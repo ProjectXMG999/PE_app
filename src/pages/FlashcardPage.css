@@ -84,35 +84,6 @@
   padding: 0 var(--spacing-md);
 }
 
-.flashcard-page__autoplay-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-sm);
-}
-
-.flashcard-page__autocontinue {
-  flex-shrink: 0;
-  height: 28px;
-  padding: 0 10px;
-  border-radius: var(--radius-full);
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 700;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  white-space: nowrap;
-}
-
-.flashcard-page__autocontinue--on {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: white;
-  box-shadow: 0 0 8px var(--accent-glow);
-}
 
 .flashcard-page__playsteps {
   display: flex;
@@ -372,4 +343,62 @@
 [data-theme="light"] .completion__btn--repeat,
 [data-theme="light"] .completion__btn--next {
   box-shadow: var(--shadow-sm);
+}
+
+/* Auto-continue toggle */
+.completion__autocontinue {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.completion__autocontinue--on {
+  border-color: var(--accent);
+  color: var(--accent-bright);
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.completion__autocontinue--on .completion__autocontinue-ring circle:last-child {
+  stroke: var(--accent);
+}
+
+.completion__autocontinue-ring {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.completion__autocontinue-ring svg {
+  display: block;
+}
+
+.completion__autocontinue-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.completion__autocontinue-label {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.completion__autocontinue-sub {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.65;
 }

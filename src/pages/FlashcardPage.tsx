@@ -51,7 +51,8 @@ export function FlashcardPage() {
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
   const [showCompletion, setShowCompletion] = useState(false)
   const [knownCount, setKnownCount] = useState(0)
-  const [autoContinue, setAutoContinue] = useState(false)
+  const [autoContinue, setAutoContinue] = useState(true)
+  const [countdown, setCountdown] = useState(6)
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
 
   const nextPack = packageId ? getNextPack(packageId) : null
@@ -205,6 +206,20 @@ export function FlashcardPage() {
     if (nextPack) navigate(`/pakiet/${nextPack.id}/${studyMode}`)
   }, [nextPack, studyMode, navigate])
 
+  // Countdown timer on completion screen
+  useEffect(() => {
+    if (!showCompletion || !autoContinue || !nextPack) {
+      setCountdown(6)
+      return
+    }
+    if (countdown <= 0) {
+      handleNextPack()
+      return
+    }
+    const t = setTimeout(() => setCountdown(c => c - 1), 1000)
+    return () => clearTimeout(t)
+  }, [showCompletion, autoContinue, nextPack, countdown, handleNextPack])
+
   // Auto-play sequence
   useEffect(() => {
     if (studyMode !== 'autoplay' || !currentWord || words.length === 0 || showCompletion) return
@@ -270,6 +285,12 @@ export function FlashcardPage() {
   // ─── Completion screen ─────────────────────────────────────────────────────
 
   if (showCompletion) {
+    const TOTAL_SECS = 6
+    const circumference = 2 * Math.PI * 26 // r=26
+    const dashOffset = autoContinue && nextPack
+      ? circumference * (countdown / TOTAL_SECS)
+      : circumference
+
     return (
       <AppShell hideBottomNav>
         <div className="completion">
@@ -317,6 +338,40 @@ export function FlashcardPage() {
                 </button>
               )}
             </div>
+
+            {/* Auto-continue toggle with countdown */}
+            {nextPack && (
+              <button
+                className={`completion__autocontinue ${autoContinue ? 'completion__autocontinue--on' : ''}`}
+                onClick={() => { setAutoContinue(v => !v); setCountdown(TOTAL_SECS) }}
+              >
+                <span className="completion__autocontinue-ring">
+                  <svg width="60" height="60" viewBox="0 0 60 60">
+                    <circle cx="30" cy="30" r="26" fill="none" stroke="currentColor" strokeWidth="3" opacity="0.2"/>
+                    <circle
+                      cx="30" cy="30" r="26" fill="none"
+                      stroke="currentColor" strokeWidth="3"
+                      strokeDasharray={circumference}
+                      strokeDashoffset={dashOffset}
+                      strokeLinecap="round"
+                      transform="rotate(-90 30 30)"
+                      style={{ transition: autoContinue && nextPack ? 'stroke-dashoffset 1s linear' : 'none' }}
+                    />
+                    <text x="30" y="35" textAnchor="middle" fontSize="16" fontWeight="700" fill="currentColor">
+                      {autoContinue ? countdown : '⏭'}
+                    </text>
+                  </svg>
+                </span>
+                <span className="completion__autocontinue-body">
+                  <span className="completion__autocontinue-label">
+                    {autoContinue ? `Za ${countdown}s → ${nextPack.name}` : 'Auto-kontynuacja'}
+                  </span>
+                  <span className="completion__autocontinue-sub">
+                    {autoContinue ? 'Kliknij aby zatrzymać' : 'Kliknij aby włączyć'}
+                  </span>
+                </span>
+              </button>
+            )}
           </div>
         </div>
       </AppShell>
@@ -376,23 +431,12 @@ export function FlashcardPage() {
 
       {studyMode === 'autoplay' && (
         <div className="flashcard-page__autoplay-bar">
-          <div className="flashcard-page__autoplay-top">
-            <div className="flashcard-page__playsteps">
-              {(['PL', 'EN', 'PL zdanie', 'EN zdanie'] as const).map((label, i) => (
-                <span key={i} className={`flashcard-page__playstep ${playStep === i ? 'active' : ''}`}>
-                  {label}
-                </span>
-              ))}
-            </div>
-            {nextPack && (
-              <button
-                className={`flashcard-page__autocontinue ${autoContinue ? 'flashcard-page__autocontinue--on' : ''}`}
-                onClick={() => setAutoContinue(v => !v)}
-                title={autoContinue ? 'Auto-kontynuacja włączona' : 'Włącz auto-kontynuację'}
-              >
-                {autoContinue ? '⏭ Auto' : '⏭'}
-              </button>
-            )}
+          <div className="flashcard-page__playsteps">
+            {(['PL', 'EN', 'PL zdanie', 'EN zdanie'] as const).map((label, i) => (
+              <span key={i} className={`flashcard-page__playstep ${playStep === i ? 'active' : ''}`}>
+                {label}
+              </span>
+            ))}
           </div>
           <div className="flashcard-page__autoplay-btns">
             <AudioButton
