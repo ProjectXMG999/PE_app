@@ -50,7 +50,7 @@ export function App() {
       {needRefresh[0] && import.meta.env.PROD && (
         <div className="sw-update-toast">
           <span>Dostępna aktualizacja</span>
-          <button onClick={() => updateServiceWorker(true)}>Odśwież</button>
+          <button onClick={() => { updateServiceWorker(true); window.location.reload() }}>Odśwież</button>
         </div>
       )}
       <Suspense fallback={<LoadingFallback />}>

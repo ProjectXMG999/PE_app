@@ -7,6 +7,7 @@ import { RangeRequestsPlugin } from 'workbox-range-requests'
 
 declare let self: ServiceWorkerGlobalScope & { __WB_MANIFEST: { url: string; revision: string | null }[] }
 
+self.skipWaiting()
 clientsClaim()
 precacheAndRoute(self.__WB_MANIFEST)
 cleanupOutdatedCaches()
