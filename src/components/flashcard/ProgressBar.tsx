@@ -7,19 +7,22 @@ interface Props {
 }
 
 export function ProgressBar({ current, total, knownCount }: Props) {
-  const pct = total > 0 ? Math.min((current / total) * 100, 100) : 0
-  const knownPct = total > 0 && knownCount != null ? Math.min((knownCount / total) * 100, 100) : null
+  if (total <= 0) return <div className="progressbar" />
+
+  const heardPct = Math.min((current / total) * 100, 100)
+  const knownPct = knownCount != null ? Math.min((knownCount / total) * 100, 100) : 0
 
   return (
-    <div className="progressbar">
-      <div className="progressbar__track progressbar__track--heard">
-        <div className="progressbar__fill progressbar__fill--heard" style={{ width: `${pct}%` }} />
+    <div className="progressbar" role="progressbar" aria-valuenow={current} aria-valuemax={total}>
+      <div className="progressbar__track">
+        {/* Known (green) — sits at the left, always ≤ heard */}
+        <div className="progressbar__fill progressbar__fill--known" style={{ width: `${knownPct}%` }} />
+        {/* Heard (orange) — extends from known to current position */}
+        <div
+          className="progressbar__fill progressbar__fill--heard"
+          style={{ width: `${Math.max(heardPct - knownPct, 0)}%` }}
+        />
       </div>
-      {knownPct !== null && (
-        <div className="progressbar__track progressbar__track--known">
-          <div className="progressbar__fill progressbar__fill--known" style={{ width: `${knownPct}%` }} />
-        </div>
-      )}
     </div>
   )
 }
