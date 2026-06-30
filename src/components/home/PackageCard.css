@@ -95,6 +95,11 @@
   color: white;
 }
 
+.packcard__badge--mastered {
+  background: var(--accent);
+  color: white;
+}
+
 .packcard__progress-row {
   display: flex;
   justify-content: space-between;

@@ -22,16 +22,19 @@ let dbPromise: Promise<IDBPDatabase<PEDB>> | null = null
 
 function getDB() {
   if (!dbPromise) {
-    dbPromise = openDB<PEDB>('PE_DB', 1, {
-      upgrade(db) {
-        const sessions = db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true })
-        sessions.createIndex('by-date', 'date')
-        sessions.createIndex('by-package', 'packageId')
+    dbPromise = openDB<PEDB>('PE_DB', 2, {
+      upgrade(db, oldVersion) {
+        if (oldVersion < 1) {
+          const sessions = db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true })
+          sessions.createIndex('by-date', 'date')
+          sessions.createIndex('by-package', 'packageId')
 
-        const wordProgress = db.createObjectStore('wordProgress', { keyPath: 'wordId' })
-        wordProgress.createIndex('by-package', 'packageId')
+          const wordProgress = db.createObjectStore('wordProgress', { keyPath: 'wordId' })
+          wordProgress.createIndex('by-package', 'packageId')
 
-        db.createObjectStore('packageProgress', { keyPath: 'packageId' })
+          db.createObjectStore('packageProgress', { keyPath: 'packageId' })
+        }
+        // v2: masteredAt field — no store changes needed, field is optional and added at write time
       },
     })
   }

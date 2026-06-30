@@ -6,7 +6,7 @@ import { useStats } from '../hooks/useStats'
 import './StatsPage.css'
 
 export function StatsPage() {
-  const { streak, knownWords, sessionCount, startedPacks, activity, loading } = useStats()
+  const { streak, knownWords, sessionCount, masteredPacks, activity, loading } = useStats()
 
   return (
     <AppShell>
@@ -17,7 +17,7 @@ export function StatsPage() {
           <StatCard value={knownWords} label="Poznanych słów" />
           <StatCard value={streak} label="Dni z rzędu" icon="🔥" />
           <StatCard value={sessionCount} label="Sesji ukończono" />
-          <StatCard value={startedPacks} label="Paczek zaczętych" />
+          <StatCard value={masteredPacks} label="Paczek opanowanych" icon="★" />
         </div>
 
         <section className="statspage__section">

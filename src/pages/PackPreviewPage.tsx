@@ -1,10 +1,16 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Pack, PackMeta } from '../types/vocabulary'
+import { PackageProgress } from '../types/progress'
+import { getPackageProgress } from '../services/db'
 import packagesIndex from '../data/packages-index.json'
 import './PackPreviewPage.css'
 
 const allPacks = packagesIndex as PackMeta[]
+
+function formatDate(iso: string): string {
+  return new Date(iso).toLocaleDateString('pl-PL', { day: 'numeric', month: 'short', year: 'numeric' })
+}
 
 /** Strip trailing number (and surrounding space) from pack name to get base series name */
 function getSeriesBase(name: string): string {
@@ -15,6 +21,7 @@ export function PackPreviewPage() {
   const { packageId } = useParams<{ packageId: string }>()
   const navigate = useNavigate()
   const [pack, setPack] = useState<Pack | null>(null)
+  const [progress, setProgress] = useState<PackageProgress | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -22,13 +29,16 @@ export function PackPreviewPage() {
     if (!packageId) return
     setLoading(true)
     setError(null)
-    fetch(`/data/packs/${packageId}.json`)
-      .then(r => {
+    Promise.all([
+      fetch(`/data/packs/${packageId}.json`).then(r => {
         if (!r.ok) throw new Error('Nie znaleziono pakietu')
         return r.json() as Promise<Pack>
-      })
-      .then(data => {
+      }),
+      getPackageProgress(packageId),
+    ])
+      .then(([data, prog]) => {
         setPack(data)
+        setProgress(prog ?? null)
         setLoading(false)
       })
       .catch(err => {
@@ -89,6 +99,16 @@ export function PackPreviewPage() {
             <span className="packpreview__meta-pill">{pack.volume}</span>
             {packNum && (
               <span className="packpreview__meta-pill packpreview__meta-pill--num">#{packNum}</span>
+            )}
+            {progress?.masteredAt && (
+              <span className="packpreview__meta-pill packpreview__meta-pill--mastered" title={`Opanowana: ${formatDate(progress.masteredAt)}`}>
+                ★ Opanowana
+              </span>
+            )}
+            {progress?.completedAt && !progress?.masteredAt && (
+              <span className="packpreview__meta-pill packpreview__meta-pill--completed" title={`Odsłuchana: ${formatDate(progress.completedAt)}`}>
+                ✓ Odsłuchana
+              </span>
             )}
           </div>
         </div>

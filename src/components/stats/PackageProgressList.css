@@ -17,11 +17,36 @@
   gap: 6px;
 }
 
+.packprogress__name-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
 .packprogress__name {
   font-family: var(--font-heading);
   font-size: 14px;
   font-weight: 600;
   color: var(--text-primary);
+}
+
+.packprogress__badge {
+  font-size: 10px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+}
+
+.packprogress__badge--mastered {
+  background: var(--accent);
+  color: white;
+}
+
+.packprogress__badge--completed {
+  background: var(--success);
+  color: white;
 }
 
 .packprogress__bar-row {
@@ -43,6 +68,11 @@
   background: linear-gradient(90deg, var(--accent-dim), var(--accent));
   border-radius: var(--radius-full);
   transition: width var(--transition-slow);
+}
+
+.packprogress__bar-fill--mastered {
+  background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+  box-shadow: 0 0 8px var(--accent-glow);
 }
 
 .packprogress__pct {

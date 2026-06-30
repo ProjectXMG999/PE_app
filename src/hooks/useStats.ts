@@ -7,6 +7,7 @@ export function useStats() {
   const [knownWords, setKnownWords] = useState(0)
   const [sessionCount, setSessionCount] = useState(0)
   const [startedPacks, setStartedPacks] = useState(0)
+  const [masteredPacks, setMasteredPacks] = useState(0)
   const [activity, setActivity] = useState<DayActivity[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -24,6 +25,7 @@ export function useStats() {
         setKnownWords(kw)
         setSessionCount(sessions.length)
         setStartedPacks(packs.length)
+        setMasteredPacks(packs.filter(p => p.masteredAt != null).length)
 
         // Build 7-day activity
         const days: DayActivity[] = []
@@ -44,5 +46,5 @@ export function useStats() {
     load()
   }, [])
 
-  return { streak, knownWords, sessionCount, startedPacks, activity, loading }
+  return { streak, knownWords, sessionCount, startedPacks, masteredPacks, activity, loading }
 }

@@ -10,7 +10,7 @@ import { usePackageData } from '../hooks/usePackageData'
 import { useFlashcard } from '../hooks/useFlashcard'
 import { useAudio } from '../hooks/useAudio'
 import { useAppStore } from '../store/useAppStore'
-import { saveSession, savePackageProgress, getPackageProgress, saveWordProgress } from '../services/db'
+import { saveSession, savePackageProgress, getPackageProgress, saveWordProgress, getPackageWordProgress } from '../services/db'
 import { StudyMode } from '../types/progress'
 import './FlashcardPage.css'
 
@@ -40,6 +40,7 @@ export function FlashcardPage() {
   const sessionStartRef = useRef<string>(new Date().toISOString().split('T')[0])
   const completedWordsRef = useRef(0)
   const startedAtRef = useRef<string | null>(null)
+  const masteredAtRef = useRef<string | null>(null)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
 
@@ -58,19 +59,23 @@ export function FlashcardPage() {
     getPackageProgress(packageId).then(existing => {
       const now = new Date().toISOString()
       startedAtRef.current = existing?.startedAt ?? now
+      masteredAtRef.current = existing?.masteredAt ?? null
       if (!existing) {
-        savePackageProgress({ packageId, startedAt: now, completedAt: null, currentIndex: 0 })
+        savePackageProgress({ packageId, startedAt: now, completedAt: null, masteredAt: null, currentIndex: 0 })
       }
     })
   }, [pack, packageId])
 
-  const saveProgress = useCallback(async (index: number, completed: boolean) => {
+  const saveProgress = useCallback(async (index: number, completed: boolean, newMasteredAt?: string | null) => {
     if (!packageId) return
     completedWordsRef.current = index
+    // newMasteredAt=undefined → preserve existing; null → clear; string → set new
+    const masteredAt = newMasteredAt !== undefined ? newMasteredAt : masteredAtRef.current
     await savePackageProgress({
       packageId,
       startedAt: startedAtRef.current ?? new Date().toISOString(),
       completedAt: completed ? new Date().toISOString() : null,
+      masteredAt,
       currentIndex: index,
     })
     if (completed) {
@@ -83,9 +88,9 @@ export function FlashcardPage() {
     }
   }, [packageId, total, studyMode])
 
-  const handleNext = useCallback((status?: 'known' | 'learning') => {
+  const handleNext = useCallback(async (status?: 'known' | 'learning') => {
     if (currentWord && status) {
-      saveWordProgress({
+      await saveWordProgress({
         wordId: currentWord.id,
         packageId: packageId ?? '',
         seenCount: 1,
@@ -94,7 +99,17 @@ export function FlashcardPage() {
       })
     }
     if (isLastCard) {
-      saveProgress(total, true)
+      // Check if all words in pack are now 'known' → set masteredAt
+      let newMasteredAt: string | null | undefined = undefined
+      if (packageId) {
+        const allWordProgress = await getPackageWordProgress(packageId)
+        const allKnown = words.length > 0 && allWordProgress.filter(w => w.status === 'known').length >= words.length
+        if (allKnown && !masteredAtRef.current) {
+          newMasteredAt = new Date().toISOString()
+          masteredAtRef.current = newMasteredAt
+        }
+      }
+      await saveProgress(total, true, newMasteredAt)
       navigate(packageId ? `/pakiet/${packageId}` : '/')
     } else {
       advance()

@@ -99,6 +99,19 @@
   color: var(--text-muted);
 }
 
+.packpreview__meta-pill--mastered {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.packpreview__meta-pill--completed {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+
 .packpreview__wordcount {
   font-family: var(--font-heading);
   font-size: 13px;

@@ -39,7 +39,8 @@ export function PackageCard({ pack, progress }: Props) {
   const icon = CATEGORY_ICONS[pack.category] ?? CATEGORY_ICONS.default
   const color = CATEGORY_COLORS[pack.category] ?? CATEGORY_COLORS.default
   const progressPct = progress ? (progress.currentIndex / pack.wordCount) * 100 : 0
-  const isCompleted = progress?.completedAt != null
+  const isMastered = progress?.masteredAt != null
+  const isCompleted = progress?.completedAt != null && !isMastered
   const packNum = getPackNumber(pack.id)
 
   return (
@@ -56,8 +57,11 @@ export function PackageCard({ pack, progress }: Props) {
           <span className="packcard__meta">{pack.volume} · {pack.category}</span>
         </div>
         <div className="packcard__right">
+          {isMastered && (
+            <span className="packcard__badge packcard__badge--mastered" title="Wszystkie słowa oznaczone jako znane">★</span>
+          )}
           {isCompleted && (
-            <span className="packcard__badge packcard__badge--done">✓</span>
+            <span className="packcard__badge packcard__badge--done" title="Odsłuchane">✓</span>
           )}
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <polyline points="9 18 15 12 9 6"/>

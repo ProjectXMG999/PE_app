@@ -20,7 +20,8 @@ export interface WordProgress {
 export interface PackageProgress {
   packageId: string
   startedAt: string
-  completedAt: string | null
+  completedAt: string | null    // last time all cards were played through
+  masteredAt: string | null     // time when all words were marked 'known'
   currentIndex: number
 }
 
