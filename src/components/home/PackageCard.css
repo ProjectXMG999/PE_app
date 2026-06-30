@@ -3,8 +3,17 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: var(--spacing-md);
-  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
   position: relative;
+}
+
+[data-theme="light"] .packcard {
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="light"] .packcard:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-accent);
 }
 
 .packcard__num-badge {

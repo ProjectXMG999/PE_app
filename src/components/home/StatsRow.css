@@ -16,6 +16,10 @@
   gap: var(--spacing-sm);
 }
 
+[data-theme="light"] .statsrow__chip {
+  box-shadow: var(--shadow-sm);
+}
+
 .statsrow__value {
   font-family: var(--font-heading);
   font-size: 28px;
