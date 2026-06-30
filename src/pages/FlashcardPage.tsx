@@ -113,6 +113,8 @@ export function FlashcardPage() {
         await new Promise(r => setTimeout(r, 600))
         setPlayStep(1)
         await playWord(currentWord)
+        await new Promise(r => setTimeout(r, 400))
+        await playWord(currentWord)
         await new Promise(r => setTimeout(r, 600))
         if (currentWord.sentencePl) {
           setPlayStep(2)
