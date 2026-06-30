@@ -7,10 +7,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--spacing-md);
-  background: var(--bg-primary);
-  border-bottom: 1px solid var(--border);
+  background: #0D0B1E;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+
+[data-theme="light"] .topbar {
+  background: #1E1B4B;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
 }
 
 .topbar__logo {
@@ -55,11 +60,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.75);
   transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 .topbar__theme-btn:hover {
-  background: var(--bg-card);
-  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
