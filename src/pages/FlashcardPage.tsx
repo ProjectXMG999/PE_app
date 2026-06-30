@@ -335,6 +335,11 @@ export function FlashcardPage() {
               )}
             </div>
 
+            {/* Exit to menu */}
+            <button className="completion__exit" onClick={() => navigate('/')}>
+              Zakończ i wróć do menu
+            </button>
+
             {/* Auto-continue toggle with countdown */}
             {nextPack && (
               <button

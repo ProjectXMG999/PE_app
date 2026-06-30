@@ -345,6 +345,24 @@
   box-shadow: var(--shadow-sm);
 }
 
+/* Exit link */
+.completion__exit {
+  width: 100%;
+  padding: var(--spacing-sm) 0;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.completion__exit:hover {
+  color: var(--text-primary);
+}
+
 /* Auto-continue toggle */
 .completion__autocontinue {
   display: flex;
