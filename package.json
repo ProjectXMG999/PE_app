@@ -13,6 +13,7 @@
     "generate-icons": "node scripts/generate-icons.mjs",
     "generate-audio": "tsx scripts/generate-audio.ts",
     "generate-audio-demo": "tsx scripts/generate-audio-demo.ts",
+    "generate-audio-polish": "tsx scripts/generate-audio-polish.ts",
     "upload-blobs": "tsx scripts/upload-audio-blobs.ts"
   },
   "dependencies": {

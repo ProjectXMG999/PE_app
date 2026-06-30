@@ -6,6 +6,8 @@ export interface Word {
   sentencePl: string | null
   audioWord: string
   audioSentence: string
+  audioWordPl?: string
+  audioSentencePl?: string
 }
 
 export interface PackMeta {
