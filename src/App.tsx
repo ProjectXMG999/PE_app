@@ -47,7 +47,7 @@ export function App() {
 
   return (
     <>
-      {needRefresh[0] && (
+      {needRefresh[0] && import.meta.env.PROD && (
         <div className="sw-update-toast">
           <span>Dostępna aktualizacja</span>
           <button onClick={() => updateServiceWorker(true)}>Odśwież</button>
