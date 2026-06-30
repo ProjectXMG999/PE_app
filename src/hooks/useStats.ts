@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { getAllSessions, getStreak, getTotalKnownWords, getAllPackageProgress } from '../services/db'
 import { DayActivity } from '../types/progress'
 
@@ -10,6 +10,8 @@ export function useStats() {
   const [masteredPacks, setMasteredPacks] = useState(0)
   const [activity, setActivity] = useState<DayActivity[]>([])
   const [loading, setLoading] = useState(true)
+  const [tick, setTick] = useState(0)
+  const reload = useCallback(() => setTick(t => t + 1), [])
 
   useEffect(() => {
     async function load() {
@@ -44,7 +46,7 @@ export function useStats() {
       }
     }
     load()
-  }, [])
+  }, [tick])
 
-  return { streak, knownWords, sessionCount, startedPacks, masteredPacks, activity, loading }
+  return { streak, knownWords, sessionCount, startedPacks, masteredPacks, activity, loading, reload, tick }
 }

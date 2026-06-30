@@ -1,12 +1,20 @@
+import { useState } from 'react'
 import { AppShell } from '../components/layout/AppShell'
 import { StatCard } from '../components/stats/StatCard'
 import { ActivityChart } from '../components/stats/ActivityChart'
 import { PackageProgressList } from '../components/stats/PackageProgressList'
+import { ResetProgressModal } from '../components/stats/ResetProgressModal'
 import { useStats } from '../hooks/useStats'
 import './StatsPage.css'
 
 export function StatsPage() {
-  const { streak, knownWords, sessionCount, masteredPacks, activity, loading } = useStats()
+  const { streak, knownWords, sessionCount, masteredPacks, activity, loading, reload, tick } = useStats()
+  const [showReset, setShowReset] = useState(false)
+
+  function handleReset() {
+    setShowReset(false)
+    reload()
+  }
 
   return (
     <AppShell>
@@ -34,10 +42,26 @@ export function StatsPage() {
           {loading ? (
             <div className="statspage__skeleton skeleton" style={{ height: 80 }} />
           ) : (
-            <PackageProgressList />
+            <PackageProgressList key={tick} />
           )}
         </section>
+
+        <div className="statspage__danger-zone">
+          <button
+            className="statspage__reset-btn"
+            onClick={() => setShowReset(true)}
+          >
+            Resetuj progres…
+          </button>
+        </div>
       </div>
+
+      {showReset && (
+        <ResetProgressModal
+          onClose={() => setShowReset(false)}
+          onReset={handleReset}
+        />
+      )}
     </AppShell>
   )
 }

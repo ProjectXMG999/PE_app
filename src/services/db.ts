@@ -91,6 +91,34 @@ export async function getAllPackageProgress(): Promise<PackageProgress[]> {
   return db.getAll('packageProgress')
 }
 
+export async function resetAllProgress(): Promise<void> {
+  const db = await getDB()
+  await Promise.all([
+    db.clear('wordProgress'),
+    db.clear('packageProgress'),
+    db.clear('sessions'),
+  ])
+}
+
+export async function resetProgressForPackages(packageIds: string[]): Promise<void> {
+  const db = await getDB()
+  const tx1 = db.transaction('packageProgress', 'readwrite')
+  await Promise.all(packageIds.map(id => tx1.store.delete(id)))
+  await tx1.done
+
+  const allWords = await db.getAll('wordProgress')
+  const toDelete = allWords.filter(w => packageIds.includes(w.packageId)).map(w => w.wordId)
+  const tx2 = db.transaction('wordProgress', 'readwrite')
+  await Promise.all(toDelete.map(id => tx2.store.delete(id)))
+  await tx2.done
+
+  const allSessions = await db.getAll('sessions')
+  const sessionsToDelete = allSessions.filter(s => packageIds.includes(s.packageId) && s.id != null).map(s => s.id!)
+  const tx3 = db.transaction('sessions', 'readwrite')
+  await Promise.all(sessionsToDelete.map(id => tx3.store.delete(id)))
+  await tx3.done
+}
+
 export async function getStreak(): Promise<number> {
   const db = await getDB()
   const all = await db.getAll('sessions')
