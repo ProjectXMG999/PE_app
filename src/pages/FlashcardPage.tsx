@@ -317,6 +317,7 @@ export function FlashcardPage() {
   return (
     <AppShell hideBottomNav>
       <ProgressBar current={currentCardIndex} total={total} knownCount={knownCount} />
+      <div className="flashcard-page">
       <FlashcardHeader title={pack.name} current={currentCardIndex} total={total} packageId={packageId} />
       <ModeToggle mode={studyMode} />
 
@@ -383,6 +384,7 @@ export function FlashcardPage() {
           </div>
         </div>
       )}
+      </div>
     </AppShell>
   )
 }
