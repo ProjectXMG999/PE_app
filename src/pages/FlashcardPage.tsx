@@ -161,15 +161,11 @@ export function FlashcardPage() {
     }
   }, [isLastCard, advance, preloadNext, words, currentCardIndex, saveProgress, total, stop])
 
-  // Autoplay end → auto-continue to next pack OR show completion screen
+  // Autoplay end → always show completion screen; countdown handles auto-continue
   const handleAutoplayEnd = useCallback(async () => {
     await saveProgress(total, true)
-    if (autoContinue && nextPack) {
-      navigate(`/pakiet/${nextPack.id}/${studyMode}`)
-    } else {
-      setShowCompletion(true)
-    }
-  }, [saveProgress, total, autoContinue, nextPack, navigate, studyMode])
+    setShowCompletion(true)
+  }, [saveProgress, total])
 
   const handleAutoplayEndRef = useRef(handleAutoplayEnd)
   useEffect(() => { handleAutoplayEndRef.current = handleAutoplayEnd }, [handleAutoplayEnd])
