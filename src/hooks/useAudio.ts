@@ -6,13 +6,17 @@ export function useAudio(packId: string | null) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const playingRef = useRef(false)
 
-  const play = useCallback((url: string): Promise<void> => {
+  const EN_RATE = 0.85  // EN slightly slower for comprehension
+  const PL_RATE = 1.0
+
+  const play = useCallback((url: string, rate = 1.0): Promise<void> => {
     return new Promise((resolve, reject) => {
       if (audioRef.current) {
         audioRef.current.pause()
         audioRef.current = null
       }
       const audio = new Audio(url)
+      audio.playbackRate = rate
       audioRef.current = audio
       playingRef.current = true
 
@@ -33,22 +37,22 @@ export function useAudio(packId: string | null) {
 
   const playWord = useCallback((word: Word) => {
     if (!packId) return Promise.resolve()
-    return play(getAudioUrl(packId, word.audioWord))
+    return play(getAudioUrl(packId, word.audioWord), EN_RATE)
   }, [packId, play])
 
   const playSentence = useCallback((word: Word) => {
     if (!packId) return Promise.resolve()
-    return play(getAudioUrl(packId, word.audioSentence))
+    return play(getAudioUrl(packId, word.audioSentence), EN_RATE)
   }, [packId, play])
 
   const playWordPl = useCallback((word: Word) => {
     if (!packId || !word.audioWordPl) return Promise.resolve()
-    return play(getAudioUrl(packId, word.audioWordPl))
+    return play(getAudioUrl(packId, word.audioWordPl), PL_RATE)
   }, [packId, play])
 
   const playSentencePl = useCallback((word: Word) => {
     if (!packId || !word.audioSentencePl) return Promise.resolve()
-    return play(getAudioUrl(packId, word.audioSentencePl))
+    return play(getAudioUrl(packId, word.audioSentencePl), PL_RATE)
   }, [packId, play])
 
   const stop = useCallback(() => {
