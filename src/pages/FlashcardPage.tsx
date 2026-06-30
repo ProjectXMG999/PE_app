@@ -12,7 +12,16 @@ import { useAudio } from '../hooks/useAudio'
 import { useAppStore } from '../store/useAppStore'
 import { saveSession, savePackageProgress, getPackageProgress, saveWordProgress, getPackageWordProgress } from '../services/db'
 import { StudyMode } from '../types/progress'
+import packagesIndex from '../data/packages-index.json'
+import { PackMeta } from '../types/vocabulary'
 import './FlashcardPage.css'
+
+const allPacks = packagesIndex as PackMeta[]
+
+function getNextPack(currentId: string): PackMeta | null {
+  const idx = allPacks.findIndex(p => p.id === currentId)
+  return idx >= 0 && idx < allPacks.length - 1 ? allPacks[idx + 1] : null
+}
 
 export function FlashcardPage() {
   const { packageId, mode } = useParams<{ packageId: string; mode: string }>()
@@ -30,6 +39,7 @@ export function FlashcardPage() {
     isLastCard,
     advance,
     reveal,
+    reset,
     total,
   } = useFlashcard(words)
 
@@ -39,16 +49,20 @@ export function FlashcardPage() {
   const startedAtRef = useRef<string | null>(null)
   const masteredAtRef = useRef<string | null>(null)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
-  const [showCompletionScreen, setShowCompletionScreen] = useState(false)
+  const [showCompletion, setShowCompletion] = useState(false)
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
 
+  const nextPack = packageId ? getNextPack(packageId) : null
+
+  const clearAutoplay = () => {
+    if (autoPlayTimerRef.current) clearTimeout(autoPlayTimerRef.current)
+  }
+
   useEffect(() => {
-    if (packageId && studyMode) {
-      setPackage(packageId, studyMode)
-    }
+    if (packageId && studyMode) setPackage(packageId, studyMode)
     return () => {
       stop()
-      if (autoPlayTimerRef.current) clearTimeout(autoPlayTimerRef.current)
+      clearAutoplay()
     }
   }, [packageId, studyMode])
 
@@ -75,16 +89,11 @@ export function FlashcardPage() {
       currentIndex: index,
     })
     if (completed) {
-      await saveSession({
-        packageId,
-        date: sessionStartRef.current,
-        wordsCompleted: total,
-        mode: studyMode,
-      })
+      await saveSession({ packageId, date: sessionStartRef.current, wordsCompleted: total, mode: studyMode })
     }
   }, [packageId, total, studyMode])
 
-  // Fiszki: last card rated → check mastery automatically
+  // Fiszki: rate card → auto-detect mastery on last card
   const handleNext = useCallback(async (status?: 'known' | 'learning') => {
     if (currentWord && status) {
       await saveWordProgress({
@@ -98,8 +107,8 @@ export function FlashcardPage() {
     if (isLastCard) {
       let newMasteredAt: string | null | undefined = undefined
       if (packageId) {
-        const allWordProgress = await getPackageWordProgress(packageId)
-        const allKnown = words.length > 0 && allWordProgress.filter(w => w.status === 'known').length >= words.length
+        const allWp = await getPackageWordProgress(packageId)
+        const allKnown = words.length > 0 && allWp.filter(w => w.status === 'known').length >= words.length
         if (allKnown && !masteredAtRef.current) {
           newMasteredAt = new Date().toISOString()
           masteredAtRef.current = newMasteredAt
@@ -116,38 +125,64 @@ export function FlashcardPage() {
 
   useEffect(() => { handleNextRef.current = handleNext }, [handleNext])
 
-  // Auto-play: after last word → show completion screen instead of navigating
+  // Skip current card in autoplay
+  const handleSkip = useCallback(() => {
+    clearAutoplay()
+    stop()
+    setPlayStep(null)
+    if (isLastCard) {
+      saveProgress(total, true).then(() => setShowCompletion(true))
+    } else {
+      advance()
+      preloadNext(words, currentCardIndex + 1)
+      saveProgress(currentCardIndex + 1, false)
+    }
+  }, [isLastCard, advance, preloadNext, words, currentCardIndex, saveProgress, total, stop])
+
+  // Autoplay end → show completion screen
   const handleAutoplayEnd = useCallback(async () => {
-    await saveProgress(total, true, undefined)
-    setShowCompletionScreen(true)
+    await saveProgress(total, true)
+    setShowCompletion(true)
   }, [saveProgress, total])
 
   const handleAutoplayEndRef = useRef(handleAutoplayEnd)
   useEffect(() => { handleAutoplayEndRef.current = handleAutoplayEnd }, [handleAutoplayEnd])
 
-  const handleMarkMastered = useCallback(async (mastered: boolean) => {
-    if (mastered && packageId && !masteredAtRef.current) {
-      const now = new Date().toISOString()
-      masteredAtRef.current = now
-      // Mark all words as known
-      await Promise.all(words.map(w =>
-        saveWordProgress({ wordId: w.id, packageId, seenCount: 1, lastSeen: now, status: 'known' })
-      ))
-      // Update masteredAt on the saved progress record
-      await savePackageProgress({
-        packageId,
-        startedAt: startedAtRef.current ?? now,
-        completedAt: new Date().toISOString(),
-        masteredAt: now,
-        currentIndex: total,
-      })
-    }
+  // Completion actions
+  const handleMastered = useCallback(async () => {
+    if (!packageId) return
+    const now = new Date().toISOString()
+    masteredAtRef.current = now
+    await Promise.all(words.map(w =>
+      saveWordProgress({ wordId: w.id, packageId, seenCount: 1, lastSeen: now, status: 'known' })
+    ))
+    await savePackageProgress({
+      packageId,
+      startedAt: startedAtRef.current ?? now,
+      completedAt: now,
+      masteredAt: now,
+      currentIndex: total,
+    })
     navigate(packageId ? `/pakiet/${packageId}` : '/')
   }, [packageId, words, total, navigate])
 
+  const handleRepeat = useCallback(() => {
+    clearAutoplay()
+    stop()
+    setShowCompletion(false)
+    setPlayStep(null)
+    reset()
+    // Reset session start for a fresh session log
+    sessionStartRef.current = new Date().toISOString().split('T')[0]
+  }, [reset, stop])
+
+  const handleNextPack = useCallback(() => {
+    if (nextPack) navigate(`/pakiet/${nextPack.id}/${studyMode}`)
+  }, [nextPack, studyMode, navigate])
+
   // Auto-play sequence
   useEffect(() => {
-    if (studyMode !== 'autoplay' || !currentWord || words.length === 0 || showCompletionScreen) return
+    if (studyMode !== 'autoplay' || !currentWord || words.length === 0 || showCompletion) return
 
     const runSequence = async () => {
       try {
@@ -170,26 +205,20 @@ export function FlashcardPage() {
           await new Promise(r => setTimeout(r, 600))
         }
         setPlayStep(null)
-        if (isLastCard) {
-          autoPlayTimerRef.current = setTimeout(() => handleAutoplayEndRef.current(), 500)
-        } else {
-          autoPlayTimerRef.current = setTimeout(() => handleNextRef.current(), 500)
-        }
+        const onDone = isLastCard ? () => handleAutoplayEndRef.current() : () => handleNextRef.current()
+        autoPlayTimerRef.current = setTimeout(onDone, 500)
       } catch {
         setPlayStep(null)
-        if (isLastCard) {
-          autoPlayTimerRef.current = setTimeout(() => handleAutoplayEndRef.current(), 2000)
-        } else {
-          autoPlayTimerRef.current = setTimeout(() => handleNextRef.current(), 2000)
-        }
+        const onDone = isLastCard ? () => handleAutoplayEndRef.current() : () => handleNextRef.current()
+        autoPlayTimerRef.current = setTimeout(onDone, 2000)
       }
     }
 
     autoPlayTimerRef.current = setTimeout(runSequence, 600)
-    return () => {
-      if (autoPlayTimerRef.current) clearTimeout(autoPlayTimerRef.current)
-    }
-  }, [currentCardIndex, studyMode, currentWord, isLastCard, showCompletionScreen])
+    return clearAutoplay
+  }, [currentCardIndex, studyMode, currentWord, isLastCard, showCompletion])
+
+  // ─── Loading / error ───────────────────────────────────────────────────────
 
   if (loading) {
     return (
@@ -213,35 +242,56 @@ export function FlashcardPage() {
     )
   }
 
-  // Autoplay completion screen
-  if (showCompletionScreen) {
+  // ─── Completion screen ─────────────────────────────────────────────────────
+
+  if (showCompletion) {
     return (
       <AppShell hideBottomNav>
-        <div className="flashcard-page__completion">
-          <div className="flashcard-page__completion-icon">🎉</div>
-          <h2 className="flashcard-page__completion-title">Paczka odsłuchana!</h2>
-          <p className="flashcard-page__completion-sub">
-            {pack.name} · {total} słów
-          </p>
-          <div className="flashcard-page__completion-question">
-            <p>Czy chcesz oznaczyć wszystkie słowa jako <strong>nauczone</strong>?</p>
-            <p className="flashcard-page__completion-hint">
-              Oznaczenie jako opanowana zapisze pełny postęp i zmieni status paczki.
-            </p>
+        <div className="completion">
+          <div className="completion__top">
+            <div className="completion__emoji">🎉</div>
+            <h2 className="completion__title">Paczka gotowa!</h2>
+            <p className="completion__meta">{pack.name} · {total} słów</p>
           </div>
-          <div className="flashcard-page__completion-actions">
-            <button
-              className="flashcard-page__completion-btn flashcard-page__completion-btn--yes"
-              onClick={() => handleMarkMastered(true)}
-            >
-              ★ Tak, opanowana
+
+          <div className="completion__actions">
+            {/* Primary — mastered */}
+            <button className="completion__btn completion__btn--mastered" onClick={handleMastered}>
+              <span className="completion__btn-icon">★</span>
+              <span className="completion__btn-body">
+                <span className="completion__btn-label">Opanowana</span>
+                <span className="completion__btn-sub">Oznacza wszystkie słowa jako znam</span>
+              </span>
             </button>
-            <button
-              className="flashcard-page__completion-btn flashcard-page__completion-btn--no"
-              onClick={() => handleMarkMastered(false)}
-            >
-              Nie, tylko odsłuchana
-            </button>
+
+            {/* Secondary row */}
+            <div className="completion__row">
+              <button className="completion__btn completion__btn--repeat" onClick={handleRepeat}>
+                <span className="completion__btn-icon">↺</span>
+                <span className="completion__btn-body">
+                  <span className="completion__btn-label">Powtórz</span>
+                  <span className="completion__btn-sub">Od początku</span>
+                </span>
+              </button>
+
+              {nextPack ? (
+                <button className="completion__btn completion__btn--next" onClick={handleNextPack}>
+                  <span className="completion__btn-body">
+                    <span className="completion__btn-label">Następna</span>
+                    <span className="completion__btn-sub completion__btn-sub--name">{nextPack.name}</span>
+                  </span>
+                  <span className="completion__btn-icon">▶</span>
+                </button>
+              ) : (
+                <button className="completion__btn completion__btn--next" onClick={() => navigate('/')}>
+                  <span className="completion__btn-body">
+                    <span className="completion__btn-label">Lista paczek</span>
+                    <span className="completion__btn-sub">Wróć do menu</span>
+                  </span>
+                  <span className="completion__btn-icon">⌂</span>
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </AppShell>
@@ -249,6 +299,8 @@ export function FlashcardPage() {
   }
 
   if (!currentWord) return null
+
+  // ─── Study view ────────────────────────────────────────────────────────────
 
   return (
     <AppShell hideBottomNav>
@@ -299,15 +351,17 @@ export function FlashcardPage() {
         <div className="flashcard-page__autoplay-info">
           <div className="flashcard-page__playsteps">
             {(['PL', 'EN', 'PL zdanie', 'EN zdanie'] as const).map((label, i) => (
-              <span
-                key={i}
-                className={`flashcard-page__playstep ${playStep === i ? 'active' : ''}`}
-              >
+              <span key={i} className={`flashcard-page__playstep ${playStep === i ? 'active' : ''}`}>
                 {label}
               </span>
             ))}
           </div>
-          <span>Odtwarzanie automatyczne</span>
+          <button className="flashcard-page__skip" onClick={handleSkip} aria-label="Pomiń słowo">
+            Pomiń
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/>
+            </svg>
+          </button>
         </div>
       )}
     </AppShell>
