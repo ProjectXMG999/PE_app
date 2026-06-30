@@ -24,15 +24,11 @@
   font-family: var(--font-heading);
   font-size: clamp(28px, 8vw, 48px);
   font-weight: 700;
-  color: rgba(255,255,255,0.35);
+  color: var(--text-primary);
   text-align: center;
   letter-spacing: -0.01em;
   line-height: 1.1;
   width: 100%;
-}
-
-[data-theme="light"] .flashcard__english {
-  color: rgba(30,27,75,0.3);
 }
 
 .flashcard__divider {
@@ -63,7 +59,7 @@
 
 .flashcard__sentence-en {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-style: italic;
   text-align: center;
   line-height: 1.6;

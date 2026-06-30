@@ -6,7 +6,9 @@ export function TopBar() {
 
   return (
     <header className="topbar">
-      <div className="topbar__logo">
+      <img src="/icons/icon-192.png" alt="PE" className="topbar__pe-icon" />
+
+      <div className="topbar__center">
         <img
           src={theme === 'dark' ? '/icons/logo-white.svg' : '/icons/logo-dark.svg'}
           alt="Project English"
@@ -23,6 +25,7 @@ export function TopBar() {
           <span className="topbar__logo-sub">NEW EDUCATION</span>
         </div>
       </div>
+
       <button
         className="topbar__theme-btn"
         onClick={toggleTheme}

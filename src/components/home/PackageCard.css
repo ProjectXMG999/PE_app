@@ -176,23 +176,32 @@
   border-radius: var(--radius-full);
 }
 
-.packcard__progressbar {
+.packcard__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: var(--spacing-md);
+}
+
+.packcard__bar {
   height: 3px;
   background: var(--bg-surface);
   border-radius: var(--radius-full);
   overflow: hidden;
-  margin-bottom: var(--spacing-md);
 }
 
-.packcard__progressbar-fill {
+.packcard__bar-fill {
   height: 100%;
   border-radius: var(--radius-full);
   transition: width var(--transition-slow);
 }
 
-.packcard__progressbar-fill--mastered {
-  background: linear-gradient(90deg, var(--accent), #10B981) !important;
-  box-shadow: 0 0 6px var(--accent-glow);
+.packcard__bar--heard .packcard__bar-fill {
+  background: #f97316;
+}
+
+.packcard__bar--known .packcard__bar-fill {
+  background: #10B981;
 }
 
 .packcard__actions {

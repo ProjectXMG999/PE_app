@@ -8,7 +8,7 @@ import { FilterTabs } from '../components/home/FilterTabs'
 import { SectionHeader } from '../components/home/SectionHeader'
 import { PackageCard } from '../components/home/PackageCard'
 import { useAppStore } from '../store/useAppStore'
-import { getAllPackageProgress } from '../services/db'
+import { getAllPackageProgress, getPackageWordProgress } from '../services/db'
 import { PackageProgress } from '../types/progress'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
@@ -19,11 +19,19 @@ const allPacks = packagesIndex as PackMeta[]
 export function HomePage() {
   const { searchQuery, activeFilter, activeLevel, activeCategory } = useAppStore()
   const [progressMap, setProgressMap] = useState<Map<string, PackageProgress>>(new Map())
+  const [knownMap, setKnownMap] = useState<Map<string, number>>(new Map())
 
   useEffect(() => {
-    getAllPackageProgress().then(arr => {
+    getAllPackageProgress().then(async arr => {
       const map = new Map(arr.map(p => [p.packageId, p]))
       setProgressMap(map)
+      const knownEntries = await Promise.all(
+        arr.map(async p => {
+          const wp = await getPackageWordProgress(p.packageId)
+          return [p.packageId, wp.filter(w => w.status === 'known').length] as [string, number]
+        })
+      )
+      setKnownMap(new Map(knownEntries))
     })
   }, [])
 
@@ -33,12 +41,16 @@ export function HomePage() {
       pack.category.toLowerCase().includes(searchQuery.toLowerCase())
 
     const prog = progressMap.get(pack.id)
+    const known = knownMap.get(pack.id) ?? 0
+    const allKnown = known >= pack.wordCount && pack.wordCount > 0
+    const hasProgress = prog != null
+    const hasCompleted = prog?.completedAt != null
 
     const matchesStatus =
-      activeFilter === 'new'       ? prog == null :
-      activeFilter === 'started'   ? (prog != null && prog.completedAt == null && prog.masteredAt == null) :
-      activeFilter === 'completed' ? (prog?.completedAt != null && prog?.masteredAt == null) :
-      activeFilter === 'mastered'  ? prog?.masteredAt != null :
+      activeFilter === 'new'       ? !hasProgress :
+      activeFilter === 'started'   ? (hasProgress && !hasCompleted && !allKnown) :
+      activeFilter === 'completed' ? (hasCompleted && !allKnown) :
+      activeFilter === 'mastered'  ? allKnown :
       true
 
     const matchesLevel = activeLevel == null || pack.level === activeLevel
@@ -62,6 +74,7 @@ export function HomePage() {
               key={pack.id}
               pack={pack}
               progress={progressMap.get(pack.id)}
+              knownCount={knownMap.get(pack.id) ?? 0}
             />
           ))}
           {filtered.length === 0 && (

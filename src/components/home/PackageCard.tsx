@@ -26,6 +26,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 interface Props {
   pack: PackMeta
   progress?: PackageProgress
+  knownCount?: number
 }
 
 function getPackNumber(id: string): string | null {
@@ -49,11 +50,12 @@ const STATUS_META: Record<PackStatus, { label: string; className: string }> = {
   mastered:  { label: '★ Opanowana',   className: 'packcard--mastered' },
 }
 
-export function PackageCard({ pack, progress }: Props) {
+export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
   const navigate = useNavigate()
   const icon = CATEGORY_ICONS[pack.category] ?? CATEGORY_ICONS.default
   const color = CATEGORY_COLORS[pack.category] ?? CATEGORY_COLORS.default
-  const progressPct = progress ? Math.min((progress.currentIndex / pack.wordCount) * 100, 100) : 0
+  const heardPct = progress ? Math.min((progress.currentIndex / pack.wordCount) * 100, 100) : 0
+  const knownPct = pack.wordCount > 0 ? Math.min((knownCount / pack.wordCount) * 100, 100) : 0
   const status = getStatus(progress)
   const { label: statusLabel, className: statusClass } = STATUS_META[status]
   const packNum = getPackNumber(pack.id)
@@ -91,19 +93,21 @@ export function PackageCard({ pack, progress }: Props) {
 
       <div className="packcard__progress-row">
         <span className="packcard__count">
-          {progress?.currentIndex ?? 0} / {pack.wordCount} słów
+          {knownCount} / {pack.wordCount} opanowanych
         </span>
         {pack.level && (
           <span className="packcard__level">Poziom {pack.level}</span>
         )}
       </div>
 
-      {progressPct > 0 && (
-        <div className="packcard__progressbar">
-          <div
-            className={`packcard__progressbar-fill${status === 'mastered' ? ' packcard__progressbar-fill--mastered' : ''}`}
-            style={{ width: `${progressPct}%`, background: status === 'mastered' ? undefined : color }}
-          />
+      {(heardPct > 0 || knownPct > 0) && (
+        <div className="packcard__bars">
+          <div className="packcard__bar packcard__bar--heard">
+            <div className="packcard__bar-fill" style={{ width: `${heardPct}%` }} />
+          </div>
+          <div className="packcard__bar packcard__bar--known">
+            <div className="packcard__bar-fill" style={{ width: `${knownPct}%` }} />
+          </div>
         </div>
       )}
 

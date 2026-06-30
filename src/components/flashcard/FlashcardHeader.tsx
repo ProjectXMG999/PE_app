@@ -15,7 +15,7 @@ export function FlashcardHeader({ title, current, total, packageId }: Props) {
     <div className="fc-header">
       <button
         className="fc-header__back"
-        onClick={() => navigate(packageId ? `/pakiet/${packageId}` : '/')}
+        onClick={() => navigate('/')}
         aria-label="Wróć"
       >
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
