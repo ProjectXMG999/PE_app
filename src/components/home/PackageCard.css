@@ -4,6 +4,19 @@
   border-radius: var(--radius-lg);
   padding: var(--spacing-md);
   transition: border-color var(--transition-fast), transform var(--transition-fast);
+  position: relative;
+}
+
+.packcard__num-badge {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  pointer-events: none;
+  user-select: none;
 }
 
 .packcard:active {

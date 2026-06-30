@@ -17,7 +17,7 @@ import './HomePage.css'
 const allPacks = packagesIndex as PackMeta[]
 
 export function HomePage() {
-  const { searchQuery, activeFilter } = useAppStore()
+  const { searchQuery, activeFilter, activeLevel, activeCategory } = useAppStore()
   const [progressMap, setProgressMap] = useState<Map<string, PackageProgress>>(new Map())
 
   useEffect(() => {
@@ -34,9 +34,15 @@ export function HomePage() {
 
     const prog = progressMap.get(pack.id)
 
-    if (activeFilter === 'started') return matchesSearch && prog && !prog.completedAt
-    if (activeFilter === 'completed') return matchesSearch && prog?.completedAt != null
-    return matchesSearch
+    const matchesStatus =
+      activeFilter === 'started' ? (prog != null && !prog.completedAt) :
+      activeFilter === 'completed' ? prog?.completedAt != null :
+      true
+
+    const matchesLevel = activeLevel == null || pack.level === activeLevel
+    const matchesCat = activeCategory == null || pack.category === activeCategory
+
+    return matchesSearch && matchesStatus && matchesLevel && matchesCat
   })
 
   return (

@@ -97,17 +97,20 @@ export async function getStreak(): Promise<number> {
   const today = new Date().toISOString().split('T')[0]
   const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0]
 
+  // Streak only counts if user studied today or yesterday
   if (dates[0] !== today && dates[0] !== yesterday) return 0
 
   let streak = 0
-  let current = dates[0] === today ? today : yesterday
+  let expected = dates[0] // start from most recent date
+
   for (const date of dates) {
-    if (date === current) {
+    if (date === expected) {
       streak++
-      const d = new Date(current)
-      d.setDate(d.getDate() - 1)
-      current = d.toISOString().split('T')[0]
-    } else if (date < current) {
+      // compute previous day
+      const d = new Date(expected + 'T12:00:00Z')
+      d.setUTCDate(d.getUTCDate() - 1)
+      expected = d.toISOString().split('T')[0]
+    } else {
       break
     }
   }

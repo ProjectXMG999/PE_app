@@ -28,15 +28,25 @@ interface Props {
   progress?: PackageProgress
 }
 
+/** Extract numeric part from pack id, e.g. "t1-p07" → "7", "t1-p86" → "86" */
+function getPackNumber(id: string): string | null {
+  const match = id.match(/p0*(\d+)$/)
+  return match ? match[1] : null
+}
+
 export function PackageCard({ pack, progress }: Props) {
   const navigate = useNavigate()
   const icon = CATEGORY_ICONS[pack.category] ?? CATEGORY_ICONS.default
   const color = CATEGORY_COLORS[pack.category] ?? CATEGORY_COLORS.default
   const progressPct = progress ? (progress.currentIndex / pack.wordCount) * 100 : 0
   const isCompleted = progress?.completedAt != null
+  const packNum = getPackNumber(pack.id)
 
   return (
     <div className="packcard">
+      {packNum && (
+        <span className="packcard__num-badge">#{packNum}</span>
+      )}
       <div className="packcard__header">
         <div className="packcard__icon" style={{ background: `${color}22`, color }}>
           {icon}
@@ -73,13 +83,13 @@ export function PackageCard({ pack, progress }: Props) {
       <div className="packcard__actions">
         <button
           className="packcard__btn packcard__btn--autoplay"
-          onClick={() => navigate(`/pakiet/${pack.id}/autoplay`)}
+          onClick={() => navigate(`/pakiet/${pack.id}`)}
         >
           <span>🚗</span> Auto-play
         </button>
         <button
           className="packcard__btn packcard__btn--fiszki"
-          onClick={() => navigate(`/pakiet/${pack.id}/fiszki`)}
+          onClick={() => navigate(`/pakiet/${pack.id}`)}
         >
           <span>🃏</span> Fiszki
         </button>

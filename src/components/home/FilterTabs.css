@@ -1,13 +1,22 @@
 .filtertabs {
   display: flex;
+  flex-direction: column;
   gap: var(--spacing-sm);
   padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+.filtertabs__row {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.filtertabs__row--scroll {
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
 
-.filtertabs::-webkit-scrollbar {
+.filtertabs__row--scroll::-webkit-scrollbar {
   display: none;
 }
 

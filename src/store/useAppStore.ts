@@ -27,9 +27,13 @@ interface AppStore {
   searchQuery: string
   activeFilter: FilterType
   activeCategoryFilter: string | null
+  activeLevel: number | null
+  activeCategory: string | null
   setSearch: (q: string) => void
   setFilter: (f: FilterType) => void
   setCategoryFilter: (cat: string | null) => void
+  setLevel: (level: number | null) => void
+  setCategory: (cat: string | null) => void
 
   installPromptEvent: BeforeInstallPromptEvent | null
   isInstalled: boolean
@@ -64,9 +68,13 @@ export const useAppStore = create<AppStore>()(
       searchQuery: '',
       activeFilter: 'all',
       activeCategoryFilter: null,
+      activeLevel: null,
+      activeCategory: null,
       setSearch: (q) => set({ searchQuery: q }),
       setFilter: (f) => set({ activeFilter: f }),
       setCategoryFilter: (cat) => set({ activeCategoryFilter: cat }),
+      setLevel: (level) => set({ activeLevel: level }),
+      setCategory: (cat) => set({ activeCategory: cat }),
 
       installPromptEvent: null,
       isInstalled: false,
