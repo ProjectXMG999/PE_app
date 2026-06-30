@@ -100,11 +100,19 @@ export function FlashcardPage() {
 
     const runSequence = async () => {
       try {
+        // Polish word shown first (no audio) — pause so user can read
+        await new Promise(r => setTimeout(r, 1200))
+        // English word appears + audio
         await playWord(currentWord)
-        await new Promise(r => setTimeout(r, 800))
+        await new Promise(r => setTimeout(r, 600))
+        // Polish sentence (no audio) — pause so user can read
+        if (currentWord.sentencePl) {
+          await new Promise(r => setTimeout(r, 1200))
+        }
+        // English sentence + audio
         if (currentWord.sentenceEn) {
           await playSentence(currentWord)
-          await new Promise(r => setTimeout(r, 800))
+          await new Promise(r => setTimeout(r, 600))
         }
         autoPlayTimerRef.current = setTimeout(() => {
           handleNext()
@@ -167,7 +175,7 @@ export function FlashcardPage() {
         <div className="flashcard-page__actions">
           {!isFullyRevealed && revealStep < 3 && (
             <button className="flashcard-page__reveal-btn" onClick={reveal}>
-              {revealStep === 0 ? 'Pokaż tłumaczenie' : revealStep === 1 ? 'Pokaż zdanie EN' : 'Pokaż zdanie PL'}
+              {revealStep === 0 ? 'Pokaż angielski' : revealStep === 1 ? 'Pokaż zdanie PL' : 'Pokaż zdanie EN'}
             </button>
           )}
           {(isFullyRevealed || revealStep >= 2) && (

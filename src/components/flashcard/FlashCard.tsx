@@ -10,26 +10,28 @@ interface Props {
 }
 
 export function FlashCard({ word, revealStep, mode, onClick }: Props) {
-  const showPolish = revealStep >= 1 || mode === 'autoplay'
-  const showSentenceEn = revealStep >= 2 || mode === 'autoplay'
-  const showSentencePl = revealStep >= 3 || mode === 'autoplay'
+  const isAutoplay = mode === 'autoplay'
+  // Reveal order: Polish(0) → English(1) → sentence PL(2) → sentence EN(3)
+  const showEnglish = revealStep >= 1 || isAutoplay
+  const showSentencePl = revealStep >= 2 || isAutoplay
+  const showSentenceEn = revealStep >= 3 || isAutoplay
 
   return (
     <div className={`flashcard animate-card`} onClick={mode === 'fiszki' ? onClick : undefined}>
-      <div className="flashcard__english">
-        {word.english}
+      <div className="flashcard__polish">
+        {word.polish}
       </div>
 
-      {showPolish && (
+      {showEnglish && (
         <>
           <div className="flashcard__divider" />
-          <div className="flashcard__polish animate-slide-up">
-            {word.polish}
+          <div className="flashcard__english animate-slide-up">
+            {word.english}
           </div>
         </>
       )}
 
-      {!showPolish && (
+      {!showEnglish && (
         <>
           <div className="flashcard__divider flashcard__divider--hint" />
           <div className="flashcard__hint">
@@ -38,15 +40,15 @@ export function FlashCard({ word, revealStep, mode, onClick }: Props) {
         </>
       )}
 
-      {word.sentenceEn && showSentenceEn && (
-        <div className="flashcard__sentence-en animate-slide-up">
-          {word.sentenceEn}
-        </div>
-      )}
-
       {word.sentencePl && showSentencePl && (
         <div className="flashcard__sentence-pl animate-slide-up">
           {word.sentencePl}
+        </div>
+      )}
+
+      {word.sentenceEn && showSentenceEn && (
+        <div className="flashcard__sentence-en animate-slide-up">
+          {word.sentenceEn}
         </div>
       )}
     </div>
