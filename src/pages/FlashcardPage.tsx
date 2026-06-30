@@ -41,6 +41,7 @@ export function FlashcardPage() {
   const completedWordsRef = useRef(0)
   const startedAtRef = useRef<string | null>(null)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
+  const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
 
   useEffect(() => {
     if (packageId && studyMode) {
@@ -102,6 +103,9 @@ export function FlashcardPage() {
     }
   }, [isLastCard, advance, preloadNext, words, currentCardIndex, saveProgress, total, navigate, currentWord, packageId])
 
+  // Keep ref in sync so autoplay always calls the latest handleNext
+  useEffect(() => { handleNextRef.current = handleNext }, [handleNext])
+
   // Auto-play sequence
   useEffect(() => {
     if (studyMode !== 'autoplay' || !currentWord || words.length === 0) return
@@ -127,10 +131,10 @@ export function FlashcardPage() {
           await new Promise(r => setTimeout(r, 600))
         }
         setPlayStep(null)
-        autoPlayTimerRef.current = setTimeout(() => handleNext(), 500)
+        autoPlayTimerRef.current = setTimeout(() => handleNextRef.current(), 500)
       } catch {
         setPlayStep(null)
-        autoPlayTimerRef.current = setTimeout(() => handleNext(), 2000)
+        autoPlayTimerRef.current = setTimeout(() => handleNextRef.current(), 2000)
       }
     }
 
