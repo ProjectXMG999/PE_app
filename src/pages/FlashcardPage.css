@@ -139,3 +139,99 @@
   color: white;
   border-color: var(--accent);
 }
+
+/* Completion screen */
+.flashcard-page__completion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80dvh;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  gap: var(--spacing-md);
+  text-align: center;
+}
+
+.flashcard-page__completion-icon {
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: var(--spacing-sm);
+}
+
+.flashcard-page__completion-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.flashcard-page__completion-sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: -var(--spacing-xs);
+}
+
+.flashcard-page__completion-question {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-sm);
+  max-width: 360px;
+  width: 100%;
+}
+
+.flashcard-page__completion-question p {
+  font-size: 16px;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.flashcard-page__completion-question strong {
+  color: var(--accent-bright);
+  font-family: var(--font-heading);
+}
+
+.flashcard-page__completion-hint {
+  font-size: 12px !important;
+  color: var(--text-muted) !important;
+  margin-top: var(--spacing-sm);
+}
+
+.flashcard-page__completion-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  width: 100%;
+  max-width: 360px;
+}
+
+.flashcard-page__completion-btn {
+  height: 52px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+.flashcard-page__completion-btn--yes {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.flashcard-page__completion-btn--yes:hover {
+  background: var(--accent-bright);
+}
+
+.flashcard-page__completion-btn--no {
+  background: transparent;
+  border: 1.5px solid var(--border);
+  color: var(--text-muted);
+}
+
+.flashcard-page__completion-btn--no:hover {
+  border-color: var(--border-accent);
+  color: var(--text-primary);
+}

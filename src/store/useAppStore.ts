@@ -2,7 +2,7 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { StudyMode } from '../types/progress'
 
-type FilterType = 'all' | 'started' | 'completed' | 'category'
+type FilterType = 'all' | 'new' | 'started' | 'completed' | 'mastered'
 
 type BeforeInstallPromptEvent = Event & {
   prompt: () => Promise<void>

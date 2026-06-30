@@ -28,20 +28,18 @@ export function FlashcardPage() {
     currentCardIndex,
     revealStep,
     isLastCard,
-    isFullyRevealed,
     advance,
     reveal,
-    reset,
     total,
   } = useFlashcard(words)
 
   const { playWord, playSentence, playWordPl, playSentencePl, stop, preloadNext } = useAudio(packageId ?? null)
   const autoPlayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const sessionStartRef = useRef<string>(new Date().toISOString().split('T')[0])
-  const completedWordsRef = useRef(0)
   const startedAtRef = useRef<string | null>(null)
   const masteredAtRef = useRef<string | null>(null)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
+  const [showCompletionScreen, setShowCompletionScreen] = useState(false)
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
 
   useEffect(() => {
@@ -68,8 +66,6 @@ export function FlashcardPage() {
 
   const saveProgress = useCallback(async (index: number, completed: boolean, newMasteredAt?: string | null) => {
     if (!packageId) return
-    completedWordsRef.current = index
-    // newMasteredAt=undefined → preserve existing; null → clear; string → set new
     const masteredAt = newMasteredAt !== undefined ? newMasteredAt : masteredAtRef.current
     await savePackageProgress({
       packageId,
@@ -88,6 +84,7 @@ export function FlashcardPage() {
     }
   }, [packageId, total, studyMode])
 
+  // Fiszki: last card rated → check mastery automatically
   const handleNext = useCallback(async (status?: 'known' | 'learning') => {
     if (currentWord && status) {
       await saveWordProgress({
@@ -99,7 +96,6 @@ export function FlashcardPage() {
       })
     }
     if (isLastCard) {
-      // Check if all words in pack are now 'known' → set masteredAt
       let newMasteredAt: string | null | undefined = undefined
       if (packageId) {
         const allWordProgress = await getPackageWordProgress(packageId)
@@ -118,12 +114,40 @@ export function FlashcardPage() {
     }
   }, [isLastCard, advance, preloadNext, words, currentCardIndex, saveProgress, total, navigate, currentWord, packageId])
 
-  // Keep ref in sync so autoplay always calls the latest handleNext
   useEffect(() => { handleNextRef.current = handleNext }, [handleNext])
+
+  // Auto-play: after last word → show completion screen instead of navigating
+  const handleAutoplayEnd = useCallback(async () => {
+    await saveProgress(total, true, undefined)
+    setShowCompletionScreen(true)
+  }, [saveProgress, total])
+
+  const handleAutoplayEndRef = useRef(handleAutoplayEnd)
+  useEffect(() => { handleAutoplayEndRef.current = handleAutoplayEnd }, [handleAutoplayEnd])
+
+  const handleMarkMastered = useCallback(async (mastered: boolean) => {
+    if (mastered && packageId && !masteredAtRef.current) {
+      const now = new Date().toISOString()
+      masteredAtRef.current = now
+      // Mark all words as known
+      await Promise.all(words.map(w =>
+        saveWordProgress({ wordId: w.id, packageId, seenCount: 1, lastSeen: now, status: 'known' })
+      ))
+      // Update masteredAt on the saved progress record
+      await savePackageProgress({
+        packageId,
+        startedAt: startedAtRef.current ?? now,
+        completedAt: new Date().toISOString(),
+        masteredAt: now,
+        currentIndex: total,
+      })
+    }
+    navigate(packageId ? `/pakiet/${packageId}` : '/')
+  }, [packageId, words, total, navigate])
 
   // Auto-play sequence
   useEffect(() => {
-    if (studyMode !== 'autoplay' || !currentWord || words.length === 0) return
+    if (studyMode !== 'autoplay' || !currentWord || words.length === 0 || showCompletionScreen) return
 
     const runSequence = async () => {
       try {
@@ -146,10 +170,18 @@ export function FlashcardPage() {
           await new Promise(r => setTimeout(r, 600))
         }
         setPlayStep(null)
-        autoPlayTimerRef.current = setTimeout(() => handleNextRef.current(), 500)
+        if (isLastCard) {
+          autoPlayTimerRef.current = setTimeout(() => handleAutoplayEndRef.current(), 500)
+        } else {
+          autoPlayTimerRef.current = setTimeout(() => handleNextRef.current(), 500)
+        }
       } catch {
         setPlayStep(null)
-        autoPlayTimerRef.current = setTimeout(() => handleNextRef.current(), 2000)
+        if (isLastCard) {
+          autoPlayTimerRef.current = setTimeout(() => handleAutoplayEndRef.current(), 2000)
+        } else {
+          autoPlayTimerRef.current = setTimeout(() => handleNextRef.current(), 2000)
+        }
       }
     }
 
@@ -157,7 +189,7 @@ export function FlashcardPage() {
     return () => {
       if (autoPlayTimerRef.current) clearTimeout(autoPlayTimerRef.current)
     }
-  }, [currentCardIndex, studyMode, currentWord])
+  }, [currentCardIndex, studyMode, currentWord, isLastCard, showCompletionScreen])
 
   if (loading) {
     return (
@@ -176,6 +208,41 @@ export function FlashcardPage() {
         <div className="flashcard-page__error">
           <p>Nie udało się załadować paczki</p>
           <button onClick={() => navigate('/')}>Wróć</button>
+        </div>
+      </AppShell>
+    )
+  }
+
+  // Autoplay completion screen
+  if (showCompletionScreen) {
+    return (
+      <AppShell hideBottomNav>
+        <div className="flashcard-page__completion">
+          <div className="flashcard-page__completion-icon">🎉</div>
+          <h2 className="flashcard-page__completion-title">Paczka odsłuchana!</h2>
+          <p className="flashcard-page__completion-sub">
+            {pack.name} · {total} słów
+          </p>
+          <div className="flashcard-page__completion-question">
+            <p>Czy chcesz oznaczyć wszystkie słowa jako <strong>nauczone</strong>?</p>
+            <p className="flashcard-page__completion-hint">
+              Oznaczenie jako opanowana zapisze pełny postęp i zmieni status paczki.
+            </p>
+          </div>
+          <div className="flashcard-page__completion-actions">
+            <button
+              className="flashcard-page__completion-btn flashcard-page__completion-btn--yes"
+              onClick={() => handleMarkMastered(true)}
+            >
+              ★ Tak, opanowana
+            </button>
+            <button
+              className="flashcard-page__completion-btn flashcard-page__completion-btn--no"
+              onClick={() => handleMarkMastered(false)}
+            >
+              Nie, tylko odsłuchana
+            </button>
+          </div>
         </div>
       </AppShell>
     )

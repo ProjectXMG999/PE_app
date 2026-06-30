@@ -35,8 +35,10 @@ export function HomePage() {
     const prog = progressMap.get(pack.id)
 
     const matchesStatus =
-      activeFilter === 'started' ? (prog != null && !prog.completedAt) :
-      activeFilter === 'completed' ? prog?.completedAt != null :
+      activeFilter === 'new'       ? prog == null :
+      activeFilter === 'started'   ? (prog != null && prog.completedAt == null && prog.masteredAt == null) :
+      activeFilter === 'completed' ? (prog?.completedAt != null && prog?.masteredAt == null) :
+      activeFilter === 'mastered'  ? prog?.masteredAt != null :
       true
 
     const matchesLevel = activeLevel == null || pack.level === activeLevel
