@@ -51,6 +51,7 @@ export function FlashcardPage() {
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
   const [showCompletion, setShowCompletion] = useState(false)
   const [knownCount, setKnownCount] = useState(0)
+  const [autoContinue, setAutoContinue] = useState(false)
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
 
   const nextPack = packageId ? getNextPack(packageId) : null
@@ -61,6 +62,14 @@ export function FlashcardPage() {
 
   useEffect(() => {
     if (packageId && studyMode) setPackage(packageId, studyMode)
+    // Reset all local state when package changes (handles "Next pack" navigation
+    // without unmounting — same route pattern /pakiet/:id/:mode)
+    setShowCompletion(false)
+    setPlayStep(null)
+    setKnownCount(0)
+    startedAtRef.current = null
+    masteredAtRef.current = null
+    sessionStartRef.current = new Date().toISOString().split('T')[0]
     return () => {
       stop()
       clearAutoplay()
@@ -151,11 +160,15 @@ export function FlashcardPage() {
     }
   }, [isLastCard, advance, preloadNext, words, currentCardIndex, saveProgress, total, stop])
 
-  // Autoplay end → show completion screen
+  // Autoplay end → auto-continue to next pack OR show completion screen
   const handleAutoplayEnd = useCallback(async () => {
     await saveProgress(total, true)
-    setShowCompletion(true)
-  }, [saveProgress, total])
+    if (autoContinue && nextPack) {
+      navigate(`/pakiet/${nextPack.id}/${studyMode}`)
+    } else {
+      setShowCompletion(true)
+    }
+  }, [saveProgress, total, autoContinue, nextPack, navigate, studyMode])
 
   const handleAutoplayEndRef = useRef(handleAutoplayEnd)
   useEffect(() => { handleAutoplayEndRef.current = handleAutoplayEnd }, [handleAutoplayEnd])
@@ -363,12 +376,23 @@ export function FlashcardPage() {
 
       {studyMode === 'autoplay' && (
         <div className="flashcard-page__autoplay-bar">
-          <div className="flashcard-page__playsteps">
-            {(['PL', 'EN', 'PL zdanie', 'EN zdanie'] as const).map((label, i) => (
-              <span key={i} className={`flashcard-page__playstep ${playStep === i ? 'active' : ''}`}>
-                {label}
-              </span>
-            ))}
+          <div className="flashcard-page__autoplay-top">
+            <div className="flashcard-page__playsteps">
+              {(['PL', 'EN', 'PL zdanie', 'EN zdanie'] as const).map((label, i) => (
+                <span key={i} className={`flashcard-page__playstep ${playStep === i ? 'active' : ''}`}>
+                  {label}
+                </span>
+              ))}
+            </div>
+            {nextPack && (
+              <button
+                className={`flashcard-page__autocontinue ${autoContinue ? 'flashcard-page__autocontinue--on' : ''}`}
+                onClick={() => setAutoContinue(v => !v)}
+                title={autoContinue ? 'Auto-kontynuacja włączona' : 'Włącz auto-kontynuację'}
+              >
+                {autoContinue ? '⏭ Auto' : '⏭'}
+              </button>
+            )}
           </div>
           <div className="flashcard-page__autoplay-btns">
             <AudioButton

@@ -80,9 +80,38 @@
 .flashcard-page__autoplay-bar {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: var(--spacing-sm);
   padding: 0 var(--spacing-md);
+}
+
+.flashcard-page__autoplay-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.flashcard-page__autocontinue {
+  flex-shrink: 0;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.flashcard-page__autocontinue--on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  box-shadow: 0 0 8px var(--accent-glow);
 }
 
 .flashcard-page__playsteps {
