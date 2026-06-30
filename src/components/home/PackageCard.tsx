@@ -43,7 +43,7 @@ export function PackageCard({ pack, progress }: Props) {
   const packNum = getPackNumber(pack.id)
 
   return (
-    <div className="packcard">
+    <div className="packcard" onClick={() => navigate(`/pakiet/${pack.id}`)} style={{ cursor: 'pointer' }}>
       {packNum && (
         <span className="packcard__num-badge">#{packNum}</span>
       )}
@@ -83,13 +83,13 @@ export function PackageCard({ pack, progress }: Props) {
       <div className="packcard__actions">
         <button
           className="packcard__btn packcard__btn--autoplay"
-          onClick={() => navigate(`/pakiet/${pack.id}`)}
+          onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/autoplay`) }}
         >
           <span>🚗</span> Auto-play
         </button>
         <button
           className="packcard__btn packcard__btn--fiszki"
-          onClick={() => navigate(`/pakiet/${pack.id}`)}
+          onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/fiszki`) }}
         >
           <span>🃏</span> Fiszki
         </button>

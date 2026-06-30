@@ -8,7 +8,7 @@ export function TopBar() {
     <header className="topbar">
       <div className="topbar__logo">
         <img
-          src={theme === 'dark' ? '/icons/logo-white.png' : '/icons/logo-white.png'}
+          src={theme === 'dark' ? '/icons/logo-white.svg' : '/icons/logo-dark.svg'}
           alt="Project English"
           className="topbar__logo-img"
           onError={(e) => {

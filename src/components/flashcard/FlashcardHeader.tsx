@@ -5,14 +5,19 @@ interface Props {
   title: string
   current: number
   total: number
+  packageId?: string
 }
 
-export function FlashcardHeader({ title, current, total }: Props) {
+export function FlashcardHeader({ title, current, total, packageId }: Props) {
   const navigate = useNavigate()
 
   return (
     <div className="fc-header">
-      <button className="fc-header__back" onClick={() => navigate('/')} aria-label="Wróć">
+      <button
+        className="fc-header__back"
+        onClick={() => navigate(packageId ? `/pakiet/${packageId}` : '/')}
+        aria-label="Wróć"
+      >
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
           <polyline points="15 18 9 12 15 6"/>
         </svg>

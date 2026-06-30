@@ -79,19 +79,63 @@
   font-size: 13px;
 }
 
-.flashcard-page__autoplay-dots {
+.flashcard-page__rating {
   display: flex;
-  gap: 6px;
+  gap: var(--spacing-sm);
 }
 
-.flashcard-page__dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--border);
-  transition: background var(--transition-fast);
+.flashcard-page__rating-btn {
+  flex: 1;
+  height: 50px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  transition: all var(--transition-fast);
 }
 
-.flashcard-page__dot.active {
+.flashcard-page__rating-btn--known {
+  background: #10B981;
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.flashcard-page__rating-btn--known:hover {
+  background: #059669;
+}
+
+.flashcard-page__rating-btn--learning {
+  background: transparent;
+  border: 1.5px solid var(--border);
+  color: var(--text-muted);
+}
+
+.flashcard-page__rating-btn--learning:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.flashcard-page__playsteps {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flashcard-page__playstep {
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  transition: all var(--transition-fast);
+}
+
+.flashcard-page__playstep.active {
   background: var(--accent);
+  color: white;
+  border-color: var(--accent);
 }
