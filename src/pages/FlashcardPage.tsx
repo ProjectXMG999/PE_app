@@ -35,7 +35,7 @@ export function FlashcardPage() {
     total,
   } = useFlashcard(words)
 
-  const { playWord, playSentence, stop, preloadNext } = useAudio(packageId ?? null)
+  const { playWord, playSentence, playWordPl, playSentencePl, stop, preloadNext } = useAudio(packageId ?? null)
   const autoPlayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const sessionStartRef = useRef<string>(new Date().toISOString().split('T')[0])
   const completedWordsRef = useRef(0)
@@ -100,23 +100,23 @@ export function FlashcardPage() {
 
     const runSequence = async () => {
       try {
-        // Polish word shown first (no audio) — pause so user can read
-        await new Promise(r => setTimeout(r, 1200))
-        // English word appears + audio
+        // 1. Polish word audio
+        await playWordPl(currentWord)
+        await new Promise(r => setTimeout(r, 600))
+        // 2. English word audio
         await playWord(currentWord)
         await new Promise(r => setTimeout(r, 600))
-        // Polish sentence (no audio) — pause so user can read
+        // 3. Polish sentence audio
         if (currentWord.sentencePl) {
-          await new Promise(r => setTimeout(r, 1200))
+          await playSentencePl(currentWord)
+          await new Promise(r => setTimeout(r, 600))
         }
-        // English sentence + audio
+        // 4. English sentence audio
         if (currentWord.sentenceEn) {
           await playSentence(currentWord)
           await new Promise(r => setTimeout(r, 600))
         }
-        autoPlayTimerRef.current = setTimeout(() => {
-          handleNext()
-        }, 500)
+        autoPlayTimerRef.current = setTimeout(handleNext, 500)
       } catch {
         autoPlayTimerRef.current = setTimeout(handleNext, 2000)
       }

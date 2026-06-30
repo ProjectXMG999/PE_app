@@ -33,14 +33,22 @@ export function useAudio(packId: string | null) {
 
   const playWord = useCallback((word: Word) => {
     if (!packId) return Promise.resolve()
-    const url = getAudioUrl(packId, word.audioWord)
-    return play(url)
+    return play(getAudioUrl(packId, word.audioWord))
   }, [packId, play])
 
   const playSentence = useCallback((word: Word) => {
     if (!packId) return Promise.resolve()
-    const url = getAudioUrl(packId, word.audioSentence)
-    return play(url)
+    return play(getAudioUrl(packId, word.audioSentence))
+  }, [packId, play])
+
+  const playWordPl = useCallback((word: Word) => {
+    if (!packId || !word.audioWordPl) return Promise.resolve()
+    return play(getAudioUrl(packId, word.audioWordPl))
+  }, [packId, play])
+
+  const playSentencePl = useCallback((word: Word) => {
+    if (!packId || !word.audioSentencePl) return Promise.resolve()
+    return play(getAudioUrl(packId, word.audioSentencePl))
   }, [packId, play])
 
   const stop = useCallback(() => {
@@ -67,5 +75,5 @@ export function useAudio(packId: string | null) {
     }
   }, [packId])
 
-  return { playWord, playSentence, stop, preloadNext }
+  return { playWord, playSentence, playWordPl, playSentencePl, stop, preloadNext }
 }

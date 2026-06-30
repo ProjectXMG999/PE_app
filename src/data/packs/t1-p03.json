@@ -13,7 +13,9 @@
       "sentenceEn": "Who is the most intelligent person you know? Maybe me?",
       "sentencePl": "Kto jest najbardziej inteligentną osobą, jaką znasz? Może ja?",
       "audioWord": "t1-p03-001-word.mp3",
-      "audioSentence": "t1-p03-001-sentence.mp3"
+      "audioSentence": "t1-p03-001-sentence.mp3",
+      "audioWordPl": "t1-p03-001-word-pl.mp3",
+      "audioSentencePl": "t1-p03-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p03-002",
@@ -22,7 +24,9 @@
       "sentenceEn": "We could go to the zoo tomorrow, if the weather's nice.",
       "sentencePl": "Moglibyśmy pójść jutro do zoo, jeśli pogoda będzie ładna.",
       "audioWord": "t1-p03-002-word.mp3",
-      "audioSentence": "t1-p03-002-sentence.mp3"
+      "audioSentence": "t1-p03-002-sentence.mp3",
+      "audioWordPl": "t1-p03-002-word-pl.mp3",
+      "audioSentencePl": "t1-p03-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p03-003",
@@ -31,7 +35,9 @@
       "sentenceEn": "The last part of the story was very funny. I didn't expect that.",
       "sentencePl": "Ostatnia część historii była bardzo śmieszna. Nie spodziewałem się tego.",
       "audioWord": "t1-p03-003-word.mp3",
-      "audioSentence": "t1-p03-003-sentence.mp3"
+      "audioSentence": "t1-p03-003-sentence.mp3",
+      "audioWordPl": "t1-p03-003-word-pl.mp3",
+      "audioSentencePl": "t1-p03-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p03-004",
@@ -40,7 +46,9 @@
       "sentenceEn": "This new single is great. I can listen to it over and over again.",
       "sentencePl": "Ten nowy singiel jest świetny. Mogę go słuchać w kółko.",
       "audioWord": "t1-p03-004-word.mp3",
-      "audioSentence": "t1-p03-004-sentence.mp3"
+      "audioSentence": "t1-p03-004-sentence.mp3",
+      "audioWordPl": "t1-p03-004-word-pl.mp3",
+      "audioSentencePl": "t1-p03-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p03-005",
@@ -49,7 +57,9 @@
       "sentenceEn": "\"John is the best dad\", his wife said.",
       "sentencePl": "Jan jest najlepszym tatą - powiedziała jego żona.",
       "audioWord": "t1-p03-005-word.mp3",
-      "audioSentence": "t1-p03-005-sentence.mp3"
+      "audioSentence": "t1-p03-005-sentence.mp3",
+      "audioWordPl": "t1-p03-005-word-pl.mp3",
+      "audioSentencePl": "t1-p03-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p03-006",
@@ -58,7 +68,9 @@
       "sentenceEn": "I will show you an awesome video. I couldn't stop laughing.",
       "sentencePl": "Pokażę Ci fenomenalny filmik. Nie mogłem przestać się śmiać.",
       "audioWord": "t1-p03-006-word.mp3",
-      "audioSentence": "t1-p03-006-sentence.mp3"
+      "audioSentence": "t1-p03-006-sentence.mp3",
+      "audioWordPl": "t1-p03-006-word-pl.mp3",
+      "audioSentencePl": "t1-p03-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p03-007",
@@ -67,7 +79,9 @@
       "sentenceEn": "You are such a pretty boy, Bruno.",
       "sentencePl": "Jesteś takim ślicznym chłopcem, Bruno.",
       "audioWord": "t1-p03-007-word.mp3",
-      "audioSentence": "t1-p03-007-sentence.mp3"
+      "audioSentence": "t1-p03-007-sentence.mp3",
+      "audioWordPl": "t1-p03-007-word-pl.mp3",
+      "audioSentencePl": "t1-p03-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p03-008",
@@ -76,7 +90,9 @@
       "sentenceEn": "Max's partner is very young. I'm curious where they even met.",
       "sentencePl": "Partnerka Maxa jest bardzo młoda. Ciekawe, gdzie się w ogóle poznali.",
       "audioWord": "t1-p03-008-word.mp3",
-      "audioSentence": "t1-p03-008-sentence.mp3"
+      "audioSentence": "t1-p03-008-sentence.mp3",
+      "audioWordPl": "t1-p03-008-word-pl.mp3",
+      "audioSentencePl": "t1-p03-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p03-009",
@@ -85,7 +101,9 @@
       "sentenceEn": "I think that beautiful people have easy lives.",
       "sentencePl": "Moim zdaniem piękni ludzie mają łatwe życie.",
       "audioWord": "t1-p03-009-word.mp3",
-      "audioSentence": "t1-p03-009-sentence.mp3"
+      "audioSentence": "t1-p03-009-sentence.mp3",
+      "audioWordPl": "t1-p03-009-word-pl.mp3",
+      "audioSentencePl": "t1-p03-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p03-010",
@@ -94,7 +112,9 @@
       "sentenceEn": "It is so hot today that I dream only about swimming.",
       "sentencePl": "Dzisiaj jest tak gorąco, że marzę tylko o pływaniu.",
       "audioWord": "t1-p03-010-word.mp3",
-      "audioSentence": "t1-p03-010-sentence.mp3"
+      "audioSentence": "t1-p03-010-sentence.mp3",
+      "audioWordPl": "t1-p03-010-word-pl.mp3",
+      "audioSentencePl": "t1-p03-010-sentence-pl.mp3"
     }
   ]
 }
