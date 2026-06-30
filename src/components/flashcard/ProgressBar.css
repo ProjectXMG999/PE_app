@@ -1,12 +1,34 @@
 .progressbar {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0 0 2px;
+}
+
+.progressbar__track {
   height: 3px;
   background: var(--bg-surface);
-  margin: 0;
   overflow: hidden;
+}
+
+.progressbar__track--heard {
+  border-radius: 0;
+}
+
+.progressbar__track--known {
+  border-radius: 0;
 }
 
 .progressbar__fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent-dim), var(--accent));
   transition: width var(--transition-med);
+}
+
+.progressbar__fill--heard {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+}
+
+.progressbar__fill--known {
+  background: linear-gradient(90deg, #059669, #10B981);
 }

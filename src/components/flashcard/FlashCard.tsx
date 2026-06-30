@@ -17,7 +17,7 @@ export function FlashCard({ word, revealStep, mode, onClick }: Props) {
   const showSentenceEn = revealStep >= 3 || isAutoplay
 
   return (
-    <div className={`flashcard animate-card`} onClick={mode === 'fiszki' ? onClick : undefined}>
+    <div className={`flashcard animate-card`} onClick={onClick}>
       <div className="flashcard__polish">
         {word.polish}
       </div>

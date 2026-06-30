@@ -50,6 +50,7 @@ export function FlashcardPage() {
   const masteredAtRef = useRef<string | null>(null)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
   const [showCompletion, setShowCompletion] = useState(false)
+  const [knownCount, setKnownCount] = useState(0)
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
 
   const nextPack = packageId ? getNextPack(packageId) : null
@@ -68,15 +69,25 @@ export function FlashcardPage() {
 
   useEffect(() => {
     if (!pack || !packageId) return
-    getPackageProgress(packageId).then(existing => {
+    Promise.all([
+      getPackageProgress(packageId),
+      getPackageWordProgress(packageId),
+    ]).then(([existing, wordProgress]) => {
       const now = new Date().toISOString()
       startedAtRef.current = existing?.startedAt ?? now
       masteredAtRef.current = existing?.masteredAt ?? null
+      setKnownCount(wordProgress.filter(w => w.status === 'known').length)
       if (!existing) {
         savePackageProgress({ packageId, startedAt: now, completedAt: null, masteredAt: null, currentIndex: 0 })
       }
     })
   }, [pack, packageId])
+
+  const refreshKnownCount = useCallback(async () => {
+    if (!packageId) return
+    const wp = await getPackageWordProgress(packageId)
+    setKnownCount(wp.filter(w => w.status === 'known').length)
+  }, [packageId])
 
   const saveProgress = useCallback(async (index: number, completed: boolean, newMasteredAt?: string | null) => {
     if (!packageId) return
@@ -103,6 +114,7 @@ export function FlashcardPage() {
         lastSeen: new Date().toISOString(),
         status,
       })
+      if (status === 'known') setKnownCount(c => c + 1)
     }
     if (isLastCard) {
       let newMasteredAt: string | null | undefined = undefined
@@ -304,7 +316,7 @@ export function FlashcardPage() {
 
   return (
     <AppShell hideBottomNav>
-      <ProgressBar current={currentCardIndex} total={total} />
+      <ProgressBar current={currentCardIndex} total={total} knownCount={knownCount} />
       <FlashcardHeader title={pack.name} current={currentCardIndex} total={total} packageId={packageId} />
       <ModeToggle mode={studyMode} />
 
@@ -313,42 +325,43 @@ export function FlashcardPage() {
         word={currentWord}
         revealStep={revealStep}
         mode={studyMode}
-        onClick={reveal}
-      />
-
-      <AudioButton
-        onPlay={() => revealStep === 0 ? playWordPl(currentWord) : playWord(currentWord)}
-        caption={studyMode === 'autoplay' ? 'Uruchom przed jazdą — audio leci automatycznie' : 'Odtwórz wymowę'}
+        onClick={studyMode === 'autoplay' ? handleSkip : reveal}
       />
 
       {studyMode === 'fiszki' && (
-        <div className="flashcard-page__actions">
-          {revealStep < 3 && (
-            <button className="flashcard-page__reveal-btn" onClick={reveal}>
-              {revealStep === 0 ? 'Pokaż angielski' : revealStep === 1 ? 'Pokaż zdanie PL' : 'Pokaż zdanie EN'}
-            </button>
-          )}
-          {revealStep >= 3 && (
-            <div className="flashcard-page__rating">
-              <button
-                className="flashcard-page__rating-btn flashcard-page__rating-btn--known"
-                onClick={() => handleNext('known')}
-              >
-                ✓ Znam
+        <>
+          <AudioButton
+            onPlay={() => revealStep === 0 ? playWordPl(currentWord) : playWord(currentWord)}
+            caption="Odtwórz wymowę"
+          />
+          <div className="flashcard-page__actions">
+            {revealStep < 3 && (
+              <button className="flashcard-page__reveal-btn" onClick={reveal}>
+                {revealStep === 0 ? 'Pokaż angielski' : revealStep === 1 ? 'Pokaż zdanie PL' : 'Pokaż zdanie EN'}
               </button>
-              <button
-                className="flashcard-page__rating-btn flashcard-page__rating-btn--learning"
-                onClick={() => handleNext('learning')}
-              >
-                ✗ Jeszcze nie
-              </button>
-            </div>
-          )}
-        </div>
+            )}
+            {revealStep >= 3 && (
+              <div className="flashcard-page__rating">
+                <button
+                  className="flashcard-page__rating-btn flashcard-page__rating-btn--known"
+                  onClick={() => handleNext('known')}
+                >
+                  ✓ Znam
+                </button>
+                <button
+                  className="flashcard-page__rating-btn flashcard-page__rating-btn--learning"
+                  onClick={() => handleNext('learning')}
+                >
+                  ✗ Jeszcze nie
+                </button>
+              </div>
+            )}
+          </div>
+        </>
       )}
 
       {studyMode === 'autoplay' && (
-        <div className="flashcard-page__autoplay-info">
+        <div className="flashcard-page__autoplay-bar">
           <div className="flashcard-page__playsteps">
             {(['PL', 'EN', 'PL zdanie', 'EN zdanie'] as const).map((label, i) => (
               <span key={i} className={`flashcard-page__playstep ${playStep === i ? 'active' : ''}`}>
@@ -356,12 +369,18 @@ export function FlashcardPage() {
               </span>
             ))}
           </div>
-          <button className="flashcard-page__skip" onClick={handleSkip} aria-label="Pomiń słowo">
-            Pomiń
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/>
-            </svg>
-          </button>
+          <div className="flashcard-page__autoplay-btns">
+            <AudioButton
+              onPlay={() => playWordPl(currentWord)}
+              caption="Odtwórz"
+            />
+            <button className="flashcard-page__skip-btn" onClick={handleSkip} aria-label="Pomiń słowo">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/>
+              </svg>
+              Pomiń
+            </button>
+          </div>
         </div>
       )}
     </AppShell>

@@ -69,14 +69,36 @@
   background: var(--accent-bright);
 }
 
-.flashcard-page__autoplay-info {
+.flashcard-page__autoplay-bar {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--spacing-md);
+  padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+.flashcard-page__autoplay-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: var(--spacing-sm);
-  padding: var(--spacing-md);
-  color: var(--text-muted);
-  font-size: 13px;
+  width: 100%;
+}
+
+/* Override AudioButton layout inside autoplay bar */
+.flashcard-page__autoplay-btns .audiobtn-wrap {
+  flex-direction: row;
+  padding: 0;
+}
+
+.flashcard-page__autoplay-btns .audiobtn-wrap .audiobtn__caption {
+  display: none;
+}
+
+.flashcard-page__autoplay-btns .audiobtn-wrap .audiobtn {
+  width: 100%;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0 0 4px var(--accent-glow);
 }
 
 .flashcard-page__rating {
@@ -140,26 +162,31 @@
   border-color: var(--accent);
 }
 
-/* Skip button */
-.flashcard-page__skip {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 5px 14px;
-  border-radius: var(--radius-full);
+/* Skip button — large, thumb-friendly */
+.flashcard-page__skip-btn {
+  height: 56px;
+  border-radius: var(--radius-lg);
   font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-muted);
-  background: transparent;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: var(--bg-surface);
   border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   transition: all var(--transition-fast);
   cursor: pointer;
 }
 
-.flashcard-page__skip:hover {
-  color: var(--text-primary);
+.flashcard-page__skip-btn:hover {
   border-color: var(--border-accent);
+  color: var(--text-primary);
+}
+
+.flashcard-page__skip-btn:active {
+  transform: scale(0.97);
 }
 
 /* ── Completion screen ────────────────────────────────────────────── */
