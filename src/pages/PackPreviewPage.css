@@ -33,7 +33,7 @@
 /* Header */
 .packpreview__header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--spacing-md);
   padding: var(--spacing-md);
   background: var(--bg-surface);
@@ -118,6 +118,7 @@
   font-weight: 600;
   color: var(--text-muted);
   flex-shrink: 0;
+  padding-top: 3px;
 }
 
 /* Word list */
