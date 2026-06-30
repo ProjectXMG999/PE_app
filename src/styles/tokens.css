@@ -1,0 +1,82 @@
+:root {
+  /* Dark theme (default) */
+  --bg-primary: #0D0B1E;
+  --bg-surface: #1A1040;
+  --bg-card: #241B5C;
+  --bg-card-hover: #2E2470;
+  --bg-input: #1A1040;
+
+  --accent: #8B5CF6;
+  --accent-dim: #7B5EA7;
+  --accent-bright: #A78BFA;
+  --accent-glow: rgba(139, 92, 246, 0.3);
+
+  --brand-purple: #6B2BFF;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.75);
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --text-accent: #C4B5FD;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(139, 92, 246, 0.4);
+
+  --success: #34D399;
+  --warning: #FBBF24;
+  --danger: #F87171;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 24px rgba(139, 92, 246, 0.4);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+  --topbar-height: 60px;
+  --bottomnav-height: 64px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  --transition-fast: 150ms ease;
+  --transition-med: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+[data-theme="light"] {
+  --bg-primary: #F0EBFF;
+  --bg-surface: #E8E0FF;
+  --bg-card: #DDD6FE;
+  --bg-card-hover: #C4B5FD;
+  --bg-input: #E8E0FF;
+
+  --accent: #7C3AED;
+  --accent-dim: #6D28D9;
+  --accent-bright: #8B5CF6;
+  --accent-glow: rgba(124, 58, 237, 0.2);
+
+  --text-primary: #1E1B4B;
+  --text-secondary: rgba(30, 27, 75, 0.8);
+  --text-muted: rgba(30, 27, 75, 0.5);
+  --text-accent: #5B21B6;
+
+  --border: rgba(30, 27, 75, 0.12);
+  --border-accent: rgba(124, 58, 237, 0.4);
+
+  --shadow-sm: 0 2px 8px rgba(30, 27, 75, 0.1);
+  --shadow-md: 0 4px 20px rgba(30, 27, 75, 0.15);
+  --shadow-lg: 0 8px 40px rgba(30, 27, 75, 0.2);
+  --shadow-glow: 0 0 24px rgba(124, 58, 237, 0.3);
+}

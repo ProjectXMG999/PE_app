@@ -1,0 +1,325 @@
+{
+  "id": "t1-p37",
+  "name": "Warzywa I owoce",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rodział IV",
+  "words": [
+    {
+      "id": "t1-p37-001",
+      "english": "Banana",
+      "polish": "Banan",
+      "sentenceEn": "You have to peel the banana before you can eat it. How come you didn't know that?",
+      "sentencePl": "Zanim zjesz banana, musisz go obrać. Jak to możliwe, że tego nie wiedziałeś?",
+      "audioWord": "t1-p37-001-word.mp3",
+      "audioSentence": "t1-p37-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-002",
+      "english": "Lemon",
+      "polish": "Cytryna",
+      "sentenceEn": "Lola wants to have a healthy life, so she starts the day with a glass of water with lemon.",
+      "sentencePl": "Lola chce prowadzić zdrowy styl życia, więc zaczyna dzień od wypicia szklanki wody z cytryną.",
+      "audioWord": "t1-p37-002-word.mp3",
+      "audioSentence": "t1-p37-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-003",
+      "english": "Apple",
+      "polish": "Jabłko",
+      "sentenceEn": "I got a lot of apples from the orchard. Let's bake an apple pie.",
+      "sentencePl": "Mam dużo jabłek z sadu. Upieczmy szarlotkę.",
+      "audioWord": "t1-p37-003-word.mp3",
+      "audioSentence": "t1-p37-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-004",
+      "english": "Cucumber",
+      "polish": "Ogórek",
+      "sentenceEn": "I really like water with some cucumbers. It's very refreshing.",
+      "sentencePl": "Naprawdę lubię wodę z odrobiną ogórka. Jest bardzo orzeźwiająca.",
+      "audioWord": "t1-p37-004-word.mp3",
+      "audioSentence": "t1-p37-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-005",
+      "english": "Fruit",
+      "polish": "Owoc",
+      "sentenceEn": "You should eat fresh fruit every day.",
+      "sentencePl": "Świeże owoce należy jeść codziennie.",
+      "audioWord": "t1-p37-005-word.mp3",
+      "audioSentence": "t1-p37-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-006",
+      "english": "Pepper",
+      "polish": "Papryka",
+      "sentenceEn": "I always eat spicy food, so you can put as much pepper as you want. It doesn't bother me.",
+      "sentencePl": "Zawsze jem pikantne potrawy, więc możesz wsypać tyle pieprzu, ile chcesz. Mnie to nie przeszkadza.",
+      "audioWord": "t1-p37-006-word.mp3",
+      "audioSentence": "t1-p37-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-007",
+      "english": "Orange",
+      "polish": "Pomarańcza",
+      "sentenceEn": "This orange ice cream is not sweet and it has a strange taste.",
+      "sentencePl": "Te pomarańczowe lody nie są słodkie i mają dziwny smak.",
+      "audioWord": "t1-p37-007-word.mp3",
+      "audioSentence": "t1-p37-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-008",
+      "english": "Tomato",
+      "polish": "Pomidor",
+      "sentenceEn": "Remind me to buy more tomatoes. I want to make a tomato soup.",
+      "sentencePl": "Przypomnij mi, żebym kupił więcej pomidorów.  Chcę zrobić pomidorową.",
+      "audioWord": "t1-p37-008-word.mp3",
+      "audioSentence": "t1-p37-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-009",
+      "english": "Vegetable",
+      "polish": "Warzywo",
+      "sentenceEn": "You have to include vegetables in your diet to stay healthy.",
+      "sentencePl": "Aby być zdrowym, musisz w swojej diecie uwzględnić warzywa.",
+      "audioWord": "t1-p37-009-word.mp3",
+      "audioSentence": "t1-p37-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-010",
+      "english": "Potato",
+      "polish": "Ziemniak",
+      "sentenceEn": "Mom! We need more potatoes for the salad!",
+      "sentencePl": "Mamo! Potrzebujemy więcej ziemniaków do sałatki!",
+      "audioWord": "t1-p37-010-word.mp3",
+      "audioSentence": "t1-p37-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-011",
+      "english": "Avocado",
+      "polish": "Awokado",
+      "sentenceEn": "Emma is making guacamole for the party, so she needs 5 avocados.",
+      "sentencePl": "Emma robi guacamole na imprezę, więc potrzebuje 5 awokado.",
+      "audioWord": "t1-p37-011-word.mp3",
+      "audioSentence": "t1-p37-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-012",
+      "english": "Peach",
+      "polish": "Brzoskwinia",
+      "sentenceEn": "I know people love apple pie, but peach pie is superior.",
+      "sentencePl": "Wiem, że ludzie kochają szarlotkę, ale najlepszy jest placek z brzoskwiniami.",
+      "audioWord": "t1-p37-012-word.mp3",
+      "audioSentence": "t1-p37-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-013",
+      "english": "Onion",
+      "polish": "Cebula",
+      "sentenceEn": "Everybody cries when they cut an onion. That is why you need these special goggles! Only 54.99$!",
+      "sentencePl": "Wszyscy płaczą, kiedy kroją cebulę. I właśnie dlatego potrzebujesz specjalnych okularów! Za jedyne 54.99$!",
+      "audioWord": "t1-p37-013-word.mp3",
+      "audioSentence": "t1-p37-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-014",
+      "english": "Cauliflower",
+      "polish": "Kalafior",
+      "sentenceEn": "Cauliflower is such a great vegetable. You can do everything with it, and it looks a little bit like a brain.",
+      "sentencePl": "Kalafior jest świetnym warzywem. Możesz z nim zrobić wszystko i wygląda trochę jak mózg.",
+      "audioWord": "t1-p37-014-word.mp3",
+      "audioSentence": "t1-p37-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-015",
+      "english": "Corn",
+      "polish": "Kukurydza",
+      "sentenceEn": "Corn soup is one of the best autumn dishes. You should try it.",
+      "sentencePl": "Zupa z kukurydzy to jedno z najlepszych jesiennych dań. Powinieneś jej spróbować.",
+      "audioWord": "t1-p37-015-word.mp3",
+      "audioSentence": "t1-p37-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-016",
+      "english": "Carrot",
+      "polish": "Marchewka",
+      "sentenceEn": "Raw carrots are great, but boiled ones are disgusting.",
+      "sentencePl": "Surowe marchewki są super, ale gotowane są obrzydliwe.",
+      "audioWord": "t1-p37-016-word.mp3",
+      "audioSentence": "t1-p37-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-017",
+      "english": "Lettuce",
+      "polish": "Sałata",
+      "sentenceEn": "- Lettuce can be boring if you don't know how to prepare it. - Surprise me then.",
+      "sentencePl": "- Sałata może być nudna, jeśli nie wiesz, jak ją przyrządzić. - Zaskocz mnie w takim razie.",
+      "audioWord": "t1-p37-017-word.mp3",
+      "audioSentence": "t1-p37-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-018",
+      "english": "Strawberry",
+      "polish": "Truskawka",
+      "sentenceEn": "It's a shame that strawberries are in season only for two months.",
+      "sentencePl": "Szkoda, że sezon na truskawki trwa tylko dwa miesiące.",
+      "audioWord": "t1-p37-018-word.mp3",
+      "audioSentence": "t1-p37-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-019",
+      "english": "Grape",
+      "polish": "Winogrono",
+      "sentenceEn": "Grapes go great with wine and cheese.",
+      "sentencePl": "Winogrona świetnie pasują do wina i sera.",
+      "audioWord": "t1-p37-019-word.mp3",
+      "audioSentence": "t1-p37-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-020",
+      "english": "Cherry",
+      "polish": "Wiśnia",
+      "sentenceEn": "Why is cherry season so short? They're so delicious.",
+      "sentencePl": "Dlaczego sezon na wiśnie jest taki krótki? Są takie pyszne.",
+      "audioWord": "t1-p37-020-word.mp3",
+      "audioSentence": "t1-p37-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-021",
+      "english": "Garlic",
+      "polish": "Czosnek",
+      "sentenceEn": "Always double the amount of garlic in a recipe. We don't need vampires here.",
+      "sentencePl": "Zawsze podwajaj ilość czosnku w przepisie. Nie potrzebujemy tutaj wampirów.",
+      "audioWord": "t1-p37-021-word.mp3",
+      "audioSentence": "t1-p37-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-022",
+      "english": "Pear",
+      "polish": "Gruszka",
+      "sentenceEn": "What about a pie with pears for dessert?",
+      "sentencePl": "A na desr może placek z gruszkami?",
+      "audioWord": "t1-p37-022-word.mp3",
+      "audioSentence": "t1-p37-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-023",
+      "english": "Nectarine",
+      "polish": "Nektarynka",
+      "sentenceEn": "My favorite fruit is nectarine but I also like watermelons.",
+      "sentencePl": "Moim ukochanym owocem jest nektarynka, ale lubię też arbuzy.",
+      "audioWord": "t1-p37-023-word.mp3",
+      "audioSentence": "t1-p37-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-024",
+      "english": "Fig",
+      "polish": "Figa",
+      "sentenceEn": "Figs are a great addition to any meal.",
+      "sentencePl": "Figi są doskonałym dodatkiem do każdego posiłku.",
+      "audioWord": "t1-p37-024-word.mp3",
+      "audioSentence": "t1-p37-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-025",
+      "english": "Cabbage",
+      "polish": "Kapusta",
+      "sentenceEn": "She cut the red cabbage in half and lifted it up.",
+      "sentencePl": "Przecięła czerwoną kapustę na pół i podniosła ją do góry.",
+      "audioWord": "t1-p37-025-word.mp3",
+      "audioSentence": "t1-p37-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-026",
+      "english": "Mango",
+      "polish": "Mango",
+      "sentenceEn": "Have two medium-sized slices of mango as a snack or after a meal.",
+      "sentencePl": "Zjedz dwa średniej wielkości plasterki mango jako przekąskę lub po posiłku.",
+      "audioWord": "t1-p37-026-word.mp3",
+      "audioSentence": "t1-p37-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-027",
+      "english": "Melon",
+      "polish": "Melon",
+      "sentenceEn": "Scientists may have uncovered a natural way to combat stress. Eat a melon.",
+      "sentencePl": "Naukowcy być może odkryli naturalny sposób walki ze stresem. Zjedz melona.",
+      "audioWord": "t1-p37-027-word.mp3",
+      "audioSentence": "t1-p37-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-028",
+      "english": "Papaya",
+      "polish": "Papaja",
+      "sentenceEn": "Papaya is usually much bigger than a cucumber.",
+      "sentencePl": "Papaja jest zazwyczaj znacznie większa od ogórka.",
+      "audioWord": "t1-p37-028-word.mp3",
+      "audioSentence": "t1-p37-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-029",
+      "english": "Celery",
+      "polish": "Seler",
+      "sentenceEn": "Don't eat this dish if you are allergic to celery.",
+      "sentencePl": "Nie jedz tego dania, jeśli jesteś uczulony na seler.",
+      "audioWord": "t1-p37-029-word.mp3",
+      "audioSentence": "t1-p37-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-030",
+      "english": "Watermelon",
+      "polish": "Arbuz",
+      "sentenceEn": "The best watermelons have yellow spots on them.",
+      "sentencePl": "Najlepsze arbuzy to te w żółte plamki.",
+      "audioWord": "t1-p37-030-word.mp3",
+      "audioSentence": "t1-p37-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-031",
+      "english": "Pumpkin",
+      "polish": "Dynia",
+      "sentenceEn": "I love seeing pumpkins at the store. It's the true beginning of autumn.",
+      "sentencePl": "Uwielbiam widok dyni w sklepie. To prawdziwy początek jesieni.",
+      "audioWord": "t1-p37-031-word.mp3",
+      "audioSentence": "t1-p37-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-032",
+      "english": "Bean",
+      "polish": "Fasola",
+      "sentenceEn": "Beans are incredible. Dinner, dessert, snacks – you can do anything with them.",
+      "sentencePl": "Fasola jest niesamowita. Kolacja, deser, przekąska – można z niej zrobić wszystko.",
+      "audioWord": "t1-p37-032-word.mp3",
+      "audioSentence": "t1-p37-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-033",
+      "english": "Sweet potato",
+      "polish": "Batat",
+      "sentenceEn": "Sweet potato fries are better than regular fries. And much healthier.",
+      "sentencePl": "Frytki z batata są lepsze niż zwykłe. I dużo zdrowsze.",
+      "audioWord": "t1-p37-033-word.mp3",
+      "audioSentence": "t1-p37-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-034",
+      "english": "Pea",
+      "polish": "Groch",
+      "sentenceEn": "A single pea under your mattress will tell whether you're a princess or not.",
+      "sentencePl": "Jeden groszek pod materacem powie, czy jesteś księżniczką, czy nie.",
+      "audioWord": "t1-p37-034-word.mp3",
+      "audioSentence": "t1-p37-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p37-035",
+      "english": "Beetroot",
+      "polish": "Burak",
+      "sentenceEn": "The juice of beetroot is effective in lowering high blood pressure.",
+      "sentencePl": "Sok z buraków skutecznie obniża ciśnienie krwi.",
+      "audioWord": "t1-p37-035-word.mp3",
+      "audioSentence": "t1-p37-035-sentence.mp3"
+    }
+  ]
+}

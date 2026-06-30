@@ -1,0 +1,52 @@
+.audiobtn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+}
+
+.audiobtn {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 8px var(--accent-glow), var(--shadow-glow);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.audiobtn::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-glow);
+  animation: pulse 2s infinite;
+}
+
+.audiobtn--playing {
+  background: var(--accent-dim);
+  box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+.audiobtn--playing::before {
+  animation: none;
+}
+
+.audiobtn:active {
+  transform: scale(0.95);
+}
+
+.audiobtn__caption {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  font-family: var(--font-body);
+  max-width: 240px;
+  line-height: 1.5;
+}

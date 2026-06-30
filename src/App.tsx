@@ -1,0 +1,66 @@
+import { Suspense, lazy, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { useRegisterSW } from 'virtual:pwa-register/react'
+import { useAppStore } from './store/useAppStore'
+import { initInstallService } from './services/installService'
+import { HomePage } from './pages/HomePage'
+import './App.css'
+
+const FlashcardPage = lazy(() => import('./pages/FlashcardPage').then(m => ({ default: m.FlashcardPage })))
+const StatsPage = lazy(() => import('./pages/StatsPage').then(m => ({ default: m.StatsPage })))
+
+function LoadingFallback() {
+  return (
+    <div style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '60vh',
+    }}>
+      <div className="spinner" />
+    </div>
+  )
+}
+
+export function App() {
+  const { theme, setInstallPrompt, setInstalled, setSwUpdateAvailable, setSwRegistration } = useAppStore()
+
+  const { needRefresh, updateServiceWorker } = useRegisterSW({
+    onRegistered(r) {
+      if (r) setSwRegistration(r)
+    },
+    onNeedRefresh() {
+      setSwUpdateAvailable(true)
+    },
+  })
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
+
+  useEffect(() => {
+    initInstallService(
+      (e) => setInstallPrompt(e as Parameters<typeof setInstallPrompt>[0]),
+      () => setInstalled()
+    )
+  }, [])
+
+  return (
+    <>
+      {needRefresh[0] && (
+        <div className="sw-update-toast">
+          <span>Dostępna aktualizacja</span>
+          <button onClick={() => updateServiceWorker(true)}>Odśwież</button>
+        </div>
+      )}
+      <Suspense fallback={<LoadingFallback />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/pakiet/:packageId/:mode" element={<FlashcardPage />} />
+          <Route path="/statystyki" element={<StatsPage />} />
+          <Route path="*" element={<HomePage />} />
+        </Routes>
+      </Suspense>
+    </>
+  )
+}

@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+audio-output/
+*.local
+.DS_Store
+Thumbs.db

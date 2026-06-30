@@ -1,0 +1,505 @@
+{
+  "id": "t1-p112",
+  "name": "It",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XVI",
+  "words": [
+    {
+      "id": "t1-p112-001",
+      "english": "Chat",
+      "polish": "Czat",
+      "sentenceEn": "I'm chatting with Veronica. She might help me with my credit.",
+      "sentencePl": "Gadam z Veronicą. Może będzie mogła mi pomóc z kredytem.",
+      "audioWord": "t1-p112-001-word.mp3",
+      "audioSentence": "t1-p112-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-002",
+      "english": "Button",
+      "polish": "Klawisz",
+      "sentenceEn": "Just press the button... What can happen? *boom*",
+      "sentencePl": "Po prostu wciśnij klawisz. Co się może stać? *bum*",
+      "audioWord": "t1-p112-002-word.mp3",
+      "audioSentence": "t1-p112-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-003",
+      "english": "Printer",
+      "polish": "Drukarka",
+      "sentenceEn": "Printers can feel when you are in a hurry, and then they break.",
+      "sentencePl": "Drukarki potrafią wyczuć, kiedy się spieszysz i wtedy się psują.",
+      "audioWord": "t1-p112-003-word.mp3",
+      "audioSentence": "t1-p112-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-004",
+      "english": "Data",
+      "polish": "Dane",
+      "sentenceEn": "I lost all my data from my laptop when I spilled coffee on it.",
+      "sentencePl": "Straciłem wszystkie dane z laptopa, kiedy wylałem na niego kawę.",
+      "audioWord": "t1-p112-004-word.mp3",
+      "audioSentence": "t1-p112-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-005",
+      "english": "Screen",
+      "polish": "Ekran",
+      "sentenceEn": "Bobby, you should really clean your screen. How can you see anything?",
+      "sentencePl": "Bobby, powinieneś serio wyczyścić swój ekran. Czy Ty tam w ogóle cokolwiek widzisz?",
+      "audioWord": "t1-p112-005-word.mp3",
+      "audioSentence": "t1-p112-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-006",
+      "english": "Folder",
+      "polish": "Folder",
+      "sentenceEn": "Why do you have so many folders on your desktop?",
+      "sentencePl": "Dlaczego masz tyle folderów na pulpicie?",
+      "audioWord": "t1-p112-006-word.mp3",
+      "audioSentence": "t1-p112-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-007",
+      "english": "Message board",
+      "polish": "Forum",
+      "sentenceEn": "Maybe we will find the answer on our message board.",
+      "sentencePl": "Może znajdziemy odpowiedź na naszym forum.",
+      "audioWord": "t1-p112-007-word.mp3",
+      "audioSentence": "t1-p112-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-008",
+      "english": "Password",
+      "polish": "Hasło",
+      "sentenceEn": "I have to change my password because someone tried to get into my account.",
+      "sentencePl": "Muszę zmienić hasło, bo ktoś próbował dostać się na moje konto.",
+      "audioWord": "t1-p112-008-word.mp3",
+      "audioSentence": "t1-p112-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-009",
+      "english": "Keyboard",
+      "polish": "Klawiatura",
+      "sentenceEn": "I have the loudest keyboard in the world. I cannot play at night, 'cause neighbors complain.",
+      "sentencePl": "Mam najgłośniejszą klawiaturę na świecie. Nie mogę grać w nocy, bo sąsiedzi narzekają.",
+      "audioWord": "t1-p112-009-word.mp3",
+      "audioSentence": "t1-p112-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-010",
+      "english": "Copy",
+      "polish": "Kopia",
+      "sentenceEn": "The latest app lets you copy all your files to your cloud storage.",
+      "sentencePl": "Najnowsza aplikacja umożliwia skopiowanie wszystkich plików do pamięci w chmurze.",
+      "audioWord": "t1-p112-010-word.mp3",
+      "audioSentence": "t1-p112-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-011",
+      "english": "Monitor",
+      "polish": "Monitor (ekran komputera)",
+      "sentenceEn": "The role of the organization is to move toward its goals while management must monitor its progress.",
+      "sentencePl": "Zadaniem organizacji jest osiąganie celów, a kierownictwa – monitorowanie postępów.",
+      "audioWord": "t1-p112-011-word.mp3",
+      "audioSentence": "t1-p112-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-012",
+      "english": "Option",
+      "polish": "Opcja",
+      "sentenceEn": "Are there any other options?",
+      "sentencePl": "Czy są jakieś inne opcje?",
+      "audioWord": "t1-p112-012-word.mp3",
+      "audioSentence": "t1-p112-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-013",
+      "english": "Technology",
+      "polish": "Technologia",
+      "sentenceEn": "The development of technology has never been so quick!",
+      "sentencePl": "Rozwój technologii jeszcze nigdy nie był tak szybki!",
+      "audioWord": "t1-p112-013-word.mp3",
+      "audioSentence": "t1-p112-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-014",
+      "english": "File",
+      "polish": "Plik",
+      "sentenceEn": "Sir, if you have an issue with the Federal Bureau of Language Investigation, please, file a complaint.",
+      "sentencePl": "Proszę pana, jeśli ma pan problem z Federalnym Językowym Biurem Śledczym, proszę wnieść skargę.",
+      "audioWord": "t1-p112-014-word.mp3",
+      "audioSentence": "t1-p112-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-015",
+      "english": "E-mail",
+      "polish": "Poczta elektroniczna",
+      "sentenceEn": "E-mail me at hotBoy334 at pmail dot com.",
+      "sentencePl": "Napisz do mnie mejla na adres hotBoy334 małpa pmail kropka com.",
+      "audioWord": "t1-p112-015-word.mp3",
+      "audioSentence": "t1-p112-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-016",
+      "english": "Post",
+      "polish": "Post (na forum)",
+      "sentenceEn": "Have you seen her post about social inequality in the city?",
+      "sentencePl": "Widziałeś jej post o nierówności społecznej w mieście?",
+      "audioWord": "t1-p112-016-word.mp3",
+      "audioSentence": "t1-p112-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-017",
+      "english": "Level",
+      "polish": "Poziom",
+      "sentenceEn": "I gained an extra level after winning the game.",
+      "sentencePl": "Zdobyłem dodatkowy poziom po wygranej w grze.",
+      "audioWord": "t1-p112-017-word.mp3",
+      "audioSentence": "t1-p112-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-018",
+      "english": "Program",
+      "polish": "Program",
+      "sentenceEn": "What's the best program to check the spelling?",
+      "sentencePl": "Jaki jest najlepszy program do sprawdzania pisowni?",
+      "audioWord": "t1-p112-018-word.mp3",
+      "audioSentence": "t1-p112-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-019",
+      "english": "Desktop",
+      "polish": "Pulpit",
+      "sentenceEn": "You should really organize your desktop. How can you find any folder?",
+      "sentencePl": "Powinieneś naprawdę zrobić porządek na pulpicie. Jak możesz znaleźć jakikolwiek folder?",
+      "audioWord": "t1-p112-019-word.mp3",
+      "audioSentence": "t1-p112-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-020",
+      "english": "Network",
+      "polish": "Sieć",
+      "sentenceEn": "All of our computers are plugged into the main network.",
+      "sentencePl": "Wszystkie nasze komputery są podłączone do sieci głównej.",
+      "audioWord": "t1-p112-020-word.mp3",
+      "audioSentence": "t1-p112-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-021",
+      "english": "Mailbox",
+      "polish": "Skrzynka e-mail; skrzynka na listy",
+      "sentenceEn": "Check your mailbox. Maybe you've got a message from Sensei.",
+      "sentencePl": "Sprawdź swoją skrzynkę pocztową. Może masz wiadomość od Senseia.",
+      "audioWord": "t1-p112-021-word.mp3",
+      "audioSentence": "t1-p112-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-022",
+      "english": "Spam",
+      "polish": "Spam",
+      "sentenceEn": "Maybe you should check your spam folder. My email might be there.",
+      "sentencePl": "Może powinieneś sprawdzić folder ze spamem. Tam mógł wpaść mój e-mail.",
+      "audioWord": "t1-p112-022-word.mp3",
+      "audioSentence": "t1-p112-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-023",
+      "english": "Website",
+      "polish": "Strona internetowa",
+      "sentenceEn": "The design of this website is very user-friendly. You can find everything with ease.",
+      "sentencePl": "Projekt tej strony internetowej jest bardzo przyjazny dla użytkownika. Wszystko bez problemu tam znajdziesz.",
+      "audioWord": "t1-p112-023-word.mp3",
+      "audioSentence": "t1-p112-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-024",
+      "english": "System",
+      "polish": "System",
+      "sentenceEn": "The system is down. We will have to restart it.",
+      "sentencePl": "System nie działa. Będziemy musieli go zrestartować.",
+      "audioWord": "t1-p112-024-word.mp3",
+      "audioSentence": "t1-p112-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-025",
+      "english": "Filter",
+      "polish": "Filtr",
+      "sentenceEn": "I filtered the search results in ITizen. Everything's about Sir David.",
+      "sentencePl": "Filtrowałem wyniki wyszukiwania w ITizenie. Wszystko jest o Sir Davidzie.",
+      "audioWord": "t1-p112-025-word.mp3",
+      "audioSentence": "t1-p112-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-026",
+      "english": "Error",
+      "polish": "Błąd (skutek tego co zrobiłeś)",
+      "sentenceEn": "There's a big error in my paper, and I have no idea how to fix it.",
+      "sentencePl": "W mojej pracy jest poważny błąd i nie mam pojęcia, jak go poprawić.",
+      "audioWord": "t1-p112-026-word.mp3",
+      "audioSentence": "t1-p112-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-027",
+      "english": "Setting",
+      "polish": "Ustawienie; regulacja (urządzenia)",
+      "sentenceEn": "Take into account all of the details of the setting, such as time and place.",
+      "sentencePl": "Weź pod uwagę wszystkie szczegóły ustawienia, takie jak czas i miejsce.",
+      "audioWord": "t1-p112-027-word.mp3",
+      "audioSentence": "t1-p112-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-028",
+      "english": "Edition",
+      "polish": "Edycja",
+      "sentenceEn": "I've just bought the first edition of my favorite book, and it's so pretty.",
+      "sentencePl": "Kupiłam właśnie pierwsze wydanie mojej ulubionej książki, jest taka ładna.",
+      "audioWord": "t1-p112-028-word.mp3",
+      "audioSentence": "t1-p112-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-029",
+      "english": "Version",
+      "polish": "Wersja",
+      "sentenceEn": "His version is the only one I have ever heard.",
+      "sentencePl": "Jego wersja jest jedyną, jaką kiedykolwiek słyszałem.",
+      "audioWord": "t1-p112-029-word.mp3",
+      "audioSentence": "t1-p112-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-030",
+      "english": "Profile",
+      "polish": "Profil",
+      "sentenceEn": "If you see an upgrade page, you don't have a ITizen profile.",
+      "sentencePl": "Jeśli widzisz stronę aktualizacji, to znaczy, że nie masz profilu na ITizenie.",
+      "audioWord": "t1-p112-030-word.mp3",
+      "audioSentence": "t1-p112-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-031",
+      "english": "Sender",
+      "polish": "Nadawca",
+      "sentenceEn": "You must enter the sender before sending the email.",
+      "sentencePl": "Przed wysłaniem wiadomości e-mail musisz podać nadawcę.",
+      "audioWord": "t1-p112-031-word.mp3",
+      "audioSentence": "t1-p112-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-032",
+      "english": "Receiver",
+      "polish": "Odbiorca",
+      "sentenceEn": "You can't send the email because you forgot to type in the receiver.",
+      "sentencePl": "Nie możesz wysłać e-maila, ponieważ zapomniałeś wpisać adresata.",
+      "audioWord": "t1-p112-032-word.mp3",
+      "audioSentence": "t1-p112-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-033",
+      "english": "Notification",
+      "polish": "Powiadomienie",
+      "sentenceEn": "Stop ignoring your notifications. They might be important.",
+      "sentencePl": "Przestań ignorować swoje powiadomienia. Mogą być ważne.",
+      "audioWord": "t1-p112-033-word.mp3",
+      "audioSentence": "t1-p112-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-034",
+      "english": "Feature",
+      "polish": "Cecha; funkcja",
+      "sentenceEn": "This new program has many useful features. I think we'll switch to it.",
+      "sentencePl": "Ten nowy program ma wiele przydatnych funkcji. Myślę, że się na niego przerzucimy.",
+      "audioWord": "t1-p112-034-word.mp3",
+      "audioSentence": "t1-p112-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-035",
+      "english": "Compilation",
+      "polish": "Kompilacja",
+      "sentenceEn": "OMG, have you seen the new fail compilation? I couldn't stop laughing.",
+      "sentencePl": "OMG, widziałeś nową kompilację porażek? Nie mogłem przestać się śmiać.",
+      "audioWord": "t1-p112-035-word.mp3",
+      "audioSentence": "t1-p112-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-036",
+      "english": "Configuration",
+      "polish": "Konfiguracja",
+      "sentenceEn": "The ITizen must've changed its configuration. It'll take some time, but I'll crack it.",
+      "sentencePl": "ITizen musiał zmienić swoją konfigurację. Zajmie to trochę czasu, ale rozwalę to.",
+      "audioWord": "t1-p112-036-word.mp3",
+      "audioSentence": "t1-p112-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-037",
+      "english": "Dot",
+      "polish": "Kropka (w adresie internetowym); punkcik",
+      "sentenceEn": "Remember to put a dot in the web address.",
+      "sentencePl": "Pamiętaj o wstawieniu kropki w adresie internetowym.",
+      "audioWord": "t1-p112-037-word.mp3",
+      "audioSentence": "t1-p112-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-038",
+      "english": "Modification",
+      "polish": "Modyfikacja",
+      "sentenceEn": "The modification work continues around the clock.",
+      "sentencePl": "Prace nad modyfikacją trwają przez całą dobę.",
+      "audioWord": "t1-p112-038-word.mp3",
+      "audioSentence": "t1-p112-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-039",
+      "english": "Pause",
+      "polish": "Pauza",
+      "sentenceEn": "When I deliver a speech, I always pause for a moment, so the audience can take a breath.",
+      "sentencePl": "Gdy przemawiam, zawsze robię na moment przerwę, żeby słuchacze mogli odsapnąć.",
+      "audioWord": "t1-p112-039-word.mp3",
+      "audioSentence": "t1-p112-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-040",
+      "english": "Mode",
+      "polish": "Tryb",
+      "sentenceEn": "In the tunneling mode, the entire data packet is encrypted.",
+      "sentencePl": "W trybie tunelowym cały pakiet danych jest szyfrowany.",
+      "audioWord": "t1-p112-040-word.mp3",
+      "audioSentence": "t1-p112-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-041",
+      "english": "Attachment",
+      "polish": "Załącznik",
+      "sentenceEn": "All the necessary information is in the attachment. For Pete's sake, read it this time!",
+      "sentencePl": "Wszystkie niezbędne informacje są w załączniku. Przeczytajcie to tym razem, na litość boską!",
+      "audioWord": "t1-p112-041-word.mp3",
+      "audioSentence": "t1-p112-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-042",
+      "english": "Background",
+      "polish": "Tło",
+      "sentenceEn": "Who is this man in the background of all your photos?",
+      "sentencePl": "Kim jest ten mężczyzna w tle na wszystkich Twoich zdjęciach?",
+      "audioWord": "t1-p112-042-word.mp3",
+      "audioSentence": "t1-p112-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-043",
+      "english": "Communicator",
+      "polish": "Komunikator",
+      "sentenceEn": "Gadu-Gadu communicator is still used in many companies.",
+      "sentencePl": "Wiele firm wciąż korzysta z komunikatora Gadu-Gadu.",
+      "audioWord": "t1-p112-043-word.mp3",
+      "audioSentence": "t1-p112-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-044",
+      "english": "Administrator",
+      "polish": "Administrator",
+      "sentenceEn": "Paweł is the system administrator in our company.",
+      "sentencePl": "Paweł jest administratorem systemu w naszej firmie.",
+      "audioWord": "t1-p112-044-word.mp3",
+      "audioSentence": "t1-p112-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-045",
+      "english": "Database",
+      "polish": "Baza danych",
+      "sentenceEn": "Copy the database before you start doing any work on it.",
+      "sentencePl": "Skopiuj bazę danych, zanim zaczniesz na niej pracować.",
+      "audioWord": "t1-p112-045-word.mp3",
+      "audioSentence": "t1-p112-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-046",
+      "english": "Bullet time",
+      "polish": "Zwolnione tempo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p112-046-word.mp3",
+      "audioSentence": "t1-p112-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-047",
+      "english": "Zombie ad",
+      "polish": "Reklama, która pojawia się wciąż \nNawet po zakończeniu kampanii",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p112-047-word.mp3",
+      "audioSentence": "t1-p112-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-048",
+      "english": "Cold monkey",
+      "polish": "Programista 24/7",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p112-048-word.mp3",
+      "audioSentence": "t1-p112-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-049",
+      "english": "Phishing",
+      "polish": "Wyciąganie danych personalnych",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p112-049-word.mp3",
+      "audioSentence": "t1-p112-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-050",
+      "english": "Malware",
+      "polish": "Złośliwe oprogramowanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p112-050-word.mp3",
+      "audioSentence": "t1-p112-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-051",
+      "english": "Brogrammer",
+      "polish": "Programista mężczyzna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p112-051-word.mp3",
+      "audioSentence": "t1-p112-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-052",
+      "english": "Dev",
+      "polish": "Deweloper w branży it",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p112-052-word.mp3",
+      "audioSentence": "t1-p112-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-053",
+      "english": "Spoofing",
+      "polish": "Podszywanie się pod użytkownika",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p112-053-word.mp3",
+      "audioSentence": "t1-p112-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-054",
+      "english": "Spaghetti code",
+      "polish": "Nieuporządkowany kod",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p112-054-word.mp3",
+      "audioSentence": "t1-p112-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p112-055",
+      "english": "L337 h4x0r",
+      "polish": "Świetny haker (przechwałki)",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p112-055-word.mp3",
+      "audioSentence": "t1-p112-055-sentence.mp3"
+    }
+  ]
+}

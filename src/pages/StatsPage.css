@@ -1,0 +1,36 @@
+.statspage {
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.statspage__title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.statspage__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.statspage__section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.statspage__section-title {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.statspage__skeleton {
+  border-radius: var(--radius-lg);
+}

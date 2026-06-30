@@ -1,0 +1,370 @@
+{
+  "id": "t1-p34",
+  "name": "Zwierzęta",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rodział IV",
+  "words": [
+    {
+      "id": "t1-p34-001",
+      "english": "Horse",
+      "polish": "Koń",
+      "sentenceEn": "Jeremiah bought a horse for himself. He wants to be a knight.",
+      "sentencePl": "Jeremiasz kupił sobie konia. Chce zostać rycerzem.",
+      "audioWord": "t1-p34-001-word.mp3",
+      "audioSentence": "t1-p34-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-002",
+      "english": "Cat",
+      "polish": "Kot",
+      "sentenceEn": "I have two cats, and I really want a third one.",
+      "sentencePl": "Mam dwa koty i bardzo chcę trzeciego.",
+      "audioWord": "t1-p34-002-word.mp3",
+      "audioSentence": "t1-p34-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-003",
+      "english": "Cow",
+      "polish": "Krowa",
+      "sentenceEn": "Can you ride cows? May I try?",
+      "sentencePl": "Można jeździć na krowach? Mogę spróbować?",
+      "audioWord": "t1-p34-003-word.mp3",
+      "audioSentence": "t1-p34-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-004",
+      "english": "Butterfly",
+      "polish": "Motyl",
+      "sentenceEn": "Look, a butterfly! Let's take a picture of it before it flies away!",
+      "sentencePl": "Spójrz, motyl!  Zróbmy mu zdjęcie, zanim odleci!",
+      "audioWord": "t1-p34-004-word.mp3",
+      "audioSentence": "t1-p34-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-005",
+      "english": "Fly",
+      "polish": "Mucha",
+      "sentenceEn": "The UFO was flying over our heads. An incredible spectacle.",
+      "sentencePl": "UFO latało nad naszymi głowami. Niewiarygodne widowisko.",
+      "audioWord": "t1-p34-005-word.mp3",
+      "audioSentence": "t1-p34-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-006",
+      "english": "Mouse",
+      "polish": "Mysz",
+      "sentenceEn": "I think we have a mouse in the kitchen. I keep hearing squeaking.",
+      "sentencePl": "Wydaje mi się, że mamy mysz w kuchni. Ciągle słyszę piszczenie.",
+      "audioWord": "t1-p34-006-word.mp3",
+      "audioSentence": "t1-p34-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-007",
+      "english": "Spider",
+      "polish": "Pająk",
+      "sentenceEn": "There's a huge spider in the basement. I'm not going there.",
+      "sentencePl": "W piwnicy jest ogromny pająk. Nie wejdę tam.",
+      "audioWord": "t1-p34-007-word.mp3",
+      "audioSentence": "t1-p34-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-008",
+      "english": "Dog",
+      "polish": "Pies",
+      "sentenceEn": "Your dog is great. Now I want one.",
+      "sentencePl": "Twój pies jest świetny. Teraz ja też chcę psa.",
+      "audioWord": "t1-p34-008-word.mp3",
+      "audioSentence": "t1-p34-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-009",
+      "english": "Pig",
+      "polish": "Świnia",
+      "sentenceEn": "Pigs are very intelligent. A bit like dogs.",
+      "sentencePl": "Świnie są bardzo inteligentne. Trochę jak psy.",
+      "audioWord": "t1-p34-009-word.mp3",
+      "audioSentence": "t1-p34-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-010",
+      "english": "Animal",
+      "polish": "Zwierzę",
+      "sentenceEn": "Are you afraid of any animals? For example, spiders?",
+      "sentencePl": "Boisz się jakichś zwierząt? Na przykład pająków?",
+      "audioWord": "t1-p34-010-word.mp3",
+      "audioSentence": "t1-p34-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-011",
+      "english": "Bull",
+      "polish": "Byk",
+      "sentenceEn": "My grandfather is afraid of bulls. He says they are unpredictable.",
+      "sentencePl": "Mój dziadek boi się byków. Mówi że są nieprzewidywalne.",
+      "audioWord": "t1-p34-011-word.mp3",
+      "audioSentence": "t1-p34-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-012",
+      "english": "Hamster",
+      "polish": "Chomik",
+      "sentenceEn": "We have a class pet. It's Joe, the hamster.",
+      "sentencePl": "Mamy zwierzątko klasowe. To chomik o imieniu Joe.",
+      "audioWord": "t1-p34-012-word.mp3",
+      "audioSentence": "t1-p34-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-013",
+      "english": "Mosquito",
+      "polish": "Komar",
+      "sentenceEn": "I hate mosquitos. Why are they everywhere?",
+      "sentencePl": "Nienawidzę komarów. Dlaczego one są wszędzie?",
+      "audioWord": "t1-p34-013-word.mp3",
+      "audioSentence": "t1-p34-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-014",
+      "english": "Kitten",
+      "polish": "Kotek; kocię",
+      "sentenceEn": "I'm getting a new kitten next week!",
+      "sentencePl": "Dostanę nowego kotka w przyszłym tygodniu!",
+      "audioWord": "t1-p34-014-word.mp3",
+      "audioSentence": "t1-p34-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-015",
+      "english": "Rabbit",
+      "polish": "Królik",
+      "sentenceEn": "I had a rabbit when I was little. They are adorable.",
+      "sentencePl": "Miałam królika, kiedy byłam mała. Są urocze.",
+      "audioWord": "t1-p34-015-word.mp3",
+      "audioSentence": "t1-p34-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-016",
+      "english": "Lion",
+      "polish": "Lew",
+      "sentenceEn": "A lot of people have lion tattoos. For some reason, they've gotten very popular.",
+      "sentencePl": "Masa ludzi ma tatuaże z lwami. Z jakiegoś powodu stały się bardzo popularne.",
+      "audioWord": "t1-p34-016-word.mp3",
+      "audioSentence": "t1-p34-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-017",
+      "english": "Monkey",
+      "polish": "Małpa",
+      "sentenceEn": "I will never go to Majorca. There are monkeys that steal.",
+      "sentencePl": "Nigdy nie pojadę na Majorkę. Tam są małpy, które kradną.",
+      "audioWord": "t1-p34-017-word.mp3",
+      "audioSentence": "t1-p34-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-018",
+      "english": "Bear",
+      "polish": "Niedźwiedź",
+      "sentenceEn": "She couldn't bear the thought of losing him.",
+      "sentencePl": "Nie mogła znieść myśli, że go straci.",
+      "audioWord": "t1-p34-018-word.mp3",
+      "audioSentence": "t1-p34-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-019",
+      "english": "Insect",
+      "polish": "Owad",
+      "sentenceEn": "Insects are so annoying! They always fly next to my ear.",
+      "sentencePl": "Owady są takie wkurzające! Zawsze latają mi koło ucha.",
+      "audioWord": "t1-p34-019-word.mp3",
+      "audioSentence": "t1-p34-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-020",
+      "english": "Sheep",
+      "polish": "Owca",
+      "sentenceEn": "I always wanted to have a sheep!",
+      "sentencePl": "Zawsze chciałam mieć owcę!",
+      "audioWord": "t1-p34-020-word.mp3",
+      "audioSentence": "t1-p34-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-021",
+      "english": "Bee",
+      "polish": "Pszczoła",
+      "sentenceEn": "Bees are really important for the environment.",
+      "sentencePl": "Pszczoły są bardzo ważne dla środowiska.",
+      "audioWord": "t1-p34-021-word.mp3",
+      "audioSentence": "t1-p34-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-022",
+      "english": "Elephant",
+      "polish": "Słoń",
+      "sentenceEn": "Elephants are extremely dangerous, and people should know it.",
+      "sentencePl": "Słonie są wyjątkowo niebezpiecznie i ludzie powinni o tym wiedzieć.",
+      "audioWord": "t1-p34-022-word.mp3",
+      "audioSentence": "t1-p34-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-023",
+      "english": "Tiger",
+      "polish": "Tygrys",
+      "sentenceEn": "Tigers sound like cows. Trust me and check it.",
+      "sentencePl": "Tygrysy wydają odgłosy podobne do krów. Zaufaj mi i sprawdź to.",
+      "audioWord": "t1-p34-023-word.mp3",
+      "audioSentence": "t1-p34-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-024",
+      "english": "Snake",
+      "polish": "Wąż",
+      "sentenceEn": "My sister loves snakes. She has 5 of them and is planning another one.",
+      "sentencePl": "Moja siostra kocha węże. Ma ich 5 i planuje kolejnego.",
+      "audioWord": "t1-p34-024-word.mp3",
+      "audioSentence": "t1-p34-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-025",
+      "english": "Pet",
+      "polish": "Zwierzę domowe",
+      "sentenceEn": "Everyone should take care of their pet.",
+      "sentencePl": "Każdy powinien dbać o swoje zwierzę domowe.",
+      "audioWord": "t1-p34-025-word.mp3",
+      "audioSentence": "t1-p34-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-026",
+      "english": "Rat",
+      "polish": "Szczur",
+      "sentenceEn": "Rats are really cute. I don't know why people hate them.",
+      "sentencePl": "Szczury są naprawdę urocze. Nie wiem, dlaczego ludzie ich nienawidzą.",
+      "audioWord": "t1-p34-026-word.mp3",
+      "audioSentence": "t1-p34-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-027",
+      "english": "Wolf",
+      "polish": "Wilk",
+      "sentenceEn": "Wolves are incredible animals.",
+      "sentencePl": "Wilki to niesamowite zwierzęta.",
+      "audioWord": "t1-p34-027-word.mp3",
+      "audioSentence": "t1-p34-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-028",
+      "english": "Frog",
+      "polish": "Żaba",
+      "sentenceEn": "I like how in spring you can hear all of the frogs by the lake.",
+      "sentencePl": "Lubię,kiedy wiosną słychać wszystkie żaby przy jeziorze.",
+      "audioWord": "t1-p34-028-word.mp3",
+      "audioSentence": "t1-p34-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-029",
+      "english": "Turtle",
+      "polish": "Żółw",
+      "sentenceEn": "Turtles can live even 150 years.",
+      "sentencePl": "Żółwie mogą żyć nawet 150 lat.",
+      "audioWord": "t1-p34-029-word.mp3",
+      "audioSentence": "t1-p34-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-030",
+      "english": "Creature",
+      "polish": "Stwór; stworzenie; istota",
+      "sentenceEn": "There is only one creature in the universe that snores that loud.",
+      "sentencePl": "Tylko jedno stworzenie w kosmosie chrapie tak głośno.",
+      "audioWord": "t1-p34-030-word.mp3",
+      "audioSentence": "t1-p34-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-031",
+      "english": "Ram",
+      "polish": "Baran",
+      "sentenceEn": "A ram always backs away before forging ahead.",
+      "sentencePl": "Baran zawsze się najpierw cofa, a dopiero potem rusza pełną parą.",
+      "audioWord": "t1-p34-031-word.mp3",
+      "audioSentence": "t1-p34-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-032",
+      "english": "Ladybird",
+      "polish": "Biedronka",
+      "sentenceEn": "A little ladybird sat on her arm. It was the first sign of spring.",
+      "sentencePl": "Na ramieniu usiadła jej mała biedronka. To była pierwsza oznaka wiosny.",
+      "audioWord": "t1-p34-032-word.mp3",
+      "audioSentence": "t1-p34-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-033",
+      "english": "Calf",
+      "polish": "Cielę",
+      "sentenceEn": "He said he was vegan and not a calf that drinks cow's milk.",
+      "sentencePl": "Powiedział, że jest weganinem i że nie jest cielęciem, żeby pić krowie mleko.",
+      "audioWord": "t1-p34-033-word.mp3",
+      "audioSentence": "t1-p34-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-034",
+      "english": "Dolphin",
+      "polish": "Delfin",
+      "sentenceEn": "Tamara loves to swim with dolphins!",
+      "sentencePl": "Tamara uwielbia pływać z delfinami!",
+      "audioWord": "t1-p34-034-word.mp3",
+      "audioSentence": "t1-p34-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-035",
+      "english": "Worm",
+      "polish": "Robak (wijący)",
+      "sentenceEn": "I bought a can of worms and I'm going fishing.",
+      "sentencePl": "Kupiłem puszkę robaków i idę na ryby.",
+      "audioWord": "t1-p34-035-word.mp3",
+      "audioSentence": "t1-p34-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-036",
+      "english": "Gorilla",
+      "polish": "Goryl",
+      "sentenceEn": "Suspect is wearing a gorilla costume.",
+      "sentencePl": "Podejrzany ma na sobie strój goryla.",
+      "audioWord": "t1-p34-036-word.mp3",
+      "audioSentence": "t1-p34-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-037",
+      "english": "Lamb",
+      "polish": "Jagnię; owieczka",
+      "sentenceEn": "Have you seen our lamb already? It's so adorable.",
+      "sentencePl": "Czy widziałeś już naszą owieczkę? Jest taka urocza.",
+      "audioWord": "t1-p34-037-word.mp3",
+      "audioSentence": "t1-p34-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-038",
+      "english": "Deer",
+      "polish": "Jeleń",
+      "sentenceEn": "You shouldn't hunt deer during that time due to the mating season.",
+      "sentencePl": "Nie powinno się w tym czasie polować na jelenie ze względu na okres godowy.",
+      "audioWord": "t1-p34-038-word.mp3",
+      "audioSentence": "t1-p34-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-039",
+      "english": "Paw",
+      "polish": "Łapa",
+      "sentenceEn": "The cat was pawing on the door.",
+      "sentencePl": "Kot skrobał łapą w drzwi.",
+      "audioWord": "t1-p34-039-word.mp3",
+      "audioSentence": "t1-p34-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p34-040",
+      "english": "Elk",
+      "polish": "Łoś",
+      "sentenceEn": "If you want to be a hunter, this course will provide you with basic knowledge about hunting for elks.",
+      "sentencePl": "Jeśli chcesz zostać myśliwym, ten da Ci podstawową wiedzę na temat polowania na łosie.",
+      "audioWord": "t1-p34-040-word.mp3",
+      "audioSentence": "t1-p34-040-sentence.mp3"
+    }
+  ]
+}

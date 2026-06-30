@@ -1,0 +1,29 @@
+.modetoggle {
+  display: flex;
+  margin: 0 var(--spacing-md) var(--spacing-md);
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  border: 1px solid var(--border);
+}
+
+.modetoggle__btn {
+  flex: 1;
+  height: 40px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.modetoggle__btn--active {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 2px 8px var(--accent-glow);
+}

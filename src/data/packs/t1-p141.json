@@ -1,0 +1,280 @@
+{
+  "id": "t1-p141",
+  "name": "Nauki ścisłe",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXI",
+  "words": [
+    {
+      "id": "t1-p141-001",
+      "english": "Half",
+      "polish": "Połowa",
+      "sentenceEn": "That's your half of the cake.",
+      "sentencePl": "To Twoja połowa ciasta.",
+      "audioWord": "t1-p141-001-word.mp3",
+      "audioSentence": "t1-p141-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-002",
+      "english": "Argument",
+      "polish": "Argument",
+      "sentenceEn": "I don't want to start an argument, but you're wrong.",
+      "sentencePl": "Nie chcę zaczynać kłótni, ale nie masz racji.",
+      "audioWord": "t1-p141-002-word.mp3",
+      "audioSentence": "t1-p141-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-003",
+      "english": "Pair",
+      "polish": "Para (coś złożonego z dwóch odpowiadających sobie kawałków)",
+      "sentenceEn": "John needs a new pair of shoes.",
+      "sentencePl": "John potrzebuje nowej pary butów.",
+      "audioWord": "t1-p141-003-word.mp3",
+      "audioSentence": "t1-p141-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-004",
+      "english": "Action",
+      "polish": "Akcja",
+      "sentenceEn": "What an action! Two MPLD officers were chasing those guys, and then something distracted one of them, and he ran into a dolphin sculpture.",
+      "sentencePl": "Co za akcja! Dwóch funkcjonariuszy MPLD ścigało tamtych gości, a potem coś odwróciło uwagę jednego z nich i wpadł na rzeźbę delfina.",
+      "audioWord": "t1-p141-004-word.mp3",
+      "audioSentence": "t1-p141-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-005",
+      "english": "Chemistry",
+      "polish": "Chemia",
+      "sentenceEn": "Chemistry is less difficult than it looks.",
+      "sentencePl": "Chemia jest łatwiejsza niż mogłoby się wydawać.",
+      "audioWord": "t1-p141-005-word.mp3",
+      "audioSentence": "t1-p141-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-006",
+      "english": "Physics",
+      "polish": "Fizyka",
+      "sentenceEn": "I only liked astronomy in physics classes.",
+      "sentencePl": "Z fizyki lubiłem tylko astronomię.",
+      "audioWord": "t1-p141-006-word.mp3",
+      "audioSentence": "t1-p141-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-007",
+      "english": "Maximum",
+      "polish": "Maksimum",
+      "sentenceEn": "A maximum of two people may stay in one room.",
+      "sentencePl": "W pokoju mogą się zatrzymać maksimum dwie osoby.",
+      "audioWord": "t1-p141-007-word.mp3",
+      "audioSentence": "t1-p141-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-008",
+      "english": "Mathematics",
+      "polish": "Matematyka",
+      "sentenceEn": "I'm terrible at mathematics. I have no idea what I'm doing.",
+      "sentencePl": "Jestem beznadziejny z matematyki. Nie mam pojęcia, co robię.",
+      "audioWord": "t1-p141-008-word.mp3",
+      "audioSentence": "t1-p141-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-009",
+      "english": "Minimum",
+      "polish": "Minimum",
+      "sentenceEn": "Please, Andrew. Just do the bare minimum.",
+      "sentencePl": "Proszę cię, Andrew. Zrób tylko absolutne minimum.",
+      "audioWord": "t1-p141-009-word.mp3",
+      "audioSentence": "t1-p141-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-010",
+      "english": "Science",
+      "polish": "Nauka",
+      "sentenceEn": "I admit that science is only beginning to understand its own discoveries.",
+      "sentencePl": "Przyznaję, że nauka dopiero teraz zaczyna rozumieć swoje własne odkrycia.",
+      "audioWord": "t1-p141-010-word.mp3",
+      "audioSentence": "t1-p141-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-011",
+      "english": "Example",
+      "polish": "Przykład",
+      "sentenceEn": "Please, give me some examples. The theory itself is not enough.",
+      "sentencePl": "Podaj mi proszę jakieś przykłady. Sama teoria to nie wszystko.",
+      "audioWord": "t1-p141-011-word.mp3",
+      "audioSentence": "t1-p141-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-012",
+      "english": "Solution",
+      "polish": "Rozwiązanie",
+      "sentenceEn": "Sensei has all solutions.",
+      "sentencePl": "Sensei znajdzie rozwiązanie każdego problemu.",
+      "audioWord": "t1-p141-012-word.mp3",
+      "audioSentence": "t1-p141-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-013",
+      "english": "Reaction",
+      "polish": "Reakcja",
+      "sentenceEn": "I love to watch people's reactions when I say who I am.",
+      "sentencePl": "Lubię obserwować reakcje ludzi, kiedy mówię, kim jestem.",
+      "audioWord": "t1-p141-013-word.mp3",
+      "audioSentence": "t1-p141-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-014",
+      "english": "Expert",
+      "polish": "Ekspert",
+      "sentenceEn": "Jack considered himself a wine expert, but she was not impressed.",
+      "sentencePl": "Jack uważał się za eksperta od wina, ale jej wcale to nie imponowało.",
+      "audioWord": "t1-p141-014-word.mp3",
+      "audioSentence": "t1-p141-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-015",
+      "english": "Function",
+      "polish": "Funkcja",
+      "sentenceEn": "The second function is a deep freeze mode.",
+      "sentencePl": "Druga funkcja to tryb głębokiego zamrażania.",
+      "audioWord": "t1-p141-015-word.mp3",
+      "audioSentence": "t1-p141-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-016",
+      "english": "Observation",
+      "polish": "Obserwacja",
+      "sentenceEn": "I have some observations regarding our last meeting. Do you have a few minutes?",
+      "sentencePl": "Mam kilka obserwacji odnośnie do naszego ostatniego spotkania. Masz kilka minut?",
+      "audioWord": "t1-p141-016-word.mp3",
+      "audioSentence": "t1-p141-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-017",
+      "english": "Precision",
+      "polish": "Precyzja",
+      "sentenceEn": "Trina works on mechanical gadgets with great precision .",
+      "sentencePl": "Trina pracuje nad mechanicznymi gadżetami z ogromną precyzją.",
+      "audioWord": "t1-p141-017-word.mp3",
+      "audioSentence": "t1-p141-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-018",
+      "english": "Infinity",
+      "polish": "Nieskończoność",
+      "sentenceEn": "It is impossible to count up to infinity.",
+      "sentencePl": "Nie da się doliczyć do nieskończoności.",
+      "audioWord": "t1-p141-018-word.mp3",
+      "audioSentence": "t1-p141-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-019",
+      "english": "Oxygen",
+      "polish": "Tlen",
+      "sentenceEn": "Don't open the windows if something is burning because the oxygen will make it worse.",
+      "sentencePl": "Nie otwieraj okien, kiedy coś się pali, bo tlen tylko pogorszy sytuację.",
+      "audioWord": "t1-p141-019-word.mp3",
+      "audioSentence": "t1-p141-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-020",
+      "english": "Clarification",
+      "polish": "Doprecyzowanie; wyjaśnienie",
+      "sentenceEn": "Your explanation requires additional clarification.",
+      "sentencePl": "Twoje wyjaśnienie wymaga dodatkowego doprecyzowania.",
+      "audioWord": "t1-p141-020-word.mp3",
+      "audioSentence": "t1-p141-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-021",
+      "english": "Aspect",
+      "polish": "Aspekt",
+      "sentenceEn": "The criminal aspect of this case has not yet been clarified.",
+      "sentencePl": "Kryminalny aspekt tej sprawy nie został jeszcze wyjaśniony.",
+      "audioWord": "t1-p141-021-word.mp3",
+      "audioSentence": "t1-p141-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-022",
+      "english": "Column",
+      "polish": "Kolumna",
+      "sentenceEn": "Everything you need is in the first column.",
+      "sentencePl": "Wszystko, czego potrzebujesz, znajduje się w pierwszej kolumnie.",
+      "audioWord": "t1-p141-022-word.mp3",
+      "audioSentence": "t1-p141-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-023",
+      "english": "Row",
+      "polish": "Rząd; wiersz",
+      "sentenceEn": "Check the last row. Your data should be there.",
+      "sentencePl": "Sprawdź ostatni wiersz, tam powinny być Twoje dane.",
+      "audioWord": "t1-p141-023-word.mp3",
+      "audioSentence": "t1-p141-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-024",
+      "english": "Research",
+      "polish": "Badanie (naukowe)",
+      "sentenceEn": "Listen... I need you to research something for me.",
+      "sentencePl": "Słuchaj, chcę, żebyś coś dla mnie zbadał.",
+      "audioWord": "t1-p141-024-word.mp3",
+      "audioSentence": "t1-p141-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-025",
+      "english": "Digit",
+      "polish": "Cyfra",
+      "sentenceEn": "Enter the first three digits of your phone number.",
+      "sentencePl": "Wpisz trzy pierwsze cyfry swojego numeru telefonu.",
+      "audioWord": "t1-p141-025-word.mp3",
+      "audioSentence": "t1-p141-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-026",
+      "english": "Factor",
+      "polish": "Czynnik",
+      "sentenceEn": "Have we considered all of the factors? I want to be sure we don't mess up.",
+      "sentencePl": "Uwzględniliśmy wszystkie czynniki? Chcę mieć pewność, że tego nie schrzanimy.",
+      "audioWord": "t1-p141-026-word.mp3",
+      "audioSentence": "t1-p141-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-027",
+      "english": "Diagram",
+      "polish": "Diagram",
+      "sentenceEn": "Note: Keep in mind that the road in the diagram below is about 2 km long.",
+      "sentencePl": "Uwaga: Należy pamiętać, że droga na poniższym diagramie ma około 2 km długości.",
+      "audioWord": "t1-p141-027-word.mp3",
+      "audioSentence": "t1-p141-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-028",
+      "english": "Definition",
+      "polish": "Definicja",
+      "sentenceEn": "What is the definition of normality?",
+      "sentencePl": "Jaka jest definicja normalności?",
+      "audioWord": "t1-p141-028-word.mp3",
+      "audioSentence": "t1-p141-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-029",
+      "english": "Addition",
+      "polish": "Dodawanie",
+      "sentenceEn": "We need to practice addition with our kid today. He's having some issues.",
+      "sentencePl": "Musimy dzisiaj potrenować dodawanie z naszym synem. Ma trochę problemów.",
+      "audioWord": "t1-p141-029-word.mp3",
+      "audioSentence": "t1-p141-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p141-030",
+      "english": "Division",
+      "polish": "Dzielenie",
+      "sentenceEn": "We should put an end to this division into us and them.",
+      "sentencePl": "Powinniśmy skończyć z tym podziałem na nas i na nich.",
+      "audioWord": "t1-p141-030-word.mp3",
+      "audioSentence": "t1-p141-030-sentence.mp3"
+    }
+  ]
+}

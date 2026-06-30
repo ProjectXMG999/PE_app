@@ -1,0 +1,460 @@
+{
+  "id": "t1-p06",
+  "name": "Ubrania",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział I",
+  "words": [
+    {
+      "id": "t1-p06-001",
+      "english": "Underwear",
+      "polish": "Bielizna",
+      "sentenceEn": "Did you pack a fresh set of underwear and a toothbrush?",
+      "sentencePl": "Spakowałeś komplet bielizny na zmianę i szczoteczkę do zębów?",
+      "audioWord": "t1-p06-001-word.mp3",
+      "audioSentence": "t1-p06-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-002",
+      "english": "Shoes",
+      "polish": "Buty",
+      "sentenceEn": "Those are the most comfortable shoes in my life. I can dance all night.",
+      "sentencePl": "To są najwygodniejsze buty, jakie miałam w życiu. Mogę w nich tańczyć całą noc.",
+      "audioWord": "t1-p06-002-word.mp3",
+      "audioSentence": "t1-p06-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-003",
+      "english": "Jeans",
+      "polish": "Dżinsy",
+      "sentenceEn": "I like jeans, but they can be very uncomfortable.",
+      "sentencePl": "Lubię jeansy, ale bywają bardzo niewygodne.",
+      "audioWord": "t1-p06-003-word.mp3",
+      "audioSentence": "t1-p06-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-004",
+      "english": "Shirt",
+      "polish": "Koszulka; koszula",
+      "sentenceEn": "I love the color of your shirt! Where did you get it?",
+      "sentencePl": "Bardzo mi się podoba kolor Twojej koszuli! Skąd ją masz?",
+      "audioWord": "t1-p06-004-word.mp3",
+      "audioSentence": "t1-p06-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-005",
+      "english": "Glasses",
+      "polish": "Okulary",
+      "sentenceEn": "I keep losing my glasses! Most of the time, I find them on my head.",
+      "sentencePl": "Ciągle gubię moje okulary! Najczęściej znajduję je na swojej głowie.",
+      "audioWord": "t1-p06-005-word.mp3",
+      "audioSentence": "t1-p06-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-006",
+      "english": "Socks",
+      "polish": "Skarpetki",
+      "sentenceEn": "Oh no, now my socks are all wet — I HATE wet socks!",
+      "sentencePl": "O nie, teraz moje skarpety są całe mokre - nienawidzę mokrych skarpet!",
+      "audioWord": "t1-p06-006-word.mp3",
+      "audioSentence": "t1-p06-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-007",
+      "english": "Pants",
+      "polish": "Spodnie; majtki",
+      "sentenceEn": "My pants ripped, and everybody saw my underwear. Great birthday party.",
+      "sentencePl": "Moje spodnie się podarły i wszyscy zobaczyli moją bieliznę. Wspaniała impreza urodzinowa.",
+      "audioWord": "t1-p06-007-word.mp3",
+      "audioSentence": "t1-p06-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-008",
+      "english": "T-shirt",
+      "polish": "T-shirt",
+      "sentenceEn": "- Why do you only wear t-shirts? - Because I don't have to think what to wear every day.",
+      "sentencePl": "- Dlaczego nosisz tylko T-shirty? - Bo nie muszę się codziennie zastanawiać, w co się ubrać.",
+      "audioWord": "t1-p06-008-word.mp3",
+      "audioSentence": "t1-p06-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-009",
+      "english": "Bag",
+      "polish": "Torebka; torba",
+      "sentenceEn": "The keys are in my bag, but do you know where it is?",
+      "sentencePl": "Klucze są w mojej torebce, ale wiesz może, gdzie ona jest?",
+      "audioWord": "t1-p06-009-word.mp3",
+      "audioSentence": "t1-p06-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-010",
+      "english": "Clothes",
+      "polish": "Ubrania",
+      "sentenceEn": "Do you want to buy some new clothes? I saw a lot of sales in the mall.",
+      "sentencePl": "Chcesz kupić jakieś nowe ubrania? W centrum handlowym widziałam dużo wyprzedaży.",
+      "audioWord": "t1-p06-010-word.mp3",
+      "audioSentence": "t1-p06-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-011",
+      "english": "Blouse",
+      "polish": "Bluzka",
+      "sentenceEn": "I must wear a nice blouse for today's meeting. My boss will be there.",
+      "sentencePl": "Muszę założyć ładną bluzkę na dzisiejsze spotkanie. Będzie tam mój szef.",
+      "audioWord": "t1-p06-011-word.mp3",
+      "audioSentence": "t1-p06-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-012",
+      "english": "Cap",
+      "polish": "Czapka",
+      "sentenceEn": "Isn't this your cap that you've lost? Someone left it on this chair.",
+      "sentencePl": "Czy to nie jest Twoja czapka, którą zgubiłeś? Ktoś ją zostawił na tym krześle.",
+      "audioWord": "t1-p06-012-word.mp3",
+      "audioSentence": "t1-p06-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-013",
+      "english": "Suit",
+      "polish": "Garnitur",
+      "sentenceEn": "A man in a suit always looks great.",
+      "sentencePl": "Mężczyzna w garniturze zawsze wygląda świetnie.",
+      "audioWord": "t1-p06-013-word.mp3",
+      "audioSentence": "t1-p06-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-014",
+      "english": "Tie",
+      "polish": "Krawat",
+      "sentenceEn": "Will you fix my tie? I only managed to make a knot.",
+      "sentencePl": "Poprawisz mi krawat? Udało mi się tylko zawiązać węzeł.",
+      "audioWord": "t1-p06-014-word.mp3",
+      "audioSentence": "t1-p06-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-015",
+      "english": "Fashion",
+      "polish": "Moda",
+      "sentenceEn": "Fashion changes so fast. It's hard to keep up with it.",
+      "sentencePl": "Moda szybko się zmienia. Ciężko za nią nadążyć.",
+      "audioWord": "t1-p06-015-word.mp3",
+      "audioSentence": "t1-p06-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-016",
+      "english": "Sunglasses",
+      "polish": "Okulary przeciwsłoneczne",
+      "sentenceEn": "I packed your sunglasses in my bag. You will need them on the beach.",
+      "sentencePl": "Spakowałam do torby Twoje okulary przeciwsłoneczne. Będziesz ich potrzebować na plaży.",
+      "audioWord": "t1-p06-016-word.mp3",
+      "audioSentence": "t1-p06-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-017",
+      "english": "Wallet",
+      "polish": "Portfel",
+      "sentenceEn": "Can you pass me my wallet? It's in my purse.",
+      "sentencePl": "Możesz podać mi mój portfel? Mam go w torebce.",
+      "audioWord": "t1-p06-017-word.mp3",
+      "audioSentence": "t1-p06-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-018",
+      "english": "Shorts",
+      "polish": "Spodenki",
+      "sentenceEn": "Isn't it a little too cold for shorts? Maybe put on some jeans instead.",
+      "sentencePl": "Nie jest trochę za zimno na spodenki? Może lepiej załóż jakieś dżinsy.",
+      "audioWord": "t1-p06-018-word.mp3",
+      "audioSentence": "t1-p06-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-019",
+      "english": "Skirt",
+      "polish": "Spódnica",
+      "sentenceEn": "In summer I'd rather wear skirts than pants, so I can tan my legs.",
+      "sentencePl": "Latem wolę nosić spódnice niż spodnie, żeby móc opalać nogi.",
+      "audioWord": "t1-p06-019-word.mp3",
+      "audioSentence": "t1-p06-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-020",
+      "english": "Dress",
+      "polish": "Suknia; sukienka",
+      "sentenceEn": "This dress is so pretty! Plus, it has pockets!",
+      "sentencePl": "Ta sukienka jest taka ładna! I do tego ma kieszonki!",
+      "audioWord": "t1-p06-020-word.mp3",
+      "audioSentence": "t1-p06-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-021",
+      "english": "Bikini",
+      "polish": "Bikini",
+      "sentenceEn": "It's normal to wear a bikini on the streets of Miami.",
+      "sentencePl": "Noszenie bikini na ulicy jest w Miami zupełnie normalne.",
+      "audioWord": "t1-p06-021-word.mp3",
+      "audioSentence": "t1-p06-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-022",
+      "english": "Button",
+      "polish": "Guzik",
+      "sentenceEn": "Just press the button... What can happen? *boom*",
+      "sentencePl": "Po prostu wciśnij klawisz. Co się może stać? *bum*",
+      "audioWord": "t1-p06-022-word.mp3",
+      "audioSentence": "t1-p06-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-023",
+      "english": "Hat",
+      "polish": "Kapelusz",
+      "sentenceEn": "Did you see my hat? It has a big pink flower on it.",
+      "sentencePl": "Widziałeś mój kapelusz? Ma wielkiego, różowego kwiatka.",
+      "audioWord": "t1-p06-023-word.mp3",
+      "audioSentence": "t1-p06-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-024",
+      "english": "Pocket",
+      "polish": "Kieszeń",
+      "sentenceEn": "Why are women's pockets so small?",
+      "sentencePl": "Dlaczego damskie kieszenie są takie małe?",
+      "audioWord": "t1-p06-024-word.mp3",
+      "audioSentence": "t1-p06-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-025",
+      "english": "Jacket",
+      "polish": "Kurtka; marynarka",
+      "sentenceEn": "- Why do you have so many jackets? - There was an awesome sale.",
+      "sentencePl": "- Dlaczego masz tyle marynarek? - Była zarąbista wyprzedaż.",
+      "audioWord": "t1-p06-025-word.mp3",
+      "audioSentence": "t1-p06-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-026",
+      "english": "Belt",
+      "polish": "Pasek (do spodni)",
+      "sentenceEn": "I lost some weight, and I need a belt now.",
+      "sentencePl": "Straciłam trochę na wadze i teraz potrzebuję paska.",
+      "audioWord": "t1-p06-026-word.mp3",
+      "audioSentence": "t1-p06-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-027",
+      "english": "Pajamas",
+      "polish": "Piżama",
+      "sentenceEn": "Let's spend this day in pajamas and in bed.",
+      "sentencePl": "Spędźmy ten dzień w piżamach i w łóżku.",
+      "audioWord": "t1-p06-027-word.mp3",
+      "audioSentence": "t1-p06-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-028",
+      "english": "Coat",
+      "polish": "Płaszcz",
+      "sentenceEn": "You need a new coat because this one is torn.",
+      "sentencePl": "Potrzebujesz nowego płaszcza, bo ten jest porwany.",
+      "audioWord": "t1-p06-028-word.mp3",
+      "audioSentence": "t1-p06-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-029",
+      "english": "Sandals",
+      "polish": "Sandały",
+      "sentenceEn": "Please, don't wear sandals with socks.",
+      "sentencePl": "Proszę Cię, nie noś skarpetek do sandałów.",
+      "audioWord": "t1-p06-029-word.mp3",
+      "audioSentence": "t1-p06-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-030",
+      "english": "Bra",
+      "polish": "Stanik",
+      "sentenceEn": "It's a great feeling to take off your bra after a long day.",
+      "sentencePl": "To wspaniałe uczucie móc wreszcie ściągnąć po całym dniu stanik.",
+      "audioWord": "t1-p06-030-word.mp3",
+      "audioSentence": "t1-p06-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-031",
+      "english": "Sweater",
+      "polish": "Sweter",
+      "sentenceEn": "Oh, it's chilly today. Good thing I took my sweater.",
+      "sentencePl": "Och, dziś jest chłodno. Dobrze, że wzięłam sweter.",
+      "audioWord": "t1-p06-031-word.mp3",
+      "audioSentence": "t1-p06-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-032",
+      "english": "Scarf",
+      "polish": "Szalik",
+      "sentenceEn": "It's windy. I'd better wear a scarf.",
+      "sentencePl": "Jest wietrznie. Lepiej założę szalik.",
+      "audioWord": "t1-p06-032-word.mp3",
+      "audioSentence": "t1-p06-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-033",
+      "english": "Purse",
+      "polish": "Torebka",
+      "sentenceEn": "I cannot find my purse after yesterday's party. I hope no one took it 'cause there were 10k inside.",
+      "sentencePl": "Nie mogę znaleźć torebki po wczorajszej imprezie. Mam nadzieję, że nikt jej nie zabrał, bo w środku było 10 tyś.",
+      "audioWord": "t1-p06-033-word.mp3",
+      "audioSentence": "t1-p06-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-034",
+      "english": "Trend",
+      "polish": "Trend",
+      "sentenceEn": "Socks and sandals? I don't get this trend.",
+      "sentencePl": "Skarpety i sandały? Nie czaję tego trendu.",
+      "audioWord": "t1-p06-034-word.mp3",
+      "audioSentence": "t1-p06-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-035",
+      "english": "Miniskirt",
+      "polish": "Minispódniczka",
+      "sentenceEn": "I'm looking for a miniskirt. Do you have any?",
+      "sentencePl": "Szukam minispódniczki. Macie jakieś?",
+      "audioWord": "t1-p06-035-word.mp3",
+      "audioSentence": "t1-p06-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-036",
+      "english": "Lingerie",
+      "polish": "Bielizna damska",
+      "sentenceEn": "I like buying nice lingerie. It makes me feel sexy and unstoppable.",
+      "sentencePl": "Lubię kupować ładną bieliznę. Sprawia, że czuję się sexy i nie do zatrzymania.",
+      "audioWord": "t1-p06-036-word.mp3",
+      "audioSentence": "t1-p06-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-037",
+      "english": "Trainers",
+      "polish": "Buty sportowe",
+      "sentenceEn": "Trainers are the most comfortable shoes ever created.",
+      "sentencePl": "Buty sportowe to najwygodniejsze buty, jakie kiedykolwiek stworzono.",
+      "audioWord": "t1-p06-037-word.mp3",
+      "audioSentence": "t1-p06-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-038",
+      "english": "Tracksuit",
+      "polish": "Dres",
+      "sentenceEn": "Tracksuits are the most comfortable thing in the world. However, some prefer latex.",
+      "sentencePl": "Dresy to najwygodniejsza rzecz na świecie. Niektórzy jednak wolą lateks.",
+      "audioWord": "t1-p06-038-word.mp3",
+      "audioSentence": "t1-p06-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-039",
+      "english": "Tights",
+      "polish": "Rajstopy",
+      "sentenceEn": "The trouble with wearing tights is that your skin can't breathe.",
+      "sentencePl": "Problem z rajstopami jest taki, że skóra w nich nie oddycha.",
+      "audioWord": "t1-p06-039-word.mp3",
+      "audioSentence": "t1-p06-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-040",
+      "english": "Thongs",
+      "polish": "Stringi",
+      "sentenceEn": "Thongs are sexy but not necessarily comfortable.",
+      "sentencePl": "Stringi są seksowne, ale niekoniecznie wygodne.",
+      "audioWord": "t1-p06-040-word.mp3",
+      "audioSentence": "t1-p06-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-041",
+      "english": "High heels",
+      "polish": "Szpilki",
+      "sentenceEn": "Yes. High heels look great, but they are the most uncomfortable thing you can wear.",
+      "sentencePl": "Tak. Szpilki wyglądają świetnie, ale nie ma na świecie nic bardziej niewygodnego.",
+      "audioWord": "t1-p06-041-word.mp3",
+      "audioSentence": "t1-p06-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-042",
+      "english": "Handbag",
+      "polish": "Torba na ramię",
+      "sentenceEn": "Nowadays, not only women wear handbags.",
+      "sentencePl": "W dzisiejszych czasach nie tylko kobiety noszą torebki.",
+      "audioWord": "t1-p06-042-word.mp3",
+      "audioSentence": "t1-p06-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-043",
+      "english": "Sneakers",
+      "polish": "Trampki",
+      "sentenceEn": "I want to be comfortable, so yes. I will wear sneakers with this dress.",
+      "sentencePl": "Chcę, żeby było mi wygodnie, więc tak. Założę trampki do tej sukienki.",
+      "audioWord": "t1-p06-043-word.mp3",
+      "audioSentence": "t1-p06-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-044",
+      "english": "Flip-flops",
+      "polish": "Klapki",
+      "sentenceEn": "How can you wear flip-flops all the time? It's snowing!",
+      "sentencePl": "Jak można nosić cały czas japonki? Przecież pada śnieg!",
+      "audioWord": "t1-p06-044-word.mp3",
+      "audioSentence": "t1-p06-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-045",
+      "english": "Stockings",
+      "polish": "Pończochy",
+      "sentenceEn": "She does not appear to be wearing stockings. I think she is just tanned.",
+      "sentencePl": "Nie wygląda, jakby nosiła pończochy. Myślę, że jest po prostu opalona.",
+      "audioWord": "t1-p06-045-word.mp3",
+      "audioSentence": "t1-p06-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-046",
+      "english": "Fitting room",
+      "polish": "Przymierzalnia",
+      "sentenceEn": "I'm going to the fitting room to check those pants.",
+      "sentencePl": "Skoczę do przymierzalni sprawdzić te spodnie.",
+      "audioWord": "t1-p06-046-word.mp3",
+      "audioSentence": "t1-p06-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-047",
+      "english": "Gloves",
+      "polish": "Rękawiczki",
+      "sentenceEn": "I always lose gloves! It happens every winter.",
+      "sentencePl": "Zawsze gubię rękawiczki! Zdarza się to każdej zimy.",
+      "audioWord": "t1-p06-047-word.mp3",
+      "audioSentence": "t1-p06-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-048",
+      "english": "Pullover",
+      "polish": "Sweter (nakładany przez głowę)",
+      "sentenceEn": "This is my favorite pullover. I wear it every autumn.",
+      "sentencePl": "To jest mój ulubiony sweter. Noszę go każdej jesieni.",
+      "audioWord": "t1-p06-048-word.mp3",
+      "audioSentence": "t1-p06-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-049",
+      "english": "Handkerchief",
+      "polish": "Chusteczka wielokrotnego użytku",
+      "sentenceEn": "Wow, you have a handkerchief! Like my grandfather.",
+      "sentencePl": "Wow, masz chustkę do nosa! Jak mój dziadek.",
+      "audioWord": "t1-p06-049-word.mp3",
+      "audioSentence": "t1-p06-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p06-050",
+      "english": "Needle",
+      "polish": "Igła",
+      "sentenceEn": "Why are needles so easy to lose?",
+      "sentencePl": "Dlaczego igły tak łatwo się gubią?",
+      "audioWord": "t1-p06-050-word.mp3",
+      "audioSentence": "t1-p06-050-sentence.mp3"
+    }
+  ]
+}

@@ -1,0 +1,550 @@
+{
+  "id": "t1-p104",
+  "name": "Czas I kolejność",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Przymiotniki",
+  "chapter": "Rodział XIV",
+  "words": [
+    {
+      "id": "t1-p104-001",
+      "english": "Quick",
+      "polish": "Szybki (trwający krótko)",
+      "sentenceEn": "It was a quick trip to Paris. Just for the weekend.",
+      "sentencePl": "To była szybka wycieczka do Paryża. Tylko na weekend.",
+      "audioWord": "t1-p104-001-word.mp3",
+      "audioSentence": "t1-p104-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-002",
+      "english": "Current",
+      "polish": "Bieżący",
+      "sentenceEn": "The current situation is hopeless. We must pull out or call for reinforcements.",
+      "sentencePl": "Bieżąca sytuacja jest beznadziejna. Musimy się wycofać albo wezwać wsparcie.",
+      "audioWord": "t1-p104-002-word.mp3",
+      "audioSentence": "t1-p104-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-003",
+      "english": "Former",
+      "polish": "Były; poprzedni",
+      "sentenceEn": "The former boxing champ was defeated by a rookie. Times are changing.",
+      "sentencePl": "Były mistrz boksu został pokonany przez nowicjusza. Czasy się zmieniają.",
+      "audioWord": "t1-p104-003-word.mp3",
+      "audioSentence": "t1-p104-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-004",
+      "english": "All-day",
+      "polish": "Całodniowy",
+      "sentenceEn": "It is an all-day meeting, so don't make any appointments for the afternoon.",
+      "sentencePl": "To jest całodniowe spotkanie, więc nie umawiaj żadnych innych spotkań na popołudnie.",
+      "audioWord": "t1-p104-004-word.mp3",
+      "audioSentence": "t1-p104-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-005",
+      "english": "Temporal",
+      "polish": "Doczesny; czasowy",
+      "sentenceEn": "This is a temporal solution. We have to come up with something steady.",
+      "sentencePl": "To jest rozwiązanie czasowe. Musimy wymyślić coś stabilnego.",
+      "audioWord": "t1-p104-005-word.mp3",
+      "audioSentence": "t1-p104-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-006",
+      "english": "Today's",
+      "polish": "Dzisiejszy",
+      "sentenceEn": "Have you heard about Elon Musk announcing yet another project? I've just read it in today's paper.",
+      "sentencePl": "Słyszałeś o tym, że Elon Musk ogłosił kolejny projekt? Właśnie wyczytałem w dzisiejszej gazecie.",
+      "audioWord": "t1-p104-006-word.mp3",
+      "audioSentence": "t1-p104-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-007",
+      "english": "Tomorrow's",
+      "polish": "Jutrzejszy",
+      "sentenceEn": "The article about me will appear in tomorrow's newspaper! I'll frame and hang it in the living room.",
+      "sentencePl": "Artykuł o mnie ukaże się w jutrzejszej gazecie! Oprawię go i powieszę w salonie.",
+      "audioWord": "t1-p104-007-word.mp3",
+      "audioSentence": "t1-p104-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-008",
+      "english": "Recent",
+      "polish": "Niedawny; ostatni",
+      "sentenceEn": "Your recent behavior showed me, Tommy... that partying with you was the best decision ever! That party was legendary!",
+      "sentencePl": "Twoje ostatnie zachowanie pokazało mi Tommy... że imprezowanie z Tobą było najlepszą decyzją w historii! Ta impreza była legendarna!",
+      "audioWord": "t1-p104-008-word.mp3",
+      "audioSentence": "t1-p104-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-009",
+      "english": "Nonstop",
+      "polish": "Nieprzerwany; non stop",
+      "sentenceEn": "She's been cleaning the kitchen nonstop for 5 hours!",
+      "sentencePl": "Ona sprząta kuchnię non stop od 5 godzin!",
+      "audioWord": "t1-p104-009-word.mp3",
+      "audioSentence": "t1-p104-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-010",
+      "english": "Past",
+      "polish": "Przeszły; z przeszłości",
+      "sentenceEn": "Your past actions speak for themselves. You are a man of honor.",
+      "sentencePl": "Twoje czyny z przeszłości mówią same za siebie. Jesteś człowiekiem honoru.",
+      "audioWord": "t1-p104-010-word.mp3",
+      "audioSentence": "t1-p104-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-011",
+      "english": "Future",
+      "polish": "Przyszły",
+      "sentenceEn": "Look at that girl on the right. Yeah, she looks like my future wife.",
+      "sentencePl": "Patrz na tę dziewczynę po prawej. Noo, wygląda jak moja przyszła żona.",
+      "audioWord": "t1-p104-011-word.mp3",
+      "audioSentence": "t1-p104-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-012",
+      "english": "Present",
+      "polish": "Teraźniejszy; obecny",
+      "sentenceEn": "The present situation is obvious – Chinese smartphones are storming the market.",
+      "sentencePl": "Obecna sytuacja jest oczywista, chińskie smartfony szturmują rynek.",
+      "audioWord": "t1-p104-012-word.mp3",
+      "audioSentence": "t1-p104-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-013",
+      "english": "Earlier",
+      "polish": "Wcześniejszy",
+      "sentenceEn": "My earlier projects were aiming to redefine the public space in Miami.",
+      "sentencePl": "Celem moich wcześniejszych projektów było zaprojektowanie na nowo przestrzeni publicznej Miami.",
+      "audioWord": "t1-p104-013-word.mp3",
+      "audioSentence": "t1-p104-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-014",
+      "english": "Yesterday's",
+      "polish": "Wczorajszy",
+      "sentenceEn": "Jeff lost yesterday's match, but I'm sure he is a promising tennis player.",
+      "sentencePl": "Jeff przegrał wczorajszy mecz, ale jestem pewien, że jest obiecującym tenisistą.",
+      "audioWord": "t1-p104-014-word.mp3",
+      "audioSentence": "t1-p104-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-015",
+      "english": "Time-consuming",
+      "polish": "Czasochłonny",
+      "sentenceEn": "Organizing this party is much more time-consuming than we expected.",
+      "sentencePl": "Zorganizowanie tej imprezy jest o wiele bardziej czasochłonne niż się spodziewaliśmy.",
+      "audioWord": "t1-p104-015-word.mp3",
+      "audioSentence": "t1-p104-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-016",
+      "english": "Now",
+      "polish": "Teraz; natychmiast",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-016-word.mp3",
+      "audioSentence": "t1-p104-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-017",
+      "english": "Currently",
+      "polish": "Obecnie; aktualnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-017-word.mp3",
+      "audioSentence": "t1-p104-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-018",
+      "english": "Just",
+      "polish": "Dopiero co",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-018-word.mp3",
+      "audioSentence": "t1-p104-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-019",
+      "english": "During",
+      "polish": "W czasie; podczas",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-019-word.mp3",
+      "audioSentence": "t1-p104-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-020",
+      "english": "Ever",
+      "polish": "Kiedykolwiek; zawsze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-020-word.mp3",
+      "audioSentence": "t1-p104-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-021",
+      "english": "In time",
+      "polish": "W porę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-021-word.mp3",
+      "audioSentence": "t1-p104-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-022",
+      "english": "Last",
+      "polish": "Ostatnio; na końcu",
+      "sentenceEn": "This new order will not last forever. Soon a revolution will come. We shall wait.",
+      "sentencePl": "Ten nowy porządek nie będzie trwał wiecznie, wkrótce nadejdzie rewolucja. Poczekamy.",
+      "audioWord": "t1-p104-022-word.mp3",
+      "audioSentence": "t1-p104-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-023",
+      "english": "Later",
+      "polish": "Później",
+      "sentenceEn": "Can we meet at a later date? I don't have time this week.",
+      "sentencePl": "Czy możemy się spotkać w późniejszym terminie? Nie mam czasu w tym tygodniu.",
+      "audioWord": "t1-p104-023-word.mp3",
+      "audioSentence": "t1-p104-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-024",
+      "english": "On time",
+      "polish": "Na czas (punktualnie)",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-024-word.mp3",
+      "audioSentence": "t1-p104-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-025",
+      "english": "One day",
+      "polish": "Pewnego dnia (w przyszłości)",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-025-word.mp3",
+      "audioSentence": "t1-p104-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-026",
+      "english": "Past",
+      "polish": "Po (np. Godzinie drugiej, czterdziestce)",
+      "sentenceEn": "Your past actions speak for themselves. You are a man of honor.",
+      "sentencePl": "Twoje czyny z przeszłości mówią same za siebie. Jesteś człowiekiem honoru.",
+      "audioWord": "t1-p104-026-word.mp3",
+      "audioSentence": "t1-p104-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-027",
+      "english": "Sometime",
+      "polish": "Pewnego razu; któregoś dnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-027-word.mp3",
+      "audioSentence": "t1-p104-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-028",
+      "english": "Soon",
+      "polish": "Wkrótce",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-028-word.mp3",
+      "audioSentence": "t1-p104-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-029",
+      "english": "Sooner",
+      "polish": "Wcześniej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-029-word.mp3",
+      "audioSentence": "t1-p104-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-030",
+      "english": "Still",
+      "polish": "Nadal; jeszcze",
+      "sentenceEn": "I prefer still water rather than sparkling one.",
+      "sentencePl": "Wolę wodę niegazowaną od gazowanej.",
+      "audioWord": "t1-p104-030-word.mp3",
+      "audioSentence": "t1-p104-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-031",
+      "english": "Instant",
+      "polish": "Natychmiastowy; błyskawiczny (np. Kawa)",
+      "sentenceEn": "That's the best move in MMA so far. Let's get an instant replay on this.",
+      "sentencePl": "To jak dotąd najlepszy manewr w MMA. Zobaczmy szybką powtórkę.",
+      "audioWord": "t1-p104-031-word.mp3",
+      "audioSentence": "t1-p104-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-032",
+      "english": "Brief",
+      "polish": "Krótki; zwięzły",
+      "sentenceEn": "That was a brief conversation, but we managed to establish everything.",
+      "sentencePl": "To była krótka rozmowa, ale udało nam się wszystko ustalić.",
+      "audioWord": "t1-p104-032-word.mp3",
+      "audioSentence": "t1-p104-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-033",
+      "english": "Delayed",
+      "polish": "Opóźniony (pociąg)",
+      "sentenceEn": "Our flight is delayed 2 hours... Let's go to duty-free stores.",
+      "sentencePl": "Nasz lot jest opóźniony o 2 godziny... Chodźmy do sklepów wolnocłowych.",
+      "audioWord": "t1-p104-033-word.mp3",
+      "audioSentence": "t1-p104-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-034",
+      "english": "Urgent",
+      "polish": "Pilny (o sprawie)",
+      "sentenceEn": "We have an urgent matter to discuss. The President is threatening us with war.",
+      "sentencePl": "Mamy pilną sprawę do omówienia. Prezydent grozi nam wojną.",
+      "audioWord": "t1-p104-034-word.mp3",
+      "audioSentence": "t1-p104-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-035",
+      "english": "Long-term",
+      "polish": "Długoterminowy",
+      "sentenceEn": "In the long-term, we are considering changing the name of the company for something more catchy.",
+      "sentencePl": "W perspektywie długoterminowej rozważamy zmianę nazwy firmy na coś bardziej chwytliwego.",
+      "audioWord": "t1-p104-035-word.mp3",
+      "audioSentence": "t1-p104-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-036",
+      "english": "Short-term",
+      "polish": "Krótkoterminowy",
+      "sentenceEn": "Our short-term goal is to increase the level of sales.",
+      "sentencePl": "Naszym celem krótkoterminowym jest zwiększenie poziomu sprzedaży.",
+      "audioWord": "t1-p104-036-word.mp3",
+      "audioSentence": "t1-p104-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-037",
+      "english": "Sudden",
+      "polish": "Nagły; gwałtowny",
+      "sentenceEn": "Mom, it was a sudden decision, but I'm in Vegas, and I've gotten married.",
+      "sentencePl": "Mamo, to była nagła decyzja, ale jestem w Vegas i wyszłam za mąż.",
+      "audioWord": "t1-p104-037-word.mp3",
+      "audioSentence": "t1-p104-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-038",
+      "english": "Immediate",
+      "polish": "Pilny; bezpośredni (np. Niebezpieczeństwo)",
+      "sentenceEn": "I need immediate tax consultation.",
+      "sentencePl": "Potrzebuję pilnej konsultacji w sprawie podatków.",
+      "audioWord": "t1-p104-038-word.mp3",
+      "audioSentence": "t1-p104-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-039",
+      "english": "Last-minute",
+      "polish": "W ostatniej chwili",
+      "sentenceEn": "Lola is helping me find some last-minute gifts.",
+      "sentencePl": "Lola pomaga mi znaleźć jakieś prezenty na ostatnią chwilę.",
+      "audioWord": "t1-p104-039-word.mp3",
+      "audioSentence": "t1-p104-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-040",
+      "english": "Old-time",
+      "polish": "Dawny; starodawny",
+      "sentenceEn": "An old-time custom is to stomp your foot and turn around 4 times jumping on one leg.",
+      "sentencePl": "Starodawny zwyczaj nakazuje tupnąć nogą i obrócić się 4 razy, podskakując na jednej nodze.",
+      "audioWord": "t1-p104-040-word.mp3",
+      "audioSentence": "t1-p104-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-041",
+      "english": "Coming",
+      "polish": "Zbliżający się; nadchodzący",
+      "sentenceEn": "Your peace of mind and well-being are the most important in the coming months.",
+      "sentencePl": "W nadchodzących miesiącach najważniejsze będą Twój spokój i dobre samopoczucie.",
+      "audioWord": "t1-p104-041-word.mp3",
+      "audioSentence": "t1-p104-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-042",
+      "english": "Incoming",
+      "polish": "Przychodzący",
+      "sentenceEn": "The government should defend our planet from incoming asteroids.",
+      "sentencePl": "Rząd powinien chronić planetę przed nadlatującymi asteroidami.",
+      "audioWord": "t1-p104-042-word.mp3",
+      "audioSentence": "t1-p104-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-043",
+      "english": "Upcoming",
+      "polish": "Nadchodzący (o czasie); zbliżający się",
+      "sentenceEn": "I need not remind you of your upcoming exams.",
+      "sentencePl": "Nie muszę Ci chyba przypominać o zbliżających się egzaminach.",
+      "audioWord": "t1-p104-043-word.mp3",
+      "audioSentence": "t1-p104-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-044",
+      "english": "Following",
+      "polish": "Następujący; kolejny",
+      "sentenceEn": "Our plan for the following weeks is simple: \"To get rich fast!\"",
+      "sentencePl": "Nasz plan na kolejne tygodnie jest prosty: „Szybko się wzbogacić!”",
+      "audioWord": "t1-p104-044-word.mp3",
+      "audioSentence": "t1-p104-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-045",
+      "english": "Scheduled",
+      "polish": "Wpisany na konkretną datę; zaplanowany",
+      "sentenceEn": "All issues and activities are precisely recorded and scheduled. The High Council is very well organized.",
+      "sentencePl": "Wszystkie sprawy i działania są dokładnie rejestrowane i planowane. Wysoka Rada jest bardzo dobrze zorganizowana.",
+      "audioWord": "t1-p104-045-word.mp3",
+      "audioSentence": "t1-p104-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-046",
+      "english": "Some time ago",
+      "polish": "Jakiś czas temu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-046-word.mp3",
+      "audioSentence": "t1-p104-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-047",
+      "english": "Finally",
+      "polish": "Wreszcie; na koniec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-047-word.mp3",
+      "audioSentence": "t1-p104-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-048",
+      "english": "Monthly",
+      "polish": "Miesięcznie; co miesiąc",
+      "sentenceEn": "Our monthly income is around 50k.",
+      "sentencePl": "Nasz miesięczny przychód wynosi ok. 50 tysięcy.",
+      "audioWord": "t1-p104-048-word.mp3",
+      "audioSentence": "t1-p104-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-049",
+      "english": "All day long",
+      "polish": "Przez cały dzień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-049-word.mp3",
+      "audioSentence": "t1-p104-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-050",
+      "english": "Punctually",
+      "polish": "Punktualnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-050-word.mp3",
+      "audioSentence": "t1-p104-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-051",
+      "english": "Ahead of",
+      "polish": "Z wyprzedzeniem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-051-word.mp3",
+      "audioSentence": "t1-p104-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-052",
+      "english": "Previously",
+      "polish": "Przedtem; poprzednio",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-052-word.mp3",
+      "audioSentence": "t1-p104-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-053",
+      "english": "Someday",
+      "polish": "Któregoś dnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-053-word.mp3",
+      "audioSentence": "t1-p104-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-054",
+      "english": "By the time",
+      "polish": "Do czasu gdy; zanim",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-054-word.mp3",
+      "audioSentence": "t1-p104-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-055",
+      "english": "Daily",
+      "polish": "Dziennie",
+      "sentenceEn": "My daily routine is: good breakfast, exercises and work.",
+      "sentencePl": "Moja codzienna rutyna to: dobre śniadanie, ćwiczenia i praca.",
+      "audioWord": "t1-p104-055-word.mp3",
+      "audioSentence": "t1-p104-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-056",
+      "english": "Eventually",
+      "polish": "W końcu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-056-word.mp3",
+      "audioSentence": "t1-p104-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-057",
+      "english": "For good",
+      "polish": "Na stałe; na dobre",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-057-word.mp3",
+      "audioSentence": "t1-p104-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-058",
+      "english": "From now on",
+      "polish": "Od teraz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-058-word.mp3",
+      "audioSentence": "t1-p104-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-059",
+      "english": "In time to",
+      "polish": "Na czas (wyrobić się)",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-059-word.mp3",
+      "audioSentence": "t1-p104-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p104-060",
+      "english": "Long ago",
+      "polish": "Dawno temu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p104-060-word.mp3",
+      "audioSentence": "t1-p104-060-sentence.mp3"
+    }
+  ]
+}

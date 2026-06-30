@@ -1,0 +1,415 @@
+{
+  "id": "t1-p160",
+  "name": "Ilość",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Przysłówki",
+  "chapter": "Rozdział XXVI",
+  "words": [
+    {
+      "id": "t1-p160-001",
+      "english": "About",
+      "polish": "Mniej więcej; około",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-001-word.mp3",
+      "audioSentence": "t1-p160-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-002",
+      "english": "Around",
+      "polish": "Około (np. 5kg, 20min)",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-002-word.mp3",
+      "audioSentence": "t1-p160-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-003",
+      "english": "Both",
+      "polish": "Oba; obaj; obie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-003-word.mp3",
+      "audioSentence": "t1-p160-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-004",
+      "english": "None",
+      "polish": "Nic; ani trochę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-004-word.mp3",
+      "audioSentence": "t1-p160-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-005",
+      "english": "Some",
+      "polish": "Kilka; trochę; parę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-005-word.mp3",
+      "audioSentence": "t1-p160-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-006",
+      "english": "Each",
+      "polish": "Każdy z",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-006-word.mp3",
+      "audioSentence": "t1-p160-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-007",
+      "english": "Enough",
+      "polish": "Wystarczająco",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-007-word.mp3",
+      "audioSentence": "t1-p160-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-008",
+      "english": "Every",
+      "polish": "Każdy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-008-word.mp3",
+      "audioSentence": "t1-p160-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-009",
+      "english": "Less",
+      "polish": "Mniej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-009-word.mp3",
+      "audioSentence": "t1-p160-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-010",
+      "english": "More",
+      "polish": "Więcej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-010-word.mp3",
+      "audioSentence": "t1-p160-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-011",
+      "english": "Up to",
+      "polish": "Aż do",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-011-word.mp3",
+      "audioSentence": "t1-p160-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-012",
+      "english": "Most",
+      "polish": "Większość; najbardziej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-012-word.mp3",
+      "audioSentence": "t1-p160-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-013",
+      "english": "Once",
+      "polish": "Raz; jednorazowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-013-word.mp3",
+      "audioSentence": "t1-p160-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-014",
+      "english": "Twice",
+      "polish": "Dwa razy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-014-word.mp3",
+      "audioSentence": "t1-p160-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-015",
+      "english": "Least",
+      "polish": "Najmniej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p160-015-word.mp3",
+      "audioSentence": "t1-p160-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-016",
+      "english": "Total",
+      "polish": "Całkowity",
+      "sentenceEn": "The total amount of songs on iTunes is impossible to sum up.",
+      "sentencePl": "Nie sposób policzyć całkowitej liczby utworów na iTunes.",
+      "audioWord": "t1-p160-016-word.mp3",
+      "audioSentence": "t1-p160-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-017",
+      "english": "Extra",
+      "polish": "Ekstra; dodatkowy",
+      "sentenceEn": "Can I have extra cheese on my pizza?",
+      "sentencePl": "Czy mogę dostać dodatkowy ser na pizzę?",
+      "audioWord": "t1-p160-017-word.mp3",
+      "audioSentence": "t1-p160-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-018",
+      "english": "Moderate",
+      "polish": "Umiarkowany",
+      "sentenceEn": "We have noticed a moderate increase in our sales compared to the last year.",
+      "sentencePl": "Zauważyliśmy umiarkowany wzrost naszej sprzedaży w odniesieniu do ostatniego roku.",
+      "audioWord": "t1-p160-018-word.mp3",
+      "audioSentence": "t1-p160-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-019",
+      "english": "Whole",
+      "polish": "Cały; pełny (nienaruszony)",
+      "sentenceEn": "How long would it take you to read all of Wikipedia?",
+      "sentencePl": "Jak długo zajęłoby Ci przeczytanie całej Wikipedii?",
+      "audioWord": "t1-p160-019-word.mp3",
+      "audioSentence": "t1-p160-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-020",
+      "english": "Numerous",
+      "polish": "Liczny; mnogi; wiele",
+      "sentenceEn": "Numerous Founding Fathers were imprisoned by Sir David.",
+      "sentencePl": "Wielu Ojców Założycieli zostało uwięzionych przez Sir Davida.",
+      "audioWord": "t1-p160-020-word.mp3",
+      "audioSentence": "t1-p160-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-021",
+      "english": "Maximal",
+      "polish": "Maksymalny",
+      "sentenceEn": "Ok. What is the maximal time we have to download everything after you hack into the system? Will we manage to collect all the data?",
+      "sentencePl": "Okej. Jak już się włamiesz do systemu, to jaki mamy maksymalny czas na ściągnięcie danych? Damy radę ściągnąć wszystko?",
+      "audioWord": "t1-p160-021-word.mp3",
+      "audioSentence": "t1-p160-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-022",
+      "english": "Minimal",
+      "polish": "Minimalny; znikomy",
+      "sentenceEn": "Our daughter has minimal contact with the rest of our family.",
+      "sentencePl": "Nasza córka ma znikomy kontakt z resztą naszej rodziny.",
+      "audioWord": "t1-p160-022-word.mp3",
+      "audioSentence": "t1-p160-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-023",
+      "english": "Plural",
+      "polish": "Mnogi",
+      "sentenceEn": "Why are the plural forms in English all so different?",
+      "sentencePl": "Dlaczego angielskie wyrazy mają różne formy liczby mnogiej?",
+      "audioWord": "t1-p160-023-word.mp3",
+      "audioSentence": "t1-p160-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-024",
+      "english": "Singular",
+      "polish": "Pojedynczy; odosobniony",
+      "sentenceEn": "Singular molecules can be observed.",
+      "sentencePl": "Pojedyncze cząsteczki da się zaobserwować.",
+      "audioWord": "t1-p160-024-word.mp3",
+      "audioSentence": "t1-p160-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-025",
+      "english": "Entire",
+      "polish": "Cały (w komplecie)",
+      "sentenceEn": "I was able to bring the entire set in one suitcase.",
+      "sentencePl": "Udało mi się przywieźć cały zestaw w jednej walizce.",
+      "audioWord": "t1-p160-025-word.mp3",
+      "audioSentence": "t1-p160-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-026",
+      "english": "Decreasing",
+      "polish": "Malejący",
+      "sentenceEn": "It's surprising that the decreasing percentage of the population is capable of providing food for an ever greater number of people.",
+      "sentencePl": "To zaskakujące, że malejący odsetek populacji jest w stanie wyżywić coraz większą liczbę ludzi.",
+      "audioWord": "t1-p160-026-word.mp3",
+      "audioSentence": "t1-p160-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-027",
+      "english": "Countless",
+      "polish": "Niezliczony",
+      "sentenceEn": "I had told her countless times to move in with me, but she didn't and now she regrets her decision.",
+      "sentencePl": "Mówiłem jej niezliczoną ilość razy, żeby się do mnie wprowadziła, ale tego nie zrobiła i teraz żałuje swojej decyzji,",
+      "audioWord": "t1-p160-027-word.mp3",
+      "audioSentence": "t1-p160-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-028",
+      "english": "Countable",
+      "polish": "Policzalny",
+      "sentenceEn": "The word \"chair\" is an example of a countable noun.",
+      "sentencePl": "Słowo „krzesło” jest przykładem rzeczownika policzalnego.",
+      "audioWord": "t1-p160-028-word.mp3",
+      "audioSentence": "t1-p160-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-029",
+      "english": "Multiple",
+      "polish": "Wielokrotny",
+      "sentenceEn": "We had multiple accidents with old WordCatchers.",
+      "sentencePl": "Mieliśmy sporo wypadków ze starymi WordCatcherami.",
+      "audioWord": "t1-p160-029-word.mp3",
+      "audioSentence": "t1-p160-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-030",
+      "english": "Increasing",
+      "polish": "Wzrastający",
+      "sentenceEn": "This increasing demand will be beneficial in the long run.",
+      "sentencePl": "Ten wzrastający popyt na dłuższą metę będzie korzystny.",
+      "audioWord": "t1-p160-030-word.mp3",
+      "audioSentence": "t1-p160-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-031",
+      "english": "Minority",
+      "polish": "Mniejszość",
+      "sentenceEn": "People who know correct English are now a minority in Miami.",
+      "sentencePl": "Ludzie, którzy znają poprawny angielski, stanowią obecnie mniejszość w Miami.",
+      "audioWord": "t1-p160-031-word.mp3",
+      "audioSentence": "t1-p160-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-032",
+      "english": "Majority",
+      "polish": "Większość; pełnoletniość",
+      "sentenceEn": "Rustilies are the majority in Miami.",
+      "sentencePl": "Rustilisi stanowią większość w Miami.",
+      "audioWord": "t1-p160-032-word.mp3",
+      "audioSentence": "t1-p160-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-033",
+      "english": "Quarter",
+      "polish": "Ćwierć",
+      "sentenceEn": "Let's take a break and meet again in a quarter.",
+      "sentencePl": "Zróbmy przerwę i spotkajmy się za kwadrans.",
+      "audioWord": "t1-p160-033-word.mp3",
+      "audioSentence": "t1-p160-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-034",
+      "english": "Lack",
+      "polish": "Brak",
+      "sentenceEn": "Cassandra knew she lacked self-confidence.",
+      "sentencePl": "Cassandra wiedziała, że brakuje jej pewności siebie.",
+      "audioWord": "t1-p160-034-word.mp3",
+      "audioSentence": "t1-p160-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-035",
+      "english": "Surplus",
+      "polish": "Nadwyżka; nadmiar",
+      "sentenceEn": "Mexico is unlikely to produce any corn surplus this year.",
+      "sentencePl": "Meksyk raczej nie wyprodukuje w tym roku żadnej nadwyżki kukurydzy.",
+      "audioWord": "t1-p160-035-word.mp3",
+      "audioSentence": "t1-p160-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-036",
+      "english": "Shortage",
+      "polish": "Niedobór",
+      "sentenceEn": "Rising rents and the housing shortage dominated the election campaign.",
+      "sentencePl": "Rosnące czynsze i niedobór mieszkań zdominowały kampanię wyborczą.",
+      "audioWord": "t1-p160-036-word.mp3",
+      "audioSentence": "t1-p160-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-037",
+      "english": "Quantity",
+      "polish": "Ilość",
+      "sentenceEn": "Any pigment contains a small quantity of other colors.",
+      "sentencePl": "Każdy pigment zawiera niewielką ilość innych kolorów.",
+      "audioWord": "t1-p160-037-word.mp3",
+      "audioSentence": "t1-p160-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-038",
+      "english": "Amount",
+      "polish": "Kwota; ilość",
+      "sentenceEn": "Can you tell me what was the smallest amount you agreed to work for?",
+      "sentencePl": "Czy możesz mi powiedzieć, za jaką najmniejszą kwotę zgodziłeś się pracować?",
+      "audioWord": "t1-p160-038-word.mp3",
+      "audioSentence": "t1-p160-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-039",
+      "english": "Pile",
+      "polish": "Stos; sterta",
+      "sentenceEn": "This is the pile of the things to keep, and that one is for the garbage. Have fun.",
+      "sentencePl": "Ta sterta jest do zostawienia, a tamta idzie na śmieci. Baw się dobrze.",
+      "audioWord": "t1-p160-039-word.mp3",
+      "audioSentence": "t1-p160-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-040",
+      "english": "Dozen",
+      "polish": "Tuzin",
+      "sentenceEn": "A dozen people came to the counter-protest. It cannot be taken seriously.",
+      "sentencePl": "Na kontrprotest przyszedł może tuzin osób. Nie można go traktować poważnie.",
+      "audioWord": "t1-p160-040-word.mp3",
+      "audioSentence": "t1-p160-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-041",
+      "english": "Excess",
+      "polish": "Nadmiar",
+      "sentenceEn": "It should help us drain some of this excess fluid.",
+      "sentencePl": "To powinno nam pomóc odessać nadmiar płynu.",
+      "audioWord": "t1-p160-041-word.mp3",
+      "audioSentence": "t1-p160-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-042",
+      "english": "Overflow",
+      "polish": "Przepełnienie; przelew; zalew",
+      "sentenceEn": "The overflow of information is incredible, but I can't put it in order.",
+      "sentencePl": "Zalew informacji jest niebywały, ale nie potrafię ich uporządkować.",
+      "audioWord": "t1-p160-042-word.mp3",
+      "audioSentence": "t1-p160-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-043",
+      "english": "Ounce",
+      "polish": "Uncja",
+      "sentenceEn": "Two ounces of gunpowder, and you can load the gun.",
+      "sentencePl": "Dwie uncje prochu strzelniczego i możesz ładować broń.",
+      "audioWord": "t1-p160-043-word.mp3",
+      "audioSentence": "t1-p160-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-044",
+      "english": "Lack",
+      "polish": "Brak",
+      "sentenceEn": "Cassandra knew she lacked self-confidence.",
+      "sentencePl": "Cassandra wiedziała, że brakuje jej pewności siebie.",
+      "audioWord": "t1-p160-044-word.mp3",
+      "audioSentence": "t1-p160-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p160-045",
+      "english": "Dozen",
+      "polish": "Tuzin",
+      "sentenceEn": "A dozen people came to the counter-protest. It cannot be taken seriously.",
+      "sentencePl": "Na kontrprotest przyszedł może tuzin osób. Nie można go traktować poważnie.",
+      "audioWord": "t1-p160-045-word.mp3",
+      "audioSentence": "t1-p160-045-sentence.mp3"
+    }
+  ]
+}

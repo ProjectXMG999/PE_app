@@ -1,0 +1,32 @@
+.sw-update-toast {
+  position: fixed;
+  bottom: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-md));
+  left: var(--spacing-md);
+  right: var(--spacing-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 200;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 300ms ease forwards;
+}
+
+.sw-update-toast span {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.sw-update-toast button {
+  background: var(--accent);
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+}

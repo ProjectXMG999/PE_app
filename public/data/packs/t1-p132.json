@@ -1,0 +1,280 @@
+{
+  "id": "t1-p132",
+  "name": "Książki I pisownia",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XIX",
+  "words": [
+    {
+      "id": "t1-p132-001",
+      "english": "Verb",
+      "polish": "Czasownik",
+      "sentenceEn": "Every sentence needs a verb.",
+      "sentencePl": "W każdym zdaniu musi być czasownik.",
+      "audioWord": "t1-p132-001-word.mp3",
+      "audioSentence": "t1-p132-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-002",
+      "english": "Grammar",
+      "polish": "Gramatyka",
+      "sentenceEn": "You need grammar to really understand the language.",
+      "sentencePl": "Potrzebujesz gramatyki, żeby tak na serio zrozumieć język.",
+      "audioWord": "t1-p132-002-word.mp3",
+      "audioSentence": "t1-p132-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-003",
+      "english": "Story",
+      "polish": "Historia (opowieść)",
+      "sentenceEn": "My sister lives in a two-story house.",
+      "sentencePl": "Moja siostra mieszka w domu dwupiętrowym.",
+      "audioWord": "t1-p132-003-word.mp3",
+      "audioSentence": "t1-p132-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-004",
+      "english": "Description",
+      "polish": "Opis",
+      "sentenceEn": "We will need a detailed description.",
+      "sentencePl": "Będziemy potrzebowali szczegółowego opisu.",
+      "audioWord": "t1-p132-004-word.mp3",
+      "audioSentence": "t1-p132-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-005",
+      "english": "Adjective",
+      "polish": "Przymiotnik",
+      "sentenceEn": "Which adjective describes you the best?",
+      "sentencePl": "Który przymiotnik najlepiej Cię opisuje?",
+      "audioWord": "t1-p132-005-word.mp3",
+      "audioSentence": "t1-p132-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-006",
+      "english": "Adverb",
+      "polish": "Przysłówek",
+      "sentenceEn": "People often confuse adverbs with adjectives.",
+      "sentencePl": "Ludzie często mylą przysłówki z przymiotnikami",
+      "audioWord": "t1-p132-006-word.mp3",
+      "audioSentence": "t1-p132-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-007",
+      "english": "Chapter",
+      "polish": "Rozdział",
+      "sentenceEn": "Just one more chapter, and I'm going to bed.",
+      "sentencePl": "Jeszcze jeden rozdział i idę spać.",
+      "audioWord": "t1-p132-007-word.mp3",
+      "audioSentence": "t1-p132-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-008",
+      "english": "Noun",
+      "polish": "Rzeczownik",
+      "sentenceEn": "Nouns are the most abundant part of speech in English.",
+      "sentencePl": "Rzeczowniki stanowią najliczniejszą grupę wśród części mowy w języku angielskim.",
+      "audioWord": "t1-p132-008-word.mp3",
+      "audioSentence": "t1-p132-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-009",
+      "english": "Vocabulary",
+      "polish": "Słownictwo",
+      "sentenceEn": "Rustlies' vocabulary is very limited.",
+      "sentencePl": "Słownictwo Rustilesów jest bardzo ograniczone.",
+      "audioWord": "t1-p132-009-word.mp3",
+      "audioSentence": "t1-p132-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-010",
+      "english": "Dictionary",
+      "polish": "Słownik",
+      "sentenceEn": "Why do you still have dictionaries at home? You can find it all online.",
+      "sentencePl": "Po co dalej trzymasz słowniki? Przecież wszystko można znaleźć w sieci.",
+      "audioWord": "t1-p132-010-word.mp3",
+      "audioSentence": "t1-p132-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-011",
+      "english": "Page",
+      "polish": "Strona (w książce)",
+      "sentenceEn": "Turn to page 394 and tell me, what do you think about Emily's behavior.",
+      "sentencePl": "Przejdź do strony 394 i powiedz mi, co myślisz o zachowaniu Emily.",
+      "audioWord": "t1-p132-011-word.mp3",
+      "audioSentence": "t1-p132-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-012",
+      "english": "Translation",
+      "polish": "Tłumaczenie; przekład",
+      "sentenceEn": "This is a very good translation, thank you.",
+      "sentencePl": "To doskonały przekład, dziękuję.",
+      "audioWord": "t1-p132-012-word.mp3",
+      "audioSentence": "t1-p132-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-013",
+      "english": "Title",
+      "polish": "Tytuł",
+      "sentenceEn": "The book is great. Now you just need a good title.",
+      "sentencePl": "Książka jest świetna, teraz potrzebujesz tylko dobrego tytułu.",
+      "audioWord": "t1-p132-013-word.mp3",
+      "audioSentence": "t1-p132-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-014",
+      "english": "Publication",
+      "polish": "Publikacja",
+      "sentenceEn": "He forced her to go through his dull scientific publications on the first date. Can you imagine? No wonder she never called back.",
+      "sentencePl": "Na pierwszej randce kazał jej przelądać swoje nudne prace naukowe. Dasz wiarę? Nic dziwnego, że nigdy nie oddzwoniła.",
+      "audioWord": "t1-p132-014-word.mp3",
+      "audioSentence": "t1-p132-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-015",
+      "english": "Encyclopedia",
+      "polish": "Encyklopedia",
+      "sentenceEn": "Anyone can become a co-author of this encyclopedia.",
+      "sentencePl": "Każdy może zostać współautorem tej encyklopedii.",
+      "audioWord": "t1-p132-015-word.mp3",
+      "audioSentence": "t1-p132-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-016",
+      "english": "Diary",
+      "polish": "Dziennik; pamiętnik",
+      "sentenceEn": "My sister got really mad when she found out that I read her diary.",
+      "sentencePl": "Moja siostra się wściekła, kiedy odkryła, że czytałam jej pamiętnik.",
+      "audioWord": "t1-p132-016-word.mp3",
+      "audioSentence": "t1-p132-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-017",
+      "english": "Extract",
+      "polish": "Fragment",
+      "sentenceEn": "We are working on extracting some valuable metals from this area.",
+      "sentencePl": "Pracujemy nad wydobyciem pewnych drogocennych metali z tego obszaru.",
+      "audioWord": "t1-p132-017-word.mp3",
+      "audioSentence": "t1-p132-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-018",
+      "english": "Punctuation",
+      "polish": "Interpunkcja",
+      "sentenceEn": "Correct grammar and punctuation are not necessary for easy communication.",
+      "sentencePl": "Poprawna gramatyka i interpunkcja nie są niezbędne w prostej komunikacji.",
+      "audioWord": "t1-p132-018-word.mp3",
+      "audioSentence": "t1-p132-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-019",
+      "english": "Proofreading",
+      "polish": "Korekta",
+      "sentenceEn": "Proofreading these sentences feels like a never-ending story.",
+      "sentencePl": "Korekta tych zdań wydaje się historią bez końca.",
+      "audioWord": "t1-p132-019-word.mp3",
+      "audioSentence": "t1-p132-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-020",
+      "english": "Period",
+      "polish": "Kropka (na końcu zdania)",
+      "sentenceEn": "Patients should be closely monitored throughout this period.",
+      "sentencePl": "W tym okresie pacjent powinien pozostawać pod ścisłą obserwacją.",
+      "audioWord": "t1-p132-020-word.mp3",
+      "audioSentence": "t1-p132-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-021",
+      "english": "Numeral",
+      "polish": "Liczebnik",
+      "sentenceEn": "You have to learn numerals to be able to count.",
+      "sentencePl": "Żeby liczyć, musisz nauczyć się liczebników.",
+      "audioWord": "t1-p132-021-word.mp3",
+      "audioSentence": "t1-p132-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-022",
+      "english": "Theme",
+      "polish": "Motyw przewodni",
+      "sentenceEn": "Ariel's birthday party theme will be \"Under the sea.\" I think this is quite obvious.",
+      "sentencePl": "Motywem przewodnim urodzin Ariel będzie „Podwodny świat”. Myślę, że to dość oczywiste.",
+      "audioWord": "t1-p132-022-word.mp3",
+      "audioSentence": "t1-p132-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-023",
+      "english": "Handwriting",
+      "polish": "Pismo odręczne; charakter pisma",
+      "sentenceEn": "Steven's handwriting is really messy. He would be a perfect doctor.",
+      "sentencePl": "Steve ma okropny charakter pisma. Byłby idealnym lekarzem.",
+      "audioWord": "t1-p132-023-word.mp3",
+      "audioSentence": "t1-p132-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-024",
+      "english": "Spelling",
+      "polish": "Pisownia",
+      "sentenceEn": "There is no better way to work on spelling than writing stuff down by yourself.",
+      "sentencePl": "Nie ma lepszego sposobu pracy nad pisownią niż samodzielne zapisywanie wszystkiego.",
+      "audioWord": "t1-p132-024-word.mp3",
+      "audioSentence": "t1-p132-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-025",
+      "english": "Summary",
+      "polish": "Podsumowanie",
+      "sentenceEn": "Just finish this summary, and you are done for today.",
+      "sentencePl": "Skończ tylko to podsumowanie i to tyle na dzisiaj.",
+      "audioWord": "t1-p132-025-word.mp3",
+      "audioSentence": "t1-p132-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-026",
+      "english": "Comma",
+      "polish": "Przecinek",
+      "sentenceEn": "That password I gave you is without a comma.",
+      "sentencePl": "To hasło, które ci podałem, jest bez przecinka.",
+      "audioWord": "t1-p132-026-word.mp3",
+      "audioSentence": "t1-p132-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-027",
+      "english": "Preposition",
+      "polish": "Przyimek",
+      "sentenceEn": "Why do I always have a problem choosing a preposition?",
+      "sentencePl": "Dlaczego zawsze mam problem z wyborem przyimka?",
+      "audioWord": "t1-p132-027-word.mp3",
+      "audioSentence": "t1-p132-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-028",
+      "english": "Proverb",
+      "polish": "Przysłowie",
+      "sentenceEn": "An old Swedish proverb says, “Worry gives small things a big shadow.”",
+      "sentencePl": "Stare szwedzkie przysłowie mówi: „Zmartwienie daje małym rzeczom duży cień”.",
+      "audioWord": "t1-p132-028-word.mp3",
+      "audioSentence": "t1-p132-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-029",
+      "english": "Abbreviation",
+      "polish": "Skrót (np. Słowa, nazwy)",
+      "sentenceEn": "What does the MLPD abbreviation stand for?",
+      "sentencePl": "Co oznacza skrót MLPD?",
+      "audioWord": "t1-p132-029-word.mp3",
+      "audioSentence": "t1-p132-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-030",
+      "english": "Slang",
+      "polish": "Slang",
+      "sentenceEn": "Some criminal groups have their own slang.",
+      "sentencePl": "Niektóre grupy przestępcze mają swój własny slang.",
+      "audioWord": "t1-p132-030-word.mp3",
+      "audioSentence": "t1-p132-030-sentence.mp3"
+    }
+  ]
+}

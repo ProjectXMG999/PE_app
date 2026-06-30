@@ -1,0 +1,595 @@
+{
+  "id": "t1-p29",
+  "name": "Części ciała",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział III",
+  "words": [
+    {
+      "id": "t1-p29-001",
+      "english": "Head",
+      "polish": "Głowa",
+      "sentenceEn": "Jenny was given a head position because she is the best at what she does.",
+      "sentencePl": "Jenny otrzymała kierownicze stanowisko, bo jest najlepsza w tym, co robi.",
+      "audioWord": "t1-p29-001-word.mp3",
+      "audioSentence": "t1-p29-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-002",
+      "english": "Leg",
+      "polish": "Noga",
+      "sentenceEn": "My leg is asleep! I don't like this.",
+      "sentencePl": "Noga mi zdrętwiała! Nie lubię tego uczucia.",
+      "audioWord": "t1-p29-002-word.mp3",
+      "audioSentence": "t1-p29-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-003",
+      "english": "Nose",
+      "polish": "Nos",
+      "sentenceEn": "Josie wants to pierce her nose, but she is afraid of needles.",
+      "sentencePl": "Josie chce sobie przekłuć nos, ale boi się igieł.",
+      "audioWord": "t1-p29-003-word.mp3",
+      "audioSentence": "t1-p29-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-004",
+      "english": "Eye",
+      "polish": "Oko",
+      "sentenceEn": "You keep eyeing Will, why? Has he done something to you?",
+      "sentencePl": "Ciągle mierzysz wzrokiem Willa, dlaczego? Czy coś Ci zrobił?",
+      "audioWord": "t1-p29-004-word.mp3",
+      "audioSentence": "t1-p29-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-005",
+      "english": "Hand",
+      "polish": "Ręka",
+      "sentenceEn": "Oh my God, what happened with your hand? It's all swollen.",
+      "sentencePl": "O mój Boże, co Ci się stało w rękę? Jest cała spuchnięta.",
+      "audioWord": "t1-p29-005-word.mp3",
+      "audioSentence": "t1-p29-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-006",
+      "english": "Heart",
+      "polish": "Serce",
+      "sentenceEn": "My heart beats faster when I see him! I don't know if it's love or stress.",
+      "sentencePl": "Moje serce bije szybciej, kiedy go widzę! Nie wiem, czy to miłość, czy stres.",
+      "audioWord": "t1-p29-006-word.mp3",
+      "audioSentence": "t1-p29-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-007",
+      "english": "Face",
+      "polish": "Twarz",
+      "sentenceEn": "He was so rude! No wonder he got slapped in the face!",
+      "sentencePl": "Był wyjątkowo chamski! Nic dziwnego, że dostał w twarz!",
+      "audioWord": "t1-p29-007-word.mp3",
+      "audioSentence": "t1-p29-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-008",
+      "english": "Ear",
+      "polish": "Ucho",
+      "sentenceEn": "I can't hear in one ear. It was very loud at the concert yesterday.",
+      "sentencePl": "Nie słyszę na jedno ucho. Wczoraj na koncercie było bardzo głośno.",
+      "audioWord": "t1-p29-008-word.mp3",
+      "audioSentence": "t1-p29-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-009",
+      "english": "Mouth",
+      "polish": "Usta; buzia",
+      "sentenceEn": "Open your mouth and try this cake! It's delicious.",
+      "sentencePl": "Otwórz buzię i spróbuj tego ciasta! Jest pyszne.",
+      "audioWord": "t1-p29-009-word.mp3",
+      "audioSentence": "t1-p29-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-010",
+      "english": "Hair",
+      "polish": "Włosy",
+      "sentenceEn": "I love your hair! Who's your hairdresser?",
+      "sentencePl": "Uwielbiam Twoje włosy! Gdzie chodzisz do fryzjera?",
+      "audioWord": "t1-p29-010-word.mp3",
+      "audioSentence": "t1-p29-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-011",
+      "english": "Belly",
+      "polish": "Brzuch",
+      "sentenceEn": "The dog was lying on its belly.",
+      "sentencePl": "Pies leżał na brzuchu.",
+      "audioWord": "t1-p29-011-word.mp3",
+      "audioSentence": "t1-p29-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-012",
+      "english": "Body",
+      "polish": "Ciało",
+      "sentenceEn": "I love my body the way it is – I don't need a diet!",
+      "sentencePl": "Kocham moje ciało takim, jakie jest – nie potrzebuję diety!",
+      "audioWord": "t1-p29-012-word.mp3",
+      "audioSentence": "t1-p29-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-013",
+      "english": "Tongue",
+      "polish": "Język",
+      "sentenceEn": "Can you roll your tongue? I can't...",
+      "sentencePl": "Umiesz zwinąć język? Ja nie umiem...",
+      "audioWord": "t1-p29-013-word.mp3",
+      "audioSentence": "t1-p29-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-014",
+      "english": "Blood",
+      "polish": "Krew",
+      "sentenceEn": "I don't know my blood type. Should I?",
+      "sentencePl": "Nie znam swojej grupy krwi. A powinienem?",
+      "audioWord": "t1-p29-014-word.mp3",
+      "audioSentence": "t1-p29-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-015",
+      "english": "Penis",
+      "polish": "Penis",
+      "sentenceEn": "Penises can come in all sizes and shapes.",
+      "sentencePl": "Penisy mogą mieć różne rozmiary i kształty.",
+      "audioWord": "t1-p29-015-word.mp3",
+      "audioSentence": "t1-p29-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-016",
+      "english": "Back",
+      "polish": "Plecy",
+      "sentenceEn": "Let's go at the back. I have to show you something.",
+      "sentencePl": "Chodźmy na tył. Muszę Ci coś pokazać.",
+      "audioWord": "t1-p29-016-word.mp3",
+      "audioSentence": "t1-p29-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-017",
+      "english": "Vagina",
+      "polish": "Pochwa",
+      "sentenceEn": "A vagina can stretch a lot during childbirth and later go back to its original size.",
+      "sentencePl": "Pochwa podczas porodu potrafi się bardzo rozciągnąć, a potem wraca do pierwotnego rozmiaru.",
+      "audioWord": "t1-p29-017-word.mp3",
+      "audioSentence": "t1-p29-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-018",
+      "english": "Skin",
+      "polish": "Skóra",
+      "sentenceEn": "You have the smoothest skin! Tell me, how do you do this?",
+      "sentencePl": "Masz wyjątkowo gładką skórę! Zdradź mi, jak to robisz?",
+      "audioWord": "t1-p29-018-word.mp3",
+      "audioSentence": "t1-p29-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-019",
+      "english": "Foot",
+      "polish": "Stopa",
+      "sentenceEn": "You are only 15 years old and already over 7 feet!",
+      "sentencePl": "Masz dopiero 15 lat, a wzrost ponad 7 stóp!",
+      "audioWord": "t1-p29-019-word.mp3",
+      "audioSentence": "t1-p29-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-020",
+      "english": "Tooth",
+      "polish": "Ząb",
+      "sentenceEn": "My tooth hurts, but I really don't want to go to the dentist.",
+      "sentencePl": "Boli mnie ząb, ale naprawdę nie chcę iść do dentysty.",
+      "audioWord": "t1-p29-020-word.mp3",
+      "audioSentence": "t1-p29-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-021",
+      "english": "Shoulder",
+      "polish": "Bark",
+      "sentenceEn": "I dislocated my shoulder a few weeks ago, and it still hurts.",
+      "sentencePl": "Wybiłem sobie bark kilka tygodni temu i dalej boli.",
+      "audioWord": "t1-p29-021-word.mp3",
+      "audioSentence": "t1-p29-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-022",
+      "english": "Eyebrow",
+      "polish": "Brew",
+      "sentenceEn": "I haven't noticed you have a scar on your eyebrow before. What happened?",
+      "sentencePl": "Nie zauważyłem wcześniej, że masz bliznę na brwi. Co się stało?",
+      "audioWord": "t1-p29-022-word.mp3",
+      "audioSentence": "t1-p29-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-023",
+      "english": "Beard",
+      "polish": "Broda",
+      "sentenceEn": "Jim shaved off his beard and he looks like a child now.",
+      "sentencePl": "Jim zgolił brodę i wygląda teraz jak dziecko.",
+      "audioWord": "t1-p29-023-word.mp3",
+      "audioSentence": "t1-p29-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-024",
+      "english": "Stomach",
+      "polish": "Brzuch; żołądek",
+      "sentenceEn": "My stomach hurts. I shouldn't have eaten that last slice of pizza.",
+      "sentencePl": "Brzuch mnie boli. Nie powinienem był jeść tego ostatniego kawałka pizzy.",
+      "audioWord": "t1-p29-024-word.mp3",
+      "audioSentence": "t1-p29-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-025",
+      "english": "Part of the body",
+      "polish": "Część ciała",
+      "sentenceEn": "Every part of my body hurts after that workout.",
+      "sentencePl": "Po treningu boli mnie każda część ciała.",
+      "audioWord": "t1-p29-025-word.mp3",
+      "audioSentence": "t1-p29-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-026",
+      "english": "Palm",
+      "polish": "Dłoń",
+      "sentenceEn": "Daisy slid something gently into Danny's palm. I think they're up to something.",
+      "sentencePl": "Daisy delikatnie wsunęła coś w dłoń Danny'ego. Myślę, że coś knują.",
+      "audioWord": "t1-p29-026-word.mp3",
+      "audioSentence": "t1-p29-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-027",
+      "english": "Throat",
+      "polish": "Gardło",
+      "sentenceEn": "My throat hurts. Do we have anything for it?",
+      "sentencePl": "Gardło mnie boli. Mamy coś na to?",
+      "audioWord": "t1-p29-027-word.mp3",
+      "audioSentence": "t1-p29-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-028",
+      "english": "Thumb",
+      "polish": "Kciuk",
+      "sentenceEn": "Let's give them thumbs up! It's a good video.",
+      "sentencePl": "Dajmy im kciuki do góry! To dobry filmik.",
+      "audioWord": "t1-p29-028-word.mp3",
+      "audioSentence": "t1-p29-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-029",
+      "english": "Chest",
+      "polish": "Klatka piersiowa",
+      "sentenceEn": "I thought I had heart problems, but it was just the muscles in my chest.",
+      "sentencePl": "Myślałem, że mam problemy z sercem, a to były tylko mięśnie klatki piersiowej.",
+      "audioWord": "t1-p29-029-word.mp3",
+      "audioSentence": "t1-p29-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-030",
+      "english": "Knee",
+      "polish": "Kolano",
+      "sentenceEn": "I used to be an adventurer like you. Then I took an arrow to the knee.",
+      "sentencePl": "Kiedyś byłem poszukiwaczem przygód tak jak Ty. Potem dostałem strzałą w kolano.",
+      "audioWord": "t1-p29-030-word.mp3",
+      "audioSentence": "t1-p29-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-031",
+      "english": "Bone",
+      "polish": "Kość",
+      "sentenceEn": "Have you ever broken a bone? I haven't. I am indestructible.",
+      "sentencePl": "Czy złamałeś kiedyś jakąś kość? Nie. Jestem niezniszczalny.",
+      "audioWord": "t1-p29-031-word.mp3",
+      "audioSentence": "t1-p29-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-032",
+      "english": "Spine",
+      "polish": "Kręgosłup",
+      "sentenceEn": "To have a healthy spine, you have to sit straight.",
+      "sentencePl": "Żeby mieć zdrowy kręgosłup, musisz siedzieć prosto.",
+      "audioWord": "t1-p29-032-word.mp3",
+      "audioSentence": "t1-p29-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-033",
+      "english": "Elbow",
+      "polish": "Łokieć",
+      "sentenceEn": "Why does hitting your elbow hurt so much?",
+      "sentencePl": "Dlaczego uderzenie się w łokieć tak bardzo boli?",
+      "audioWord": "t1-p29-033-word.mp3",
+      "audioSentence": "t1-p29-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-034",
+      "english": "Muscle",
+      "polish": "Mięsień",
+      "sentenceEn": "I'm not working out with you again. All of my muscles hurt.",
+      "sentencePl": "Nie ćwiczę więcej z Tobą. Bolą mnie wszystkie mięśnie.",
+      "audioWord": "t1-p29-034-word.mp3",
+      "audioSentence": "t1-p29-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-035",
+      "english": "Brain",
+      "polish": "Mózg",
+      "sentenceEn": "Some people don't use their brains as they should...",
+      "sentencePl": "Niektórzy ludzie nie używają swoich mózgów tak, jak powinni...",
+      "audioWord": "t1-p29-035-word.mp3",
+      "audioSentence": "t1-p29-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-036",
+      "english": "Finger",
+      "polish": "Palec",
+      "sentenceEn": "Stop pointing your finger at me!",
+      "sentencePl": "Przestań wskazywać na mnie palcem!",
+      "audioWord": "t1-p29-036-word.mp3",
+      "audioSentence": "t1-p29-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-037",
+      "english": "Nail",
+      "polish": "Paznokieć",
+      "sentenceEn": "Oh no! I broke my nail!",
+      "sentencePl": "O nie! Złamałam paznokieć!",
+      "audioWord": "t1-p29-037-word.mp3",
+      "audioSentence": "t1-p29-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-038",
+      "english": "Breast",
+      "polish": "Pierś",
+      "sentenceEn": "Usually, one breast is bigger than the other one.",
+      "sentencePl": "Jedna pierś jest zazwyczaj większa od drugiej.",
+      "audioWord": "t1-p29-038-word.mp3",
+      "audioSentence": "t1-p29-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-039",
+      "english": "Fist",
+      "polish": "Pięść",
+      "sentenceEn": "I couldn't listen to this anymore, so I banged my fist loudly on the table.",
+      "sentencePl": "Nie mogłem już tego dłużej słuchać, więc głośno uderzyłem pięścią w stół.",
+      "audioWord": "t1-p29-039-word.mp3",
+      "audioSentence": "t1-p29-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-040",
+      "english": "Butt",
+      "polish": "Pupa; tyłek",
+      "sentenceEn": "Move your butt and go swimming with me.",
+      "sentencePl": "Rusz tyłek i chodź ze mną popływać.",
+      "audioWord": "t1-p29-040-word.mp3",
+      "audioSentence": "t1-p29-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-041",
+      "english": "Ass",
+      "polish": "Tyłek",
+      "sentenceEn": "I love horse riding, but I don't know if my ass will ever stop hurting.",
+      "sentencePl": "Kocham jazdę konną, ale nie wiem czy mój tyłek kiedykolwiek przestanie boleć.",
+      "audioWord": "t1-p29-041-word.mp3",
+      "audioSentence": "t1-p29-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-042",
+      "english": "Arm",
+      "polish": "Ramię",
+      "sentenceEn": "What happened to your arm?",
+      "sentencePl": "Co Ci się stało w ramię?",
+      "audioWord": "t1-p29-042-word.mp3",
+      "audioSentence": "t1-p29-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-043",
+      "english": "Eyelash",
+      "polish": "Rzęsa",
+      "sentenceEn": "Wait, you have an eyelash on your cheek. Let me take it off for you.",
+      "sentencePl": "Poczekaj, masz rzęsę na policzku. Zdejmę Ci ją.",
+      "audioWord": "t1-p29-043-word.mp3",
+      "audioSentence": "t1-p29-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-044",
+      "english": "Neck",
+      "polish": "Szyja; kark",
+      "sentenceEn": "I didn't sleep well, and now my neck hurts.",
+      "sentencePl": "Nie spałem dobrze i teraz boli mnie szyja.",
+      "audioWord": "t1-p29-044-word.mp3",
+      "audioSentence": "t1-p29-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-045",
+      "english": "Lip",
+      "polish": "Warga",
+      "sentenceEn": "I cut my lip again. Why does it keep happening?",
+      "sentencePl": "Znowu rozcięłam sobie wargę. Dlaczego mi się to ciągle przytrafia?",
+      "audioWord": "t1-p29-045-word.mp3",
+      "audioSentence": "t1-p29-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-046",
+      "english": "Rib",
+      "polish": "Żebro",
+      "sentenceEn": "I cracked my rib during karate practice. I had to go to the hospital.",
+      "sentencePl": "Złamałem żebro podczas treningu karate. Musiałem pojechać do szpitala.",
+      "audioWord": "t1-p29-046-word.mp3",
+      "audioSentence": "t1-p29-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-047",
+      "english": "Wrist",
+      "polish": "Nadgarstek",
+      "sentenceEn": "I wear a festival bracelet on my wrist the whole time.",
+      "sentencePl": "Przez cały czas noszę festiwalową bransoletkę na nadgarstku.",
+      "audioWord": "t1-p29-047-word.mp3",
+      "audioSentence": "t1-p29-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-048",
+      "english": "Organ",
+      "polish": "Narząd",
+      "sentenceEn": "Can you name all the organs in the human body?",
+      "sentencePl": "Potrafisz wymienić wszystkie organy w ludzkim ciele?",
+      "audioWord": "t1-p29-048-word.mp3",
+      "audioSentence": "t1-p29-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-049",
+      "english": "Organism",
+      "polish": "Organizm",
+      "sentenceEn": "Everything in your organism seems to be working fine.",
+      "sentencePl": "Wygląda na to, że wszystko w Twoim organizmie funkcjonuje bez zarzutów.",
+      "audioWord": "t1-p29-049-word.mp3",
+      "audioSentence": "t1-p29-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-050",
+      "english": "Lung",
+      "polish": "Płuco",
+      "sentenceEn": "Lung transplants are very rare and extremely difficult.",
+      "sentencePl": "Przeszczepy płuc są bardzo rzadkie i niezwykle trudne.",
+      "audioWord": "t1-p29-050-word.mp3",
+      "audioSentence": "t1-p29-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-051",
+      "english": "Cheek",
+      "polish": "Policzek",
+      "sentenceEn": "He kissed my cheek and walked away.",
+      "sentencePl": "Pocałował mnie w policzek i odszedł.",
+      "audioWord": "t1-p29-051-word.mp3",
+      "audioSentence": "t1-p29-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-052",
+      "english": "Heartbeat",
+      "polish": "Bicie serca",
+      "sentenceEn": "That's a strong heartbeat! Your baby is doing great.",
+      "sentencePl": "Bicie serca jest wyraźne! Z dzieckiem wszystko w porządku,",
+      "audioWord": "t1-p29-052-word.mp3",
+      "audioSentence": "t1-p29-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-053",
+      "english": "Thigh",
+      "polish": "Udo",
+      "sentenceEn": "It seemed like he touched my thigh by accident, but I'm not so sure...",
+      "sentencePl": "Wyglądało na to, że przypadkowo dotknął mojego uda, ale nie jestem tego taka pewna…",
+      "audioWord": "t1-p29-053-word.mp3",
+      "audioSentence": "t1-p29-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-054",
+      "english": "Liver",
+      "polish": "Wątroba",
+      "sentenceEn": "Your liver is the only organ that can grow itself back.",
+      "sentencePl": "Wątroba jest jedynym organem, który może odrosnąć.",
+      "audioWord": "t1-p29-054-word.mp3",
+      "audioSentence": "t1-p29-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-055",
+      "english": "Buttocks",
+      "polish": "Pośladki",
+      "sentenceEn": "Sit on your buttocks and eat dinner.",
+      "sentencePl": "Usiądź na pośladkach i zjedz obiad.",
+      "audioWord": "t1-p29-055-word.mp3",
+      "audioSentence": "t1-p29-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-056",
+      "english": "Anatomy",
+      "polish": "Anatomia",
+      "sentenceEn": "I like learning anatomy and knowing all the parts of my body.",
+      "sentencePl": "Lubię uczyć się  anatomii i poznawać wszystkie części swojego ciała.",
+      "audioWord": "t1-p29-056-word.mp3",
+      "audioSentence": "t1-p29-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-057",
+      "english": "Hip",
+      "polish": "Biodro",
+      "sentenceEn": "My grandma had a hip surgery. She is ok now.",
+      "sentencePl": "Moja babcia miała operację biodra. Teraz czuje się dobrze.",
+      "audioWord": "t1-p29-057-word.mp3",
+      "audioSentence": "t1-p29-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-058",
+      "english": "Skull",
+      "polish": "Czaszka",
+      "sentenceEn": "Sugar skulls are an awesome Mexican decoration for Dia de Muertos.",
+      "sentencePl": "Cukrowe czaszki to niesamowita meksykańska dekoracja na dzień zmarłych.",
+      "audioWord": "t1-p29-058-word.mp3",
+      "audioSentence": "t1-p29-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-059",
+      "english": "Forehead",
+      "polish": "Czoło",
+      "sentenceEn": "In medieval times having a big forehead was considered attractive.",
+      "sentencePl": "W czasach średniowiecznych duże czoło było uważane za atrakcyjne.",
+      "audioWord": "t1-p29-059-word.mp3",
+      "audioSentence": "t1-p29-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-060",
+      "english": "Ankle",
+      "polish": "Kostka",
+      "sentenceEn": "I've twisted my ankle and I do't know if I should go to the hospital.",
+      "sentencePl": "Skręciłem sobie kostkę i nie wiem, czy nie powinienem jechać do szpitala.",
+      "audioWord": "t1-p29-060-word.mp3",
+      "audioSentence": "t1-p29-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-061",
+      "english": "Pinky",
+      "polish": "Mały palec (potocznie)",
+      "sentenceEn": "I think I've broken my pinky on that door.",
+      "sentencePl": "Wydaje mi się, że złamałem sobie mały palec na tych drzwiach.",
+      "audioWord": "t1-p29-061-word.mp3",
+      "audioSentence": "t1-p29-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-062",
+      "english": "Ring finger",
+      "polish": "Palec serdeczny",
+      "sentenceEn": "I hurt my ring finger when playing baseball.",
+      "sentencePl": "Uszkodziłem sobie serdeczny palec podczas gry w baseball.",
+      "audioWord": "t1-p29-062-word.mp3",
+      "audioSentence": "t1-p29-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-063",
+      "english": "Middle finger",
+      "polish": "Palec środkowy",
+      "sentenceEn": "I can see your middle finger. Stop it.",
+      "sentencePl": "Widzę Twój środkowy palec. Przestań.",
+      "audioWord": "t1-p29-063-word.mp3",
+      "audioSentence": "t1-p29-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-064",
+      "english": "Index finger",
+      "polish": "Palec wskazujący",
+      "sentenceEn": "Place your right index finger on the scanner, please.",
+      "sentencePl": "Proszę położyć palec wskazujący prawej ręki na skanerze.",
+      "audioWord": "t1-p29-064-word.mp3",
+      "audioSentence": "t1-p29-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p29-065",
+      "english": "Heel",
+      "polish": "Pięta; obcas",
+      "sentenceEn": "I broke my heel. It's impossible to walk in these shoes now.",
+      "sentencePl": "Złamałam obcas. Nie da się teraz chodzić w tych butach.",
+      "audioWord": "t1-p29-065-word.mp3",
+      "audioSentence": "t1-p29-065-sentence.mp3"
+    }
+  ]
+}

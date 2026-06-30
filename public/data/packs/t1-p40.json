@@ -1,0 +1,460 @@
+{
+  "id": "t1-p40",
+  "name": "Sprzęt elektroniczny",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział V",
+  "words": [
+    {
+      "id": "t1-p40-001",
+      "english": "Battery",
+      "polish": "Bateria",
+      "sentenceEn": "David, please change the battery in the remote control.",
+      "sentencePl": "Dawid, zmień baterię w pilocie, proszę.",
+      "audioWord": "t1-p40-001-word.mp3",
+      "audioSentence": "t1-p40-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-002",
+      "english": "Camera",
+      "polish": "Kamera; aparat",
+      "sentenceEn": "Peter bought a new camera. He is going to take great photos.",
+      "sentencePl": "Peter kupił nowy aparat. Będzie robił świetne zdjęcia.",
+      "audioWord": "t1-p40-002-word.mp3",
+      "audioSentence": "t1-p40-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-003",
+      "english": "Computer",
+      "polish": "Komputer",
+      "sentenceEn": "I'd rather play on a computer than on a console.",
+      "sentencePl": "Wolę grać na komputerze niż na konsoli.",
+      "audioWord": "t1-p40-003-word.mp3",
+      "audioSentence": "t1-p40-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-004",
+      "english": "Laptop",
+      "polish": "Laptop",
+      "sentenceEn": "Working with a laptop is very convenient. You can take it everywhere with you.",
+      "sentencePl": "Praca na laptopie jest bardzo wygodna. Możesz go wszędzie ze sobą zabrać.",
+      "audioWord": "t1-p40-004-word.mp3",
+      "audioSentence": "t1-p40-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-005",
+      "english": "Charger",
+      "polish": "Ładowarka",
+      "sentenceEn": "I never know where my charger is. Can it walk?",
+      "sentencePl": "Nigdy nie wiem, gdzie jest moja ładowarka. Czy ona umie chodzić?",
+      "audioWord": "t1-p40-005-word.mp3",
+      "audioSentence": "t1-p40-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-006",
+      "english": "Phone call",
+      "polish": "Rozmowa telefoniczna",
+      "sentenceEn": "That phone call really freaked me out.",
+      "sentencePl": "Ta rozmowa telefoniczna naprawdę mnie wystraszyła.",
+      "audioWord": "t1-p40-006-word.mp3",
+      "audioSentence": "t1-p40-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-007",
+      "english": "Hairdryer",
+      "polish": "Suszarka do włosów",
+      "sentenceEn": "I use a hairdryer to dry my hair. What else would I need it for?",
+      "sentencePl": "Używam suszarki do suszenia włosów. Do czego innego miałabym jej potrzebować?",
+      "audioWord": "t1-p40-007-word.mp3",
+      "audioSentence": "t1-p40-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-008",
+      "english": "Telephone",
+      "polish": "Telefon",
+      "sentenceEn": "It's hard to imagine life without a telephone.",
+      "sentencePl": "Ciężko wyobrazić sobie życie bez telefonu.",
+      "audioWord": "t1-p40-008-word.mp3",
+      "audioSentence": "t1-p40-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-009",
+      "english": "Mobile phone",
+      "polish": "Telefon komórkowy",
+      "sentenceEn": "I always have my mobile phone with me. I think I'm addicted.",
+      "sentencePl": "Zawsze mam przy sobie telefon komórkowy. Chyba jestem uzależniony.",
+      "audioWord": "t1-p40-009-word.mp3",
+      "audioSentence": "t1-p40-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-010",
+      "english": "Message",
+      "polish": "Wiadomość",
+      "sentenceEn": "*beep* You've got a message.",
+      "sentencePl": "*pip* Masz wiadomość.",
+      "audioWord": "t1-p40-010-word.mp3",
+      "audioSentence": "t1-p40-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-011",
+      "english": "Update",
+      "polish": "Aktualizacja",
+      "sentenceEn": "Update your information, man. The Chicago Bulls are not the best anymore.",
+      "sentencePl": "Zaktualizuj swoje info, stary. Chicago Bulls nie są już najlepsi.",
+      "audioWord": "t1-p40-011-word.mp3",
+      "audioSentence": "t1-p40-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-012",
+      "english": "Air conditioning",
+      "polish": "Klimatyzacja",
+      "sentenceEn": "We need to install air conditioning before July. It was too hot last summer.",
+      "sentencePl": "Do końca czerwca musimy zainstalować klimatyzację. Zeszłe lato było piekielnie gorące.",
+      "audioWord": "t1-p40-012-word.mp3",
+      "audioSentence": "t1-p40-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-013",
+      "english": "Code",
+      "polish": "Kod",
+      "sentenceEn": "IT Wizzard is teaching me how to code. I can't wait to learn more.",
+      "sentencePl": "IT Wizzard uczy mnie programowania. Nie mogę się doczekać, aż nauczę się więcej.",
+      "audioWord": "t1-p40-013-word.mp3",
+      "audioSentence": "t1-p40-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-014",
+      "english": "Comment",
+      "polish": "Komentarz",
+      "sentenceEn": "Leave the comment below my video and subscribe!",
+      "sentencePl": "Zostaw komentarz pod moim filmem i zasubskrybuj!",
+      "audioWord": "t1-p40-014-word.mp3",
+      "audioSentence": "t1-p40-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-015",
+      "english": "Microwave",
+      "polish": "Mikrofalówka",
+      "sentenceEn": "They say that there is a guy who is so lazy that he only eats meals from the microwave.",
+      "sentencePl": "Podobno jeden gość jest taki leniwy, że je posiłki tylko z mikrofalówki.",
+      "audioWord": "t1-p40-015-word.mp3",
+      "audioSentence": "t1-p40-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-016",
+      "english": "Phone number",
+      "polish": "Numer telefonu",
+      "sentenceEn": "You are stunning! Can I have your phone number?",
+      "sentencePl": "Jesteś prześliczna! Dasz mi swój numer telefonu?",
+      "audioWord": "t1-p40-016-word.mp3",
+      "audioSentence": "t1-p40-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-017",
+      "english": "Headphones",
+      "polish": "Słuchawki na głowę",
+      "sentenceEn": "I have a very good set of headphones, 'cause I play a lot, and I need to hear my enemies.",
+      "sentencePl": "Mam bardzo dobry zestaw słuchawek, bo dużo gram i muszę słyszeć swoich wrogów.",
+      "audioWord": "t1-p40-017-word.mp3",
+      "audioSentence": "t1-p40-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-018",
+      "english": "Status",
+      "polish": "Status",
+      "sentenceEn": "What's the status of our mission?",
+      "sentencePl": "Jaki jest status naszej misji?",
+      "audioWord": "t1-p40-018-word.mp3",
+      "audioSentence": "t1-p40-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-019",
+      "english": "Signal",
+      "polish": "Sygnał",
+      "sentenceEn": "Discontinue the drug  if you develop symptoms that may signal liver problems.",
+      "sentencePl": "Odstaw lek, jeśli pojawią się objawy mogące sygnalizować problemy z wątrobą.",
+      "audioWord": "t1-p40-019-word.mp3",
+      "audioSentence": "t1-p40-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-020",
+      "english": "User",
+      "polish": "Użytkownik",
+      "sentenceEn": "Sign up here to become a new user. It's all for free.",
+      "sentencePl": "Zarejestruj się tutaj, aby zostać nowym użytkownikiem. Całkowicie za darmo.",
+      "audioWord": "t1-p40-020-word.mp3",
+      "audioSentence": "t1-p40-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-021",
+      "english": "Coffee maker",
+      "polish": "Ekspres do kawy",
+      "sentenceEn": "I couldn't live without a coffee maker in my house.",
+      "sentencePl": "Nie mogłabym żyć bez ekspresu do kawy w domu.",
+      "audioWord": "t1-p40-021-word.mp3",
+      "audioSentence": "t1-p40-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-022",
+      "english": "Stove",
+      "polish": "Kuchenka",
+      "sentenceEn": "I left a pan on the stove... Everything is burned now.",
+      "sentencePl": "Zostawiłam patelnię na kuchence... Wszystko się spaliło.",
+      "audioWord": "t1-p40-022-word.mp3",
+      "audioSentence": "t1-p40-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-023",
+      "english": "Player",
+      "polish": "Odtwarzacz",
+      "sentenceEn": "Matt is the best player on our team!",
+      "sentencePl": "Matt jest najlepszym zawodnikiem w naszej drużynie!",
+      "audioWord": "t1-p40-023-word.mp3",
+      "audioSentence": "t1-p40-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-024",
+      "english": "Oven",
+      "polish": "Piekarnik",
+      "sentenceEn": "Can you put the cookies into the oven?",
+      "sentencePl": "Możesz wstawić ciasteczka do piekarnika?",
+      "audioWord": "t1-p40-024-word.mp3",
+      "audioSentence": "t1-p40-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-025",
+      "english": "Remote control",
+      "polish": "Pilot do telewizora",
+      "sentenceEn": "Toby found the remote control under the couch.",
+      "sentencePl": "Toby znalazł pilota do telewizora pod kanapą.",
+      "audioWord": "t1-p40-025-word.mp3",
+      "audioSentence": "t1-p40-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-026",
+      "english": "Robot",
+      "polish": "Robot",
+      "sentenceEn": "It's nice to have a personal robot.",
+      "sentencePl": "Fajnie jest mieć osobistego robota.",
+      "audioWord": "t1-p40-026-word.mp3",
+      "audioSentence": "t1-p40-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-027",
+      "english": "Socket",
+      "polish": "Gniazdko (elektryczne)",
+      "sentenceEn": "Can you plug the charger into the socket, please?",
+      "sentencePl": "Czy możesz podłączyć ładowarkę do gniazdka, proszę?",
+      "audioWord": "t1-p40-027-word.mp3",
+      "audioSentence": "t1-p40-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-028",
+      "english": "Cable",
+      "polish": "Kabel; kablówka",
+      "sentenceEn": "Does anyone still have the cable? In the digital streaming era?",
+      "sentencePl": "Czy ktokolwiek ma jeszcze kablówkę? W erze cyfrowego streamingu?",
+      "audioWord": "t1-p40-028-word.mp3",
+      "audioSentence": "t1-p40-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-029",
+      "english": "Videotape",
+      "polish": "Kaseta wideo",
+      "sentenceEn": "I have a box of videotapes in the attic.",
+      "sentencePl": "Mam pudło kaset wideo na strychu.",
+      "audioWord": "t1-p40-029-word.mp3",
+      "audioSentence": "t1-p40-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-030",
+      "english": "Console",
+      "polish": "Konsola",
+      "sentenceEn": "Suzy tried to console Fred after his wife died. Now they're a happy couple.",
+      "sentencePl": "Suzy próbowała pocieszyć Freda po tym, jak zmarła jego żona. Teraz są szczęśliwą parą.",
+      "audioWord": "t1-p40-030-word.mp3",
+      "audioSentence": "t1-p40-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-031",
+      "english": "Stereo",
+      "polish": "Wieża (odtwarzacz)",
+      "sentenceEn": "Oh yeah, this stereo has a massive bass!",
+      "sentencePl": "O tak, ta wieża ma potężny bas!",
+      "audioWord": "t1-p40-031-word.mp3",
+      "audioSentence": "t1-p40-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-032",
+      "english": "Plug",
+      "polish": "Wtyczka",
+      "sentenceEn": "Can you put the plug into the socket? Thanks.",
+      "sentencePl": "Możesz włożyć wtyczkę do gniazdka? Dziękuję.",
+      "audioWord": "t1-p40-032-word.mp3",
+      "audioSentence": "t1-p40-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-033",
+      "english": "Freezer",
+      "polish": "Zamrażarka",
+      "sentenceEn": "You must keep ice cream in the freezer, or it will melt at this temperature!",
+      "sentencePl": "Musisz trzymać lody w zamrażarce albo się rozpuszczą w tej temperaturze!",
+      "audioWord": "t1-p40-033-word.mp3",
+      "audioSentence": "t1-p40-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-034",
+      "english": "Dishwasher",
+      "polish": "Zmywarka",
+      "sentenceEn": "The dishwasher is full. You won't even fit this one plate inside.",
+      "sentencePl": "Zmywarka jest pełna. Nie wciśniesz tam nawet tego jednego talerza.",
+      "audioWord": "t1-p40-034-word.mp3",
+      "audioSentence": "t1-p40-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-035",
+      "english": "Mixer",
+      "polish": "Mikser",
+      "sentenceEn": "This is the best mixer on the market. I want it. I need it.",
+      "sentencePl": "To jest najlepszy mikser na rynku. Chcę go. Potrzebuję go.",
+      "audioWord": "t1-p40-035-word.mp3",
+      "audioSentence": "t1-p40-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-036",
+      "english": "Wire",
+      "polish": "Drut; przewód",
+      "sentenceEn": "This wire has been destroyed, so we have to replace it.",
+      "sentencePl": "Ten przewód został zniszczony, więc musimy go wymienić.",
+      "audioWord": "t1-p40-036-word.mp3",
+      "audioSentence": "t1-p40-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-037",
+      "english": "Appliance",
+      "polish": "Urządzenie (domowe)",
+      "sentenceEn": "Coffee machine is my favorite home appliance. I can't live without my cup of cappuccino.",
+      "sentencePl": "Moim ukochanym sprzętem domowym jest ekspres do kawy. Nie potrafię żyć bez filiżanki cappuccino.",
+      "audioWord": "t1-p40-037-word.mp3",
+      "audioSentence": "t1-p40-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-038",
+      "english": "Headset",
+      "polish": "Zestaw słuchawkowy (nakładany na głowę)",
+      "sentenceEn": "I broke the microphone in my headset. How can I play online with guys?",
+      "sentencePl": "Zepsułem mikrofon w zestawie słuchawkowym. Jak mam grać online z chłopakami?",
+      "audioWord": "t1-p40-038-word.mp3",
+      "audioSentence": "t1-p40-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-039",
+      "english": "Electronics",
+      "polish": "Elektronika",
+      "sentenceEn": "You'll find Max in the electronics department, as always.",
+      "sentencePl": "Znajdziesz Maxa w dziale z elektroniką, jak zawsze.",
+      "audioWord": "t1-p40-039-word.mp3",
+      "audioSentence": "t1-p40-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-040",
+      "english": "Manual",
+      "polish": "Instrukcja obsługi",
+      "sentenceEn": "John has no idea how to drive a car with a manual gearbox. He's never learned it.",
+      "sentencePl": "John nie ma pojęcia, jak prowadzić auto z manualną skrzynią biegów. Nigdy się tego nie uczył.",
+      "audioWord": "t1-p40-040-word.mp3",
+      "audioSentence": "t1-p40-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-041",
+      "english": "Specification",
+      "polish": "Specyfikacja",
+      "sentenceEn": "Is there any detailed specification you have in mind? Want the car to be \"cool\"? Ok, we'll do our best, Mrs. Morgan.",
+      "sentencePl": "Jaka specyfikacja pojazdu panią interesuje? Ma być „fajny”? Ok, zrobimy co w naszej mocy, pani Morgan.",
+      "audioWord": "t1-p40-041-word.mp3",
+      "audioSentence": "t1-p40-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-042",
+      "english": "Recorder",
+      "polish": "Rejestrator (np. Dźwięku, video)",
+      "sentenceEn": "Cameras and recorders transmit the image wirelessly in a Wi-Fi network.",
+      "sentencePl": "Kamery i rejestratory przesyłają obraz bezprzewodowo w sieci Wi-Fi.",
+      "audioWord": "t1-p40-042-word.mp3",
+      "audioSentence": "t1-p40-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-043",
+      "english": "Gadget",
+      "polish": "Gadżet",
+      "sentenceEn": "I don't know how Trina does it but she tinkers with garbage and ends up with awesome gadgets for everyday use.",
+      "sentencePl": "Nie wiem, jak Trina to robi, ale majstruje przy śmieciach, a wychodzą z tego świetne gadżety codziennego użytku.",
+      "audioWord": "t1-p40-043-word.mp3",
+      "audioSentence": "t1-p40-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-044",
+      "english": "Speaker",
+      "polish": "Głośnik",
+      "sentenceEn": "I have to invest in better speakers. They can't hear me on the other side of town.",
+      "sentencePl": "Muszę zainwestować w lepsze głośniki. Nie słyszą mnie po drugiej stronie miasta.",
+      "audioWord": "t1-p40-044-word.mp3",
+      "audioSentence": "t1-p40-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-045",
+      "english": "Home theater",
+      "polish": "Kino domowe",
+      "sentenceEn": "Our product is a computer, personal home theater and gaming system in one.",
+      "sentencePl": "Nasz produkt to komputer, osobiste kino domowe i system gier w jednym.",
+      "audioWord": "t1-p40-045-word.mp3",
+      "audioSentence": "t1-p40-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-046",
+      "english": "Recorder",
+      "polish": "Nagrywarka",
+      "sentenceEn": "Cameras and recorders transmit the image wirelessly in a Wi-Fi network.",
+      "sentencePl": "Kamery i rejestratory przesyłają obraz bezprzewodowo w sieci Wi-Fi.",
+      "audioWord": "t1-p40-046-word.mp3",
+      "audioSentence": "t1-p40-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-047",
+      "english": "Reminder",
+      "polish": "Przypomnienie",
+      "sentenceEn": "Set a reminder for that meeting. You know we will forget about it if you don't do it.",
+      "sentencePl": "Ustaw przypomnienie o tym spotkaniu. Wiesz, że o nim zapomnimy, jeśli tego nie zrobisz.",
+      "audioWord": "t1-p40-047-word.mp3",
+      "audioSentence": "t1-p40-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-048",
+      "english": "Device",
+      "polish": "Przyrząd; urządzenie",
+      "sentenceEn": "Click here, and this will remove messages in that conversation from your device.",
+      "sentencePl": "Kliknij tutaj, a usuniesz wiadomości z tej rozmowy na swoim urządzeniu.",
+      "audioWord": "t1-p40-048-word.mp3",
+      "audioSentence": "t1-p40-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-049",
+      "english": "Standby",
+      "polish": "Stan gotowości",
+      "sentenceEn": "Don't leave your computer on standby. It's not good for it.",
+      "sentencePl": "Nie zostawiaj komputera w stanie gotowości. To nie jest dla niego dobre.",
+      "audioWord": "t1-p40-049-word.mp3",
+      "audioSentence": "t1-p40-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p40-050",
+      "english": "Tablet",
+      "polish": "Tablet",
+      "sentenceEn": "No, Toby! You won't get a new smartphone for your 5th birthday! You may get a tablet.",
+      "sentencePl": "Nie Toby! Nie dostaniesz nowego smartfona na swoje 5 urodziny! Możesz dostać tablet.",
+      "audioWord": "t1-p40-050-word.mp3",
+      "audioSentence": "t1-p40-050-sentence.mp3"
+    }
+  ]
+}

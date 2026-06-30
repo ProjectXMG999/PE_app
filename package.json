@@ -1,0 +1,47 @@
+{
+  "name": "project-english",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "parse-data": "tsx scripts/parse-wizard-xlsx.ts && node scripts/sync-packs.mjs",
+    "match-sentences": "tsx scripts/match-sentences.ts && node scripts/sync-packs.mjs",
+    "sync-packs": "node scripts/sync-packs.mjs",
+    "generate-icons": "node scripts/generate-icons.mjs",
+    "generate-audio": "tsx scripts/generate-audio.ts",
+    "generate-audio-demo": "tsx scripts/generate-audio-demo.ts",
+    "upload-blobs": "tsx scripts/upload-audio-blobs.ts"
+  },
+  "dependencies": {
+    "@fontsource/montserrat": "^5.0.0",
+    "@fontsource/roboto": "^5.0.0",
+    "@netlify/blobs": "^8.0.0",
+    "idb": "^8.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
+    "recharts": "^2.13.0",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "sharp": "^0.35.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.2",
+    "vite": "^6.0.1",
+    "vite-plugin-pwa": "^0.21.1",
+    "workbox-core": "^7.3.0",
+    "workbox-expiration": "^7.3.0",
+    "workbox-precaching": "^7.3.0",
+    "workbox-range-requests": "^7.3.0",
+    "workbox-routing": "^7.3.0",
+    "workbox-strategies": "^7.3.0",
+    "xlsx": "^0.18.5"
+  }
+}

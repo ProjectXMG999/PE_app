@@ -1,0 +1,505 @@
+{
+  "id": "t1-p42",
+  "name": "Szkoła",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział V",
+  "words": [
+    {
+      "id": "t1-p42-001",
+      "english": "Mistake",
+      "polish": "Błąd",
+      "sentenceEn": "You have some mistakes in your paper, but not many.",
+      "sentencePl": "Masz kilka błędów w swojej pracy, ale nie za wiele.",
+      "audioWord": "t1-p42-001-word.mp3",
+      "audioSentence": "t1-p42-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-002",
+      "english": "Pen",
+      "polish": "Długopis; pióro",
+      "sentenceEn": "Do you have an extra pen? Mine ran out.",
+      "sentencePl": "Masz dodatkowy długopis? Mój się wypisał.",
+      "audioWord": "t1-p42-002-word.mp3",
+      "audioSentence": "t1-p42-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-003",
+      "english": "Exam",
+      "polish": "Egzamin",
+      "sentenceEn": "The exam was hard, but I think I'll pass.",
+      "sentencePl": "Egzamin był trudny, ale myślę, że zdam.",
+      "audioWord": "t1-p42-003-word.mp3",
+      "audioSentence": "t1-p42-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-004",
+      "english": "Lesson",
+      "polish": "Lekcja",
+      "sentenceEn": "I'll be late for the first lesson. Please tell the teacher.",
+      "sentencePl": "Spóźnię się na pierwszą lekcję. Proszę, powiedz o tym nauczycielowi.",
+      "audioWord": "t1-p42-004-word.mp3",
+      "audioSentence": "t1-p42-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-005",
+      "english": "Pencil",
+      "polish": "Ołówek",
+      "sentenceEn": "I like to make sketches with a pencil. I have a special notebook for it.",
+      "sentencePl": "Lubię robić szkice ołówkiem. Mam do tego specjalny zeszyt.",
+      "audioWord": "t1-p42-005-word.mp3",
+      "audioSentence": "t1-p42-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-006",
+      "english": "Homework",
+      "polish": "Praca domowa",
+      "sentenceEn": "Don't forget to do your homework from Sensei.",
+      "sentencePl": "Nie zapomnij odrobić pracy domowej od Senseia.",
+      "audioWord": "t1-p42-006-word.mp3",
+      "audioSentence": "t1-p42-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-007",
+      "english": "Topic",
+      "polish": "Temat (np. Rozmowy; lekcji)",
+      "sentenceEn": "Can you repeat the topic? I didn't write it down.",
+      "sentencePl": "Czy możesz powtórzyć temat? Nie zapisałem go.",
+      "audioWord": "t1-p42-007-word.mp3",
+      "audioSentence": "t1-p42-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-008",
+      "english": "Test",
+      "polish": "Test",
+      "sentenceEn": "The test is today?! Are you kidding me?",
+      "sentencePl": "Ten test jest dzisiaj?! Żartujesz?",
+      "audioWord": "t1-p42-008-word.mp3",
+      "audioSentence": "t1-p42-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-009",
+      "english": "Student",
+      "polish": "Uczeń; student",
+      "sentenceEn": "I have a lot of students in my class this year.",
+      "sentencePl": "W tym roku mam w klasie mnóstwo uczniów.",
+      "audioWord": "t1-p42-009-word.mp3",
+      "audioSentence": "t1-p42-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-010",
+      "english": "Notebook",
+      "polish": "Zeszyt",
+      "sentenceEn": "I buy new notebooks every year, and then I use one for everything.",
+      "sentencePl": "Kupuję co roku nowe zeszyty, a potem i tak używam jednego do wszystkiego.",
+      "audioWord": "t1-p42-010-word.mp3",
+      "audioSentence": "t1-p42-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-011",
+      "english": "Academy",
+      "polish": "Akademia",
+      "sentenceEn": "I loved my private academy. Modern lectures and professors with experience. It taught me a lot.",
+      "sentencePl": "Kochałem swoją prywatną szkołę. Nowoczesne wykłady i profesorowie z doświadczeniem. Wiele się tam nauczyłem.",
+      "audioWord": "t1-p42-011-word.mp3",
+      "audioSentence": "t1-p42-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-012",
+      "english": "Biology",
+      "polish": "Biologia",
+      "sentenceEn": "I don't love him. It's just biology, 'cause look at those abs!",
+      "sentencePl": "Nie kocham go. To czysta biologia, spójrz tylko na te mięśnie brzucha!",
+      "audioWord": "t1-p42-012-word.mp3",
+      "audioSentence": "t1-p42-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-013",
+      "english": "Bell",
+      "polish": "Dzwonek; dzwon",
+      "sentenceEn": "The bell is really loud. Don't stand so close to it.",
+      "sentencePl": "Dzwon jest naprawdę głośny. Nie stój tak blisko niego.",
+      "audioWord": "t1-p42-013-word.mp3",
+      "audioSentence": "t1-p42-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-014",
+      "english": "Behavior",
+      "polish": "Zachowanie",
+      "sentenceEn": "We do not tolerate this kind of behavior in our beloved Crimson School. Helping the people of Miami is a capital offense.",
+      "sentencePl": "Nie tolerujemy takiego zachowania w naszej ukochanej Crimson School. Pomaganie ludziom w Miami to wykroczenie, za które grozi kara śmierci.",
+      "audioWord": "t1-p42-014-word.mp3",
+      "audioSentence": "t1-p42-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-015",
+      "english": "Discussion",
+      "polish": "Dyskusja",
+      "sentenceEn": "We had a very heated discussion during our lecture today.",
+      "sentencePl": "Mieliśmy bardzo gorącą dyskusję podczas dzisiejszego wykładu.",
+      "audioWord": "t1-p42-015-word.mp3",
+      "audioSentence": "t1-p42-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-016",
+      "english": "History",
+      "polish": "Historia",
+      "sentenceEn": "History can be fascinating if you aren't only learning dates.",
+      "sentencePl": "Historia może być fascynująca, jeśli uczysz się czegoś więcej niż tylko dat.",
+      "audioWord": "t1-p42-016-word.mp3",
+      "audioSentence": "t1-p42-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-017",
+      "english": "Institute",
+      "polish": "Instytut",
+      "sentenceEn": "We are going on a tour of the Science Institute tomorrow.",
+      "sentencePl": "Jutro jedziemy na wycieczkę do Instytutu Nauki.",
+      "audioWord": "t1-p42-017-word.mp3",
+      "audioSentence": "t1-p42-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-018",
+      "english": "Class",
+      "polish": "Klasa",
+      "sentenceEn": "The Crimson School class of 2033 is graduating right now!",
+      "sentencePl": "Klasa z rocznika 2033 szkoły Crimson School właśnie kończy edukację!",
+      "audioWord": "t1-p42-018-word.mp3",
+      "audioSentence": "t1-p42-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-019",
+      "english": "Schoolmate",
+      "polish": "Kolega szkolny",
+      "sentenceEn": "Sofia is very popular. She has schoolmates everywhere in Crimson School.",
+      "sentencePl": "Sofia jest bardzo popularna. Ma wszędzie w Crimson School mnóstwo znajomych.",
+      "audioWord": "t1-p42-019-word.mp3",
+      "audioSentence": "t1-p42-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-020",
+      "english": "Classmate",
+      "polish": "Kolega z klasy",
+      "sentenceEn": "Andy is my classmate from primary school! We used to sit together during lessons.",
+      "sentencePl": "Andy jest moim kolegą z klasy z podstawówki. Siedzieliśmy w jednej ławce.",
+      "audioWord": "t1-p42-020-word.mp3",
+      "audioSentence": "t1-p42-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-021",
+      "english": "Course",
+      "polish": "Kurs; tor; przedmiot na studiach",
+      "sentenceEn": "I've started a cooking course for beginners.",
+      "sentencePl": "Zacząłem kurs gotowania dla początkujących.",
+      "audioWord": "t1-p42-021-word.mp3",
+      "audioSentence": "t1-p42-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-022",
+      "english": "High school",
+      "polish": "Liceum",
+      "sentenceEn": "High school was fun, but I wouldn't call it the best time of my life.",
+      "sentencePl": "W liceum było fajnie, ale nie powiedziałbym, że to był najlepszy okres w moim życiu.",
+      "audioWord": "t1-p42-022-word.mp3",
+      "audioSentence": "t1-p42-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-023",
+      "english": "Ruler",
+      "polish": "Linijka",
+      "sentenceEn": "Do you have a ruler? I lost mine.",
+      "sentencePl": "Masz linijkę? Zgubiłem swoją.",
+      "audioWord": "t1-p42-023-word.mp3",
+      "audioSentence": "t1-p42-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-024",
+      "english": "Campus",
+      "polish": "Miasteczko uniwersyteckie; kampus",
+      "sentenceEn": "I met my wife on campus.",
+      "sentencePl": "Poznałem moją żonę na kampusie.",
+      "audioWord": "t1-p42-024-word.mp3",
+      "audioSentence": "t1-p42-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-025",
+      "english": "Note",
+      "polish": "Notatka",
+      "sentenceEn": "I noted a few flaws in this chemical equation.",
+      "sentencePl": "Zauważyłam w tym równaniu chemicznym kilka błędów.",
+      "audioWord": "t1-p42-025-word.mp3",
+      "audioSentence": "t1-p42-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-026",
+      "english": "Mark",
+      "polish": "Ocena; znak",
+      "sentenceEn": "You want to find a park nearby? Let me mark it on your GPS.",
+      "sentencePl": "Chcesz znaleźć najbliższy park? Zaznaczę Ci w nawigacji.",
+      "audioWord": "t1-p42-026-word.mp3",
+      "audioSentence": "t1-p42-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-027",
+      "english": "Handbook",
+      "polish": "Podręcznik",
+      "sentenceEn": "Please, open your handbook on page 16 and start reading.",
+      "sentencePl": "Proszę, otwórzcie podręczniki na stronie 16 i zacznijcie czytać.",
+      "audioWord": "t1-p42-027-word.mp3",
+      "audioSentence": "t1-p42-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-028",
+      "english": "Kindergarten",
+      "polish": "Przedszkole",
+      "sentenceEn": "I miss kindergarten and nap time.",
+      "sentencePl": "Tęsknię za przedszkolem i leżakowaniem.",
+      "audioWord": "t1-p42-028-word.mp3",
+      "audioSentence": "t1-p42-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-029",
+      "english": "Break",
+      "polish": "Przerwa",
+      "sentenceEn": "- You broke my hand, you idiot! - That's what you get for hacking my account.",
+      "sentencePl": "- Złamałeś mi rękę, idioto! - Masz za swoje, trzeba było nie hakować mojego konta.",
+      "audioWord": "t1-p42-029-word.mp3",
+      "audioSentence": "t1-p42-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-030",
+      "english": "Classroom",
+      "polish": "Sala lekcyjna",
+      "sentenceEn": "You're in the wrong classroom. The biology class is on the left.",
+      "sentencePl": "Jesteś w złej sali. Klasa biologiczna jest po lewej.",
+      "audioWord": "t1-p42-030-word.mp3",
+      "audioSentence": "t1-p42-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-031",
+      "english": "Elementary school",
+      "polish": "Szkoła podstawowa (us)",
+      "sentenceEn": "I still remember all of my elementary school teachers.",
+      "sentencePl": "Dalej pamiętam wszystkich moich nauczycieli z podstawówki.",
+      "audioWord": "t1-p42-031-word.mp3",
+      "audioSentence": "t1-p42-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-032",
+      "english": "Primary school",
+      "polish": "Szkoła podstawowa",
+      "sentenceEn": "Our son is starting primary school next week. I'm very stressed about it.",
+      "sentencePl": "Nasz syn zaczyna w przyszłym tygodniu podstawówkę. Bardzo się tym stresuję.",
+      "audioWord": "t1-p42-032-word.mp3",
+      "audioSentence": "t1-p42-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-033",
+      "english": "College",
+      "polish": "Szkoła policealna (us)",
+      "sentenceEn": "Are you planning to go to college or to university?",
+      "sentencePl": "Planujesz iść do szkoły policealnej czy na studia?",
+      "audioWord": "t1-p42-033-word.mp3",
+      "audioSentence": "t1-p42-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-034",
+      "english": "Board",
+      "polish": "Tablica",
+      "sentenceEn": "There was an emergency meeting of the Crimson School board.",
+      "sentencePl": "Odbyło się specjalne posiedzenie zarządu Karmazynowej Szkoły.",
+      "audioWord": "t1-p42-034-word.mp3",
+      "audioSentence": "t1-p42-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-035",
+      "english": "Subject",
+      "polish": "Temat; przedmiot; podmiot",
+      "sentenceEn": "Joe's favorite school subject is English.",
+      "sentencePl": "Ulubionym przedmiotem szkolnym Joe'go jest angielski.",
+      "audioWord": "t1-p42-035-word.mp3",
+      "audioSentence": "t1-p42-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-036",
+      "english": "University",
+      "polish": "Uniwersytet",
+      "sentenceEn": "The real Miami University was almost destroyed during the revolution. Then came Crimson School, bummer.",
+      "sentencePl": "Prawdziwy Uniwersytet Miami został prawie całkowicie zniszczony podczas rewolucji. Potem nastała era Crimson School, lipa.",
+      "audioWord": "t1-p42-036-word.mp3",
+      "audioSentence": "t1-p42-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-037",
+      "english": "Knowledge",
+      "polish": "Wiedza",
+      "sentenceEn": "Sensei has knowledge about everything! Have you got the knowledge cards from him already?",
+      "sentencePl": "Sensei ma wiedzę o wszystkim! Czy dostałeś już od niego karty wiedzy?",
+      "audioWord": "t1-p42-037-word.mp3",
+      "audioSentence": "t1-p42-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-038",
+      "english": "Education",
+      "polish": "Wykształcenie; edukacja",
+      "sentenceEn": "Education is the key to everything.",
+      "sentencePl": "Edukacja jest kluczem do wszystkiego.",
+      "audioWord": "t1-p42-038-word.mp3",
+      "audioSentence": "t1-p42-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-039",
+      "english": "Scissors",
+      "polish": "Nożyczki",
+      "sentenceEn": "Use scissors to cut out the coupons.",
+      "sentencePl": "Odetknij kupony nożyczkami.",
+      "audioWord": "t1-p42-039-word.mp3",
+      "audioSentence": "t1-p42-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-040",
+      "english": "Locker",
+      "polish": "Szafka (w szkole, szatni, biurze)",
+      "sentenceEn": "Remember to clear out your lockers at the end of the school year.",
+      "sentencePl": "Pamiętajcie, żeby opróżnić swoje szafki na koniec roku szkolnego.",
+      "audioWord": "t1-p42-040-word.mp3",
+      "audioSentence": "t1-p42-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-041",
+      "english": "Crayons",
+      "polish": "Kredki",
+      "sentenceEn": "We should buy some new crayons. You need more colors.",
+      "sentencePl": "Powinniśmy kupić nowe kredki. Potrzebujesz więcej kolorów.",
+      "audioWord": "t1-p42-041-word.mp3",
+      "audioSentence": "t1-p42-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-042",
+      "english": "Sticker",
+      "polish": "Naklejka",
+      "sentenceEn": "A sticker on a bus stop caught my attention.",
+      "sentencePl": "Naklejka na przystanku autobusowym przykuła moją uwagę.",
+      "audioWord": "t1-p42-042-word.mp3",
+      "audioSentence": "t1-p42-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-043",
+      "english": "Draft",
+      "polish": "Brudnopis; szkic (coś wstępnego)",
+      "sentenceEn": "This is just a draft. Tell me what you think, but don't be too harsh.",
+      "sentencePl": "To tylko szkic. Powiedz mi, co myślisz, ale nie bądź zbyt surowy.",
+      "audioWord": "t1-p42-043-word.mp3",
+      "audioSentence": "t1-p42-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-044",
+      "english": "Consultation",
+      "polish": "Konsultacje",
+      "sentenceEn": "Sir David and his people have taken this decision without any consultation.",
+      "sentencePl": "Sir David i jego ludzie podjęli tę decyzję bez żadnych konsultacji.",
+      "audioWord": "t1-p42-044-word.mp3",
+      "audioSentence": "t1-p42-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-045",
+      "english": "Instruction",
+      "polish": "Polecenie",
+      "sentenceEn": "Mandy always gives precise instruction to her students.",
+      "sentencePl": "Mandy zawsze daje swoim uczniom dokładne instrukcje.",
+      "audioWord": "t1-p42-045-word.mp3",
+      "audioSentence": "t1-p42-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-046",
+      "english": "Master",
+      "polish": "Magister; mistrz",
+      "sentenceEn": "- How do you know all that stuff? - I'm a master of history, baby.",
+      "sentencePl": "- Skąd Ty to wszystko wiesz? - Jestem magistrem historii, kochanie.",
+      "audioWord": "t1-p42-046-word.mp3",
+      "audioSentence": "t1-p42-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-047",
+      "english": "Matura exam",
+      "polish": "Matura",
+      "sentenceEn": "I have my final exam in a month. I really need to start studying.",
+      "sentencePl": "Za miesiąc mam ostatni egzamin. Powinnam się zacząć uczyć.",
+      "audioWord": "t1-p42-047-word.mp3",
+      "audioSentence": "t1-p42-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-048",
+      "english": "Attendance",
+      "polish": "Obecność na czymś; uczęszczanie",
+      "sentenceEn": "My attendance is meaningless unless you are there.",
+      "sentencePl": "Moja obecność jest bez znaczenia, chyba że Ty tam jesteś.",
+      "audioWord": "t1-p42-048-word.mp3",
+      "audioSentence": "t1-p42-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-049",
+      "english": "Institute of technology",
+      "polish": "Politechnika",
+      "sentenceEn": "Trina wanted to study at the Miami Institute of Technology, but Asteria said no.",
+      "sentencePl": "Trina chciała studiować na Politechnice Miami, ale Asteria się nie zgodziła.",
+      "audioWord": "t1-p42-049-word.mp3",
+      "audioSentence": "t1-p42-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-050",
+      "english": "Retake",
+      "polish": "Poprawa (egzaminu)",
+      "sentenceEn": "You should not despair, because the retake is next week. You'll try to pass then.",
+      "sentencePl": "Nie rozpaczaj, bo poprawka jest w przyszłym tygodniu. Wtedy spróbujesz zdać.",
+      "audioWord": "t1-p42-050-word.mp3",
+      "audioSentence": "t1-p42-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-051",
+      "english": "School subject",
+      "polish": "Przedmiot szkolny",
+      "sentenceEn": "If you ever were a teacher, which school subject would you teach?",
+      "sentencePl": "Gdybyś był nauczycielem, którego przedmiotu byś uczył?",
+      "audioWord": "t1-p42-051-word.mp3",
+      "audioSentence": "t1-p42-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-052",
+      "english": "Semester",
+      "polish": "Semestr",
+      "sentenceEn": "Tony flunked chemistry last semester.",
+      "sentencePl": "Tony oblał chemię w zeszłym semestrze.",
+      "audioWord": "t1-p42-052-word.mp3",
+      "audioSentence": "t1-p42-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-053",
+      "english": "Grade",
+      "polish": "Stopień; ocena (w szkole)",
+      "sentenceEn": "You don't need to have perfect grades in everything. Just focus on the subjects you like.",
+      "sentencePl": "Nie musisz mieć idealnych ocen ze wszystkiego. Po prostu skup się na przedmiotach, które lubisz.",
+      "audioWord": "t1-p42-053-word.mp3",
+      "audioSentence": "t1-p42-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-054",
+      "english": "Chalkboard",
+      "polish": "Tablica kredowa",
+      "sentenceEn": "The chalkboard is already obsolete, which is why we use tablets in our company.",
+      "sentencePl": "Tablica kredowa jest już przestarzała, dlatego w naszej firmie korzystamy z tabletów.",
+      "audioWord": "t1-p42-054-word.mp3",
+      "audioSentence": "t1-p42-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p42-055",
+      "english": "Faculty",
+      "polish": "Wydział; kadra akademicka",
+      "sentenceEn": "The dean is proud of his faculty.",
+      "sentencePl": "Dziekan jest dumny ze swojej kadry akademickiej.",
+      "audioWord": "t1-p42-055-word.mp3",
+      "audioSentence": "t1-p42-055-sentence.mp3"
+    }
+  ]
+}

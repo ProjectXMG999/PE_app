@@ -1,0 +1,685 @@
+{
+  "id": "t1-p113",
+  "name": "Sport",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XVI",
+  "words": [
+    {
+      "id": "t1-p113-001",
+      "english": "Baseball",
+      "polish": "Baseball",
+      "sentenceEn": "Can you explain the rules of baseball to me? It's the last time, I promise.",
+      "sentencePl": "Wyjaśnisz mi zasady baseballu? To już ostatni raz, obiecuję.",
+      "audioWord": "t1-p113-001-word.mp3",
+      "audioSentence": "t1-p113-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-002",
+      "english": "Running",
+      "polish": "Bieganie",
+      "sentenceEn": "Running without music is so boring.",
+      "sentencePl": "Bieganie bez muzyki jest takie nudne.",
+      "audioWord": "t1-p113-002-word.mp3",
+      "audioSentence": "t1-p113-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-003",
+      "english": "Goal",
+      "polish": "Gol",
+      "sentenceEn": "Focus, we need that goal, or we'll lose!",
+      "sentencePl": "Skup się! Potrzebujemy tego gola albo przegramy.",
+      "audioWord": "t1-p113-003-word.mp3",
+      "audioSentence": "t1-p113-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-004",
+      "english": "Position",
+      "polish": "Pozycja",
+      "sentenceEn": "For the company, every position is important.",
+      "sentencePl": "Dla firmy ważne jest każde stanowisko.",
+      "audioWord": "t1-p113-004-word.mp3",
+      "audioSentence": "t1-p113-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-005",
+      "english": "Exercise",
+      "polish": "Ćwiczenie",
+      "sentenceEn": "I prefer exercising at the gym rather than at home.",
+      "sentencePl": "Wolę ćwiczyć na siłowni niż w domu.",
+      "audioWord": "t1-p113-005-word.mp3",
+      "audioSentence": "t1-p113-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-006",
+      "english": "Amateur",
+      "polish": "Amator",
+      "sentenceEn": "Jenny has decided to try her skills inan amateur dance competition.",
+      "sentencePl": "Jenny postanowiła spróbować swoich sił w amatorskim konkursie tanecznym.",
+      "audioWord": "t1-p113-006-word.mp3",
+      "audioSentence": "t1-p113-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-007",
+      "english": "Game",
+      "polish": "Gra",
+      "sentenceEn": "It's just a game. Calm down.",
+      "sentencePl": "To tylko gra, uspokój się.",
+      "audioWord": "t1-p113-007-word.mp3",
+      "audioSentence": "t1-p113-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-008",
+      "english": "Point",
+      "polish": "Punkt",
+      "sentenceEn": "This is a good answer, a point for you.",
+      "sentencePl": "To dobra odpowiedź, punkt dla Ciebie.",
+      "audioWord": "t1-p113-008-word.mp3",
+      "audioSentence": "t1-p113-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-009",
+      "english": "Hobby",
+      "polish": "Hobby",
+      "sentenceEn": "She has a new hobby every two months. This month it's juggling.",
+      "sentencePl": "Co dwa miesiące ma nowe hobby. W tym miesiącu to żonglerka.",
+      "audioWord": "t1-p113-009-word.mp3",
+      "audioSentence": "t1-p113-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-010",
+      "english": "Hockey",
+      "polish": "Hokej",
+      "sentenceEn": "It's really easy to lose your teeth in hockey.",
+      "sentencePl": "W hokeju bardzo łatwo stracić zęby.",
+      "audioWord": "t1-p113-010-word.mp3",
+      "audioSentence": "t1-p113-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-011",
+      "english": "Instructor",
+      "polish": "Instruktor",
+      "sentenceEn": "My instructor is great. I finally understand everything. Only doing it is a bigger problem.",
+      "sentencePl": "Mój instruktor jest super. W końcu wszystko rozumiem. Tylko ze zrobieniem tego jest większy problem.",
+      "audioWord": "t1-p113-011-word.mp3",
+      "audioSentence": "t1-p113-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-012",
+      "english": "Beginner",
+      "polish": "Początkujący",
+      "sentenceEn": "Every expert was once a beginner.",
+      "sentencePl": "Każdy ekspert był kiedyś początkującym.",
+      "audioWord": "t1-p113-012-word.mp3",
+      "audioSentence": "t1-p113-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-013",
+      "english": "Yoga",
+      "polish": "Joga",
+      "sentenceEn": "They opened a yoga studio near my house. I think I'll give it a try.",
+      "sentencePl": "Niedaleko mojego domu otworzyli studio jogi. Chyba się tam wybiorę na próbę.",
+      "audioWord": "t1-p113-013-word.mp3",
+      "audioSentence": "t1-p113-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-014",
+      "english": "Jogging",
+      "polish": "Jogging",
+      "sentenceEn": "We go jogging every morning.",
+      "sentencePl": "Codziennie rano uprawiamy jogging.",
+      "audioWord": "t1-p113-014-word.mp3",
+      "audioSentence": "t1-p113-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-015",
+      "english": "Cards",
+      "polish": "Karty",
+      "sentenceEn": "Let's play cards tonight! Go get some canned soda!",
+      "sentencePl": "Zagrajmy dziś wieczorem w karty! Idź po jakieś gazowane picie!",
+      "audioWord": "t1-p113-015-word.mp3",
+      "audioSentence": "t1-p113-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-016",
+      "english": "Beat",
+      "polish": "Pokonać; przezwyciężyć",
+      "sentenceEn": "The beat of this piece is very dicey.",
+      "sentencePl": "Takt tego utworu jest bardzo nierówny.",
+      "audioWord": "t1-p113-016-word.mp3",
+      "audioSentence": "t1-p113-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-017",
+      "english": "Cycle",
+      "polish": "Jeździć na rowerze",
+      "sentenceEn": "He was cycling down the Miami shore.",
+      "sentencePl": "Jechał na rowerze wzdłuż wybrzeża Miami.",
+      "audioWord": "t1-p113-017-word.mp3",
+      "audioSentence": "t1-p113-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-018",
+      "english": "Exercise",
+      "polish": "Ćwiczyć; praktykować",
+      "sentenceEn": "I prefer exercising at the gym rather than at home.",
+      "sentencePl": "Wolę ćwiczyć na siłowni niż w domu.",
+      "audioWord": "t1-p113-018-word.mp3",
+      "audioSentence": "t1-p113-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-019",
+      "english": "Hit",
+      "polish": "Trafiać",
+      "sentenceEn": "He hit the ball with great force, which meant that the goalkeeper had no chance.",
+      "sentencePl": "Uderzył piłkę z wielką siłą, przez co bramkarz nie miał żadnych szans.",
+      "audioWord": "t1-p113-019-word.mp3",
+      "audioSentence": "t1-p113-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-020",
+      "english": "Kick",
+      "polish": "Kopać coś (np. Piłkę)",
+      "sentenceEn": "Stan kicked the ball so hard that it almost fell apart.",
+      "sentencePl": "Stan kopnął piłkę tak mocno, że prawie się roleciała.",
+      "audioWord": "t1-p113-020-word.mp3",
+      "audioSentence": "t1-p113-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-021",
+      "english": "Defend",
+      "polish": "Bronić",
+      "sentenceEn": "I will defend my views at all times.",
+      "sentencePl": "Zawsze będę bronił swoich przekonań.",
+      "audioWord": "t1-p113-021-word.mp3",
+      "audioSentence": "t1-p113-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-022",
+      "english": "Train",
+      "polish": "Trenować",
+      "sentenceEn": "I want to go by train because it is cheaper, but by plane would be much quicker. What to do?",
+      "sentencePl": "Chcę pojechać pociągiem, bo jest taniej, ale samolotem byłoby znacznie szybciej. Co robić?",
+      "audioWord": "t1-p113-022-word.mp3",
+      "audioSentence": "t1-p113-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-023",
+      "english": "Race",
+      "polish": "Ścigać się",
+      "sentenceEn": "We're in Tokyo and dad bought me this expensive car. I'm going to race!",
+      "sentencePl": "Jesteśmy w Tokio, a tata kupił mi drogi samochód. Zamierzam się ścigać!",
+      "audioWord": "t1-p113-023-word.mp3",
+      "audioSentence": "t1-p113-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-024",
+      "english": "Score",
+      "polish": "Zdobywać punkty; strzelić gola",
+      "sentenceEn": "What's the score? 1:10?? I was gone for 5 minutes. How did that happen?",
+      "sentencePl": "Jaki jest wynik? 1:10?? Nie było mnie 5 minut. Jak to się stało?",
+      "audioWord": "t1-p113-024-word.mp3",
+      "audioSentence": "t1-p113-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-025",
+      "english": "Skate",
+      "polish": "Jeździć na deskorolce lub łyżwach",
+      "sentenceEn": "I wanted to skate on ice. Now I've got a broken arm.",
+      "sentencePl": "Chciałem pojeździć na łyżwach. Teraz mam złamaną rękę.",
+      "audioWord": "t1-p113-025-word.mp3",
+      "audioSentence": "t1-p113-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-026",
+      "english": "Ski",
+      "polish": "Jeździć na nartach",
+      "sentenceEn": "I thought we would ski in Aspen, but we spent the entire leave in a hotel bar.",
+      "sentencePl": "Myślałem, że w Aspen pojeździmy na nartach, ale cały urlop spędziliśmy w hotelowym barze.",
+      "audioWord": "t1-p113-026-word.mp3",
+      "audioSentence": "t1-p113-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-027",
+      "english": "Climb",
+      "polish": "Wspinać się",
+      "sentenceEn": "I was climbing up the mountain when I saw a bear.",
+      "sentencePl": "Gdy wspinałem się w górach, zobaczyłem niedźwiedzia.",
+      "audioWord": "t1-p113-027-word.mp3",
+      "audioSentence": "t1-p113-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-028",
+      "english": "Dive",
+      "polish": "Nurkować",
+      "sentenceEn": "I'm going to Thailand for a month, and I want to learn how to dive.",
+      "sentencePl": "Jadę do Tajlandii na miesiąc i chcę się nauczyć nurkować.",
+      "audioWord": "t1-p113-028-word.mp3",
+      "audioSentence": "t1-p113-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-029",
+      "english": "Qualify",
+      "polish": "Kwalifikować",
+      "sentenceEn": "Congratulations, you have been qualified for the final round!",
+      "sentencePl": "Gratulacje, zakwalifikowałeś się do rundy finałowej!",
+      "audioWord": "t1-p113-029-word.mp3",
+      "audioSentence": "t1-p113-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-030",
+      "english": "Simulate",
+      "polish": "Symulować",
+      "sentenceEn": "The latest computers can simulate the future of the world.",
+      "sentencePl": "Najnowsze komputery potrafią symulować przyszłość świata.",
+      "audioWord": "t1-p113-030-word.mp3",
+      "audioSentence": "t1-p113-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-031",
+      "english": "Fan",
+      "polish": "Fan",
+      "sentenceEn": "The fan is making a weird noise. We have to call the guy!",
+      "sentencePl": "Wentylator wydaje dziwny dźwięk. Musimy wezwać gościa!",
+      "audioWord": "t1-p113-031-word.mp3",
+      "audioSentence": "t1-p113-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-032",
+      "english": "Club",
+      "polish": "Klub",
+      "sentenceEn": "– I want a bow, not some club. What am I, a caveman? – No, Steve, you're a barbarian. Play the role.",
+      "sentencePl": "– Chcę łuk, nie jakąś maczugę, co ja jestem, jaskiniowiec? – Nie Steve, jesteś barbarzyńcą, wczuj się w rolę.",
+      "audioWord": "t1-p113-032-word.mp3",
+      "audioSentence": "t1-p113-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-033",
+      "english": "Basketball",
+      "polish": "Koszykówka",
+      "sentenceEn": "We play basketball every Sunday afternoon.",
+      "sentencePl": "Gramy w koszykówkę w każde niedzielne popołudnie.",
+      "audioWord": "t1-p113-033-word.mp3",
+      "audioSentence": "t1-p113-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-034",
+      "english": "Step",
+      "polish": "Krok",
+      "sentenceEn": "Andy is my stepbrother, and we always argue, but I always win!",
+      "sentencePl": "Andy to mój przyrodni brat i zawsze się kłócimy, ale to ja zawsze wygrywam!",
+      "audioWord": "t1-p113-034-word.mp3",
+      "audioSentence": "t1-p113-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-035",
+      "english": "Match",
+      "polish": "Mecz",
+      "sentenceEn": "I can never find socks to match. It's time to clean up the place.",
+      "sentencePl": "Nigdy nie mogę znaleźć pasujących do siebie skarpetek. Czas tu posprzątać.",
+      "audioWord": "t1-p113-035-word.mp3",
+      "audioSentence": "t1-p113-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-036",
+      "english": "Skiing",
+      "polish": "Narciarstwo",
+      "sentenceEn": "Skiing is the perfect winter sport. We should go to the mountains this year!",
+      "sentencePl": "Narciarstwo to idealny sport zimowy. Powinniśmy pojechać w góry w tym roku!",
+      "audioWord": "t1-p113-036-word.mp3",
+      "audioSentence": "t1-p113-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-037",
+      "english": "Ball",
+      "polish": "Piłka",
+      "sentenceEn": "Kick the ball to me, or we're never gonna score a point!",
+      "sentencePl": "Kopnij do mnie tę piłkę, bo nigdy nie zdobędziemy punktu!",
+      "audioWord": "t1-p113-037-word.mp3",
+      "audioSentence": "t1-p113-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-038",
+      "english": "Soccer",
+      "polish": "Piłka nożna",
+      "sentenceEn": "What about playing soccer this weekend?",
+      "sentencePl": "Co powiesz na piłkę nożną w ten weekend?",
+      "audioWord": "t1-p113-038-word.mp3",
+      "audioSentence": "t1-p113-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-039",
+      "english": "Handball",
+      "polish": "Piłka ręczna",
+      "sentenceEn": "Handball is fun when people know the rules.",
+      "sentencePl": "Piłka ręczna jest fajna, kiedy ludzie ogarniają zasady.",
+      "audioWord": "t1-p113-039-word.mp3",
+      "audioSentence": "t1-p113-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-040",
+      "english": "Swimming",
+      "polish": "Pływanie",
+      "sentenceEn": "Swimming is great for your spine. Plus, you may feel like a mermaid.",
+      "sentencePl": "Pływanie jest świetne dla kręgosłupa. Dodatkowo możesz się poczuć jak syrenka.",
+      "audioWord": "t1-p113-040-word.mp3",
+      "audioSentence": "t1-p113-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-041",
+      "english": "Loser",
+      "polish": "Przegrany",
+      "sentenceEn": "Seems you're the only loser here.",
+      "sentencePl": "Wygląda na to, że jesteś tu jedynym przegranym.",
+      "audioWord": "t1-p113-041-word.mp3",
+      "audioSentence": "t1-p113-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-042",
+      "english": "Ranking",
+      "polish": "Ranking",
+      "sentenceEn": "Where are you in the ranking compared to other players?",
+      "sentencePl": "Gdzie jesteś w rankingu w porównaniu z innymi graczami?",
+      "audioWord": "t1-p113-042-word.mp3",
+      "audioSentence": "t1-p113-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-043",
+      "english": "Volleyball",
+      "polish": "Siatkówka",
+      "sentenceEn": "You can always play volleyball on the beach.",
+      "sentencePl": "Na plaży zawsze można zagrać w siatkówkę.",
+      "audioWord": "t1-p113-043-word.mp3",
+      "audioSentence": "t1-p113-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-044",
+      "english": "Gym",
+      "polish": "Siłownia",
+      "sentenceEn": "I go to the gym a lot, but so far, without effects.",
+      "sentencePl": "Chodzę często na siłownię, ale na razie bez efektów.",
+      "audioWord": "t1-p113-044-word.mp3",
+      "audioSentence": "t1-p113-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-045",
+      "english": "Snowboard",
+      "polish": "Snowboard",
+      "sentenceEn": "We need to go to the mountains in winter to practice snowboard.",
+      "sentencePl": "Musimy pojechać zimą w góry, żeby poćwiczyć jazdę snowboardzie.",
+      "audioWord": "t1-p113-045-word.mp3",
+      "audioSentence": "t1-p113-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-046",
+      "english": "Walk",
+      "polish": "Spacer",
+      "sentenceEn": "I walk the path of the tiger. My apartment looks like a jungle.",
+      "sentencePl": "Idę drogą tygrysa. Moje mieszkanie wygląda jak dżungla.",
+      "audioWord": "t1-p113-046-word.mp3",
+      "audioSentence": "t1-p113-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-047",
+      "english": "Sport",
+      "polish": "Sport",
+      "sentenceEn": "When you love sports, you often wear shorts.",
+      "sentencePl": "Kiedy kochasz sport, często nosisz szorty.",
+      "audioWord": "t1-p113-047-word.mp3",
+      "audioSentence": "t1-p113-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-048",
+      "english": "Stadium",
+      "polish": "Stadion",
+      "sentenceEn": "Let's go to the Hard Rock Stadium where the Miami Dolphins are playing.",
+      "sentencePl": "Chodźmy na Hard Rock Stadium, gdzie grają Miami Dolphins.",
+      "audioWord": "t1-p113-048-word.mp3",
+      "audioSentence": "t1-p113-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-049",
+      "english": "Chess",
+      "polish": "Szachy",
+      "sentenceEn": "Did you know that the Russian word for 'chess' is „szachmaty”?",
+      "sentencePl": "Czy wiedziałeś, że szachy po rosyjsku to „szachmaty”?",
+      "audioWord": "t1-p113-049-word.mp3",
+      "audioSentence": "t1-p113-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-050",
+      "english": "Tennis",
+      "polish": "Tenis",
+      "sentenceEn": "Did you know that tennis was started in France?",
+      "sentencePl": "Wiesz, że tenis wymyślili we Francji?",
+      "audioWord": "t1-p113-050-word.mp3",
+      "audioSentence": "t1-p113-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-051",
+      "english": "Trainer",
+      "polish": "Trener",
+      "sentenceEn": "My will is not strong enough to exercise regularly. I have to hire a trainer.",
+      "sentencePl": "Nie mam na tyle silnej woli, żeby regularnie ćwiczyć. Muszę zatrudnić trenera.",
+      "audioWord": "t1-p113-051-word.mp3",
+      "audioSentence": "t1-p113-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-052",
+      "english": "Workout",
+      "polish": "Trening",
+      "sentenceEn": "This is a hard workout. I'll have to do it many times before I master it.",
+      "sentencePl": "To ciężki trening. Będę musiał ćwiczyć wiele razy, zanim to opanuję.",
+      "audioWord": "t1-p113-052-word.mp3",
+      "audioSentence": "t1-p113-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-053",
+      "english": "Score",
+      "polish": "Wynik (liczba punktów)",
+      "sentenceEn": "What's the score? 1:10?? I was gone for 5 minutes. How did that happen?",
+      "sentencePl": "Jaki jest wynik? 1:10?? Nie było mnie 5 minut. Jak to się stało?",
+      "audioWord": "t1-p113-053-word.mp3",
+      "audioSentence": "t1-p113-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-054",
+      "english": "Player",
+      "polish": "Zawodnik; gracz",
+      "sentenceEn": "Matt is the best player on our team!",
+      "sentencePl": "Matt jest najlepszym zawodnikiem w naszej drużynie!",
+      "audioWord": "t1-p113-054-word.mp3",
+      "audioSentence": "t1-p113-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-055",
+      "english": "Competition",
+      "polish": "Zawody",
+      "sentenceEn": "Who won the competition?",
+      "sentencePl": "Kto wygrał zawody?",
+      "audioWord": "t1-p113-055-word.mp3",
+      "audioSentence": "t1-p113-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-056",
+      "english": "Professional",
+      "polish": "Profesjonalista; fachowiec",
+      "sentenceEn": "The party was full of models and professional photographers.",
+      "sentencePl": "Na imprezie było mnóstwo modelek i zawodowych fotografów.",
+      "audioWord": "t1-p113-056-word.mp3",
+      "audioSentence": "t1-p113-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-057",
+      "english": "Team",
+      "polish": "Zespół; drużyna",
+      "sentenceEn": "I would do anything for my team. We're like family.",
+      "sentencePl": "Zrobiłbym wszystko dla mojej drużyny. Są dla mnie jak rodzina.",
+      "audioWord": "t1-p113-057-word.mp3",
+      "audioSentence": "t1-p113-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-058",
+      "english": "Sweat",
+      "polish": "Pot",
+      "sentenceEn": "Sweat ran down his forehead when he saw her.",
+      "sentencePl": "Pot spłynął mu po czole, kiedy ją zobaczył.",
+      "audioWord": "t1-p113-058-word.mp3",
+      "audioSentence": "t1-p113-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-059",
+      "english": "Opponent",
+      "polish": "Przeciwnik",
+      "sentenceEn": "Our opponent is devious and strong, but we know his weak point!",
+      "sentencePl": "Nasz przeciwnik jest przebiegły i silny, ale znamy jego słaby punkt!",
+      "audioWord": "t1-p113-059-word.mp3",
+      "audioSentence": "t1-p113-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-060",
+      "english": "Activity",
+      "polish": "Zajęcie; działalność",
+      "sentenceEn": "Too many activities, too little time. There's a lot of pressure on high school kids these days.",
+      "sentencePl": "Za dużo zajęć, za mało czasu. Dzisiejsi licealiści poddawani są dużej presji.",
+      "audioWord": "t1-p113-060-word.mp3",
+      "audioSentence": "t1-p113-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-061",
+      "english": "Rival",
+      "polish": "Rywal",
+      "sentenceEn": "Everyone in the city is my rival. I can't lose any of the duels.",
+      "sentencePl": "Każdy w mieście jest moim rywalem. Nie mogę przegrać żadnego pojedynku.",
+      "audioWord": "t1-p113-061-word.mp3",
+      "audioSentence": "t1-p113-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-062",
+      "english": "Attempt",
+      "polish": "Usiłowanie; próba",
+      "sentenceEn": "We've detected 3 attempts of breaking into our security system in the past 2 days.",
+      "sentencePl": "W ciągu ostatnich 2 dni wykryliśmy 3 próby włamań do naszego systemu bezpieczeństwa.",
+      "audioWord": "t1-p113-062-word.mp3",
+      "audioSentence": "t1-p113-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-063",
+      "english": "Effort",
+      "polish": "Wysiłek",
+      "sentenceEn": "She put a lot of effort into preparing for the exam and ended up doing very well.",
+      "sentencePl": "Włożyła w przygotowania do egzaminu sporo wysiłku i całkiem nieźle jej poszło.",
+      "audioWord": "t1-p113-063-word.mp3",
+      "audioSentence": "t1-p113-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-064",
+      "english": "Try",
+      "polish": "Próba",
+      "sentenceEn": "Try to imagine a world where technology is everywhere. - Isn't it already everywhere?",
+      "sentencePl": "- Spróbuj wyobrazić sobie świat, w którym technologia jest wszędzie. - Czy nie jest aby wszędzie już teraz ?",
+      "audioWord": "t1-p113-064-word.mp3",
+      "audioSentence": "t1-p113-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-065",
+      "english": "Ability",
+      "polish": "Zdolność",
+      "sentenceEn": "The mark of great men lies in their ability to forgive.",
+      "sentencePl": "Cechą wielkich ludzi jest ich zdolność do przebaczania.",
+      "audioWord": "t1-p113-065-word.mp3",
+      "audioSentence": "t1-p113-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-066",
+      "english": "Skill",
+      "polish": "Umiejętność",
+      "sentenceEn": "I have many useful skills. I can be a real asset to this company.",
+      "sentencePl": "Posiadam wiele przydatnych umiejętności. Mogę być cennym nabytkiem dla firmy.",
+      "audioWord": "t1-p113-066-word.mp3",
+      "audioSentence": "t1-p113-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-067",
+      "english": "Pitch",
+      "polish": "Boisko do gry",
+      "sentenceEn": "We are meeting at the pitch in the evening, bring your bat.",
+      "sentencePl": "Spotykamy się dzisiaj wieczorem na boisku, zabierz swój kij.",
+      "audioWord": "t1-p113-067-word.mp3",
+      "audioSentence": "t1-p113-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-068",
+      "english": "Fight",
+      "polish": "Walka",
+      "sentenceEn": "The fight ended prematurely with a technical knockout.",
+      "sentencePl": "Walka zakończyła się przed czasem przez nokaut techniczny.",
+      "audioWord": "t1-p113-068-word.mp3",
+      "audioSentence": "t1-p113-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-069",
+      "english": "Arena",
+      "polish": "Arena",
+      "sentenceEn": "This was the first time we played in such a huge arena.",
+      "sentencePl": "To był pierwszy raz, kiedy graliśmy na tak ogromnej arenie.",
+      "audioWord": "t1-p113-069-word.mp3",
+      "audioSentence": "t1-p113-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-070",
+      "english": "Net",
+      "polish": "Siatka; sieć",
+      "sentenceEn": "This was the worst volleyball game in history. I have been hitting the net all the time.",
+      "sentencePl": "To była najgorszy mecz siatkówki w historii. Cały czas trafiałem w siatkę.",
+      "audioWord": "t1-p113-070-word.mp3",
+      "audioSentence": "t1-p113-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-071",
+      "english": "Attack",
+      "polish": "Atak",
+      "sentenceEn": "Gentlemen, we attack at dawn. Get ready!",
+      "sentencePl": "Panowie, atakujemy o świcie. Przygotować się!",
+      "audioWord": "t1-p113-071-word.mp3",
+      "audioSentence": "t1-p113-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-072",
+      "english": "Athlete",
+      "polish": "Atleta; sportowiec",
+      "sentenceEn": "Tyrone always dreamed of becoming a great athlete.",
+      "sentencePl": "Tyrone zawsze marzył o tym, by stać się wielkim sportowcem.",
+      "audioWord": "t1-p113-072-word.mp3",
+      "audioSentence": "t1-p113-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-073",
+      "english": "Quarter-final",
+      "polish": "Ćwierćfinał",
+      "sentenceEn": "Where are we watching today's quarter-final? At the bar with everyone, or just the two of us at your place?",
+      "sentencePl": "Gdzie oglądamy dzisiejszy ćwierćfinał? W barze ze wszystkimi, czy sami u Ciebie?",
+      "audioWord": "t1-p113-073-word.mp3",
+      "audioSentence": "t1-p113-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-074",
+      "english": "Skateboard",
+      "polish": "Deskorolka",
+      "sentenceEn": "I used to ride a skateboard when I was young. Boy, that was so much fun.",
+      "sentencePl": "Kiedy byłem młody, jeździłem na deskorolce. Rany, ale to była świetna zabawa.",
+      "audioWord": "t1-p113-074-word.mp3",
+      "audioSentence": "t1-p113-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p113-075",
+      "english": "Foul",
+      "polish": "Faul",
+      "sentenceEn": "That was a foul. It's time for a penalty.",
+      "sentencePl": "To był faul. Czas na karnego.",
+      "audioWord": "t1-p113-075-word.mp3",
+      "audioSentence": "t1-p113-075-sentence.mp3"
+    }
+  ]
+}

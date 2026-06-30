@@ -1,0 +1,125 @@
+.install-banner {
+  margin: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--accent) 0%, #6D28D9 100%);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-glow);
+}
+
+.install-banner--android {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.install-banner__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+}
+
+.install-banner__text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.install-banner__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+
+.install-banner__sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+}
+
+.install-banner__btn {
+  background: white;
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.install-banner__btn:hover { opacity: 0.9; }
+.install-banner__btn:disabled { opacity: 0.7; }
+
+/* iOS variant */
+.install-banner--ios {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.install-banner__ios-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.install-banner__ios-title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+
+.install-banner__dismiss {
+  color: rgba(255,255,255,0.7);
+  font-size: 16px;
+  padding: 4px;
+}
+
+.install-banner__ios-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.install-banner__ios-steps li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 13px;
+  color: rgba(255,255,255,0.9);
+}
+
+.install-banner__step-num {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  background: rgba(255,255,255,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 12px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.install-banner__ios-share {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 2px;
+}

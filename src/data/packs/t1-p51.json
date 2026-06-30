@@ -1,0 +1,100 @@
+{
+  "id": "t1-p51",
+  "name": "Kto jest kto",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Zaimki",
+  "chapter": "Rozdział VI",
+  "words": [
+    {
+      "id": "t1-p51-001",
+      "english": "He",
+      "polish": "On",
+      "sentenceEn": "He doesn't know what he is talking about.",
+      "sentencePl": "On nie ma pojęcia, o czym mówi.",
+      "audioWord": "t1-p51-001-word.mp3",
+      "audioSentence": "t1-p51-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p51-002",
+      "english": "I",
+      "polish": "Ja",
+      "sentenceEn": "I am Sensei, and I am here to help you.",
+      "sentencePl": "Ja jestem Sensei i jestem tu po to, aby Ci pomóc.",
+      "audioWord": "t1-p51-002-word.mp3",
+      "audioSentence": "t1-p51-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p51-003",
+      "english": "It",
+      "polish": "Ono; to",
+      "sentenceEn": "Look very closely at it and tell me what you see. You see nothing? Whoops, I forgot to turn the page.",
+      "sentencePl": "Przyjrzyj się temu bardzo uważnie i powiedz mi, co widzisz. Nic nie widzisz? Ups, zapomniałem przewrócić stronę.",
+      "audioWord": "t1-p51-003-word.mp3",
+      "audioSentence": "t1-p51-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p51-004",
+      "english": "She",
+      "polish": "Ona",
+      "sentenceEn": "All this isn't my fault, dad. It's Sheila! She made me do it!",
+      "sentencePl": "To wszystko to nie moja wina, tato. To Sheila! Ona mnie zmusiła!",
+      "audioWord": "t1-p51-004-word.mp3",
+      "audioSentence": "t1-p51-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p51-005",
+      "english": "They",
+      "polish": "Oni",
+      "sentenceEn": "They don't want to go dancing tonight. They're staying at home and watching some movies.",
+      "sentencePl": "Oni nie chcą iść dzisiaj potańczyć. Zostaną w domu i będą oglądać filmy.",
+      "audioWord": "t1-p51-005-word.mp3",
+      "audioSentence": "t1-p51-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p51-006",
+      "english": "We",
+      "polish": "My",
+      "sentenceEn": "Okay, so we want to play. Do you?",
+      "sentencePl": "Ok, my chcemy grać. A ty?",
+      "audioWord": "t1-p51-006-word.mp3",
+      "audioSentence": "t1-p51-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p51-007",
+      "english": "You",
+      "polish": "Ty",
+      "sentenceEn": "You guys better not say anything. The perpetrator is among you.",
+      "sentencePl": "Wy lepiej nic nie mówcie. Sprawca jest wśród Was.",
+      "audioWord": "t1-p51-007-word.mp3",
+      "audioSentence": "t1-p51-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p51-008",
+      "english": "You",
+      "polish": "Wy",
+      "sentenceEn": "You guys better not say anything. The perpetrator is among you.",
+      "sentencePl": "Wy lepiej nic nie mówcie. Sprawca jest wśród Was.",
+      "audioWord": "t1-p51-008-word.mp3",
+      "audioSentence": "t1-p51-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p51-009",
+      "english": "I",
+      "polish": "Ja",
+      "sentenceEn": "I am Sensei, and I am here to help you.",
+      "sentencePl": "Ja jestem Sensei i jestem tu po to, aby Ci pomóc.",
+      "audioWord": "t1-p51-009-word.mp3",
+      "audioSentence": "t1-p51-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p51-010",
+      "english": "It",
+      "polish": "Ono; to",
+      "sentenceEn": "Look very closely at it and tell me what you see. You see nothing? Whoops, I forgot to turn the page.",
+      "sentencePl": "Przyjrzyj się temu bardzo uważnie i powiedz mi, co widzisz. Nic nie widzisz? Ups, zapomniałem przewrócić stronę.",
+      "audioWord": "t1-p51-010-word.mp3",
+      "audioSentence": "t1-p51-010-sentence.mp3"
+    }
+  ]
+}

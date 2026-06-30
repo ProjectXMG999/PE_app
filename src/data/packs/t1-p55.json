@@ -1,0 +1,100 @@
+{
+  "id": "t1-p55",
+  "name": "Języki (I nie tylko)",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział VII",
+  "words": [
+    {
+      "id": "t1-p55-001",
+      "english": "Alphabet",
+      "polish": "Alfabet",
+      "sentenceEn": "- Is it necessary to know the alphabet? - Only if you want to read...",
+      "sentencePl": "- Czy trzeba znać alfabet? - Tylko jeśli chcesz czytać...",
+      "audioWord": "t1-p55-001-word.mp3",
+      "audioSentence": "t1-p55-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p55-002",
+      "english": "Language",
+      "polish": "Język (jako narzędzie komunikacji)",
+      "sentenceEn": "How many languages do you know? Seven? How?!",
+      "sentencePl": "Ile znasz języków? Siedem? Jakim cudem?!",
+      "audioWord": "t1-p55-002-word.mp3",
+      "audioSentence": "t1-p55-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p55-003",
+      "english": "Book",
+      "polish": "Książka",
+      "sentenceEn": "I'm booking a room at the hotel. Time to spend a night in Paris.",
+      "sentencePl": "Rezerwuję pokój w hotelu. Czas spędzić noc w Paryżu.",
+      "audioWord": "t1-p55-003-word.mp3",
+      "audioSentence": "t1-p55-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p55-004",
+      "english": "Letter",
+      "polish": "List",
+      "sentenceEn": "- Why don't we write letters anymore? - Because e-mails are faster.",
+      "sentencePl": "- Dlaczego już nie piszemy listów? - Bo maile są szybsze.",
+      "audioWord": "t1-p55-004-word.mp3",
+      "audioSentence": "t1-p55-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p55-005",
+      "english": "Answer",
+      "polish": "Odpowiedź",
+      "sentenceEn": "Ok, Mike. It's been one minute. What's your final answer?",
+      "sentencePl": "Ok, Mike. Minęła minuta. Jaka jest Twoja ostateczna odpowiedź?",
+      "audioWord": "t1-p55-005-word.mp3",
+      "audioSentence": "t1-p55-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p55-006",
+      "english": "Question",
+      "polish": "Pytanie",
+      "sentenceEn": "I have a few questions about the WordCatcher. I'm not sure how to use it.",
+      "sentencePl": "Mam kilka pytań dotyczących WordCatchera. Nie wiem, jak z niego korzystać.",
+      "audioWord": "t1-p55-006-word.mp3",
+      "audioSentence": "t1-p55-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p55-007",
+      "english": "Word",
+      "polish": "Słowo",
+      "sentenceEn": "He was the first man to utter the \"f\" word on British TV.",
+      "sentencePl": "Był pierwszym facetem, który na antenie brytyjskiej telewizji użył słowa na \"f\".",
+      "audioWord": "t1-p55-007-word.mp3",
+      "audioSentence": "t1-p55-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p55-008",
+      "english": "Text",
+      "polish": "Tekst",
+      "sentenceEn": "This is a really difficult text. I had to read it three times!",
+      "sentencePl": "To jest bardzo trudny tekst. Musiałem przeczytać go trzy razy!",
+      "audioWord": "t1-p55-008-word.mp3",
+      "audioSentence": "t1-p55-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p55-009",
+      "english": "Sentence",
+      "polish": "Zdanie",
+      "sentenceEn": "Kate speaks so fast that you can't understand a single sentence.",
+      "sentencePl": "Kate mówi tak szybko, że nie można zrozumieć ani jednego zdania.",
+      "audioWord": "t1-p55-009-word.mp3",
+      "audioSentence": "t1-p55-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p55-010",
+      "english": "Meaning",
+      "polish": "Znaczenie (sens)",
+      "sentenceEn": "Do you know the meaning of this word? I must look it up in the dictionary.",
+      "sentencePl": "Znasz znaczenie tego słowa? Muszę sprawdzić w słowniku.",
+      "audioWord": "t1-p55-010-word.mp3",
+      "audioSentence": "t1-p55-010-sentence.mp3"
+    }
+  ]
+}

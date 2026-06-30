@@ -1,0 +1,1090 @@
+{
+  "id": "t1-p26",
+  "name": "Jedzenie",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział III",
+  "words": [
+    {
+      "id": "t1-p26-001",
+      "english": "Bread",
+      "polish": "Chleb",
+      "sentenceEn": "I love the smell of freshly baked bread in the morning.",
+      "sentencePl": "Kocham zapach świeżo upieczonego pieczywa z rana.",
+      "audioWord": "t1-p26-001-word.mp3",
+      "audioSentence": "t1-p26-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-002",
+      "english": "Chocolate",
+      "polish": "Czekolada",
+      "sentenceEn": "I always eat chocolate when I need to cheer myself up!",
+      "sentencePl": "Zawsze jem czekoladę, kiedy muszę poprawić sobie humor.",
+      "audioWord": "t1-p26-002-word.mp3",
+      "audioSentence": "t1-p26-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-003",
+      "english": "Food",
+      "polish": "Jedzenie",
+      "sentenceEn": "I can eat Mexican food every day! It's not too spicy for me.",
+      "sentencePl": "Mogę jeść meksykańskie jedzenie codziennie! Dla mnie nie jest za ostre.",
+      "audioWord": "t1-p26-003-word.mp3",
+      "audioSentence": "t1-p26-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-004",
+      "english": "Ice cream",
+      "polish": "Lody",
+      "sentenceEn": "Mom, can we get some ice cream when we're at the beach?",
+      "sentencePl": "Mamo, możemy kupić lody, jak będziemy na plaży?",
+      "audioWord": "t1-p26-004-word.mp3",
+      "audioSentence": "t1-p26-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-005",
+      "english": "Butter",
+      "polish": "Masło",
+      "sentenceEn": "I always fry eggs with butter, not oil.",
+      "sentencePl": "Zawsze smażę jajka na maśle, nie na oleju.",
+      "audioWord": "t1-p26-005-word.mp3",
+      "audioSentence": "t1-p26-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-006",
+      "english": "Meat",
+      "polish": "Mięso",
+      "sentenceEn": "I stopped eating meat two years ago, and I feel much better.",
+      "sentencePl": "Przestałem jeść mięso dwa lata temu i czuję się dużo lepiej.",
+      "audioWord": "t1-p26-006-word.mp3",
+      "audioSentence": "t1-p26-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-007",
+      "english": "Honey",
+      "polish": "Miód",
+      "sentenceEn": "I can add honey to everything. I love it.",
+      "sentencePl": "Mogę dodawać miód do wszystkiego. Uwielbiam go.",
+      "audioWord": "t1-p26-007-word.mp3",
+      "audioSentence": "t1-p26-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-008",
+      "english": "Rice",
+      "polish": "Ryż",
+      "sentenceEn": "Did you know that there is rice in a burrito?",
+      "sentencePl": "Wiedziałeś, że w burrito jest ryż?",
+      "audioWord": "t1-p26-008-word.mp3",
+      "audioSentence": "t1-p26-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-009",
+      "english": "Cheese",
+      "polish": "Ser",
+      "sentenceEn": "Cheese is very smelly but delicious!",
+      "sentencePl": "Ser bardzo śmierdzi, ale jest przepyszny!",
+      "audioWord": "t1-p26-009-word.mp3",
+      "audioSentence": "t1-p26-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-010",
+      "english": "Breakfast",
+      "polish": "Śniadanie",
+      "sentenceEn": "I had scrambled eggs for breakfast today.",
+      "sentencePl": "Miałem dziś na śniadanie jajecznicę.",
+      "audioWord": "t1-p26-010-word.mp3",
+      "audioSentence": "t1-p26-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-011",
+      "english": "Sugar",
+      "polish": "Cukier",
+      "sentenceEn": "Would you like sugar in your coffee?",
+      "sentencePl": "Chcesz cukru do kawy?",
+      "audioWord": "t1-p26-011-word.mp3",
+      "audioSentence": "t1-p26-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-012",
+      "english": "Egg",
+      "polish": "Jajko",
+      "sentenceEn": "What kind of eggs would you like for breakfast? Scrambled? Fried? Benedict's eggs?",
+      "sentencePl": "Jakie jajka chcesz na śniadanie? Jajecznicę? Sadzone? Po benedyktyńsku?",
+      "audioWord": "t1-p26-012-word.mp3",
+      "audioSentence": "t1-p26-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-013",
+      "english": "Supper",
+      "polish": "Kolacja",
+      "sentenceEn": "I usually eat something light for supper. I have a better sleep then.",
+      "sentencePl": "Zazwyczaj jem coś lekkiego na kolację. Lepiej wtedy śpię.",
+      "audioWord": "t1-p26-013-word.mp3",
+      "audioSentence": "t1-p26-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-014",
+      "english": "Lunch",
+      "polish": "Lunch",
+      "sentenceEn": "Let's go out for lunch. I don't want to cook.",
+      "sentencePl": "Wyjdźmy gdzieś na lunch. Nie chce mi się gotować.",
+      "audioWord": "t1-p26-014-word.mp3",
+      "audioSentence": "t1-p26-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-015",
+      "english": "Pasta",
+      "polish": "Makaron",
+      "sentenceEn": "Pasta is the best type of food ever created.",
+      "sentencePl": "Makaron to najlepsze jedzenie, jakie kiedykolwiek wymyślono.",
+      "audioWord": "t1-p26-015-word.mp3",
+      "audioSentence": "t1-p26-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-016",
+      "english": "Dinner",
+      "polish": "Obiad",
+      "sentenceEn": "What do we have for dinner today? I'm starving.",
+      "sentencePl": "Co mamy dziś na obiad? Umieram z głodu.",
+      "audioWord": "t1-p26-016-word.mp3",
+      "audioSentence": "t1-p26-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-017",
+      "english": "Pizza",
+      "polish": "Pizza",
+      "sentenceEn": "How would you like your pizza? Thick or thin-crust?",
+      "sentencePl": "Jaką chcesz pizzę? Na grubym, czy cienkim cieście?",
+      "audioWord": "t1-p26-017-word.mp3",
+      "audioSentence": "t1-p26-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-018",
+      "english": "Salad",
+      "polish": "Sałatka",
+      "sentenceEn": "Chicken-mango salad is very popular here.",
+      "sentencePl": "Sałatka z kurczakiem i mango jest tu bardzo popularna.",
+      "audioWord": "t1-p26-018-word.mp3",
+      "audioSentence": "t1-p26-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-019",
+      "english": "Sweets",
+      "polish": "Słodycze",
+      "sentenceEn": "Kids love sweets - any kind. The sweeter, the better.",
+      "sentencePl": "Dzieci kochają słodycze. Wszystkie. Im słodsze, tym lepiej.",
+      "audioWord": "t1-p26-019-word.mp3",
+      "audioSentence": "t1-p26-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-020",
+      "english": "Soup",
+      "polish": "Zupa",
+      "sentenceEn": "The most common soup here is a fish soup. No wonder.",
+      "sentencePl": "Najbardziej popularną zupą tutaj jest zupa rybna. Nie dziwota.",
+      "audioWord": "t1-p26-020-word.mp3",
+      "audioSentence": "t1-p26-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-021",
+      "english": "Cookie",
+      "polish": "Ciastko",
+      "sentenceEn": "Who took the cookie from the cookie jar?",
+      "sentencePl": "Kto zabrał ciasteczko ze słoika na ciasteczka?",
+      "audioWord": "t1-p26-021-word.mp3",
+      "audioSentence": "t1-p26-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-022",
+      "english": "Dessert",
+      "polish": "Deser",
+      "sentenceEn": "For dessert, I recommend our chef's specialty – a brownie cake with vanilla ice cream.",
+      "sentencePl": "Na deser polecam specjalność naszego szefa kuchni – ciastko brownie z lodami waniliowymi.",
+      "audioWord": "t1-p26-022-word.mp3",
+      "audioSentence": "t1-p26-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-023",
+      "english": "Fries",
+      "polish": "Frytki",
+      "sentenceEn": "Don't believe the girl on the date when she says she doesn't want fries. Always order extra ones, or she'll want yours anyway!",
+      "sentencePl": "Nie wierz dziewczynie, kiedy na randce mówi, że nie chce frytek. Zawsze zamawiaj dodatkowe, bo tak czy siak zje Twoje!",
+      "audioWord": "t1-p26-023-word.mp3",
+      "audioSentence": "t1-p26-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-024",
+      "english": "Hamburger",
+      "polish": "Hamburger",
+      "sentenceEn": "Basically, you may order a burger everywhere near the beach.",
+      "sentencePl": "W zasadzie to wszędzie w pobliżu plaży można zamówić hamburgera.",
+      "audioWord": "t1-p26-024-word.mp3",
+      "audioSentence": "t1-p26-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-025",
+      "english": "Yogurt",
+      "polish": "Jogurt",
+      "sentenceEn": "Mindy always eats strawberry yogurt for breakfast. It's like a ritual for her.",
+      "sentencePl": "Mindy zawsze je jogurt truskawkowy na śniadanie. To taki jej rytuał.",
+      "audioWord": "t1-p26-025-word.mp3",
+      "audioSentence": "t1-p26-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-026",
+      "english": "Sandwich",
+      "polish": "Kanapka",
+      "sentenceEn": "You have to try a Cuban sandwich! It's amazing.",
+      "sentencePl": "Musisz spróbować kubańskiej kanapki. Jest niesamowita.",
+      "audioWord": "t1-p26-026-word.mp3",
+      "audioSentence": "t1-p26-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-027",
+      "english": "Meal",
+      "polish": "Posiłek",
+      "sentenceEn": "Breakfast is the most important meal of the day. Don't skip it.",
+      "sentencePl": "Śniadanie jest najważniejszym posiłkiem w ciągu dnia. Nie pomijaj go.",
+      "audioWord": "t1-p26-027-word.mp3",
+      "audioSentence": "t1-p26-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-028",
+      "english": "Snack",
+      "polish": "Przekąska",
+      "sentenceEn": "Jose eats empanadas for a snack during the day.",
+      "sentencePl": "Jose jada empanady jako przekąski w ciągu dnia.",
+      "audioWord": "t1-p26-028-word.mp3",
+      "audioSentence": "t1-p26-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-029",
+      "english": "Salt",
+      "polish": "Sól",
+      "sentenceEn": "One shall not salt too much.",
+      "sentencePl": "Nie należy solić za dużo.",
+      "audioWord": "t1-p26-029-word.mp3",
+      "audioSentence": "t1-p26-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-030",
+      "english": "Ham",
+      "polish": "Szynka",
+      "sentenceEn": "Would you like to have a sandwich with cheese or ham?",
+      "sentencePl": "Chciałbyś kanapkę z serem, czy z szynką?",
+      "audioWord": "t1-p26-030-word.mp3",
+      "audioSentence": "t1-p26-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-031",
+      "english": "Bacon",
+      "polish": "Boczek",
+      "sentenceEn": "Fried bacon isn't healthy, but it is tasty.",
+      "sentencePl": "Smażony boczek nie jest zdrowy, ale jest smaczny.",
+      "audioWord": "t1-p26-031-word.mp3",
+      "audioSentence": "t1-p26-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-032",
+      "english": "Roll",
+      "polish": "Bułka",
+      "sentenceEn": "Granny Agnes was rolling the cookie dough and listening to the music.",
+      "sentencePl": "Babcia Agnieszka rolowała ciasto na kruche ciasteczka i słuchała muzyki.",
+      "audioWord": "t1-p26-032-word.mp3",
+      "audioSentence": "t1-p26-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-033",
+      "english": "Cake",
+      "polish": "Ciasto; tort",
+      "sentenceEn": "I invited 100 guests, so we had to order 3-tiered cake.",
+      "sentencePl": "Zaprosiłam 100 gości, więc musieliśmy zamówić trzypiętrowy tort.",
+      "audioWord": "t1-p26-033-word.mp3",
+      "audioSentence": "t1-p26-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-034",
+      "english": "Jam",
+      "polish": "Dżem",
+      "sentenceEn": "My grandmother makes her own jam every year.",
+      "sentencePl": "Moja babcia robi co roku własny dżem.",
+      "audioWord": "t1-p26-034-word.mp3",
+      "audioSentence": "t1-p26-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-035",
+      "english": "Jelly",
+      "polish": "Galaretka",
+      "sentenceEn": "There's always room for jelly.",
+      "sentencePl": "Zawsze jest miejsce na galaretkę.",
+      "audioWord": "t1-p26-035-word.mp3",
+      "audioSentence": "t1-p26-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-036",
+      "english": "Scrambled eggs",
+      "polish": "Jajecznica",
+      "sentenceEn": "Scrambled eggs are the worst way to prepare them. I prefer eggs Benedict.",
+      "sentencePl": "Jajecznica to najgorsza potrawa z jajek. Wolę jajka po benedyktyńsku.",
+      "audioWord": "t1-p26-036-word.mp3",
+      "audioSentence": "t1-p26-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-037",
+      "english": "Take out",
+      "polish": "Jedzenie na wynos",
+      "sentenceEn": "Let's get some takeout tonight. Unless you want to cook something?",
+      "sentencePl": "Weźmy dzisiaj jedzenie na wynos. Chyba że chcesz coś ugotować?",
+      "audioWord": "t1-p26-037-word.mp3",
+      "audioSentence": "t1-p26-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-038",
+      "english": "Ketchup",
+      "polish": "Keczup",
+      "sentenceEn": "A bit of ketchup can fix anything.",
+      "sentencePl": "Odrobina keczupu może naprawić wszystko.",
+      "audioWord": "t1-p26-038-word.mp3",
+      "audioSentence": "t1-p26-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-039",
+      "english": "Sausage",
+      "polish": "Kiełbasa",
+      "sentenceEn": "I can't eat any more sausages. I'm done with the barbecue season.",
+      "sentencePl": "Nie dam rady zjeść ani jednej kiełbasy więcej. Mam dość sezonu grillowego.",
+      "audioWord": "t1-p26-039-word.mp3",
+      "audioSentence": "t1-p26-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-040",
+      "english": "Chop",
+      "polish": "Kotlet",
+      "sentenceEn": "Let's chop some wood before dinner so that we can get the fireplace going.",
+      "sentencePl": "Narąbmy trochę drewna przed kolacją, żebyśmy mogli rozpalić w kominku.",
+      "audioWord": "t1-p26-040-word.mp3",
+      "audioSentence": "t1-p26-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-041",
+      "english": "Slice",
+      "polish": "Kromka; plaster",
+      "sentenceEn": "Ok, Randy, I'm going to slice the pie, and you prepare the punch.",
+      "sentencePl": "Ok Randy, ja pokroję placek, a Ty przygotuj poncz.",
+      "audioWord": "t1-p26-041-word.mp3",
+      "audioSentence": "t1-p26-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-042",
+      "english": "Mayonnaise",
+      "polish": "Majonez",
+      "sentenceEn": "I love egg salad with mayonnaise. I eat it every day.",
+      "sentencePl": "Uwielbiam sałatkę jajeczną z majonezem. Jem ją codziennie.",
+      "audioWord": "t1-p26-042-word.mp3",
+      "audioSentence": "t1-p26-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-043",
+      "english": "Mustard",
+      "polish": "Musztarda",
+      "sentenceEn": "I would like to have mustard with this hot dog.",
+      "sentencePl": "Chciałbym musztardę do tego hot-doga.",
+      "audioWord": "t1-p26-043-word.mp3",
+      "audioSentence": "t1-p26-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-044",
+      "english": "Pancake",
+      "polish": "Naleśnik",
+      "sentenceEn": "Why are there restaurants that only serve pancakes? It's idiotic.",
+      "sentencePl": "Po co komu restauracje, które serwują tylko naleśniki? To idiotyczne.",
+      "audioWord": "t1-p26-044-word.mp3",
+      "audioSentence": "t1-p26-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-045",
+      "english": "Oil",
+      "polish": "Olej",
+      "sentenceEn": "Did you hear about cooking without oil? Yeah, right, cooking without a frying pan? And no food at all? It's called fruitarianism.",
+      "sentencePl": "Słyszałeś o gotowaniu bez oleju? Taa jasne, a o gotowaniu bez patelni? I w ogóle bez jedzenia? To się nazywa frutarianizm, lol!",
+      "audioWord": "t1-p26-045-word.mp3",
+      "audioSentence": "t1-p26-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-046",
+      "english": "Cut",
+      "polish": "Pokrojony",
+      "sentenceEn": "A little deeper, and that cut would deserve a trip to the ER.",
+      "sentencePl": "Trochę głębiej i to skaleczenie skończyłoby się wycieczką na ostry dyżur.",
+      "audioWord": "t1-p26-046-word.mp3",
+      "audioSentence": "t1-p26-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-047",
+      "english": "Crispy",
+      "polish": "Chrupiący; skrzypiący",
+      "sentenceEn": "I can't say no to a crispy fried chicken!",
+      "sentencePl": "Nie mogę odmówić chrupiącego, smażonego kurczaka!",
+      "audioWord": "t1-p26-047-word.mp3",
+      "audioSentence": "t1-p26-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-048",
+      "english": "Diet",
+      "polish": "Dietetyczny",
+      "sentenceEn": "I will start my diet tomorrow!",
+      "sentencePl": "Od jutra zaczynam dietę!",
+      "audioWord": "t1-p26-048-word.mp3",
+      "audioSentence": "t1-p26-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-049",
+      "english": "Fizzy",
+      "polish": "Gazowany (napój)",
+      "sentenceEn": "Fizzy drinks are your worst enemy in dieting.",
+      "sentencePl": "Napoje gazowane to Twój najgorszy wróg przy trzymaniu diety.",
+      "audioWord": "t1-p26-049-word.mp3",
+      "audioSentence": "t1-p26-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-050",
+      "english": "Bitter",
+      "polish": "Gorzki",
+      "sentenceEn": "This soup has a very bitter flavor. I don't like it.",
+      "sentencePl": "Ta zupa ma gorzki smak. Nie smakuje mi.",
+      "audioWord": "t1-p26-050-word.mp3",
+      "audioSentence": "t1-p26-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-051",
+      "english": "Sour",
+      "polish": "Kwaśny",
+      "sentenceEn": "I'd like something sour. Make me the most lemon lemonade that you can!",
+      "sentencePl": "Poproszę coś kwaśnego. Zrób mi najbardziej cytrynową lemoniadę, jaką tylko potrafisz!",
+      "audioWord": "t1-p26-051-word.mp3",
+      "audioSentence": "t1-p26-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-052",
+      "english": "Still",
+      "polish": "Niegazowany",
+      "sentenceEn": "I prefer still water rather than sparkling one.",
+      "sentencePl": "Wolę wodę niegazowaną od gazowanej.",
+      "audioWord": "t1-p26-052-word.mp3",
+      "audioSentence": "t1-p26-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-053",
+      "english": "Low-fat",
+      "polish": "Niskotłuszczowy",
+      "sentenceEn": "Kate is on a diet, so she eats only low-fat products.",
+      "sentencePl": "Kasia jest na diecie, więc je tylko niskotłuszczowe produkty.",
+      "audioWord": "t1-p26-053-word.mp3",
+      "audioSentence": "t1-p26-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-054",
+      "english": "Yucky",
+      "polish": "Ohydne; obleśne",
+      "sentenceEn": "Raw meat is yucky. I don't like it.",
+      "sentencePl": "Surowe mięso jest ohydne. Nie lubię go.",
+      "audioWord": "t1-p26-054-word.mp3",
+      "audioSentence": "t1-p26-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-055",
+      "english": "Spicy",
+      "polish": "Pikantny",
+      "sentenceEn": "Carmen thinks that Chinese food is too spicy, so we have to choose a different restaurant for tonight.",
+      "sentencePl": "Carmen uważa, że chińskie jedzenie jest zbyt pikantne, więc musimy wybrać inną restaurację.",
+      "audioWord": "t1-p26-055-word.mp3",
+      "audioSentence": "t1-p26-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-056",
+      "english": "Semi-sweet",
+      "polish": "Półsłodki",
+      "sentenceEn": "Sometimes I add semi-sweet chocolate to bring out the flavor.",
+      "sentencePl": "Czasami dodaję półsłodką czekoladę, aby wydobyć smak.",
+      "audioWord": "t1-p26-056-word.mp3",
+      "audioSentence": "t1-p26-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-057",
+      "english": "Yummy",
+      "polish": "Pyszne",
+      "sentenceEn": "This cake is just yummy. It's a pity I'm on a diet and can't take another piece. Or can I...?",
+      "sentencePl": "To ciasto jest pyszne. Szkoda że jestem na diecie i nie mogę wziąć kolejnego kawałka. A może...?",
+      "audioWord": "t1-p26-057-word.mp3",
+      "audioSentence": "t1-p26-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-058",
+      "english": "Raw",
+      "polish": "Surowy (np. Warzywa)",
+      "sentenceEn": "We prepare our burgers from the best quality raw beef.",
+      "sentencePl": "Przygotowujemy nasze burgery z surowej wołowiny najlepszej jakości.",
+      "audioWord": "t1-p26-058-word.mp3",
+      "audioSentence": "t1-p26-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-059",
+      "english": "Salty",
+      "polish": "Słony",
+      "sentenceEn": "Fast food is too salty to eat.",
+      "sentencePl": "Jedzenie typu fast food jest za słone do jedzenia.",
+      "audioWord": "t1-p26-059-word.mp3",
+      "audioSentence": "t1-p26-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-060",
+      "english": "Tasty",
+      "polish": "Smaczny",
+      "sentenceEn": "I always prefer Jane's burgers. They're so tasty.",
+      "sentencePl": "Zawsze wolę burgery Jane. Są przepyszne.",
+      "audioWord": "t1-p26-060-word.mp3",
+      "audioSentence": "t1-p26-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-061",
+      "english": "Nut",
+      "polish": "Orzech",
+      "sentenceEn": "My sister is allergic to nuts. Shopping with her takes hours, because she needs to read every single label.",
+      "sentencePl": "Moja siostra ma alergię na orzechy. Zakupy z nią ciągną się godzinami,  bo musi przeczytać każdą etykietę.",
+      "audioWord": "t1-p26-061-word.mp3",
+      "audioSentence": "t1-p26-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-062",
+      "english": "Donut",
+      "polish": "Pączek",
+      "sentenceEn": "A donut, a coffee, and a view of the ocean. Could it be any better? That's working at the MLPD.",
+      "sentencePl": "Pączek, kawa i widok na ocean. Czy mogłoby być lepiej? Tak się pracuje w MLPD.",
+      "audioWord": "t1-p26-062-word.mp3",
+      "audioSentence": "t1-p26-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-063",
+      "english": "Pie",
+      "polish": "Placek; ciasto",
+      "sentenceEn": "\"Would you bake an apple pie for the dwarfs,\" asked the Witch.",
+      "sentencePl": "A może upiekłabyś szarlotkę dla krasnoludków? - spytała Wiedźma.",
+      "audioWord": "t1-p26-063-word.mp3",
+      "audioSentence": "t1-p26-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-064",
+      "english": "Cereal",
+      "polish": "Płatki śniadaniowe",
+      "sentenceEn": "Kids like to have chocolate cereal for breakfast.",
+      "sentencePl": "Dzieci lubią jeść czekoladowe płatki na śniadanie.",
+      "audioWord": "t1-p26-064-word.mp3",
+      "audioSentence": "t1-p26-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-065",
+      "english": "Portion",
+      "polish": "Porcja",
+      "sentenceEn": "This ice cream shop serves very large ice cream portions.",
+      "sentencePl": "W tej lodziarni serwują bardzo duże porcje lodów.",
+      "audioWord": "t1-p26-065-word.mp3",
+      "audioSentence": "t1-p26-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-066",
+      "english": "Dish",
+      "polish": "Potrawa",
+      "sentenceEn": "What is your favorite dish? I could eat the whole lasagne myself!",
+      "sentencePl": "Jaka jest Twoja ulubiona potrawa? Ja mogłabym zjeść sama całą lasagne!",
+      "audioWord": "t1-p26-066-word.mp3",
+      "audioSentence": "t1-p26-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-067",
+      "english": "Recipe",
+      "polish": "Przepis (na danie)",
+      "sentenceEn": "Magdalene, would you give me a recipe for this delicious cake?",
+      "sentencePl": "Magdaleno, podałabyś mi przepis na ten pyszny tort?",
+      "audioWord": "t1-p26-067-word.mp3",
+      "audioSentence": "t1-p26-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-068",
+      "english": "Spice",
+      "polish": "Przyprawa",
+      "sentenceEn": "How can you cook without spices?",
+      "sentencePl": "Jak możesz gotować bez przypraw?",
+      "audioWord": "t1-p26-068-word.mp3",
+      "audioSentence": "t1-p26-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-069",
+      "english": "Cheesecake",
+      "polish": "Sernik",
+      "sentenceEn": "You must try my dad's cheesecake. It's incredible.",
+      "sentencePl": "Musisz spróbować sernika mojego taty. Jest niesamowity.",
+      "audioWord": "t1-p26-069-word.mp3",
+      "audioSentence": "t1-p26-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-070",
+      "english": "Flavor",
+      "polish": "Smak (potrawy)",
+      "sentenceEn": "To bring up the flavor of the dish, you need to add some lemon juice.",
+      "sentencePl": "Aby podkreślić smak potrawy, należy dodać trochę soku z cytryny.",
+      "audioWord": "t1-p26-070-word.mp3",
+      "audioSentence": "t1-p26-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-071",
+      "english": "Sauce",
+      "polish": "Sos",
+      "sentenceEn": "How did you make this sauce? It's delicious.",
+      "sentencePl": "Jak zrobiłeś ten sos? Jest przepyszny.",
+      "audioWord": "t1-p26-071-word.mp3",
+      "audioSentence": "t1-p26-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-072",
+      "english": "Spaghetti",
+      "polish": "Spaghetti",
+      "sentenceEn": "Spaghetti is the best kind of pasta. You will not change my mind.",
+      "sentencePl": "Spaghetti to najlepszy rodzaj makaronu. Nie zmienisz mojego zdania.",
+      "audioWord": "t1-p26-072-word.mp3",
+      "audioSentence": "t1-p26-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-073",
+      "english": "Pepper",
+      "polish": "Pieprz",
+      "sentenceEn": "I always eat spicy food, so you can put as much pepper as you want. It doesn't bother me.",
+      "sentencePl": "Zawsze jem pikantne potrawy, więc możesz wsypać tyle pieprzu, ile chcesz. Mnie to nie przeszkadza.",
+      "audioWord": "t1-p26-073-word.mp3",
+      "audioSentence": "t1-p26-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-074",
+      "english": "Sushi",
+      "polish": "Sushi",
+      "sentenceEn": "We always eat sushi on special occasions.",
+      "sentencePl": "Zawsze jemy sushi na specjalne okazje.",
+      "audioWord": "t1-p26-074-word.mp3",
+      "audioSentence": "t1-p26-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-075",
+      "english": "Apple pie",
+      "polish": "Szarlotka",
+      "sentenceEn": "My favorite dessert is an apple pie with vanilla ice-cream.",
+      "sentencePl": "Mój ulubiony deser to szarlotka z lodami waniliowymi.",
+      "audioWord": "t1-p26-075-word.mp3",
+      "audioSentence": "t1-p26-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-076",
+      "english": "Noodle",
+      "polish": "Kluska",
+      "sentenceEn": "You have a noodle on your shirt. Have you eaten soup?",
+      "sentencePl": "Masz kluskę na koszuli. Jadłaś zupę?",
+      "audioWord": "t1-p26-076-word.mp3",
+      "audioSentence": "t1-p26-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-077",
+      "english": "Pudding",
+      "polish": "Budyń",
+      "sentenceEn": "Would you rather have chocolate or vanilla pudding?",
+      "sentencePl": "Wolisz budyń czekoladowy czy waniliowy?",
+      "audioWord": "t1-p26-077-word.mp3",
+      "audioSentence": "t1-p26-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-078",
+      "english": "Veal",
+      "polish": "Cielęcina",
+      "sentenceEn": "This wine goes well with veal and pork.",
+      "sentencePl": "To wino pasuje to cielęciny i wieprzowiny.",
+      "audioWord": "t1-p26-078-word.mp3",
+      "audioSentence": "t1-p26-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-079",
+      "english": "Helping",
+      "polish": "Dokładka",
+      "sentenceEn": "I would be in seventh heaven if I got an extra helping.",
+      "sentencePl": "Byłabym w siódmym niebie, gdybym dostała dodatkową dokładkę.",
+      "audioWord": "t1-p26-079-word.mp3",
+      "audioSentence": "t1-p26-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-080",
+      "english": "Filet",
+      "polish": "Filet",
+      "sentenceEn": "Bought a salmon filet, want sushi?",
+      "sentencePl": "Kupiłem filet z łososia, masz ochotę na sushi?",
+      "audioWord": "t1-p26-080-word.mp3",
+      "audioSentence": "t1-p26-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-081",
+      "english": "Waffle",
+      "polish": "Gofr",
+      "sentenceEn": "Can I have a waffle with ALL add-ins?",
+      "sentencePl": "Czy mogę zamówić gofra ze WSZYSTKIMI dodatkami?",
+      "audioWord": "t1-p26-081-word.mp3",
+      "audioSentence": "t1-p26-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-082",
+      "english": "Stuffed cabbage",
+      "polish": "Gołąbki",
+      "sentenceEn": "I can almost smell the stuffed cabbage cooking in my mom's kitchen.",
+      "sentencePl": "Niemal czuję zapach gołąbków gotujących się w kuchni mojej mamy.",
+      "audioWord": "t1-p26-082-word.mp3",
+      "audioSentence": "t1-p26-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-083",
+      "english": "Biscuit",
+      "polish": "Herbatnik; ciastko",
+      "sentenceEn": "At Coffee Shore they always add a small biscuit to your coffee.",
+      "sentencePl": "W Coffee Shore zawsze dodają do kawy małego herbatnika.",
+      "audioWord": "t1-p26-083-word.mp3",
+      "audioSentence": "t1-p26-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-084",
+      "english": "Groats",
+      "polish": "Kasza",
+      "sentenceEn": "A one-pot dish with groats is a great idea for a family dinner.",
+      "sentencePl": "Danie jednogarnkowe z kaszą to świetny pomysł na rodzinny obiad.",
+      "audioWord": "t1-p26-084-word.mp3",
+      "audioSentence": "t1-p26-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-085",
+      "english": "Margarine",
+      "polish": "Margaryna",
+      "sentenceEn": "Is margarine healthier than butter, or is it the other way round? I never know.",
+      "sentencePl": "Czy margaryna jest zdrowsza od masła, czy to było w drugą stronę? Nigdy nie wiem.",
+      "audioWord": "t1-p26-085-word.mp3",
+      "audioSentence": "t1-p26-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-086",
+      "english": "Flour",
+      "polish": "Mąka",
+      "sentenceEn": "Excuse me, is this cake made of coconut flour?",
+      "sentencePl": "Przepraszam, czy to ciasto jest z mąki kokosowej?",
+      "audioWord": "t1-p26-086-word.mp3",
+      "audioSentence": "t1-p26-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-087",
+      "english": "Mixture",
+      "polish": "Mieszanka; mieszanina",
+      "sentenceEn": "I usually add some mixture of seeds to my salads. I like when it crunches.",
+      "sentencePl": "Do sałatek zazwyczaj dodaję mieszankę nasion. Lubię, kiedy coś coś chrupie.",
+      "audioWord": "t1-p26-087-word.mp3",
+      "audioSentence": "t1-p26-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-088",
+      "english": "Almond",
+      "polish": "Migdał",
+      "sentenceEn": "Almonds are not the type of nuts. You can eat them.",
+      "sentencePl": "Migdały to nie orzechy, możesz je jeść.",
+      "audioWord": "t1-p26-088-word.mp3",
+      "audioSentence": "t1-p26-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-089",
+      "english": "Vinegar",
+      "polish": "Ocet",
+      "sentenceEn": "I don't like dishes based on vinegar.",
+      "sentencePl": "Nie lubię potraw bazujących na occie.",
+      "audioWord": "t1-p26-089-word.mp3",
+      "audioSentence": "t1-p26-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-090",
+      "english": "Omelet",
+      "polish": "Omlet",
+      "sentenceEn": "What ingredients would you like your omelet with?",
+      "sentencePl": "Z jakimi składnikami chciałbyś swój omlet?",
+      "audioWord": "t1-p26-090-word.mp3",
+      "audioSentence": "t1-p26-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-091",
+      "english": "Juicy",
+      "polish": "Soczysty",
+      "sentenceEn": "Check out this pineapple! So juicy!",
+      "sentencePl": "Obczaj tego ananasa! Ale soczysty!",
+      "audioWord": "t1-p26-091-word.mp3",
+      "audioSentence": "t1-p26-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-092",
+      "english": "Bittersweet",
+      "polish": "Słodko-gorzki",
+      "sentenceEn": "The new beer which we tried was very bittersweet.",
+      "sentencePl": "Nowe piwo, którego próbowaliśmy, miało bardzo słodko-gorzki smak.",
+      "audioWord": "t1-p26-092-word.mp3",
+      "audioSentence": "t1-p26-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-093",
+      "english": "Dry",
+      "polish": "Wytrawne (o winie)",
+      "sentenceEn": "Sophia always drinks dry white wine with fish.",
+      "sentencePl": "Zofia zawsze pije wytrawne białe wino do ryb.",
+      "audioWord": "t1-p26-093-word.mp3",
+      "audioSentence": "t1-p26-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-094",
+      "english": "Sparkling",
+      "polish": "Gazowany (woda)",
+      "sentenceEn": "Do you have sparkling water?",
+      "sentencePl": "Macie wodę gazowaną?",
+      "audioWord": "t1-p26-094-word.mp3",
+      "audioSentence": "t1-p26-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-095",
+      "english": "Boiling",
+      "polish": "Wrzący",
+      "sentenceEn": "You know what boiling fat smells like?",
+      "sentencePl": "Wiesz, jak cuchnie wrzący tłuszcz?",
+      "audioWord": "t1-p26-095-word.mp3",
+      "audioSentence": "t1-p26-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-096",
+      "english": "Delicate",
+      "polish": "Delikatny (np. Potrawa)",
+      "sentenceEn": "A delicate aroma of roses was in the air.",
+      "sentencePl": "W powietrzu unosił się delikatny zapach róż.",
+      "audioWord": "t1-p26-096-word.mp3",
+      "audioSentence": "t1-p26-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-097",
+      "english": "Rare",
+      "polish": "Niewysmażony (krwisty)",
+      "sentenceEn": "This rare Buick Riviera sold for a million dollars.",
+      "sentencePl": "Ten rzadki Buick Riviera został sprzedany za milion dolarów.",
+      "audioWord": "t1-p26-097-word.mp3",
+      "audioSentence": "t1-p26-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-098",
+      "english": "Delicious",
+      "polish": "Pyszny",
+      "sentenceEn": "These delicious cookies were made for Candice's birthday. Lovely.",
+      "sentencePl": "Te pyszne ciasteczka przygotowano na urodziny Candice. Cudowne.",
+      "audioWord": "t1-p26-098-word.mp3",
+      "audioSentence": "t1-p26-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-099",
+      "english": "Tasteless",
+      "polish": "Bez smaku",
+      "sentenceEn": "The food at their wedding reception was completely tasteless.",
+      "sentencePl": "Jedzenie na ich przyjęciu weselnym było całkowicie bez smaku.",
+      "audioWord": "t1-p26-099-word.mp3",
+      "audioSentence": "t1-p26-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-100",
+      "english": "Chopped",
+      "polish": "Siekany",
+      "sentenceEn": "The dish was garnished with chopped celery.",
+      "sentencePl": "Danie przyozdobiono posiekanym selerem.",
+      "audioWord": "t1-p26-100-word.mp3",
+      "audioSentence": "t1-p26-100-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-101",
+      "english": "Bland",
+      "polish": "Mdły; pozbawiony smaku",
+      "sentenceEn": "The chicken is indescribably bland. Bring me the oysters.",
+      "sentencePl": "Kurczak jest niemiłosiernie mdły. Przynieś mi ostrygi.",
+      "audioWord": "t1-p26-101-word.mp3",
+      "audioSentence": "t1-p26-101-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-102",
+      "english": "Milky",
+      "polish": "Mleczny",
+      "sentenceEn": "The chocolate was melting in my mouth. I haven't eaten anything so delicious for a long time.",
+      "sentencePl": "Czekolada rozpływała się w ustach. Dawno nie jadłem niczego tak pysznego.",
+      "audioWord": "t1-p26-102-word.mp3",
+      "audioSentence": "t1-p26-102-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-103",
+      "english": "Drinkable",
+      "polish": "Pitny; nadający się do picia",
+      "sentenceEn": "Only 1% of water is drinkable.",
+      "sentencePl": "Tylko 1% wody nadaje się do picia.",
+      "audioWord": "t1-p26-103-word.mp3",
+      "audioSentence": "t1-p26-103-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-104",
+      "english": "Burned",
+      "polish": "Przypalony",
+      "sentenceEn": "You don't have to eat the burned part. You can scrape it off.",
+      "sentencePl": "Nie musisz jeść tej przypalonej części. Możesz to zdrapać.",
+      "audioWord": "t1-p26-104-word.mp3",
+      "audioSentence": "t1-p26-104-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-105",
+      "english": "Fried",
+      "polish": "Smażony",
+      "sentenceEn": "I don't eat fried foods anymore, and I limit my salt.",
+      "sentencePl": "Nie jem już smażonego jedzenia i ograniczam sól.",
+      "audioWord": "t1-p26-105-word.mp3",
+      "audioSentence": "t1-p26-105-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-106",
+      "english": "Roast",
+      "polish": "Pieczeń",
+      "sentenceEn": "I'm going to roast the duck for dinner. We expect some important guests.",
+      "sentencePl": "Zamierzam upiec kaczkę na obiad. Spodziewamy się ważnych gości.",
+      "audioWord": "t1-p26-106-word.mp3",
+      "audioSentence": "t1-p26-106-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-107",
+      "english": "Dumplings",
+      "polish": "Pierogi",
+      "sentenceEn": "For years we've invited tourists to the dumplings festival.",
+      "sentencePl": "Od lat zapraszamy turystów na festiwal pierogów.",
+      "audioWord": "t1-p26-107-word.mp3",
+      "audioSentence": "t1-p26-107-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-108",
+      "english": "Chicken breast",
+      "polish": "Pierś drobiowa",
+      "sentenceEn": "How to cook chicken breast in the oven to make sure it's delicious and nourishing?",
+      "sentencePl": "Jak upiec pierś z kurczaka w piekarniku, aby była smaczna i pożywna?",
+      "audioWord": "t1-p26-108-word.mp3",
+      "audioSentence": "t1-p26-108-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-109",
+      "english": "Popcorn",
+      "polish": "Popkorn",
+      "sentenceEn": "You must have popcorn at the movies. It's an unwritten rule.",
+      "sentencePl": "W kinie trzeba mieć popcorn. To niepisana zasada.",
+      "audioWord": "t1-p26-109-word.mp3",
+      "audioSentence": "t1-p26-109-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-110",
+      "english": "Starter",
+      "polish": "Przystawka; zakąska",
+      "sentenceEn": "Let's get some starters and then we can think about the main courses.",
+      "sentencePl": "Zamówmy jakieś przystawki, a potem zastanowimy się nad daniami głównymi.",
+      "audioWord": "t1-p26-110-word.mp3",
+      "audioSentence": "t1-p26-110-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-111",
+      "english": "Meatball",
+      "polish": "Pulpet",
+      "sentenceEn": "Spaghetti with meatballs is my favorite meal.",
+      "sentencePl": "Moim ulubionym daniem jest spaghetti z pulpetami.",
+      "audioWord": "t1-p26-111-word.mp3",
+      "audioSentence": "t1-p26-111-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-112",
+      "english": "Mashed potatoes",
+      "polish": "Tłuczone ziemniaki; puree",
+      "sentenceEn": "- I'd rather have mashed potatoes than rice for dinner. - And that is why you look like that.",
+      "sentencePl": "- Wolę tłuczone ziemniaki niż ryż na obiad. - I właśnie dlatego tak wyglądasz.",
+      "audioWord": "t1-p26-112-word.mp3",
+      "audioSentence": "t1-p26-112-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-113",
+      "english": "Raisin",
+      "polish": "Rodzynek",
+      "sentenceEn": "Okay, the main question is... Cheesecake with or without raisins?",
+      "sentencePl": "Ok, główne pytanie to... Sernik z rodzynkami, czy bez?",
+      "audioWord": "t1-p26-113-word.mp3",
+      "audioSentence": "t1-p26-113-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-114",
+      "english": "Ingredient",
+      "polish": "Składnik",
+      "sentenceEn": "Why do all these recipes have so many ingredients?",
+      "sentencePl": "Dlaczego te wszystkie przepisy mają tyle składników?",
+      "audioWord": "t1-p26-114-word.mp3",
+      "audioSentence": "t1-p26-114-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-115",
+      "english": "Catering",
+      "polish": "Katering",
+      "sentenceEn": "We have to order catering for our anniversary party. I ain't gonna cook for 50 people!",
+      "sentencePl": "Musimy zamówić catering na nasze przyjęcie rocznicowe. Nie będę gotować dla 50 osób!",
+      "audioWord": "t1-p26-115-word.mp3",
+      "audioSentence": "t1-p26-115-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-116",
+      "english": "Olive",
+      "polish": "Oliwka",
+      "sentenceEn": "I've never met a child that likes olives. I guess you need to grow up to them.",
+      "sentencePl": "Nigdy nie spotkałam dziecka, które lubi oliwki. Chyba trzeba do nich dorosnąć.",
+      "audioWord": "t1-p26-116-word.mp3",
+      "audioSentence": "t1-p26-116-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-117",
+      "english": "Seafood",
+      "polish": "Owoce morza",
+      "sentenceEn": "At Miami Beach, you can eat the best seafood.",
+      "sentencePl": "W Miami Beach możesz zjeść najlepsze owoce morza.",
+      "audioWord": "t1-p26-117-word.mp3",
+      "audioSentence": "t1-p26-117-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-118",
+      "english": "Appetizer",
+      "polish": "Przystawka; aperitif",
+      "sentenceEn": "Would you like to share an appetizer? We can get two different ones and split them.",
+      "sentencePl": "Chciałbyś się podzielić przystawką? Możemy zamówić dwie różne i podzielić je na pół.",
+      "audioWord": "t1-p26-118-word.mp3",
+      "audioSentence": "t1-p26-118-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-119",
+      "english": "Pork",
+      "polish": "Wieprzowina",
+      "sentenceEn": "Pork is the best in Chinese dishes, otherwise it's nothing special.",
+      "sentencePl": "Najlepsza w chińskich potrawach jest wieprzowina, bez niej chińszczyzna to nic specjalnego.",
+      "audioWord": "t1-p26-119-word.mp3",
+      "audioSentence": "t1-p26-119-sentence.mp3"
+    },
+    {
+      "id": "t1-p26-120",
+      "english": "Beef",
+      "polish": "Wołowina",
+      "sentenceEn": "The quality of a burger depends on the beef.",
+      "sentencePl": "Jakość burgera zależy od wołowiny.",
+      "audioWord": "t1-p26-120-word.mp3",
+      "audioSentence": "t1-p26-120-sentence.mp3"
+    }
+  ]
+}

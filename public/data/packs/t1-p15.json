@@ -1,0 +1,100 @@
+{
+  "id": "t1-p15",
+  "name": "Romantyczne",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Zabronione",
+  "chapter": "Rozdział II",
+  "words": [
+    {
+      "id": "t1-p15-001",
+      "english": "Angel eyes",
+      "polish": "Aniołku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p15-001-word.mp3",
+      "audioSentence": "t1-p15-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p15-002",
+      "english": "Better half",
+      "polish": "Lepsza połowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p15-002-word.mp3",
+      "audioSentence": "t1-p15-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p15-003",
+      "english": "Cuddle bug",
+      "polish": "Robaczku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p15-003-word.mp3",
+      "audioSentence": "t1-p15-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p15-004",
+      "english": "Honey bunny",
+      "polish": "Króliczku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p15-004-word.mp3",
+      "audioSentence": "t1-p15-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p15-005",
+      "english": "Kitty cat",
+      "polish": "Kotku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p15-005-word.mp3",
+      "audioSentence": "t1-p15-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p15-006",
+      "english": "Lover girl",
+      "polish": "Misiaczek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p15-006-word.mp3",
+      "audioSentence": "t1-p15-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p15-007",
+      "english": "Lucky charm",
+      "polish": "Moje szczęście",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p15-007-word.mp3",
+      "audioSentence": "t1-p15-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p15-008",
+      "english": "My queen",
+      "polish": "Królowo moja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p15-008-word.mp3",
+      "audioSentence": "t1-p15-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p15-009",
+      "english": "Precious",
+      "polish": "Skarbeńku",
+      "sentenceEn": "We offer a method that allows us to save precious time and costs.",
+      "sentencePl": "Oferujemy metodę, która pozwala zaoszczędzić drogocenny czas i koszty.",
+      "audioWord": "t1-p15-009-word.mp3",
+      "audioSentence": "t1-p15-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p15-010",
+      "english": "Sunshine",
+      "polish": "Słoneczko",
+      "sentenceEn": "When I went outside after playing LoL all night, I was blinded by the sunshine.",
+      "sentencePl": "Kiedy wyszedłem na dwór po całej nocy grania w LoLa, oślepił mnie blask słońca.",
+      "audioWord": "t1-p15-010-word.mp3",
+      "audioSentence": "t1-p15-010-sentence.mp3"
+    }
+  ]
+}

@@ -1,0 +1,955 @@
+{
+  "id": "t1-p24",
+  "name": "Dom",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział III",
+  "words": [
+    {
+      "id": "t1-p24-001",
+      "english": "Desk",
+      "polish": "Biurko",
+      "sentenceEn": "Jerry's desk is always so messy. You can see what he ate for the whole week.",
+      "sentencePl": "Na biurku Jerry'ego zawsze jest bałagan. Możesz zobaczyć, co jadł przez cały tydzień.",
+      "audioWord": "t1-p24-001-word.mp3",
+      "audioSentence": "t1-p24-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-002",
+      "english": "Home",
+      "polish": "Dom (miejsce zamieszkania)",
+      "sentenceEn": "There is no other place like home.",
+      "sentencePl": "Nie ma to jak w domu.",
+      "audioWord": "t1-p24-002-word.mp3",
+      "audioSentence": "t1-p24-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-003",
+      "english": "Door",
+      "polish": "Drzwi",
+      "sentenceEn": "- Did you close the door? - I thought you did it!",
+      "sentencePl": "- Zamknąłeś drzwi? - Myślałem, że Ty zamknęłaś!",
+      "audioWord": "t1-p24-003-word.mp3",
+      "audioSentence": "t1-p24-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-004",
+      "english": "Key",
+      "polish": "Klucz",
+      "sentenceEn": "The European Union has a key role and must take care of climate change.",
+      "sentencePl": "Unia Europejska odgrywa kluczową rolę i musi zająć się zmianami klimatu.",
+      "audioWord": "t1-p24-004-word.mp3",
+      "audioSentence": "t1-p24-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-005",
+      "english": "Window",
+      "polish": "Okno",
+      "sentenceEn": "Can you open the window? I need fresh air.",
+      "sentencePl": "Możesz otworzyć okno? Potrzebuję świeżego powietrza.",
+      "audioWord": "t1-p24-005-word.mp3",
+      "audioSentence": "t1-p24-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-006",
+      "english": "Table",
+      "polish": "Stół; tabela",
+      "sentenceEn": "Could you set the table? Guests are coming.",
+      "sentencePl": "Możesz nakryć do stołu? Zaraz będą goście.",
+      "audioWord": "t1-p24-006-word.mp3",
+      "audioSentence": "t1-p24-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-007",
+      "english": "Light",
+      "polish": "Światło",
+      "sentenceEn": "It's getting late. Let's turn off the lights and go to bed.",
+      "sentencePl": "Robi się późno. Zgaśmy światło i chodźmy spać.",
+      "audioWord": "t1-p24-007-word.mp3",
+      "audioSentence": "t1-p24-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-008",
+      "english": "Tub",
+      "polish": "Wanna",
+      "sentenceEn": "Do you prefer the tub or the shower?",
+      "sentencePl": "Wolisz wannę czy prysznic?",
+      "audioWord": "t1-p24-008-word.mp3",
+      "audioSentence": "t1-p24-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-009",
+      "english": "Lighter",
+      "polish": "Zapalniczka",
+      "sentenceEn": "Can you lend me a lighter? Thanks.",
+      "sentencePl": "Pożyczysz mi zapalniczkę? Dzięki.",
+      "audioWord": "t1-p24-009-word.mp3",
+      "audioSentence": "t1-p24-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-010",
+      "english": "Clock",
+      "polish": "Zegar",
+      "sentenceEn": "Look at the clock! We are late!",
+      "sentencePl": "Spójrz na zegar! Jesteśmy spóźnieni!",
+      "audioWord": "t1-p24-010-word.mp3",
+      "audioSentence": "t1-p24-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-011",
+      "english": "Address",
+      "polish": "Adres",
+      "sentenceEn": "- You must address the envelope before you send it. - But mom, everyone knows where Santa lives.",
+      "sentencePl": "- Musisz zaadresować kopertę, zanim ją wyślesz. - Ale mamo, przecież wszyscy wiedzą, gdzie mieszka Święty Mikołaj.",
+      "audioWord": "t1-p24-011-word.mp3",
+      "audioSentence": "t1-p24-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-012",
+      "english": "Chair",
+      "polish": "Krzesło",
+      "sentenceEn": "I had no idea that chairs were so expensive.",
+      "sentencePl": "Nie miałem pojęcia, że krzesła były takie drogie.",
+      "audioWord": "t1-p24-012-word.mp3",
+      "audioSentence": "t1-p24-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-013",
+      "english": "Lamp",
+      "polish": "Lampa",
+      "sentenceEn": "Roger, turn on the lamp. I can't see anything.",
+      "sentencePl": "Roger, włącz lampę. Nic nie widzę.",
+      "audioWord": "t1-p24-013-word.mp3",
+      "audioSentence": "t1-p24-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-014",
+      "english": "Mirror",
+      "polish": "Lustro",
+      "sentenceEn": "They broke the mirror. That's 7 years of bad luck.",
+      "sentencePl": "Rozbili lustro. To 7 lat nieszczęścia.",
+      "audioWord": "t1-p24-014-word.mp3",
+      "audioSentence": "t1-p24-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-015",
+      "english": "Bed",
+      "polish": "Łóżko",
+      "sentenceEn": "This is the most comfortable bed I've ever slept in. I feel like I'm on a cloud.",
+      "sentencePl": "To najwygodniejsze łóżko, w jakim kiedykolwiek spałam. Czuję się, jakbym była na chmurce.",
+      "audioWord": "t1-p24-015-word.mp3",
+      "audioSentence": "t1-p24-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-016",
+      "english": "Room",
+      "polish": "Pokój (pomieszczenie)",
+      "sentenceEn": "My room is on the right if you need anything.",
+      "sentencePl": "Mój pokój jest po prawej, jeśli będziesz czegoś potrzebować.",
+      "audioWord": "t1-p24-016-word.mp3",
+      "audioSentence": "t1-p24-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-017",
+      "english": "Sofa",
+      "polish": "Sofa; kanapa",
+      "sentenceEn": "Please, Nathan, take the armchair. I'll sit on the sofa.",
+      "sentencePl": "Proszę, Nathan, weź fotel. Ja siądę na kanapie.",
+      "audioWord": "t1-p24-017-word.mp3",
+      "audioSentence": "t1-p24-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-018",
+      "english": "Wardrobe",
+      "polish": "Szafa",
+      "sentenceEn": "That wardrobe is too small. My clothes won't fit in there.",
+      "sentencePl": "Ta szafa jest za mała. Moje ubrania się tu nie zmieszczą.",
+      "audioWord": "t1-p24-018-word.mp3",
+      "audioSentence": "t1-p24-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-019",
+      "english": "Wall",
+      "polish": "Ściana",
+      "sentenceEn": "We should fix this wall. I can see the sea through this hole...",
+      "sentencePl": "Powinniśmy naprawić tę ścianę. Przez tę dziurę widzę morze...",
+      "audioWord": "t1-p24-019-word.mp3",
+      "audioSentence": "t1-p24-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-020",
+      "english": "Toilet",
+      "polish": "Toaleta",
+      "sentenceEn": "Where's the toilet? I really have to pee.",
+      "sentencePl": "Gdzie jest toaleta? Naprawdę muszę siku.",
+      "audioWord": "t1-p24-020-word.mp3",
+      "audioSentence": "t1-p24-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-021",
+      "english": "Alarm clock",
+      "polish": "Budzik",
+      "sentenceEn": "Don't forget to set your alarm clock. You've been late 3 times this week.",
+      "sentencePl": "Nie zapomnij ustawić budzika. Już 3 razy w tym tygodniu się spóźniłeś.",
+      "audioWord": "t1-p24-021-word.mp3",
+      "audioSentence": "t1-p24-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-022",
+      "english": "Garage",
+      "polish": "Garaż",
+      "sentenceEn": "No one stole the car. Dad parked it in the garage today.",
+      "sentencePl": "Nikt nie ukradł samochodu. Tata zaparkował go dzisiaj w garażu.",
+      "audioWord": "t1-p24-022-word.mp3",
+      "audioSentence": "t1-p24-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-023",
+      "english": "Bathroom",
+      "polish": "Łazienka",
+      "sentenceEn": "I want to renovate my bathroom in Zen style.",
+      "sentencePl": "Chcę wyremontować łazienkę w stylu Zen.",
+      "audioWord": "t1-p24-023-word.mp3",
+      "audioSentence": "t1-p24-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-024",
+      "english": "Furniture",
+      "polish": "Meble",
+      "sentenceEn": "We are moving to a new apartment and have to buy furniture.",
+      "sentencePl": "Przeprowadzamy się do nowego mieszkania i musimy kupić meble.",
+      "audioWord": "t1-p24-024-word.mp3",
+      "audioSentence": "t1-p24-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-025",
+      "english": "Umbrella",
+      "polish": "Parasol",
+      "sentenceEn": "I've lost five umbrellas this year. Don't say anything...",
+      "sentencePl": "Zgubiłam pięć parasolek w tym roku. Nic nie mów...",
+      "audioWord": "t1-p24-025-word.mp3",
+      "audioSentence": "t1-p24-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-026",
+      "english": "Pillow",
+      "polish": "Poduszka",
+      "sentenceEn": "- Stop stealing all my pillows! - But yours are much more comfortable.",
+      "sentencePl": "- Przestań kraść moje wszystkie poduszki! - Ale Twoje są dużo wygodniejsze.",
+      "audioWord": "t1-p24-026-word.mp3",
+      "audioSentence": "t1-p24-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-027",
+      "english": "Washing machine",
+      "polish": "Pralka",
+      "sentenceEn": "The washing machine is broken. We have to buy a new one.",
+      "sentencePl": "Pralka jest popsuta. Musimy kupić nową.",
+      "audioWord": "t1-p24-027-word.mp3",
+      "audioSentence": "t1-p24-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-028",
+      "english": "Living room",
+      "polish": "Salon",
+      "sentenceEn": "I'm buying new furniture for the living room. Kids ruined our old ones...",
+      "sentencePl": "Kupuję nowe meble do salonu. Dzieciaki zniszczyły nasze stare...",
+      "audioWord": "t1-p24-028-word.mp3",
+      "audioSentence": "t1-p24-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-029",
+      "english": "Neighbor",
+      "polish": "Sąsiad",
+      "sentenceEn": "We've great neighbors in our new building. They throw out game night every Friday.",
+      "sentencePl": "Mamy świetnych sąsiadów w naszym nowym budynku. Urządzają co piątek wieczory z grami.",
+      "audioWord": "t1-p24-029-word.mp3",
+      "audioSentence": "t1-p24-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-030",
+      "english": "Bedroom",
+      "polish": "Sypialnia",
+      "sentenceEn": "A bedroom is the most important part of the house. If you know what I mean.",
+      "sentencePl": "Sypialnia jest najważniejszą częścią domu. Jeśli wiesz, co mam na myśli.",
+      "audioWord": "t1-p24-030-word.mp3",
+      "audioSentence": "t1-p24-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-031",
+      "english": "Aquarium",
+      "polish": "Akwarium",
+      "sentenceEn": "Cleaning the aquarium is the worst part of having fish.",
+      "sentencePl": "Najgorsze w posiadaniu rybek jest czyszczenie akwarium.",
+      "audioWord": "t1-p24-031-word.mp3",
+      "audioSentence": "t1-p24-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-032",
+      "english": "Balcony",
+      "polish": "Balkon",
+      "sentenceEn": "If you must smoke, please do it on the balcony.",
+      "sentencePl": "Jeśli musisz palić, to proszę, rób to na balkonie.",
+      "audioWord": "t1-p24-032-word.mp3",
+      "audioSentence": "t1-p24-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-033",
+      "english": "Dining room",
+      "polish": "Jadalnia",
+      "sentenceEn": "We spend most of our time at home in a dining room. When there is food on the table, everything is better.",
+      "sentencePl": "Większość czasu spędzamy w domu, w jadalni. Kiedy na stole jest jedzenie, wszystko jest jakieś lepsze.",
+      "audioWord": "t1-p24-033-word.mp3",
+      "audioSentence": "t1-p24-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-034",
+      "english": "Mess",
+      "polish": "Bałagan",
+      "sentenceEn": "Don't mess it up, Dave. You only have one job!",
+      "sentencePl": "Nie zepsuj tego, Dave. Masz tylko jedną robotę!",
+      "audioWord": "t1-p24-034-word.mp3",
+      "audioSentence": "t1-p24-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-035",
+      "english": "Gate",
+      "polish": "Brama",
+      "sentenceEn": "Open the gates! The king is coming!",
+      "sentencePl": "Otwórzcie bramy! Król się zbliża!",
+      "audioWord": "t1-p24-035-word.mp3",
+      "audioSentence": "t1-p24-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-036",
+      "english": "Roof",
+      "polish": "Dach",
+      "sentenceEn": "Roger has a stork nest on his roof!",
+      "sentencePl": "Roger ma gniazdo bocianie na dachu!",
+      "audioWord": "t1-p24-036-word.mp3",
+      "audioSentence": "t1-p24-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-037",
+      "english": "Decoration",
+      "polish": "Dekoracje",
+      "sentenceEn": "Don't you think it's time to take down Christmas decorations?",
+      "sentencePl": "Nie sądzisz, że już czas zdjąć świąteczne dekoracje?",
+      "audioWord": "t1-p24-037-word.mp3",
+      "audioSentence": "t1-p24-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-038",
+      "english": "Carpet",
+      "polish": "Dywan",
+      "sentenceEn": "Your dog pooped on the carpet, bro. What the heck?",
+      "sentencePl": "Stary, Twój pies zrobił kupę na dywan. Co jest?",
+      "audioWord": "t1-p24-038-word.mp3",
+      "audioSentence": "t1-p24-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-039",
+      "english": "Blanket",
+      "polish": "Koc",
+      "sentenceEn": "You have so many blankets. Do you need another one?",
+      "sentencePl": "Masz tyle kocy. Potrzebujesz kolejnego?",
+      "audioWord": "t1-p24-039-word.mp3",
+      "audioSentence": "t1-p24-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-040",
+      "english": "Mattress",
+      "polish": "Materac",
+      "sentenceEn": "Would you like to sleep on the sofa or on the mattress?",
+      "sentencePl": "Chcesz spać na kanapie czy na materacu?",
+      "audioWord": "t1-p24-040-word.mp3",
+      "audioSentence": "t1-p24-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-041",
+      "english": "Area code",
+      "polish": "Numer kierunkowy",
+      "sentenceEn": "What's your area code?",
+      "sentencePl": "Jaki jest Twój numer kierunkowy?",
+      "audioWord": "t1-p24-041-word.mp3",
+      "audioSentence": "t1-p24-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-042",
+      "english": "Security",
+      "polish": "Ochrona; środki bezpieczeństwa",
+      "sentenceEn": "The security will be here soon. Take as much as you can and run!",
+      "sentencePl": "Za chwilę będzie tu ochrona. Bierz, ile możesz, i uciekaj!",
+      "audioWord": "t1-p24-042-word.mp3",
+      "audioSentence": "t1-p24-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-043",
+      "english": "Basement",
+      "polish": "Piwnica",
+      "sentenceEn": "I've seen too many horror movies. I'm not going down to that basement.",
+      "sentencePl": "Widziałam za dużo horrorów. Nie schodzę do tej piwnicy.",
+      "audioWord": "t1-p24-043-word.mp3",
+      "audioSentence": "t1-p24-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-044",
+      "english": "Area",
+      "polish": "Powierzchnia; obszar",
+      "sentenceEn": "We are going to build a guest house in this area.",
+      "sentencePl": "Na tym obszarze wybudujemy dom dla gości.",
+      "audioWord": "t1-p24-044-word.mp3",
+      "audioSentence": "t1-p24-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-045",
+      "english": "Shelf",
+      "polish": "Półka",
+      "sentenceEn": "My landlord doesn't allow me to put shelves up.",
+      "sentencePl": "Właściciel mojego mieszkania nie pozwala mi powiesić półek.",
+      "audioWord": "t1-p24-045-word.mp3",
+      "audioSentence": "t1-p24-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-046",
+      "english": "Housewife",
+      "polish": "Gospodyni domowa",
+      "sentenceEn": "Being a housewife is more difficult than it seems.",
+      "sentencePl": "Bycie gospodynią domową jest trudniejsze niż mogłoby się wydawać.",
+      "audioWord": "t1-p24-046-word.mp3",
+      "audioSentence": "t1-p24-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-047",
+      "english": "Housework",
+      "polish": "Prace domowe",
+      "sentenceEn": "Housework never ends. There's always something to clean.",
+      "sentencePl": "Prace domowe nigdy się nie kończą. Zawsze jest coś do posprzątania.",
+      "audioWord": "t1-p24-047-word.mp3",
+      "audioSentence": "t1-p24-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-048",
+      "english": "Laundry",
+      "polish": "Pranie",
+      "sentenceEn": "I don't know why, but my socks keep disappearing during laundry.",
+      "sentencePl": "Nie wiem dlaczego, ale w czasie prania znikają mi skarpetki.",
+      "audioWord": "t1-p24-048-word.mp3",
+      "audioSentence": "t1-p24-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-049",
+      "english": "Hall",
+      "polish": "Przedpokój",
+      "sentenceEn": "Your shoes are all over the hall. Please clean them up.",
+      "sentencePl": "Twoje buty są rozwalone po całym przedpokoju. Uprzątnij je.",
+      "audioWord": "t1-p24-049-word.mp3",
+      "audioSentence": "t1-p24-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-050",
+      "english": "Stairs",
+      "polish": "Schody",
+      "sentenceEn": "The stairs are a healthier choice than the elevator. But who cares about health?",
+      "sentencePl": "Schody są zdrowszym wyborem niż winda. Ale kto by tam dbał o zdrowie?",
+      "audioWord": "t1-p24-050-word.mp3",
+      "audioSentence": "t1-p24-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-051",
+      "english": "Attic",
+      "polish": "Strych",
+      "sentenceEn": "That attic is so creepy. Let's not go there ever again.",
+      "sentencePl": "Ten strych jest upiorny. Nie wchodźmy tam nigdy więcej.",
+      "audioWord": "t1-p24-051-word.mp3",
+      "audioSentence": "t1-p24-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-052",
+      "english": "Ceiling",
+      "polish": "Sufit",
+      "sentenceEn": "The ceiling is leaking. We need to call the owners.",
+      "sentencePl": "Sufit przecieka. Musimy zadzwonić do właścicieli.",
+      "audioWord": "t1-p24-052-word.mp3",
+      "audioSentence": "t1-p24-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-053",
+      "english": "Garbage",
+      "polish": "Śmieci",
+      "sentenceEn": "I put the garbage into a plastic bag.",
+      "sentencePl": "Włożyłam śmieci do plastikowego worka.",
+      "audioWord": "t1-p24-053-word.mp3",
+      "audioSentence": "t1-p24-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-054",
+      "english": "Elevator",
+      "polish": "Winda",
+      "sentenceEn": "You have to use the elevator to get to the 41st floor.",
+      "sentencePl": "Aby dostać się na 41 piętro, musisz pojechać tą windą.",
+      "audioWord": "t1-p24-054-word.mp3",
+      "audioSentence": "t1-p24-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-055",
+      "english": "Roommate",
+      "polish": "Współlokator",
+      "sentenceEn": "How many roommates are too many? I think 4.",
+      "sentencePl": "Ilu współlokatorów to zbyt wielu? Wydaje mi się, że 4.",
+      "audioWord": "t1-p24-055-word.mp3",
+      "audioSentence": "t1-p24-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-056",
+      "english": "Rent",
+      "polish": "Czynsz",
+      "sentenceEn": "You can rent a used 90's Cadillac in the USA and hit the road. Feel the call of adventure!",
+      "sentencePl": "W Stanach możesz wypożyczyć używanego Cadillaca z lat 90-tych i ruszyć w drogę. Poczuj zew przygody!.",
+      "audioWord": "t1-p24-056-word.mp3",
+      "audioSentence": "t1-p24-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-057",
+      "english": "Family house",
+      "polish": "Dom rodzinny",
+      "sentenceEn": "My parents are selling our family house.",
+      "sentencePl": "Moi rodzice sprzedają nasz dom rodzinny.",
+      "audioWord": "t1-p24-057-word.mp3",
+      "audioSentence": "t1-p24-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-058",
+      "english": "Corridor",
+      "polish": "Korytarz",
+      "sentenceEn": "This corridor is very dark. We need to order some sconces.",
+      "sentencePl": "Korytarz jest bardzo ciemny. Musimy zamówić jakieś kinkety.",
+      "audioWord": "t1-p24-058-word.mp3",
+      "audioSentence": "t1-p24-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-059",
+      "english": "Dust",
+      "polish": "Kurz",
+      "sentenceEn": "While I was dusting my old cabinet, I found something weird.",
+      "sentencePl": "Kiedy odkurzałem moją starą szafkę, znalazłem coś dziwnego.",
+      "audioWord": "t1-p24-059-word.mp3",
+      "audioSentence": "t1-p24-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-060",
+      "english": "Monitoring",
+      "polish": "Monitoring",
+      "sentenceEn": "It's very safe here. We have a monitoring system throughout the property.",
+      "sentencePl": "Tu jest bardzo bezpiecznie. Mamy monitoring na terenie całej posesji.",
+      "audioWord": "t1-p24-060-word.mp3",
+      "audioSentence": "t1-p24-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-061",
+      "english": "Chore",
+      "polish": "Obowiązek (praca do wykonania)",
+      "sentenceEn": "My favorite house chore is hanging the clean laundry. It's so relaxing and smells great.",
+      "sentencePl": "Z obowiązków domowych najbardziej lubię rozwieszanie czystego prania. Odpręża mnie to, a pranie pięknie pachnie.",
+      "audioWord": "t1-p24-061-word.mp3",
+      "audioSentence": "t1-p24-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-062",
+      "english": "Heating",
+      "polish": "Ogrzewanie",
+      "sentenceEn": "Could we set the heating to a lower temperature? It's like hell in here.",
+      "sentencePl": "Możemy ustawić ogrzewanie na niższą temperaturę? Tu jest jak w piekle.",
+      "audioWord": "t1-p24-062-word.mp3",
+      "audioSentence": "t1-p24-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-063",
+      "english": "Lighting",
+      "polish": "Oświetlenie",
+      "sentenceEn": "The lighting of this room is awesome - the lights change color depending on the part of the day!",
+      "sentencePl": "Oświetlenie tego pokoju jest niesamowite - światła zmieniają kolor zależnie od pory dnia!",
+      "audioWord": "t1-p24-063-word.mp3",
+      "audioSentence": "t1-p24-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-064",
+      "english": "Move",
+      "polish": "Przeprowadzka",
+      "sentenceEn": "I'd like to move to an apartment close to the sea.",
+      "sentencePl": "Chciałbym przeprowadzić się do mieszkania blisko morza.",
+      "audioWord": "t1-p24-064-word.mp3",
+      "audioSentence": "t1-p24-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-065",
+      "english": "Bed sheet",
+      "polish": "Prześcieradło",
+      "sentenceEn": "I love sleeping on a freshly washed bed sheet. The smell is the best!",
+      "sentencePl": "Uwielbiam spać na świeżo wypranym prześcieradle. Ten zapach jest najlepszy!",
+      "audioWord": "t1-p24-065-word.mp3",
+      "audioSentence": "t1-p24-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-066",
+      "english": "Neighborhood",
+      "polish": "Sąsiedztwo; okolica",
+      "sentenceEn": "We live in a family neighborhood. There are kids everywhere.",
+      "sentencePl": "W sąsiedztwie mamy same rodziny. Gdzie się nie obejrzysz, tam dzieci.",
+      "audioWord": "t1-p24-066-word.mp3",
+      "audioSentence": "t1-p24-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-067",
+      "english": "Drawer",
+      "polish": "Szuflada",
+      "sentenceEn": "Sarah keeps all of her precious stuff in this drawer.",
+      "sentencePl": "Sara trzyma wszystkie swoje cenne rzeczy w tej szufladzie.",
+      "audioWord": "t1-p24-067-word.mp3",
+      "audioSentence": "t1-p24-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-068",
+      "english": "Handle",
+      "polish": "Uchwyt",
+      "sentenceEn": "The tool should be well sharpened and equipped with a comfortable handle.",
+      "sentencePl": "Narzędzie powinno być dobrze naostrzone i wyposażone w wygodny uchwyt.",
+      "audioWord": "t1-p24-068-word.mp3",
+      "audioSentence": "t1-p24-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-069",
+      "english": "Fan",
+      "polish": "Wentylator",
+      "sentenceEn": "The fan is making a weird noise. We have to call the guy!",
+      "sentencePl": "Wentylator wydaje dziwny dźwięk. Musimy wezwać gościa!",
+      "audioWord": "t1-p24-069-word.mp3",
+      "audioSentence": "t1-p24-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-070",
+      "english": "Hanger",
+      "polish": "Wieszak",
+      "sentenceEn": "Rosita has a hanger for every dress that she owns.",
+      "sentencePl": "Rosita ma wieszak na każdą swoją sukienkę.",
+      "audioWord": "t1-p24-070-word.mp3",
+      "audioSentence": "t1-p24-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-071",
+      "english": "Property",
+      "polish": "Własność; posesja",
+      "sentenceEn": "Get off my property, or I'll call the police!",
+      "sentencePl": "Wynoś się z mojej posiadłości albo wezwę policję!",
+      "audioWord": "t1-p24-071-word.mp3",
+      "audioSentence": "t1-p24-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-072",
+      "english": "Landlord",
+      "polish": "Właściciel (np. Wynajmowanego mieszkania)",
+      "sentenceEn": "My landlord likes to pay me unexpected visits and play his new guitar solos.",
+      "sentencePl": "Właściciel mojego mieszkania lubi składać mi niezapowiedziane wizyty i grać swoje nowe gitarowe solówki.",
+      "audioWord": "t1-p24-072-word.mp3",
+      "audioSentence": "t1-p24-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-073",
+      "english": "Lock",
+      "polish": "Zamek (w drzwiach)",
+      "sentenceEn": "We should check the lock in the main door.",
+      "sentencePl": "Powinniśmy sprawdzić zamek w głównych drzwiach.",
+      "audioWord": "t1-p24-073-word.mp3",
+      "audioSentence": "t1-p24-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-074",
+      "english": "Lightbulb",
+      "polish": "Żarówka",
+      "sentenceEn": "Oh no. Another lightbulb is burned out...",
+      "sentencePl": "O nie! Kolejna żarówka się spaliła...",
+      "audioWord": "t1-p24-074-word.mp3",
+      "audioSentence": "t1-p24-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-075",
+      "english": "Vacuum cleaner",
+      "polish": "Odkurzacz",
+      "sentenceEn": "I dream of an automatic vacuum cleaner. If I had one, the house would surely be cleaner.",
+      "sentencePl": "Marzy mi się automatyczny odkurzacz. Gdybym taki miała, na pewno w domu byłoby czyściej.",
+      "audioWord": "t1-p24-075-word.mp3",
+      "audioSentence": "t1-p24-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-076",
+      "english": "Belongings",
+      "polish": "Dobytek; manatki",
+      "sentenceEn": "The refugees had to gather all their belongings and flee.",
+      "sentencePl": "Uchodźcy musieli zebrać cały swój dobytek i uciekać.",
+      "audioWord": "t1-p24-076-word.mp3",
+      "audioSentence": "t1-p24-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-077",
+      "english": "Housekeeper",
+      "polish": "Gosposia",
+      "sentenceEn": "Have you thought about getting a housekeeper? This place could use dusting.",
+      "sentencePl": "Myśleliście o zatrudnieniu gosposi? Przydałoby się tu trochę odkurzyć.",
+      "audioWord": "t1-p24-077-word.mp3",
+      "audioSentence": "t1-p24-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-078",
+      "english": "Armchair",
+      "polish": "Fotel",
+      "sentenceEn": "I can't sit in my armchair, 'cause my cat is always there.",
+      "sentencePl": "Nie mogę siedzieć na swoim fotelu, bo zawsze jest tam mój kot.",
+      "audioWord": "t1-p24-078-word.mp3",
+      "audioSentence": "t1-p24-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-079",
+      "english": "Fireplace",
+      "polish": "Kominek",
+      "sentenceEn": "I've always wanted to have a fireplace at home.",
+      "sentencePl": "Zawsze chciałem mieć w domu kominek.",
+      "audioWord": "t1-p24-079-word.mp3",
+      "audioSentence": "t1-p24-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-080",
+      "english": "Gateway",
+      "polish": "Brama wjazdowa",
+      "sentenceEn": "The gateway is broken again. I couldn't enter for an hour!",
+      "sentencePl": "Brama wjazdowa jest znowu zepsuta. Nie mogłem wjechać przez godzinę!",
+      "audioWord": "t1-p24-080-word.mp3",
+      "audioSentence": "t1-p24-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-081",
+      "english": "Intercom",
+      "polish": "Domofon",
+      "sentenceEn": "Open the door! Someone keeps ringing on the intercom over and over!",
+      "sentencePl": "Otwórz drzwi! Ktoś w kółko dzwoni domofonem!",
+      "audioWord": "t1-p24-081-word.mp3",
+      "audioSentence": "t1-p24-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-082",
+      "english": "Frame",
+      "polish": "Futryna, rama",
+      "sentenceEn": "Great picture. Let's frame it and hang it on the wall.",
+      "sentencePl": "Świetny obrazek. Oprawmy go i zawieśmy na ścianie.",
+      "audioWord": "t1-p24-082-word.mp3",
+      "audioSentence": "t1-p24-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-083",
+      "english": "Heater",
+      "polish": "Grzejnik",
+      "sentenceEn": "- Should we order an extra heater? - No, honey, we live in Florida.",
+      "sentencePl": "- Czy powinniśmy zamówić dodatkowy grzejnik? - Nie kochanie, mieszkamy na Florydzie.",
+      "audioWord": "t1-p24-083-word.mp3",
+      "audioSentence": "t1-p24-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-084",
+      "english": "Radiator",
+      "polish": "Kaloryfer",
+      "sentenceEn": "There is no use having a radiator when you live in Miami...",
+      "sentencePl": "Nie trzeba mieć kaloryfera, kiedy się mieszka w Miami...",
+      "audioWord": "t1-p24-084-word.mp3",
+      "audioSentence": "t1-p24-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-085",
+      "english": "Door handle",
+      "polish": "Klamka",
+      "sentenceEn": "Take a look at this unique door handle! It's shaped like a skull!",
+      "sentencePl": "Spójrz na tę wyjątkową klamkę! Jest w kształcie czaszki!",
+      "audioWord": "t1-p24-085-word.mp3",
+      "audioSentence": "t1-p24-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-086",
+      "english": "Staircase",
+      "polish": "Klatka schodowa",
+      "sentenceEn": "I found my phone on the staircase! Good thing no one took it!",
+      "sentencePl": "Znalazłam swój telefon na klatce schodowej! Dobrze, że nikt go nie zabrał.",
+      "audioWord": "t1-p24-086-word.mp3",
+      "audioSentence": "t1-p24-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-087",
+      "english": "Chimney",
+      "polish": "Komin",
+      "sentenceEn": "Kids believe that Santa Claus gets into the house through the chimney.",
+      "sentencePl": "Dzieci wierzą, że Święty Mikołaj dostaje się do domu przez komin.",
+      "audioWord": "t1-p24-087-word.mp3",
+      "audioSentence": "t1-p24-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-088",
+      "english": "Chest of drawers",
+      "polish": "Komoda",
+      "sentenceEn": "This chest of drawers is for linen only!",
+      "sentencePl": "Ta komoda jest tylko na pościel!",
+      "audioWord": "t1-p24-088-word.mp3",
+      "audioSentence": "t1-p24-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-089",
+      "english": "Tenant",
+      "polish": "Lokator",
+      "sentenceEn": "Oh, sorry, but I've already found a new tenant for this flat.",
+      "sentencePl": "Och przykro mi, ale już znalazłam nowego lokatora do mieszkania.",
+      "audioWord": "t1-p24-089-word.mp3",
+      "audioSentence": "t1-p24-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-090",
+      "english": "Soap dish",
+      "polish": "Mydelniczka",
+      "sentenceEn": "Put down the soap onto the soap dish. This is where it belongs.",
+      "sentencePl": "Odłóż mydło na mydelniczkę. Tam jest jego miejsce.",
+      "audioWord": "t1-p24-090-word.mp3",
+      "audioSentence": "t1-p24-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-091",
+      "english": "Window sill",
+      "polish": "Parapet",
+      "sentenceEn": "I love how they arranged their window sill. It is now a very comfortable mini couch!",
+      "sentencePl": "Bardzo mi się podoba, jak zaaranżowali swój parapet. To teraz bardzo wygodna mini kanapa!",
+      "audioWord": "t1-p24-091-word.mp3",
+      "audioSentence": "t1-p24-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-092",
+      "english": "Driveway",
+      "polish": "Podjazd",
+      "sentenceEn": "I left the shopping bag on the driveway and forgot about it.",
+      "sentencePl": "Zostawiłam torbę z zakupami na podjeździe i zapomniałam o tym.",
+      "audioWord": "t1-p24-092-word.mp3",
+      "audioSentence": "t1-p24-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-093",
+      "english": "Possession",
+      "polish": "Posiadanie (fakt posiadania czegoś)",
+      "sentenceEn": "Have those in possession made it known what they intend to do with this material?",
+      "sentencePl": "Czy osoby, które są w posiadaniu tego materiału, poinformowały już, co zamierzają z nim zrobić?",
+      "audioWord": "t1-p24-093-word.mp3",
+      "audioSentence": "t1-p24-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-094",
+      "english": "Matchbox",
+      "polish": "Pudełko zapałek",
+      "sentenceEn": "My lighter doesn't work, but I saw a matchbox on the countertop. I'll go for it.",
+      "sentencePl": "Moja zapalniczka nie działa, ale na blacie widziałem pudełko zapałek. Pójdę po nie.",
+      "audioWord": "t1-p24-094-word.mp3",
+      "audioSentence": "t1-p24-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-095",
+      "english": "Bookcase",
+      "polish": "Regał na książki",
+      "sentenceEn": "I need another bookcase. My books just don't fit in anymore.",
+      "sentencePl": "Potrzebuję kolejnego regału. Moje książki już się nie mieszczą.",
+      "audioWord": "t1-p24-095-word.mp3",
+      "audioSentence": "t1-p24-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-096",
+      "english": "Rooftop",
+      "polish": "Szczyt dachu; dach",
+      "sentenceEn": "Maybe we should go to the rooftop to watch the shooting stars?",
+      "sentencePl": "Może powinniśmy wejść na dach, żeby obejrzeć spadające gwiazdy?",
+      "audioWord": "t1-p24-096-word.mp3",
+      "audioSentence": "t1-p24-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-097",
+      "english": "Washbasin",
+      "polish": "Umywalka",
+      "sentenceEn": "I'm not a fan of this washbasin. Can we keep looking?",
+      "sentencePl": "Ta umywalka niespecjalnie mi się podoba. Możemy szukać dalej?",
+      "audioWord": "t1-p24-097-word.mp3",
+      "audioSentence": "t1-p24-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-098",
+      "english": "Vase",
+      "polish": "Wazon",
+      "sentenceEn": "Let's find a vase for these flowers! They are beautiful.",
+      "sentencePl": "Znajdźmy wazon dla tych kwiatów. Są piękne!",
+      "audioWord": "t1-p24-098-word.mp3",
+      "audioSentence": "t1-p24-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-099",
+      "english": "Ownership",
+      "polish": "Własność (fakt bycia właścicielem czegoś)",
+      "sentenceEn": "Do you have any documents proving your ownership?",
+      "sentencePl": "Masz jakieś dokumenty potwierdzające Twoje prawo własności?",
+      "audioWord": "t1-p24-099-word.mp3",
+      "audioSentence": "t1-p24-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-100",
+      "english": "Blind",
+      "polish": "Żaluzja",
+      "sentenceEn": "The hotel blinds make the room completely dark!",
+      "sentencePl": "Rolety hotelowe sprawiają, że pokój jest całkowicie ciemny!",
+      "audioWord": "t1-p24-100-word.mp3",
+      "audioSentence": "t1-p24-100-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-101",
+      "english": "Utilities",
+      "polish": "Media komunalne (np. Prąd, woda, itp.)",
+      "sentenceEn": "Utilities are way overpriced here. We need to move to another district.",
+      "sentencePl": "Cena za media jest tu o wiele za wysoka. Musimy się przeprowadzić do innej dzielnicy.",
+      "audioWord": "t1-p24-101-word.mp3",
+      "audioSentence": "t1-p24-101-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-102",
+      "english": "Groceries",
+      "polish": "Zakupy spożywcze",
+      "sentenceEn": "I need to do some groceries. There is nothing in the fridge.",
+      "sentencePl": "Muszę zrobić zakupy. Nic nie ma w lodówce!",
+      "audioWord": "t1-p24-102-word.mp3",
+      "audioSentence": "t1-p24-102-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-103",
+      "english": "Parcel",
+      "polish": "Parcela; paczka (pocztowa)",
+      "sentenceEn": "I had to parcel a package for my grandmother.",
+      "sentencePl": "Musiałem spakować paczkę dla babci.",
+      "audioWord": "t1-p24-103-word.mp3",
+      "audioSentence": "t1-p24-103-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-104",
+      "english": "Interior",
+      "polish": "Wnętrze",
+      "sentenceEn": "The boat's interior badly needed painting.",
+      "sentencePl": "Wnętrze łodzi naprawdę wymagało pomalowania.",
+      "audioWord": "t1-p24-104-word.mp3",
+      "audioSentence": "t1-p24-104-sentence.mp3"
+    },
+    {
+      "id": "t1-p24-105",
+      "english": "Deposit",
+      "polish": "Kaucja",
+      "sentenceEn": "He doesn't want to pay me my deposit back but nothing was broken in the apartment.",
+      "sentencePl": "On nie chce mi oddać mojej kaucji, choć nic w mieszkaniu nie zostało zniszczone.",
+      "audioWord": "t1-p24-105-word.mp3",
+      "audioSentence": "t1-p24-105-sentence.mp3"
+    }
+  ]
+}

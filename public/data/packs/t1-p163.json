@@ -1,0 +1,100 @@
+{
+  "id": "t1-p163",
+  "name": "Przykład",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Spójniki",
+  "chapter": "Rozdział XXVI",
+  "words": [
+    {
+      "id": "t1-p163-001",
+      "english": "For example",
+      "polish": "Na przykład",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p163-001-word.mp3",
+      "audioSentence": "t1-p163-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p163-002",
+      "english": "Such as",
+      "polish": "Taki jak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p163-002-word.mp3",
+      "audioSentence": "t1-p163-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p163-003",
+      "english": "Along with",
+      "polish": "Wraz z",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p163-003-word.mp3",
+      "audioSentence": "t1-p163-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p163-004",
+      "english": "Counting",
+      "polish": "Wliczając",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p163-004-word.mp3",
+      "audioSentence": "t1-p163-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p163-005",
+      "english": "Including",
+      "polish": "Łącznie z",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p163-005-word.mp3",
+      "audioSentence": "t1-p163-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p163-006",
+      "english": "To illustrate",
+      "polish": "By zobrazować (np. Argument)",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p163-006-word.mp3",
+      "audioSentence": "t1-p163-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p163-007",
+      "english": "As an example",
+      "polish": "Jako przykład",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p163-007-word.mp3",
+      "audioSentence": "t1-p163-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p163-008",
+      "english": "For instance",
+      "polish": "Dla przykładu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p163-008-word.mp3",
+      "audioSentence": "t1-p163-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p163-009",
+      "english": "In this case",
+      "polish": "W tym przypadku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p163-009-word.mp3",
+      "audioSentence": "t1-p163-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p163-010",
+      "english": "That is",
+      "polish": "To jest",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p163-010-word.mp3",
+      "audioSentence": "t1-p163-010-sentence.mp3"
+    }
+  ]
+}

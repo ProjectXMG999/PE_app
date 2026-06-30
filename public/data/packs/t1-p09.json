@@ -1,0 +1,955 @@
+{
+  "id": "t1-p09",
+  "name": "Mile widziane",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział I",
+  "words": [
+    {
+      "id": "t1-p09-001",
+      "english": "Ambition",
+      "polish": "Ambicja",
+      "sentenceEn": "Does ambition always mean success? Well, not always.",
+      "sentencePl": "Czy ambicja zawsze oznacza sukces? Niekoniecznie.",
+      "audioWord": "t1-p09-001-word.mp3",
+      "audioSentence": "t1-p09-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-002",
+      "english": "Humor",
+      "polish": "Humor",
+      "sentenceEn": "Joe has the best sense of humor. I can't stop smiling.",
+      "sentencePl": "Joe ma najlepsze poczucie humoru. Nie mogę przestać się uśmiechać.",
+      "audioWord": "t1-p09-002-word.mp3",
+      "audioSentence": "t1-p09-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-003",
+      "english": "Love",
+      "polish": "Miłość",
+      "sentenceEn": "I love what you've done with the place. The industrial style fits very well here.",
+      "sentencePl": "Bardzo mi się podoba, jak urządziłaś to miejsce. Styl industrialny bardzo tu pasuje.",
+      "audioWord": "t1-p09-003-word.mp3",
+      "audioSentence": "t1-p09-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-004",
+      "english": "Hope",
+      "polish": "Nadzieja",
+      "sentenceEn": "I hope that I'll win the next duel. I want to get access to a luxurious part of the city!",
+      "sentencePl": "Mam nadzieję, że wygram kolejny pojedynek. Chcę dostać dostęp do luksusowej części miasta!",
+      "audioWord": "t1-p09-004-word.mp3",
+      "audioSentence": "t1-p09-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-005",
+      "english": "Friendship",
+      "polish": "Przyjaźń",
+      "sentenceEn": "I value your friendship the most in the world. Seriously.",
+      "sentencePl": "Najbardziej na świecie cenię sobie Twoją przyjaźń. Poważnie.",
+      "audioWord": "t1-p09-005-word.mp3",
+      "audioSentence": "t1-p09-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-006",
+      "english": "Respect",
+      "polish": "Szacunek",
+      "sentenceEn": "Willie, I respect your ambition, but you have to have a vision, too.",
+      "sentencePl": "Willie, szanuję Twoją ambicję, ale musisz mieć też wizję.",
+      "audioWord": "t1-p09-006-word.mp3",
+      "audioSentence": "t1-p09-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-007",
+      "english": "Luck",
+      "polish": "Szczęście (fart)",
+      "sentenceEn": "You need to have a lot of luck to win at poker.",
+      "sentencePl": "Żeby wygrać w pokera, potrzeba sporo szczęścia.",
+      "audioWord": "t1-p09-007-word.mp3",
+      "audioSentence": "t1-p09-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-008",
+      "english": "Happiness",
+      "polish": "Szczęście (uczucie)",
+      "sentenceEn": "Happiness is when you can watch a beautiful sunset on the beach and not care about a thing.",
+      "sentencePl": "Szczęście jest wtedy, gdy możesz oglądać piękny zachód słońca na plaży i wszystko inne mieć w nosie.",
+      "audioWord": "t1-p09-008-word.mp3",
+      "audioSentence": "t1-p09-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-009",
+      "english": "Smile",
+      "polish": "Uśmiech",
+      "sentenceEn": "This guy smiled at me! He's so cute.",
+      "sentencePl": "Ten gość się do mnie uśmiechnął. Uroczy jest.",
+      "audioWord": "t1-p09-009-word.mp3",
+      "audioSentence": "t1-p09-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-010",
+      "english": "Fun",
+      "polish": "Zabawa; radość",
+      "sentenceEn": "Work is important, but we cannot forget about the fun! Who is up for a bungee jump?",
+      "sentencePl": "Praca jest ważna, ale nie możemy zapomnieć o zabawie! Kto ma ochotę na skok na bungee?",
+      "audioWord": "t1-p09-010-word.mp3",
+      "audioSentence": "t1-p09-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-011",
+      "english": "Safety",
+      "polish": "Bezpieczeństwo",
+      "sentenceEn": "Your safety comes first. Don't do anything stupid.",
+      "sentencePl": "Twoje bezpieczeństwo jest na pierwszym miejscu. Nie rób nic głupiego.",
+      "audioWord": "t1-p09-011-word.mp3",
+      "audioSentence": "t1-p09-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-012",
+      "english": "Excitement",
+      "polish": "Ekscytacja; podniecenie",
+      "sentenceEn": "You could see the excitement on her face when we got to the amusement park.",
+      "sentencePl": "Kiedy dotarliśmy do parku rozrywki, na jej twarzy widać było wyraźną ekscytację.",
+      "audioWord": "t1-p09-012-word.mp3",
+      "audioSentence": "t1-p09-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-013",
+      "english": "Honor",
+      "polish": "Honor",
+      "sentenceEn": "Thanks to this agreement, Korea will honor EU certificates and quality standards.",
+      "sentencePl": "Dzięki tej umowie Korea będzie honorować unijne certyfikaty i standardy jakości.",
+      "audioWord": "t1-p09-013-word.mp3",
+      "audioSentence": "t1-p09-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-014",
+      "english": "Inspiration",
+      "polish": "Inspiracja; natchnienie",
+      "sentenceEn": "I'm waiting for inspiration. I don't know what to write.",
+      "sentencePl": "Czekam na natchnienie. Nie wiem, co napisać.",
+      "audioWord": "t1-p09-014-word.mp3",
+      "audioSentence": "t1-p09-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-015",
+      "english": "Intelligence",
+      "polish": "Inteligencja",
+      "sentenceEn": "Intelligence without ambition is like a bird without wings.",
+      "sentencePl": "Inteligencja bez ambicji jest jak ptak bez skrzydeł.",
+      "audioWord": "t1-p09-015-word.mp3",
+      "audioSentence": "t1-p09-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-016",
+      "english": "Vibe",
+      "polish": "Klimat (atmosfera)",
+      "sentenceEn": "This is my favorite cafe 'cause it has the best vibe for working.",
+      "sentencePl": "To moja ulubiona kawiarnia, bo ma najlepszy klimat do pracy.",
+      "audioWord": "t1-p09-016-word.mp3",
+      "audioSentence": "t1-p09-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-017",
+      "english": "Comfort",
+      "polish": "Komfort",
+      "sentenceEn": "You're really good at comforting people. Have you thought about going into psychology?",
+      "sentencePl": "Umiesz pocieszać ludzi. Myślałaś o pójściu na psychologię?",
+      "audioWord": "t1-p09-017-word.mp3",
+      "audioSentence": "t1-p09-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-018",
+      "english": "Motivation",
+      "polish": "Motywacja",
+      "sentenceEn": "What kind of motivation do you need to change your life?",
+      "sentencePl": "Jakiej motywacji potrzebujesz, aby zmienić swoje życie?",
+      "audioWord": "t1-p09-018-word.mp3",
+      "audioSentence": "t1-p09-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-019",
+      "english": "Joy",
+      "polish": "Radość",
+      "sentenceEn": "I wish you a lot of joy and happiness. Happy Birthday!",
+      "sentencePl": "Życzę Ci dużo radości i szczęścia. Wszystkiego najlepszego z okazji urodzin!",
+      "audioWord": "t1-p09-019-word.mp3",
+      "audioSentence": "t1-p09-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-020",
+      "english": "Satisfaction",
+      "polish": "Satysfakcja",
+      "sentenceEn": "Satisfaction is a very important part of every job.",
+      "sentencePl": "Satysfakcja to bardzo ważny aspekt każdej pracy.",
+      "audioWord": "t1-p09-020-word.mp3",
+      "audioSentence": "t1-p09-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-021",
+      "english": "Hospitable",
+      "polish": "Gościnny",
+      "sentenceEn": "Kelly was very hospitable, but not so welcoming that she would have two guests in a row.",
+      "sentencePl": "Kelly była bardzo gościnna, ale nie aż tak, żeby przyjmować dwoje gości pod rząd.",
+      "audioWord": "t1-p09-021-word.mp3",
+      "audioSentence": "t1-p09-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-022",
+      "english": "Imaginative",
+      "polish": "Pomysłowy; twórczy",
+      "sentenceEn": "You are very imaginative, so I think that you will be useful in our company.",
+      "sentencePl": "Jesteś bardzo twórczy, więc myślę, że przydasz się w naszej firmie.",
+      "audioWord": "t1-p09-022-word.mp3",
+      "audioSentence": "t1-p09-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-023",
+      "english": "Respectable",
+      "polish": "Porządny; szanowany",
+      "sentenceEn": "We are respectable members of this community and we will do what they tell us.",
+      "sentencePl": "Jesteśmy szanowanymi członkami tej społeczności i zrobimy co nam każą.",
+      "audioWord": "t1-p09-023-word.mp3",
+      "audioSentence": "t1-p09-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-024",
+      "english": "Merry",
+      "polish": "Radosny; wesoły",
+      "sentenceEn": "Children and fools have merry lives.",
+      "sentencePl": "Dzieci i głupcy mają wesołe życie.",
+      "audioWord": "t1-p09-024-word.mp3",
+      "audioSentence": "t1-p09-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-025",
+      "english": "Consistent",
+      "polish": "Spójny; niezmienny",
+      "sentenceEn": "Your argument is consistent, but I am not convinced anyway.",
+      "sentencePl": "Twoja argumentacja jest spójna, ale i tak mnie nie przekonuje.",
+      "audioWord": "t1-p09-025-word.mp3",
+      "audioSentence": "t1-p09-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-026",
+      "english": "Frank",
+      "polish": "Szczery",
+      "sentenceEn": "So let us be frank and honest with history.",
+      "sentencePl": "Bądźmy więc szczerzy i uczciwi wobec historii.",
+      "audioWord": "t1-p09-026-word.mp3",
+      "audioSentence": "t1-p09-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-027",
+      "english": "Engaged",
+      "polish": "Zaangażowany",
+      "sentenceEn": "Jim and Pam have just gotten engaged! They are throwing a party on Friday.",
+      "sentencePl": "Jim i Pam właśnie się zaręczyli! Urządzają imprezę w piątek!",
+      "audioWord": "t1-p09-027-word.mp3",
+      "audioSentence": "t1-p09-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-028",
+      "english": "Skillful",
+      "polish": "Zręczny; wprawny w czymś",
+      "sentenceEn": "We have skillful workers and imported machines to guarantee quality of every process.",
+      "sentencePl": "Mamy zdolnych pracowników i importowane maszyny, aby zagwarantować jakość każdego procesu.",
+      "audioWord": "t1-p09-028-word.mp3",
+      "audioSentence": "t1-p09-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-029",
+      "english": "Proficient",
+      "polish": "Biegły",
+      "sentenceEn": "He was not proficient enough in English to enter the college.",
+      "sentencePl": "Nie był na tyle biegły w angielskim, żeby wstąpić do college'u.",
+      "audioWord": "t1-p09-029-word.mp3",
+      "audioSentence": "t1-p09-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-030",
+      "english": "Credible",
+      "polish": "Wiarygodny",
+      "sentenceEn": "I have this information from a credible source.",
+      "sentencePl": "Mam te informacje z wiarygodnego źródła.",
+      "audioWord": "t1-p09-030-word.mp3",
+      "audioSentence": "t1-p09-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-031",
+      "english": "Genial",
+      "polish": "Dobrotliwy; przyjazny",
+      "sentenceEn": "Asteria is the most genial person you'll ever meet.",
+      "sentencePl": "Asteria to najbardziej przyjazna osoba, jaką kiedykolwiek poznasz.",
+      "audioWord": "t1-p09-031-word.mp3",
+      "audioSentence": "t1-p09-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-032",
+      "english": "Vigorous",
+      "polish": "Pełen wigoru; żywotny",
+      "sentenceEn": "My grandparents are healthy and vigorous and they can't wait their great grand-children.",
+      "sentencePl": "Moi dziadkowie są zdrowi, żywotni i już nie mogą sie doczekać prawnuków.",
+      "audioWord": "t1-p09-032-word.mp3",
+      "audioSentence": "t1-p09-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-033",
+      "english": "Fruitful",
+      "polish": "Owocny; przynoszący efekty",
+      "sentenceEn": "Fruitful cooperation has led to an excellent result.",
+      "sentencePl": "Doskonałe wyniki jest efektem owocnej współpracy.",
+      "audioWord": "t1-p09-033-word.mp3",
+      "audioSentence": "t1-p09-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-034",
+      "english": "Upbeat",
+      "polish": "Wesoły; podnoszący na duchu",
+      "sentenceEn": "When I have to clean the house, I just turn on some upbeat music, and everything goes smoothly.",
+      "sentencePl": "Kiedy muszę posprzątać dom, włączam jakąś podnoszącą na duchu muzyczkę i wszystko idzie gładko.",
+      "audioWord": "t1-p09-034-word.mp3",
+      "audioSentence": "t1-p09-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-035",
+      "english": "Open-minded",
+      "polish": "Otwarty; wolny od uprzedzeń",
+      "sentenceEn": "He is a very open-minded person. He will definitely understand your attachment to this inflatable doll.",
+      "sentencePl": "On jest wolny od jakichkolwiek uprzedzeń. Na pewno zrozumie Twoje przywiązanie do tej dmuchanej lali.",
+      "audioWord": "t1-p09-035-word.mp3",
+      "audioSentence": "t1-p09-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-036",
+      "english": "In love",
+      "polish": "Zakochany",
+      "sentenceEn": "He wasn't in love with you. He just wanted your money.",
+      "sentencePl": "On nie był w Tobie zakochany. Chciał tylko Twoich pieniędzy.",
+      "audioWord": "t1-p09-036-word.mp3",
+      "audioSentence": "t1-p09-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-037",
+      "english": "Dear",
+      "polish": "Szanowny; drogi",
+      "sentenceEn": "Dear Kate. I'm writing this postcard looking at the Statue of Liberty and thinking about how much I miss you already.",
+      "sentencePl": "Droga Kate. Piszę tę kartkę, patrząc na Statuę Wolności i myśląc o tym, jak bardzo już za Tobą tęsknię.",
+      "audioWord": "t1-p09-037-word.mp3",
+      "audioSentence": "t1-p09-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-038",
+      "english": "Loving",
+      "polish": "Kochający; czuły",
+      "sentenceEn": "-You shouldn't marry him just because he's loving and caring. - No?!",
+      "sentencePl": "- Nie powinnaś za niego wychodzić tylko dlatego, że jest czuły i troskliwy. - Nie?!",
+      "audioWord": "t1-p09-038-word.mp3",
+      "audioSentence": "t1-p09-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-039",
+      "english": "Ambitious",
+      "polish": "Ambitny",
+      "sentenceEn": "Maria is very ambitious, so I think she will get a promotion soon.",
+      "sentencePl": "Maria jest bardzo ambitna, więc myślę, że szybko awansuje.",
+      "audioWord": "t1-p09-039-word.mp3",
+      "audioSentence": "t1-p09-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-040",
+      "english": "Patient",
+      "polish": "Cierpliwy",
+      "sentenceEn": "You are my patient and I will do all I can to save your life.",
+      "sentencePl": "Jesteś moim pacjentem i zrobię wszystko, aby uratować Ci życie.",
+      "audioWord": "t1-p09-040-word.mp3",
+      "audioSentence": "t1-p09-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-041",
+      "english": "Proud",
+      "polish": "Dumny",
+      "sentenceEn": "I'm so proud of my children.",
+      "sentencePl": "Jestem taka dumna ze swoich dzieci.",
+      "audioWord": "t1-p09-041-word.mp3",
+      "audioSentence": "t1-p09-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-042",
+      "english": "Generous",
+      "polish": "Hojny; wspaniałomyślny",
+      "sentenceEn": "Thank you for your generous offer, but our company will manage itself.",
+      "sentencePl": "Dziękujemy za hojną ofertę, ale nasza firma poradzi sobie sama.",
+      "audioWord": "t1-p09-042-word.mp3",
+      "audioSentence": "t1-p09-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-043",
+      "english": "Outgoing",
+      "polish": "Łatwo poznający nowych ludzi; towarzyski",
+      "sentenceEn": "Trudy is very outgoing. She always makes new friends.",
+      "sentencePl": "Trudy jest bardzo towarzyska. Ciągle zawiązuje nowe przyjaźnie.",
+      "audioWord": "t1-p09-043-word.mp3",
+      "audioSentence": "t1-p09-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-044",
+      "english": "Wise",
+      "polish": "Mądry",
+      "sentenceEn": "A wise leader allows his people live their ways.",
+      "sentencePl": "Mądry przywódca pozwala swoim ludziom żyć po swojemu.",
+      "audioWord": "t1-p09-044-word.mp3",
+      "audioSentence": "t1-p09-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-045",
+      "english": "Kind",
+      "polish": "Miły",
+      "sentenceEn": "It is a new kind of colonialism, a new kind of power, and a new kind of control.",
+      "sentencePl": "To nowy rodzaj kolonializmu, nowy rodzaj władzy i nowy rodzaj kontroli.",
+      "audioWord": "t1-p09-045-word.mp3",
+      "audioSentence": "t1-p09-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-046",
+      "english": "Reliable",
+      "polish": "Niezawodny; wiarygodny",
+      "sentenceEn": "What is the most reliable method of contraception?",
+      "sentencePl": "Jaka jest najbardziej niezawodna metoda antykoncepcji?",
+      "audioWord": "t1-p09-046-word.mp3",
+      "audioSentence": "t1-p09-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-047",
+      "english": "Responsible",
+      "polish": "Odpowiedzialny",
+      "sentenceEn": "She's only 19, but she already has a great job. She must be very responsible.",
+      "sentencePl": "Ma dopiero 19 lat, a już ma świetną pracę. Musi być bardzo odpowiedzialna.",
+      "audioWord": "t1-p09-047-word.mp3",
+      "audioSentence": "t1-p09-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-048",
+      "english": "Optimistic",
+      "polish": "Optymistyczny",
+      "sentenceEn": "The optimistic results for the last year allow our company to invest in new technologies.",
+      "sentencePl": "Optymistyczne wyniki za ostatni rok pozwalają naszej firmie inwestować w nowe technologie.",
+      "audioWord": "t1-p09-048-word.mp3",
+      "audioSentence": "t1-p09-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-049",
+      "english": "Confident",
+      "polish": "Pewny siebie",
+      "sentenceEn": "I'm confident about winning this duel.",
+      "sentencePl": "Jestem pewny, że wygram ten pojedynek.",
+      "audioWord": "t1-p09-049-word.mp3",
+      "audioSentence": "t1-p09-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-050",
+      "english": "Cheerful",
+      "polish": "Pogodny; radosny",
+      "sentenceEn": "Why so cheerful? Did you take something again, Paul?",
+      "sentencePl": "Czemuś taki radosny? Znowu coś brałeś, Paul?",
+      "audioWord": "t1-p09-050-word.mp3",
+      "audioSentence": "t1-p09-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-051",
+      "english": "Broad-minded",
+      "polish": "Otwarty (umysł); mający szerokie horyzonty",
+      "sentenceEn": "I'd like to think I'm broad-minded. Nothing limits me, and I can do anything.",
+      "sentencePl": "Chciałabym myśleć, że mam szerokie horyzonty. Nic mnie nie ogranicza i stać mnie na wszystko.",
+      "audioWord": "t1-p09-051-word.mp3",
+      "audioSentence": "t1-p09-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-052",
+      "english": "Respectful",
+      "polish": "Pełen szacunku I poważania",
+      "sentenceEn": "We love doing business with John. He's always so nice and respectful to others.",
+      "sentencePl": "Kochamy robić interesy z Johnem. On jest zawsze taki miły oraz pełen szacunku i poważania dla innych.",
+      "audioWord": "t1-p09-052-word.mp3",
+      "audioSentence": "t1-p09-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-053",
+      "english": "Sympathetic",
+      "polish": "Współczujący",
+      "sentenceEn": "When the doctor gave me a very sympathetic look, I knew she didn't have good news.",
+      "sentencePl": "Kiedy lekarka popatrzyła na mnie ze współczuciem, wiedziałem, że nie ma dobrych wieści.",
+      "audioWord": "t1-p09-053-word.mp3",
+      "audioSentence": "t1-p09-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-054",
+      "english": "Diligent",
+      "polish": "Pilny; pracowity",
+      "sentenceEn": "Kate is the most diligent person in our company. We should all learn from her.",
+      "sentencePl": "Kate jest najbardziej pracowitą osobą w naszej firmie. Powinniśmy się wszyscy od niej uczyć.",
+      "audioWord": "t1-p09-054-word.mp3",
+      "audioSentence": "t1-p09-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-055",
+      "english": "Teachable",
+      "polish": "Pojętny (uczeń)",
+      "sentenceEn": "His students were teachable. However, he was not a very gifted teacher.",
+      "sentencePl": "Jego uczniowie byli pojętni. On jednak nie był wybitnie uzdolnionym nauczycielem.",
+      "audioWord": "t1-p09-055-word.mp3",
+      "audioSentence": "t1-p09-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-056",
+      "english": "Desirable",
+      "polish": "Pożądany",
+      "sentenceEn": "Sensei's advices are extremely desirable here.",
+      "sentencePl": "Rady Senseia są tutaj jak najbardziej pożądane.",
+      "audioWord": "t1-p09-056-word.mp3",
+      "audioSentence": "t1-p09-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-057",
+      "english": "Proactive",
+      "polish": "Proaktywny",
+      "sentenceEn": "Managers must be proactive in identifying potential problems.",
+      "sentencePl": "Managerowie muszą być proaktywni w identyfikowaniu potencjalnych problemów.",
+      "audioWord": "t1-p09-057-word.mp3",
+      "audioSentence": "t1-p09-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-058",
+      "english": "Provident",
+      "polish": "Zapobiegliwy; przezorny",
+      "sentenceEn": "I've got the rest of my life to play the provident father.",
+      "sentencePl": "Resztę życia mam na zabawę w zapobiegliwego ojca.",
+      "audioWord": "t1-p09-058-word.mp3",
+      "audioSentence": "t1-p09-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-059",
+      "english": "Prudent",
+      "polish": "Rozważny",
+      "sentenceEn": "I thought Amber was prudent, instead she turned out to be a shopaholic!",
+      "sentencePl": "Myślałem, że Amber jest rozważna, a ona okazała się zakupoholiczką!",
+      "audioWord": "t1-p09-059-word.mp3",
+      "audioSentence": "t1-p09-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-060",
+      "english": "Businesslike",
+      "polish": "Rzeczowy (człowiek); rzetelny",
+      "sentenceEn": "Her handshake was firm, and her voice was cold and businesslike.",
+      "sentencePl": "Uścisk jej dłoni był mocny, a głos zimny i rzeczowy.",
+      "audioWord": "t1-p09-060-word.mp3",
+      "audioSentence": "t1-p09-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-061",
+      "english": "Self-sufficient",
+      "polish": "Samowystarczalny",
+      "sentenceEn": "My goal is to become self-sufficient and to rely only on myself.",
+      "sentencePl": "Moim celem jest bycie samowystarczalną i poleganie tylko na samej sobie.",
+      "audioWord": "t1-p09-061-word.mp3",
+      "audioSentence": "t1-p09-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-062",
+      "english": "Cordial",
+      "polish": "Serdeczny",
+      "sentenceEn": "Octavio, you're not noted for cordial relationships with other artists.",
+      "sentencePl": "Octavio, nie słyniesz z serdecznych relacji z innymi artystami.",
+      "audioWord": "t1-p09-062-word.mp3",
+      "audioSentence": "t1-p09-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-063",
+      "english": "Conscientious",
+      "polish": "Sumienny",
+      "sentenceEn": "Trina is very conscientious, which is why all her inventions work.",
+      "sentencePl": "Trina jest bardzo sumienna i dlatego wszystkie jej wynalazki działają.",
+      "audioWord": "t1-p09-063-word.mp3",
+      "audioSentence": "t1-p09-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-064",
+      "english": "Supportive",
+      "polish": "Wspierający; pomocny",
+      "sentenceEn": "Even as a stepmother, Anna was so supportive, sweet, and caring.",
+      "sentencePl": "Nawet jako przyszywana matka Anna była wspierająca, urocza i opiekuńcza.",
+      "audioWord": "t1-p09-064-word.mp3",
+      "audioSentence": "t1-p09-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-065",
+      "english": "Considerate",
+      "polish": "Liczący się z innymi; troskliwy",
+      "sentenceEn": "Sean is kind and considerate.",
+      "sentencePl": "Sean jest uprzejmy i troskliwy.",
+      "audioWord": "t1-p09-065-word.mp3",
+      "audioSentence": "t1-p09-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-066",
+      "english": "In love",
+      "polish": "Zakochany",
+      "sentenceEn": "He wasn't in love with you. He just wanted your money.",
+      "sentencePl": "On nie był w Tobie zakochany. Chciał tylko Twoich pieniędzy.",
+      "audioWord": "t1-p09-066-word.mp3",
+      "audioSentence": "t1-p09-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-067",
+      "english": "Dear",
+      "polish": "Szanowny; drogi",
+      "sentenceEn": "Dear Kate. I'm writing this postcard looking at the Statue of Liberty and thinking about how much I miss you already.",
+      "sentencePl": "Droga Kate. Piszę tę kartkę, patrząc na Statuę Wolności i myśląc o tym, jak bardzo już za Tobą tęsknię.",
+      "audioWord": "t1-p09-067-word.mp3",
+      "audioSentence": "t1-p09-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-068",
+      "english": "Loving",
+      "polish": "Kochający; czuły",
+      "sentenceEn": "-You shouldn't marry him just because he's loving and caring. - No?!",
+      "sentencePl": "- Nie powinnaś za niego wychodzić tylko dlatego, że jest czuły i troskliwy. - Nie?!",
+      "audioWord": "t1-p09-068-word.mp3",
+      "audioSentence": "t1-p09-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-069",
+      "english": "Ambitious",
+      "polish": "Ambitny",
+      "sentenceEn": "Maria is very ambitious, so I think she will get a promotion soon.",
+      "sentencePl": "Maria jest bardzo ambitna, więc myślę, że szybko awansuje.",
+      "audioWord": "t1-p09-069-word.mp3",
+      "audioSentence": "t1-p09-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-070",
+      "english": "Patient",
+      "polish": "Cierpliwy",
+      "sentenceEn": "You are my patient and I will do all I can to save your life.",
+      "sentencePl": "Jesteś moim pacjentem i zrobię wszystko, aby uratować Ci życie.",
+      "audioWord": "t1-p09-070-word.mp3",
+      "audioSentence": "t1-p09-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-071",
+      "english": "Proud",
+      "polish": "Dumny",
+      "sentenceEn": "I'm so proud of my children.",
+      "sentencePl": "Jestem taka dumna ze swoich dzieci.",
+      "audioWord": "t1-p09-071-word.mp3",
+      "audioSentence": "t1-p09-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-072",
+      "english": "Generous",
+      "polish": "Hojny; wspaniałomyślny",
+      "sentenceEn": "Thank you for your generous offer, but our company will manage itself.",
+      "sentencePl": "Dziękujemy za hojną ofertę, ale nasza firma poradzi sobie sama.",
+      "audioWord": "t1-p09-072-word.mp3",
+      "audioSentence": "t1-p09-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-073",
+      "english": "Outgoing",
+      "polish": "Łatwo poznający nowych ludzi; towarzyski",
+      "sentenceEn": "Trudy is very outgoing. She always makes new friends.",
+      "sentencePl": "Trudy jest bardzo towarzyska. Ciągle zawiązuje nowe przyjaźnie.",
+      "audioWord": "t1-p09-073-word.mp3",
+      "audioSentence": "t1-p09-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-074",
+      "english": "Wise",
+      "polish": "Mądry",
+      "sentenceEn": "A wise leader allows his people live their ways.",
+      "sentencePl": "Mądry przywódca pozwala swoim ludziom żyć po swojemu.",
+      "audioWord": "t1-p09-074-word.mp3",
+      "audioSentence": "t1-p09-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-075",
+      "english": "Kind",
+      "polish": "Miły",
+      "sentenceEn": "It is a new kind of colonialism, a new kind of power, and a new kind of control.",
+      "sentencePl": "To nowy rodzaj kolonializmu, nowy rodzaj władzy i nowy rodzaj kontroli.",
+      "audioWord": "t1-p09-075-word.mp3",
+      "audioSentence": "t1-p09-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-076",
+      "english": "Reliable",
+      "polish": "Niezawodny; wiarygodny",
+      "sentenceEn": "What is the most reliable method of contraception?",
+      "sentencePl": "Jaka jest najbardziej niezawodna metoda antykoncepcji?",
+      "audioWord": "t1-p09-076-word.mp3",
+      "audioSentence": "t1-p09-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-077",
+      "english": "Responsible",
+      "polish": "Odpowiedzialny",
+      "sentenceEn": "She's only 19, but she already has a great job. She must be very responsible.",
+      "sentencePl": "Ma dopiero 19 lat, a już ma świetną pracę. Musi być bardzo odpowiedzialna.",
+      "audioWord": "t1-p09-077-word.mp3",
+      "audioSentence": "t1-p09-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-078",
+      "english": "Optimistic",
+      "polish": "Optymistyczny",
+      "sentenceEn": "The optimistic results for the last year allow our company to invest in new technologies.",
+      "sentencePl": "Optymistyczne wyniki za ostatni rok pozwalają naszej firmie inwestować w nowe technologie.",
+      "audioWord": "t1-p09-078-word.mp3",
+      "audioSentence": "t1-p09-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-079",
+      "english": "Confident",
+      "polish": "Pewny siebie",
+      "sentenceEn": "I'm confident about winning this duel.",
+      "sentencePl": "Jestem pewny, że wygram ten pojedynek.",
+      "audioWord": "t1-p09-079-word.mp3",
+      "audioSentence": "t1-p09-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-080",
+      "english": "Cheerful",
+      "polish": "Pogodny; radosny",
+      "sentenceEn": "Why so cheerful? Did you take something again, Paul?",
+      "sentencePl": "Czemuś taki radosny? Znowu coś brałeś, Paul?",
+      "audioWord": "t1-p09-080-word.mp3",
+      "audioSentence": "t1-p09-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-081",
+      "english": "Helpful",
+      "polish": "Pomocny; uczynny",
+      "sentenceEn": "My knowledge in economics proved helpful in discussing the latest crisis.",
+      "sentencePl": "Moja wiedza ekonomiczna okazała się pomocna podczas omawiania ostatniego kryzysu.",
+      "audioWord": "t1-p09-081-word.mp3",
+      "audioSentence": "t1-p09-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-082",
+      "english": "Hard-working",
+      "polish": "Pracowity",
+      "sentenceEn": "Lukas is not only clever but also very hard-working.",
+      "sentencePl": "Lukas jest nie tylko bystry, ale i bardzo pracowity.",
+      "audioWord": "t1-p09-082-word.mp3",
+      "audioSentence": "t1-p09-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-083",
+      "english": "Friendly",
+      "polish": "Przyjacielski; przyjazny",
+      "sentenceEn": "Agatha seems friendly and open.",
+      "sentencePl": "Agata wydaje się przyjazna i otwarta.",
+      "audioWord": "t1-p09-083-word.mp3",
+      "audioSentence": "t1-p09-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-084",
+      "english": "Punctual",
+      "polish": "Punktualny",
+      "sentenceEn": "We always ask our employeesto be punctual. Too bad you're always late, Dave.",
+      "sentencePl": "Zawsze prosimy naszych pracowników, aby byli punktualni. Szkoda, że zawsze się spóźniasz, Dave.",
+      "audioWord": "t1-p09-084-word.mp3",
+      "audioSentence": "t1-p09-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-085",
+      "english": "Reasonable",
+      "polish": "Rozsądny",
+      "sentenceEn": "Okay, let's be reasonable. The fact that Jimmy went out with another girl doesn't mean that he's cheating on you, Sammy.",
+      "sentencePl": "Ok, bądźmy rozsądni. To że Jimmy wyszedł z inną dziewczyną, nie znaczy, że Cię zdradza, Sammy.",
+      "audioWord": "t1-p09-085-word.mp3",
+      "audioSentence": "t1-p09-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-086",
+      "english": "Sensible",
+      "polish": "Sensowny; rozsądny",
+      "sentenceEn": "Ok, look, let's try to be sensible. I give you back the money, and you call off the wolves.",
+      "sentencePl": "Ok, słuchaj, postarajmy się być rozsądni. Oddam Ci kasę, a Ty odwołasz wilki.",
+      "audioWord": "t1-p09-086-word.mp3",
+      "audioSentence": "t1-p09-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-087",
+      "english": "Calm",
+      "polish": "Spokojny",
+      "sentenceEn": "Hmm... It's too calm around. Is it the calm before the storm?",
+      "sentencePl": "Hmm... Coś tu za spokojnie. Czy to cisza przed burzą?",
+      "audioWord": "t1-p09-087-word.mp3",
+      "audioSentence": "t1-p09-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-088",
+      "english": "Clever",
+      "polish": "Sprytny",
+      "sentenceEn": "You're a clever girl and you'll know how to manage.",
+      "sentencePl": "Jesteś sprytną dziewczynką i sobie poradzisz.",
+      "audioWord": "t1-p09-088-word.mp3",
+      "audioSentence": "t1-p09-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-089",
+      "english": "Tolerant",
+      "polish": "Tolerancyjny",
+      "sentenceEn": "Our country is very tolerant. We accept all foreign workers.",
+      "sentencePl": "Nasz kraj jest bardzo tolerancyjny. Przyjmujemy wszystkich robotników z zagranicy.",
+      "audioWord": "t1-p09-089-word.mp3",
+      "audioSentence": "t1-p09-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-090",
+      "english": "Sociable",
+      "polish": "Towarzyski",
+      "sentenceEn": "Joey's sociable attitude allows him to meet people all around the world.",
+      "sentencePl": "Towarzyska dusza Joey'ego pomaga mu poznawać ludzi z całego świata.",
+      "audioWord": "t1-p09-090-word.mp3",
+      "audioSentence": "t1-p09-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-091",
+      "english": "Polite",
+      "polish": "Uprzejmy",
+      "sentenceEn": "He was trying so hard to be polite that he seemed unnatural.",
+      "sentencePl": "Tak bardzo starał się być uprzejmy, że wydawał się wręcz nienaturalny.",
+      "audioWord": "t1-p09-091-word.mp3",
+      "audioSentence": "t1-p09-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-092",
+      "english": "Easygoing",
+      "polish": "Wyluzowany; łatwy w kontakcie",
+      "sentenceEn": "Man, you're good-looking and easygoing. You can have any girl you want.",
+      "sentencePl": "Stary, jesteś przystojny i wyluzowany. Możesz mieć każdą dziewczynę, jaką sobie wymarzysz.",
+      "audioWord": "t1-p09-092-word.mp3",
+      "audioSentence": "t1-p09-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-093",
+      "english": "Understanding",
+      "polish": "Wyrozumiały",
+      "sentenceEn": "People say that Sir David is very understanding. He never hurts the families of his enemies.",
+      "sentencePl": "Ludzie mówią, że Sir David jest bardzo wyrozumiały. Nigdy nie krzywdzi rodzin swoich wrogów.",
+      "audioWord": "t1-p09-093-word.mp3",
+      "audioSentence": "t1-p09-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-094",
+      "english": "Right",
+      "polish": "Mający rację",
+      "sentenceEn": "There is only one right way to do this, and of course, this is my way.",
+      "sentencePl": "Jest tylko jeden właściwy sposób, aby to zrobić. Oczywiście, po mojemu.",
+      "audioWord": "t1-p09-094-word.mp3",
+      "audioSentence": "t1-p09-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-095",
+      "english": "Cool",
+      "polish": "Spoko; wyluzowany",
+      "sentenceEn": "You must look cool.They can't see you're nervous.",
+      "sentencePl": "Musisz wyglądać na wyluzowanego. Nie mogą widzieć, że się denerwujesz.",
+      "audioWord": "t1-p09-095-word.mp3",
+      "audioSentence": "t1-p09-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-096",
+      "english": "Look forward to sth",
+      "polish": "Czekać z niecierpliwością",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p09-096-word.mp3",
+      "audioSentence": "t1-p09-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-097",
+      "english": "Look up",
+      "polish": "Poprawiać się; wyglądać coraz lepiej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p09-097-word.mp3",
+      "audioSentence": "t1-p09-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-098",
+      "english": "Pull off",
+      "polish": "Osiągnąć coś; dokonać czegoś (trudnego)",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p09-098-word.mp3",
+      "audioSentence": "t1-p09-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-099",
+      "english": "Take sb in",
+      "polish": "Przygarnąć kogoś (pod dach)",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p09-099-word.mp3",
+      "audioSentence": "t1-p09-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-100",
+      "english": "Turn sth around",
+      "polish": "Zmieniać się na lepsze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p09-100-word.mp3",
+      "audioSentence": "t1-p09-100-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-101",
+      "english": "Beef up",
+      "polish": "Ulepszyć; podrasować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p09-101-word.mp3",
+      "audioSentence": "t1-p09-101-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-102",
+      "english": "Perk up",
+      "polish": "Zyskiwać animusz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p09-102-word.mp3",
+      "audioSentence": "t1-p09-102-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-103",
+      "english": "Liven up",
+      "polish": "Ożywiać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p09-103-word.mp3",
+      "audioSentence": "t1-p09-103-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-104",
+      "english": "Go through",
+      "polish": "Zostać przyklepanym",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p09-104-word.mp3",
+      "audioSentence": "t1-p09-104-sentence.mp3"
+    },
+    {
+      "id": "t1-p09-105",
+      "english": "Catch on",
+      "polish": "Stać się popularnym",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p09-105-word.mp3",
+      "audioSentence": "t1-p09-105-sentence.mp3"
+    }
+  ]
+}

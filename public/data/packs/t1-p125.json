@@ -1,0 +1,145 @@
+{
+  "id": "t1-p125",
+  "name": "Budynki",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XVIII",
+  "words": [
+    {
+      "id": "t1-p125-001",
+      "english": "Architecture",
+      "polish": "Architektura",
+      "sentenceEn": "I love architecture. This is what I want to do.",
+      "sentencePl": "Kocham architekturę. Tym chcę się zajmować.",
+      "audioWord": "t1-p125-001-word.mp3",
+      "audioSentence": "t1-p125-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-002",
+      "english": "Block of flats",
+      "polish": "Blok",
+      "sentenceEn": "Do you live in a house or in a block of flats?",
+      "sentencePl": "Mieszkasz w domu czy w bloku?",
+      "audioWord": "t1-p125-002-word.mp3",
+      "audioSentence": "t1-p125-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-003",
+      "english": "Story",
+      "polish": "Kondygnacja",
+      "sentenceEn": "My sister lives in a two-story house.",
+      "sentencePl": "Moja siostra mieszka w domu dwupiętrowym.",
+      "audioWord": "t1-p125-003-word.mp3",
+      "audioSentence": "t1-p125-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-004",
+      "english": "Ground floor",
+      "polish": "Parter",
+      "sentenceEn": "I don't like living on the ground floor. It's too loud.",
+      "sentencePl": "Nie lubię mieszkać na parterze. Jest za głośno.",
+      "audioWord": "t1-p125-004-word.mp3",
+      "audioSentence": "t1-p125-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-005",
+      "english": "Floor",
+      "polish": "Piętro",
+      "sentenceEn": "Kids are playing with blocks on the floor.",
+      "sentencePl": "Dzieci bawią się klockami na podłodze.",
+      "audioWord": "t1-p125-005-word.mp3",
+      "audioSentence": "t1-p125-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-006",
+      "english": "Station",
+      "polish": "Stacja; dworzec",
+      "sentenceEn": "Though there were thousands of people at the station, he saw Mary in the crowd.",
+      "sentencePl": "Chociaż na stacji były tysiące ludzi, wypatrzył Mary w tłumie.",
+      "audioWord": "t1-p125-006-word.mp3",
+      "audioSentence": "t1-p125-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-007",
+      "english": "Entrance",
+      "polish": "Wejście",
+      "sentenceEn": "The entrance to the Arcade Room is hidden.",
+      "sentencePl": "Wejście do Arcade Roomu jest ukryte.",
+      "audioWord": "t1-p125-007-word.mp3",
+      "audioSentence": "t1-p125-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-008",
+      "english": "Exit",
+      "polish": "Wyjście",
+      "sentenceEn": "I think we're lost. Where's the exit?",
+      "sentencePl": "Chyba się zgubiliśmy. Gdzie jest wyjście?",
+      "audioWord": "t1-p125-008-word.mp3",
+      "audioSentence": "t1-p125-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-009",
+      "english": "Office building",
+      "polish": "Biurowiec",
+      "sentenceEn": "I like working from home and don't want to return to the office building.",
+      "sentencePl": "Lubię pracę z domu i nie chcę wracać do biurowca.",
+      "audioWord": "t1-p125-009-word.mp3",
+      "audioSentence": "t1-p125-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-010",
+      "english": "Apartment block",
+      "polish": "Blok mieszkalny",
+      "sentenceEn": "They are renovating my apartment block, and it's so loud I can't hear myself think.",
+      "sentencePl": "Odnawiają mój blok i jest tak głośno, że nie słyszę własnych myśli.",
+      "audioWord": "t1-p125-010-word.mp3",
+      "audioSentence": "t1-p125-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-011",
+      "english": "Palace",
+      "polish": "Pałac",
+      "sentenceEn": "The palace in Sankt Petersburg is a must-see.",
+      "sentencePl": "Pałac w Petersburgu to miejsce, które trzeba zobaczyć.",
+      "audioWord": "t1-p125-011-word.mp3",
+      "audioSentence": "t1-p125-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-012",
+      "english": "Ruins",
+      "polish": "Ruiny",
+      "sentenceEn": "Let's see the ruins tomorrow. They aren't going anywhere.",
+      "sentencePl": "Ruiny możemy zobaczyć jutro. Nigdzie nam nie uciekną.",
+      "audioWord": "t1-p125-012-word.mp3",
+      "audioSentence": "t1-p125-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-013",
+      "english": "Tower",
+      "polish": "Wieża",
+      "sentenceEn": "Let's climb to the top of the tower and take a selfie with an awesome view!",
+      "sentencePl": "Wejdźmy na szczyt wieży i zróbmy sobie selfie z czaderskim widokiem!",
+      "audioWord": "t1-p125-013-word.mp3",
+      "audioSentence": "t1-p125-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-014",
+      "english": "Castle",
+      "polish": "Zamek (budynek)",
+      "sentenceEn": "I really want to go on a tour of castles in Scotland.",
+      "sentencePl": "Bardzo chcę pojechać na wycieczkę po zamkach w Szkocji.",
+      "audioWord": "t1-p125-014-word.mp3",
+      "audioSentence": "t1-p125-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-015",
+      "english": "Studio",
+      "polish": "Studio; kawalerka",
+      "sentenceEn": "Natalie lives in a small cozy studio which is good enough for her.",
+      "sentencePl": "Natalie mieszka w małym, przytulnym studio, które w zupełności jej wystarcza.",
+      "audioWord": "t1-p125-015-word.mp3",
+      "audioSentence": "t1-p125-015-sentence.mp3"
+    }
+  ]
+}

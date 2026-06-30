@@ -1,0 +1,1360 @@
+{
+  "id": "t1-p118",
+  "name": "Społeczeństwo",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XVII",
+  "words": [
+    {
+      "id": "t1-p118-001",
+      "english": "Retirement",
+      "polish": "Emerytura (czas po zakończeniu pracy)",
+      "sentenceEn": "I can't wait for retirement. I'll do nothing all day.",
+      "sentencePl": "Nie mogę się doczekać emerytury. Całe dnie nie będę robić nic.",
+      "audioWord": "t1-p118-001-word.mp3",
+      "audioSentence": "t1-p118-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-002",
+      "english": "Flag",
+      "polish": "Flaga",
+      "sentenceEn": "Every country has its own flag.",
+      "sentencePl": "Każdy kraj ma swoją flagę.",
+      "audioWord": "t1-p118-002-word.mp3",
+      "audioSentence": "t1-p118-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-003",
+      "english": "Line",
+      "polish": "Kolejka",
+      "sentenceEn": "There is a fine line between truth and lies.",
+      "sentencePl": "Cienka linia oddziela prawdę od kłamstwa.",
+      "audioWord": "t1-p118-003-word.mp3",
+      "audioSentence": "t1-p118-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-004",
+      "english": "King",
+      "polish": "Król",
+      "sentenceEn": "The king is getting old. His daughter will be our ruler soon.",
+      "sentencePl": "Król się starzeje. Niedługo będzie nami rządzić jego córka.",
+      "audioWord": "t1-p118-004-word.mp3",
+      "audioSentence": "t1-p118-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-005",
+      "english": "Queen",
+      "polish": "Królowa",
+      "sentenceEn": "Our queen is the best ruler on the continent.",
+      "sentencePl": "Nasza królowa jest najlepszą władczynią na kontynencie.",
+      "audioWord": "t1-p118-005-word.mp3",
+      "audioSentence": "t1-p118-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-006",
+      "english": "State",
+      "polish": "Państwo; stan usa",
+      "sentenceEn": "I'm in this state and age that I don't care what other people say about me.",
+      "sentencePl": "Jestem w takim stanie i wieku, że nie obchodzi mnie, co inni sobie o mnie myślą.",
+      "audioWord": "t1-p118-006-word.mp3",
+      "audioSentence": "t1-p118-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-007",
+      "english": "Peace",
+      "polish": "Pokój",
+      "sentenceEn": "After winning with Sir David, peace will finally reign.",
+      "sentencePl": "Po wygranej z Sir Davidem w końcu zapanuje pokój.",
+      "audioWord": "t1-p118-007-word.mp3",
+      "audioSentence": "t1-p118-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-008",
+      "english": "Politics",
+      "polish": "Polityka (dziedzina)",
+      "sentenceEn": "I'd love to study politics, especially the parts about presidents and their elections.",
+      "sentencePl": "Chciałabym studiować politykę. Szczególnie interesuje mnie temat prezydentów i ich wyborów.",
+      "audioWord": "t1-p118-008-word.mp3",
+      "audioSentence": "t1-p118-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-009",
+      "english": "Law",
+      "polish": "Prawo; ustawa",
+      "sentenceEn": "The law has to be changed! We cannot live like this anymore.",
+      "sentencePl": "Trzeba zmienić prawo! Nie możemy tak dalej żyć.",
+      "audioWord": "t1-p118-009-word.mp3",
+      "audioSentence": "t1-p118-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-010",
+      "english": "Prime minister",
+      "polish": "Premier",
+      "sentenceEn": "Did you know there is no prime minister in the USA?",
+      "sentencePl": "Wiedziałeś, że w USA nie ma premiera?",
+      "audioWord": "t1-p118-010-word.mp3",
+      "audioSentence": "t1-p118-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-011",
+      "english": "Freedom",
+      "polish": "Wolność",
+      "sentenceEn": "Sir David and the High Council took our language freedom.",
+      "sentencePl": "Sir David i Wysoka Rada odebrali nam wolność języka.",
+      "audioWord": "t1-p118-011-word.mp3",
+      "audioSentence": "t1-p118-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-012",
+      "english": "President",
+      "polish": "Prezydent; prezes",
+      "sentenceEn": "To be a president of the USA, you have to be at least 35 years old.",
+      "sentencePl": "Aby zostać prezydentem USA, musisz mieć co najmniej 35 lat.",
+      "audioWord": "t1-p118-012-word.mp3",
+      "audioSentence": "t1-p118-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-013",
+      "english": "Rule",
+      "polish": "Przepis; zasada; rządy (prawa)",
+      "sentenceEn": "Man, that latest Dr. Dre album rules.",
+      "sentencePl": "Stary, ten nowy album Doktora Dre rządzi.",
+      "audioWord": "t1-p118-013-word.mp3",
+      "audioSentence": "t1-p118-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-014",
+      "english": "Government",
+      "polish": "Rząd",
+      "sentenceEn": "Our government should never forget about serving people.",
+      "sentencePl": "Nasz rząd nigdy nie powinien zapominać o tym, że służy ludziom.",
+      "audioWord": "t1-p118-014-word.mp3",
+      "audioSentence": "t1-p118-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-015",
+      "english": "Society",
+      "polish": "Społeczeństwo",
+      "sentenceEn": "It is important to find your role in society.",
+      "sentencePl": "Ważne by znaleźć swoją rolę w społeczeństwie.",
+      "audioWord": "t1-p118-015-word.mp3",
+      "audioSentence": "t1-p118-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-016",
+      "english": "Marry",
+      "polish": "Poślubić",
+      "sentenceEn": "- I want to marry you someday. - So, what are you waiting for?",
+      "sentencePl": "- Chcę się z Tobą kiedyś ożenić. - No to na co czekasz?",
+      "audioWord": "t1-p118-016-word.mp3",
+      "audioSentence": "t1-p118-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-017",
+      "english": "Celebrate",
+      "polish": "Świętować",
+      "sentenceEn": "Hello and welcome! We are celebrating the birthday of the greatest actor of our generation.",
+      "sentencePl": "Witajcie! Świętujemy urodziny największego aktora naszego pokolenia.",
+      "audioWord": "t1-p118-017-word.mp3",
+      "audioSentence": "t1-p118-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-018",
+      "english": "Admit",
+      "polish": "Przyjmować (np. Do szpitala, na uczelnię)",
+      "sentenceEn": "Danny and Daisy always admit to their pranks. They're very proud of them.",
+      "sentencePl": "Danny i Daisy zawsze przyznają się do swoich psikusów. Są z nich bardzo dumni.",
+      "audioWord": "t1-p118-018-word.mp3",
+      "audioSentence": "t1-p118-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-019",
+      "english": "Attend",
+      "polish": "Uczęszczać",
+      "sentenceEn": "Lots of people attend motivational speeches, but instead of looking for inspiration, they're looking for a way to make a quick buck.",
+      "sentencePl": "Masa ludzi chodzi na przemówienia motywacyjne, ale zamiast szukać inspiracji, szukają sposobu na szybki zarobek.",
+      "audioWord": "t1-p118-019-word.mp3",
+      "audioSentence": "t1-p118-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-020",
+      "english": "Follow",
+      "polish": "Stosować się (do poleceń, wskazówek)",
+      "sentenceEn": "Don't just follow your leader. Become one yourself.",
+      "sentencePl": "Nie podążaj jedynie za swoim przywódcą. Sam zostań przywódcą!",
+      "audioWord": "t1-p118-020-word.mp3",
+      "audioSentence": "t1-p118-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-021",
+      "english": "Gather",
+      "polish": "Gromadzić; zbierać (ludzi, przedmioty)",
+      "sentenceEn": "It seems that ITizen used to gather data about social media users. Or maybe it still does?",
+      "sentencePl": "Wygląda na to, że ITizen zbierał dane o użytkownikach mediów społecznościowych. A może wciąż to robi?",
+      "audioWord": "t1-p118-021-word.mp3",
+      "audioSentence": "t1-p118-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-022",
+      "english": "Lead",
+      "polish": "Prowadzić; przewodzić",
+      "sentenceEn": "I'm leading a team of soldiers to save the hostages.",
+      "sentencePl": "Prowadzę grupę żołnierzy, by ocalić zakładników.",
+      "audioWord": "t1-p118-022-word.mp3",
+      "audioSentence": "t1-p118-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-023",
+      "english": "Participate",
+      "polish": "Uczestniczyć",
+      "sentenceEn": "They expected him to participate in the ceremony.",
+      "sentencePl": "Oczekiwali, że będzie uczestniczył w ceremoni.",
+      "audioWord": "t1-p118-023-word.mp3",
+      "audioSentence": "t1-p118-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-024",
+      "english": "Limit",
+      "polish": "Ograniczać",
+      "sentenceEn": "Bob, I'm sorry, but we have to limit your access to the forum. You're scaring away other users.",
+      "sentencePl": "Bob, przepraszam, ale musimy ograniczyć Twój dostęp do forum. Odstraszasz innych użytkowników.",
+      "audioWord": "t1-p118-024-word.mp3",
+      "audioSentence": "t1-p118-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-025",
+      "english": "Retire",
+      "polish": "Iść na emeryturę",
+      "sentenceEn": "I'm gonna retire when I make $ 100 million.",
+      "sentencePl": "Zamierzam przejść na emeryturę, kiedy zarobię 100 milionów dolców.",
+      "audioWord": "t1-p118-025-word.mp3",
+      "audioSentence": "t1-p118-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-026",
+      "english": "Rule",
+      "polish": "Rządzić; sprawować władzę",
+      "sentenceEn": "Man, that latest Dr. Dre album rules.",
+      "sentencePl": "Stary, ten nowy album Doktora Dre rządzi.",
+      "audioWord": "t1-p118-026-word.mp3",
+      "audioSentence": "t1-p118-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-027",
+      "english": "Support",
+      "polish": "Wspierać; popierać",
+      "sentenceEn": "I fully support democracy in the country as long as I win, Sir David said.",
+      "sentencePl": "„W pełni popieram demokrację w kraju, dopóki to ja wygrywam” - powiedział Sir David.",
+      "audioWord": "t1-p118-027-word.mp3",
+      "audioSentence": "t1-p118-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-028",
+      "english": "Vote",
+      "polish": "Głosować",
+      "sentenceEn": "Look, I'm not a huge fan of Trump, but I'm not voting for Hillary either.",
+      "sentencePl": "Słuchaj, nie jestem wielkim fanem Trumpa, ale na Hillary też nie zagłosuję.",
+      "audioWord": "t1-p118-028-word.mp3",
+      "audioSentence": "t1-p118-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-029",
+      "english": "Act",
+      "polish": "Występować; grać (jako aktor)",
+      "sentenceEn": "Stop acting as if you were innocent, Roger.",
+      "sentencePl": "Nie zachowuj się, jakbyś był niewinny, Roger.",
+      "audioWord": "t1-p118-029-word.mp3",
+      "audioSentence": "t1-p118-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-030",
+      "english": "Ban",
+      "polish": "Zakazywać",
+      "sentenceEn": "A ban on discrimination because of sexual orientation is nothing new.",
+      "sentencePl": "Zakaz dyskryminacji ze względu na orientację seksualną nie jest niczym nowym.",
+      "audioWord": "t1-p118-030-word.mp3",
+      "audioSentence": "t1-p118-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-031",
+      "english": "Crowd",
+      "polish": "Tłum",
+      "sentenceEn": "Let's get out of this crowd.",
+      "sentencePl": "Wyjdźmy z tego tłumu.",
+      "audioWord": "t1-p118-031-word.mp3",
+      "audioSentence": "t1-p118-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-032",
+      "english": "Administration",
+      "polish": "Administracja",
+      "sentenceEn": "Dealing with the administration is the worst part of studies.",
+      "sentencePl": "Użeranie się z administracją to najgorsza część studiów.",
+      "audioWord": "t1-p118-032-word.mp3",
+      "audioSentence": "t1-p118-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-033",
+      "english": "Follower",
+      "polish": "Zwolennik",
+      "sentenceEn": "This political party has many followers.",
+      "sentencePl": "Ta partia polityczna ma wielu zwolenników.",
+      "audioWord": "t1-p118-033-word.mp3",
+      "audioSentence": "t1-p118-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-034",
+      "english": "Ecology",
+      "polish": "Ekologia",
+      "sentenceEn": "Ecology is the study of how living things relate to their environment.",
+      "sentencePl": "Ekologia to nauka o tym, jak żywe istoty są powiązane ze swoim środowiskiem.",
+      "audioWord": "t1-p118-034-word.mp3",
+      "audioSentence": "t1-p118-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-035",
+      "english": "Politician",
+      "polish": "Polityk",
+      "sentenceEn": "Politicians should care about society.",
+      "sentencePl": "Politycy powinni dbać o społeczeństwo.",
+      "audioWord": "t1-p118-035-word.mp3",
+      "audioSentence": "t1-p118-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-036",
+      "english": "Ambassador",
+      "polish": "Ambasador",
+      "sentenceEn": "My biggest dream is to become an ambassador and live in another country.",
+      "sentencePl": "Moim największym marzeniem jest zostanie ambasadorem i zamieszkanie w innym kraju.",
+      "audioWord": "t1-p118-036-word.mp3",
+      "audioSentence": "t1-p118-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-037",
+      "english": "Police blockade",
+      "polish": "Blokada policyjna",
+      "sentenceEn": "They put a police blockade here. Someone used forbidden words inside!",
+      "sentencePl": "Założyli tu policyjną blokadę. W środku ktoś użył zakazanych słów!",
+      "audioWord": "t1-p118-037-word.mp3",
+      "audioSentence": "t1-p118-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-038",
+      "english": "Member",
+      "polish": "Członek",
+      "sentenceEn": "Who's your favorite member of the band?",
+      "sentencePl": "Kto jest Twoim ulubionym członkiem zespołu?",
+      "audioWord": "t1-p118-038-word.mp3",
+      "audioSentence": "t1-p118-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-039",
+      "english": "Volunteer",
+      "polish": "Ochotnik",
+      "sentenceEn": "My brother volunteered to organize Christmas Eve at his house.",
+      "sentencePl": "Mój brat zgłosił się na ochotnika, aby zorganizować Wigilię w swoim domu.",
+      "audioWord": "t1-p118-039-word.mp3",
+      "audioSentence": "t1-p118-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-040",
+      "english": "Democracy",
+      "polish": "Demokracja",
+      "sentenceEn": "Democracy is flawed, but we don't have a better system.",
+      "sentencePl": "Demokracja ma swoje wady, ale nie mamy lepszego systemu.",
+      "audioWord": "t1-p118-040-word.mp3",
+      "audioSentence": "t1-p118-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-041",
+      "english": "Demonstration",
+      "polish": "Demonstracja",
+      "sentenceEn": "There was a huge demonstration last week. The atmosphere there was incredible.",
+      "sentencePl": "W zeszłym tygodniu odbyła się wielka demonstracja. Atmosfera była niesamowita.",
+      "audioWord": "t1-p118-041-word.mp3",
+      "audioSentence": "t1-p118-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-042",
+      "english": "Elite",
+      "polish": "Elita",
+      "sentenceEn": "Crimson School is for the elite only.",
+      "sentencePl": "Crimson School jest tylko dla elity.",
+      "audioWord": "t1-p118-042-word.mp3",
+      "audioSentence": "t1-p118-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-043",
+      "english": "Emigrant",
+      "polish": "Emigrant",
+      "sentenceEn": "How do you feel as an emigrant?",
+      "sentencePl": "Jak się czujesz jako emigrant?",
+      "audioWord": "t1-p118-043-word.mp3",
+      "audioSentence": "t1-p118-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-044",
+      "english": "Vote",
+      "polish": "Głos (np. Wyborczy)",
+      "sentenceEn": "Look, I'm not a huge fan of Trump, but I'm not voting for Hillary either.",
+      "sentencePl": "Słuchaj, nie jestem wielkim fanem Trumpa, ale na Hillary też nie zagłosuję.",
+      "audioWord": "t1-p118-044-word.mp3",
+      "audioSentence": "t1-p118-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-045",
+      "english": "Immigration",
+      "polish": "Imigracja",
+      "sentenceEn": "The problem of immigration affects many nations.",
+      "sentencePl": "Problem imigracji dotyka wielu narodów.",
+      "audioWord": "t1-p118-045-word.mp3",
+      "audioSentence": "t1-p118-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-046",
+      "english": "Institution",
+      "polish": "Instytucja",
+      "sentenceEn": "Marriage is a very complex institution.",
+      "sentencePl": "Małżeństwo to bardzo skomplikowana instytucja.",
+      "audioWord": "t1-p118-046-word.mp3",
+      "audioSentence": "t1-p118-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-047",
+      "english": "Candidate",
+      "polish": "Kandydat",
+      "sentenceEn": "We have so many great candidates for this position. It will be a difficult choice.",
+      "sentencePl": "Mamy wielu świetnych kandydatów na to stanowisko. To będzie trudny wybór.",
+      "audioWord": "t1-p118-047-word.mp3",
+      "audioSentence": "t1-p118-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-048",
+      "english": "Middle class",
+      "polish": "Klasa średnia",
+      "sentenceEn": "I would say we belong to the middle class. This sounds about right.",
+      "sentencePl": "Powiedziałbym, że należymy do klasy średniej. Tak mi się wydaje.",
+      "audioWord": "t1-p118-048-word.mp3",
+      "audioSentence": "t1-p118-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-049",
+      "english": "Constitution",
+      "polish": "Konstytucja",
+      "sentenceEn": "We should fight for the rights which are found in the constitution.",
+      "sentencePl": "Powinniśmy walczyć o prawa zawarte w konstytucji.",
+      "audioWord": "t1-p118-049-word.mp3",
+      "audioSentence": "t1-p118-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-050",
+      "english": "Prince",
+      "polish": "Książę",
+      "sentenceEn": "I'm waiting for a prince on a white horse. Maybe someday, he will show up.",
+      "sentencePl": "Czekam na księcia na białym koniu. Może któregoś dnia się pojawi.",
+      "audioWord": "t1-p118-050-word.mp3",
+      "audioSentence": "t1-p118-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-051",
+      "english": "Princess",
+      "polish": "Księżniczka",
+      "sentenceEn": "A princess should be good and kind, but also... know how to fight!",
+      "sentencePl": "Księżniczka powinna być dobra i uprzejma, ale powinna też... umieć walczyć!",
+      "audioWord": "t1-p118-051-word.mp3",
+      "audioSentence": "t1-p118-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-052",
+      "english": "Population",
+      "polish": "Populacja",
+      "sentenceEn": "He is a Rustlie, like 95% population of Miami.",
+      "sentencePl": "Jest Rustliesem jak 95% populacji Mami.",
+      "audioWord": "t1-p118-052-word.mp3",
+      "audioSentence": "t1-p118-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-053",
+      "english": "Manifesto",
+      "polish": "Manifest",
+      "sentenceEn": "None of them had yet seen the manifesto, but they all knew it had appeared.",
+      "sentencePl": "Nikt jeszcze nie widział manifestu, ale wszyscy wiedzą, że się pojawił.",
+      "audioWord": "t1-p118-053-word.mp3",
+      "audioSentence": "t1-p118-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-054",
+      "english": "Ministry",
+      "polish": "Ministerstwo",
+      "sentenceEn": "The ministry building should be right around the corner. I think I can see it.",
+      "sentencePl": "Budynek ministerstwa powinien być tuż za rogiem. Chyba go widzę.",
+      "audioWord": "t1-p118-054-word.mp3",
+      "audioSentence": "t1-p118-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-055",
+      "english": "Populace",
+      "polish": "Ludność",
+      "sentenceEn": "The populace of Miami gets dummer and dummer every minute.",
+      "sentencePl": "Ludność Miami z każdą minutą coraz bardziej głupieje.",
+      "audioWord": "t1-p118-055-word.mp3",
+      "audioSentence": "t1-p118-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-056",
+      "english": "Norm",
+      "polish": "Norma",
+      "sentenceEn": "One child per family is fast becoming the norm in some countries.",
+      "sentencePl": "Posiadanie tylko jednego dziecka szybko staje się normą w niektórych krajach.",
+      "audioWord": "t1-p118-056-word.mp3",
+      "audioSentence": "t1-p118-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-057",
+      "english": "Citizen",
+      "polish": "Obywatel; mieszkaniec",
+      "sentenceEn": "All citizens of Miami have to use the ITizen system.",
+      "sentencePl": "Wszyscy obywatele Miami muszą korzystać z systemu ITizen.",
+      "audioWord": "t1-p118-057-word.mp3",
+      "audioSentence": "t1-p118-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-058",
+      "english": "Parliament",
+      "polish": "Parlament",
+      "sentenceEn": "The parliament has gathered for a new session.",
+      "sentencePl": "Parlament zebrał się na nowe posiedzenie.",
+      "audioWord": "t1-p118-058-word.mp3",
+      "audioSentence": "t1-p118-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-059",
+      "english": "Patriotism",
+      "polish": "Patriotyzm",
+      "sentenceEn": "Patriotism is good as long as it doesn't turn into nationalism.",
+      "sentencePl": "Patriotyzm jest dobry, jeśli tylko nie przeradza się w nacjonalizm.",
+      "audioWord": "t1-p118-059-word.mp3",
+      "audioSentence": "t1-p118-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-060",
+      "english": "Policy",
+      "polish": "Polityka; zasady (np. Firmy)",
+      "sentenceEn": "I'm sorry, that's the company's policy. I can't do anything.",
+      "sentencePl": "Przykro mi, ale taka jest polityka firmy. Nie mogę nic zrobić.",
+      "audioWord": "t1-p118-060-word.mp3",
+      "audioSentence": "t1-p118-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-061",
+      "english": "Support",
+      "polish": "Poparcie",
+      "sentenceEn": "I fully support democracy in the country as long as I win, Sir David said.",
+      "sentencePl": "„W pełni popieram demokrację w kraju, dopóki to ja wygrywam” - powiedział Sir David.",
+      "audioWord": "t1-p118-061-word.mp3",
+      "audioSentence": "t1-p118-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-062",
+      "english": "Protest",
+      "polish": "Protest",
+      "sentenceEn": "Each protest must be submitted to the city office 3 days before its date.",
+      "sentencePl": "Każdy protest trzeba zgłosić do urzędu miasta 3 dni przed jego terminem.",
+      "audioWord": "t1-p118-062-word.mp3",
+      "audioSentence": "t1-p118-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-063",
+      "english": "Reform",
+      "polish": "Reforma",
+      "sentenceEn": "The current education system needs total reform. We need to destroy ITizen.",
+      "sentencePl": "Obecny system edukacji wymaga całkowitej reformy. Musimy zniszczyć ITizena.",
+      "audioWord": "t1-p118-063-word.mp3",
+      "audioSentence": "t1-p118-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-064",
+      "english": "Region",
+      "polish": "Region",
+      "sentenceEn": "The best wine in France is produced in this region where we are.",
+      "sentencePl": "Najlepsze wino we Francji jest produkowane właśnie w tym regionie, w którym teraz jesteśmy.",
+      "audioWord": "t1-p118-064-word.mp3",
+      "audioSentence": "t1-p118-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-065",
+      "english": "Revolution",
+      "polish": "Rewolucja",
+      "sentenceEn": "The revolution is only a matter of time. The High Council can't rule forever.",
+      "sentencePl": "Rewolucja jest tylko kwestią czasu. Wysoka Rada nie może rządzić wiecznie.",
+      "audioWord": "t1-p118-065-word.mp3",
+      "audioSentence": "t1-p118-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-066",
+      "english": "Equality",
+      "polish": "Równość",
+      "sentenceEn": "There should be equality for all citizens in Miami.",
+      "sentencePl": "Powinna być równość dla wszystkich obywateli w Miami.",
+      "audioWord": "t1-p118-066-word.mp3",
+      "audioSentence": "t1-p118-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-067",
+      "english": "Segregation",
+      "polish": "Segregacja",
+      "sentenceEn": "We have to fight segregation. We need to bring back the correct English language for everyone in Miami.",
+      "sentencePl": "Musimy walczyć z segregacją. Musimy przywrócić poprawny angielski wszystkim mieszkańcom w Miami.",
+      "audioWord": "t1-p118-067-word.mp3",
+      "audioSentence": "t1-p118-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-068",
+      "english": "Strike",
+      "polish": "Strajk",
+      "sentenceEn": "Do you think that going on strike will change anything?",
+      "sentencePl": "Myślisz, że rozpoczęcie strajku cokolwiek zmieni?",
+      "audioWord": "t1-p118-068-word.mp3",
+      "audioSentence": "t1-p118-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-069",
+      "english": "Tolerance",
+      "polish": "Tolerancja",
+      "sentenceEn": "Our company advocates for tolerance.",
+      "sentencePl": "Nasza firma nawołuje do tolerancji.",
+      "audioWord": "t1-p118-069-word.mp3",
+      "audioSentence": "t1-p118-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-070",
+      "english": "Participant",
+      "polish": "Uczestnik",
+      "sentenceEn": "How many participants do you expect?",
+      "sentencePl": "Ilu uczestników oczekujesz?",
+      "audioWord": "t1-p118-070-word.mp3",
+      "audioSentence": "t1-p118-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-071",
+      "english": "Union",
+      "polish": "Unia",
+      "sentenceEn": "This union can be very helpful for us.",
+      "sentencePl": "Ta unia może nam bardzo pomóc.",
+      "audioWord": "t1-p118-071-word.mp3",
+      "audioSentence": "t1-p118-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-072",
+      "english": "Liberty",
+      "polish": "Wolność; swoboda",
+      "sentenceEn": "We must fight for our liberty in this city with the High Council.",
+      "sentencePl": "Musimy walczyć o naszą wolność w tym mieście z Wysoką Radą!",
+      "audioWord": "t1-p118-072-word.mp3",
+      "audioSentence": "t1-p118-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-073",
+      "english": "Community",
+      "polish": "Społeczność",
+      "sentenceEn": "Sir David claims that we all live in a big community. Yeah, right, mistaking community and communism is often, right?",
+      "sentencePl": "Sir David twierdzi, że wszyscy żyjemy w dużej wspólnocie. Taa, jasne, mylenie wspólnoty z komunizmem zdarza się często, nie?",
+      "audioWord": "t1-p118-073-word.mp3",
+      "audioSentence": "t1-p118-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-074",
+      "english": "Cooperation",
+      "polish": "Współpraca",
+      "sentenceEn": "Stop fighting! We need good cooperation, not two kids arguing all the time.",
+      "sentencePl": "Przestańcie się kłócić! Potrzebujemy dobrej współpracy, a nie dwójki, kłócących się przez cały czas dzieciaków.",
+      "audioWord": "t1-p118-074-word.mp3",
+      "audioSentence": "t1-p118-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-075",
+      "english": "Voter",
+      "polish": "Wyborca",
+      "sentenceEn": "Sir, we are losing voters. We should prepare new propaganda on ITizen for our next campaign.",
+      "sentencePl": "Sir, tracimy wyborców. Powinniśmy przygotować nową propagandę na ITizena do naszej następnej kampanii.",
+      "audioWord": "t1-p118-075-word.mp3",
+      "audioSentence": "t1-p118-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-076",
+      "english": "Election",
+      "polish": "Wybory",
+      "sentenceEn": "The election is in May. We still have plenty of time to prepare.",
+      "sentencePl": "Wybory są w maju. Wciąż mamy mnóstwo czasu, żeby się przygotować.",
+      "audioWord": "t1-p118-076-word.mp3",
+      "audioSentence": "t1-p118-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-077",
+      "english": "Activist",
+      "polish": "Aktywista",
+      "sentenceEn": "My brother is an activist. He is at a different protest every week.",
+      "sentencePl": "Mój brat jest aktywistą. Co tydzień jest na innym proteście.",
+      "audioWord": "t1-p118-077-word.mp3",
+      "audioSentence": "t1-p118-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-078",
+      "english": "Ecologist",
+      "polish": "Ekolog",
+      "sentenceEn": "I care about the environment and I want to become an ecologist.",
+      "sentencePl": "Dbam o środowisko i chcę zostać ekologiem.",
+      "audioWord": "t1-p118-078-word.mp3",
+      "audioSentence": "t1-p118-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-079",
+      "english": "Beggar",
+      "polish": "Żebrak",
+      "sentenceEn": "What is the best way to help beggars, giving them money, or buying them things?",
+      "sentencePl": "Jak najlepiej pomagać żebrakom? Dawać im pieniądze czy kupować im rzeczy?",
+      "audioWord": "t1-p118-079-word.mp3",
+      "audioSentence": "t1-p118-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-080",
+      "english": "Embassy",
+      "polish": "Ambasada",
+      "sentenceEn": "There is a huge party in the embassy on Friday, and we have to get in.",
+      "sentencePl": "W piątek jest wielka impreza w ambasadzie i musimy się tam dostać.",
+      "audioWord": "t1-p118-080-word.mp3",
+      "audioSentence": "t1-p118-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-081",
+      "english": "Anarchy",
+      "polish": "Anarchia",
+      "sentenceEn": "It's total anarchy here. No one is responsible for anything",
+      "sentencePl": "Tu panuje totalna anarchia. Nikt nie jest za nic odpowiedzialny.",
+      "audioWord": "t1-p118-081-word.mp3",
+      "audioSentence": "t1-p118-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-082",
+      "english": "Poverty",
+      "polish": "Bieda",
+      "sentenceEn": "Some people live in poverty, so we need to help them.",
+      "sentencePl": "Niektórzy ludzie żyją w biedzie, więc musimy im pomóc!",
+      "audioWord": "t1-p118-082-word.mp3",
+      "audioSentence": "t1-p118-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-083",
+      "english": "Civilization",
+      "polish": "Cywilizacja",
+      "sentenceEn": "Civilization is one of our greatest achievements.",
+      "sentencePl": "Cywilizacja jest jednym z naszych największych osiągnięć.",
+      "audioWord": "t1-p118-083-word.mp3",
+      "audioSentence": "t1-p118-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-084",
+      "english": "Membership",
+      "polish": "Członkostwo",
+      "sentenceEn": "In Poland, all major political forces support EU membership.",
+      "sentencePl": "Wszystkie główne siły polityczne w Polsce popieraja nasze członkostwo w UE.",
+      "audioWord": "t1-p118-084-word.mp3",
+      "audioSentence": "t1-p118-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-085",
+      "english": "Discrimination",
+      "polish": "Dyskryminacja",
+      "sentenceEn": "There will be no discrimination in this office, I will make sure of that.",
+      "sentencePl": "W tym biurze nie będzie żadnej dyskryminacji, już ja o to zadbam.",
+      "audioWord": "t1-p118-085-word.mp3",
+      "audioSentence": "t1-p118-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-086",
+      "english": "Emigration",
+      "polish": "Emigracja",
+      "sentenceEn": "Emigration is difficult but sometimes the only choice.",
+      "sentencePl": "Emigracja jest trudnym, ale czasem jedynym wyborem.",
+      "audioWord": "t1-p118-086-word.mp3",
+      "audioSentence": "t1-p118-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-087",
+      "english": "Foundation",
+      "polish": "Fundacja",
+      "sentenceEn": "I can't find foundation that matches my skin tone. I know that I'm pale, but I'm not white!",
+      "sentencePl": "Nie mogę znaleźć podkładu pasującego do mojej karnacji. Wiem, że jestem blada, ale nie jestem biała!",
+      "audioWord": "t1-p118-087-word.mp3",
+      "audioSentence": "t1-p118-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-088",
+      "english": "Globalization",
+      "polish": "Globalizacja",
+      "sentenceEn": "There is a modern myth that globalization is new.",
+      "sentencePl": "Współczesny mit głosi, że globalizacja jest czymś nowym.",
+      "audioWord": "t1-p118-088-word.mp3",
+      "audioSentence": "t1-p118-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-089",
+      "english": "Hierarchy",
+      "polish": "Hierarchia",
+      "sentenceEn": "The hierarchy in Miami is wrong and only you can change this!",
+      "sentencePl": "Hierarchia w Miami nie jest właściwa i tylko Ty możesz to zmienić!",
+      "audioWord": "t1-p118-089-word.mp3",
+      "audioSentence": "t1-p118-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-090",
+      "english": "Anthem",
+      "polish": "Hymn",
+      "sentenceEn": "You should stand up when you hear the anthem.",
+      "sentencePl": "Powinieneś wstać, kiedy słyszysz hymn.",
+      "audioWord": "t1-p118-090-word.mp3",
+      "audioSentence": "t1-p118-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-091",
+      "english": "Graduate",
+      "polish": "Zostawać absolwentem; skończyć szkołę",
+      "sentenceEn": "Mandy graduated and thought that she would conquer the world. Now she cleans tables at Marthy's.",
+      "sentencePl": "Mandy skończyła szkołę i myślała, że podbije świat. Tymczasem sprząta stoły u Marthy'ego.",
+      "audioWord": "t1-p118-091-word.mp3",
+      "audioSentence": "t1-p118-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-092",
+      "english": "Populate",
+      "polish": "Zaludniać; zasiedlać",
+      "sentenceEn": "At some point in the past, a sub-group of Africans left the African continent to go out and populate the rest of the world.",
+      "sentencePl": "Swego czasu podgrupa mieszkańców Afryki opuściła kontynent, aby zasiedlić resztę świata.",
+      "audioWord": "t1-p118-092-word.mp3",
+      "audioSentence": "t1-p118-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-093",
+      "english": "Claim",
+      "polish": "Rościć sobie prawo",
+      "sentenceEn": "The company claims that the drug prevents hair loss but I guess they would say anything to sell it.",
+      "sentencePl": "Firma twierdzi, że lek zapobiega wypadaniu włosów, ale podejrzewam, że powiedzieliby wszystko, byle go sprzedać.",
+      "audioWord": "t1-p118-093-word.mp3",
+      "audioSentence": "t1-p118-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-094",
+      "english": "Spy",
+      "polish": "Szpiegować",
+      "sentenceEn": "What if he is a spy? Maybe we shouldn't trust him.",
+      "sentencePl": "A co jeśli on jest szpiegiem? Może nie powinniśmy mu ufać.",
+      "audioWord": "t1-p118-094-word.mp3",
+      "audioSentence": "t1-p118-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-095",
+      "english": "Gamble",
+      "polish": "Uprawiać hazard; ryzykować",
+      "sentenceEn": "Joe will go anywhere he can gamble.",
+      "sentencePl": "Joe pojedzie wszędzie, gdzie można uprawiać hazard.",
+      "audioWord": "t1-p118-095-word.mp3",
+      "audioSentence": "t1-p118-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-096",
+      "english": "Obey",
+      "polish": "Być posłusznym; przestrzegać (zasad)",
+      "sentenceEn": "Living in a society, you have to obey certain rules.",
+      "sentencePl": "Żyjąć w społeczeństwie, musisz przestrzegać pewnych zasad.",
+      "audioWord": "t1-p118-096-word.mp3",
+      "audioSentence": "t1-p118-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-097",
+      "english": "Occupy",
+      "polish": "Zająć; okupować",
+      "sentenceEn": "Foreign troops are occupying our territory, and you are thinking about such trivialities now ?!",
+      "sentencePl": "Obce wojska okupują nasze tereny, a Ty myślisz teraz o takich błahostkach?!",
+      "audioWord": "t1-p118-097-word.mp3",
+      "audioSentence": "t1-p118-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-098",
+      "english": "Settle",
+      "polish": "Osiedlać się",
+      "sentenceEn": "We must finally settle the dispute between our clans, McRob. No more wars.",
+      "sentencePl": "Musimy wreszcie rozstrzygnąć spór między naszymi rodami, McRob. Dosyć wojen.",
+      "audioWord": "t1-p118-098-word.mp3",
+      "audioSentence": "t1-p118-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-099",
+      "english": "Volunteer",
+      "polish": "Zgłaszać się na ochotnika",
+      "sentenceEn": "My brother volunteered to organize Christmas Eve at his house.",
+      "sentencePl": "Mój brat zgłosił się na ochotnika, aby zorganizować Wigilię w swoim domu.",
+      "audioWord": "t1-p118-099-word.mp3",
+      "audioSentence": "t1-p118-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-100",
+      "english": "Grade",
+      "polish": "Wystawiać ocenę; oceniać",
+      "sentenceEn": "You don't need to have perfect grades in everything. Just focus on the subjects you like.",
+      "sentencePl": "Nie musisz mieć idealnych ocen ze wszystkiego. Po prostu skup się na przedmiotach, które lubisz.",
+      "audioWord": "t1-p118-100-word.mp3",
+      "audioSentence": "t1-p118-100-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-101",
+      "english": "Host",
+      "polish": "Prowadzić (np. Program w tv)",
+      "sentenceEn": "Jeremy Fallon hosts his own TV show.",
+      "sentencePl": "Jeremy Fallon prowadzi swój własny program w TV.",
+      "audioWord": "t1-p118-101-word.mp3",
+      "audioSentence": "t1-p118-101-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-102",
+      "english": "Shop",
+      "polish": "Robić zakupy",
+      "sentenceEn": "While shopping, I noticed that we didn't lock our doors.",
+      "sentencePl": "Gdy robiliśmy zakupy, zorientowałem się, że nie zamknęliśmy drzwi na klucz.",
+      "audioWord": "t1-p118-102-word.mp3",
+      "audioSentence": "t1-p118-102-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-103",
+      "english": "Command",
+      "polish": "Dowodzić; rozkazywać",
+      "sentenceEn": "I'm not asking you; this is the command.",
+      "sentencePl": "To nie prośba, to rozkaz.",
+      "audioWord": "t1-p118-103-word.mp3",
+      "audioSentence": "t1-p118-103-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-104",
+      "english": "Survey",
+      "polish": "Przeprowadzać sondaż; badać teren (grunt)",
+      "sentenceEn": "The radio station surveyed the listeners and found out that they actually should think of changing the type of music played.",
+      "sentencePl": "Radio przeprowadziło sondaż wśród słuchaczy i okazało się, że tak w zasadzie to powinni pomyśleć o zmianie rodzaju odtwarzanej muzyki.",
+      "audioWord": "t1-p118-104-word.mp3",
+      "audioSentence": "t1-p118-104-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-105",
+      "english": "Vaccinate",
+      "polish": "Szczepić",
+      "sentenceEn": "Don't forget to get the flu vaccine before fall. You don't want to get sick.",
+      "sentencePl": "Nie zapomnij się zaszczepić na grypę przed jesienią. Nie chcesz przecież zachorować.",
+      "audioWord": "t1-p118-105-word.mp3",
+      "audioSentence": "t1-p118-105-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-106",
+      "english": "Nomination",
+      "polish": "Nominacja",
+      "sentenceEn": "The following year, Sheila received her first Grammy nomination.",
+      "sentencePl": "Rok później Sheila otrzymała pierwszą nominację do nagrody Grammy.",
+      "audioWord": "t1-p118-106-word.mp3",
+      "audioSentence": "t1-p118-106-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-107",
+      "english": "Refugee camp",
+      "polish": "Obóz dla uchodźców",
+      "sentenceEn": "Sicily was the refugee camp in Europe.",
+      "sentencePl": "Sycylia była obozem uchodźców w Europie.",
+      "audioWord": "t1-p118-107-word.mp3",
+      "audioSentence": "t1-p118-107-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-108",
+      "english": "Resistance",
+      "polish": "Opór",
+      "sentenceEn": "Resistance is a tradition in this country.",
+      "sentencePl": "Opór jest tradycją w tym kraju.",
+      "audioWord": "t1-p118-108-word.mp3",
+      "audioSentence": "t1-p118-108-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-109",
+      "english": "Immigration policy",
+      "polish": "Polityka imigracyjna",
+      "sentenceEn": "Does that mean that you oppose the EU immigration policy?",
+      "sentencePl": "Czy oznacza to, że sprzeciwiacie się polityce imigracyjnej UE?",
+      "audioWord": "t1-p118-109-word.mp3",
+      "audioSentence": "t1-p118-109-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-110",
+      "english": "Populism",
+      "polish": "Populizm",
+      "sentenceEn": "Their ideas are sheer populism. They want higher wages and higher taxes for the wealthier.",
+      "sentencePl": "Ich pomysły to czysty populizm. Chcą wyższych płac i wyższych podatków dla zamożniejszych.",
+      "audioWord": "t1-p118-110-word.mp3",
+      "audioSentence": "t1-p118-110-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-111",
+      "english": "Postulate",
+      "polish": "Postulat",
+      "sentenceEn": "A postulate was issued that people should agree more.",
+      "sentencePl": "Wystosowano postulat, że ludzie powinni się częściej zgadzać.",
+      "audioWord": "t1-p118-111-word.mp3",
+      "audioSentence": "t1-p118-111-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-112",
+      "english": "Province",
+      "polish": "Prowincja",
+      "sentenceEn": "As a New Yorker, he didn't want to teach at a university in the provinces.",
+      "sentencePl": "Jako nowojorczyk nie chciał uczyć na uniwersytecie na prowincji.",
+      "audioWord": "t1-p118-112-word.mp3",
+      "audioSentence": "t1-p118-112-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-113",
+      "english": "Social movement",
+      "polish": "Ruch społeczny",
+      "sentenceEn": "As a social movement, we need knowledge equity.",
+      "sentencePl": "Jako ruch społeczny potrzebujemy równości wiedzy.",
+      "audioWord": "t1-p118-113-word.mp3",
+      "audioSentence": "t1-p118-113-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-114",
+      "english": "Socialization",
+      "polish": "Socjalizacja",
+      "sentenceEn": "The first step of socialization is to allow a new person to communicate with others.",
+      "sentencePl": "Pierwszym krokiem socjalizacji jest umożliwienie nowej osobie komunikowania się z innymi.",
+      "audioWord": "t1-p118-114-word.mp3",
+      "audioSentence": "t1-p118-114-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-115",
+      "english": "Mass society",
+      "polish": "Społeczeństwo masowe",
+      "sentenceEn": "Mass society may have the majority, but that doesn't mean it's right.",
+      "sentencePl": "Społeczeństwo masowe może mieć większość, ale to nie znaczy, że ma rację.",
+      "audioWord": "t1-p118-115-word.mp3",
+      "audioSentence": "t1-p118-115-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-116",
+      "english": "Local community",
+      "polish": "Lokalna społeczność",
+      "sentenceEn": "It is not just the local community that will benefit, but all citizens of Miami.",
+      "sentencePl": "Zyska na tym nie tylko lokalna społeczność, ale wszyscy mieszkańcy Miami.",
+      "audioWord": "t1-p118-116-word.mp3",
+      "audioSentence": "t1-p118-116-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-117",
+      "english": "Social structure",
+      "polish": "Struktura społeczna",
+      "sentenceEn": "My job is to watch the intensity of creativeness in each social structure.",
+      "sentencePl": "Moim zadaniem jest obserwowanie stopnia kreatywności w każdej strukturze społecznej.",
+      "audioWord": "t1-p118-117-word.mp3",
+      "audioSentence": "t1-p118-117-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-118",
+      "english": "Sovereignty",
+      "polish": "Suwerenność",
+      "sentenceEn": "We have to acknowledge the sovereignty of the citizens of Miami.",
+      "sentencePl": "Musimy uznać suwerenność mieszkańców Miami.",
+      "audioWord": "t1-p118-118-word.mp3",
+      "audioSentence": "t1-p118-118-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-119",
+      "english": "Culture shock",
+      "polish": "Szok kulturowy",
+      "sentenceEn": "Remember that culture shock is very normal.",
+      "sentencePl": "Pamiętaj, że szok kulturowy to coś zupełnie normalnego.",
+      "audioWord": "t1-p118-119-word.mp3",
+      "audioSentence": "t1-p118-119-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-120",
+      "english": "Security measure",
+      "polish": "Środek bezpieczeństwa",
+      "sentenceEn": "We must implement all security measures for the president's arrival.",
+      "sentencePl": "Musimy zastosować wszystkie środki bezpieczeństwa na przyjazd prezydenta.",
+      "audioWord": "t1-p118-120-word.mp3",
+      "audioSentence": "t1-p118-120-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-121",
+      "english": "Minor",
+      "polish": "Nieletni",
+      "sentenceEn": "The delay will ne minor. You should still get there on time.",
+      "sentencePl": "Spóźnienie będzie niewielkie. Powinnaś zdążyć.",
+      "audioWord": "t1-p118-121-word.mp3",
+      "audioSentence": "t1-p118-121-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-122",
+      "english": "Civic",
+      "polish": "Obywatelski; miejski",
+      "sentenceEn": "Our fight for civic rights will never end.",
+      "sentencePl": "Nasza walka o prawa obywatelskie nigdy nie ustanie.",
+      "audioWord": "t1-p118-122-word.mp3",
+      "audioSentence": "t1-p118-122-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-123",
+      "english": "Nationwide",
+      "polish": "Ogólnonarodowy",
+      "sentenceEn": "The nationwide uprising was a great success.",
+      "sentencePl": "Ogólnonarodowe powstanie zakończyło się wielkim sukcesem.",
+      "audioWord": "t1-p118-123-word.mp3",
+      "audioSentence": "t1-p118-123-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-124",
+      "english": "Pagan",
+      "polish": "Pogański",
+      "sentenceEn": "I like some pagan rituals, for example Halloween.",
+      "sentencePl": "Lubię niektóre zwyczaje pogańskie, na przykład Halloween.",
+      "audioWord": "t1-p118-124-word.mp3",
+      "audioSentence": "t1-p118-124-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-125",
+      "english": "Timeless",
+      "polish": "Ponadczasowy",
+      "sentenceEn": "Knowledge is timeless, achieving it should be a priority.",
+      "sentencePl": "Wiedza jest ponadczasowa, zdobywanie jej powinno być priorytetem.",
+      "audioWord": "t1-p118-125-word.mp3",
+      "audioSentence": "t1-p118-125-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-126",
+      "english": "Well-established",
+      "polish": "Powszechnie uznany",
+      "sentenceEn": "CrimsonCorp is a well-established company in the community of Miami.",
+      "sentencePl": "CrimsonCorp jest powszechnie uznaną firmą w środowisku Miami.",
+      "audioWord": "t1-p118-126-word.mp3",
+      "audioSentence": "t1-p118-126-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-127",
+      "english": "Cross-border",
+      "polish": "Przygraniczny; transgraniczny",
+      "sentenceEn": "The cross-border checkpoint was attacked.",
+      "sentencePl": "Posterunek przygraniczny został zaatakowany.",
+      "audioWord": "t1-p118-127-word.mp3",
+      "audioSentence": "t1-p118-127-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-128",
+      "english": "Indigenous",
+      "polish": "Rodzimy",
+      "sentenceEn": "The indigenous peoples have a right to an unpolluted natural environment.",
+      "sentencePl": "Rdzenna ludność ma prawo do środowiska naturalnego wolnego od zanieczyszczeń.",
+      "audioWord": "t1-p118-128-word.mp3",
+      "audioSentence": "t1-p118-128-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-129",
+      "english": "Sovereign",
+      "polish": "Suwerenny",
+      "sentenceEn": "Who holds sovereign power in the state?",
+      "sentencePl": "Kto sprawuje władzę suwerenną  w państwie?",
+      "audioWord": "t1-p118-129-word.mp3",
+      "audioSentence": "t1-p118-129-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-130",
+      "english": "Solemn",
+      "polish": "Uroczysty",
+      "sentenceEn": "They all took a solemn oath.",
+      "sentencePl": "Wszyscy złożyli uroczystą przysięgę.",
+      "audioWord": "t1-p118-130-word.mp3",
+      "audioSentence": "t1-p118-130-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-131",
+      "english": "Renowned",
+      "polish": "Uznany (w społeczeństwie)",
+      "sentenceEn": "Can you name two films whose titles reference the renowned drama by Shakespeare?",
+      "sentencePl": "Czy możesz wymienić dwa filmy, których tytuły nawiązują do uznanego dramatu Szekspira?",
+      "audioWord": "t1-p118-131-word.mp3",
+      "audioSentence": "t1-p118-131-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-132",
+      "english": "Real-life",
+      "polish": "Z życia wzięty",
+      "sentenceEn": "If you want to remember things well, use real-life examples. They will stay in your mind better.",
+      "sentencePl": "Jeśli chcesz coś zapamiętać, to używaj przykładów z życia wziętych. Lepiej zostaną Ci w głowie.",
+      "audioWord": "t1-p118-132-word.mp3",
+      "audioSentence": "t1-p118-132-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-133",
+      "english": "Postgraduate",
+      "polish": "Podyplomowy",
+      "sentenceEn": "Olivia wanted to start a postgraduate course in translation.",
+      "sentencePl": "Olivia chciała zacząć podyplomowe studia z tłumaczenia.",
+      "audioWord": "t1-p118-133-word.mp3",
+      "audioSentence": "t1-p118-133-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-134",
+      "english": "Non-native",
+      "polish": "Niebędący językiem ojczystym",
+      "sentenceEn": "Any tourist who speaks a non-native will sound strange to natives.",
+      "sentencePl": "Każdy turysta mówiący w języku niebędącym jego językiem ojczystym będzie brzmiał dziwnie dla tubylców.",
+      "audioWord": "t1-p118-134-word.mp3",
+      "audioSentence": "t1-p118-134-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-135",
+      "english": "Crowded",
+      "polish": "Zatłoczony",
+      "sentenceEn": "New York was the most crowded city in the world.",
+      "sentencePl": "Nowy Jork był najbardziej zatłoczonym miastem na świecie.",
+      "audioWord": "t1-p118-135-word.mp3",
+      "audioSentence": "t1-p118-135-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-136",
+      "english": "Precaution",
+      "polish": "Środek ostrożności; ostrożność",
+      "sentenceEn": "Substances should be authorised with special precaution for aerial spraying.",
+      "sentencePl": "Substancje do stosowania w opryskach z powietrza należy dopuszczać ze szczególną ostrożnością.",
+      "audioWord": "t1-p118-136-word.mp3",
+      "audioSentence": "t1-p118-136-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-137",
+      "english": "Multiculturalism",
+      "polish": "Wielokulturowość",
+      "sentenceEn": "Multiculturalism in the US has made each state fascinating.",
+      "sentencePl": "Wielokulturowość w USA sprawiła, że każdy stan jest fascynujący.",
+      "audioWord": "t1-p118-137-word.mp3",
+      "audioSentence": "t1-p118-137-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-138",
+      "english": "Displacement",
+      "polish": "Wysiedlenie",
+      "sentenceEn": "I've only seen that kind of displacement with car accidents.",
+      "sentencePl": "Takie przemieszczenia widziałem tylko w przypadku wypadków samochodowych.",
+      "audioWord": "t1-p118-138-word.mp3",
+      "audioSentence": "t1-p118-138-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-139",
+      "english": "Riot",
+      "polish": "Zamieszki",
+      "sentenceEn": "In Miami, posters encouraging riots began to appear. Is the revolution around the corner?",
+      "sentencePl": "W Miami zaczęły pojawiać się plakaty zachęcające do zamieszek. Czyżby za rogiem czaiła się rewolucja?",
+      "audioWord": "t1-p118-139-word.mp3",
+      "audioSentence": "t1-p118-139-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-140",
+      "english": "Unemployment benefit",
+      "polish": "Zasiłek dla bezrobotnych",
+      "sentenceEn": "What do you think? Should there be unemployment benefits for people under 40?",
+      "sentencePl": "Co myślisz? Czy powinien istnieć zasiłek dla bezrobotnych dla osób poniżej 40 roku życia?",
+      "audioWord": "t1-p118-140-word.mp3",
+      "audioSentence": "t1-p118-140-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-141",
+      "english": "Aristocracy",
+      "polish": "Arystokracja",
+      "sentenceEn": "There is no official aristocracy in Miami, only the rich.",
+      "sentencePl": "W Miami nie ma oficjalnej arystokracji, tylko bogaci.",
+      "audioWord": "t1-p118-141-word.mp3",
+      "audioSentence": "t1-p118-141-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-142",
+      "english": "Tough times",
+      "polish": "Ciężkie czasy",
+      "sentenceEn": "Tough times require tough decisions.",
+      "sentencePl": "Ciężkie czasy wymagają ciężkich decyzji.",
+      "audioWord": "t1-p118-142-word.mp3",
+      "audioSentence": "t1-p118-142-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-143",
+      "english": "Coronation",
+      "polish": "Koronacja",
+      "sentenceEn": "The coronation ceremony was interrupted by a long-lost brother of the prince.",
+      "sentencePl": "Ceremonia koronacji została przerwana przez zaginionego dawno temu brata księcia.",
+      "audioWord": "t1-p118-143-word.mp3",
+      "audioSentence": "t1-p118-143-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-144",
+      "english": "Kingdom",
+      "polish": "Królestwo",
+      "sentenceEn": "I will do anything to protect the kingdom.",
+      "sentencePl": "Zrobię wszystko, żeby obronić królestwo.",
+      "audioWord": "t1-p118-144-word.mp3",
+      "audioSentence": "t1-p118-144-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-145",
+      "english": "Privilege",
+      "polish": "Przywilej",
+      "sentenceEn": "It was a privilege to work with you, sir.",
+      "sentencePl": "To był przywilej pracować z panem.",
+      "audioWord": "t1-p118-145-word.mp3",
+      "audioSentence": "t1-p118-145-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-146",
+      "english": "Social development",
+      "polish": "Rozwój społeczny",
+      "sentenceEn": "The social development of Rustlies was restricted by the ITizen system.",
+      "sentencePl": "Rozwój społeczny Rustlies został ograniczony przez system ITizen.",
+      "audioWord": "t1-p118-146-word.mp3",
+      "audioSentence": "t1-p118-146-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-147",
+      "english": "Diversity",
+      "polish": "Różnorodność; bogactwo",
+      "sentenceEn": "Diversity is good. The world would be boring if we all were the same.",
+      "sentencePl": "Różnorodność jest dobra. Świat byłby nudny, gdybyśmy wszyscy byli tacy sami.",
+      "audioWord": "t1-p118-147-word.mp3",
+      "audioSentence": "t1-p118-147-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-148",
+      "english": "Admit",
+      "polish": "Przyjmować (np. Do szpitala, na uczelnię)",
+      "sentenceEn": "Danny and Daisy always admit to their pranks. They're very proud of them.",
+      "sentencePl": "Danny i Daisy zawsze przyznają się do swoich psikusów. Są z nich bardzo dumni.",
+      "audioWord": "t1-p118-148-word.mp3",
+      "audioSentence": "t1-p118-148-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-149",
+      "english": "Attend",
+      "polish": "Uczęszczać",
+      "sentenceEn": "Lots of people attend motivational speeches, but instead of looking for inspiration, they're looking for a way to make a quick buck.",
+      "sentencePl": "Masa ludzi chodzi na przemówienia motywacyjne, ale zamiast szukać inspiracji, szukają sposobu na szybki zarobek.",
+      "audioWord": "t1-p118-149-word.mp3",
+      "audioSentence": "t1-p118-149-sentence.mp3"
+    },
+    {
+      "id": "t1-p118-150",
+      "english": "Follow",
+      "polish": "Stosować się (do poleceń, wskazówek)",
+      "sentenceEn": "Don't just follow your leader. Become one yourself.",
+      "sentencePl": "Nie podążaj jedynie za swoim przywódcą. Sam zostań przywódcą!",
+      "audioWord": "t1-p118-150-word.mp3",
+      "audioSentence": "t1-p118-150-sentence.mp3"
+    }
+  ]
+}

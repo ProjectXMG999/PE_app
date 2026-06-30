@@ -1,0 +1,17 @@
+.homepage {
+  padding-top: var(--spacing-md);
+}
+
+.homepage__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+.homepage__empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: var(--spacing-2xl) 0;
+}

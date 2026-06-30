@@ -1,0 +1,100 @@
+{
+  "id": "t1-p21",
+  "name": "W skali 1-10",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Liczby",
+  "chapter": "Rozdział III",
+  "words": [
+    {
+      "id": "t1-p21-001",
+      "english": "One",
+      "polish": "Raz; jeden",
+      "sentenceEn": "All for one and one for all!",
+      "sentencePl": "Jeden za wszystkich i wszyscy za jednego!",
+      "audioWord": "t1-p21-001-word.mp3",
+      "audioSentence": "t1-p21-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p21-002",
+      "english": "Two",
+      "polish": "Dwa",
+      "sentenceEn": "Two boys have just appeared on the stage, and they're dancing!",
+      "sentencePl": "Na scenie pojawiło się właśnie dwóch chłopców i zaczęli tańczyć!",
+      "audioWord": "t1-p21-002-word.mp3",
+      "audioSentence": "t1-p21-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p21-003",
+      "english": "Three",
+      "polish": "Trzy",
+      "sentenceEn": "You got three pairs? Three pairs, Jimmy?! I've never seen anyone play poker like that.",
+      "sentencePl": "Masz trzy pary? Trzy pary, Jimmy?! Nigdy nie widziałem, żeby ktoś tak grał w pokera.",
+      "audioWord": "t1-p21-003-word.mp3",
+      "audioSentence": "t1-p21-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p21-004",
+      "english": "Four",
+      "polish": "Cztery",
+      "sentenceEn": "This year I've only been to the office four times.",
+      "sentencePl": "W tym roku byłem w biurze tylko cztery razy.",
+      "audioWord": "t1-p21-004-word.mp3",
+      "audioSentence": "t1-p21-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p21-005",
+      "english": "Five",
+      "polish": "Pięć",
+      "sentenceEn": "Give me five minutes. I need to take a break.",
+      "sentencePl": "Daj mi pięć minut. Muszę zrobić sobie przerwę.",
+      "audioWord": "t1-p21-005-word.mp3",
+      "audioSentence": "t1-p21-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p21-006",
+      "english": "Six",
+      "polish": "Sześć",
+      "sentenceEn": "Look, if you take six packs of canned soda, we're done for the evening.",
+      "sentencePl": "Słuchaj, jeśli weźmiesz sześć opakowań gazowanego picia w puszcze, mamy wieczór z bani.",
+      "audioWord": "t1-p21-006-word.mp3",
+      "audioSentence": "t1-p21-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p21-007",
+      "english": "Seven",
+      "polish": "Siedem",
+      "sentenceEn": "\"Seven\" is one of my favorite movies. A great 90's crime story with good acting!",
+      "sentencePl": "„Siedem” to jeden z moich ulubionych filmów. Świetny kryminał z lat 90. z doskonałą grą aktorską.",
+      "audioWord": "t1-p21-007-word.mp3",
+      "audioSentence": "t1-p21-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p21-008",
+      "english": "Eight",
+      "polish": "Osiem",
+      "sentenceEn": "An octopus has eight tentacles. I'm curious why it needs so many of them.",
+      "sentencePl": "Ośmiornica ma osiem macek. Jestem ciekawy, po co jej aż tyle.",
+      "audioWord": "t1-p21-008-word.mp3",
+      "audioSentence": "t1-p21-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p21-009",
+      "english": "Nine",
+      "polish": "Dziewięć",
+      "sentenceEn": "Nine knights entered the dungeon and stopped the dragon!",
+      "sentencePl": "Dziewięciu rycerzy weszło do lochu i powstrzymało smoka!",
+      "audioWord": "t1-p21-009-word.mp3",
+      "audioSentence": "t1-p21-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p21-010",
+      "english": "Zero",
+      "polish": "Zero",
+      "sentenceEn": "I have zero money now. I'm totally broke.",
+      "sentencePl": "Mam zero kasy. Jestem totalnie spłukany.",
+      "audioWord": "t1-p21-010-word.mp3",
+      "audioSentence": "t1-p21-010-sentence.mp3"
+    }
+  ]
+}
