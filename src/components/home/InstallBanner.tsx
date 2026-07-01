@@ -28,7 +28,7 @@ export function InstallBanner() {
         </div>
         <div className="install-banner__text">
           <span className="install-banner__title">Zainstaluj Project English</span>
-          <span className="install-banner__sub">Dodaj do ekranu głównego — działa offline</span>
+          <span className="install-banner__sub">Dodaj do ekranu głównego — szybki dostęp</span>
         </div>
         <button
           className="install-banner__btn"
