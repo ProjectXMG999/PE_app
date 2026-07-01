@@ -5,37 +5,68 @@ import { Word } from '../types/vocabulary'
 export function useAudio(packId: string | null) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const playingRef = useRef(false)
+  // Holds the done() resolver of the currently pending play() promise so stop()
+  // can resolve it immediately instead of leaving it hanging until onended fires
+  const resolveCurrentRef = useRef<(() => void) | null>(null)
 
   const EN_RATE = 0.85
   const PL_RATE = 1.0
 
   const play = useCallback((url: string, rate = 1.0): Promise<void> => {
     return new Promise((resolve) => {
+      // Hard-stop any previous audio before starting new one
+      if (resolveCurrentRef.current) {
+        resolveCurrentRef.current()
+        resolveCurrentRef.current = null
+      }
       if (audioRef.current) {
         audioRef.current.pause()
+        audioRef.current.src = ''
         audioRef.current = null
       }
-      const audio = new Audio(url)
+
+      const audio = new Audio()
       audio.playbackRate = rate
       audioRef.current = audio
       playingRef.current = true
 
-      const timeoutId = setTimeout(() => {
+      // Single-fire guard — done() is idempotent
+      let resolved = false
+      const done = () => {
+        if (resolved) return
+        resolved = true
+        clearTimeout(timeoutId)
+        resolveCurrentRef.current = null
         playingRef.current = false
-        audio.pause()
         if (audioRef.current === audio) audioRef.current = null
         resolve()
-      }, 8000)
-
-      const cleanup = () => {
-        clearTimeout(timeoutId)
-        playingRef.current = false
-        if (audioRef.current === audio) audioRef.current = null
       }
 
-      audio.onended = () => { cleanup(); resolve() }
-      audio.onerror = () => { cleanup(); resolve() }
-      audio.play().catch(() => { cleanup(); resolve() })
+      resolveCurrentRef.current = done
+
+      // Safety net — if audio never ends or loads, move on after 10s
+      const timeoutId = setTimeout(done, 10000)
+
+      // Single-fire guard — only one audio.play() call regardless of which
+      // event fires first (oncanplaythrough vs onloadeddata)
+      let playStarted = false
+      const tryPlay = () => {
+        if (playStarted) return
+        playStarted = true
+        audio.oncanplaythrough = null
+        audio.onloadeddata = null
+        audio.play().catch(done)
+      }
+
+      audio.onended = done
+      audio.onerror = done
+      audio.oncanplaythrough = tryPlay
+      audio.onloadeddata = () => {
+        if (audio.readyState >= 3) tryPlay()
+      }
+
+      audio.src = url
+      audio.load()
     })
   }, [])
 
@@ -60,8 +91,14 @@ export function useAudio(packId: string | null) {
   }, [packId, play])
 
   const stop = useCallback(() => {
+    // Resolve pending play() promise immediately — unblocks any awaiting sequence
+    if (resolveCurrentRef.current) {
+      resolveCurrentRef.current()
+      resolveCurrentRef.current = null
+    }
     if (audioRef.current) {
       audioRef.current.pause()
+      audioRef.current.src = ''
       audioRef.current = null
     }
     playingRef.current = false

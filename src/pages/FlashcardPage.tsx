@@ -296,39 +296,61 @@ export function FlashcardPage() {
   useEffect(() => {
     if (studyMode !== 'autoplay' || !currentWord || studyWords.length === 0 || showCompletion) return
 
+    // Capture word snapshot — closure must not re-read currentWord after async gaps
+    const word = currentWord
+    let cancelled = false
+
+    const pause = (ms: number) => new Promise<void>(r => { setTimeout(r, ms) })
+
     const runSequence = async () => {
-      try {
-        setPlayStep(0)
-        await playWordPl(currentWord)
-        await new Promise(r => setTimeout(r, 600))
-        setPlayStep(1)
-        await playWord(currentWord)
-        await new Promise(r => setTimeout(r, 400))
-        await playWord(currentWord)
-        await new Promise(r => setTimeout(r, 600))
-        if (currentWord.sentencePl) {
-          setPlayStep(2)
-          await playSentencePl(currentWord)
-          await new Promise(r => setTimeout(r, 600))
-        }
-        if (currentWord.sentenceEn) {
-          setPlayStep(3)
-          await playSentence(currentWord)
-          await new Promise(r => setTimeout(r, 600))
-        }
-        setPlayStep(null)
-        const onDone = isLastCard ? () => handleAutoplayEndRef.current() : () => handleNextRef.current()
-        autoPlayTimerRef.current = setTimeout(onDone, 500)
-      } catch {
-        setPlayStep(null)
-        const onDone = isLastCard ? () => handleAutoplayEndRef.current() : () => handleNextRef.current()
-        autoPlayTimerRef.current = setTimeout(onDone, 2000)
+      if (cancelled) return
+      setPlayStep(0)
+      await playWordPl(word)
+      if (cancelled) return
+      await pause(700)
+      if (cancelled) return
+
+      setPlayStep(1)
+      await playWord(word)
+      if (cancelled) return
+      await pause(500)
+      if (cancelled) return
+
+      await playWord(word)
+      if (cancelled) return
+      await pause(700)
+      if (cancelled) return
+
+      if (word.sentencePl) {
+        setPlayStep(2)
+        await playSentencePl(word)
+        if (cancelled) return
+        await pause(700)
+        if (cancelled) return
       }
+
+      if (word.sentenceEn) {
+        setPlayStep(3)
+        await playSentence(word)
+        if (cancelled) return
+        await pause(700)
+        if (cancelled) return
+      }
+
+      setPlayStep(null)
+      const onDone = isLastCard ? () => handleAutoplayEndRef.current() : () => handleNextRef.current()
+      autoPlayTimerRef.current = setTimeout(onDone, 600)
     }
 
-    autoPlayTimerRef.current = setTimeout(runSequence, 600)
-    return clearAutoplay
-  }, [currentCardIndex, restartKey, studyMode, currentWord, isLastCard, showCompletion])
+    autoPlayTimerRef.current = setTimeout(runSequence, 800)
+
+    return () => {
+      cancelled = true
+      clearAutoplay()
+      stop()
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentCardIndex, restartKey, studyMode, isLastCard, showCompletion])
 
   // ─── Loading / error ───────────────────────────────────────────────────────
 
