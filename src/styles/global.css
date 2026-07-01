@@ -20,6 +20,11 @@
   transition: none;
 }
 
+/* Applied during theme switch — kills all transitions so colors swap instantly and in sync */
+.no-transition *, .no-transition *::before, .no-transition *::after {
+  transition: none !important;
+}
+
 html {
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;

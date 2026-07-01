@@ -36,7 +36,15 @@ export function App() {
   })
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
+    const el = document.documentElement
+    el.classList.add('no-transition')
+    el.setAttribute('data-theme', theme)
+    // One rAF to let the attribute apply, then remove the class so transitions resume
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        el.classList.remove('no-transition')
+      })
+    })
   }, [theme])
 
   useEffect(() => {

@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#8B5CF6" />
+    <script>
+      try {
+        var s = JSON.parse(localStorage.getItem('pe-store') || '{}')
+        if (s.state && s.state.theme === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      } catch(e) {}
+    </script>
     <meta name="description" content="Project English — nauka angielskiego offline" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
