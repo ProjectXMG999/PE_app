@@ -57,6 +57,8 @@ export function FlashcardPage() {
   const savedIndexRef = useRef<number>(0)
   const prevRevealStepRef = useRef<number>(0)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
+  const [audioLoading, setAudioLoading] = useState(false)
+  const [audioError, setAudioError] = useState<'timeout' | 'error' | null>(null)
   const [isPaused, setIsPaused] = useState(false)
   const [restartKey, setRestartKey] = useState(0)
   const [showCompletion, setShowCompletion] = useState(false)
@@ -77,6 +79,8 @@ export function FlashcardPage() {
     stop()
     setIsPaused(false)
     setPlayStep(null)
+    setAudioLoading(false)
+    setAudioError(null)
     setRestartKey(k => k + 1)
   }, [stop])
 
@@ -84,11 +88,15 @@ export function FlashcardPage() {
     if (isPaused) {
       setIsPaused(false)
       setPlayStep(null)
+      setAudioLoading(false)
+      setAudioError(null)
       setRestartKey(k => k + 1)
     } else {
       clearAutoplay()
       stop()
       setPlayStep(null)
+      setAudioLoading(false)
+      setAudioError(null)
       setIsPaused(true)
     }
   }, [isPaused, stop])
@@ -329,36 +337,48 @@ export function FlashcardPage() {
       pauseTimer = setTimeout(r, ms)
     })
 
+    const playWithStatus = async (fn: () => Promise<'ok' | 'timeout' | 'error'>) => {
+      setAudioLoading(true)
+      setAudioError(null)
+      const result = await fn()
+      setAudioLoading(false)
+      if (result !== 'ok') {
+        setAudioError(result)
+        await pause(1500)
+        setAudioError(null)
+      }
+    }
+
     const runSequence = async () => {
       if (cancelled) return
 
       if (autoplayMode === 'fast') {
-        setPlayStep(0); await playWordPl(word); if (cancelled) return
+        setPlayStep(0); await playWithStatus(() => playWordPl(word)); if (cancelled) return
         await pause(500); if (cancelled) return
-        setPlayStep(1); await playWord(word); if (cancelled) return
+        setPlayStep(1); await playWithStatus(() => playWord(word)); if (cancelled) return
         await pause(900); if (cancelled) return
       }
 
       if (autoplayMode === 'standard') {
-        setPlayStep(0); await playWordPl(word); if (cancelled) return
+        setPlayStep(0); await playWithStatus(() => playWordPl(word)); if (cancelled) return
         await pause(700); if (cancelled) return
-        setPlayStep(1); await playWord(word); if (cancelled) return
+        setPlayStep(1); await playWithStatus(() => playWord(word)); if (cancelled) return
         await pause(900); if (cancelled) return
-        await playWord(word); if (cancelled) return
+        await playWithStatus(() => playWord(word)); if (cancelled) return
         await pause(1100); if (cancelled) return
-        if (word.sentencePl) { setPlayStep(2); await playSentencePl(word); if (cancelled) return; await pause(700); if (cancelled) return }
-        if (word.sentenceEn) { setPlayStep(3); await playSentence(word); if (cancelled) return; await pause(900); if (cancelled) return }
+        if (word.sentencePl) { setPlayStep(2); await playWithStatus(() => playSentencePl(word)); if (cancelled) return; await pause(700); if (cancelled) return }
+        if (word.sentenceEn) { setPlayStep(3); await playWithStatus(() => playSentence(word)); if (cancelled) return; await pause(900); if (cancelled) return }
       }
 
       if (autoplayMode === 'speaking') {
-        setPlayStep(0); await playWordPl(word); if (cancelled) return
+        setPlayStep(0); await playWithStatus(() => playWordPl(word)); if (cancelled) return
         await pause(2000); if (cancelled) return
-        setPlayStep(1); await playWord(word); if (cancelled) return
+        setPlayStep(1); await playWithStatus(() => playWord(word)); if (cancelled) return
         await pause(700); if (cancelled) return
-        await playWord(word); if (cancelled) return
+        await playWithStatus(() => playWord(word)); if (cancelled) return
         await pause(3000); if (cancelled) return
-        if (word.sentencePl) { setPlayStep(2); await playSentencePl(word); if (cancelled) return; await pause(2000); if (cancelled) return }
-        if (word.sentenceEn) { setPlayStep(3); await playSentence(word); if (cancelled) return; await pause(3000); if (cancelled) return }
+        if (word.sentencePl) { setPlayStep(2); await playWithStatus(() => playSentencePl(word)); if (cancelled) return; await pause(2000); if (cancelled) return }
+        if (word.sentenceEn) { setPlayStep(3); await playWithStatus(() => playSentence(word)); if (cancelled) return; await pause(3000); if (cancelled) return }
       }
 
       if (cancelled) return
@@ -374,6 +394,8 @@ export function FlashcardPage() {
       if (pauseTimer) clearTimeout(pauseTimer)
       clearAutoplay()
       stop()
+      setAudioLoading(false)
+      setAudioError(null)
     }
   // studyWords.length triggers re-run when DB finishes loading (studyWords: [] → pack.words)
   // isPaused gates the sequence; autoplayMode change re-fires with new timing
@@ -588,6 +610,12 @@ export function FlashcardPage() {
               </span>
             ))}
           </div>
+          {(audioLoading || audioError) && (
+            <div className={`flashcard-page__audio-status ${audioError ? 'flashcard-page__audio-status--error' : 'flashcard-page__audio-status--loading'}`}>
+              {audioLoading && <span className="flashcard-page__audio-spinner" />}
+              {audioLoading ? 'Ładowanie audio...' : audioError === 'timeout' ? '⚠ Wolna sieć — pominięto' : '⚠ Brak pliku audio'}
+            </div>
+          )}
           <div className="flashcard-page__autoplay-btns">
             <button className="flashcard-page__restart-btn" onClick={restartCurrentWord} aria-label="Powtórz słowo">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

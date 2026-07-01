@@ -10,7 +10,7 @@ export function useAudio(packId: string | null) {
   const EN_RATE = 0.65
   const PL_RATE = 1.0
 
-  const play = useCallback((url: string, rate = 1.0): Promise<void> => {
+  const play = useCallback((url: string, rate = 1.0): Promise<'ok' | 'timeout' | 'error'> => {
     return new Promise((resolve) => {
       // Stop previous audio WITHOUT resolving its promise via resolveCurrentRef —
       // the previous promise was already resolved (sequence moves linearly).
@@ -27,20 +27,20 @@ export function useAudio(packId: string | null) {
 
       // done() is idempotent — safe to call from multiple paths
       let resolved = false
-      const done = () => {
+      const done = (result: 'ok' | 'timeout' | 'error' = 'ok') => {
         if (resolved) return
         resolved = true
         clearTimeout(timeoutId)
         resolveCurrentRef.current = null
         if (audioRef.current === audio) audioRef.current = null
-        resolve()
+        resolve(result)
       }
 
       // Expose done() so stop() can unblock a pending await playX() immediately
-      resolveCurrentRef.current = done
+      resolveCurrentRef.current = () => done('ok')
 
       // Hard ceiling — never hang longer than 10s on a single file
-      const timeoutId = setTimeout(done, 10000)
+      const timeoutId = setTimeout(() => done('timeout'), 10000)
 
       // Exactly one audio.play() call — guards against double-fire from
       // oncanplaythrough + onloadeddata both triggering on cached files
@@ -50,11 +50,11 @@ export function useAudio(packId: string | null) {
         playStarted = true
         audio.oncanplaythrough = null
         audio.onloadeddata = null
-        audio.play().catch(done)
+        audio.play().catch(() => done('error'))
       }
 
-      audio.onended = done
-      audio.onerror = done
+      audio.onended = () => done('ok')
+      audio.onerror = () => done('error')
       audio.oncanplaythrough = tryPlay
       audio.onloadeddata = () => { if (audio.readyState >= 3) tryPlay() }
 
@@ -63,23 +63,23 @@ export function useAudio(packId: string | null) {
     })
   }, [])
 
-  const playWord = useCallback((word: Word) => {
-    if (!packId) return Promise.resolve()
+  const playWord = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
+    if (!packId) return Promise.resolve('ok' as const)
     return play(getAudioUrl(packId, word.audioWord), EN_RATE)
   }, [packId, play])
 
-  const playSentence = useCallback((word: Word) => {
-    if (!packId) return Promise.resolve()
+  const playSentence = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
+    if (!packId) return Promise.resolve('ok' as const)
     return play(getAudioUrl(packId, word.audioSentence), EN_RATE)
   }, [packId, play])
 
-  const playWordPl = useCallback((word: Word) => {
-    if (!packId || !word.audioWordPl) return Promise.resolve()
+  const playWordPl = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
+    if (!packId || !word.audioWordPl) return Promise.resolve('ok' as const)
     return play(getAudioUrl(packId, word.audioWordPl), PL_RATE)
   }, [packId, play])
 
-  const playSentencePl = useCallback((word: Word) => {
-    if (!packId || !word.audioSentencePl) return Promise.resolve()
+  const playSentencePl = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
+    if (!packId || !word.audioSentencePl) return Promise.resolve('ok' as const)
     return play(getAudioUrl(packId, word.audioSentencePl), PL_RATE)
   }, [packId, play])
 
