@@ -173,7 +173,29 @@
   border-color: var(--accent);
 }
 
-/* Skip button — large, thumb-friendly */
+/* Restart / Skip buttons — large, thumb-friendly */
+.flashcard-page__restart-btn {
+  height: 56px;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  background: var(--accent);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.flashcard-page__restart-btn:active {
+  transform: scale(0.97);
+}
+
 .flashcard-page__skip-btn {
   height: 56px;
   border-radius: var(--radius-lg);

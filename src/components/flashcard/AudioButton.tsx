@@ -1,32 +1,37 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import './AudioButton.css'
 
 interface Props {
   onPlay: () => Promise<void>
+  onStop?: () => void
   caption?: string
 }
 
-export function AudioButton({ onPlay, caption = 'Uruchom przed jazdą — audio leci automatycznie' }: Props) {
+export function AudioButton({ onPlay, onStop, caption = 'Uruchom przed jazdą — audio leci automatycznie' }: Props) {
   const [playing, setPlaying] = useState(false)
 
-  const handleClick = async () => {
-    if (playing) return
+  const handleClick = useCallback(async () => {
+    if (playing) {
+      onStop?.()
+      setPlaying(false)
+      return
+    }
     setPlaying(true)
     try {
       await onPlay()
     } catch {
-      // audio unavailable — silent
+      // silent
     } finally {
       setPlaying(false)
     }
-  }
+  }, [playing, onPlay, onStop])
 
   return (
     <div className="audiobtn-wrap">
       <button
         className={`audiobtn ${playing ? 'audiobtn--playing' : ''}`}
         onClick={handleClick}
-        aria-label="Odtwórz audio"
+        aria-label={playing ? 'Zatrzymaj audio' : 'Odtwórz audio'}
       >
         {playing ? (
           <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">

@@ -57,6 +57,7 @@ export function FlashcardPage() {
   const savedIndexRef = useRef<number>(0)
   const prevRevealStepRef = useRef<number>(0)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
+  const [restartKey, setRestartKey] = useState(0)
   const [showCompletion, setShowCompletion] = useState(false)
   const [allAlreadyKnown, setAllAlreadyKnown] = useState(false)
   const [knownCount, setKnownCount] = useState(0)
@@ -69,6 +70,13 @@ export function FlashcardPage() {
   const clearAutoplay = () => {
     if (autoPlayTimerRef.current) clearTimeout(autoPlayTimerRef.current)
   }
+
+  const restartCurrentWord = useCallback(() => {
+    clearAutoplay()
+    stop()
+    setPlayStep(null)
+    setRestartKey(k => k + 1)
+  }, [stop])
 
   useEffect(() => {
     if (packageId && studyMode) setPackage(packageId, studyMode)
@@ -320,7 +328,7 @@ export function FlashcardPage() {
 
     autoPlayTimerRef.current = setTimeout(runSequence, 600)
     return clearAutoplay
-  }, [currentCardIndex, studyMode, currentWord, isLastCard, showCompletion])
+  }, [currentCardIndex, restartKey, studyMode, currentWord, isLastCard, showCompletion])
 
   // ─── Loading / error ───────────────────────────────────────────────────────
 
@@ -481,6 +489,7 @@ export function FlashcardPage() {
                 if (revealStep === 2) return currentWord.sentencePl ? playSentencePl(currentWord) : playWord(currentWord)
                 return currentWord.sentenceEn ? playSentence(currentWord) : playWord(currentWord)
               }}
+            onStop={stop}
             caption="Odtwórz wymowę"
           />
           <div className="flashcard-page__actions">
@@ -519,10 +528,12 @@ export function FlashcardPage() {
             ))}
           </div>
           <div className="flashcard-page__autoplay-btns">
-            <AudioButton
-              onPlay={() => playWordPl(currentWord)}
-              caption="Odtwórz"
-            />
+            <button className="flashcard-page__restart-btn" onClick={restartCurrentWord} aria-label="Powtórz słowo">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4"/>
+              </svg>
+              Powtórz
+            </button>
             <button className="flashcard-page__skip-btn" onClick={handleSkip} aria-label="Pomiń słowo">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/>
