@@ -4,9 +4,7 @@ import { Word } from '../types/vocabulary'
 
 export function useAudio(packId: string | null) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
-  const playingRef = useRef(false)
-  // Holds the done() resolver of the currently pending play() promise so stop()
-  // can resolve it immediately instead of leaving it hanging until onended fires
+  // Resolver for the currently pending play() promise — lets stop() unblock awaits
   const resolveCurrentRef = useRef<(() => void) | null>(null)
 
   const EN_RATE = 0.85
@@ -14,11 +12,9 @@ export function useAudio(packId: string | null) {
 
   const play = useCallback((url: string, rate = 1.0): Promise<void> => {
     return new Promise((resolve) => {
-      // Hard-stop any previous audio before starting new one
-      if (resolveCurrentRef.current) {
-        resolveCurrentRef.current()
-        resolveCurrentRef.current = null
-      }
+      // Stop previous audio WITHOUT resolving its promise via resolveCurrentRef —
+      // the previous promise was already resolved (sequence moves linearly).
+      // We only need to kill the DOM element.
       if (audioRef.current) {
         audioRef.current.pause()
         audioRef.current.src = ''
@@ -28,27 +24,26 @@ export function useAudio(packId: string | null) {
       const audio = new Audio()
       audio.playbackRate = rate
       audioRef.current = audio
-      playingRef.current = true
 
-      // Single-fire guard — done() is idempotent
+      // done() is idempotent — safe to call from multiple paths
       let resolved = false
       const done = () => {
         if (resolved) return
         resolved = true
         clearTimeout(timeoutId)
         resolveCurrentRef.current = null
-        playingRef.current = false
         if (audioRef.current === audio) audioRef.current = null
         resolve()
       }
 
+      // Expose done() so stop() can unblock a pending await playX() immediately
       resolveCurrentRef.current = done
 
-      // Safety net — if audio never ends or loads, move on after 10s
+      // Hard ceiling — never hang longer than 10s on a single file
       const timeoutId = setTimeout(done, 10000)
 
-      // Single-fire guard — only one audio.play() call regardless of which
-      // event fires first (oncanplaythrough vs onloadeddata)
+      // Exactly one audio.play() call — guards against double-fire from
+      // oncanplaythrough + onloadeddata both triggering on cached files
       let playStarted = false
       const tryPlay = () => {
         if (playStarted) return
@@ -61,9 +56,7 @@ export function useAudio(packId: string | null) {
       audio.onended = done
       audio.onerror = done
       audio.oncanplaythrough = tryPlay
-      audio.onloadeddata = () => {
-        if (audio.readyState >= 3) tryPlay()
-      }
+      audio.onloadeddata = () => { if (audio.readyState >= 3) tryPlay() }
 
       audio.src = url
       audio.load()
@@ -91,7 +84,8 @@ export function useAudio(packId: string | null) {
   }, [packId, play])
 
   const stop = useCallback(() => {
-    // Resolve pending play() promise immediately — unblocks any awaiting sequence
+    // Unblock any pending await playX() in runSequence — it will hit the next
+    // `if (cancelled) return` and exit cleanly
     if (resolveCurrentRef.current) {
       resolveCurrentRef.current()
       resolveCurrentRef.current = null
@@ -101,17 +95,14 @@ export function useAudio(packId: string | null) {
       audioRef.current.src = ''
       audioRef.current = null
     }
-    playingRef.current = false
   }, [])
 
   const preloadNext = useCallback((words: Word[], currentIndex: number) => {
     if (!packId) return
     const toPreload = [currentIndex + 1, currentIndex + 2]
-
     const schedule = 'requestIdleCallback' in window
       ? (fn: () => void) => requestIdleCallback(fn)
       : (fn: () => void) => setTimeout(fn, 100)
-
     schedule(() => {
       toPreload.forEach(i => {
         if (i < words.length) {

@@ -28,7 +28,7 @@ export function FilterTabs() {
   return (
     <div className="filtertabs">
       {/* Row 1: Status */}
-      <div className="filtertabs__row">
+      <div className="filtertabs__row filtertabs__row--scroll">
         {STATUS_TABS.map(tab => (
           <button
             key={tab.id}
@@ -41,7 +41,7 @@ export function FilterTabs() {
       </div>
 
       {/* Row 2: Level */}
-      <div className="filtertabs__row">
+      <div className="filtertabs__row filtertabs__row--scroll">
         {LEVELS.map(lvl => (
           <button
             key={lvl}

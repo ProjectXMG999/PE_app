@@ -300,7 +300,12 @@ export function FlashcardPage() {
     const word = currentWord
     let cancelled = false
 
-    const pause = (ms: number) => new Promise<void>(r => { setTimeout(r, ms) })
+    // Cancelable pause — resolves early when stop() unblocks the sequence
+    const pause = (ms: number) => new Promise<void>(r => {
+      const t = setTimeout(r, ms)
+      // Store cleanup in autoPlayTimerRef so clearAutoplay() kills it too
+      autoPlayTimerRef.current = t
+    })
 
     const runSequence = async () => {
       if (cancelled) return
@@ -349,8 +354,9 @@ export function FlashcardPage() {
       clearAutoplay()
       stop()
     }
+  // studyWords.length triggers re-run when DB finishes loading (studyWords: [] → pack.words)
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentCardIndex, restartKey, studyMode, isLastCard, showCompletion])
+  }, [currentCardIndex, restartKey, studyMode, isLastCard, showCompletion, studyWords.length])
 
   // ─── Loading / error ───────────────────────────────────────────────────────
 
