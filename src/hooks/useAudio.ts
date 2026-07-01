@@ -2,13 +2,10 @@ import { useCallback, useRef } from 'react'
 import { getAudioUrl, preloadAudio } from '../services/audioService'
 import { Word } from '../types/vocabulary'
 
-export function useAudio(packId: string | null) {
+export function useAudio(packId: string | null, enRate = 0.60, plRate = 1.0) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   // Resolver for the currently pending play() promise — lets stop() unblock awaits
   const resolveCurrentRef = useRef<(() => void) | null>(null)
-
-  const EN_RATE = 0.60
-  const PL_RATE = 1.0
 
   const play = useCallback((url: string, rate = 1.0): Promise<'ok' | 'timeout' | 'error'> => {
     return new Promise((resolve) => {
@@ -65,23 +62,23 @@ export function useAudio(packId: string | null) {
 
   const playWord = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId) return Promise.resolve('ok' as const)
-    return play(getAudioUrl(packId, word.audioWord), EN_RATE)
-  }, [packId, play])
+    return play(getAudioUrl(packId, word.audioWord), enRate)
+  }, [packId, play, enRate])
 
   const playSentence = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId) return Promise.resolve('ok' as const)
-    return play(getAudioUrl(packId, word.audioSentence), EN_RATE)
-  }, [packId, play])
+    return play(getAudioUrl(packId, word.audioSentence), enRate)
+  }, [packId, play, enRate])
 
   const playWordPl = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId || !word.audioWordPl) return Promise.resolve('ok' as const)
-    return play(getAudioUrl(packId, word.audioWordPl), PL_RATE)
-  }, [packId, play])
+    return play(getAudioUrl(packId, word.audioWordPl), plRate)
+  }, [packId, play, plRate])
 
   const playSentencePl = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId || !word.audioSentencePl) return Promise.resolve('ok' as const)
-    return play(getAudioUrl(packId, word.audioSentencePl), PL_RATE)
-  }, [packId, play])
+    return play(getAudioUrl(packId, word.audioSentencePl), plRate)
+  }, [packId, play, plRate])
 
   const stop = useCallback(() => {
     // Unblock any pending await playX() in runSequence — it will hit the next

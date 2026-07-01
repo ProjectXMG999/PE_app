@@ -20,6 +20,10 @@ interface AppStore {
   isAutoPlaying: boolean
   autoplayMode: 'fast' | 'standard' | 'speaking'
   setAutoplayMode: (m: 'fast' | 'standard' | 'speaking') => void
+  enRate: number
+  plRate: number
+  setEnRate: (r: number) => void
+  setPlRate: (r: number) => void
   setPackage: (id: string, mode: StudyMode) => void
   setCardIndex: (i: number) => void
   advanceReveal: () => void
@@ -63,6 +67,10 @@ export const useAppStore = create<AppStore>()(
       isAutoPlaying: false,
       autoplayMode: 'standard',
       setAutoplayMode: (m) => set({ autoplayMode: m }),
+      enRate: 0.60,
+      plRate: 1.0,
+      setEnRate: (r) => set({ enRate: r }),
+      setPlRate: (r) => set({ plRate: r }),
       setPackage: (id, mode) => set({ currentPackageId: id, currentMode: mode, currentCardIndex: 0, revealStep: 0 }),
       setCardIndex: (i) => set({ currentCardIndex: i, revealStep: 0 }),
       advanceReveal: () => set(s => ({ revealStep: s.revealStep + 1 })),
@@ -99,6 +107,8 @@ export const useAppStore = create<AppStore>()(
         isInstalled: s.isInstalled,
         iosBannerDismissed: s.iosBannerDismissed,
         autoplayMode: s.autoplayMode,
+        enRate: s.enRate,
+        plRate: s.plRate,
       }),
     }
   )
