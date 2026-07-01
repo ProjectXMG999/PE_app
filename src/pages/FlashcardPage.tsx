@@ -122,7 +122,7 @@ export function FlashcardPage() {
   }, [packageId, studyMode])
 
   useEffect(() => {
-    if (!pack || !packageId || dbLoaded) return
+    if (!pack || !packageId || dbLoaded || pack.id !== packageId) return
     Promise.all([
       getPackageProgress(packageId),
       getPackageWordProgress(packageId),
