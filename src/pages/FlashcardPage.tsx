@@ -361,13 +361,13 @@ export function FlashcardPage() {
 
       if (autoplayMode === 'standard') {
         setPlayStep(0); await playWithStatus(() => playWordPl(word)); if (cancelled) return
-        await pause(700); if (cancelled) return
+        await pause(1500); if (cancelled) return
         setPlayStep(1); await playWithStatus(() => playWord(word)); if (cancelled) return
         await pause(1400); if (cancelled) return
         await playWithStatus(() => playWord(word)); if (cancelled) return
-        await pause(1100); if (cancelled) return
-        if (word.sentencePl) { setPlayStep(2); await playWithStatus(() => playSentencePl(word)); if (cancelled) return; await pause(700); if (cancelled) return }
-        if (word.sentenceEn) { setPlayStep(3); await playWithStatus(() => playSentence(word)); if (cancelled) return; await pause(900); if (cancelled) return }
+        await pause(1500); if (cancelled) return
+        if (word.sentencePl) { setPlayStep(2); await playWithStatus(() => playSentencePl(word)); if (cancelled) return; await pause(2500); if (cancelled) return }
+        if (word.sentenceEn) { setPlayStep(3); await playWithStatus(() => playSentence(word)); if (cancelled) return; await pause(1000); if (cancelled) return }
       }
 
       if (autoplayMode === 'speaking') {
