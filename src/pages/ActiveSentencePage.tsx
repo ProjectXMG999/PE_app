@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { usePackageData } from '../hooks/usePackageData'
 import { useAudio } from '../hooks/useAudio'
 import { useAppStore } from '../store/useAppStore'
-import { AudioButton } from '../components/flashcard/AudioButton'
 import { MasteryScreen } from '../components/flashcard/MasteryScreen'
 import { Word } from '../types/vocabulary'
 import { WordProgress } from '../types/progress'
@@ -13,6 +12,8 @@ import { PackMeta } from '../types/vocabulary'
 import './ActiveSentencePage.css'
 
 const allPacks = packagesIndex as PackMeta[]
+
+type CardSide = 'front' | 'back'
 
 export function ActiveSentencePage() {
   const { packageId } = useParams<{ packageId: string }>()
@@ -24,9 +25,11 @@ export function ActiveSentencePage() {
   const [studyWords, setStudyWords] = useState<Word[]>([])
   const [progressMap, setProgressMap] = useState<Map<string, WordProgress>>(new Map())
   const [cardIndex, setCardIndex] = useState(0)
-  const [flipped, setFlipped] = useState(false)
+  const [side, setSide] = useState<CardSide>('front')
+  const [halfwayDone, setHalfwayDone] = useState(false)
+  const [flipping, setFlipping] = useState(false)
   const [revealed, setRevealed] = useState(false)
-  const [animating, setAnimating] = useState(false)
+  const [advancing, setAdvancing] = useState(false)
   const [knownCount, setKnownCount] = useState(0)
   const [showMastery, setShowMastery] = useState(false)
   const [sessionKnown, setSessionKnown] = useState(0)
@@ -36,44 +39,51 @@ export function ActiveSentencePage() {
 
   useEffect(() => {
     if (!pack || !packageId) return
-
     getPackageWordProgress(packageId).then(wpList => {
       const map = new Map(wpList.map(wp => [wp.wordId, wp]))
       setProgressMap(map)
-
       const unknown = pack.words.filter(w => map.get(w.id)?.status !== 'known')
       const words = unknown.length > 0 ? unknown : pack.words
       const known = wpList.filter(wp => wp.status === 'known').length
       setStudyWords(words)
       setKnownCount(known)
       setCardIndex(0)
-      setFlipped(false)
+      setSide('front')
       setRevealed(false)
+      setHalfwayDone(false)
     })
   }, [pack, packageId])
 
   const currentWord = studyWords[cardIndex] ?? null
   const total = studyWords.length
   const isLast = cardIndex >= total - 1
-
-  const packMeta = allPacks.find(p => p.id === packageId)
   const packIdx = allPacks.findIndex(p => p.id === packageId)
   const nextPack = packIdx >= 0 && packIdx < allPacks.length - 1 ? allPacks[packIdx + 1] : null
 
-  const handleFlip = useCallback(() => {
-    if (animating) return
-    stop()
-    const next = !flipped
-    setFlipped(next)
-    if (next) {
-      setRevealed(true)
-      if (currentWord) playWord(currentWord)
-    }
-  }, [animating, flipped, currentWord, playWord, stop])
+  const flipCard = useCallback(() => {
+    if (flipping || advancing) return
+    const targetSide = side === 'front' ? 'back' : 'front'
+
+    setFlipping(true)
+    // Phase 1: rotate to 90deg (card folds away)
+    setTimeout(() => {
+      setSide(targetSide)
+      setHalfwayDone(true)
+      if (targetSide === 'back') {
+        setRevealed(true)
+        if (currentWord) playWord(currentWord)
+      }
+      // Phase 2: rotate from 90deg back to 0deg (card unfolds with new content)
+      setTimeout(() => {
+        setFlipping(false)
+        setHalfwayDone(false)
+      }, 220)
+    }, 220)
+  }, [flipping, advancing, side, currentWord, playWord])
 
   const advance = useCallback(async (markKnown: boolean) => {
-    if (!currentWord || !packageId || animating) return
-    setAnimating(true)
+    if (!currentWord || !packageId || advancing) return
+    setAdvancing(true)
     stop()
 
     if (markKnown) {
@@ -93,9 +103,10 @@ export function ActiveSentencePage() {
     }
 
     setTimeout(async () => {
-      setFlipped(false)
+      setSide('front')
       setRevealed(false)
-      setAnimating(false)
+      setHalfwayDone(false)
+      setAdvancing(false)
 
       if (isLast) {
         if (!sessionStartRef.current) {
@@ -107,10 +118,8 @@ export function ActiveSentencePage() {
             mode: 'fiszki',
           })
         }
-
         const allProgress = await getPackageWordProgress(packageId)
         const allKnown = pack!.words.every(w => allProgress.find(p => p.wordId === w.id)?.status === 'known')
-
         const now = new Date().toISOString()
         const existing = await getPackageProgress(packageId)
         await savePackageProgress({
@@ -120,17 +129,13 @@ export function ActiveSentencePage() {
           masteredAt: allKnown ? now : (existing?.masteredAt ?? null),
           currentIndex: 0,
         })
-
-        if (allKnown) {
-          setShowMastery(true)
-        } else {
-          setDone(true)
-        }
+        if (allKnown) setShowMastery(true)
+        else setDone(true)
       } else {
         setCardIndex(i => i + 1)
       }
     }, 320)
-  }, [currentWord, packageId, animating, isLast, progressMap, total, pack, stop])
+  }, [currentWord, packageId, advancing, isLast, progressMap, total, pack, stop])
 
   const handleRepeat = useCallback(() => {
     if (!pack || !packageId) return
@@ -141,8 +146,9 @@ export function ActiveSentencePage() {
       const words = unknown.length > 0 ? unknown : pack.words
       setStudyWords(words)
       setCardIndex(0)
-      setFlipped(false)
+      setSide('front')
       setRevealed(false)
+      setHalfwayDone(false)
       setKnownCount(wpList.filter(wp => wp.status === 'known').length)
       setShowMastery(false)
       setDone(false)
@@ -152,11 +158,7 @@ export function ActiveSentencePage() {
   }, [pack, packageId])
 
   if (loading || studyWords.length === 0) {
-    return (
-      <div className="asc-loading">
-        <div className="spinner" />
-      </div>
-    )
+    return <div className="asc-loading"><div className="spinner" /></div>
   }
 
   if (showMastery && pack) {
@@ -181,12 +183,8 @@ export function ActiveSentencePage() {
           <p className="asc-done__sub">{pack?.name}</p>
           <p className="asc-done__count">Oznaczono jako znane: <strong>{sessionKnown}</strong></p>
           <div className="asc-done__actions">
-            <button className="asc-done__btn asc-done__btn--repeat" onClick={handleRepeat}>
-              ↺ Powtórz
-            </button>
-            <button className="asc-done__btn asc-done__btn--exit" onClick={() => navigate('/')}>
-              ⌂ Menu
-            </button>
+            <button className="asc-done__btn asc-done__btn--repeat" onClick={handleRepeat}>↺ Powtórz</button>
+            <button className="asc-done__btn asc-done__btn--exit" onClick={() => navigate('/')}>⌂ Menu</button>
           </div>
         </div>
       </div>
@@ -200,7 +198,6 @@ export function ActiveSentencePage() {
 
   return (
     <div className="asc">
-      {/* Header */}
       <div className="asc__header">
         <button className="asc__back" onClick={() => { stop(); navigate(-1) }} aria-label="Wróć">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -214,99 +211,107 @@ export function ActiveSentencePage() {
         <span className="asc__counter">{cardIndex + 1} / {total}</span>
       </div>
 
-      {/* Card */}
       <div className="asc__scene">
         <div
           key={cardIndex}
-          className={`asc__card-wrap ${flipped ? 'asc__card-wrap--flipped' : ''}`}
-          onClick={handleFlip}
+          className={`asc__card${flipping && !halfwayDone ? ' asc__card--fold' : ''}${flipping && halfwayDone ? ' asc__card--unfold' : ''}${advancing ? ' asc__card--advance' : ''}`}
+          onClick={flipCard}
           role="button"
           tabIndex={0}
-          onKeyDown={e => e.key === 'Enter' || e.key === ' ' ? handleFlip() : undefined}
+          onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && flipCard()}
         >
-          {/* Front */}
-          <div className="asc__face asc__face--front">
-            <div className="asc__front-content">
-              <div className="asc__front-word-row">
-                <p className="asc__word asc__word--pl">{currentWord?.polish}</p>
-                {currentWord && (
-                  <button className="asc__audio-icon" onClick={e => { e.stopPropagation(); stop(); playWordPl(currentWord) }} aria-label="Wymowa PL słowo">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                      <polygon points="5,3 19,12 5,21"/>
-                    </svg>
-                  </button>
-                )}
-              </div>
-              {hasSentencePl && (
-                <div className="asc__front-sentence-row">
-                  <p className="asc__sentence-pl">{currentWord?.sentencePl}</p>
+          {side === 'front' ? (
+            <div className="asc__face asc__face--front">
+              <span className="asc__lang-badge asc__lang-badge--pl">PL</span>
+
+              <div className="asc__content">
+                <div className="asc__word-line">
+                  <p className="asc__word asc__word--pl">{currentWord?.polish}</p>
                   {currentWord && (
-                    <button className="asc__audio-icon asc__audio-icon--sm" onClick={e => { e.stopPropagation(); stop(); playSentencePl(currentWord) }} aria-label="Wymowa PL zdanie">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <button
+                      className="asc__play"
+                      onClick={e => { e.stopPropagation(); stop(); playWordPl(currentWord) }}
+                      aria-label="Wymowa PL słowo"
+                    >
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
                         <polygon points="5,3 19,12 5,21"/>
                       </svg>
                     </button>
                   )}
                 </div>
-              )}
-              <p className="asc__hint">
-                {hasSentencePl ? 'powiedz po angielsku' : 'dotknij, aby odsłonić'}
-              </p>
-            </div>
-          </div>
 
-          {/* Back */}
-          <div className="asc__face asc__face--back">
-            <div className="asc__back-content">
-              <div className="asc__back-row">
-                <p className="asc__word asc__word--en">{currentWord?.english}</p>
-                {currentWord && (
-                  <div onClick={e => e.stopPropagation()}>
-                    <AudioButton
-                      onPlay={() => playWord(currentWord)}
-                      onStop={stop}
-                      caption=""
-                    />
+                {hasSentencePl && (
+                  <div className="asc__sentence-line">
+                    <p className="asc__sentence asc__sentence--pl">{currentWord?.sentencePl}</p>
+                    {currentWord && (
+                      <button
+                        className="asc__play asc__play--sm"
+                        onClick={e => { e.stopPropagation(); stop(); playSentencePl(currentWord) }}
+                        aria-label="Wymowa PL zdanie"
+                      >
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="5,3 19,12 5,21"/>
+                        </svg>
+                      </button>
+                    )}
                   </div>
                 )}
               </div>
-              {hasSentenceEn && currentWord && (
-                <div className="asc__back-row asc__back-row--sentence">
-                  <p className="asc__sentence-en">{currentWord.sentenceEn}</p>
-                  <div onClick={e => e.stopPropagation()}>
-                    <AudioButton
-                      onPlay={() => playSentence(currentWord)}
-                      onStop={stop}
-                      caption=""
-                    />
-                  </div>
-                </div>
-              )}
-              <p className="asc__flip-hint">dotknij kartę, aby zobaczyć przód</p>
+
+              <p className="asc__tap-hint">
+                {hasSentencePl ? 'powiedz po angielsku · obróć kartę' : 'dotknij, aby odsłonić'}
+              </p>
             </div>
-          </div>
+          ) : (
+            <div className="asc__face asc__face--back">
+              <span className="asc__lang-badge asc__lang-badge--en">EN</span>
+
+              <div className="asc__content">
+                <div className="asc__word-line">
+                  <p className="asc__word asc__word--en">{currentWord?.english}</p>
+                  <button
+                    className="asc__play asc__play--accent"
+                    onClick={e => { e.stopPropagation(); stop(); if (currentWord) playWord(currentWord) }}
+                    aria-label="Wymowa EN słowo"
+                  >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="5,3 19,12 5,21"/>
+                    </svg>
+                  </button>
+                </div>
+
+                {hasSentenceEn && currentWord && (
+                  <div className="asc__sentence-line asc__sentence-line--divider">
+                    <p className="asc__sentence asc__sentence--en">{currentWord.sentenceEn}</p>
+                    <button
+                      className="asc__play asc__play--sm asc__play--accent"
+                      onClick={e => { e.stopPropagation(); stop(); playSentence(currentWord) }}
+                      aria-label="Wymowa EN zdanie"
+                    >
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5,3 19,12 5,21"/>
+                      </svg>
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              <p className="asc__tap-hint">dotknij, aby zobaczyć przód</p>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Buttons — visible after first reveal, stay visible even when flipped back */}
-      <div className={`asc__actions ${revealed && !animating ? 'asc__actions--visible' : ''}`}>
-        <button
-          className="asc__btn asc__btn--unknown"
-          onClick={() => advance(false)}
-          disabled={animating}
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+      <div className={`asc__actions${revealed && !advancing ? ' asc__actions--visible' : ''}`}>
+        <button className="asc__btn asc__btn--unknown" onClick={() => advance(false)} disabled={advancing}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <line x1="18" y1="6" x2="6" y2="18"/>
             <line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
           Nie znam
         </button>
-        <button
-          className="asc__btn asc__btn--known"
-          onClick={() => advance(true)}
-          disabled={animating}
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+        <button className="asc__btn asc__btn--known" onClick={() => advance(true)} disabled={advancing}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <polyline points="20 6 9 17 4 12"/>
           </svg>
           Znam
