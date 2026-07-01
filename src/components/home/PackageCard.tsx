@@ -114,13 +114,13 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
       <div className="packcard__actions">
         <button
           className="packcard__btn packcard__btn--autoplay"
-          onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/autoplay`) }}
+          onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/start`) }}
         >
           <span>🚗</span> Auto-play
         </button>
         <button
           className="packcard__btn packcard__btn--fiszki"
-          onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/fiszki`) }}
+          onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/fiszki-start`) }}
         >
           <span>🃏</span> Fiszki
         </button>

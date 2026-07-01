@@ -219,9 +219,13 @@ export function ActiveSentencePage() {
         <div
           key={cardIndex}
           className={`asc__card-wrap ${flipped ? 'asc__card-wrap--flipped' : ''}`}
+          onClick={handleFlip}
+          role="button"
+          tabIndex={0}
+          onKeyDown={e => e.key === 'Enter' || e.key === ' ' ? handleFlip() : undefined}
         >
           {/* Front */}
-          <div className="asc__face asc__face--front" onClick={handleFlip}>
+          <div className="asc__face asc__face--front">
             <div className="asc__front-content">
               <div className="asc__front-word-row">
                 <p className="asc__word asc__word--pl">{currentWord?.polish}</p>
@@ -249,37 +253,36 @@ export function ActiveSentencePage() {
                 {hasSentencePl ? 'powiedz po angielsku' : 'dotknij, aby odsłonić'}
               </p>
             </div>
-            {!revealed && (
-              <button className="asc__reveal-btn" onClick={e => { e.stopPropagation(); handleFlip() }}>
-                Odsłoń odpowiedź
-              </button>
-            )}
           </div>
 
           {/* Back */}
-          <div className="asc__face asc__face--back" onClick={handleFlip}>
+          <div className="asc__face asc__face--back">
             <div className="asc__back-content">
               <div className="asc__back-row">
                 <p className="asc__word asc__word--en">{currentWord?.english}</p>
                 {currentWord && (
-                  <AudioButton
-                    onPlay={() => playWord(currentWord)}
-                    onStop={stop}
-                    caption=""
-                  />
+                  <div onClick={e => e.stopPropagation()}>
+                    <AudioButton
+                      onPlay={() => playWord(currentWord)}
+                      onStop={stop}
+                      caption=""
+                    />
+                  </div>
                 )}
               </div>
               {hasSentenceEn && currentWord && (
                 <div className="asc__back-row asc__back-row--sentence">
                   <p className="asc__sentence-en">{currentWord.sentenceEn}</p>
-                  <AudioButton
-                    onPlay={() => playSentence(currentWord)}
-                    onStop={stop}
-                    caption=""
-                  />
+                  <div onClick={e => e.stopPropagation()}>
+                    <AudioButton
+                      onPlay={() => playSentence(currentWord)}
+                      onStop={stop}
+                      caption=""
+                    />
+                  </div>
                 </div>
               )}
-              <p className="asc__flip-hint">dotknij, aby zobaczyć przód</p>
+              <p className="asc__flip-hint">dotknij kartę, aby zobaczyć przód</p>
             </div>
           </div>
         </div>

@@ -94,7 +94,7 @@ export function QuickStartCards() {
 
       <button
         className="quickstart__card quickstart__card--fiszki"
-        onClick={() => navigate(`/pakiet/${fiszkiCard!.pack.id}/fiszki`)}
+        onClick={() => navigate(`/pakiet/${fiszkiCard!.pack.id}/fiszki-start`)}
       >
         <div className="quickstart__card-top">
           <span className="quickstart__label">FISZKI</span>

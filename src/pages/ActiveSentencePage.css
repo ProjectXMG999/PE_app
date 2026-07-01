@@ -86,6 +86,8 @@
   transform-style: preserve-3d;
   transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   animation: asc-card-enter 0.3s ease both;
+  cursor: pointer;
+  outline: none;
 }
 
 @keyframes asc-card-enter {
@@ -110,17 +112,15 @@
 }
 
 .asc__face--front {
-  cursor: pointer;
-  padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-md);
+  padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
   gap: var(--spacing-md);
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .asc__face--back {
   transform: rotateY(180deg);
   padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-md);
   justify-content: center;
-  cursor: pointer;
 }
 
 /* ── Front content ── */
