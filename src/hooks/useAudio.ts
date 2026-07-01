@@ -2,7 +2,11 @@ import { useCallback, useRef } from 'react'
 import { getAudioUrl, preloadAudio } from '../services/audioService'
 import { Word } from '../types/vocabulary'
 
-export function useAudio(packId: string | null, enRate = 0.60, plRate = 1.0) {
+const EN_BASE = 0.60
+const PL_BASE = 1.0
+
+// enRate/plRate are multipliers: 1.0 = default speed, 0.5 = half, 1.5 = faster
+export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   // Resolver for the currently pending play() promise — lets stop() unblock awaits
   const resolveCurrentRef = useRef<(() => void) | null>(null)
@@ -40,10 +44,13 @@ export function useAudio(packId: string | null, enRate = 0.60, plRate = 1.0) {
       const timeoutId = setTimeout(() => done('timeout'), 10000)
 
       // Exactly one audio.play() call — guards against double-fire from
-      // oncanplaythrough + onloadeddata both triggering on cached files
+      // oncanplaythrough + onloadeddata both triggering on cached files.
+      // Also guards against stale closures: if stop() replaced audioRef before
+      // this fires, we bail out so the old element never plays.
       let playStarted = false
       const tryPlay = () => {
         if (playStarted) return
+        if (audioRef.current !== audio) return  // superseded by a newer play() call
         playStarted = true
         audio.oncanplaythrough = null
         audio.onloadeddata = null
@@ -62,22 +69,24 @@ export function useAudio(packId: string | null, enRate = 0.60, plRate = 1.0) {
 
   const playWord = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId) return Promise.resolve('ok' as const)
-    return play(getAudioUrl(packId, word.audioWord), enRate)
+    return play(getAudioUrl(packId, word.audioWord), EN_BASE * enRate)
   }, [packId, play, enRate])
 
   const playSentence = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId) return Promise.resolve('ok' as const)
+    // EN sentence files are generated at 0.75 speed in ElevenLabs — play at 1.0 so
+    // the waveform's own tempo is the only slowdown applied.
     return play(getAudioUrl(packId, word.audioSentence), enRate)
   }, [packId, play, enRate])
 
   const playWordPl = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId || !word.audioWordPl) return Promise.resolve('ok' as const)
-    return play(getAudioUrl(packId, word.audioWordPl), plRate)
+    return play(getAudioUrl(packId, word.audioWordPl), PL_BASE * plRate)
   }, [packId, play, plRate])
 
   const playSentencePl = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId || !word.audioSentencePl) return Promise.resolve('ok' as const)
-    return play(getAudioUrl(packId, word.audioSentencePl), plRate)
+    return play(getAudioUrl(packId, word.audioSentencePl), PL_BASE * plRate)
   }, [packId, play, plRate])
 
   const stop = useCallback(() => {
