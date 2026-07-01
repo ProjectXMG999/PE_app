@@ -336,29 +336,29 @@ export function FlashcardPage() {
         setPlayStep(0); await playWordPl(word); if (cancelled) return
         await pause(500); if (cancelled) return
         setPlayStep(1); await playWord(word); if (cancelled) return
-        await pause(500); if (cancelled) return
+        await pause(900); if (cancelled) return
       }
 
       if (autoplayMode === 'standard') {
         setPlayStep(0); await playWordPl(word); if (cancelled) return
         await pause(700); if (cancelled) return
         setPlayStep(1); await playWord(word); if (cancelled) return
-        await pause(500); if (cancelled) return
+        await pause(900); if (cancelled) return
         await playWord(word); if (cancelled) return
-        await pause(700); if (cancelled) return
+        await pause(1100); if (cancelled) return
         if (word.sentencePl) { setPlayStep(2); await playSentencePl(word); if (cancelled) return; await pause(700); if (cancelled) return }
-        if (word.sentenceEn) { setPlayStep(3); await playSentence(word); if (cancelled) return; await pause(700); if (cancelled) return }
+        if (word.sentenceEn) { setPlayStep(3); await playSentence(word); if (cancelled) return; await pause(900); if (cancelled) return }
       }
 
       if (autoplayMode === 'speaking') {
         setPlayStep(0); await playWordPl(word); if (cancelled) return
-        await pause(1500); if (cancelled) return
+        await pause(2000); if (cancelled) return
         setPlayStep(1); await playWord(word); if (cancelled) return
-        await pause(500); if (cancelled) return
+        await pause(700); if (cancelled) return
         await playWord(word); if (cancelled) return
-        await pause(1500); if (cancelled) return
-        if (word.sentencePl) { setPlayStep(2); await playSentencePl(word); if (cancelled) return; await pause(1500); if (cancelled) return }
-        if (word.sentenceEn) { setPlayStep(3); await playSentence(word); if (cancelled) return; await pause(1500); if (cancelled) return }
+        await pause(3000); if (cancelled) return
+        if (word.sentencePl) { setPlayStep(2); await playSentencePl(word); if (cancelled) return; await pause(2000); if (cancelled) return }
+        if (word.sentenceEn) { setPlayStep(3); await playSentence(word); if (cancelled) return; await pause(3000); if (cancelled) return }
       }
 
       if (cancelled) return
