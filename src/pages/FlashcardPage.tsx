@@ -55,6 +55,7 @@ export function FlashcardPage() {
   const masteredAtRef = useRef<string | null>(null)
   const completedAtRef = useRef<string | null>(null)
   const savedIndexRef = useRef<number>(0)
+  const prevRevealStepRef = useRef<number>(0)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
   const [showCompletion, setShowCompletion] = useState(false)
   const [allAlreadyKnown, setAllAlreadyKnown] = useState(false)
@@ -194,6 +195,22 @@ export function FlashcardPage() {
   }, [isLastCard, advance, preloadNext, allWords, studyWords, currentCardIndex, saveProgress, total, currentWord, packageId])
 
   useEffect(() => { handleNextRef.current = handleNext }, [handleNext])
+
+  // Reset reveal guard when card changes
+  useEffect(() => {
+    prevRevealStepRef.current = 0
+  }, [currentCardIndex])
+
+  // Fiszki: auto-play audio after each reveal step
+  useEffect(() => {
+    if (studyMode !== 'fiszki' || !currentWord || revealStep === 0) return
+    if (revealStep <= prevRevealStepRef.current) return
+    prevRevealStepRef.current = revealStep
+
+    if (revealStep === 1) playWord(currentWord)
+    else if (revealStep === 2) playSentencePl(currentWord)
+    else if (revealStep === 3) playSentence(currentWord)
+  }, [revealStep, studyMode, currentWord, playWord, playSentencePl, playSentence])
 
   // Skip current card in autoplay
   const handleSkip = useCallback(() => {
@@ -458,7 +475,12 @@ export function FlashcardPage() {
       {studyMode === 'fiszki' && (
         <>
           <AudioButton
-            onPlay={() => revealStep === 0 ? playWordPl(currentWord) : playWord(currentWord)}
+            onPlay={() => {
+                if (revealStep === 0) return playWordPl(currentWord)
+                if (revealStep === 1) return playWord(currentWord)
+                if (revealStep === 2) return currentWord.sentencePl ? playSentencePl(currentWord) : playWord(currentWord)
+                return currentWord.sentenceEn ? playSentence(currentWord) : playWord(currentWord)
+              }}
             caption="Odtwórz wymowę"
           />
           <div className="flashcard-page__actions">

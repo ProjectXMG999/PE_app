@@ -1,16 +1,16 @@
 import { useCallback, useRef } from 'react'
-import { getAudioUrl, preloadAudio, stopAudio } from '../services/audioService'
+import { getAudioUrl, preloadAudio } from '../services/audioService'
 import { Word } from '../types/vocabulary'
 
 export function useAudio(packId: string | null) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const playingRef = useRef(false)
 
-  const EN_RATE = 0.85  // EN slightly slower for comprehension
+  const EN_RATE = 0.85
   const PL_RATE = 1.0
 
   const play = useCallback((url: string, rate = 1.0): Promise<void> => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       if (audioRef.current) {
         audioRef.current.pause()
         audioRef.current = null
@@ -20,18 +20,22 @@ export function useAudio(packId: string | null) {
       audioRef.current = audio
       playingRef.current = true
 
-      audio.onended = () => {
+      const timeoutId = setTimeout(() => {
         playingRef.current = false
+        audio.pause()
+        if (audioRef.current === audio) audioRef.current = null
         resolve()
-      }
-      audio.onerror = () => {
+      }, 8000)
+
+      const cleanup = () => {
+        clearTimeout(timeoutId)
         playingRef.current = false
-        reject(new Error('audio error'))
+        if (audioRef.current === audio) audioRef.current = null
       }
-      audio.play().catch(err => {
-        playingRef.current = false
-        reject(err)
-      })
+
+      audio.onended = () => { cleanup(); resolve() }
+      audio.onerror = () => { cleanup(); resolve() }
+      audio.play().catch(() => { cleanup(); resolve() })
     })
   }, [])
 
@@ -61,22 +65,27 @@ export function useAudio(packId: string | null) {
       audioRef.current = null
     }
     playingRef.current = false
-    stopAudio()
   }, [])
 
   const preloadNext = useCallback((words: Word[], currentIndex: number) => {
     if (!packId) return
     const toPreload = [currentIndex + 1, currentIndex + 2]
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
-        toPreload.forEach(i => {
-          if (i < words.length) {
-            preloadAudio(getAudioUrl(packId, words[i].audioWord))
-            preloadAudio(getAudioUrl(packId, words[i].audioSentence))
-          }
-        })
+
+    const schedule = 'requestIdleCallback' in window
+      ? (fn: () => void) => requestIdleCallback(fn)
+      : (fn: () => void) => setTimeout(fn, 100)
+
+    schedule(() => {
+      toPreload.forEach(i => {
+        if (i < words.length) {
+          const w = words[i]
+          preloadAudio(getAudioUrl(packId, w.audioWord))
+          preloadAudio(getAudioUrl(packId, w.audioSentence))
+          if (w.audioWordPl) preloadAudio(getAudioUrl(packId, w.audioWordPl))
+          if (w.audioSentencePl) preloadAudio(getAudioUrl(packId, w.audioSentencePl))
+        }
       })
-    }
+    })
   }, [packId])
 
   return { playWord, playSentence, playWordPl, playSentencePl, stop, preloadNext }
