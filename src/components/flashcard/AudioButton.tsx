@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react'
 import './AudioButton.css'
 
 interface Props {
-  onPlay: () => Promise<void>
+  onPlay: () => Promise<void | 'ok' | 'timeout' | 'error'>
   onStop?: () => void
   caption?: string
 }
