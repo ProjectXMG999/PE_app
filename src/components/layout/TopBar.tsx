@@ -1,14 +1,16 @@
+import { useNavigate } from 'react-router-dom'
 import { useAppStore } from '../../store/useAppStore'
 import './TopBar.css'
 
 export function TopBar() {
   const { theme, toggleTheme } = useAppStore()
+  const navigate = useNavigate()
 
   return (
     <header className="topbar">
       <img src="/icons/icon-192.png" alt="PE" className="topbar__pe-icon" />
 
-      <div className="topbar__center">
+      <div className="topbar__center" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
         <img
           src={theme === 'dark' ? '/icons/logo-white.svg' : '/icons/logo-dark.svg'}
           alt="Project English"
