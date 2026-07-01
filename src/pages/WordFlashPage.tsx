@@ -59,18 +59,20 @@ export function WordFlashPage() {
   const nextPack = packIdx >= 0 && packIdx < allPacks.length - 1 ? allPacks[packIdx + 1] : null
 
   const flipCard = useCallback(() => {
-    if (flipping || advancing || side === 'back') return
+    if (flipping || advancing) return
+    const targetSide: CardSide = side === 'front' ? 'back' : 'front'
     setFlipping(true)
     setTimeout(() => {
-      setSide('back')
+      setSide(targetSide)
       setHalfwayDone(true)
-      if (currentWord) playWord(currentWord)
+      if (targetSide === 'back' && currentWord) playWord(currentWord)
+      if (targetSide === 'front') stop()
       setTimeout(() => {
         setFlipping(false)
         setHalfwayDone(false)
       }, 220)
     }, 220)
-  }, [flipping, advancing, side, currentWord, playWord])
+  }, [flipping, advancing, side, currentWord, playWord, stop])
 
   const advance = useCallback(async (markKnown: boolean) => {
     if (!currentWord || !packageId || advancing) return
