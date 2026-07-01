@@ -57,6 +57,7 @@ export function FlashcardPage() {
   const savedIndexRef = useRef<number>(0)
   const prevRevealStepRef = useRef<number>(0)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
+  const [isPaused, setIsPaused] = useState(false)
   const [restartKey, setRestartKey] = useState(0)
   const [showCompletion, setShowCompletion] = useState(false)
   const [allAlreadyKnown, setAllAlreadyKnown] = useState(false)
@@ -74,9 +75,25 @@ export function FlashcardPage() {
   const restartCurrentWord = useCallback(() => {
     clearAutoplay()
     stop()
+    setIsPaused(false)
     setPlayStep(null)
     setRestartKey(k => k + 1)
   }, [stop])
+
+  const handlePauseResume = useCallback(() => {
+    if (isPaused) {
+      // Resume: restart current word from beginning
+      setIsPaused(false)
+      setPlayStep(null)
+      setRestartKey(k => k + 1)
+    } else {
+      // Pause: stop audio, freeze sequence
+      clearAutoplay()
+      stop()
+      setPlayStep(null)
+      setIsPaused(true)
+    }
+  }, [isPaused, stop])
 
   useEffect(() => {
     if (packageId && studyMode) setPackage(packageId, studyMode)
@@ -225,6 +242,7 @@ export function FlashcardPage() {
     clearAutoplay()
     stop()
     setPlayStep(null)
+    setIsPaused(false)
     if (isLastCard) {
       saveProgress(total, true).then(() => setShowCompletion(true))
     } else {
@@ -294,7 +312,7 @@ export function FlashcardPage() {
 
   // Auto-play sequence
   useEffect(() => {
-    if (studyMode !== 'autoplay' || !currentWord || studyWords.length === 0 || showCompletion) return
+    if (studyMode !== 'autoplay' || !currentWord || studyWords.length === 0 || showCompletion || isPaused) return
 
     const word = currentWord
     let cancelled = false
@@ -354,8 +372,9 @@ export function FlashcardPage() {
       stop()
     }
   // studyWords.length triggers re-run when DB finishes loading (studyWords: [] → pack.words)
+  // isPaused gates the sequence — changing false→true stops it, true→false re-fires it
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentCardIndex, restartKey, studyMode, isLastCard, showCompletion, studyWords.length])
+  }, [currentCardIndex, restartKey, studyMode, isLastCard, showCompletion, studyWords.length, isPaused])
 
   // ─── Loading / error ───────────────────────────────────────────────────────
 
@@ -560,6 +579,19 @@ export function FlashcardPage() {
                 <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4"/>
               </svg>
               Powtórz
+            </button>
+            <button className="flashcard-page__pause-btn" onClick={handlePauseResume} aria-label={isPaused ? 'Wznów' : 'Pauza'}>
+              {isPaused ? (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5,3 19,12 5,21"/>
+                </svg>
+              ) : (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="6" y="4" width="4" height="16" rx="1"/>
+                  <rect x="14" y="4" width="4" height="16" rx="1"/>
+                </svg>
+              )}
+              {isPaused ? 'Wznów' : 'Pauza'}
             </button>
             <button className="flashcard-page__skip-btn" onClick={handleSkip} aria-label="Pomiń słowo">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

@@ -95,7 +95,7 @@
 
 .flashcard-page__autoplay-btns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--spacing-sm);
   width: 100%;
 }
@@ -193,6 +193,27 @@
 }
 
 .flashcard-page__restart-btn:active {
+  transform: scale(0.97);
+}
+
+.flashcard-page__pause-btn {
+  height: 56px;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.flashcard-page__pause-btn:active {
   transform: scale(0.97);
 }
 
