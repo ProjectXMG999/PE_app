@@ -1,5 +1,5 @@
 import { Suspense, lazy, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { useRegisterSW } from 'virtual:pwa-register/react'
 import { useAppStore } from './store/useAppStore'
 import { initInstallService } from './services/installService'
@@ -26,6 +26,7 @@ function LoadingFallback() {
 
 export function App() {
   const { theme, setInstallPrompt, setInstalled, setSwUpdateAvailable, setSwRegistration } = useAppStore()
+  const location = useLocation()
 
   const { needRefresh, updateServiceWorker } = useRegisterSW({
     onRegistered(r) {
@@ -68,7 +69,7 @@ export function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/pakiet/:packageId" element={<PackPreviewPage />} />
           <Route path="/pakiet/:packageId/start" element={<AutoplayModePage />} />
-          <Route path="/pakiet/:packageId/:mode" element={<FlashcardPage />} />
+          <Route path="/pakiet/:packageId/:mode" element={<FlashcardPage key={location.pathname} />} />
           <Route path="/statystyki" element={<StatsPage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
