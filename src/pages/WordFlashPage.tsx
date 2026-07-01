@@ -69,6 +69,7 @@ export function WordFlashPage() {
   const advance = useCallback(async (markKnown: boolean) => {
     if (!currentWord || !packageId || animating) return
     setAnimating(true)
+    stop()
 
     if (markKnown) {
       const now = new Date().toISOString()
