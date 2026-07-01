@@ -19,12 +19,13 @@ export function ActiveSentencePage() {
   const navigate = useNavigate()
   const { pack, loading } = usePackageData(packageId ?? null)
   const { enRate, plRate } = useAppStore()
-  const { playWord, playSentence, stop } = useAudio(packageId ?? null, enRate, plRate)
+  const { playWord, playSentence, playWordPl, playSentencePl, stop } = useAudio(packageId ?? null, enRate, plRate)
 
   const [studyWords, setStudyWords] = useState<Word[]>([])
   const [progressMap, setProgressMap] = useState<Map<string, WordProgress>>(new Map())
   const [cardIndex, setCardIndex] = useState(0)
   const [flipped, setFlipped] = useState(false)
+  const [revealed, setRevealed] = useState(false)
   const [animating, setAnimating] = useState(false)
   const [knownCount, setKnownCount] = useState(0)
   const [showMastery, setShowMastery] = useState(false)
@@ -47,6 +48,7 @@ export function ActiveSentencePage() {
       setKnownCount(known)
       setCardIndex(0)
       setFlipped(false)
+      setRevealed(false)
     })
   }, [pack, packageId])
 
@@ -59,12 +61,15 @@ export function ActiveSentencePage() {
   const nextPack = packIdx >= 0 && packIdx < allPacks.length - 1 ? allPacks[packIdx + 1] : null
 
   const handleFlip = useCallback(() => {
-    if (animating || flipped) return
-    setFlipped(true)
-    if (currentWord) {
-      playWord(currentWord)
+    if (animating) return
+    stop()
+    const next = !flipped
+    setFlipped(next)
+    if (next) {
+      setRevealed(true)
+      if (currentWord) playWord(currentWord)
     }
-  }, [animating, flipped, currentWord, playWord])
+  }, [animating, flipped, currentWord, playWord, stop])
 
   const advance = useCallback(async (markKnown: boolean) => {
     if (!currentWord || !packageId || animating) return
@@ -89,6 +94,7 @@ export function ActiveSentencePage() {
 
     setTimeout(async () => {
       setFlipped(false)
+      setRevealed(false)
       setAnimating(false)
 
       if (isLast) {
@@ -136,6 +142,7 @@ export function ActiveSentencePage() {
       setStudyWords(words)
       setCardIndex(0)
       setFlipped(false)
+      setRevealed(false)
       setKnownCount(wpList.filter(wp => wp.status === 'known').length)
       setShowMastery(false)
       setDone(false)
@@ -188,7 +195,8 @@ export function ActiveSentencePage() {
 
   const knownPct = pack ? (knownCount / pack.wordCount) * 100 : 0
   const progressPct = total > 0 ? (cardIndex / total) * 100 : 0
-  const hasSentence = !!currentWord?.sentencePl
+  const hasSentencePl = !!currentWord?.sentencePl
+  const hasSentenceEn = !!currentWord?.sentenceEn
 
   return (
     <div className="asc">
@@ -213,25 +221,43 @@ export function ActiveSentencePage() {
           className={`asc__card-wrap ${flipped ? 'asc__card-wrap--flipped' : ''}`}
         >
           {/* Front */}
-          <div className="asc__face asc__face--front" onClick={!flipped ? handleFlip : undefined}>
+          <div className="asc__face asc__face--front" onClick={handleFlip}>
             <div className="asc__front-content">
-              <p className="asc__word asc__word--pl">{currentWord?.polish}</p>
-              {hasSentence && (
-                <p className="asc__sentence-pl">{currentWord?.sentencePl}</p>
+              <div className="asc__front-word-row">
+                <p className="asc__word asc__word--pl">{currentWord?.polish}</p>
+                {currentWord && (
+                  <button className="asc__audio-icon" onClick={e => { e.stopPropagation(); stop(); playWordPl(currentWord) }} aria-label="Wymowa PL słowo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <polygon points="5,3 19,12 5,21"/>
+                    </svg>
+                  </button>
+                )}
+              </div>
+              {hasSentencePl && (
+                <div className="asc__front-sentence-row">
+                  <p className="asc__sentence-pl">{currentWord?.sentencePl}</p>
+                  {currentWord && (
+                    <button className="asc__audio-icon asc__audio-icon--sm" onClick={e => { e.stopPropagation(); stop(); playSentencePl(currentWord) }} aria-label="Wymowa PL zdanie">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5,3 19,12 5,21"/>
+                      </svg>
+                    </button>
+                  )}
+                </div>
               )}
               <p className="asc__hint">
-                {hasSentence ? 'powiedz po angielsku' : 'dotknij, aby odsłonić'}
+                {hasSentencePl ? 'powiedz po angielsku' : 'dotknij, aby odsłonić'}
               </p>
             </div>
-            {!flipped && (
-              <button className="asc__reveal-btn" onClick={handleFlip}>
+            {!revealed && (
+              <button className="asc__reveal-btn" onClick={e => { e.stopPropagation(); handleFlip() }}>
                 Odsłoń odpowiedź
               </button>
             )}
           </div>
 
           {/* Back */}
-          <div className="asc__face asc__face--back">
+          <div className="asc__face asc__face--back" onClick={handleFlip}>
             <div className="asc__back-content">
               <div className="asc__back-row">
                 <p className="asc__word asc__word--en">{currentWord?.english}</p>
@@ -243,25 +269,24 @@ export function ActiveSentencePage() {
                   />
                 )}
               </div>
-              {currentWord?.sentenceEn && (
+              {hasSentenceEn && currentWord && (
                 <div className="asc__back-row asc__back-row--sentence">
                   <p className="asc__sentence-en">{currentWord.sentenceEn}</p>
-                  {currentWord && (
-                    <AudioButton
-                      onPlay={() => playSentence(currentWord)}
-                      onStop={stop}
-                      caption=""
-                    />
-                  )}
+                  <AudioButton
+                    onPlay={() => playSentence(currentWord)}
+                    onStop={stop}
+                    caption=""
+                  />
                 </div>
               )}
+              <p className="asc__flip-hint">dotknij, aby zobaczyć przód</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Buttons */}
-      <div className={`asc__actions ${flipped && !animating ? 'asc__actions--visible' : ''}`}>
+      {/* Buttons — visible after first reveal, stay visible even when flipped back */}
+      <div className={`asc__actions ${revealed && !animating ? 'asc__actions--visible' : ''}`}>
         <button
           className="asc__btn asc__btn--unknown"
           onClick={() => advance(false)}
