@@ -67,7 +67,7 @@ export const useAppStore = create<AppStore>()(
       isAutoPlaying: false,
       autoplayMode: 'standard',
       setAutoplayMode: (m) => set({ autoplayMode: m }),
-      enRate: 0.60,
+      enRate: 1.0,
       plRate: 1.0,
       setEnRate: (r) => set({ enRate: r }),
       setPlRate: (r) => set({ plRate: r }),
