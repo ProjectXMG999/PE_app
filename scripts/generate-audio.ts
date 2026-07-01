@@ -53,6 +53,7 @@ async function generateSpeech(text: string, outputPath: string): Promise<void> {
           similarity_boost: 0.8,
           style: 0.2,
           use_speaker_boost: true,
+          speed: 0.75,
         },
       }),
     }
