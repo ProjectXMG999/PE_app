@@ -13,7 +13,7 @@ precacheAndRoute(self.__WB_MANIFEST)
 cleanupOutdatedCaches()
 
 // On SW activate: drop audio cache so stale/bad responses don't persist across deploys
-self.addEventListener('activate', (event) => {
+;(self as unknown as ServiceWorkerGlobalScope).addEventListener('activate', (event: ExtendableEvent) => {
   event.waitUntil(caches.delete('pe-audio-v1'))
 })
 
