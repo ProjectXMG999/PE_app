@@ -12,6 +12,11 @@ clientsClaim()
 precacheAndRoute(self.__WB_MANIFEST)
 cleanupOutdatedCaches()
 
+// On SW activate: drop audio cache so stale/bad responses don't persist across deploys
+self.addEventListener('activate', (event) => {
+  event.waitUntil(caches.delete('pe-audio-v1'))
+})
+
 // Pack JSON files: serve from cache, refresh in background
 registerRoute(
   ({ url }) => url.pathname.startsWith('/data/packs/'),
