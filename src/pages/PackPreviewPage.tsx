@@ -155,7 +155,7 @@ export function PackPreviewPage() {
       <div className="packpreview__actions">
         <button
           className="packpreview__btn packpreview__btn--fiszki"
-          onClick={() => navigate(`/pakiet/${packageId}/fiszki`)}
+          onClick={() => navigate(`/pakiet/${packageId}/fiszki-start`)}
         >
           <span>🃏</span> Fiszki
         </button>
