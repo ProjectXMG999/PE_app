@@ -13,7 +13,8 @@ precacheAndRoute(self.__WB_MANIFEST)
 cleanupOutdatedCaches()
 
 // On SW activate: drop audio cache so stale/bad responses don't persist across deploys
-;(self as unknown as ServiceWorkerGlobalScope).addEventListener('activate', (event: ExtendableEvent) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+;(globalThis as any).addEventListener('activate', (event: any) => {
   event.waitUntil(caches.delete('pe-audio-v1'))
 })
 
