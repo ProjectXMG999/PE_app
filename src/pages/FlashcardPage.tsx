@@ -296,15 +296,12 @@ export function FlashcardPage() {
   useEffect(() => {
     if (studyMode !== 'autoplay' || !currentWord || studyWords.length === 0 || showCompletion) return
 
-    // Capture word snapshot — closure must not re-read currentWord after async gaps
     const word = currentWord
     let cancelled = false
+    let pauseTimer: ReturnType<typeof setTimeout> | null = null
 
-    // Cancelable pause — resolves early when stop() unblocks the sequence
     const pause = (ms: number) => new Promise<void>(r => {
-      const t = setTimeout(r, ms)
-      // Store cleanup in autoPlayTimerRef so clearAutoplay() kills it too
-      autoPlayTimerRef.current = t
+      pauseTimer = setTimeout(r, ms)
     })
 
     const runSequence = async () => {
@@ -342,6 +339,7 @@ export function FlashcardPage() {
         if (cancelled) return
       }
 
+      if (cancelled) return
       setPlayStep(null)
       const onDone = isLastCard ? () => handleAutoplayEndRef.current() : () => handleNextRef.current()
       autoPlayTimerRef.current = setTimeout(onDone, 600)
@@ -351,6 +349,7 @@ export function FlashcardPage() {
 
     return () => {
       cancelled = true
+      if (pauseTimer) clearTimeout(pauseTimer)
       clearAutoplay()
       stop()
     }
