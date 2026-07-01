@@ -12,9 +12,17 @@ const RATES: { value: number; label: string }[] = [
   { value: 1.50, label: '150%' },
 ]
 
+const VALID = new Set(RATES.map(r => r.value))
+
 export function SettingsPage() {
   const navigate = useNavigate()
   const { enRate, plRate, setEnRate, setPlRate } = useAppStore()
+
+  // Migrate legacy absolute values (e.g. 0.60) that don't match current multiplier scale
+  const safeEnRate = VALID.has(enRate) ? enRate : 1.0
+  const safePlRate = VALID.has(plRate) ? plRate : 1.0
+  if (safeEnRate !== enRate) setEnRate(safeEnRate)
+  if (safePlRate !== plRate) setPlRate(safePlRate)
 
   return (
     <AppShell hideBottomNav>
@@ -40,7 +48,7 @@ export function SettingsPage() {
               {RATES.map(({ value, label }) => (
                 <button
                   key={value}
-                  className={`settings__pill ${enRate === value ? 'settings__pill--active' : ''}`}
+                  className={`settings__pill ${safeEnRate === value ? 'settings__pill--active' : ''}`}
                   onClick={() => setEnRate(value)}
                 >
                   {label}
@@ -58,7 +66,7 @@ export function SettingsPage() {
               {RATES.map(({ value, label }) => (
                 <button
                   key={value}
-                  className={`settings__pill ${plRate === value ? 'settings__pill--active' : ''}`}
+                  className={`settings__pill ${safePlRate === value ? 'settings__pill--active' : ''}`}
                   onClick={() => setPlRate(value)}
                 >
                   {label}
