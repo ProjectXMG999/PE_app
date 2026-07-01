@@ -9,6 +9,7 @@ import './App.css'
 const FlashcardPage = lazy(() => import('./pages/FlashcardPage').then(m => ({ default: m.FlashcardPage })))
 const StatsPage = lazy(() => import('./pages/StatsPage').then(m => ({ default: m.StatsPage })))
 const PackPreviewPage = lazy(() => import('./pages/PackPreviewPage').then(m => ({ default: m.PackPreviewPage })))
+const AutoplayModePage = lazy(() => import('./pages/AutoplayModePage').then(m => ({ default: m.AutoplayModePage })))
 
 function LoadingFallback() {
   return (
@@ -66,6 +67,7 @@ export function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/pakiet/:packageId" element={<PackPreviewPage />} />
+          <Route path="/pakiet/:packageId/start" element={<AutoplayModePage />} />
           <Route path="/pakiet/:packageId/:mode" element={<FlashcardPage />} />
           <Route path="/statystyki" element={<StatsPage />} />
           <Route path="*" element={<HomePage />} />

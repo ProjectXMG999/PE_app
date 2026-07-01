@@ -80,7 +80,7 @@ export function QuickStartCards() {
     <div className="quickstart">
       <button
         className="quickstart__card quickstart__card--autoplay"
-        onClick={() => navigate(`/pakiet/${autoplayCard!.pack.id}/autoplay`)}
+        onClick={() => navigate(`/pakiet/${autoplayCard!.pack.id}/start`)}
       >
         <div className="quickstart__card-top">
           <span className="quickstart__label">ODSŁUCHIWANIE</span>

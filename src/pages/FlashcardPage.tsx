@@ -30,7 +30,7 @@ export function FlashcardPage() {
   const navigate = useNavigate()
   const studyMode = (mode === 'autoplay' ? 'autoplay' : 'fiszki') as StudyMode
 
-  const { setPackage } = useAppStore()
+  const { setPackage, autoplayMode, setAutoplayMode } = useAppStore()
   const { pack, loading, error } = usePackageData(packageId ?? null)
   const allWords = pack?.words ?? []
   // In fiszki mode: only show words not yet marked 'known'. Autoplay always shows all.
@@ -82,18 +82,25 @@ export function FlashcardPage() {
 
   const handlePauseResume = useCallback(() => {
     if (isPaused) {
-      // Resume: restart current word from beginning
       setIsPaused(false)
       setPlayStep(null)
       setRestartKey(k => k + 1)
     } else {
-      // Pause: stop audio, freeze sequence
       clearAutoplay()
       stop()
       setPlayStep(null)
       setIsPaused(true)
     }
   }, [isPaused, stop])
+
+  const handleModeChange = useCallback((m: 'fast' | 'standard' | 'speaking') => {
+    stop()
+    clearAutoplay()
+    setAutoplayMode(m)
+    setPlayStep(null)
+    setIsPaused(false)
+    setRestartKey(k => k + 1)
+  }, [stop, setAutoplayMode])
 
   useEffect(() => {
     if (packageId && studyMode) setPackage(packageId, studyMode)
@@ -324,37 +331,34 @@ export function FlashcardPage() {
 
     const runSequence = async () => {
       if (cancelled) return
-      setPlayStep(0)
-      await playWordPl(word)
-      if (cancelled) return
-      await pause(700)
-      if (cancelled) return
 
-      setPlayStep(1)
-      await playWord(word)
-      if (cancelled) return
-      await pause(500)
-      if (cancelled) return
-
-      await playWord(word)
-      if (cancelled) return
-      await pause(700)
-      if (cancelled) return
-
-      if (word.sentencePl) {
-        setPlayStep(2)
-        await playSentencePl(word)
-        if (cancelled) return
-        await pause(700)
-        if (cancelled) return
+      if (autoplayMode === 'fast') {
+        setPlayStep(0); await playWordPl(word); if (cancelled) return
+        await pause(500); if (cancelled) return
+        setPlayStep(1); await playWord(word); if (cancelled) return
+        await pause(500); if (cancelled) return
       }
 
-      if (word.sentenceEn) {
-        setPlayStep(3)
-        await playSentence(word)
-        if (cancelled) return
-        await pause(700)
-        if (cancelled) return
+      if (autoplayMode === 'standard') {
+        setPlayStep(0); await playWordPl(word); if (cancelled) return
+        await pause(700); if (cancelled) return
+        setPlayStep(1); await playWord(word); if (cancelled) return
+        await pause(500); if (cancelled) return
+        await playWord(word); if (cancelled) return
+        await pause(700); if (cancelled) return
+        if (word.sentencePl) { setPlayStep(2); await playSentencePl(word); if (cancelled) return; await pause(700); if (cancelled) return }
+        if (word.sentenceEn) { setPlayStep(3); await playSentence(word); if (cancelled) return; await pause(700); if (cancelled) return }
+      }
+
+      if (autoplayMode === 'speaking') {
+        setPlayStep(0); await playWordPl(word); if (cancelled) return
+        await pause(1500); if (cancelled) return
+        setPlayStep(1); await playWord(word); if (cancelled) return
+        await pause(500); if (cancelled) return
+        await playWord(word); if (cancelled) return
+        await pause(1500); if (cancelled) return
+        if (word.sentencePl) { setPlayStep(2); await playSentencePl(word); if (cancelled) return; await pause(1500); if (cancelled) return }
+        if (word.sentenceEn) { setPlayStep(3); await playSentence(word); if (cancelled) return; await pause(1500); if (cancelled) return }
       }
 
       if (cancelled) return
@@ -372,9 +376,9 @@ export function FlashcardPage() {
       stop()
     }
   // studyWords.length triggers re-run when DB finishes loading (studyWords: [] → pack.words)
-  // isPaused gates the sequence — changing false→true stops it, true→false re-fires it
+  // isPaused gates the sequence; autoplayMode change re-fires with new timing
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentCardIndex, restartKey, studyMode, isLastCard, showCompletion, studyWords.length, isPaused])
+  }, [currentCardIndex, restartKey, studyMode, isLastCard, showCompletion, studyWords.length, isPaused, autoplayMode])
 
   // ─── Loading / error ───────────────────────────────────────────────────────
 
@@ -566,6 +570,17 @@ export function FlashcardPage() {
 
       {studyMode === 'autoplay' && (
         <div className="flashcard-page__autoplay-bar">
+          <div className="flashcard-page__mode-pills">
+            {(['fast', 'standard', 'speaking'] as const).map(m => (
+              <button
+                key={m}
+                className={`flashcard-page__mode-pill ${autoplayMode === m ? 'active' : ''}`}
+                onClick={() => handleModeChange(m)}
+              >
+                {m === 'fast' ? '⚡ Szybko' : m === 'standard' ? '★ Standard' : '🎙 Speaking'}
+              </button>
+            ))}
+          </div>
           <div className="flashcard-page__playsteps">
             {(['PL', 'EN', 'PL zdanie', 'EN zdanie'] as const).map((label, i) => (
               <span key={i} className={`flashcard-page__playstep ${playStep === i ? 'active' : ''}`}>

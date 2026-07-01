@@ -161,7 +161,7 @@ export function PackPreviewPage() {
         </button>
         <button
           className="packpreview__btn packpreview__btn--autoplay"
-          onClick={() => navigate(`/pakiet/${packageId}/autoplay`)}
+          onClick={() => navigate(`/pakiet/${packageId}/start`)}
         >
           <span>🚗</span> Auto-play
         </button>

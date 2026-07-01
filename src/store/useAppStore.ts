@@ -18,6 +18,8 @@ interface AppStore {
   currentCardIndex: number
   revealStep: number
   isAutoPlaying: boolean
+  autoplayMode: 'fast' | 'standard' | 'speaking'
+  setAutoplayMode: (m: 'fast' | 'standard' | 'speaking') => void
   setPackage: (id: string, mode: StudyMode) => void
   setCardIndex: (i: number) => void
   advanceReveal: () => void
@@ -59,6 +61,8 @@ export const useAppStore = create<AppStore>()(
       currentCardIndex: 0,
       revealStep: 0,
       isAutoPlaying: false,
+      autoplayMode: 'standard',
+      setAutoplayMode: (m) => set({ autoplayMode: m }),
       setPackage: (id, mode) => set({ currentPackageId: id, currentMode: mode, currentCardIndex: 0, revealStep: 0 }),
       setCardIndex: (i) => set({ currentCardIndex: i, revealStep: 0 }),
       advanceReveal: () => set(s => ({ revealStep: s.revealStep + 1 })),
@@ -94,6 +98,7 @@ export const useAppStore = create<AppStore>()(
         theme: s.theme,
         isInstalled: s.isInstalled,
         iosBannerDismissed: s.iosBannerDismissed,
+        autoplayMode: s.autoplayMode,
       }),
     }
   )

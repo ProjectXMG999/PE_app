@@ -85,6 +85,39 @@
 }
 
 
+.flashcard-page__mode-pills {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  width: 100%;
+}
+
+.flashcard-page__mode-pill {
+  flex: 1;
+  height: 32px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--bg-surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.flashcard-page__mode-pill.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.flashcard-page__mode-pill:not(.active):hover {
+  border-color: var(--border-accent);
+  color: var(--text-primary);
+}
+
 .flashcard-page__playsteps {
   display: flex;
   gap: 6px;
