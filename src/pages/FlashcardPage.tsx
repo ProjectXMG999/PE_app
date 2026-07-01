@@ -363,7 +363,7 @@ export function FlashcardPage() {
         setPlayStep(0); await playWithStatus(() => playWordPl(word)); if (cancelled) return
         await pause(700); if (cancelled) return
         setPlayStep(1); await playWithStatus(() => playWord(word)); if (cancelled) return
-        await pause(900); if (cancelled) return
+        await pause(1400); if (cancelled) return
         await playWithStatus(() => playWord(word)); if (cancelled) return
         await pause(1100); if (cancelled) return
         if (word.sentencePl) { setPlayStep(2); await playWithStatus(() => playSentencePl(word)); if (cancelled) return; await pause(700); if (cancelled) return }
@@ -374,7 +374,7 @@ export function FlashcardPage() {
         setPlayStep(0); await playWithStatus(() => playWordPl(word)); if (cancelled) return
         await pause(3000); if (cancelled) return
         setPlayStep(1); await playWithStatus(() => playWord(word)); if (cancelled) return
-        await pause(700); if (cancelled) return
+        await pause(1400); if (cancelled) return
         await playWithStatus(() => playWord(word)); if (cancelled) return
         await pause(3000); if (cancelled) return
         if (word.sentencePl) { setPlayStep(2); await playWithStatus(() => playSentencePl(word)); if (cancelled) return; await pause(5000); if (cancelled) return }

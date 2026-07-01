@@ -7,7 +7,7 @@ export function useAudio(packId: string | null) {
   // Resolver for the currently pending play() promise — lets stop() unblock awaits
   const resolveCurrentRef = useRef<(() => void) | null>(null)
 
-  const EN_RATE = 0.65
+  const EN_RATE = 0.60
   const PL_RATE = 1.0
 
   const play = useCallback((url: string, rate = 1.0): Promise<'ok' | 'timeout' | 'error'> => {
