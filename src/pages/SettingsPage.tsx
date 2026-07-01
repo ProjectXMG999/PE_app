@@ -3,12 +3,23 @@ import { AppShell } from '../components/layout/AppShell'
 import { useAppStore } from '../store/useAppStore'
 import './SettingsPage.css'
 
-const EN_RATES = [0.5, 0.6, 0.7, 0.8, 1.0]
-const PL_RATES = [0.8, 0.9, 1.0, 1.1, 1.2]
+// EN default = 0.60, PL default = 1.0
+// Labels show % relative to default so user understands "100% = normal speed"
+const EN_RATES: { value: number; label: string }[] = [
+  { value: 0.30, label: '50%' },
+  { value: 0.45, label: '75%' },
+  { value: 0.60, label: '100%' },
+  { value: 0.75, label: '125%' },
+  { value: 0.90, label: '150%' },
+]
 
-function rateLabel(r: number) {
-  return `${r}×`
-}
+const PL_RATES: { value: number; label: string }[] = [
+  { value: 0.75, label: '75%' },
+  { value: 0.90, label: '90%' },
+  { value: 1.00, label: '100%' },
+  { value: 1.10, label: '110%' },
+  { value: 1.25, label: '125%' },
+]
 
 export function SettingsPage() {
   const navigate = useNavigate()
@@ -35,13 +46,13 @@ export function SettingsPage() {
               <span className="settings__row-hint">słowa i zdania EN</span>
             </div>
             <div className="settings__pills">
-              {EN_RATES.map(r => (
+              {EN_RATES.map(({ value, label }) => (
                 <button
-                  key={r}
-                  className={`settings__pill ${enRate === r ? 'settings__pill--active' : ''}`}
-                  onClick={() => setEnRate(r)}
+                  key={value}
+                  className={`settings__pill ${enRate === value ? 'settings__pill--active' : ''}`}
+                  onClick={() => setEnRate(value)}
                 >
-                  {rateLabel(r)}
+                  {label}
                 </button>
               ))}
             </div>
@@ -53,13 +64,13 @@ export function SettingsPage() {
               <span className="settings__row-hint">słowa i zdania PL</span>
             </div>
             <div className="settings__pills">
-              {PL_RATES.map(r => (
+              {PL_RATES.map(({ value, label }) => (
                 <button
-                  key={r}
-                  className={`settings__pill ${plRate === r ? 'settings__pill--active' : ''}`}
-                  onClick={() => setPlRate(r)}
+                  key={value}
+                  className={`settings__pill ${plRate === value ? 'settings__pill--active' : ''}`}
+                  onClick={() => setPlRate(value)}
                 >
-                  {rateLabel(r)}
+                  {label}
                 </button>
               ))}
             </div>
