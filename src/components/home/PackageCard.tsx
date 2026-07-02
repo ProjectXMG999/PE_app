@@ -96,7 +96,7 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
           {knownCount} / {pack.wordCount} opanowanych
         </span>
         {pack.level && (
-          <span className="packcard__level">Poziom {pack.level}</span>
+          <span className="packcard__level">Level {pack.level}</span>
         )}
       </div>
 
@@ -116,13 +116,13 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
           className="packcard__btn packcard__btn--autoplay"
           onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/start`) }}
         >
-          <span>🚗</span> Auto-play
+          <span>🎧</span> Słuchaj
         </button>
         <button
           className="packcard__btn packcard__btn--fiszki"
           onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/fiszki-start`) }}
         >
-          <span>🃏</span> Fiszki
+          <span>⚡</span> Aktywuj
         </button>
       </div>
     </div>

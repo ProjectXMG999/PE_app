@@ -48,7 +48,7 @@ export function FilterTabs() {
             className={`filtertabs__tab ${activeLevel === lvl ? 'filtertabs__tab--active' : ''}`}
             onClick={() => setLevel(activeLevel === lvl ? null : lvl)}
           >
-            Poz. {lvl}
+            Level {lvl}
           </button>
         ))}
       </div>

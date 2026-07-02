@@ -58,6 +58,7 @@ export function FlashcardPage() {
   const prevRevealStepRef = useRef<number>(0)
   const resumeFromStepRef = useRef<0 | 1 | 2 | 3 | null>(null)
   const cancelSequenceRef = useRef(false)
+  const skipStepRef = useRef<(() => void) | null>(null)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
   const [audioLoading, setAudioLoading] = useState(false)
   const [audioError, setAudioError] = useState<'timeout' | 'error' | null>(null)
@@ -258,6 +259,18 @@ export function FlashcardPage() {
     else if (revealStep === 3) playSentence(currentWord)
   }, [revealStep, studyMode, currentWord, playWord, playSentencePl, playSentence])
 
+  // Skip to next audio step within current card (card tap in autoplay)
+  // Does NOT advance to next card — that's handleSkip (Pomiń button only)
+  const handleSkipStep = useCallback(() => {
+    if (skipStepRef.current) {
+      // Currently in a pause between steps — skip the pause immediately
+      skipStepRef.current()
+    } else {
+      // Currently playing audio — stop it; sequence will advance to next step
+      stop()
+    }
+  }, [stop])
+
   // Skip current card in autoplay
   const handleSkip = useCallback(() => {
     clearAutoplay()
@@ -342,7 +355,8 @@ export function FlashcardPage() {
     let pauseTimer: ReturnType<typeof setTimeout> | null = null
 
     const pause = (ms: number) => new Promise<void>(r => {
-      pauseTimer = setTimeout(r, ms)
+      pauseTimer = setTimeout(() => { skipStepRef.current = null; r() }, ms)
+      skipStepRef.current = () => { clearTimeout(pauseTimer!); pauseTimer = null; skipStepRef.current = null; r() }
     })
 
     const playWithStatus = async (fn: () => Promise<'ok' | 'timeout' | 'error'>) => {
@@ -395,7 +409,7 @@ export function FlashcardPage() {
           await playWithStatus(() => playWord(word)); if (isCancelled()) return
           await pause(3000); if (isCancelled()) return
         }
-        if (word.sentencePl && !shouldSkip(2)) { setPlayStep(2); await playWithStatus(() => playSentencePl(word)); if (isCancelled()) return; await pause(5000); if (isCancelled()) return }
+        if (word.sentencePl && !shouldSkip(2)) { setPlayStep(2); await playWithStatus(() => playSentencePl(word)); if (isCancelled()) return; await pause(8000); if (isCancelled()) return }
         if (word.sentenceEn && !shouldSkip(3)) { setPlayStep(3); await playWithStatus(() => playSentence(word)); if (isCancelled()) return; await pause(3000); if (isCancelled()) return }
       }
 
@@ -410,6 +424,7 @@ export function FlashcardPage() {
     return () => {
       cancelled = true
       cancelSequenceRef.current = true
+      skipStepRef.current = null
       if (pauseTimer) clearTimeout(pauseTimer)
       clearAutoplay()
       stop()
@@ -568,7 +583,7 @@ export function FlashcardPage() {
         word={currentWord}
         revealStep={revealStep}
         mode={studyMode}
-        onClick={studyMode === 'autoplay' ? handleSkip : reveal}
+        onClick={studyMode === 'autoplay' ? handleSkipStep : reveal}
       />
 
       {studyMode === 'fiszki' && (

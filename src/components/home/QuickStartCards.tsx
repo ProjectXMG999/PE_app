@@ -83,10 +83,11 @@ export function QuickStartCards() {
         onClick={() => navigate(`/pakiet/${autoplayCard!.pack.id}/start`)}
       >
         <div className="quickstart__card-top">
-          <span className="quickstart__label">ODSŁUCHIWANIE</span>
+          <span className="quickstart__label">SŁUCHAJ</span>
           <span className="quickstart__icon">🎧</span>
         </div>
         <span className="quickstart__title">{autoplayCard!.pack.name}</span>
+        <span className="quickstart__sub--main">Kontynuuj kurs</span>
         <span className="quickstart__sub">
           od słowa {autoplayCard!.startIndex + 1} / {autoplayCard!.pack.wordCount}
         </span>
@@ -97,10 +98,11 @@ export function QuickStartCards() {
         onClick={() => navigate(`/pakiet/${fiszkiCard!.pack.id}/fiszki-start`)}
       >
         <div className="quickstart__card-top">
-          <span className="quickstart__label">FISZKI</span>
-          <span className="quickstart__icon">📚</span>
+          <span className="quickstart__label">AKTYWUJ</span>
+          <span className="quickstart__icon">⚡</span>
         </div>
         <span className="quickstart__title">{fiszkiCard!.pack.name}</span>
+        <span className="quickstart__sub--main">Naucz się aktywnie</span>
         <span className="quickstart__sub">{fiszkiCard!.pack.wordCount} słów do nauki</span>
       </button>
     </div>

@@ -52,7 +52,7 @@ export function AutoplayModePage() {
           <span className="autoplay-mode__pack-name">{pack?.name ?? packageId}</span>
         </div>
 
-        <h1 className="autoplay-mode__title">Wybierz tryb odsłuchiwania</h1>
+        <h1 className="autoplay-mode__title">Wybierz tryb słuchania</h1>
 
         <div className="autoplay-mode__cards">
           {MODES.map(m => (

@@ -157,13 +157,13 @@ export function PackPreviewPage() {
           className="packpreview__btn packpreview__btn--fiszki"
           onClick={() => navigate(`/pakiet/${packageId}/fiszki-start`)}
         >
-          <span>🃏</span> Fiszki
+          <span>⚡</span> Aktywuj
         </button>
         <button
           className="packpreview__btn packpreview__btn--autoplay"
           onClick={() => navigate(`/pakiet/${packageId}/start`)}
         >
-          <span>🚗</span> Auto-play
+          <span>🎧</span> Słuchaj
         </button>
       </div>
     </div>

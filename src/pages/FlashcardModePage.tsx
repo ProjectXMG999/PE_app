@@ -43,7 +43,7 @@ export function FlashcardModePage() {
           <span className="fc-mode__pack-name">{pack?.name ?? packageId}</span>
         </div>
 
-        <h1 className="fc-mode__title">Wybierz tryb fiszek</h1>
+        <h1 className="fc-mode__title">Wybierz tryb nauki</h1>
 
         <div className="fc-mode__cards">
           {MODES.map(m => (

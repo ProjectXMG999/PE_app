@@ -16,13 +16,13 @@ export function ModeToggle({ mode }: Props) {
         className={`modetoggle__btn ${mode === 'fiszki' ? 'modetoggle__btn--active' : ''}`}
         onClick={() => navigate(`/pakiet/${packageId}/fiszki`, { replace: true })}
       >
-        🃏 Fiszki
+        ⚡ Aktywuj
       </button>
       <button
         className={`modetoggle__btn ${mode === 'autoplay' ? 'modetoggle__btn--active' : ''}`}
         onClick={() => navigate(`/pakiet/${packageId}/autoplay`, { replace: true })}
       >
-        🚗 Auto-play
+        🎧 Słuchaj
       </button>
     </div>
   )
