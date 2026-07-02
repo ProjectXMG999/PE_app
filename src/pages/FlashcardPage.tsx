@@ -605,6 +605,9 @@ export function FlashcardPage() {
                 </button>
               </div>
             )}
+            <button className="flashcard-page__skip-fiszki" onClick={handleSkip}>
+              Pomiń
+            </button>
           </div>
         </>
       )}

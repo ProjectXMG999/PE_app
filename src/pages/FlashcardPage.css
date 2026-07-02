@@ -151,6 +151,24 @@
   box-shadow: 0 0 0 4px var(--accent-glow);
 }
 
+.flashcard-page__skip-fiszki {
+  width: 100%;
+  padding: 8px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  text-align: center;
+}
+
+.flashcard-page__skip-fiszki:hover {
+  color: var(--text-secondary);
+}
+
 .flashcard-page__rating {
   display: flex;
   gap: var(--spacing-sm);
