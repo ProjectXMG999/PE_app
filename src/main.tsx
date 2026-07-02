@@ -3,16 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { App } from './App'
 import './styles/global.css'
-import { registerSW } from 'virtual:pwa-register'
-
-// Reload the page when a new SW takes control — prevents stale chunk 404s
-registerSW({
-  onNeedRefresh() {},
-  onOfflineReady() {},
-  immediate: true,
-})
-
-// Force reload when SW activates with a new version
+// Force reload when a new SW takes control — prevents stale chunk 404s after deploy
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.addEventListener('controllerchange', () => {
     window.location.reload()
