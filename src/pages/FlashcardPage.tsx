@@ -83,7 +83,7 @@ export function FlashcardPage() {
   }
 
   const restartCurrentWord = useCallback(() => {
-    console.log('[restart] restartCurrentWord')
+    console.log('[action] restartCurrentWord, playStep=', playStep)
     abortSequence()
     clearAutoplay()
     skipStepRef.current?.()
@@ -99,12 +99,14 @@ export function FlashcardPage() {
 
   const handlePauseResume = useCallback(() => {
     if (isPaused) {
+      console.log('[action] handlePauseResume RESUME, resumeFrom=', resumeFromStepRef.current)
       // Resume from the step we paused on — don't reset playStep so pill stays lit
       setIsPaused(false)
       setAudioLoading(false)
       setAudioError(null)
       setRestartKey(k => k + 1)
     } else {
+      console.log('[action] handlePauseResume PAUSE, playStep=', playStep)
       abortSequence()
       clearAutoplay()
       skipStepRef.current?.()
@@ -280,20 +282,21 @@ export function FlashcardPage() {
   // Skip to next audio step within current card (card tap in autoplay)
   // Does NOT advance to next card — that's handleSkip (Pomiń button only)
   const handleSkipStep = useCallback(() => {
-    console.log('[skip] handleSkipStep, skipStepRef=', !!skipStepRef.current)
+    console.log('[action] handleSkipStep, skipStepRef=', !!skipStepRef.current, 'playStep=', playStep)
     if (skipStepRef.current) {
-      console.log('[skip] skipping pause')
+      console.log('[action] handleSkipStep — skipping pause')
       skipStepRef.current()
     } else {
       // Set no-op so rapid subsequent taps don't call stop() again before next pause registers
-      console.log('[skip] stopping audio, setting no-op guard')
+      console.log('[action] handleSkipStep — stopping audio mid-play, setting no-op guard')
       skipStepRef.current = () => {}
       stop()
     }
-  }, [stop])
+  }, [stop, playStep])
 
   // Skip current card in autoplay
   const handleSkip = useCallback(() => {
+    console.log('[action] handleSkip (Pomij), playStep=', playStep)
     abortSequence()
     clearAutoplay()
     skipStepRef.current?.()
@@ -406,6 +409,7 @@ export function FlashcardPage() {
       // resumeFrom: skip steps before the paused step, replay from it
       const resumeFrom = resumeFromStepRef.current
       resumeFromStepRef.current = null
+      console.log('[seq] resumeFrom=', resumeFrom)
 
       const shouldSkip = (step: 0 | 1 | 2 | 3) => resumeFrom !== null && step < resumeFrom
 
