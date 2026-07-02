@@ -57,6 +57,7 @@ export function FlashcardPage() {
   const savedIndexRef = useRef<number>(0)
   const prevRevealStepRef = useRef<number>(0)
   const resumeFromStepRef = useRef<0 | 1 | 2 | 3 | null>(null)
+  const abortSequenceRef = useRef<AbortController | null>(null)
   const skipStepRef = useRef<(() => void) | null>(null)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
   const [audioLoading, setAudioLoading] = useState(false)
@@ -76,8 +77,14 @@ export function FlashcardPage() {
     if (autoPlayTimerRef.current) clearTimeout(autoPlayTimerRef.current)
   }
 
+  const abortSequence = () => {
+    abortSequenceRef.current?.abort()
+    abortSequenceRef.current = null
+  }
+
   const restartCurrentWord = useCallback(() => {
     console.log('[restart] restartCurrentWord')
+    abortSequence()
     clearAutoplay()
     skipStepRef.current?.()
     skipStepRef.current = null
@@ -98,6 +105,7 @@ export function FlashcardPage() {
       setAudioError(null)
       setRestartKey(k => k + 1)
     } else {
+      abortSequence()
       clearAutoplay()
       skipStepRef.current?.()
       skipStepRef.current = null
@@ -111,6 +119,7 @@ export function FlashcardPage() {
   }, [isPaused, playStep, stop])
 
   const handleModeChange = useCallback((m: 'fast' | 'standard' | 'speaking') => {
+    abortSequence()
     stop()
     clearAutoplay()
     resumeFromStepRef.current = null
@@ -285,6 +294,7 @@ export function FlashcardPage() {
 
   // Skip current card in autoplay
   const handleSkip = useCallback(() => {
+    abortSequence()
     clearAutoplay()
     skipStepRef.current?.()
     skipStepRef.current = null
@@ -363,8 +373,9 @@ export function FlashcardPage() {
     if (studyMode !== 'autoplay' || !currentWord || studyWords.length === 0 || showCompletion || isPaused) return
 
     const word = currentWord
-    let cancelled = false
-    const isCancelled = () => cancelled
+    const controller = new AbortController()
+    abortSequenceRef.current = controller
+    const isCancelled = () => controller.signal.aborted
     let pauseTimer: ReturnType<typeof setTimeout> | null = null
 
     const pause = (ms: number) => new Promise<void>(r => {
@@ -441,8 +452,9 @@ export function FlashcardPage() {
     autoPlayTimerRef.current = setTimeout(runSequence, 800)
 
     return () => {
-      console.log('[seq] useEffect CLEANUP, setting cancelled=true')
-      cancelled = true
+      console.log('[seq] useEffect CLEANUP, aborting controller')
+      controller.abort()
+      if (abortSequenceRef.current === controller) abortSequenceRef.current = null
       skipStepRef.current = null
       if (pauseTimer) clearTimeout(pauseTimer)
       clearAutoplay()
