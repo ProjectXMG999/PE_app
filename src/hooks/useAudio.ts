@@ -17,9 +17,13 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       // the previous promise was already resolved (sequence moves linearly).
       // We only need to kill the DOM element.
       if (audioRef.current) {
-        audioRef.current.pause()
-        audioRef.current.src = ''
+        const prev = audioRef.current
         audioRef.current = null
+        console.log('[audio] play() killing prev, paused=', prev.paused, 'time=', prev.currentTime.toFixed(2))
+        prev.pause()
+        prev.currentTime = 0
+        prev.src = ''
+        prev.load()
       }
 
       const audio = new Audio()
@@ -102,9 +106,13 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       resolveCurrentRef.current = null
     }
     if (audioRef.current) {
-      audioRef.current.pause()
-      audioRef.current.src = ''
+      const el = audioRef.current
       audioRef.current = null
+      console.log('[audio] stop() killing el, paused=', el.paused, 'time=', el.currentTime.toFixed(2))
+      el.pause()
+      el.currentTime = 0
+      el.src = ''
+      el.load()
     }
   }, [])
 

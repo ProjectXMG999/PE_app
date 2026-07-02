@@ -81,6 +81,8 @@ export function FlashcardPage() {
     console.log('[restart] restartCurrentWord, setting cancelSeq=true')
     cancelSequenceRef.current = true
     clearAutoplay()
+    skipStepRef.current?.()
+    skipStepRef.current = null
     stop()
     resumeFromStepRef.current = null
     setIsPaused(false)
@@ -100,6 +102,8 @@ export function FlashcardPage() {
     } else {
       cancelSequenceRef.current = true
       clearAutoplay()
+      skipStepRef.current?.()
+      skipStepRef.current = null
       stop()
       // Remember which step was active so resume can skip back to it
       resumeFromStepRef.current = playStep
@@ -286,6 +290,8 @@ export function FlashcardPage() {
   const handleSkip = useCallback(() => {
     cancelSequenceRef.current = true
     clearAutoplay()
+    skipStepRef.current?.()
+    skipStepRef.current = null
     stop()
     setPlayStep(null)
     setIsPaused(false)
