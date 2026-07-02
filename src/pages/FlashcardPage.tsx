@@ -86,7 +86,8 @@ export function FlashcardPage() {
     console.log('[action] restartCurrentWord, playStep=', playStep)
     abortSequence()
     clearAutoplay()
-    skipStepRef.current?.()
+    // Do NOT call skipStepRef.current?.() here — that would advance the sequence
+    // to the next audio step. Cleanup (via controller.abort) will clearTimeout the pause.
     skipStepRef.current = null
     stop()
     resumeFromStepRef.current = null
@@ -109,7 +110,8 @@ export function FlashcardPage() {
       console.log('[action] handlePauseResume PAUSE, playStep=', playStep)
       abortSequence()
       clearAutoplay()
-      skipStepRef.current?.()
+      // Do NOT call skipStepRef.current?.() — that advances the sequence to next audio.
+      // Cleanup (controller.abort + clearTimeout) kills the pause timer instead.
       skipStepRef.current = null
       stop()
       // Remember which step was active so resume can skip back to it
@@ -383,8 +385,18 @@ export function FlashcardPage() {
 
     const pause = (ms: number) => new Promise<void>(r => {
       console.log('[seq] pause START ms=', ms)
-      pauseTimer = setTimeout(() => { skipStepRef.current = null; console.log('[seq] pause END natural'); r() }, ms)
-      skipStepRef.current = () => { clearTimeout(pauseTimer!); pauseTimer = null; skipStepRef.current = null; console.log('[seq] pause END skipped'); r() }
+      const end = (reason: string) => {
+        clearTimeout(pauseTimer!)
+        pauseTimer = null
+        skipStepRef.current = null
+        controller.signal.removeEventListener('abort', onAbort)
+        console.log('[seq] pause END', reason)
+        r()
+      }
+      const onAbort = () => end('aborted')
+      controller.signal.addEventListener('abort', onAbort)
+      pauseTimer = setTimeout(() => end('natural'), ms)
+      skipStepRef.current = () => end('skipped')
     })
 
     const playWithStatus = async (fn: () => Promise<'ok' | 'timeout' | 'error'>) => {
