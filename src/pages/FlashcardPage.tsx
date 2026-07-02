@@ -576,8 +576,6 @@ export function FlashcardPage() {
       <ProgressBar current={currentCardIndex} total={total} knownCount={knownCount} />
       <div className="flashcard-page">
       <FlashcardHeader title={pack.name} current={currentCardIndex} total={total} packageId={packageId} />
-      {studyMode === 'autoplay' && <ModeToggle mode={studyMode} />}
-
       <FlashCard
         key={currentCardIndex}
         word={currentWord}
