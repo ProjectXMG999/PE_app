@@ -384,7 +384,7 @@ export function FlashcardPage() {
     }
 
     const runSequence = async () => {
-      console.log('[seq] runSequence START, cancelled=', isCancelled(), 'mode=', autoplayMode, 'word=', word.wordEn)
+      console.log('[seq] runSequence START, cancelled=', isCancelled(), 'mode=', autoplayMode, 'word=', word.english)
       if (isCancelled()) return
 
       // resumeFrom: skip steps before the paused step, replay from it
