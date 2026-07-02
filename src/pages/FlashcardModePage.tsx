@@ -35,10 +35,15 @@ export function FlashcardModePage() {
     <AppShell hideBottomNav>
       <div className="fc-mode">
         <div className="fc-mode__header">
-          <button className="fc-mode__back" onClick={() => navigate(-1)} aria-label="Wróć">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+          <button
+            className="fc-mode__back"
+            onClick={() => navigate(packageId ? `/pakiet/${packageId}` : '/')}
+            aria-label="Wróć do pakietu"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <polyline points="15 18 9 12 15 6"/>
             </svg>
+            <span className="fc-mode__back-label">Pakiet</span>
           </button>
           <span className="fc-mode__pack-name">{pack?.name ?? packageId}</span>
         </div>

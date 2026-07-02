@@ -102,7 +102,7 @@ export function QuickStartCards() {
           <span className="quickstart__icon">⚡</span>
         </div>
         <span className="quickstart__title">{fiszkiCard!.pack.name}</span>
-        <span className="quickstart__sub--main">Naucz się aktywnie</span>
+        <span className="quickstart__sub--main">Ucz się głęboko</span>
         <span className="quickstart__sub">{fiszkiCard!.pack.wordCount} słów do nauki</span>
       </button>
     </div>
