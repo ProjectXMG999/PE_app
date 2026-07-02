@@ -299,11 +299,14 @@ export function FlashcardPage() {
   // Skip current card in autoplay
   const handleSkip = useCallback(() => {
     console.log('[action] handleSkip (Pomij), playStep=', playStep)
+    // Kill audio and abort sequence FIRST — before advance() triggers new useEffect
     abortSequence()
     clearAutoplay()
-    skipStepRef.current?.()
+    // Do NOT call skipStepRef.current?.() — abort signal already kills the pause timer.
+    // Calling it here would advance the sequence to the next audio step before stop() runs.
     skipStepRef.current = null
     stop()
+    resumeFromStepRef.current = null
     setPlayStep(null)
     setIsPaused(false)
     if (isLastCard) {
