@@ -96,6 +96,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
   const stop = useCallback(() => {
     // Unblock any pending await playX() in runSequence — it will hit the next
     // `if (cancelled) return` and exit cleanly
+    console.log('[audio] stop() called, resolveRef=', !!resolveCurrentRef.current, 'audioRef=', !!audioRef.current)
     if (resolveCurrentRef.current) {
       resolveCurrentRef.current()
       resolveCurrentRef.current = null

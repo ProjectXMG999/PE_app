@@ -78,6 +78,8 @@ export function FlashcardPage() {
   }
 
   const restartCurrentWord = useCallback(() => {
+    console.log('[restart] restartCurrentWord, setting cancelSeq=true')
+    cancelSequenceRef.current = true
     clearAutoplay()
     stop()
     resumeFromStepRef.current = null
@@ -135,6 +137,12 @@ export function FlashcardPage() {
       clearAutoplay()
     }
   }, [packageId, studyMode])
+
+  // Stop audio on every unmount — catches navigation via header links and back button
+  useEffect(() => {
+    return () => { stop() }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(() => {
     if (!pack || !packageId || dbLoaded || pack.id !== packageId) return
@@ -262,17 +270,21 @@ export function FlashcardPage() {
   // Skip to next audio step within current card (card tap in autoplay)
   // Does NOT advance to next card — that's handleSkip (Pomiń button only)
   const handleSkipStep = useCallback(() => {
+    console.log('[skip] handleSkipStep, skipStepRef=', !!skipStepRef.current, 'cancelSeq=', cancelSequenceRef.current)
     if (skipStepRef.current) {
-      // Currently in a pause between steps — skip the pause immediately
+      console.log('[skip] skipping pause')
       skipStepRef.current()
     } else {
-      // Currently playing audio — stop it; sequence will advance to next step
+      // Set no-op so rapid subsequent taps don't call stop() again before next pause registers
+      console.log('[skip] stopping audio, setting no-op guard')
+      skipStepRef.current = () => {}
       stop()
     }
   }, [stop])
 
   // Skip current card in autoplay
   const handleSkip = useCallback(() => {
+    cancelSequenceRef.current = true
     clearAutoplay()
     stop()
     setPlayStep(null)
@@ -372,6 +384,7 @@ export function FlashcardPage() {
     }
 
     const runSequence = async () => {
+      console.log('[seq] runSequence START, cancelled=', isCancelled(), 'mode=', autoplayMode, 'word=', word.wordEn)
       if (isCancelled()) return
 
       // resumeFrom: skip steps before the paused step, replay from it
@@ -415,6 +428,7 @@ export function FlashcardPage() {
 
       if (isCancelled()) return
       setPlayStep(null)
+      console.log('[seq] DONE, scheduling next, isLastCard=', isLastCard)
       const onDone = isLastCard ? () => handleAutoplayEndRef.current() : () => handleNextRef.current()
       autoPlayTimerRef.current = setTimeout(onDone, 600)
     }
@@ -422,6 +436,7 @@ export function FlashcardPage() {
     autoPlayTimerRef.current = setTimeout(runSequence, 800)
 
     return () => {
+      console.log('[seq] useEffect CLEANUP, setting cancelled=true')
       cancelled = true
       cancelSequenceRef.current = true
       skipStepRef.current = null
