@@ -362,7 +362,6 @@ export function FlashcardPage() {
 
     const word = currentWord
     let cancelled = false
-    cancelSequenceRef.current = false
     const isCancelled = () => cancelled || cancelSequenceRef.current
     let pauseTimer: ReturnType<typeof setTimeout> | null = null
 
