@@ -23,6 +23,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       }
 
       const audio = new Audio()
+      audio.preload = 'auto'
       audio.playbackRate = rate
       audioRef.current = audio
 
@@ -48,19 +49,22 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       // Also guards against stale closures: if stop() replaced audioRef before
       // this fires, we bail out so the old element never plays.
       let playStarted = false
-      const tryPlay = () => {
+      const tryPlay = (evt?: string) => {
+        console.log('[audio] tryPlay via', evt, 'rs=', audio.readyState, 'started=', playStarted, url.split('file=')[1])
         if (playStarted) return
         if (audioRef.current !== audio) return  // superseded by a newer play() call
         playStarted = true
         audio.oncanplaythrough = null
+        audio.onloadedmetadata = null
         audio.onloadeddata = null
-        audio.play().catch(() => done('error'))
+        audio.play().catch(e => { console.error('[audio] play() rejected:', e.name, e.message, url.split('file=')[1]); done('error') })
       }
 
       audio.onended = () => done('ok')
-      audio.onerror = () => done('error')
-      audio.oncanplaythrough = tryPlay
-      audio.onloadeddata = () => { if (audio.readyState >= 3) tryPlay() }
+      audio.onerror = () => { console.error('[audio] onerror', audio.error?.code, audio.error?.message, url.split('file=')[1]); done('error') }
+      audio.oncanplaythrough = () => tryPlay('canplaythrough')
+      audio.onloadedmetadata = () => tryPlay('loadedmetadata')
+      audio.onloadeddata = () => { console.log('[audio] loadeddata rs=', audio.readyState, url.split('file=')[1]); if (audio.readyState >= 2) tryPlay('loadeddata') }
 
       audio.src = url
       audio.load()

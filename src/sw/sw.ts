@@ -12,12 +12,6 @@ clientsClaim()
 precacheAndRoute(self.__WB_MANIFEST)
 cleanupOutdatedCaches()
 
-// On SW activate: drop audio cache so stale/bad responses don't persist across deploys
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-;(globalThis as any).addEventListener('activate', (event: any) => {
-  event.waitUntil(caches.delete('pe-audio-v1'))
-})
-
 // Pack JSON files: serve from cache, refresh in background
 registerRoute(
   ({ url }) => url.pathname.startsWith('/data/packs/'),

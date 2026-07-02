@@ -5,15 +5,9 @@ export function getAudioUrl(packId: string, filename: string): string {
 }
 
 export async function preloadAudio(url: string): Promise<void> {
-  if ('caches' in window) {
-    try {
-      const cache = await caches.open('pe-audio-v1')
-      const cached = await cache.match(url)
-      if (!cached) {
-        await cache.add(url)
-      }
-    } catch {
-      // silent — preload is best-effort
-    }
+  try {
+    await fetch(url, { mode: 'same-origin' })
+  } catch {
+    // silent — preload is best-effort
   }
 }
