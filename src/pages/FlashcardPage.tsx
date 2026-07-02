@@ -368,19 +368,22 @@ export function FlashcardPage() {
 
     const word = currentWord
     let cancelled = false
-    cancelSequenceRef.current = false
+    // Do NOT reset cancelSequenceRef here — handlers (pause/restart/skip) set it to true
+    // to block this effect from running. We only clear it once we've confirmed we should run.
     const isCancelled = () => cancelled || cancelSequenceRef.current
     let pauseTimer: ReturnType<typeof setTimeout> | null = null
 
     const pause = (ms: number) => new Promise<void>(r => {
-      pauseTimer = setTimeout(() => { skipStepRef.current = null; r() }, ms)
-      skipStepRef.current = () => { clearTimeout(pauseTimer!); pauseTimer = null; skipStepRef.current = null; r() }
+      console.log('[seq] pause START ms=', ms)
+      pauseTimer = setTimeout(() => { skipStepRef.current = null; console.log('[seq] pause END natural'); r() }, ms)
+      skipStepRef.current = () => { clearTimeout(pauseTimer!); pauseTimer = null; skipStepRef.current = null; console.log('[seq] pause END skipped'); r() }
     })
 
     const playWithStatus = async (fn: () => Promise<'ok' | 'timeout' | 'error'>) => {
       setAudioLoading(true)
       setAudioError(null)
       const result = await fn()
+      console.log('[seq] playWithStatus done, result=', result, 'cancelled=', isCancelled())
       setAudioLoading(false)
       if (result !== 'ok') {
         setAudioError(result)
@@ -391,7 +394,12 @@ export function FlashcardPage() {
 
     const runSequence = async () => {
       console.log('[seq] runSequence START, cancelled=', isCancelled(), 'mode=', autoplayMode, 'word=', word.english)
-      if (isCancelled()) return
+      if (isCancelled()) {
+        console.log('[seq] runSequence ABORTED immediately')
+        return
+      }
+      // Safe to reset now — we've confirmed no pending cancellation
+      cancelSequenceRef.current = false
 
       // resumeFrom: skip steps before the paused step, replay from it
       const resumeFrom = resumeFromStepRef.current
