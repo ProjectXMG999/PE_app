@@ -57,7 +57,6 @@ export function FlashcardPage() {
   const savedIndexRef = useRef<number>(0)
   const prevRevealStepRef = useRef<number>(0)
   const resumeFromStepRef = useRef<0 | 1 | 2 | 3 | null>(null)
-  const cancelSequenceRef = useRef(false)
   const skipStepRef = useRef<(() => void) | null>(null)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
   const [audioLoading, setAudioLoading] = useState(false)
@@ -78,8 +77,7 @@ export function FlashcardPage() {
   }
 
   const restartCurrentWord = useCallback(() => {
-    console.log('[restart] restartCurrentWord, setting cancelSeq=true then false')
-    cancelSequenceRef.current = true
+    console.log('[restart] restartCurrentWord')
     clearAutoplay()
     skipStepRef.current?.()
     skipStepRef.current = null
@@ -89,7 +87,6 @@ export function FlashcardPage() {
     setPlayStep(null)
     setAudioLoading(false)
     setAudioError(null)
-    cancelSequenceRef.current = false  // allow new sequence to run
     setRestartKey(k => k + 1)
   }, [stop])
 
@@ -99,10 +96,8 @@ export function FlashcardPage() {
       setIsPaused(false)
       setAudioLoading(false)
       setAudioError(null)
-      cancelSequenceRef.current = false  // allow new sequence to run
       setRestartKey(k => k + 1)
     } else {
-      cancelSequenceRef.current = true
       clearAutoplay()
       skipStepRef.current?.()
       skipStepRef.current = null
@@ -122,7 +117,6 @@ export function FlashcardPage() {
     setAutoplayMode(m)
     setPlayStep(null)
     setIsPaused(false)
-    cancelSequenceRef.current = false
     setRestartKey(k => k + 1)
   }, [stop, setAutoplayMode])
 
@@ -277,7 +271,7 @@ export function FlashcardPage() {
   // Skip to next audio step within current card (card tap in autoplay)
   // Does NOT advance to next card — that's handleSkip (Pomiń button only)
   const handleSkipStep = useCallback(() => {
-    console.log('[skip] handleSkipStep, skipStepRef=', !!skipStepRef.current, 'cancelSeq=', cancelSequenceRef.current)
+    console.log('[skip] handleSkipStep, skipStepRef=', !!skipStepRef.current)
     if (skipStepRef.current) {
       console.log('[skip] skipping pause')
       skipStepRef.current()
@@ -291,14 +285,12 @@ export function FlashcardPage() {
 
   // Skip current card in autoplay
   const handleSkip = useCallback(() => {
-    cancelSequenceRef.current = true
     clearAutoplay()
     skipStepRef.current?.()
     skipStepRef.current = null
     stop()
     setPlayStep(null)
     setIsPaused(false)
-    cancelSequenceRef.current = false  // allow next card's sequence to run
     if (isLastCard) {
       saveProgress(total, true).then(() => setShowCompletion(true))
     } else {
@@ -372,9 +364,7 @@ export function FlashcardPage() {
 
     const word = currentWord
     let cancelled = false
-    // Do NOT reset cancelSequenceRef here — handlers (pause/restart/skip) set it to true
-    // to block this effect from running. We only clear it once we've confirmed we should run.
-    const isCancelled = () => cancelled || cancelSequenceRef.current
+    const isCancelled = () => cancelled
     let pauseTimer: ReturnType<typeof setTimeout> | null = null
 
     const pause = (ms: number) => new Promise<void>(r => {
@@ -384,11 +374,13 @@ export function FlashcardPage() {
     })
 
     const playWithStatus = async (fn: () => Promise<'ok' | 'timeout' | 'error'>) => {
+      if (isCancelled()) return
       setAudioLoading(true)
       setAudioError(null)
       const result = await fn()
       console.log('[seq] playWithStatus done, result=', result, 'cancelled=', isCancelled())
       setAudioLoading(false)
+      if (isCancelled()) return
       if (result !== 'ok') {
         setAudioError(result)
         await pause(1500)
@@ -398,12 +390,7 @@ export function FlashcardPage() {
 
     const runSequence = async () => {
       console.log('[seq] runSequence START, cancelled=', isCancelled(), 'mode=', autoplayMode, 'word=', word.english)
-      if (isCancelled()) {
-        console.log('[seq] runSequence ABORTED immediately')
-        return
-      }
-      // Safe to reset now — we've confirmed no pending cancellation
-      cancelSequenceRef.current = false
+      if (isCancelled()) return
 
       // resumeFrom: skip steps before the paused step, replay from it
       const resumeFrom = resumeFromStepRef.current
@@ -456,7 +443,6 @@ export function FlashcardPage() {
     return () => {
       console.log('[seq] useEffect CLEANUP, setting cancelled=true')
       cancelled = true
-      cancelSequenceRef.current = true
       skipStepRef.current = null
       if (pauseTimer) clearTimeout(pauseTimer)
       clearAutoplay()
