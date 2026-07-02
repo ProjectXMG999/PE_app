@@ -78,7 +78,7 @@ export function FlashcardPage() {
   }
 
   const restartCurrentWord = useCallback(() => {
-    console.log('[restart] restartCurrentWord, setting cancelSeq=true')
+    console.log('[restart] restartCurrentWord, setting cancelSeq=true then false')
     cancelSequenceRef.current = true
     clearAutoplay()
     skipStepRef.current?.()
@@ -89,6 +89,7 @@ export function FlashcardPage() {
     setPlayStep(null)
     setAudioLoading(false)
     setAudioError(null)
+    cancelSequenceRef.current = false  // allow new sequence to run
     setRestartKey(k => k + 1)
   }, [stop])
 
@@ -98,6 +99,7 @@ export function FlashcardPage() {
       setIsPaused(false)
       setAudioLoading(false)
       setAudioError(null)
+      cancelSequenceRef.current = false  // allow new sequence to run
       setRestartKey(k => k + 1)
     } else {
       cancelSequenceRef.current = true
@@ -120,6 +122,7 @@ export function FlashcardPage() {
     setAutoplayMode(m)
     setPlayStep(null)
     setIsPaused(false)
+    cancelSequenceRef.current = false
     setRestartKey(k => k + 1)
   }, [stop, setAutoplayMode])
 
@@ -295,6 +298,7 @@ export function FlashcardPage() {
     stop()
     setPlayStep(null)
     setIsPaused(false)
+    cancelSequenceRef.current = false  // allow next card's sequence to run
     if (isLastCard) {
       saveProgress(total, true).then(() => setShowCompletion(true))
     } else {
