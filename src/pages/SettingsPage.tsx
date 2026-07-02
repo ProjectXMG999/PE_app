@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell'
 import { useAppStore } from '../store/useAppStore'
 import './SettingsPage.css'
@@ -15,7 +14,6 @@ const RATES: { value: number; label: string }[] = [
 const VALID = new Set(RATES.map(r => r.value))
 
 export function SettingsPage() {
-  const navigate = useNavigate()
   const { enRate, plRate, setEnRate, setPlRate } = useAppStore()
 
   // Migrate legacy absolute values (e.g. 0.60) that don't match current multiplier scale
@@ -25,14 +23,9 @@ export function SettingsPage() {
   if (safePlRate !== plRate) setPlRate(safePlRate)
 
   return (
-    <AppShell hideBottomNav>
+    <AppShell>
       <div className="settings">
         <div className="settings__header">
-          <button className="settings__back" onClick={() => navigate(-1)} aria-label="Wróć">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <polyline points="15 18 9 12 15 6"/>
-            </svg>
-          </button>
           <span className="settings__title">Ustawienia</span>
         </div>
 
