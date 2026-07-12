@@ -24,7 +24,9 @@ export function unlockAudioGlobally() {
     // Resume if suspended (iOS Safari pattern)
     if (ctx.state === 'suspended') {
       console.log('[audio] AudioContext suspended, calling resume()')
-      ctx.resume()
+      ctx.resume().then(() => {
+        console.log('[audio] ctx.resume() resolved, state=', ctx!.state)
+      })
     }
 
     console.log('[audio] AudioContext state:', ctx.state)
@@ -37,6 +39,37 @@ export function unlockAudioGlobally() {
   } catch (e) {
     console.error('[audio] unlockAudioGlobally error:', e)
   }
+}
+
+/**
+ * Get the global AudioContext if it exists
+ */
+export function getAudioContext(): AudioContext | null {
+  return ctx
+}
+
+/**
+ * Wait for AudioContext to be running (after resume() completes)
+ * Returns immediately if ctx is already running or null
+ */
+export function awaitAudioUnlock(): Promise<void> {
+  if (ctx && ctx.state === 'running') return Promise.resolve()
+  if (!ctx) return Promise.resolve()
+
+  return new Promise(resolve => {
+    const check = () => {
+      if (ctx!.state === 'running') {
+        resolve()
+        return
+      }
+      const handler = () => {
+        if (ctx!.state === 'running') resolve()
+      }
+      ctx!.addEventListener('statechange', handler, { once: true })
+    }
+    check()
+    setTimeout(resolve, 500) // timeout safety
+  })
 }
 
 /**
