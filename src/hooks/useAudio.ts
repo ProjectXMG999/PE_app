@@ -143,11 +143,19 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
   // iOS Safari blocks audio.play() unless it's triggered by a user gesture.
   // Once audio.play() succeeds within a gesture, playback is "unlocked" for the session.
   const unlockAudio = useCallback(() => {
+    console.log('[audio] unlockAudio() START')
     // 43-byte minimal WAV header with single silent sample — plays and ends instantly
     const silence = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA')
     silence.volume = 0
-    silence.play().catch(() => {}) // ignore errors — this is best-effort
-    console.log('[audio] unlockAudio() called — iOS audio policy unlocked for this session')
+    console.log('[audio] silence element created, about to call play()')
+    silence.play()
+      .then(() => {
+        console.log('[audio] unlockAudio play() SUCCEEDED — audio unlocked')
+        silence.pause()
+      })
+      .catch(e => {
+        console.error('[audio] unlockAudio play() FAILED:', e.name, e.message)
+      })
   }, [])
 
   return { playWord, playSentence, playWordPl, playSentencePl, stop, preloadNext, unlockAudio }
