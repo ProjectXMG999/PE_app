@@ -73,11 +73,21 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
               const source = ctx.createBufferSource()
               source.buffer = decoded
               source.playbackRate.value = rate
-              source.connect(ctx.destination)
+
+              // Create gain node (required on some iOS Safari versions)
+              const gain = ctx.createGain()
+              gain.gain.value = 1.0
+              source.connect(gain)
+              gain.connect(ctx.destination)
+
               sourceRef.current = source
-              console.log('[audio] source.start() rate=', rate)
-              source.onended = () => done('ok')
+              source.onended = () => {
+                console.log('[audio] source.onended fired')
+                done('ok')
+              }
+              console.log('[audio] source.start() rate=', rate, 'ctx.currentTime=', ctx.currentTime.toFixed(2))
               source.start()
+              console.log('[audio] source.start() completed, ctx.currentTime=', ctx.currentTime.toFixed(2))
             })
             .catch(e => {
               if (resolved) return
