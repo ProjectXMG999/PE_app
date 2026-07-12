@@ -9,14 +9,18 @@ export function InstallBanner() {
   const [installing, setInstalling] = useState(false)
 
   useEffect(() => {
-    if (isIOS() && !isInStandaloneMode() && !iosBannerDismissed) {
-      setShowIOS(true)
-    }
+    const shouldShowIOS = isIOS() && !isInStandaloneMode() && !iosBannerDismissed
+    console.log('[install] iOS banner logic:', { isIOS: isIOS(), isStandalone: isInStandaloneMode(), iosBannerDismissed, shouldShowIOS })
+    setShowIOS(shouldShowIOS)
   }, [iosBannerDismissed])
 
-  if (isInstalled || isInStandaloneMode()) return null
+  if (isInstalled || isInStandaloneMode()) {
+    console.log('[install] banner hidden:', { isInstalled, isStandalone: isInStandaloneMode() })
+    return null
+  }
 
   if (installPromptEvent) {
+    console.log('[install] showing Android banner')
     return (
       <div className="install-banner install-banner--android animate-slide-up">
         <div className="install-banner__icon">
@@ -47,6 +51,7 @@ export function InstallBanner() {
   }
 
   if (showIOS) {
+    console.log('[install] showing iOS banner')
     return (
       <div className="install-banner install-banner--ios animate-slide-up">
         <div className="install-banner__ios-header">
