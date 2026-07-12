@@ -31,61 +31,13 @@ export function unlockAudioGlobally() {
 
     console.log('[audio] AudioContext state:', ctx.state)
 
-    // Belt-and-suspenders: create a dummy AudioBufferSourceNode and start it
-    // This "primes" the AudioContext to allow subsequent source.start() calls
-    // without gesture context (iOS Safari workaround)
-    if (ctx && ctx.state === 'running') {
-      try {
-        const dummy = ctx.createBufferSource()
-        // Create a 1-sample buffer just to have something to start
-        const buf = ctx.createBuffer(1, 1, ctx.sampleRate)
-        dummy.buffer = buf
-        dummy.connect(ctx.destination)
-        dummy.start()
-        console.log('[audio] primed ctx with dummy source')
-      } catch (e) {
-        console.log('[audio] dummy source prime failed (ok):', e)
-      }
-    }
-
-    // Also play silent HTMLAudio
+    // Play silent audio to further unlock iOS audio playback
     const silence = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA')
     silence.volume = 0
-    silence.play().catch(() => {}) // ignore any errors
+    silence.play().catch(() => {}) // ignore errors
   } catch (e) {
     console.error('[audio] unlockAudioGlobally error:', e)
   }
-}
-
-/**
- * Get the global AudioContext if it exists
- */
-export function getAudioContext(): AudioContext | null {
-  return ctx
-}
-
-/**
- * Wait for AudioContext to be running (after resume() completes)
- * Returns immediately if ctx is already running or null
- */
-export function awaitAudioUnlock(): Promise<void> {
-  if (ctx && ctx.state === 'running') return Promise.resolve()
-  if (!ctx) return Promise.resolve()
-
-  return new Promise(resolve => {
-    const check = () => {
-      if (ctx!.state === 'running') {
-        resolve()
-        return
-      }
-      const handler = () => {
-        if (ctx!.state === 'running') resolve()
-      }
-      ctx!.addEventListener('statechange', handler, { once: true })
-    }
-    check()
-    setTimeout(resolve, 500) // timeout safety
-  })
 }
 
 /**
