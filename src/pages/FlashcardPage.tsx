@@ -60,6 +60,7 @@ export function FlashcardPage() {
   const resumeFromStepRef = useRef<0 | 1 | 2 | 3 | null>(null)
   const abortSequenceRef = useRef<AbortController | null>(null)
   const skipStepRef = useRef<(() => void) | null>(null)
+  const audioBlockedRef = useRef(false)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
   const [audioLoading, setAudioLoading] = useState(false)
   const [audioError, setAudioError] = useState<'timeout' | 'error' | null>(null)
@@ -139,10 +140,14 @@ export function FlashcardPage() {
     if (packageId && studyMode) setPackage(packageId, studyMode)
     // Register unlockAudio for use by AutoplayModePage button handler (synchronous user gesture context)
     setAudioUnlockFn(() => unlockAudio())
-    // Show audio unlock modal on first autoplay load (user must tap to unlock on iOS Chrome)
-    if (studyMode === 'autoplay') {
+    // Register callback to show modal on NotAllowedError
+    ;(window as any).__showAudioUnlockModal = () => {
+      console.log('[action] showAudioUnlockModal callback triggered')
+      audioBlockedRef.current = true
       setShowAudioUnlockModal(true)
     }
+    // Don't show modal yet — wait to see if audio plays. Show only on NotAllowedError.
+    audioBlockedRef.current = false
     setShowCompletion(false)
     setAllAlreadyKnown(false)
     setPlayStep(null)

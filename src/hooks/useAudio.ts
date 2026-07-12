@@ -74,6 +74,11 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
             if (e.name === 'NotAllowedError' && playRetries < 3) {
               playRetries++
               console.log('[audio] NotAllowedError retry', playRetries, '— scheduling retry in 200ms')
+              // On first NotAllowedError, show unlock modal if callback exists
+              if (playRetries === 1 && typeof (window as any).__showAudioUnlockModal === 'function') {
+                console.log('[audio] NotAllowedError — triggering audio unlock modal')
+                ;(window as any).__showAudioUnlockModal()
+              }
               playStarted = false
               setTimeout(() => {
                 if (audioRef.current === audio) tryPlay(`retry${playRetries}`)
