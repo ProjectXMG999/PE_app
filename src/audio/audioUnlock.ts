@@ -31,8 +31,24 @@ export function unlockAudioGlobally() {
 
     console.log('[audio] AudioContext state:', ctx.state)
 
-    // Belt-and-suspenders: also play silent HTMLAudio
-    // On some browsers this might be necessary alongside AudioContext
+    // Belt-and-suspenders: create a dummy AudioBufferSourceNode and start it
+    // This "primes" the AudioContext to allow subsequent source.start() calls
+    // without gesture context (iOS Safari workaround)
+    if (ctx && ctx.state === 'running') {
+      try {
+        const dummy = ctx.createBufferSource()
+        // Create a 1-sample buffer just to have something to start
+        const buf = ctx.createBuffer(1, 1, ctx.sampleRate)
+        dummy.buffer = buf
+        dummy.connect(ctx.destination)
+        dummy.start()
+        console.log('[audio] primed ctx with dummy source')
+      } catch (e) {
+        console.log('[audio] dummy source prime failed (ok):', e)
+      }
+    }
+
+    // Also play silent HTMLAudio
     const silence = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA')
     silence.volume = 0
     silence.play().catch(() => {}) // ignore any errors

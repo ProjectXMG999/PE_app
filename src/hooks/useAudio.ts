@@ -40,13 +40,14 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       }
 
       let resolved = false
+      let useWebAudioActual = useWebAudio
       const done = (result: 'ok' | 'timeout' | 'error' = 'ok') => {
         if (resolved) return
         resolved = true
         clearTimeout(timeoutId)
         resolveCurrentRef.current = null
-        if (audioRef.current && !useWebAudio) audioRef.current = null
-        if (sourceRef.current && useWebAudio) sourceRef.current = null
+        if (audioRef.current && useWebAudioActual) audioRef.current = null
+        if (sourceRef.current && useWebAudioActual) sourceRef.current = null
         resolve(result)
       }
 
@@ -81,13 +82,36 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
               gain.connect(ctx.destination)
 
               sourceRef.current = source
+              let ended = false
               source.onended = () => {
-                console.log('[audio] source.onended fired')
+                if (ended) return
+                ended = true
+                console.log('[audio] source.onended fired, duration=', decoded.duration.toFixed(2))
                 done('ok')
               }
               console.log('[audio] source.start() rate=', rate, 'ctx.currentTime=', ctx.currentTime.toFixed(2))
-              source.start()
-              console.log('[audio] source.start() completed, ctx.currentTime=', ctx.currentTime.toFixed(2))
+              try {
+                source.start()
+                console.log('[audio] source.start() succeeded, ctx.currentTime=', ctx.currentTime.toFixed(2))
+                // Fallback: if onended doesn't fire in reasonable time, complete anyway
+                const fallbackTimer = setTimeout(() => {
+                  if (!ended && !resolved) {
+                    console.log('[audio] source onended timeout — assuming done')
+                    ended = true
+                    done('ok')
+                  }
+                }, decoded.duration * 1000 + 1000)
+                source.onended = () => {
+                  clearTimeout(fallbackTimer)
+                  if (ended) return
+                  ended = true
+                  console.log('[audio] source.onended fired')
+                  done('ok')
+                }
+              } catch (e) {
+                console.error('[audio] source.start() threw:', e)
+                done('error')
+              }
             })
             .catch(e => {
               if (resolved) return
