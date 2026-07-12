@@ -36,11 +36,15 @@ const MODES: { id: AutoplayMode; icon: string; name: string; sequence: string; d
 export function AutoplayModePage() {
   const { packageId } = useParams<{ packageId: string }>()
   const navigate = useNavigate()
-  const { setAutoplayMode } = useAppStore()
+  const { setAutoplayMode, audioUnlockFn } = useAppStore()
 
   const pack = allPacks.find(p => p.id === packageId)
 
   const handleSelect = (mode: AutoplayMode) => {
+    // Unlock iOS audio NOW while we're in a synchronous user gesture context
+    // This ensures audio.play() will succeed when the sequence starts
+    audioUnlockFn?.()
+    console.log('[action] autoplay mode selected, audio unlock called')
     setAutoplayMode(mode)
     navigate(`/pakiet/${packageId}/autoplay`)
   }
