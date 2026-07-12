@@ -2,7 +2,7 @@ import { useCallback, useRef } from 'react'
 import { getAudioUrl, preloadAudio } from '../services/audioService'
 import { Word } from '../types/vocabulary'
 
-const EN_BASE = 0.60
+const EN_BASE = 0.70
 const PL_BASE = 1.0
 
 // enRate/plRate are multipliers: 1.0 = default speed, 0.5 = half, 1.5 = faster
@@ -53,7 +53,6 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       // Also guards against stale closures: if stop() replaced audioRef before
       // this fires, we bail out so the old element never plays.
       let playStarted = false
-      let playRetries = 0
       const tryPlay = (evt?: string) => {
         console.log('[audio] tryPlay via', evt, 'rs=', audio.readyState, 'started=', playStarted, url.split('file=')[1])
         if (playStarted) return
@@ -69,24 +68,8 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
           })
           .catch(e => {
             console.error('[audio] play() rejected from', evt, '— error:', e.name, e.message, 'url:', url.split('file=')[1])
-            // On iOS/Chrome, NotAllowedError means audio is still locked. Retry after a short delay.
-            // User interaction may have happened in the meantime.
-            if (e.name === 'NotAllowedError' && playRetries < 3) {
-              playRetries++
-              console.log('[audio] NotAllowedError retry', playRetries, '— scheduling retry in 200ms')
-              // On first NotAllowedError, show unlock modal if callback exists
-              if (playRetries === 1 && typeof (window as any).__showAudioUnlockModal === 'function') {
-                console.log('[audio] NotAllowedError — triggering audio unlock modal')
-                ;(window as any).__showAudioUnlockModal()
-              }
-              playStarted = false
-              setTimeout(() => {
-                if (audioRef.current === audio) tryPlay(`retry${playRetries}`)
-              }, 200)
-            } else {
-              console.error('[audio] play() stack:', new Error().stack)
-              done('error')
-            }
+            console.error('[audio] play() stack:', new Error().stack)
+            done('error')
           })
       }
 

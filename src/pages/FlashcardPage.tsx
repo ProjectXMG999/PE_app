@@ -8,7 +8,6 @@ import { AudioButton } from '../components/flashcard/AudioButton'
 import { ProgressBar } from '../components/flashcard/ProgressBar'
 import { MasteryScreen } from '../components/flashcard/MasteryScreen'
 import { AutoplayDoneScreen } from '../components/flashcard/AutoplayDoneScreen'
-import { AudioUnlockModal } from '../components/debug/AudioUnlockModal'
 import { usePackageData } from '../hooks/usePackageData'
 import { useFlashcard } from '../hooks/useFlashcard'
 import { useAudio } from '../hooks/useAudio'
@@ -60,7 +59,6 @@ export function FlashcardPage() {
   const resumeFromStepRef = useRef<0 | 1 | 2 | 3 | null>(null)
   const abortSequenceRef = useRef<AbortController | null>(null)
   const skipStepRef = useRef<(() => void) | null>(null)
-  const audioBlockedRef = useRef(false)
   const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
   const [audioLoading, setAudioLoading] = useState(false)
   const [audioError, setAudioError] = useState<'timeout' | 'error' | null>(null)
@@ -71,7 +69,6 @@ export function FlashcardPage() {
   const [knownCount, setKnownCount] = useState(0)
   const [autoContinue, setAutoContinue] = useState(true)
   const [countdown, setCountdown] = useState(6)
-  const [showAudioUnlockModal, setShowAudioUnlockModal] = useState(false)
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
 
   const nextPack = packageId ? getNextPack(packageId) : null
@@ -140,14 +137,6 @@ export function FlashcardPage() {
     if (packageId && studyMode) setPackage(packageId, studyMode)
     // Register unlockAudio for use by AutoplayModePage button handler (synchronous user gesture context)
     setAudioUnlockFn(() => unlockAudio())
-    // Register callback to show modal on NotAllowedError
-    ;(window as any).__showAudioUnlockModal = () => {
-      console.log('[action] showAudioUnlockModal callback triggered')
-      audioBlockedRef.current = true
-      setShowAudioUnlockModal(true)
-    }
-    // Don't show modal yet — wait to see if audio plays. Show only on NotAllowedError.
-    audioBlockedRef.current = false
     setShowCompletion(false)
     setAllAlreadyKnown(false)
     setPlayStep(null)
@@ -746,13 +735,6 @@ export function FlashcardPage() {
           </div>
         </div>
       )}
-      <AudioUnlockModal
-        visible={showAudioUnlockModal}
-        onUnlock={() => {
-          unlockAudio()
-          setShowAudioUnlockModal(false)
-        }}
-      />
       </div>
     </AppShell>
   )
