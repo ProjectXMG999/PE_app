@@ -4,6 +4,7 @@ import { useRegisterSW } from 'virtual:pwa-register/react'
 import { useAppStore } from './store/useAppStore'
 import { initInstallService } from './services/installService'
 import { DebugOverlay } from './components/debug/DebugOverlay'
+import { VersionBadge } from './components/debug/VersionBadge'
 import { HomePage } from './pages/HomePage'
 import './App.css'
 
@@ -84,6 +85,7 @@ export function App() {
         </Routes>
       </Suspense>
       <DebugOverlay />
+      <VersionBadge />
     </>
   )
 }

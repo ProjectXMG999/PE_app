@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import path from 'path'
 import fs from 'fs'
+import { execSync } from 'child_process'
 
 // Dev-only plugin: serve audio files from audio-output/ instead of Netlify Blobs
 function localAudioPlugin() {
@@ -33,7 +34,22 @@ function localAudioPlugin() {
   }
 }
 
+// Capture build metadata for version badge
+const getGitHash = () => {
+  try {
+    return execSync('git rev-parse --short HEAD', { encoding: 'utf-8' }).trim().slice(0, 8)
+  } catch {
+    return 'unknown'
+  }
+}
+
 export default defineConfig({
+  define: {
+    'import.meta.env.VITE_APP_VERSION': JSON.stringify(
+      `${JSON.parse(fs.readFileSync('package.json', 'utf-8')).version}+${getGitHash()}`
+    ),
+    'import.meta.env.VITE_BUILD_TIME': JSON.stringify(new Date().toISOString()),
+  },
   plugins: [
     localAudioPlugin(),
     react(),
