@@ -61,7 +61,16 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
         audio.oncanplaythrough = null
         audio.onloadedmetadata = null
         audio.onloadeddata = null
-        audio.play().catch(e => { console.error('[audio] play() rejected:', e.name, e.message, url.split('file=')[1]); done('error') })
+        console.log('[audio] calling play() from', evt)
+        audio.play()
+          .then(() => {
+            console.log('[audio] play() SUCCEEDED from', evt)
+          })
+          .catch(e => {
+            console.error('[audio] play() rejected from', evt, '— error:', e.name, e.message, 'url:', url.split('file=')[1])
+            console.error('[audio] play() stack:', new Error().stack)
+            done('error')
+          })
       }
 
       audio.onended = () => done('ok')
