@@ -30,23 +30,13 @@ export function TopBar() {
         </div>
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <span
-          style={{
-            fontSize: '10px',
-            color: 'var(--text-muted)',
-            fontFamily: 'monospace',
-            opacity: 0.7,
-          }}
-          title={`Version ${version}`}
-        >
-          {version}
-        </span>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
         <button
           className="topbar__theme-btn"
           onClick={toggleTheme}
           aria-label={theme === 'dark' ? 'Włącz jasny motyw' : 'Włącz ciemny motyw'}
           title={theme === 'dark' ? 'Jasny motyw' : 'Ciemny motyw'}
+          style={{ marginBottom: '0px' }}
         >
           {theme === 'dark' ? (
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -66,6 +56,18 @@ export function TopBar() {
             </svg>
           )}
         </button>
+        <span
+          style={{
+            fontSize: '7px',
+            color: 'var(--text-muted)',
+            fontFamily: 'monospace',
+            opacity: 0.6,
+            lineHeight: 1,
+          }}
+          title={`Version ${version}`}
+        >
+          {version}
+        </span>
       </div>
     </header>
   )
