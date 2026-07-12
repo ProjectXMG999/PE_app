@@ -8,6 +8,7 @@ import { AudioButton } from '../components/flashcard/AudioButton'
 import { ProgressBar } from '../components/flashcard/ProgressBar'
 import { MasteryScreen } from '../components/flashcard/MasteryScreen'
 import { AutoplayDoneScreen } from '../components/flashcard/AutoplayDoneScreen'
+import { AudioUnlockModal } from '../components/debug/AudioUnlockModal'
 import { usePackageData } from '../hooks/usePackageData'
 import { useFlashcard } from '../hooks/useFlashcard'
 import { useAudio } from '../hooks/useAudio'
@@ -69,6 +70,7 @@ export function FlashcardPage() {
   const [knownCount, setKnownCount] = useState(0)
   const [autoContinue, setAutoContinue] = useState(true)
   const [countdown, setCountdown] = useState(6)
+  const [showAudioUnlockModal, setShowAudioUnlockModal] = useState(false)
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
 
   const nextPack = packageId ? getNextPack(packageId) : null
@@ -137,6 +139,10 @@ export function FlashcardPage() {
     if (packageId && studyMode) setPackage(packageId, studyMode)
     // Register unlockAudio for use by AutoplayModePage button handler (synchronous user gesture context)
     setAudioUnlockFn(() => unlockAudio())
+    // Show audio unlock modal on first autoplay load (user must tap to unlock on iOS Chrome)
+    if (studyMode === 'autoplay') {
+      setShowAudioUnlockModal(true)
+    }
     setShowCompletion(false)
     setAllAlreadyKnown(false)
     setPlayStep(null)
@@ -735,6 +741,13 @@ export function FlashcardPage() {
           </div>
         </div>
       )}
+      <AudioUnlockModal
+        visible={showAudioUnlockModal}
+        onUnlock={() => {
+          unlockAudio()
+          setShowAudioUnlockModal(false)
+        }}
+      />
       </div>
     </AppShell>
   )
