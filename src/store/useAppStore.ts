@@ -52,9 +52,6 @@ interface AppStore {
   setSwUpdateAvailable: (v: boolean) => void
   swRegistration: ServiceWorkerRegistration | null
   setSwRegistration: (r: ServiceWorkerRegistration) => void
-
-  audioUnlockFn: (() => void) | null
-  setAudioUnlockFn: (fn: () => void) => void
 }
 
 export const useAppStore = create<AppStore>()(
@@ -102,9 +99,6 @@ export const useAppStore = create<AppStore>()(
       setSwUpdateAvailable: (v) => set({ swUpdateAvailable: v }),
       swRegistration: null,
       setSwRegistration: (r) => set({ swRegistration: r }),
-
-      audioUnlockFn: null,
-      setAudioUnlockFn: (fn) => set({ audioUnlockFn: fn }),
     }),
     {
       name: 'pe-store',

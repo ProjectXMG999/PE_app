@@ -30,7 +30,7 @@ export function FlashcardPage() {
   const navigate = useNavigate()
   const studyMode = (mode === 'autoplay' ? 'autoplay' : 'fiszki') as StudyMode
 
-  const { setPackage, autoplayMode, setAutoplayMode, enRate, plRate, setAudioUnlockFn } = useAppStore()
+  const { setPackage, autoplayMode, setAutoplayMode, enRate, plRate } = useAppStore()
   const { pack, loading, error } = usePackageData(packageId ?? null)
   const allWords = pack?.words ?? []
   // In fiszki mode: only show words not yet marked 'known'. Autoplay always shows all.
@@ -48,7 +48,7 @@ export function FlashcardPage() {
     total,
   } = useFlashcard(studyWords)
 
-  const { playWord, playSentence, playWordPl, playSentencePl, stop, preloadNext, unlockAudio } = useAudio(packageId ?? null, enRate, plRate)
+  const { playWord, playSentence, playWordPl, playSentencePl, stop, preloadNext } = useAudio(packageId ?? null, enRate, plRate)
   const autoPlayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const sessionStartRef = useRef<string>(new Date().toISOString().split('T')[0])
   const startedAtRef = useRef<string | null>(null)
@@ -135,8 +135,6 @@ export function FlashcardPage() {
 
   useEffect(() => {
     if (packageId && studyMode) setPackage(packageId, studyMode)
-    // Register unlockAudio for use by AutoplayModePage button handler (synchronous user gesture context)
-    setAudioUnlockFn(() => unlockAudio())
     setShowCompletion(false)
     setAllAlreadyKnown(false)
     setPlayStep(null)
@@ -152,7 +150,7 @@ export function FlashcardPage() {
       stop()
       clearAutoplay()
     }
-  }, [packageId, studyMode, unlockAudio, setAudioUnlockFn])
+  }, [packageId, studyMode])
 
   // Stop audio on every unmount — catches navigation via header links and back button
   useEffect(() => {
