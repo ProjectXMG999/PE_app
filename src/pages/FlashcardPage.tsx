@@ -48,7 +48,7 @@ export function FlashcardPage() {
     total,
   } = useFlashcard(studyWords)
 
-  const { playWord, playSentence, playWordPl, playSentencePl, stop, preloadNext } = useAudio(packageId ?? null, enRate, plRate)
+  const { playWord, playSentence, playWordPl, playSentencePl, stop, preloadNext, unlockAudio } = useAudio(packageId ?? null, enRate, plRate)
   const autoPlayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const sessionStartRef = useRef<string>(new Date().toISOString().split('T')[0])
   const startedAtRef = useRef<string | null>(null)
@@ -135,6 +135,8 @@ export function FlashcardPage() {
 
   useEffect(() => {
     if (packageId && studyMode) setPackage(packageId, studyMode)
+    // Unlock iOS audio on autoplay mode entry — iOS blocks autoplay otherwise
+    if (studyMode === 'autoplay') unlockAudio()
     setShowCompletion(false)
     setAllAlreadyKnown(false)
     setPlayStep(null)
@@ -150,7 +152,7 @@ export function FlashcardPage() {
       stop()
       clearAutoplay()
     }
-  }, [packageId, studyMode])
+  }, [packageId, studyMode, unlockAudio])
 
   // Stop audio on every unmount — catches navigation via header links and back button
   useEffect(() => {

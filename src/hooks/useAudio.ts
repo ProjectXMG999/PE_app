@@ -28,7 +28,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
 
       const audio = new Audio()
       audio.preload = 'auto'
-      audio.playbackRate = rate
+      // playbackRate is set in onloadedmetadata, not here — iOS Safari may reset to 1.0 if set before src
       audioRef.current = audio
 
       // done() is idempotent — safe to call from multiple paths
@@ -67,7 +67,11 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       audio.onended = () => done('ok')
       audio.onerror = () => { console.error('[audio] onerror', audio.error?.code, audio.error?.message, url.split('file=')[1]); done('error') }
       audio.oncanplaythrough = () => tryPlay('canplaythrough')
-      audio.onloadedmetadata = () => tryPlay('loadedmetadata')
+      audio.onloadedmetadata = () => {
+        // Set playbackRate here (after metadata loads) for iOS compatibility — setting it before src can be ignored
+        audio.playbackRate = rate
+        tryPlay('loadedmetadata')
+      }
       audio.onloadeddata = () => { console.log('[audio] loadeddata rs=', audio.readyState, url.split('file=')[1]); if (audio.readyState >= 2) tryPlay('loadeddata') }
 
       audio.src = url
@@ -135,5 +139,16 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
     })
   }, [packId])
 
-  return { playWord, playSentence, playWordPl, playSentencePl, stop, preloadNext }
+  // Unlock audio playback on iOS Safari by playing + immediately stopping a silent WAV.
+  // iOS Safari blocks audio.play() unless it's triggered by a user gesture.
+  // Once audio.play() succeeds within a gesture, playback is "unlocked" for the session.
+  const unlockAudio = useCallback(() => {
+    // 43-byte minimal WAV header with single silent sample — plays and ends instantly
+    const silence = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA')
+    silence.volume = 0
+    silence.play().catch(() => {}) // ignore errors — this is best-effort
+    console.log('[audio] unlockAudio() called — iOS audio policy unlocked for this session')
+  }, [])
+
+  return { playWord, playSentence, playWordPl, playSentencePl, stop, preloadNext, unlockAudio }
 }

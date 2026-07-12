@@ -200,7 +200,20 @@ async function main() {
     fs.writeFileSync(packFile, JSON.stringify(pack, null, 2))
     console.log(`  Updated ${packId}.json`)
   }
-  console.log('Done. Run: npm run sync-packs  then  npm run upload-audio-blobs')
+
+  // Auto-sync updated packs to public/ so they're immediately available at runtime
+  console.log('\n--- Syncing to public/ ---')
+  const PUBLIC_PACK_DIR = path.join(ROOT, 'public/data/packs')
+  for (const packId of TARGET_PACKS) {
+    const src = path.join(PACK_DIR, `${packId}.json`)
+    const dest = path.join(PUBLIC_PACK_DIR, `${packId}.json`)
+    if (fs.existsSync(src)) {
+      fs.copyFileSync(src, dest)
+      console.log(`  Synced ${packId}.json → public/data/packs/`)
+    }
+  }
+
+  console.log('Done. Run: npm run upload-audio-blobs')
 }
 
 main().catch(console.error)
