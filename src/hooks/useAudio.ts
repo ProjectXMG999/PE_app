@@ -53,6 +53,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       // Also guards against stale closures: if stop() replaced audioRef before
       // this fires, we bail out so the old element never plays.
       let playStarted = false
+      let playRetries = 0
       const tryPlay = (evt?: string) => {
         console.log('[audio] tryPlay via', evt, 'rs=', audio.readyState, 'started=', playStarted, url.split('file=')[1])
         if (playStarted) return
@@ -68,8 +69,19 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
           })
           .catch(e => {
             console.error('[audio] play() rejected from', evt, '— error:', e.name, e.message, 'url:', url.split('file=')[1])
-            console.error('[audio] play() stack:', new Error().stack)
-            done('error')
+            // On iOS/Chrome, NotAllowedError means audio is still locked. Retry after a short delay.
+            // User interaction may have happened in the meantime.
+            if (e.name === 'NotAllowedError' && playRetries < 3) {
+              playRetries++
+              console.log('[audio] NotAllowedError retry', playRetries, '— scheduling retry in 200ms')
+              playStarted = false
+              setTimeout(() => {
+                if (audioRef.current === audio) tryPlay(`retry${playRetries}`)
+              }, 200)
+            } else {
+              console.error('[audio] play() stack:', new Error().stack)
+              done('error')
+            }
           })
       }
 
@@ -159,11 +171,14 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
     console.log('[audio] silence element created, about to call play()')
     silence.play()
       .then(() => {
-        console.log('[audio] unlockAudio play() SUCCEEDED — audio unlocked')
+        console.log('[audio] unlockAudio play() SUCCEEDED ✓ — audio unlocked for session')
         silence.pause()
+        // Store that we successfully unlocked, for debugging
+        ;(window as any).__audioUnlocked = true
       })
       .catch(e => {
-        console.error('[audio] unlockAudio play() FAILED:', e.name, e.message)
+        console.error('[audio] unlockAudio play() FAILED ✗:', e.name, e.message)
+        ;(window as any).__audioUnlocked = false
       })
   }, [])
 
