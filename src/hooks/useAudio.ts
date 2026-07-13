@@ -45,12 +45,16 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
         resolved = true
         clearTimeout(timeoutId)
         resolveCurrentRef.current = null
-        // Cleanup fresh element
+        // Detach ALL handlers FIRST — iOS Safari fires onerror (code=4) when src is cleared,
+        // which interrupts AVAudioSession → NotAllowedError on the next audio.play()
+        audio.onended = null
+        audio.onerror = null
+        audio.oncanplaythrough = null
+        audio.onloadedmetadata = null
+        audio.onloadeddata = null
         try {
           audio.pause()
-          audio.src = ''
-          // Do NOT call audio.load() — iOS Safari fires onerror (code=4) asynchronously,
-          // which interrupts the AVAudioSession, causing the next audio.play() to fail with NotAllowedError
+          audio.removeAttribute('src')
         } catch {}
         resolve(result)
       }
