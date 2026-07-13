@@ -13,12 +13,18 @@
   cursor: pointer;
   position: relative;
   user-select: none;
-  transition: box-shadow var(--transition-fast);
   box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
 .flashcard:active {
   box-shadow: var(--shadow-sm);
+}
+
+.flashcard__divider,
+.flashcard__english,
+.flashcard__sentence-pl,
+.flashcard__sentence-en {
+  will-change: opacity, transform, filter;
 }
 
 .flashcard__english {
@@ -81,19 +87,4 @@
   font-family: var(--font-body);
 }
 
-/* Staggered reveal animation timing */
-.flashcard__divider {
-  animation-delay: 0ms !important;
-}
-
-.flashcard__english {
-  animation-delay: 60ms !important;
-}
-
-.flashcard__sentence-pl {
-  animation-delay: 120ms !important;
-}
-
-.flashcard__sentence-en {
-  animation-delay: 180ms !important;
-}
+/* Staggered reveal animation — bez delays by uniknąć refresh glitch */
