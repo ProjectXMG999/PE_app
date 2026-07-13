@@ -41,6 +41,23 @@ export function unlockAudioGlobally() {
 }
 
 /**
+ * Get the global AudioContext if it exists
+ */
+export function getAudioContext(): AudioContext | null {
+  return ctx
+}
+
+/**
+ * Wait for AudioContext to be running (after resume completes or if already running)
+ * Resolves immediately if already running or no context exists
+ */
+export function awaitAudioUnlock(): Promise<void> {
+  if (!ctx || ctx.state === 'running') return Promise.resolve()
+  // Try to resume and wait for it
+  return ctx.resume().then(() => {}).catch(() => {})
+}
+
+/**
  * Check if audio is unlocked (AudioContext is running)
  */
 export function isAudioUnlocked() {

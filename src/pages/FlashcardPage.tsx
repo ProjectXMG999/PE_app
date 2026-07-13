@@ -68,7 +68,7 @@ export function FlashcardPage() {
   const [allAlreadyKnown, setAllAlreadyKnown] = useState(false)
   const [knownCount, setKnownCount] = useState(0)
   const [autoContinue, setAutoContinue] = useState(true)
-  const [countdown, setCountdown] = useState(8)
+  const [countdown, setCountdown] = useState(6)
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
 
   const nextPack = packageId ? getNextPack(packageId) : null
@@ -365,7 +365,7 @@ export function FlashcardPage() {
   // Countdown timer on completion screen — autoplay only
   useEffect(() => {
     if (!showCompletion || studyMode !== 'autoplay' || !autoContinue || !nextPack) {
-      setCountdown(8)
+      setCountdown(6)
       return
     }
     if (countdown <= 0) {

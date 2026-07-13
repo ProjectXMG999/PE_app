@@ -1,6 +1,7 @@
 import { useCallback, useRef } from 'react'
 import { getAudioUrl, preloadAudio } from '../services/audioService'
 import { Word } from '../types/vocabulary'
+import { awaitAudioUnlock } from '../audio/audioUnlock'
 
 const EN_BASE = 0.70
 const PL_BASE = 1.0
@@ -23,8 +24,12 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
   }, [])
 
   const play = useCallback((url: string, rate = 1.0): Promise<'ok' | 'timeout' | 'error'> => {
-    return new Promise((resolve) => {
+    return new Promise(async (resolve) => {
       const filename = url.split('file=')[1] || url.split('/').pop() || 'unknown'
+
+      // Wait for AudioContext to be running (handles iOS suspend between packs)
+      await awaitAudioUnlock()
+
       const audio = createAudioElement()
       if (!audio) {
         console.error('[audio] createAudioElement failed')
