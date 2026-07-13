@@ -1,7 +1,7 @@
 import { useCallback, useRef } from 'react'
 import { getAudioUrl, preloadAudio } from '../services/audioService'
 import { Word } from '../types/vocabulary'
-import { awaitAudioUnlock } from '../audio/audioUnlock'
+import { awaitAudioUnlock, getAudioContext } from '../audio/audioUnlock'
 
 const EN_BASE = 0.70
 const PL_BASE = 1.0
@@ -58,14 +58,24 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       const timeoutId = setTimeout(() => done('timeout'), 10000)
 
       let playStarted = false
-      const tryPlay = (evt?: string) => {
+      const tryPlay = async (evt?: string) => {
         console.log('[audio] tryPlay via', evt, 'rs=', audio.readyState, 'started=', playStarted, 'filename=', filename)
         if (playStarted) return
         playStarted = true
         audio.oncanplaythrough = null
         audio.onloadedmetadata = null
         audio.onloadeddata = null
-        console.log('[audio] calling play() from', evt)
+
+        // Resume AudioContext immediately before play() — iOS Safari suspends ctx
+        // during the async gap (network fetch + decode), so we must re-check here
+        const audioCtx = getAudioContext()
+        if (audioCtx && audioCtx.state !== 'running') {
+          console.log('[audio] ctx suspended before play, resuming, state=', audioCtx.state)
+          await audioCtx.resume().catch(() => {})
+          console.log('[audio] ctx resumed, state=', audioCtx.state)
+        }
+
+        console.log('[audio] calling play() from', evt, 'ctx.state=', audioCtx?.state)
         audio.play()
           .then(() => {
             console.log('[audio] play() SUCCEEDED from', evt)
