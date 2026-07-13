@@ -11,24 +11,23 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
   // Resolver for the currently pending play() promise — lets stop() unblock awaits
   const resolveCurrentRef = useRef<(() => void) | null>(null)
 
-  // Initialize persistent audio element on first use
-  const ensureAudio = useCallback(() => {
-    if (!audioRef.current && typeof document !== 'undefined') {
-      const el = document.createElement('audio')
-      el.crossOrigin = 'anonymous'
-      el.style.display = 'none'
-      document.body.appendChild(el)
-      audioRef.current = el
-    }
-    return audioRef.current
+  // Create fresh audio element for each play
+  const createAudioElement = useCallback(() => {
+    if (typeof document === 'undefined') return null
+    const el = document.createElement('audio')
+    el.crossOrigin = 'anonymous'
+    el.style.display = 'none'
+    // Don't append to DOM — keep it in memory only
+    console.log('[audio] createAudioElement() fresh element')
+    return el
   }, [])
 
   const play = useCallback((url: string, rate = 1.0): Promise<'ok' | 'timeout' | 'error'> => {
     return new Promise((resolve) => {
       const filename = url.split('file=')[1] || url.split('/').pop() || 'unknown'
-      const audio = ensureAudio()
+      const audio = createAudioElement()
       if (!audio) {
-        console.error('[audio] no audio element available')
+        console.error('[audio] createAudioElement failed')
         resolve('error')
         return
       }
@@ -41,6 +40,12 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
         resolved = true
         clearTimeout(timeoutId)
         resolveCurrentRef.current = null
+        // Cleanup fresh element
+        try {
+          audio.pause()
+          audio.src = ''
+          audio.load()
+        } catch {}
         resolve(result)
       }
 
@@ -91,7 +96,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       audio.load()
       console.log('[audio] after load(), audio.src=', audio.src)
     })
-  }, [ensureAudio])
+  }, [createAudioElement])
 
   const playWord = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId) return Promise.resolve('ok' as const)
@@ -121,14 +126,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       resolveCurrentRef.current()
       resolveCurrentRef.current = null
     }
-    if (audioRef.current) {
-      const el = audioRef.current
-      console.log('[audio] stop() pausing audio')
-      el.pause()
-      el.currentTime = 0
-      el.src = ''
-      el.load()
-    }
+    // Note: we don't reuse audio elements anymore, so nothing to cleanup here
   }, [])
 
   const preloadNext = useCallback((words: Word[], currentIndex: number) => {
