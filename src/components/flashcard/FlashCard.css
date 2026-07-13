@@ -7,8 +7,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-md);
-  min-height: 280px;
+  min-height: 320px;
   cursor: pointer;
   position: relative;
   user-select: none;
@@ -22,13 +23,16 @@
 
 .flashcard__english {
   font-family: var(--font-heading);
-  font-size: clamp(28px, 8vw, 48px);
+  font-size: clamp(20px, 7vw, 48px);
   font-weight: 700;
   color: var(--text-primary);
   text-align: center;
   letter-spacing: -0.01em;
-  line-height: 1.1;
+  line-height: 1.2;
   width: 100%;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .flashcard__divider {
@@ -45,10 +49,13 @@
 
 .flashcard__polish {
   font-family: var(--font-heading);
-  font-size: clamp(20px, 5vw, 28px);
+  font-size: clamp(16px, 5vw, 28px);
   font-weight: 600;
   color: var(--text-primary);
   text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .flashcard__hint {

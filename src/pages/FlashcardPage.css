@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: var(--spacing-md);
   padding-bottom: var(--spacing-lg);
+  padding-top: var(--spacing-md);
 }
 
 .flashcard-page__loading,
