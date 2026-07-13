@@ -24,8 +24,8 @@ export function FlashCard({ word, revealStep, mode, onClick }: Props) {
 
       {showEnglish && (
         <>
-          <div className="flashcard__divider" />
-          <div className="flashcard__english animate-slide-up">
+          <div className="flashcard__divider animate-reveal-fade" />
+          <div className="flashcard__english animate-reveal-fade">
             {word.english}
           </div>
         </>
@@ -41,13 +41,13 @@ export function FlashCard({ word, revealStep, mode, onClick }: Props) {
       )}
 
       {word.sentencePl && showSentencePl && (
-        <div className="flashcard__sentence-pl animate-slide-up">
+        <div className="flashcard__sentence-pl animate-reveal-fade">
           {word.sentencePl}
         </div>
       )}
 
       {word.sentenceEn && showSentenceEn && (
-        <div className="flashcard__sentence-en animate-slide-up">
+        <div className="flashcard__sentence-en animate-reveal-fade">
           {word.sentenceEn}
         </div>
       )}

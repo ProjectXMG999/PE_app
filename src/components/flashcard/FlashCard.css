@@ -80,3 +80,20 @@
   line-height: 1.6;
   font-family: var(--font-body);
 }
+
+/* Staggered reveal animation timing */
+.flashcard__divider {
+  animation-delay: 0ms !important;
+}
+
+.flashcard__english {
+  animation-delay: 60ms !important;
+}
+
+.flashcard__sentence-pl {
+  animation-delay: 120ms !important;
+}
+
+.flashcard__sentence-en {
+  animation-delay: 180ms !important;
+}
