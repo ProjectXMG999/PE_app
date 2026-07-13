@@ -1,17 +1,13 @@
 import { useState, useEffect } from 'react'
-import { useAppStore } from '../../store/useAppStore'
 import { getLogs, subscribeToLogs } from '../../debug/audioLogger'
 
 export function DebugOverlay() {
-  const { showDebug } = useAppStore()
   const [logs, setLogs] = useState<string[]>(() => getLogs())
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     return subscribeToLogs(() => setLogs([...getLogs()]))
   }, [])
-
-  if (!showDebug) return null
 
   return (
     <>

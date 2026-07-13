@@ -7,12 +7,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: var(--spacing-md);
-  min-height: 320px;
+  min-height: 280px;
   cursor: pointer;
   position: relative;
   user-select: none;
+  transition: box-shadow var(--transition-fast);
   box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
@@ -20,25 +20,15 @@
   box-shadow: var(--shadow-sm);
 }
 
-.flashcard__divider,
-.flashcard__english,
-.flashcard__sentence-pl,
-.flashcard__sentence-en {
-  will-change: opacity, transform, filter;
-}
-
 .flashcard__english {
   font-family: var(--font-heading);
-  font-size: clamp(20px, 7vw, 48px);
+  font-size: clamp(28px, 8vw, 48px);
   font-weight: 700;
   color: var(--text-primary);
   text-align: center;
   letter-spacing: -0.01em;
-  line-height: 1.2;
+  line-height: 1.1;
   width: 100%;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
 }
 
 .flashcard__divider {
@@ -55,13 +45,10 @@
 
 .flashcard__polish {
   font-family: var(--font-heading);
-  font-size: clamp(16px, 5vw, 28px);
+  font-size: clamp(20px, 5vw, 28px);
   font-weight: 600;
   color: var(--text-primary);
   text-align: center;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto;
 }
 
 .flashcard__hint {
@@ -86,5 +73,3 @@
   line-height: 1.6;
   font-family: var(--font-body);
 }
-
-/* Staggered reveal animation — bez delays by uniknąć refresh glitch */

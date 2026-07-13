@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import { Word } from '../../types/vocabulary'
 import { StudyMode } from '../../types/progress'
 import './FlashCard.css'
@@ -11,12 +10,6 @@ interface Props {
 }
 
 export function FlashCard({ word, revealStep, mode, onClick }: Props) {
-  const [isInitial, setIsInitial] = useState(true)
-
-  useEffect(() => {
-    setIsInitial(false)
-  }, [word.id])
-
   const isAutoplay = mode === 'autoplay'
   // Reveal order: Polish(0) → English(1) → sentence PL(2) → sentence EN(3)
   const showEnglish = revealStep >= 1 || isAutoplay
@@ -24,24 +17,15 @@ export function FlashCard({ word, revealStep, mode, onClick }: Props) {
   const showSentenceEn = revealStep >= 3 || isAutoplay
 
   return (
-    <div
-      className={`flashcard ${isInitial ? 'animate-card' : ''}`}
-      onClick={onClick}
-    >
+    <div className={`flashcard animate-card`} onClick={onClick}>
       <div className="flashcard__polish">
         {word.polish}
       </div>
 
       {showEnglish && (
         <>
-          <div
-            key={`divider-${word.id}`}
-            className="flashcard__divider animate-reveal-fade"
-          />
-          <div
-            key={`english-${word.id}`}
-            className="flashcard__english animate-reveal-fade"
-          >
+          <div className="flashcard__divider" />
+          <div className="flashcard__english animate-slide-up">
             {word.english}
           </div>
         </>
@@ -57,19 +41,13 @@ export function FlashCard({ word, revealStep, mode, onClick }: Props) {
       )}
 
       {word.sentencePl && showSentencePl && (
-        <div
-          key={`sentence-pl-${word.id}`}
-          className="flashcard__sentence-pl animate-reveal-fade"
-        >
+        <div className="flashcard__sentence-pl animate-slide-up">
           {word.sentencePl}
         </div>
       )}
 
       {word.sentenceEn && showSentenceEn && (
-        <div
-          key={`sentence-en-${word.id}`}
-          className="flashcard__sentence-en animate-reveal-fade"
-        >
+        <div className="flashcard__sentence-en animate-slide-up">
           {word.sentenceEn}
         </div>
       )}
