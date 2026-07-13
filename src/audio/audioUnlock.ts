@@ -29,6 +29,15 @@ export function unlockAudioGlobally() {
       })
     }
 
+    // Play a silent 1-sample buffer through the AudioContext to activate iOS audio output route.
+    // ctx.resume() alone is not enough — iOS requires an actual Web Audio node to play
+    // before it opens the system audio session for subsequent AudioBufferSourceNode playback.
+    const silentBuffer = ctx.createBuffer(1, 1, ctx.sampleRate)
+    const silentSource = ctx.createBufferSource()
+    silentSource.buffer = silentBuffer
+    silentSource.connect(ctx.destination)
+    silentSource.start(0)
+
     console.log('[audio] AudioContext state:', ctx.state)
   } catch (e) {
     console.error('[audio] unlockAudioGlobally error:', e)
