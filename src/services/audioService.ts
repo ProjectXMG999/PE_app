@@ -1,7 +1,9 @@
 const AUDIO_BASE = '/.netlify/functions/audio'
 
 export function getAudioUrl(packId: string, filename: string): string {
-  return `${AUDIO_BASE}?pack=${encodeURIComponent(packId)}&file=${encodeURIComponent(filename)}`
+  const url = `${AUDIO_BASE}?pack=${encodeURIComponent(packId)}&file=${encodeURIComponent(filename)}`
+  console.log('[audio] getAudioUrl =', url)
+  return url
 }
 
 export async function preloadAudio(url: string): Promise<void> {

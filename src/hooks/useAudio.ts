@@ -72,7 +72,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
         done('ok')
       }
       audio.onerror = () => {
-        console.error('[audio] onerror', audio.error?.code, audio.error?.message, 'filename:', filename)
+        console.error('[audio] onerror code=', audio.error?.code, 'message=', audio.error?.message, 'networkState=', audio.networkState, 'readyState=', audio.readyState, 'filename=', filename, 'src=', audio.src)
         done('error')
       }
       audio.oncanplaythrough = () => tryPlay('canplaythrough')

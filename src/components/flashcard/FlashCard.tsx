@@ -14,6 +14,19 @@ export function FlashCard({ word, revealStep, mode, onClick }: Props) {
   const [isInitial, setIsInitial] = useState(true)
 
   useEffect(() => {
+    console.log('[flashcard] mount, word=', word.id)
+    return () => console.log('[flashcard] unmount, word=', word.id)
+  }, [word.id])
+
+  useEffect(() => {
+    console.log('[flashcard] isInitial=', isInitial, '→ animate-card will', isInitial ? 'APPLY' : 'NOT apply')
+    if (!isInitial) {
+      setIsInitial(false) // already false, but log that we skip re-animating
+    }
+  }, [isInitial])
+
+  useEffect(() => {
+    console.log('[flashcard] revealStep=', revealStep, 'word=', word.english)
     setIsInitial(false)
   }, [])
 
@@ -24,15 +37,30 @@ export function FlashCard({ word, revealStep, mode, onClick }: Props) {
   const showSentenceEn = revealStep >= 3 || isAutoplay
 
   return (
-    <div className={`flashcard ${isInitial ? 'animate-card' : ''}`} onClick={onClick}>
+    <div
+      className={`flashcard ${isInitial ? 'animate-card' : ''}`}
+      onClick={onClick}
+      onAnimationStart={() => console.log('[anim] card animation START')}
+      onAnimationEnd={() => console.log('[anim] card animation END')}
+    >
       <div className="flashcard__polish">
         {word.polish}
       </div>
 
       {showEnglish && (
         <>
-          <div key={`divider-${word.id}`} className="flashcard__divider animate-reveal-fade" />
-          <div key={`english-${word.id}`} className="flashcard__english animate-reveal-fade">
+          <div
+            key={`divider-${word.id}`}
+            className="flashcard__divider animate-reveal-fade"
+            onAnimationStart={() => console.log('[anim] divider animation START')}
+            onAnimationEnd={() => console.log('[anim] divider animation END')}
+          />
+          <div
+            key={`english-${word.id}`}
+            className="flashcard__english animate-reveal-fade"
+            onAnimationStart={() => console.log('[anim] english animation START')}
+            onAnimationEnd={() => console.log('[anim] english animation END')}
+          >
             {word.english}
           </div>
         </>
@@ -48,13 +76,23 @@ export function FlashCard({ word, revealStep, mode, onClick }: Props) {
       )}
 
       {word.sentencePl && showSentencePl && (
-        <div key={`sentence-pl-${word.id}`} className="flashcard__sentence-pl animate-reveal-fade">
+        <div
+          key={`sentence-pl-${word.id}`}
+          className="flashcard__sentence-pl animate-reveal-fade"
+          onAnimationStart={() => console.log('[anim] sentence-pl animation START')}
+          onAnimationEnd={() => console.log('[anim] sentence-pl animation END')}
+        >
           {word.sentencePl}
         </div>
       )}
 
       {word.sentenceEn && showSentenceEn && (
-        <div key={`sentence-en-${word.id}`} className="flashcard__sentence-en animate-reveal-fade">
+        <div
+          key={`sentence-en-${word.id}`}
+          className="flashcard__sentence-en animate-reveal-fade"
+          onAnimationStart={() => console.log('[anim] sentence-en animation START')}
+          onAnimationEnd={() => console.log('[anim] sentence-en animation END')}
+        >
           {word.sentenceEn}
         </div>
       )}
