@@ -28,7 +28,7 @@ export function FlashCard({ word, revealStep, mode, onClick }: Props) {
       className={`flashcard ${isInitial ? 'animate-card' : ''}`}
       onClick={onClick}
     >
-      <div className="flashcard__polish flashcard__polish--top">
+      <div className="flashcard__polish">
         {word.polish}
       </div>
 
