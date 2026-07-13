@@ -1,7 +1,7 @@
 // Simple ring buffer for capturing [audio], [action], [seq] console logs
 // Used by debug overlay to display logs on iOS without Safari Inspector
 
-const MAX_LOGS = 200
+const MAX_LOGS = 80
 const logs: string[] = []
 let listeners: Set<() => void> = new Set()
 

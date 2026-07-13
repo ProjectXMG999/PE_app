@@ -76,7 +76,7 @@ export function DebugOverlay() {
                 fontWeight: 'bold',
               }}
             >
-              Logs: {logs.length}/200
+              Logs: {logs.length}/80
             </span>
             <button
               onClick={() => setLogs([])}

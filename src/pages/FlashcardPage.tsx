@@ -12,7 +12,6 @@ import { usePackageData } from '../hooks/usePackageData'
 import { useFlashcard } from '../hooks/useFlashcard'
 import { useAudio } from '../hooks/useAudio'
 import { useAppStore } from '../store/useAppStore'
-import { resumeAudioContext } from '../audio/audioUnlock'
 import { saveSession, savePackageProgress, getPackageProgress, saveWordProgress, getPackageWordProgress } from '../services/db'
 import { StudyMode } from '../types/progress'
 import packagesIndex from '../data/packages-index.json'
@@ -69,7 +68,7 @@ export function FlashcardPage() {
   const [allAlreadyKnown, setAllAlreadyKnown] = useState(false)
   const [knownCount, setKnownCount] = useState(0)
   const [autoContinue, setAutoContinue] = useState(true)
-  const [countdown, setCountdown] = useState(6)
+  const [countdown, setCountdown] = useState(8)
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
 
   const nextPack = packageId ? getNextPack(packageId) : null
@@ -84,7 +83,6 @@ export function FlashcardPage() {
   }
 
   const restartCurrentWord = useCallback(() => {
-    resumeAudioContext()
     console.log('[action] restartCurrentWord, playStep=', playStep)
     abortSequence()
     clearAutoplay()
@@ -101,7 +99,6 @@ export function FlashcardPage() {
   }, [stop])
 
   const handlePauseResume = useCallback(() => {
-    resumeAudioContext()
     if (isPaused) {
       console.log('[action] handlePauseResume RESUME, resumeFrom=', resumeFromStepRef.current)
       // Resume from the step we paused on — don't reset playStep so pill stays lit
@@ -126,7 +123,6 @@ export function FlashcardPage() {
   }, [isPaused, playStep, stop])
 
   const handleModeChange = useCallback((m: 'fast' | 'standard' | 'speaking') => {
-    resumeAudioContext()
     abortSequence()
     stop()
     clearAutoplay()
@@ -288,7 +284,6 @@ export function FlashcardPage() {
   // Skip to next audio step within current card (card tap in autoplay)
   // Does NOT advance to next card — that's handleSkip (Pomiń button only)
   const handleSkipStep = useCallback(() => {
-    resumeAudioContext()
     console.log('[action] handleSkipStep, skipStepRef=', !!skipStepRef.current, 'playStep=', playStep)
     if (skipStepRef.current) {
       console.log('[action] handleSkipStep — skipping pause')
@@ -303,7 +298,6 @@ export function FlashcardPage() {
 
   // Skip current card in autoplay
   const handleSkip = useCallback(() => {
-    resumeAudioContext()
     console.log('[action] handleSkip (Pomij), playStep=', playStep)
     // Kill audio and abort sequence FIRST — before advance() triggers new useEffect
     abortSequence()
@@ -371,7 +365,7 @@ export function FlashcardPage() {
   // Countdown timer on completion screen — autoplay only
   useEffect(() => {
     if (!showCompletion || studyMode !== 'autoplay' || !autoContinue || !nextPack) {
-      setCountdown(6)
+      setCountdown(8)
       return
     }
     if (countdown <= 0) {

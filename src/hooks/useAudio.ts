@@ -1,84 +1,102 @@
 import { useCallback, useRef } from 'react'
 import { getAudioUrl, preloadAudio } from '../services/audioService'
 import { Word } from '../types/vocabulary'
-import { awaitAudioUnlock, getAudioContext } from '../audio/audioUnlock'
 
 const EN_BASE = 0.70
 const PL_BASE = 1.0
 
 // enRate/plRate are multipliers: 1.0 = default speed, 0.5 = half, 1.5 = faster
 export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
+  const audioRef = useRef<HTMLAudioElement | null>(null)
   // Resolver for the currently pending play() promise — lets stop() unblock awaits
   const resolveCurrentRef = useRef<(() => void) | null>(null)
 
-  // Web Audio API playback — no HTMLAudioElement gesture requirement on iOS Safari
-  // ctx.state=running (from unlockAudioGlobally gesture) is sufficient for all plays
+  // Create fresh audio element for each play
+  const createAudioElement = useCallback(() => {
+    if (typeof document === 'undefined') return null
+    const el = document.createElement('audio')
+    el.crossOrigin = 'anonymous'
+    el.style.display = 'none'
+    // Don't append to DOM — keep it in memory only
+    console.log('[audio] createAudioElement() fresh element')
+    return el
+  }, [])
+
   const play = useCallback((url: string, rate = 1.0): Promise<'ok' | 'timeout' | 'error'> => {
-    return new Promise(async (resolve) => {
+    return new Promise((resolve) => {
       const filename = url.split('file=')[1] || url.split('/').pop() || 'unknown'
-
-      // Ensure AudioContext is running before attempting playback
-      await awaitAudioUnlock()
-
-      const ctx = getAudioContext()
-      if (!ctx) {
-        console.error('[audio] no AudioContext — audio unlock not called')
+      const audio = createAudioElement()
+      if (!audio) {
+        console.error('[audio] createAudioElement failed')
         resolve('error')
         return
       }
 
-      console.log('[audio] play() filename=', filename, 'rate=', rate)
+      console.log('[audio] play() filename=', filename, 'rate=', rate, 'url=', url)
 
       let resolved = false
-      let currentSource: AudioBufferSourceNode | null = null
-
       const done = (result: 'ok' | 'timeout' | 'error' = 'ok') => {
         if (resolved) return
         resolved = true
         clearTimeout(timeoutId)
         resolveCurrentRef.current = null
-        try { currentSource?.stop() } catch {}
-        currentSource = null
+        // Cleanup fresh element
+        try {
+          audio.pause()
+          audio.src = ''
+          audio.load()
+        } catch {}
         resolve(result)
       }
 
       resolveCurrentRef.current = () => done('ok')
       const timeoutId = setTimeout(() => done('timeout'), 10000)
 
-      try {
-        // Fetch audio (HTTP cache warmed by preloadNext)
-        const response = await fetch(url, { mode: 'same-origin' })
-        if (!response.ok) throw new Error(`HTTP ${response.status}`)
-        const arrayBuffer = await response.arrayBuffer()
+      let playStarted = false
+      const tryPlay = (evt?: string) => {
+        console.log('[audio] tryPlay via', evt, 'rs=', audio.readyState, 'started=', playStarted, 'filename=', filename)
+        if (playStarted) return
+        playStarted = true
+        audio.oncanplaythrough = null
+        audio.onloadedmetadata = null
+        audio.onloadeddata = null
+        console.log('[audio] calling play() from', evt)
+        audio.play()
+          .then(() => {
+            console.log('[audio] play() SUCCEEDED from', evt)
+          })
+          .catch(e => {
+            console.error('[audio] play() rejected from', evt, '— error:', e.name, e.message, 'filename:', filename)
+            console.error('[audio] play() stack:', new Error().stack)
+            done('error')
+          })
+      }
 
-        if (resolved) return
-
-        // Decode compressed audio to raw PCM buffer
-        const audioBuffer = await ctx.decodeAudioData(arrayBuffer)
-
-        if (resolved) return
-
-        // Create one-shot source node — no gesture required, only ctx.state=running
-        const source = ctx.createBufferSource()
-        source.buffer = audioBuffer
-        source.playbackRate.value = rate
-        source.connect(ctx.destination)
-        currentSource = source
-
-        source.onended = () => {
-          console.log('[audio] onended', filename)
-          done('ok')
-        }
-
-        console.log('[audio] Web Audio start filename=', filename, 'rate=', rate, 'ctx.state=', ctx.state)
-        source.start(0)
-
-      } catch (e: any) {
-        console.error('[audio] play() error:', e.name, e.message, 'filename:', filename)
+      audio.onended = () => {
+        console.log('[audio] onended')
+        done('ok')
+      }
+      audio.onerror = () => {
+        console.error('[audio] onerror code=', audio.error?.code, 'message=', audio.error?.message, 'networkState=', audio.networkState, 'readyState=', audio.readyState, 'filename=', filename, 'src=', audio.src)
         done('error')
       }
+      audio.oncanplaythrough = () => tryPlay('canplaythrough')
+      audio.onloadedmetadata = () => {
+        audio.playbackRate = rate
+        tryPlay('loadedmetadata')
+      }
+      audio.onloadeddata = () => {
+        console.log('[audio] loadeddata rs=', audio.readyState, 'filename=', filename)
+        if (audio.readyState >= 2) tryPlay('loadeddata')
+      }
+
+      console.log('[audio] setting src =', url, 'audio.src before=', audio.src)
+      audio.src = url
+      console.log('[audio] audio.src after=', audio.src)
+      audio.load()
+      console.log('[audio] after load(), audio.src=', audio.src)
     })
-  }, [])
+  }, [createAudioElement])
 
   const playWord = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId) return Promise.resolve('ok' as const)
@@ -108,6 +126,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       resolveCurrentRef.current()
       resolveCurrentRef.current = null
     }
+    // Note: we don't reuse audio elements anymore, so nothing to cleanup here
   }, [])
 
   const preloadNext = useCallback((words: Word[], currentIndex: number) => {

@@ -29,36 +29,15 @@ export function unlockAudioGlobally() {
       })
     }
 
-    // Play a silent 1-sample buffer through the AudioContext to activate iOS audio output route.
-    // ctx.resume() alone is not enough — iOS requires an actual Web Audio node to play
-    // before it opens the system audio session for subsequent AudioBufferSourceNode playback.
-    const silentBuffer = ctx.createBuffer(1, 1, ctx.sampleRate)
-    const silentSource = ctx.createBufferSource()
-    silentSource.buffer = silentBuffer
-    silentSource.connect(ctx.destination)
-    silentSource.start(0)
-
     console.log('[audio] AudioContext state:', ctx.state)
+
+    // Play silent audio to further unlock iOS audio playback
+    const silence = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA')
+    silence.volume = 0
+    silence.play().catch(() => {}) // ignore errors
   } catch (e) {
     console.error('[audio] unlockAudioGlobally error:', e)
   }
-}
-
-/**
- * Get the global AudioContext if it exists
- */
-export function getAudioContext(): AudioContext | null {
-  return ctx
-}
-
-/**
- * Wait for AudioContext to be running (after resume completes or if already running)
- * Resolves immediately if already running or no context exists
- */
-export function awaitAudioUnlock(): Promise<void> {
-  if (!ctx || ctx.state === 'running') return Promise.resolve()
-  // Try to resume and wait for it
-  return ctx.resume().then(() => {}).catch(() => {})
 }
 
 /**
@@ -66,13 +45,4 @@ export function awaitAudioUnlock(): Promise<void> {
  */
 export function isAudioUnlocked() {
   return ctx !== null && ctx.state === 'running'
-}
-
-/**
- * Call synchronously from any user gesture handler during autoplay.
- * iOS Safari only reliably resumes AudioContext from a gesture — fire and forget.
- */
-export function resumeAudioContext(): void {
-  if (!ctx || ctx.state === 'running') return
-  ctx.resume().catch(() => {})
 }
