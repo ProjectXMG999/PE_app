@@ -113,3 +113,29 @@
   color: white;
   border-color: var(--accent);
 }
+
+.settings__toggle {
+  height: 44px;
+  padding: 0 16px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  align-self: flex-start;
+}
+
+.settings__toggle:hover {
+  border-color: var(--border-accent);
+  color: var(--text-primary);
+}
+
+.settings__toggle--on {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}

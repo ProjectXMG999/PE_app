@@ -14,7 +14,7 @@ const RATES: { value: number; label: string }[] = [
 const VALID = new Set(RATES.map(r => r.value))
 
 export function SettingsPage() {
-  const { enRate, plRate, setEnRate, setPlRate } = useAppStore()
+  const { enRate, plRate, setEnRate, setPlRate, showDebug, setShowDebug } = useAppStore()
 
   // Migrate legacy absolute values (e.g. 0.60) that don't match current multiplier scale
   const safeEnRate = VALID.has(enRate) ? enRate : 1.0
@@ -66,6 +66,23 @@ export function SettingsPage() {
                 </button>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div className="settings__section">
+          <h2 className="settings__section-title">Developer</h2>
+
+          <div className="settings__row">
+            <div className="settings__row-label">
+              <span className="settings__row-name">Debug Logs</span>
+              <span className="settings__row-hint">pokaż/ukryj przycisk DEBUG</span>
+            </div>
+            <button
+              className={`settings__toggle ${showDebug ? 'settings__toggle--on' : ''}`}
+              onClick={() => setShowDebug(!showDebug)}
+            >
+              {showDebug ? 'WŁ.' : 'WYŁ.'}
+            </button>
           </div>
         </div>
       </div>
