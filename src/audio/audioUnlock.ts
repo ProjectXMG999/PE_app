@@ -30,11 +30,6 @@ export function unlockAudioGlobally() {
     }
 
     console.log('[audio] AudioContext state:', ctx.state)
-
-    // Play silent audio to further unlock iOS audio playback
-    const silence = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA')
-    silence.volume = 0
-    silence.play().catch(() => {}) // ignore errors
   } catch (e) {
     console.error('[audio] unlockAudioGlobally error:', e)
   }
