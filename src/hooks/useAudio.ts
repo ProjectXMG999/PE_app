@@ -33,7 +33,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
         return
       }
 
-      console.log('[audio] play() filename=', filename, 'rate=', rate)
+      console.log('[audio] play() filename=', filename, 'rate=', rate, 'url=', url)
 
       let resolved = false
       const done = (result: 'ok' | 'timeout' | 'error' = 'ok') => {
@@ -85,8 +85,11 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
         if (audio.readyState >= 2) tryPlay('loadeddata')
       }
 
+      console.log('[audio] setting src =', url, 'audio.src before=', audio.src)
       audio.src = url
+      console.log('[audio] audio.src after=', audio.src)
       audio.load()
+      console.log('[audio] after load(), audio.src=', audio.src)
     })
   }, [ensureAudio])
 
