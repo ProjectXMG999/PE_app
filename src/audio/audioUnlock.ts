@@ -63,3 +63,12 @@ export function awaitAudioUnlock(): Promise<void> {
 export function isAudioUnlocked() {
   return ctx !== null && ctx.state === 'running'
 }
+
+/**
+ * Call synchronously from any user gesture handler during autoplay.
+ * iOS Safari only reliably resumes AudioContext from a gesture — fire and forget.
+ */
+export function resumeAudioContext(): void {
+  if (!ctx || ctx.state === 'running') return
+  ctx.resume().catch(() => {})
+}
