@@ -40,7 +40,8 @@
   font-family: var(--font-heading);
   font-size: 11px;
   color: var(--text-muted);
-  width: 44px;
+  min-width: 64px;
   text-align: right;
   flex-shrink: 0;
+  white-space: nowrap;
 }
