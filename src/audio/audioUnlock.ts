@@ -1,6 +1,8 @@
 // Global audio unlock using AudioContext — permanently unlocks audio for iOS Safari
 // Must be called synchronously from a user gesture (click/tap)
 
+import { getAudioElement } from './audioElement'
+
 let ctx: AudioContext | null = null
 
 /**
@@ -31,10 +33,14 @@ export function unlockAudioGlobally() {
 
     console.log('[audio] AudioContext state:', ctx.state)
 
-    // Play silent audio to further unlock iOS audio playback
-    const silence = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA')
-    silence.volume = 0
-    silence.play().catch(() => {}) // ignore errors
+    // Play silent audio on the singleton element to activate it within the gesture context.
+    // This is the same element useAudio will use for real playback — iOS ties unlock to the element.
+    const el = getAudioElement()
+    if (el) {
+      el.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA'
+      el.volume = 0
+      el.play().catch(() => {})
+    }
   } catch (e) {
     console.error('[audio] unlockAudioGlobally error:', e)
   }

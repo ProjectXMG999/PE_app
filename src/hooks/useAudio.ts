@@ -1,5 +1,6 @@
 import { useCallback, useRef } from 'react'
 import { getAudioUrl, preloadAudio } from '../services/audioService'
+import { getAudioElement } from '../audio/audioElement'
 import { Word } from '../types/vocabulary'
 
 const EN_BASE = 0.70
@@ -7,20 +8,13 @@ const PL_BASE = 1.0
 
 // enRate/plRate are multipliers: 1.0 = default speed, 0.5 = half, 1.5 = faster
 export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
-  const audioRef = useRef<HTMLAudioElement | null>(null)
   // Resolver for the currently pending play() promise — lets stop() unblock awaits
   const resolveCurrentRef = useRef<(() => void) | null>(null)
 
-  // Initialize persistent audio element on first use
+  // Return the singleton audio element — survives component unmount/remount so iOS
+  // retains its activation state across pack auto-transitions (no new element = no new unlock needed)
   const ensureAudio = useCallback(() => {
-    if (!audioRef.current && typeof document !== 'undefined') {
-      const el = document.createElement('audio')
-      el.crossOrigin = 'anonymous'
-      el.style.display = 'none'
-      document.body.appendChild(el)
-      audioRef.current = el
-    }
-    return audioRef.current
+    return getAudioElement()
   }, [])
 
   const play = useCallback((url: string, rate = 1.0): Promise<'ok' | 'timeout' | 'error'> => {
@@ -118,8 +112,8 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
       resolveCurrentRef.current()
       resolveCurrentRef.current = null
     }
-    if (audioRef.current) {
-      const el = audioRef.current
+    const el = getAudioElement()
+    if (el) {
       console.log('[audio] stop() pausing audio')
       el.pause()
       el.currentTime = 0
