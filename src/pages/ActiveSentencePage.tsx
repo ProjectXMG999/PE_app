@@ -181,7 +181,7 @@ export function ActiveSentencePage() {
           <div className="asc-done__icon">✓</div>
           <h1 className="asc-done__title">Sesja zakończona</h1>
           <p className="asc-done__sub">{pack?.name}</p>
-          <p className="asc-done__count">Oznaczono jako znane: <strong>{sessionKnown}</strong></p>
+          <p className="asc-done__count">Opanowano: <strong>{sessionKnown}</strong></p>
           <div className="asc-done__actions">
             <button className="asc-done__btn asc-done__btn--repeat" onClick={handleRepeat}>↺ Powtórz</button>
             <button className="asc-done__btn asc-done__btn--exit" onClick={() => navigate('/')}>⌂ Menu</button>

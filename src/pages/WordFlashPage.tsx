@@ -172,7 +172,7 @@ export function WordFlashPage() {
           <div className="wf-done__icon">✓</div>
           <h1 className="wf-done__title">Sesja zakończona</h1>
           <p className="wf-done__sub">{pack?.name}</p>
-          <p className="wf-done__count">Oznaczono jako znane: <strong>{sessionKnown}</strong></p>
+          <p className="wf-done__count">Opanowano: <strong>{sessionKnown}</strong></p>
           <div className="wf-done__actions">
             <button className="wf-done__btn wf-done__btn--repeat" onClick={handleRepeat}>↺ Powtórz</button>
             <button className="wf-done__btn wf-done__btn--exit" onClick={() => navigate('/')}>⌂ Menu</button>

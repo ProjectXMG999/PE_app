@@ -45,7 +45,7 @@ export function FilterTabs() {
         {LEVELS.map(lvl => (
           <button
             key={lvl}
-            className={`filtertabs__tab ${activeLevel === lvl ? 'filtertabs__tab--active' : ''}`}
+            className={`filtertabs__tab filtertabs__tab--level${lvl} ${activeLevel === lvl ? 'filtertabs__tab--active' : ''}`}
             onClick={() => setLevel(activeLevel === lvl ? null : lvl)}
           >
             Level {lvl}

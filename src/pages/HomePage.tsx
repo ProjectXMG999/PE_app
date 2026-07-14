@@ -5,6 +5,7 @@ import { QuickStartCards } from '../components/home/QuickStartCards'
 import { StatsRow } from '../components/home/StatsRow'
 import { SearchBar } from '../components/home/SearchBar'
 import { FilterTabs } from '../components/home/FilterTabs'
+import { LevelProgressBars } from '../components/home/LevelProgressBars'
 import { SectionHeader } from '../components/home/SectionHeader'
 import { PackageCard } from '../components/home/PackageCard'
 import { useAppStore } from '../store/useAppStore'
@@ -67,6 +68,7 @@ export function HomePage() {
         <StatsRow />
         <SearchBar />
         <FilterTabs />
+        <LevelProgressBars allPacks={allPacks} knownMap={knownMap} />
         <SectionHeader label="Pakiety" count={filtered.length} />
         <div className="homepage__list">
           {filtered.map(pack => (
