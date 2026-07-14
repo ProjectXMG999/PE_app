@@ -9,7 +9,7 @@ import { LevelProgressBars } from '../components/home/LevelProgressBars'
 import { SectionHeader } from '../components/home/SectionHeader'
 import { PackageCard } from '../components/home/PackageCard'
 import { useAppStore } from '../store/useAppStore'
-import { getAllPackageProgress, getPackageWordProgress } from '../services/db'
+import { getAllPackageProgress, getAllWordProgress } from '../services/db'
 import { PackageProgress } from '../types/progress'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
@@ -23,16 +23,15 @@ export function HomePage() {
   const [knownMap, setKnownMap] = useState<Map<string, number>>(new Map())
 
   useEffect(() => {
-    getAllPackageProgress().then(async arr => {
-      const map = new Map(arr.map(p => [p.packageId, p]))
-      setProgressMap(map)
-      const knownEntries = await Promise.all(
-        arr.map(async p => {
-          const wp = await getPackageWordProgress(p.packageId)
-          return [p.packageId, wp.filter(w => w.status === 'known').length] as [string, number]
-        })
-      )
-      setKnownMap(new Map(knownEntries))
+    Promise.all([getAllPackageProgress(), getAllWordProgress()]).then(([ppArr, wpArr]) => {
+      setProgressMap(new Map(ppArr.map(p => [p.packageId, p])))
+      const knownCounts = new Map<string, number>()
+      for (const wp of wpArr) {
+        if (wp.status === 'known') {
+          knownCounts.set(wp.packageId, (knownCounts.get(wp.packageId) ?? 0) + 1)
+        }
+      }
+      setKnownMap(knownCounts)
     })
   }, [])
 

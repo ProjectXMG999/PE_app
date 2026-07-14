@@ -70,6 +70,11 @@ export async function getPackageWordProgress(packageId: string): Promise<WordPro
   return db.getAllFromIndex('wordProgress', 'by-package', packageId)
 }
 
+export async function getAllWordProgress(): Promise<WordProgress[]> {
+  const db = await getDB()
+  return db.getAll('wordProgress')
+}
+
 export async function getTotalKnownWords(): Promise<number> {
   const db = await getDB()
   const all = await db.getAll('wordProgress')

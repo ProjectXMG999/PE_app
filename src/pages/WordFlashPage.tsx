@@ -38,7 +38,7 @@ export function WordFlashPage() {
 
   useEffect(() => {
     if (!pack || !packageId) return
-    getPackageWordProgress(packageId).then(wpList => {
+    getPackageWordProgress(packageId).then(async wpList => {
       const map = new Map(wpList.map(wp => [wp.wordId, wp]))
       setProgressMap(map)
       const unknown = pack.words.filter(w => map.get(w.id)?.status !== 'known')
@@ -49,6 +49,11 @@ export function WordFlashPage() {
       setCardIndex(0)
       setSide('front')
       setHalfwayDone(false)
+      const existing = await getPackageProgress(packageId)
+      if (!existing) {
+        const now = new Date().toISOString()
+        await savePackageProgress({ packageId, startedAt: now, completedAt: null, masteredAt: null, currentIndex: 0 })
+      }
     })
   }, [pack, packageId])
 
@@ -119,7 +124,7 @@ export function WordFlashPage() {
           startedAt: existing?.startedAt ?? now,
           completedAt: now,
           masteredAt: allKnown ? now : (existing?.masteredAt ?? null),
-          currentIndex: 0,
+          currentIndex: total,
         })
         if (allKnown) setShowMastery(true)
         else setDone(true)
