@@ -71,10 +71,10 @@
 
 .packcard__num-text {
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 800;
   color: var(--text-muted);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   line-height: 1;
 }
 

@@ -13,6 +13,13 @@ const CATEGORY_ICONS: Record<string, string> = {
   'default': '📚',
 }
 
+const LEVEL_COLORS: Record<number, string> = {
+  1: '#eab308',
+  2: '#f97316',
+  3: '#22c55e',
+  4: '#3b82f6',
+}
+
 const CATEGORY_COLORS: Record<string, string> = {
   'Rzeczowniki': '#8B5CF6',
   'Czasowniki': '#F59E0B',
@@ -72,7 +79,12 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
       <div className="packcard__header">
         {packNum && (
           <div className="packcard__num">
-            <span className="packcard__num-text">#{packNum}</span>
+            <span
+              className="packcard__num-text"
+              style={{ color: pack.level ? LEVEL_COLORS[pack.level] : undefined }}
+            >
+              #{packNum}
+            </span>
           </div>
         )}
         <div className="packcard__icon" style={{ background: `${color}22`, color }}>
