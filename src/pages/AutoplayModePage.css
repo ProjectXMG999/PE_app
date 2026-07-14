@@ -1,7 +1,8 @@
 .autoplay-mode {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
   padding: var(--spacing-md) var(--spacing-md) var(--spacing-xl);
   gap: var(--spacing-lg);
 }
