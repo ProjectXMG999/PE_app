@@ -69,9 +69,12 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
       {/* Status stripe — visible left border accent */}
       {status !== 'new' && <div className="packcard__stripe" />}
 
-      {packNum && <span className="packcard__num-badge">#{packNum}</span>}
-
       <div className="packcard__header">
+        {packNum && (
+          <div className="packcard__num">
+            <span className="packcard__num-text">#{packNum}</span>
+          </div>
+        )}
         <div className="packcard__icon" style={{ background: `${color}22`, color }}>
           {icon}
         </div>

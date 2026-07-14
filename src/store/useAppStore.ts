@@ -52,6 +52,9 @@ interface AppStore {
   setSwUpdateAvailable: (v: boolean) => void
   swRegistration: ServiceWorkerRegistration | null
   setSwRegistration: (r: ServiceWorkerRegistration) => void
+
+  showDebug: boolean
+  setShowDebug: (v: boolean) => void
 }
 
 export const useAppStore = create<AppStore>()(
@@ -99,6 +102,9 @@ export const useAppStore = create<AppStore>()(
       setSwUpdateAvailable: (v) => set({ swUpdateAvailable: v }),
       swRegistration: null,
       setSwRegistration: (r) => set({ swRegistration: r }),
+
+      showDebug: false,
+      setShowDebug: (v) => set({ showDebug: v }),
     }),
     {
       name: 'pe-store',
@@ -109,6 +115,7 @@ export const useAppStore = create<AppStore>()(
         autoplayMode: s.autoplayMode,
         enRate: s.enRate,
         plRate: s.plRate,
+        showDebug: s.showDebug,
       }),
     }
   )
