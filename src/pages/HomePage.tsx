@@ -22,7 +22,7 @@ export function HomePage() {
   const [progressMap, setProgressMap] = useState<Map<string, PackageProgress>>(new Map())
   const [knownMap, setKnownMap] = useState<Map<string, number>>(new Map())
 
-  const loadProgress = () => {
+  useEffect(() => {
     getAllPackageProgress().then(async arr => {
       const map = new Map(arr.map(p => [p.packageId, p]))
       setProgressMap(map)
@@ -34,13 +34,6 @@ export function HomePage() {
       )
       setKnownMap(new Map(knownEntries))
     })
-  }
-
-  useEffect(() => {
-    loadProgress()
-    const onVisible = () => { if (document.visibilityState === 'visible') loadProgress() }
-    document.addEventListener('visibilitychange', onVisible)
-    return () => document.removeEventListener('visibilitychange', onVisible)
   }, [])
 
   const filtered = allPacks.filter(pack => {

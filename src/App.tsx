@@ -72,7 +72,7 @@ export function App() {
       )}
       <Suspense fallback={<LoadingFallback />}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage key={location.pathname} />} />
           <Route path="/pakiet/:packageId" element={<PackPreviewPage />} />
           <Route path="/pakiet/:packageId/start" element={<AutoplayModePage />} />
           <Route path="/pakiet/:packageId/fiszki-start" element={<FlashcardModePage />} />
