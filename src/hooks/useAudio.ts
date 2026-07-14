@@ -3,7 +3,7 @@ import { getAudioUrl, preloadAudio } from '../services/audioService'
 import { getAudioElement } from '../audio/audioElement'
 import { Word } from '../types/vocabulary'
 
-const EN_BASE = 0.70
+const EN_BASE = 1.0
 const PL_BASE = 1.0
 
 // enRate/plRate are multipliers: 1.0 = default speed, 0.5 = half, 1.5 = faster
