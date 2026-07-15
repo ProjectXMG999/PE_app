@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  padding: 14px var(--spacing-md) 10px;
+  padding: calc(14px + env(safe-area-inset-top, 0px)) var(--spacing-md) 10px;
   flex-shrink: 0;
 }
 
