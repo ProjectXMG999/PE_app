@@ -8,6 +8,8 @@ import { FilterTabs } from '../components/home/FilterTabs'
 import { LevelProgressBars } from '../components/home/LevelProgressBars'
 import { SectionHeader } from '../components/home/SectionHeader'
 import { PackageCard } from '../components/home/PackageCard'
+import { OnboardingCard } from '../components/home/OnboardingCard'
+import { OnboardingModal } from '../components/onboarding/OnboardingModal'
 import { useAppStore } from '../store/useAppStore'
 import { getAllPackageProgress, getAllWordProgress } from '../services/db'
 import { PackageProgress } from '../types/progress'
@@ -61,8 +63,10 @@ export function HomePage() {
 
   return (
     <AppShell>
+      <OnboardingModal />
       <div className="homepage">
         <InstallBanner />
+        <OnboardingCard />
         <QuickStartCards />
         <StatsRow />
         <SearchBar />
