@@ -10,8 +10,8 @@
       "id": "t1-p125-001",
       "english": "Architecture",
       "polish": "Architektura",
-      "sentenceEn": "I love architecture. This is what I want to do.",
-      "sentencePl": "Kocham architekturę. Tym chcę się zajmować.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-001-word.mp3",
       "audioSentence": "t1-p125-001-sentence.mp3"
     },
@@ -19,8 +19,8 @@
       "id": "t1-p125-002",
       "english": "Block of flats",
       "polish": "Blok",
-      "sentenceEn": "Do you live in a house or in a block of flats?",
-      "sentencePl": "Mieszkasz w domu czy w bloku?",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-002-word.mp3",
       "audioSentence": "t1-p125-002-sentence.mp3"
     },
@@ -28,8 +28,8 @@
       "id": "t1-p125-003",
       "english": "Story",
       "polish": "Kondygnacja",
-      "sentenceEn": "My sister lives in a two-story house.",
-      "sentencePl": "Moja siostra mieszka w domu dwupiętrowym.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-003-word.mp3",
       "audioSentence": "t1-p125-003-sentence.mp3"
     },
@@ -37,8 +37,8 @@
       "id": "t1-p125-004",
       "english": "Ground floor",
       "polish": "Parter",
-      "sentenceEn": "I don't like living on the ground floor. It's too loud.",
-      "sentencePl": "Nie lubię mieszkać na parterze. Jest za głośno.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-004-word.mp3",
       "audioSentence": "t1-p125-004-sentence.mp3"
     },
@@ -46,17 +46,17 @@
       "id": "t1-p125-005",
       "english": "Floor",
       "polish": "Piętro",
-      "sentenceEn": "Kids are playing with blocks on the floor.",
-      "sentencePl": "Dzieci bawią się klockami na podłodze.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-005-word.mp3",
       "audioSentence": "t1-p125-005-sentence.mp3"
     },
     {
       "id": "t1-p125-006",
       "english": "Station",
-      "polish": "Stacja; dworzec",
-      "sentenceEn": "Though there were thousands of people at the station, he saw Mary in the crowd.",
-      "sentencePl": "Chociaż na stacji były tysiące ludzi, wypatrzył Mary w tłumie.",
+      "polish": "Stacja",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-006-word.mp3",
       "audioSentence": "t1-p125-006-sentence.mp3"
     },
@@ -64,8 +64,8 @@
       "id": "t1-p125-007",
       "english": "Entrance",
       "polish": "Wejście",
-      "sentenceEn": "The entrance to the Arcade Room is hidden.",
-      "sentencePl": "Wejście do Arcade Roomu jest ukryte.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-007-word.mp3",
       "audioSentence": "t1-p125-007-sentence.mp3"
     },
@@ -73,8 +73,8 @@
       "id": "t1-p125-008",
       "english": "Exit",
       "polish": "Wyjście",
-      "sentenceEn": "I think we're lost. Where's the exit?",
-      "sentencePl": "Chyba się zgubiliśmy. Gdzie jest wyjście?",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-008-word.mp3",
       "audioSentence": "t1-p125-008-sentence.mp3"
     },
@@ -82,8 +82,8 @@
       "id": "t1-p125-009",
       "english": "Office building",
       "polish": "Biurowiec",
-      "sentenceEn": "I like working from home and don't want to return to the office building.",
-      "sentencePl": "Lubię pracę z domu i nie chcę wracać do biurowca.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-009-word.mp3",
       "audioSentence": "t1-p125-009-sentence.mp3"
     },
@@ -91,8 +91,8 @@
       "id": "t1-p125-010",
       "english": "Apartment block",
       "polish": "Blok mieszkalny",
-      "sentenceEn": "They are renovating my apartment block, and it's so loud I can't hear myself think.",
-      "sentencePl": "Odnawiają mój blok i jest tak głośno, że nie słyszę własnych myśli.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-010-word.mp3",
       "audioSentence": "t1-p125-010-sentence.mp3"
     },
@@ -100,8 +100,8 @@
       "id": "t1-p125-011",
       "english": "Palace",
       "polish": "Pałac",
-      "sentenceEn": "The palace in Sankt Petersburg is a must-see.",
-      "sentencePl": "Pałac w Petersburgu to miejsce, które trzeba zobaczyć.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-011-word.mp3",
       "audioSentence": "t1-p125-011-sentence.mp3"
     },
@@ -109,8 +109,8 @@
       "id": "t1-p125-012",
       "english": "Ruins",
       "polish": "Ruiny",
-      "sentenceEn": "Let's see the ruins tomorrow. They aren't going anywhere.",
-      "sentencePl": "Ruiny możemy zobaczyć jutro. Nigdzie nam nie uciekną.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-012-word.mp3",
       "audioSentence": "t1-p125-012-sentence.mp3"
     },
@@ -118,28 +118,163 @@
       "id": "t1-p125-013",
       "english": "Tower",
       "polish": "Wieża",
-      "sentenceEn": "Let's climb to the top of the tower and take a selfie with an awesome view!",
-      "sentencePl": "Wejdźmy na szczyt wieży i zróbmy sobie selfie z czaderskim widokiem!",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-013-word.mp3",
       "audioSentence": "t1-p125-013-sentence.mp3"
     },
     {
       "id": "t1-p125-014",
       "english": "Castle",
-      "polish": "Zamek (budynek)",
-      "sentenceEn": "I really want to go on a tour of castles in Scotland.",
-      "sentencePl": "Bardzo chcę pojechać na wycieczkę po zamkach w Szkocji.",
+      "polish": "Zamek",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-014-word.mp3",
       "audioSentence": "t1-p125-014-sentence.mp3"
     },
     {
       "id": "t1-p125-015",
       "english": "Studio",
-      "polish": "Studio; kawalerka",
-      "sentenceEn": "Natalie lives in a small cozy studio which is good enough for her.",
-      "sentencePl": "Natalie mieszka w małym, przytulnym studio, które w zupełności jej wystarcza.",
+      "polish": "Studio",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p125-015-word.mp3",
       "audioSentence": "t1-p125-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-016",
+      "english": "Skyscraper",
+      "polish": "Drapacz chmur",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-016-word.mp3",
+      "audioSentence": "t1-p125-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-017",
+      "english": "Semi-detached house",
+      "polish": "Bliźniak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-017-word.mp3",
+      "audioSentence": "t1-p125-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-018",
+      "english": "Tenement",
+      "polish": "Kamienica",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-018-word.mp3",
+      "audioSentence": "t1-p125-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-019",
+      "english": "Terraced house",
+      "polish": "Dom szeregowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-019-word.mp3",
+      "audioSentence": "t1-p125-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-020",
+      "english": "Detached house",
+      "polish": "Dom wolnostojący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-020-word.mp3",
+      "audioSentence": "t1-p125-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-021",
+      "english": "Estate",
+      "polish": "Nieruchomość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-021-word.mp3",
+      "audioSentence": "t1-p125-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-022",
+      "english": "Facility",
+      "polish": "Obiekt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-022-word.mp3",
+      "audioSentence": "t1-p125-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-023",
+      "english": "Tower block",
+      "polish": "Wieżowiec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-023-word.mp3",
+      "audioSentence": "t1-p125-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-024",
+      "english": "Bungalow",
+      "polish": "Bungalow",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-024-word.mp3",
+      "audioSentence": "t1-p125-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-025",
+      "english": "Bell tower",
+      "polish": "Dzwonnica",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-025-word.mp3",
+      "audioSentence": "t1-p125-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-026",
+      "english": "Studio apartment",
+      "polish": "Kawalerka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-026-word.mp3",
+      "audioSentence": "t1-p125-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-027",
+      "english": "Lodge",
+      "polish": "Domek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-027-word.mp3",
+      "audioSentence": "t1-p125-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-028",
+      "english": "Shack",
+      "polish": "Chałupa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-028-word.mp3",
+      "audioSentence": "t1-p125-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-029",
+      "english": "Mansion",
+      "polish": "Posiadłość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-029-word.mp3",
+      "audioSentence": "t1-p125-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p125-030",
+      "english": "Manor",
+      "polish": "Dworek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p125-030-word.mp3",
+      "audioSentence": "t1-p125-030-sentence.mp3"
     }
   ]
 }

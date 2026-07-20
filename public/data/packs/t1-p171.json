@@ -8,7 +8,7 @@
   "words": [
     {
       "id": "t1-p171-001",
-      "english": "C'mon",
+      "english": "C'MON",
       "polish": "No cho",
       "sentenceEn": null,
       "sentencePl": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t1-p171-002",
-      "english": "Coz",
+      "english": "COZ",
       "polish": "Bo",
       "sentenceEn": null,
       "sentencePl": null,
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p171-003",
-      "english": "Dontcha",
-      "polish": "C'nie (o drugim rozmówcy w zdaniach o teraźniejszości)",
+      "english": "DONTCHA",
+      "polish": "C'nie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p171-004",
-      "english": "Dunno",
-      "polish": "Nie wiem (slang)",
+      "english": "DUNNO",
+      "polish": "Nie wiem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p171-005",
-      "english": "Gimme",
-      "polish": "Daj mi (slang)",
+      "english": "GIMME",
+      "polish": "Daj mi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p171-006",
-      "english": "Kinda",
-      "polish": "Trochę; trochę jak (slang)",
+      "english": "KINDA",
+      "polish": "Trochę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p171-007",
-      "english": "Em",
-      "polish": "Im; je (slang)",
+      "english": "EM",
+      "polish": "Im",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p171-008",
-      "english": "Wanna",
-      "polish": "Chcieć (slang)",
+      "english": "WANNA",
+      "polish": "Chcieć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p171-009",
-      "english": "Ain't",
-      "polish": "Nie (slang)",
+      "english": "AIN'T",
+      "polish": "Nie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-009-word.mp3",
@@ -89,12 +89,102 @@
     },
     {
       "id": "t1-p171-010",
-      "english": "Gonna",
-      "polish": "Mieć zamiar (slang)",
+      "english": "GONNA",
+      "polish": "Mieć zamiar",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-010-word.mp3",
       "audioSentence": "t1-p171-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p171-011",
+      "english": "GOTTA",
+      "polish": "Musieć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p171-011-word.mp3",
+      "audioSentence": "t1-p171-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p171-012",
+      "english": "I'MMA",
+      "polish": "Zamierzam",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p171-012-word.mp3",
+      "audioSentence": "t1-p171-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p171-013",
+      "english": "INNIT",
+      "polish": "C'nie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p171-013-word.mp3",
+      "audioSentence": "t1-p171-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p171-014",
+      "english": "LEMME",
+      "polish": "Daj mi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p171-014-word.mp3",
+      "audioSentence": "t1-p171-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p171-015",
+      "english": "OUTTA",
+      "polish": "Z",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p171-015-word.mp3",
+      "audioSentence": "t1-p171-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p171-016",
+      "english": "SHOULDA",
+      "polish": "Powinien był",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p171-016-word.mp3",
+      "audioSentence": "t1-p171-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p171-017",
+      "english": "SORTA",
+      "polish": "Trochę jak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p171-017-word.mp3",
+      "audioSentence": "t1-p171-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p171-018",
+      "english": "WHATCHA",
+      "polish": "Co tam",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p171-018-word.mp3",
+      "audioSentence": "t1-p171-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p171-019",
+      "english": "FINNA",
+      "polish": "Zamierzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p171-019-word.mp3",
+      "audioSentence": "t1-p171-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p171-020",
+      "english": "WONTCHA",
+      "polish": "C'nie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p171-020-word.mp3",
+      "audioSentence": "t1-p171-020-sentence.mp3"
     }
   ]
 }

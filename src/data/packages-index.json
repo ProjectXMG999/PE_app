@@ -1,6 +1,6 @@
 [
   {
-    "id": "t1-p01",
+    "id": "t1-p001",
     "name": "Czasowniki 1",
     "volume": "Tom I",
     "level": 1,
@@ -9,16 +9,16 @@
     "chapter": "Rozdział I"
   },
   {
-    "id": "t1-p02",
+    "id": "t1-p002",
     "name": "Miasto",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 75,
+    "wordCount": 120,
     "chapter": "Rozdział I"
   },
   {
-    "id": "t1-p03",
+    "id": "t1-p003",
     "name": "Dzięki, to miłe",
     "volume": "Tom I",
     "level": 1,
@@ -27,43 +27,43 @@
     "chapter": "Rozdział I"
   },
   {
-    "id": "t1-p04",
+    "id": "t1-p004",
     "name": "Napoje",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 25,
+    "wordCount": 39,
     "chapter": "Rozdział I"
   },
   {
-    "id": "t1-p05",
+    "id": "t1-p005",
     "name": "Ruch I bezczynność",
     "volume": "Tom I",
     "level": 1,
     "category": "Czasowniki",
-    "wordCount": 40,
+    "wordCount": 70,
     "chapter": "Rozdział I"
   },
   {
-    "id": "t1-p06",
+    "id": "t1-p006",
     "name": "Ubrania",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 50,
+    "wordCount": 110,
     "chapter": "Rozdział I"
   },
   {
-    "id": "t1-p07",
+    "id": "t1-p007",
     "name": "Podróże",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 65,
+    "wordCount": 95,
     "chapter": "Rozdział I"
   },
   {
-    "id": "t1-p08",
+    "id": "t1-p008",
     "name": "Witaj w świecie skrótów",
     "volume": "Tom I",
     "level": 1,
@@ -72,25 +72,25 @@
     "chapter": "Rozdział I"
   },
   {
-    "id": "t1-p09",
+    "id": "t1-p009",
     "name": "Mile widziane",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 105,
+    "wordCount": 230,
     "chapter": "Rozdział I"
   },
   {
-    "id": "t1-p10",
+    "id": "t1-p010",
     "name": "Biznes",
     "volume": "Tom I",
     "level": 1,
     "category": "Czasowniki",
-    "wordCount": 125,
+    "wordCount": 375,
     "chapter": "Rozdział I"
   },
   {
-    "id": "t1-p11",
+    "id": "t1-p011",
     "name": "Czasowniki 2",
     "volume": "Tom I",
     "level": 1,
@@ -99,7 +99,7 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p12",
+    "id": "t1-p012",
     "name": "Slang 1",
     "volume": "Tom I",
     "level": 1,
@@ -108,7 +108,7 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p13",
+    "id": "t1-p013",
     "name": "Slang 2",
     "volume": "Tom I",
     "level": 1,
@@ -117,34 +117,34 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p14",
+    "id": "t1-p014",
     "name": "Każdy to robi",
     "volume": "Tom I",
     "level": 1,
     "category": "Czasowniki",
-    "wordCount": 25,
+    "wordCount": 50,
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p15",
+    "id": "t1-p015",
     "name": "Romantyczne",
     "volume": "Tom I",
     "level": 1,
-    "category": "Piękne",
+    "category": "Slang",
     "wordCount": 10,
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p16",
+    "id": "t1-p016",
     "name": "Komunikacja",
     "volume": "Tom I",
     "level": 1,
     "category": "Czasowniki",
-    "wordCount": 140,
+    "wordCount": 255,
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p17",
+    "id": "t1-p017",
     "name": "Od świtu do zmierzchu",
     "volume": "Tom I",
     "level": 1,
@@ -153,7 +153,7 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p18",
+    "id": "t1-p018",
     "name": "Przymiotniki 1",
     "volume": "Tom I",
     "level": 1,
@@ -162,7 +162,7 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p19",
+    "id": "t1-p019",
     "name": "Czasowniki 3",
     "volume": "Tom I",
     "level": 1,
@@ -171,16 +171,16 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p20",
+    "id": "t1-p020",
     "name": "Człowiek",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 105,
+    "wordCount": 165,
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p21",
+    "id": "t1-p021",
     "name": "W skali 1-10",
     "volume": "Tom I",
     "level": 1,
@@ -189,16 +189,16 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p22",
+    "id": "t1-p022",
     "name": "Rodzina",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 50,
+    "wordCount": 65,
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p23",
+    "id": "t1-p023",
     "name": "Slang 3",
     "volume": "Tom I",
     "level": 1,
@@ -207,34 +207,34 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p24",
+    "id": "t1-p024",
     "name": "Dom",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 105,
+    "wordCount": 135,
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p25",
+    "id": "t1-p025",
     "name": "Miary",
     "volume": "Tom I",
     "level": 1,
     "category": "Przymiotniki",
-    "wordCount": 40,
+    "wordCount": 55,
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p26",
+    "id": "t1-p026",
     "name": "Jedzenie",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 120,
+    "wordCount": 180,
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p27",
+    "id": "t1-p027",
     "name": "Czas to pieniądz",
     "volume": "Tom I",
     "level": 1,
@@ -243,124 +243,124 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p28",
+    "id": "t1-p028",
     "name": "Transport",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 65,
+    "wordCount": 95,
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p29",
+    "id": "t1-p029",
     "name": "Części ciała",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 65,
+    "wordCount": 95,
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p30",
+    "id": "t1-p030",
     "name": "Nie przestawaj liczyć!",
     "volume": "Tom I",
     "level": 1,
     "category": "Liczby",
     "wordCount": 10,
-    "chapter": "Rodział IV"
+    "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p31",
+    "id": "t1-p031",
     "name": "Higiena I wygląd",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 60,
-    "chapter": "Rodział IV"
+    "wordCount": 130,
+    "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p32",
+    "id": "t1-p032",
     "name": "Kalendarz I czas",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 70,
-    "chapter": "Rodział IV"
+    "wordCount": 85,
+    "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p33",
+    "id": "t1-p033",
     "name": "Pogoda",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 55,
-    "chapter": "Rodział IV"
+    "wordCount": 115,
+    "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p34",
+    "id": "t1-p034",
     "name": "Zwierzęta",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 40,
-    "chapter": "Rodział IV"
+    "wordCount": 115,
+    "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p35",
+    "id": "t1-p035",
     "name": "Slang 4",
     "volume": "Tom I",
     "level": 1,
     "category": "Slang",
     "wordCount": 10,
-    "chapter": "Rodział IV"
+    "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p36",
+    "id": "t1-p036",
     "name": "Przymiotniki 2",
     "volume": "Tom I",
     "level": 1,
     "category": "Przymiotniki",
     "wordCount": 10,
-    "chapter": "Rodział IV"
+    "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p37",
+    "id": "t1-p037",
     "name": "Warzywa I owoce",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 35,
-    "chapter": "Rodział IV"
+    "wordCount": 80,
+    "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p38",
+    "id": "t1-p038",
     "name": "Finanse",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 50,
-    "chapter": "Rodział IV"
+    "wordCount": 105,
+    "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p39",
+    "id": "t1-p039",
     "name": "Mali, lecz ważni",
     "volume": "Tom I",
     "level": 1,
     "category": "Maleństwa",
     "wordCount": 10,
-    "chapter": "Rodział IV"
+    "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p40",
+    "id": "t1-p040",
     "name": "Sprzęt elektroniczny",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 50,
+    "wordCount": 65,
     "chapter": "Rozdział V"
   },
   {
-    "id": "t1-p41",
+    "id": "t1-p041",
     "name": "Przymiotniki 3",
     "volume": "Tom I",
     "level": 1,
@@ -369,16 +369,16 @@
     "chapter": "Rozdział V"
   },
   {
-    "id": "t1-p42",
+    "id": "t1-p042",
     "name": "Szkoła",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 55,
+    "wordCount": 85,
     "chapter": "Rozdział V"
   },
   {
-    "id": "t1-p43",
+    "id": "t1-p043",
     "name": "Wyższa matematyka",
     "volume": "Tom I",
     "level": 1,
@@ -387,7 +387,7 @@
     "chapter": "Rozdział V"
   },
   {
-    "id": "t1-p44",
+    "id": "t1-p044",
     "name": "Czasowniki 4",
     "volume": "Tom I",
     "level": 1,
@@ -396,7 +396,7 @@
     "chapter": "Rozdział V"
   },
   {
-    "id": "t1-p45",
+    "id": "t1-p045",
     "name": "Rzeczowniki 1",
     "volume": "Tom I",
     "level": 1,
@@ -405,7 +405,7 @@
     "chapter": "Rozdział V"
   },
   {
-    "id": "t1-p46",
+    "id": "t1-p046",
     "name": "Rzeczowniki 2",
     "volume": "Tom I",
     "level": 1,
@@ -414,7 +414,7 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p47",
+    "id": "t1-p047",
     "name": "Rzeczowniki 3",
     "volume": "Tom I",
     "level": 1,
@@ -423,16 +423,16 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p48",
+    "id": "t1-p048",
     "name": "Kolory",
     "volume": "Tom I",
     "level": 1,
     "category": "Przymiotniki",
-    "wordCount": 10,
+    "wordCount": 25,
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p49",
+    "id": "t1-p049",
     "name": "Rzeczowniki 4",
     "volume": "Tom I",
     "level": 1,
@@ -441,16 +441,16 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p50",
+    "id": "t1-p050",
     "name": "Media",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 40,
+    "wordCount": 100,
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p51",
+    "id": "t1-p051",
     "name": "Kto jest kto",
     "volume": "Tom I",
     "level": 1,
@@ -459,25 +459,25 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p52",
+    "id": "t1-p052",
     "name": "Kuchnia",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 25,
+    "wordCount": 40,
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p53",
+    "id": "t1-p053",
     "name": "Czas",
     "volume": "Tom I",
     "level": 1,
     "category": "Maleństwa",
-    "wordCount": 30,
+    "wordCount": 55,
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p54",
+    "id": "t1-p054",
     "name": "Na koncie",
     "volume": "Tom I",
     "level": 1,
@@ -486,7 +486,7 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p55",
+    "id": "t1-p055",
     "name": "Języki (I nie tylko)",
     "volume": "Tom I",
     "level": 1,
@@ -495,7 +495,7 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p56",
+    "id": "t1-p056",
     "name": "Czas I miary",
     "volume": "Tom I",
     "level": 1,
@@ -504,16 +504,16 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p57",
+    "id": "t1-p057",
     "name": "Geografia",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 55,
+    "wordCount": 85,
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p58",
+    "id": "t1-p058",
     "name": "Kto? Co?",
     "volume": "Tom I",
     "level": 1,
@@ -522,7 +522,7 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p59",
+    "id": "t1-p059",
     "name": "Rzeczowniki 5",
     "volume": "Tom I",
     "level": 1,
@@ -531,7 +531,7 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p60",
+    "id": "t1-p060",
     "name": "Kto pyta, nie błądzi",
     "volume": "Tom I",
     "level": 1,
@@ -540,25 +540,25 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p61",
+    "id": "t1-p061",
     "name": "Dolegliwości",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 55,
+    "wordCount": 115,
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p62",
+    "id": "t1-p062",
     "name": "Mentalne",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 25,
+    "wordCount": 85,
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p63",
+    "id": "t1-p063",
     "name": "Czasowniki 5",
     "volume": "Tom I",
     "level": 1,
@@ -567,16 +567,16 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p64",
+    "id": "t1-p064",
     "name": "Sukces",
     "volume": "Tom I",
     "level": 1,
     "category": "Przymiotniki",
-    "wordCount": 55,
+    "wordCount": 100,
     "chapter": "Rozdział VIII"
   },
   {
-    "id": "t1-p65",
+    "id": "t1-p065",
     "name": "Czasowniki 6",
     "volume": "Tom I",
     "level": 1,
@@ -585,7 +585,7 @@
     "chapter": "Rozdział VIII"
   },
   {
-    "id": "t1-p66",
+    "id": "t1-p066",
     "name": "Komu? Czemu?",
     "volume": "Tom I",
     "level": 1,
@@ -594,7 +594,7 @@
     "chapter": "Rozdział VIII"
   },
   {
-    "id": "t1-p67",
+    "id": "t1-p067",
     "name": "Przymiotniki 4",
     "volume": "Tom I",
     "level": 1,
@@ -603,7 +603,7 @@
     "chapter": "Rozdział VIII"
   },
   {
-    "id": "t1-p68",
+    "id": "t1-p068",
     "name": "Przysłówki 1",
     "volume": "Tom I",
     "level": 1,
@@ -612,7 +612,7 @@
     "chapter": "Rozdział VIII"
   },
   {
-    "id": "t1-p69",
+    "id": "t1-p069",
     "name": "Ciągle w ruchu",
     "volume": "Tom I",
     "level": 1,
@@ -621,7 +621,7 @@
     "chapter": "Rozdział IX"
   },
   {
-    "id": "t1-p70",
+    "id": "t1-p070",
     "name": "Zostań w świecie skrótów",
     "volume": "Tom I",
     "level": 1,
@@ -630,16 +630,16 @@
     "chapter": "Rozdział IX"
   },
   {
-    "id": "t1-p71",
+    "id": "t1-p071",
     "name": "Kraje",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 170,
+    "wordCount": 245,
     "chapter": "Rozdział IX"
   },
   {
-    "id": "t1-p72",
+    "id": "t1-p072",
     "name": "Kierunek I miejsce",
     "volume": "Tom I",
     "level": 1,
@@ -648,7 +648,7 @@
     "chapter": "Rozdział IX"
   },
   {
-    "id": "t1-p73",
+    "id": "t1-p073",
     "name": "Czasowniki 7",
     "volume": "Tom I",
     "level": 1,
@@ -657,7 +657,7 @@
     "chapter": "Rozdział IX"
   },
   {
-    "id": "t1-p74",
+    "id": "t1-p074",
     "name": "Przymiotniki 5",
     "volume": "Tom I",
     "level": 1,
@@ -666,7 +666,7 @@
     "chapter": "Rozdział IX"
   },
   {
-    "id": "t1-p75",
+    "id": "t1-p075",
     "name": "Człowiekiem jestem",
     "volume": "Tom I",
     "level": 1,
@@ -675,7 +675,7 @@
     "chapter": "Rozdział X"
   },
   {
-    "id": "t1-p76",
+    "id": "t1-p076",
     "name": "Przymiotniki 6",
     "volume": "Tom I",
     "level": 1,
@@ -684,8 +684,17 @@
     "chapter": "Rozdział X"
   },
   {
-    "id": "t1-p77",
+    "id": "t1-p077",
     "name": "Kultura",
+    "volume": "Tom I",
+    "level": 1,
+    "category": "Rzeczowniki",
+    "wordCount": 115,
+    "chapter": "Rozdział X"
+  },
+  {
+    "id": "t1-p078",
+    "name": "Emocje I uczucia",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
@@ -693,8 +702,17 @@
     "chapter": "Rozdział X"
   },
   {
-    "id": "t1-p78",
-    "name": "Emocje I uczucia",
+    "id": "t1-p079",
+    "name": "Ręką",
+    "volume": "Tom I",
+    "level": 1,
+    "category": "Czasowniki",
+    "wordCount": 95,
+    "chapter": "Rozdział X"
+  },
+  {
+    "id": "t1-p080",
+    "name": "Życie",
     "volume": "Tom I",
     "level": 1,
     "category": "Rzeczowniki",
@@ -702,25 +720,7 @@
     "chapter": "Rozdział X"
   },
   {
-    "id": "t1-p79",
-    "name": "Ręką",
-    "volume": "Tom I",
-    "level": 1,
-    "category": "Czasowniki",
-    "wordCount": 60,
-    "chapter": "Rozdział X"
-  },
-  {
-    "id": "t1-p80",
-    "name": "Życie",
-    "volume": "Tom I",
-    "level": 1,
-    "category": "Rzeczowniki",
-    "wordCount": 10,
-    "chapter": "Rozdział X"
-  },
-  {
-    "id": "t1-p81",
+    "id": "t1-p081",
     "name": "Atak klonów",
     "volume": "Tom I",
     "level": 1,
@@ -729,7 +729,7 @@
     "chapter": "Rozdział X"
   },
   {
-    "id": "t1-p82",
+    "id": "t1-p082",
     "name": "Biznes zaczyna się w głowie",
     "volume": "Tom II",
     "level": 1,
@@ -738,25 +738,25 @@
     "chapter": "Rozdział XI"
   },
   {
-    "id": "t1-p83",
+    "id": "t1-p083",
     "name": "Języki",
     "volume": "Tom II",
     "level": 1,
     "category": "Przymiotniki",
-    "wordCount": 25,
+    "wordCount": 55,
     "chapter": "Rozdział XI"
   },
   {
-    "id": "t1-p84",
+    "id": "t1-p084",
     "name": "Zawody",
     "volume": "Tom II",
     "level": 1,
     "category": "Rzeczowniki",
-    "wordCount": 85,
+    "wordCount": 130,
     "chapter": "Rozdział XI"
   },
   {
-    "id": "t1-p85",
+    "id": "t1-p085",
     "name": "Rzeczowniki 6",
     "volume": "Tom II",
     "level": 1,
@@ -765,7 +765,7 @@
     "chapter": "Rozdział XI"
   },
   {
-    "id": "t1-p86",
+    "id": "t1-p086",
     "name": "Działania",
     "volume": "Tom II",
     "level": 2,
@@ -774,16 +774,16 @@
     "chapter": "Rozdział XI"
   },
   {
-    "id": "t1-p87",
+    "id": "t1-p087",
     "name": "Słodziak",
     "volume": "Tom II",
     "level": 2,
-    "category": "Piękne",
+    "category": "Slang",
     "wordCount": 20,
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p88",
+    "id": "t1-p088",
     "name": "Slang 5",
     "volume": "Tom II",
     "level": 2,
@@ -792,7 +792,7 @@
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p89",
+    "id": "t1-p089",
     "name": "Czasowniki 8",
     "volume": "Tom II",
     "level": 2,
@@ -801,7 +801,7 @@
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p90",
+    "id": "t1-p090",
     "name": "Slang 6",
     "volume": "Tom II",
     "level": 2,
@@ -810,25 +810,25 @@
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p91",
+    "id": "t1-p091",
     "name": "Dziecko",
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 30,
+    "wordCount": 60,
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p92",
+    "id": "t1-p092",
     "name": "Unikać",
     "volume": "Tom II",
     "level": 2,
     "category": "Przymiotniki",
-    "wordCount": 90,
+    "wordCount": 225,
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p93",
+    "id": "t1-p093",
     "name": "Czasu mamy mało",
     "volume": "Tom II",
     "level": 2,
@@ -837,7 +837,7 @@
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p94",
+    "id": "t1-p094",
     "name": "Slang 7",
     "volume": "Tom II",
     "level": 2,
@@ -846,7 +846,7 @@
     "chapter": "Rozdział XIII"
   },
   {
-    "id": "t1-p95",
+    "id": "t1-p095",
     "name": "Czasowniki 9",
     "volume": "Tom II",
     "level": 2,
@@ -855,16 +855,16 @@
     "chapter": "Rozdział XIII"
   },
   {
-    "id": "t1-p96",
+    "id": "t1-p096",
     "name": "Niefajne",
     "volume": "Tom II",
     "level": 2,
     "category": "Czasowniki",
-    "wordCount": 110,
+    "wordCount": 255,
     "chapter": "Rozdział XIII"
   },
   {
-    "id": "t1-p97",
+    "id": "t1-p097",
     "name": "Przymiotniki 7",
     "volume": "Tom II",
     "level": 2,
@@ -873,7 +873,7 @@
     "chapter": "Rozdział XIII"
   },
   {
-    "id": "t1-p98",
+    "id": "t1-p098",
     "name": "Popularne",
     "volume": "Tom II",
     "level": 2,
@@ -882,13 +882,13 @@
     "chapter": "Rozdział XIII"
   },
   {
-    "id": "t1-p99",
+    "id": "t1-p099",
     "name": "Który na mecie",
     "volume": "Tom II",
     "level": 2,
     "category": "Liczby",
     "wordCount": 10,
-    "chapter": "Rodział XIV"
+    "chapter": "Rozdział XIV"
   },
   {
     "id": "t1-p100",
@@ -897,7 +897,7 @@
     "level": 2,
     "category": "Slang",
     "wordCount": 10,
-    "chapter": "Rodział XIV"
+    "chapter": "Rozdział XIV"
   },
   {
     "id": "t1-p101",
@@ -906,7 +906,7 @@
     "level": 2,
     "category": "Slang",
     "wordCount": 10,
-    "chapter": "Rodział XIV"
+    "chapter": "Rozdział XIV"
   },
   {
     "id": "t1-p102",
@@ -914,8 +914,8 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Czasowniki",
-    "wordCount": 80,
-    "chapter": "Rodział XIV"
+    "wordCount": 130,
+    "chapter": "Rozdział XIV"
   },
   {
     "id": "t1-p103",
@@ -924,7 +924,7 @@
     "level": 2,
     "category": "Slang",
     "wordCount": 10,
-    "chapter": "Rodział XIV"
+    "chapter": "Rozdział XIV"
   },
   {
     "id": "t1-p104",
@@ -932,8 +932,8 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Przymiotniki",
-    "wordCount": 60,
-    "chapter": "Rodział XIV"
+    "wordCount": 90,
+    "chapter": "Rozdział XIV"
   },
   {
     "id": "t1-p105",
@@ -941,7 +941,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Czasowniki",
-    "wordCount": 50,
+    "wordCount": 90,
     "chapter": "Rozdział XV"
   },
   {
@@ -959,7 +959,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Czasowniki",
-    "wordCount": 15,
+    "wordCount": 30,
     "chapter": "Rozdział XV"
   },
   {
@@ -968,7 +968,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Przysłówki",
-    "wordCount": 45,
+    "wordCount": 70,
     "chapter": "Rozdział XV"
   },
   {
@@ -1004,7 +1004,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 55,
+    "wordCount": 95,
     "chapter": "Rozdział XVI"
   },
   {
@@ -1013,7 +1013,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 75,
+    "wordCount": 195,
     "chapter": "Rozdział XVI"
   },
   {
@@ -1022,7 +1022,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Maleństwa",
-    "wordCount": 10,
+    "wordCount": 20,
     "chapter": "Rozdział XVI"
   },
   {
@@ -1030,7 +1030,7 @@
     "name": "Rewelacja",
     "volume": "Tom II",
     "level": 2,
-    "category": "Piękne",
+    "category": "Slang",
     "wordCount": 40,
     "chapter": "Rozdział XVII"
   },
@@ -1040,7 +1040,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 30,
     "chapter": "Rozdział XVII"
   },
   {
@@ -1049,7 +1049,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 30,
     "chapter": "Rozdział XVII"
   },
   {
@@ -1058,7 +1058,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 150,
+    "wordCount": 315,
     "chapter": "Rozdział XVII"
   },
   {
@@ -1085,7 +1085,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 45,
     "chapter": "Rozdział XVII"
   },
   {
@@ -1103,7 +1103,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 30,
+    "wordCount": 45,
     "chapter": "Rozdział XVIII"
   },
   {
@@ -1112,7 +1112,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 75,
+    "wordCount": 135,
     "chapter": "Rozdział XVIII"
   },
   {
@@ -1121,7 +1121,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 30,
     "chapter": "Rozdział XVIII"
   },
   {
@@ -1130,7 +1130,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Klony",
-    "wordCount": 20,
+    "wordCount": 30,
     "chapter": "Rozdział XVIII"
   },
   {
@@ -1139,7 +1139,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 30,
     "chapter": "Rozdział XVIII"
   },
   {
@@ -1157,7 +1157,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Przymiotniki",
-    "wordCount": 15,
+    "wordCount": 30,
     "chapter": "Rozdział XIX"
   },
   {
@@ -1166,7 +1166,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Phrasale",
-    "wordCount": 20,
+    "wordCount": 40,
     "chapter": "Rozdział XIX"
   },
   {
@@ -1175,7 +1175,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 30,
     "chapter": "Rozdział XIX"
   },
   {
@@ -1184,7 +1184,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 30,
+    "wordCount": 75,
     "chapter": "Rozdział XIX"
   },
   {
@@ -1193,7 +1193,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 30,
+    "wordCount": 60,
     "chapter": "Rozdział XIX"
   },
   {
@@ -1202,7 +1202,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Przysłówki",
-    "wordCount": 30,
+    "wordCount": 75,
     "chapter": "Rozdział XX"
   },
   {
@@ -1210,8 +1210,8 @@
     "name": "Człowiek jest piękny",
     "volume": "Tom II",
     "level": 2,
-    "category": "Piękne",
-    "wordCount": 30,
+    "category": "Slang",
+    "wordCount": 40,
     "chapter": "Rozdział XX"
   },
   {
@@ -1220,7 +1220,7 @@
     "volume": "Tom II",
     "level": 2,
     "category": "Phrasale",
-    "wordCount": 20,
+    "wordCount": 55,
     "chapter": "Rozdział XX"
   },
   {
@@ -1247,7 +1247,7 @@
     "volume": "Tom III",
     "level": 2,
     "category": "Phrasale",
-    "wordCount": 20,
+    "wordCount": 30,
     "chapter": "Rozdział XXI"
   },
   {
@@ -1256,7 +1256,7 @@
     "volume": "Tom III",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 60,
     "chapter": "Rozdział XXI"
   },
   {
@@ -1265,7 +1265,7 @@
     "volume": "Tom III",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 30,
+    "wordCount": 120,
     "chapter": "Rozdział XXI"
   },
   {
@@ -1292,7 +1292,7 @@
     "volume": "Tom III",
     "level": 2,
     "category": "Rzeczowniki",
-    "wordCount": 125,
+    "wordCount": 185,
     "chapter": "Rozdział XXI"
   },
   {
@@ -1301,7 +1301,7 @@
     "volume": "Tom III",
     "level": 2,
     "category": "Czasowniki",
-    "wordCount": 30,
+    "wordCount": 45,
     "chapter": "Rozdział XXII"
   },
   {
@@ -1310,7 +1310,7 @@
     "volume": "Tom III",
     "level": 2,
     "category": "Przymiotniki",
-    "wordCount": 15,
+    "wordCount": 45,
     "chapter": "Rozdział XXII"
   },
   {
@@ -1327,8 +1327,8 @@
     "name": "Najpiękniejsze słowa",
     "volume": "Tom III",
     "level": 2,
-    "category": "Piękne",
-    "wordCount": 20,
+    "category": "Slang",
+    "wordCount": 60,
     "chapter": "Rozdział XXII"
   },
   {
@@ -1337,7 +1337,7 @@
     "volume": "Tom III",
     "level": 2,
     "category": "Spójniki",
-    "wordCount": 10,
+    "wordCount": 20,
     "chapter": "Rozdział XXII"
   },
   {
@@ -1355,7 +1355,7 @@
     "volume": "Tom III",
     "level": 2,
     "category": "Slang",
-    "wordCount": 10,
+    "wordCount": 20,
     "chapter": "Rozdział XXIII"
   },
   {
@@ -1364,7 +1364,7 @@
     "volume": "Tom III",
     "level": 2,
     "category": "Czasowniki",
-    "wordCount": 30,
+    "wordCount": 55,
     "chapter": "Rozdział XXIII"
   },
   {
@@ -1391,7 +1391,7 @@
     "volume": "Tom III",
     "level": 2,
     "category": "Slang",
-    "wordCount": 35,
+    "wordCount": 60,
     "chapter": "Rozdział XXIV"
   },
   {
@@ -1427,7 +1427,7 @@
     "volume": "Tom III",
     "level": 2,
     "category": "Przymiotniki",
-    "wordCount": 15,
+    "wordCount": 45,
     "chapter": "Rozdział XXV"
   },
   {
@@ -1436,7 +1436,7 @@
     "volume": "Tom III",
     "level": 2,
     "category": "Przysłówki",
-    "wordCount": 45,
+    "wordCount": 75,
     "chapter": "Rozdział XXVI"
   },
   {
@@ -1517,7 +1517,7 @@
     "volume": "Tom III",
     "level": 3,
     "category": "Rzeczowniki",
-    "wordCount": 30,
+    "wordCount": 45,
     "chapter": "Rozdział XXIX"
   },
   {
@@ -1526,7 +1526,7 @@
     "volume": "Tom III",
     "level": 3,
     "category": "Slang",
-    "wordCount": 10,
+    "wordCount": 30,
     "chapter": "Rozdział XXIX"
   },
   {
@@ -1535,7 +1535,7 @@
     "volume": "Tom III",
     "level": 3,
     "category": "Skróty",
-    "wordCount": 10,
+    "wordCount": 20,
     "chapter": "Rozdział XXX"
   },
   {
@@ -1580,7 +1580,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 30,
     "chapter": "Rozdział XXXI"
   },
   {
@@ -1607,7 +1607,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Przymiotniki",
-    "wordCount": 15,
+    "wordCount": 30,
     "chapter": "Rozdział XXXII"
   },
   {
@@ -1634,7 +1634,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 45,
     "chapter": "Rozdział XXXIII"
   },
   {
@@ -1643,7 +1643,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 18,
     "chapter": "Rozdział XXXIII"
   },
   {
@@ -1661,7 +1661,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 60,
     "chapter": "Rozdział XXXIII"
   },
   {
@@ -1688,7 +1688,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Phrasale",
-    "wordCount": 40,
+    "wordCount": 80,
     "chapter": "Rozdział XXXIV"
   },
   {
@@ -1697,7 +1697,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Przymiotniki",
-    "wordCount": 30,
+    "wordCount": 60,
     "chapter": "Rozdział XXXIV"
   },
   {
@@ -1724,7 +1724,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 45,
     "chapter": "Rozdział XXXV"
   },
   {
@@ -1760,7 +1760,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 30,
     "chapter": "Rozdział XXXVI"
   },
   {
@@ -1769,7 +1769,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Phrasale",
-    "wordCount": 20,
+    "wordCount": 30,
     "chapter": "Rozdział XXXVII"
   },
   {
@@ -1787,7 +1787,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 45,
     "chapter": "Rozdział XXXVIII"
   },
   {
@@ -1796,7 +1796,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 75,
     "chapter": "Rozdział XXXVIII"
   },
   {
@@ -1805,7 +1805,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 45,
     "chapter": "Rozdział XXXVIII"
   },
   {
@@ -1814,7 +1814,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 30,
     "chapter": "Rozdział XXXVIII"
   },
   {
@@ -1823,7 +1823,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Czasowniki",
-    "wordCount": 15,
+    "wordCount": 75,
     "chapter": "Rozdział XXXIX"
   },
   {
@@ -1841,7 +1841,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Rzeczowniki",
-    "wordCount": 15,
+    "wordCount": 30,
     "chapter": "Rozdział XXXIX"
   },
   {
@@ -1868,7 +1868,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Spójniki",
-    "wordCount": 10,
+    "wordCount": 20,
     "chapter": "Rozdział XL"
   },
   {
@@ -1877,7 +1877,7 @@
     "volume": "Tom IV",
     "level": 3,
     "category": "Czasowniki",
-    "wordCount": 25,
+    "wordCount": 50,
     "chapter": "Rozdział XL"
   },
   {
@@ -1900,6 +1900,852 @@
   },
   {
     "id": "t1-p212",
+    "name": "Przymiotniki 17",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział XLI"
+  },
+  {
+    "id": "t1-p213",
+    "name": "Co się patrzysz?",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Phrasale",
+    "wordCount": 20,
+    "chapter": "Rozdział XLI"
+  },
+  {
+    "id": "t1-p214",
+    "name": "Mądre",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Skróty",
+    "wordCount": 10,
+    "chapter": "Rozdział XLI"
+  },
+  {
+    "id": "t1-p215",
+    "name": "Złe",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Czasowniki",
+    "wordCount": 60,
+    "chapter": "Rozdział XLII"
+  },
+  {
+    "id": "t1-p216",
+    "name": "Widzenie",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Czasowniki",
+    "wordCount": 30,
+    "chapter": "Rozdział XLII"
+  },
+  {
+    "id": "t1-p217",
+    "name": "Ucieczka",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Phrasale",
+    "wordCount": 20,
+    "chapter": "Rozdział XLII"
+  },
+  {
+    "id": "t1-p218",
+    "name": "Przysłówki 3",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przysłówki",
+    "wordCount": 15,
+    "chapter": "Rozdział XLIII"
+  },
+  {
+    "id": "t1-p219",
+    "name": "Rzeczowniki 13",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Rzeczowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział XLIII"
+  },
+  {
+    "id": "t1-p220",
+    "name": "Slang 20",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział XLIII"
+  },
+  {
+    "id": "t1-p221",
+    "name": "Przymiotniki 18",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział XLIII"
+  },
+  {
+    "id": "t1-p222",
+    "name": "Skala I intensywność",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przysłówki",
+    "wordCount": 30,
+    "chapter": "Rozdział XLIII"
+  },
+  {
+    "id": "t1-p223",
+    "name": "Woda wszędzie",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Czasowniki",
+    "wordCount": 30,
+    "chapter": "Rozdział XLIV"
+  },
+  {
+    "id": "t1-p224",
+    "name": "Przymiotniki 19",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział XLIV"
+  },
+  {
+    "id": "t1-p225",
+    "name": "Gdy grasz w grę",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Skróty",
+    "wordCount": 10,
+    "chapter": "Rozdział XLV"
+  },
+  {
+    "id": "t1-p226",
+    "name": "Poczta",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział XLV"
+  },
+  {
+    "id": "t1-p227",
+    "name": "Dodanie kolejnej myśli",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Spójniki",
+    "wordCount": 10,
+    "chapter": "Rozdział XLV"
+  },
+  {
+    "id": "t1-p228",
+    "name": "Czasowniki 16",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział XLVI"
+  },
+  {
+    "id": "t1-p229",
+    "name": "Przymiotniki 20",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przymiotniki",
+    "wordCount": 17,
+    "chapter": "Rozdział XLVI"
+  },
+  {
+    "id": "t1-p230",
+    "name": "Slang 21",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział XLVI"
+  },
+  {
+    "id": "t1-p231",
+    "name": "Przestrzeń I położenie",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przymiotniki",
+    "wordCount": 45,
+    "chapter": "Rozdział XLVI"
+  },
+  {
+    "id": "t1-p232",
+    "name": "Czasowniki 17",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział XLVII"
+  },
+  {
+    "id": "t1-p233",
+    "name": "Technologia",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przymiotniki",
+    "wordCount": 45,
+    "chapter": "Rozdział XLVII"
+  },
+  {
+    "id": "t1-p234",
+    "name": "Czasowniki 18",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział XLVII"
+  },
+  {
+    "id": "t1-p235",
+    "name": "Wykonane z czegoś",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przymiotniki",
+    "wordCount": 30,
+    "chapter": "Rozdział XLVIII"
+  },
+  {
+    "id": "t1-p236",
+    "name": "Spójniki 5",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Spójniki",
+    "wordCount": 10,
+    "chapter": "Rozdział XLVIII"
+  },
+  {
+    "id": "t1-p237",
+    "name": "Czasowniki 19",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział XLIX"
+  },
+  {
+    "id": "t1-p238",
+    "name": "Przymiotniki 21",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział XLIX"
+  },
+  {
+    "id": "t1-p239",
+    "name": "Czasowniki 20",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział L"
+  },
+  {
+    "id": "t1-p240",
+    "name": "Przymiotniki 22",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział L"
+  },
+  {
+    "id": "t1-p241",
+    "name": "Przysłówki 4",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przysłówki",
+    "wordCount": 15,
+    "chapter": "Rozdział L"
+  },
+  {
+    "id": "t1-p242",
+    "name": "Przymiotniki 23",
+    "volume": "Tom V",
+    "level": 3,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział L"
+  },
+  {
+    "id": "t1-p243",
+    "name": "Slang 22",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LI"
+  },
+  {
+    "id": "t1-p244",
+    "name": "Czasowniki 21",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LI"
+  },
+  {
+    "id": "t1-p245",
+    "name": "Czasowniki 22",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LII"
+  },
+  {
+    "id": "t1-p246",
+    "name": "Slang 23",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LIII"
+  },
+  {
+    "id": "t1-p247",
+    "name": "Memiczne",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Skróty",
+    "wordCount": 20,
+    "chapter": "Rozdział LIII"
+  },
+  {
+    "id": "t1-p248",
+    "name": "Slang 24",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LIV"
+  },
+  {
+    "id": "t1-p249",
+    "name": "Slang 25",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LIV"
+  },
+  {
+    "id": "t1-p250",
+    "name": "Slang 26",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LIV"
+  },
+  {
+    "id": "t1-p251",
+    "name": "Czasowniki 23",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LV"
+  },
+  {
+    "id": "t1-p252",
+    "name": "Spójniki 6",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Spójniki",
+    "wordCount": 10,
+    "chapter": "Rozdział LV"
+  },
+  {
+    "id": "t1-p253",
+    "name": "Przymiotniki 24",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 16,
+    "chapter": "Rozdział LV"
+  },
+  {
+    "id": "t1-p254",
+    "name": "Rodzinka",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LV"
+  },
+  {
+    "id": "t1-p255",
+    "name": "Rzeczowniki 14",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Rzeczowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział  LVI"
+  },
+  {
+    "id": "t1-p256",
+    "name": "Rzeczowniki 15",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Rzeczowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział  LVI"
+  },
+  {
+    "id": "t1-p257",
+    "name": "Przymiotniki 25",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział  LVI"
+  },
+  {
+    "id": "t1-p258",
+    "name": "Rzeczowniki 16",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Rzeczowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział  LVI"
+  },
+  {
+    "id": "t1-p259",
+    "name": "Spójniki 7",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Spójniki",
+    "wordCount": 10,
+    "chapter": "Rozdział  LVII"
+  },
+  {
+    "id": "t1-p260",
+    "name": "Rzeczowniki 17",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Rzeczowniki",
+    "wordCount": 12,
+    "chapter": "Rozdział  LVII"
+  },
+  {
+    "id": "t1-p261",
+    "name": "Ogniowe",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Rzeczowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LVIII"
+  },
+  {
+    "id": "t1-p262",
+    "name": "Slang 27",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LVIII"
+  },
+  {
+    "id": "t1-p263",
+    "name": "Slang 28",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LVIII"
+  },
+  {
+    "id": "t1-p264",
+    "name": "Slang 29",
+    "volume": "Tom VI",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LIX"
+  },
+  {
+    "id": "t1-p265",
+    "name": "Przymiotniki 26",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXI"
+  },
+  {
+    "id": "t1-p266",
+    "name": "Przymiotniki 27",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXII"
+  },
+  {
+    "id": "t1-p267",
+    "name": "Przymiotniki 28",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXII"
+  },
+  {
+    "id": "t1-p268",
+    "name": "Phrasale 4",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Phrasale",
+    "wordCount": 10,
+    "chapter": "Rozdział LXII"
+  },
+  {
+    "id": "t1-p269",
+    "name": "Drzewa",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Rzeczowniki",
+    "wordCount": 30,
+    "chapter": "Rozdział LXIII"
+  },
+  {
+    "id": "t1-p270",
+    "name": "Pani domu",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Phrasale",
+    "wordCount": 25,
+    "chapter": "Rozdział LXIII"
+  },
+  {
+    "id": "t1-p271",
+    "name": "Slang 30",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LXIV"
+  },
+  {
+    "id": "t1-p272",
+    "name": "Przymiotniki 29",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXIV"
+  },
+  {
+    "id": "t1-p273",
+    "name": "Przysłówki 5",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Przysłówki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXV"
+  },
+  {
+    "id": "t1-p274",
+    "name": "Ptaki",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Rzeczowniki",
+    "wordCount": 45,
+    "chapter": "Rozdział LXV"
+  },
+  {
+    "id": "t1-p275",
+    "name": "Ryby",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Rzeczowniki",
+    "wordCount": 30,
+    "chapter": "Rozdział LXV"
+  },
+  {
+    "id": "t1-p276",
+    "name": "Przymiotniki 30",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXV"
+  },
+  {
+    "id": "t1-p277",
+    "name": "Znaki zodiaku",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Rzeczowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXV"
+  },
+  {
+    "id": "t1-p278",
+    "name": "Przymiotniki 31",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXVI"
+  },
+  {
+    "id": "t1-p279",
+    "name": "Pewność",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Spójniki",
+    "wordCount": 10,
+    "chapter": "Rozdział LXVI"
+  },
+  {
+    "id": "t1-p280",
+    "name": "Phrasale 5",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Phrasale",
+    "wordCount": 10,
+    "chapter": "Rozdział LXVI"
+  },
+  {
+    "id": "t1-p281",
+    "name": "Przymiotniki 32",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 13,
+    "chapter": "Rozdział LXVII"
+  },
+  {
+    "id": "t1-p282",
+    "name": "Wzrost I spadek",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Phrasale",
+    "wordCount": 20,
+    "chapter": "Rozdział LXVII"
+  },
+  {
+    "id": "t1-p283",
+    "name": "Szamka",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LXX"
+  },
+  {
+    "id": "t1-p284",
+    "name": "Agresja",
+    "volume": "Tom VII",
+    "level": 4,
+    "category": "Phrasale",
+    "wordCount": 10,
+    "chapter": "Rozdział LXX"
+  },
+  {
+    "id": "t1-p285",
+    "name": "Wymaga wysiłku",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXI"
+  },
+  {
+    "id": "t1-p286",
+    "name": "Slang 31",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LXXI"
+  },
+  {
+    "id": "t1-p287",
+    "name": "Gangsterka",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 20,
+    "chapter": "Rozdział LXXI"
+  },
+  {
+    "id": "t1-p288",
+    "name": "Substancje",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXII"
+  },
+  {
+    "id": "t1-p289",
+    "name": "Slang 32",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LXXII"
+  },
+  {
+    "id": "t1-p290",
+    "name": "Nagle",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Przysłówki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXIII"
+  },
+  {
+    "id": "t1-p291",
+    "name": "Przymiotniki 33",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 14,
+    "chapter": "Rozdział LXXIII"
+  },
+  {
+    "id": "t1-p292",
+    "name": "Phrasale 6",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Phrasale",
+    "wordCount": 10,
+    "chapter": "Rozdział LXXIII"
+  },
+  {
+    "id": "t1-p293",
+    "name": "Czasowniki 24",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXIV"
+  },
+  {
+    "id": "t1-p294",
+    "name": "Wakacje",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Phrasale",
+    "wordCount": 10,
+    "chapter": "Rozdział LXXIV"
+  },
+  {
+    "id": "t1-p295",
+    "name": "Przymiotniki 34",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXV"
+  },
+  {
+    "id": "t1-p296",
+    "name": "Przymiotniki 35",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXV"
+  },
+  {
+    "id": "t1-p297",
+    "name": "Czasowniki 25",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXV"
+  },
+  {
+    "id": "t1-p298",
+    "name": "Przymiotniki 36",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXV"
+  },
+  {
+    "id": "t1-p299",
+    "name": "Slang 33",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LXXVII"
+  },
+  {
+    "id": "t1-p300",
+    "name": "To już (prawie) koniec",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Phrasale",
+    "wordCount": 10,
+    "chapter": "Rozdział LXXVII"
+  },
+  {
+    "id": "t1-p301",
+    "name": "Slang 34",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LXXVII"
+  },
+  {
+    "id": "t1-p302",
+    "name": "Przysłówki 6",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Przysłówki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXVII"
+  },
+  {
+    "id": "t1-p303",
+    "name": "Światło",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Phrasale",
+    "wordCount": 10,
+    "chapter": "Rozdział LXXVIII"
+  },
+  {
+    "id": "t1-p304",
+    "name": "Slang 35",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Slang",
+    "wordCount": 10,
+    "chapter": "Rozdział LXXVIII"
+  },
+  {
+    "id": "t1-p305",
+    "name": "Przymiotniki 37",
+    "volume": "Tom VIII",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXX"
+  },
+  {
+    "id": "t1-p306",
     "name": "Przymiotniki 38",
     "volume": "Tom IX",
     "level": 4,
@@ -1908,7 +2754,7 @@
     "chapter": "Rozdział LXXXI"
   },
   {
-    "id": "t1-p213",
+    "id": "t1-p307",
     "name": "Slang 36",
     "volume": "Tom IX",
     "level": 4,
@@ -1917,7 +2763,7 @@
     "chapter": "Rozdział LXXXI"
   },
   {
-    "id": "t1-p214",
+    "id": "t1-p308",
     "name": "Phrasale 7",
     "volume": "Tom IX",
     "level": 4,
@@ -1926,7 +2772,7 @@
     "chapter": "Rozdział LXXXI"
   },
   {
-    "id": "t1-p215",
+    "id": "t1-p309",
     "name": "Czasowniki 26",
     "volume": "Tom IX",
     "level": 4,
@@ -1935,7 +2781,7 @@
     "chapter": "Rozdział LXXXII"
   },
   {
-    "id": "t1-p216",
+    "id": "t1-p310",
     "name": "Phrasale 8",
     "volume": "Tom IX",
     "level": 4,
@@ -1944,25 +2790,7 @@
     "chapter": "Rozdział LXXXII"
   },
   {
-    "id": "t1-p217",
-    "name": "Wzrost I spadek",
-    "volume": "Tom IX",
-    "level": 4,
-    "category": "Phrasale",
-    "wordCount": 10,
-    "chapter": "Rozdział LXXXIII"
-  },
-  {
-    "id": "t1-p218",
-    "name": "Gangsterka",
-    "volume": "Tom IX",
-    "level": 4,
-    "category": "Slang",
-    "wordCount": 10,
-    "chapter": "Rozdział LXXXIII"
-  },
-  {
-    "id": "t1-p219",
+    "id": "t1-p311",
     "name": "Przymiotniki 39",
     "volume": "Tom IX",
     "level": 4,
@@ -1971,7 +2799,7 @@
     "chapter": "Rozdział LXXXIII"
   },
   {
-    "id": "t1-p220",
+    "id": "t1-p312",
     "name": "Czasowniki 27",
     "volume": "Tom IX",
     "level": 4,
@@ -1980,7 +2808,7 @@
     "chapter": "Rozdział LXXXIV"
   },
   {
-    "id": "t1-p221",
+    "id": "t1-p313",
     "name": "Przymiotniki 40",
     "volume": "Tom IX",
     "level": 4,
@@ -1989,7 +2817,7 @@
     "chapter": "Rozdział LXXXIV"
   },
   {
-    "id": "t1-p222",
+    "id": "t1-p314",
     "name": "Przymiotniki 41",
     "volume": "Tom IX",
     "level": 4,
@@ -1998,7 +2826,7 @@
     "chapter": "Rozdział LXXXIV"
   },
   {
-    "id": "t1-p223",
+    "id": "t1-p315",
     "name": "Czasowniki 28",
     "volume": "Tom IX",
     "level": 4,
@@ -2007,7 +2835,7 @@
     "chapter": "Rozdział LXXXV"
   },
   {
-    "id": "t1-p224",
+    "id": "t1-p316",
     "name": "Przymiotniki 42",
     "volume": "Tom IX",
     "level": 4,
@@ -2016,7 +2844,7 @@
     "chapter": "Rozdział LXXXV"
   },
   {
-    "id": "t1-p225",
+    "id": "t1-p317",
     "name": "Czasowniki 29",
     "volume": "Tom IX",
     "level": 4,
@@ -2025,7 +2853,7 @@
     "chapter": "Rozdział LXXXV"
   },
   {
-    "id": "t1-p226",
+    "id": "t1-p318",
     "name": "Przymiotniki 43",
     "volume": "Tom IX",
     "level": 4,
@@ -2034,7 +2862,7 @@
     "chapter": "Rozdział LXXXV"
   },
   {
-    "id": "t1-p227",
+    "id": "t1-p319",
     "name": "Niefajne - Slang",
     "volume": "Tom IX",
     "level": 4,
@@ -2043,7 +2871,7 @@
     "chapter": "Rozdział LXXXV"
   },
   {
-    "id": "t1-p228",
+    "id": "t1-p320",
     "name": "Czasowniki 30",
     "volume": "Tom IX",
     "level": 4,
@@ -2052,7 +2880,7 @@
     "chapter": "Rozdział LXXXVI"
   },
   {
-    "id": "t1-p229",
+    "id": "t1-p321",
     "name": "Przymiotniki 44",
     "volume": "Tom IX",
     "level": 4,
@@ -2061,7 +2889,7 @@
     "chapter": "Rozdział LXXXVI"
   },
   {
-    "id": "t1-p230",
+    "id": "t1-p322",
     "name": "Czasowniki 31",
     "volume": "Tom IX",
     "level": 4,
@@ -2070,7 +2898,7 @@
     "chapter": "Rozdział LXXXVI"
   },
   {
-    "id": "t1-p231",
+    "id": "t1-p323",
     "name": "Slang 37",
     "volume": "Tom IX",
     "level": 4,
@@ -2079,7 +2907,7 @@
     "chapter": "Rozdział LXXXVI"
   },
   {
-    "id": "t1-p232",
+    "id": "t1-p324",
     "name": "Przymiotniki 45",
     "volume": "Tom IX",
     "level": 4,

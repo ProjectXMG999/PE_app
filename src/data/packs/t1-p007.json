@@ -1,0 +1,865 @@
+{
+  "id": "t1-p007",
+  "name": "Podróże",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział I",
+  "words": [
+    {
+      "id": "t1-p007-001",
+      "english": "Baggage",
+      "polish": "Bagaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-001-word.mp3",
+      "audioSentence": "t1-p007-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-002",
+      "english": "Luggage",
+      "polish": "Bagaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-002-word.mp3",
+      "audioSentence": "t1-p007-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-003",
+      "english": "Ticket",
+      "polish": "Bilet",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-003-word.mp3",
+      "audioSentence": "t1-p007-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-004",
+      "english": "Guest",
+      "polish": "Gość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-004-word.mp3",
+      "audioSentence": "t1-p007-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-005",
+      "english": "Map",
+      "polish": "Mapa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-005-word.mp3",
+      "audioSentence": "t1-p007-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-006",
+      "english": "Passport",
+      "polish": "Paszport",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-006-word.mp3",
+      "audioSentence": "t1-p007-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-007",
+      "english": "Reservation",
+      "polish": "Rezerwacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-007-word.mp3",
+      "audioSentence": "t1-p007-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-008",
+      "english": "Tourist",
+      "polish": "Turysta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-008-word.mp3",
+      "audioSentence": "t1-p007-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-009",
+      "english": "Holiday",
+      "polish": "Wakacje",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-009-word.mp3",
+      "audioSentence": "t1-p007-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-010",
+      "english": "Vacation",
+      "polish": "Wakacje",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-010-word.mp3",
+      "audioSentence": "t1-p007-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-011",
+      "english": "Attraction",
+      "polish": "Atrakcja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-011-word.mp3",
+      "audioSentence": "t1-p007-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-012",
+      "english": "Trip",
+      "polish": "Krótka podróż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-012-word.mp3",
+      "audioSentence": "t1-p007-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-013",
+      "english": "Rest",
+      "polish": "Odpoczynek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-013-word.mp3",
+      "audioSentence": "t1-p007-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-014",
+      "english": "Souvenir",
+      "polish": "Pamiątka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-014-word.mp3",
+      "audioSentence": "t1-p007-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-015",
+      "english": "Picnic",
+      "polish": "Piknik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-015-word.mp3",
+      "audioSentence": "t1-p007-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-016",
+      "english": "Backpack",
+      "polish": "Plecak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-016-word.mp3",
+      "audioSentence": "t1-p007-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-017",
+      "english": "Journey",
+      "polish": "Podróż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-017-word.mp3",
+      "audioSentence": "t1-p007-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-018",
+      "english": "Reception",
+      "polish": "Recepcja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-018-word.mp3",
+      "audioSentence": "t1-p007-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-019",
+      "english": "Visa",
+      "polish": "Wiza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-019-word.mp3",
+      "audioSentence": "t1-p007-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-020",
+      "english": "Tour",
+      "polish": "Wycieczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-020-word.mp3",
+      "audioSentence": "t1-p007-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-021",
+      "english": "Ticket office",
+      "polish": "Kasa biletowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-021-word.mp3",
+      "audioSentence": "t1-p007-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-022",
+      "english": "Carry on",
+      "polish": "Bagaż podręczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-022-word.mp3",
+      "audioSentence": "t1-p007-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-023",
+      "english": "Border",
+      "polish": "Granica",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-023-word.mp3",
+      "audioSentence": "t1-p007-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-024",
+      "english": "Hostel",
+      "polish": "Hostel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-024-word.mp3",
+      "audioSentence": "t1-p007-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-025",
+      "english": "Motel",
+      "polish": "Motel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-025-word.mp3",
+      "audioSentence": "t1-p007-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-026",
+      "english": "Stay",
+      "polish": "Pobyt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-026-word.mp3",
+      "audioSentence": "t1-p007-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-027",
+      "english": "Postcard",
+      "polish": "Pocztówka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-027-word.mp3",
+      "audioSentence": "t1-p007-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-028",
+      "english": "Traveling",
+      "polish": "Podróżowanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-028-word.mp3",
+      "audioSentence": "t1-p007-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-029",
+      "english": "Double room",
+      "polish": "Pokój dwuosobowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-029-word.mp3",
+      "audioSentence": "t1-p007-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-030",
+      "english": "Single room",
+      "polish": "Pokój jednoosobowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-030-word.mp3",
+      "audioSentence": "t1-p007-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-031",
+      "english": "Arrival",
+      "polish": "Przyjazd",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-031-word.mp3",
+      "audioSentence": "t1-p007-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-032",
+      "english": "Tourist attraction",
+      "polish": "Atrakcja turystyczna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-032-word.mp3",
+      "audioSentence": "t1-p007-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-033",
+      "english": "Travel agency",
+      "polish": "Biuro podróży",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-033-word.mp3",
+      "audioSentence": "t1-p007-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-034",
+      "english": "Camping",
+      "polish": "Kemping",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-034-word.mp3",
+      "audioSentence": "t1-p007-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-035",
+      "english": "Holiday resort",
+      "polish": "Miejscowość wypoczynkowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-035-word.mp3",
+      "audioSentence": "t1-p007-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-036",
+      "english": "Tent",
+      "polish": "Namiot",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-036-word.mp3",
+      "audioSentence": "t1-p007-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-037",
+      "english": "Pyramid",
+      "polish": "Piramida",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-037-word.mp3",
+      "audioSentence": "t1-p007-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-038",
+      "english": "Overnight stay",
+      "polish": "Pobyt z noclegiem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-038-word.mp3",
+      "audioSentence": "t1-p007-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-039",
+      "english": "Traveler",
+      "polish": "Podróżnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-039-word.mp3",
+      "audioSentence": "t1-p007-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-040",
+      "english": "Tour guide",
+      "polish": "Przewodnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-040-word.mp3",
+      "audioSentence": "t1-p007-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-041",
+      "english": "Adventure",
+      "polish": "Przygoda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-041-word.mp3",
+      "audioSentence": "t1-p007-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-042",
+      "english": "Preparation",
+      "polish": "Przygotowanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-042-word.mp3",
+      "audioSentence": "t1-p007-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-043",
+      "english": "Holiday season",
+      "polish": "Okres świąteczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-043-word.mp3",
+      "audioSentence": "t1-p007-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-044",
+      "english": "Trail",
+      "polish": "Szlak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-044-word.mp3",
+      "audioSentence": "t1-p007-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-045",
+      "english": "Path",
+      "polish": "Ścieżka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-045-word.mp3",
+      "audioSentence": "t1-p007-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-046",
+      "english": "Tropics",
+      "polish": "Tropiki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-046-word.mp3",
+      "audioSentence": "t1-p007-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-047",
+      "english": "Tourism",
+      "polish": "Turystyka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-047-word.mp3",
+      "audioSentence": "t1-p007-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-048",
+      "english": "Suitcase",
+      "polish": "Walizka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-048-word.mp3",
+      "audioSentence": "t1-p007-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-049",
+      "english": "Entry",
+      "polish": "Wstęp",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-049-word.mp3",
+      "audioSentence": "t1-p007-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-050",
+      "english": "Sightseeing",
+      "polish": "Zwiedzanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-050-word.mp3",
+      "audioSentence": "t1-p007-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-051",
+      "english": "Accommodation",
+      "polish": "Zakwaterowanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-051-word.mp3",
+      "audioSentence": "t1-p007-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-052",
+      "english": "Departure",
+      "polish": "Odjazd",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-052-word.mp3",
+      "audioSentence": "t1-p007-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-053",
+      "english": "Hitchhiking",
+      "polish": "Autostop",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-053-word.mp3",
+      "audioSentence": "t1-p007-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-054",
+      "english": "Lodgings",
+      "polish": "Kwatera",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-054-word.mp3",
+      "audioSentence": "t1-p007-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-055",
+      "english": "Lighthouse",
+      "polish": "Latarnia morska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-055-word.mp3",
+      "audioSentence": "t1-p007-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-056",
+      "english": "Sunbed",
+      "polish": "Leżak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-056-word.mp3",
+      "audioSentence": "t1-p007-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-057",
+      "english": "Whereabouts",
+      "polish": "Miejsce pobytu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-057-word.mp3",
+      "audioSentence": "t1-p007-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-058",
+      "english": "Pier",
+      "polish": "Molo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-058-word.mp3",
+      "audioSentence": "t1-p007-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-059",
+      "english": "Shell",
+      "polish": "Muszla",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-059-word.mp3",
+      "audioSentence": "t1-p007-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-060",
+      "english": "Camp",
+      "polish": "Obóz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-060-word.mp3",
+      "audioSentence": "t1-p007-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-061",
+      "english": "Campfire",
+      "polish": "Ognisko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-061-word.mp3",
+      "audioSentence": "t1-p007-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-062",
+      "english": "Sunbathing",
+      "polish": "Opalanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-062-word.mp3",
+      "audioSentence": "t1-p007-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-063",
+      "english": "Campsite",
+      "polish": "Pole namiotowe",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-063-word.mp3",
+      "audioSentence": "t1-p007-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-064",
+      "english": "Monument",
+      "polish": "Pomnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-064-word.mp3",
+      "audioSentence": "t1-p007-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-065",
+      "english": "Border crossing",
+      "polish": "Przejście graniczne",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-065-word.mp3",
+      "audioSentence": "t1-p007-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-066",
+      "english": "Guidebook",
+      "polish": "Przewodnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-066-word.mp3",
+      "audioSentence": "t1-p007-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-067",
+      "english": "Tourist information office",
+      "polish": "Punkt informacji turystycznej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-067-word.mp3",
+      "audioSentence": "t1-p007-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-068",
+      "english": "Cruise",
+      "polish": "Rejs",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-068-word.mp3",
+      "audioSentence": "t1-p007-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-069",
+      "english": "Recreation",
+      "polish": "Rekreacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-069-word.mp3",
+      "audioSentence": "t1-p007-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-070",
+      "english": "Relaxation",
+      "polish": "Relaks",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-070-word.mp3",
+      "audioSentence": "t1-p007-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-071",
+      "english": "Shelter",
+      "polish": "Schronisko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-071-word.mp3",
+      "audioSentence": "t1-p007-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-072",
+      "english": "Trekking",
+      "polish": "Wędrówka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-072-word.mp3",
+      "audioSentence": "t1-p007-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-073",
+      "english": "Excursion",
+      "polish": "Wycieczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-073-word.mp3",
+      "audioSentence": "t1-p007-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-074",
+      "english": "Sightseeing tour",
+      "polish": "Wycieczka krajoznawcza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-074-word.mp3",
+      "audioSentence": "t1-p007-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-075",
+      "english": "Guided tour",
+      "polish": "Wycieczka z przewodnikiem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-075-word.mp3",
+      "audioSentence": "t1-p007-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-076",
+      "english": "Expedition",
+      "polish": "Wyprawa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-076-word.mp3",
+      "audioSentence": "t1-p007-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-077",
+      "english": "Host",
+      "polish": "Gospodarz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-077-word.mp3",
+      "audioSentence": "t1-p007-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-078",
+      "english": "Destination",
+      "polish": "Cel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-078-word.mp3",
+      "audioSentence": "t1-p007-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-079",
+      "english": "Landing",
+      "polish": "Lądowanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-079-word.mp3",
+      "audioSentence": "t1-p007-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-080",
+      "english": "Stopover",
+      "polish": "Międzylądowanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-080-word.mp3",
+      "audioSentence": "t1-p007-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-081",
+      "english": "Check-in",
+      "polish": "Odprawa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-081-word.mp3",
+      "audioSentence": "t1-p007-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-082",
+      "english": "Transfer",
+      "polish": "Transfer",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-082-word.mp3",
+      "audioSentence": "t1-p007-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-083",
+      "english": "Landmark",
+      "polish": "Punkt orientacyjny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-083-word.mp3",
+      "audioSentence": "t1-p007-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-084",
+      "english": "Take-off",
+      "polish": "Start",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-084-word.mp3",
+      "audioSentence": "t1-p007-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-085",
+      "english": "Terminal",
+      "polish": "Terminal",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-085-word.mp3",
+      "audioSentence": "t1-p007-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-086",
+      "english": "Zoom",
+      "polish": "Zbliżenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-086-word.mp3",
+      "audioSentence": "t1-p007-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-087",
+      "english": "Boarding pass",
+      "polish": "Karta pokładowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-087-word.mp3",
+      "audioSentence": "t1-p007-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-088",
+      "english": "Lounge",
+      "polish": "Hol",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-088-word.mp3",
+      "audioSentence": "t1-p007-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-089",
+      "english": "Seat reservation",
+      "polish": "Rezerwacja miejsca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-089-word.mp3",
+      "audioSentence": "t1-p007-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-090",
+      "english": "Excess luggage",
+      "polish": "Nadbagaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-090-word.mp3",
+      "audioSentence": "t1-p007-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-091",
+      "english": "Destination",
+      "polish": "Cel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-091-word.mp3",
+      "audioSentence": "t1-p007-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-092",
+      "english": "Sightseeing tour",
+      "polish": "Wycieczka krajoznawcza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-092-word.mp3",
+      "audioSentence": "t1-p007-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-093",
+      "english": "Recreation",
+      "polish": "Rekreacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-093-word.mp3",
+      "audioSentence": "t1-p007-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-094",
+      "english": "Guidebook",
+      "polish": "Przewodnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-094-word.mp3",
+      "audioSentence": "t1-p007-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p007-095",
+      "english": "Sunbathing",
+      "polish": "Opalanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p007-095-word.mp3",
+      "audioSentence": "t1-p007-095-sentence.mp3"
+    }
+  ]
+}

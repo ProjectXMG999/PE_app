@@ -1,0 +1,775 @@
+{
+  "id": "t1-p032",
+  "name": "Kalendarz I czas",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział IV",
+  "words": [
+    {
+      "id": "t1-p032-001",
+      "english": "Hour",
+      "polish": "Godzina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-001-word.mp3",
+      "audioSentence": "t1-p032-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-002",
+      "english": "Minute",
+      "polish": "Minuta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-002-word.mp3",
+      "audioSentence": "t1-p032-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-003",
+      "english": "Night",
+      "polish": "Noc",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-003-word.mp3",
+      "audioSentence": "t1-p032-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-004",
+      "english": "Friday",
+      "polish": "Piątek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-004-word.mp3",
+      "audioSentence": "t1-p032-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-005",
+      "english": "Afternoon",
+      "polish": "Popołudnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-005-word.mp3",
+      "audioSentence": "t1-p032-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-006",
+      "english": "Year",
+      "polish": "Rok",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-006-word.mp3",
+      "audioSentence": "t1-p032-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-007",
+      "english": "Second",
+      "polish": "Sekunda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-007-word.mp3",
+      "audioSentence": "t1-p032-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-008",
+      "english": "Week",
+      "polish": "Tydzień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-008-word.mp3",
+      "audioSentence": "t1-p032-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-009",
+      "english": "Weekend",
+      "polish": "Weekend",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-009-word.mp3",
+      "audioSentence": "t1-p032-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-010",
+      "english": "Evening",
+      "polish": "Wieczór",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-010-word.mp3",
+      "audioSentence": "t1-p032-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-011",
+      "english": "Time",
+      "polish": "Czas",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-011-word.mp3",
+      "audioSentence": "t1-p032-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-012",
+      "english": "Thursday",
+      "polish": "Czwartek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-012-word.mp3",
+      "audioSentence": "t1-p032-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-013",
+      "english": "Day",
+      "polish": "Dzień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-013-word.mp3",
+      "audioSentence": "t1-p032-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-014",
+      "english": "Month",
+      "polish": "Miesiąc",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-014-word.mp3",
+      "audioSentence": "t1-p032-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-015",
+      "english": "Sunday",
+      "polish": "Niedziela",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-015-word.mp3",
+      "audioSentence": "t1-p032-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-016",
+      "english": "Monday",
+      "polish": "Poniedziałek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-016-word.mp3",
+      "audioSentence": "t1-p032-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-017",
+      "english": "Morning",
+      "polish": "Ranek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-017-word.mp3",
+      "audioSentence": "t1-p032-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-018",
+      "english": "Saturday",
+      "polish": "Sobota",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-018-word.mp3",
+      "audioSentence": "t1-p032-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-019",
+      "english": "Wednesday",
+      "polish": "Środa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-019-word.mp3",
+      "audioSentence": "t1-p032-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-020",
+      "english": "Tuesday",
+      "polish": "Wtorek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-020-word.mp3",
+      "audioSentence": "t1-p032-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-021",
+      "english": "December",
+      "polish": "Grudzień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-021-word.mp3",
+      "audioSentence": "t1-p032-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-022",
+      "english": "Autumn",
+      "polish": "Jesień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-022-word.mp3",
+      "audioSentence": "t1-p032-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-023",
+      "english": "Calendar",
+      "polish": "Kalendarz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-023-word.mp3",
+      "audioSentence": "t1-p032-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-024",
+      "english": "Summer",
+      "polish": "Lato",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-024-word.mp3",
+      "audioSentence": "t1-p032-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-025",
+      "english": "November",
+      "polish": "Listopad",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-025-word.mp3",
+      "audioSentence": "t1-p032-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-026",
+      "english": "February",
+      "polish": "Luty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-026-word.mp3",
+      "audioSentence": "t1-p032-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-027",
+      "english": "March",
+      "polish": "Marzec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-027-word.mp3",
+      "audioSentence": "t1-p032-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-028",
+      "english": "August",
+      "polish": "Sierpień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-028-word.mp3",
+      "audioSentence": "t1-p032-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-029",
+      "english": "January",
+      "polish": "Styczeń",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-029-word.mp3",
+      "audioSentence": "t1-p032-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-030",
+      "english": "Winter",
+      "polish": "Zima",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-030-word.mp3",
+      "audioSentence": "t1-p032-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-031",
+      "english": "June",
+      "polish": "Czerwiec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-031-word.mp3",
+      "audioSentence": "t1-p032-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-032",
+      "english": "Date",
+      "polish": "Data",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-032-word.mp3",
+      "audioSentence": "t1-p032-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-033",
+      "english": "Holiday",
+      "polish": "Dzień świąteczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-033-word.mp3",
+      "audioSentence": "t1-p032-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-034",
+      "english": "April",
+      "polish": "Kwiecień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-034-word.mp3",
+      "audioSentence": "t1-p032-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-035",
+      "english": "July",
+      "polish": "Lipiec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-035-word.mp3",
+      "audioSentence": "t1-p032-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-036",
+      "english": "May",
+      "polish": "Maj",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-036-word.mp3",
+      "audioSentence": "t1-p032-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-037",
+      "english": "Moment",
+      "polish": "Moment",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-037-word.mp3",
+      "audioSentence": "t1-p032-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-038",
+      "english": "October",
+      "polish": "Październik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-038-word.mp3",
+      "audioSentence": "t1-p032-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-039",
+      "english": "Spring",
+      "polish": "Wiosna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-039-word.mp3",
+      "audioSentence": "t1-p032-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-040",
+      "english": "September",
+      "polish": "Wrzesień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-040-word.mp3",
+      "audioSentence": "t1-p032-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-041",
+      "english": "Free time",
+      "polish": "Czas wolny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-041-word.mp3",
+      "audioSentence": "t1-p032-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-042",
+      "english": "Weekday",
+      "polish": "Dzień roboczy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-042-word.mp3",
+      "audioSentence": "t1-p032-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-043",
+      "english": "Age",
+      "polish": "Epoka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-043-word.mp3",
+      "audioSentence": "t1-p032-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-044",
+      "english": "Quarter",
+      "polish": "Kwadrans",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-044-word.mp3",
+      "audioSentence": "t1-p032-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-045",
+      "english": "Delay",
+      "polish": "Opóźnienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-045-word.mp3",
+      "audioSentence": "t1-p032-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-046",
+      "english": "The day after tomorrow",
+      "polish": "Pojutrze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-046-word.mp3",
+      "audioSentence": "t1-p032-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-047",
+      "english": "Midday",
+      "polish": "Południe",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-047-word.mp3",
+      "audioSentence": "t1-p032-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-048",
+      "english": "Noon",
+      "polish": "Południe",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-048-word.mp3",
+      "audioSentence": "t1-p032-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-049",
+      "english": "Season",
+      "polish": "Pora roku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-049-word.mp3",
+      "audioSentence": "t1-p032-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-050",
+      "english": "Midnight",
+      "polish": "Północ",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-050-word.mp3",
+      "audioSentence": "t1-p032-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-051",
+      "english": "The day before yesterday",
+      "polish": "Przedwczoraj",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-051-word.mp3",
+      "audioSentence": "t1-p032-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-052",
+      "english": "Past",
+      "polish": "Przeszłość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-052-word.mp3",
+      "audioSentence": "t1-p032-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-053",
+      "english": "Future",
+      "polish": "Przyszłość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-053-word.mp3",
+      "audioSentence": "t1-p032-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-054",
+      "english": "Century",
+      "polish": "Stulecie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-054-word.mp3",
+      "audioSentence": "t1-p032-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-055",
+      "english": "Present",
+      "polish": "Teraźniejszość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-055-word.mp3",
+      "audioSentence": "t1-p032-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-056",
+      "english": "Lack of time",
+      "polish": "Brak czasu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-056-word.mp3",
+      "audioSentence": "t1-p032-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-057",
+      "english": "Daybreak",
+      "polish": "Brzask",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-057-word.mp3",
+      "audioSentence": "t1-p032-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-058",
+      "english": "Instant",
+      "polish": "Chwila",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-058-word.mp3",
+      "audioSentence": "t1-p032-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-059",
+      "english": "Cycle",
+      "polish": "Cykl",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-059-word.mp3",
+      "audioSentence": "t1-p032-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-060",
+      "english": "Summertime",
+      "polish": "Czas letni",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-060-word.mp3",
+      "audioSentence": "t1-p032-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-061",
+      "english": "Lunchtime",
+      "polish": "Czas lunchu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-061-word.mp3",
+      "audioSentence": "t1-p032-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-062",
+      "english": "Duration",
+      "polish": "Czas trwania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-062-word.mp3",
+      "audioSentence": "t1-p032-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-063",
+      "english": "Decade",
+      "polish": "Dekada",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-063-word.mp3",
+      "audioSentence": "t1-p032-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-064",
+      "english": "Daytime",
+      "polish": "Dzień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-064-word.mp3",
+      "audioSentence": "t1-p032-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-065",
+      "english": "The stone age",
+      "polish": "Epoka kamienia łupanego",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-065-word.mp3",
+      "audioSentence": "t1-p032-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-066",
+      "english": "Era",
+      "polish": "Era",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-066-word.mp3",
+      "audioSentence": "t1-p032-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-067",
+      "english": "Modern era",
+      "polish": "Nowożytność",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-067-word.mp3",
+      "audioSentence": "t1-p032-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-068",
+      "english": "Period",
+      "polish": "Okres",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-068-word.mp3",
+      "audioSentence": "t1-p032-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-069",
+      "english": "Teatime",
+      "polish": "Podwieczorek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-069-word.mp3",
+      "audioSentence": "t1-p032-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-070",
+      "english": "Time of day",
+      "polish": "Pora dnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-070-word.mp3",
+      "audioSentence": "t1-p032-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-071",
+      "english": "Bedtime",
+      "polish": "Pora spania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-071-word.mp3",
+      "audioSentence": "t1-p032-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-072",
+      "english": "Prehistory",
+      "polish": "Prehistoria",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-072-word.mp3",
+      "audioSentence": "t1-p032-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-073",
+      "english": "Renaissance",
+      "polish": "Renesans",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-073-word.mp3",
+      "audioSentence": "t1-p032-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-074",
+      "english": "Antiquity",
+      "polish": "Starożytność",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-074-word.mp3",
+      "audioSentence": "t1-p032-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-075",
+      "english": "The middle ages",
+      "polish": "Średniowiecze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-075-word.mp3",
+      "audioSentence": "t1-p032-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-076",
+      "english": "Millennium",
+      "polish": "Tysiąclecie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-076-word.mp3",
+      "audioSentence": "t1-p032-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-077",
+      "english": "Lapse of time",
+      "polish": "Upływ czasu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-077-word.mp3",
+      "audioSentence": "t1-p032-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-078",
+      "english": "Midweek",
+      "polish": "W środku tygodnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-078-word.mp3",
+      "audioSentence": "t1-p032-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-079",
+      "english": "Solar clock",
+      "polish": "Zegar słoneczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-079-word.mp3",
+      "audioSentence": "t1-p032-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-080",
+      "english": "Twilight",
+      "polish": "Zmierzch",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-080-word.mp3",
+      "audioSentence": "t1-p032-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-081",
+      "english": "Baroque",
+      "polish": "Barok",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-081-word.mp3",
+      "audioSentence": "t1-p032-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-082",
+      "english": "Nighttime",
+      "polish": "Nocna pora",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-082-word.mp3",
+      "audioSentence": "t1-p032-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-083",
+      "english": "Leap year",
+      "polish": "Rok przestępny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-083-word.mp3",
+      "audioSentence": "t1-p032-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-084",
+      "english": "Dawn",
+      "polish": "Świt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-084-word.mp3",
+      "audioSentence": "t1-p032-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p032-085",
+      "english": "Dusk",
+      "polish": "Zmrok",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p032-085-word.mp3",
+      "audioSentence": "t1-p032-085-sentence.mp3"
+    }
+  ]
+}

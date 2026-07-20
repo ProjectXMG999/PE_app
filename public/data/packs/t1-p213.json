@@ -1,15 +1,15 @@
 {
   "id": "t1-p213",
-  "name": "Slang 36",
-  "volume": "Tom IX",
-  "level": 4,
-  "category": "Slang",
-  "chapter": "Rozdział LXXXI",
+  "name": "Co się patrzysz?",
+  "volume": "Tom V",
+  "level": 3,
+  "category": "Phrasale",
+  "chapter": "Rozdział XLI",
   "words": [
     {
       "id": "t1-p213-001",
-      "english": "All balled up",
-      "polish": "Rozwalony emocjonalnie",
+      "english": "Look down",
+      "polish": "Spojrzeć w dół",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p213-002",
-      "english": "Backseat driver",
-      "polish": "Osoba krytykująca jazdę kierowcy",
+      "english": "Look up",
+      "polish": "Spojrzeć w górę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p213-003",
-      "english": "Buzzkill",
-      "polish": "Psuje zabawę",
+      "english": "Look around",
+      "polish": "Rozejrzeć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p213-004",
-      "english": "Poindexter",
-      "polish": "Udaje nerda, ale nie ma jego umiejętności",
+      "english": "Look at",
+      "polish": "Spojrzeć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p213-005",
-      "english": "Skipper",
-      "polish": "Wagarowicz",
+      "english": "Look back",
+      "polish": "Oglądać się za siebie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p213-006",
-      "english": "Buttinsky",
-      "polish": "Wścibski typ",
+      "english": "Look back at",
+      "polish": "Oglądać się na",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p213-007",
-      "english": "Heavyfoot",
-      "polish": "Ciężka noga (kierowca, który jeździ bardzo szybko I nieostrożnie)",
+      "english": "Look over",
+      "polish": "Spoglądać za coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p213-008",
-      "english": "Guitarded",
-      "polish": "Zero umiejętności gry na gitarze",
+      "english": "Look away",
+      "polish": "Odwracać wzrok",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p213-009",
-      "english": "Dork",
-      "polish": "Frajer pompka",
+      "english": "Look out",
+      "polish": "Wyjrzeć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-009-word.mp3",
@@ -89,12 +89,102 @@
     },
     {
       "id": "t1-p213-010",
-      "english": "Boob",
-      "polish": "Melepeta",
+      "english": "Look sth up",
+      "polish": "Wyszukać coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-010-word.mp3",
       "audioSentence": "t1-p213-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-011",
+      "english": "Look ahead",
+      "polish": "Patrzeć w przyszłość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-011-word.mp3",
+      "audioSentence": "t1-p213-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-012",
+      "english": "Look over sth",
+      "polish": "Przeglądać coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-012-word.mp3",
+      "audioSentence": "t1-p213-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-013",
+      "english": "Look through sth",
+      "polish": "Przejrzeć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-013-word.mp3",
+      "audioSentence": "t1-p213-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-014",
+      "english": "Check sth out",
+      "polish": "Sprawdzić coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-014-word.mp3",
+      "audioSentence": "t1-p213-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-015",
+      "english": "Go through",
+      "polish": "Przewertować coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-015-word.mp3",
+      "audioSentence": "t1-p213-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-016",
+      "english": "Shop around",
+      "polish": "Rozglądać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-016-word.mp3",
+      "audioSentence": "t1-p213-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-017",
+      "english": "Put out sth",
+      "polish": "Wystawiać coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-017-word.mp3",
+      "audioSentence": "t1-p213-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-018",
+      "english": "Go over",
+      "polish": "Przejrzeć coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-018-word.mp3",
+      "audioSentence": "t1-p213-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-019",
+      "english": "Skim through",
+      "polish": "Pobieżnie przejrzeć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-019-word.mp3",
+      "audioSentence": "t1-p213-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-020",
+      "english": "See through",
+      "polish": "Przejrzeć kogoś na wylot",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-020-word.mp3",
+      "audioSentence": "t1-p213-020-sentence.mp3"
     }
   ]
 }

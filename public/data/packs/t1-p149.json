@@ -9,7 +9,7 @@
     {
       "id": "t1-p149-001",
       "english": "Because of",
-      "polish": "Z powodu; ponieważ",
+      "polish": "Z powodu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p149-001-word.mp3",
@@ -54,7 +54,7 @@
     {
       "id": "t1-p149-006",
       "english": "Since",
-      "polish": "Od (np. Niedzieli); jako że",
+      "polish": "Od",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p149-006-word.mp3",
@@ -81,7 +81,7 @@
     {
       "id": "t1-p149-009",
       "english": "Afterwards",
-      "polish": "Po wszystkim (po robieniu czegoś)",
+      "polish": "Po wszystkim",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p149-009-word.mp3",
@@ -95,6 +95,96 @@
       "sentencePl": null,
       "audioWord": "t1-p149-010-word.mp3",
       "audioSentence": "t1-p149-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p149-011",
+      "english": "As a consequence",
+      "polish": "W konsekwencji",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p149-011-word.mp3",
+      "audioSentence": "t1-p149-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p149-012",
+      "english": "In order to",
+      "polish": "W celu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p149-012-word.mp3",
+      "audioSentence": "t1-p149-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p149-013",
+      "english": "Hence",
+      "polish": "Stąd",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p149-013-word.mp3",
+      "audioSentence": "t1-p149-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p149-014",
+      "english": "Therefore",
+      "polish": "Zatem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p149-014-word.mp3",
+      "audioSentence": "t1-p149-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p149-015",
+      "english": "Thus",
+      "polish": "Tak więc",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p149-015-word.mp3",
+      "audioSentence": "t1-p149-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p149-016",
+      "english": "Thereby",
+      "polish": "Tym samym",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p149-016-word.mp3",
+      "audioSentence": "t1-p149-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p149-017",
+      "english": "So as to",
+      "polish": "Po to by",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p149-017-word.mp3",
+      "audioSentence": "t1-p149-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p149-018",
+      "english": "Subsequent to",
+      "polish": "W następstwie czegoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p149-018-word.mp3",
+      "audioSentence": "t1-p149-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p149-019",
+      "english": "Whereby",
+      "polish": "W wyniku czego",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p149-019-word.mp3",
+      "audioSentence": "t1-p149-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p149-020",
+      "english": "By the same token",
+      "polish": "Z tych samych powodów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p149-020-word.mp3",
+      "audioSentence": "t1-p149-020-sentence.mp3"
     }
   ]
 }

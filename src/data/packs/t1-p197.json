@@ -9,7 +9,7 @@
     {
       "id": "t1-p197-001",
       "english": "Break down",
-      "polish": "Popsuć się; zepsuć się",
+      "polish": "Popsuć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-001-word.mp3",
@@ -27,7 +27,7 @@
     {
       "id": "t1-p197-003",
       "english": "Fall down",
-      "polish": "Upaść; spaść",
+      "polish": "Upaść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-003-word.mp3",
@@ -36,7 +36,7 @@
     {
       "id": "t1-p197-004",
       "english": "End up",
-      "polish": "Skończyć; wylądować gdzieś",
+      "polish": "Skończyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-004-word.mp3",
@@ -54,7 +54,7 @@
     {
       "id": "t1-p197-006",
       "english": "Be off",
-      "polish": "Zepsuć się (np. Jedzenie)",
+      "polish": "Zepsuć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-006-word.mp3",
@@ -72,7 +72,7 @@
     {
       "id": "t1-p197-008",
       "english": "Run out of sth",
-      "polish": "Wyczerpywać; kończyć się",
+      "polish": "Wyczerpywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-008-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p197-011",
-      "english": "Clog up",
-      "polish": "Zatkać się",
+      "english": "Hold sb up",
+      "polish": "Zatrzymać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p197-012",
-      "english": "Fade away",
-      "polish": "Blaknąć; gasnąć (również o umierającej osobie)",
+      "english": "Miss out on",
+      "polish": "Przegapić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p197-013",
-      "english": "Go off",
-      "polish": "Przestać działać (np. Maszyna)",
+      "english": "Screw up",
+      "polish": "Schrzanić coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p197-014",
-      "english": "Knock over",
-      "polish": "Przewrócić coś",
+      "english": "Act up",
+      "polish": "Nawalać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-014-word.mp3",
@@ -134,8 +134,8 @@
     },
     {
       "id": "t1-p197-015",
-      "english": "Run down",
-      "polish": "Wyczerpać",
+      "english": "Mess up",
+      "polish": "Schrzanić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-015-word.mp3",
@@ -143,8 +143,8 @@
     },
     {
       "id": "t1-p197-016",
-      "english": "Wind up",
-      "polish": "Skończyć (gdzieś)",
+      "english": "Mistake sb for sb",
+      "polish": "Pomylić kogoś z kimś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-016-word.mp3",
@@ -152,8 +152,8 @@
     },
     {
       "id": "t1-p197-017",
-      "english": "Dry up",
-      "polish": "Wyczerpać się (o zasobach)",
+      "english": "Use up",
+      "polish": "Zużyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-017-word.mp3",
@@ -161,8 +161,8 @@
     },
     {
       "id": "t1-p197-018",
-      "english": "Go down",
-      "polish": "Przegrać (np. Zawody, wybory)",
+      "english": "Be off",
+      "polish": "Być niezgodnym z ustaleniami",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-018-word.mp3",
@@ -170,8 +170,8 @@
     },
     {
       "id": "t1-p197-019",
-      "english": "Go down",
-      "polish": "Spaść (o samolocie)",
+      "english": "Get rid of sth",
+      "polish": "Pozbywać się czegoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-019-word.mp3",
@@ -179,12 +179,102 @@
     },
     {
       "id": "t1-p197-020",
-      "english": "Go down",
-      "polish": "Tonąć (o statku)",
+      "english": "Break down",
+      "polish": "Załamywać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-020-word.mp3",
       "audioSentence": "t1-p197-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p197-021",
+      "english": "Clog up",
+      "polish": "Zatkać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p197-021-word.mp3",
+      "audioSentence": "t1-p197-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p197-022",
+      "english": "Fade away",
+      "polish": "Blaknąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p197-022-word.mp3",
+      "audioSentence": "t1-p197-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p197-023",
+      "english": "Go off",
+      "polish": "Przestać działać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p197-023-word.mp3",
+      "audioSentence": "t1-p197-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p197-024",
+      "english": "Knock over",
+      "polish": "Przewrócić coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p197-024-word.mp3",
+      "audioSentence": "t1-p197-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p197-025",
+      "english": "Run down",
+      "polish": "Wyczerpać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p197-025-word.mp3",
+      "audioSentence": "t1-p197-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p197-026",
+      "english": "Wind up",
+      "polish": "Skończyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p197-026-word.mp3",
+      "audioSentence": "t1-p197-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p197-027",
+      "english": "Dry up",
+      "polish": "Wyczerpać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p197-027-word.mp3",
+      "audioSentence": "t1-p197-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p197-028",
+      "english": "Go down",
+      "polish": "Przegrać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p197-028-word.mp3",
+      "audioSentence": "t1-p197-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p197-029",
+      "english": "Go down",
+      "polish": "Spaść",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p197-029-word.mp3",
+      "audioSentence": "t1-p197-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p197-030",
+      "english": "Go down",
+      "polish": "Tonąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p197-030-word.mp3",
+      "audioSentence": "t1-p197-030-sentence.mp3"
     }
   ]
 }

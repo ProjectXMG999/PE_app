@@ -1,0 +1,1045 @@
+{
+  "id": "t1-p034",
+  "name": "Zwierzęta",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział IV",
+  "words": [
+    {
+      "id": "t1-p034-001",
+      "english": "Horse",
+      "polish": "Koń",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-001-word.mp3",
+      "audioSentence": "t1-p034-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-002",
+      "english": "Cat",
+      "polish": "Kot",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-002-word.mp3",
+      "audioSentence": "t1-p034-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-003",
+      "english": "Cow",
+      "polish": "Krowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-003-word.mp3",
+      "audioSentence": "t1-p034-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-004",
+      "english": "Butterfly",
+      "polish": "Motyl",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-004-word.mp3",
+      "audioSentence": "t1-p034-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-005",
+      "english": "Fly",
+      "polish": "Mucha",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-005-word.mp3",
+      "audioSentence": "t1-p034-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-006",
+      "english": "Mouse",
+      "polish": "Mysz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-006-word.mp3",
+      "audioSentence": "t1-p034-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-007",
+      "english": "Spider",
+      "polish": "Pająk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-007-word.mp3",
+      "audioSentence": "t1-p034-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-008",
+      "english": "Dog",
+      "polish": "Pies",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-008-word.mp3",
+      "audioSentence": "t1-p034-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-009",
+      "english": "Pig",
+      "polish": "Świnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-009-word.mp3",
+      "audioSentence": "t1-p034-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-010",
+      "english": "Animal",
+      "polish": "Zwierzę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-010-word.mp3",
+      "audioSentence": "t1-p034-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-011",
+      "english": "Bull",
+      "polish": "Byk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-011-word.mp3",
+      "audioSentence": "t1-p034-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-012",
+      "english": "Hamster",
+      "polish": "Chomik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-012-word.mp3",
+      "audioSentence": "t1-p034-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-013",
+      "english": "Mosquito",
+      "polish": "Komar",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-013-word.mp3",
+      "audioSentence": "t1-p034-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-014",
+      "english": "Kitten",
+      "polish": "Kotek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-014-word.mp3",
+      "audioSentence": "t1-p034-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-015",
+      "english": "Rabbit",
+      "polish": "Królik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-015-word.mp3",
+      "audioSentence": "t1-p034-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-016",
+      "english": "Lion",
+      "polish": "Lew",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-016-word.mp3",
+      "audioSentence": "t1-p034-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-017",
+      "english": "Monkey",
+      "polish": "Małpa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-017-word.mp3",
+      "audioSentence": "t1-p034-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-018",
+      "english": "Bear",
+      "polish": "Niedźwiedź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-018-word.mp3",
+      "audioSentence": "t1-p034-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-019",
+      "english": "Insect",
+      "polish": "Owad",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-019-word.mp3",
+      "audioSentence": "t1-p034-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-020",
+      "english": "Sheep",
+      "polish": "Owca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-020-word.mp3",
+      "audioSentence": "t1-p034-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-021",
+      "english": "Bee",
+      "polish": "Pszczoła",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-021-word.mp3",
+      "audioSentence": "t1-p034-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-022",
+      "english": "Elephant",
+      "polish": "Słoń",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-022-word.mp3",
+      "audioSentence": "t1-p034-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-023",
+      "english": "Tiger",
+      "polish": "Tygrys",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-023-word.mp3",
+      "audioSentence": "t1-p034-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-024",
+      "english": "Snake",
+      "polish": "Wąż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-024-word.mp3",
+      "audioSentence": "t1-p034-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-025",
+      "english": "Pet",
+      "polish": "Zwierzę domowe",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-025-word.mp3",
+      "audioSentence": "t1-p034-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-026",
+      "english": "Rat",
+      "polish": "Szczur",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-026-word.mp3",
+      "audioSentence": "t1-p034-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-027",
+      "english": "Wolf",
+      "polish": "Wilk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-027-word.mp3",
+      "audioSentence": "t1-p034-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-028",
+      "english": "Frog",
+      "polish": "Żaba",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-028-word.mp3",
+      "audioSentence": "t1-p034-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-029",
+      "english": "Turtle",
+      "polish": "Żółw",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-029-word.mp3",
+      "audioSentence": "t1-p034-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-030",
+      "english": "Creature",
+      "polish": "Stwór",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-030-word.mp3",
+      "audioSentence": "t1-p034-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-031",
+      "english": "Ram",
+      "polish": "Baran",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-031-word.mp3",
+      "audioSentence": "t1-p034-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-032",
+      "english": "Ladybird",
+      "polish": "Biedronka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-032-word.mp3",
+      "audioSentence": "t1-p034-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-033",
+      "english": "Calf",
+      "polish": "Cielę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-033-word.mp3",
+      "audioSentence": "t1-p034-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-034",
+      "english": "Dolphin",
+      "polish": "Delfin",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-034-word.mp3",
+      "audioSentence": "t1-p034-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-035",
+      "english": "Worm",
+      "polish": "Robak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-035-word.mp3",
+      "audioSentence": "t1-p034-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-036",
+      "english": "Gorilla",
+      "polish": "Goryl",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-036-word.mp3",
+      "audioSentence": "t1-p034-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-037",
+      "english": "Lamb",
+      "polish": "Jagnię",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-037-word.mp3",
+      "audioSentence": "t1-p034-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-038",
+      "english": "Deer",
+      "polish": "Jeleń",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-038-word.mp3",
+      "audioSentence": "t1-p034-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-039",
+      "english": "Paw",
+      "polish": "Łapa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-039-word.mp3",
+      "audioSentence": "t1-p034-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-040",
+      "english": "Elk",
+      "polish": "Łoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-040-word.mp3",
+      "audioSentence": "t1-p034-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-041",
+      "english": "Ant",
+      "polish": "Mrówka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-041-word.mp3",
+      "audioSentence": "t1-p034-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-042",
+      "english": "Bat",
+      "polish": "Nietoperz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-042-word.mp3",
+      "audioSentence": "t1-p034-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-043",
+      "english": "Tail",
+      "polish": "Ogon",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-043-word.mp3",
+      "audioSentence": "t1-p034-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-044",
+      "english": "Wasp",
+      "polish": "Osa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-044-word.mp3",
+      "audioSentence": "t1-p034-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-045",
+      "english": "Donkey",
+      "polish": "Osioł",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-045-word.mp3",
+      "audioSentence": "t1-p034-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-046",
+      "english": "Panda",
+      "polish": "Panda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-046-word.mp3",
+      "audioSentence": "t1-p034-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-047",
+      "english": "Claw",
+      "polish": "Pazur",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-047-word.mp3",
+      "audioSentence": "t1-p034-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-048",
+      "english": "Flea",
+      "polish": "Pchła",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-048-word.mp3",
+      "audioSentence": "t1-p034-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-049",
+      "english": "Doggy",
+      "polish": "Piesek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-049-word.mp3",
+      "audioSentence": "t1-p034-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-050",
+      "english": "Female",
+      "polish": "Samica",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-050-word.mp3",
+      "audioSentence": "t1-p034-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-051",
+      "english": "Male",
+      "polish": "Samiec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-051-word.mp3",
+      "audioSentence": "t1-p034-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-052",
+      "english": "Leash",
+      "polish": "Smycz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-052-word.mp3",
+      "audioSentence": "t1-p034-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-053",
+      "english": "Owl",
+      "polish": "Sowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-053-word.mp3",
+      "audioSentence": "t1-p034-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-054",
+      "english": "Chimpanzee",
+      "polish": "Szympans",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-054-word.mp3",
+      "audioSentence": "t1-p034-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-055",
+      "english": "Snail",
+      "polish": "Ślimak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-055-word.mp3",
+      "audioSentence": "t1-p034-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-056",
+      "english": "Camel",
+      "polish": "Wielbłąd",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-056-word.mp3",
+      "audioSentence": "t1-p034-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-057",
+      "english": "Whale",
+      "polish": "Wieloryb",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-057-word.mp3",
+      "audioSentence": "t1-p034-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-058",
+      "english": "Squirrel",
+      "polish": "Wiewiórka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-058-word.mp3",
+      "audioSentence": "t1-p034-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-059",
+      "english": "Hare",
+      "polish": "Zając",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-059-word.mp3",
+      "audioSentence": "t1-p034-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-060",
+      "english": "Sting",
+      "polish": "Żądło",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-060-word.mp3",
+      "audioSentence": "t1-p034-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-061",
+      "english": "Giraffe",
+      "polish": "Żyrafa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-061-word.mp3",
+      "audioSentence": "t1-p034-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-062",
+      "english": "Fur",
+      "polish": "Futro",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-062-word.mp3",
+      "audioSentence": "t1-p034-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-063",
+      "english": "Hippo",
+      "polish": "Hipopotam",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-063-word.mp3",
+      "audioSentence": "t1-p034-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-064",
+      "english": "Kangaroo",
+      "polish": "Kangur",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-064-word.mp3",
+      "audioSentence": "t1-p034-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-065",
+      "english": "Goat",
+      "polish": "Koza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-065-word.mp3",
+      "audioSentence": "t1-p034-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-066",
+      "english": "Crocodile",
+      "polish": "Krokodyl",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-066-word.mp3",
+      "audioSentence": "t1-p034-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-067",
+      "english": "Fox",
+      "polish": "Lis",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-067-word.mp3",
+      "audioSentence": "t1-p034-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-068",
+      "english": "Bug",
+      "polish": "Robak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-068-word.mp3",
+      "audioSentence": "t1-p034-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-069",
+      "english": "Puppy",
+      "polish": "Szczeniak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-069-word.mp3",
+      "audioSentence": "t1-p034-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-070",
+      "english": "Species",
+      "polish": "Gatunek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-070-word.mp3",
+      "audioSentence": "t1-p034-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-071",
+      "english": "Weasel",
+      "polish": "Łasica",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-071-word.mp3",
+      "audioSentence": "t1-p034-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-072",
+      "english": "Roe deer",
+      "polish": "Sarna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-072-word.mp3",
+      "audioSentence": "t1-p034-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-073",
+      "english": "Raccoon",
+      "polish": "Szop",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-073-word.mp3",
+      "audioSentence": "t1-p034-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-074",
+      "english": "Whiskers",
+      "polish": "Wąsy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-074-word.mp3",
+      "audioSentence": "t1-p034-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-075",
+      "english": "Cockroach",
+      "polish": "Karaluch",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-075-word.mp3",
+      "audioSentence": "t1-p034-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-076",
+      "english": "Octopus",
+      "polish": "Ośmiornica",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-076-word.mp3",
+      "audioSentence": "t1-p034-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-077",
+      "english": "Badger",
+      "polish": "Borsuk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-077-word.mp3",
+      "audioSentence": "t1-p034-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-078",
+      "english": "Beetle",
+      "polish": "Chrząszcz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-078-word.mp3",
+      "audioSentence": "t1-p034-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-079",
+      "english": "Predator",
+      "polish": "Drapieżnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-079-word.mp3",
+      "audioSentence": "t1-p034-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-080",
+      "english": "Reptile",
+      "polish": "Gad",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-080-word.mp3",
+      "audioSentence": "t1-p034-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-081",
+      "english": "Cheetah",
+      "polish": "Gepard",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-081-word.mp3",
+      "audioSentence": "t1-p034-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-082",
+      "english": "Rodent",
+      "polish": "Gryzoń",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-082-word.mp3",
+      "audioSentence": "t1-p034-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-083",
+      "english": "Hedgehog",
+      "polish": "Jeż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-083-word.mp3",
+      "audioSentence": "t1-p034-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-084",
+      "english": "Mare",
+      "polish": "Klacz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-084-word.mp3",
+      "audioSentence": "t1-p034-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-085",
+      "english": "Koala",
+      "polish": "Koala",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-085-word.mp3",
+      "audioSentence": "t1-p034-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-086",
+      "english": "Hoof",
+      "polish": "Kopyto",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-086-word.mp3",
+      "audioSentence": "t1-p034-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-087",
+      "english": "Mole",
+      "polish": "Kret",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-087-word.mp3",
+      "audioSentence": "t1-p034-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-088",
+      "english": "Cougar",
+      "polish": "Puma",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-088-word.mp3",
+      "audioSentence": "t1-p034-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-089",
+      "english": "Marten",
+      "polish": "Kuna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-089-word.mp3",
+      "audioSentence": "t1-p034-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-090",
+      "english": "Mongrel",
+      "polish": "Kundel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-090-word.mp3",
+      "audioSentence": "t1-p034-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-091",
+      "english": "Leopard",
+      "polish": "Lampart",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-091-word.mp3",
+      "audioSentence": "t1-p034-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-092",
+      "english": "Rhinoceros",
+      "polish": "Nosorożec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-092-word.mp3",
+      "audioSentence": "t1-p034-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-093",
+      "english": "Sheepdog",
+      "polish": "Owczarek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-093-word.mp3",
+      "audioSentence": "t1-p034-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-094",
+      "english": "Panther",
+      "polish": "Pantera",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-094-word.mp3",
+      "audioSentence": "t1-p034-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-095",
+      "english": "Pedigree dog",
+      "polish": "Pies z rodowodem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-095-word.mp3",
+      "audioSentence": "t1-p034-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-096",
+      "english": "Amphibian",
+      "polish": "Płaz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-096-word.mp3",
+      "audioSentence": "t1-p034-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-097",
+      "english": "Piglet",
+      "polish": "Prosiaczek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-097-word.mp3",
+      "audioSentence": "t1-p034-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-098",
+      "english": "Poodle",
+      "polish": "Pudel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-098-word.mp3",
+      "audioSentence": "t1-p034-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-099",
+      "english": "Toad",
+      "polish": "Ropucha",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-099-word.mp3",
+      "audioSentence": "t1-p034-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-100",
+      "english": "Mammal",
+      "polish": "Ssak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-100-word.mp3",
+      "audioSentence": "t1-p034-100-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-101",
+      "english": "Herd",
+      "polish": "Stado",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-101-word.mp3",
+      "audioSentence": "t1-p034-101-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-102",
+      "english": "Hornet",
+      "polish": "Szerszeń",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-102-word.mp3",
+      "audioSentence": "t1-p034-102-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-103",
+      "english": "Bumblebee",
+      "polish": "Trzmiel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-103-word.mp3",
+      "audioSentence": "t1-p034-103-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-104",
+      "english": "Dragonfly",
+      "polish": "Ważka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-104-word.mp3",
+      "audioSentence": "t1-p034-104-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-105",
+      "english": "Otter",
+      "polish": "Wydra",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-105-word.mp3",
+      "audioSentence": "t1-p034-105-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-106",
+      "english": "Viper",
+      "polish": "Żmija",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-106-word.mp3",
+      "audioSentence": "t1-p034-106-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-107",
+      "english": "Beaver",
+      "polish": "Bóbr",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-107-word.mp3",
+      "audioSentence": "t1-p034-107-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-108",
+      "english": "Moth",
+      "polish": "Ćma",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-108-word.mp3",
+      "audioSentence": "t1-p034-108-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-109",
+      "english": "Platypus",
+      "polish": "Dziobak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-109-word.mp3",
+      "audioSentence": "t1-p034-109-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-110",
+      "english": "Seal",
+      "polish": "Foka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-110-word.mp3",
+      "audioSentence": "t1-p034-110-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-111",
+      "english": "Dachshund",
+      "polish": "Jamnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-111-word.mp3",
+      "audioSentence": "t1-p034-111-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-112",
+      "english": "Pony",
+      "polish": "Kucyk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-112-word.mp3",
+      "audioSentence": "t1-p034-112-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-113",
+      "english": "Sloth",
+      "polish": "Leniwiec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-113-word.mp3",
+      "audioSentence": "t1-p034-113-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-114",
+      "english": "Foal",
+      "polish": "Źrebak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-114-word.mp3",
+      "audioSentence": "t1-p034-114-sentence.mp3"
+    },
+    {
+      "id": "t1-p034-115",
+      "english": "Herd",
+      "polish": "Stado",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p034-115-word.mp3",
+      "audioSentence": "t1-p034-115-sentence.mp3"
+    }
+  ]
+}

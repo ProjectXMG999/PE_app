@@ -8,7 +8,7 @@
   "words": [
     {
       "id": "t1-p159-001",
-      "english": "FAŁSZ",
+      "english": "False",
       "polish": "Fałszywy",
       "sentenceEn": null,
       "sentencePl": null,
@@ -18,9 +18,9 @@
     {
       "id": "t1-p159-002",
       "english": "Wrong",
-      "polish": "Niewłaściwy (błędny)",
-      "sentenceEn": "If you enter the wrong language code, press CLEAR.",
-      "sentencePl": "Jeżeli wprowadzisz błędny kod języka, naciśnij przycisk CLEAR.",
+      "polish": "Niewłaściwy",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-002-word.mp3",
       "audioSentence": "t1-p159-002-sentence.mp3"
     },
@@ -28,35 +28,35 @@
       "id": "t1-p159-003",
       "english": "Correct",
       "polish": "Prawidłowy",
-      "sentenceEn": "Correct me if I'm wrong, but weren't we supposed to meet Steve today?",
-      "sentencePl": "Popraw mnie, jeśli się mylę, ale czy nie mieliśmy zobaczyć się dziś ze Stevem?",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-003-word.mp3",
       "audioSentence": "t1-p159-003-sentence.mp3"
     },
     {
       "id": "t1-p159-004",
       "english": "Familiar",
-      "polish": "Znany; wyglądający znajomo",
-      "sentenceEn": "This man looks familiar. Do you know him?",
-      "sentencePl": "Ten mężczyzna wygląda znajomo. Znasz go?",
+      "polish": "Znany",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-004-word.mp3",
       "audioSentence": "t1-p159-004-sentence.mp3"
     },
     {
       "id": "t1-p159-005",
       "english": "Invalid",
-      "polish": "Nieważny (dokument, zapis)",
-      "sentenceEn": "I'm afraid your driving licence is invalid in Eastern Europe.",
-      "sentencePl": "Obawiam się, że Twoje prawo jazdy jest nieważne w Europie Wschodniej.",
+      "polish": "Nieważny",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-005-word.mp3",
       "audioSentence": "t1-p159-005-sentence.mp3"
     },
     {
       "id": "t1-p159-006",
       "english": "Valid",
-      "polish": "Ważny (dokument, bilet)",
-      "sentenceEn": "Sorry sir, but your credit card is no longer valid.",
-      "sentencePl": "Przykro mi proszę pana, ale pańska karta kredytowa nie jest już ważna.",
+      "polish": "Ważny",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-006-word.mp3",
       "audioSentence": "t1-p159-006-sentence.mp3"
     },
@@ -64,8 +64,8 @@
       "id": "t1-p159-007",
       "english": "Risky",
       "polish": "Ryzykowny",
-      "sentenceEn": "That was some risky business, but you handled it very well!",
-      "sentencePl": "To była ryzykowna sprawa, ale bardzo dobrze sobie z nią poradziłeś!",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-007-word.mp3",
       "audioSentence": "t1-p159-007-sentence.mp3"
     },
@@ -73,8 +73,8 @@
       "id": "t1-p159-008",
       "english": "Satisfying",
       "polish": "Satysfakcjonujący",
-      "sentenceEn": "The Fender guitar offers a satisfying sound.",
-      "sentencePl": "Gitara Fender wydaje satysfakcjonujący dźwięk.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-008-word.mp3",
       "audioSentence": "t1-p159-008-sentence.mp3"
     },
@@ -82,17 +82,17 @@
       "id": "t1-p159-009",
       "english": "Typical",
       "polish": "Typowy",
-      "sentenceEn": "I'm dirty, tired. I had a nervous breakdown. I am sleep deprived. I'm a typical mom of a newborn.",
-      "sentencePl": "Jestem brudna. Zmęczona. Miałam załamanie nerwowe. Brakuje mi snu. Jestem typową mamą niemowlaka.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-009-word.mp3",
       "audioSentence": "t1-p159-009-sentence.mp3"
     },
     {
       "id": "t1-p159-010",
       "english": "Complex",
-      "polish": "Złożony; kompleksowy",
-      "sentenceEn": "CrimsonCorp offers complex solutions for the customers, including 360 marketing, software engineering, and market management.",
-      "sentencePl": "CrimsonCorp oferuje klientom kompleksowe rozwiązania, w tym marketing 360, inżynierię oprogramowania i zarządzanie rynkiem.",
+      "polish": "Złożony",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-010-word.mp3",
       "audioSentence": "t1-p159-010-sentence.mp3"
     },
@@ -100,8 +100,8 @@
       "id": "t1-p159-011",
       "english": "Incorrect",
       "polish": "Nieprawidłowy",
-      "sentenceEn": "The invoice amount is incorrect. You must void it.",
-      "sentencePl": "Kwota podana na fakturze jest nieprawidłowa. Musisz ją anulować.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-011-word.mp3",
       "audioSentence": "t1-p159-011-sentence.mp3"
     },
@@ -109,17 +109,17 @@
       "id": "t1-p159-012",
       "english": "Complicated",
       "polish": "Skomplikowany",
-      "sentenceEn": "Our relationship was very complicated. In the end, we didn't even know what we were arguing about.",
-      "sentencePl": "Nasza relacja była bardzo skomplikowana. Na końcu nawet nie wiedzieliśmy, o co się kłócimy.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-012-word.mp3",
       "audioSentence": "t1-p159-012-sentence.mp3"
     },
     {
       "id": "t1-p159-013",
       "english": "Expected",
-      "polish": "Spodziewany; przewidywany",
-      "sentenceEn": "The expected update shall fix this problem.",
-      "sentencePl": "Spodziewana aktualizacja powinna rozwiązać ten problem.",
+      "polish": "Spodziewany",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-013-word.mp3",
       "audioSentence": "t1-p159-013-sentence.mp3"
     },
@@ -127,8 +127,8 @@
       "id": "t1-p159-014",
       "english": "Detailed",
       "polish": "Szczegółowy",
-      "sentenceEn": "Your deadline is tomorrow. I'm expecting a detailed report from a conference in Orlando.",
-      "sentencePl": "Masz czas do jutra. Czekam na szczegółowy raport z konferencji w Orlando.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-014-word.mp3",
       "audioSentence": "t1-p159-014-sentence.mp3"
     },
@@ -136,10 +136,280 @@
       "id": "t1-p159-015",
       "english": "Logical",
       "polish": "Logiczny",
-      "sentenceEn": "Pure mathematics is, in its way, the poetry of logical ideas.",
-      "sentencePl": "Czysta matematyka jest na swój sposób poezją logicznych idei.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p159-015-word.mp3",
       "audioSentence": "t1-p159-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-016",
+      "english": "Probable",
+      "polish": "Prawdopodobny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-016-word.mp3",
+      "audioSentence": "t1-p159-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-017",
+      "english": "Illogical",
+      "polish": "Nielogiczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-017-word.mp3",
+      "audioSentence": "t1-p159-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-018",
+      "english": "Justified",
+      "polish": "Usprawiedliwiony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-018-word.mp3",
+      "audioSentence": "t1-p159-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-019",
+      "english": "Familiar",
+      "polish": "Zaznajomiony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-019-word.mp3",
+      "audioSentence": "t1-p159-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-020",
+      "english": "Selected",
+      "polish": "Wyselekcjonowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-020-word.mp3",
+      "audioSentence": "t1-p159-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-021",
+      "english": "Underlying",
+      "polish": "Leżący u podstaw",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-021-word.mp3",
+      "audioSentence": "t1-p159-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-022",
+      "english": "Suitable",
+      "polish": "Odpowiedni",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-022-word.mp3",
+      "audioSentence": "t1-p159-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-023",
+      "english": "Proportional",
+      "polish": "Proporcjonalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-023-word.mp3",
+      "audioSentence": "t1-p159-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-024",
+      "english": "Cognitive",
+      "polish": "Poznawczy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-024-word.mp3",
+      "audioSentence": "t1-p159-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-025",
+      "english": "Thorough",
+      "polish": "Gruntowny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-025-word.mp3",
+      "audioSentence": "t1-p159-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-026",
+      "english": "Substantive",
+      "polish": "Merytoryczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-026-word.mp3",
+      "audioSentence": "t1-p159-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-027",
+      "english": "Plausible",
+      "polish": "Możliwy do zaistnienia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-027-word.mp3",
+      "audioSentence": "t1-p159-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-028",
+      "english": "Obscure",
+      "polish": "Niejasny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-028-word.mp3",
+      "audioSentence": "t1-p159-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-029",
+      "english": "Inexplicable",
+      "polish": "Niewytłumaczalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-029-word.mp3",
+      "audioSentence": "t1-p159-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-030",
+      "english": "Undeniable",
+      "polish": "Niezaprzeczalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-030-word.mp3",
+      "audioSentence": "t1-p159-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-031",
+      "english": "Comprehensive",
+      "polish": "Wszechstronny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-031-word.mp3",
+      "audioSentence": "t1-p159-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-032",
+      "english": "Questionable",
+      "polish": "Sporny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-032-word.mp3",
+      "audioSentence": "t1-p159-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-033",
+      "english": "Contradictory",
+      "polish": "Sprzeczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-033-word.mp3",
+      "audioSentence": "t1-p159-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-034",
+      "english": "Peculiar",
+      "polish": "Osobliwy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-034-word.mp3",
+      "audioSentence": "t1-p159-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-035",
+      "english": "Coherent",
+      "polish": "Spójny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-035-word.mp3",
+      "audioSentence": "t1-p159-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-036",
+      "english": "Worthwhile",
+      "polish": "Wart zachodu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-036-word.mp3",
+      "audioSentence": "t1-p159-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-037",
+      "english": "Doubtful",
+      "polish": "Wątpliwy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-037-word.mp3",
+      "audioSentence": "t1-p159-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-038",
+      "english": "Explicable",
+      "polish": "Wytłumaczalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-038-word.mp3",
+      "audioSentence": "t1-p159-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-039",
+      "english": "Mind-boggling",
+      "polish": "Wprawiający o zawrót głowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-039-word.mp3",
+      "audioSentence": "t1-p159-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-040",
+      "english": "Acquainted",
+      "polish": "Zapoznany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-040-word.mp3",
+      "audioSentence": "t1-p159-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-041",
+      "english": "Coincident",
+      "polish": "Zbieżny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-041-word.mp3",
+      "audioSentence": "t1-p159-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-042",
+      "english": "Hesitant",
+      "polish": "Niezdecydowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-042-word.mp3",
+      "audioSentence": "t1-p159-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-043",
+      "english": "Misleading",
+      "polish": "Mylny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-043-word.mp3",
+      "audioSentence": "t1-p159-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-044",
+      "english": "Computable",
+      "polish": "Obliczalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-044-word.mp3",
+      "audioSentence": "t1-p159-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p159-045",
+      "english": "Solvable",
+      "polish": "Mający rozwiązanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p159-045-word.mp3",
+      "audioSentence": "t1-p159-045-sentence.mp3"
     }
   ]
 }

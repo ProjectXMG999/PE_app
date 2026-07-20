@@ -9,7 +9,7 @@
     {
       "id": "t1-p151-001",
       "english": "Afterparty",
-      "polish": "Afterek; dozgonniak",
+      "polish": "Afterek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-001-word.mp3",
@@ -27,9 +27,9 @@
     {
       "id": "t1-p151-003",
       "english": "Bash",
-      "polish": "Impreza; projekt x",
-      "sentenceEn": "I was bashed by my boss, but it's not my fault the pizza didn't reach the office.",
-      "sentencePl": "Zostałem zrugany przez szefa, ale to nie moja wina, że pizza nie dojechała do biura.",
+      "polish": "Impreza",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p151-003-word.mp3",
       "audioSentence": "t1-p151-003-sentence.mp3"
     },
@@ -45,9 +45,9 @@
     {
       "id": "t1-p151-005",
       "english": "Dead",
-      "polish": "Opustoszały lokal; koniec imprezy (np. W barze)",
-      "sentenceEn": "He was found dead in the woods.",
-      "sentencePl": "Znaleźli go martwego w lesie.",
+      "polish": "Opustoszały lokal",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p151-005-word.mp3",
       "audioSentence": "t1-p151-005-sentence.mp3"
     },
@@ -72,7 +72,7 @@
     {
       "id": "t1-p151-008",
       "english": "Booze",
-      "polish": "Procenty; mocne alko",
+      "polish": "Procenty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-008-word.mp3",
@@ -90,11 +90,101 @@
     {
       "id": "t1-p151-010",
       "english": "Vibe",
-      "polish": "Dobre wibracje; fajny klimat",
-      "sentenceEn": "This is my favorite cafe 'cause it has the best vibe for working.",
-      "sentencePl": "To moja ulubiona kawiarnia, bo ma najlepszy klimat do pracy.",
+      "polish": "Dobre wibracje",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p151-010-word.mp3",
       "audioSentence": "t1-p151-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p151-011",
+      "english": "All nighter",
+      "polish": "Całonocna posiadówka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p151-011-word.mp3",
+      "audioSentence": "t1-p151-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p151-012",
+      "english": "Sloshed",
+      "polish": "Nawalony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p151-012-word.mp3",
+      "audioSentence": "t1-p151-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p151-013",
+      "english": "Amped",
+      "polish": "Nakręcony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p151-013-word.mp3",
+      "audioSentence": "t1-p151-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p151-014",
+      "english": "Do",
+      "polish": "Impra",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p151-014-word.mp3",
+      "audioSentence": "t1-p151-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p151-015",
+      "english": "Kick back",
+      "polish": "Mała imprezka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p151-015-word.mp3",
+      "audioSentence": "t1-p151-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p151-016",
+      "english": "Rager",
+      "polish": "Gruba impreza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p151-016-word.mp3",
+      "audioSentence": "t1-p151-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p151-017",
+      "english": "Throw down",
+      "polish": "Rozkręcić imprezę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p151-017-word.mp3",
+      "audioSentence": "t1-p151-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p151-018",
+      "english": "Brewski",
+      "polish": "Browarek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p151-018-word.mp3",
+      "audioSentence": "t1-p151-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p151-019",
+      "english": "Cold one",
+      "polish": "Zimny browarek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p151-019-word.mp3",
+      "audioSentence": "t1-p151-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p151-020",
+      "english": "Cig",
+      "polish": "Pet",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p151-020-word.mp3",
+      "audioSentence": "t1-p151-020-sentence.mp3"
     }
   ]
 }

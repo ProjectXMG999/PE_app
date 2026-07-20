@@ -10,8 +10,8 @@
       "id": "t1-p132-001",
       "english": "Verb",
       "polish": "Czasownik",
-      "sentenceEn": "Every sentence needs a verb.",
-      "sentencePl": "W każdym zdaniu musi być czasownik.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-001-word.mp3",
       "audioSentence": "t1-p132-001-sentence.mp3"
     },
@@ -19,17 +19,17 @@
       "id": "t1-p132-002",
       "english": "Grammar",
       "polish": "Gramatyka",
-      "sentenceEn": "You need grammar to really understand the language.",
-      "sentencePl": "Potrzebujesz gramatyki, żeby tak na serio zrozumieć język.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-002-word.mp3",
       "audioSentence": "t1-p132-002-sentence.mp3"
     },
     {
       "id": "t1-p132-003",
       "english": "Story",
-      "polish": "Historia (opowieść)",
-      "sentenceEn": "My sister lives in a two-story house.",
-      "sentencePl": "Moja siostra mieszka w domu dwupiętrowym.",
+      "polish": "Historia",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-003-word.mp3",
       "audioSentence": "t1-p132-003-sentence.mp3"
     },
@@ -37,8 +37,8 @@
       "id": "t1-p132-004",
       "english": "Description",
       "polish": "Opis",
-      "sentenceEn": "We will need a detailed description.",
-      "sentencePl": "Będziemy potrzebowali szczegółowego opisu.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-004-word.mp3",
       "audioSentence": "t1-p132-004-sentence.mp3"
     },
@@ -46,8 +46,8 @@
       "id": "t1-p132-005",
       "english": "Adjective",
       "polish": "Przymiotnik",
-      "sentenceEn": "Which adjective describes you the best?",
-      "sentencePl": "Który przymiotnik najlepiej Cię opisuje?",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-005-word.mp3",
       "audioSentence": "t1-p132-005-sentence.mp3"
     },
@@ -55,8 +55,8 @@
       "id": "t1-p132-006",
       "english": "Adverb",
       "polish": "Przysłówek",
-      "sentenceEn": "People often confuse adverbs with adjectives.",
-      "sentencePl": "Ludzie często mylą przysłówki z przymiotnikami",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-006-word.mp3",
       "audioSentence": "t1-p132-006-sentence.mp3"
     },
@@ -64,8 +64,8 @@
       "id": "t1-p132-007",
       "english": "Chapter",
       "polish": "Rozdział",
-      "sentenceEn": "Just one more chapter, and I'm going to bed.",
-      "sentencePl": "Jeszcze jeden rozdział i idę spać.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-007-word.mp3",
       "audioSentence": "t1-p132-007-sentence.mp3"
     },
@@ -73,8 +73,8 @@
       "id": "t1-p132-008",
       "english": "Noun",
       "polish": "Rzeczownik",
-      "sentenceEn": "Nouns are the most abundant part of speech in English.",
-      "sentencePl": "Rzeczowniki stanowią najliczniejszą grupę wśród części mowy w języku angielskim.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-008-word.mp3",
       "audioSentence": "t1-p132-008-sentence.mp3"
     },
@@ -82,8 +82,8 @@
       "id": "t1-p132-009",
       "english": "Vocabulary",
       "polish": "Słownictwo",
-      "sentenceEn": "Rustlies' vocabulary is very limited.",
-      "sentencePl": "Słownictwo Rustilesów jest bardzo ograniczone.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-009-word.mp3",
       "audioSentence": "t1-p132-009-sentence.mp3"
     },
@@ -91,26 +91,26 @@
       "id": "t1-p132-010",
       "english": "Dictionary",
       "polish": "Słownik",
-      "sentenceEn": "Why do you still have dictionaries at home? You can find it all online.",
-      "sentencePl": "Po co dalej trzymasz słowniki? Przecież wszystko można znaleźć w sieci.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-010-word.mp3",
       "audioSentence": "t1-p132-010-sentence.mp3"
     },
     {
       "id": "t1-p132-011",
       "english": "Page",
-      "polish": "Strona (w książce)",
-      "sentenceEn": "Turn to page 394 and tell me, what do you think about Emily's behavior.",
-      "sentencePl": "Przejdź do strony 394 i powiedz mi, co myślisz o zachowaniu Emily.",
+      "polish": "Strona",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-011-word.mp3",
       "audioSentence": "t1-p132-011-sentence.mp3"
     },
     {
       "id": "t1-p132-012",
       "english": "Translation",
-      "polish": "Tłumaczenie; przekład",
-      "sentenceEn": "This is a very good translation, thank you.",
-      "sentencePl": "To doskonały przekład, dziękuję.",
+      "polish": "Tłumaczenie",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-012-word.mp3",
       "audioSentence": "t1-p132-012-sentence.mp3"
     },
@@ -118,8 +118,8 @@
       "id": "t1-p132-013",
       "english": "Title",
       "polish": "Tytuł",
-      "sentenceEn": "The book is great. Now you just need a good title.",
-      "sentencePl": "Książka jest świetna, teraz potrzebujesz tylko dobrego tytułu.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-013-word.mp3",
       "audioSentence": "t1-p132-013-sentence.mp3"
     },
@@ -127,8 +127,8 @@
       "id": "t1-p132-014",
       "english": "Publication",
       "polish": "Publikacja",
-      "sentenceEn": "He forced her to go through his dull scientific publications on the first date. Can you imagine? No wonder she never called back.",
-      "sentencePl": "Na pierwszej randce kazał jej przelądać swoje nudne prace naukowe. Dasz wiarę? Nic dziwnego, że nigdy nie oddzwoniła.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-014-word.mp3",
       "audioSentence": "t1-p132-014-sentence.mp3"
     },
@@ -136,17 +136,17 @@
       "id": "t1-p132-015",
       "english": "Encyclopedia",
       "polish": "Encyklopedia",
-      "sentenceEn": "Anyone can become a co-author of this encyclopedia.",
-      "sentencePl": "Każdy może zostać współautorem tej encyklopedii.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-015-word.mp3",
       "audioSentence": "t1-p132-015-sentence.mp3"
     },
     {
       "id": "t1-p132-016",
       "english": "Diary",
-      "polish": "Dziennik; pamiętnik",
-      "sentenceEn": "My sister got really mad when she found out that I read her diary.",
-      "sentencePl": "Moja siostra się wściekła, kiedy odkryła, że czytałam jej pamiętnik.",
+      "polish": "Dziennik",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-016-word.mp3",
       "audioSentence": "t1-p132-016-sentence.mp3"
     },
@@ -154,8 +154,8 @@
       "id": "t1-p132-017",
       "english": "Extract",
       "polish": "Fragment",
-      "sentenceEn": "We are working on extracting some valuable metals from this area.",
-      "sentencePl": "Pracujemy nad wydobyciem pewnych drogocennych metali z tego obszaru.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-017-word.mp3",
       "audioSentence": "t1-p132-017-sentence.mp3"
     },
@@ -163,8 +163,8 @@
       "id": "t1-p132-018",
       "english": "Punctuation",
       "polish": "Interpunkcja",
-      "sentenceEn": "Correct grammar and punctuation are not necessary for easy communication.",
-      "sentencePl": "Poprawna gramatyka i interpunkcja nie są niezbędne w prostej komunikacji.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-018-word.mp3",
       "audioSentence": "t1-p132-018-sentence.mp3"
     },
@@ -172,17 +172,17 @@
       "id": "t1-p132-019",
       "english": "Proofreading",
       "polish": "Korekta",
-      "sentenceEn": "Proofreading these sentences feels like a never-ending story.",
-      "sentencePl": "Korekta tych zdań wydaje się historią bez końca.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-019-word.mp3",
       "audioSentence": "t1-p132-019-sentence.mp3"
     },
     {
       "id": "t1-p132-020",
       "english": "Period",
-      "polish": "Kropka (na końcu zdania)",
-      "sentenceEn": "Patients should be closely monitored throughout this period.",
-      "sentencePl": "W tym okresie pacjent powinien pozostawać pod ścisłą obserwacją.",
+      "polish": "Kropka",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-020-word.mp3",
       "audioSentence": "t1-p132-020-sentence.mp3"
     },
@@ -190,8 +190,8 @@
       "id": "t1-p132-021",
       "english": "Numeral",
       "polish": "Liczebnik",
-      "sentenceEn": "You have to learn numerals to be able to count.",
-      "sentencePl": "Żeby liczyć, musisz nauczyć się liczebników.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-021-word.mp3",
       "audioSentence": "t1-p132-021-sentence.mp3"
     },
@@ -199,17 +199,17 @@
       "id": "t1-p132-022",
       "english": "Theme",
       "polish": "Motyw przewodni",
-      "sentenceEn": "Ariel's birthday party theme will be \"Under the sea.\" I think this is quite obvious.",
-      "sentencePl": "Motywem przewodnim urodzin Ariel będzie „Podwodny świat”. Myślę, że to dość oczywiste.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-022-word.mp3",
       "audioSentence": "t1-p132-022-sentence.mp3"
     },
     {
       "id": "t1-p132-023",
       "english": "Handwriting",
-      "polish": "Pismo odręczne; charakter pisma",
-      "sentenceEn": "Steven's handwriting is really messy. He would be a perfect doctor.",
-      "sentencePl": "Steve ma okropny charakter pisma. Byłby idealnym lekarzem.",
+      "polish": "Pismo odręczne",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-023-word.mp3",
       "audioSentence": "t1-p132-023-sentence.mp3"
     },
@@ -217,8 +217,8 @@
       "id": "t1-p132-024",
       "english": "Spelling",
       "polish": "Pisownia",
-      "sentenceEn": "There is no better way to work on spelling than writing stuff down by yourself.",
-      "sentencePl": "Nie ma lepszego sposobu pracy nad pisownią niż samodzielne zapisywanie wszystkiego.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-024-word.mp3",
       "audioSentence": "t1-p132-024-sentence.mp3"
     },
@@ -226,8 +226,8 @@
       "id": "t1-p132-025",
       "english": "Summary",
       "polish": "Podsumowanie",
-      "sentenceEn": "Just finish this summary, and you are done for today.",
-      "sentencePl": "Skończ tylko to podsumowanie i to tyle na dzisiaj.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-025-word.mp3",
       "audioSentence": "t1-p132-025-sentence.mp3"
     },
@@ -235,8 +235,8 @@
       "id": "t1-p132-026",
       "english": "Comma",
       "polish": "Przecinek",
-      "sentenceEn": "That password I gave you is without a comma.",
-      "sentencePl": "To hasło, które ci podałem, jest bez przecinka.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-026-word.mp3",
       "audioSentence": "t1-p132-026-sentence.mp3"
     },
@@ -244,8 +244,8 @@
       "id": "t1-p132-027",
       "english": "Preposition",
       "polish": "Przyimek",
-      "sentenceEn": "Why do I always have a problem choosing a preposition?",
-      "sentencePl": "Dlaczego zawsze mam problem z wyborem przyimka?",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-027-word.mp3",
       "audioSentence": "t1-p132-027-sentence.mp3"
     },
@@ -253,17 +253,17 @@
       "id": "t1-p132-028",
       "english": "Proverb",
       "polish": "Przysłowie",
-      "sentenceEn": "An old Swedish proverb says, “Worry gives small things a big shadow.”",
-      "sentencePl": "Stare szwedzkie przysłowie mówi: „Zmartwienie daje małym rzeczom duży cień”.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-028-word.mp3",
       "audioSentence": "t1-p132-028-sentence.mp3"
     },
     {
       "id": "t1-p132-029",
       "english": "Abbreviation",
-      "polish": "Skrót (np. Słowa, nazwy)",
-      "sentenceEn": "What does the MLPD abbreviation stand for?",
-      "sentencePl": "Co oznacza skrót MLPD?",
+      "polish": "Skrót",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-029-word.mp3",
       "audioSentence": "t1-p132-029-sentence.mp3"
     },
@@ -271,10 +271,415 @@
       "id": "t1-p132-030",
       "english": "Slang",
       "polish": "Slang",
-      "sentenceEn": "Some criminal groups have their own slang.",
-      "sentencePl": "Niektóre grupy przestępcze mają swój własny slang.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p132-030-word.mp3",
       "audioSentence": "t1-p132-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-031",
+      "english": "Glossary",
+      "polish": "Słowniczek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-031-word.mp3",
+      "audioSentence": "t1-p132-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-032",
+      "english": "Table of contents",
+      "polish": "Spis treści",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-032-word.mp3",
+      "audioSentence": "t1-p132-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-033",
+      "english": "Conjunction",
+      "polish": "Spójnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-033-word.mp3",
+      "audioSentence": "t1-p132-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-034",
+      "english": "Usage",
+      "polish": "Użycie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-034-word.mp3",
+      "audioSentence": "t1-p132-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-035",
+      "english": "Introduction",
+      "polish": "Wprowadzenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-035-word.mp3",
+      "audioSentence": "t1-p132-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-036",
+      "english": "Pronunciation",
+      "polish": "Wymowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-036-word.mp3",
+      "audioSentence": "t1-p132-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-037",
+      "english": "Pronoun",
+      "polish": "Zaimek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-037-word.mp3",
+      "audioSentence": "t1-p132-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-038",
+      "english": "Contents",
+      "polish": "Zawartość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-038-word.mp3",
+      "audioSentence": "t1-p132-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-039",
+      "english": "Fiction",
+      "polish": "Fikcja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-039-word.mp3",
+      "audioSentence": "t1-p132-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-040",
+      "english": "Synonym",
+      "polish": "Synonim",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-040-word.mp3",
+      "audioSentence": "t1-p132-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-041",
+      "english": "Protagonist",
+      "polish": "Bohater",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-041-word.mp3",
+      "audioSentence": "t1-p132-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-042",
+      "english": "Tale",
+      "polish": "Bajka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-042-word.mp3",
+      "audioSentence": "t1-p132-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-043",
+      "english": "Layout",
+      "polish": "Format",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-043-word.mp3",
+      "audioSentence": "t1-p132-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-044",
+      "english": "Term",
+      "polish": "Termin",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-044-word.mp3",
+      "audioSentence": "t1-p132-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-045",
+      "english": "Exception",
+      "polish": "Wyjątek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-045-word.mp3",
+      "audioSentence": "t1-p132-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-046",
+      "english": "Metaphor",
+      "polish": "Metafora",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-046-word.mp3",
+      "audioSentence": "t1-p132-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-047",
+      "english": "Storybook",
+      "polish": "Książeczka z bajkami",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-047-word.mp3",
+      "audioSentence": "t1-p132-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-048",
+      "english": "Biography",
+      "polish": "Biografia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-048-word.mp3",
+      "audioSentence": "t1-p132-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-049",
+      "english": "Front page",
+      "polish": "Strona tytułowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-049-word.mp3",
+      "audioSentence": "t1-p132-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-050",
+      "english": "Best-seller",
+      "polish": "Bestseller",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-050-word.mp3",
+      "audioSentence": "t1-p132-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-051",
+      "english": "Reader",
+      "polish": "Czytelnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-051-word.mp3",
+      "audioSentence": "t1-p132-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-052",
+      "english": "Heroine",
+      "polish": "Bohaterka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-052-word.mp3",
+      "audioSentence": "t1-p132-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-053",
+      "english": "Publisher",
+      "polish": "Wydawca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-053-word.mp3",
+      "audioSentence": "t1-p132-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-054",
+      "english": "Context",
+      "polish": "Kontekst",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-054-word.mp3",
+      "audioSentence": "t1-p132-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-055",
+      "english": "Cover",
+      "polish": "Okładka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-055-word.mp3",
+      "audioSentence": "t1-p132-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-056",
+      "english": "Short story",
+      "polish": "Opowiadanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-056-word.mp3",
+      "audioSentence": "t1-p132-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-057",
+      "english": "Poet",
+      "polish": "Poeta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-057-word.mp3",
+      "audioSentence": "t1-p132-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-058",
+      "english": "Poetry",
+      "polish": "Poezja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-058-word.mp3",
+      "audioSentence": "t1-p132-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-059",
+      "english": "Novel",
+      "polish": "Powieść",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-059-word.mp3",
+      "audioSentence": "t1-p132-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-060",
+      "english": "Content",
+      "polish": "Treść",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-060-word.mp3",
+      "audioSentence": "t1-p132-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-061",
+      "english": "Poem",
+      "polish": "Wiersz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-061-word.mp3",
+      "audioSentence": "t1-p132-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-062",
+      "english": "Autobiography",
+      "polish": "Autobiografia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-062-word.mp3",
+      "audioSentence": "t1-p132-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-063",
+      "english": "Bibliography",
+      "polish": "Bibliografia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-063-word.mp3",
+      "audioSentence": "t1-p132-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-064",
+      "english": "Plot",
+      "polish": "Fabuła",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-064-word.mp3",
+      "audioSentence": "t1-p132-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-065",
+      "english": "Literature",
+      "polish": "Literatura",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-065-word.mp3",
+      "audioSentence": "t1-p132-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-066",
+      "english": "Villain",
+      "polish": "Czarny charakter",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-066-word.mp3",
+      "audioSentence": "t1-p132-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-067",
+      "english": "Dictation",
+      "polish": "Dyktando",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-067-word.mp3",
+      "audioSentence": "t1-p132-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-068",
+      "english": "Appendix",
+      "polish": "Aneks",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-068-word.mp3",
+      "audioSentence": "t1-p132-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-069",
+      "english": "Wordplay",
+      "polish": "Gra słów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-069-word.mp3",
+      "audioSentence": "t1-p132-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-070",
+      "english": "Reference",
+      "polish": "Odniesienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-070-word.mp3",
+      "audioSentence": "t1-p132-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-071",
+      "english": "Association",
+      "polish": "Skojarzenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-071-word.mp3",
+      "audioSentence": "t1-p132-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-072",
+      "english": "Footnote",
+      "polish": "Przypis",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-072-word.mp3",
+      "audioSentence": "t1-p132-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-073",
+      "english": "Verse",
+      "polish": "Wers",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-073-word.mp3",
+      "audioSentence": "t1-p132-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-074",
+      "english": "Strophe",
+      "polish": "Strofa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-074-word.mp3",
+      "audioSentence": "t1-p132-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p132-075",
+      "english": "Apostrophe",
+      "polish": "Apostrof",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p132-075-word.mp3",
+      "audioSentence": "t1-p132-075-sentence.mp3"
     }
   ]
 }

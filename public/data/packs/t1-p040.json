@@ -1,0 +1,595 @@
+{
+  "id": "t1-p040",
+  "name": "Sprzęt elektroniczny",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział V",
+  "words": [
+    {
+      "id": "t1-p040-001",
+      "english": "Battery",
+      "polish": "Bateria",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-001-word.mp3",
+      "audioSentence": "t1-p040-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-002",
+      "english": "Camera",
+      "polish": "Aparat",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-002-word.mp3",
+      "audioSentence": "t1-p040-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-003",
+      "english": "Computer",
+      "polish": "Komputer",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-003-word.mp3",
+      "audioSentence": "t1-p040-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-004",
+      "english": "Laptop",
+      "polish": "Laptop",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-004-word.mp3",
+      "audioSentence": "t1-p040-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-005",
+      "english": "Charger",
+      "polish": "Ładowarka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-005-word.mp3",
+      "audioSentence": "t1-p040-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-006",
+      "english": "Phone call",
+      "polish": "Rozmowa telefoniczna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-006-word.mp3",
+      "audioSentence": "t1-p040-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-007",
+      "english": "Hairdryer",
+      "polish": "Suszarka do włosów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-007-word.mp3",
+      "audioSentence": "t1-p040-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-008",
+      "english": "Telephone",
+      "polish": "Telefon",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-008-word.mp3",
+      "audioSentence": "t1-p040-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-009",
+      "english": "Mobile phone",
+      "polish": "Telefon komórkowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-009-word.mp3",
+      "audioSentence": "t1-p040-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-010",
+      "english": "Message",
+      "polish": "Wiadomość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-010-word.mp3",
+      "audioSentence": "t1-p040-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-011",
+      "english": "Update",
+      "polish": "Aktualizacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-011-word.mp3",
+      "audioSentence": "t1-p040-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-012",
+      "english": "Air conditioning",
+      "polish": "Klimatyzacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-012-word.mp3",
+      "audioSentence": "t1-p040-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-013",
+      "english": "Code",
+      "polish": "Kod",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-013-word.mp3",
+      "audioSentence": "t1-p040-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-014",
+      "english": "Comment",
+      "polish": "Komentarz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-014-word.mp3",
+      "audioSentence": "t1-p040-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-015",
+      "english": "Microwave",
+      "polish": "Mikrofalówka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-015-word.mp3",
+      "audioSentence": "t1-p040-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-016",
+      "english": "Phone number",
+      "polish": "Numer telefonu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-016-word.mp3",
+      "audioSentence": "t1-p040-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-017",
+      "english": "Headphones",
+      "polish": "Słuchawki na głowę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-017-word.mp3",
+      "audioSentence": "t1-p040-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-018",
+      "english": "Status",
+      "polish": "Status",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-018-word.mp3",
+      "audioSentence": "t1-p040-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-019",
+      "english": "Signal",
+      "polish": "Sygnał",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-019-word.mp3",
+      "audioSentence": "t1-p040-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-020",
+      "english": "User",
+      "polish": "Użytkownik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-020-word.mp3",
+      "audioSentence": "t1-p040-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-021",
+      "english": "Coffee maker",
+      "polish": "Ekspres do kawy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-021-word.mp3",
+      "audioSentence": "t1-p040-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-022",
+      "english": "Stove",
+      "polish": "Kuchenka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-022-word.mp3",
+      "audioSentence": "t1-p040-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-023",
+      "english": "Player",
+      "polish": "Odtwarzacz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-023-word.mp3",
+      "audioSentence": "t1-p040-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-024",
+      "english": "Oven",
+      "polish": "Piekarnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-024-word.mp3",
+      "audioSentence": "t1-p040-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-025",
+      "english": "Remote control",
+      "polish": "Pilot do telewizora",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-025-word.mp3",
+      "audioSentence": "t1-p040-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-026",
+      "english": "Robot",
+      "polish": "Robot",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-026-word.mp3",
+      "audioSentence": "t1-p040-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-027",
+      "english": "Socket",
+      "polish": "Gniazdko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-027-word.mp3",
+      "audioSentence": "t1-p040-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-028",
+      "english": "Cable",
+      "polish": "Kabel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-028-word.mp3",
+      "audioSentence": "t1-p040-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-029",
+      "english": "Videotape",
+      "polish": "Kaseta wideo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-029-word.mp3",
+      "audioSentence": "t1-p040-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-030",
+      "english": "Console",
+      "polish": "Konsola",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-030-word.mp3",
+      "audioSentence": "t1-p040-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-031",
+      "english": "Stereo",
+      "polish": "Wieża",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-031-word.mp3",
+      "audioSentence": "t1-p040-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-032",
+      "english": "Plug",
+      "polish": "Wtyczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-032-word.mp3",
+      "audioSentence": "t1-p040-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-033",
+      "english": "Freezer",
+      "polish": "Zamrażarka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-033-word.mp3",
+      "audioSentence": "t1-p040-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-034",
+      "english": "Dishwasher",
+      "polish": "Zmywarka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-034-word.mp3",
+      "audioSentence": "t1-p040-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-035",
+      "english": "Mixer",
+      "polish": "Mikser",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-035-word.mp3",
+      "audioSentence": "t1-p040-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-036",
+      "english": "Wire",
+      "polish": "Drut",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-036-word.mp3",
+      "audioSentence": "t1-p040-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-037",
+      "english": "Appliance",
+      "polish": "Urządzenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-037-word.mp3",
+      "audioSentence": "t1-p040-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-038",
+      "english": "Headset",
+      "polish": "Zestaw słuchawkowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-038-word.mp3",
+      "audioSentence": "t1-p040-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-039",
+      "english": "Electronics",
+      "polish": "Elektronika",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-039-word.mp3",
+      "audioSentence": "t1-p040-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-040",
+      "english": "Manual",
+      "polish": "Instrukcja obsługi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-040-word.mp3",
+      "audioSentence": "t1-p040-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-041",
+      "english": "Specification",
+      "polish": "Specyfikacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-041-word.mp3",
+      "audioSentence": "t1-p040-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-042",
+      "english": "Recorder",
+      "polish": "Rejestrator",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-042-word.mp3",
+      "audioSentence": "t1-p040-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-043",
+      "english": "Gadget",
+      "polish": "Gadżet",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-043-word.mp3",
+      "audioSentence": "t1-p040-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-044",
+      "english": "Speaker",
+      "polish": "Głośnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-044-word.mp3",
+      "audioSentence": "t1-p040-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-045",
+      "english": "Home theater",
+      "polish": "Kino domowe",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-045-word.mp3",
+      "audioSentence": "t1-p040-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-046",
+      "english": "Recorder",
+      "polish": "Nagrywarka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-046-word.mp3",
+      "audioSentence": "t1-p040-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-047",
+      "english": "Reminder",
+      "polish": "Przypomnienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-047-word.mp3",
+      "audioSentence": "t1-p040-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-048",
+      "english": "Device",
+      "polish": "Przyrząd",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-048-word.mp3",
+      "audioSentence": "t1-p040-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-049",
+      "english": "Standby",
+      "polish": "Stan gotowości",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-049-word.mp3",
+      "audioSentence": "t1-p040-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-050",
+      "english": "Tablet",
+      "polish": "Tablet",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-050-word.mp3",
+      "audioSentence": "t1-p040-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-051",
+      "english": "Transmission",
+      "polish": "Transmisja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-051-word.mp3",
+      "audioSentence": "t1-p040-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-052",
+      "english": "Vibration",
+      "polish": "Wibracja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-052-word.mp3",
+      "audioSentence": "t1-p040-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-053",
+      "english": "Contrast",
+      "polish": "Kontrast",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-053-word.mp3",
+      "audioSentence": "t1-p040-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-054",
+      "english": "Tracking",
+      "polish": "Namierzanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-054-word.mp3",
+      "audioSentence": "t1-p040-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-055",
+      "english": "Extension lead",
+      "polish": "Przedłużacz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-055-word.mp3",
+      "audioSentence": "t1-p040-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-056",
+      "english": "Display",
+      "polish": "Wyświetlacz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-056-word.mp3",
+      "audioSentence": "t1-p040-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-057",
+      "english": "Coverage",
+      "polish": "Zasięg",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-057-word.mp3",
+      "audioSentence": "t1-p040-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-058",
+      "english": "Sensor",
+      "polish": "Czujnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-058-word.mp3",
+      "audioSentence": "t1-p040-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-059",
+      "english": "Amplifier",
+      "polish": "Wzmacniacz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-059-word.mp3",
+      "audioSentence": "t1-p040-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-060",
+      "english": "Record player",
+      "polish": "Adapter",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-060-word.mp3",
+      "audioSentence": "t1-p040-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-061",
+      "english": "Transistor",
+      "polish": "Tranzystor",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-061-word.mp3",
+      "audioSentence": "t1-p040-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-062",
+      "english": "Capacitor",
+      "polish": "Kondensator",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-062-word.mp3",
+      "audioSentence": "t1-p040-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-063",
+      "english": "Transformer",
+      "polish": "Transformator",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-063-word.mp3",
+      "audioSentence": "t1-p040-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-064",
+      "english": "Induction stove",
+      "polish": "Płyta indukcyjna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-064-word.mp3",
+      "audioSentence": "t1-p040-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p040-065",
+      "english": "Resistor",
+      "polish": "Opornik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p040-065-word.mp3",
+      "audioSentence": "t1-p040-065-sentence.mp3"
+    }
+  ]
+}

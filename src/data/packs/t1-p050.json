@@ -1,0 +1,910 @@
+{
+  "id": "t1-p050",
+  "name": "Media",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział VI",
+  "words": [
+    {
+      "id": "t1-p050-001",
+      "english": "Fact",
+      "polish": "Fakt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-001-word.mp3",
+      "audioSentence": "t1-p050-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-002",
+      "english": "Movie",
+      "polish": "Film",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-002-word.mp3",
+      "audioSentence": "t1-p050-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-003",
+      "english": "Newspaper",
+      "polish": "Gazeta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-003-word.mp3",
+      "audioSentence": "t1-p050-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-004",
+      "english": "Information",
+      "polish": "Informacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-004-word.mp3",
+      "audioSentence": "t1-p050-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-005",
+      "english": "Internet",
+      "polish": "Internet",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-005-word.mp3",
+      "audioSentence": "t1-p050-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-006",
+      "english": "Episode",
+      "polish": "Odcinek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-006-word.mp3",
+      "audioSentence": "t1-p050-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-007",
+      "english": "Radio",
+      "polish": "Radio",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-007-word.mp3",
+      "audioSentence": "t1-p050-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-008",
+      "english": "Series",
+      "polish": "Serial",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-008-word.mp3",
+      "audioSentence": "t1-p050-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-009",
+      "english": "Television",
+      "polish": "Telewizja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-009-word.mp3",
+      "audioSentence": "t1-p050-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-010",
+      "english": "News",
+      "polish": "Wiadomości",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-010-word.mp3",
+      "audioSentence": "t1-p050-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-011",
+      "english": "Article",
+      "polish": "Artykuł",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-011-word.mp3",
+      "audioSentence": "t1-p050-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-012",
+      "english": "Celebrity",
+      "polish": "Celebryta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-012-word.mp3",
+      "audioSentence": "t1-p050-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-013",
+      "english": "Magazine",
+      "polish": "Magazyn",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-013-word.mp3",
+      "audioSentence": "t1-p050-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-014",
+      "english": "Press",
+      "polish": "Prasa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-014-word.mp3",
+      "audioSentence": "t1-p050-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-015",
+      "english": "Fame",
+      "polish": "Sława",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-015-word.mp3",
+      "audioSentence": "t1-p050-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-016",
+      "english": "Interview",
+      "polish": "Wywiad",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-016-word.mp3",
+      "audioSentence": "t1-p050-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-017",
+      "english": "Conference",
+      "polish": "Konferencja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-017-word.mp3",
+      "audioSentence": "t1-p050-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-018",
+      "english": "Media",
+      "polish": "Media",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-018-word.mp3",
+      "audioSentence": "t1-p050-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-019",
+      "english": "Image",
+      "polish": "Wizerunek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-019-word.mp3",
+      "audioSentence": "t1-p050-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-020",
+      "english": "Billboard",
+      "polish": "Billboard",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-020-word.mp3",
+      "audioSentence": "t1-p050-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-021",
+      "english": "Journal",
+      "polish": "Czasopismo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-021-word.mp3",
+      "audioSentence": "t1-p050-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-022",
+      "english": "Motto",
+      "polish": "Motto",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-022-word.mp3",
+      "audioSentence": "t1-p050-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-023",
+      "english": "Panel",
+      "polish": "Panel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-023-word.mp3",
+      "audioSentence": "t1-p050-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-024",
+      "english": "Slogan",
+      "polish": "Slogan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-024-word.mp3",
+      "audioSentence": "t1-p050-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-025",
+      "english": "Newsletter",
+      "polish": "Biuletyn",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-025-word.mp3",
+      "audioSentence": "t1-p050-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-026",
+      "english": "Advertising",
+      "polish": "Reklama",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-026-word.mp3",
+      "audioSentence": "t1-p050-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-027",
+      "english": "Mainstream",
+      "polish": "Główny nurt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-027-word.mp3",
+      "audioSentence": "t1-p050-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-028",
+      "english": "Entertainment",
+      "polish": "Rozrywka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-028-word.mp3",
+      "audioSentence": "t1-p050-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-029",
+      "english": "Broadcast",
+      "polish": "Transmisja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-029-word.mp3",
+      "audioSentence": "t1-p050-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-030",
+      "english": "Role",
+      "polish": "Rola w filmie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-030-word.mp3",
+      "audioSentence": "t1-p050-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-031",
+      "english": "Leak",
+      "polish": "Przeciek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-031-word.mp3",
+      "audioSentence": "t1-p050-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-032",
+      "english": "Cartoon",
+      "polish": "Kreskówka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-032-word.mp3",
+      "audioSentence": "t1-p050-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-033",
+      "english": "Subscriber",
+      "polish": "Abonent",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-033-word.mp3",
+      "audioSentence": "t1-p050-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-034",
+      "english": "News agency",
+      "polish": "Agencja prasowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-034-word.mp3",
+      "audioSentence": "t1-p050-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-035",
+      "english": "Animation",
+      "polish": "Animacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-035-word.mp3",
+      "audioSentence": "t1-p050-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-036",
+      "english": "Antenna",
+      "polish": "Antena",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-036-word.mp3",
+      "audioSentence": "t1-p050-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-037",
+      "english": "Autograph",
+      "polish": "Autograf",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-037-word.mp3",
+      "audioSentence": "t1-p050-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-038",
+      "english": "Banner",
+      "polish": "Baner",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-038-word.mp3",
+      "audioSentence": "t1-p050-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-039",
+      "english": "Spotlight",
+      "polish": "Centrum uwagi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-039-word.mp3",
+      "audioSentence": "t1-p050-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-040",
+      "english": "Make-up artist",
+      "polish": "Charakteryzator",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-040-word.mp3",
+      "audioSentence": "t1-p050-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-041",
+      "english": "Airtime",
+      "polish": "Czas antenowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-041-word.mp3",
+      "audioSentence": "t1-p050-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-042",
+      "english": "Periodic",
+      "polish": "Czasopismo cykliczne",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-042-word.mp3",
+      "audioSentence": "t1-p050-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-043",
+      "english": "Annual",
+      "polish": "Czasopismo regularne",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-043-word.mp3",
+      "audioSentence": "t1-p050-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-044",
+      "english": "Technical journal",
+      "polish": "Czasopismo specjalistyczne",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-044-word.mp3",
+      "audioSentence": "t1-p050-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-045",
+      "english": "Drama",
+      "polish": "Dramat",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-045-word.mp3",
+      "audioSentence": "t1-p050-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-046",
+      "english": "Journalism",
+      "polish": "Dziennikarstwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-046-word.mp3",
+      "audioSentence": "t1-p050-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-047",
+      "english": "Broadcasting",
+      "polish": "Emisja programów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-047-word.mp3",
+      "audioSentence": "t1-p050-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-048",
+      "english": "Press photographer",
+      "polish": "Fotoreporter",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-048-word.mp3",
+      "audioSentence": "t1-p050-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-049",
+      "english": "Hotline",
+      "polish": "Gorąca linia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-049-word.mp3",
+      "audioSentence": "t1-p050-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-050",
+      "english": "Horror",
+      "polish": "Horror",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-050-word.mp3",
+      "audioSentence": "t1-p050-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-051",
+      "english": "Idol",
+      "polish": "Idol",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-051-word.mp3",
+      "audioSentence": "t1-p050-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-052",
+      "english": "Channel",
+      "polish": "Kanał tv",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-052-word.mp3",
+      "audioSentence": "t1-p050-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-053",
+      "english": "Casting",
+      "polish": "Casting",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-053-word.mp3",
+      "audioSentence": "t1-p050-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-054",
+      "english": "Comedy",
+      "polish": "Komedia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-054-word.mp3",
+      "audioSentence": "t1-p050-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-055",
+      "english": "Press release",
+      "polish": "Komunikat prasowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-055-word.mp3",
+      "audioSentence": "t1-p050-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-056",
+      "english": "Controversy",
+      "polish": "Kontrowersja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-056-word.mp3",
+      "audioSentence": "t1-p050-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-057",
+      "english": "Correspondent",
+      "polish": "Korespondent",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-057-word.mp3",
+      "audioSentence": "t1-p050-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-058",
+      "english": "Footage",
+      "polish": "Materiał",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-058-word.mp3",
+      "audioSentence": "t1-p050-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-059",
+      "english": "Headline",
+      "polish": "Nagłówek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-059-word.mp3",
+      "audioSentence": "t1-p050-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-060",
+      "english": "Recording",
+      "polish": "Nagranie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-060-word.mp3",
+      "audioSentence": "t1-p050-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-061",
+      "english": "Subtitles",
+      "polish": "Napisy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-061-word.mp3",
+      "audioSentence": "t1-p050-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-062",
+      "english": "Cast",
+      "polish": "Obsada",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-062-word.mp3",
+      "audioSentence": "t1-p050-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-063",
+      "english": "Spectator",
+      "polish": "Oglądający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-063-word.mp3",
+      "audioSentence": "t1-p050-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-064",
+      "english": "Announcement",
+      "polish": "Ogłoszenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-064-word.mp3",
+      "audioSentence": "t1-p050-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-065",
+      "english": "Operator",
+      "polish": "Operator",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-065-word.mp3",
+      "audioSentence": "t1-p050-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-066",
+      "english": "Paparazzi",
+      "polish": "Paparazzi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-066-word.mp3",
+      "audioSentence": "t1-p050-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-067",
+      "english": "Preview",
+      "polish": "Podgląd",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-067-word.mp3",
+      "audioSentence": "t1-p050-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-068",
+      "english": "Showcase",
+      "polish": "Pokaz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-068-word.mp3",
+      "audioSentence": "t1-p050-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-069",
+      "english": "Showroom",
+      "polish": "Pokój wystawowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-069-word.mp3",
+      "audioSentence": "t1-p050-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-070",
+      "english": "Popularity",
+      "polish": "Popularność",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-070-word.mp3",
+      "audioSentence": "t1-p050-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-071",
+      "english": "Comeback",
+      "polish": "Powrót",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-071-word.mp3",
+      "audioSentence": "t1-p050-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-072",
+      "english": "Premiere",
+      "polish": "Premiera",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-072-word.mp3",
+      "audioSentence": "t1-p050-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-073",
+      "english": "Subscription",
+      "polish": "Prenumerata",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-073-word.mp3",
+      "audioSentence": "t1-p050-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-074",
+      "english": "Spin-off",
+      "polish": "Produkt uboczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-074-word.mp3",
+      "audioSentence": "t1-p050-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-075",
+      "english": "Blockbuster",
+      "polish": "Przebój",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-075-word.mp3",
+      "audioSentence": "t1-p050-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-076",
+      "english": "Remake",
+      "polish": "Przeróbka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-076-word.mp3",
+      "audioSentence": "t1-p050-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-077",
+      "english": "Reviewer",
+      "polish": "Recenzent",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-077-word.mp3",
+      "audioSentence": "t1-p050-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-078",
+      "english": "Direction",
+      "polish": "Reżyseria",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-078-word.mp3",
+      "audioSentence": "t1-p050-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-079",
+      "english": "Spokesman",
+      "polish": "Rzecznik prasowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-079-word.mp3",
+      "audioSentence": "t1-p050-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-080",
+      "english": "Scene",
+      "polish": "Scena",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-080-word.mp3",
+      "audioSentence": "t1-p050-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-081",
+      "english": "Sitcom",
+      "polish": "Serial komediowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-081-word.mp3",
+      "audioSentence": "t1-p050-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-082",
+      "english": "Show",
+      "polish": "Widowisko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-082-word.mp3",
+      "audioSentence": "t1-p050-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-083",
+      "english": "Listener",
+      "polish": "Słuchacz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-083-word.mp3",
+      "audioSentence": "t1-p050-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-084",
+      "english": "Poll",
+      "polish": "Sondaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-084-word.mp3",
+      "audioSentence": "t1-p050-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-085",
+      "english": "Survey",
+      "polish": "Ankieta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-085-word.mp3",
+      "audioSentence": "t1-p050-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-086",
+      "english": "Hype",
+      "polish": "Szum medialny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-086-word.mp3",
+      "audioSentence": "t1-p050-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-087",
+      "english": "Soundtrack",
+      "polish": "Ścieżka dźwiękowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-087-word.mp3",
+      "audioSentence": "t1-p050-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-088",
+      "english": "Mass media",
+      "polish": "Środki masowego przekazu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-088-word.mp3",
+      "audioSentence": "t1-p050-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-089",
+      "english": "Thriller",
+      "polish": "Thriller",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-089-word.mp3",
+      "audioSentence": "t1-p050-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-090",
+      "english": "Trilogy",
+      "polish": "Trylogia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-090-word.mp3",
+      "audioSentence": "t1-p050-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-091",
+      "english": "Viewer",
+      "polish": "Widz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-091-word.mp3",
+      "audioSentence": "t1-p050-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-092",
+      "english": "Superstar",
+      "polish": "Wielka gwiazda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-092-word.mp3",
+      "audioSentence": "t1-p050-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-093",
+      "english": "Audition",
+      "polish": "Audycja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-093-word.mp3",
+      "audioSentence": "t1-p050-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-094",
+      "english": "Tabloid",
+      "polish": "Brukowiec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-094-word.mp3",
+      "audioSentence": "t1-p050-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-095",
+      "english": "Censorship",
+      "polish": "Cenzura",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-095-word.mp3",
+      "audioSentence": "t1-p050-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-096",
+      "english": "Sequel",
+      "polish": "Druga część filmu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-096-word.mp3",
+      "audioSentence": "t1-p050-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-097",
+      "english": "Hit",
+      "polish": "Hit",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-097-word.mp3",
+      "audioSentence": "t1-p050-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-098",
+      "english": "Gimmick",
+      "polish": "Chwyt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-098-word.mp3",
+      "audioSentence": "t1-p050-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-099",
+      "english": "Spin doctor",
+      "polish": "Spec od propagandy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-099-word.mp3",
+      "audioSentence": "t1-p050-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p050-100",
+      "english": "Mention",
+      "polish": "Wzmianka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p050-100-word.mp3",
+      "audioSentence": "t1-p050-100-sentence.mp3"
+    }
+  ]
+}

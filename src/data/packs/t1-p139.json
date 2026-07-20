@@ -9,7 +9,7 @@
     {
       "id": "t1-p139-001",
       "english": "Bring back",
-      "polish": "Przynieść coś z powrotem; oddać",
+      "polish": "Przynieść coś z powrotem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p139-001-word.mp3",
@@ -18,7 +18,7 @@
     {
       "id": "t1-p139-002",
       "english": "Clear sth away",
-      "polish": "Usunąc z drogi; uprzątnąć",
+      "polish": "Usunąc z drogi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p139-002-word.mp3",
@@ -27,7 +27,7 @@
     {
       "id": "t1-p139-003",
       "english": "Go away",
-      "polish": "Wyjechać; pójść sobie",
+      "polish": "Wyjechać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p139-003-word.mp3",
@@ -36,7 +36,7 @@
     {
       "id": "t1-p139-004",
       "english": "Lie down",
-      "polish": "Położyć się; kłaść się",
+      "polish": "Położyć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p139-004-word.mp3",
@@ -45,7 +45,7 @@
     {
       "id": "t1-p139-005",
       "english": "Stand up",
-      "polish": "Wstać (stanąć prosto)",
+      "polish": "Wstać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p139-005-word.mp3",
@@ -90,7 +90,7 @@
     {
       "id": "t1-p139-010",
       "english": "Turn around",
-      "polish": "Odwrócić się; obrócić się",
+      "polish": "Odwrócić się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p139-010-word.mp3",
@@ -108,7 +108,7 @@
     {
       "id": "t1-p139-012",
       "english": "Move up",
-      "polish": "Robić miejsce; przesunąć się",
+      "polish": "Robić miejsce",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p139-012-word.mp3",
@@ -126,7 +126,7 @@
     {
       "id": "t1-p139-014",
       "english": "Sit back",
-      "polish": "Usiąść wygodnie; relaksować się",
+      "polish": "Usiąść wygodnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p139-014-word.mp3",
@@ -135,7 +135,7 @@
     {
       "id": "t1-p139-015",
       "english": "Walk around",
-      "polish": "Przechadzać się; spacerować",
+      "polish": "Przechadzać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p139-015-word.mp3",
@@ -153,7 +153,7 @@
     {
       "id": "t1-p139-017",
       "english": "Take off",
-      "polish": "Startować (o samolocie lub projekcie)",
+      "polish": "Startować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p139-017-word.mp3",
@@ -185,6 +185,96 @@
       "sentencePl": null,
       "audioWord": "t1-p139-020-word.mp3",
       "audioSentence": "t1-p139-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p139-021",
+      "english": "Set off",
+      "polish": "Wyruszać gdzieś w podróż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p139-021-word.mp3",
+      "audioSentence": "t1-p139-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p139-022",
+      "english": "Come down",
+      "polish": "Padać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p139-022-word.mp3",
+      "audioSentence": "t1-p139-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p139-023",
+      "english": "Go down",
+      "polish": "Zachodzić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p139-023-word.mp3",
+      "audioSentence": "t1-p139-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p139-024",
+      "english": "Be out",
+      "polish": "Wychodzić zza chmur",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p139-024-word.mp3",
+      "audioSentence": "t1-p139-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p139-025",
+      "english": "Go along",
+      "polish": "Zabrać się z kimś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p139-025-word.mp3",
+      "audioSentence": "t1-p139-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p139-026",
+      "english": "Sneak into",
+      "polish": "Wkraść się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p139-026-word.mp3",
+      "audioSentence": "t1-p139-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p139-027",
+      "english": "Spread out",
+      "polish": "Rozkładać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p139-027-word.mp3",
+      "audioSentence": "t1-p139-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p139-028",
+      "english": "Spread out",
+      "polish": "Rozproszyć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p139-028-word.mp3",
+      "audioSentence": "t1-p139-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p139-029",
+      "english": "Bring down",
+      "polish": "Lądować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p139-029-word.mp3",
+      "audioSentence": "t1-p139-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p139-030",
+      "english": "Keel over",
+      "polish": "Przewrócić się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p139-030-word.mp3",
+      "audioSentence": "t1-p139-030-sentence.mp3"
     }
   ]
 }

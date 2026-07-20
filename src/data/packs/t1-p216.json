@@ -1,15 +1,15 @@
 {
   "id": "t1-p216",
-  "name": "Phrasale 8",
-  "volume": "Tom IX",
-  "level": 4,
-  "category": "Phrasale",
-  "chapter": "Rozdział LXXXII",
+  "name": "Widzenie",
+  "volume": "Tom V",
+  "level": 3,
+  "category": "Czasowniki",
+  "chapter": "Rozdział XLII",
   "words": [
     {
       "id": "t1-p216-001",
-      "english": "Bring about",
-      "polish": "Spowodować coś; doprowadzić do czegoś",
+      "english": "Light",
+      "polish": "Oświetlać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p216-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p216-002",
-      "english": "Bring out",
-      "polish": "Uwydatnić coś",
+      "english": "Hide",
+      "polish": "Chować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p216-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p216-003",
-      "english": "Come from",
-      "polish": "Wynikać z czegoś",
+      "english": "Notice",
+      "polish": "Zauważać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p216-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p216-004",
-      "english": "Crack down",
-      "polish": "Rozprawić się z czymś",
+      "english": "Cover",
+      "polish": "Zakrywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p216-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p216-005",
-      "english": "Go down as",
-      "polish": "Zostać zapamiętanym; zostać zapisanym",
+      "english": "Overlook",
+      "polish": "Przeoczyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p216-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p216-006",
-      "english": "Keep sth from sb",
-      "polish": "Zataić coś przed kimś; utrzymywać coś w tajemnicy",
+      "english": "Shine",
+      "polish": "Błyszczeć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p216-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p216-007",
-      "english": "Hold out",
-      "polish": "Przetrwać coś; wytrwać w walce",
+      "english": "Uncover",
+      "polish": "Odsłaniać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p216-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p216-008",
-      "english": "Pull through",
-      "polish": "Wytrzymać; dotrwać",
+      "english": "Blink",
+      "polish": "Mrugać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p216-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p216-009",
-      "english": "Settle for",
-      "polish": "Zadowolić się",
+      "english": "Glance",
+      "polish": "Zerkać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p216-009-word.mp3",
@@ -89,12 +89,192 @@
     },
     {
       "id": "t1-p216-010",
-      "english": "Stand by",
-      "polish": "Być w pogotowiu",
+      "english": "Glimpse",
+      "polish": "Rzucić okiem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p216-010-word.mp3",
       "audioSentence": "t1-p216-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-011",
+      "english": "Note",
+      "polish": "Zwracać uwagę na",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-011-word.mp3",
+      "audioSentence": "t1-p216-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-012",
+      "english": "Stare",
+      "polish": "Gapić się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-012-word.mp3",
+      "audioSentence": "t1-p216-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-013",
+      "english": "Wink",
+      "polish": "Puszczać oczko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-013-word.mp3",
+      "audioSentence": "t1-p216-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-014",
+      "english": "Blind",
+      "polish": "Oślepiać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-014-word.mp3",
+      "audioSentence": "t1-p216-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-015",
+      "english": "Glow",
+      "polish": "Świecić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-015-word.mp3",
+      "audioSentence": "t1-p216-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-016",
+      "english": "Peep",
+      "polish": "Podglądać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-016-word.mp3",
+      "audioSentence": "t1-p216-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-017",
+      "english": "Reveal",
+      "polish": "Ujawniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-017-word.mp3",
+      "audioSentence": "t1-p216-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-018",
+      "english": "Vanish",
+      "polish": "Znikać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-018-word.mp3",
+      "audioSentence": "t1-p216-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-019",
+      "english": "View",
+      "polish": "Postrzegać jako",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-019-word.mp3",
+      "audioSentence": "t1-p216-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-020",
+      "english": "Blur",
+      "polish": "Rozmazać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-020-word.mp3",
+      "audioSentence": "t1-p216-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-021",
+      "english": "Oversee",
+      "polish": "Doglądać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-021-word.mp3",
+      "audioSentence": "t1-p216-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-022",
+      "english": "Peer",
+      "polish": "Przyglądać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-022-word.mp3",
+      "audioSentence": "t1-p216-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-023",
+      "english": "Spot",
+      "polish": "Dostrzegać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-023-word.mp3",
+      "audioSentence": "t1-p216-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-024",
+      "english": "Squint",
+      "polish": "Mrużyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-024-word.mp3",
+      "audioSentence": "t1-p216-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-025",
+      "english": "Eye",
+      "polish": "Mierzyć wzrokiem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-025-word.mp3",
+      "audioSentence": "t1-p216-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-026",
+      "english": "Glare",
+      "polish": "Rzucać ostre spojrzenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-026-word.mp3",
+      "audioSentence": "t1-p216-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-027",
+      "english": "Peek",
+      "polish": "Zerknąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-027-word.mp3",
+      "audioSentence": "t1-p216-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-028",
+      "english": "Goggle",
+      "polish": "Wybałuszyć oczy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-028-word.mp3",
+      "audioSentence": "t1-p216-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-029",
+      "english": "Gaze",
+      "polish": "Wpatrywać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-029-word.mp3",
+      "audioSentence": "t1-p216-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p216-030",
+      "english": "Ogle",
+      "polish": "Pożerać wzrokiem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p216-030-word.mp3",
+      "audioSentence": "t1-p216-030-sentence.mp3"
     }
   ]
 }

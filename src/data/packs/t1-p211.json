@@ -8,7 +8,7 @@
   "words": [
     {
       "id": "t1-p211-001",
-      "english": "Ba",
+      "english": "BA",
       "polish": "Lic. Nauk humanistycznych",
       "sentenceEn": null,
       "sentencePl": null,
@@ -17,7 +17,7 @@
     },
     {
       "id": "t1-p211-002",
-      "english": "Bsc",
+      "english": "BSC",
       "polish": "Lic. Nauk ścisłych",
       "sentenceEn": null,
       "sentencePl": null,
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p211-003",
-      "english": "Efl",
-      "polish": "Angielski jako język obcy (skrót)",
+      "english": "EFL",
+      "polish": "Angielski jako język obcy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p211-004",
-      "english": "Esl",
-      "polish": "Angielski jako drugi język (skrót)",
+      "english": "ESL",
+      "polish": "Angielski jako drugi język",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-004-word.mp3",
@@ -44,7 +44,7 @@
     },
     {
       "id": "t1-p211-005",
-      "english": "Ma",
+      "english": "MA",
       "polish": "Mgr nauk humanistycznych",
       "sentenceEn": null,
       "sentencePl": null,
@@ -53,7 +53,7 @@
     },
     {
       "id": "t1-p211-006",
-      "english": "Mba",
+      "english": "MBA",
       "polish": "Mgr administracji biznesowej",
       "sentenceEn": null,
       "sentencePl": null,
@@ -62,7 +62,7 @@
     },
     {
       "id": "t1-p211-007",
-      "english": "Md",
+      "english": "MD",
       "polish": "Lek. Med.",
       "sentenceEn": null,
       "sentencePl": null,
@@ -71,7 +71,7 @@
     },
     {
       "id": "t1-p211-008",
-      "english": "Mphil",
+      "english": "MPHIL",
       "polish": "Mgr filozofii",
       "sentenceEn": null,
       "sentencePl": null,
@@ -80,7 +80,7 @@
     },
     {
       "id": "t1-p211-009",
-      "english": "Msc",
+      "english": "MSC",
       "polish": "Mgr nauk ścisłych",
       "sentenceEn": null,
       "sentencePl": null,
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p211-010",
-      "english": "Phd",
-      "polish": "Doktorat; dr",
+      "english": "PHD",
+      "polish": "Doktorat",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-010-word.mp3",

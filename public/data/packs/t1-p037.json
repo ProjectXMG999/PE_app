@@ -1,0 +1,730 @@
+{
+  "id": "t1-p037",
+  "name": "Warzywa I owoce",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział IV",
+  "words": [
+    {
+      "id": "t1-p037-001",
+      "english": "Banana",
+      "polish": "Banan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-001-word.mp3",
+      "audioSentence": "t1-p037-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-002",
+      "english": "Lemon",
+      "polish": "Cytryna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-002-word.mp3",
+      "audioSentence": "t1-p037-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-003",
+      "english": "Apple",
+      "polish": "Jabłko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-003-word.mp3",
+      "audioSentence": "t1-p037-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-004",
+      "english": "Cucumber",
+      "polish": "Ogórek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-004-word.mp3",
+      "audioSentence": "t1-p037-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-005",
+      "english": "Fruit",
+      "polish": "Owoc",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-005-word.mp3",
+      "audioSentence": "t1-p037-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-006",
+      "english": "Pepper",
+      "polish": "Papryka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-006-word.mp3",
+      "audioSentence": "t1-p037-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-007",
+      "english": "Orange",
+      "polish": "Pomarańcza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-007-word.mp3",
+      "audioSentence": "t1-p037-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-008",
+      "english": "Tomato",
+      "polish": "Pomidor",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-008-word.mp3",
+      "audioSentence": "t1-p037-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-009",
+      "english": "Vegetable",
+      "polish": "Warzywo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-009-word.mp3",
+      "audioSentence": "t1-p037-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-010",
+      "english": "Potato",
+      "polish": "Ziemniak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-010-word.mp3",
+      "audioSentence": "t1-p037-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-011",
+      "english": "Avocado",
+      "polish": "Awokado",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-011-word.mp3",
+      "audioSentence": "t1-p037-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-012",
+      "english": "Peach",
+      "polish": "Brzoskwinia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-012-word.mp3",
+      "audioSentence": "t1-p037-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-013",
+      "english": "Onion",
+      "polish": "Cebula",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-013-word.mp3",
+      "audioSentence": "t1-p037-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-014",
+      "english": "Cauliflower",
+      "polish": "Kalafior",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-014-word.mp3",
+      "audioSentence": "t1-p037-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-015",
+      "english": "Corn",
+      "polish": "Kukurydza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-015-word.mp3",
+      "audioSentence": "t1-p037-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-016",
+      "english": "Carrot",
+      "polish": "Marchewka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-016-word.mp3",
+      "audioSentence": "t1-p037-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-017",
+      "english": "Lettuce",
+      "polish": "Sałata",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-017-word.mp3",
+      "audioSentence": "t1-p037-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-018",
+      "english": "Strawberry",
+      "polish": "Truskawka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-018-word.mp3",
+      "audioSentence": "t1-p037-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-019",
+      "english": "Grape",
+      "polish": "Winogrono",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-019-word.mp3",
+      "audioSentence": "t1-p037-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-020",
+      "english": "Cherry",
+      "polish": "Wiśnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-020-word.mp3",
+      "audioSentence": "t1-p037-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-021",
+      "english": "Garlic",
+      "polish": "Czosnek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-021-word.mp3",
+      "audioSentence": "t1-p037-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-022",
+      "english": "Pear",
+      "polish": "Gruszka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-022-word.mp3",
+      "audioSentence": "t1-p037-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-023",
+      "english": "Nectarine",
+      "polish": "Nektarynka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-023-word.mp3",
+      "audioSentence": "t1-p037-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-024",
+      "english": "Fig",
+      "polish": "Figa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-024-word.mp3",
+      "audioSentence": "t1-p037-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-025",
+      "english": "Cabbage",
+      "polish": "Kapusta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-025-word.mp3",
+      "audioSentence": "t1-p037-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-026",
+      "english": "Mango",
+      "polish": "Mango",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-026-word.mp3",
+      "audioSentence": "t1-p037-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-027",
+      "english": "Melon",
+      "polish": "Melon",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-027-word.mp3",
+      "audioSentence": "t1-p037-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-028",
+      "english": "Papaya",
+      "polish": "Papaja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-028-word.mp3",
+      "audioSentence": "t1-p037-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-029",
+      "english": "Celery",
+      "polish": "Seler",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-029-word.mp3",
+      "audioSentence": "t1-p037-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-030",
+      "english": "Watermelon",
+      "polish": "Arbuz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-030-word.mp3",
+      "audioSentence": "t1-p037-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-031",
+      "english": "Pumpkin",
+      "polish": "Dynia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-031-word.mp3",
+      "audioSentence": "t1-p037-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-032",
+      "english": "Bean",
+      "polish": "Fasola",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-032-word.mp3",
+      "audioSentence": "t1-p037-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-033",
+      "english": "Sweet potato",
+      "polish": "Batat",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-033-word.mp3",
+      "audioSentence": "t1-p037-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-034",
+      "english": "Pea",
+      "polish": "Groch",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-034-word.mp3",
+      "audioSentence": "t1-p037-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-035",
+      "english": "Beetroot",
+      "polish": "Burak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-035-word.mp3",
+      "audioSentence": "t1-p037-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-036",
+      "english": "Sweet cherry",
+      "polish": "Czereśnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-036-word.mp3",
+      "audioSentence": "t1-p037-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-037",
+      "english": "Tangerine",
+      "polish": "Mandarynka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-037-word.mp3",
+      "audioSentence": "t1-p037-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-038",
+      "english": "Blackberry",
+      "polish": "Jeżyna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-038-word.mp3",
+      "audioSentence": "t1-p037-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-039",
+      "english": "Lichee",
+      "polish": "Liczi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-039-word.mp3",
+      "audioSentence": "t1-p037-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-040",
+      "english": "Raspberry",
+      "polish": "Malina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-040-word.mp3",
+      "audioSentence": "t1-p037-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-041",
+      "english": "Apricot",
+      "polish": "Morela",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-041-word.mp3",
+      "audioSentence": "t1-p037-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-042",
+      "english": "Parsley",
+      "polish": "Pietruszka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-042-word.mp3",
+      "audioSentence": "t1-p037-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-043",
+      "english": "Leek",
+      "polish": "Por",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-043-word.mp3",
+      "audioSentence": "t1-p037-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-044",
+      "english": "Radish",
+      "polish": "Rzodkiew",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-044-word.mp3",
+      "audioSentence": "t1-p037-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-045",
+      "english": "Chives",
+      "polish": "Szczypior",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-045-word.mp3",
+      "audioSentence": "t1-p037-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-046",
+      "english": "Asparagus",
+      "polish": "Szparag",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-046-word.mp3",
+      "audioSentence": "t1-p037-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-047",
+      "english": "Spinach",
+      "polish": "Szpinak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-047-word.mp3",
+      "audioSentence": "t1-p037-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-048",
+      "english": "Plum",
+      "polish": "Śliwka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-048-word.mp3",
+      "audioSentence": "t1-p037-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-049",
+      "english": "Cranberry",
+      "polish": "Żurawina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-049-word.mp3",
+      "audioSentence": "t1-p037-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-050",
+      "english": "Pineapple",
+      "polish": "Ananas",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-050-word.mp3",
+      "audioSentence": "t1-p037-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-051",
+      "english": "Passion fruit",
+      "polish": "Marakuja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-051-word.mp3",
+      "audioSentence": "t1-p037-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-052",
+      "english": "Currant",
+      "polish": "Porzeczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-052-word.mp3",
+      "audioSentence": "t1-p037-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-053",
+      "english": "Blueberry",
+      "polish": "Borówka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-053-word.mp3",
+      "audioSentence": "t1-p037-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-054",
+      "english": "Broad bean",
+      "polish": "Bób",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-054-word.mp3",
+      "audioSentence": "t1-p037-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-055",
+      "english": "Brussels sprout",
+      "polish": "Brukselka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-055-word.mp3",
+      "audioSentence": "t1-p037-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-056",
+      "english": "Spring onion",
+      "polish": "Cebula dymka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-056-word.mp3",
+      "audioSentence": "t1-p037-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-057",
+      "english": "Ginger",
+      "polish": "Imbir",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-057-word.mp3",
+      "audioSentence": "t1-p037-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-058",
+      "english": "Kale",
+      "polish": "Jarmuż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-058-word.mp3",
+      "audioSentence": "t1-p037-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-059",
+      "english": "Eggplant",
+      "polish": "Bakłażan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-059-word.mp3",
+      "audioSentence": "t1-p037-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-060",
+      "english": "Dill",
+      "polish": "Koper",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-060-word.mp3",
+      "audioSentence": "t1-p037-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-061",
+      "english": "Gooseberry",
+      "polish": "Agrest",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-061-word.mp3",
+      "audioSentence": "t1-p037-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-062",
+      "english": "Chokeberry",
+      "polish": "Aronia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-062-word.mp3",
+      "audioSentence": "t1-p037-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-063",
+      "english": "Horseradish",
+      "polish": "Chrzan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-063-word.mp3",
+      "audioSentence": "t1-p037-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-064",
+      "english": "Marrow",
+      "polish": "Kabaczek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-064-word.mp3",
+      "audioSentence": "t1-p037-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-065",
+      "english": "Sauerkraut",
+      "polish": "Kapusta kiszona",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-065-word.mp3",
+      "audioSentence": "t1-p037-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-066",
+      "english": "Artichoke",
+      "polish": "Karczoch",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-066-word.mp3",
+      "audioSentence": "t1-p037-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-067",
+      "english": "Parsnip",
+      "polish": "Pasternak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-067-word.mp3",
+      "audioSentence": "t1-p037-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-068",
+      "english": "Quince",
+      "polish": "Pigwa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-068-word.mp3",
+      "audioSentence": "t1-p037-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-069",
+      "english": "Dragon fruit",
+      "polish": "Smoczy owoc",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-069-word.mp3",
+      "audioSentence": "t1-p037-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-070",
+      "english": "Wild strawberry",
+      "polish": "Poziomka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-070-word.mp3",
+      "audioSentence": "t1-p037-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-071",
+      "english": "Rhubarb",
+      "polish": "Rabarbar",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-071-word.mp3",
+      "audioSentence": "t1-p037-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-072",
+      "english": "Turnip",
+      "polish": "Rzepa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-072-word.mp3",
+      "audioSentence": "t1-p037-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-073",
+      "english": "Cress",
+      "polish": "Rzeżucha",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-073-word.mp3",
+      "audioSentence": "t1-p037-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-074",
+      "english": "Lentil",
+      "polish": "Soczewica",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-074-word.mp3",
+      "audioSentence": "t1-p037-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-075",
+      "english": "Prune",
+      "polish": "Suszona śliwka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-075-word.mp3",
+      "audioSentence": "t1-p037-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-076",
+      "english": "Kale",
+      "polish": "Jarmuż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-076-word.mp3",
+      "audioSentence": "t1-p037-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-077",
+      "english": "Passion fruit",
+      "polish": "Marakuja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-077-word.mp3",
+      "audioSentence": "t1-p037-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-078",
+      "english": "Apricot",
+      "polish": "Morela",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-078-word.mp3",
+      "audioSentence": "t1-p037-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-079",
+      "english": "Lettuce",
+      "polish": "Sałata",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-079-word.mp3",
+      "audioSentence": "t1-p037-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p037-080",
+      "english": "Cucumber",
+      "polish": "Ogórek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p037-080-word.mp3",
+      "audioSentence": "t1-p037-080-sentence.mp3"
+    }
+  ]
+}

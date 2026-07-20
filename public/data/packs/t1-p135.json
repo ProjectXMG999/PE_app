@@ -3,7 +3,7 @@
   "name": "Człowiek jest piękny",
   "volume": "Tom II",
   "level": 2,
-  "category": "Piękne",
+  "category": "Slang",
   "chapter": "Rozdział XX",
   "words": [
     {
@@ -27,7 +27,7 @@
     {
       "id": "t1-p135-003",
       "english": "Looker",
-      "polish": "Pięknisia (old-school)",
+      "polish": "Pięknisia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-003-word.mp3",
@@ -109,15 +109,15 @@
       "id": "t1-p135-012",
       "english": "Fly",
       "polish": "Odlotowa",
-      "sentenceEn": "The UFO was flying over our heads. An incredible spectacle.",
-      "sentencePl": "UFO latało nad naszymi głowami. Niewiarygodne widowisko.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p135-012-word.mp3",
       "audioSentence": "t1-p135-012-sentence.mp3"
     },
     {
       "id": "t1-p135-013",
       "english": "Glamorous",
-      "polish": "Przepiękna; olśniewająca; pełna przepychu",
+      "polish": "Przepiękna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-013-word.mp3",
@@ -243,7 +243,7 @@
     {
       "id": "t1-p135-027",
       "english": "Mesmerizing",
-      "polish": "Hipnotyzująca; zachwycająca",
+      "polish": "Hipnotyzująca",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-027-word.mp3",
@@ -252,7 +252,7 @@
     {
       "id": "t1-p135-028",
       "english": "Phenomenal",
-      "polish": "Zjawiskowa; fenomenalna",
+      "polish": "Zjawiskowa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-028-word.mp3",
@@ -275,6 +275,96 @@
       "sentencePl": null,
       "audioWord": "t1-p135-030-word.mp3",
       "audioSentence": "t1-p135-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p135-031",
+      "english": "Aesthetically pleasing",
+      "polish": "Estetyczna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p135-031-word.mp3",
+      "audioSentence": "t1-p135-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p135-032",
+      "english": "Beguiling",
+      "polish": "Nęcąca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p135-032-word.mp3",
+      "audioSentence": "t1-p135-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p135-033",
+      "english": "Bewitching",
+      "polish": "Urzekająca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p135-033-word.mp3",
+      "audioSentence": "t1-p135-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p135-034",
+      "english": "Captivating",
+      "polish": "Zniewalająca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p135-034-word.mp3",
+      "audioSentence": "t1-p135-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p135-035",
+      "english": "Comely",
+      "polish": "Nadobna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p135-035-word.mp3",
+      "audioSentence": "t1-p135-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p135-036",
+      "english": "Enchanting",
+      "polish": "Czarująca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p135-036-word.mp3",
+      "audioSentence": "t1-p135-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p135-037",
+      "english": "Petticoat",
+      "polish": "Białogłowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p135-037-word.mp3",
+      "audioSentence": "t1-p135-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p135-038",
+      "english": "Disarming",
+      "polish": "Rozbrajająca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p135-038-word.mp3",
+      "audioSentence": "t1-p135-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p135-039",
+      "english": "Riveting",
+      "polish": "Porywająca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p135-039-word.mp3",
+      "audioSentence": "t1-p135-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p135-040",
+      "english": "Winsome",
+      "polish": "Ujmujący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p135-040-word.mp3",
+      "audioSentence": "t1-p135-040-sentence.mp3"
     }
   ]
 }

@@ -1,0 +1,1180 @@
+{
+  "id": "t1-p031",
+  "name": "Higiena I wygląd",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział IV",
+  "words": [
+    {
+      "id": "t1-p031-001",
+      "english": "Tissue",
+      "polish": "Chusteczka do nosa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-001-word.mp3",
+      "audioSentence": "t1-p031-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-002",
+      "english": "Comb",
+      "polish": "Grzebień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-002-word.mp3",
+      "audioSentence": "t1-p031-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-003",
+      "english": "Soap",
+      "polish": "Mydło",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-003-word.mp3",
+      "audioSentence": "t1-p031-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-004",
+      "english": "Toilet paper",
+      "polish": "Papier toaletowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-004-word.mp3",
+      "audioSentence": "t1-p031-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-005",
+      "english": "Toothpaste",
+      "polish": "Pasta do zębów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-005-word.mp3",
+      "audioSentence": "t1-p031-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-006",
+      "english": "Shower",
+      "polish": "Prysznic",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-006-word.mp3",
+      "audioSentence": "t1-p031-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-007",
+      "english": "Towel",
+      "polish": "Ręcznik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-007-word.mp3",
+      "audioSentence": "t1-p031-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-008",
+      "english": "Shampoo",
+      "polish": "Szampon",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-008-word.mp3",
+      "audioSentence": "t1-p031-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-009",
+      "english": "Toothbrush",
+      "polish": "Szczoteczka do zębów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-009-word.mp3",
+      "audioSentence": "t1-p031-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-010",
+      "english": "Hairbrush",
+      "polish": "Szczotka do włosów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-010-word.mp3",
+      "audioSentence": "t1-p031-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-011",
+      "english": "Deodorant",
+      "polish": "Dezodorant",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-011-word.mp3",
+      "audioSentence": "t1-p031-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-012",
+      "english": "Figure",
+      "polish": "Figura",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-012-word.mp3",
+      "audioSentence": "t1-p031-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-013",
+      "english": "Hygiene",
+      "polish": "Higiena",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-013-word.mp3",
+      "audioSentence": "t1-p031-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-014",
+      "english": "Color",
+      "polish": "Kolor",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-014-word.mp3",
+      "audioSentence": "t1-p031-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-015",
+      "english": "Cream",
+      "polish": "Krem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-015-word.mp3",
+      "audioSentence": "t1-p031-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-016",
+      "english": "Make-up",
+      "polish": "Makijaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-016-word.mp3",
+      "audioSentence": "t1-p031-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-017",
+      "english": "Perfume",
+      "polish": "Perfumy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-017-word.mp3",
+      "audioSentence": "t1-p031-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-018",
+      "english": "Beauty",
+      "polish": "Piękno",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-018-word.mp3",
+      "audioSentence": "t1-p031-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-019",
+      "english": "Tattoo",
+      "polish": "Tatuaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-019-word.mp3",
+      "audioSentence": "t1-p031-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-020",
+      "english": "Gel",
+      "polish": "Żel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-020-word.mp3",
+      "audioSentence": "t1-p031-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-021",
+      "english": "Clean oneself up",
+      "polish": "Umyć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-021-word.mp3",
+      "audioSentence": "t1-p031-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-022",
+      "english": "Put sth on",
+      "polish": "Nakładać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-022-word.mp3",
+      "audioSentence": "t1-p031-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-023",
+      "english": "Have on",
+      "polish": "Mieć coś na sobie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-023-word.mp3",
+      "audioSentence": "t1-p031-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-024",
+      "english": "Look like",
+      "polish": "Wyglądać jak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-024-word.mp3",
+      "audioSentence": "t1-p031-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-025",
+      "english": "Put on weight",
+      "polish": "Przytyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-025-word.mp3",
+      "audioSentence": "t1-p031-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-026",
+      "english": "Take sth off",
+      "polish": "Ściągać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-026-word.mp3",
+      "audioSentence": "t1-p031-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-027",
+      "english": "Try sth on",
+      "polish": "Przymierzyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-027-word.mp3",
+      "audioSentence": "t1-p031-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-028",
+      "english": "Get sth on",
+      "polish": "Założyć coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-028-word.mp3",
+      "audioSentence": "t1-p031-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-029",
+      "english": "Dress up",
+      "polish": "Wystroić się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-029-word.mp3",
+      "audioSentence": "t1-p031-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-030",
+      "english": "Dress up as",
+      "polish": "Przebrać się za",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-030-word.mp3",
+      "audioSentence": "t1-p031-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-031",
+      "english": "Mustache",
+      "polish": "Wąsy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-031-word.mp3",
+      "audioSentence": "t1-p031-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-032",
+      "english": "Razor",
+      "polish": "Brzytwa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-032-word.mp3",
+      "audioSentence": "t1-p031-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-033",
+      "english": "Massage",
+      "polish": "Masaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-033-word.mp3",
+      "audioSentence": "t1-p031-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-034",
+      "english": "Suntan",
+      "polish": "Opalenizna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-034-word.mp3",
+      "audioSentence": "t1-p031-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-035",
+      "english": "Tan",
+      "polish": "Opalenizna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-035-word.mp3",
+      "audioSentence": "t1-p031-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-036",
+      "english": "Lipstick",
+      "polish": "Szminka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-036-word.mp3",
+      "audioSentence": "t1-p031-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-037",
+      "english": "Braid",
+      "polish": "Warkocz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-037-word.mp3",
+      "audioSentence": "t1-p031-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-038",
+      "english": "Elegance",
+      "polish": "Elegancja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-038-word.mp3",
+      "audioSentence": "t1-p031-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-039",
+      "english": "Sponge",
+      "polish": "Gąbka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-039-word.mp3",
+      "audioSentence": "t1-p031-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-040",
+      "english": "Grace",
+      "polish": "Gracja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-040-word.mp3",
+      "audioSentence": "t1-p031-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-041",
+      "english": "Freckle",
+      "polish": "Pieg",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-041-word.mp3",
+      "audioSentence": "t1-p031-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-042",
+      "english": "Overweight",
+      "polish": "Nadwaga",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-042-word.mp3",
+      "audioSentence": "t1-p031-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-043",
+      "english": "Underweight",
+      "polish": "Niedowaga",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-043-word.mp3",
+      "audioSentence": "t1-p031-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-044",
+      "english": "Acne",
+      "polish": "Trądzik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-044-word.mp3",
+      "audioSentence": "t1-p031-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-045",
+      "english": "Appearance",
+      "polish": "Wygląd",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-045-word.mp3",
+      "audioSentence": "t1-p031-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-046",
+      "english": "Shave",
+      "polish": "Golić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-046-word.mp3",
+      "audioSentence": "t1-p031-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-047",
+      "english": "Look",
+      "polish": "Wyglądać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-047-word.mp3",
+      "audioSentence": "t1-p031-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-048",
+      "english": "Fit",
+      "polish": "Być właściwego rozmiaru",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-048-word.mp3",
+      "audioSentence": "t1-p031-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-049",
+      "english": "Match",
+      "polish": "Pasować do czegoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-049-word.mp3",
+      "audioSentence": "t1-p031-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-050",
+      "english": "Suit",
+      "polish": "Pasować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-050-word.mp3",
+      "audioSentence": "t1-p031-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-051",
+      "english": "Dress",
+      "polish": "Ubierać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-051-word.mp3",
+      "audioSentence": "t1-p031-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-052",
+      "english": "Tease",
+      "polish": "Tapirować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-052-word.mp3",
+      "audioSentence": "t1-p031-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-053",
+      "english": "Perfume",
+      "polish": "Perfumować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-053-word.mp3",
+      "audioSentence": "t1-p031-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-054",
+      "english": "Brush",
+      "polish": "Szczotkować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-054-word.mp3",
+      "audioSentence": "t1-p031-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-055",
+      "english": "Lace",
+      "polish": "Sznurować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-055-word.mp3",
+      "audioSentence": "t1-p031-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-056",
+      "english": "Measure",
+      "polish": "Mierzyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-056-word.mp3",
+      "audioSentence": "t1-p031-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-057",
+      "english": "Refresh",
+      "polish": "Odświeżać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-057-word.mp3",
+      "audioSentence": "t1-p031-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-058",
+      "english": "Strip",
+      "polish": "Zdzierać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-058-word.mp3",
+      "audioSentence": "t1-p031-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-059",
+      "english": "Sunbathe",
+      "polish": "Opalać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-059-word.mp3",
+      "audioSentence": "t1-p031-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-060",
+      "english": "Undress",
+      "polish": "Rozbierać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-060-word.mp3",
+      "audioSentence": "t1-p031-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-061",
+      "english": "Bangs",
+      "polish": "Grzywka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-061-word.mp3",
+      "audioSentence": "t1-p031-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-062",
+      "english": "Ponytail",
+      "polish": "Kucyk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-062-word.mp3",
+      "audioSentence": "t1-p031-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-063",
+      "english": "Lens",
+      "polish": "Soczewki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-063-word.mp3",
+      "audioSentence": "t1-p031-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-064",
+      "english": "Wrinkle",
+      "polish": "Zmarszczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-064-word.mp3",
+      "audioSentence": "t1-p031-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-065",
+      "english": "Pimple",
+      "polish": "Pryszcz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-065-word.mp3",
+      "audioSentence": "t1-p031-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-066",
+      "english": "Characteristic",
+      "polish": "Cecha charakterystyczna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-066-word.mp3",
+      "audioSentence": "t1-p031-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-067",
+      "english": "Cleanliness",
+      "polish": "Czystość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-067-word.mp3",
+      "audioSentence": "t1-p031-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-068",
+      "english": "Shaving",
+      "polish": "Golenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-068-word.mp3",
+      "audioSentence": "t1-p031-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-069",
+      "english": "Lip crayon",
+      "polish": "Kredka do ust",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-069-word.mp3",
+      "audioSentence": "t1-p031-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-070",
+      "english": "Shaving cream",
+      "polish": "Krem do golenia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-070-word.mp3",
+      "audioSentence": "t1-p031-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-071",
+      "english": "Dirt",
+      "polish": "Brud",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-071-word.mp3",
+      "audioSentence": "t1-p031-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-072",
+      "english": "Dandruff",
+      "polish": "Łupież",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-072-word.mp3",
+      "audioSentence": "t1-p031-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-073",
+      "english": "Face mask",
+      "polish": "Maseczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-073-word.mp3",
+      "audioSentence": "t1-p031-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-074",
+      "english": "Nail scissors",
+      "polish": "Nożyczki do paznokci",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-074-word.mp3",
+      "audioSentence": "t1-p031-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-075",
+      "english": "Tone",
+      "polish": "Odcień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-075-word.mp3",
+      "audioSentence": "t1-p031-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-076",
+      "english": "Grow out of",
+      "polish": "Wyrosnąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-076-word.mp3",
+      "audioSentence": "t1-p031-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-077",
+      "english": "Pull sth on",
+      "polish": "Narzucić coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-077-word.mp3",
+      "audioSentence": "t1-p031-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-078",
+      "english": "Do sth up",
+      "polish": "Zapiąć coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-078-word.mp3",
+      "audioSentence": "t1-p031-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-079",
+      "english": "Pull sth down",
+      "polish": "Ściągnąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-079-word.mp3",
+      "audioSentence": "t1-p031-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-080",
+      "english": "Stick out",
+      "polish": "Wystawać skądś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-080-word.mp3",
+      "audioSentence": "t1-p031-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-081",
+      "english": "Turn out",
+      "polish": "Wywrócić coś na drugą stronę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-081-word.mp3",
+      "audioSentence": "t1-p031-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-082",
+      "english": "Zip sth up",
+      "polish": "Zapiąć na zamek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-082-word.mp3",
+      "audioSentence": "t1-p031-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-083",
+      "english": "Go with",
+      "polish": "Pasować do",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-083-word.mp3",
+      "audioSentence": "t1-p031-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-084",
+      "english": "Wash up",
+      "polish": "Myć ręce I twarz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-084-word.mp3",
+      "audioSentence": "t1-p031-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-085",
+      "english": "Freshen up",
+      "polish": "Odświeżać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-085-word.mp3",
+      "audioSentence": "t1-p031-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-086",
+      "english": "Hair conditioner",
+      "polish": "Odżywka do włosów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-086-word.mp3",
+      "audioSentence": "t1-p031-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-087",
+      "english": "Tweezers",
+      "polish": "Pęseta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-087-word.mp3",
+      "audioSentence": "t1-p031-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-088",
+      "english": "Care",
+      "polish": "Pielęgnacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-088-word.mp3",
+      "audioSentence": "t1-p031-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-089",
+      "english": "Nail file",
+      "polish": "Pilnik do paznokci",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-089-word.mp3",
+      "audioSentence": "t1-p031-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-090",
+      "english": "Mouthwash",
+      "polish": "Płyn do płukania ust",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-090-word.mp3",
+      "audioSentence": "t1-p031-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-091",
+      "english": "Foundation",
+      "polish": "Podkład",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-091-word.mp3",
+      "audioSentence": "t1-p031-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-092",
+      "english": "Pad",
+      "polish": "Podpaska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-092-word.mp3",
+      "audioSentence": "t1-p031-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-093",
+      "english": "Fondant",
+      "polish": "Lukier",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-093-word.mp3",
+      "audioSentence": "t1-p031-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-094",
+      "english": "Powder box",
+      "polish": "Puderniczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-094-word.mp3",
+      "audioSentence": "t1-p031-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-095",
+      "english": "Pumice",
+      "polish": "Pumeks",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-095-word.mp3",
+      "audioSentence": "t1-p031-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-096",
+      "english": "Tampon",
+      "polish": "Tampon",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-096-word.mp3",
+      "audioSentence": "t1-p031-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-097",
+      "english": "Mascara",
+      "polish": "Tusz do rzęs",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-097-word.mp3",
+      "audioSentence": "t1-p031-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-098",
+      "english": "Cotton pad",
+      "polish": "Wacik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-098-word.mp3",
+      "audioSentence": "t1-p031-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-099",
+      "english": "Curler",
+      "polish": "Wałek do kręcenia włosów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-099-word.mp3",
+      "audioSentence": "t1-p031-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-100",
+      "english": "Cologne",
+      "polish": "Woda kolońska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-100-word.mp3",
+      "audioSentence": "t1-p031-100-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-101",
+      "english": "Comb",
+      "polish": "Czesać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-101-word.mp3",
+      "audioSentence": "t1-p031-101-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-102",
+      "english": "Disguise",
+      "polish": "Przebierać się za",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-102-word.mp3",
+      "audioSentence": "t1-p031-102-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-103",
+      "english": "Expose",
+      "polish": "Eksponować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-103-word.mp3",
+      "audioSentence": "t1-p031-103-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-104",
+      "english": "Groom",
+      "polish": "Szczotkować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-104-word.mp3",
+      "audioSentence": "t1-p031-104-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-105",
+      "english": "Shrink",
+      "polish": "Kurczyć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-105-word.mp3",
+      "audioSentence": "t1-p031-105-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-106",
+      "english": "Straighten",
+      "polish": "Wyprostować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-106-word.mp3",
+      "audioSentence": "t1-p031-106-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-107",
+      "english": "Thin",
+      "polish": "Przerzedzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-107-word.mp3",
+      "audioSentence": "t1-p031-107-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-108",
+      "english": "Lighten",
+      "polish": "Pojaśnieć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-108-word.mp3",
+      "audioSentence": "t1-p031-108-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-109",
+      "english": "Brighten",
+      "polish": "Rozjaśnić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-109-word.mp3",
+      "audioSentence": "t1-p031-109-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-110",
+      "english": "Freshen",
+      "polish": "Odświeżyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-110-word.mp3",
+      "audioSentence": "t1-p031-110-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-111",
+      "english": "Darken",
+      "polish": "Przyciemniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-111-word.mp3",
+      "audioSentence": "t1-p031-111-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-112",
+      "english": "Shorten",
+      "polish": "Skracać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-112-word.mp3",
+      "audioSentence": "t1-p031-112-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-113",
+      "english": "Trim",
+      "polish": "Trymować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-113-word.mp3",
+      "audioSentence": "t1-p031-113-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-114",
+      "english": "Powder",
+      "polish": "Pudrować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-114-word.mp3",
+      "audioSentence": "t1-p031-114-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-115",
+      "english": "Enrobe",
+      "polish": "Przyodziać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-115-word.mp3",
+      "audioSentence": "t1-p031-115-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-116",
+      "english": "Aftershave",
+      "polish": "Woda po goleniu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-116-word.mp3",
+      "audioSentence": "t1-p031-116-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-117",
+      "english": "Wax",
+      "polish": "Wosk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-117-word.mp3",
+      "audioSentence": "t1-p031-117-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-118",
+      "english": "Nail polish remover",
+      "polish": "Zmywacz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-118-word.mp3",
+      "audioSentence": "t1-p031-118-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-119",
+      "english": "Complexion",
+      "polish": "Cera",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-119-word.mp3",
+      "audioSentence": "t1-p031-119-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-120",
+      "english": "Hair removal",
+      "polish": "Depilacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-120-word.mp3",
+      "audioSentence": "t1-p031-120-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-121",
+      "english": "Hair dye",
+      "polish": "Farba do włosów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-121-word.mp3",
+      "audioSentence": "t1-p031-121-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-122",
+      "english": "Make-up bag",
+      "polish": "Kosmetyczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-122-word.mp3",
+      "audioSentence": "t1-p031-122-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-123",
+      "english": "Baldness",
+      "polish": "Łysina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-123-word.mp3",
+      "audioSentence": "t1-p031-123-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-124",
+      "english": "Face expression",
+      "polish": "Wyraz twarzy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-124-word.mp3",
+      "audioSentence": "t1-p031-124-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-125",
+      "english": "Stretch mark",
+      "polish": "Rozstęp",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-125-word.mp3",
+      "audioSentence": "t1-p031-125-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-126",
+      "english": "Ugliness",
+      "polish": "Brzydota",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-126-word.mp3",
+      "audioSentence": "t1-p031-126-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-127",
+      "english": "Silhouette",
+      "polish": "Sylwetka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-127-word.mp3",
+      "audioSentence": "t1-p031-127-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-128",
+      "english": "High forehead",
+      "polish": "Wysokie czoło",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-128-word.mp3",
+      "audioSentence": "t1-p031-128-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-129",
+      "english": "Sideburns",
+      "polish": "Bokobrody",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-129-word.mp3",
+      "audioSentence": "t1-p031-129-sentence.mp3"
+    },
+    {
+      "id": "t1-p031-130",
+      "english": "Blemish",
+      "polish": "Krosta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p031-130-word.mp3",
+      "audioSentence": "t1-p031-130-sentence.mp3"
+    }
+  ]
+}

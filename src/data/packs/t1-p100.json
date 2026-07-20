@@ -4,7 +4,7 @@
   "volume": "Tom II",
   "level": 2,
   "category": "Slang",
-  "chapter": "Rodział XIV",
+  "chapter": "Rozdział XIV",
   "words": [
     {
       "id": "t1-p100-001",
@@ -28,8 +28,8 @@
       "id": "t1-p100-003",
       "english": "Dead",
       "polish": "Skisnąć",
-      "sentenceEn": "He was found dead in the woods.",
-      "sentencePl": "Znaleźli go martwego w lesie.",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p100-003-word.mp3",
       "audioSentence": "t1-p100-003-sentence.mp3"
     },
@@ -45,7 +45,7 @@
     {
       "id": "t1-p100-005",
       "english": "Low-key",
-      "polish": "Po cichu; w tajemnicy; w przyczajce",
+      "polish": "Po cichu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p100-005-word.mp3",
@@ -63,7 +63,7 @@
     {
       "id": "t1-p100-007",
       "english": "Fam",
-      "polish": "Grupa najbliższych przyjaciół; paczka",
+      "polish": "Grupa najbliższych przyjaciół",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p100-007-word.mp3",
@@ -72,9 +72,9 @@
     {
       "id": "t1-p100-008",
       "english": "Beef",
-      "polish": "Kosa; konflikt",
-      "sentenceEn": "The quality of a burger depends on the beef.",
-      "sentencePl": "Jakość burgera zależy od wołowiny.",
+      "polish": "Kosa",
+      "sentenceEn": null,
+      "sentencePl": null,
       "audioWord": "t1-p100-008-word.mp3",
       "audioSentence": "t1-p100-008-sentence.mp3"
     },

@@ -1,0 +1,640 @@
+{
+  "id": "t1-p005",
+  "name": "Ruch I bezczynność",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Czasowniki",
+  "chapter": "Rozdział I",
+  "words": [
+    {
+      "id": "t1-p005-001",
+      "english": "Come",
+      "polish": "Przychodzić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-001-word.mp3",
+      "audioSentence": "t1-p005-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-002",
+      "english": "Drive",
+      "polish": "Prowadzić samochód",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-002-word.mp3",
+      "audioSentence": "t1-p005-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-003",
+      "english": "Go",
+      "polish": "Iść",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-003-word.mp3",
+      "audioSentence": "t1-p005-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-004",
+      "english": "Jump",
+      "polish": "Skakać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-004-word.mp3",
+      "audioSentence": "t1-p005-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-005",
+      "english": "Move",
+      "polish": "Ruszać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-005-word.mp3",
+      "audioSentence": "t1-p005-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-006",
+      "english": "Run",
+      "polish": "Biegać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-006-word.mp3",
+      "audioSentence": "t1-p005-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-007",
+      "english": "Sit",
+      "polish": "Siedzieć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-007-word.mp3",
+      "audioSentence": "t1-p005-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-008",
+      "english": "Stop",
+      "polish": "Zatrzymywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-008-word.mp3",
+      "audioSentence": "t1-p005-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-009",
+      "english": "Walk",
+      "polish": "Iść pieszo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-009-word.mp3",
+      "audioSentence": "t1-p005-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-010",
+      "english": "Start",
+      "polish": "Startować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-010-word.mp3",
+      "audioSentence": "t1-p005-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-011",
+      "english": "Cross",
+      "polish": "Przechodzić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-011-word.mp3",
+      "audioSentence": "t1-p005-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-012",
+      "english": "Depart",
+      "polish": "Odjeżdżać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-012-word.mp3",
+      "audioSentence": "t1-p005-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-013",
+      "english": "Enter",
+      "polish": "Wejść",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-013-word.mp3",
+      "audioSentence": "t1-p005-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-014",
+      "english": "Fall",
+      "polish": "Spadać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-014-word.mp3",
+      "audioSentence": "t1-p005-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-015",
+      "english": "Hurry",
+      "polish": "Spieszyć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-015-word.mp3",
+      "audioSentence": "t1-p005-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-016",
+      "english": "Land",
+      "polish": "Lądować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-016-word.mp3",
+      "audioSentence": "t1-p005-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-017",
+      "english": "Leave",
+      "polish": "Wychodzić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-017-word.mp3",
+      "audioSentence": "t1-p005-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-018",
+      "english": "Lie",
+      "polish": "Leżeć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-018-word.mp3",
+      "audioSentence": "t1-p005-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-019",
+      "english": "Stay",
+      "polish": "Zostać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-019-word.mp3",
+      "audioSentence": "t1-p005-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-020",
+      "english": "Turn",
+      "polish": "Obracać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-020-word.mp3",
+      "audioSentence": "t1-p005-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-021",
+      "english": "Turn",
+      "polish": "Skręcać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-021-word.mp3",
+      "audioSentence": "t1-p005-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-022",
+      "english": "Appear",
+      "polish": "Pojawiać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-022-word.mp3",
+      "audioSentence": "t1-p005-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-023",
+      "english": "Disappear",
+      "polish": "Znikać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-023-word.mp3",
+      "audioSentence": "t1-p005-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-024",
+      "english": "Follow",
+      "polish": "Śledzić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-024-word.mp3",
+      "audioSentence": "t1-p005-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-025",
+      "english": "Return",
+      "polish": "Powracać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-025-word.mp3",
+      "audioSentence": "t1-p005-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-026",
+      "english": "Quit",
+      "polish": "Rezygnować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-026-word.mp3",
+      "audioSentence": "t1-p005-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-027",
+      "english": "Escape",
+      "polish": "Wydostawać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-027-word.mp3",
+      "audioSentence": "t1-p005-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-028",
+      "english": "Slip",
+      "polish": "Poślizgnąć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-028-word.mp3",
+      "audioSentence": "t1-p005-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-029",
+      "english": "Withdraw",
+      "polish": "Wycofywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-029-word.mp3",
+      "audioSentence": "t1-p005-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-030",
+      "english": "Approach",
+      "polish": "Zbliżać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-030-word.mp3",
+      "audioSentence": "t1-p005-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-031",
+      "english": "Chase",
+      "polish": "Gonić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-031-word.mp3",
+      "audioSentence": "t1-p005-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-032",
+      "english": "Kneel",
+      "polish": "Klęczeć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-032-word.mp3",
+      "audioSentence": "t1-p005-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-033",
+      "english": "Lean",
+      "polish": "Pochylać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-033-word.mp3",
+      "audioSentence": "t1-p005-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-034",
+      "english": "Stroll",
+      "polish": "Spacerować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-034-word.mp3",
+      "audioSentence": "t1-p005-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-035",
+      "english": "Swing",
+      "polish": "Huśtać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-035-word.mp3",
+      "audioSentence": "t1-p005-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-036",
+      "english": "Crouch",
+      "polish": "Kucać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-036-word.mp3",
+      "audioSentence": "t1-p005-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-037",
+      "english": "Flip",
+      "polish": "Wywrócić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-037-word.mp3",
+      "audioSentence": "t1-p005-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-038",
+      "english": "Hop",
+      "polish": "Podskakiwać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-038-word.mp3",
+      "audioSentence": "t1-p005-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-039",
+      "english": "Overtake",
+      "polish": "Wyprzedzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-039-word.mp3",
+      "audioSentence": "t1-p005-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-040",
+      "english": "Step",
+      "polish": "Stąpać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-040-word.mp3",
+      "audioSentence": "t1-p005-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-041",
+      "english": "Rush",
+      "polish": "Pędzić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-041-word.mp3",
+      "audioSentence": "t1-p005-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-042",
+      "english": "Speed",
+      "polish": "Przekraczać prędkość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-042-word.mp3",
+      "audioSentence": "t1-p005-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-043",
+      "english": "Spin",
+      "polish": "Kręcić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-043-word.mp3",
+      "audioSentence": "t1-p005-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-044",
+      "english": "Spread",
+      "polish": "Rozłożyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-044-word.mp3",
+      "audioSentence": "t1-p005-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-045",
+      "english": "Twist",
+      "polish": "Skręcać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-045-word.mp3",
+      "audioSentence": "t1-p005-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-046",
+      "english": "Commute",
+      "polish": "Dojeżdżać do",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-046-word.mp3",
+      "audioSentence": "t1-p005-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-047",
+      "english": "Hunch",
+      "polish": "Garbić się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-047-word.mp3",
+      "audioSentence": "t1-p005-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-048",
+      "english": "Shelter",
+      "polish": "Schronić się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-048-word.mp3",
+      "audioSentence": "t1-p005-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-049",
+      "english": "Stomp",
+      "polish": "Tupać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-049-word.mp3",
+      "audioSentence": "t1-p005-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-050",
+      "english": "Stumble",
+      "polish": "Potykać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-050-word.mp3",
+      "audioSentence": "t1-p005-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-051",
+      "english": "Tow",
+      "polish": "Holować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-051-word.mp3",
+      "audioSentence": "t1-p005-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-052",
+      "english": "Abandon",
+      "polish": "Porzucić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-052-word.mp3",
+      "audioSentence": "t1-p005-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-053",
+      "english": "Bounce",
+      "polish": "Odbijać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-053-word.mp3",
+      "audioSentence": "t1-p005-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-054",
+      "english": "Cruise",
+      "polish": "Krążyć po morzu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-054-word.mp3",
+      "audioSentence": "t1-p005-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-055",
+      "english": "Dash",
+      "polish": "Gnać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-055-word.mp3",
+      "audioSentence": "t1-p005-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-056",
+      "english": "Dodge",
+      "polish": "Unikać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-056-word.mp3",
+      "audioSentence": "t1-p005-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-057",
+      "english": "Emerge",
+      "polish": "Wynurzać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-057-word.mp3",
+      "audioSentence": "t1-p005-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-058",
+      "english": "Freeze",
+      "polish": "Stać w bezruchu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-058-word.mp3",
+      "audioSentence": "t1-p005-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-059",
+      "english": "Leap",
+      "polish": "Przeskakiwać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-059-word.mp3",
+      "audioSentence": "t1-p005-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-060",
+      "english": "Pop",
+      "polish": "Wyskakiwać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-060-word.mp3",
+      "audioSentence": "t1-p005-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-061",
+      "english": "Slump",
+      "polish": "Spadać gwałtownie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-061-word.mp3",
+      "audioSentence": "t1-p005-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-062",
+      "english": "Stagger",
+      "polish": "Zataczać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-062-word.mp3",
+      "audioSentence": "t1-p005-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-063",
+      "english": "Track",
+      "polish": "Śledzić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-063-word.mp3",
+      "audioSentence": "t1-p005-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-064",
+      "english": "Whirl",
+      "polish": "Wirować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-064-word.mp3",
+      "audioSentence": "t1-p005-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-065",
+      "english": "Circulate",
+      "polish": "Krążyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-065-word.mp3",
+      "audioSentence": "t1-p005-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-066",
+      "english": "Pursue",
+      "polish": "Ścigać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-066-word.mp3",
+      "audioSentence": "t1-p005-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-067",
+      "english": "Revolve",
+      "polish": "Obracać się wokół własnej osi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-067-word.mp3",
+      "audioSentence": "t1-p005-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-068",
+      "english": "Seat",
+      "polish": "Posadzić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-068-word.mp3",
+      "audioSentence": "t1-p005-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-069",
+      "english": "Straddle",
+      "polish": "Siedzieć okrakiem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-069-word.mp3",
+      "audioSentence": "t1-p005-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p005-070",
+      "english": "Swirl",
+      "polish": "Kręcić w koło",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p005-070-word.mp3",
+      "audioSentence": "t1-p005-070-sentence.mp3"
+    }
+  ]
+}

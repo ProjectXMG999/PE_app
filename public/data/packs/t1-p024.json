@@ -1,0 +1,1225 @@
+{
+  "id": "t1-p024",
+  "name": "Dom",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział III",
+  "words": [
+    {
+      "id": "t1-p024-001",
+      "english": "Desk",
+      "polish": "Biurko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-001-word.mp3",
+      "audioSentence": "t1-p024-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-002",
+      "english": "Home",
+      "polish": "Dom",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-002-word.mp3",
+      "audioSentence": "t1-p024-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-003",
+      "english": "Door",
+      "polish": "Drzwi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-003-word.mp3",
+      "audioSentence": "t1-p024-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-004",
+      "english": "Key",
+      "polish": "Klucz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-004-word.mp3",
+      "audioSentence": "t1-p024-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-005",
+      "english": "Window",
+      "polish": "Okno",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-005-word.mp3",
+      "audioSentence": "t1-p024-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-006",
+      "english": "Table",
+      "polish": "Stół",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-006-word.mp3",
+      "audioSentence": "t1-p024-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-007",
+      "english": "Light",
+      "polish": "Światło",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-007-word.mp3",
+      "audioSentence": "t1-p024-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-008",
+      "english": "Tub",
+      "polish": "Wanna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-008-word.mp3",
+      "audioSentence": "t1-p024-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-009",
+      "english": "Lighter",
+      "polish": "Zapalniczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-009-word.mp3",
+      "audioSentence": "t1-p024-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-010",
+      "english": "Clock",
+      "polish": "Zegar",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-010-word.mp3",
+      "audioSentence": "t1-p024-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-011",
+      "english": "Address",
+      "polish": "Adres",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-011-word.mp3",
+      "audioSentence": "t1-p024-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-012",
+      "english": "Chair",
+      "polish": "Krzesło",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-012-word.mp3",
+      "audioSentence": "t1-p024-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-013",
+      "english": "Lamp",
+      "polish": "Lampa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-013-word.mp3",
+      "audioSentence": "t1-p024-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-014",
+      "english": "Mirror",
+      "polish": "Lustro",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-014-word.mp3",
+      "audioSentence": "t1-p024-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-015",
+      "english": "Bed",
+      "polish": "Łóżko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-015-word.mp3",
+      "audioSentence": "t1-p024-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-016",
+      "english": "Room",
+      "polish": "Pokój",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-016-word.mp3",
+      "audioSentence": "t1-p024-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-017",
+      "english": "Sofa",
+      "polish": "Kanapa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-017-word.mp3",
+      "audioSentence": "t1-p024-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-018",
+      "english": "Wardrobe",
+      "polish": "Szafa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-018-word.mp3",
+      "audioSentence": "t1-p024-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-019",
+      "english": "Wall",
+      "polish": "Ściana",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-019-word.mp3",
+      "audioSentence": "t1-p024-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-020",
+      "english": "Toilet",
+      "polish": "Toaleta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-020-word.mp3",
+      "audioSentence": "t1-p024-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-021",
+      "english": "Alarm clock",
+      "polish": "Budzik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-021-word.mp3",
+      "audioSentence": "t1-p024-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-022",
+      "english": "Garage",
+      "polish": "Garaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-022-word.mp3",
+      "audioSentence": "t1-p024-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-023",
+      "english": "Bathroom",
+      "polish": "Łazienka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-023-word.mp3",
+      "audioSentence": "t1-p024-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-024",
+      "english": "Furniture",
+      "polish": "Meble",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-024-word.mp3",
+      "audioSentence": "t1-p024-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-025",
+      "english": "Umbrella",
+      "polish": "Parasol",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-025-word.mp3",
+      "audioSentence": "t1-p024-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-026",
+      "english": "Pillow",
+      "polish": "Poduszka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-026-word.mp3",
+      "audioSentence": "t1-p024-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-027",
+      "english": "Washing machine",
+      "polish": "Pralka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-027-word.mp3",
+      "audioSentence": "t1-p024-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-028",
+      "english": "Living room",
+      "polish": "Salon",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-028-word.mp3",
+      "audioSentence": "t1-p024-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-029",
+      "english": "Neighbor",
+      "polish": "Sąsiad",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-029-word.mp3",
+      "audioSentence": "t1-p024-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-030",
+      "english": "Bedroom",
+      "polish": "Sypialnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-030-word.mp3",
+      "audioSentence": "t1-p024-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-031",
+      "english": "Aquarium",
+      "polish": "Akwarium",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-031-word.mp3",
+      "audioSentence": "t1-p024-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-032",
+      "english": "Balcony",
+      "polish": "Balkon",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-032-word.mp3",
+      "audioSentence": "t1-p024-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-033",
+      "english": "Dining room",
+      "polish": "Jadalnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-033-word.mp3",
+      "audioSentence": "t1-p024-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-034",
+      "english": "Mess",
+      "polish": "Bałagan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-034-word.mp3",
+      "audioSentence": "t1-p024-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-035",
+      "english": "Gate",
+      "polish": "Brama",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-035-word.mp3",
+      "audioSentence": "t1-p024-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-036",
+      "english": "Roof",
+      "polish": "Dach",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-036-word.mp3",
+      "audioSentence": "t1-p024-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-037",
+      "english": "Decoration",
+      "polish": "Dekoracje",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-037-word.mp3",
+      "audioSentence": "t1-p024-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-038",
+      "english": "Carpet",
+      "polish": "Dywan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-038-word.mp3",
+      "audioSentence": "t1-p024-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-039",
+      "english": "Blanket",
+      "polish": "Koc",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-039-word.mp3",
+      "audioSentence": "t1-p024-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-040",
+      "english": "Mattress",
+      "polish": "Materac",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-040-word.mp3",
+      "audioSentence": "t1-p024-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-041",
+      "english": "Area code",
+      "polish": "Numer kierunkowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-041-word.mp3",
+      "audioSentence": "t1-p024-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-042",
+      "english": "Security",
+      "polish": "Ochrona",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-042-word.mp3",
+      "audioSentence": "t1-p024-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-043",
+      "english": "Basement",
+      "polish": "Piwnica",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-043-word.mp3",
+      "audioSentence": "t1-p024-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-044",
+      "english": "Area",
+      "polish": "Powierzchnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-044-word.mp3",
+      "audioSentence": "t1-p024-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-045",
+      "english": "Shelf",
+      "polish": "Półka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-045-word.mp3",
+      "audioSentence": "t1-p024-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-046",
+      "english": "Housewife",
+      "polish": "Gospodyni domowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-046-word.mp3",
+      "audioSentence": "t1-p024-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-047",
+      "english": "Housework",
+      "polish": "Prace domowe",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-047-word.mp3",
+      "audioSentence": "t1-p024-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-048",
+      "english": "Laundry",
+      "polish": "Pranie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-048-word.mp3",
+      "audioSentence": "t1-p024-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-049",
+      "english": "Hall",
+      "polish": "Przedpokój",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-049-word.mp3",
+      "audioSentence": "t1-p024-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-050",
+      "english": "Stairs",
+      "polish": "Schody",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-050-word.mp3",
+      "audioSentence": "t1-p024-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-051",
+      "english": "Attic",
+      "polish": "Strych",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-051-word.mp3",
+      "audioSentence": "t1-p024-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-052",
+      "english": "Ceiling",
+      "polish": "Sufit",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-052-word.mp3",
+      "audioSentence": "t1-p024-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-053",
+      "english": "Garbage",
+      "polish": "Śmieci",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-053-word.mp3",
+      "audioSentence": "t1-p024-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-054",
+      "english": "Elevator",
+      "polish": "Winda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-054-word.mp3",
+      "audioSentence": "t1-p024-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-055",
+      "english": "Roommate",
+      "polish": "Współlokator",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-055-word.mp3",
+      "audioSentence": "t1-p024-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-056",
+      "english": "Rent",
+      "polish": "Czynsz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-056-word.mp3",
+      "audioSentence": "t1-p024-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-057",
+      "english": "Family house",
+      "polish": "Dom rodzinny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-057-word.mp3",
+      "audioSentence": "t1-p024-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-058",
+      "english": "Corridor",
+      "polish": "Korytarz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-058-word.mp3",
+      "audioSentence": "t1-p024-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-059",
+      "english": "Dust",
+      "polish": "Kurz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-059-word.mp3",
+      "audioSentence": "t1-p024-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-060",
+      "english": "Monitoring",
+      "polish": "Monitoring",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-060-word.mp3",
+      "audioSentence": "t1-p024-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-061",
+      "english": "Chore",
+      "polish": "Obowiązek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-061-word.mp3",
+      "audioSentence": "t1-p024-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-062",
+      "english": "Heating",
+      "polish": "Ogrzewanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-062-word.mp3",
+      "audioSentence": "t1-p024-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-063",
+      "english": "Lighting",
+      "polish": "Oświetlenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-063-word.mp3",
+      "audioSentence": "t1-p024-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-064",
+      "english": "Move",
+      "polish": "Przeprowadzka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-064-word.mp3",
+      "audioSentence": "t1-p024-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-065",
+      "english": "Bed sheet",
+      "polish": "Prześcieradło",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-065-word.mp3",
+      "audioSentence": "t1-p024-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-066",
+      "english": "Neighborhood",
+      "polish": "Sąsiedztwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-066-word.mp3",
+      "audioSentence": "t1-p024-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-067",
+      "english": "Drawer",
+      "polish": "Szuflada",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-067-word.mp3",
+      "audioSentence": "t1-p024-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-068",
+      "english": "Handle",
+      "polish": "Uchwyt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-068-word.mp3",
+      "audioSentence": "t1-p024-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-069",
+      "english": "Fan",
+      "polish": "Wentylator",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-069-word.mp3",
+      "audioSentence": "t1-p024-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-070",
+      "english": "Hanger",
+      "polish": "Wieszak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-070-word.mp3",
+      "audioSentence": "t1-p024-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-071",
+      "english": "Property",
+      "polish": "Własność",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-071-word.mp3",
+      "audioSentence": "t1-p024-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-072",
+      "english": "Landlord",
+      "polish": "Właściciel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-072-word.mp3",
+      "audioSentence": "t1-p024-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-073",
+      "english": "Lock",
+      "polish": "Zamek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-073-word.mp3",
+      "audioSentence": "t1-p024-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-074",
+      "english": "Lightbulb",
+      "polish": "Żarówka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-074-word.mp3",
+      "audioSentence": "t1-p024-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-075",
+      "english": "Vacuum cleaner",
+      "polish": "Odkurzacz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-075-word.mp3",
+      "audioSentence": "t1-p024-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-076",
+      "english": "Belongings",
+      "polish": "Dobytek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-076-word.mp3",
+      "audioSentence": "t1-p024-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-077",
+      "english": "Housekeeper",
+      "polish": "Gosposia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-077-word.mp3",
+      "audioSentence": "t1-p024-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-078",
+      "english": "Armchair",
+      "polish": "Fotel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-078-word.mp3",
+      "audioSentence": "t1-p024-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-079",
+      "english": "Fireplace",
+      "polish": "Kominek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-079-word.mp3",
+      "audioSentence": "t1-p024-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-080",
+      "english": "Gateway",
+      "polish": "Brama wjazdowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-080-word.mp3",
+      "audioSentence": "t1-p024-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-081",
+      "english": "Intercom",
+      "polish": "Domofon",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-081-word.mp3",
+      "audioSentence": "t1-p024-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-082",
+      "english": "Frame",
+      "polish": "Futryna, rama",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-082-word.mp3",
+      "audioSentence": "t1-p024-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-083",
+      "english": "Heater",
+      "polish": "Grzejnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-083-word.mp3",
+      "audioSentence": "t1-p024-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-084",
+      "english": "Radiator",
+      "polish": "Kaloryfer",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-084-word.mp3",
+      "audioSentence": "t1-p024-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-085",
+      "english": "Door handle",
+      "polish": "Klamka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-085-word.mp3",
+      "audioSentence": "t1-p024-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-086",
+      "english": "Staircase",
+      "polish": "Klatka schodowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-086-word.mp3",
+      "audioSentence": "t1-p024-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-087",
+      "english": "Chimney",
+      "polish": "Komin",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-087-word.mp3",
+      "audioSentence": "t1-p024-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-088",
+      "english": "Chest of drawers",
+      "polish": "Komoda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-088-word.mp3",
+      "audioSentence": "t1-p024-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-089",
+      "english": "Tenant",
+      "polish": "Lokator",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-089-word.mp3",
+      "audioSentence": "t1-p024-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-090",
+      "english": "Soap dish",
+      "polish": "Mydelniczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-090-word.mp3",
+      "audioSentence": "t1-p024-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-091",
+      "english": "Window sill",
+      "polish": "Parapet",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-091-word.mp3",
+      "audioSentence": "t1-p024-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-092",
+      "english": "Driveway",
+      "polish": "Podjazd",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-092-word.mp3",
+      "audioSentence": "t1-p024-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-093",
+      "english": "Possession",
+      "polish": "Posiadanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-093-word.mp3",
+      "audioSentence": "t1-p024-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-094",
+      "english": "Matchbox",
+      "polish": "Pudełko zapałek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-094-word.mp3",
+      "audioSentence": "t1-p024-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-095",
+      "english": "Bookcase",
+      "polish": "Regał na książki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-095-word.mp3",
+      "audioSentence": "t1-p024-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-096",
+      "english": "Rooftop",
+      "polish": "Szczyt dachu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-096-word.mp3",
+      "audioSentence": "t1-p024-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-097",
+      "english": "Washbasin",
+      "polish": "Umywalka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-097-word.mp3",
+      "audioSentence": "t1-p024-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-098",
+      "english": "Vase",
+      "polish": "Wazon",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-098-word.mp3",
+      "audioSentence": "t1-p024-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-099",
+      "english": "Ownership",
+      "polish": "Własność",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-099-word.mp3",
+      "audioSentence": "t1-p024-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-100",
+      "english": "Blind",
+      "polish": "Żaluzja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-100-word.mp3",
+      "audioSentence": "t1-p024-100-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-101",
+      "english": "Utilities",
+      "polish": "Media komunalne",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-101-word.mp3",
+      "audioSentence": "t1-p024-101-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-102",
+      "english": "Groceries",
+      "polish": "Zakupy spożywcze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-102-word.mp3",
+      "audioSentence": "t1-p024-102-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-103",
+      "english": "Parcel",
+      "polish": "Parcela",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-103-word.mp3",
+      "audioSentence": "t1-p024-103-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-104",
+      "english": "Interior",
+      "polish": "Wnętrze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-104-word.mp3",
+      "audioSentence": "t1-p024-104-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-105",
+      "english": "Deposit",
+      "polish": "Kaucja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-105-word.mp3",
+      "audioSentence": "t1-p024-105-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-106",
+      "english": "Cupboard",
+      "polish": "Kredens",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-106-word.mp3",
+      "audioSentence": "t1-p024-106-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-107",
+      "english": "Threshold",
+      "polish": "Próg",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-107-word.mp3",
+      "audioSentence": "t1-p024-107-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-108",
+      "english": "Rack",
+      "polish": "Regał",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-108-word.mp3",
+      "audioSentence": "t1-p024-108-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-109",
+      "english": "Residence",
+      "polish": "Rezydencja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-109-word.mp3",
+      "audioSentence": "t1-p024-109-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-110",
+      "english": "Pantry",
+      "polish": "Spiżarnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-110-word.mp3",
+      "audioSentence": "t1-p024-110-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-111",
+      "english": "Stool",
+      "polish": "Taboret",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-111-word.mp3",
+      "audioSentence": "t1-p024-111-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-112",
+      "english": "Wallpaper",
+      "polish": "Tapeta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-112-word.mp3",
+      "audioSentence": "t1-p024-112-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-113",
+      "english": "Porch",
+      "polish": "Weranda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-113-word.mp3",
+      "audioSentence": "t1-p024-113-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-114",
+      "english": "Peephole",
+      "polish": "Wizjer",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-114-word.mp3",
+      "audioSentence": "t1-p024-114-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-115",
+      "english": "Door mat",
+      "polish": "Wycieraczka do butów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-115-word.mp3",
+      "audioSentence": "t1-p024-115-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-116",
+      "english": "Curtain",
+      "polish": "Zasłona",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-116-word.mp3",
+      "audioSentence": "t1-p024-116-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-117",
+      "english": "Running water",
+      "polish": "Bieżąca woda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-117-word.mp3",
+      "audioSentence": "t1-p024-117-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-118",
+      "english": "Doorbell",
+      "polish": "Dzwonek do drzwi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-118-word.mp3",
+      "audioSentence": "t1-p024-118-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-119",
+      "english": "Walk-in wardrobe",
+      "polish": "Garderoba",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-119-word.mp3",
+      "audioSentence": "t1-p024-119-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-120",
+      "english": "Mold",
+      "polish": "Pleśń",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-120-word.mp3",
+      "audioSentence": "t1-p024-120-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-121",
+      "english": "Loft",
+      "polish": "Poddasze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-121-word.mp3",
+      "audioSentence": "t1-p024-121-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-122",
+      "english": "Candle",
+      "polish": "Świeczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-122-word.mp3",
+      "audioSentence": "t1-p024-122-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-123",
+      "english": "Terrace",
+      "polish": "Taras",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-123-word.mp3",
+      "audioSentence": "t1-p024-123-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-124",
+      "english": "Roof tile",
+      "polish": "Dachówka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-124-word.mp3",
+      "audioSentence": "t1-p024-124-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-125",
+      "english": "Toilet seat",
+      "polish": "Deska klozetowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-125-word.mp3",
+      "audioSentence": "t1-p024-125-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-126",
+      "english": "Toilet bowl",
+      "polish": "Muszla klozetowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-126-word.mp3",
+      "audioSentence": "t1-p024-126-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-127",
+      "english": "Lightning rod",
+      "polish": "Piorunochron",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-127-word.mp3",
+      "audioSentence": "t1-p024-127-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-128",
+      "english": "Utility room",
+      "polish": "Pomieszczenie gospodarcze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-128-word.mp3",
+      "audioSentence": "t1-p024-128-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-129",
+      "english": "Banister",
+      "polish": "Poręcz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-129-word.mp3",
+      "audioSentence": "t1-p024-129-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-130",
+      "english": "Mantelpiece",
+      "polish": "Półka nad kominkiem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-130-word.mp3",
+      "audioSentence": "t1-p024-130-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-131",
+      "english": "Drainpipe",
+      "polish": "Rynna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-131-word.mp3",
+      "audioSentence": "t1-p024-131-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-132",
+      "english": "Pillar",
+      "polish": "Słup",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-132-word.mp3",
+      "audioSentence": "t1-p024-132-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-133",
+      "english": "Wainscot",
+      "polish": "Boazeria",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-133-word.mp3",
+      "audioSentence": "t1-p024-133-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-134",
+      "english": "Bunk beds",
+      "polish": "Łóżko piętrowe",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-134-word.mp3",
+      "audioSentence": "t1-p024-134-sentence.mp3"
+    },
+    {
+      "id": "t1-p024-135",
+      "english": "Doorbell",
+      "polish": "Dzwonek do drzwi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p024-135-word.mp3",
+      "audioSentence": "t1-p024-135-sentence.mp3"
+    }
+  ]
+}
