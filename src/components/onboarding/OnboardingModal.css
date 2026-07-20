@@ -27,9 +27,11 @@
   background: var(--bg-surface);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-2xl);
-  max-width: 520px;
-  width: 90%;
+  padding: var(--spacing-lg);
+  max-width: 420px;
+  width: 85%;
+  max-height: 90vh;
+  overflow-y: auto;
   z-index: 510;
   animation: slideUp 300ms ease-out forwards;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
@@ -141,24 +143,24 @@
   letter-spacing: 0.3px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .onboarding-modal {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     max-width: none;
-    width: 92%;
+    width: 88%;
   }
 
   .onboarding-modal__title {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .onboarding-modal__subtitle {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .onboarding-modal__btn {
-    padding: 11px var(--spacing-md);
-    font-size: 14px;
+    padding: 10px var(--spacing-md);
+    font-size: 13px;
   }
 
   .onboarding-modal__hint {
