@@ -1,10 +1,12 @@
 .onboarding-card {
-  margin: 0 var(--spacing-md) var(--spacing-md);
-  padding: var(--spacing-md);
+  margin: 0 auto var(--spacing-md);
+  padding: var(--spacing-lg);
+  max-width: 600px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-accent);
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(139, 92, 246, 0.04) 100%);
   animation: slideDown 400ms ease-out forwards;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 @keyframes slideDown {
@@ -33,10 +35,11 @@
 
 .onboarding-card__title {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   margin: 0;
   color: var(--accent);
+  flex: 1;
 }
 
 .onboarding-card__close {
@@ -61,31 +64,33 @@
 
 .onboarding-card__text {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-secondary);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
+  word-wrap: break-word;
 }
 
 .onboarding-card__actions {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
-  margin-top: var(--spacing-xs);
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
 }
 
 .onboarding-card__btn {
-  padding: 8px var(--spacing-md);
+  padding: 10px var(--spacing-md);
   border-radius: var(--radius-sm);
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   background: var(--accent);
   color: white;
   border: none;
   cursor: pointer;
   transition: all var(--transition-fast);
-  box-shadow: 0 0 8px var(--accent-glow);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+  width: fit-content;
 }
 
 .onboarding-card__btn:hover {
@@ -97,12 +102,13 @@
   border: none;
   background: none;
   font-family: var(--font-heading);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--accent);
   cursor: pointer;
   transition: color var(--transition-fast);
   text-align: left;
+  width: fit-content;
 }
 
 .onboarding-card__link:hover {
@@ -186,4 +192,29 @@
 .onboarding-card__audio {
   width: 100%;
   margin-top: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .onboarding-card {
+    margin: 0 var(--spacing-md) var(--spacing-md);
+    padding: var(--spacing-md);
+    max-width: none;
+  }
+
+  .onboarding-card__title {
+    font-size: 15px;
+  }
+
+  .onboarding-card__text {
+    font-size: 13px;
+  }
+
+  .onboarding-card__btn {
+    font-size: 12px;
+    padding: 9px var(--spacing-md);
+  }
+
+  .onboarding-card__link {
+    font-size: 11px;
+  }
 }
