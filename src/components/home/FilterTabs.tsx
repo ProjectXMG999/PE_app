@@ -35,7 +35,7 @@ const LEVELS = [
   {
     level: 4,
     name: 'World-Class English',
-    description: 'Znasz około 10 000 słów. To jest poziom, na którym nie tylko się komunikujesz. Ty brzmisz dobrze. Mówisz precyzyjnie, lekko, ciekawie i z klasą. Możesz prowadzić głębsze rozmowy.',
+    description: 'Znasz około 10 000 słów. To jest poziom, na którym nie tylko się komunikujesz. Ty brzmisz dobrze. Mówisz precyzyjnie, lekko, ciekawie i z klasą. Możesz prowadzić głębsze rozmowy, budować relacje, robić biznes, występować, pisać, uczyć się z anglojęzycznego świata i naprawdę czuć się obywatelem świata. To jest angielski, przy którym ludzie pytają: „gdzie Ty się tak nauczyłeś mówić?"',
   },
 ]
 
