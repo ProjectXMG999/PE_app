@@ -16,10 +16,10 @@ const NAV_ITEMS = [
     path: '/trening',
     label: 'Trening',
     icon: (active: boolean) => (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M14 4h7v7"/>
-        <path d="M21 11l-9-9"/>
-        <polyline points="3 21 12 12 21 3" strokeLinejoin="round" strokeLinecap="round"/>
+      <svg width="22" height="22" viewBox="0 0 24 24" fill={active ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+        <circle cx="12" cy="9" r="1.5" fill={active ? 'currentColor' : 'none'} stroke="currentColor"/>
       </svg>
     ),
   },
