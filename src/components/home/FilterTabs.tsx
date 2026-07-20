@@ -39,9 +39,27 @@ const LEVELS = [
   },
 ]
 
-// Derive unique categories in order of first appearance
-const CATEGORIES: string[] = Array.from(
-  new Set(allPacks.map(p => p.category))
+// Fixed category order
+const CATEGORY_ORDER = [
+  'Czasowniki',
+  'Przymiotniki',
+  'Rzeczowniki',
+  'Liczby',
+  'Maleństwa',
+  'Zaimki',
+  'Phrasale',
+  'Przysłówki',
+  'Spójniki',
+  'Slang',
+  'Piękne skróty',
+  'Wulgaryzmy',
+  'Klony',
+]
+
+// Derive unique categories in specified order
+const allCategories = Array.from(new Set(allPacks.map(p => p.category)))
+const CATEGORIES: string[] = CATEGORY_ORDER.filter(cat => allCategories.includes(cat)).concat(
+  allCategories.filter(cat => !CATEGORY_ORDER.includes(cat))
 )
 
 export function FilterTabs() {
