@@ -92,7 +92,7 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
         </div>
         <div className="packcard__info">
           <h3 className="packcard__name">{pack.name}</h3>
-          <span className="packcard__meta">{pack.volume} · {pack.category}</span>
+          <span className="packcard__meta">{pack.category}</span>
         </div>
         <div className="packcard__right">
           {statusLabel && (
