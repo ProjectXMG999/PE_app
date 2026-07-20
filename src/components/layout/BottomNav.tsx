@@ -13,8 +13,19 @@ const NAV_ITEMS = [
     ),
   },
   {
-    path: '/statystyki',
-    label: 'Statystyki',
+    path: '/trening',
+    label: 'Trening',
+    icon: (active: boolean) => (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M14 4h7v7"/>
+        <path d="M21 11l-9-9"/>
+        <polyline points="3 21 12 12 21 3" strokeLinejoin="round" strokeLinecap="round"/>
+      </svg>
+    ),
+  },
+  {
+    path: '/postęp',
+    label: 'Postęp',
     icon: (active: boolean) => (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" strokeLinejoin="round" strokeLinecap="round"/>

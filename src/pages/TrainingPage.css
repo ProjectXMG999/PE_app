@@ -1,0 +1,133 @@
+.training-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 80px;
+  background: var(--color-bg-primary);
+}
+
+.training-header {
+  padding: 20px 16px 24px;
+  text-align: center;
+}
+
+.training-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--color-text-primary);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.training-header p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  padding: 0 16px;
+  flex: 1;
+}
+
+@media (min-width: 600px) {
+  .training-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.training-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: var(--color-bg-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.training-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+@media (hover: hover) {
+  .training-card:hover {
+    background: var(--color-bg-tertiary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.training-card__icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.training-card__content {
+  width: 100%;
+}
+
+.training-card__title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--color-text-primary);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.training-card__subtitle {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  margin: 0 0 8px;
+  font-style: italic;
+}
+
+.training-card__description {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.training-card__footer {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.training-card__duration {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+[data-theme="dark"] {
+  --color-bg-primary: #0a0e27;
+  --color-bg-secondary: #16213e;
+  --color-bg-tertiary: #1f3860;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b0b8c1;
+  --color-text-tertiary: #808b96;
+}
+
+[data-theme="light"] {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f5f7fa;
+  --color-bg-tertiary: #eef0f5;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #666666;
+  --color-text-tertiary: #999999;
+}

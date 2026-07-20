@@ -10,6 +10,7 @@ import './App.css'
 
 const FlashcardPage = lazy(() => import('./pages/FlashcardPage').then(m => ({ default: m.FlashcardPage })))
 const StatsPage = lazy(() => import('./pages/StatsPage').then(m => ({ default: m.StatsPage })))
+const TrainingPage = lazy(() => import('./pages/TrainingPage').then(m => ({ default: m.TrainingPage })))
 const PackPreviewPage = lazy(() => import('./pages/PackPreviewPage').then(m => ({ default: m.PackPreviewPage })))
 const AutoplayModePage = lazy(() => import('./pages/AutoplayModePage').then(m => ({ default: m.AutoplayModePage })))
 const FlashcardModePage = lazy(() => import('./pages/FlashcardModePage').then(m => ({ default: m.FlashcardModePage })))
@@ -79,7 +80,8 @@ export function App() {
           <Route path="/pakiet/:packageId/word-flash" element={<WordFlashPage />} />
           <Route path="/pakiet/:packageId/active-sentence" element={<ActiveSentencePage />} />
           <Route path="/pakiet/:packageId/:mode" element={<FlashcardPage key={location.pathname} />} />
-          <Route path="/statystyki" element={<StatsPage />} />
+          <Route path="/trening" element={<TrainingPage />} />
+          <Route path="/postęp" element={<StatsPage />} />
           <Route path="/ustawienia" element={<SettingsPage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
