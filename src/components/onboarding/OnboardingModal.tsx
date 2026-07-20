@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import './OnboardingModal.css'
 
 const ONBOARDING_SEEN_KEY = 'lp_onboarding_seen'
@@ -26,7 +27,7 @@ export function OnboardingModal() {
 
   if (!isOpen) return null
 
-  return (
+  return createPortal(
     <>
       <div className="onboarding-modal__overlay" onClick={handleClose} />
       <div className="onboarding-modal">
@@ -83,6 +84,7 @@ export function OnboardingModal() {
           </div>
         </div>
       )}
-    </>
+    </>,
+    document.body
   )
 }
