@@ -170,24 +170,16 @@
   margin-top: 0;
 }
 
-.training-detail__h2 {
+.training-detail__h3 {
   font-family: var(--font-heading);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   margin: var(--spacing-lg) 0 var(--spacing-md);
   color: var(--accent);
 }
 
-.training-detail__h2:first-child {
+.training-detail__h3:first-of-type {
   margin-top: 0;
-}
-
-.training-detail__h3 {
-  font-family: var(--font-heading);
-  font-size: 16px;
-  font-weight: 700;
-  margin: var(--spacing-md) 0 var(--spacing-sm);
-  color: var(--text-primary);
 }
 
 .training-detail__p {
