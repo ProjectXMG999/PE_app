@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { PackMeta } from '../../types/vocabulary'
 import { PackageProgress } from '../../types/progress'
@@ -58,8 +59,22 @@ const STATUS_META: Record<PackStatus, { label: string; className: string }> = {
   mastered:  { label: '★ Opanowana',   className: 'packcard--mastered' },
 }
 
+const MODE_INFO = {
+  sluchaj: 'Tryb audio do osłuchania, powtórki i nauki w tle. Uczysz się słów bez patrzenia w ekran. Idealne w aucie, na spacerze, na siłowni, w poczekalni albo w metrze.',
+  aktywuj: 'Tryb głębokiego treningu słowa. Przypominasz sobie znaczenie, mówisz na głos i budujesz własne frazy lub zdania. Tutaj słowo przestaje być tylko znane — zaczynasz czuć, że potrafisz go użyć w prawdziwej rozmowie.',
+}
+
+const INFO_ICON = (
+  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+    <circle cx="12" cy="12" r="10"/>
+    <line x1="12" y1="8" x2="12" y2="8" strokeWidth="3" strokeLinecap="round"/>
+    <line x1="12" y1="12" x2="12" y2="16"/>
+  </svg>
+)
+
 export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
   const navigate = useNavigate()
+  const [activeInfo, setActiveInfo] = useState<'sluchaj' | 'aktywuj' | null>(null)
   const icon = CATEGORY_ICONS[pack.category] ?? CATEGORY_ICONS.default
   const color = CATEGORY_COLORS[pack.category] ?? CATEGORY_COLORS.default
   const heardPct = progress ? Math.min((progress.currentIndex / pack.wordCount) * 100, 100) : 0
@@ -127,19 +142,46 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
         </div>
       )}
 
+      {activeInfo && (
+        <div className="packcard__mode-info">
+          <span className="packcard__mode-info-icon">{activeInfo === 'sluchaj' ? '🎧' : '⚡'}</span>
+          <div>
+            <p className="packcard__mode-info-title">{activeInfo === 'sluchaj' ? 'Słuchaj' : 'Aktywuj'}</p>
+            <p className="packcard__mode-info-desc">{MODE_INFO[activeInfo]}</p>
+          </div>
+        </div>
+      )}
       <div className="packcard__actions">
-        <button
-          className="packcard__btn packcard__btn--autoplay"
-          onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/start`) }}
-        >
-          <span>🎧</span> Słuchaj
-        </button>
-        <button
-          className="packcard__btn packcard__btn--fiszki"
-          onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/fiszki-start`) }}
-        >
-          <span>⚡</span> Aktywuj
-        </button>
+        <div className="packcard__btn-wrap">
+          <button
+            className="packcard__btn packcard__btn--autoplay"
+            onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/start`) }}
+          >
+            <span>🎧</span> Słuchaj
+          </button>
+          <button
+            className={`packcard__info-btn${activeInfo === 'sluchaj' ? ' packcard__info-btn--active' : ''}`}
+            onClick={(e) => { e.stopPropagation(); setActiveInfo(v => v === 'sluchaj' ? null : 'sluchaj') }}
+            aria-label="Informacje o trybie Słuchaj"
+          >
+            {INFO_ICON}
+          </button>
+        </div>
+        <div className="packcard__btn-wrap">
+          <button
+            className="packcard__btn packcard__btn--fiszki"
+            onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/fiszki-start`) }}
+          >
+            <span>⚡</span> Aktywuj
+          </button>
+          <button
+            className={`packcard__info-btn packcard__info-btn--dark${activeInfo === 'aktywuj' ? ' packcard__info-btn--active' : ''}`}
+            onClick={(e) => { e.stopPropagation(); setActiveInfo(v => v === 'aktywuj' ? null : 'aktywuj') }}
+            aria-label="Informacje o trybie Aktywuj"
+          >
+            {INFO_ICON}
+          </button>
+        </div>
       </div>
     </div>
   )

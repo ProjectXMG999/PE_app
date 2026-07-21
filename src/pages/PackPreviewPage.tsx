@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Pack, PackMeta } from '../types/vocabulary'
 import { PackageProgress } from '../types/progress'
@@ -10,6 +10,19 @@ const allPacks = packagesIndex as PackMeta[]
 
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString('pl-PL', { day: 'numeric', month: 'short', year: 'numeric' })
+}
+
+const MODE_INFO = {
+  sluchaj: {
+    title: 'Słuchaj',
+    icon: '🎧',
+    desc: 'Tryb audio do osłuchania, powtórki i nauki w tle. Uczysz się słów bez patrzenia w ekran. Idealne w aucie, na spacerze, na siłowni, w poczekalni albo w metrze.',
+  },
+  aktywuj: {
+    title: 'Aktywuj',
+    icon: '⚡',
+    desc: 'Tryb głębokiego treningu słowa. Przypominasz sobie znaczenie, mówisz na głos i budujesz własne frazy lub zdania. Tutaj słowo przestaje być tylko znane — zaczynasz czuć, że potrafisz go użyć w prawdziwej rozmowie.',
+  },
 }
 
 /** Strip trailing number (and surrounding space) from pack name to get base series name */
@@ -24,6 +37,19 @@ export function PackPreviewPage() {
   const [progress, setProgress] = useState<PackageProgress | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [activeInfo, setActiveInfo] = useState<'sluchaj' | 'aktywuj' | null>(null)
+  const infoRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!activeInfo) return
+    function handleClick(e: MouseEvent) {
+      if (infoRef.current && !infoRef.current.contains(e.target as Node)) {
+        setActiveInfo(null)
+      }
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [activeInfo])
 
   useEffect(() => {
     if (!packageId) return
@@ -152,19 +178,52 @@ export function PackPreviewPage() {
       </main>
 
       {/* Sticky bottom action bar */}
-      <div className="packpreview__actions">
-        <button
-          className="packpreview__btn packpreview__btn--fiszki"
-          onClick={() => navigate(`/pakiet/${packageId}/fiszki-start`)}
-        >
-          <span>⚡</span> Aktywuj
-        </button>
-        <button
-          className="packpreview__btn packpreview__btn--autoplay"
-          onClick={() => navigate(`/pakiet/${packageId}/start`)}
-        >
-          <span>🎧</span> Słuchaj
-        </button>
+      <div className="packpreview__actions" ref={infoRef}>
+        {activeInfo && (
+          <div className="packpreview__mode-info">
+            <span className="packpreview__mode-info-icon">{MODE_INFO[activeInfo].icon}</span>
+            <div>
+              <p className="packpreview__mode-info-title">{MODE_INFO[activeInfo].title}</p>
+              <p className="packpreview__mode-info-desc">{MODE_INFO[activeInfo].desc}</p>
+            </div>
+          </div>
+        )}
+        <div className="packpreview__btns">
+          <div className="packpreview__btn-wrap">
+            <button
+              className="packpreview__btn packpreview__btn--fiszki"
+              onClick={() => navigate(`/pakiet/${packageId}/fiszki-start`)}
+            >
+              <span>⚡</span> Aktywuj
+            </button>
+            <button
+              className={`packpreview__info-btn${activeInfo === 'aktywuj' ? ' packpreview__info-btn--active' : ''}`}
+              onClick={e => { e.stopPropagation(); setActiveInfo(v => v === 'aktywuj' ? null : 'aktywuj') }}
+              aria-label="Informacje o trybie Aktywuj"
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" strokeWidth="3" strokeLinecap="round"/><line x1="12" y1="12" x2="12" y2="16"/>
+              </svg>
+            </button>
+          </div>
+          <div className="packpreview__btn-wrap">
+            <button
+              className="packpreview__btn packpreview__btn--autoplay"
+              onClick={() => navigate(`/pakiet/${packageId}/start`)}
+            >
+              <span>🎧</span> Słuchaj
+            </button>
+            <button
+              className={`packpreview__info-btn packpreview__info-btn--light${activeInfo === 'sluchaj' ? ' packpreview__info-btn--active' : ''}`}
+              onClick={e => { e.stopPropagation(); setActiveInfo(v => v === 'sluchaj' ? null : 'sluchaj') }}
+              aria-label="Informacje o trybie Słuchaj"
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" strokeWidth="3" strokeLinecap="round"/><line x1="12" y1="12" x2="12" y2="16"/>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   )
