@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Pack, PackMeta } from '../types/vocabulary'
 import { PackageProgress } from '../types/progress'
 import { getPackageProgress } from '../services/db'
+import { useStats } from '../hooks/useStats'
 import packagesIndex from '../data/packages-index.json'
 import './PackPreviewPage.css'
 
@@ -39,6 +40,7 @@ export function PackPreviewPage() {
   const [error, setError] = useState<string | null>(null)
   const [activeInfo, setActiveInfo] = useState<'sluchaj' | 'aktywuj' | null>(null)
   const infoRef = useRef<HTMLDivElement>(null)
+  const { levelStats } = useStats()
 
   useEffect(() => {
     if (!activeInfo) return
@@ -152,6 +154,31 @@ export function PackPreviewPage() {
             </li>
           ))}
         </ul>
+
+        {/* Progress stats */}
+        {levelStats && (
+          <div className="packpreview__stats">
+            <div className="packpreview__stat">
+              <span className="packpreview__stat-value">{levelStats.avgWordsPerDay}</span>
+              <span className="packpreview__stat-label">słów / dzień</span>
+              <span className="packpreview__stat-sub">średnie tempo</span>
+            </div>
+            <div className="packpreview__stat-divider" />
+            {levelStats.nextLevel ? (
+              <div className="packpreview__stat">
+                <span className="packpreview__stat-value">{levelStats.daysToNextLevel ?? '—'}</span>
+                <span className="packpreview__stat-label">dni do L{levelStats.nextLevel}</span>
+                <span className="packpreview__stat-sub">przy tym tempie</span>
+              </div>
+            ) : (
+              <div className="packpreview__stat">
+                <span className="packpreview__stat-value packpreview__stat-value--max">MAX</span>
+                <span className="packpreview__stat-label">poziom</span>
+                <span className="packpreview__stat-sub">osiągnięty</span>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Series navigation */}
         {seriesPacks.length > 0 && (
