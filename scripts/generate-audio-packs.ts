@@ -99,6 +99,10 @@ async function generateSpeech(text: string, voiceId: string, outputPath: string,
   }
 }
 
+function withPeriod(text: string): string {
+  return /[.!?;]$/.test(text.trim()) ? text : text.trim() + '.'
+}
+
 function createLimiter(concurrency: number) {
   let running = 0
   const queue: (() => void)[] = []
@@ -138,7 +142,7 @@ async function main() {
       total++
       tasks.push(limit(async () => {
         try {
-          await generateSpeech(word.english, enVoice.id, path.join(packOutDir, word.audioWord), 0.75)
+          await generateSpeech(withPeriod(word.english), enVoice.id, path.join(packOutDir, word.audioWord), 0.75)
           done++
           process.stdout.write(`\r[${done}/${total}] EN word: ${word.english.slice(0,20).padEnd(20)} (${enVoice.name} ${enVoice.accent})`)
         } catch (e) { errors++; console.error(`\nFailed EN word: "${word.english}" – ${(e as Error).message}`) }
@@ -161,7 +165,7 @@ async function main() {
       total++
       tasks.push(limit(async () => {
         try {
-          await generateSpeech(word.polish, plVoice.id, path.join(packOutDir, plFile))
+          await generateSpeech(withPeriod(word.polish), plVoice.id, path.join(packOutDir, plFile))
           done++
           process.stdout.write(`\r[${done}/${total}] PL word: ${word.polish.slice(0,20).padEnd(20)} (${plVoice.name})`)
         } catch (e) { errors++; console.error(`\nFailed PL word: "${word.polish}" – ${(e as Error).message}`) }
