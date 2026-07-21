@@ -15,22 +15,22 @@ const MODES: { id: AutoplayMode; icon: string; name: string; sequence: string; d
     id: 'fast',
     icon: '⚡',
     name: 'Szybko',
-    sequence: 'PL słowo → EN słowo',
-    desc: 'Szybkie rozpoznanie i powtórka',
+    sequence: 'PL → EN',
+    desc: 'Błyskawiczna powtórka słów. Idealne na rozgrzewkę, utrwalenie i szybkie sprawdzenie pamięci.',
   },
   {
     id: 'standard',
     icon: '★',
     name: 'Standard',
-    sequence: 'PL słowo → EN słowo ×2 → PL zdanie → EN zdanie',
-    desc: 'Główny tryb nauki — pełna sekwencja',
+    sequence: 'Słowo + zdanie',
+    desc: 'Główny tryb nauki. Słyszysz słowo, tłumaczenie i przykład w zdaniu, żeby od razu poczuć kontekst.',
   },
   {
     id: 'speaking',
     icon: '🎙',
     name: 'Speaking',
-    sequence: 'PL słowo → [pauza] → EN słowo → [pauza] → zdania',
-    desc: 'Dłuższe pauzy do ćwiczenia mówienia na głos',
+    sequence: 'PL słowo → pauza → EN słowo → pauza → zdania',
+    desc: 'Tryb z dłuższymi pauzami. Powtarzasz na głos, zanim usłyszysz odpowiedź. Najbliżej prawdziwego mówienia.',
   },
 ]
 
