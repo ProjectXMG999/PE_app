@@ -17,7 +17,7 @@
 
 .onboarding-modal {
   position: fixed;
-  top: 50%;
+  top: calc(50% - var(--bottomnav-height) / 2);
   left: 16px;
   right: 16px;
   transform: translateY(-50%);
@@ -39,7 +39,7 @@
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(calc(-50% + 20px));
+    transform: translateY(calc(-50% + 16px));
   }
   to {
     opacity: 1;
