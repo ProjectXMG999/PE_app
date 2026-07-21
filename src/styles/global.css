@@ -37,7 +37,7 @@ body {
   color: var(--text-primary);
   min-height: 100dvh;
   min-height: -webkit-fill-available;
-  overflow-x: hidden;
+  overflow-x: clip;
   transition: background-color var(--transition-med), color var(--transition-med);
   -webkit-font-smoothing: antialiased;
 }
