@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Pack, PackMeta } from '../types/vocabulary'
 import { PackageProgress } from '../types/progress'
 import { getPackageProgress } from '../services/db'
+import { getAudioUrl } from '../services/audioService'
 import packagesIndex from '../data/packages-index.json'
 import './PackPreviewPage.css'
 
@@ -149,6 +150,19 @@ export function PackPreviewPage() {
               <span className="packpreview__polish">{word.polish}</span>
               <span className="packpreview__sep" aria-hidden="true">–</span>
               <span className="packpreview__english">{word.english}</span>
+              <button
+                className="packpreview__audio-btn"
+                aria-label={`Wymowa: ${word.english}`}
+                onClick={e => {
+                  e.stopPropagation()
+                  const audio = new Audio(getAudioUrl(pack.id, word.audioWord))
+                  audio.play().catch(() => {})
+                }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                </svg>
+              </button>
             </li>
           ))}
         </ul>

@@ -171,7 +171,32 @@
   font-size: 14px;
   color: var(--accent-bright);
   font-family: var(--font-body);
-  text-align: right;
+  text-align: left;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.packpreview__audio-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s, background 0.15s;
+}
+
+.packpreview__audio-btn:active {
+  color: var(--accent-bright);
+  background: var(--bg-elevated);
 }
 
 /* Series section */
