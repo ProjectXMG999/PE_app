@@ -1,7 +1,7 @@
 import './StatCard.css'
 
 interface Props {
-  value: number | string
+  value: number | string | null
   label: string
   icon?: string
   color?: string
@@ -12,7 +12,7 @@ export function StatCard({ value, label, icon, color = 'var(--accent)', unit }: 
   return (
     <div className="statcard">
       <div className="statcard__value" style={{ color }}>
-        {value}
+        {value ?? '—'}
         {icon && <span className="statcard__icon">{icon}</span>}
       </div>
       <div className="statcard__label">{label}</div>

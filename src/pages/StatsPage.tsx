@@ -31,7 +31,7 @@ export function StatsPage() {
         {levelStats && (
           <div className="statspage__grid">
             <StatCard value={levelStats.avgWordsPerDay} label="Średnio dziennie" unit="słów/dzień" />
-            {levelStats.nextLevel && levelStats.daysToNextLevel !== null && (
+            {levelStats.nextLevel && (
               <StatCard value={levelStats.daysToNextLevel} label={`Do poziomu ${levelStats.nextLevel}`} unit="dni przy tym tempie" />
             )}
           </div>

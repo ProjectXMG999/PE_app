@@ -70,8 +70,10 @@ export function useStats() {
           : 0
 
         const nextLevelThreshold = LEVEL_THRESHOLDS.find(t => t.words > kw)
-        const daysToNextLevel = nextLevelThreshold && avgWordsPerDay > 0
-          ? Math.ceil((nextLevelThreshold.words - kw) / avgWordsPerDay)
+        const daysToNextLevel = nextLevelThreshold
+          ? (avgWordsPerDay > 0
+              ? Math.ceil((nextLevelThreshold.words - kw) / avgWordsPerDay)
+              : 0)  // Show 0 if no progress yet
           : null
 
         setLevelStats({
