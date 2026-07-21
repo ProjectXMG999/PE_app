@@ -92,7 +92,7 @@ export function FilterTabs() {
 
       {/* Level description */}
       {selectedLevelData && (
-        <div className="filtertabs__level-description">
+        <div className="filtertabs__level-description" data-level={selectedLevelData.level}>
           <div className="filtertabs__level-description__header">
             <h3 className="filtertabs__level-description__name">{selectedLevelData.name}</h3>
           </div>
