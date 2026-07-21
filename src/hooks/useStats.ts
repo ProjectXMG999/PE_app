@@ -58,26 +58,28 @@ export function useStats() {
         setActivity(days)
 
         // Calculate level stats
-        if (sessions.length > 0) {
-          const firstSession = sessions[sessions.length - 1]
-          const lastSession = sessions[0]
-          const startDate = new Date(firstSession.date)
-          const endDate = new Date(lastSession.date)
-          const daysElapsed = Math.max(1, Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1)
-          const avgWordsPerDay = Math.round(kw / daysElapsed)
+        const avgWordsPerDay = sessions.length > 0
+          ? (() => {
+              const firstSession = sessions[sessions.length - 1]
+              const lastSession = sessions[0]
+              const startDate = new Date(firstSession.date)
+              const endDate = new Date(lastSession.date)
+              const daysElapsed = Math.max(1, Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1)
+              return Math.round(kw / daysElapsed)
+            })()
+          : 0
 
-          const nextLevelThreshold = LEVEL_THRESHOLDS.find(t => t.words > kw)
-          const daysToNextLevel = nextLevelThreshold
-            ? Math.ceil((nextLevelThreshold.words - kw) / Math.max(1, avgWordsPerDay))
-            : null
+        const nextLevelThreshold = LEVEL_THRESHOLDS.find(t => t.words > kw)
+        const daysToNextLevel = nextLevelThreshold && avgWordsPerDay > 0
+          ? Math.ceil((nextLevelThreshold.words - kw) / avgWordsPerDay)
+          : null
 
-          setLevelStats({
-            avgWordsPerDay,
-            nextLevel: nextLevelThreshold?.level ?? null,
-            nextLevelWords: nextLevelThreshold?.words ?? null,
-            daysToNextLevel,
-          })
-        }
+        setLevelStats({
+          avgWordsPerDay,
+          nextLevel: nextLevelThreshold?.level ?? null,
+          nextLevelWords: nextLevelThreshold?.words ?? null,
+          daysToNextLevel,
+        })
       } finally {
         setLoading(false)
       }
