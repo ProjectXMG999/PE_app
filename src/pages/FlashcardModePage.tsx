@@ -11,7 +11,7 @@ type FlashcardMode = 'word-flash' | 'active-sentence'
 const MODES: { id: FlashcardMode; icon: string; name: string; tag: string; desc: string }[] = [
   {
     id: 'word-flash',
-    icon: '⚡',
+    icon: '📝',
     name: 'Word Flash',
     tag: 'Szybki przegląd słów',
     desc: 'Widzisz polskie słowo, próbujesz przypomnieć sobie angielski odpowiednik i dopiero potem odsłaniasz odpowiedź. Szybka rozgrzewka dla pamięci.',
