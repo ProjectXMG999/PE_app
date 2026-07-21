@@ -1,9 +1,30 @@
 import { useNavigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { getAllPackageProgress, getPackageWordProgress } from '../../services/db'
 import './QuickStartCards.css'
 import packagesIndex from '../../data/packages-index.json'
 import { PackMeta } from '../../types/vocabulary'
+
+const MODE_INFO = {
+  sluchaj: {
+    icon: '🎧',
+    title: 'Słuchaj',
+    desc: 'Tryb audio do osłuchania, powtórki i nauki w tle. Uczysz się słów bez patrzenia w ekran. Idealne w aucie, na spacerze, na siłowni, w poczekalni albo w metrze.',
+  },
+  aktywuj: {
+    icon: '⚡',
+    title: 'Aktywuj',
+    desc: 'Tryb głębokiego treningu słowa. Przypominasz sobie znaczenie, mówisz na głos i budujesz własne frazy lub zdania. Tutaj słowo przestaje być tylko znane — zaczynasz czuć, że potrafisz go użyć w prawdziwej rozmowie.',
+  },
+}
+
+const INFO_SVG = (
+  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+    <circle cx="12" cy="12" r="10"/>
+    <line x1="12" y1="8" x2="12" y2="8" strokeWidth="3" strokeLinecap="round"/>
+    <line x1="12" y1="12" x2="12" y2="16"/>
+  </svg>
+)
 
 const packs = packagesIndex as PackMeta[]
 
@@ -17,6 +38,19 @@ export function QuickStartCards() {
   const [autoplayCard, setAutoplayCard] = useState<QuickCard | null>(null)
   const [fiszkiCard, setFiszkiCard] = useState<QuickCard | null>(null)
   const [loaded, setLoaded] = useState(false)
+  const [activeInfo, setActiveInfo] = useState<'sluchaj' | 'aktywuj' | null>(null)
+  const wrapRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!activeInfo) return
+    function handleClick(e: MouseEvent) {
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
+        setActiveInfo(null)
+      }
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [activeInfo])
 
   useEffect(() => {
     let cancelled = false
@@ -77,34 +111,62 @@ export function QuickStartCards() {
   }
 
   return (
-    <div className="quickstart">
-      <button
-        className="quickstart__card quickstart__card--autoplay"
-        onClick={() => navigate(`/pakiet/${autoplayCard!.pack.id}/start`)}
-      >
-        <div className="quickstart__card-top">
-          <span className="quickstart__label">SŁUCHAJ</span>
-          <span className="quickstart__icon">🎧</span>
-        </div>
-        <span className="quickstart__title">{autoplayCard!.pack.name}</span>
-        <span className="quickstart__sub--main">Kontynuuj kurs</span>
-        <span className="quickstart__sub">
-          od słowa {autoplayCard!.startIndex + 1} / {autoplayCard!.pack.wordCount}
-        </span>
-      </button>
+    <div className="quickstart" ref={wrapRef}>
+      <div className="quickstart__wrap">
+        <button
+          className="quickstart__card quickstart__card--autoplay"
+          onClick={() => navigate(`/pakiet/${autoplayCard!.pack.id}/start`)}
+        >
+          <div className="quickstart__card-top">
+            <span className="quickstart__label">SŁUCHAJ</span>
+            <span className="quickstart__icon">🎧</span>
+          </div>
+          <span className="quickstart__title">{autoplayCard!.pack.name}</span>
+          <span className="quickstart__sub--main">Kontynuuj kurs</span>
+          <span className="quickstart__sub">
+            od słowa {autoplayCard!.startIndex + 1} / {autoplayCard!.pack.wordCount}
+          </span>
+        </button>
+        <button
+          className={`quickstart__info-btn${activeInfo === 'sluchaj' ? ' quickstart__info-btn--active' : ''}`}
+          onClick={e => { e.stopPropagation(); setActiveInfo(v => v === 'sluchaj' ? null : 'sluchaj') }}
+          aria-label="Informacje o trybie Słuchaj"
+        >
+          {INFO_SVG}
+        </button>
+      </div>
 
-      <button
-        className="quickstart__card quickstart__card--fiszki"
-        onClick={() => navigate(`/pakiet/${fiszkiCard!.pack.id}/fiszki-start`)}
-      >
-        <div className="quickstart__card-top">
-          <span className="quickstart__label">AKTYWUJ</span>
-          <span className="quickstart__icon">⚡</span>
+      <div className="quickstart__wrap">
+        <button
+          className="quickstart__card quickstart__card--fiszki"
+          onClick={() => navigate(`/pakiet/${fiszkiCard!.pack.id}/fiszki-start`)}
+        >
+          <div className="quickstart__card-top">
+            <span className="quickstart__label">AKTYWUJ</span>
+            <span className="quickstart__icon">⚡</span>
+          </div>
+          <span className="quickstart__title">{fiszkiCard!.pack.name}</span>
+          <span className="quickstart__sub--main">Ucz się głęboko</span>
+          <span className="quickstart__sub">{fiszkiCard!.pack.wordCount} słów do nauki</span>
+        </button>
+        <button
+          className={`quickstart__info-btn${activeInfo === 'aktywuj' ? ' quickstart__info-btn--active' : ''}`}
+          onClick={e => { e.stopPropagation(); setActiveInfo(v => v === 'aktywuj' ? null : 'aktywuj') }}
+          aria-label="Informacje o trybie Aktywuj"
+        >
+          {INFO_SVG}
+        </button>
+      </div>
+
+      {activeInfo && (
+        <div className="quickstart__mode-info">
+          <span className="quickstart__mode-info-icon">{MODE_INFO[activeInfo].icon}</span>
+          <div>
+            <p className="quickstart__mode-info-title">{MODE_INFO[activeInfo].title}</p>
+            <p className="quickstart__mode-info-desc">{MODE_INFO[activeInfo].desc}</p>
+          </div>
         </div>
-        <span className="quickstart__title">{fiszkiCard!.pack.name}</span>
-        <span className="quickstart__sub--main">Ucz się głęboko</span>
-        <span className="quickstart__sub">{fiszkiCard!.pack.wordCount} słów do nauki</span>
-      </button>
+      )}
     </div>
   )
 }

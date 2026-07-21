@@ -5,6 +5,55 @@
   padding: 0 var(--spacing-md) var(--spacing-md);
 }
 
+/* full-width info panel spans both columns */
+.quickstart__mode-info {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-md);
+  animation: qs-slide 180ms ease-out forwards;
+}
+
+@keyframes qs-slide {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.quickstart__mode-info-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.quickstart__mode-info-title {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 3px;
+}
+
+.quickstart__mode-info-desc {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* wrapper holds card + absolute info button */
+.quickstart__wrap {
+  position: relative;
+}
+
+.quickstart__card {
+  width: 100%;
+}
+
 .quickstart__card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
@@ -87,4 +136,30 @@
 .quickstart__sub {
   font-size: 11px;
   color: rgba(255,255,255,0.5);
+}
+
+/* Info button — bottom-right corner of card */
+.quickstart__info-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: rgba(0, 0, 0, 0.22);
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  z-index: 2;
+  padding: 0;
+}
+
+.quickstart__info-btn:hover,
+.quickstart__info-btn--active {
+  background: rgba(139, 92, 246, 0.5);
+  color: white;
 }
