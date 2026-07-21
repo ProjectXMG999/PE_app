@@ -51,8 +51,7 @@ const CATEGORY_ORDER = [
   'Przysłówki',
   'Spójniki',
   'Slang',
-  'Piękne skróty',
-  'Wulgaryzmy',
+  'Skróty',
   'Klony',
 ]
 
