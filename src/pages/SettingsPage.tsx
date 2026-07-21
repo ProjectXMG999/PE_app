@@ -1,5 +1,6 @@
 import { AppShell } from '../components/layout/AppShell'
 import { AboutAppSection } from '../components/settings/AboutAppSection'
+import { InstallGuideSection } from '../components/settings/InstallGuideSection'
 import { useAppStore } from '../store/useAppStore'
 import './SettingsPage.css'
 
@@ -31,6 +32,8 @@ export function SettingsPage() {
         </div>
 
         <AboutAppSection />
+
+        <InstallGuideSection />
 
         <div className="settings__section">
           <h2 className="settings__section-title">Tempo audio</h2>

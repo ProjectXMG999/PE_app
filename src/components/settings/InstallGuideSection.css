@@ -1,0 +1,200 @@
+.install-guide {
+  margin: 0 var(--spacing-md) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  overflow: hidden;
+}
+
+.install-guide__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--border);
+}
+
+.install-guide__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.install-guide__title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 2px;
+}
+
+.install-guide__subtitle {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Platform tabs */
+.install-guide__tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.install-guide__tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px var(--spacing-sm);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+}
+
+.install-guide__tab:not(:last-child) {
+  border-right: 1px solid var(--border);
+}
+
+.install-guide__tab:hover {
+  color: var(--text-secondary);
+  background: var(--bg-card-hover);
+}
+
+.install-guide__tab--active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  background: rgba(139, 92, 246, 0.04);
+}
+
+/* Steps */
+.install-guide__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: var(--spacing-sm) 0;
+}
+
+.install-guide__step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  position: relative;
+}
+
+.install-guide__step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: calc(var(--spacing-md) + 11px);
+  top: calc(var(--spacing-sm) + 24px);
+  width: 1px;
+  height: calc(100% - var(--spacing-sm));
+  background: var(--border);
+}
+
+.install-guide__step-num {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.install-guide__step-body {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.install-guide__step-body strong {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.install-guide__share-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Android CTA (when prompt available) */
+.install-guide__cta {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.install-guide__cta-text {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.install-guide__cta-btn {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px var(--spacing-md);
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast), opacity var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.35);
+}
+
+.install-guide__cta-btn:hover {
+  background: var(--accent-bright);
+}
+
+.install-guide__cta-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

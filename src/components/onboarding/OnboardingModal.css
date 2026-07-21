@@ -18,13 +18,16 @@
 .onboarding-modal {
   position: fixed;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 16px;
+  right: 16px;
+  transform: translateY(-50%);
+  width: auto;
+  max-width: 340px;
+  margin: 0 auto;
   background: var(--bg-surface);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-lg);
   padding: 20px 24px;
-  width: min(calc(100vw - 32px), 340px);
   max-height: 85vh;
   overflow-y: auto;
   z-index: 510;
@@ -36,11 +39,11 @@
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translate(-50%, calc(-50% + 20px));
+    transform: translateY(calc(-50% + 20px));
   }
   to {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
   }
 }
 
@@ -153,61 +156,3 @@
   }
 }
 
-/* Audio player overlay */
-.onboarding-modal__audio-player {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 520;
-  animation: fadeIn 300ms ease-out forwards;
-}
-
-.onboarding-modal__audio-content {
-  background: var(--bg-surface);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-  width: calc(100% - 32px);
-  max-width: 400px;
-  position: relative;
-  animation: slideUp 300ms ease-out forwards;
-}
-
-.onboarding-modal__audio-close {
-  position: absolute;
-  top: var(--spacing-md);
-  right: var(--spacing-md);
-  width: 32px;
-  height: 32px;
-  border: none;
-  background: none;
-  color: var(--text-muted);
-  font-size: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color var(--transition-fast);
-}
-
-.onboarding-modal__audio-close:hover {
-  color: var(--text-primary);
-}
-
-.onboarding-modal__audio-content h3 {
-  font-family: var(--font-heading);
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 var(--spacing-md);
-  color: var(--text-primary);
-}
-
-.onboarding-modal__audio {
-  width: 100%;
-  margin-top: var(--spacing-md);
-}
