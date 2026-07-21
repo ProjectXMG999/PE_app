@@ -49,10 +49,25 @@ export function BottomNav() {
   const location = useLocation()
   const navigate = useNavigate()
 
+  const getActiveItem = () => {
+    const path = location.pathname
+    // Exact match for root paths
+    if (path === '/') return '/'
+    if (path === '/trening') return '/trening'
+    if (path === '/postęp') return '/postęp'
+    if (path === '/ustawienia') return '/ustawienia'
+    // For sub-pages (like /pakiet/...), highlight "Pakiety" only if we're on home/package pages
+    if (path.startsWith('/pakiet')) return '/'
+    // Default to root
+    return '/'
+  }
+
+  const activeItem = getActiveItem()
+
   return (
     <nav className="bottomnav">
       {NAV_ITEMS.map(item => {
-        const active = location.pathname === item.path
+        const active = activeItem === item.path
         return (
           <button
             key={item.path}
