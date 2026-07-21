@@ -111,19 +111,22 @@
 
 .fc-mode__card-name {
   font-family: var(--font-heading);
-  font-size: 18px;
+  font-size: 11px;
   font-weight: 700;
-  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent);
   line-height: 1.2;
+  order: 2;
 }
 
 .fc-mode__card-tag {
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  order: 1;
 }
 
 .fc-mode__card-arrow {
