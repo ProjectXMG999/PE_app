@@ -33,3 +33,27 @@
   color: var(--text-secondary);
   font-family: var(--font-body);
 }
+
+/* Compact variant for secondary metrics */
+.statcard--small {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-surface);
+  border-color: transparent;
+}
+
+.statcard--small .statcard__value {
+  font-size: 22px;
+}
+
+.statcard--small .statcard__icon {
+  font-size: 16px;
+}
+
+.statcard--small .statcard__label {
+  font-size: 11px;
+}
+
+.statcard--small .statcard__unit {
+  font-size: 10px;
+  color: var(--text-muted);
+}

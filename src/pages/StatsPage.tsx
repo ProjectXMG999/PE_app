@@ -29,10 +29,29 @@ export function StatsPage() {
         </div>
 
         {levelStats && (
-          <div className="statspage__grid">
-            <StatCard value={levelStats.avgWordsPerDay} label="Średnio dziennie" unit="słów/dzień" />
-            {levelStats.nextLevel && (
-              <StatCard value={levelStats.daysToNextLevel} label={`Do poziomu ${levelStats.nextLevel}`} unit="dni przy tym tempie" />
+          <div className="statspage__grid statspage__grid--small">
+            <StatCard
+              small
+              value={levelStats.avgWordsPerDay}
+              label="Średnio dziennie"
+              unit="słów / dzień"
+              color="var(--accent-bright)"
+            />
+            {levelStats.nextLevel ? (
+              <StatCard
+                small
+                value={levelStats.daysToNextLevel}
+                label={`Dni do poziomu ${levelStats.nextLevel}`}
+                unit="przy aktualnym tempie"
+                color="var(--accent-bright)"
+              />
+            ) : (
+              <StatCard
+                small
+                value="MAX"
+                label="Osiągnięto maks. poziom"
+                color="var(--accent)"
+              />
             )}
           </div>
         )}

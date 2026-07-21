@@ -6,11 +6,12 @@ interface Props {
   icon?: string
   color?: string
   unit?: string
+  small?: boolean
 }
 
-export function StatCard({ value, label, icon, color = 'var(--accent)', unit }: Props) {
+export function StatCard({ value, label, icon, color = 'var(--accent)', unit, small }: Props) {
   return (
-    <div className="statcard">
+    <div className={`statcard${small ? ' statcard--small' : ''}`}>
       <div className="statcard__value" style={{ color }}>
         {value ?? '—'}
         {icon && <span className="statcard__icon">{icon}</span>}

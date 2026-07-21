@@ -17,6 +17,11 @@
   margin-bottom: var(--spacing-lg);
 }
 
+.statspage__grid--small {
+  margin-top: calc(-1 * var(--spacing-md));
+  gap: var(--spacing-xs);
+}
+
 
 .statspage__section {
   margin-bottom: var(--spacing-lg);
