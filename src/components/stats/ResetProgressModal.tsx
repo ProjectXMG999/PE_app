@@ -63,6 +63,9 @@ export function ResetProgressModal({ onClose, onReset }: Props) {
     try {
       if (scope === 'all') {
         await resetAllProgress()
+        // Reset onboarding flags when resetting all progress
+        localStorage.removeItem('lp_onboarding_seen')
+        localStorage.removeItem('lp_onboarding_card_hidden')
       } else {
         await resetProgressForPackages(getPackageIds(scope))
       }
