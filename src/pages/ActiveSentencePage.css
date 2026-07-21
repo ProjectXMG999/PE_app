@@ -156,15 +156,15 @@
 }
 
 .asc__lang-badge--pl {
-  background: rgba(245, 158, 11, 0.1);
-  color: #F59E0B;
-  border: 1px solid rgba(245, 158, 11, 0.22);
-}
-
-.asc__lang-badge--en {
   background: rgba(139, 92, 246, 0.1);
   color: var(--accent);
   border: 1px solid rgba(139, 92, 246, 0.22);
+}
+
+.asc__lang-badge--en {
+  background: rgba(245, 158, 11, 0.1);
+  color: #F59E0B;
+  border: 1px solid rgba(245, 158, 11, 0.22);
 }
 
 /* ── Content area ── */
@@ -193,12 +193,12 @@
 
 .asc__word--pl {
   font-size: clamp(28px, 6.5vw, 40px);
-  color: var(--text-primary);
+  color: var(--accent-bright);
 }
 
 .asc__word--en {
   font-size: clamp(28px, 6.5vw, 40px);
-  color: var(--accent-bright);
+  color: var(--text-primary);
 }
 
 /* ── Sentence line ── */

@@ -154,15 +154,15 @@
 }
 
 .wf__lang-badge--pl {
-  background: rgba(245, 158, 11, 0.1);
-  color: #F59E0B;
-  border: 1px solid rgba(245, 158, 11, 0.22);
-}
-
-.wf__lang-badge--en {
   background: rgba(139, 92, 246, 0.1);
   color: var(--accent);
   border: 1px solid rgba(139, 92, 246, 0.22);
+}
+
+.wf__lang-badge--en {
+  background: rgba(245, 158, 11, 0.1);
+  color: #F59E0B;
+  border: 1px solid rgba(245, 158, 11, 0.22);
 }
 
 /* ── Content ── */
@@ -191,12 +191,12 @@
 
 .wf__word--pl {
   font-size: clamp(30px, 7vw, 44px);
-  color: var(--text-primary);
+  color: var(--accent-bright);
 }
 
 .wf__word--en {
   font-size: clamp(30px, 7vw, 44px);
-  color: var(--accent-bright);
+  color: var(--text-primary);
 }
 
 .wf__sentence {
