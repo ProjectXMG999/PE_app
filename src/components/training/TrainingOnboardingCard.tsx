@@ -1,8 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { AudioModal } from '../shared/AudioModal'
-import '../home/OnboardingCard.css'
-
-const HIDDEN_KEY = 'lp_training_onboarding_hidden'
+import './TrainingOnboardingCard.css'
 
 const TRAINING_PARAGRAPHS = [
   'Cześć. Wchodzisz właśnie do zakładki Trening.',
@@ -16,39 +14,19 @@ const TRAINING_PARAGRAPHS = [
 ]
 
 export function TrainingOnboardingCard() {
-  const [isVisible, setIsVisible] = useState(true)
   const [isPlaying, setIsPlaying] = useState(false)
-
-  useEffect(() => {
-    if (localStorage.getItem(HIDDEN_KEY)) setIsVisible(false)
-  }, [])
-
-  if (!isVisible) return null
 
   return (
     <>
-      <div className="onboarding-card">
-        <div className="onboarding-card__content">
-          <div className="onboarding-card__header">
-            <h3 className="onboarding-card__title">🏋️ Jak działa Trening?</h3>
-            <button
-              className="onboarding-card__close"
-              onClick={() => { setIsVisible(false); localStorage.setItem(HIDDEN_KEY, 'true') }}
-              aria-label="Hide"
-            >
-              ✕
-            </button>
-          </div>
-          <p className="onboarding-card__text">
-            Posłuchaj jak działają cztery ćwiczenia treningowe i po co każde z nich jest
-          </p>
-          <div className="onboarding-card__actions">
-            <button className="onboarding-card__btn" onClick={() => setIsPlaying(true)}>
-              🎧 Słuchaj (1 min)
-            </button>
-          </div>
-        </div>
-      </div>
+      <button className="training-intro-bar" onClick={() => setIsPlaying(true)}>
+        <span className="training-intro-bar__icon">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5,3 19,12 5,21"/>
+          </svg>
+        </span>
+        <span className="training-intro-bar__text">Jak działa Trening?</span>
+        <span className="training-intro-bar__badge">1 min</span>
+      </button>
 
       {isPlaying && (
         <AudioModal
