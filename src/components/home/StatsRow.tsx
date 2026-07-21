@@ -68,7 +68,7 @@ export function StatsRow() {
           {daysTo.days ?? (daysTo.level ? '—' : '✓')}
         </span>
         <span className="statsrow__label statsrow__label--solo">
-          {daysTo.level ? `dni do L${daysTo.level}` : 'maks. poziom'}
+          {daysTo.level ? `dni do LVL ${daysTo.level}` : 'maks. poziom'}
         </span>
       </div>
     </div>

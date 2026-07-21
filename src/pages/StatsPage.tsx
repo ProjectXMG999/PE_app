@@ -41,7 +41,7 @@ export function StatsPage() {
               <StatCard
                 small
                 value={levelStats.daysToNextLevel}
-                label={`Dni do poziomu ${levelStats.nextLevel}`}
+                label={`Dni do LVL ${levelStats.nextLevel}`}
                 unit="przy aktualnym tempie"
                 color="var(--accent-bright)"
               />
