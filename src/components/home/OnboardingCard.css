@@ -73,7 +73,7 @@
 
 .onboarding-card__actions {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: var(--spacing-sm);
   margin-top: var(--spacing-sm);
 }
@@ -95,6 +95,18 @@
 
 .onboarding-card__btn:hover {
   background: var(--accent-bright);
+}
+
+.onboarding-card__btn--secondary {
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  box-shadow: none;
+  border: 1px solid var(--border);
+}
+
+.onboarding-card__btn--secondary:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
 }
 
 .onboarding-card__link {

@@ -62,10 +62,10 @@ export function OnboardingCard() {
               🎧 Słuchaj (2 min)
             </button>
             <button
-              className="onboarding-card__link"
+              className="onboarding-card__btn onboarding-card__btn--secondary"
               onClick={() => navigate('/ustawienia')}
             >
-              Dowiedz się więcej →
+              Dowiedz się więcej
             </button>
           </div>
         </div>
