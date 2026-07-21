@@ -29,18 +29,10 @@ export function StatsPage() {
         </div>
 
         {levelStats && (
-          <div className="statspage__level-stats">
-            <div className="statspage__level-stat-item">
-              <div className="statspage__level-stat-label">Średnio dziennie</div>
-              <div className="statspage__level-stat-value">{levelStats.avgWordsPerDay}</div>
-              <div className="statspage__level-stat-unit">słów/dzień</div>
-            </div>
+          <div className="statspage__grid">
+            <StatCard value={levelStats.avgWordsPerDay} label="Średnio dziennie" unit="słów/dzień" />
             {levelStats.nextLevel && (
-              <div className="statspage__level-stat-item">
-                <div className="statspage__level-stat-label">Do poziomu {levelStats.nextLevel}</div>
-                <div className="statspage__level-stat-value">{levelStats.daysToNextLevel}</div>
-                <div className="statspage__level-stat-unit">dni przy tym tempie</div>
-              </div>
+              <StatCard value={levelStats.daysToNextLevel} label={`Do poziomu ${levelStats.nextLevel}`} unit="dni przy tym tempie" />
             )}
           </div>
         )}

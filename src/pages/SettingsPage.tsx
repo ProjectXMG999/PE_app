@@ -27,7 +27,7 @@ export function SettingsPage() {
     <AppShell>
       <div className="settings">
         <div className="settings__header">
-          <span className="settings__title">Ustawienia</span>
+          <span className="settings__title">Personalizacja</span>
         </div>
 
         <AboutAppSection />

@@ -5,9 +5,10 @@ interface Props {
   label: string
   icon?: string
   color?: string
+  unit?: string
 }
 
-export function StatCard({ value, label, icon, color = 'var(--accent)' }: Props) {
+export function StatCard({ value, label, icon, color = 'var(--accent)', unit }: Props) {
   return (
     <div className="statcard">
       <div className="statcard__value" style={{ color }}>
@@ -15,6 +16,7 @@ export function StatCard({ value, label, icon, color = 'var(--accent)' }: Props)
         {icon && <span className="statcard__icon">{icon}</span>}
       </div>
       <div className="statcard__label">{label}</div>
+      {unit && <div className="statcard__unit">{unit}</div>}
     </div>
   )
 }
