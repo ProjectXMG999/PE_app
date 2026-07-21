@@ -13,7 +13,8 @@
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p12-001-word.mp3",
-      "audioSentence": "t1-p12-001-sentence.mp3"
+      "audioSentence": "t1-p12-001-sentence.mp3",
+      "audioWordPl": "t1-p12-001-word-pl.mp3"
     },
     {
       "id": "t1-p12-002",
@@ -22,7 +23,8 @@
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p12-002-word.mp3",
-      "audioSentence": "t1-p12-002-sentence.mp3"
+      "audioSentence": "t1-p12-002-sentence.mp3",
+      "audioWordPl": "t1-p12-002-word-pl.mp3"
     },
     {
       "id": "t1-p12-003",
@@ -31,7 +33,8 @@
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p12-003-word.mp3",
-      "audioSentence": "t1-p12-003-sentence.mp3"
+      "audioSentence": "t1-p12-003-sentence.mp3",
+      "audioWordPl": "t1-p12-003-word-pl.mp3"
     },
     {
       "id": "t1-p12-004",
@@ -40,7 +43,8 @@
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p12-004-word.mp3",
-      "audioSentence": "t1-p12-004-sentence.mp3"
+      "audioSentence": "t1-p12-004-sentence.mp3",
+      "audioWordPl": "t1-p12-004-word-pl.mp3"
     },
     {
       "id": "t1-p12-005",
@@ -49,7 +53,8 @@
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p12-005-word.mp3",
-      "audioSentence": "t1-p12-005-sentence.mp3"
+      "audioSentence": "t1-p12-005-sentence.mp3",
+      "audioWordPl": "t1-p12-005-word-pl.mp3"
     },
     {
       "id": "t1-p12-006",
@@ -58,7 +63,9 @@
       "sentenceEn": "I can add honey to everything. I love it.",
       "sentencePl": "Mogę dodawać miód do wszystkiego. Uwielbiam go.",
       "audioWord": "t1-p12-006-word.mp3",
-      "audioSentence": "t1-p12-006-sentence.mp3"
+      "audioSentence": "t1-p12-006-sentence.mp3",
+      "audioWordPl": "t1-p12-006-word-pl.mp3",
+      "audioSentencePl": "t1-p12-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p12-007",
@@ -67,7 +74,8 @@
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p12-007-word.mp3",
-      "audioSentence": "t1-p12-007-sentence.mp3"
+      "audioSentence": "t1-p12-007-sentence.mp3",
+      "audioWordPl": "t1-p12-007-word-pl.mp3"
     },
     {
       "id": "t1-p12-008",
@@ -76,7 +84,8 @@
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p12-008-word.mp3",
-      "audioSentence": "t1-p12-008-sentence.mp3"
+      "audioSentence": "t1-p12-008-sentence.mp3",
+      "audioWordPl": "t1-p12-008-word-pl.mp3"
     },
     {
       "id": "t1-p12-009",
@@ -85,7 +94,9 @@
       "sentenceEn": "Man, that latest Dr. Dre album rules.",
       "sentencePl": "Stary, ten nowy album Doktora Dre rządzi.",
       "audioWord": "t1-p12-009-word.mp3",
-      "audioSentence": "t1-p12-009-sentence.mp3"
+      "audioSentence": "t1-p12-009-sentence.mp3",
+      "audioWordPl": "t1-p12-009-word-pl.mp3",
+      "audioSentencePl": "t1-p12-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p12-010",
@@ -94,7 +105,8 @@
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p12-010-word.mp3",
-      "audioSentence": "t1-p12-010-sentence.mp3"
+      "audioSentence": "t1-p12-010-sentence.mp3",
+      "audioWordPl": "t1-p12-010-word-pl.mp3"
     }
   ]
 }
