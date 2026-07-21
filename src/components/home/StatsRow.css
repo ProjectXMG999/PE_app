@@ -61,3 +61,19 @@
 .statsrow__dot--filled {
   background: var(--accent);
 }
+
+/* Small secondary chips */
+.statsrow__chip--sm {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-card);
+  border-color: transparent;
+  gap: var(--spacing-xs);
+}
+
+.statsrow__value--sm {
+  font-size: 20px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--accent-bright);
+  line-height: 1;
+}
