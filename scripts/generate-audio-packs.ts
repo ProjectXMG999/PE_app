@@ -14,7 +14,8 @@ const API_KEY = process.env.ELEVENLABS_API_KEY || ''
 const MODEL_ID = 'eleven_multilingual_v2'
 
 // Packs to generate — change this list to target different packs
-const TARGET_PACKS = ['t1-p04', 't1-p05', 't1-p06', 't1-p07', 't1-p08']
+const TARGET_PACKS = ['t1-p01','t1-p02','t1-p03','t1-p04','t1-p05','t1-p06',
+                      't1-p07','t1-p08','t1-p09','t1-p10','t1-p11','t1-p12']
 
 const PL_VOICES = [
   { id: 'o2xdfKUpc1Bwq7RchZuW', name: 'Piotr',    gender: 'M' },

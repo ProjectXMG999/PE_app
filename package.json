@@ -15,6 +15,9 @@
     "generate-audio": "tsx scripts/generate-audio.ts",
     "generate-audio-demo": "tsx scripts/generate-audio-demo.ts",
     "generate-audio-polish": "tsx scripts/generate-audio-polish.ts",
+    "generate-audio-packs": "tsx scripts/generate-audio-packs.ts",
+    "generate-intro-audio": "tsx scripts/generate-intro-audio.ts",
+    "delete-blobs": "tsx scripts/delete-audio-blobs.ts",
     "upload-blobs": "tsx scripts/upload-audio-blobs.ts"
   },
   "dependencies": {
