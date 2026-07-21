@@ -210,17 +210,18 @@
 }
 
 .am__skip-btn {
-  position: relative;
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   border-radius: 999px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   color: var(--text-secondary);
   cursor: pointer;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1px;
   transition: background var(--transition-fast), color var(--transition-fast);
   flex-shrink: 0;
 }
@@ -231,11 +232,10 @@
 }
 
 .am__skip-btn span {
-  position: absolute;
   font-family: var(--font-heading);
   font-size: 9px;
   font-weight: 700;
-  bottom: 6px;
+  line-height: 1;
 }
 
 /* ── Transcript ── */
