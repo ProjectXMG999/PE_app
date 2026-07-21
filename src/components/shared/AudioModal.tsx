@@ -31,25 +31,32 @@ export function AudioModal({ title, label, duration, src, paragraphs, onClose }:
     if (!a) return
     a.play().catch(() => {})
 
+    const updateDuration = () => {
+      if (isFinite(a.duration) && a.duration > 0) setTotal(a.duration)
+    }
+
     const onPlay    = () => setPlaying(true)
     const onPause   = () => setPlaying(false)
-    const onLoaded  = () => setTotal(a.duration)
-    const onTime    = () => { if (!dragging) setCurrent(a.currentTime) }
+    const onTime    = () => { if (!dragging) { setCurrent(a.currentTime); updateDuration() } }
     const onBuf     = () => { if (a.buffered.length) setBuffered(a.buffered.end(a.buffered.length - 1)) }
     const onEnded   = () => { setPlaying(false); onClose() }
 
     a.addEventListener('play',             onPlay)
     a.addEventListener('pause',            onPause)
-    a.addEventListener('loadedmetadata',   onLoaded)
-    a.addEventListener('durationchange',   onLoaded)
+    a.addEventListener('loadedmetadata',   updateDuration)
+    a.addEventListener('durationchange',   updateDuration)
+    a.addEventListener('canplay',          updateDuration)
+    a.addEventListener('canplaythrough',   updateDuration)
     a.addEventListener('timeupdate',       onTime)
     a.addEventListener('progress',         onBuf)
     a.addEventListener('ended',            onEnded)
     return () => {
       a.removeEventListener('play',           onPlay)
       a.removeEventListener('pause',          onPause)
-      a.removeEventListener('loadedmetadata', onLoaded)
-      a.removeEventListener('durationchange', onLoaded)
+      a.removeEventListener('loadedmetadata', updateDuration)
+      a.removeEventListener('durationchange', updateDuration)
+      a.removeEventListener('canplay',        updateDuration)
+      a.removeEventListener('canplaythrough', updateDuration)
       a.removeEventListener('timeupdate',     onTime)
       a.removeEventListener('progress',       onBuf)
       a.removeEventListener('ended',          onEnded)
