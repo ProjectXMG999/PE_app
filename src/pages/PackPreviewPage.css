@@ -171,63 +171,6 @@
   text-align: right;
 }
 
-/* Progress stats panel */
-.packpreview__stats {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  margin-top: var(--spacing-lg);
-  padding: var(--spacing-md) var(--spacing-lg);
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(139, 92, 246, 0.03) 100%);
-  border: 1px solid var(--border-accent);
-  border-radius: var(--radius-lg);
-}
-
-.packpreview__stat {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  text-align: center;
-}
-
-.packpreview__stat-value {
-  font-family: var(--font-heading);
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--accent-bright);
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-
-.packpreview__stat-value--max {
-  font-size: 22px;
-  color: var(--accent);
-}
-
-.packpreview__stat-label {
-  font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.packpreview__stat-sub {
-  font-family: var(--font-body);
-  font-size: 10px;
-  color: var(--text-muted);
-}
-
-.packpreview__stat-divider {
-  width: 1px;
-  height: 40px;
-  background: var(--border-accent);
-  flex-shrink: 0;
-  opacity: 0.5;
-  margin: 0 var(--spacing-md);
-}
-
 /* Series section */
 .packpreview__series {
   margin-top: var(--spacing-lg);
