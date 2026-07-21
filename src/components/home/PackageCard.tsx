@@ -5,7 +5,7 @@ import './PackageCard.css'
 
 const CATEGORY_ICONS: Record<string, string> = {
   'Rzeczowniki': '📦',
-  'Czasowniki': '⚡',
+  'Czasowniki': '🏃',
   'Przymiotniki': '🎨',
   'Przysłówki': '🔄',
   'Phrasale': '🔗',
