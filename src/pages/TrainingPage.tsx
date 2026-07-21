@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell'
+import { TrainingOnboardingCard } from '../components/training/TrainingOnboardingCard'
 import './TrainingPage.css'
 
 const TRAINING_EXERCISES = [
@@ -266,6 +267,7 @@ export function TrainingPage() {
   return (
     <AppShell>
       <div className="training-page">
+        <TrainingOnboardingCard />
         <div className="training-header">
           <h1>Trening</h1>
           <p>Wybierz ćwiczenie i zacznij trenować</p>
