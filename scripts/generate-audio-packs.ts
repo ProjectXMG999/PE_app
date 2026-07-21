@@ -1,11 +1,6 @@
-// Generate EN + PL audio for specified packs with alternating voice pairs
-// Voice rotation per word (global index across all packs):
-//   slot 0: PL=Magdalena (F),  EN=Alice (F)
-//   slot 1: PL=Piotr (M),      EN=Amelia (F)   ← 2 EN female slots
-//   slot 2: PL=Beata (F),      EN=Alice (F)     ← Alice again for 3rd female
-//   slot 3: PL=Jaca (M),       EN=Titan (M)
-//   slot 4: PL=Magdalena (F),  EN=Jay Wayne (M) ← 2nd EN male slot
-//   then repeats from 0
+// Generate EN + PL audio for specified packs with alternating voices
+// PL rotation (per word, mod 4): Piotr(M) → Magdalena(F) → Pawel(M) → Violetta(F) → repeat
+// EN rotation (per word, mod 4): Adam US(M) → Samantha US(F) → William UK(M) → Tamsin UK(F) → repeat
 
 import * as fs from 'fs'
 import * as path from 'path'
@@ -21,13 +16,18 @@ const MODEL_ID = 'eleven_multilingual_v2'
 // Packs to generate — change this list to target different packs
 const TARGET_PACKS = ['t1-p04', 't1-p05', 't1-p06', 't1-p07', 't1-p08']
 
-// Voice pairs: [plVoiceId, plVoiceName, enVoiceId, enVoiceName]
-const VOICE_PAIRS: { plId: string; plName: string; enId: string; enName: string }[] = [
-  { plId: 'N0GCuK2B0qwWozQNTS8F', plName: 'Magdalena', enId: 'Xb7hH8MSUJpSbSDYk0k2', enName: 'Alice'    },
-  { plId: 'o2xdfKUpc1Bwq7RchZuW', plName: 'Piotr',     enId: 'ZF6FPAbjXT4488VcRRnw', enName: 'Amelia'   },
-  { plId: 'W0sqKm1Sfw1EzlCH14FQ', plName: 'Beata',     enId: 'Xb7hH8MSUJpSbSDYk0k2', enName: 'Alice'    },
-  { plId: 'Czpm0ILwHmgdxzeIhCyL', plName: 'Jaca',      enId: 'dtSEyYGNJqjrtBArPCVZ', enName: 'Titan'    },
-  { plId: 'N0GCuK2B0qwWozQNTS8F', plName: 'Magdalena', enId: '8Ln42OXYupYsag45MAUy', enName: 'Jay Wayne' },
+const PL_VOICES = [
+  { id: 'o2xdfKUpc1Bwq7RchZuW', name: 'Piotr',    gender: 'M' },
+  { id: 'N0GCuK2B0qwWozQNTS8F', name: 'Magdalena', gender: 'F' },
+  { id: 'zzBTsLBFM6AOJtkr1e9b', name: 'Pawel',     gender: 'M' },
+  { id: 'gfKKsLN1k0oYYN9n2dXX', name: 'Violetta',  gender: 'F' },
+]
+
+const EN_VOICES = [
+  { id: 'wBXNqKUATyqu0RtYt25i', name: 'Adam',     accent: 'US',  gender: 'M' },
+  { id: 'uIZsnBL0YK1S5j69bAih', name: 'Samantha', accent: 'US',  gender: 'F' },
+  { id: 'fjnwTZkKtQOJaYzGLa6n', name: 'William',  accent: 'UK',  gender: 'M' },
+  { id: 'dAlhI9qAHVIjXuVppzhW', name: 'Tamsin',   accent: 'UK',  gender: 'F' },
 ]
 
 if (!API_KEY) {
@@ -119,7 +119,6 @@ async function main() {
 
   const tasks: Promise<void>[] = []
 
-  // First pass: collect tasks
   for (const packId of TARGET_PACKS) {
     const packFile = path.join(PACK_DIR, `${packId}.json`)
     if (!fs.existsSync(packFile)) { console.log(`Pack ${packId} not found, skipping`); continue }
@@ -129,17 +128,18 @@ async function main() {
     console.log(`Queuing ${pack.id} – ${pack.name}: ${pack.words.length} words`)
 
     for (const word of pack.words) {
-      const pair = VOICE_PAIRS[wordIndex % VOICE_PAIRS.length]
       const wi = wordIndex
+      const plVoice = PL_VOICES[wi % PL_VOICES.length]
+      const enVoice = EN_VOICES[wi % EN_VOICES.length]
       wordIndex++
 
       // EN word
       total++
       tasks.push(limit(async () => {
         try {
-          await generateSpeech(word.english, VOICE_PAIRS[wi % VOICE_PAIRS.length].enId, path.join(packOutDir, word.audioWord), 0.75)
+          await generateSpeech(word.english, enVoice.id, path.join(packOutDir, word.audioWord), 0.75)
           done++
-          process.stdout.write(`\r[${done}/${total}] EN word: ${word.english.slice(0,20).padEnd(20)} (${VOICE_PAIRS[wi % VOICE_PAIRS.length].enName})`)
+          process.stdout.write(`\r[${done}/${total}] EN word: ${word.english.slice(0,20).padEnd(20)} (${enVoice.name} ${enVoice.accent})`)
         } catch (e) { errors++; console.error(`\nFailed EN word: "${word.english}" – ${(e as Error).message}`) }
       }))
 
@@ -148,9 +148,9 @@ async function main() {
         total++
         tasks.push(limit(async () => {
           try {
-            await generateSpeech(word.sentenceEn!, VOICE_PAIRS[wi % VOICE_PAIRS.length].enId, path.join(packOutDir, word.audioSentence), 0.75)
+            await generateSpeech(word.sentenceEn!, enVoice.id, path.join(packOutDir, word.audioSentence), 0.75)
             done++
-            process.stdout.write(`\r[${done}/${total}] EN sent: ${word.english.slice(0,20).padEnd(20)} (${VOICE_PAIRS[wi % VOICE_PAIRS.length].enName})`)
+            process.stdout.write(`\r[${done}/${total}] EN sent: ${word.english.slice(0,20).padEnd(20)} (${enVoice.name} ${enVoice.accent})`)
           } catch (e) { errors++; console.error(`\nFailed EN sentence: "${word.english}" – ${(e as Error).message}`) }
         }))
       }
@@ -160,9 +160,9 @@ async function main() {
       total++
       tasks.push(limit(async () => {
         try {
-          await generateSpeech(word.polish, pair.plId, path.join(packOutDir, plFile))
+          await generateSpeech(word.polish, plVoice.id, path.join(packOutDir, plFile))
           done++
-          process.stdout.write(`\r[${done}/${total}] PL word: ${word.polish.slice(0,20).padEnd(20)} (${pair.plName})`)
+          process.stdout.write(`\r[${done}/${total}] PL word: ${word.polish.slice(0,20).padEnd(20)} (${plVoice.name})`)
         } catch (e) { errors++; console.error(`\nFailed PL word: "${word.polish}" – ${(e as Error).message}`) }
       }))
 
@@ -172,9 +172,9 @@ async function main() {
         total++
         tasks.push(limit(async () => {
           try {
-            await generateSpeech(word.sentencePl!, pair.plId, path.join(packOutDir, plSentFile))
+            await generateSpeech(word.sentencePl!, plVoice.id, path.join(packOutDir, plSentFile))
             done++
-            process.stdout.write(`\r[${done}/${total}] PL sent: ${word.polish.slice(0,20).padEnd(20)} (${pair.plName})`)
+            process.stdout.write(`\r[${done}/${total}] PL sent: ${word.polish.slice(0,20).padEnd(20)} (${plVoice.name})`)
           } catch (e) { errors++; console.error(`\nFailed PL sentence: "${word.polish}" – ${(e as Error).message}`) }
         }))
       }
@@ -186,7 +186,7 @@ async function main() {
   console.log(`\nDone! Generated: ${done}, Errors: ${errors}, Skipped (exist): ${total - done - errors}`)
 
   // Update pack JSONs with Polish audio filenames
-  console.log('\nUpdating pack JSON files…')
+  console.log('\nUpdating pack JSON files...')
   wordIndex = 0
   for (const packId of TARGET_PACKS) {
     const packFile = path.join(PACK_DIR, `${packId}.json`)
@@ -201,7 +201,7 @@ async function main() {
     console.log(`  Updated ${packId}.json`)
   }
 
-  // Auto-sync updated packs to public/ so they're immediately available at runtime
+  // Sync updated packs to public/
   console.log('\n--- Syncing to public/ ---')
   const PUBLIC_PACK_DIR = path.join(ROOT, 'public/data/packs')
   for (const packId of TARGET_PACKS) {
