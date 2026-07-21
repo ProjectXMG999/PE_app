@@ -95,6 +95,12 @@
   color: var(--accent);
 }
 
+/* Level-specific title colors */
+.filtertabs__level-description[data-level="1"] .filtertabs__level-description__name { color: #eab308; }
+.filtertabs__level-description[data-level="2"] .filtertabs__level-description__name { color: #f97316; }
+.filtertabs__level-description[data-level="3"] .filtertabs__level-description__name { color: #22c55e; }
+.filtertabs__level-description[data-level="4"] .filtertabs__level-description__name { color: #3b82f6; }
+
 .filtertabs__level-description__text {
   font-family: var(--font-body);
   font-size: 12px;

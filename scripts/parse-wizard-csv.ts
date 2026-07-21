@@ -179,11 +179,7 @@ function processRows(rows: WizardRow[]) {
     // Aktualizuj kategorię w row
     row.category = category
 
-    // Mapuj poziomy: CSV ma odwrotny porządek (1=hardest, 4=easiest)
-    // Zamieniamy: 1->4, 2->3, 3->2, 4->1
-    if (row.level) {
-      row.level = 5 - row.level
-    }
+    // Poziomy z CSV są używane bezpośrednio: 1=Tom I (World-Class), 4=Tom IX (Survival)
 
     if (!packs.has(row.packName)) packs.set(row.packName, [])
     packs.get(row.packName)!.push(row)

@@ -64,7 +64,7 @@ export function AboutAppSection() {
               <span className="about-app__level-badge" style={{ background: '#3b82f6' }}>L4</span>
               <div>
                 <h5>World-Class English</h5>
-                <p>~10000 słów • Język który robi wrażenie</p>
+                <p>~10 000 słów • Język który robi wrażenie</p>
               </div>
             </div>
           </div>
