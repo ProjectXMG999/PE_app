@@ -13,15 +13,15 @@ const MODES: { id: FlashcardMode; icon: string; name: string; tag: string; desc:
     id: 'word-flash',
     icon: '⚡',
     name: 'Word Flash',
-    tag: 'Szybki przegląd',
-    desc: 'Widzisz polskie słowo — w myślach formułujesz angielski odpowiednik, potem odsłaniasz. Idealne na rozgrzewkę i budowanie pewności siebie. Setki kart w krótkim czasie.',
+    tag: 'Szybki przegląd słów',
+    desc: 'Widzisz polskie słowo, próbujesz przypomnieć sobie angielski odpowiednik i dopiero potem odsłaniasz odpowiedź. Szybka rozgrzewka dla pamięci.',
   },
   {
     id: 'active-sentence',
     icon: '🧠',
     name: 'Active Sentence',
-    tag: 'Głęboka nauka',
-    desc: 'Pełny kontekst zdania po polsku — musisz zbudować angielską odpowiedź zanim odsłonisz. To właśnie tutaj zaczyna się prawdziwe mówienie. Trudniejsze, ale trwałe.',
+    tag: 'Aktywacja zdań',
+    desc: 'Widzisz polskie zdanie i budujesz angielską odpowiedź, zanim ją odsłonisz. Trudniejsze, ale tutaj zaczyna się prawdziwe mówienie.',
   },
 ]
 
