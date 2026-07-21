@@ -13,7 +13,7 @@ type AutoplayMode = 'fast' | 'standard' | 'speaking'
 const MODES: { id: AutoplayMode; icon: string; name: string; sequence: string; desc: string }[] = [
   {
     id: 'fast',
-    icon: '⚡',
+    icon: '🚀',
     name: 'Szybko',
     sequence: 'PL → EN',
     desc: 'Błyskawiczna powtórka słów. Idealne na rozgrzewkę, utrwalenie i szybkie sprawdzenie pamięci.',
