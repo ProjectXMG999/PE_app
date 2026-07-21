@@ -24,8 +24,7 @@
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-lg);
   padding: 20px 24px;
-  width: calc(100% - 32px);
-  max-width: 340px;
+  width: min(calc(100vw - 32px), 340px);
   max-height: 85vh;
   overflow-y: auto;
   z-index: 510;
