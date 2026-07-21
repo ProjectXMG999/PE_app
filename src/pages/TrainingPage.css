@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: var(--spacing-lg);
   padding: var(--spacing-md);
-  padding-bottom: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-md));
+  padding-bottom: var(--spacing-md);
 }
 
 .training-header {
@@ -109,7 +109,7 @@
 /* Detail view */
 .training-detail {
   padding: var(--spacing-md);
-  padding-bottom: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-md));
+  padding-bottom: var(--spacing-md);
 }
 
 .training-detail__back {

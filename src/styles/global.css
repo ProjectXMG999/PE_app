@@ -35,15 +35,15 @@ body {
   font-family: var(--font-body);
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  min-height: 100dvh;
-  min-height: -webkit-fill-available;
-  overflow-x: clip;
+  height: 100dvh;
+  overflow: hidden;
   transition: background-color var(--transition-med), color var(--transition-med);
   -webkit-font-smoothing: antialiased;
 }
 
 #root {
-  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }

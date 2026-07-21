@@ -1,7 +1,8 @@
 .appshell {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
+  height: 100%;
+  overflow: hidden;
 }
 
 .appshell__main {
