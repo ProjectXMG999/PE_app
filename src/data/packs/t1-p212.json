@@ -1,15 +1,15 @@
 {
   "id": "t1-p212",
-  "name": "Przymiotniki 17",
-  "volume": "Tom V",
+  "name": "W odniesieniu do",
+  "volume": "Tom IV",
   "level": 3,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział XLI",
+  "category": "Spójniki",
+  "chapter": "Rozdział XL",
   "words": [
     {
       "id": "t1-p212-001",
-      "english": "Specific",
-      "polish": "Specyficzny",
+      "english": "As far as",
+      "polish": "O ile",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p212-002",
-      "english": "Abstract",
-      "polish": "Abstrakcyjny",
+      "english": "As for",
+      "polish": "Co się tyczy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p212-003",
-      "english": "Idiotic",
-      "polish": "Idiotyczny",
+      "english": "In the first place",
+      "polish": "W pierwszej kolejności",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p212-004",
-      "english": "Allergic",
-      "polish": "Alergiczny",
+      "english": "Depending on",
+      "polish": "Zależnie od",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p212-005",
-      "english": "Alcoholic",
-      "polish": "Alkoholowy",
+      "english": "Given",
+      "polish": "Zważywszy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p212-006",
-      "english": "Complete",
-      "polish": "Kompletny",
+      "english": "Independent of",
+      "polish": "Niezależnie od",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p212-007",
-      "english": "Anal",
-      "polish": "Analny",
+      "english": "Owing to",
+      "polish": "Dzięki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p212-008",
-      "english": "Architectural",
-      "polish": "Architektoniczny",
+      "english": "Regarding",
+      "polish": "W sprawie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p212-009",
-      "english": "Authentic",
-      "polish": "Autentyczny",
+      "english": "With regard to",
+      "polish": "W odniesieniu do",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p212-010",
-      "english": "Automatic",
-      "polish": "Automatyczny",
+      "english": "According to",
+      "polish": "Według",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p212-011",
-      "english": "Banal",
-      "polish": "Banalny",
+      "english": "As per",
+      "polish": "Jak według",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p212-012",
-      "english": "Oral",
-      "polish": "Doustny",
+      "english": "In accordance with",
+      "polish": "Zgodnie z",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p212-013",
-      "english": "Dramatic",
-      "polish": "Dramatyczny",
+      "english": "In connection with",
+      "polish": "W połączeniu z",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p212-014",
-      "english": "Discreet",
-      "polish": "Dyskretny",
+      "english": "In respect of",
+      "polish": "Pod względem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-014-word.mp3",
@@ -134,12 +134,57 @@
     },
     {
       "id": "t1-p212-015",
-      "english": "Ecological",
-      "polish": "Ekologiczny",
+      "english": "On account of",
+      "polish": "Z racji",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p212-015-word.mp3",
       "audioSentence": "t1-p212-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p212-016",
+      "english": "On behalf of",
+      "polish": "W imieniu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p212-016-word.mp3",
+      "audioSentence": "t1-p212-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p212-017",
+      "english": "Referring to",
+      "polish": "Odnosząc się do",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p212-017-word.mp3",
+      "audioSentence": "t1-p212-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p212-018",
+      "english": "Turning to",
+      "polish": "Zwracając się do",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p212-018-word.mp3",
+      "audioSentence": "t1-p212-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p212-019",
+      "english": "Further to",
+      "polish": "W nawiązaniu do",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p212-019-word.mp3",
+      "audioSentence": "t1-p212-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p212-020",
+      "english": "Pursuant to",
+      "polish": "Zgodnie z",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p212-020-word.mp3",
+      "audioSentence": "t1-p212-020-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p224",
-  "name": "Przymiotniki 19",
+  "name": "Slang 20",
   "volume": "Tom V",
   "level": 3,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział XLIV",
+  "category": "Slang",
+  "chapter": "Rozdział XLIII",
   "words": [
     {
       "id": "t1-p224-001",
-      "english": "Lonely",
-      "polish": "Osamotniony",
+      "english": "Smash hit",
+      "polish": "Hit",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p224-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p224-002",
-      "english": "Common",
-      "polish": "Wspólny",
+      "english": "Hit the screen",
+      "polish": "Wejść na ekrany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p224-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p224-003",
-      "english": "Separate",
-      "polish": "Oddzielny",
+      "english": "Air guitar",
+      "polish": "Udaje że gra na gitarze podczas słuchania muzy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p224-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p224-004",
-      "english": "Lone",
-      "polish": "Samotny",
+      "english": "Beat box",
+      "polish": "Robienie beatów własnym głosem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p224-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p224-005",
-      "english": "Independent",
-      "polish": "Niezależny",
+      "english": "Blockbuster",
+      "polish": "Hit kinowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p224-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p224-006",
-      "english": "Dependent",
-      "polish": "Zależny",
+      "english": "Bootleg",
+      "polish": "Podróba",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p224-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p224-007",
-      "english": "Face-to-face",
-      "polish": "Twarzą w twarz",
+      "english": "Spoiler",
+      "polish": "Zdradzenie zakończenia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p224-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p224-008",
-      "english": "Joint",
-      "polish": "Łączny",
+      "english": "Crank up",
+      "polish": "Robić głośniej muzę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p224-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p224-009",
-      "english": "Associated",
-      "polish": "Kojarzony",
+      "english": "Gig",
+      "polish": "Koncert lub koncertować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p224-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p224-010",
-      "english": "Connected",
-      "polish": "Połączony",
+      "english": "Pump up",
+      "polish": "Dawać głośniej muzę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p224-010-word.mp3",
       "audioSentence": "t1-p224-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p224-011",
-      "english": "Mutual",
-      "polish": "Wzajemny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p224-011-word.mp3",
-      "audioSentence": "t1-p224-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p224-012",
-      "english": "Reciprocal",
-      "polish": "Obopólny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p224-012-word.mp3",
-      "audioSentence": "t1-p224-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p224-013",
-      "english": "United",
-      "polish": "Zjednoczony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p224-013-word.mp3",
-      "audioSentence": "t1-p224-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p224-014",
-      "english": "Reconciled",
-      "polish": "Pogodzony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p224-014-word.mp3",
-      "audioSentence": "t1-p224-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p224-015",
-      "english": "Lone",
-      "polish": "Samotny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p224-015-word.mp3",
-      "audioSentence": "t1-p224-015-sentence.mp3"
     }
   ]
 }

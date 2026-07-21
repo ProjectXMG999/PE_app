@@ -1,15 +1,15 @@
 {
   "id": "t1-p193",
-  "name": "Kalkulator",
+  "name": "Jak często",
   "volume": "Tom IV",
   "level": 3,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XXXVI",
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XXXIV",
   "words": [
     {
       "id": "t1-p193-001",
-      "english": "Add",
-      "polish": "Dodawać",
+      "english": "Rare",
+      "polish": "Rzadki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p193-002",
-      "english": "Decrease",
-      "polish": "Zmniejszać",
+      "english": "Repeated",
+      "polish": "Powtarzany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p193-003",
-      "english": "Divide",
-      "polish": "Dzielić",
+      "english": "Everyday",
+      "polish": "Codzienny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p193-004",
-      "english": "Estimate",
-      "polish": "Szacować",
+      "english": "Day-to-day",
+      "polish": "Codzienny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p193-005",
-      "english": "Increase",
-      "polish": "Zwiększać",
+      "english": "Daily",
+      "polish": "Dzienny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p193-006",
-      "english": "Multiply",
-      "polish": "Mnożyć",
+      "english": "Monthly",
+      "polish": "Miesięczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p193-007",
-      "english": "Subtract",
-      "polish": "Odejmować",
+      "english": "Weekly",
+      "polish": "Tygodniowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p193-008",
-      "english": "Calculate",
-      "polish": "Obliczać",
+      "english": "Yearly",
+      "polish": "Roczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p193-009",
-      "english": "Double",
-      "polish": "Podwajać",
+      "english": "Temporary",
+      "polish": "Tymczasowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p193-010",
-      "english": "Integrate",
-      "polish": "Całkować",
+      "english": "Annual",
+      "polish": "Roczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p193-011",
-      "english": "Split",
-      "polish": "Dzielić się",
+      "english": "Infrequent",
+      "polish": "Nieczęsty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p193-012",
-      "english": "Triple",
-      "polish": "Potrajać",
+      "english": "Never-ending",
+      "polish": "Niekończący się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p193-013",
-      "english": "Differentiate",
-      "polish": "Różniczkować",
+      "english": "Ongoing",
+      "polish": "Trwający",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p193-014",
-      "english": "Overestimate",
-      "polish": "Przeszacować",
+      "english": "Frequent",
+      "polish": "Częsty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-014-word.mp3",
@@ -134,12 +134,417 @@
     },
     {
       "id": "t1-p193-015",
-      "english": "Underestimate",
-      "polish": "Nie doszacować",
+      "english": "Random",
+      "polish": "Losowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p193-015-word.mp3",
       "audioSentence": "t1-p193-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-016",
+      "english": "All along",
+      "polish": "Przez cały czas",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-016-word.mp3",
+      "audioSentence": "t1-p193-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-017",
+      "english": "Sometimes",
+      "polish": "Czasami",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-017-word.mp3",
+      "audioSentence": "t1-p193-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-018",
+      "english": "Daily",
+      "polish": "Codziennie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-018-word.mp3",
+      "audioSentence": "t1-p193-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-019",
+      "english": "Again",
+      "polish": "Ponownie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-019-word.mp3",
+      "audioSentence": "t1-p193-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-020",
+      "english": "Non-stop",
+      "polish": "Bez przerwy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-020-word.mp3",
+      "audioSentence": "t1-p193-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-021",
+      "english": "Usually",
+      "polish": "Przeważnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-021-word.mp3",
+      "audioSentence": "t1-p193-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-022",
+      "english": "Frequently",
+      "polish": "Z dużą częstotliwością",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-022-word.mp3",
+      "audioSentence": "t1-p193-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-023",
+      "english": "Over and over again",
+      "polish": "W kółko I w kółko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-023-word.mp3",
+      "audioSentence": "t1-p193-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-024",
+      "english": "Rarely",
+      "polish": "Rzadko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-024-word.mp3",
+      "audioSentence": "t1-p193-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-025",
+      "english": "Recurrently",
+      "polish": "Powtarzalnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-025-word.mp3",
+      "audioSentence": "t1-p193-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-026",
+      "english": "Weekly",
+      "polish": "Cotygodniowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-026-word.mp3",
+      "audioSentence": "t1-p193-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-027",
+      "english": "For once",
+      "polish": "Choć raz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-027-word.mp3",
+      "audioSentence": "t1-p193-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-028",
+      "english": "From time to time",
+      "polish": "Od czasu do czasu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-028-word.mp3",
+      "audioSentence": "t1-p193-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-029",
+      "english": "More and more",
+      "polish": "Coraz więcej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-029-word.mp3",
+      "audioSentence": "t1-p193-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-030",
+      "english": "On occasion",
+      "polish": "Od święta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-030-word.mp3",
+      "audioSentence": "t1-p193-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-031",
+      "english": "Ever-present",
+      "polish": "Wciąż obecny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-031-word.mp3",
+      "audioSentence": "t1-p193-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-032",
+      "english": "Repetitive",
+      "polish": "Powtarzalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-032-word.mp3",
+      "audioSentence": "t1-p193-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-033",
+      "english": "Continuous",
+      "polish": "Ciągły",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-033-word.mp3",
+      "audioSentence": "t1-p193-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-034",
+      "english": "Everlasting",
+      "polish": "Nieustający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-034-word.mp3",
+      "audioSentence": "t1-p193-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-035",
+      "english": "Seasonal",
+      "polish": "Sezonowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-035-word.mp3",
+      "audioSentence": "t1-p193-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-036",
+      "english": "Persistent",
+      "polish": "Uporczywy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-036-word.mp3",
+      "audioSentence": "t1-p193-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-037",
+      "english": "Recurring",
+      "polish": "Powracający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-037-word.mp3",
+      "audioSentence": "t1-p193-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-038",
+      "english": "Ever-changing",
+      "polish": "Stale zmieniający się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-038-word.mp3",
+      "audioSentence": "t1-p193-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-039",
+      "english": "Lifelong",
+      "polish": "Trwający całe życie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-039-word.mp3",
+      "audioSentence": "t1-p193-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-040",
+      "english": "Recurrent",
+      "polish": "Nawracający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-040-word.mp3",
+      "audioSentence": "t1-p193-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-041",
+      "english": "Intermittent",
+      "polish": "Przerywany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-041-word.mp3",
+      "audioSentence": "t1-p193-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-042",
+      "english": "Perennial",
+      "polish": "Nieprzemijający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-042-word.mp3",
+      "audioSentence": "t1-p193-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-043",
+      "english": "Incessant",
+      "polish": "Nieustanny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-043-word.mp3",
+      "audioSentence": "t1-p193-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-044",
+      "english": "Perpetual",
+      "polish": "Bezustanny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-044-word.mp3",
+      "audioSentence": "t1-p193-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-045",
+      "english": "Constant",
+      "polish": "Niezmieniający się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-045-word.mp3",
+      "audioSentence": "t1-p193-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-046",
+      "english": "Seldom",
+      "polish": "Z rzadka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-046-word.mp3",
+      "audioSentence": "t1-p193-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-047",
+      "english": "Constantly",
+      "polish": "Wciąż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-047-word.mp3",
+      "audioSentence": "t1-p193-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-048",
+      "english": "Systematically",
+      "polish": "Systematycznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-048-word.mp3",
+      "audioSentence": "t1-p193-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-049",
+      "english": "Occasionally",
+      "polish": "Okazjonalnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-049-word.mp3",
+      "audioSentence": "t1-p193-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-050",
+      "english": "Permanently",
+      "polish": "Stale",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-050-word.mp3",
+      "audioSentence": "t1-p193-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-051",
+      "english": "Regularly",
+      "polish": "Regularnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-051-word.mp3",
+      "audioSentence": "t1-p193-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-052",
+      "english": "Mostly",
+      "polish": "Przeważnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-052-word.mp3",
+      "audioSentence": "t1-p193-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-053",
+      "english": "Repeatedly",
+      "polish": "Wielokrotnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-053-word.mp3",
+      "audioSentence": "t1-p193-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-054",
+      "english": "Routinely",
+      "polish": "Rutynowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-054-word.mp3",
+      "audioSentence": "t1-p193-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-055",
+      "english": "Periodically",
+      "polish": "Okresowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-055-word.mp3",
+      "audioSentence": "t1-p193-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-056",
+      "english": "Sporadically",
+      "polish": "Sporadycznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-056-word.mp3",
+      "audioSentence": "t1-p193-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-057",
+      "english": "Infrequently",
+      "polish": "Z małą częstotliwością",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-057-word.mp3",
+      "audioSentence": "t1-p193-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-058",
+      "english": "Intermittently",
+      "polish": "Sporadycznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-058-word.mp3",
+      "audioSentence": "t1-p193-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-059",
+      "english": "Irregularly",
+      "polish": "Niregularnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-059-word.mp3",
+      "audioSentence": "t1-p193-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p193-060",
+      "english": "Continually",
+      "polish": "Ustawicznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p193-060-word.mp3",
+      "audioSentence": "t1-p193-060-sentence.mp3"
     }
   ]
 }

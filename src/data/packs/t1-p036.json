@@ -1,15 +1,15 @@
 {
   "id": "t1-p036",
-  "name": "Przymiotniki 2",
+  "name": "Pogoda",
   "volume": "Tom I",
   "level": 1,
-  "category": "Przymiotniki",
+  "category": "Rzeczowniki",
   "chapter": "Rozdział IV",
   "words": [
     {
       "id": "t1-p036-001",
-      "english": "Empty",
-      "polish": "Pusty",
+      "english": "Rain",
+      "polish": "Deszcz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p036-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p036-002",
-      "english": "Open",
-      "polish": "Otwarty",
+      "english": "Ice",
+      "polish": "Lód",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p036-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p036-003",
-      "english": "Closed",
-      "polish": "Zamknięty",
+      "english": "Sky",
+      "polish": "Niebo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p036-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p036-004",
-      "english": "Free",
-      "polish": "Bezpłatny",
+      "english": "Weather",
+      "polish": "Pogoda",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p036-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p036-005",
-      "english": "Expensive",
-      "polish": "Drogi",
+      "english": "Air",
+      "polish": "Powietrze",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p036-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p036-006",
-      "english": "Cheap",
-      "polish": "Tani",
+      "english": "Sun",
+      "polish": "Słońce",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p036-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p036-007",
-      "english": "Left",
-      "polish": "Lewy",
+      "english": "Degree celsius",
+      "polish": "Stopień celsjusza",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p036-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p036-008",
-      "english": "Right",
-      "polish": "Prawy",
+      "english": "Snow",
+      "polish": "Śnieg",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p036-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p036-009",
-      "english": "Dark",
-      "polish": "Ciemny",
+      "english": "Temperature",
+      "polish": "Temperatura",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p036-009-word.mp3",
@@ -89,12 +89,957 @@
     },
     {
       "id": "t1-p036-010",
-      "english": "Light",
-      "polish": "Jasny",
+      "english": "Wind",
+      "polish": "Wiatr",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p036-010-word.mp3",
       "audioSentence": "t1-p036-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-011",
+      "english": "Storm",
+      "polish": "Burza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-011-word.mp3",
+      "audioSentence": "t1-p036-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-012",
+      "english": "Cloud",
+      "polish": "Chmura",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-012-word.mp3",
+      "audioSentence": "t1-p036-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-013",
+      "english": "Climate",
+      "polish": "Klimat",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-013-word.mp3",
+      "audioSentence": "t1-p036-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-014",
+      "english": "Fog",
+      "polish": "Mgła",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-014-word.mp3",
+      "audioSentence": "t1-p036-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-015",
+      "english": "Weather forecast",
+      "polish": "Prognoza pogody",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-015-word.mp3",
+      "audioSentence": "t1-p036-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-016",
+      "english": "Degree",
+      "polish": "Stopień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-016-word.mp3",
+      "audioSentence": "t1-p036-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-017",
+      "english": "Sunshine",
+      "polish": "Blask słońca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-017-word.mp3",
+      "audioSentence": "t1-p036-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-018",
+      "english": "Shade",
+      "polish": "Cień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-018-word.mp3",
+      "audioSentence": "t1-p036-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-019",
+      "english": "Shadow",
+      "polish": "Cień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-019-word.mp3",
+      "audioSentence": "t1-p036-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-020",
+      "english": "Thunder",
+      "polish": "Grzmot",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-020-word.mp3",
+      "audioSentence": "t1-p036-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-021",
+      "english": "Frost",
+      "polish": "Mróz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-021-word.mp3",
+      "audioSentence": "t1-p036-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-022",
+      "english": "Steam",
+      "polish": "Para",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-022-word.mp3",
+      "audioSentence": "t1-p036-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-023",
+      "english": "Rainbow",
+      "polish": "Tęcza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-023-word.mp3",
+      "audioSentence": "t1-p036-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-024",
+      "english": "Sunrise",
+      "polish": "Wschód słońca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-024-word.mp3",
+      "audioSentence": "t1-p036-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-025",
+      "english": "Sunset",
+      "polish": "Zachód słońca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-025-word.mp3",
+      "audioSentence": "t1-p036-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-026",
+      "english": "Dry",
+      "polish": "Suchy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-026-word.mp3",
+      "audioSentence": "t1-p036-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-027",
+      "english": "Rainy",
+      "polish": "Deszczowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-027-word.mp3",
+      "audioSentence": "t1-p036-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-028",
+      "english": "Icy",
+      "polish": "Lodowaty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-028-word.mp3",
+      "audioSentence": "t1-p036-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-029",
+      "english": "Bright",
+      "polish": "Jasny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-029-word.mp3",
+      "audioSentence": "t1-p036-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-030",
+      "english": "Cloudy",
+      "polish": "Pochmurny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-030-word.mp3",
+      "audioSentence": "t1-p036-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-031",
+      "english": "Sunny",
+      "polish": "Słoneczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-031-word.mp3",
+      "audioSentence": "t1-p036-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-032",
+      "english": "Snowy",
+      "polish": "Śnieżny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-032-word.mp3",
+      "audioSentence": "t1-p036-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-033",
+      "english": "Windy",
+      "polish": "Wietrzny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-033-word.mp3",
+      "audioSentence": "t1-p036-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-034",
+      "english": "Frozen",
+      "polish": "Mrożony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-034-word.mp3",
+      "audioSentence": "t1-p036-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-035",
+      "english": "Foggy",
+      "polish": "Mglisty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-035-word.mp3",
+      "audioSentence": "t1-p036-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-036",
+      "english": "Sandy",
+      "polish": "Piaszczysty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-036-word.mp3",
+      "audioSentence": "t1-p036-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-037",
+      "english": "Summer",
+      "polish": "Letni",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-037-word.mp3",
+      "audioSentence": "t1-p036-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-038",
+      "english": "Autumn",
+      "polish": "Jesienny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-038-word.mp3",
+      "audioSentence": "t1-p036-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-039",
+      "english": "Winter",
+      "polish": "Zimowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-039-word.mp3",
+      "audioSentence": "t1-p036-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-040",
+      "english": "Spring",
+      "polish": "Wiosenny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-040-word.mp3",
+      "audioSentence": "t1-p036-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-041",
+      "english": "Thunderstorm",
+      "polish": "Burza z piorunami",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-041-word.mp3",
+      "audioSentence": "t1-p036-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-042",
+      "english": "Darkness",
+      "polish": "Ciemność",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-042-word.mp3",
+      "audioSentence": "t1-p036-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-043",
+      "english": "Hail",
+      "polish": "Grad",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-043-word.mp3",
+      "audioSentence": "t1-p036-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-044",
+      "english": "Hurricane",
+      "polish": "Huragan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-044-word.mp3",
+      "audioSentence": "t1-p036-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-045",
+      "english": "Drizzle",
+      "polish": "Mżawka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-045-word.mp3",
+      "audioSentence": "t1-p036-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-046",
+      "english": "Rainfall",
+      "polish": "Opad deszczu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-046-word.mp3",
+      "audioSentence": "t1-p036-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-047",
+      "english": "Lightning",
+      "polish": "Błyskawica",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-047-word.mp3",
+      "audioSentence": "t1-p036-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-048",
+      "english": "Flood",
+      "polish": "Powódź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-048-word.mp3",
+      "audioSentence": "t1-p036-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-049",
+      "english": "Drought",
+      "polish": "Susza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-049-word.mp3",
+      "audioSentence": "t1-p036-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-050",
+      "english": "Snowfall",
+      "polish": "Opad śniegu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-050-word.mp3",
+      "audioSentence": "t1-p036-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-051",
+      "english": "Moonlight",
+      "polish": "Światło księżyca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-051-word.mp3",
+      "audioSentence": "t1-p036-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-052",
+      "english": "Daylight",
+      "polish": "Światło słoneczne",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-052-word.mp3",
+      "audioSentence": "t1-p036-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-053",
+      "english": "Downpour",
+      "polish": "Ulewa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-053-word.mp3",
+      "audioSentence": "t1-p036-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-054",
+      "english": "Heat",
+      "polish": "Upał",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-054-word.mp3",
+      "audioSentence": "t1-p036-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-055",
+      "english": "Nightfall",
+      "polish": "Nadejście nocy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-055-word.mp3",
+      "audioSentence": "t1-p036-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-056",
+      "english": "Earthquake",
+      "polish": "Trzęsienie ziemi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-056-word.mp3",
+      "audioSentence": "t1-p036-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-057",
+      "english": "Anomaly",
+      "polish": "Anomalia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-057-word.mp3",
+      "audioSentence": "t1-p036-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-058",
+      "english": "Sandstorm",
+      "polish": "Burza piaskowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-058-word.mp3",
+      "audioSentence": "t1-p036-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-059",
+      "english": "Closeness",
+      "polish": "Duchota",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-059-word.mp3",
+      "audioSentence": "t1-p036-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-060",
+      "english": "Black ice",
+      "polish": "Gołoledź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-060-word.mp3",
+      "audioSentence": "t1-p036-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-061",
+      "english": "Meteorology",
+      "polish": "Meteorologia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-061-word.mp3",
+      "audioSentence": "t1-p036-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-062",
+      "english": "Low-pressure zone",
+      "polish": "Niż atmosferyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-062-word.mp3",
+      "audioSentence": "t1-p036-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-063",
+      "english": "Thaw",
+      "polish": "Odwilż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-063-word.mp3",
+      "audioSentence": "t1-p036-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-064",
+      "english": "Sunny spell",
+      "polish": "Przejaśnienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-064-word.mp3",
+      "audioSentence": "t1-p036-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-065",
+      "english": "Snowstorm",
+      "polish": "Śnieżyca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-065-word.mp3",
+      "audioSentence": "t1-p036-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-066",
+      "english": "Tornado",
+      "polish": "Tornado",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-066-word.mp3",
+      "audioSentence": "t1-p036-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-067",
+      "english": "Variations in temperature",
+      "polish": "Wahania temperatury",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-067-word.mp3",
+      "audioSentence": "t1-p036-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-068",
+      "english": "Moisture",
+      "polish": "Wilgoć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-068-word.mp3",
+      "audioSentence": "t1-p036-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-069",
+      "english": "Maelstrom",
+      "polish": "Wir wodny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-069-word.mp3",
+      "audioSentence": "t1-p036-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-070",
+      "english": "High-pressure zone",
+      "polish": "Wyż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-070-word.mp3",
+      "audioSentence": "t1-p036-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-071",
+      "english": "Freezing",
+      "polish": "Zamarzający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-071-word.mp3",
+      "audioSentence": "t1-p036-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-072",
+      "english": "Stormy",
+      "polish": "Burzowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-072-word.mp3",
+      "audioSentence": "t1-p036-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-073",
+      "english": "Chilly",
+      "polish": "Chłodny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-073-word.mp3",
+      "audioSentence": "t1-p036-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-074",
+      "english": "Molten",
+      "polish": "Roztopiony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-074-word.mp3",
+      "audioSentence": "t1-p036-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-075",
+      "english": "Slippery",
+      "polish": "Śliski",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-075-word.mp3",
+      "audioSentence": "t1-p036-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-076",
+      "english": "Humid",
+      "polish": "Wilgotny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-076-word.mp3",
+      "audioSentence": "t1-p036-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-077",
+      "english": "Dried",
+      "polish": "Wysuszony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-077-word.mp3",
+      "audioSentence": "t1-p036-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-078",
+      "english": "Swampy",
+      "polish": "Bagienny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-078-word.mp3",
+      "audioSentence": "t1-p036-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-079",
+      "english": "Boggy",
+      "polish": "Bagnisty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-079-word.mp3",
+      "audioSentence": "t1-p036-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-080",
+      "english": "Cloudless",
+      "polish": "Bezchmurny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-080-word.mp3",
+      "audioSentence": "t1-p036-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-081",
+      "english": "Lukewarm",
+      "polish": "Letni",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-081-word.mp3",
+      "audioSentence": "t1-p036-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-082",
+      "english": "Frosted",
+      "polish": "Oszroniony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-082-word.mp3",
+      "audioSentence": "t1-p036-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-083",
+      "english": "Overcast",
+      "polish": "Zachmurzony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-083-word.mp3",
+      "audioSentence": "t1-p036-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-084",
+      "english": "Watery",
+      "polish": "Podmokły",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-084-word.mp3",
+      "audioSentence": "t1-p036-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-085",
+      "english": "Moist",
+      "polish": "Wilgotny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-085-word.mp3",
+      "audioSentence": "t1-p036-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-086",
+      "english": "Cloudiness",
+      "polish": "Zachmurzenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-086-word.mp3",
+      "audioSentence": "t1-p036-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-087",
+      "english": "Snow drift",
+      "polish": "Zaspa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-087-word.mp3",
+      "audioSentence": "t1-p036-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-088",
+      "english": "Sunray",
+      "polish": "Promień słoneczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-088-word.mp3",
+      "audioSentence": "t1-p036-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-089",
+      "english": "Dew",
+      "polish": "Rosa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-089-word.mp3",
+      "audioSentence": "t1-p036-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-090",
+      "english": "Blizzard",
+      "polish": "Zamieć śnieżna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-090-word.mp3",
+      "audioSentence": "t1-p036-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-091",
+      "english": "Foul weather",
+      "polish": "Słota",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-091-word.mp3",
+      "audioSentence": "t1-p036-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-092",
+      "english": "Slob",
+      "polish": "Plucha",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-092-word.mp3",
+      "audioSentence": "t1-p036-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-093",
+      "english": "Sleet",
+      "polish": "Śnieg z deszczem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-093-word.mp3",
+      "audioSentence": "t1-p036-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-094",
+      "english": "Whirlwind",
+      "polish": "Trąba powietrzna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-094-word.mp3",
+      "audioSentence": "t1-p036-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-095",
+      "english": "Snowflake",
+      "polish": "Płatek śniegu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-095-word.mp3",
+      "audioSentence": "t1-p036-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-096",
+      "english": "Gust",
+      "polish": "Podmuch",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-096-word.mp3",
+      "audioSentence": "t1-p036-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-097",
+      "english": "Gale",
+      "polish": "Wichura",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-097-word.mp3",
+      "audioSentence": "t1-p036-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-098",
+      "english": "Blizzard",
+      "polish": "Zamieć śnieżna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-098-word.mp3",
+      "audioSentence": "t1-p036-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-099",
+      "english": "Thaw",
+      "polish": "Odwilż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-099-word.mp3",
+      "audioSentence": "t1-p036-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-100",
+      "english": "Black ice",
+      "polish": "Gołoledź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-100-word.mp3",
+      "audioSentence": "t1-p036-100-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-101",
+      "english": "Rainy",
+      "polish": "Deszczowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-101-word.mp3",
+      "audioSentence": "t1-p036-101-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-102",
+      "english": "Sunny",
+      "polish": "Słonecznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-102-word.mp3",
+      "audioSentence": "t1-p036-102-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-103",
+      "english": "Windy",
+      "polish": "Wietrznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-103-word.mp3",
+      "audioSentence": "t1-p036-103-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-104",
+      "english": "Cloudy",
+      "polish": "Pochmurno",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-104-word.mp3",
+      "audioSentence": "t1-p036-104-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-105",
+      "english": "Chilly",
+      "polish": "Mroźnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-105-word.mp3",
+      "audioSentence": "t1-p036-105-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-106",
+      "english": "Cloudlessly",
+      "polish": "Bezchmurnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-106-word.mp3",
+      "audioSentence": "t1-p036-106-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-107",
+      "english": "Damply",
+      "polish": "Mokro",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-107-word.mp3",
+      "audioSentence": "t1-p036-107-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-108",
+      "english": "Foggy",
+      "polish": "Mgliście",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-108-word.mp3",
+      "audioSentence": "t1-p036-108-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-109",
+      "english": "Freezing",
+      "polish": "Mrożąco",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-109-word.mp3",
+      "audioSentence": "t1-p036-109-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-110",
+      "english": "Gloomy",
+      "polish": "Ponuro",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-110-word.mp3",
+      "audioSentence": "t1-p036-110-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-111",
+      "english": "Gustily",
+      "polish": "Wietrzyście",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-111-word.mp3",
+      "audioSentence": "t1-p036-111-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-112",
+      "english": "Icily",
+      "polish": "Lodowato",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-112-word.mp3",
+      "audioSentence": "t1-p036-112-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-113",
+      "english": "Moistly",
+      "polish": "Wilgotno",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-113-word.mp3",
+      "audioSentence": "t1-p036-113-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-114",
+      "english": "Searingly",
+      "polish": "Piekąco",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-114-word.mp3",
+      "audioSentence": "t1-p036-114-sentence.mp3"
+    },
+    {
+      "id": "t1-p036-115",
+      "english": "Warmly",
+      "polish": "Ciepło",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p036-115-word.mp3",
+      "audioSentence": "t1-p036-115-sentence.mp3"
     }
   ]
 }

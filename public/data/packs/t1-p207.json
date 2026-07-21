@@ -1,15 +1,15 @@
 {
   "id": "t1-p207",
-  "name": "Przymiotniki 16",
+  "name": "Natura",
   "volume": "Tom IV",
   "level": 3,
-  "category": "Przymiotniki",
+  "category": "Czasowniki",
   "chapter": "Rozdział XXXIX",
   "words": [
     {
       "id": "t1-p207-001",
-      "english": "General",
-      "polish": "Generalny",
+      "english": "Bite",
+      "polish": "Gryźć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p207-002",
-      "english": "Other",
-      "polish": "Inny",
+      "english": "Blow",
+      "polish": "Dmuchać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p207-003",
-      "english": "Same",
-      "polish": "Taki sam",
+      "english": "Snow",
+      "polish": "Śnieżyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p207-004",
-      "english": "Right",
-      "polish": "Właściwy",
+      "english": "Bark",
+      "polish": "Szczekać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p207-005",
-      "english": "Similar",
-      "polish": "Podobny",
+      "english": "Meow",
+      "polish": "Miauczeć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p207-006",
-      "english": "Absent",
-      "polish": "Nieobecny",
+      "english": "Cool",
+      "polish": "Chłodzić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p207-007",
-      "english": "So-and-so",
-      "polish": "Taki owaki",
+      "english": "Fetch",
+      "polish": "Aportować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p207-008",
-      "english": "Active",
-      "polish": "Aktywny",
+      "english": "Heat",
+      "polish": "Podgrzać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p207-009",
-      "english": "Direct",
-      "polish": "Bezpośredni",
+      "english": "Plant",
+      "polish": "Sadzić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p207-010",
-      "english": "Passive",
-      "polish": "Pasywny",
+      "english": "Pollinate",
+      "polish": "Zapylać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p207-011",
-      "english": "Indirect",
-      "polish": "Pośredni",
+      "english": "Purr",
+      "polish": "Mruczeć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p207-012",
-      "english": "Missing",
-      "polish": "Brakujący",
+      "english": "Sprinkle",
+      "polish": "Prószyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p207-013",
-      "english": "Pure",
-      "polish": "Bezgrzeszny",
+      "english": "Stroke",
+      "polish": "Głaskać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p207-014",
-      "english": "Equal",
-      "polish": "Równy",
+      "english": "Survive",
+      "polish": "Przetrwać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-014-word.mp3",
@@ -134,12 +134,552 @@
     },
     {
       "id": "t1-p207-015",
-      "english": "Particular",
-      "polish": "Konkretny",
+      "english": "Warm",
+      "polish": "Ogrzewać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p207-015-word.mp3",
       "audioSentence": "t1-p207-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-016",
+      "english": "Blossom",
+      "polish": "Kwitnąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-016-word.mp3",
+      "audioSentence": "t1-p207-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-017",
+      "english": "Breed",
+      "polish": "Hodować zwierzęta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-017-word.mp3",
+      "audioSentence": "t1-p207-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-018",
+      "english": "Buzz",
+      "polish": "Brzęczeć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-018-word.mp3",
+      "audioSentence": "t1-p207-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-019",
+      "english": "Mature",
+      "polish": "Dojrzewać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-019-word.mp3",
+      "audioSentence": "t1-p207-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-020",
+      "english": "Tweet",
+      "polish": "Ćwierkać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-020-word.mp3",
+      "audioSentence": "t1-p207-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-021",
+      "english": "Crawl",
+      "polish": "Pełzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-021-word.mp3",
+      "audioSentence": "t1-p207-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-022",
+      "english": "Cultivate",
+      "polish": "Hodować rośliny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-022-word.mp3",
+      "audioSentence": "t1-p207-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-023",
+      "english": "Reproduce",
+      "polish": "Rozmnażać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-023-word.mp3",
+      "audioSentence": "t1-p207-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-024",
+      "english": "Adapt",
+      "polish": "Adaptować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-024-word.mp3",
+      "audioSentence": "t1-p207-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-025",
+      "english": "Bloom",
+      "polish": "Rozkwitać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-025-word.mp3",
+      "audioSentence": "t1-p207-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-026",
+      "english": "Fade",
+      "polish": "Blaknąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-026-word.mp3",
+      "audioSentence": "t1-p207-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-027",
+      "english": "Fertilize",
+      "polish": "Nawozić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-027-word.mp3",
+      "audioSentence": "t1-p207-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-028",
+      "english": "Lurk",
+      "polish": "Czaić się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-028-word.mp3",
+      "audioSentence": "t1-p207-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-029",
+      "english": "Mow",
+      "polish": "Kosić kosiarką",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-029-word.mp3",
+      "audioSentence": "t1-p207-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-030",
+      "english": "Paw",
+      "polish": "Skrobać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-030-word.mp3",
+      "audioSentence": "t1-p207-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-031",
+      "english": "Protected",
+      "polish": "Chroniony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-031-word.mp3",
+      "audioSentence": "t1-p207-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-032",
+      "english": "Cured",
+      "polish": "Wyleczony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-032-word.mp3",
+      "audioSentence": "t1-p207-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-033",
+      "english": "Extinct",
+      "polish": "Wymarły",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-033-word.mp3",
+      "audioSentence": "t1-p207-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-034",
+      "english": "Feral",
+      "polish": "Zdziczały",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-034-word.mp3",
+      "audioSentence": "t1-p207-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-035",
+      "english": "Furry",
+      "polish": "Futrzasty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-035-word.mp3",
+      "audioSentence": "t1-p207-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-036",
+      "english": "Burning",
+      "polish": "Płonący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-036-word.mp3",
+      "audioSentence": "t1-p207-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-037",
+      "english": "Fluffy",
+      "polish": "Puszysty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-037-word.mp3",
+      "audioSentence": "t1-p207-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-038",
+      "english": "Solar",
+      "polish": "Słoneczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-038-word.mp3",
+      "audioSentence": "t1-p207-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-039",
+      "english": "Domesticated",
+      "polish": "Udomowiony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-039-word.mp3",
+      "audioSentence": "t1-p207-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-040",
+      "english": "Curable",
+      "polish": "Uleczalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-040-word.mp3",
+      "audioSentence": "t1-p207-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-041",
+      "english": "Trained",
+      "polish": "Wytrenowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-041-word.mp3",
+      "audioSentence": "t1-p207-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-042",
+      "english": "Agile",
+      "polish": "Zwinny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-042-word.mp3",
+      "audioSentence": "t1-p207-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-043",
+      "english": "Vicious",
+      "polish": "Okrutny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-043-word.mp3",
+      "audioSentence": "t1-p207-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-044",
+      "english": "Ferocious",
+      "polish": "Dziki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-044-word.mp3",
+      "audioSentence": "t1-p207-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-045",
+      "english": "Muddy",
+      "polish": "Błotnisty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-045-word.mp3",
+      "audioSentence": "t1-p207-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-046",
+      "english": "Ripe",
+      "polish": "Dojrzały",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-046-word.mp3",
+      "audioSentence": "t1-p207-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-047",
+      "english": "Venomous",
+      "polish": "Jadowity",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-047-word.mp3",
+      "audioSentence": "t1-p207-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-048",
+      "english": "Carnivorous",
+      "polish": "Mięsożerny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-048-word.mp3",
+      "audioSentence": "t1-p207-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-049",
+      "english": "Nocturnal",
+      "polish": "Nocny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-049-word.mp3",
+      "audioSentence": "t1-p207-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-050",
+      "english": "Immune",
+      "polish": "Odporny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-050-word.mp3",
+      "audioSentence": "t1-p207-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-051",
+      "english": "Tame",
+      "polish": "Oswojony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-051-word.mp3",
+      "audioSentence": "t1-p207-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-052",
+      "english": "Fertile",
+      "polish": "Płodny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-052-word.mp3",
+      "audioSentence": "t1-p207-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-053",
+      "english": "Maggoty",
+      "polish": "Robaczywy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-053-word.mp3",
+      "audioSentence": "t1-p207-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-054",
+      "english": "Herbivorous",
+      "polish": "Roślinożerny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-054-word.mp3",
+      "audioSentence": "t1-p207-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-055",
+      "english": "Omnivorous",
+      "polish": "Wszystkożerny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-055-word.mp3",
+      "audioSentence": "t1-p207-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-056",
+      "english": "Smooth-haired",
+      "polish": "Gładkowłosy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-056-word.mp3",
+      "audioSentence": "t1-p207-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-057",
+      "english": "Wire-haired",
+      "polish": "Szorstkowłosy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-057-word.mp3",
+      "audioSentence": "t1-p207-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-058",
+      "english": "Steep",
+      "polish": "Stromy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-058-word.mp3",
+      "audioSentence": "t1-p207-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-059",
+      "english": "Extinct",
+      "polish": "Wymarły",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-059-word.mp3",
+      "audioSentence": "t1-p207-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-060",
+      "english": "Venomous",
+      "polish": "Jadowity",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-060-word.mp3",
+      "audioSentence": "t1-p207-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-061",
+      "english": "Reflect",
+      "polish": "Odbijać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-061-word.mp3",
+      "audioSentence": "t1-p207-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-062",
+      "english": "Rumble",
+      "polish": "Grzmieć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-062-word.mp3",
+      "audioSentence": "t1-p207-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-063",
+      "english": "Seed",
+      "polish": "Siać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-063-word.mp3",
+      "audioSentence": "t1-p207-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-064",
+      "english": "Cluck",
+      "polish": "Gdakać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-064-word.mp3",
+      "audioSentence": "t1-p207-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-065",
+      "english": "Growl",
+      "polish": "Warczeć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-065-word.mp3",
+      "audioSentence": "t1-p207-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-066",
+      "english": "Howl",
+      "polish": "Wyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-066-word.mp3",
+      "audioSentence": "t1-p207-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-067",
+      "english": "Inseminate",
+      "polish": "Zapładniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-067-word.mp3",
+      "audioSentence": "t1-p207-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-068",
+      "english": "Plow",
+      "polish": "Orać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-068-word.mp3",
+      "audioSentence": "t1-p207-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-069",
+      "english": "Roar",
+      "polish": "Ryczeć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-069-word.mp3",
+      "audioSentence": "t1-p207-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-070",
+      "english": "Shear",
+      "polish": "Strzyc",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-070-word.mp3",
+      "audioSentence": "t1-p207-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-071",
+      "english": "Squeal",
+      "polish": "Piszczeć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-071-word.mp3",
+      "audioSentence": "t1-p207-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-072",
+      "english": "Sting",
+      "polish": "Żądlić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-072-word.mp3",
+      "audioSentence": "t1-p207-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-073",
+      "english": "Tame",
+      "polish": "Poskramiać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-073-word.mp3",
+      "audioSentence": "t1-p207-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-074",
+      "english": "Yelp",
+      "polish": "Skomleć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-074-word.mp3",
+      "audioSentence": "t1-p207-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p207-075",
+      "english": "Rustle",
+      "polish": "Szeleścić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p207-075-word.mp3",
+      "audioSentence": "t1-p207-075-sentence.mp3"
     }
   ]
 }

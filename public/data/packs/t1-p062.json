@@ -1,6 +1,6 @@
 {
   "id": "t1-p062",
-  "name": "Mentalne",
+  "name": "Rzeczowniki 5",
   "volume": "Tom I",
   "level": 1,
   "category": "Rzeczowniki",
@@ -8,8 +8,8 @@
   "words": [
     {
       "id": "t1-p062-001",
-      "english": "Character",
-      "polish": "Charakter",
+      "english": "Goal",
+      "polish": "Cel",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p062-002",
-      "english": "Decision",
-      "polish": "Decyzja",
+      "english": "Center",
+      "polish": "Centrum",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p062-003",
-      "english": "Intuition",
-      "polish": "Intuicja",
+      "english": "Category",
+      "polish": "Kategoria",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p062-004",
-      "english": "Thought",
-      "polish": "Myśl",
+      "english": "Place",
+      "polish": "Miejsce",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p062-005",
-      "english": "Opinion",
-      "polish": "Opinia",
+      "english": "Problem",
+      "polish": "Problem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p062-006",
-      "english": "Idea",
-      "polish": "Pomysł",
+      "english": "Object",
+      "polish": "Przedmiot",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p062-007",
-      "english": "Reason",
-      "polish": "Powód",
+      "english": "Thing",
+      "polish": "Rzecz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p062-008",
-      "english": "Right",
-      "polish": "Racja",
+      "english": "Way",
+      "polish": "Sposób",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p062-009",
-      "english": "Talent",
-      "polish": "Talent",
+      "english": "Detail",
+      "polish": "Szczegół",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-009-word.mp3",
@@ -89,687 +89,12 @@
     },
     {
       "id": "t1-p062-010",
-      "english": "Joke",
-      "polish": "Żart",
+      "english": "Sign",
+      "polish": "Znak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-010-word.mp3",
       "audioSentence": "t1-p062-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-011",
-      "english": "Habit",
-      "polish": "Nawyk",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-011-word.mp3",
-      "audioSentence": "t1-p062-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-012",
-      "english": "Focus",
-      "polish": "Skupienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-012-word.mp3",
-      "audioSentence": "t1-p062-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-013",
-      "english": "Intention",
-      "polish": "Intencja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-013-word.mp3",
-      "audioSentence": "t1-p062-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-014",
-      "english": "Concentration",
-      "polish": "Koncentracja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-014-word.mp3",
-      "audioSentence": "t1-p062-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-015",
-      "english": "Instinct",
-      "polish": "Instynkt",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-015-word.mp3",
-      "audioSentence": "t1-p062-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-016",
-      "english": "Wisdom",
-      "polish": "Mądrość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-016-word.mp3",
-      "audioSentence": "t1-p062-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-017",
-      "english": "Will",
-      "polish": "Ochota",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-017-word.mp3",
-      "audioSentence": "t1-p062-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-018",
-      "english": "Memory",
-      "polish": "Pamięć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-018-word.mp3",
-      "audioSentence": "t1-p062-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-019",
-      "english": "Attitude",
-      "polish": "Postawa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-019-word.mp3",
-      "audioSentence": "t1-p062-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-020",
-      "english": "Preference",
-      "polish": "Preferencja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-020-word.mp3",
-      "audioSentence": "t1-p062-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-021",
-      "english": "Prediction",
-      "polish": "Przewidywanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-021-word.mp3",
-      "audioSentence": "t1-p062-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-022",
-      "english": "Attention",
-      "polish": "Uwaga",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-022-word.mp3",
-      "audioSentence": "t1-p062-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-023",
-      "english": "Mindset",
-      "polish": "Sposób myślenia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-023-word.mp3",
-      "audioSentence": "t1-p062-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-024",
-      "english": "Tendency",
-      "polish": "Tendencja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-024-word.mp3",
-      "audioSentence": "t1-p062-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-025",
-      "english": "Mind",
-      "polish": "Umysł",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-025-word.mp3",
-      "audioSentence": "t1-p062-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-026",
-      "english": "Curious",
-      "polish": "Ciekawy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-026-word.mp3",
-      "audioSentence": "t1-p062-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-027",
-      "english": "Unsure",
-      "polish": "Niepewny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-027-word.mp3",
-      "audioSentence": "t1-p062-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-028",
-      "english": "Understandable",
-      "polish": "Zrozumiały",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-028-word.mp3",
-      "audioSentence": "t1-p062-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-029",
-      "english": "Comprehensible",
-      "polish": "Do ogarnięcia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-029-word.mp3",
-      "audioSentence": "t1-p062-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-030",
-      "english": "Unthinkable",
-      "polish": "Nie do pomyślenia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-030-word.mp3",
-      "audioSentence": "t1-p062-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-031",
-      "english": "Unimaginable",
-      "polish": "Niewyobrażalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-031-word.mp3",
-      "audioSentence": "t1-p062-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-032",
-      "english": "Imaginable",
-      "polish": "Wyobrażalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-032-word.mp3",
-      "audioSentence": "t1-p062-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-033",
-      "english": "Incomprehensible",
-      "polish": "Nie do ogarnięcia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-033-word.mp3",
-      "audioSentence": "t1-p062-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-034",
-      "english": "Believable",
-      "polish": "Do uwierzenia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-034-word.mp3",
-      "audioSentence": "t1-p062-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-035",
-      "english": "Aware",
-      "polish": "Świadomy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-035-word.mp3",
-      "audioSentence": "t1-p062-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-036",
-      "english": "Certain",
-      "polish": "Pewny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-036-word.mp3",
-      "audioSentence": "t1-p062-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-037",
-      "english": "Deliberate",
-      "polish": "Umyślny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-037-word.mp3",
-      "audioSentence": "t1-p062-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-038",
-      "english": "Unconscious",
-      "polish": "Nieświadomy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-038-word.mp3",
-      "audioSentence": "t1-p062-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-039",
-      "english": "Convinced",
-      "polish": "Przekonany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-039-word.mp3",
-      "audioSentence": "t1-p062-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-040",
-      "english": "Conscious",
-      "polish": "Przytomny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-040-word.mp3",
-      "audioSentence": "t1-p062-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-041",
-      "english": "Insight",
-      "polish": "Wgląd",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-041-word.mp3",
-      "audioSentence": "t1-p062-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-042",
-      "english": "Anticipation",
-      "polish": "Spodziewanie się czegoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-042-word.mp3",
-      "audioSentence": "t1-p062-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-043",
-      "english": "Predisposition",
-      "polish": "Predyspozycja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-043-word.mp3",
-      "audioSentence": "t1-p062-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-044",
-      "english": "Meditation",
-      "polish": "Rozważania",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-044-word.mp3",
-      "audioSentence": "t1-p062-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-045",
-      "english": "Imagination",
-      "polish": "Wyobraźnia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-045-word.mp3",
-      "audioSentence": "t1-p062-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-046",
-      "english": "Disbelief",
-      "polish": "Niedowierzanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-046-word.mp3",
-      "audioSentence": "t1-p062-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-047",
-      "english": "Unconsciousness",
-      "polish": "Nieświadomość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-047-word.mp3",
-      "audioSentence": "t1-p062-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-048",
-      "english": "Distrust",
-      "polish": "Nieufność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-048-word.mp3",
-      "audioSentence": "t1-p062-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-049",
-      "english": "Judgement",
-      "polish": "Osąd",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-049-word.mp3",
-      "audioSentence": "t1-p062-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-050",
-      "english": "Suspicion",
-      "polish": "Podejrzenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-050-word.mp3",
-      "audioSentence": "t1-p062-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-051",
-      "english": "Reflection",
-      "polish": "Refleksja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-051-word.mp3",
-      "audioSentence": "t1-p062-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-052",
-      "english": "Glance",
-      "polish": "Rzut oka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-052-word.mp3",
-      "audioSentence": "t1-p062-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-053",
-      "english": "Conscience",
-      "polish": "Sumienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-053-word.mp3",
-      "audioSentence": "t1-p062-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-054",
-      "english": "Consciousness",
-      "polish": "Świadomość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-054-word.mp3",
-      "audioSentence": "t1-p062-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-055",
-      "english": "Reminiscence",
-      "polish": "Wspomnienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-055-word.mp3",
-      "audioSentence": "t1-p062-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-056",
-      "english": "Alert",
-      "polish": "Czujny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-056-word.mp3",
-      "audioSentence": "t1-p062-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-057",
-      "english": "Savvy",
-      "polish": "Obyty",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-057-word.mp3",
-      "audioSentence": "t1-p062-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-058",
-      "english": "Astute",
-      "polish": "Przenikliwy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-058-word.mp3",
-      "audioSentence": "t1-p062-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-059",
-      "english": "Acute",
-      "polish": "Wnikliwy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-059-word.mp3",
-      "audioSentence": "t1-p062-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-060",
-      "english": "Voluntary",
-      "polish": "Wolontaryjny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-060-word.mp3",
-      "audioSentence": "t1-p062-060-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-061",
-      "english": "Perceived",
-      "polish": "Postrzegany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-061-word.mp3",
-      "audioSentence": "t1-p062-061-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-062",
-      "english": "Perceptive",
-      "polish": "Spostrzegawczy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-062-word.mp3",
-      "audioSentence": "t1-p062-062-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-063",
-      "english": "Mental",
-      "polish": "Umysłowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-063-word.mp3",
-      "audioSentence": "t1-p062-063-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-064",
-      "english": "Swift",
-      "polish": "Bystry",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-064-word.mp3",
-      "audioSentence": "t1-p062-064-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-065",
-      "english": "Subconscious",
-      "polish": "Podświadomy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-065-word.mp3",
-      "audioSentence": "t1-p062-065-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-066",
-      "english": "Mindful",
-      "polish": "Pomny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-066-word.mp3",
-      "audioSentence": "t1-p062-066-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-067",
-      "english": "Thoughtful",
-      "polish": "Przemyślany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-067-word.mp3",
-      "audioSentence": "t1-p062-067-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-068",
-      "english": "Inconceivable",
-      "polish": "Niepojmowalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-068-word.mp3",
-      "audioSentence": "t1-p062-068-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-069",
-      "english": "Conceivable",
-      "polish": "Pojmowalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-069-word.mp3",
-      "audioSentence": "t1-p062-069-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-070",
-      "english": "Recognizable",
-      "polish": "Rozpoznawalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-070-word.mp3",
-      "audioSentence": "t1-p062-070-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-071",
-      "english": "Aptitude",
-      "polish": "Biegłość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-071-word.mp3",
-      "audioSentence": "t1-p062-071-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-072",
-      "english": "Dilemma",
-      "polish": "Dylemat",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-072-word.mp3",
-      "audioSentence": "t1-p062-072-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-073",
-      "english": "Readiness",
-      "polish": "Gotowość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-073-word.mp3",
-      "audioSentence": "t1-p062-073-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-074",
-      "english": "Contemplation",
-      "polish": "Kontemplacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-074-word.mp3",
-      "audioSentence": "t1-p062-074-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-075",
-      "english": "Stroke of genius",
-      "polish": "Olśnienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-075-word.mp3",
-      "audioSentence": "t1-p062-075-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-076",
-      "english": "Penetration",
-      "polish": "Penetracja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-076-word.mp3",
-      "audioSentence": "t1-p062-076-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-077",
-      "english": "Snap decision",
-      "polish": "Pochopna decyzja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-077-word.mp3",
-      "audioSentence": "t1-p062-077-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-078",
-      "english": "Acknowledgment",
-      "polish": "Przyznanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-078-word.mp3",
-      "audioSentence": "t1-p062-078-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-079",
-      "english": "Vocation",
-      "polish": "Powołanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-079-word.mp3",
-      "audioSentence": "t1-p062-079-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-080",
-      "english": "Gut feeling",
-      "polish": "Przeczucie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-080-word.mp3",
-      "audioSentence": "t1-p062-080-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-081",
-      "english": "Dither",
-      "polish": "Rozterka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-081-word.mp3",
-      "audioSentence": "t1-p062-081-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-082",
-      "english": "Skepticism",
-      "polish": "Sceptycyzm",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-082-word.mp3",
-      "audioSentence": "t1-p062-082-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-083",
-      "english": "Mentality",
-      "polish": "Mentalność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-083-word.mp3",
-      "audioSentence": "t1-p062-083-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-084",
-      "english": "Temper",
-      "polish": "Usposobienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-084-word.mp3",
-      "audioSentence": "t1-p062-084-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-085",
-      "english": "Consideration",
-      "polish": "Zastanowienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-085-word.mp3",
-      "audioSentence": "t1-p062-085-sentence.mp3"
     }
   ]
 }

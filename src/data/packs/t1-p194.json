@@ -1,15 +1,15 @@
 {
   "id": "t1-p194",
-  "name": "Slang 18",
+  "name": "Przymiotniki 14",
   "volume": "Tom IV",
   "level": 3,
-  "category": "Slang",
-  "chapter": "Rozdział XXXVI",
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XXXV",
   "words": [
     {
       "id": "t1-p194-001",
-      "english": "All talk",
-      "polish": "Mocny w gębie",
+      "english": "Surprising",
+      "polish": "Zaskakujący",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p194-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p194-002",
-      "english": "Easy mark",
-      "polish": "Łatwy cel",
+      "english": "Usual",
+      "polish": "Zwykły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p194-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p194-003",
-      "english": "Faker",
-      "polish": "Ściemniacz",
+      "english": "Damn",
+      "polish": "Przeklęty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p194-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p194-004",
-      "english": "Imposter",
-      "polish": "Podszywacz",
+      "english": "Convenient",
+      "polish": "Dogodny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p194-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p194-005",
-      "english": "Sheeple",
-      "polish": "Ludzie owce",
+      "english": "Annoying",
+      "polish": "Denerwujący",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p194-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p194-006",
-      "english": "Slacker",
-      "polish": "Cholernie leniwy",
+      "english": "Unusual",
+      "polish": "Niezwykły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p194-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p194-007",
-      "english": "Thirsty",
-      "polish": "Pragnący akceptacji",
+      "english": "Appropriate",
+      "polish": "Właściwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p194-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p194-008",
-      "english": "Wise guy",
-      "polish": "Mądrala",
+      "english": "Unexpected",
+      "polish": "Nieoczekiwany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p194-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p194-009",
-      "english": "Simp",
-      "polish": "Pantoflarz",
+      "english": "Simple",
+      "polish": "Prosty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p194-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p194-010",
-      "english": "Rat",
-      "polish": "Kapuś",
+      "english": "Inappropriate",
+      "polish": "Nieodpowiedni",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p194-010-word.mp3",
       "audioSentence": "t1-p194-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p194-011",
+      "english": "Rough",
+      "polish": "Orientacyjny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p194-011-word.mp3",
+      "audioSentence": "t1-p194-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p194-012",
+      "english": "Pointless",
+      "polish": "Bezcelowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p194-012-word.mp3",
+      "audioSentence": "t1-p194-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p194-013",
+      "english": "Meaningless",
+      "polish": "Bez znaczenia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p194-013-word.mp3",
+      "audioSentence": "t1-p194-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p194-014",
+      "english": "Meaningful",
+      "polish": "Mający znaczenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p194-014-word.mp3",
+      "audioSentence": "t1-p194-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p194-015",
+      "english": "Worthless",
+      "polish": "Bezwartościowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p194-015-word.mp3",
+      "audioSentence": "t1-p194-015-sentence.mp3"
     }
   ]
 }

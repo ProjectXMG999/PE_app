@@ -1,15 +1,15 @@
 {
   "id": "t1-p132",
-  "name": "Książki I pisownia",
+  "name": "Przemieszczanie się",
   "volume": "Tom II",
   "level": 2,
-  "category": "Rzeczowniki",
+  "category": "Phrasale",
   "chapter": "Rozdział XIX",
   "words": [
     {
       "id": "t1-p132-001",
-      "english": "Verb",
-      "polish": "Czasownik",
+      "english": "Get back",
+      "polish": "Wrócić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p132-002",
-      "english": "Grammar",
-      "polish": "Gramatyka",
+      "english": "Go for sth",
+      "polish": "Iść po coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p132-003",
-      "english": "Story",
-      "polish": "Historia",
+      "english": "Go in",
+      "polish": "Wejść do",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p132-004",
-      "english": "Description",
-      "polish": "Opis",
+      "english": "Go out",
+      "polish": "Wyjść na zewnątrz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p132-005",
-      "english": "Adjective",
-      "polish": "Przymiotnik",
+      "english": "Walk into",
+      "polish": "Wchodzić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p132-006",
-      "english": "Adverb",
-      "polish": "Przysłówek",
+      "english": "Come down",
+      "polish": "Zejść na dół",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p132-007",
-      "english": "Chapter",
-      "polish": "Rozdział",
+      "english": "Come up",
+      "polish": "Podejść bliżej",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p132-008",
-      "english": "Noun",
-      "polish": "Rzeczownik",
+      "english": "Drop by",
+      "polish": "Zahaczyć gdzieś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p132-009",
-      "english": "Vocabulary",
-      "polish": "Słownictwo",
+      "english": "Drop in",
+      "polish": "Wpaść gdzieś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p132-010",
-      "english": "Dictionary",
-      "polish": "Słownik",
+      "english": "Get out",
+      "polish": "Wyjść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p132-011",
-      "english": "Page",
-      "polish": "Strona",
+      "english": "Come by",
+      "polish": "Wpaść do kogoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p132-012",
-      "english": "Translation",
-      "polish": "Tłumaczenie",
+      "english": "Get sb back",
+      "polish": "Odprowadzić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p132-013",
-      "english": "Title",
-      "polish": "Tytuł",
+      "english": "Get into",
+      "polish": "Wejść do jakiegoś miejsca",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p132-014",
-      "english": "Publication",
-      "polish": "Publikacja",
+      "english": "Go down",
+      "polish": "Schodzić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-014-word.mp3",
@@ -134,8 +134,8 @@
     },
     {
       "id": "t1-p132-015",
-      "english": "Encyclopedia",
-      "polish": "Encyklopedia",
+      "english": "Run up",
+      "polish": "Podbiec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-015-word.mp3",
@@ -143,8 +143,8 @@
     },
     {
       "id": "t1-p132-016",
-      "english": "Diary",
-      "polish": "Dziennik",
+      "english": "Run down",
+      "polish": "Zbiec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-016-word.mp3",
@@ -152,8 +152,8 @@
     },
     {
       "id": "t1-p132-017",
-      "english": "Extract",
-      "polish": "Fragment",
+      "english": "Get in",
+      "polish": "Przyjeżdżać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-017-word.mp3",
@@ -161,8 +161,8 @@
     },
     {
       "id": "t1-p132-018",
-      "english": "Punctuation",
-      "polish": "Interpunkcja",
+      "english": "Walk sb out",
+      "polish": "Odprowadzić kogoś pieszo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-018-word.mp3",
@@ -170,8 +170,8 @@
     },
     {
       "id": "t1-p132-019",
-      "english": "Proofreading",
-      "polish": "Korekta",
+      "english": "Go around",
+      "polish": "Okrążać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-019-word.mp3",
@@ -179,8 +179,8 @@
     },
     {
       "id": "t1-p132-020",
-      "english": "Period",
-      "polish": "Kropka",
+      "english": "Walk up",
+      "polish": "Wejść na górę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-020-word.mp3",
@@ -188,8 +188,8 @@
     },
     {
       "id": "t1-p132-021",
-      "english": "Numeral",
-      "polish": "Liczebnik",
+      "english": "Bump into",
+      "polish": "Wpaść na",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-021-word.mp3",
@@ -197,8 +197,8 @@
     },
     {
       "id": "t1-p132-022",
-      "english": "Theme",
-      "polish": "Motyw przewodni",
+      "english": "Come over",
+      "polish": "Zajść gdzieś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-022-word.mp3",
@@ -206,8 +206,8 @@
     },
     {
       "id": "t1-p132-023",
-      "english": "Handwriting",
-      "polish": "Pismo odręczne",
+      "english": "Come along",
+      "polish": "Nadejść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-023-word.mp3",
@@ -215,8 +215,8 @@
     },
     {
       "id": "t1-p132-024",
-      "english": "Spelling",
-      "polish": "Pisownia",
+      "english": "Walk back",
+      "polish": "Wracać piechotą",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-024-word.mp3",
@@ -224,8 +224,8 @@
     },
     {
       "id": "t1-p132-025",
-      "english": "Summary",
-      "polish": "Podsumowanie",
+      "english": "See sb off",
+      "polish": "Odprowadzić kogoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-025-word.mp3",
@@ -233,8 +233,8 @@
     },
     {
       "id": "t1-p132-026",
-      "english": "Comma",
-      "polish": "Przecinek",
+      "english": "Hang about",
+      "polish": "Pałętać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-026-word.mp3",
@@ -242,8 +242,8 @@
     },
     {
       "id": "t1-p132-027",
-      "english": "Preposition",
-      "polish": "Przyimek",
+      "english": "Hang around",
+      "polish": "Kręcić się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-027-word.mp3",
@@ -251,8 +251,8 @@
     },
     {
       "id": "t1-p132-028",
-      "english": "Proverb",
-      "polish": "Przysłowie",
+      "english": "Stop over",
+      "polish": "Zatrzymać się po drodze u kogoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-028-word.mp3",
@@ -260,8 +260,8 @@
     },
     {
       "id": "t1-p132-029",
-      "english": "Abbreviation",
-      "polish": "Skrót",
+      "english": "Head back",
+      "polish": "Zawracać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-029-word.mp3",
@@ -269,8 +269,8 @@
     },
     {
       "id": "t1-p132-030",
-      "english": "Slang",
-      "polish": "Slang",
+      "english": "Head toward",
+      "polish": "Zmierzać w kierunku",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-030-word.mp3",
@@ -278,8 +278,8 @@
     },
     {
       "id": "t1-p132-031",
-      "english": "Glossary",
-      "polish": "Słowniczek",
+      "english": "Make for sth",
+      "polish": "Ruszyć w kierunku czegoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-031-word.mp3",
@@ -287,8 +287,8 @@
     },
     {
       "id": "t1-p132-032",
-      "english": "Table of contents",
-      "polish": "Spis treści",
+      "english": "Move in",
+      "polish": "Posuwać się naprzód",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-032-word.mp3",
@@ -296,8 +296,8 @@
     },
     {
       "id": "t1-p132-033",
-      "english": "Conjunction",
-      "polish": "Spójnik",
+      "english": "Run around",
+      "polish": "Biegać w tę I z powrotem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-033-word.mp3",
@@ -305,8 +305,8 @@
     },
     {
       "id": "t1-p132-034",
-      "english": "Usage",
-      "polish": "Użycie",
+      "english": "Run into sb",
+      "polish": "Napotkać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-034-word.mp3",
@@ -314,8 +314,8 @@
     },
     {
       "id": "t1-p132-035",
-      "english": "Introduction",
-      "polish": "Wprowadzenie",
+      "english": "Move in on",
+      "polish": "Nadciągać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-035-word.mp3",
@@ -323,8 +323,8 @@
     },
     {
       "id": "t1-p132-036",
-      "english": "Pronunciation",
-      "polish": "Wymowa",
+      "english": "Close in",
+      "polish": "Zbliżać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-036-word.mp3",
@@ -332,8 +332,8 @@
     },
     {
       "id": "t1-p132-037",
-      "english": "Pronoun",
-      "polish": "Zaimek",
+      "english": "Pop in",
+      "polish": "Wbić gdzieś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-037-word.mp3",
@@ -341,8 +341,8 @@
     },
     {
       "id": "t1-p132-038",
-      "english": "Contents",
-      "polish": "Zawartość",
+      "english": "Break into",
+      "polish": "Zrywać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-038-word.mp3",
@@ -350,8 +350,8 @@
     },
     {
       "id": "t1-p132-039",
-      "english": "Fiction",
-      "polish": "Fikcja",
+      "english": "Come down",
+      "polish": "Podróżować na południe",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-039-word.mp3",
@@ -359,327 +359,12 @@
     },
     {
       "id": "t1-p132-040",
-      "english": "Synonym",
-      "polish": "Synonim",
+      "english": "Head for sth",
+      "polish": "Zmierzać ku czemuś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p132-040-word.mp3",
       "audioSentence": "t1-p132-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-041",
-      "english": "Protagonist",
-      "polish": "Bohater",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-041-word.mp3",
-      "audioSentence": "t1-p132-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-042",
-      "english": "Tale",
-      "polish": "Bajka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-042-word.mp3",
-      "audioSentence": "t1-p132-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-043",
-      "english": "Layout",
-      "polish": "Format",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-043-word.mp3",
-      "audioSentence": "t1-p132-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-044",
-      "english": "Term",
-      "polish": "Termin",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-044-word.mp3",
-      "audioSentence": "t1-p132-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-045",
-      "english": "Exception",
-      "polish": "Wyjątek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-045-word.mp3",
-      "audioSentence": "t1-p132-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-046",
-      "english": "Metaphor",
-      "polish": "Metafora",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-046-word.mp3",
-      "audioSentence": "t1-p132-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-047",
-      "english": "Storybook",
-      "polish": "Książeczka z bajkami",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-047-word.mp3",
-      "audioSentence": "t1-p132-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-048",
-      "english": "Biography",
-      "polish": "Biografia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-048-word.mp3",
-      "audioSentence": "t1-p132-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-049",
-      "english": "Front page",
-      "polish": "Strona tytułowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-049-word.mp3",
-      "audioSentence": "t1-p132-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-050",
-      "english": "Best-seller",
-      "polish": "Bestseller",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-050-word.mp3",
-      "audioSentence": "t1-p132-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-051",
-      "english": "Reader",
-      "polish": "Czytelnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-051-word.mp3",
-      "audioSentence": "t1-p132-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-052",
-      "english": "Heroine",
-      "polish": "Bohaterka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-052-word.mp3",
-      "audioSentence": "t1-p132-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-053",
-      "english": "Publisher",
-      "polish": "Wydawca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-053-word.mp3",
-      "audioSentence": "t1-p132-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-054",
-      "english": "Context",
-      "polish": "Kontekst",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-054-word.mp3",
-      "audioSentence": "t1-p132-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-055",
-      "english": "Cover",
-      "polish": "Okładka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-055-word.mp3",
-      "audioSentence": "t1-p132-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-056",
-      "english": "Short story",
-      "polish": "Opowiadanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-056-word.mp3",
-      "audioSentence": "t1-p132-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-057",
-      "english": "Poet",
-      "polish": "Poeta",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-057-word.mp3",
-      "audioSentence": "t1-p132-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-058",
-      "english": "Poetry",
-      "polish": "Poezja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-058-word.mp3",
-      "audioSentence": "t1-p132-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-059",
-      "english": "Novel",
-      "polish": "Powieść",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-059-word.mp3",
-      "audioSentence": "t1-p132-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-060",
-      "english": "Content",
-      "polish": "Treść",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-060-word.mp3",
-      "audioSentence": "t1-p132-060-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-061",
-      "english": "Poem",
-      "polish": "Wiersz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-061-word.mp3",
-      "audioSentence": "t1-p132-061-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-062",
-      "english": "Autobiography",
-      "polish": "Autobiografia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-062-word.mp3",
-      "audioSentence": "t1-p132-062-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-063",
-      "english": "Bibliography",
-      "polish": "Bibliografia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-063-word.mp3",
-      "audioSentence": "t1-p132-063-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-064",
-      "english": "Plot",
-      "polish": "Fabuła",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-064-word.mp3",
-      "audioSentence": "t1-p132-064-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-065",
-      "english": "Literature",
-      "polish": "Literatura",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-065-word.mp3",
-      "audioSentence": "t1-p132-065-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-066",
-      "english": "Villain",
-      "polish": "Czarny charakter",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-066-word.mp3",
-      "audioSentence": "t1-p132-066-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-067",
-      "english": "Dictation",
-      "polish": "Dyktando",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-067-word.mp3",
-      "audioSentence": "t1-p132-067-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-068",
-      "english": "Appendix",
-      "polish": "Aneks",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-068-word.mp3",
-      "audioSentence": "t1-p132-068-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-069",
-      "english": "Wordplay",
-      "polish": "Gra słów",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-069-word.mp3",
-      "audioSentence": "t1-p132-069-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-070",
-      "english": "Reference",
-      "polish": "Odniesienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-070-word.mp3",
-      "audioSentence": "t1-p132-070-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-071",
-      "english": "Association",
-      "polish": "Skojarzenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-071-word.mp3",
-      "audioSentence": "t1-p132-071-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-072",
-      "english": "Footnote",
-      "polish": "Przypis",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-072-word.mp3",
-      "audioSentence": "t1-p132-072-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-073",
-      "english": "Verse",
-      "polish": "Wers",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-073-word.mp3",
-      "audioSentence": "t1-p132-073-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-074",
-      "english": "Strophe",
-      "polish": "Strofa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-074-word.mp3",
-      "audioSentence": "t1-p132-074-sentence.mp3"
-    },
-    {
-      "id": "t1-p132-075",
-      "english": "Apostrophe",
-      "polish": "Apostrof",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p132-075-word.mp3",
-      "audioSentence": "t1-p132-075-sentence.mp3"
     }
   ]
 }

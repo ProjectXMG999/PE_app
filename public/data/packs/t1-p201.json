@@ -1,15 +1,15 @@
 {
   "id": "t1-p201",
-  "name": "Przemysł",
+  "name": "Co poszło nie tak?",
   "volume": "Tom IV",
   "level": 3,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XXXVIII",
+  "category": "Phrasale",
+  "chapter": "Rozdział XXXVII",
   "words": [
     {
       "id": "t1-p201-001",
-      "english": "Energy",
-      "polish": "Energia",
+      "english": "Break down",
+      "polish": "Popsuć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p201-002",
-      "english": "Power",
-      "polish": "Władza",
+      "english": "Give up",
+      "polish": "Poddać się, zrezygnować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p201-003",
-      "english": "Mine",
-      "polish": "Kopalnia",
+      "english": "Fall down",
+      "polish": "Upaść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p201-004",
-      "english": "Waste",
-      "polish": "Odpady",
+      "english": "End up",
+      "polish": "Skończyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p201-005",
-      "english": "Works",
-      "polish": "Prace",
+      "english": "Fall over",
+      "polish": "Przewracać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p201-006",
-      "english": "Pollution",
-      "polish": "Zanieczyszczenie",
+      "english": "Be off",
+      "polish": "Zepsuć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p201-007",
-      "english": "Recycling",
-      "polish": "Recykling",
+      "english": "Call off",
+      "polish": "Odwoływać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p201-008",
-      "english": "Automation",
-      "polish": "Automatyzacja",
+      "english": "Run out of sth",
+      "polish": "Wyczerpywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p201-009",
-      "english": "Innovation",
-      "polish": "Innowacja",
+      "english": "Fade out",
+      "polish": "Zanikać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p201-010",
-      "english": "Production",
-      "polish": "Produkcja",
+      "english": "Dry up",
+      "polish": "Wysychać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p201-011",
-      "english": "Industry",
-      "polish": "Przemysł",
+      "english": "Hold sb up",
+      "polish": "Zatrzymać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p201-012",
-      "english": "Sector",
-      "polish": "Sektor",
+      "english": "Miss out on",
+      "polish": "Przegapić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p201-013",
-      "english": "Mechanism",
-      "polish": "Mechanizm",
+      "english": "Screw up",
+      "polish": "Schrzanić coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p201-014",
-      "english": "Electricity",
-      "polish": "Prąd",
+      "english": "Act up",
+      "polish": "Nawalać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-014-word.mp3",
@@ -134,8 +134,8 @@
     },
     {
       "id": "t1-p201-015",
-      "english": "Engineering",
-      "polish": "Inżynieria",
+      "english": "Mess up",
+      "polish": "Schrzanić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-015-word.mp3",
@@ -143,8 +143,8 @@
     },
     {
       "id": "t1-p201-016",
-      "english": "Production line",
-      "polish": "Linia produkcyjna",
+      "english": "Mistake sb for sb",
+      "polish": "Pomylić kogoś z kimś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-016-word.mp3",
@@ -152,8 +152,8 @@
     },
     {
       "id": "t1-p201-017",
-      "english": "Tycoon",
-      "polish": "Potentat",
+      "english": "Use up",
+      "polish": "Zużyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-017-word.mp3",
@@ -161,8 +161,8 @@
     },
     {
       "id": "t1-p201-018",
-      "english": "Modernization",
-      "polish": "Modernizacja",
+      "english": "Be off",
+      "polish": "Być niezgodnym z ustaleniami",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-018-word.mp3",
@@ -170,8 +170,8 @@
     },
     {
       "id": "t1-p201-019",
-      "english": "Generator",
-      "polish": "Generator",
+      "english": "Get rid of sth",
+      "polish": "Pozbywać się czegoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-019-word.mp3",
@@ -179,8 +179,8 @@
     },
     {
       "id": "t1-p201-020",
-      "english": "Maintenance",
-      "polish": "Konserwacja",
+      "english": "Break down",
+      "polish": "Załamywać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-020-word.mp3",
@@ -188,8 +188,8 @@
     },
     {
       "id": "t1-p201-021",
-      "english": "Pipe",
-      "polish": "Rura",
+      "english": "Clog up",
+      "polish": "Zatkać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-021-word.mp3",
@@ -197,8 +197,8 @@
     },
     {
       "id": "t1-p201-022",
-      "english": "Power plant",
-      "polish": "Elektrownia",
+      "english": "Fade away",
+      "polish": "Blaknąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-022-word.mp3",
@@ -206,8 +206,8 @@
     },
     {
       "id": "t1-p201-023",
-      "english": "Invention",
-      "polish": "Wynalazek",
+      "english": "Go off",
+      "polish": "Przestać działać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-023-word.mp3",
@@ -215,8 +215,8 @@
     },
     {
       "id": "t1-p201-024",
-      "english": "Resource",
-      "polish": "Zasób",
+      "english": "Knock over",
+      "polish": "Przewrócić coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-024-word.mp3",
@@ -224,8 +224,8 @@
     },
     {
       "id": "t1-p201-025",
-      "english": "Processing",
-      "polish": "Obróbka",
+      "english": "Run down",
+      "polish": "Wyczerpać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-025-word.mp3",
@@ -233,8 +233,8 @@
     },
     {
       "id": "t1-p201-026",
-      "english": "Smog",
-      "polish": "Smog",
+      "english": "Wind up",
+      "polish": "Skończyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-026-word.mp3",
@@ -242,8 +242,8 @@
     },
     {
       "id": "t1-p201-027",
-      "english": "Utility",
-      "polish": "Użyteczność",
+      "english": "Dry up",
+      "polish": "Wyczerpać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-027-word.mp3",
@@ -251,8 +251,8 @@
     },
     {
       "id": "t1-p201-028",
-      "english": "Plant",
-      "polish": "Zakład",
+      "english": "Go down",
+      "polish": "Przegrać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-028-word.mp3",
@@ -260,8 +260,8 @@
     },
     {
       "id": "t1-p201-029",
-      "english": "Assembly line",
-      "polish": "Linia montażowa",
+      "english": "Go down",
+      "polish": "Spaść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-029-word.mp3",
@@ -269,147 +269,12 @@
     },
     {
       "id": "t1-p201-030",
-      "english": "Mining",
-      "polish": "Wydobycie",
+      "english": "Go down",
+      "polish": "Tonąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p201-030-word.mp3",
       "audioSentence": "t1-p201-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-031",
-      "english": "Secure",
-      "polish": "Zabezpieczać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-031-word.mp3",
-      "audioSentence": "t1-p201-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-032",
-      "english": "Operate",
-      "polish": "Obsługiwać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-032-word.mp3",
-      "audioSentence": "t1-p201-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-033",
-      "english": "Gain",
-      "polish": "Nabierać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-033-word.mp3",
-      "audioSentence": "t1-p201-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-034",
-      "english": "Drain",
-      "polish": "Wyczerpywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-034-word.mp3",
-      "audioSentence": "t1-p201-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-035",
-      "english": "Manufacture",
-      "polish": "Fabrykować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-035-word.mp3",
-      "audioSentence": "t1-p201-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-036",
-      "english": "Mine",
-      "polish": "Wydobywać surowce",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-036-word.mp3",
-      "audioSentence": "t1-p201-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-037",
-      "english": "Pollute",
-      "polish": "Zanieczyścić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-037-word.mp3",
-      "audioSentence": "t1-p201-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-038",
-      "english": "Puff",
-      "polish": "Wypuszczać dym",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-038-word.mp3",
-      "audioSentence": "t1-p201-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-039",
-      "english": "Recycle",
-      "polish": "Recyklingować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-039-word.mp3",
-      "audioSentence": "t1-p201-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-040",
-      "english": "Utilize",
-      "polish": "Użytkować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-040-word.mp3",
-      "audioSentence": "t1-p201-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-041",
-      "english": "Contaminate",
-      "polish": "Skazić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-041-word.mp3",
-      "audioSentence": "t1-p201-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-042",
-      "english": "Extract",
-      "polish": "Wydobywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-042-word.mp3",
-      "audioSentence": "t1-p201-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-043",
-      "english": "Mechanize",
-      "polish": "Zmechanizować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-043-word.mp3",
-      "audioSentence": "t1-p201-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-044",
-      "english": "Automate",
-      "polish": "Zautomatyzować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-044-word.mp3",
-      "audioSentence": "t1-p201-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p201-045",
-      "english": "Industrialize",
-      "polish": "Uprzemysłowić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p201-045-word.mp3",
-      "audioSentence": "t1-p201-045-sentence.mp3"
     }
   ]
 }

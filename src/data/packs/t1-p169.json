@@ -1,15 +1,15 @@
 {
   "id": "t1-p169",
-  "name": "Mistrz kierownicy",
-  "volume": "Tom III",
-  "level": 3,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XXIX",
+  "name": "Wulgaryzmy 6",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Wulgaryzmy",
+  "chapter": "Rozdział XVIII",
   "words": [
     {
       "id": "t1-p169-001",
-      "english": "Hole",
-      "polish": "Dziura",
+      "english": "skank",
+      "polish": "kurewka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p169-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p169-002",
-      "english": "Wheel",
-      "polish": "Koło",
+      "english": "cunt rag",
+      "polish": "szmata",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p169-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p169-003",
-      "english": "Way",
-      "polish": "Droga",
+      "english": "twat",
+      "polish": "pizda",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p169-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p169-004",
-      "english": "Speed limit",
-      "polish": "Ograniczenie prędkości",
+      "english": "coochy, coochie",
+      "polish": "cipa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p169-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p169-005",
-      "english": "Tunnel",
-      "polish": "Tunel",
+      "english": "arse",
+      "polish": "dupa (brit)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p169-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p169-006",
-      "english": "Traffic jam",
-      "polish": "Korek uliczny",
+      "english": "dumbass",
+      "polish": "debil",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p169-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p169-007",
-      "english": "Turn",
-      "polish": "Zakręt",
+      "english": "fucktard",
+      "polish": "pierdolony debil",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p169-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p169-008",
-      "english": "Traffic sign",
-      "polish": "Znak drogowy",
+      "english": "prat",
+      "polish": "debil",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p169-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p169-009",
-      "english": "Shortcut",
-      "polish": "Skrót",
+      "english": "scum",
+      "polish": "szmaciarz, lump",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p169-009-word.mp3",
@@ -89,327 +89,12 @@
     },
     {
       "id": "t1-p169-010",
-      "english": "Traffic",
-      "polish": "Ruch uliczny",
+      "english": "do the dick move",
+      "polish": "zrobić coś skurwysyńskiego",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p169-010-word.mp3",
       "audioSentence": "t1-p169-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-011",
-      "english": "Traffic lights",
-      "polish": "Sygnalizacja świetlna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-011-word.mp3",
-      "audioSentence": "t1-p169-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-012",
-      "english": "Rush",
-      "polish": "Pośpiech",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-012-word.mp3",
-      "audioSentence": "t1-p169-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-013",
-      "english": "Roadblock",
-      "polish": "Blokada na drodze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-013-word.mp3",
-      "audioSentence": "t1-p169-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-014",
-      "english": "Drive",
-      "polish": "Droga",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-014-word.mp3",
-      "audioSentence": "t1-p169-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-015",
-      "english": "Horn",
-      "polish": "Klakson",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-015-word.mp3",
-      "audioSentence": "t1-p169-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-016",
-      "english": "Spare wheel",
-      "polish": "Koło zapasowe",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-016-word.mp3",
-      "audioSentence": "t1-p169-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-017",
-      "english": "Maneuver",
-      "polish": "Manewr",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-017-word.mp3",
-      "audioSentence": "t1-p169-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-018",
-      "english": "Detour",
-      "polish": "Objazd",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-018-word.mp3",
-      "audioSentence": "t1-p169-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-019",
-      "english": "Warning",
-      "polish": "Ostrzeżenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-019-word.mp3",
-      "audioSentence": "t1-p169-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-020",
-      "english": "Roadside",
-      "polish": "Pobocze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-020-word.mp3",
-      "audioSentence": "t1-p169-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-021",
-      "english": "Vehicle",
-      "polish": "Pojazd",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-021-word.mp3",
-      "audioSentence": "t1-p169-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-022",
-      "english": "Gap",
-      "polish": "Przerwa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-022-word.mp3",
-      "audioSentence": "t1-p169-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-023",
-      "english": "Brink",
-      "polish": "Skraj",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-023-word.mp3",
-      "audioSentence": "t1-p169-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-024",
-      "english": "Flat tire",
-      "polish": "Przebita opona",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-024-word.mp3",
-      "audioSentence": "t1-p169-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-025",
-      "english": "Route",
-      "polish": "Trasa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-025-word.mp3",
-      "audioSentence": "t1-p169-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-026",
-      "english": "Bend",
-      "polish": "Zakręt",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-026-word.mp3",
-      "audioSentence": "t1-p169-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-027",
-      "english": "Minor road",
-      "polish": "Droga boczna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-027-word.mp3",
-      "audioSentence": "t1-p169-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-028",
-      "english": "Main road",
-      "polish": "Droga główna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-028-word.mp3",
-      "audioSentence": "t1-p169-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-029",
-      "english": "Brake",
-      "polish": "Hamulec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-029-word.mp3",
-      "audioSentence": "t1-p169-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-030",
-      "english": "Bumper",
-      "polish": "Zderzak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-030-word.mp3",
-      "audioSentence": "t1-p169-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-031",
-      "english": "Trunk",
-      "polish": "Bagażnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-031-word.mp3",
-      "audioSentence": "t1-p169-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-032",
-      "english": "Roundabout",
-      "polish": "Rondo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-032-word.mp3",
-      "audioSentence": "t1-p169-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-033",
-      "english": "Intersection",
-      "polish": "Skrzyżowanie, rozdroże",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-033-word.mp3",
-      "audioSentence": "t1-p169-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-034",
-      "english": "Crossroads",
-      "polish": "Skrzyżowanie dróg",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-034-word.mp3",
-      "audioSentence": "t1-p169-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-035",
-      "english": "Junction",
-      "polish": "Skrzyżowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-035-word.mp3",
-      "audioSentence": "t1-p169-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-036",
-      "english": "Engine",
-      "polish": "Silnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-036-word.mp3",
-      "audioSentence": "t1-p169-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-037",
-      "english": "Track",
-      "polish": "Tor",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-037-word.mp3",
-      "audioSentence": "t1-p169-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-038",
-      "english": "Getaway",
-      "polish": "Ucieczka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-038-word.mp3",
-      "audioSentence": "t1-p169-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-039",
-      "english": "Chase",
-      "polish": "Pościg",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-039-word.mp3",
-      "audioSentence": "t1-p169-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-040",
-      "english": "Gear",
-      "polish": "Bieg",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-040-word.mp3",
-      "audioSentence": "t1-p169-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-041",
-      "english": "Bypass",
-      "polish": "Obwodnica",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-041-word.mp3",
-      "audioSentence": "t1-p169-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-042",
-      "english": "Pothole",
-      "polish": "Wybój",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-042-word.mp3",
-      "audioSentence": "t1-p169-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-043",
-      "english": "Curb",
-      "polish": "Krawężnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-043-word.mp3",
-      "audioSentence": "t1-p169-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-044",
-      "english": "Street lighting",
-      "polish": "Oświetlenie uliczne",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-044-word.mp3",
-      "audioSentence": "t1-p169-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p169-045",
-      "english": "Lane",
-      "polish": "Pas ruchu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p169-045-word.mp3",
-      "audioSentence": "t1-p169-045-sentence.mp3"
     }
   ]
 }

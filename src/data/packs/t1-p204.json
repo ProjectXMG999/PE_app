@@ -1,15 +1,15 @@
 {
   "id": "t1-p204",
-  "name": "Slang 19",
+  "name": "Sądownicze",
   "volume": "Tom IV",
   "level": 3,
-  "category": "Slang",
-  "chapter": "Rozdział XXXIX",
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXXVIII",
   "words": [
     {
       "id": "t1-p204-001",
-      "english": "Chillax",
-      "polish": "Pełen relaks",
+      "english": "Fine",
+      "polish": "Grzywna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p204-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p204-002",
-      "english": "Downtime",
-      "polish": "Przerwa w pracy",
+      "english": "Jury",
+      "polish": "Jury",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p204-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p204-003",
-      "english": "Have a crash",
-      "polish": "Zasnąć bardzo szybko",
+      "english": "Prisoner",
+      "polish": "Więzień",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p204-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p204-004",
-      "english": "Laid back",
-      "polish": "Ktoś kompletnie bez motywacji",
+      "english": "Victim",
+      "polish": "Ofiara",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p204-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p204-005",
-      "english": "Loafing",
-      "polish": "Obijać się",
+      "english": "Crime",
+      "polish": "Zbrodnia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p204-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p204-006",
-      "english": "Slide",
-      "polish": "Podskoczyć",
+      "english": "Self-defense",
+      "polish": "Samoobrona",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p204-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p204-007",
-      "english": "Kick back",
-      "polish": "Wrzucić na luz",
+      "english": "Protection",
+      "polish": "Zabezpieczenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p204-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p204-008",
-      "english": "Take five",
-      "polish": "Robić krótką przerwę w pracy",
+      "english": "Penalty",
+      "polish": "Kara",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p204-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p204-009",
-      "english": "Roll up to",
-      "polish": "Zawinąć się",
+      "english": "Theft",
+      "polish": "Kradzież",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p204-009-word.mp3",
@@ -89,12 +89,597 @@
     },
     {
       "id": "t1-p204-010",
-      "english": "Zone out",
-      "polish": "Wyłączyć się",
+      "english": "Innocence",
+      "polish": "Niewinność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p204-010-word.mp3",
       "audioSentence": "t1-p204-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-011",
+      "english": "Arrest",
+      "polish": "Aresztowanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-011-word.mp3",
+      "audioSentence": "t1-p204-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-012",
+      "english": "Proof",
+      "polish": "Dowód",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-012-word.mp3",
+      "audioSentence": "t1-p204-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-013",
+      "english": "Witness",
+      "polish": "Świadek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-013-word.mp3",
+      "audioSentence": "t1-p204-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-014",
+      "english": "Alibi",
+      "polish": "Alibi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-014-word.mp3",
+      "audioSentence": "t1-p204-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-015",
+      "english": "Trial",
+      "polish": "Rozprawa, proces",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-015-word.mp3",
+      "audioSentence": "t1-p204-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-016",
+      "english": "Sue",
+      "polish": "Pozywać kogoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-016-word.mp3",
+      "audioSentence": "t1-p204-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-017",
+      "english": "Evidence",
+      "polish": "Świadczyć o",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-017-word.mp3",
+      "audioSentence": "t1-p204-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-018",
+      "english": "Judge",
+      "polish": "Osądzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-018-word.mp3",
+      "audioSentence": "t1-p204-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-019",
+      "english": "File",
+      "polish": "Wnosić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-019-word.mp3",
+      "audioSentence": "t1-p204-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-020",
+      "english": "Jail",
+      "polish": "Wsadzać do więzienia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-020-word.mp3",
+      "audioSentence": "t1-p204-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-021",
+      "english": "Witness",
+      "polish": "Być świadkiem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-021-word.mp3",
+      "audioSentence": "t1-p204-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-022",
+      "english": "Sentence",
+      "polish": "Skazywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-022-word.mp3",
+      "audioSentence": "t1-p204-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-023",
+      "english": "Investigate",
+      "polish": "Prowadzić dochodzenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-023-word.mp3",
+      "audioSentence": "t1-p204-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-024",
+      "english": "Convict",
+      "polish": "Uznać za winnego",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-024-word.mp3",
+      "audioSentence": "t1-p204-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-025",
+      "english": "Imprison",
+      "polish": "Uwięzić kogoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-025-word.mp3",
+      "audioSentence": "t1-p204-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-026",
+      "english": "Testify",
+      "polish": "Zeznawać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-026-word.mp3",
+      "audioSentence": "t1-p204-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-027",
+      "english": "Prosecute",
+      "polish": "Zaskarżyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-027-word.mp3",
+      "audioSentence": "t1-p204-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-028",
+      "english": "Appeal",
+      "polish": "Wnosić apelację",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-028-word.mp3",
+      "audioSentence": "t1-p204-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-029",
+      "english": "Adjudicate",
+      "polish": "Orzec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-029-word.mp3",
+      "audioSentence": "t1-p204-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-030",
+      "english": "Arbitrate",
+      "polish": "Rozstrzygać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-030-word.mp3",
+      "audioSentence": "t1-p204-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-031",
+      "english": "Appeal",
+      "polish": "Apelacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-031-word.mp3",
+      "audioSentence": "t1-p204-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-032",
+      "english": "Due diligence",
+      "polish": "Audyt prawny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-032-word.mp3",
+      "audioSentence": "t1-p204-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-033",
+      "english": "Prime suspect",
+      "polish": "Główny podejrzany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-033-word.mp3",
+      "audioSentence": "t1-p204-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-034",
+      "english": "Bail",
+      "polish": "Kaucja za aresztowanego",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-034-word.mp3",
+      "audioSentence": "t1-p204-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-035",
+      "english": "Evidence",
+      "polish": "Materiał dowodowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-035-word.mp3",
+      "audioSentence": "t1-p204-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-036",
+      "english": "Compensation",
+      "polish": "Odszkodowanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-036-word.mp3",
+      "audioSentence": "t1-p204-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-037",
+      "english": "Accusation",
+      "polish": "Oskarżenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-037-word.mp3",
+      "audioSentence": "t1-p204-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-038",
+      "english": "Paragraph",
+      "polish": "Paragraf",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-038-word.mp3",
+      "audioSentence": "t1-p204-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-039",
+      "english": "Plaintiff",
+      "polish": "Strona powodowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-039-word.mp3",
+      "audioSentence": "t1-p204-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-040",
+      "english": "Lawsuit",
+      "polish": "Proces sądowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-040-word.mp3",
+      "audioSentence": "t1-p204-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-041",
+      "english": "Course of action",
+      "polish": "Przebieg działań",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-041-word.mp3",
+      "audioSentence": "t1-p204-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-042",
+      "english": "Felony",
+      "polish": "Przestępstwo w usa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-042-word.mp3",
+      "audioSentence": "t1-p204-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-043",
+      "english": "Regulation",
+      "polish": "Regulacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-043-word.mp3",
+      "audioSentence": "t1-p204-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-044",
+      "english": "Respondent",
+      "polish": "Respondent",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-044-word.mp3",
+      "audioSentence": "t1-p204-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-045",
+      "english": "Litigation",
+      "polish": "Spór sądowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-045-word.mp3",
+      "audioSentence": "t1-p204-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-046",
+      "english": "Innocent",
+      "polish": "Niewinny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-046-word.mp3",
+      "audioSentence": "t1-p204-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-047",
+      "english": "Illegal",
+      "polish": "Nielegalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-047-word.mp3",
+      "audioSentence": "t1-p204-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-048",
+      "english": "Legal",
+      "polish": "Prawny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-048-word.mp3",
+      "audioSentence": "t1-p204-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-049",
+      "english": "Wanted",
+      "polish": "Poszukiwany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-049-word.mp3",
+      "audioSentence": "t1-p204-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-050",
+      "english": "Charged",
+      "polish": "Mający zarzuty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-050-word.mp3",
+      "audioSentence": "t1-p204-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-051",
+      "english": "Armed",
+      "polish": "Uzbrojony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-051-word.mp3",
+      "audioSentence": "t1-p204-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-052",
+      "english": "Forbidden",
+      "polish": "Zabroniony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-052-word.mp3",
+      "audioSentence": "t1-p204-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-053",
+      "english": "Banned",
+      "polish": "Zakazany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-053-word.mp3",
+      "audioSentence": "t1-p204-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-054",
+      "english": "At large",
+      "polish": "Na wolności",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-054-word.mp3",
+      "audioSentence": "t1-p204-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-055",
+      "english": "Unarmed",
+      "polish": "Nieuzbrojony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-055-word.mp3",
+      "audioSentence": "t1-p204-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-056",
+      "english": "Accountable",
+      "polish": "Odpowiedzialny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-056-word.mp3",
+      "audioSentence": "t1-p204-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-057",
+      "english": "Equitable",
+      "polish": "Sprawiedliwy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-057-word.mp3",
+      "audioSentence": "t1-p204-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-058",
+      "english": "Acquitted",
+      "polish": "Uniewinniony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-058-word.mp3",
+      "audioSentence": "t1-p204-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-059",
+      "english": "Convicted",
+      "polish": "Skazany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-059-word.mp3",
+      "audioSentence": "t1-p204-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-060",
+      "english": "Charged",
+      "polish": "Mający zarzuty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-060-word.mp3",
+      "audioSentence": "t1-p204-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-061",
+      "english": "Objection",
+      "polish": "Sprzeciw",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-061-word.mp3",
+      "audioSentence": "t1-p204-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-062",
+      "english": "Statute",
+      "polish": "Statut",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-062-word.mp3",
+      "audioSentence": "t1-p204-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-063",
+      "english": "Agreement",
+      "polish": "Ugoda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-063-word.mp3",
+      "audioSentence": "t1-p204-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-064",
+      "english": "Parole",
+      "polish": "Zwolnienie warunkowe",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-064-word.mp3",
+      "audioSentence": "t1-p204-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-065",
+      "english": "Fingerprint",
+      "polish": "Odcisk palca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-065-word.mp3",
+      "audioSentence": "t1-p204-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-066",
+      "english": "Footprint",
+      "polish": "Odcisk stopy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-066-word.mp3",
+      "audioSentence": "t1-p204-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-067",
+      "english": "Statement",
+      "polish": "Oświadczenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-067-word.mp3",
+      "audioSentence": "t1-p204-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-068",
+      "english": "Suspect",
+      "polish": "Podejrzany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-068-word.mp3",
+      "audioSentence": "t1-p204-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-069",
+      "english": "Criminal",
+      "polish": "Przestępca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-069-word.mp3",
+      "audioSentence": "t1-p204-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-070",
+      "english": "Criminality",
+      "polish": "Przestępczość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-070-word.mp3",
+      "audioSentence": "t1-p204-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-071",
+      "english": "Investigation",
+      "polish": "Dochodzenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-071-word.mp3",
+      "audioSentence": "t1-p204-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-072",
+      "english": "Warrant",
+      "polish": "Nakaz sądowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-072-word.mp3",
+      "audioSentence": "t1-p204-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-073",
+      "english": "Jurisprudence",
+      "polish": "Prawoznawstwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-073-word.mp3",
+      "audioSentence": "t1-p204-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-074",
+      "english": "Statutory interpretation",
+      "polish": "Wykładnia prawa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-074-word.mp3",
+      "audioSentence": "t1-p204-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p204-075",
+      "english": "Crown witness",
+      "polish": "Świadek koronny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p204-075-word.mp3",
+      "audioSentence": "t1-p204-075-sentence.mp3"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "id": "t1-p080",
-  "name": "Życie",
+  "name": "Kultura",
   "volume": "Tom I",
   "level": 1,
   "category": "Rzeczowniki",
@@ -8,8 +8,8 @@
   "words": [
     {
       "id": "t1-p080-001",
-      "english": "Marriage",
-      "polish": "Małżeństwo",
+      "english": "Author",
+      "polish": "Autor",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p080-002",
-      "english": "Birthplace",
-      "polish": "Miejsce urodzenia",
+      "english": "Guitar",
+      "polish": "Gitara",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p080-003",
-      "english": "Couple",
-      "polish": "Para",
+      "english": "Cinema",
+      "polish": "Kino",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p080-004",
-      "english": "Party",
-      "polish": "Przyjęcie",
+      "english": "Concert",
+      "polish": "Koncert",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p080-005",
-      "english": "Style",
-      "polish": "Styl",
+      "english": "Music",
+      "polish": "Muzyka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p080-006",
-      "english": "Lifestyle",
-      "polish": "Styl życia",
+      "english": "Picture",
+      "polish": "Obrazek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p080-007",
-      "english": "Birthday",
-      "polish": "Urodziny",
+      "english": "Song",
+      "polish": "Piosenka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p080-008",
-      "english": "Event",
-      "polish": "Wydarzenie",
+      "english": "Art",
+      "polish": "Sztuka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p080-009",
-      "english": "Life",
-      "polish": "Życie",
+      "english": "Dance",
+      "polish": "Taniec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p080-010",
-      "english": "Nightlife",
-      "polish": "Życie nocne",
+      "english": "Photo",
+      "polish": "Zdjęcie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p080-011",
-      "english": "Recover",
-      "polish": "Zdrowieć",
+      "english": "Drawing",
+      "polish": "Rysunek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p080-012",
-      "english": "Irritate",
-      "polish": "Drażnić",
+      "english": "Symbol",
+      "polish": "Symbol",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p080-013",
-      "english": "Cure",
-      "polish": "Leczyć",
+      "english": "Band",
+      "polish": "Zespół muzyczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p080-014",
-      "english": "Treat",
-      "polish": "Prowadzić leczenie",
+      "english": "Photography",
+      "polish": "Fotografia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-014-word.mp3",
@@ -134,8 +134,8 @@
     },
     {
       "id": "t1-p080-015",
-      "english": "Heal",
-      "polish": "Uzdrowić",
+      "english": "Theater",
+      "polish": "Teatr",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-015-word.mp3",
@@ -143,8 +143,8 @@
     },
     {
       "id": "t1-p080-016",
-      "english": "Age",
-      "polish": "Starzeć się",
+      "english": "Charge",
+      "polish": "Ładować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-016-word.mp3",
@@ -152,8 +152,8 @@
     },
     {
       "id": "t1-p080-017",
-      "english": "Conceive",
-      "polish": "Począć dziecko",
+      "english": "Click",
+      "polish": "Klikać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-017-word.mp3",
@@ -161,8 +161,8 @@
     },
     {
       "id": "t1-p080-018",
-      "english": "Ease",
-      "polish": "Łagodzić",
+      "english": "Copy",
+      "polish": "Kopiować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-018-word.mp3",
@@ -170,8 +170,8 @@
     },
     {
       "id": "t1-p080-019",
-      "english": "Relieve",
-      "polish": "Przynieść ulgę",
+      "english": "Lock",
+      "polish": "Zablokować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-019-word.mp3",
@@ -179,8 +179,8 @@
     },
     {
       "id": "t1-p080-020",
-      "english": "Soothe",
-      "polish": "Uśmierzać",
+      "english": "E-mail",
+      "polish": "Napisać e-mail",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-020-word.mp3",
@@ -188,8 +188,8 @@
     },
     {
       "id": "t1-p080-021",
-      "english": "Undergo",
-      "polish": "Przejść",
+      "english": "Paste",
+      "polish": "Wklejać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-021-word.mp3",
@@ -197,8 +197,8 @@
     },
     {
       "id": "t1-p080-022",
-      "english": "Originate",
-      "polish": "Pochodzić",
+      "english": "Print",
+      "polish": "Drukować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-022-word.mp3",
@@ -206,8 +206,8 @@
     },
     {
       "id": "t1-p080-023",
-      "english": "Beget",
-      "polish": "Spłodzić",
+      "english": "Sound",
+      "polish": "Brzmieć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-023-word.mp3",
@@ -215,8 +215,8 @@
     },
     {
       "id": "t1-p080-024",
-      "english": "Cicatrize",
-      "polish": "Zabliźniać się",
+      "english": "Attach",
+      "polish": "Załączać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-024-word.mp3",
@@ -224,12 +224,822 @@
     },
     {
       "id": "t1-p080-025",
-      "english": "Age",
-      "polish": "Starzeć się",
+      "english": "Cancel",
+      "polish": "Anulować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p080-025-word.mp3",
       "audioSentence": "t1-p080-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-026",
+      "english": "Tradition",
+      "polish": "Tradycja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-026-word.mp3",
+      "audioSentence": "t1-p080-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-027",
+      "english": "Exhibition",
+      "polish": "Wystawa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-027-word.mp3",
+      "audioSentence": "t1-p080-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-028",
+      "english": "Play",
+      "polish": "Sztuka teatralna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-028-word.mp3",
+      "audioSentence": "t1-p080-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-029",
+      "english": "Gallery",
+      "polish": "Galeria",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-029-word.mp3",
+      "audioSentence": "t1-p080-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-030",
+      "english": "Santa claus",
+      "polish": "Święty mikołaj",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-030-word.mp3",
+      "audioSentence": "t1-p080-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-031",
+      "english": "Icon",
+      "polish": "Ikona",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-031-word.mp3",
+      "audioSentence": "t1-p080-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-032",
+      "english": "Illustration",
+      "polish": "Ilustracja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-032-word.mp3",
+      "audioSentence": "t1-p080-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-033",
+      "english": "Session",
+      "polish": "Sesja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-033-word.mp3",
+      "audioSentence": "t1-p080-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-034",
+      "english": "Legend",
+      "polish": "Legenda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-034-word.mp3",
+      "audioSentence": "t1-p080-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-035",
+      "english": "Custom",
+      "polish": "Zwyczaj",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-035-word.mp3",
+      "audioSentence": "t1-p080-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-036",
+      "english": "Painting",
+      "polish": "Malarstwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-036-word.mp3",
+      "audioSentence": "t1-p080-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-037",
+      "english": "Drums",
+      "polish": "Perkusja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-037-word.mp3",
+      "audioSentence": "t1-p080-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-038",
+      "english": "Orchestra",
+      "polish": "Orkiestra",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-038-word.mp3",
+      "audioSentence": "t1-p080-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-039",
+      "english": "Portrait",
+      "polish": "Portret",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-039-word.mp3",
+      "audioSentence": "t1-p080-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-040",
+      "english": "Clown",
+      "polish": "Klaun",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-040-word.mp3",
+      "audioSentence": "t1-p080-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-041",
+      "english": "Amateur",
+      "polish": "Amatorski",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-041-word.mp3",
+      "audioSentence": "t1-p080-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-042",
+      "english": "Artistic",
+      "polish": "Artystyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-042-word.mp3",
+      "audioSentence": "t1-p080-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-043",
+      "english": "Classic",
+      "polish": "Klasyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-043-word.mp3",
+      "audioSentence": "t1-p080-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-044",
+      "english": "Cultural",
+      "polish": "Kulturalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-044-word.mp3",
+      "audioSentence": "t1-p080-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-045",
+      "english": "Modern",
+      "polish": "Nowoczesny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-045-word.mp3",
+      "audioSentence": "t1-p080-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-046",
+      "english": "Traditional",
+      "polish": "Tradycyjny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-046-word.mp3",
+      "audioSentence": "t1-p080-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-047",
+      "english": "Anonymous",
+      "polish": "Anonimowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-047-word.mp3",
+      "audioSentence": "t1-p080-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-048",
+      "english": "Ancient",
+      "polish": "Starożytny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-048-word.mp3",
+      "audioSentence": "t1-p080-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-049",
+      "english": "Medieval",
+      "polish": "Średniowieczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-049-word.mp3",
+      "audioSentence": "t1-p080-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-050",
+      "english": "Iconic",
+      "polish": "Kultowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-050-word.mp3",
+      "audioSentence": "t1-p080-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-051",
+      "english": "Cross-cultural",
+      "polish": "Międzykulturowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-051-word.mp3",
+      "audioSentence": "t1-p080-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-052",
+      "english": "Behind-the-scenes",
+      "polish": "Zakulisowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-052-word.mp3",
+      "audioSentence": "t1-p080-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-053",
+      "english": "Multicultural",
+      "polish": "Wielokulturowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-053-word.mp3",
+      "audioSentence": "t1-p080-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-054",
+      "english": "Full-length",
+      "polish": "Pełnometrażowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-054-word.mp3",
+      "audioSentence": "t1-p080-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-055",
+      "english": "Front-page",
+      "polish": "Z pierwszych stron",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-055-word.mp3",
+      "audioSentence": "t1-p080-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-056",
+      "english": "Painting",
+      "polish": "Malarstwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-056-word.mp3",
+      "audioSentence": "t1-p080-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-057",
+      "english": "Drums",
+      "polish": "Perkusja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-057-word.mp3",
+      "audioSentence": "t1-p080-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-058",
+      "english": "Orchestra",
+      "polish": "Orkiestra",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-058-word.mp3",
+      "audioSentence": "t1-p080-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-059",
+      "english": "Portrait",
+      "polish": "Portret",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-059-word.mp3",
+      "audioSentence": "t1-p080-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-060",
+      "english": "Clown",
+      "polish": "Klaun",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-060-word.mp3",
+      "audioSentence": "t1-p080-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-061",
+      "english": "Funeral",
+      "polish": "Pogrzeb",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-061-word.mp3",
+      "audioSentence": "t1-p080-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-062",
+      "english": "Death",
+      "polish": "Śmierć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-062-word.mp3",
+      "audioSentence": "t1-p080-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-063",
+      "english": "Poison",
+      "polish": "Trucizna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-063-word.mp3",
+      "audioSentence": "t1-p080-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-064",
+      "english": "Grave",
+      "polish": "Grób",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-064-word.mp3",
+      "audioSentence": "t1-p080-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-065",
+      "english": "Suicide",
+      "polish": "Samobójstwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-065-word.mp3",
+      "audioSentence": "t1-p080-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-066",
+      "english": "Testament",
+      "polish": "Testament",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-066-word.mp3",
+      "audioSentence": "t1-p080-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-067",
+      "english": "Dying",
+      "polish": "Umieranie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-067-word.mp3",
+      "audioSentence": "t1-p080-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-068",
+      "english": "Abortion",
+      "polish": "Aborcja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-068-word.mp3",
+      "audioSentence": "t1-p080-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-069",
+      "english": "Death certificate",
+      "polish": "Akt zgonu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-069-word.mp3",
+      "audioSentence": "t1-p080-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-070",
+      "english": "Cemetery",
+      "polish": "Cmentarz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-070-word.mp3",
+      "audioSentence": "t1-p080-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-071",
+      "english": "Drum",
+      "polish": "Bęben",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-071-word.mp3",
+      "audioSentence": "t1-p080-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-072",
+      "english": "Songwriting",
+      "polish": "Pisanie piosenek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-072-word.mp3",
+      "audioSentence": "t1-p080-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-073",
+      "english": "Portfolio",
+      "polish": "Portfolio",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-073-word.mp3",
+      "audioSentence": "t1-p080-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-074",
+      "english": "Work of art",
+      "polish": "Dzieło sztuki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-074-word.mp3",
+      "audioSentence": "t1-p080-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-075",
+      "english": "Audience",
+      "polish": "Publiczność",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-075-word.mp3",
+      "audioSentence": "t1-p080-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-076",
+      "english": "Main character",
+      "polish": "Rola główna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-076-word.mp3",
+      "audioSentence": "t1-p080-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-077",
+      "english": "Rhythm",
+      "polish": "Rytm",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-077-word.mp3",
+      "audioSentence": "t1-p080-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-078",
+      "english": "Groove",
+      "polish": "Rytm",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-078-word.mp3",
+      "audioSentence": "t1-p080-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-079",
+      "english": "Sculpture",
+      "polish": "Rzeźba",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-079-word.mp3",
+      "audioSentence": "t1-p080-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-080",
+      "english": "Sculptor",
+      "polish": "Rzeźbiarz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-080-word.mp3",
+      "audioSentence": "t1-p080-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-081",
+      "english": "Stage",
+      "polish": "Scena",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-081-word.mp3",
+      "audioSentence": "t1-p080-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-082",
+      "english": "Screenplay",
+      "polish": "Scenariusz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-082-word.mp3",
+      "audioSentence": "t1-p080-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-083",
+      "english": "Scenography",
+      "polish": "Scenografia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-083-word.mp3",
+      "audioSentence": "t1-p080-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-084",
+      "english": "Lineup",
+      "polish": "Skład",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-084-word.mp3",
+      "audioSentence": "t1-p080-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-085",
+      "english": "Violin",
+      "polish": "Skrzypce",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-085-word.mp3",
+      "audioSentence": "t1-p080-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-086",
+      "english": "Critic",
+      "polish": "Krytyk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-086-word.mp3",
+      "audioSentence": "t1-p080-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-087",
+      "english": "Spectacle",
+      "polish": "Spektakl",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-087-word.mp3",
+      "audioSentence": "t1-p080-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-088",
+      "english": "Statue",
+      "polish": "Statua",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-088-word.mp3",
+      "audioSentence": "t1-p080-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-089",
+      "english": "Singing",
+      "polish": "Śpiew",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-089-word.mp3",
+      "audioSentence": "t1-p080-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-090",
+      "english": "Beat",
+      "polish": "Takt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-090-word.mp3",
+      "audioSentence": "t1-p080-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-091",
+      "english": "Lyrics",
+      "polish": "Tekst",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-091-word.mp3",
+      "audioSentence": "t1-p080-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-092",
+      "english": "Pace",
+      "polish": "Tempo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-092-word.mp3",
+      "audioSentence": "t1-p080-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-093",
+      "english": "Trumpet",
+      "polish": "Trąbka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-093-word.mp3",
+      "audioSentence": "t1-p080-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-094",
+      "english": "Creator",
+      "polish": "Twórca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-094-word.mp3",
+      "audioSentence": "t1-p080-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-095",
+      "english": "Piece of music",
+      "polish": "Utwór muzyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-095-word.mp3",
+      "audioSentence": "t1-p080-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-096",
+      "english": "Vocalist",
+      "polish": "Wokalista",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-096-word.mp3",
+      "audioSentence": "t1-p080-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-097",
+      "english": "Adaptation",
+      "polish": "Adaptacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-097-word.mp3",
+      "audioSentence": "t1-p080-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-098",
+      "english": "Masterpiece",
+      "polish": "Arcydzieło",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-098-word.mp3",
+      "audioSentence": "t1-p080-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-099",
+      "english": "Ballet",
+      "polish": "Balet",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-099-word.mp3",
+      "audioSentence": "t1-p080-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-100",
+      "english": "Bass",
+      "polish": "Bas",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-100-word.mp3",
+      "audioSentence": "t1-p080-100-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-101",
+      "english": "Cinematography",
+      "polish": "Kinematografia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-101-word.mp3",
+      "audioSentence": "t1-p080-101-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-102",
+      "english": "Improvisation",
+      "polish": "Improwizacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-102-word.mp3",
+      "audioSentence": "t1-p080-102-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-103",
+      "english": "Dance classes",
+      "polish": "Lekcje tańca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-103-word.mp3",
+      "audioSentence": "t1-p080-103-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-104",
+      "english": "Review",
+      "polish": "Recenzja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-104-word.mp3",
+      "audioSentence": "t1-p080-104-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-105",
+      "english": "Chorus",
+      "polish": "Refren",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-105-word.mp3",
+      "audioSentence": "t1-p080-105-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-106",
+      "english": "Jukebox",
+      "polish": "Szafa grająca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-106-word.mp3",
+      "audioSentence": "t1-p080-106-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-107",
+      "english": "Opening",
+      "polish": "Otwarcie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-107-word.mp3",
+      "audioSentence": "t1-p080-107-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-108",
+      "english": "Performance",
+      "polish": "Przedstawienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-108-word.mp3",
+      "audioSentence": "t1-p080-108-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-109",
+      "english": "Closing",
+      "polish": "Zamknięcie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-109-word.mp3",
+      "audioSentence": "t1-p080-109-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-110",
+      "english": "Performer",
+      "polish": "Wykonawca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-110-word.mp3",
+      "audioSentence": "t1-p080-110-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-111",
+      "english": "Sketch",
+      "polish": "Szkic",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-111-word.mp3",
+      "audioSentence": "t1-p080-111-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-112",
+      "english": "Myth",
+      "polish": "Mit",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-112-word.mp3",
+      "audioSentence": "t1-p080-112-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-113",
+      "english": "Superstition",
+      "polish": "Przesąd",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-113-word.mp3",
+      "audioSentence": "t1-p080-113-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-114",
+      "english": "Vocalist",
+      "polish": "Wokalista",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-114-word.mp3",
+      "audioSentence": "t1-p080-114-sentence.mp3"
+    },
+    {
+      "id": "t1-p080-115",
+      "english": "Sculptor",
+      "polish": "Rzeźbiarz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p080-115-word.mp3",
+      "audioSentence": "t1-p080-115-sentence.mp3"
     }
   ]
 }

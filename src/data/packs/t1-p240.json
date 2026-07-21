@@ -1,15 +1,15 @@
 {
   "id": "t1-p240",
-  "name": "Przymiotniki 22",
+  "name": "Spójniki 5",
   "volume": "Tom V",
   "level": 3,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział L",
+  "category": "Spójniki",
+  "chapter": "Rozdział XLVIII",
   "words": [
     {
       "id": "t1-p240-001",
-      "english": "Express",
-      "polish": "Ekspresowy",
+      "english": "Neither",
+      "polish": "Żaden",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p240-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p240-002",
-      "english": "Electronic",
-      "polish": "Elektroniczny",
+      "english": "Nevertheless",
+      "polish": "Niemniej jednak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p240-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p240-003",
-      "english": "Erotic",
-      "polish": "Erotyczny",
+      "english": "On the contrary",
+      "polish": "Przeciwnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p240-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p240-004",
-      "english": "Fortunate",
-      "polish": "Fortunny",
+      "english": "Otherwise",
+      "polish": "W przeciwnym wypadku",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p240-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p240-005",
-      "english": "Geographic",
-      "polish": "Geograficzny",
+      "english": "Unless",
+      "polish": "Jeśli nie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p240-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p240-006",
-      "english": "Historical",
-      "polish": "Historyczny",
+      "english": "Unlike",
+      "polish": "W odróżnieniu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p240-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p240-007",
-      "english": "Inspiring",
-      "polish": "Inspirujący",
+      "english": "Versus",
+      "polish": "Kontra",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p240-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p240-008",
-      "english": "Intensive",
-      "polish": "Intensywny",
+      "english": "Whether or not",
+      "polish": "Obojętnie czy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p240-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p240-009",
-      "english": "Criminal",
-      "polish": "Kryminalny",
+      "english": "Aside from",
+      "polish": "Pomijając",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p240-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p240-010",
-      "english": "Legendary",
-      "polish": "Legendarny",
+      "english": "In contrast to",
+      "polish": "W porównaniu do",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p240-010-word.mp3",
       "audioSentence": "t1-p240-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p240-011",
-      "english": "Lesbian",
-      "polish": "Lesbijski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p240-011-word.mp3",
-      "audioSentence": "t1-p240-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p240-012",
-      "english": "Medical",
-      "polish": "Medyczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p240-012-word.mp3",
-      "audioSentence": "t1-p240-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p240-013",
-      "english": "Olympic",
-      "polish": "Olimpijski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p240-013-word.mp3",
-      "audioSentence": "t1-p240-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p240-014",
-      "english": "Permanent",
-      "polish": "Permanentny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p240-014-word.mp3",
-      "audioSentence": "t1-p240-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p240-015",
-      "english": "Precise",
-      "polish": "Precyzyjny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p240-015-word.mp3",
-      "audioSentence": "t1-p240-015-sentence.mp3"
     }
   ]
 }

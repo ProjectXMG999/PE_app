@@ -1,15 +1,15 @@
 {
   "id": "t1-p079",
-  "name": "Ręką",
+  "name": "Przymiotniki 6",
   "volume": "Tom I",
   "level": 1,
-  "category": "Czasowniki",
+  "category": "Przymiotniki",
   "chapter": "Rozdział X",
   "words": [
     {
       "id": "t1-p079-001",
-      "english": "Bring",
-      "polish": "Przynosić",
+      "english": "Different",
+      "polish": "Inny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p079-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p079-002",
-      "english": "Catch",
-      "polish": "Łapać",
+      "english": "Cool",
+      "polish": "Chłodny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p079-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p079-003",
-      "english": "Close",
-      "polish": "Zamykać",
+      "english": "Warm",
+      "polish": "Ciepły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p079-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p079-004",
-      "english": "Hold",
-      "polish": "Trzymać",
+      "english": "Wet",
+      "polish": "Mokry",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p079-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p079-005",
-      "english": "Open",
-      "polish": "Otwierać",
+      "english": "Close",
+      "polish": "Bliski",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p079-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p079-006",
-      "english": "Pull",
-      "polish": "Ciągnąć",
+      "english": "Sorry",
+      "polish": "Współczujący",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p079-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p079-007",
-      "english": "Push",
-      "polish": "Pchać",
+      "english": "Poor",
+      "polish": "Biedny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p079-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p079-008",
-      "english": "Put",
-      "polish": "Kłaść",
+      "english": "Sweet",
+      "polish": "Słodki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p079-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p079-009",
-      "english": "Touch",
-      "polish": "Dotykać",
+      "english": "Fresh",
+      "polish": "Świeży",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p079-009-word.mp3",
@@ -89,777 +89,12 @@
     },
     {
       "id": "t1-p079-010",
-      "english": "Write",
-      "polish": "Pisać",
+      "english": "Hard",
+      "polish": "Bardzo trudny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p079-010-word.mp3",
       "audioSentence": "t1-p079-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-011",
-      "english": "Get sth off sth",
-      "polish": "Ściągnąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-011-word.mp3",
-      "audioSentence": "t1-p079-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-012",
-      "english": "Hang up",
-      "polish": "Zawiesić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-012-word.mp3",
-      "audioSentence": "t1-p079-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-013",
-      "english": "Hold on to sth",
-      "polish": "Trzymać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-013-word.mp3",
-      "audioSentence": "t1-p079-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-014",
-      "english": "Lift up",
-      "polish": "Podźwignąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-014-word.mp3",
-      "audioSentence": "t1-p079-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-015",
-      "english": "Pick sth up",
-      "polish": "Podnosić coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-015-word.mp3",
-      "audioSentence": "t1-p079-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-016",
-      "english": "Pull sth on",
-      "polish": "Pociągnąć coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-016-word.mp3",
-      "audioSentence": "t1-p079-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-017",
-      "english": "Put down",
-      "polish": "Zanotować coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-017-word.mp3",
-      "audioSentence": "t1-p079-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-018",
-      "english": "Take down",
-      "polish": "Zdejmować coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-018-word.mp3",
-      "audioSentence": "t1-p079-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-019",
-      "english": "Take sth off",
-      "polish": "Zdjąć coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-019-word.mp3",
-      "audioSentence": "t1-p079-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-020",
-      "english": "Take out",
-      "polish": "Wyciągnąć coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-020-word.mp3",
-      "audioSentence": "t1-p079-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-021",
-      "english": "Carry",
-      "polish": "Nieść coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-021-word.mp3",
-      "audioSentence": "t1-p079-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-022",
-      "english": "Knock",
-      "polish": "Pukać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-022-word.mp3",
-      "audioSentence": "t1-p079-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-023",
-      "english": "Lock",
-      "polish": "Zamykać na klucz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-023-word.mp3",
-      "audioSentence": "t1-p079-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-024",
-      "english": "Pick",
-      "polish": "Zrywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-024-word.mp3",
-      "audioSentence": "t1-p079-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-025",
-      "english": "Throw",
-      "polish": "Rzucać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-025-word.mp3",
-      "audioSentence": "t1-p079-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-026",
-      "english": "Hang",
-      "polish": "Powiesić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-026-word.mp3",
-      "audioSentence": "t1-p079-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-027",
-      "english": "Place",
-      "polish": "Umieszczać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-027-word.mp3",
-      "audioSentence": "t1-p079-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-028",
-      "english": "Shut",
-      "polish": "Zamknąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-028-word.mp3",
-      "audioSentence": "t1-p079-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-029",
-      "english": "Sign",
-      "polish": "Podpisywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-029-word.mp3",
-      "audioSentence": "t1-p079-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-030",
-      "english": "Clap",
-      "polish": "Klaskać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-030-word.mp3",
-      "audioSentence": "t1-p079-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-031",
-      "english": "Grab",
-      "polish": "Chwytać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-031-word.mp3",
-      "audioSentence": "t1-p079-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-032",
-      "english": "Lay",
-      "polish": "Położyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-032-word.mp3",
-      "audioSentence": "t1-p079-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-033",
-      "english": "Reach",
-      "polish": "Dosięgać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-033-word.mp3",
-      "audioSentence": "t1-p079-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-034",
-      "english": "Shake",
-      "polish": "Trząść",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-034-word.mp3",
-      "audioSentence": "t1-p079-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-035",
-      "english": "Drop",
-      "polish": "Upuszczać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-035-word.mp3",
-      "audioSentence": "t1-p079-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-036",
-      "english": "Throw out",
-      "polish": "Wyrzucić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-036-word.mp3",
-      "audioSentence": "t1-p079-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-037",
-      "english": "Write sth down",
-      "polish": "Zapisać coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-037-word.mp3",
-      "audioSentence": "t1-p079-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-038",
-      "english": "Cut off",
-      "polish": "Odcinać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-038-word.mp3",
-      "audioSentence": "t1-p079-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-039",
-      "english": "Get sth down",
-      "polish": "Zdejmować coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-039-word.mp3",
-      "audioSentence": "t1-p079-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-040",
-      "english": "Put sth away",
-      "polish": "Odłożyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-040-word.mp3",
-      "audioSentence": "t1-p079-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-041",
-      "english": "Put down",
-      "polish": "Położyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-041-word.mp3",
-      "audioSentence": "t1-p079-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-042",
-      "english": "Put in",
-      "polish": "Włożyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-042-word.mp3",
-      "audioSentence": "t1-p079-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-043",
-      "english": "Sign in",
-      "polish": "Wpisać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-043-word.mp3",
-      "audioSentence": "t1-p079-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-044",
-      "english": "Go for sth",
-      "polish": "Sięgać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-044-word.mp3",
-      "audioSentence": "t1-p079-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-045",
-      "english": "Hand out",
-      "polish": "Wręczyć coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-045-word.mp3",
-      "audioSentence": "t1-p079-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-046",
-      "english": "Hand",
-      "polish": "Wręczać coś komuś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-046-word.mp3",
-      "audioSentence": "t1-p079-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-047",
-      "english": "Pinch",
-      "polish": "Szczypać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-047-word.mp3",
-      "audioSentence": "t1-p079-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-048",
-      "english": "Scribble",
-      "polish": "Bazgrać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-048-word.mp3",
-      "audioSentence": "t1-p079-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-049",
-      "english": "Wave",
-      "polish": "Machać do kogoś ręką",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-049-word.mp3",
-      "audioSentence": "t1-p079-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-050",
-      "english": "Point",
-      "polish": "Skierować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-050-word.mp3",
-      "audioSentence": "t1-p079-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-051",
-      "english": "Rub",
-      "polish": "Trzeć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-051-word.mp3",
-      "audioSentence": "t1-p079-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-052",
-      "english": "Swipe",
-      "polish": "Zamachnąć się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-052-word.mp3",
-      "audioSentence": "t1-p079-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-053",
-      "english": "Tap",
-      "polish": "Stukać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-053-word.mp3",
-      "audioSentence": "t1-p079-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-054",
-      "english": "Applaud",
-      "polish": "Bić brawo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-054-word.mp3",
-      "audioSentence": "t1-p079-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-055",
-      "english": "Punch",
-      "polish": "Uderzyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-055-word.mp3",
-      "audioSentence": "t1-p079-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-056",
-      "english": "Rewrite",
-      "polish": "Przepisywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-056-word.mp3",
-      "audioSentence": "t1-p079-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-057",
-      "english": "Slap",
-      "polish": "Policzkować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-057-word.mp3",
-      "audioSentence": "t1-p079-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-058",
-      "english": "Spank",
-      "polish": "Dać klapsa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-058-word.mp3",
-      "audioSentence": "t1-p079-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-059",
-      "english": "Squeeze",
-      "polish": "Wycisnąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-059-word.mp3",
-      "audioSentence": "t1-p079-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-060",
-      "english": "Snap",
-      "polish": "Pstrykać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-060-word.mp3",
-      "audioSentence": "t1-p079-060-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-061",
-      "english": "Lay out",
-      "polish": "Wyłożyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-061-word.mp3",
-      "audioSentence": "t1-p079-061-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-062",
-      "english": "Rip sth up",
-      "polish": "Podrzeć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-062-word.mp3",
-      "audioSentence": "t1-p079-062-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-063",
-      "english": "Brush off",
-      "polish": "Strzepnąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-063-word.mp3",
-      "audioSentence": "t1-p079-063-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-064",
-      "english": "Wipe sth off",
-      "polish": "Wytrzeć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-064-word.mp3",
-      "audioSentence": "t1-p079-064-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-065",
-      "english": "Bring over",
-      "polish": "Przynieść",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-065-word.mp3",
-      "audioSentence": "t1-p079-065-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-066",
-      "english": "Give sth away",
-      "polish": "Dawać coś za darmo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-066-word.mp3",
-      "audioSentence": "t1-p079-066-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-067",
-      "english": "Hold sth up",
-      "polish": "Trzymać w górze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-067-word.mp3",
-      "audioSentence": "t1-p079-067-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-068",
-      "english": "Wrap sth up",
-      "polish": "Owinąć coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-068-word.mp3",
-      "audioSentence": "t1-p079-068-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-069",
-      "english": "Put out sth",
-      "polish": "Wynosić coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-069-word.mp3",
-      "audioSentence": "t1-p079-069-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-070",
-      "english": "Put sth back",
-      "polish": "Odłożyć z powrotem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-070-word.mp3",
-      "audioSentence": "t1-p079-070-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-071",
-      "english": "Gesture",
-      "polish": "Gestykulować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-071-word.mp3",
-      "audioSentence": "t1-p079-071-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-072",
-      "english": "Smack",
-      "polish": "Strzelić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-072-word.mp3",
-      "audioSentence": "t1-p079-072-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-073",
-      "english": "Dump",
-      "polish": "Rzucić coś w jakieś miejsce",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-073-word.mp3",
-      "audioSentence": "t1-p079-073-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-074",
-      "english": "Grip",
-      "polish": "Chwytać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-074-word.mp3",
-      "audioSentence": "t1-p079-074-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-075",
-      "english": "Jerk",
-      "polish": "Szarpać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-075-word.mp3",
-      "audioSentence": "t1-p079-075-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-076",
-      "english": "Nudge",
-      "polish": "Trącać łokciem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-076-word.mp3",
-      "audioSentence": "t1-p079-076-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-077",
-      "english": "Seize",
-      "polish": "Pochwycić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-077-word.mp3",
-      "audioSentence": "t1-p079-077-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-078",
-      "english": "Snatch",
-      "polish": "Wyrywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-078-word.mp3",
-      "audioSentence": "t1-p079-078-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-079",
-      "english": "Yank",
-      "polish": "Szarpnąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-079-word.mp3",
-      "audioSentence": "t1-p079-079-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-080",
-      "english": "Clasp",
-      "polish": "Trzymać kurczowo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-080-word.mp3",
-      "audioSentence": "t1-p079-080-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-081",
-      "english": "Clench",
-      "polish": "Zaciskać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-081-word.mp3",
-      "audioSentence": "t1-p079-081-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-082",
-      "english": "Flick",
-      "polish": "Pstryknąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-082-word.mp3",
-      "audioSentence": "t1-p079-082-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-083",
-      "english": "Pat",
-      "polish": "Poklepywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-083-word.mp3",
-      "audioSentence": "t1-p079-083-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-084",
-      "english": "Toss",
-      "polish": "Podrzucać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-084-word.mp3",
-      "audioSentence": "t1-p079-084-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-085",
-      "english": "Clutch",
-      "polish": "Ściskać kurczowo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-085-word.mp3",
-      "audioSentence": "t1-p079-085-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-086",
-      "english": "Put sth up",
-      "polish": "Rozwiesić coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-086-word.mp3",
-      "audioSentence": "t1-p079-086-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-087",
-      "english": "Tear off",
-      "polish": "Odrywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-087-word.mp3",
-      "audioSentence": "t1-p079-087-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-088",
-      "english": "Tick off",
-      "polish": "Odhaczyć coś wykonanego",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-088-word.mp3",
-      "audioSentence": "t1-p079-088-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-089",
-      "english": "Hand sth in",
-      "polish": "Oddawać coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-089-word.mp3",
-      "audioSentence": "t1-p079-089-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-090",
-      "english": "Pass out",
-      "polish": "Rozdawać coś grupie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-090-word.mp3",
-      "audioSentence": "t1-p079-090-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-091",
-      "english": "Set sth down",
-      "polish": "Postawić coś niżej",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-091-word.mp3",
-      "audioSentence": "t1-p079-091-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-092",
-      "english": "Take down",
-      "polish": "Przepisać coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-092-word.mp3",
-      "audioSentence": "t1-p079-092-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-093",
-      "english": "Draw sth up",
-      "polish": "Sporządzać coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-093-word.mp3",
-      "audioSentence": "t1-p079-093-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-094",
-      "english": "Hand sth over",
-      "polish": "Przekazywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-094-word.mp3",
-      "audioSentence": "t1-p079-094-sentence.mp3"
-    },
-    {
-      "id": "t1-p079-095",
-      "english": "Pull out",
-      "polish": "Wyciągnąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p079-095-word.mp3",
-      "audioSentence": "t1-p079-095-sentence.mp3"
     }
   ]
 }

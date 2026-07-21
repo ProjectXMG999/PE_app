@@ -1,15 +1,15 @@
 {
   "id": "t1-p286",
-  "name": "Slang 31",
-  "volume": "Tom VIII",
+  "name": "Wzrost I spadek",
+  "volume": "Tom VII",
   "level": 4,
-  "category": "Slang",
-  "chapter": "Rozdział LXXI",
+  "category": "Phrasale",
+  "chapter": "Rozdział LXVII",
   "words": [
     {
       "id": "t1-p286-001",
-      "english": "Laid back and chilling",
-      "polish": "Na maksa zrelaksowany",
+      "english": "Go down",
+      "polish": "Zmniejszyć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p286-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p286-002",
-      "english": "Buff",
-      "polish": "Miłośnik czegoś",
+      "english": "Go up",
+      "polish": "Wzrastać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p286-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p286-003",
-      "english": "Boombox",
-      "polish": "Przenośna wieża grająca",
+      "english": "Be up",
+      "polish": "Wzrosnąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p286-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p286-004",
-      "english": "Craps",
-      "polish": "Kości",
+      "english": "Bring down",
+      "polish": "Zmniejszać coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p286-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p286-005",
-      "english": "Evergreen",
-      "polish": "Stary kawałek, ale wciąż lubiany",
+      "english": "Come down",
+      "polish": "Spadać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p286-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p286-006",
-      "english": "Fourth wall",
-      "polish": "Czwarta ściana",
+      "english": "Warm up",
+      "polish": "Rozgrzać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p286-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p286-007",
-      "english": "Tube",
-      "polish": "Tiwik",
+      "english": "Cut down on",
+      "polish": "Ograniczyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p286-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p286-008",
-      "english": "Mosh",
-      "polish": "Tańczyć pogo",
+      "english": "Fall off",
+      "polish": "Zmniejszać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p286-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p286-009",
-      "english": "Mosh pit",
-      "polish": "Młyn",
+      "english": "Blow up",
+      "polish": "Powiększać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p286-009-word.mp3",
@@ -89,12 +89,102 @@
     },
     {
       "id": "t1-p286-010",
-      "english": "Rough'n'tumble",
-      "polish": "Igraszki",
+      "english": "Keep sth down",
+      "polish": "Utrzymać na niskim poziomie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p286-010-word.mp3",
       "audioSentence": "t1-p286-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p286-011",
+      "english": "Mark down",
+      "polish": "Obniżyć cenę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p286-011-word.mp3",
+      "audioSentence": "t1-p286-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p286-012",
+      "english": "Mark up",
+      "polish": "Podwyższyć cenę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p286-012-word.mp3",
+      "audioSentence": "t1-p286-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p286-013",
+      "english": "Pile up",
+      "polish": "Piętrzyć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p286-013-word.mp3",
+      "audioSentence": "t1-p286-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p286-014",
+      "english": "Close in",
+      "polish": "Stawać się krótszym",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p286-014-word.mp3",
+      "audioSentence": "t1-p286-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p286-015",
+      "english": "Die down",
+      "polish": "Uspokoić się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p286-015-word.mp3",
+      "audioSentence": "t1-p286-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p286-016",
+      "english": "Wear off",
+      "polish": "Mijać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p286-016-word.mp3",
+      "audioSentence": "t1-p286-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p286-017",
+      "english": "Grow up",
+      "polish": "Rosnąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p286-017-word.mp3",
+      "audioSentence": "t1-p286-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p286-018",
+      "english": "Rocket up",
+      "polish": "Iść ostro w górę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p286-018-word.mp3",
+      "audioSentence": "t1-p286-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p286-019",
+      "english": "Mount up",
+      "polish": "Narastać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p286-019-word.mp3",
+      "audioSentence": "t1-p286-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p286-020",
+      "english": "Build up",
+      "polish": "Zwiększać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p286-020-word.mp3",
+      "audioSentence": "t1-p286-020-sentence.mp3"
     }
   ]
 }

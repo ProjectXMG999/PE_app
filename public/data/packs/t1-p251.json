@@ -1,15 +1,15 @@
 {
   "id": "t1-p251",
-  "name": "Czasowniki 23",
+  "name": "Memiczne",
   "volume": "Tom VI",
   "level": 4,
-  "category": "Czasowniki",
-  "chapter": "Rozdział LV",
+  "category": "Skróty",
+  "chapter": "Rozdział LIII",
   "words": [
     {
       "id": "t1-p251-001",
-      "english": "Surrender",
-      "polish": "Poddawać się",
+      "english": "FOMO",
+      "polish": "Obawa że coś nas omija",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p251-002",
-      "english": "Accompany",
-      "polish": "Towarzyszyć",
+      "english": "TIL",
+      "polish": "Dziś dowiedziałem się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p251-003",
-      "english": "Coddle",
-      "polish": "Hołubić",
+      "english": "ADIH",
+      "polish": "Kolejny dzień w piekle",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p251-004",
-      "english": "Devote",
-      "polish": "Poświęcać",
+      "english": "NFSW",
+      "polish": "Niebezpieczne w pracy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p251-005",
-      "english": "Empower",
-      "polish": "Umożliwiać",
+      "english": "HIFW",
+      "polish": "Jak się czuję, kiedy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p251-006",
-      "english": "Encounter",
-      "polish": "Napotkać",
+      "english": "MFW",
+      "polish": "Moja twarz, kiedy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p251-007",
-      "english": "Favor",
-      "polish": "Faworyzować",
+      "english": "MIA",
+      "polish": "Zaginiony w akcji",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p251-008",
-      "english": "Hail",
-      "polish": "Pozdrowić",
+      "english": "NSFL",
+      "polish": "Powalony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p251-009",
-      "english": "Nurse",
-      "polish": "Pielęgnować",
+      "english": "OG",
+      "polish": "Oryginalny gangster",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p251-010",
-      "english": "Soothe",
-      "polish": "Uspokajać",
+      "english": "QQ",
+      "polish": "Płaczę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p251-011",
-      "english": "Withhold",
-      "polish": "Wstrzymywać",
+      "english": "FTW",
+      "polish": "górą",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p251-012",
-      "english": "Defy",
-      "polish": "Przeciwstawiać się",
+      "english": "SFW",
+      "polish": "Bezpieczne w pracy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p251-013",
-      "english": "Dub",
-      "polish": "Nadać przydomek",
+      "english": "SOML",
+      "polish": "Historia mojego życia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p251-014",
-      "english": "Mimic",
-      "polish": "Naśladować",
+      "english": "TFW",
+      "polish": "To uczucie, gdy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-014-word.mp3",
@@ -134,12 +134,57 @@
     },
     {
       "id": "t1-p251-015",
-      "english": "Succumb",
-      "polish": "Ulec",
+      "english": "TNTL",
+      "polish": "Spróbuj się nie zaśmiać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-015-word.mp3",
       "audioSentence": "t1-p251-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p251-016",
+      "english": "MRW",
+      "polish": "Moja reakcja, kiedy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p251-016-word.mp3",
+      "audioSentence": "t1-p251-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p251-017",
+      "english": "TBT",
+      "polish": "Czwartkowy powrót do przeszłości",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p251-017-word.mp3",
+      "audioSentence": "t1-p251-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p251-018",
+      "english": "ORLY",
+      "polish": "Doprawdy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p251-018-word.mp3",
+      "audioSentence": "t1-p251-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p251-019",
+      "english": "QOTD",
+      "polish": "Cytat dnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p251-019-word.mp3",
+      "audioSentence": "t1-p251-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p251-020",
+      "english": "OOTD",
+      "polish": "Strój dnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p251-020-word.mp3",
+      "audioSentence": "t1-p251-020-sentence.mp3"
     }
   ]
 }

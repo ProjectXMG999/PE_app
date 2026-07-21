@@ -10,6 +10,7 @@ const CATEGORY_ICONS: Record<string, string> = {
   'Przysłówki': '🔄',
   'Phrasale': '🔗',
   'Slang': '💬',
+  'Wulgaryzmy': '🤬',
   'default': '📚',
 }
 

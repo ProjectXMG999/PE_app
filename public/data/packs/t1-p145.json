@@ -1,15 +1,15 @@
 {
   "id": "t1-p145",
-  "name": "Masterchef",
+  "name": "Slang 12",
   "volume": "Tom III",
   "level": 2,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XXII",
+  "category": "Slang",
+  "chapter": "Rozdział XXI",
   "words": [
     {
       "id": "t1-p145-001",
-      "english": "Feed",
-      "polish": "Karmić",
+      "english": "Geek",
+      "polish": "Kujon",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p145-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p145-002",
-      "english": "Fill",
-      "polish": "Napełniać",
+      "english": "Hater",
+      "polish": "Hejter",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p145-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p145-003",
-      "english": "Taste",
-      "polish": "Smakować",
+      "english": "Nerd",
+      "polish": "Nerd",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p145-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p145-004",
-      "english": "Salt",
-      "polish": "Solić",
+      "english": "Poser",
+      "polish": "Pozer",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p145-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p145-005",
-      "english": "Mix",
-      "polish": "Miksować",
+      "english": "Boomer",
+      "polish": "Staruch",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p145-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p145-006",
-      "english": "Spread",
-      "polish": "Rozsmarować",
+      "english": "Chicken",
+      "polish": "Cykor",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p145-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p145-007",
-      "english": "Bake",
-      "polish": "Upiec",
+      "english": "Noob",
+      "polish": "Nowicjusz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p145-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p145-008",
-      "english": "Barbecue",
-      "polish": "Grillować",
+      "english": "Cheesy",
+      "polish": "Tandetny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p145-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p145-009",
-      "english": "Fry",
-      "polish": "Smażyć",
+      "english": "Captain obvious",
+      "polish": "Walić truizmami",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p145-009-word.mp3",
@@ -89,327 +89,12 @@
     },
     {
       "id": "t1-p145-010",
-      "english": "Weigh",
-      "polish": "Ważyć",
+      "english": "Wannabe",
+      "polish": "Pozer",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p145-010-word.mp3",
       "audioSentence": "t1-p145-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-011",
-      "english": "Boil",
-      "polish": "Wrzeć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-011-word.mp3",
-      "audioSentence": "t1-p145-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-012",
-      "english": "Grill",
-      "polish": "Opiekać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-012-word.mp3",
-      "audioSentence": "t1-p145-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-013",
-      "english": "Pour",
-      "polish": "Wlewać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-013-word.mp3",
-      "audioSentence": "t1-p145-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-014",
-      "english": "Slice",
-      "polish": "Kroić na plasterki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-014-word.mp3",
-      "audioSentence": "t1-p145-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-015",
-      "english": "Empty",
-      "polish": "Opróżniać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-015-word.mp3",
-      "audioSentence": "t1-p145-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-016",
-      "english": "Sweeten",
-      "polish": "Słodzić coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-016-word.mp3",
-      "audioSentence": "t1-p145-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-017",
-      "english": "Crunch",
-      "polish": "Chrupać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-017-word.mp3",
-      "audioSentence": "t1-p145-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-018",
-      "english": "Peel",
-      "polish": "Obierać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-018-word.mp3",
-      "audioSentence": "t1-p145-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-019",
-      "english": "Roast",
-      "polish": "Piec mięso",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-019-word.mp3",
-      "audioSentence": "t1-p145-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-020",
-      "english": "Season",
-      "polish": "Przyprawiać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-020-word.mp3",
-      "audioSentence": "t1-p145-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-021",
-      "english": "Chop",
-      "polish": "Siekać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-021-word.mp3",
-      "audioSentence": "t1-p145-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-022",
-      "english": "Grate",
-      "polish": "Zetrzeć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-022-word.mp3",
-      "audioSentence": "t1-p145-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-023",
-      "english": "Slash",
-      "polish": "Ciąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-023-word.mp3",
-      "audioSentence": "t1-p145-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-024",
-      "english": "Stir",
-      "polish": "Mieszać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-024-word.mp3",
-      "audioSentence": "t1-p145-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-025",
-      "english": "Whip",
-      "polish": "Ubijać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-025-word.mp3",
-      "audioSentence": "t1-p145-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-026",
-      "english": "Whisp",
-      "polish": "Ubijać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-026-word.mp3",
-      "audioSentence": "t1-p145-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-027",
-      "english": "Stir-fry",
-      "polish": "Smażyć na dużym ogniu, mieszając",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-027-word.mp3",
-      "audioSentence": "t1-p145-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-028",
-      "english": "Blend",
-      "polish": "Blendować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-028-word.mp3",
-      "audioSentence": "t1-p145-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-029",
-      "english": "Dine",
-      "polish": "Stołować się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-029-word.mp3",
-      "audioSentence": "t1-p145-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-030",
-      "english": "Melt",
-      "polish": "Roztapiać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-030-word.mp3",
-      "audioSentence": "t1-p145-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-031",
-      "english": "Mince",
-      "polish": "Szatkować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-031-word.mp3",
-      "audioSentence": "t1-p145-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-032",
-      "english": "Simmer",
-      "polish": "Gotować na wolnym ogniu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-032-word.mp3",
-      "audioSentence": "t1-p145-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-033",
-      "english": "Grease",
-      "polish": "Natłuszczać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-033-word.mp3",
-      "audioSentence": "t1-p145-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-034",
-      "english": "Steam",
-      "polish": "Gotować na parze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-034-word.mp3",
-      "audioSentence": "t1-p145-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-035",
-      "english": "Relish",
-      "polish": "Delektować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-035-word.mp3",
-      "audioSentence": "t1-p145-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-036",
-      "english": "Sip",
-      "polish": "Popijać, sączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-036-word.mp3",
-      "audioSentence": "t1-p145-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-037",
-      "english": "Stuff",
-      "polish": "Nadziewać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-037-word.mp3",
-      "audioSentence": "t1-p145-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-038",
-      "english": "Brown",
-      "polish": "Przyrumieniać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-038-word.mp3",
-      "audioSentence": "t1-p145-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-039",
-      "english": "Garnish",
-      "polish": "Zdobić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-039-word.mp3",
-      "audioSentence": "t1-p145-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-040",
-      "english": "Scoop",
-      "polish": "Nabierać łyżką",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-040-word.mp3",
-      "audioSentence": "t1-p145-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-041",
-      "english": "Stew",
-      "polish": "Dusić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-041-word.mp3",
-      "audioSentence": "t1-p145-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-042",
-      "english": "Knead",
-      "polish": "Ugniatać ciasto",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-042-word.mp3",
-      "audioSentence": "t1-p145-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-043",
-      "english": "Glaze",
-      "polish": "Polewać polewą",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-043-word.mp3",
-      "audioSentence": "t1-p145-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-044",
-      "english": "Broil",
-      "polish": "Podpiekać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-044-word.mp3",
-      "audioSentence": "t1-p145-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p145-045",
-      "english": "Caramelize",
-      "polish": "Karmelizować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p145-045-word.mp3",
-      "audioSentence": "t1-p145-045-sentence.mp3"
     }
   ]
 }

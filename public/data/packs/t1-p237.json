@@ -1,15 +1,15 @@
 {
   "id": "t1-p237",
-  "name": "Czasowniki 19",
+  "name": "Technologia",
   "volume": "Tom V",
   "level": 3,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XLIX",
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XLVII",
   "words": [
     {
       "id": "t1-p237-001",
-      "english": "Define",
-      "polish": "Definiować",
+      "english": "Handy",
+      "polish": "Przydatny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p237-002",
-      "english": "Deport",
-      "polish": "Deportować",
+      "english": "Digital",
+      "polish": "Cyfrowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p237-003",
-      "english": "Dominate",
-      "polish": "Dominować",
+      "english": "Audio",
+      "polish": "Dźwiękowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p237-004",
-      "english": "Educate",
-      "polish": "Edukować",
+      "english": "Electrical",
+      "polish": "Elektryczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p237-005",
-      "english": "Experiment",
-      "polish": "Eksperymentować",
+      "english": "Functional",
+      "polish": "Funkcjonalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p237-006",
-      "english": "Figure",
-      "polish": "Figurować",
+      "english": "Online",
+      "polish": "Internetowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p237-007",
-      "english": "Film",
-      "polish": "Filmować",
+      "english": "User-friendly",
+      "polish": "Łatwy w użyciu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p237-008",
-      "english": "Finance",
-      "polish": "Finansować",
+      "english": "Mobile",
+      "polish": "Mobilny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p237-009",
-      "english": "Frustrate",
-      "polish": "Frustrować",
+      "english": "Waterproof",
+      "polish": "Wodoodporny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p237-010",
-      "english": "Honor",
-      "polish": "Honorować",
+      "english": "Modified",
+      "polish": "Zmodyfikowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p237-011",
-      "english": "Initiate",
-      "polish": "Inicjować",
+      "english": "Up-to-date",
+      "polish": "Na bieżąco",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p237-012",
-      "english": "Interest",
-      "polish": "Interesować",
+      "english": "Out-of-date",
+      "polish": "Nieaktualny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p237-013",
-      "english": "Interpret",
-      "polish": "Interpretować",
+      "english": "Technical",
+      "polish": "Techniczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p237-014",
-      "english": "Locate",
-      "polish": "Lokować",
+      "english": "Mute",
+      "polish": "Niemy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-014-word.mp3",
@@ -134,12 +134,282 @@
     },
     {
       "id": "t1-p237-015",
-      "english": "Masturbate",
-      "polish": "Masturbować się",
+      "english": "Default",
+      "polish": "Domyślny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p237-015-word.mp3",
       "audioSentence": "t1-p237-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-016",
+      "english": "Air-conditioned",
+      "polish": "Klimatyzowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-016-word.mp3",
+      "audioSentence": "t1-p237-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-017",
+      "english": "High-tech",
+      "polish": "Najnowocześniejszy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-017-word.mp3",
+      "audioSentence": "t1-p237-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-018",
+      "english": "Groundbreaking",
+      "polish": "Przełomowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-018-word.mp3",
+      "audioSentence": "t1-p237-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-019",
+      "english": "Well-designed",
+      "polish": "Dobrze zaprojektowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-019-word.mp3",
+      "audioSentence": "t1-p237-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-020",
+      "english": "Operational",
+      "polish": "Operacyjny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-020-word.mp3",
+      "audioSentence": "t1-p237-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-021",
+      "english": "Semi-automatic",
+      "polish": "Półautomatyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-021-word.mp3",
+      "audioSentence": "t1-p237-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-022",
+      "english": "Serial",
+      "polish": "Seryjny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-022-word.mp3",
+      "audioSentence": "t1-p237-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-023",
+      "english": "Standalone",
+      "polish": "Samodzielny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-023-word.mp3",
+      "audioSentence": "t1-p237-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-024",
+      "english": "Wireless",
+      "polish": "Bezprzewodowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-024-word.mp3",
+      "audioSentence": "t1-p237-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-025",
+      "english": "Energy-efficient",
+      "polish": "Energooszczędny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-025-word.mp3",
+      "audioSentence": "t1-p237-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-026",
+      "english": "Airtight",
+      "polish": "Szczelny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-026-word.mp3",
+      "audioSentence": "t1-p237-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-027",
+      "english": "Compatible",
+      "polish": "Kompatybilny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-027-word.mp3",
+      "audioSentence": "t1-p237-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-028",
+      "english": "Bulletproof",
+      "polish": "Kuloodporny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-028-word.mp3",
+      "audioSentence": "t1-p237-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-029",
+      "english": "High-end",
+      "polish": "Najwyższej jakości",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-029-word.mp3",
+      "audioSentence": "t1-p237-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-030",
+      "english": "Cutting-edge",
+      "polish": "Nowatorski",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-030-word.mp3",
+      "audioSentence": "t1-p237-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-031",
+      "english": "High-performance",
+      "polish": "O dużej wydajności",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-031-word.mp3",
+      "audioSentence": "t1-p237-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-032",
+      "english": "Renewable",
+      "polish": "Odnawialny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-032-word.mp3",
+      "audioSentence": "t1-p237-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-033",
+      "english": "Downloaded",
+      "polish": "Pobrany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-033-word.mp3",
+      "audioSentence": "t1-p237-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-034",
+      "english": "Portable",
+      "polish": "Przenośny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-034-word.mp3",
+      "audioSentence": "t1-p237-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-035",
+      "english": "Adjustable",
+      "polish": "Regulowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-035-word.mp3",
+      "audioSentence": "t1-p237-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-036",
+      "english": "Heavy-duty",
+      "polish": "Trwały",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-036-word.mp3",
+      "audioSentence": "t1-p237-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-037",
+      "english": "Improved",
+      "polish": "Ulepszony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-037-word.mp3",
+      "audioSentence": "t1-p237-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-038",
+      "english": "Utile",
+      "polish": "Użytkowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-038-word.mp3",
+      "audioSentence": "t1-p237-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-039",
+      "english": "Defective",
+      "polish": "Wadliwy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-039-word.mp3",
+      "audioSentence": "t1-p237-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-040",
+      "english": "Uploaded",
+      "polish": "Wgrany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-040-word.mp3",
+      "audioSentence": "t1-p237-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-041",
+      "english": "Reusable",
+      "polish": "Wielokrotnego użytku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-041-word.mp3",
+      "audioSentence": "t1-p237-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-042",
+      "english": "Equipped",
+      "polish": "Wyposażony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-042-word.mp3",
+      "audioSentence": "t1-p237-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-043",
+      "english": "On-screen",
+      "polish": "Znajdujący się na ekranie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-043-word.mp3",
+      "audioSentence": "t1-p237-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-044",
+      "english": "Close-up",
+      "polish": "Zbliżony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-044-word.mp3",
+      "audioSentence": "t1-p237-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p237-045",
+      "english": "Attached",
+      "polish": "Załączony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p237-045-word.mp3",
+      "audioSentence": "t1-p237-045-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p275",
-  "name": "Ryby",
+  "name": "Slang 30",
   "volume": "Tom VII",
   "level": 4,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział LXV",
+  "category": "Slang",
+  "chapter": "Rozdział LXIV",
   "words": [
     {
       "id": "t1-p275-001",
-      "english": "Cod",
-      "polish": "Dorsz",
+      "english": "Basket case",
+      "polish": "Strzępek nerwów",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p275-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p275-002",
-      "english": "Trout",
-      "polish": "Pstrąg",
+      "english": "Jock",
+      "polish": "Mięśniak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p275-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p275-003",
-      "english": "Tuna",
-      "polish": "Tuńczyk",
+      "english": "Killjoy",
+      "polish": "Smutas",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p275-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p275-004",
-      "english": "Carp",
-      "polish": "Karp",
+      "english": "Mamas boy",
+      "polish": "Maminsynek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p275-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p275-005",
-      "english": "Salmon",
-      "polish": "Łosoś",
+      "english": "Phony",
+      "polish": "Pozer",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p275-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p275-006",
-      "english": "Flounder",
-      "polish": "Flądra",
+      "english": "Preppy",
+      "polish": "Bananowa młodzież",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p275-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p275-007",
-      "english": "Atlantic halibut",
-      "polish": "Halibut atlantycki",
+      "english": "Sassy",
+      "polish": "Złoty chłopak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p275-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p275-008",
-      "english": "Sea sturgeon",
-      "polish": "Jesiotr",
+      "english": "Wuss",
+      "polish": "Mięczak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p275-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p275-009",
-      "english": "Mackerel",
-      "polish": "Makrela",
+      "english": "Typeractive",
+      "polish": "Osoba zbyt wylewna w wiadomościach tekstowych I e-mailach",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p275-009-word.mp3",
@@ -89,192 +89,12 @@
     },
     {
       "id": "t1-p275-010",
-      "english": "Alaska pollock",
-      "polish": "Mintaj",
+      "english": "Airhead",
+      "polish": "Buja w obłokach",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p275-010-word.mp3",
       "audioSentence": "t1-p275-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-011",
-      "english": "Blue grenadier",
-      "polish": "Miruna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-011-word.mp3",
-      "audioSentence": "t1-p275-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-012",
-      "english": "European hake",
-      "polish": "Morszczuk",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-012-word.mp3",
-      "audioSentence": "t1-p275-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-013",
-      "english": "Moray eel",
-      "polish": "Murena",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-013-word.mp3",
-      "audioSentence": "t1-p275-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-014",
-      "english": "European perch",
-      "polish": "Okoń",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-014-word.mp3",
-      "audioSentence": "t1-p275-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-015",
-      "english": "Fishbone",
-      "polish": "Ość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-015-word.mp3",
-      "audioSentence": "t1-p275-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-016",
-      "english": "Piranha",
-      "polish": "Pirania",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-016-word.mp3",
-      "audioSentence": "t1-p275-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-017",
-      "english": "Fin",
-      "polish": "Płetwa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-017-word.mp3",
-      "audioSentence": "t1-p275-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-018",
-      "english": "Zander",
-      "polish": "Sandacz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-018-word.mp3",
-      "audioSentence": "t1-p275-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-019",
-      "english": "Sardine",
-      "polish": "Sardynka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-019-word.mp3",
-      "audioSentence": "t1-p275-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-020",
-      "english": "Whitefish",
-      "polish": "Sieja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-020-word.mp3",
-      "audioSentence": "t1-p275-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-021",
-      "english": "Vendace",
-      "polish": "Sielawa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-021-word.mp3",
-      "audioSentence": "t1-p275-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-022",
-      "english": "Gills",
-      "polish": "Skrzela",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-022-word.mp3",
-      "audioSentence": "t1-p275-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-023",
-      "english": "Catfish",
-      "polish": "Sum",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-023-word.mp3",
-      "audioSentence": "t1-p275-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-024",
-      "english": "Pike",
-      "polish": "Szczupak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-024-word.mp3",
-      "audioSentence": "t1-p275-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-025",
-      "english": "Sprat",
-      "polish": "Szprot",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-025-word.mp3",
-      "audioSentence": "t1-p275-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-026",
-      "english": "Herring",
-      "polish": "Śledź",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-026-word.mp3",
-      "audioSentence": "t1-p275-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-027",
-      "english": "Eel",
-      "polish": "Węgorz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-027-word.mp3",
-      "audioSentence": "t1-p275-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-028",
-      "english": "Goldfish",
-      "polish": "Złota rybka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-028-word.mp3",
-      "audioSentence": "t1-p275-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-029",
-      "english": "Crucian",
-      "polish": "Karaś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-029-word.mp3",
-      "audioSentence": "t1-p275-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p275-030",
-      "english": "Guppy",
-      "polish": "Gupik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p275-030-word.mp3",
-      "audioSentence": "t1-p275-030-sentence.mp3"
     }
   ]
 }

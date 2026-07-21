@@ -1,15 +1,15 @@
 {
   "id": "t1-p074",
-  "name": "Przymiotniki 5",
+  "name": "Kraje",
   "volume": "Tom I",
   "level": 1,
-  "category": "Przymiotniki",
+  "category": "Rzeczowniki",
   "chapter": "Rozdział IX",
   "words": [
     {
       "id": "t1-p074-001",
-      "english": "Possible",
-      "polish": "Możliwy",
+      "english": "England",
+      "polish": "Anglia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p074-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p074-002",
-      "english": "Impossible",
-      "polish": "Niemożliwy",
+      "english": "English",
+      "polish": "Angielka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p074-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p074-003",
-      "english": "Real",
-      "polish": "Realny",
+      "english": "United kingdom",
+      "polish": "Zjednoczone królestwo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p074-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p074-004",
-      "english": "True",
-      "polish": "Zgodny z prawdą",
+      "english": "Great britain",
+      "polish": "Wielka brytania",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p074-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p074-005",
-      "english": "Tired",
-      "polish": "Zmęczony",
+      "english": "British",
+      "polish": "Brytyjka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p074-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p074-006",
-      "english": "Quiet",
-      "polish": "Cichy",
+      "english": "China",
+      "polish": "Chiny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p074-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p074-007",
-      "english": "Loud",
-      "polish": "Głośny",
+      "english": "Chinese",
+      "polish": "Chinka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p074-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p074-008",
-      "english": "Interesting",
-      "polish": "Interesujący",
+      "english": "France",
+      "polish": "Francja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p074-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p074-009",
-      "english": "Normal",
-      "polish": "Normalny",
+      "english": "French",
+      "polish": "Francuzka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p074-009-word.mp3",
@@ -89,12 +89,2127 @@
     },
     {
       "id": "t1-p074-010",
-      "english": "Crazy",
-      "polish": "Zwariowany",
+      "english": "Country",
+      "polish": "Kraj",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p074-010-word.mp3",
       "audioSentence": "t1-p074-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-011",
+      "english": "Poland",
+      "polish": "Polska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-011-word.mp3",
+      "audioSentence": "t1-p074-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-012",
+      "english": "Pole",
+      "polish": "Polka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-012-word.mp3",
+      "audioSentence": "t1-p074-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-013",
+      "english": "India",
+      "polish": "Indie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-013-word.mp3",
+      "audioSentence": "t1-p074-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-014",
+      "english": "Indian",
+      "polish": "Hinduska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-014-word.mp3",
+      "audioSentence": "t1-p074-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-015",
+      "english": "German",
+      "polish": "Niemka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-015-word.mp3",
+      "audioSentence": "t1-p074-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-016",
+      "english": "Germany",
+      "polish": "Niemcy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-016-word.mp3",
+      "audioSentence": "t1-p074-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-017",
+      "english": "The united states of america",
+      "polish": "Stany zjednoczone",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-017-word.mp3",
+      "audioSentence": "t1-p074-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-018",
+      "english": "American",
+      "polish": "Amerykanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-018-word.mp3",
+      "audioSentence": "t1-p074-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-019",
+      "english": "Nationality",
+      "polish": "Narodowość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-019-word.mp3",
+      "audioSentence": "t1-p074-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-020",
+      "english": "Nation",
+      "polish": "Naród",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-020-word.mp3",
+      "audioSentence": "t1-p074-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-021",
+      "english": "Italy",
+      "polish": "Włochy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-021-word.mp3",
+      "audioSentence": "t1-p074-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-022",
+      "english": "Italian",
+      "polish": "Włoszka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-022-word.mp3",
+      "audioSentence": "t1-p074-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-023",
+      "english": "Czech republic",
+      "polish": "Czechy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-023-word.mp3",
+      "audioSentence": "t1-p074-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-024",
+      "english": "Czech",
+      "polish": "Czeszka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-024-word.mp3",
+      "audioSentence": "t1-p074-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-025",
+      "english": "Greece",
+      "polish": "Grecja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-025-word.mp3",
+      "audioSentence": "t1-p074-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-026",
+      "english": "Greek",
+      "polish": "Greczynka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-026-word.mp3",
+      "audioSentence": "t1-p074-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-027",
+      "english": "Spain",
+      "polish": "Hiszpania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-027-word.mp3",
+      "audioSentence": "t1-p074-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-028",
+      "english": "Spanish",
+      "polish": "Hiszpanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-028-word.mp3",
+      "audioSentence": "t1-p074-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-029",
+      "english": "The netherlands",
+      "polish": "Holandia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-029-word.mp3",
+      "audioSentence": "t1-p074-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-030",
+      "english": "Dutch",
+      "polish": "Holenderka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-030-word.mp3",
+      "audioSentence": "t1-p074-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-031",
+      "english": "Ireland",
+      "polish": "Irlandia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-031-word.mp3",
+      "audioSentence": "t1-p074-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-032",
+      "english": "Irish",
+      "polish": "Irlandka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-032-word.mp3",
+      "audioSentence": "t1-p074-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-033",
+      "english": "Japan",
+      "polish": "Japonia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-033-word.mp3",
+      "audioSentence": "t1-p074-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-034",
+      "english": "Japanese",
+      "polish": "Japonka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-034-word.mp3",
+      "audioSentence": "t1-p074-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-035",
+      "english": "Norway",
+      "polish": "Norwegia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-035-word.mp3",
+      "audioSentence": "t1-p074-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-036",
+      "english": "Norwegian",
+      "polish": "Norweżka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-036-word.mp3",
+      "audioSentence": "t1-p074-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-037",
+      "english": "Russia",
+      "polish": "Rosja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-037-word.mp3",
+      "audioSentence": "t1-p074-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-038",
+      "english": "Russian",
+      "polish": "Rosjanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-038-word.mp3",
+      "audioSentence": "t1-p074-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-039",
+      "english": "Turkey",
+      "polish": "Turcja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-039-word.mp3",
+      "audioSentence": "t1-p074-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-040",
+      "english": "Turkish",
+      "polish": "Turczynka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-040-word.mp3",
+      "audioSentence": "t1-p074-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-041",
+      "english": "Hungarian",
+      "polish": "Węgierka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-041-word.mp3",
+      "audioSentence": "t1-p074-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-042",
+      "english": "Hungary",
+      "polish": "Węgry",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-042-word.mp3",
+      "audioSentence": "t1-p074-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-043",
+      "english": "Austria",
+      "polish": "Austria",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-043-word.mp3",
+      "audioSentence": "t1-p074-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-044",
+      "english": "Austrian",
+      "polish": "Austriaczka, austriak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-044-word.mp3",
+      "audioSentence": "t1-p074-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-045",
+      "english": "Argentina",
+      "polish": "Argentyna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-045-word.mp3",
+      "audioSentence": "t1-p074-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-046",
+      "english": "Argentinian",
+      "polish": "Argentynka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-046-word.mp3",
+      "audioSentence": "t1-p074-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-047",
+      "english": "Belgium",
+      "polish": "Belgia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-047-word.mp3",
+      "audioSentence": "t1-p074-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-048",
+      "english": "Belgian",
+      "polish": "Belgijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-048-word.mp3",
+      "audioSentence": "t1-p074-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-049",
+      "english": "Belarusian",
+      "polish": "Białorusinka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-049-word.mp3",
+      "audioSentence": "t1-p074-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-050",
+      "english": "Belarus",
+      "polish": "Białoruś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-050-word.mp3",
+      "audioSentence": "t1-p074-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-051",
+      "english": "Canada",
+      "polish": "Kanada",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-051-word.mp3",
+      "audioSentence": "t1-p074-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-052",
+      "english": "Canadian",
+      "polish": "Kanadyjka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-052-word.mp3",
+      "audioSentence": "t1-p074-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-053",
+      "english": "Croatia",
+      "polish": "Chorwacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-053-word.mp3",
+      "audioSentence": "t1-p074-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-054",
+      "english": "Croat",
+      "polish": "Chorwatka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-054-word.mp3",
+      "audioSentence": "t1-p074-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-055",
+      "english": "Denmark",
+      "polish": "Dania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-055-word.mp3",
+      "audioSentence": "t1-p074-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-056",
+      "english": "Danish",
+      "polish": "Dunka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-056-word.mp3",
+      "audioSentence": "t1-p074-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-057",
+      "english": "Finland",
+      "polish": "Finlandia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-057-word.mp3",
+      "audioSentence": "t1-p074-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-058",
+      "english": "Finnish",
+      "polish": "Fin",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-058-word.mp3",
+      "audioSentence": "t1-p074-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-059",
+      "english": "Israel",
+      "polish": "Izrael",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-059-word.mp3",
+      "audioSentence": "t1-p074-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-060",
+      "english": "Israeli",
+      "polish": "Izraelka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-060-word.mp3",
+      "audioSentence": "t1-p074-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-061",
+      "english": "Lithuania",
+      "polish": "Litwa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-061-word.mp3",
+      "audioSentence": "t1-p074-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-062",
+      "english": "Lithuanian",
+      "polish": "Litwinka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-062-word.mp3",
+      "audioSentence": "t1-p074-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-063",
+      "english": "Portugal",
+      "polish": "Portugalia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-063-word.mp3",
+      "audioSentence": "t1-p074-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-064",
+      "english": "Portuguese",
+      "polish": "Portugalka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-064-word.mp3",
+      "audioSentence": "t1-p074-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-065",
+      "english": "Serbia",
+      "polish": "Serbia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-065-word.mp3",
+      "audioSentence": "t1-p074-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-066",
+      "english": "Serbian",
+      "polish": "Serbka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-066-word.mp3",
+      "audioSentence": "t1-p074-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-067",
+      "english": "Slovakia",
+      "polish": "Słowacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-067-word.mp3",
+      "audioSentence": "t1-p074-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-068",
+      "english": "Slovak",
+      "polish": "Słowaczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-068-word.mp3",
+      "audioSentence": "t1-p074-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-069",
+      "english": "Scotland",
+      "polish": "Szkocja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-069-word.mp3",
+      "audioSentence": "t1-p074-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-070",
+      "english": "Scottish",
+      "polish": "Szkotka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-070-word.mp3",
+      "audioSentence": "t1-p074-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-071",
+      "english": "Sweden",
+      "polish": "Szwecja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-071-word.mp3",
+      "audioSentence": "t1-p074-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-072",
+      "english": "Swedish",
+      "polish": "Szwedka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-072-word.mp3",
+      "audioSentence": "t1-p074-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-073",
+      "english": "Ukraine",
+      "polish": "Ukraina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-073-word.mp3",
+      "audioSentence": "t1-p074-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-074",
+      "english": "Ukrainian",
+      "polish": "Ukrainka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-074-word.mp3",
+      "audioSentence": "t1-p074-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-075",
+      "english": "Mexico",
+      "polish": "Meksyk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-075-word.mp3",
+      "audioSentence": "t1-p074-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-076",
+      "english": "Mexican",
+      "polish": "Meksykanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-076-word.mp3",
+      "audioSentence": "t1-p074-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-077",
+      "english": "Switzerland",
+      "polish": "Szwajcaria",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-077-word.mp3",
+      "audioSentence": "t1-p074-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-078",
+      "english": "Swiss",
+      "polish": "Szwajcarka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-078-word.mp3",
+      "audioSentence": "t1-p074-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-079",
+      "english": "Romania",
+      "polish": "Rumunia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-079-word.mp3",
+      "audioSentence": "t1-p074-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-080",
+      "english": "Romanian",
+      "polish": "Rumunka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-080-word.mp3",
+      "audioSentence": "t1-p074-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-081",
+      "english": "Afghanistan",
+      "polish": "Afganistan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-081-word.mp3",
+      "audioSentence": "t1-p074-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-082",
+      "english": "Afghan",
+      "polish": "Afganka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-082-word.mp3",
+      "audioSentence": "t1-p074-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-083",
+      "english": "Album",
+      "polish": "Album",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-083-word.mp3",
+      "audioSentence": "t1-p074-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-084",
+      "english": "Artist",
+      "polish": "Artysta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-084-word.mp3",
+      "audioSentence": "t1-p074-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-085",
+      "english": "Festival",
+      "polish": "Festiwal",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-085-word.mp3",
+      "audioSentence": "t1-p074-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-086",
+      "english": "Piano",
+      "polish": "Fortepian",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-086-word.mp3",
+      "audioSentence": "t1-p074-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-087",
+      "english": "Design",
+      "polish": "Design",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-087-word.mp3",
+      "audioSentence": "t1-p074-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-088",
+      "english": "Instrument",
+      "polish": "Instrument",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-088-word.mp3",
+      "audioSentence": "t1-p074-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-089",
+      "english": "Culture",
+      "polish": "Kultura",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-089-word.mp3",
+      "audioSentence": "t1-p074-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-090",
+      "english": "Painting",
+      "polish": "Obraz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-090-word.mp3",
+      "audioSentence": "t1-p074-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-091",
+      "english": "Opera",
+      "polish": "Opera",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-091-word.mp3",
+      "audioSentence": "t1-p074-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-092",
+      "english": "Poster",
+      "polish": "Plakat",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-092-word.mp3",
+      "audioSentence": "t1-p074-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-093",
+      "english": "Drawing",
+      "polish": "Rysunek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-093-word.mp3",
+      "audioSentence": "t1-p074-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-094",
+      "english": "Symbol",
+      "polish": "Symbol",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-094-word.mp3",
+      "audioSentence": "t1-p074-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-095",
+      "english": "Band",
+      "polish": "Zespół muzyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-095-word.mp3",
+      "audioSentence": "t1-p074-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-096",
+      "english": "Bosnia and herzegovina",
+      "polish": "Bośnia I hercegowina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-096-word.mp3",
+      "audioSentence": "t1-p074-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-097",
+      "english": "Bosnian",
+      "polish": "Bośniaczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-097-word.mp3",
+      "audioSentence": "t1-p074-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-098",
+      "english": "Filipino",
+      "polish": "Filipinka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-098-word.mp3",
+      "audioSentence": "t1-p074-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-099",
+      "english": "The philippines",
+      "polish": "Filipiny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-099-word.mp3",
+      "audioSentence": "t1-p074-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-100",
+      "english": "Latvia",
+      "polish": "Łotwa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-100-word.mp3",
+      "audioSentence": "t1-p074-100-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-101",
+      "english": "Latvian",
+      "polish": "Łotyszka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-101-word.mp3",
+      "audioSentence": "t1-p074-101-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-102",
+      "english": "South african",
+      "polish": "Południowoafrykanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-102-word.mp3",
+      "audioSentence": "t1-p074-102-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-103",
+      "english": "South africa",
+      "polish": "Republika południowej afryki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-103-word.mp3",
+      "audioSentence": "t1-p074-103-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-104",
+      "english": "Vietnam",
+      "polish": "Wietnam",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-104-word.mp3",
+      "audioSentence": "t1-p074-104-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-105",
+      "english": "Vietnamese",
+      "polish": "Wietnamka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-105-word.mp3",
+      "audioSentence": "t1-p074-105-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-106",
+      "english": "Brazil",
+      "polish": "Brazylia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-106-word.mp3",
+      "audioSentence": "t1-p074-106-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-107",
+      "english": "Brazilian",
+      "polish": "Brazylijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-107-word.mp3",
+      "audioSentence": "t1-p074-107-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-108",
+      "english": "Egyptian",
+      "polish": "Egipcjanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-108-word.mp3",
+      "audioSentence": "t1-p074-108-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-109",
+      "english": "Egypt",
+      "polish": "Egipt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-109-word.mp3",
+      "audioSentence": "t1-p074-109-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-110",
+      "english": "Jamaica",
+      "polish": "Jamajka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-110-word.mp3",
+      "audioSentence": "t1-p074-110-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-111",
+      "english": "Angola",
+      "polish": "Angola",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-111-word.mp3",
+      "audioSentence": "t1-p074-111-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-112",
+      "english": "Angolan",
+      "polish": "Angolka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-112-word.mp3",
+      "audioSentence": "t1-p074-112-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-113",
+      "english": "Bangladeshi",
+      "polish": "Bangalijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-113-word.mp3",
+      "audioSentence": "t1-p074-113-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-114",
+      "english": "Madagascar",
+      "polish": "Madagaskar",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-114-word.mp3",
+      "audioSentence": "t1-p074-114-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-115",
+      "english": "Bangladesh",
+      "polish": "Bangladesz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-115-word.mp3",
+      "audioSentence": "t1-p074-115-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-116",
+      "english": "Malagasy",
+      "polish": "Madagaskarczyk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-116-word.mp3",
+      "audioSentence": "t1-p074-116-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-117",
+      "english": "Estonia",
+      "polish": "Estonia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-117-word.mp3",
+      "audioSentence": "t1-p074-117-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-118",
+      "english": "Malaysia",
+      "polish": "Malezja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-118-word.mp3",
+      "audioSentence": "t1-p074-118-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-119",
+      "english": "Estonian",
+      "polish": "Estonka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-119-word.mp3",
+      "audioSentence": "t1-p074-119-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-120",
+      "english": "Malaysian",
+      "polish": "Malezyjka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-120-word.mp3",
+      "audioSentence": "t1-p074-120-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-121",
+      "english": "Indonesia",
+      "polish": "Indonezja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-121-word.mp3",
+      "audioSentence": "t1-p074-121-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-122",
+      "english": "Indonesian",
+      "polish": "Indonezyjka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-122-word.mp3",
+      "audioSentence": "t1-p074-122-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-123",
+      "english": "Icelander",
+      "polish": "Islandka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-123-word.mp3",
+      "audioSentence": "t1-p074-123-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-124",
+      "english": "Somalia",
+      "polish": "Somalia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-124-word.mp3",
+      "audioSentence": "t1-p074-124-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-125",
+      "english": "Kazakhstan",
+      "polish": "Kazachstan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-125-word.mp3",
+      "audioSentence": "t1-p074-125-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-126",
+      "english": "England",
+      "polish": "Anglia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-126-word.mp3",
+      "audioSentence": "t1-p074-126-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-127",
+      "english": "English",
+      "polish": "Angielka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-127-word.mp3",
+      "audioSentence": "t1-p074-127-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-128",
+      "english": "United kingdom",
+      "polish": "Zjednoczone królestwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-128-word.mp3",
+      "audioSentence": "t1-p074-128-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-129",
+      "english": "Great britain",
+      "polish": "Wielka brytania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-129-word.mp3",
+      "audioSentence": "t1-p074-129-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-130",
+      "english": "British",
+      "polish": "Brytyjka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-130-word.mp3",
+      "audioSentence": "t1-p074-130-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-131",
+      "english": "China",
+      "polish": "Chiny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-131-word.mp3",
+      "audioSentence": "t1-p074-131-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-132",
+      "english": "Chinese",
+      "polish": "Chinka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-132-word.mp3",
+      "audioSentence": "t1-p074-132-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-133",
+      "english": "France",
+      "polish": "Francja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-133-word.mp3",
+      "audioSentence": "t1-p074-133-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-134",
+      "english": "French",
+      "polish": "Francuzka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-134-word.mp3",
+      "audioSentence": "t1-p074-134-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-135",
+      "english": "Country",
+      "polish": "Kraj",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-135-word.mp3",
+      "audioSentence": "t1-p074-135-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-136",
+      "english": "Poland",
+      "polish": "Polska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-136-word.mp3",
+      "audioSentence": "t1-p074-136-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-137",
+      "english": "Pole",
+      "polish": "Polka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-137-word.mp3",
+      "audioSentence": "t1-p074-137-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-138",
+      "english": "India",
+      "polish": "Indie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-138-word.mp3",
+      "audioSentence": "t1-p074-138-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-139",
+      "english": "Indian",
+      "polish": "Hinduska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-139-word.mp3",
+      "audioSentence": "t1-p074-139-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-140",
+      "english": "German",
+      "polish": "Niemka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-140-word.mp3",
+      "audioSentence": "t1-p074-140-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-141",
+      "english": "Guatemalan",
+      "polish": "Gwatemalka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-141-word.mp3",
+      "audioSentence": "t1-p074-141-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-142",
+      "english": "Honduran",
+      "polish": "Honduranka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-142-word.mp3",
+      "audioSentence": "t1-p074-142-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-143",
+      "english": "Honduras",
+      "polish": "Honduras",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-143-word.mp3",
+      "audioSentence": "t1-p074-143-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-144",
+      "english": "Iraq",
+      "polish": "Irak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-144-word.mp3",
+      "audioSentence": "t1-p074-144-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-145",
+      "english": "Iraqi",
+      "polish": "Irakijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-145-word.mp3",
+      "audioSentence": "t1-p074-145-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-146",
+      "english": "Jamaican",
+      "polish": "Jamajczyk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-146-word.mp3",
+      "audioSentence": "t1-p074-146-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-147",
+      "english": "Jordan",
+      "polish": "Jordania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-147-word.mp3",
+      "audioSentence": "t1-p074-147-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-148",
+      "english": "Jordanian",
+      "polish": "Jordanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-148-word.mp3",
+      "audioSentence": "t1-p074-148-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-149",
+      "english": "Cameroon",
+      "polish": "Kamerun",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-149-word.mp3",
+      "audioSentence": "t1-p074-149-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-150",
+      "english": "Cameroonian",
+      "polish": "Kamerunka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-150-word.mp3",
+      "audioSentence": "t1-p074-150-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-151",
+      "english": "Kenya",
+      "polish": "Kenia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-151-word.mp3",
+      "audioSentence": "t1-p074-151-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-152",
+      "english": "Kenyan",
+      "polish": "Kenijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-152-word.mp3",
+      "audioSentence": "t1-p074-152-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-153",
+      "english": "Colombia",
+      "polish": "Kolumbia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-153-word.mp3",
+      "audioSentence": "t1-p074-153-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-154",
+      "english": "Colombian",
+      "polish": "Kolumbijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-154-word.mp3",
+      "audioSentence": "t1-p074-154-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-155",
+      "english": "Congolese",
+      "polish": "Kongijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-155-word.mp3",
+      "audioSentence": "t1-p074-155-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-156",
+      "english": "Costa rica",
+      "polish": "Kostaryka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-156-word.mp3",
+      "audioSentence": "t1-p074-156-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-157",
+      "english": "Costa rican",
+      "polish": "Kostarykanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-157-word.mp3",
+      "audioSentence": "t1-p074-157-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-158",
+      "english": "Libya",
+      "polish": "Libia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-158-word.mp3",
+      "audioSentence": "t1-p074-158-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-159",
+      "english": "Libyan",
+      "polish": "Libijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-159-word.mp3",
+      "audioSentence": "t1-p074-159-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-160",
+      "english": "Mali",
+      "polish": "Mali",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-160-word.mp3",
+      "audioSentence": "t1-p074-160-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-161",
+      "english": "Malian",
+      "polish": "Malijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-161-word.mp3",
+      "audioSentence": "t1-p074-161-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-162",
+      "english": "Moroccan",
+      "polish": "Marokanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-162-word.mp3",
+      "audioSentence": "t1-p074-162-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-163",
+      "english": "Morocco",
+      "polish": "Maroko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-163-word.mp3",
+      "audioSentence": "t1-p074-163-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-164",
+      "english": "Mauritania",
+      "polish": "Mauretania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-164-word.mp3",
+      "audioSentence": "t1-p074-164-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-165",
+      "english": "Mauritanian",
+      "polish": "Mauretanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-165-word.mp3",
+      "audioSentence": "t1-p074-165-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-166",
+      "english": "Namibia",
+      "polish": "Namibia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-166-word.mp3",
+      "audioSentence": "t1-p074-166-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-167",
+      "english": "Namibian",
+      "polish": "Namibijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-167-word.mp3",
+      "audioSentence": "t1-p074-167-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-168",
+      "english": "Niger",
+      "polish": "Niger",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-168-word.mp3",
+      "audioSentence": "t1-p074-168-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-169",
+      "english": "Nigeria",
+      "polish": "Nigeria",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-169-word.mp3",
+      "audioSentence": "t1-p074-169-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-170",
+      "english": "Nigerien",
+      "polish": "Nigerka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-170-word.mp3",
+      "audioSentence": "t1-p074-170-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-171",
+      "english": "Nigerian",
+      "polish": "Nigeryjka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-171-word.mp3",
+      "audioSentence": "t1-p074-171-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-172",
+      "english": "Nicaragua",
+      "polish": "Nikaragua",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-172-word.mp3",
+      "audioSentence": "t1-p074-172-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-173",
+      "english": "Nicaraguan",
+      "polish": "Nikaraguanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-173-word.mp3",
+      "audioSentence": "t1-p074-173-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-174",
+      "english": "New zealand",
+      "polish": "Nowa zelandia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-174-word.mp3",
+      "audioSentence": "t1-p074-174-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-175",
+      "english": "New zealander",
+      "polish": "Nowozelandka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-175-word.mp3",
+      "audioSentence": "t1-p074-175-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-176",
+      "english": "Oman",
+      "polish": "Oman",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-176-word.mp3",
+      "audioSentence": "t1-p074-176-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-177",
+      "english": "Omani",
+      "polish": "Omanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-177-word.mp3",
+      "audioSentence": "t1-p074-177-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-178",
+      "english": "Pakistan",
+      "polish": "Pakistan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-178-word.mp3",
+      "audioSentence": "t1-p074-178-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-179",
+      "english": "Pakistani",
+      "polish": "Pakistanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-179-word.mp3",
+      "audioSentence": "t1-p074-179-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-180",
+      "english": "Panama",
+      "polish": "Panama",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-180-word.mp3",
+      "audioSentence": "t1-p074-180-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-181",
+      "english": "Panamanian",
+      "polish": "Panamka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-181-word.mp3",
+      "audioSentence": "t1-p074-181-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-182",
+      "english": "Paraguay",
+      "polish": "Paragwaj",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-182-word.mp3",
+      "audioSentence": "t1-p074-182-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-183",
+      "english": "Paraguayan",
+      "polish": "Paragwajka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-183-word.mp3",
+      "audioSentence": "t1-p074-183-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-184",
+      "english": "Peru",
+      "polish": "Peru",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-184-word.mp3",
+      "audioSentence": "t1-p074-184-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-185",
+      "english": "Peruvian",
+      "polish": "Peruwianka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-185-word.mp3",
+      "audioSentence": "t1-p074-185-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-186",
+      "english": "Republic of the congo",
+      "polish": "Republika konga",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-186-word.mp3",
+      "audioSentence": "t1-p074-186-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-187",
+      "english": "Central african republic",
+      "polish": "Republika środkowoafrykańska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-187-word.mp3",
+      "audioSentence": "t1-p074-187-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-188",
+      "english": "El salvador",
+      "polish": "Salwador",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-188-word.mp3",
+      "audioSentence": "t1-p074-188-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-189",
+      "english": "Salvadoran",
+      "polish": "Salwadorka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-189-word.mp3",
+      "audioSentence": "t1-p074-189-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-190",
+      "english": "Senegal",
+      "polish": "Senegal",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-190-word.mp3",
+      "audioSentence": "t1-p074-190-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-191",
+      "english": "Senegalese",
+      "polish": "Senegalka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-191-word.mp3",
+      "audioSentence": "t1-p074-191-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-192",
+      "english": "Singapore",
+      "polish": "Singapur",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-192-word.mp3",
+      "audioSentence": "t1-p074-192-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-193",
+      "english": "Singaporean",
+      "polish": "Singapurka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-193-word.mp3",
+      "audioSentence": "t1-p074-193-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-194",
+      "english": "Sudan",
+      "polish": "Sudan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-194-word.mp3",
+      "audioSentence": "t1-p074-194-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-195",
+      "english": "Sudanese",
+      "polish": "Sudanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-195-word.mp3",
+      "audioSentence": "t1-p074-195-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-196",
+      "english": "Syria",
+      "polish": "Syria",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-196-word.mp3",
+      "audioSentence": "t1-p074-196-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-197",
+      "english": "Syrian",
+      "polish": "Syryjka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-197-word.mp3",
+      "audioSentence": "t1-p074-197-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-198",
+      "english": "Central african",
+      "polish": "Z afryki środkowej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-198-word.mp3",
+      "audioSentence": "t1-p074-198-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-199",
+      "english": "Tunisia",
+      "polish": "Tunezja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-199-word.mp3",
+      "audioSentence": "t1-p074-199-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-200",
+      "english": "Tunisian",
+      "polish": "Tunezyjka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-200-word.mp3",
+      "audioSentence": "t1-p074-200-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-201",
+      "english": "Uruguay",
+      "polish": "Urugwaj",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-201-word.mp3",
+      "audioSentence": "t1-p074-201-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-202",
+      "english": "Uruguayan",
+      "polish": "Urugwajka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-202-word.mp3",
+      "audioSentence": "t1-p074-202-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-203",
+      "english": "Ivory coast",
+      "polish": "Wybrzeże kości słoniowej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-203-word.mp3",
+      "audioSentence": "t1-p074-203-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-204",
+      "english": "Ivorian",
+      "polish": "Iworyjka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-204-word.mp3",
+      "audioSentence": "t1-p074-204-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-205",
+      "english": "Zambia",
+      "polish": "Zambia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-205-word.mp3",
+      "audioSentence": "t1-p074-205-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-206",
+      "english": "Zambian",
+      "polish": "Zambijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-206-word.mp3",
+      "audioSentence": "t1-p074-206-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-207",
+      "english": "Zimbabwe",
+      "polish": "Zimbabwe",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-207-word.mp3",
+      "audioSentence": "t1-p074-207-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-208",
+      "english": "Zimbabwean",
+      "polish": "Zimbabwenka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-208-word.mp3",
+      "audioSentence": "t1-p074-208-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-209",
+      "english": "United arab emirates",
+      "polish": "Zjednoczone emiraty arabskie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-209-word.mp3",
+      "audioSentence": "t1-p074-209-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-210",
+      "english": "Emirati",
+      "polish": "Emiratka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-210-word.mp3",
+      "audioSentence": "t1-p074-210-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-211",
+      "english": "China",
+      "polish": "Chiny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-211-word.mp3",
+      "audioSentence": "t1-p074-211-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-212",
+      "english": "Chinese",
+      "polish": "Chinka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-212-word.mp3",
+      "audioSentence": "t1-p074-212-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-213",
+      "english": "Iraqi",
+      "polish": "Irakijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-213-word.mp3",
+      "audioSentence": "t1-p074-213-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-214",
+      "english": "Jamaican",
+      "polish": "Jamajczyk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-214-word.mp3",
+      "audioSentence": "t1-p074-214-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-215",
+      "english": "Peruvian",
+      "polish": "Peruwianka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-215-word.mp3",
+      "audioSentence": "t1-p074-215-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-216",
+      "english": "Republic of the congo",
+      "polish": "Republika konga",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-216-word.mp3",
+      "audioSentence": "t1-p074-216-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-217",
+      "english": "France",
+      "polish": "Francja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-217-word.mp3",
+      "audioSentence": "t1-p074-217-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-218",
+      "english": "French",
+      "polish": "Francuzka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-218-word.mp3",
+      "audioSentence": "t1-p074-218-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-219",
+      "english": "England",
+      "polish": "Anglia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-219-word.mp3",
+      "audioSentence": "t1-p074-219-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-220",
+      "english": "English",
+      "polish": "Angielka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-220-word.mp3",
+      "audioSentence": "t1-p074-220-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-221",
+      "english": "United kingdom",
+      "polish": "Zjednoczone królestwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-221-word.mp3",
+      "audioSentence": "t1-p074-221-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-222",
+      "english": "Great britain",
+      "polish": "Wielka brytania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-222-word.mp3",
+      "audioSentence": "t1-p074-222-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-223",
+      "english": "German",
+      "polish": "Niemka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-223-word.mp3",
+      "audioSentence": "t1-p074-223-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-224",
+      "english": "Germany",
+      "polish": "Niemcy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-224-word.mp3",
+      "audioSentence": "t1-p074-224-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-225",
+      "english": "The united states of america",
+      "polish": "Stany zjednoczone",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-225-word.mp3",
+      "audioSentence": "t1-p074-225-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-226",
+      "english": "Ivorian",
+      "polish": "Iworyjka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-226-word.mp3",
+      "audioSentence": "t1-p074-226-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-227",
+      "english": "Zambia",
+      "polish": "Zambia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-227-word.mp3",
+      "audioSentence": "t1-p074-227-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-228",
+      "english": "Zambian",
+      "polish": "Zambijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-228-word.mp3",
+      "audioSentence": "t1-p074-228-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-229",
+      "english": "Senegal",
+      "polish": "Senegal",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-229-word.mp3",
+      "audioSentence": "t1-p074-229-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-230",
+      "english": "Senegalese",
+      "polish": "Senegalka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-230-word.mp3",
+      "audioSentence": "t1-p074-230-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-231",
+      "english": "Singapore",
+      "polish": "Singapur",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-231-word.mp3",
+      "audioSentence": "t1-p074-231-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-232",
+      "english": "Singaporean",
+      "polish": "Singapurka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-232-word.mp3",
+      "audioSentence": "t1-p074-232-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-233",
+      "english": "Sudan",
+      "polish": "Sudan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-233-word.mp3",
+      "audioSentence": "t1-p074-233-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-234",
+      "english": "Sudanese",
+      "polish": "Sudanka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-234-word.mp3",
+      "audioSentence": "t1-p074-234-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-235",
+      "english": "Nationality",
+      "polish": "Narodowość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-235-word.mp3",
+      "audioSentence": "t1-p074-235-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-236",
+      "english": "Nation",
+      "polish": "Naród",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-236-word.mp3",
+      "audioSentence": "t1-p074-236-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-237",
+      "english": "Italy",
+      "polish": "Włochy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-237-word.mp3",
+      "audioSentence": "t1-p074-237-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-238",
+      "english": "Italian",
+      "polish": "Włoszka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-238-word.mp3",
+      "audioSentence": "t1-p074-238-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-239",
+      "english": "Czech republic",
+      "polish": "Czechy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-239-word.mp3",
+      "audioSentence": "t1-p074-239-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-240",
+      "english": "Czech",
+      "polish": "Czeszka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-240-word.mp3",
+      "audioSentence": "t1-p074-240-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-241",
+      "english": "Greece",
+      "polish": "Grecja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-241-word.mp3",
+      "audioSentence": "t1-p074-241-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-242",
+      "english": "Greek",
+      "polish": "Greczynka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-242-word.mp3",
+      "audioSentence": "t1-p074-242-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-243",
+      "english": "Bosnia and herzegovina",
+      "polish": "Bośnia I hercegowina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-243-word.mp3",
+      "audioSentence": "t1-p074-243-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-244",
+      "english": "Bosnian",
+      "polish": "Bośniaczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-244-word.mp3",
+      "audioSentence": "t1-p074-244-sentence.mp3"
+    },
+    {
+      "id": "t1-p074-245",
+      "english": "Filipino",
+      "polish": "Filipinka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p074-245-word.mp3",
+      "audioSentence": "t1-p074-245-sentence.mp3"
     }
   ]
 }

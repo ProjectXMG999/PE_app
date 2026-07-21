@@ -1,15 +1,15 @@
 {
   "id": "t1-p130",
-  "name": "Przemieszczanie się",
+  "name": "Slang 11",
   "volume": "Tom II",
   "level": 2,
-  "category": "Phrasale",
+  "category": "Slang",
   "chapter": "Rozdział XIX",
   "words": [
     {
       "id": "t1-p130-001",
-      "english": "Get back",
-      "polish": "Wrócić",
+      "english": "Bloody",
+      "polish": "Cholerny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p130-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p130-002",
-      "english": "Go for sth",
-      "polish": "Iść po coś",
+      "english": "Damn it",
+      "polish": "Cholera",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p130-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p130-003",
-      "english": "Go in",
-      "polish": "Wejść do",
+      "english": "Epic fail",
+      "polish": "Totalna porażka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p130-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p130-004",
-      "english": "Go out",
-      "polish": "Wyjść na zewnątrz",
+      "english": "Meh",
+      "polish": "Ble, ble",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p130-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p130-005",
-      "english": "Walk into",
-      "polish": "Wchodzić",
+      "english": "No dice",
+      "polish": "Nie ma szans",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p130-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p130-006",
-      "english": "Come down",
-      "polish": "Zejść na dół",
+      "english": "Talk to the hand",
+      "polish": "Gadaj zdrów",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p130-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p130-007",
-      "english": "Come up",
-      "polish": "Podejść bliżej",
+      "english": "My bad",
+      "polish": "Mój błąd",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p130-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p130-008",
-      "english": "Drop by",
-      "polish": "Zahaczyć gdzieś",
+      "english": "Oh snap!",
+      "polish": "O cholera, a niech to!",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p130-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p130-009",
-      "english": "Drop in",
-      "polish": "Wpaść gdzieś",
+      "english": "Or nah",
+      "polish": "A może jednak nie…",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p130-009-word.mp3",
@@ -89,282 +89,12 @@
     },
     {
       "id": "t1-p130-010",
-      "english": "Get out",
-      "polish": "Wyjść",
+      "english": "Yucky!",
+      "polish": "Fuj! Ohydne!",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p130-010-word.mp3",
       "audioSentence": "t1-p130-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-011",
-      "english": "Come by",
-      "polish": "Wpaść do kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-011-word.mp3",
-      "audioSentence": "t1-p130-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-012",
-      "english": "Get sb back",
-      "polish": "Odprowadzić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-012-word.mp3",
-      "audioSentence": "t1-p130-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-013",
-      "english": "Get into",
-      "polish": "Wejść do jakiegoś miejsca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-013-word.mp3",
-      "audioSentence": "t1-p130-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-014",
-      "english": "Go down",
-      "polish": "Schodzić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-014-word.mp3",
-      "audioSentence": "t1-p130-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-015",
-      "english": "Run up",
-      "polish": "Podbiec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-015-word.mp3",
-      "audioSentence": "t1-p130-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-016",
-      "english": "Run down",
-      "polish": "Zbiec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-016-word.mp3",
-      "audioSentence": "t1-p130-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-017",
-      "english": "Get in",
-      "polish": "Przyjeżdżać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-017-word.mp3",
-      "audioSentence": "t1-p130-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-018",
-      "english": "Walk sb out",
-      "polish": "Odprowadzić kogoś pieszo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-018-word.mp3",
-      "audioSentence": "t1-p130-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-019",
-      "english": "Go around",
-      "polish": "Okrążać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-019-word.mp3",
-      "audioSentence": "t1-p130-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-020",
-      "english": "Walk up",
-      "polish": "Wejść na górę",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-020-word.mp3",
-      "audioSentence": "t1-p130-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-021",
-      "english": "Bump into",
-      "polish": "Wpaść na",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-021-word.mp3",
-      "audioSentence": "t1-p130-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-022",
-      "english": "Come over",
-      "polish": "Zajść gdzieś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-022-word.mp3",
-      "audioSentence": "t1-p130-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-023",
-      "english": "Come along",
-      "polish": "Nadejść",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-023-word.mp3",
-      "audioSentence": "t1-p130-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-024",
-      "english": "Walk back",
-      "polish": "Wracać piechotą",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-024-word.mp3",
-      "audioSentence": "t1-p130-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-025",
-      "english": "See sb off",
-      "polish": "Odprowadzić kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-025-word.mp3",
-      "audioSentence": "t1-p130-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-026",
-      "english": "Hang about",
-      "polish": "Pałętać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-026-word.mp3",
-      "audioSentence": "t1-p130-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-027",
-      "english": "Hang around",
-      "polish": "Kręcić się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-027-word.mp3",
-      "audioSentence": "t1-p130-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-028",
-      "english": "Stop over",
-      "polish": "Zatrzymać się po drodze u kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-028-word.mp3",
-      "audioSentence": "t1-p130-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-029",
-      "english": "Head back",
-      "polish": "Zawracać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-029-word.mp3",
-      "audioSentence": "t1-p130-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-030",
-      "english": "Head toward",
-      "polish": "Zmierzać w kierunku",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-030-word.mp3",
-      "audioSentence": "t1-p130-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-031",
-      "english": "Make for sth",
-      "polish": "Ruszyć w kierunku czegoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-031-word.mp3",
-      "audioSentence": "t1-p130-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-032",
-      "english": "Move in",
-      "polish": "Posuwać się naprzód",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-032-word.mp3",
-      "audioSentence": "t1-p130-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-033",
-      "english": "Run around",
-      "polish": "Biegać w tę I z powrotem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-033-word.mp3",
-      "audioSentence": "t1-p130-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-034",
-      "english": "Run into sb",
-      "polish": "Napotkać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-034-word.mp3",
-      "audioSentence": "t1-p130-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-035",
-      "english": "Move in on",
-      "polish": "Nadciągać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-035-word.mp3",
-      "audioSentence": "t1-p130-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-036",
-      "english": "Close in",
-      "polish": "Zbliżać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-036-word.mp3",
-      "audioSentence": "t1-p130-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-037",
-      "english": "Pop in",
-      "polish": "Wbić gdzieś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-037-word.mp3",
-      "audioSentence": "t1-p130-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-038",
-      "english": "Break into",
-      "polish": "Zrywać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-038-word.mp3",
-      "audioSentence": "t1-p130-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-039",
-      "english": "Come down",
-      "polish": "Podróżować na południe",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-039-word.mp3",
-      "audioSentence": "t1-p130-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p130-040",
-      "english": "Head for sth",
-      "polish": "Zmierzać ku czemuś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p130-040-word.mp3",
-      "audioSentence": "t1-p130-040-sentence.mp3"
     }
   ]
 }

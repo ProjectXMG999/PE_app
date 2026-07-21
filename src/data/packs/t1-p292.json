@@ -1,15 +1,15 @@
 {
   "id": "t1-p292",
-  "name": "Phrasale 6",
+  "name": "Substancje",
   "volume": "Tom VIII",
   "level": 4,
-  "category": "Phrasale",
-  "chapter": "Rozdział LXXIII",
+  "category": "Przymiotniki",
+  "chapter": "Rozdział LXXII",
   "words": [
     {
       "id": "t1-p292-001",
-      "english": "Cool off",
-      "polish": "Ochłoń",
+      "english": "Liquid",
+      "polish": "Ciekły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p292-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p292-002",
-      "english": "Pull yourself together",
-      "polish": "Weź się w garść",
+      "english": "Explosive",
+      "polish": "Wybuchowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p292-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p292-003",
-      "english": "Back off",
-      "polish": "Odczep się",
+      "english": "Contaminated",
+      "polish": "Skażony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p292-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p292-004",
-      "english": "Come off it",
-      "polish": "Daruj sobie",
+      "english": "Impure",
+      "polish": "Zanieczyszczony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p292-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p292-005",
-      "english": "Walk sth off",
-      "polish": "Rozchodzić coś",
+      "english": "Acid",
+      "polish": "Kwasowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p292-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p292-006",
-      "english": "Back down",
-      "polish": "Odsuń się",
+      "english": "Mixed",
+      "polish": "Mieszany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p292-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p292-007",
-      "english": "Stand down",
-      "polish": "Opuścić broń",
+      "english": "Flammable",
+      "polish": "Łatwopalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p292-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p292-008",
-      "english": "Buckle up",
-      "polish": "Zapnij pasy",
+      "english": "Combustible",
+      "polish": "Palny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p292-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p292-009",
-      "english": "Man up",
-      "polish": "Zmężniej",
+      "english": "Volatile",
+      "polish": "Niestabilny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p292-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p292-010",
-      "english": "Word up",
-      "polish": "No a jak",
+      "english": "Compound",
+      "polish": "Złożony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p292-010-word.mp3",
       "audioSentence": "t1-p292-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p292-011",
+      "english": "Contaminative",
+      "polish": "Zanieczyszczający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p292-011-word.mp3",
+      "audioSentence": "t1-p292-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p292-012",
+      "english": "Soluble",
+      "polish": "Rozpuszczalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p292-012-word.mp3",
+      "audioSentence": "t1-p292-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p292-013",
+      "english": "Alkaline",
+      "polish": "Zasadowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p292-013-word.mp3",
+      "audioSentence": "t1-p292-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p292-014",
+      "english": "Oozy",
+      "polish": "Mulisty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p292-014-word.mp3",
+      "audioSentence": "t1-p292-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p292-015",
+      "english": "Acid",
+      "polish": "Kwasowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p292-015-word.mp3",
+      "audioSentence": "t1-p292-015-sentence.mp3"
     }
   ]
 }

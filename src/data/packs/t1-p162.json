@@ -1,15 +1,15 @@
 {
   "id": "t1-p162",
-  "name": "Przymiotniki 11",
+  "name": "Rozkmina",
   "volume": "Tom III",
   "level": 2,
   "category": "Przymiotniki",
-  "chapter": "Rozdział XXVI",
+  "chapter": "Rozdział XXV",
   "words": [
     {
       "id": "t1-p162-001",
-      "english": "Glad",
-      "polish": "Szczęśliwy z jakiegoś powodu",
+      "english": "False",
+      "polish": "Fałszywy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p162-002",
-      "english": "Satisfied",
-      "polish": "Usatysfakcjonowany",
+      "english": "Wrong",
+      "polish": "Niewłaściwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p162-003",
-      "english": "Thankful",
-      "polish": "Wdzięczny",
+      "english": "Correct",
+      "polish": "Prawidłowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p162-004",
-      "english": "Pleased",
-      "polish": "Zadowolony",
+      "english": "Familiar",
+      "polish": "Znany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p162-005",
-      "english": "Relaxed",
-      "polish": "Zrelaksowany",
+      "english": "Invalid",
+      "polish": "Nieważny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p162-006",
-      "english": "Drunk",
-      "polish": "Pijany",
+      "english": "Valid",
+      "polish": "Ważny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p162-007",
-      "english": "Sleepy",
-      "polish": "Senny",
+      "english": "Risky",
+      "polish": "Ryzykowny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p162-008",
-      "english": "Delighted",
-      "polish": "Zachwycony",
+      "english": "Satisfying",
+      "polish": "Satysfakcjonujący",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p162-009",
-      "english": "Excited",
-      "polish": "Podekscytowany",
+      "english": "Typical",
+      "polish": "Typowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p162-010",
-      "english": "Prepared",
-      "polish": "Przygotowany",
+      "english": "Complex",
+      "polish": "Złożony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p162-011",
-      "english": "Enjoyable",
-      "polish": "Przyjemny",
+      "english": "Incorrect",
+      "polish": "Nieprawidłowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p162-012",
-      "english": "Hopeful",
-      "polish": "Pełen nadziei",
+      "english": "Complicated",
+      "polish": "Skomplikowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p162-013",
-      "english": "Willing",
-      "polish": "Skłonny",
+      "english": "Expected",
+      "polish": "Spodziewany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p162-014",
-      "english": "Challenging",
-      "polish": "Ambitny",
+      "english": "Detailed",
+      "polish": "Szczegółowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-014-word.mp3",
@@ -134,12 +134,282 @@
     },
     {
       "id": "t1-p162-015",
-      "english": "Touched",
-      "polish": "Wzruszony",
+      "english": "Logical",
+      "polish": "Logiczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p162-015-word.mp3",
       "audioSentence": "t1-p162-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-016",
+      "english": "Probable",
+      "polish": "Prawdopodobny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-016-word.mp3",
+      "audioSentence": "t1-p162-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-017",
+      "english": "Illogical",
+      "polish": "Nielogiczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-017-word.mp3",
+      "audioSentence": "t1-p162-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-018",
+      "english": "Justified",
+      "polish": "Usprawiedliwiony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-018-word.mp3",
+      "audioSentence": "t1-p162-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-019",
+      "english": "Familiar",
+      "polish": "Zaznajomiony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-019-word.mp3",
+      "audioSentence": "t1-p162-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-020",
+      "english": "Selected",
+      "polish": "Wyselekcjonowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-020-word.mp3",
+      "audioSentence": "t1-p162-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-021",
+      "english": "Underlying",
+      "polish": "Leżący u podstaw",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-021-word.mp3",
+      "audioSentence": "t1-p162-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-022",
+      "english": "Suitable",
+      "polish": "Odpowiedni",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-022-word.mp3",
+      "audioSentence": "t1-p162-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-023",
+      "english": "Proportional",
+      "polish": "Proporcjonalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-023-word.mp3",
+      "audioSentence": "t1-p162-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-024",
+      "english": "Cognitive",
+      "polish": "Poznawczy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-024-word.mp3",
+      "audioSentence": "t1-p162-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-025",
+      "english": "Thorough",
+      "polish": "Gruntowny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-025-word.mp3",
+      "audioSentence": "t1-p162-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-026",
+      "english": "Substantive",
+      "polish": "Merytoryczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-026-word.mp3",
+      "audioSentence": "t1-p162-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-027",
+      "english": "Plausible",
+      "polish": "Możliwy do zaistnienia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-027-word.mp3",
+      "audioSentence": "t1-p162-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-028",
+      "english": "Obscure",
+      "polish": "Niejasny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-028-word.mp3",
+      "audioSentence": "t1-p162-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-029",
+      "english": "Inexplicable",
+      "polish": "Niewytłumaczalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-029-word.mp3",
+      "audioSentence": "t1-p162-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-030",
+      "english": "Undeniable",
+      "polish": "Niezaprzeczalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-030-word.mp3",
+      "audioSentence": "t1-p162-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-031",
+      "english": "Comprehensive",
+      "polish": "Wszechstronny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-031-word.mp3",
+      "audioSentence": "t1-p162-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-032",
+      "english": "Questionable",
+      "polish": "Sporny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-032-word.mp3",
+      "audioSentence": "t1-p162-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-033",
+      "english": "Contradictory",
+      "polish": "Sprzeczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-033-word.mp3",
+      "audioSentence": "t1-p162-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-034",
+      "english": "Peculiar",
+      "polish": "Osobliwy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-034-word.mp3",
+      "audioSentence": "t1-p162-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-035",
+      "english": "Coherent",
+      "polish": "Spójny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-035-word.mp3",
+      "audioSentence": "t1-p162-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-036",
+      "english": "Worthwhile",
+      "polish": "Wart zachodu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-036-word.mp3",
+      "audioSentence": "t1-p162-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-037",
+      "english": "Doubtful",
+      "polish": "Wątpliwy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-037-word.mp3",
+      "audioSentence": "t1-p162-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-038",
+      "english": "Explicable",
+      "polish": "Wytłumaczalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-038-word.mp3",
+      "audioSentence": "t1-p162-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-039",
+      "english": "Mind-boggling",
+      "polish": "Wprawiający o zawrót głowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-039-word.mp3",
+      "audioSentence": "t1-p162-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-040",
+      "english": "Acquainted",
+      "polish": "Zapoznany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-040-word.mp3",
+      "audioSentence": "t1-p162-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-041",
+      "english": "Coincident",
+      "polish": "Zbieżny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-041-word.mp3",
+      "audioSentence": "t1-p162-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-042",
+      "english": "Hesitant",
+      "polish": "Niezdecydowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-042-word.mp3",
+      "audioSentence": "t1-p162-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-043",
+      "english": "Misleading",
+      "polish": "Mylny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-043-word.mp3",
+      "audioSentence": "t1-p162-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-044",
+      "english": "Computable",
+      "polish": "Obliczalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-044-word.mp3",
+      "audioSentence": "t1-p162-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p162-045",
+      "english": "Solvable",
+      "polish": "Mający rozwiązanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p162-045-word.mp3",
+      "audioSentence": "t1-p162-045-sentence.mp3"
     }
   ]
 }

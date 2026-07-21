@@ -1,15 +1,15 @@
 {
   "id": "t1-p279",
-  "name": "Pewność",
+  "name": "Ryby",
   "volume": "Tom VII",
   "level": 4,
-  "category": "Spójniki",
-  "chapter": "Rozdział LXVI",
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział LXV",
   "words": [
     {
       "id": "t1-p279-001",
-      "english": "Beyond doubt",
-      "polish": "Poza wątpliwościami",
+      "english": "Cod",
+      "polish": "Dorsz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p279-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p279-002",
-      "english": "In point of fact",
-      "polish": "Faktycznie",
+      "english": "Trout",
+      "polish": "Pstrąg",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p279-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p279-003",
-      "english": "Indeed",
-      "polish": "W rzeczy samej",
+      "english": "Tuna",
+      "polish": "Tuńczyk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p279-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p279-004",
-      "english": "Truly",
-      "polish": "Wprawdzie",
+      "english": "Carp",
+      "polish": "Karp",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p279-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p279-005",
-      "english": "Without a doubt",
-      "polish": "Bez wątpliwości",
+      "english": "Salmon",
+      "polish": "Łosoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p279-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p279-006",
-      "english": "Regardless of",
-      "polish": "Bez względu na coś",
+      "english": "Flounder",
+      "polish": "Flądra",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p279-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p279-007",
-      "english": "With certainty",
-      "polish": "Z pewnością",
+      "english": "Atlantic halibut",
+      "polish": "Halibut atlantycki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p279-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p279-008",
-      "english": "Without hesitation",
-      "polish": "Bez wahania",
+      "english": "Sea sturgeon",
+      "polish": "Jesiotr",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p279-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p279-009",
-      "english": "In point of fact",
-      "polish": "Faktycznie",
+      "english": "Mackerel",
+      "polish": "Makrela",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p279-009-word.mp3",
@@ -89,12 +89,192 @@
     },
     {
       "id": "t1-p279-010",
-      "english": "Without a doubt",
-      "polish": "Bez wątpliwości",
+      "english": "Alaska pollock",
+      "polish": "Mintaj",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p279-010-word.mp3",
       "audioSentence": "t1-p279-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-011",
+      "english": "Blue grenadier",
+      "polish": "Miruna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-011-word.mp3",
+      "audioSentence": "t1-p279-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-012",
+      "english": "European hake",
+      "polish": "Morszczuk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-012-word.mp3",
+      "audioSentence": "t1-p279-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-013",
+      "english": "Moray eel",
+      "polish": "Murena",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-013-word.mp3",
+      "audioSentence": "t1-p279-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-014",
+      "english": "European perch",
+      "polish": "Okoń",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-014-word.mp3",
+      "audioSentence": "t1-p279-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-015",
+      "english": "Fishbone",
+      "polish": "Ość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-015-word.mp3",
+      "audioSentence": "t1-p279-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-016",
+      "english": "Piranha",
+      "polish": "Pirania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-016-word.mp3",
+      "audioSentence": "t1-p279-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-017",
+      "english": "Fin",
+      "polish": "Płetwa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-017-word.mp3",
+      "audioSentence": "t1-p279-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-018",
+      "english": "Zander",
+      "polish": "Sandacz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-018-word.mp3",
+      "audioSentence": "t1-p279-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-019",
+      "english": "Sardine",
+      "polish": "Sardynka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-019-word.mp3",
+      "audioSentence": "t1-p279-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-020",
+      "english": "Whitefish",
+      "polish": "Sieja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-020-word.mp3",
+      "audioSentence": "t1-p279-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-021",
+      "english": "Vendace",
+      "polish": "Sielawa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-021-word.mp3",
+      "audioSentence": "t1-p279-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-022",
+      "english": "Gills",
+      "polish": "Skrzela",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-022-word.mp3",
+      "audioSentence": "t1-p279-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-023",
+      "english": "Catfish",
+      "polish": "Sum",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-023-word.mp3",
+      "audioSentence": "t1-p279-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-024",
+      "english": "Pike",
+      "polish": "Szczupak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-024-word.mp3",
+      "audioSentence": "t1-p279-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-025",
+      "english": "Sprat",
+      "polish": "Szprot",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-025-word.mp3",
+      "audioSentence": "t1-p279-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-026",
+      "english": "Herring",
+      "polish": "Śledź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-026-word.mp3",
+      "audioSentence": "t1-p279-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-027",
+      "english": "Eel",
+      "polish": "Węgorz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-027-word.mp3",
+      "audioSentence": "t1-p279-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-028",
+      "english": "Goldfish",
+      "polish": "Złota rybka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-028-word.mp3",
+      "audioSentence": "t1-p279-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-029",
+      "english": "Crucian",
+      "polish": "Karaś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-029-word.mp3",
+      "audioSentence": "t1-p279-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p279-030",
+      "english": "Guppy",
+      "polish": "Gupik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p279-030-word.mp3",
+      "audioSentence": "t1-p279-030-sentence.mp3"
     }
   ]
 }

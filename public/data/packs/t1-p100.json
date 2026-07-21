@@ -1,15 +1,15 @@
 {
   "id": "t1-p100",
-  "name": "Slang 8",
+  "name": "Popularne",
   "volume": "Tom II",
   "level": 2,
-  "category": "Slang",
-  "chapter": "Rozdział XIV",
+  "category": "Skróty",
+  "chapter": "Rozdział XIII",
   "words": [
     {
       "id": "t1-p100-001",
-      "english": "Girl code",
-      "polish": "Babski kodeks",
+      "english": "MMS",
+      "polish": "Wiadomość multimedialna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p100-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p100-002",
-      "english": "Squad",
-      "polish": "Ekipa",
+      "english": "WWW",
+      "polish": "Sieć ogólnoświatowa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p100-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p100-003",
-      "english": "Dead",
-      "polish": "Skisnąć",
+      "english": "MSG",
+      "polish": "Wiad.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p100-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p100-004",
-      "english": "Brocode",
-      "polish": "Kodeks ziomali",
+      "english": "NO.",
+      "polish": "Nr.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p100-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p100-005",
-      "english": "Low-key",
-      "polish": "Po cichu",
+      "english": "PPL",
+      "polish": "Ludzie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p100-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p100-006",
-      "english": "Bromance",
-      "polish": "Zażyła męska przyjaźń",
+      "english": "SB",
+      "polish": "Jakaś osoba",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p100-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p100-007",
-      "english": "Fam",
-      "polish": "Grupa najbliższych przyjaciół",
+      "english": "SMN",
+      "polish": "Ktoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p100-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p100-008",
-      "english": "Beef",
-      "polish": "Kosa",
+      "english": "SMS",
+      "polish": "Wiadomość tekstowa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p100-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p100-009",
-      "english": "Cold shoulder",
-      "polish": "Ignorować kogoś",
+      "english": "STH",
+      "polish": "Coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p100-009-word.mp3",
@@ -89,12 +89,192 @@
     },
     {
       "id": "t1-p100-010",
-      "english": "Ghost sb",
-      "polish": "Urwać z kimś kontakt",
+      "english": "TBC",
+      "polish": "Cdn.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p100-010-word.mp3",
       "audioSentence": "t1-p100-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-011",
+      "english": "AM",
+      "polish": "Przed południem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-011-word.mp3",
+      "audioSentence": "t1-p100-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-012",
+      "english": "GPA",
+      "polish": "Średnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-012-word.mp3",
+      "audioSentence": "t1-p100-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-013",
+      "english": "DIY",
+      "polish": "Zrób to sam",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-013-word.mp3",
+      "audioSentence": "t1-p100-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-014",
+      "english": "DND",
+      "polish": "Nie przeszkadzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-014-word.mp3",
+      "audioSentence": "t1-p100-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-015",
+      "english": "IB",
+      "polish": "Funt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-015-word.mp3",
+      "audioSentence": "t1-p100-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-016",
+      "english": "ID",
+      "polish": "Dowód osobisty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-016-word.mp3",
+      "audioSentence": "t1-p100-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-017",
+      "english": "IQ",
+      "polish": "Iloraz inteligencji",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-017-word.mp3",
+      "audioSentence": "t1-p100-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-018",
+      "english": "PM",
+      "polish": "Po południu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-018-word.mp3",
+      "audioSentence": "t1-p100-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-019",
+      "english": "RIP",
+      "polish": "Spoczywaj w pokoju",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-019-word.mp3",
+      "audioSentence": "t1-p100-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-020",
+      "english": "VIP",
+      "polish": "Bardzo ważna osoba",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-020-word.mp3",
+      "audioSentence": "t1-p100-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-021",
+      "english": "AKA",
+      "polish": "Także znane jako",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-021-word.mp3",
+      "audioSentence": "t1-p100-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-022",
+      "english": "RSVP",
+      "polish": "Proszę o odpowiedź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-022-word.mp3",
+      "audioSentence": "t1-p100-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-023",
+      "english": "GMO",
+      "polish": "Genetycznie modyfikowany organizm",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-023-word.mp3",
+      "audioSentence": "t1-p100-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-024",
+      "english": "POV",
+      "polish": "Punkt widzenia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-024-word.mp3",
+      "audioSentence": "t1-p100-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-025",
+      "english": "TBA",
+      "polish": "Do ogłoszenia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-025-word.mp3",
+      "audioSentence": "t1-p100-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-026",
+      "english": "UFO",
+      "polish": "Niezidentyfikowany obiekt latający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-026-word.mp3",
+      "audioSentence": "t1-p100-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-027",
+      "english": "SOS",
+      "polish": "Ocal nasze dusze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-027-word.mp3",
+      "audioSentence": "t1-p100-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-028",
+      "english": "TGIF",
+      "polish": "Dzięki bogu jest piątek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-028-word.mp3",
+      "audioSentence": "t1-p100-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-029",
+      "english": "FAQ",
+      "polish": "Często zadawane pytania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-029-word.mp3",
+      "audioSentence": "t1-p100-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p100-030",
+      "english": "IRL",
+      "polish": "W prawdziwym życiu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p100-030-word.mp3",
+      "audioSentence": "t1-p100-030-sentence.mp3"
     }
   ]
 }

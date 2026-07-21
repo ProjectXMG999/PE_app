@@ -1,15 +1,15 @@
 {
   "id": "t1-p236",
-  "name": "Spójniki 5",
+  "name": "Czasowniki 17",
   "volume": "Tom V",
   "level": 3,
-  "category": "Spójniki",
-  "chapter": "Rozdział XLVIII",
+  "category": "Czasowniki",
+  "chapter": "Rozdział XLVII",
   "words": [
     {
       "id": "t1-p236-001",
-      "english": "Neither",
-      "polish": "Żaden",
+      "english": "Represent",
+      "polish": "Reprezentować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p236-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p236-002",
-      "english": "Nevertheless",
-      "polish": "Niemniej jednak",
+      "english": "Reserve",
+      "polish": "Rezerwować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p236-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p236-003",
-      "english": "On the contrary",
-      "polish": "Przeciwnie",
+      "english": "Scan",
+      "polish": "Skanować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p236-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p236-004",
-      "english": "Otherwise",
-      "polish": "W przeciwnym wypadku",
+      "english": "Shock",
+      "polish": "Szokować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p236-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p236-005",
-      "english": "Unless",
-      "polish": "Jeśli nie",
+      "english": "Sort",
+      "polish": "Sortować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p236-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p236-006",
-      "english": "Unlike",
-      "polish": "W odróżnieniu",
+      "english": "Specialize",
+      "polish": "Specjalizować się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p236-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p236-007",
-      "english": "Versus",
-      "polish": "Kontra",
+      "english": "Sponsor",
+      "polish": "Sponsorować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p236-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p236-008",
-      "english": "Whether or not",
-      "polish": "Obojętnie czy",
+      "english": "Surf",
+      "polish": "Surfować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p236-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p236-009",
-      "english": "Aside from",
-      "polish": "Pomijając",
+      "english": "Activate",
+      "polish": "Aktywować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p236-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p236-010",
-      "english": "In contrast to",
-      "polish": "W porównaniu do",
+      "english": "Alarm",
+      "polish": "Alarmować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p236-010-word.mp3",
       "audioSentence": "t1-p236-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p236-011",
+      "english": "Characterize",
+      "polish": "Charakteryzować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p236-011-word.mp3",
+      "audioSentence": "t1-p236-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p236-012",
+      "english": "Construct",
+      "polish": "Konstruować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p236-012-word.mp3",
+      "audioSentence": "t1-p236-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p236-013",
+      "english": "Consult",
+      "polish": "Konsultować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p236-013-word.mp3",
+      "audioSentence": "t1-p236-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p236-014",
+      "english": "Declare",
+      "polish": "Deklarować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p236-014-word.mp3",
+      "audioSentence": "t1-p236-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p236-015",
+      "english": "Dedicate",
+      "polish": "Dedykować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p236-015-word.mp3",
+      "audioSentence": "t1-p236-015-sentence.mp3"
     }
   ]
 }

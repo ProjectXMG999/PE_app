@@ -1,15 +1,15 @@
 {
   "id": "t1-p256",
-  "name": "Rzeczowniki 15",
+  "name": "Spójniki 6",
   "volume": "Tom VI",
   "level": 4,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział  LVI",
+  "category": "Spójniki",
+  "chapter": "Rozdział LV",
   "words": [
     {
       "id": "t1-p256-001",
-      "english": "Necessity",
-      "polish": "Konieczność",
+      "english": "In spite of",
+      "polish": "Mimo czegoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p256-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p256-002",
-      "english": "Selection",
-      "polish": "Wybór",
+      "english": "On the other hand",
+      "polish": "Z drugiej strony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p256-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p256-003",
-      "english": "Outline",
-      "polish": "Zarys",
+      "english": "Albeit",
+      "polish": "Aczkolwiek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p256-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p256-004",
-      "english": "Fortune",
-      "polish": "Fortuna",
+      "english": "By contrast",
+      "polish": "Dla kontrastu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p256-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p256-005",
-      "english": "Fate",
-      "polish": "Los",
+      "english": "Lest",
+      "polish": "Ażeby nie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p256-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p256-006",
-      "english": "Scenario",
-      "polish": "Scenariusz",
+      "english": "Opposite to",
+      "polish": "W przeciwieństwie o",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p256-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p256-007",
-      "english": "Coincidence",
-      "polish": "Zbieg okoliczności",
+      "english": "Alternatively",
+      "polish": "Alternatywnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p256-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p256-008",
-      "english": "Ambiguity",
-      "polish": "Dwuznaczność",
+      "english": "Barring",
+      "polish": "Wyjąwszy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p256-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p256-009",
-      "english": "Extreme",
-      "polish": "Skrajność",
+      "english": "Nonetheless",
+      "polish": "Niemniej jednak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p256-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p256-010",
-      "english": "Simplification",
-      "polish": "Uproszczenie",
+      "english": "Notwithstanding",
+      "polish": "Jednakże",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p256-010-word.mp3",
       "audioSentence": "t1-p256-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p256-011",
-      "english": "Counterpart",
-      "polish": "Odpowiednik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p256-011-word.mp3",
-      "audioSentence": "t1-p256-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p256-012",
-      "english": "Simplicity",
-      "polish": "Prostota",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p256-012-word.mp3",
-      "audioSentence": "t1-p256-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p256-013",
-      "english": "Odds",
-      "polish": "Szanse",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p256-013-word.mp3",
-      "audioSentence": "t1-p256-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p256-014",
-      "english": "Absence",
-      "polish": "Nieobecność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p256-014-word.mp3",
-      "audioSentence": "t1-p256-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p256-015",
-      "english": "Boundary",
-      "polish": "Granica",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p256-015-word.mp3",
-      "audioSentence": "t1-p256-015-sentence.mp3"
     }
   ]
 }

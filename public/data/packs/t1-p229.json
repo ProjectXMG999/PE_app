@@ -1,15 +1,15 @@
 {
   "id": "t1-p229",
-  "name": "Przymiotniki 20",
+  "name": "Gdy grasz w grę",
   "volume": "Tom V",
   "level": 3,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział XLVI",
+  "category": "Skróty",
+  "chapter": "Rozdział XLV",
   "words": [
     {
       "id": "t1-p229-001",
-      "english": "Fake",
-      "polish": "Nieprawdziwy",
+      "english": "AFK",
+      "polish": "Z daleka od klawiatury",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p229-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p229-002",
-      "english": "Original",
-      "polish": "Oryginalny",
+      "english": "FPP",
+      "polish": "Perspektywa pierwszoosobowa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p229-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p229-003",
-      "english": "Out of order",
-      "polish": "Niesprawny",
+      "english": "FPS",
+      "polish": "Strzelanka pierwszoosobowa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p229-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p229-004",
-      "english": "Artificial",
-      "polish": "Sztuczny",
+      "english": "FPS",
+      "polish": "Klatki na sekundę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p229-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p229-005",
-      "english": "Shiny",
-      "polish": "Błyszczący",
+      "english": "GG",
+      "polish": "Dobra partia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p229-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p229-006",
-      "english": "Genuine",
-      "polish": "Prawdziwy",
+      "english": "P two P",
+      "polish": "Połączenie sieciowe komputerów równorzędnych",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p229-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p229-007",
-      "english": "Second-hand",
-      "polish": "Z drugiej ręki",
+      "english": "PC",
+      "polish": "Komputer stacjonarny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p229-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p229-008",
-      "english": "Used",
-      "polish": "Używany",
+      "english": "RPG",
+      "polish": "Gra fabularna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p229-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p229-009",
-      "english": "Dusty",
-      "polish": "Zakurzony",
+      "english": "TPP",
+      "polish": "Perspektywa trzecioosobowa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p229-009-word.mp3",
@@ -89,75 +89,12 @@
     },
     {
       "id": "t1-p229-010",
-      "english": "Lost",
-      "polish": "Zgubiony",
+      "english": "MOBA",
+      "polish": "Sieciowa gra bitewna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p229-010-word.mp3",
       "audioSentence": "t1-p229-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p229-011",
-      "english": "Broken",
-      "polish": "Złamany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p229-011-word.mp3",
-      "audioSentence": "t1-p229-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p229-012",
-      "english": "Found",
-      "polish": "Znaleziony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p229-012-word.mp3",
-      "audioSentence": "t1-p229-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p229-013",
-      "english": "Precious",
-      "polish": "Drogocenny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p229-013-word.mp3",
-      "audioSentence": "t1-p229-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p229-014",
-      "english": "Handmade",
-      "polish": "Ręcznie wykonany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p229-014-word.mp3",
-      "audioSentence": "t1-p229-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p229-015",
-      "english": "Dull",
-      "polish": "Tępy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p229-015-word.mp3",
-      "audioSentence": "t1-p229-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p229-016",
-      "english": "Lost",
-      "polish": "Zgubiony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p229-016-word.mp3",
-      "audioSentence": "t1-p229-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p229-017",
-      "english": "Fake",
-      "polish": "Nieprawdziwy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p229-017-word.mp3",
-      "audioSentence": "t1-p229-017-sentence.mp3"
     }
   ]
 }

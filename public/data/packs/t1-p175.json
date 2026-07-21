@@ -1,15 +1,15 @@
 {
   "id": "t1-p175",
-  "name": "Slang 16",
-  "volume": "Tom IV",
+  "name": "Kontrakcje",
+  "volume": "Tom III",
   "level": 3,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XXXI",
+  "category": "Skróty",
+  "chapter": "Rozdział XXX",
   "words": [
     {
       "id": "t1-p175-001",
-      "english": "Heat up",
-      "polish": "Napalić się na coś",
+      "english": "C'MON",
+      "polish": "No cho",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p175-002",
-      "english": "Let it slide",
-      "polish": "Darować",
+      "english": "COZ",
+      "polish": "Bo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p175-003",
-      "english": "Mom",
-      "polish": "Określenie opisujące najtroskliwszego przyjaciela",
+      "english": "DONTCHA",
+      "polish": "C'nie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p175-004",
-      "english": "Root for",
-      "polish": "Dopingować",
+      "english": "DUNNO",
+      "polish": "Nie wiem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p175-005",
-      "english": "Be extra",
-      "polish": "Przesadzać z reakcją",
+      "english": "GIMME",
+      "polish": "Daj mi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p175-006",
-      "english": "Get hitched",
-      "polish": "Hajtnąć się",
+      "english": "KINDA",
+      "polish": "Trochę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p175-007",
-      "english": "Diss",
-      "polish": "Odnosić się do kogoś z brakiem szacunku",
+      "english": "EM",
+      "polish": "Im",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p175-008",
-      "english": "10 foot stick",
-      "polish": "Na odległość",
+      "english": "WANNA",
+      "polish": "Chcieć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p175-009",
-      "english": "Bear hug",
-      "polish": "Przytulić na misia",
+      "english": "AIN'T",
+      "polish": "Nie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-009-word.mp3",
@@ -89,12 +89,102 @@
     },
     {
       "id": "t1-p175-010",
-      "english": "Roast",
-      "polish": "Robić sobie z kogoś jaja",
+      "english": "GONNA",
+      "polish": "Mieć zamiar",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-010-word.mp3",
       "audioSentence": "t1-p175-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p175-011",
+      "english": "GOTTA",
+      "polish": "Musieć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p175-011-word.mp3",
+      "audioSentence": "t1-p175-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p175-012",
+      "english": "I'MMA",
+      "polish": "Zamierzam",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p175-012-word.mp3",
+      "audioSentence": "t1-p175-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p175-013",
+      "english": "INNIT",
+      "polish": "C'nie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p175-013-word.mp3",
+      "audioSentence": "t1-p175-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p175-014",
+      "english": "LEMME",
+      "polish": "Daj mi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p175-014-word.mp3",
+      "audioSentence": "t1-p175-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p175-015",
+      "english": "OUTTA",
+      "polish": "Z",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p175-015-word.mp3",
+      "audioSentence": "t1-p175-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p175-016",
+      "english": "SHOULDA",
+      "polish": "Powinien był",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p175-016-word.mp3",
+      "audioSentence": "t1-p175-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p175-017",
+      "english": "SORTA",
+      "polish": "Trochę jak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p175-017-word.mp3",
+      "audioSentence": "t1-p175-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p175-018",
+      "english": "WHATCHA",
+      "polish": "Co tam",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p175-018-word.mp3",
+      "audioSentence": "t1-p175-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p175-019",
+      "english": "FINNA",
+      "polish": "Zamierzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p175-019-word.mp3",
+      "audioSentence": "t1-p175-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p175-020",
+      "english": "WONTCHA",
+      "polish": "C'nie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p175-020-word.mp3",
+      "audioSentence": "t1-p175-020-sentence.mp3"
     }
   ]
 }

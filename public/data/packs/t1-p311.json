@@ -1,15 +1,15 @@
 {
   "id": "t1-p311",
-  "name": "Przymiotniki 39",
+  "name": "Slang 36",
   "volume": "Tom IX",
   "level": 4,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział LXXXIII",
+  "category": "Slang",
+  "chapter": "Rozdział LXXXI",
   "words": [
     {
       "id": "t1-p311-001",
-      "english": "Melodic",
-      "polish": "Melodyjny",
+      "english": "All balled up",
+      "polish": "Rozwalony emocjonalnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p311-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p311-002",
-      "english": "Military",
-      "polish": "Militarny",
+      "english": "Backseat driver",
+      "polish": "Osoba krytykująca jazdę kierowcy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p311-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p311-003",
-      "english": "Mineral",
-      "polish": "Mineralny",
+      "english": "Buzzkill",
+      "polish": "Psuje zabawę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p311-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p311-004",
-      "english": "Model",
-      "polish": "Modelowy",
+      "english": "Poindexter",
+      "polish": "Udaje nerda, ale nie ma jego umiejętności",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p311-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p311-005",
-      "english": "Motivating",
-      "polish": "Motywujący",
+      "english": "Skipper",
+      "polish": "Wagarowicz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p311-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p311-006",
-      "english": "Muslim",
-      "polish": "Muzułmański",
+      "english": "Buttinsky",
+      "polish": "Wścibski typ",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p311-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p311-007",
-      "english": "Nuclear",
-      "polish": "Nuklearny",
+      "english": "Heavyfoot",
+      "polish": "Ciężka noga",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p311-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p311-008",
-      "english": "Occasional",
-      "polish": "Okazjonalny",
+      "english": "Guitarded",
+      "polish": "Zero umiejętności gry na gitarze",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p311-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p311-009",
-      "english": "Optional",
-      "polish": "Opcjonalny",
+      "english": "Dork",
+      "polish": "Frajer pompka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p311-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p311-010",
-      "english": "Optimal",
-      "polish": "Optymalny",
+      "english": "Boob",
+      "polish": "Melepeta",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p311-010-word.mp3",
       "audioSentence": "t1-p311-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p311-011",
-      "english": "Pedantic",
-      "polish": "Pedantyczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p311-011-word.mp3",
-      "audioSentence": "t1-p311-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p311-012",
-      "english": "Potential",
-      "polish": "Potencjalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p311-012-word.mp3",
-      "audioSentence": "t1-p311-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p311-013",
-      "english": "Preferred",
-      "polish": "Preferowany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p311-013-word.mp3",
-      "audioSentence": "t1-p311-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p311-014",
-      "english": "Productive",
-      "polish": "Produktywny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p311-014-word.mp3",
-      "audioSentence": "t1-p311-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p311-015",
-      "english": "Psychiatric",
-      "polish": "Psychiatryczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p311-015-word.mp3",
-      "audioSentence": "t1-p311-015-sentence.mp3"
     }
   ]
 }

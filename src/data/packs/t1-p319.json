@@ -1,15 +1,15 @@
 {
   "id": "t1-p319",
-  "name": "Niefajne - Slang",
+  "name": "Czasowniki 28",
   "volume": "Tom IX",
   "level": 4,
-  "category": "Slang",
+  "category": "Czasowniki",
   "chapter": "Rozdział LXXXV",
   "words": [
     {
       "id": "t1-p319-001",
-      "english": "Damp squib",
-      "polish": "Totalny niewypał",
+      "english": "Isolate",
+      "polish": "Izolować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p319-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p319-002",
-      "english": "Fauxpology",
-      "polish": "Nieszczere przeprosiny",
+      "english": "Lobby",
+      "polish": "Lobbować za czymś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p319-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p319-003",
-      "english": "Fuzzy math",
-      "polish": "Słabo przemyślane rozwiązanie",
+      "english": "Maneuver",
+      "polish": "Manewrować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p319-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p319-004",
-      "english": "Hit and run",
-      "polish": "Potrącenie przechodnia z ucieczką",
+      "english": "Manifest",
+      "polish": "Manifestować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p319-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p319-005",
-      "english": "Hosed",
-      "polish": "W przewalonej sytuacji",
+      "english": "Materialize",
+      "polish": "Materializować się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p319-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p319-006",
-      "english": "Off the hinges",
-      "polish": "Wystrzelony w kosmos",
+      "english": "Mediate",
+      "polish": "Mediować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p319-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p319-007",
-      "english": "411",
-      "polish": "Ploteczka",
+      "english": "Migrate",
+      "polish": "Migrować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p319-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p319-008",
-      "english": "Pregret",
-      "polish": "Poczucie żałowania czegoś, co I tak się zrobi",
+      "english": "Mobilize",
+      "polish": "Mobilizować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p319-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p319-009",
-      "english": "Shack up",
-      "polish": "Żyć na kocią łapę",
+      "english": "Modernize",
+      "polish": "Modernizować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p319-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p319-010",
-      "english": "Red-flag",
-      "polish": "Czerwone światło",
+      "english": "Monitor",
+      "polish": "Monitorować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p319-010-word.mp3",
       "audioSentence": "t1-p319-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p319-011",
+      "english": "Navigate",
+      "polish": "Nawigować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p319-011-word.mp3",
+      "audioSentence": "t1-p319-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p319-012",
+      "english": "Nominate",
+      "polish": "Nominować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p319-012-word.mp3",
+      "audioSentence": "t1-p319-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p319-013",
+      "english": "Number",
+      "polish": "Numerować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p319-013-word.mp3",
+      "audioSentence": "t1-p319-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p319-014",
+      "english": "Obligate",
+      "polish": "Obligować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p319-014-word.mp3",
+      "audioSentence": "t1-p319-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p319-015",
+      "english": "Paralyze",
+      "polish": "Paraliżować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p319-015-word.mp3",
+      "audioSentence": "t1-p319-015-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p215",
-  "name": "Złe",
-  "volume": "Tom V",
+  "name": "Edukacja",
+  "volume": "Tom IV",
   "level": 3,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XLII",
+  "category": "Skróty",
+  "chapter": "Rozdział XL",
   "words": [
     {
       "id": "t1-p215-001",
-      "english": "Beat",
-      "polish": "Bić",
+      "english": "BA",
+      "polish": "Lic. Nauk humanistycznych",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p215-002",
-      "english": "Fight",
-      "polish": "Walczyć",
+      "english": "BSC",
+      "polish": "Lic. Nauk ścisłych",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p215-003",
-      "english": "Kill",
-      "polish": "Zabijać",
+      "english": "EFL",
+      "polish": "Angielski jako język obcy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p215-004",
-      "english": "Shoot",
-      "polish": "Strzelać",
+      "english": "ESL",
+      "polish": "Angielski jako drugi język",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p215-005",
-      "english": "Steal",
-      "polish": "Kraść",
+      "english": "MA",
+      "polish": "Mgr nauk humanistycznych",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p215-006",
-      "english": "Bleed",
-      "polish": "Krwawić",
+      "english": "MBA",
+      "polish": "Mgr administracji biznesowej",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p215-007",
-      "english": "Injure",
-      "polish": "Zranić",
+      "english": "MD",
+      "polish": "Lek. Med.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p215-008",
-      "english": "Choke",
-      "polish": "Dławić się",
+      "english": "MPHIL",
+      "polish": "Mgr filozofii",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p215-009",
-      "english": "Kidnap",
-      "polish": "Porwać kogoś",
+      "english": "MSC",
+      "polish": "Mgr nauk ścisłych",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-009-word.mp3",
@@ -89,462 +89,12 @@
     },
     {
       "id": "t1-p215-010",
-      "english": "Murder",
-      "polish": "Mordować",
+      "english": "PHD",
+      "polish": "Doktorat",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-010-word.mp3",
       "audioSentence": "t1-p215-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-011",
-      "english": "Poison",
-      "polish": "Zatruwać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-011-word.mp3",
-      "audioSentence": "t1-p215-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-012",
-      "english": "Rape",
-      "polish": "Gwałcić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-012-word.mp3",
-      "audioSentence": "t1-p215-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-013",
-      "english": "Smuggle",
-      "polish": "Przemycać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-013-word.mp3",
-      "audioSentence": "t1-p215-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-014",
-      "english": "Suffocate",
-      "polish": "Dusić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-014-word.mp3",
-      "audioSentence": "t1-p215-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-015",
-      "english": "Assault",
-      "polish": "Zaatakować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-015-word.mp3",
-      "audioSentence": "t1-p215-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-016",
-      "english": "Frightening",
-      "polish": "Przerażający",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-016-word.mp3",
-      "audioSentence": "t1-p215-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-017",
-      "english": "Exhausting",
-      "polish": "Wyczerpujący",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-017-word.mp3",
-      "audioSentence": "t1-p215-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-018",
-      "english": "Bloody",
-      "polish": "Krwawy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-018-word.mp3",
-      "audioSentence": "t1-p215-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-019",
-      "english": "Painful",
-      "polish": "Bolesny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-019-word.mp3",
-      "audioSentence": "t1-p215-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-020",
-      "english": "Terrifying",
-      "polish": "Budzący lęk",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-020-word.mp3",
-      "audioSentence": "t1-p215-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-021",
-      "english": "Disturbed",
-      "polish": "Niezrównoważony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-021-word.mp3",
-      "audioSentence": "t1-p215-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-022",
-      "english": "Sore",
-      "polish": "Obolały",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-022-word.mp3",
-      "audioSentence": "t1-p215-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-023",
-      "english": "Injured",
-      "polish": "Kontuzjowany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-023-word.mp3",
-      "audioSentence": "t1-p215-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-024",
-      "english": "Rotten",
-      "polish": "Zgniły",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-024-word.mp3",
-      "audioSentence": "t1-p215-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-025",
-      "english": "Atrocious",
-      "polish": "Okrutny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-025-word.mp3",
-      "audioSentence": "t1-p215-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-026",
-      "english": "Deadly",
-      "polish": "Śmiercionośny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-026-word.mp3",
-      "audioSentence": "t1-p215-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-027",
-      "english": "Fatal",
-      "polish": "Śmiertelny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-027-word.mp3",
-      "audioSentence": "t1-p215-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-028",
-      "english": "Infectious",
-      "polish": "Zakaźny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-028-word.mp3",
-      "audioSentence": "t1-p215-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-029",
-      "english": "Cheek",
-      "polish": "Policzek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-029-word.mp3",
-      "audioSentence": "t1-p215-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-030",
-      "english": "Heartbeat",
-      "polish": "Bicie serca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-030-word.mp3",
-      "audioSentence": "t1-p215-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-031",
-      "english": "Incurable",
-      "polish": "Nieuleczalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-031-word.mp3",
-      "audioSentence": "t1-p215-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-032",
-      "english": "Poisonous",
-      "polish": "Trujący",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-032-word.mp3",
-      "audioSentence": "t1-p215-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-033",
-      "english": "Lethal",
-      "polish": "Zabójczy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-033-word.mp3",
-      "audioSentence": "t1-p215-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-034",
-      "english": "Contagious",
-      "polish": "Zaraźliwy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-034-word.mp3",
-      "audioSentence": "t1-p215-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-035",
-      "english": "Possessed",
-      "polish": "Opętany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-035-word.mp3",
-      "audioSentence": "t1-p215-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-036",
-      "english": "Horrifying",
-      "polish": "Budzący grozę",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-036-word.mp3",
-      "audioSentence": "t1-p215-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-037",
-      "english": "Starving",
-      "polish": "Głodujący",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-037-word.mp3",
-      "audioSentence": "t1-p215-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-038",
-      "english": "Agonizing",
-      "polish": "W męczarniach",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-038-word.mp3",
-      "audioSentence": "t1-p215-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-039",
-      "english": "Berserk",
-      "polish": "Oszalały",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-039-word.mp3",
-      "audioSentence": "t1-p215-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-040",
-      "english": "Humiliating",
-      "polish": "Poniżający",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-040-word.mp3",
-      "audioSentence": "t1-p215-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-041",
-      "english": "Incapacitated",
-      "polish": "Ubezwłasnowolniony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-041-word.mp3",
-      "audioSentence": "t1-p215-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-042",
-      "english": "Pitiful",
-      "polish": "Godny politowania",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-042-word.mp3",
-      "audioSentence": "t1-p215-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-043",
-      "english": "At-risk",
-      "polish": "Zagrożony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-043-word.mp3",
-      "audioSentence": "t1-p215-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-044",
-      "english": "Deadly",
-      "polish": "Śmiercionośny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-044-word.mp3",
-      "audioSentence": "t1-p215-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-045",
-      "english": "Exhausting",
-      "polish": "Wyczerpujący",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-045-word.mp3",
-      "audioSentence": "t1-p215-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-046",
-      "english": "Bury",
-      "polish": "Grzebać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-046-word.mp3",
-      "audioSentence": "t1-p215-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-047",
-      "english": "Decapitate",
-      "polish": "Ściąć głowę",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-047-word.mp3",
-      "audioSentence": "t1-p215-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-048",
-      "english": "Hijack",
-      "polish": "Porwać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-048-word.mp3",
-      "audioSentence": "t1-p215-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-049",
-      "english": "Molest",
-      "polish": "Molestować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-049-word.mp3",
-      "audioSentence": "t1-p215-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-050",
-      "english": "Overdose",
-      "polish": "Przedawkować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-050-word.mp3",
-      "audioSentence": "t1-p215-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-051",
-      "english": "Drown",
-      "polish": "Tonąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-051-word.mp3",
-      "audioSentence": "t1-p215-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-052",
-      "english": "Stab",
-      "polish": "Dźgać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-052-word.mp3",
-      "audioSentence": "t1-p215-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-053",
-      "english": "Stalk",
-      "polish": "Nachodzić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-053-word.mp3",
-      "audioSentence": "t1-p215-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-054",
-      "english": "Strangle",
-      "polish": "Dusić kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-054-word.mp3",
-      "audioSentence": "t1-p215-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-055",
-      "english": "Assassinate",
-      "polish": "Dokonać zamachu na życie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-055-word.mp3",
-      "audioSentence": "t1-p215-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-056",
-      "english": "Cripple",
-      "polish": "Kaleczyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-056-word.mp3",
-      "audioSentence": "t1-p215-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-057",
-      "english": "Dismember",
-      "polish": "Rozczłonkować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-057-word.mp3",
-      "audioSentence": "t1-p215-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-058",
-      "english": "Raid",
-      "polish": "Przeprowadzać atak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-058-word.mp3",
-      "audioSentence": "t1-p215-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-059",
-      "english": "Slaughter",
-      "polish": "Zarzynać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-059-word.mp3",
-      "audioSentence": "t1-p215-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p215-060",
-      "english": "Butcher",
-      "polish": "Zaszlachtować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p215-060-word.mp3",
-      "audioSentence": "t1-p215-060-sentence.mp3"
     }
   ]
 }

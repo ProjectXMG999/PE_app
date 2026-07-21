@@ -1,15 +1,15 @@
 {
   "id": "t1-p089",
-  "name": "Czasowniki 8",
+  "name": "Słodziak",
   "volume": "Tom II",
   "level": 2,
-  "category": "Czasowniki",
+  "category": "Slang",
   "chapter": "Rozdział XII",
   "words": [
     {
       "id": "t1-p089-001",
-      "english": "Complement",
-      "polish": "Komplementować",
+      "english": "All mine",
+      "polish": "Moja ty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p089-002",
-      "english": "Install",
-      "polish": "Instalować",
+      "english": "Butterfly",
+      "polish": "Motylek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p089-003",
-      "english": "Propose",
-      "polish": "Proponować",
+      "english": "Cookie",
+      "polish": "Cukiereczek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p089-004",
-      "english": "Realize",
-      "polish": "Realizować",
+      "english": "Cutie",
+      "polish": "Słodziutka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p089-005",
-      "english": "Present",
-      "polish": "Zaprezentować",
+      "english": "Doll",
+      "polish": "Laleczka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p089-006",
-      "english": "Accept",
-      "polish": "Akceptować",
+      "english": "Honey bunch",
+      "polish": "Słodyczy moja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p089-007",
-      "english": "Analyze",
-      "polish": "Analizować",
+      "english": "Kitten",
+      "polish": "Kicia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p089-008",
-      "english": "Arrange",
-      "polish": "Aranżować coś",
+      "english": "Peaches",
+      "polish": "Brzoskwinka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p089-009",
-      "english": "Arrest",
-      "polish": "Aresztować",
+      "english": "Sweetness",
+      "polish": "Słodziak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p089-010",
-      "english": "Attack",
-      "polish": "Atakować",
+      "english": "Teddy bear",
+      "polish": "Misiaczek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p089-011",
-      "english": "Comment",
-      "polish": "Komentować",
+      "english": "Boo",
+      "polish": "Misiu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p089-012",
-      "english": "Communicate",
-      "polish": "Komunikować",
+      "english": "Daisy",
+      "polish": "Kwiatuszek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p089-013",
-      "english": "Congratulate",
-      "polish": "Gratulować",
+      "english": "Dimples",
+      "polish": "Dołeczki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p089-014",
-      "english": "Control",
-      "polish": "Kontrolować",
+      "english": "Donut",
+      "polish": "Pączuś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-014-word.mp3",
@@ -134,12 +134,57 @@
     },
     {
       "id": "t1-p089-015",
-      "english": "Flirt",
-      "polish": "Flirtować",
+      "english": "Little dove",
+      "polish": "Gołąbek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p089-015-word.mp3",
       "audioSentence": "t1-p089-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p089-016",
+      "english": "Magical fairy",
+      "polish": "Czarodziejka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p089-016-word.mp3",
+      "audioSentence": "t1-p089-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p089-017",
+      "english": "Miss kitty",
+      "polish": "Koteczek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p089-017-word.mp3",
+      "audioSentence": "t1-p089-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p089-018",
+      "english": "My tiger",
+      "polish": "Tygrysek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p089-018-word.mp3",
+      "audioSentence": "t1-p089-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p089-019",
+      "english": "Pretty lady",
+      "polish": "Piękna pani",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p089-019-word.mp3",
+      "audioSentence": "t1-p089-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p089-020",
+      "english": "Rabbit",
+      "polish": "Zajączek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p089-020-word.mp3",
+      "audioSentence": "t1-p089-020-sentence.mp3"
     }
   ]
 }

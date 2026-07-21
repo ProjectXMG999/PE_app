@@ -1,15 +1,15 @@
 {
   "id": "t1-p108",
-  "name": "Miejsce",
+  "name": "Czasowniki 10",
   "volume": "Tom II",
   "level": 2,
-  "category": "Przysłówki",
+  "category": "Czasowniki",
   "chapter": "Rozdział XV",
   "words": [
     {
       "id": "t1-p108-001",
-      "english": "Over",
-      "polish": "Po drugiej stronie",
+      "english": "Allow",
+      "polish": "Dopuścić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p108-002",
-      "english": "Against",
-      "polish": "Naprzeciw",
+      "english": "Borrow",
+      "polish": "Pożyczać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p108-003",
-      "english": "Far",
-      "polish": "Daleko",
+      "english": "Deal",
+      "polish": "Zająć się czymś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p108-004",
-      "english": "Above",
-      "polish": "Nad",
+      "english": "Leave",
+      "polish": "Zostawiać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p108-005",
-      "english": "Across",
-      "polish": "Na przeciwko",
+      "english": "Lend",
+      "polish": "Pożyczać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p108-006",
-      "english": "All over",
-      "polish": "Wszędzie",
+      "english": "Let",
+      "polish": "Pozwalać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p108-007",
-      "english": "Anywhere",
-      "polish": "Gdziekolwiek",
+      "english": "Avoid",
+      "polish": "Unikać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p108-008",
-      "english": "Around",
-      "polish": "Dookoła",
+      "english": "Cooperate",
+      "polish": "Współpracować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p108-009",
-      "english": "Away",
-      "polish": "Z dala",
+      "english": "Depend",
+      "polish": "Zależeć od",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p108-010",
-      "english": "Behind",
-      "polish": "Z tyłu",
+      "english": "Join",
+      "polish": "Przyłączać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p108-011",
-      "english": "Over",
-      "polish": "Ponad",
+      "english": "Reject",
+      "polish": "Odrzucać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p108-012",
-      "english": "Below",
-      "polish": "Pod",
+      "english": "Serve",
+      "polish": "Służyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p108-013",
-      "english": "Beside",
-      "polish": "Obok",
+      "english": "Treat",
+      "polish": "Traktować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p108-014",
-      "english": "Between",
-      "polish": "Pomiędzy",
+      "english": "Require",
+      "polish": "Wymagać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-014-word.mp3",
@@ -134,507 +134,12 @@
     },
     {
       "id": "t1-p108-015",
-      "english": "Everywhere",
-      "polish": "Wszędzie",
+      "english": "Priest",
+      "polish": "Kapłan",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-015-word.mp3",
       "audioSentence": "t1-p108-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-016",
-      "english": "From",
-      "polish": "Z",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-016-word.mp3",
-      "audioSentence": "t1-p108-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-017",
-      "english": "Here",
-      "polish": "Tutaj",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-017-word.mp3",
-      "audioSentence": "t1-p108-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-018",
-      "english": "Under",
-      "polish": "Poniżej",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-018-word.mp3",
-      "audioSentence": "t1-p108-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-019",
-      "english": "In front of",
-      "polish": "Przed",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-019-word.mp3",
-      "audioSentence": "t1-p108-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-020",
-      "english": "In the middle",
-      "polish": "W środku",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-020-word.mp3",
-      "audioSentence": "t1-p108-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-021",
-      "english": "Inside",
-      "polish": "W środku",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-021-word.mp3",
-      "audioSentence": "t1-p108-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-022",
-      "english": "Near",
-      "polish": "W pobliżu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-022-word.mp3",
-      "audioSentence": "t1-p108-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-023",
-      "english": "Nowhere",
-      "polish": "Nigdzie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-023-word.mp3",
-      "audioSentence": "t1-p108-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-024",
-      "english": "Outside",
-      "polish": "Na dworze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-024-word.mp3",
-      "audioSentence": "t1-p108-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-025",
-      "english": "Over",
-      "polish": "Nad",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-025-word.mp3",
-      "audioSentence": "t1-p108-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-026",
-      "english": "Somewhere",
-      "polish": "Gdzieś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-026-word.mp3",
-      "audioSentence": "t1-p108-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-027",
-      "english": "There",
-      "polish": "Tam",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-027-word.mp3",
-      "audioSentence": "t1-p108-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-028",
-      "english": "Under",
-      "polish": "Pod",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-028-word.mp3",
-      "audioSentence": "t1-p108-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-029",
-      "english": "Abroad",
-      "polish": "Za granicą",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-029-word.mp3",
-      "audioSentence": "t1-p108-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-030",
-      "english": "Nearby",
-      "polish": "Niedaleko",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-030-word.mp3",
-      "audioSentence": "t1-p108-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-031",
-      "english": "Beyond",
-      "polish": "Za",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-031-word.mp3",
-      "audioSentence": "t1-p108-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-032",
-      "english": "Opposite to",
-      "polish": "Naprzeciwko",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-032-word.mp3",
-      "audioSentence": "t1-p108-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-033",
-      "english": "Amidst",
-      "polish": "Wśród",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-033-word.mp3",
-      "audioSentence": "t1-p108-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-034",
-      "english": "Upon",
-      "polish": "Na",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-034-word.mp3",
-      "audioSentence": "t1-p108-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-035",
-      "english": "Wherever",
-      "polish": "Obojętnie gdzie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-035-word.mp3",
-      "audioSentence": "t1-p108-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-036",
-      "english": "About",
-      "polish": "w pobliżu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-036-word.mp3",
-      "audioSentence": "t1-p108-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-037",
-      "english": "Aboard",
-      "polish": "Na pokładzie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-037-word.mp3",
-      "audioSentence": "t1-p108-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-038",
-      "english": "Vis-a-vis",
-      "polish": "Twarzą w twarz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-038-word.mp3",
-      "audioSentence": "t1-p108-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-039",
-      "english": "All around",
-      "polish": "Wszędzie dookoła",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-039-word.mp3",
-      "audioSentence": "t1-p108-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-040",
-      "english": "Among",
-      "polish": "Pośród",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-040-word.mp3",
-      "audioSentence": "t1-p108-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-041",
-      "english": "Atop",
-      "polish": "Na szczycie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-041-word.mp3",
-      "audioSentence": "t1-p108-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-042",
-      "english": "Beneath",
-      "polish": "Pod spodem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-042-word.mp3",
-      "audioSentence": "t1-p108-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-043",
-      "english": "Elsewhere",
-      "polish": "Gdzieś indziej",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-043-word.mp3",
-      "audioSentence": "t1-p108-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-044",
-      "english": "Forward of",
-      "polish": "Przed czymś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-044-word.mp3",
-      "audioSentence": "t1-p108-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-045",
-      "english": "Big apple",
-      "polish": "New york",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-045-word.mp3",
-      "audioSentence": "t1-p108-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-046",
-      "english": "Big apple",
-      "polish": "New york",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-046-word.mp3",
-      "audioSentence": "t1-p108-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-047",
-      "english": "Big easy",
-      "polish": "Nowy orlean",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-047-word.mp3",
-      "audioSentence": "t1-p108-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-048",
-      "english": "Crib",
-      "polish": "Chałupa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-048-word.mp3",
-      "audioSentence": "t1-p108-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-049",
-      "english": "Magic city",
-      "polish": "Miami",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-049-word.mp3",
-      "audioSentence": "t1-p108-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-050",
-      "english": "Man cave",
-      "polish": "Azyl faceta",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-050-word.mp3",
-      "audioSentence": "t1-p108-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-051",
-      "english": "Sin city",
-      "polish": "Las vegas",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-051-word.mp3",
-      "audioSentence": "t1-p108-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-052",
-      "english": "Windy city",
-      "polish": "Chicago",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-052-word.mp3",
-      "audioSentence": "t1-p108-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-053",
-      "english": "Loo",
-      "polish": "Kibelek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-053-word.mp3",
-      "audioSentence": "t1-p108-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-054",
-      "english": "Pad",
-      "polish": "Hawira",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-054-word.mp3",
-      "audioSentence": "t1-p108-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-055",
-      "english": "Joint",
-      "polish": "Knajpa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-055-word.mp3",
-      "audioSentence": "t1-p108-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-056",
-      "english": "Outdoors",
-      "polish": "Poza domem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-056-word.mp3",
-      "audioSentence": "t1-p108-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-057",
-      "english": "Amongst",
-      "polish": "Wśród",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-057-word.mp3",
-      "audioSentence": "t1-p108-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-058",
-      "english": "Underneath",
-      "polish": "Pod",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-058-word.mp3",
-      "audioSentence": "t1-p108-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-059",
-      "english": "Externally",
-      "polish": "Zewnętrznie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-059-word.mp3",
-      "audioSentence": "t1-p108-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-060",
-      "english": "Halfway",
-      "polish": "W połowie drogi",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-060-word.mp3",
-      "audioSentence": "t1-p108-060-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-061",
-      "english": "Inland",
-      "polish": "Wewnątrz lądu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-061-word.mp3",
-      "audioSentence": "t1-p108-061-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-062",
-      "english": "Internally",
-      "polish": "Wewnętrznie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-062-word.mp3",
-      "audioSentence": "t1-p108-062-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-063",
-      "english": "Overseas",
-      "polish": "Zamorsko",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-063-word.mp3",
-      "audioSentence": "t1-p108-063-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-064",
-      "english": "Side-by-side",
-      "polish": "Obok siebie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-064-word.mp3",
-      "audioSentence": "t1-p108-064-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-065",
-      "english": "Beyond",
-      "polish": "Za",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-065-word.mp3",
-      "audioSentence": "t1-p108-065-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-066",
-      "english": "About",
-      "polish": "w pobliżu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-066-word.mp3",
-      "audioSentence": "t1-p108-066-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-067",
-      "english": "Forward of",
-      "polish": "Przed czymś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-067-word.mp3",
-      "audioSentence": "t1-p108-067-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-068",
-      "english": "Halfway",
-      "polish": "W połowie drogi",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-068-word.mp3",
-      "audioSentence": "t1-p108-068-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-069",
-      "english": "In the middle",
-      "polish": "W środku",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-069-word.mp3",
-      "audioSentence": "t1-p108-069-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-070",
-      "english": "Beside",
-      "polish": "Obok",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-070-word.mp3",
-      "audioSentence": "t1-p108-070-sentence.mp3"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "id": "t1-p067",
-  "name": "Przymiotniki 4",
+  "name": "Sukces",
   "volume": "Tom I",
   "level": 1,
   "category": "Przymiotniki",
@@ -8,8 +8,8 @@
   "words": [
     {
       "id": "t1-p067-001",
-      "english": "Sick",
-      "polish": "Chory",
+      "english": "Sure",
+      "polish": "Pewny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p067-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p067-002",
-      "english": "Healthy",
-      "polish": "Zdrowy",
+      "english": "Popular",
+      "polish": "Popularny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p067-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p067-003",
-      "english": "Lucky",
-      "polish": "Przynoszący szczęście",
+      "english": "Rich",
+      "polish": "Bogaty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p067-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p067-004",
-      "english": "Smart",
-      "polish": "Bystry",
+      "english": "Perfect",
+      "polish": "Perfekcyjny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p067-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p067-005",
-      "english": "Strong",
-      "polish": "Silny",
+      "english": "Fantastic",
+      "polish": "Fantastyczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p067-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p067-006",
-      "english": "Fair",
-      "polish": "Sprawiedliwy",
+      "english": "Better",
+      "polish": "Lepszy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p067-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p067-007",
-      "english": "Dirty",
-      "polish": "Brudny",
+      "english": "Amazing",
+      "polish": "Niesamowity",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p067-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p067-008",
-      "english": "Clean",
-      "polish": "Czysty",
+      "english": "Super",
+      "polish": "Super",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p067-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p067-009",
-      "english": "Fat",
-      "polish": "Gruby",
+      "english": "Great",
+      "polish": "Wspaniały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p067-009-word.mp3",
@@ -89,12 +89,822 @@
     },
     {
       "id": "t1-p067-010",
-      "english": "Sexy",
-      "polish": "Seksowny",
+      "english": "Only",
+      "polish": "Jedyny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p067-010-word.mp3",
       "audioSentence": "t1-p067-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-011",
+      "english": "Determination",
+      "polish": "Determinacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-011-word.mp3",
+      "audioSentence": "t1-p067-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-012",
+      "english": "Congratulations",
+      "polish": "Gratulacje",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-012-word.mp3",
+      "audioSentence": "t1-p067-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-013",
+      "english": "Billionaire",
+      "polish": "Miliarder",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-013-word.mp3",
+      "audioSentence": "t1-p067-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-014",
+      "english": "Millionaire",
+      "polish": "Milioner",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-014-word.mp3",
+      "audioSentence": "t1-p067-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-015",
+      "english": "Champion",
+      "polish": "Mistrz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-015-word.mp3",
+      "audioSentence": "t1-p067-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-016",
+      "english": "Prize",
+      "polish": "Nagroda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-016-word.mp3",
+      "audioSentence": "t1-p067-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-017",
+      "english": "Success",
+      "polish": "Sukces",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-017-word.mp3",
+      "audioSentence": "t1-p067-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-018",
+      "english": "Winner",
+      "polish": "Wygrany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-018-word.mp3",
+      "audioSentence": "t1-p067-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-019",
+      "english": "Wealth",
+      "polish": "Bogactwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-019-word.mp3",
+      "audioSentence": "t1-p067-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-020",
+      "english": "Opportunity",
+      "polish": "Okazja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-020-word.mp3",
+      "audioSentence": "t1-p067-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-021",
+      "english": "Prestige",
+      "polish": "Prestiż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-021-word.mp3",
+      "audioSentence": "t1-p067-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-022",
+      "english": "World champion",
+      "polish": "Mistrz świata",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-022-word.mp3",
+      "audioSentence": "t1-p067-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-023",
+      "english": "Luxury",
+      "polish": "Luksus",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-023-word.mp3",
+      "audioSentence": "t1-p067-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-024",
+      "english": "Award",
+      "polish": "Nagroda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-024-word.mp3",
+      "audioSentence": "t1-p067-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-025",
+      "english": "Applause",
+      "polish": "Aplauz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-025-word.mp3",
+      "audioSentence": "t1-p067-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-026",
+      "english": "Famous",
+      "polish": "Słynny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-026-word.mp3",
+      "audioSentence": "t1-p067-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-027",
+      "english": "Special",
+      "polish": "Specjalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-027-word.mp3",
+      "audioSentence": "t1-p067-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-028",
+      "english": "Wealthy",
+      "polish": "Zamożny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-028-word.mp3",
+      "audioSentence": "t1-p067-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-029",
+      "english": "Exciting",
+      "polish": "Ekscytujący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-029-word.mp3",
+      "audioSentence": "t1-p067-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-030",
+      "english": "Fascinating",
+      "polish": "Fascynujący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-030-word.mp3",
+      "audioSentence": "t1-p067-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-031",
+      "english": "Brilliant",
+      "polish": "Genialny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-031-word.mp3",
+      "audioSentence": "t1-p067-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-032",
+      "english": "Ideal",
+      "polish": "Idealny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-032-word.mp3",
+      "audioSentence": "t1-p067-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-033",
+      "english": "Greatest",
+      "polish": "Najwspanialszy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-033-word.mp3",
+      "audioSentence": "t1-p067-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-034",
+      "english": "Unbelievable",
+      "polish": "Nie do wiary",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-034-word.mp3",
+      "audioSentence": "t1-p067-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-035",
+      "english": "Incredible",
+      "polish": "Niewiarygodny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-035-word.mp3",
+      "audioSentence": "t1-p067-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-036",
+      "english": "Excellent",
+      "polish": "Znakomity",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-036-word.mp3",
+      "audioSentence": "t1-p067-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-037",
+      "english": "Wonderful",
+      "polish": "Wspaniały",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-037-word.mp3",
+      "audioSentence": "t1-p067-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-038",
+      "english": "Well-educated",
+      "polish": "Dobrze wykształcony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-038-word.mp3",
+      "audioSentence": "t1-p067-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-039",
+      "english": "Best-known",
+      "polish": "Najsłynniejszy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-039-word.mp3",
+      "audioSentence": "t1-p067-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-040",
+      "english": "Successful",
+      "polish": "Odnoszący sukcesy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-040-word.mp3",
+      "audioSentence": "t1-p067-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-041",
+      "english": "Achieve",
+      "polish": "Osiągać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-041-word.mp3",
+      "audioSentence": "t1-p067-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-042",
+      "english": "Obtain",
+      "polish": "Uzyskiwać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-042-word.mp3",
+      "audioSentence": "t1-p067-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-043",
+      "english": "Reward",
+      "polish": "Nagradzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-043-word.mp3",
+      "audioSentence": "t1-p067-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-044",
+      "english": "Astonish",
+      "polish": "Zdumiewać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-044-word.mp3",
+      "audioSentence": "t1-p067-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-045",
+      "english": "Succeed",
+      "polish": "Odnieść sukces",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-045-word.mp3",
+      "audioSentence": "t1-p067-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-046",
+      "english": "Fulfill",
+      "polish": "Spełniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-046-word.mp3",
+      "audioSentence": "t1-p067-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-047",
+      "english": "Benefit",
+      "polish": "Czerpać korzyści",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-047-word.mp3",
+      "audioSentence": "t1-p067-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-048",
+      "english": "Triumph",
+      "polish": "Triumfować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-048-word.mp3",
+      "audioSentence": "t1-p067-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-049",
+      "english": "Accomplish",
+      "polish": "Dokonać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-049-word.mp3",
+      "audioSentence": "t1-p067-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-050",
+      "english": "Amaze",
+      "polish": "Zadziwiać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-050-word.mp3",
+      "audioSentence": "t1-p067-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-051",
+      "english": "Overcome",
+      "polish": "Przezwyciężać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-051-word.mp3",
+      "audioSentence": "t1-p067-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-052",
+      "english": "Excel",
+      "polish": "Górować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-052-word.mp3",
+      "audioSentence": "t1-p067-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-053",
+      "english": "Flourish",
+      "polish": "Dobrze prosperować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-053-word.mp3",
+      "audioSentence": "t1-p067-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-054",
+      "english": "Enrich",
+      "polish": "Wzbogacać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-054-word.mp3",
+      "audioSentence": "t1-p067-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-055",
+      "english": "Succeed",
+      "polish": "Odnieść sukces",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-055-word.mp3",
+      "audioSentence": "t1-p067-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-056",
+      "english": "Unique",
+      "polish": "Niepowtarzalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-056-word.mp3",
+      "audioSentence": "t1-p067-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-057",
+      "english": "World-class",
+      "polish": "Światowej sławy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-057-word.mp3",
+      "audioSentence": "t1-p067-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-058",
+      "english": "Impressive",
+      "polish": "Imponujący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-058-word.mp3",
+      "audioSentence": "t1-p067-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-059",
+      "english": "Influential",
+      "polish": "Wpływowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-059-word.mp3",
+      "audioSentence": "t1-p067-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-060",
+      "english": "Unforgettable",
+      "polish": "Niezapomniany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-060-word.mp3",
+      "audioSentence": "t1-p067-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-061",
+      "english": "Leading",
+      "polish": "Prowadzący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-061-word.mp3",
+      "audioSentence": "t1-p067-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-062",
+      "english": "Priceless",
+      "polish": "Bezcenny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-062-word.mp3",
+      "audioSentence": "t1-p067-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-063",
+      "english": "Extraordinary",
+      "polish": "Nadzwyczajny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-063-word.mp3",
+      "audioSentence": "t1-p067-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-064",
+      "english": "Memorable",
+      "polish": "Pamiętny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-064-word.mp3",
+      "audioSentence": "t1-p067-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-065",
+      "english": "Superior",
+      "polish": "Lepszy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-065-word.mp3",
+      "audioSentence": "t1-p067-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-066",
+      "english": "Victorious",
+      "polish": "Zwycięski",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-066-word.mp3",
+      "audioSentence": "t1-p067-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-067",
+      "english": "Unbeatable",
+      "polish": "Nie do pokonania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-067-word.mp3",
+      "audioSentence": "t1-p067-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-068",
+      "english": "Unstoppable",
+      "polish": "Nie do zatrzymania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-068-word.mp3",
+      "audioSentence": "t1-p067-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-069",
+      "english": "Supreme",
+      "polish": "Najwyższy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-069-word.mp3",
+      "audioSentence": "t1-p067-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-070",
+      "english": "Splendid",
+      "polish": "Kapitalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-070-word.mp3",
+      "audioSentence": "t1-p067-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-071",
+      "english": "Fulfillment",
+      "polish": "Spełnienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-071-word.mp3",
+      "audioSentence": "t1-p067-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-072",
+      "english": "Achievement",
+      "polish": "Osiągnięcie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-072-word.mp3",
+      "audioSentence": "t1-p067-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-073",
+      "english": "Potential",
+      "polish": "Potencjał",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-073-word.mp3",
+      "audioSentence": "t1-p067-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-074",
+      "english": "Treasure",
+      "polish": "Skarb",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-074-word.mp3",
+      "audioSentence": "t1-p067-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-075",
+      "english": "Challenge",
+      "polish": "Wyzwanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-075-word.mp3",
+      "audioSentence": "t1-p067-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-076",
+      "english": "Glory",
+      "polish": "Chwała",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-076-word.mp3",
+      "audioSentence": "t1-p067-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-077",
+      "english": "Breakthrough",
+      "polish": "Przełom",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-077-word.mp3",
+      "audioSentence": "t1-p067-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-078",
+      "english": "Self-confidence",
+      "polish": "Pewność siebie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-078-word.mp3",
+      "audioSentence": "t1-p067-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-079",
+      "english": "Prime",
+      "polish": "Najlepszy okres",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-079-word.mp3",
+      "audioSentence": "t1-p067-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-080",
+      "english": "Triumph",
+      "polish": "Triumf",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-080-word.mp3",
+      "audioSentence": "t1-p067-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-081",
+      "english": "Accomplishment",
+      "polish": "Dokonanie czegoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-081-word.mp3",
+      "audioSentence": "t1-p067-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-082",
+      "english": "Victory",
+      "polish": "Zwycięstwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-082-word.mp3",
+      "audioSentence": "t1-p067-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-083",
+      "english": "Victor",
+      "polish": "Zwycięzca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-083-word.mp3",
+      "audioSentence": "t1-p067-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-084",
+      "english": "Attainment",
+      "polish": "Zdobycie czegoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-084-word.mp3",
+      "audioSentence": "t1-p067-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-085",
+      "english": "Brilliance",
+      "polish": "Świetność",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-085-word.mp3",
+      "audioSentence": "t1-p067-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-086",
+      "english": "Glorious",
+      "polish": "Chwalebny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-086-word.mp3",
+      "audioSentence": "t1-p067-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-087",
+      "english": "High-flying",
+      "polish": "Głodny sukcesu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-087-word.mp3",
+      "audioSentence": "t1-p067-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-088",
+      "english": "Godlike",
+      "polish": "Niczym bóstwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-088-word.mp3",
+      "audioSentence": "t1-p067-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-089",
+      "english": "Unbeaten",
+      "polish": "Niepobity",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-089-word.mp3",
+      "audioSentence": "t1-p067-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-090",
+      "english": "Undefeated",
+      "polish": "Niepokonany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-090-word.mp3",
+      "audioSentence": "t1-p067-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-091",
+      "english": "Invincible",
+      "polish": "Niezwyciężony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-091-word.mp3",
+      "audioSentence": "t1-p067-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-092",
+      "english": "Mighty",
+      "polish": "Waleczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-092-word.mp3",
+      "audioSentence": "t1-p067-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-093",
+      "english": "Breakthrough",
+      "polish": "Przełomowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-093-word.mp3",
+      "audioSentence": "t1-p067-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-094",
+      "english": "World-famous",
+      "polish": "Sławny na całym świecie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-094-word.mp3",
+      "audioSentence": "t1-p067-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-095",
+      "english": "Triumphant",
+      "polish": "Triumfalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-095-word.mp3",
+      "audioSentence": "t1-p067-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-096",
+      "english": "Perseverant",
+      "polish": "Wytrwały",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-096-word.mp3",
+      "audioSentence": "t1-p067-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-097",
+      "english": "Exquisite",
+      "polish": "Wyborny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-097-word.mp3",
+      "audioSentence": "t1-p067-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-098",
+      "english": "Uncanny",
+      "polish": "Niesamowity",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-098-word.mp3",
+      "audioSentence": "t1-p067-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-099",
+      "english": "Win-win",
+      "polish": "Sytuacja, w której nie ma przegranych",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-099-word.mp3",
+      "audioSentence": "t1-p067-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p067-100",
+      "english": "Flawless",
+      "polish": "Bez skazy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p067-100-word.mp3",
+      "audioSentence": "t1-p067-100-sentence.mp3"
     }
   ]
 }

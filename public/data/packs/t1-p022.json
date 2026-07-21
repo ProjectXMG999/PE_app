@@ -1,15 +1,15 @@
 {
   "id": "t1-p022",
-  "name": "Rodzina",
+  "name": "Czasowniki 3",
   "volume": "Tom I",
   "level": 1,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział III",
+  "category": "Czasowniki",
+  "chapter": "Rozdział II",
   "words": [
     {
       "id": "t1-p022-001",
-      "english": "Brother",
-      "polish": "Brat",
+      "english": "Cry",
+      "polish": "Płakać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p022-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p022-002",
-      "english": "Daughter",
-      "polish": "Córka",
+      "english": "Drink",
+      "polish": "Pić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p022-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p022-003",
-      "english": "Children",
-      "polish": "Dzieci",
+      "english": "Eat",
+      "polish": "Jeść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p022-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p022-004",
-      "english": "Child",
-      "polish": "Dziecko",
+      "english": "Help",
+      "polish": "Pomagać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p022-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p022-005",
-      "english": "Mother",
-      "polish": "Matka",
+      "english": "Live",
+      "polish": "Żyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p022-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p022-006",
-      "english": "Husband",
-      "polish": "Mąż",
+      "english": "Meet",
+      "polish": "Spotykać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p022-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p022-007",
-      "english": "Father",
-      "polish": "Ojciec",
+      "english": "Prepare",
+      "polish": "Przygotowywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p022-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p022-008",
-      "english": "Family",
-      "polish": "Rodzina",
+      "english": "Use",
+      "polish": "Używać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p022-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p022-009",
-      "english": "Son",
-      "polish": "Syn",
+      "english": "Wash",
+      "polish": "Myć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p022-009-word.mp3",
@@ -89,507 +89,12 @@
     },
     {
       "id": "t1-p022-010",
-      "english": "Wife",
-      "polish": "Żona",
+      "english": "Work",
+      "polish": "Działać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p022-010-word.mp3",
       "audioSentence": "t1-p022-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-011",
-      "english": "Grandma",
-      "polish": "Babcia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-011-word.mp3",
-      "audioSentence": "t1-p022-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-012",
-      "english": "Grandmother",
-      "polish": "Babka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-012-word.mp3",
-      "audioSentence": "t1-p022-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-013",
-      "english": "Aunt",
-      "polish": "Ciotka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-013-word.mp3",
-      "audioSentence": "t1-p022-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-014",
-      "english": "Grandfather",
-      "polish": "Dziadek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-014-word.mp3",
-      "audioSentence": "t1-p022-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-015",
-      "english": "Grandpa",
-      "polish": "Dziadzio",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-015-word.mp3",
-      "audioSentence": "t1-p022-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-016",
-      "english": "Cousin",
-      "polish": "Kuzyn",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-016-word.mp3",
-      "audioSentence": "t1-p022-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-017",
-      "english": "Baby",
-      "polish": "Niemowlę",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-017-word.mp3",
-      "audioSentence": "t1-p022-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-018",
-      "english": "Parent",
-      "polish": "Rodzic",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-018-word.mp3",
-      "audioSentence": "t1-p022-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-019",
-      "english": "Sister",
-      "polish": "Siostra",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-019-word.mp3",
-      "audioSentence": "t1-p022-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-020",
-      "english": "Uncle",
-      "polish": "Wujek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-020-word.mp3",
-      "audioSentence": "t1-p022-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-021",
-      "english": "Twin",
-      "polish": "Bliźniak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-021-word.mp3",
-      "audioSentence": "t1-p022-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-022",
-      "english": "Only child",
-      "polish": "Jedynak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-022-word.mp3",
-      "audioSentence": "t1-p022-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-023",
-      "english": "Relative",
-      "polish": "Krewny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-023-word.mp3",
-      "audioSentence": "t1-p022-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-024",
-      "english": "Mom",
-      "polish": "Mama",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-024-word.mp3",
-      "audioSentence": "t1-p022-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-025",
-      "english": "Siblings",
-      "polish": "Rodzeństwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-025-word.mp3",
-      "audioSentence": "t1-p022-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-026",
-      "english": "Niece",
-      "polish": "Siostrzenica",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-026-word.mp3",
-      "audioSentence": "t1-p022-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-027",
-      "english": "Nephew",
-      "polish": "Siostrzeniec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-027-word.mp3",
-      "audioSentence": "t1-p022-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-028",
-      "english": "Dad",
-      "polish": "Tata",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-028-word.mp3",
-      "audioSentence": "t1-p022-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-029",
-      "english": "Mother-in-law",
-      "polish": "Teściowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-029-word.mp3",
-      "audioSentence": "t1-p022-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-030",
-      "english": "Father-in-law",
-      "polish": "Teść",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-030-word.mp3",
-      "audioSentence": "t1-p022-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-031",
-      "english": "Grandchildren",
-      "polish": "Wnuki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-031-word.mp3",
-      "audioSentence": "t1-p022-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-032",
-      "english": "Family life",
-      "polish": "Życie rodzinne",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-032-word.mp3",
-      "audioSentence": "t1-p022-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-033",
-      "english": "Daughter-in-law",
-      "polish": "Synowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-033-word.mp3",
-      "audioSentence": "t1-p022-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-034",
-      "english": "Grandson",
-      "polish": "Wnuk",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-034-word.mp3",
-      "audioSentence": "t1-p022-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-035",
-      "english": "Son-in-law",
-      "polish": "Zięć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-035-word.mp3",
-      "audioSentence": "t1-p022-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-036",
-      "english": "Kinship",
-      "polish": "Powinowactwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-036-word.mp3",
-      "audioSentence": "t1-p022-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-037",
-      "english": "Great-grandmother",
-      "polish": "Prababcia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-037-word.mp3",
-      "audioSentence": "t1-p022-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-038",
-      "english": "Great-grandfather",
-      "polish": "Pradziadek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-038-word.mp3",
-      "audioSentence": "t1-p022-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-039",
-      "english": "Brother-in-law",
-      "polish": "Szwagier",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-039-word.mp3",
-      "audioSentence": "t1-p022-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-040",
-      "english": "Sister-in-law",
-      "polish": "Szwagierka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-040-word.mp3",
-      "audioSentence": "t1-p022-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-041",
-      "english": "Heritage",
-      "polish": "Dziedzictwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-041-word.mp3",
-      "audioSentence": "t1-p022-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-042",
-      "english": "Legacy",
-      "polish": "Spuścizna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-042-word.mp3",
-      "audioSentence": "t1-p022-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-043",
-      "english": "Godson",
-      "polish": "Chrześniak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-043-word.mp3",
-      "audioSentence": "t1-p022-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-044",
-      "english": "Goddaughter",
-      "polish": "Chrześnica",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-044-word.mp3",
-      "audioSentence": "t1-p022-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-045",
-      "english": "Godmother",
-      "polish": "Matka chrzestna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-045-word.mp3",
-      "audioSentence": "t1-p022-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-046",
-      "english": "Godfather",
-      "polish": "Ojciec chrzestny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-046-word.mp3",
-      "audioSentence": "t1-p022-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-047",
-      "english": "Great-great-grandmother",
-      "polish": "Praprababcia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-047-word.mp3",
-      "audioSentence": "t1-p022-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-048",
-      "english": "Great-great-grandfather",
-      "polish": "Prapradziadek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-048-word.mp3",
-      "audioSentence": "t1-p022-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-049",
-      "english": "Half-sister",
-      "polish": "Siostra przyrodnia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-049-word.mp3",
-      "audioSentence": "t1-p022-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-050",
-      "english": "Half-brother",
-      "polish": "Brat przyrodni",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-050-word.mp3",
-      "audioSentence": "t1-p022-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-051",
-      "english": "Birth father",
-      "polish": "Biologiczny ojciec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-051-word.mp3",
-      "audioSentence": "t1-p022-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-052",
-      "english": "Maternity",
-      "polish": "Okres ciąży I macierzyństwa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-052-word.mp3",
-      "audioSentence": "t1-p022-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-053",
-      "english": "Stepfather",
-      "polish": "Ojczym",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-053-word.mp3",
-      "audioSentence": "t1-p022-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-054",
-      "english": "Step-son",
-      "polish": "Pasierb",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-054-word.mp3",
-      "audioSentence": "t1-p022-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-055",
-      "english": "Step-daughter",
-      "polish": "Pasierbica",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-055-word.mp3",
-      "audioSentence": "t1-p022-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-056",
-      "english": "Descendant",
-      "polish": "Potomek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-056-word.mp3",
-      "audioSentence": "t1-p022-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-057",
-      "english": "Ancestor",
-      "polish": "Przodek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-057-word.mp3",
-      "audioSentence": "t1-p022-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-058",
-      "english": "Extended family",
-      "polish": "Rodzina wielopokoleniowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-058-word.mp3",
-      "audioSentence": "t1-p022-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-059",
-      "english": "Foster family",
-      "polish": "Rodzina zastępcza",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-059-word.mp3",
-      "audioSentence": "t1-p022-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-060",
-      "english": "Stepmother",
-      "polish": "Macocha",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-060-word.mp3",
-      "audioSentence": "t1-p022-060-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-061",
-      "english": "Breadwinner",
-      "polish": "Żywiciel rodziny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-061-word.mp3",
-      "audioSentence": "t1-p022-061-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-062",
-      "english": "Progenitor",
-      "polish": "Protoplasta",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-062-word.mp3",
-      "audioSentence": "t1-p022-062-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-063",
-      "english": "Lineage",
-      "polish": "Ród",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-063-word.mp3",
-      "audioSentence": "t1-p022-063-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-064",
-      "english": "Consanguinity",
-      "polish": "Pokrewieństwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-064-word.mp3",
-      "audioSentence": "t1-p022-064-sentence.mp3"
-    },
-    {
-      "id": "t1-p022-065",
-      "english": "Ancestry",
-      "polish": "Rodowód",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p022-065-word.mp3",
-      "audioSentence": "t1-p022-065-sentence.mp3"
     }
   ]
 }

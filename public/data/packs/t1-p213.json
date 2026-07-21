@@ -1,15 +1,15 @@
 {
   "id": "t1-p213",
-  "name": "Co się patrzysz?",
-  "volume": "Tom V",
+  "name": "Demolki małe I duże",
+  "volume": "Tom IV",
   "level": 3,
-  "category": "Phrasale",
-  "chapter": "Rozdział XLI",
+  "category": "Czasowniki",
+  "chapter": "Rozdział XL",
   "words": [
     {
       "id": "t1-p213-001",
-      "english": "Look down",
-      "polish": "Spojrzeć w dół",
+      "english": "Break",
+      "polish": "Złamać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p213-002",
-      "english": "Look up",
-      "polish": "Spojrzeć w górę",
+      "english": "Crash",
+      "polish": "Rozbijać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p213-003",
-      "english": "Look around",
-      "polish": "Rozejrzeć się",
+      "english": "Damage",
+      "polish": "Uszkadzać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p213-004",
-      "english": "Look at",
-      "polish": "Spojrzeć",
+      "english": "Destroy",
+      "polish": "Niszczyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p213-005",
-      "english": "Look back",
-      "polish": "Oglądać się za siebie",
+      "english": "Burn",
+      "polish": "Spalić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p213-006",
-      "english": "Look back at",
-      "polish": "Oglądać się na",
+      "english": "Crush",
+      "polish": "Miażdżyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p213-007",
-      "english": "Look over",
-      "polish": "Spoglądać za coś",
+      "english": "Mess",
+      "polish": "Zrujnować coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p213-008",
-      "english": "Look away",
-      "polish": "Odwracać wzrok",
+      "english": "Bang",
+      "polish": "Huknąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p213-009",
-      "english": "Look out",
-      "polish": "Wyjrzeć",
+      "english": "Explode",
+      "polish": "Eksplodować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p213-010",
-      "english": "Look sth up",
-      "polish": "Wyszukać coś",
+      "english": "Launch",
+      "polish": "Wystrzelić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p213-011",
-      "english": "Look ahead",
-      "polish": "Patrzeć w przyszłość",
+      "english": "Rip",
+      "polish": "Rozrywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p213-012",
-      "english": "Look over sth",
-      "polish": "Przeglądać coś",
+      "english": "Scratch",
+      "polish": "Zarysować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p213-013",
-      "english": "Look through sth",
-      "polish": "Przejrzeć",
+      "english": "Crack",
+      "polish": "Stłuc",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p213-014",
-      "english": "Check sth out",
-      "polish": "Sprawdzić coś",
+      "english": "Tear",
+      "polish": "Rwać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-014-word.mp3",
@@ -134,8 +134,8 @@
     },
     {
       "id": "t1-p213-015",
-      "english": "Go through",
-      "polish": "Przewertować coś",
+      "english": "Bump",
+      "polish": "Zderzać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-015-word.mp3",
@@ -143,8 +143,8 @@
     },
     {
       "id": "t1-p213-016",
-      "english": "Shop around",
-      "polish": "Rozglądać się",
+      "english": "Burst",
+      "polish": "Pękać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-016-word.mp3",
@@ -152,8 +152,8 @@
     },
     {
       "id": "t1-p213-017",
-      "english": "Put out sth",
-      "polish": "Wystawiać coś",
+      "english": "Collapse",
+      "polish": "Runąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-017-word.mp3",
@@ -161,8 +161,8 @@
     },
     {
       "id": "t1-p213-018",
-      "english": "Go over",
-      "polish": "Przejrzeć coś",
+      "english": "Crumble",
+      "polish": "Kruszyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-018-word.mp3",
@@ -170,8 +170,8 @@
     },
     {
       "id": "t1-p213-019",
-      "english": "Skim through",
-      "polish": "Pobieżnie przejrzeć",
+      "english": "Demolish",
+      "polish": "Wyburzać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-019-word.mp3",
@@ -179,12 +179,282 @@
     },
     {
       "id": "t1-p213-020",
-      "english": "See through",
-      "polish": "Przejrzeć kogoś na wylot",
+      "english": "Erase",
+      "polish": "Wymazywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p213-020-word.mp3",
       "audioSentence": "t1-p213-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-021",
+      "english": "Level",
+      "polish": "Wyrównywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-021-word.mp3",
+      "audioSentence": "t1-p213-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-022",
+      "english": "Pierce",
+      "polish": "Przekłuwać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-022-word.mp3",
+      "audioSentence": "t1-p213-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-023",
+      "english": "Scatter",
+      "polish": "Rozsypać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-023-word.mp3",
+      "audioSentence": "t1-p213-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-024",
+      "english": "Slam",
+      "polish": "Trzaskać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-024-word.mp3",
+      "audioSentence": "t1-p213-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-025",
+      "english": "Bash",
+      "polish": "Walić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-025-word.mp3",
+      "audioSentence": "t1-p213-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-026",
+      "english": "Batter",
+      "polish": "Łomotać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-026-word.mp3",
+      "audioSentence": "t1-p213-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-027",
+      "english": "Curve",
+      "polish": "Zakrzywić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-027-word.mp3",
+      "audioSentence": "t1-p213-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-028",
+      "english": "Dismantle",
+      "polish": "Rozmontować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-028-word.mp3",
+      "audioSentence": "t1-p213-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-029",
+      "english": "Strike",
+      "polish": "Uderzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-029-word.mp3",
+      "audioSentence": "t1-p213-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-030",
+      "english": "Wreck",
+      "polish": "Zniszczyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-030-word.mp3",
+      "audioSentence": "t1-p213-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-031",
+      "english": "Cut off",
+      "polish": "Wyłączyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-031-word.mp3",
+      "audioSentence": "t1-p213-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-032",
+      "english": "Blow out",
+      "polish": "Zdmuchnąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-032-word.mp3",
+      "audioSentence": "t1-p213-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-033",
+      "english": "Fall off sth",
+      "polish": "Odpaść",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-033-word.mp3",
+      "audioSentence": "t1-p213-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-034",
+      "english": "Fall apart",
+      "polish": "Rozpadać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-034-word.mp3",
+      "audioSentence": "t1-p213-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-035",
+      "english": "Take down",
+      "polish": "Zburzyć coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-035-word.mp3",
+      "audioSentence": "t1-p213-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-036",
+      "english": "Blow away",
+      "polish": "Rozwalać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-036-word.mp3",
+      "audioSentence": "t1-p213-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-037",
+      "english": "Break off",
+      "polish": "Ułamać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-037-word.mp3",
+      "audioSentence": "t1-p213-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-038",
+      "english": "Blow sth up",
+      "polish": "Wysadzić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-038-word.mp3",
+      "audioSentence": "t1-p213-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-039",
+      "english": "Go off",
+      "polish": "Wybuchnąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-039-word.mp3",
+      "audioSentence": "t1-p213-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-040",
+      "english": "Pull down",
+      "polish": "Rozebrać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-040-word.mp3",
+      "audioSentence": "t1-p213-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-041",
+      "english": "Wipe out",
+      "polish": "Zetrzeć na proch",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-041-word.mp3",
+      "audioSentence": "t1-p213-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-042",
+      "english": "Break out",
+      "polish": "Zacząć się gwałtownie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-042-word.mp3",
+      "audioSentence": "t1-p213-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-043",
+      "english": "Bring down",
+      "polish": "Obalać coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-043-word.mp3",
+      "audioSentence": "t1-p213-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-044",
+      "english": "Burn down",
+      "polish": "Spalić doszczętnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-044-word.mp3",
+      "audioSentence": "t1-p213-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-045",
+      "english": "Come down",
+      "polish": "Walić się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-045-word.mp3",
+      "audioSentence": "t1-p213-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-046",
+      "english": "Tear sth down",
+      "polish": "Rozebrać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-046-word.mp3",
+      "audioSentence": "t1-p213-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-047",
+      "english": "Wear down",
+      "polish": "Niszczeć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-047-word.mp3",
+      "audioSentence": "t1-p213-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-048",
+      "english": "Wear out",
+      "polish": "Znosić się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-048-word.mp3",
+      "audioSentence": "t1-p213-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-049",
+      "english": "Wipe sth out",
+      "polish": "Znieść z powierzchni ziemi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-049-word.mp3",
+      "audioSentence": "t1-p213-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p213-050",
+      "english": "Burst into",
+      "polish": "Wybuchnąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p213-050-word.mp3",
+      "audioSentence": "t1-p213-050-sentence.mp3"
     }
   ]
 }

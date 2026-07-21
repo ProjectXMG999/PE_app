@@ -1,15 +1,15 @@
 {
   "id": "t1-p137",
-  "name": "Orientuj się",
+  "name": "Kierunek",
   "volume": "Tom II",
   "level": 2,
-  "category": "Skróty",
+  "category": "Przysłówki",
   "chapter": "Rozdział XX",
   "words": [
     {
       "id": "t1-p137-001",
-      "english": "APT.",
-      "polish": "M.",
+      "english": "Across",
+      "polish": "Przez",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p137-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p137-002",
-      "english": "AVE",
-      "polish": "Al.",
+      "english": "Along",
+      "polish": "Wzdłuż",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p137-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p137-003",
-      "english": "BLVD",
-      "polish": "Bulwar",
+      "english": "Around",
+      "polish": "Wokół",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p137-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p137-004",
-      "english": "DEPT",
-      "polish": "Oddział",
+      "english": "Back",
+      "polish": "Z powrotem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p137-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p137-005",
-      "english": "E",
-      "polish": "Wsch.",
+      "english": "Down",
+      "polish": "Na dole",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p137-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p137-006",
-      "english": "N",
-      "polish": "Pn.",
+      "english": "Into",
+      "polish": "Do środka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p137-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p137-007",
-      "english": "S",
-      "polish": "Pd.",
+      "english": "Out of",
+      "polish": "Poza",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p137-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p137-008",
-      "english": "ST.",
-      "polish": "Ul.",
+      "english": "Over",
+      "polish": "Przez",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p137-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p137-009",
-      "english": "W",
-      "polish": "Zach.",
+      "english": "Round",
+      "polish": "Wokół",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p137-009-word.mp3",
@@ -89,12 +89,597 @@
     },
     {
       "id": "t1-p137-010",
-      "english": "APT.",
-      "polish": "M.",
+      "english": "Straight",
+      "polish": "Prosto",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p137-010-word.mp3",
       "audioSentence": "t1-p137-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-011",
+      "english": "Through",
+      "polish": "Przez",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-011-word.mp3",
+      "audioSentence": "t1-p137-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-012",
+      "english": "Ahead",
+      "polish": "Dalej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-012-word.mp3",
+      "audioSentence": "t1-p137-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-013",
+      "english": "Forth",
+      "polish": "Naprzód",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-013-word.mp3",
+      "audioSentence": "t1-p137-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-014",
+      "english": "Towards",
+      "polish": "W kierunku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-014-word.mp3",
+      "audioSentence": "t1-p137-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-015",
+      "english": "Upstairs",
+      "polish": "Na górę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-015-word.mp3",
+      "audioSentence": "t1-p137-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-016",
+      "english": "Two-way",
+      "polish": "W dwie strony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-016-word.mp3",
+      "audioSentence": "t1-p137-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-017",
+      "english": "One-way",
+      "polish": "Jednokierunkowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-017-word.mp3",
+      "audioSentence": "t1-p137-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-018",
+      "english": "Directed",
+      "polish": "Skierowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-018-word.mp3",
+      "audioSentence": "t1-p137-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-019",
+      "english": "Two way",
+      "polish": "Dwukierunkowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-019-word.mp3",
+      "audioSentence": "t1-p137-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-020",
+      "english": "One way",
+      "polish": "W jedną stronę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-020-word.mp3",
+      "audioSentence": "t1-p137-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-021",
+      "english": "Straight",
+      "polish": "Prosty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-021-word.mp3",
+      "audioSentence": "t1-p137-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-022",
+      "english": "Opposite",
+      "polish": "Przeciwny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-022-word.mp3",
+      "audioSentence": "t1-p137-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-023",
+      "english": "Clockwise",
+      "polish": "Zgodny z ruchem wskazówek zegara",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-023-word.mp3",
+      "audioSentence": "t1-p137-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-024",
+      "english": "Counterclockwise",
+      "polish": "Przeciwny do ruchu wskazówek zegara",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-024-word.mp3",
+      "audioSentence": "t1-p137-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-025",
+      "english": "Reverse",
+      "polish": "Odwrotny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-025-word.mp3",
+      "audioSentence": "t1-p137-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-026",
+      "english": "Horizontal",
+      "polish": "Poziomy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-026-word.mp3",
+      "audioSentence": "t1-p137-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-027",
+      "english": "Vertical",
+      "polish": "Wertykalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-027-word.mp3",
+      "audioSentence": "t1-p137-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-028",
+      "english": "Directional",
+      "polish": "Kierunkowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-028-word.mp3",
+      "audioSentence": "t1-p137-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-029",
+      "english": "Upright",
+      "polish": "Pionowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-029-word.mp3",
+      "audioSentence": "t1-p137-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-030",
+      "english": "Diagonal",
+      "polish": "Ukośny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-030-word.mp3",
+      "audioSentence": "t1-p137-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-031",
+      "english": "Down the sth",
+      "polish": "Trochę dalej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-031-word.mp3",
+      "audioSentence": "t1-p137-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-032",
+      "english": "Onto",
+      "polish": "Na coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-032-word.mp3",
+      "audioSentence": "t1-p137-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-033",
+      "english": "Within",
+      "polish": "Wewnętrznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-033-word.mp3",
+      "audioSentence": "t1-p137-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-034",
+      "english": "Upside-down",
+      "polish": "Do góry nogami",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-034-word.mp3",
+      "audioSentence": "t1-p137-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-035",
+      "english": "Alongside",
+      "polish": "Wzdłuż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-035-word.mp3",
+      "audioSentence": "t1-p137-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-036",
+      "english": "Athwart",
+      "polish": "W poprzek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-036-word.mp3",
+      "audioSentence": "t1-p137-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-037",
+      "english": "Back and forth",
+      "polish": "Tam I z powrotem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-037-word.mp3",
+      "audioSentence": "t1-p137-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-038",
+      "english": "Backwards",
+      "polish": "Wspak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-038-word.mp3",
+      "audioSentence": "t1-p137-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-039",
+      "english": "Downstairs",
+      "polish": "W dół",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-039-word.mp3",
+      "audioSentence": "t1-p137-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-040",
+      "english": "Horizontally",
+      "polish": "Poziomo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-040-word.mp3",
+      "audioSentence": "t1-p137-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-041",
+      "english": "Outward",
+      "polish": "Na zewnątrz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-041-word.mp3",
+      "audioSentence": "t1-p137-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-042",
+      "english": "To and fro",
+      "polish": "W tę I wewtę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-042-word.mp3",
+      "audioSentence": "t1-p137-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-043",
+      "english": "Up and down",
+      "polish": "W górę I w dół",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-043-word.mp3",
+      "audioSentence": "t1-p137-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-044",
+      "english": "Upward",
+      "polish": "Wzwyż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-044-word.mp3",
+      "audioSentence": "t1-p137-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-045",
+      "english": "Vertically",
+      "polish": "Pionowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-045-word.mp3",
+      "audioSentence": "t1-p137-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-046",
+      "english": "Inward",
+      "polish": "Skierowany do wewnątrz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-046-word.mp3",
+      "audioSentence": "t1-p137-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-047",
+      "english": "Downhill",
+      "polish": "Zjazdowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-047-word.mp3",
+      "audioSentence": "t1-p137-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-048",
+      "english": "Backward",
+      "polish": "Wsteczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-048-word.mp3",
+      "audioSentence": "t1-p137-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-049",
+      "english": "Downward",
+      "polish": "Zwrócony ku dołowi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-049-word.mp3",
+      "audioSentence": "t1-p137-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-050",
+      "english": "Upward",
+      "polish": "Zwrócony ku górze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-050-word.mp3",
+      "audioSentence": "t1-p137-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-051",
+      "english": "Outward",
+      "polish": "Skierowany na zewnątrz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-051-word.mp3",
+      "audioSentence": "t1-p137-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-052",
+      "english": "Uphill",
+      "polish": "Pod górę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-052-word.mp3",
+      "audioSentence": "t1-p137-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-053",
+      "english": "Eastward",
+      "polish": "Wschodni",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-053-word.mp3",
+      "audioSentence": "t1-p137-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-054",
+      "english": "Westward",
+      "polish": "Zachodni",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-054-word.mp3",
+      "audioSentence": "t1-p137-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-055",
+      "english": "Northward",
+      "polish": "Północny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-055-word.mp3",
+      "audioSentence": "t1-p137-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-056",
+      "english": "Southward",
+      "polish": "Południowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-056-word.mp3",
+      "audioSentence": "t1-p137-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-057",
+      "english": "Cross-country",
+      "polish": "Przełajowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-057-word.mp3",
+      "audioSentence": "t1-p137-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-058",
+      "english": "Downwind",
+      "polish": "Z wiatrem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-058-word.mp3",
+      "audioSentence": "t1-p137-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-059",
+      "english": "Top-down",
+      "polish": "Odgórny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-059-word.mp3",
+      "audioSentence": "t1-p137-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-060",
+      "english": "Seaward",
+      "polish": "W kierunku morza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-060-word.mp3",
+      "audioSentence": "t1-p137-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-061",
+      "english": "Inside out",
+      "polish": "Na lewą stronę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-061-word.mp3",
+      "audioSentence": "t1-p137-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-062",
+      "english": "Aloft",
+      "polish": "Wysoko w górze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-062-word.mp3",
+      "audioSentence": "t1-p137-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-063",
+      "english": "Aside",
+      "polish": "Na bok",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-063-word.mp3",
+      "audioSentence": "t1-p137-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-064",
+      "english": "Aslant",
+      "polish": "Na ukos",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-064-word.mp3",
+      "audioSentence": "t1-p137-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-065",
+      "english": "Clockwise",
+      "polish": "Zgodnie z ruchem wskazówek zegara",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-065-word.mp3",
+      "audioSentence": "t1-p137-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-066",
+      "english": "Counter-clockwise",
+      "polish": "Przeciwnie do kierunku ruchu wskazówek zegara",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-066-word.mp3",
+      "audioSentence": "t1-p137-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-067",
+      "english": "Downhill",
+      "polish": "Z górki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-067-word.mp3",
+      "audioSentence": "t1-p137-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-068",
+      "english": "Downstream",
+      "polish": "W dół",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-068-word.mp3",
+      "audioSentence": "t1-p137-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-069",
+      "english": "Downward",
+      "polish": "W dół",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-069-word.mp3",
+      "audioSentence": "t1-p137-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-070",
+      "english": "Forward",
+      "polish": "Do przodu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-070-word.mp3",
+      "audioSentence": "t1-p137-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-071",
+      "english": "Inward",
+      "polish": "Do wewnątrz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-071-word.mp3",
+      "audioSentence": "t1-p137-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-072",
+      "english": "Parallel",
+      "polish": "Równolegle",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-072-word.mp3",
+      "audioSentence": "t1-p137-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-073",
+      "english": "Sideways",
+      "polish": "Bokiem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-073-word.mp3",
+      "audioSentence": "t1-p137-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-074",
+      "english": "Uphill",
+      "polish": "W górę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-074-word.mp3",
+      "audioSentence": "t1-p137-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p137-075",
+      "english": "Upstream",
+      "polish": "W górę rzeki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p137-075-word.mp3",
+      "audioSentence": "t1-p137-075-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p171",
-  "name": "Kontrakcje",
+  "name": "Czasowniki 13",
   "volume": "Tom III",
   "level": 3,
-  "category": "Skróty",
-  "chapter": "Rozdział XXX",
+  "category": "Czasowniki",
+  "chapter": "Rozdział XXVII",
   "words": [
     {
       "id": "t1-p171-001",
-      "english": "C'MON",
-      "polish": "No cho",
+      "english": "Employ",
+      "polish": "Zastosować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p171-002",
-      "english": "COZ",
-      "polish": "Bo",
+      "english": "Experience",
+      "polish": "Doświadczać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p171-003",
-      "english": "DONTCHA",
-      "polish": "C'nie",
+      "english": "Apply",
+      "polish": "Stosować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p171-004",
-      "english": "DUNNO",
-      "polish": "Nie wiem",
+      "english": "Matter",
+      "polish": "Mieć znaczenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p171-005",
-      "english": "GIMME",
-      "polish": "Daj mi",
+      "english": "Remove",
+      "polish": "Usunąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p171-006",
-      "english": "KINDA",
-      "polish": "Trochę",
+      "english": "Prove",
+      "polish": "Okazywać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p171-007",
-      "english": "EM",
-      "polish": "Im",
+      "english": "Link",
+      "polish": "Łączyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p171-008",
-      "english": "WANNA",
-      "polish": "Chcieć",
+      "english": "Remain",
+      "polish": "Pozostawać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p171-009",
-      "english": "AIN'T",
-      "polish": "Nie",
+      "english": "Relate",
+      "polish": "Odnosić się do czegoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p171-010",
-      "english": "GONNA",
-      "polish": "Mieć zamiar",
+      "english": "Rise",
+      "polish": "Powstawać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p171-011",
-      "english": "GOTTA",
-      "polish": "Musieć",
+      "english": "Concern",
+      "polish": "Dotyczyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p171-012",
-      "english": "I'MMA",
-      "polish": "Zamierzam",
+      "english": "Consist of",
+      "polish": "Składać się z czegoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p171-013",
-      "english": "INNIT",
-      "polish": "C'nie",
+      "english": "Contain",
+      "polish": "Zawierać coś w sobie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p171-014",
-      "english": "LEMME",
-      "polish": "Daj mi",
+      "english": "Include",
+      "polish": "Uwzględniać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-014-word.mp3",
@@ -134,57 +134,12 @@
     },
     {
       "id": "t1-p171-015",
-      "english": "OUTTA",
-      "polish": "Z",
+      "english": "Involve",
+      "polish": "Dotyczyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p171-015-word.mp3",
       "audioSentence": "t1-p171-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p171-016",
-      "english": "SHOULDA",
-      "polish": "Powinien był",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p171-016-word.mp3",
-      "audioSentence": "t1-p171-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p171-017",
-      "english": "SORTA",
-      "polish": "Trochę jak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p171-017-word.mp3",
-      "audioSentence": "t1-p171-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p171-018",
-      "english": "WHATCHA",
-      "polish": "Co tam",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p171-018-word.mp3",
-      "audioSentence": "t1-p171-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p171-019",
-      "english": "FINNA",
-      "polish": "Zamierzać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p171-019-word.mp3",
-      "audioSentence": "t1-p171-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p171-020",
-      "english": "WONTCHA",
-      "polish": "C'nie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p171-020-word.mp3",
-      "audioSentence": "t1-p171-020-sentence.mp3"
     }
   ]
 }

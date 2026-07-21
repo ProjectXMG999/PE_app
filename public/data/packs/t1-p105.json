@@ -1,15 +1,15 @@
 {
   "id": "t1-p105",
-  "name": "Świat cyfrowy",
+  "name": "Slang 10",
   "volume": "Tom II",
   "level": 2,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XV",
+  "category": "Slang",
+  "chapter": "Rozdział XIV",
   "words": [
     {
       "id": "t1-p105-001",
-      "english": "Charge",
-      "polish": "Ładować",
+      "english": "Bankroll",
+      "polish": "Pliki pliki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p105-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p105-002",
-      "english": "Click",
-      "polish": "Klikać",
+      "english": "Break money",
+      "polish": "Rozmienić pieniądze",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p105-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p105-003",
-      "english": "Copy",
-      "polish": "Kopiować",
+      "english": "Freebie",
+      "polish": "Coś za darmo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p105-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p105-004",
-      "english": "Lock",
-      "polish": "Zablokować",
+      "english": "Front money",
+      "polish": "Zaliczka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p105-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p105-005",
-      "english": "E-mail",
-      "polish": "Napisać e-mail",
+      "english": "Robbery",
+      "polish": "Drożyzna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p105-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p105-006",
-      "english": "Paste",
-      "polish": "Wklejać",
+      "english": "Change",
+      "polish": "Drobne",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p105-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p105-007",
-      "english": "Print",
-      "polish": "Drukować",
+      "english": "Chip in",
+      "polish": "Zrzucić się na coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p105-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p105-008",
-      "english": "Sound",
-      "polish": "Brzmieć",
+      "english": "Grand",
+      "polish": "Tysiak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p105-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p105-009",
-      "english": "Attach",
-      "polish": "Załączać",
+      "english": "Pennies",
+      "polish": "Niewielkie pieniądze",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p105-009-word.mp3",
@@ -89,732 +89,12 @@
     },
     {
       "id": "t1-p105-010",
-      "english": "Cancel",
-      "polish": "Anulować",
+      "english": "Cut",
+      "polish": "Część zysku",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p105-010-word.mp3",
       "audioSentence": "t1-p105-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-011",
-      "english": "Mark",
-      "polish": "Zaznaczać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-011-word.mp3",
-      "audioSentence": "t1-p105-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-012",
-      "english": "Save",
-      "polish": "Zapisywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-012-word.mp3",
-      "audioSentence": "t1-p105-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-013",
-      "english": "Search",
-      "polish": "Szukać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-013-word.mp3",
-      "audioSentence": "t1-p105-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-014",
-      "english": "Press",
-      "polish": "Naciskać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-014-word.mp3",
-      "audioSentence": "t1-p105-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-015",
-      "english": "Disconnect",
-      "polish": "Rozłączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-015-word.mp3",
-      "audioSentence": "t1-p105-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-016",
-      "english": "Plug in",
-      "polish": "Podłączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-016-word.mp3",
-      "audioSentence": "t1-p105-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-017",
-      "english": "Sign out",
-      "polish": "Wypisać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-017-word.mp3",
-      "audioSentence": "t1-p105-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-018",
-      "english": "Switch off",
-      "polish": "Wyłączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-018-word.mp3",
-      "audioSentence": "t1-p105-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-019",
-      "english": "Hook up",
-      "polish": "Podpiąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-019-word.mp3",
-      "audioSentence": "t1-p105-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-020",
-      "english": "Switch on",
-      "polish": "Włączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-020-word.mp3",
-      "audioSentence": "t1-p105-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-021",
-      "english": "Pop up",
-      "polish": "Wyskoczyć na ekranie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-021-word.mp3",
-      "audioSentence": "t1-p105-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-022",
-      "english": "Turn down",
-      "polish": "Ściszać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-022-word.mp3",
-      "audioSentence": "t1-p105-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-023",
-      "english": "Turn sth off",
-      "polish": "Wyłączyć coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-023-word.mp3",
-      "audioSentence": "t1-p105-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-024",
-      "english": "Turn on",
-      "polish": "Włączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-024-word.mp3",
-      "audioSentence": "t1-p105-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-025",
-      "english": "Turn up",
-      "polish": "Podgłaśniać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-025-word.mp3",
-      "audioSentence": "t1-p105-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-026",
-      "english": "Subscribe",
-      "polish": "Subskrybować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-026-word.mp3",
-      "audioSentence": "t1-p105-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-027",
-      "english": "Type",
-      "polish": "Pisać na wszystkim co ma klawisze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-027-word.mp3",
-      "audioSentence": "t1-p105-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-028",
-      "english": "Unlock",
-      "polish": "Odblokować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-028-word.mp3",
-      "audioSentence": "t1-p105-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-029",
-      "english": "Update",
-      "polish": "Zaktualizować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-029-word.mp3",
-      "audioSentence": "t1-p105-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-030",
-      "english": "Switch",
-      "polish": "Przełączać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-030-word.mp3",
-      "audioSentence": "t1-p105-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-031",
-      "english": "Connect",
-      "polish": "Podłączać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-031-word.mp3",
-      "audioSentence": "t1-p105-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-032",
-      "english": "Downgrade",
-      "polish": "Zainstalować do starszej wersji",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-032-word.mp3",
-      "audioSentence": "t1-p105-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-033",
-      "english": "Download",
-      "polish": "Zgrać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-033-word.mp3",
-      "audioSentence": "t1-p105-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-034",
-      "english": "Load",
-      "polish": "Wczytywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-034-word.mp3",
-      "audioSentence": "t1-p105-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-035",
-      "english": "Plug",
-      "polish": "Wetknąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-035-word.mp3",
-      "audioSentence": "t1-p105-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-036",
-      "english": "Reset",
-      "polish": "Wyzerować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-036-word.mp3",
-      "audioSentence": "t1-p105-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-037",
-      "english": "Rewind",
-      "polish": "Przewijać do tyłu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-037-word.mp3",
-      "audioSentence": "t1-p105-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-038",
-      "english": "Upgrade",
-      "polish": "Unowocześniać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-038-word.mp3",
-      "audioSentence": "t1-p105-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-039",
-      "english": "Upload",
-      "polish": "Wgrać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-039-word.mp3",
-      "audioSentence": "t1-p105-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-040",
-      "english": "Adjust",
-      "polish": "Przystosowywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-040-word.mp3",
-      "audioSentence": "t1-p105-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-041",
-      "english": "Log in",
-      "polish": "Zalogować się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-041-word.mp3",
-      "audioSentence": "t1-p105-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-042",
-      "english": "Log out",
-      "polish": "Wylogować się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-042-word.mp3",
-      "audioSentence": "t1-p105-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-043",
-      "english": "Go offline",
-      "polish": "Wyjść z internetu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-043-word.mp3",
-      "audioSentence": "t1-p105-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-044",
-      "english": "Go online",
-      "polish": "Wejść do internetu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-044-word.mp3",
-      "audioSentence": "t1-p105-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-045",
-      "english": "Load up",
-      "polish": "Załadować się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-045-word.mp3",
-      "audioSentence": "t1-p105-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-046",
-      "english": "Print out",
-      "polish": "Wydrukować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-046-word.mp3",
-      "audioSentence": "t1-p105-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-047",
-      "english": "Scroll down",
-      "polish": "Przewijać w dół",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-047-word.mp3",
-      "audioSentence": "t1-p105-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-048",
-      "english": "Scroll up",
-      "polish": "Przewijać do góry",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-048-word.mp3",
-      "audioSentence": "t1-p105-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-049",
-      "english": "Shut down",
-      "polish": "Wyłączać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-049-word.mp3",
-      "audioSentence": "t1-p105-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-050",
-      "english": "Filter out",
-      "polish": "Odfiltrować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-050-word.mp3",
-      "audioSentence": "t1-p105-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-051",
-      "english": "Blink",
-      "polish": "Migać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-051-word.mp3",
-      "audioSentence": "t1-p105-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-052",
-      "english": "Delete",
-      "polish": "Kasować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-052-word.mp3",
-      "audioSentence": "t1-p105-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-053",
-      "english": "Record",
-      "polish": "Nagrać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-053-word.mp3",
-      "audioSentence": "t1-p105-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-054",
-      "english": "Recover",
-      "polish": "Odzyskiwać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-054-word.mp3",
-      "audioSentence": "t1-p105-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-055",
-      "english": "Register",
-      "polish": "Rejestrować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-055-word.mp3",
-      "audioSentence": "t1-p105-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-056",
-      "english": "Submit",
-      "polish": "Wysłać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-056-word.mp3",
-      "audioSentence": "t1-p105-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-057",
-      "english": "Boost",
-      "polish": "Doładować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-057-word.mp3",
-      "audioSentence": "t1-p105-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-058",
-      "english": "Broadcast",
-      "polish": "Emitować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-058-word.mp3",
-      "audioSentence": "t1-p105-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-059",
-      "english": "Browse",
-      "polish": "Przeglądać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-059-word.mp3",
-      "audioSentence": "t1-p105-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-060",
-      "english": "Code",
-      "polish": "Kodować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-060-word.mp3",
-      "audioSentence": "t1-p105-060-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-061",
-      "english": "Design",
-      "polish": "Projektować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-061-word.mp3",
-      "audioSentence": "t1-p105-061-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-062",
-      "english": "Equip",
-      "polish": "Wyposażyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-062-word.mp3",
-      "audioSentence": "t1-p105-062-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-063",
-      "english": "Process",
-      "polish": "Przetwarzać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-063-word.mp3",
-      "audioSentence": "t1-p105-063-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-064",
-      "english": "Scroll",
-      "polish": "Scrollować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-064-word.mp3",
-      "audioSentence": "t1-p105-064-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-065",
-      "english": "Store",
-      "polish": "Przechowywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-065-word.mp3",
-      "audioSentence": "t1-p105-065-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-066",
-      "english": "Customize",
-      "polish": "Dostosowywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-066-word.mp3",
-      "audioSentence": "t1-p105-066-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-067",
-      "english": "Insert",
-      "polish": "Wstawić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-067-word.mp3",
-      "audioSentence": "t1-p105-067-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-068",
-      "english": "Consume",
-      "polish": "Zużywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-068-word.mp3",
-      "audioSentence": "t1-p105-068-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-069",
-      "english": "Detect",
-      "polish": "Wykrywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-069-word.mp3",
-      "audioSentence": "t1-p105-069-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-070",
-      "english": "Disable",
-      "polish": "Wyłączać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-070-word.mp3",
-      "audioSentence": "t1-p105-070-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-071",
-      "english": "Display",
-      "polish": "Wystawiać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-071-word.mp3",
-      "audioSentence": "t1-p105-071-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-072",
-      "english": "Enable",
-      "polish": "Włączać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-072-word.mp3",
-      "audioSentence": "t1-p105-072-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-073",
-      "english": "Harness",
-      "polish": "Ujarzmić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-073-word.mp3",
-      "audioSentence": "t1-p105-073-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-074",
-      "english": "Trace",
-      "polish": "Namierzać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-074-word.mp3",
-      "audioSentence": "t1-p105-074-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-075",
-      "english": "Bypass",
-      "polish": "Omijać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-075-word.mp3",
-      "audioSentence": "t1-p105-075-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-076",
-      "english": "Play",
-      "polish": "Odtwarzać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-076-word.mp3",
-      "audioSentence": "t1-p105-076-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-077",
-      "english": "Restore",
-      "polish": "Przywracać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-077-word.mp3",
-      "audioSentence": "t1-p105-077-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-078",
-      "english": "Stream",
-      "polish": "Przesyłać strumieniowo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-078-word.mp3",
-      "audioSentence": "t1-p105-078-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-079",
-      "english": "Trigger",
-      "polish": "Wywoływać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-079-word.mp3",
-      "audioSentence": "t1-p105-079-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-080",
-      "english": "Undo",
-      "polish": "Cofnąć do poprzedniego",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-080-word.mp3",
-      "audioSentence": "t1-p105-080-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-081",
-      "english": "Put sth on",
-      "polish": "Włączać coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-081-word.mp3",
-      "audioSentence": "t1-p105-081-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-082",
-      "english": "Set up",
-      "polish": "Konfigurować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-082-word.mp3",
-      "audioSentence": "t1-p105-082-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-083",
-      "english": "Key in",
-      "polish": "Wklepać na klawiaturze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-083-word.mp3",
-      "audioSentence": "t1-p105-083-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-084",
-      "english": "Back sth up",
-      "polish": "Zrobić kopię zapasową czegoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-084-word.mp3",
-      "audioSentence": "t1-p105-084-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-085",
-      "english": "Go off",
-      "polish": "Włączyć się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-085-word.mp3",
-      "audioSentence": "t1-p105-085-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-086",
-      "english": "Boot up",
-      "polish": "Załadować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-086-word.mp3",
-      "audioSentence": "t1-p105-086-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-087",
-      "english": "Power up",
-      "polish": "Włączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-087-word.mp3",
-      "audioSentence": "t1-p105-087-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-088",
-      "english": "Go down",
-      "polish": "Zawiesić się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-088-word.mp3",
-      "audioSentence": "t1-p105-088-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-089",
-      "english": "Track sb down",
-      "polish": "Namierzyć kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-089-word.mp3",
-      "audioSentence": "t1-p105-089-sentence.mp3"
-    },
-    {
-      "id": "t1-p105-090",
-      "english": "Pull down",
-      "polish": "Rozwinąć zakładkę",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p105-090-word.mp3",
-      "audioSentence": "t1-p105-090-sentence.mp3"
     }
   ]
 }

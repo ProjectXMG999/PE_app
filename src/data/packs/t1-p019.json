@@ -1,6 +1,6 @@
 {
   "id": "t1-p019",
-  "name": "Czasowniki 3",
+  "name": "Komunikacja",
   "volume": "Tom I",
   "level": 1,
   "category": "Czasowniki",
@@ -8,8 +8,8 @@
   "words": [
     {
       "id": "t1-p019-001",
-      "english": "Cry",
-      "polish": "Płakać",
+      "english": "Answer",
+      "polish": "Odpowiadać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p019-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p019-002",
-      "english": "Drink",
-      "polish": "Pić",
+      "english": "Ask",
+      "polish": "Pytać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p019-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p019-003",
-      "english": "Eat",
-      "polish": "Jeść",
+      "english": "Call",
+      "polish": "Dzwonić do kogoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p019-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p019-004",
-      "english": "Help",
-      "polish": "Pomagać",
+      "english": "Contact",
+      "polish": "Kontaktować się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p019-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p019-005",
-      "english": "Live",
-      "polish": "Żyć",
+      "english": "Inform",
+      "polish": "Informować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p019-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p019-006",
-      "english": "Meet",
-      "polish": "Spotykać",
+      "english": "Say",
+      "polish": "Powiedzieć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p019-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p019-007",
-      "english": "Prepare",
-      "polish": "Przygotowywać",
+      "english": "Show",
+      "polish": "Pokazywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p019-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p019-008",
-      "english": "Use",
-      "polish": "Używać",
+      "english": "Smile",
+      "polish": "Uśmiechać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p019-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p019-009",
-      "english": "Wash",
-      "polish": "Myć",
+      "english": "Tell",
+      "polish": "Powiedzieć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p019-009-word.mp3",
@@ -89,12 +89,2217 @@
     },
     {
       "id": "t1-p019-010",
-      "english": "Work",
-      "polish": "Działać",
+      "english": "Thank",
+      "polish": "Dziękować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p019-010-word.mp3",
       "audioSentence": "t1-p019-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-011",
+      "english": "Agree",
+      "polish": "Zgadzać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-011-word.mp3",
+      "audioSentence": "t1-p019-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-012",
+      "english": "Argue",
+      "polish": "Spierać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-012-word.mp3",
+      "audioSentence": "t1-p019-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-013",
+      "english": "Call",
+      "polish": "Nazywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-013-word.mp3",
+      "audioSentence": "t1-p019-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-014",
+      "english": "Call",
+      "polish": "Wzywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-014-word.mp3",
+      "audioSentence": "t1-p019-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-015",
+      "english": "Describe",
+      "polish": "Opisywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-015-word.mp3",
+      "audioSentence": "t1-p019-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-016",
+      "english": "Disagree",
+      "polish": "Nie zgadzać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-016-word.mp3",
+      "audioSentence": "t1-p019-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-017",
+      "english": "Discuss",
+      "polish": "Omawiać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-017-word.mp3",
+      "audioSentence": "t1-p019-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-018",
+      "english": "Invite",
+      "polish": "Zapraszać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-018-word.mp3",
+      "audioSentence": "t1-p019-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-019",
+      "english": "Spell",
+      "polish": "Przeliterować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-019-word.mp3",
+      "audioSentence": "t1-p019-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-020",
+      "english": "Apologize",
+      "polish": "Przepraszać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-020-word.mp3",
+      "audioSentence": "t1-p019-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-021",
+      "english": "Promise",
+      "polish": "Obiecywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-021-word.mp3",
+      "audioSentence": "t1-p019-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-022",
+      "english": "Repeat",
+      "polish": "Powtarzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-022-word.mp3",
+      "audioSentence": "t1-p019-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-023",
+      "english": "Reply",
+      "polish": "Odpowiadać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-023-word.mp3",
+      "audioSentence": "t1-p019-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-024",
+      "english": "Respond",
+      "polish": "Reagować, odpowiadać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-024-word.mp3",
+      "audioSentence": "t1-p019-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-025",
+      "english": "Specify",
+      "polish": "Uściślać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-025-word.mp3",
+      "audioSentence": "t1-p019-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-026",
+      "english": "Mate",
+      "polish": "Kumpel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-026-word.mp3",
+      "audioSentence": "t1-p019-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-027",
+      "english": "Back at you",
+      "polish": "Nawzajem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-027-word.mp3",
+      "audioSentence": "t1-p019-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-028",
+      "english": "JSYK",
+      "polish": "Tak żebyś wiedział",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-028-word.mp3",
+      "audioSentence": "t1-p019-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-029",
+      "english": "AFAIK",
+      "polish": "Z tego, co mi wiadomo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-029-word.mp3",
+      "audioSentence": "t1-p019-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-030",
+      "english": "TBH",
+      "polish": "Szczerze mówiąc",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-030-word.mp3",
+      "audioSentence": "t1-p019-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-031",
+      "english": "You too",
+      "polish": "Ty też",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-031-word.mp3",
+      "audioSentence": "t1-p019-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-032",
+      "english": "IDC",
+      "polish": "Nie dbam o to",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-032-word.mp3",
+      "audioSentence": "t1-p019-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-033",
+      "english": "NVM",
+      "polish": "Nieważne",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-033-word.mp3",
+      "audioSentence": "t1-p019-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-034",
+      "english": "OBV",
+      "polish": "No a jak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-034-word.mp3",
+      "audioSentence": "t1-p019-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-035",
+      "english": "OFC",
+      "polish": "Peffka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-035-word.mp3",
+      "audioSentence": "t1-p019-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-036",
+      "english": "Ask for",
+      "polish": "Prosić o",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-036-word.mp3",
+      "audioSentence": "t1-p019-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-037",
+      "english": "Call back",
+      "polish": "Oddzwonić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-037-word.mp3",
+      "audioSentence": "t1-p019-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-038",
+      "english": "Talk to",
+      "polish": "Mówić do kogoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-038-word.mp3",
+      "audioSentence": "t1-p019-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-039",
+      "english": "Talk over",
+      "polish": "Przegadać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-039-word.mp3",
+      "audioSentence": "t1-p019-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-040",
+      "english": "Sum up",
+      "polish": "Zsumować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-040-word.mp3",
+      "audioSentence": "t1-p019-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-041",
+      "english": "Agree with",
+      "polish": "Akceptować coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-041-word.mp3",
+      "audioSentence": "t1-p019-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-042",
+      "english": "Hear about",
+      "polish": "Usłyszeć o",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-042-word.mp3",
+      "audioSentence": "t1-p019-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-043",
+      "english": "Make sth up",
+      "polish": "Zmyślić coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-043-word.mp3",
+      "audioSentence": "t1-p019-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-044",
+      "english": "Break up",
+      "polish": "Przerywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-044-word.mp3",
+      "audioSentence": "t1-p019-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-045",
+      "english": "Hang up",
+      "polish": "Rozłączyć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-045-word.mp3",
+      "audioSentence": "t1-p019-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-046",
+      "english": "Suggest",
+      "polish": "Sugerować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-046-word.mp3",
+      "audioSentence": "t1-p019-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-047",
+      "english": "Translate",
+      "polish": "Tłumaczyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-047-word.mp3",
+      "audioSentence": "t1-p019-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-048",
+      "english": "Wish",
+      "polish": "Życzyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-048-word.mp3",
+      "audioSentence": "t1-p019-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-049",
+      "english": "Admit",
+      "polish": "Przyznawać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-049-word.mp3",
+      "audioSentence": "t1-p019-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-050",
+      "english": "Chat",
+      "polish": "Ucinać pogawędkę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-050-word.mp3",
+      "audioSentence": "t1-p019-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-051",
+      "english": "Commit",
+      "polish": "Zobowiązać się do czegoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-051-word.mp3",
+      "audioSentence": "t1-p019-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-052",
+      "english": "Complain",
+      "polish": "Skarżyć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-052-word.mp3",
+      "audioSentence": "t1-p019-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-053",
+      "english": "Confirm",
+      "polish": "Potwierdzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-053-word.mp3",
+      "audioSentence": "t1-p019-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-054",
+      "english": "Demand",
+      "polish": "Domagać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-054-word.mp3",
+      "audioSentence": "t1-p019-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-055",
+      "english": "Express",
+      "polish": "Wyrażać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-055-word.mp3",
+      "audioSentence": "t1-p019-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-056",
+      "english": "Introduce",
+      "polish": "Przedstawiać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-056-word.mp3",
+      "audioSentence": "t1-p019-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-057",
+      "english": "Recommend",
+      "polish": "Rekomendować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-057-word.mp3",
+      "audioSentence": "t1-p019-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-058",
+      "english": "Warn",
+      "polish": "Ostrzegać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-058-word.mp3",
+      "audioSentence": "t1-p019-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-059",
+      "english": "Welcome",
+      "polish": "Witać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-059-word.mp3",
+      "audioSentence": "t1-p019-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-060",
+      "english": "Name",
+      "polish": "Dawać imię",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-060-word.mp3",
+      "audioSentence": "t1-p019-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-061",
+      "english": "Tell sb off",
+      "polish": "Zwrócić komuś uwagę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-061-word.mp3",
+      "audioSentence": "t1-p019-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-062",
+      "english": "Call for",
+      "polish": "Wzywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-062-word.mp3",
+      "audioSentence": "t1-p019-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-063",
+      "english": "Get back to sb",
+      "polish": "Odezwać się do kogoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-063-word.mp3",
+      "audioSentence": "t1-p019-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-064",
+      "english": "Get on with sb",
+      "polish": "Zgadzać się z kimś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-064-word.mp3",
+      "audioSentence": "t1-p019-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-065",
+      "english": "Speak up",
+      "polish": "Mówić głośniej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-065-word.mp3",
+      "audioSentence": "t1-p019-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-066",
+      "english": "Talk sb into sth",
+      "polish": "Namówić kogoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-066-word.mp3",
+      "audioSentence": "t1-p019-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-067",
+      "english": "Speak up",
+      "polish": "Wypowiadać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-067-word.mp3",
+      "audioSentence": "t1-p019-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-068",
+      "english": "Go into",
+      "polish": "Wejść w",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-068-word.mp3",
+      "audioSentence": "t1-p019-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-069",
+      "english": "Point sth out",
+      "polish": "Wytknąć coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-069-word.mp3",
+      "audioSentence": "t1-p019-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-070",
+      "english": "Point sth out",
+      "polish": "Zwrócić uwagę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-070-word.mp3",
+      "audioSentence": "t1-p019-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-071",
+      "english": "Refuse",
+      "polish": "Odmawiać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-071-word.mp3",
+      "audioSentence": "t1-p019-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-072",
+      "english": "Whisper",
+      "polish": "Szeptać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-072-word.mp3",
+      "audioSentence": "t1-p019-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-073",
+      "english": "Bet",
+      "polish": "Zakładać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-073-word.mp3",
+      "audioSentence": "t1-p019-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-074",
+      "english": "Convince",
+      "polish": "Namawiać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-074-word.mp3",
+      "audioSentence": "t1-p019-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-075",
+      "english": "Excuse",
+      "polish": "Usprawiedliwiać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-075-word.mp3",
+      "audioSentence": "t1-p019-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-076",
+      "english": "Mention",
+      "polish": "Wspomnieć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-076-word.mp3",
+      "audioSentence": "t1-p019-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-077",
+      "english": "Swear",
+      "polish": "Przysięgać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-077-word.mp3",
+      "audioSentence": "t1-p019-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-078",
+      "english": "Advise",
+      "polish": "Doradzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-078-word.mp3",
+      "audioSentence": "t1-p019-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-079",
+      "english": "Announce",
+      "polish": "Ogłosić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-079-word.mp3",
+      "audioSentence": "t1-p019-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-080",
+      "english": "Claim",
+      "polish": "Twierdzić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-080-word.mp3",
+      "audioSentence": "t1-p019-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-081",
+      "english": "Confess",
+      "polish": "Wyznawać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-081-word.mp3",
+      "audioSentence": "t1-p019-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-082",
+      "english": "Deny",
+      "polish": "Zaprzeczać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-082-word.mp3",
+      "audioSentence": "t1-p019-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-083",
+      "english": "Interrupt",
+      "polish": "Przerywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-083-word.mp3",
+      "audioSentence": "t1-p019-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-084",
+      "english": "Interview",
+      "polish": "Przeprowadzać wywiad",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-084-word.mp3",
+      "audioSentence": "t1-p019-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-085",
+      "english": "Misunderstand",
+      "polish": "Źle zrozumieć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-085-word.mp3",
+      "audioSentence": "t1-p019-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-086",
+      "english": "AFAIC",
+      "polish": "Jeśli o mnie chodzi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-086-word.mp3",
+      "audioSentence": "t1-p019-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-087",
+      "english": "AFAIR",
+      "polish": "Z tego, co pamiętam",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-087-word.mp3",
+      "audioSentence": "t1-p019-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-088",
+      "english": "FTFY",
+      "polish": "Naprawiłem to dla cb",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-088-word.mp3",
+      "audioSentence": "t1-p019-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-089",
+      "english": "YGTR",
+      "polish": "Dokładnie tak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-089-word.mp3",
+      "audioSentence": "t1-p019-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-090",
+      "english": "BCC",
+      "polish": "Ukryte do wiadomości",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-090-word.mp3",
+      "audioSentence": "t1-p019-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-091",
+      "english": "CC",
+      "polish": "Do wiadomości",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-091-word.mp3",
+      "audioSentence": "t1-p019-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-092",
+      "english": "BYOB",
+      "polish": "Przynieś własną butelkę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-092-word.mp3",
+      "audioSentence": "t1-p019-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-093",
+      "english": "GL",
+      "polish": "Powodzenia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-093-word.mp3",
+      "audioSentence": "t1-p019-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-094",
+      "english": "IANAL",
+      "polish": "Nie jestem prawnikiem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-094-word.mp3",
+      "audioSentence": "t1-p019-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-095",
+      "english": "Just for fun",
+      "polish": "Tylko dla jaj",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-095-word.mp3",
+      "audioSentence": "t1-p019-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-096",
+      "english": "Argument",
+      "polish": "Kłótnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-096-word.mp3",
+      "audioSentence": "t1-p019-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-097",
+      "english": "Accent",
+      "polish": "Akcent",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-097-word.mp3",
+      "audioSentence": "t1-p019-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-098",
+      "english": "Dialogue",
+      "polish": "Dialog",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-098-word.mp3",
+      "audioSentence": "t1-p019-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-099",
+      "english": "Monologue",
+      "polish": "Monolog",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-099-word.mp3",
+      "audioSentence": "t1-p019-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-100",
+      "english": "Communication",
+      "polish": "Komunikacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-100-word.mp3",
+      "audioSentence": "t1-p019-100-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-101",
+      "english": "Advice",
+      "polish": "Rada",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-101-word.mp3",
+      "audioSentence": "t1-p019-101-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-102",
+      "english": "Conversation",
+      "polish": "Rozmowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-102-word.mp3",
+      "audioSentence": "t1-p019-102-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-103",
+      "english": "Chatter",
+      "polish": "Paplanina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-103-word.mp3",
+      "audioSentence": "t1-p019-103-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-104",
+      "english": "Promise",
+      "polish": "Obietnica",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-104-word.mp3",
+      "audioSentence": "t1-p019-104-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-105",
+      "english": "Small talk",
+      "polish": "Luźna rozmowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-105-word.mp3",
+      "audioSentence": "t1-p019-105-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-106",
+      "english": "Debate",
+      "polish": "Debata",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-106-word.mp3",
+      "audioSentence": "t1-p019-106-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-107",
+      "english": "Speech",
+      "polish": "Przemówienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-107-word.mp3",
+      "audioSentence": "t1-p019-107-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-108",
+      "english": "Feedback",
+      "polish": "Informacja zwrotna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-108-word.mp3",
+      "audioSentence": "t1-p019-108-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-109",
+      "english": "Nonsense",
+      "polish": "Nonsens",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-109-word.mp3",
+      "audioSentence": "t1-p019-109-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-110",
+      "english": "Repetition",
+      "polish": "Powtórzenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-110-word.mp3",
+      "audioSentence": "t1-p019-110-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-111",
+      "english": "Fill sb in",
+      "polish": "Zdawać komuś relację",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-111-word.mp3",
+      "audioSentence": "t1-p019-111-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-112",
+      "english": "Insist on sth",
+      "polish": "Upierać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-112-word.mp3",
+      "audioSentence": "t1-p019-112-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-113",
+      "english": "Keep sth to oneself",
+      "polish": "Zatrzymać coś dla siebie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-113-word.mp3",
+      "audioSentence": "t1-p019-113-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-114",
+      "english": "Own up",
+      "polish": "Przyznać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-114-word.mp3",
+      "audioSentence": "t1-p019-114-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-115",
+      "english": "Pin down",
+      "polish": "Sprecyzować coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-115-word.mp3",
+      "audioSentence": "t1-p019-115-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-116",
+      "english": "Put in",
+      "polish": "Wtrącić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-116-word.mp3",
+      "audioSentence": "t1-p019-116-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-117",
+      "english": "Sink in",
+      "polish": "Przyjąć do wiadomości",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-117-word.mp3",
+      "audioSentence": "t1-p019-117-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-118",
+      "english": "Butt in",
+      "polish": "Wtrącić się do rozmowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-118-word.mp3",
+      "audioSentence": "t1-p019-118-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-119",
+      "english": "Fill sb in",
+      "polish": "Zdawać komuś relację",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-119-word.mp3",
+      "audioSentence": "t1-p019-119-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-120",
+      "english": "Own up",
+      "polish": "Przyznać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-120-word.mp3",
+      "audioSentence": "t1-p019-120-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-121",
+      "english": "Irony",
+      "polish": "Ironia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-121-word.mp3",
+      "audioSentence": "t1-p019-121-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-122",
+      "english": "Gossip",
+      "polish": "Plotka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-122-word.mp3",
+      "audioSentence": "t1-p019-122-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-123",
+      "english": "Rumor",
+      "polish": "Pogłoska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-123-word.mp3",
+      "audioSentence": "t1-p019-123-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-124",
+      "english": "Reply",
+      "polish": "Odpowiedź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-124-word.mp3",
+      "audioSentence": "t1-p019-124-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-125",
+      "english": "Response",
+      "polish": "Odpowiedź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-125-word.mp3",
+      "audioSentence": "t1-p019-125-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-126",
+      "english": "Recommendation",
+      "polish": "Rekomendacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-126-word.mp3",
+      "audioSentence": "t1-p019-126-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-127",
+      "english": "Sarcasm",
+      "polish": "Sarkazm",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-127-word.mp3",
+      "audioSentence": "t1-p019-127-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-128",
+      "english": "Suggestion",
+      "polish": "Sugestia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-128-word.mp3",
+      "audioSentence": "t1-p019-128-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-129",
+      "english": "Hint",
+      "polish": "Wskazówka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-129-word.mp3",
+      "audioSentence": "t1-p019-129-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-130",
+      "english": "Backbiting",
+      "polish": "Obgadywanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-130-word.mp3",
+      "audioSentence": "t1-p019-130-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-131",
+      "english": "Greeting",
+      "polish": "Przywitanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-131-word.mp3",
+      "audioSentence": "t1-p019-131-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-132",
+      "english": "Misunderstanding",
+      "polish": "Nieporozumienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-132-word.mp3",
+      "audioSentence": "t1-p019-132-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-133",
+      "english": "Denial",
+      "polish": "Pozbawienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-133-word.mp3",
+      "audioSentence": "t1-p019-133-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-134",
+      "english": "Praise",
+      "polish": "Pochwała",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-134-word.mp3",
+      "audioSentence": "t1-p019-134-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-135",
+      "english": "Farewell",
+      "polish": "Pożegnanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-135-word.mp3",
+      "audioSentence": "t1-p019-135-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-136",
+      "english": "Quote",
+      "polish": "Cytować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-136-word.mp3",
+      "audioSentence": "t1-p019-136-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-137",
+      "english": "Request",
+      "polish": "Wnioskować o coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-137-word.mp3",
+      "audioSentence": "t1-p019-137-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-138",
+      "english": "Summarize",
+      "polish": "Podsumowywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-138-word.mp3",
+      "audioSentence": "t1-p019-138-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-139",
+      "english": "Address",
+      "polish": "Adresować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-139-word.mp3",
+      "audioSentence": "t1-p019-139-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-140",
+      "english": "Cite",
+      "polish": "Przytoczyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-140-word.mp3",
+      "audioSentence": "t1-p019-140-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-141",
+      "english": "Debate",
+      "polish": "Debatować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-141-word.mp3",
+      "audioSentence": "t1-p019-141-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-142",
+      "english": "Hint",
+      "polish": "Robić aluzje",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-142-word.mp3",
+      "audioSentence": "t1-p019-142-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-143",
+      "english": "Interpret",
+      "polish": "Tłumaczyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-143-word.mp3",
+      "audioSentence": "t1-p019-143-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-144",
+      "english": "List",
+      "polish": "Wymieniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-144-word.mp3",
+      "audioSentence": "t1-p019-144-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-145",
+      "english": "Object",
+      "polish": "Sprzeciwiać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-145-word.mp3",
+      "audioSentence": "t1-p019-145-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-146",
+      "english": "Pause",
+      "polish": "Robić przerwę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-146-word.mp3",
+      "audioSentence": "t1-p019-146-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-147",
+      "english": "Question",
+      "polish": "Kwestionować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-147-word.mp3",
+      "audioSentence": "t1-p019-147-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-148",
+      "english": "Rename",
+      "polish": "Przemianować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-148-word.mp3",
+      "audioSentence": "t1-p019-148-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-149",
+      "english": "Silence",
+      "polish": "Uciszać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-149-word.mp3",
+      "audioSentence": "t1-p019-149-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-150",
+      "english": "Argument",
+      "polish": "Kłótnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-150-word.mp3",
+      "audioSentence": "t1-p019-150-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-151",
+      "english": "FW",
+      "polish": "Prześlij dalej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-151-word.mp3",
+      "audioSentence": "t1-p019-151-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-152",
+      "english": "LMGTFY",
+      "polish": "Pozwól, że ci to wygoogluję",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-152-word.mp3",
+      "audioSentence": "t1-p019-152-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-153",
+      "english": "RE",
+      "polish": "Odp.",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-153-word.mp3",
+      "audioSentence": "t1-p019-153-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-154",
+      "english": "SMH",
+      "polish": "Kręcić głową",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-154-word.mp3",
+      "audioSentence": "t1-p019-154-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-155",
+      "english": "SRSLY",
+      "polish": "Serio",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-155-word.mp3",
+      "audioSentence": "t1-p019-155-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-156",
+      "english": "TLDR",
+      "polish": "Zbyt długie, nie czytałem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-156-word.mp3",
+      "audioSentence": "t1-p019-156-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-157",
+      "english": "ASL",
+      "polish": "Wiek, płeć, miejsce zamieszkania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-157-word.mp3",
+      "audioSentence": "t1-p019-157-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-158",
+      "english": "REL",
+      "polish": "Mam tak samo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-158-word.mp3",
+      "audioSentence": "t1-p019-158-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-159",
+      "english": "IMHO",
+      "polish": "Szczerze powiedziawszy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-159-word.mp3",
+      "audioSentence": "t1-p019-159-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-160",
+      "english": "ROFL",
+      "polish": "Tarzać się po podłodze ze śmiechu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-160-word.mp3",
+      "audioSentence": "t1-p019-160-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-161",
+      "english": "Clarify",
+      "polish": "Precyzować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-161-word.mp3",
+      "audioSentence": "t1-p019-161-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-162",
+      "english": "Justify",
+      "polish": "Uzasadniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-162-word.mp3",
+      "audioSentence": "t1-p019-162-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-163",
+      "english": "Socialize",
+      "polish": "Udzielać się towarzysko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-163-word.mp3",
+      "audioSentence": "t1-p019-163-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-164",
+      "english": "Disapprove",
+      "polish": "Nie aprobować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-164-word.mp3",
+      "audioSentence": "t1-p019-164-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-165",
+      "english": "Decline",
+      "polish": "Nie przyjmować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-165-word.mp3",
+      "audioSentence": "t1-p019-165-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-166",
+      "english": "Emphasize",
+      "polish": "Kłaść nacisk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-166-word.mp3",
+      "audioSentence": "t1-p019-166-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-167",
+      "english": "Persist",
+      "polish": "Nie ustępować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-167-word.mp3",
+      "audioSentence": "t1-p019-167-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-168",
+      "english": "Persuade",
+      "polish": "Przekonywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-168-word.mp3",
+      "audioSentence": "t1-p019-168-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-169",
+      "english": "Disclose",
+      "polish": "Wyjawić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-169-word.mp3",
+      "audioSentence": "t1-p019-169-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-170",
+      "english": "Dwell",
+      "polish": "Rozwodzić się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-170-word.mp3",
+      "audioSentence": "t1-p019-170-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-171",
+      "english": "Ensure",
+      "polish": "Upewniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-171-word.mp3",
+      "audioSentence": "t1-p019-171-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-172",
+      "english": "Exclaim",
+      "polish": "Wykrzyknąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-172-word.mp3",
+      "audioSentence": "t1-p019-172-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-173",
+      "english": "Highlight",
+      "polish": "Uwydatniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-173-word.mp3",
+      "audioSentence": "t1-p019-173-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-174",
+      "english": "Inquire",
+      "polish": "Dowiadywać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-174-word.mp3",
+      "audioSentence": "t1-p019-174-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-175",
+      "english": "Mishear",
+      "polish": "Przesłyszeć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-175-word.mp3",
+      "audioSentence": "t1-p019-175-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-176",
+      "english": "Face time",
+      "polish": "W cztery oczy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-176-word.mp3",
+      "audioSentence": "t1-p019-176-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-177",
+      "english": "Kiki",
+      "polish": "Plotkować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-177-word.mp3",
+      "audioSentence": "t1-p019-177-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-178",
+      "english": "Shook",
+      "polish": "Zaskoczony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-178-word.mp3",
+      "audioSentence": "t1-p019-178-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-179",
+      "english": "Shooketh",
+      "polish": "Mega-zaskoczony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-179-word.mp3",
+      "audioSentence": "t1-p019-179-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-180",
+      "english": "Deadass",
+      "polish": "Śmiertelnie poważny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-180-word.mp3",
+      "audioSentence": "t1-p019-180-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-181",
+      "english": "Gag",
+      "polish": "Dusić się ze śmiechu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-181-word.mp3",
+      "audioSentence": "t1-p019-181-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-182",
+      "english": "Random",
+      "polish": "Mam kontakt w telefonie ale nie wiem skąd",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-182-word.mp3",
+      "audioSentence": "t1-p019-182-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-183",
+      "english": "Air quotes",
+      "polish": "Tzw.",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-183-word.mp3",
+      "audioSentence": "t1-p019-183-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-184",
+      "english": "Clap back",
+      "polish": "Odszczekiwać komuś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-184-word.mp3",
+      "audioSentence": "t1-p019-184-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-185",
+      "english": "Peep",
+      "polish": "Obczaić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-185-word.mp3",
+      "audioSentence": "t1-p019-185-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-186",
+      "english": "AAMOF",
+      "polish": "W gruncie rzeczy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-186-word.mp3",
+      "audioSentence": "t1-p019-186-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-187",
+      "english": "AFAICT",
+      "polish": "Z tego, co mogę powiedzieć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-187-word.mp3",
+      "audioSentence": "t1-p019-187-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-188",
+      "english": "FWIW",
+      "polish": "Na tyle, na ile jest to warte",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-188-word.mp3",
+      "audioSentence": "t1-p019-188-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-189",
+      "english": "ICYMI",
+      "polish": "W razie jakbyś przegapił",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-189-word.mp3",
+      "audioSentence": "t1-p019-189-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-190",
+      "english": "IIRC",
+      "polish": "Jeśli dobrze pamiętam",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-190-word.mp3",
+      "audioSentence": "t1-p019-190-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-191",
+      "english": "IKR",
+      "polish": "Wiem, prawda?",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-191-word.mp3",
+      "audioSentence": "t1-p019-191-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-192",
+      "english": "JK",
+      "polish": "Tylko żartowałem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-192-word.mp3",
+      "audioSentence": "t1-p019-192-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-193",
+      "english": "LMK",
+      "polish": "Daj znać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-193-word.mp3",
+      "audioSentence": "t1-p019-193-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-194",
+      "english": "NP",
+      "polish": "Nie ma problemu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-194-word.mp3",
+      "audioSentence": "t1-p019-194-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-195",
+      "english": "TIA",
+      "polish": "Z góry dzięki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-195-word.mp3",
+      "audioSentence": "t1-p019-195-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-196",
+      "english": "Request",
+      "polish": "Prośba",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-196-word.mp3",
+      "audioSentence": "t1-p019-196-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-197",
+      "english": "Excuse",
+      "polish": "Wymówka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-197-word.mp3",
+      "audioSentence": "t1-p019-197-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-198",
+      "english": "Approval",
+      "polish": "Zgoda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-198-word.mp3",
+      "audioSentence": "t1-p019-198-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-199",
+      "english": "Statement",
+      "polish": "Wypowiedź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-199-word.mp3",
+      "audioSentence": "t1-p019-199-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-200",
+      "english": "Tiff",
+      "polish": "Sprzeczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-200-word.mp3",
+      "audioSentence": "t1-p019-200-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-201",
+      "english": "Delivery",
+      "polish": "Sposób przemawiania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-201-word.mp3",
+      "audioSentence": "t1-p019-201-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-202",
+      "english": "Follow-up",
+      "polish": "Nawiązanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-202-word.mp3",
+      "audioSentence": "t1-p019-202-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-203",
+      "english": "Confrontation",
+      "polish": "Konfrontacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-203-word.mp3",
+      "audioSentence": "t1-p019-203-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-204",
+      "english": "Command",
+      "polish": "Rozkaz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-204-word.mp3",
+      "audioSentence": "t1-p019-204-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-205",
+      "english": "Dispute",
+      "polish": "Spór",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-205-word.mp3",
+      "audioSentence": "t1-p019-205-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-206",
+      "english": "Articulation",
+      "polish": "Artykulacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-206-word.mp3",
+      "audioSentence": "t1-p019-206-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-207",
+      "english": "Enunciation",
+      "polish": "Dykcja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-207-word.mp3",
+      "audioSentence": "t1-p019-207-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-208",
+      "english": "Utterance",
+      "polish": "Wypowiedź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-208-word.mp3",
+      "audioSentence": "t1-p019-208-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-209",
+      "english": "Punditry",
+      "polish": "Wypowiedź eksperta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-209-word.mp3",
+      "audioSentence": "t1-p019-209-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-210",
+      "english": "Declaration",
+      "polish": "Deklaracja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-210-word.mp3",
+      "audioSentence": "t1-p019-210-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-211",
+      "english": "Mumble",
+      "polish": "Mamrotać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-211-word.mp3",
+      "audioSentence": "t1-p019-211-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-212",
+      "english": "Nod",
+      "polish": "Skinąć głową",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-212-word.mp3",
+      "audioSentence": "t1-p019-212-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-213",
+      "english": "Oppose",
+      "polish": "Być przeciw",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-213-word.mp3",
+      "audioSentence": "t1-p019-213-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-214",
+      "english": "Outline",
+      "polish": "Przedstawić zarys",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-214-word.mp3",
+      "audioSentence": "t1-p019-214-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-215",
+      "english": "Overhear",
+      "polish": "Usłyszeć przypadkiem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-215-word.mp3",
+      "audioSentence": "t1-p019-215-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-216",
+      "english": "Stress",
+      "polish": "Podkreślać coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-216-word.mp3",
+      "audioSentence": "t1-p019-216-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-217",
+      "english": "Bash",
+      "polish": "Wyrażać się nieprzychylnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-217-word.mp3",
+      "audioSentence": "t1-p019-217-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-218",
+      "english": "Confide",
+      "polish": "Zwierzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-218-word.mp3",
+      "audioSentence": "t1-p019-218-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-219",
+      "english": "Eavesdrop",
+      "polish": "Podsłuchać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-219-word.mp3",
+      "audioSentence": "t1-p019-219-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-220",
+      "english": "Imitate",
+      "polish": "Imitować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-220-word.mp3",
+      "audioSentence": "t1-p019-220-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-221",
+      "english": "Instill",
+      "polish": "Wpajać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-221-word.mp3",
+      "audioSentence": "t1-p019-221-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-222",
+      "english": "Prompt",
+      "polish": "Podpowiadać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-222-word.mp3",
+      "audioSentence": "t1-p019-222-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-223",
+      "english": "Reconcile",
+      "polish": "Pojednać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-223-word.mp3",
+      "audioSentence": "t1-p019-223-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-224",
+      "english": "Urge",
+      "polish": "Nakłaniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-224-word.mp3",
+      "audioSentence": "t1-p019-224-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-225",
+      "english": "Dwell",
+      "polish": "Rozwodzić się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-225-word.mp3",
+      "audioSentence": "t1-p019-225-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-226",
+      "english": "Put sb on",
+      "polish": "Dać kogoś do telefonu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-226-word.mp3",
+      "audioSentence": "t1-p019-226-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-227",
+      "english": "Get through to",
+      "polish": "Połączyć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-227-word.mp3",
+      "audioSentence": "t1-p019-227-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-228",
+      "english": "Follow up on",
+      "polish": "Kontynuować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-228-word.mp3",
+      "audioSentence": "t1-p019-228-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-229",
+      "english": "Get sb in",
+      "polish": "Zawołać kogoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-229-word.mp3",
+      "audioSentence": "t1-p019-229-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-230",
+      "english": "Get sth out of sb",
+      "polish": "Wyciągnąć coś z kogoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-230-word.mp3",
+      "audioSentence": "t1-p019-230-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-231",
+      "english": "Put sb through",
+      "polish": "Przekierować rozmowę do kogoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-231-word.mp3",
+      "audioSentence": "t1-p019-231-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-232",
+      "english": "Choke up",
+      "polish": "Mieć ściśnięte gardło z powodu silnych emocji",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-232-word.mp3",
+      "audioSentence": "t1-p019-232-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-233",
+      "english": "Open up",
+      "polish": "Otworzyć się przed kimś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-233-word.mp3",
+      "audioSentence": "t1-p019-233-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-234",
+      "english": "Bang on",
+      "polish": "Gadać bez przerwy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-234-word.mp3",
+      "audioSentence": "t1-p019-234-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-235",
+      "english": "Go against",
+      "polish": "Sprzeciwiać się czemuś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-235-word.mp3",
+      "audioSentence": "t1-p019-235-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-236",
+      "english": "Butter up",
+      "polish": "Podlizywać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-236-word.mp3",
+      "audioSentence": "t1-p019-236-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-237",
+      "english": "Call for",
+      "polish": "Nawoływać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-237-word.mp3",
+      "audioSentence": "t1-p019-237-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-238",
+      "english": "Call sb in",
+      "polish": "Wzywać kogoś do pomocy lub na dywanik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-238-word.mp3",
+      "audioSentence": "t1-p019-238-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-239",
+      "english": "Call on",
+      "polish": "Apelować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-239-word.mp3",
+      "audioSentence": "t1-p019-239-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-240",
+      "english": "Call out",
+      "polish": "Wywołać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-240-word.mp3",
+      "audioSentence": "t1-p019-240-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-241",
+      "english": "Come out",
+      "polish": "Zabrzmieć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-241-word.mp3",
+      "audioSentence": "t1-p019-241-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-242",
+      "english": "Make out of",
+      "polish": "Sądzić coś o czymś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-242-word.mp3",
+      "audioSentence": "t1-p019-242-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-243",
+      "english": "Cut into",
+      "polish": "Wciąć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-243-word.mp3",
+      "audioSentence": "t1-p019-243-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-244",
+      "english": "Play up",
+      "polish": "Rozdmuchiwać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-244-word.mp3",
+      "audioSentence": "t1-p019-244-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-245",
+      "english": "Put forward",
+      "polish": "Proponować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-245-word.mp3",
+      "audioSentence": "t1-p019-245-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-246",
+      "english": "Speak for",
+      "polish": "Mówić za",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-246-word.mp3",
+      "audioSentence": "t1-p019-246-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-247",
+      "english": "Take sth back",
+      "polish": "Cofnąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-247-word.mp3",
+      "audioSentence": "t1-p019-247-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-248",
+      "english": "Talk sb out of sth",
+      "polish": "Wyperswadować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-248-word.mp3",
+      "audioSentence": "t1-p019-248-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-249",
+      "english": "Chime in",
+      "polish": "Wtrącić słówko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-249-word.mp3",
+      "audioSentence": "t1-p019-249-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-250",
+      "english": "Allude to",
+      "polish": "Nawiązać do",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-250-word.mp3",
+      "audioSentence": "t1-p019-250-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-251",
+      "english": "Blow up",
+      "polish": "Rozdmuchać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-251-word.mp3",
+      "audioSentence": "t1-p019-251-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-252",
+      "english": "Break in",
+      "polish": "Przerwać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-252-word.mp3",
+      "audioSentence": "t1-p019-252-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-253",
+      "english": "Bring sth up",
+      "polish": "Przytaczać coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-253-word.mp3",
+      "audioSentence": "t1-p019-253-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-254",
+      "english": "Clear sth up",
+      "polish": "Wyjaśnić coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-254-word.mp3",
+      "audioSentence": "t1-p019-254-sentence.mp3"
+    },
+    {
+      "id": "t1-p019-255",
+      "english": "Cut off",
+      "polish": "Przerywać komuś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p019-255-word.mp3",
+      "audioSentence": "t1-p019-255-sentence.mp3"
     }
   ]
 }

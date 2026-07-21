@@ -1,15 +1,15 @@
 {
   "id": "t1-p014",
-  "name": "Każdy to robi",
+  "name": "Wulgaryzmy 3",
   "volume": "Tom I",
   "level": 1,
-  "category": "Czasowniki",
-  "chapter": "Rozdział II",
+  "category": "Wulgaryzmy",
+  "chapter": "Rozdział X",
   "words": [
     {
       "id": "t1-p014-001",
-      "english": "Feel",
-      "polish": "Czuć się",
+      "english": "it blows",
+      "polish": "chujowo, do dupy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p014-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p014-002",
-      "english": "Have",
-      "polish": "Mieć",
+      "english": "not to give a fuck",
+      "polish": "mieć wyjebane",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p014-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p014-003",
-      "english": "Hear",
-      "polish": "Słyszeć",
+      "english": "I don't give a fuck!",
+      "polish": "mam wyjebane",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p014-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p014-004",
-      "english": "Listen",
-      "polish": "Słuchać",
+      "english": "I don't give a shit!",
+      "polish": "mam to w dupie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p014-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p014-005",
-      "english": "Sleep",
-      "polish": "Spać",
+      "english": "bloody hell!",
+      "polish": "jasna cholera!",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p014-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p014-006",
-      "english": "Talk",
-      "polish": "Rozmawiać",
+      "english": "jerk",
+      "polish": "cham",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p014-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p014-007",
-      "english": "Grow",
-      "polish": "Rosnąć",
+      "english": "cunt",
+      "polish": "pizda",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p014-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p014-008",
-      "english": "Pee",
-      "polish": "Sikać",
+      "english": "slut",
+      "polish": "dziwka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p014-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p014-009",
-      "english": "Poop",
-      "polish": "Robić kupę",
+      "english": "ho",
+      "polish": "dziweczka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p014-009-word.mp3",
@@ -89,372 +89,12 @@
     },
     {
       "id": "t1-p014-010",
-      "english": "Smell",
-      "polish": "Wąchać",
+      "english": "whore",
+      "polish": "kurwa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p014-010-word.mp3",
       "audioSentence": "t1-p014-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-011",
-      "english": "Breathe",
-      "polish": "Oddychać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-011-word.mp3",
-      "audioSentence": "t1-p014-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-012",
-      "english": "Cough",
-      "polish": "Kaszleć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-012-word.mp3",
-      "audioSentence": "t1-p014-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-013",
-      "english": "Lick",
-      "polish": "Lizać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-013-word.mp3",
-      "audioSentence": "t1-p014-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-014",
-      "english": "Slurp",
-      "polish": "Siorbać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-014-word.mp3",
-      "audioSentence": "t1-p014-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-015",
-      "english": "Piss",
-      "polish": "Sikać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-015-word.mp3",
-      "audioSentence": "t1-p014-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-016",
-      "english": "Sneeze",
-      "polish": "Kichać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-016-word.mp3",
-      "audioSentence": "t1-p014-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-017",
-      "english": "Snore",
-      "polish": "Chrapać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-017-word.mp3",
-      "audioSentence": "t1-p014-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-018",
-      "english": "Suck",
-      "polish": "Ssać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-018-word.mp3",
-      "audioSentence": "t1-p014-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-019",
-      "english": "Sweat",
-      "polish": "Pocić się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-019-word.mp3",
-      "audioSentence": "t1-p014-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-020",
-      "english": "Fart",
-      "polish": "Puszczać bąki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-020-word.mp3",
-      "audioSentence": "t1-p014-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-021",
-      "english": "Burp",
-      "polish": "Bekać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-021-word.mp3",
-      "audioSentence": "t1-p014-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-022",
-      "english": "Spit",
-      "polish": "Pluć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-022-word.mp3",
-      "audioSentence": "t1-p014-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-023",
-      "english": "Whistle",
-      "polish": "Gwizdać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-023-word.mp3",
-      "audioSentence": "t1-p014-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-024",
-      "english": "Be awake",
-      "polish": "Być obudzonym",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-024-word.mp3",
-      "audioSentence": "t1-p014-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-025",
-      "english": "Dislike",
-      "polish": "Nie lubić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-025-word.mp3",
-      "audioSentence": "t1-p014-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-026",
-      "english": "Come from",
-      "polish": "Pochodzić skądś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-026-word.mp3",
-      "audioSentence": "t1-p014-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-027",
-      "english": "Grow up",
-      "polish": "Dorastać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-027-word.mp3",
-      "audioSentence": "t1-p014-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-028",
-      "english": "Wake up",
-      "polish": "Budzić się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-028-word.mp3",
-      "audioSentence": "t1-p014-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-029",
-      "english": "Bite off",
-      "polish": "Odgryźć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-029-word.mp3",
-      "audioSentence": "t1-p014-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-030",
-      "english": "Breathe in",
-      "polish": "Wdychać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-030-word.mp3",
-      "audioSentence": "t1-p014-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-031",
-      "english": "Breathe out",
-      "polish": "Wydychać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-031-word.mp3",
-      "audioSentence": "t1-p014-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-032",
-      "english": "Stay up",
-      "polish": "Nie kłaść się spać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-032-word.mp3",
-      "audioSentence": "t1-p014-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-033",
-      "english": "Be up",
-      "polish": "Być na nogach",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-033-word.mp3",
-      "audioSentence": "t1-p014-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-034",
-      "english": "Drop off",
-      "polish": "Zasypiać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-034-word.mp3",
-      "audioSentence": "t1-p014-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-035",
-      "english": "Feed on sth",
-      "polish": "Żywić się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-035-word.mp3",
-      "audioSentence": "t1-p014-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-036",
-      "english": "Yawn",
-      "polish": "Ziewać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-036-word.mp3",
-      "audioSentence": "t1-p014-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-037",
-      "english": "Chew",
-      "polish": "Żuć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-037-word.mp3",
-      "audioSentence": "t1-p014-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-038",
-      "english": "Sigh",
-      "polish": "Wzdychać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-038-word.mp3",
-      "audioSentence": "t1-p014-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-039",
-      "english": "Sniff",
-      "polish": "Pociągać nosem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-039-word.mp3",
-      "audioSentence": "t1-p014-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-040",
-      "english": "Flex",
-      "polish": "Napinać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-040-word.mp3",
-      "audioSentence": "t1-p014-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-041",
-      "english": "Inhale",
-      "polish": "Zrobić wdech",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-041-word.mp3",
-      "audioSentence": "t1-p014-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-042",
-      "english": "Defecate",
-      "polish": "Wypróżniać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-042-word.mp3",
-      "audioSentence": "t1-p014-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-043",
-      "english": "Urinate",
-      "polish": "Oddawać mocz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-043-word.mp3",
-      "audioSentence": "t1-p014-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-044",
-      "english": "Swallow",
-      "polish": "Połykać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-044-word.mp3",
-      "audioSentence": "t1-p014-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-045",
-      "english": "Exhale",
-      "polish": "Zrobić wydech",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-045-word.mp3",
-      "audioSentence": "t1-p014-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-046",
-      "english": "Pronounce",
-      "polish": "Wymawiać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-046-word.mp3",
-      "audioSentence": "t1-p014-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-047",
-      "english": "Frown",
-      "polish": "Marszczyć brwi",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-047-word.mp3",
-      "audioSentence": "t1-p014-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-048",
-      "english": "Shrug",
-      "polish": "Wzruszać ramionami",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-048-word.mp3",
-      "audioSentence": "t1-p014-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-049",
-      "english": "Awaken",
-      "polish": "Rozbudzać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-049-word.mp3",
-      "audioSentence": "t1-p014-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p014-050",
-      "english": "Digest",
-      "polish": "Trawić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p014-050-word.mp3",
-      "audioSentence": "t1-p014-050-sentence.mp3"
     }
   ]
 }

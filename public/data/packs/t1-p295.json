@@ -1,15 +1,15 @@
 {
   "id": "t1-p295",
-  "name": "Przymiotniki 34",
+  "name": "Przymiotniki 33",
   "volume": "Tom VIII",
   "level": 4,
   "category": "Przymiotniki",
-  "chapter": "Rozdział LXXV",
+  "chapter": "Rozdział LXXIII",
   "words": [
     {
       "id": "t1-p295-001",
-      "english": "Superstitious",
-      "polish": "Przesądny",
+      "english": "Flamboyant",
+      "polish": "Krzykliwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p295-002",
-      "english": "Predictable",
-      "polish": "Przewidywalny",
+      "english": "Masculine",
+      "polish": "Męski",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p295-003",
-      "english": "Wary",
-      "polish": "Przezorny",
+      "english": "Flashy",
+      "polish": "Na pokaz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p295-004",
-      "english": "Accustomed",
-      "polish": "Przyzwyczajony",
+      "english": "Scruffy",
+      "polish": "Niechlujny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p295-005",
-      "english": "Cocky",
-      "polish": "Pyszałkowaty",
+      "english": "Passe",
+      "polish": "Niemodny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p295-006",
-      "english": "Puzzling",
-      "polish": "Zagadkowy",
+      "english": "Baggy",
+      "polish": "Workowaty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p295-007",
-      "english": "Painstaking",
-      "polish": "Skrupulatny",
+      "english": "Dingy",
+      "polish": "Poplamiony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p295-008",
-      "english": "Secretive",
-      "polish": "Skryty",
+      "english": "Graceless",
+      "polish": "Pozbawiony wdzięku",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p295-009",
-      "english": "Bizarre",
-      "polish": "Cudaczny",
+      "english": "Snappy",
+      "polish": "Szykowny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p295-010",
-      "english": "Indifferent",
-      "polish": "Obojętny",
+      "english": "Ravishing",
+      "polish": "Porażająco piękny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p295-011",
-      "english": "Frivolous",
-      "polish": "Frywolny",
+      "english": "Worn-out",
+      "polish": "Znoszony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p295-012",
-      "english": "Goofy",
-      "polish": "Głupkowaty",
+      "english": "Worn",
+      "polish": "Zużyty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p295-013",
-      "english": "Obsessed",
-      "polish": "Mający obsesję na punkcie czegoś",
+      "english": "Stiff",
+      "polish": "Zesztywniały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-013-word.mp3",
@@ -125,21 +125,12 @@
     },
     {
       "id": "t1-p295-014",
-      "english": "Uptight",
-      "polish": "Spięty",
+      "english": "Garish",
+      "polish": "Krzykliwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p295-014-word.mp3",
       "audioSentence": "t1-p295-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p295-015",
-      "english": "Freaky",
-      "polish": "Zakręcony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p295-015-word.mp3",
-      "audioSentence": "t1-p295-015-sentence.mp3"
     }
   ]
 }

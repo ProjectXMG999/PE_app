@@ -1,15 +1,15 @@
 {
   "id": "t1-p091",
-  "name": "Dziecko",
+  "name": "Czasowniki 8",
   "volume": "Tom II",
   "level": 2,
-  "category": "Rzeczowniki",
+  "category": "Czasowniki",
   "chapter": "Rozdział XII",
   "words": [
     {
       "id": "t1-p091-001",
-      "english": "Doll",
-      "polish": "Lalka",
+      "english": "Complement",
+      "polish": "Komplementować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p091-002",
-      "english": "Kid",
-      "polish": "Dzieciak",
+      "english": "Install",
+      "polish": "Instalować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p091-003",
-      "english": "Toy",
-      "polish": "Zabawka",
+      "english": "Propose",
+      "polish": "Proponować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p091-004",
-      "english": "Childhood",
-      "polish": "Dzieciństwo",
+      "english": "Realize",
+      "polish": "Realizować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p091-005",
-      "english": "Rattle",
-      "polish": "Grzechotka",
+      "english": "Present",
+      "polish": "Zaprezentować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p091-006",
-      "english": "Crib",
-      "polish": "Łóżeczko niemowlęce",
+      "english": "Accept",
+      "polish": "Akceptować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p091-007",
-      "english": "Baby girl",
-      "polish": "Mała dziewczynka",
+      "english": "Analyze",
+      "polish": "Analizować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p091-008",
-      "english": "Baby boy",
-      "polish": "Mały chłopczyk",
+      "english": "Arrange",
+      "polish": "Aranżować coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p091-009",
-      "english": "Mommy",
-      "polish": "Mamusia",
+      "english": "Arrest",
+      "polish": "Aresztować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p091-010",
-      "english": "Birth",
-      "polish": "Narodziny",
+      "english": "Attack",
+      "polish": "Atakować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p091-011",
-      "english": "Nanny",
-      "polish": "Niania",
+      "english": "Comment",
+      "polish": "Komentować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p091-012",
-      "english": "Newborn",
-      "polish": "Noworodek",
+      "english": "Communicate",
+      "polish": "Komunikować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p091-013",
-      "english": "Daddy",
-      "polish": "Tatuś",
+      "english": "Congratulate",
+      "polish": "Gratulować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p091-014",
-      "english": "Chewing gum",
-      "polish": "Guma do żucia",
+      "english": "Control",
+      "polish": "Kontrolować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-014-word.mp3",
@@ -134,417 +134,12 @@
     },
     {
       "id": "t1-p091-015",
-      "english": "Stuffed toy",
-      "polish": "Pluszowa zabawka",
+      "english": "Flirt",
+      "polish": "Flirtować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-015-word.mp3",
       "audioSentence": "t1-p091-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-016",
-      "english": "Pregnancy",
-      "polish": "Ciąża",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-016-word.mp3",
-      "audioSentence": "t1-p091-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-017",
-      "english": "Adolescence",
-      "polish": "Okres dojrzewania",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-017-word.mp3",
-      "audioSentence": "t1-p091-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-018",
-      "english": "Diaper",
-      "polish": "Pieluszka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-018-word.mp3",
-      "audioSentence": "t1-p091-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-019",
-      "english": "Conception",
-      "polish": "Poczęcie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-019-word.mp3",
-      "audioSentence": "t1-p091-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-020",
-      "english": "Childbirth",
-      "polish": "Poród",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-020-word.mp3",
-      "audioSentence": "t1-p091-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-021",
-      "english": "Pregnancy test",
-      "polish": "Test ciążowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-021-word.mp3",
-      "audioSentence": "t1-p091-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-022",
-      "english": "Kite",
-      "polish": "Latawiec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-022-word.mp3",
-      "audioSentence": "t1-p091-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-023",
-      "english": "Snowman",
-      "polish": "Bałwan",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-023-word.mp3",
-      "audioSentence": "t1-p091-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-024",
-      "english": "Bubble",
-      "polish": "Bańka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-024-word.mp3",
-      "audioSentence": "t1-p091-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-025",
-      "english": "Balloon",
-      "polish": "Balon",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-025-word.mp3",
-      "audioSentence": "t1-p091-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-026",
-      "english": "Feeding bottle",
-      "polish": "Butelka dla niemowląt",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-026-word.mp3",
-      "audioSentence": "t1-p091-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-027",
-      "english": "Lullaby",
-      "polish": "Kołysanka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-027-word.mp3",
-      "audioSentence": "t1-p091-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-028",
-      "english": "Cradle",
-      "polish": "Kołyska",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-028-word.mp3",
-      "audioSentence": "t1-p091-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-029",
-      "english": "Motherhood",
-      "polish": "Macierzyństwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-029-word.mp3",
-      "audioSentence": "t1-p091-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-030",
-      "english": "Childcare",
-      "polish": "Opieka nad dzieckiem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-030-word.mp3",
-      "audioSentence": "t1-p091-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-031",
-      "english": "Babyhood",
-      "polish": "Okres niemowlęcy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-031-word.mp3",
-      "audioSentence": "t1-p091-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-032",
-      "english": "Offspring",
-      "polish": "Potomstwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-032-word.mp3",
-      "audioSentence": "t1-p091-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-033",
-      "english": "Foster child",
-      "polish": "Przybrane dziecko",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-033-word.mp3",
-      "audioSentence": "t1-p091-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-034",
-      "english": "Child development",
-      "polish": "Rozwój dziecka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-034-word.mp3",
-      "audioSentence": "t1-p091-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-035",
-      "english": "Pacifier",
-      "polish": "Smoczek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-035-word.mp3",
-      "audioSentence": "t1-p091-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-036",
-      "english": "Tot",
-      "polish": "Szkrab",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-036-word.mp3",
-      "audioSentence": "t1-p091-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-037",
-      "english": "Bib",
-      "polish": "Śliniaczek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-037-word.mp3",
-      "audioSentence": "t1-p091-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-038",
-      "english": "Premature baby",
-      "polish": "Wcześniak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-038-word.mp3",
-      "audioSentence": "t1-p091-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-039",
-      "english": "Stroller",
-      "polish": "Wózek dziecięcy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-039-word.mp3",
-      "audioSentence": "t1-p091-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-040",
-      "english": "Upbringing",
-      "polish": "Wychowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-040-word.mp3",
-      "audioSentence": "t1-p091-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-041",
-      "english": "Adoption",
-      "polish": "Adopcja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-041-word.mp3",
-      "audioSentence": "t1-p091-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-042",
-      "english": "Nursery",
-      "polish": "Żłobek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-042-word.mp3",
-      "audioSentence": "t1-p091-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-043",
-      "english": "Labor pains",
-      "polish": "Bóle porodowe",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-043-word.mp3",
-      "audioSentence": "t1-p091-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-044",
-      "english": "Quadruplets",
-      "polish": "Czworaczki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-044-word.mp3",
-      "audioSentence": "t1-p091-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-045",
-      "english": "Puberty",
-      "polish": "Dojrzałość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-045-word.mp3",
-      "audioSentence": "t1-p091-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-046",
-      "english": "Playpen",
-      "polish": "Kojec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-046-word.mp3",
-      "audioSentence": "t1-p091-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-047",
-      "english": "Nappy rash",
-      "polish": "Odparzenie od pieluszki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-047-word.mp3",
-      "audioSentence": "t1-p091-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-048",
-      "english": "Rompers",
-      "polish": "Pajacyk",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-048-word.mp3",
-      "audioSentence": "t1-p091-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-049",
-      "english": "Quintuplets",
-      "polish": "Pięcioraczki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-049-word.mp3",
-      "audioSentence": "t1-p091-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-050",
-      "english": "Postnatal",
-      "polish": "Poporodowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-050-word.mp3",
-      "audioSentence": "t1-p091-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-051",
-      "english": "Mother-to-be",
-      "polish": "Przyszła matka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-051-word.mp3",
-      "audioSentence": "t1-p091-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-052",
-      "english": "Triplets",
-      "polish": "Trojaczki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-052-word.mp3",
-      "audioSentence": "t1-p091-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-053",
-      "english": "Layette",
-      "polish": "Wyprawka niemowlęca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-053-word.mp3",
-      "audioSentence": "t1-p091-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-054",
-      "english": "C-section",
-      "polish": "Cesarskie cięcie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-054-word.mp3",
-      "audioSentence": "t1-p091-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-055",
-      "english": "Test-tube baby",
-      "polish": "Dziecko z probówki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-055-word.mp3",
-      "audioSentence": "t1-p091-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-056",
-      "english": "Adoption",
-      "polish": "Adopcja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-056-word.mp3",
-      "audioSentence": "t1-p091-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-057",
-      "english": "Kite",
-      "polish": "Latawiec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-057-word.mp3",
-      "audioSentence": "t1-p091-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-058",
-      "english": "Snowman",
-      "polish": "Bałwan",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-058-word.mp3",
-      "audioSentence": "t1-p091-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-059",
-      "english": "Toy",
-      "polish": "Zabawka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-059-word.mp3",
-      "audioSentence": "t1-p091-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-060",
-      "english": "Childhood",
-      "polish": "Dzieciństwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-060-word.mp3",
-      "audioSentence": "t1-p091-060-sentence.mp3"
     }
   ]
 }

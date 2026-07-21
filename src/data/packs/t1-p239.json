@@ -1,15 +1,15 @@
 {
   "id": "t1-p239",
-  "name": "Czasowniki 20",
+  "name": "Wykonane z czegoś",
   "volume": "Tom V",
   "level": 3,
-  "category": "Czasowniki",
-  "chapter": "Rozdział L",
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XLVIII",
   "words": [
     {
       "id": "t1-p239-001",
-      "english": "Dismiss",
-      "polish": "Odprawiać",
+      "english": "Wooden",
+      "polish": "Drewniany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p239-002",
-      "english": "Establish",
-      "polish": "Stworzyć",
+      "english": "Metal",
+      "polish": "Metalowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p239-003",
-      "english": "Exclude",
-      "polish": "Wykluczać",
+      "english": "Paper",
+      "polish": "Papierowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p239-004",
-      "english": "Explore",
-      "polish": "Zgłębiać",
+      "english": "Plastic",
+      "polish": "Plastikowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p239-005",
-      "english": "Impact",
-      "polish": "Wpływać na",
+      "english": "Silver",
+      "polish": "Srebrny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p239-006",
-      "english": "Indicate",
-      "polish": "Wskazywać",
+      "english": "Glass",
+      "polish": "Szklany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p239-007",
-      "english": "Influence",
-      "polish": "Wpływać na",
+      "english": "Golden",
+      "polish": "Złoty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p239-008",
-      "english": "Ought to",
-      "polish": "Powinien",
+      "english": "Bronze",
+      "polish": "Wykonany z brązu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p239-009",
-      "english": "Pose",
-      "polish": "Stanowić",
+      "english": "Rubber",
+      "polish": "Gumowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p239-010",
-      "english": "Shape",
-      "polish": "Kształtować",
+      "english": "Stone",
+      "polish": "Kamienny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p239-011",
-      "english": "Vary",
-      "polish": "Różnić się",
+      "english": "Metallic",
+      "polish": "Metaliczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p239-012",
-      "english": "Aim",
-      "polish": "Celować",
+      "english": "Velvet",
+      "polish": "Aksamitny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p239-013",
-      "english": "Attempt",
-      "polish": "Usiłować",
+      "english": "Cotton",
+      "polish": "Bawełniany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p239-014",
-      "english": "Face",
-      "polish": "Stawiać czoło",
+      "english": "Concrete",
+      "polish": "Betonowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-014-word.mp3",
@@ -134,12 +134,147 @@
     },
     {
       "id": "t1-p239-015",
-      "english": "Surround",
-      "polish": "Otaczać",
+      "english": "Steel",
+      "polish": "Stalowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p239-015-word.mp3",
       "audioSentence": "t1-p239-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-016",
+      "english": "Tin",
+      "polish": "Blaszany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-016-word.mp3",
+      "audioSentence": "t1-p239-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-017",
+      "english": "Amber",
+      "polish": "Bursztynowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-017-word.mp3",
+      "audioSentence": "t1-p239-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-018",
+      "english": "Earthen",
+      "polish": "Gliniany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-018-word.mp3",
+      "audioSentence": "t1-p239-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-019",
+      "english": "Granite",
+      "polish": "Granitowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-019-word.mp3",
+      "audioSentence": "t1-p239-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-020",
+      "english": "Linen",
+      "polish": "Lniany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-020-word.mp3",
+      "audioSentence": "t1-p239-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-021",
+      "english": "Marbled",
+      "polish": "Marmurowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-021-word.mp3",
+      "audioSentence": "t1-p239-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-022",
+      "english": "Copper",
+      "polish": "Miedziany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-022-word.mp3",
+      "audioSentence": "t1-p239-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-023",
+      "english": "Stainless",
+      "polish": "Nierdzewny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-023-word.mp3",
+      "audioSentence": "t1-p239-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-024",
+      "english": "Leaden",
+      "polish": "Ołowiany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-024-word.mp3",
+      "audioSentence": "t1-p239-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-025",
+      "english": "Leathern",
+      "polish": "Skórzany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-025-word.mp3",
+      "audioSentence": "t1-p239-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-026",
+      "english": "Cardboard",
+      "polish": "Tekturowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-026-word.mp3",
+      "audioSentence": "t1-p239-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-027",
+      "english": "Woolen",
+      "polish": "Wełniany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-027-word.mp3",
+      "audioSentence": "t1-p239-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-028",
+      "english": "Textile",
+      "polish": "Włókienniczy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-028-word.mp3",
+      "audioSentence": "t1-p239-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-029",
+      "english": "Ivory",
+      "polish": "Wykonany z kości słoniowej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-029-word.mp3",
+      "audioSentence": "t1-p239-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p239-030",
+      "english": "Rusty",
+      "polish": "Zardzewiały",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p239-030-word.mp3",
+      "audioSentence": "t1-p239-030-sentence.mp3"
     }
   ]
 }

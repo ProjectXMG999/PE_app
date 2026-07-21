@@ -1,15 +1,15 @@
 {
   "id": "t1-p011",
-  "name": "Czasowniki 2",
+  "name": "Biznes",
   "volume": "Tom I",
   "level": 1,
   "category": "Czasowniki",
-  "chapter": "Rozdział II",
+  "chapter": "Rozdział I",
   "words": [
     {
       "id": "t1-p011-001",
-      "english": "Believe",
-      "polish": "Wierzyć",
+      "english": "Change",
+      "polish": "Zmieniać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p011-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p011-002",
-      "english": "Check",
-      "polish": "Sprawdzać",
+      "english": "Cost",
+      "polish": "Kosztować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p011-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p011-003",
-      "english": "Decide",
-      "polish": "Decydować",
+      "english": "Earn",
+      "polish": "Zarabiać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p011-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p011-004",
-      "english": "Hope",
-      "polish": "Mieć nadzieję",
+      "english": "Buy",
+      "polish": "Kupować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p011-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p011-005",
-      "english": "Know",
-      "polish": "Wiedzieć",
+      "english": "Finish",
+      "polish": "Skończyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p011-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p011-006",
-      "english": "Like",
-      "polish": "Lubić",
+      "english": "Pay",
+      "polish": "Płacić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p011-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p011-007",
-      "english": "Love",
-      "polish": "Kochać",
+      "english": "Plan",
+      "polish": "Planować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p011-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p011-008",
-      "english": "Think",
-      "polish": "Myśleć",
+      "english": "Spend",
+      "polish": "Wydawać pieniądze",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p011-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p011-009",
-      "english": "Understand",
-      "polish": "Rozumieć",
+      "english": "Wait",
+      "polish": "Czekać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p011-009-word.mp3",
@@ -89,12 +89,3297 @@
     },
     {
       "id": "t1-p011-010",
-      "english": "Want",
-      "polish": "Chcieć",
+      "english": "Work",
+      "polish": "Pracować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p011-010-word.mp3",
       "audioSentence": "t1-p011-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-011",
+      "english": "Company",
+      "polish": "Firma",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-011-word.mp3",
+      "audioSentence": "t1-p011-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-012",
+      "english": "Client",
+      "polish": "Klient",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-012-word.mp3",
+      "audioSentence": "t1-p011-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-013",
+      "english": "Plan",
+      "polish": "Plan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-013-word.mp3",
+      "audioSentence": "t1-p011-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-014",
+      "english": "Product",
+      "polish": "Produkt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-014-word.mp3",
+      "audioSentence": "t1-p011-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-015",
+      "english": "Bill",
+      "polish": "Rachunek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-015-word.mp3",
+      "audioSentence": "t1-p011-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-016",
+      "english": "Chance",
+      "polish": "Szansa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-016-word.mp3",
+      "audioSentence": "t1-p011-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-017",
+      "english": "Deal",
+      "polish": "Umowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-017-word.mp3",
+      "audioSentence": "t1-p011-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-018",
+      "english": "Result",
+      "polish": "Rezultat",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-018-word.mp3",
+      "audioSentence": "t1-p011-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-019",
+      "english": "Sale",
+      "polish": "Wyprzedaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-019-word.mp3",
+      "audioSentence": "t1-p011-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-020",
+      "english": "Discount",
+      "polish": "Zniżka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-020-word.mp3",
+      "audioSentence": "t1-p011-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-021",
+      "english": "Book",
+      "polish": "Bukować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-021-word.mp3",
+      "audioSentence": "t1-p011-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-022",
+      "english": "Save",
+      "polish": "Zaoszczędzić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-022-word.mp3",
+      "audioSentence": "t1-p011-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-023",
+      "english": "Deal",
+      "polish": "Handlować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-023-word.mp3",
+      "audioSentence": "t1-p011-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-024",
+      "english": "Hire",
+      "polish": "Zatrudnić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-024-word.mp3",
+      "audioSentence": "t1-p011-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-025",
+      "english": "Order",
+      "polish": "Zamawiać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-025-word.mp3",
+      "audioSentence": "t1-p011-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-026",
+      "english": "Rent",
+      "polish": "Wypożyczać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-026-word.mp3",
+      "audioSentence": "t1-p011-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-027",
+      "english": "Own",
+      "polish": "Być właścicielem czegoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-027-word.mp3",
+      "audioSentence": "t1-p011-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-028",
+      "english": "Develop",
+      "polish": "Rozwijać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-028-word.mp3",
+      "audioSentence": "t1-p011-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-029",
+      "english": "Employ",
+      "polish": "Zatrudniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-029-word.mp3",
+      "audioSentence": "t1-p011-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-030",
+      "english": "Introduce",
+      "polish": "Wprowadzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-030-word.mp3",
+      "audioSentence": "t1-p011-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-031",
+      "english": "Manage",
+      "polish": "Zarządzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-031-word.mp3",
+      "audioSentence": "t1-p011-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-032",
+      "english": "Promote",
+      "polish": "Awansować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-032-word.mp3",
+      "audioSentence": "t1-p011-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-033",
+      "english": "Report",
+      "polish": "Zgłaszać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-033-word.mp3",
+      "audioSentence": "t1-p011-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-034",
+      "english": "Return",
+      "polish": "Zwracać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-034-word.mp3",
+      "audioSentence": "t1-p011-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-035",
+      "english": "Supply",
+      "polish": "Zaopatrywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-035-word.mp3",
+      "audioSentence": "t1-p011-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-036",
+      "english": "Business",
+      "polish": "Biznes",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-036-word.mp3",
+      "audioSentence": "t1-p011-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-037",
+      "english": "Businessman",
+      "polish": "Biznesmen",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-037-word.mp3",
+      "audioSentence": "t1-p011-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-038",
+      "english": "Department",
+      "polish": "Dział",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-038-word.mp3",
+      "audioSentence": "t1-p011-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-039",
+      "english": "Opening hours",
+      "polish": "Godziny otwarcia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-039-word.mp3",
+      "audioSentence": "t1-p011-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-040",
+      "english": "Economy",
+      "polish": "Gospodarka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-040-word.mp3",
+      "audioSentence": "t1-p011-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-041",
+      "english": "Logo",
+      "polish": "Logo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-041-word.mp3",
+      "audioSentence": "t1-p011-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-042",
+      "english": "Brand",
+      "polish": "Marka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-042-word.mp3",
+      "audioSentence": "t1-p011-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-043",
+      "english": "Offer",
+      "polish": "Oferta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-043-word.mp3",
+      "audioSentence": "t1-p011-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-044",
+      "english": "Organization",
+      "polish": "Organizacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-044-word.mp3",
+      "audioSentence": "t1-p011-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-045",
+      "english": "Signature",
+      "polish": "Podpis",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-045-word.mp3",
+      "audioSentence": "t1-p011-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-046",
+      "english": "Advertisement",
+      "polish": "Reklama",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-046-word.mp3",
+      "audioSentence": "t1-p011-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-047",
+      "english": "Advert",
+      "polish": "Ogłoszenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-047-word.mp3",
+      "audioSentence": "t1-p011-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-048",
+      "english": "He who doesn't risk, never gets to drink champagne!",
+      "polish": "Ryzyko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-048-word.mp3",
+      "audioSentence": "t1-p011-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-049",
+      "english": "Boss",
+      "polish": "Szef",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-049-word.mp3",
+      "audioSentence": "t1-p011-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-050",
+      "english": "Order",
+      "polish": "Zamówienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-050-word.mp3",
+      "audioSentence": "t1-p011-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-051",
+      "english": "ETA",
+      "polish": "Oczekiwany czas przyjazdu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-051-word.mp3",
+      "audioSentence": "t1-p011-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-052",
+      "english": "B two B",
+      "polish": "Biznes z biznesem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-052-word.mp3",
+      "audioSentence": "t1-p011-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-053",
+      "english": "B two C",
+      "polish": "Biznes z konsumentem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-053-word.mp3",
+      "audioSentence": "t1-p011-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-054",
+      "english": "CEO",
+      "polish": "Dyrektor generalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-054-word.mp3",
+      "audioSentence": "t1-p011-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-055",
+      "english": "CSO",
+      "polish": "Dyrektor ds. Sprzedaży",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-055-word.mp3",
+      "audioSentence": "t1-p011-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-056",
+      "english": "HR",
+      "polish": "Zasoby ludzkie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-056-word.mp3",
+      "audioSentence": "t1-p011-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-057",
+      "english": "OOO",
+      "polish": "Poza biurem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-057-word.mp3",
+      "audioSentence": "t1-p011-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-058",
+      "english": "N/A",
+      "polish": "Niedostępny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-058-word.mp3",
+      "audioSentence": "t1-p011-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-059",
+      "english": "PA",
+      "polish": "Asystent",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-059-word.mp3",
+      "audioSentence": "t1-p011-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-060",
+      "english": "PR",
+      "polish": "Relacje publiczne",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-060-word.mp3",
+      "audioSentence": "t1-p011-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-061",
+      "english": "Trade",
+      "polish": "Handlować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-061-word.mp3",
+      "audioSentence": "t1-p011-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-062",
+      "english": "Apply",
+      "polish": "Aplikować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-062-word.mp3",
+      "audioSentence": "t1-p011-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-063",
+      "english": "Expire",
+      "polish": "Wygasać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-063-word.mp3",
+      "audioSentence": "t1-p011-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-064",
+      "english": "Advertise",
+      "polish": "Reklamować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-064-word.mp3",
+      "audioSentence": "t1-p011-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-065",
+      "english": "Assign",
+      "polish": "Przydzielać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-065-word.mp3",
+      "audioSentence": "t1-p011-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-066",
+      "english": "Exchange",
+      "polish": "Wymieniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-066-word.mp3",
+      "audioSentence": "t1-p011-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-067",
+      "english": "Fire",
+      "polish": "Wylać kogoś z pracy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-067-word.mp3",
+      "audioSentence": "t1-p011-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-068",
+      "english": "Haggle",
+      "polish": "Targować się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-068-word.mp3",
+      "audioSentence": "t1-p011-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-069",
+      "english": "Insure",
+      "polish": "Ubezpieczać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-069-word.mp3",
+      "audioSentence": "t1-p011-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-070",
+      "english": "Postpone",
+      "polish": "Przekładać na późniejszy termin",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-070-word.mp3",
+      "audioSentence": "t1-p011-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-071",
+      "english": "Profit",
+      "polish": "Korzystać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-071-word.mp3",
+      "audioSentence": "t1-p011-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-072",
+      "english": "Provide",
+      "polish": "Zapewniać coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-072-word.mp3",
+      "audioSentence": "t1-p011-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-073",
+      "english": "Supervise",
+      "polish": "Nadzorować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-073-word.mp3",
+      "audioSentence": "t1-p011-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-074",
+      "english": "Award",
+      "polish": "Nagradzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-074-word.mp3",
+      "audioSentence": "t1-p011-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-075",
+      "english": "Bid",
+      "polish": "Licytować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-075-word.mp3",
+      "audioSentence": "t1-p011-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-076",
+      "english": "Insurance",
+      "polish": "Ubezpieczenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-076-word.mp3",
+      "audioSentence": "t1-p011-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-077",
+      "english": "Service",
+      "polish": "Usługa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-077-word.mp3",
+      "audioSentence": "t1-p011-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-078",
+      "english": "Control",
+      "polish": "Kontrola",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-078-word.mp3",
+      "audioSentence": "t1-p011-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-079",
+      "english": "Leader",
+      "polish": "Lider",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-079-word.mp3",
+      "audioSentence": "t1-p011-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-080",
+      "english": "Overtime",
+      "polish": "Nadgodziny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-080-word.mp3",
+      "audioSentence": "t1-p011-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-081",
+      "english": "Leadership",
+      "polish": "Przywództwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-081-word.mp3",
+      "audioSentence": "t1-p011-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-082",
+      "english": "Owner",
+      "polish": "Właściciel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-082-word.mp3",
+      "audioSentence": "t1-p011-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-083",
+      "english": "Co-owner",
+      "polish": "Współwłaściciel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-083-word.mp3",
+      "audioSentence": "t1-p011-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-084",
+      "english": "Return",
+      "polish": "Zwrot",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-084-word.mp3",
+      "audioSentence": "t1-p011-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-085",
+      "english": "Agency",
+      "polish": "Agencja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-085-word.mp3",
+      "audioSentence": "t1-p011-085-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-086",
+      "english": "Unemployment",
+      "polish": "Bezrobocie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-086-word.mp3",
+      "audioSentence": "t1-p011-086-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-087",
+      "english": "Unemployed",
+      "polish": "Bezrobotny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-087-word.mp3",
+      "audioSentence": "t1-p011-087-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-088",
+      "english": "Bureaucracy",
+      "polish": "Biurokracja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-088-word.mp3",
+      "audioSentence": "t1-p011-088-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-089",
+      "english": "Coordinator",
+      "polish": "Koordynator",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-089-word.mp3",
+      "audioSentence": "t1-p011-089-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-090",
+      "english": "Accounting",
+      "polish": "Księgowość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-090-word.mp3",
+      "audioSentence": "t1-p011-090-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-091",
+      "english": "Sell off",
+      "polish": "Wyprzedawać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-091-word.mp3",
+      "audioSentence": "t1-p011-091-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-092",
+      "english": "Send sth back",
+      "polish": "Odesłać coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-092-word.mp3",
+      "audioSentence": "t1-p011-092-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-093",
+      "english": "Be out",
+      "polish": "Zostać wydanym",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-093-word.mp3",
+      "audioSentence": "t1-p011-093-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-094",
+      "english": "Be out of sth",
+      "polish": "Nie mieć czegoś na stanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-094-word.mp3",
+      "audioSentence": "t1-p011-094-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-095",
+      "english": "Pay off",
+      "polish": "Opłacać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-095-word.mp3",
+      "audioSentence": "t1-p011-095-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-096",
+      "english": "Lay off",
+      "polish": "Zwalniać kogoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-096-word.mp3",
+      "audioSentence": "t1-p011-096-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-097",
+      "english": "Let out",
+      "polish": "Wynajmować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-097-word.mp3",
+      "audioSentence": "t1-p011-097-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-098",
+      "english": "Set up",
+      "polish": "Założyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-098-word.mp3",
+      "audioSentence": "t1-p011-098-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-099",
+      "english": "Shut down",
+      "polish": "Zamknąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-099-word.mp3",
+      "audioSentence": "t1-p011-099-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-100",
+      "english": "Close down",
+      "polish": "Zakończyć działalność",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-100-word.mp3",
+      "audioSentence": "t1-p011-100-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-101",
+      "english": "VP",
+      "polish": "Wiceprezydent",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-101-word.mp3",
+      "audioSentence": "t1-p011-101-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-102",
+      "english": "WYSIWYG",
+      "polish": "Dostajesz to, co widzisz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-102-word.mp3",
+      "audioSentence": "t1-p011-102-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-103",
+      "english": "CTA",
+      "polish": "Wezwanie do działania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-103-word.mp3",
+      "audioSentence": "t1-p011-103-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-104",
+      "english": "EOD",
+      "polish": "Koniec dnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-104-word.mp3",
+      "audioSentence": "t1-p011-104-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-105",
+      "english": "FIFO",
+      "polish": "Pierwsze wchodzi, pierwsze wychodzi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-105-word.mp3",
+      "audioSentence": "t1-p011-105-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-106",
+      "english": "ROA",
+      "polish": "Zwrot z aktywów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-106-word.mp3",
+      "audioSentence": "t1-p011-106-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-107",
+      "english": "ROI",
+      "polish": "Zwrot z inwestycji",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-107-word.mp3",
+      "audioSentence": "t1-p011-107-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-108",
+      "english": "TBD",
+      "polish": "Do rozstrzygnięcia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-108-word.mp3",
+      "audioSentence": "t1-p011-108-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-109",
+      "english": "NFS",
+      "polish": "Nie na sprzedaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-109-word.mp3",
+      "audioSentence": "t1-p011-109-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-110",
+      "english": "NTH",
+      "polish": "Fajnie mieć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-110-word.mp3",
+      "audioSentence": "t1-p011-110-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-111",
+      "english": "Real estate",
+      "polish": "Nieruchomości",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-111-word.mp3",
+      "audioSentence": "t1-p011-111-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-112",
+      "english": "Workforce",
+      "polish": "Siła robocza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-112-word.mp3",
+      "audioSentence": "t1-p011-112-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-113",
+      "english": "Arrangement",
+      "polish": "Ustalenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-113-word.mp3",
+      "audioSentence": "t1-p011-113-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-114",
+      "english": "Employment",
+      "polish": "Zatrudnienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-114-word.mp3",
+      "audioSentence": "t1-p011-114-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-115",
+      "english": "Visitation",
+      "polish": "Wizytacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-115-word.mp3",
+      "audioSentence": "t1-p011-115-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-116",
+      "english": "Return address",
+      "polish": "Adres zwrotny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-116-word.mp3",
+      "audioSentence": "t1-p011-116-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-117",
+      "english": "Marketing",
+      "polish": "Marketing",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-117-word.mp3",
+      "audioSentence": "t1-p011-117-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-118",
+      "english": "Share",
+      "polish": "Udział",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-118-word.mp3",
+      "audioSentence": "t1-p011-118-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-119",
+      "english": "Registry",
+      "polish": "Archiwum",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-119-word.mp3",
+      "audioSentence": "t1-p011-119-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-120",
+      "english": "Branch",
+      "polish": "Branża",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-120-word.mp3",
+      "audioSentence": "t1-p011-120-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-121",
+      "english": "Certificate",
+      "polish": "Certyfikat",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-121-word.mp3",
+      "audioSentence": "t1-p011-121-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-122",
+      "english": "Consulting",
+      "polish": "Doradztwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-122-word.mp3",
+      "audioSentence": "t1-p011-122-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-123",
+      "english": "Distribution",
+      "polish": "Dystrybucja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-123-word.mp3",
+      "audioSentence": "t1-p011-123-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-124",
+      "english": "E-commerce",
+      "polish": "E-biznes",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-124-word.mp3",
+      "audioSentence": "t1-p011-124-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-125",
+      "english": "Economics",
+      "polish": "Ekonomia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-125-word.mp3",
+      "audioSentence": "t1-p011-125-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-126",
+      "english": "Unemployed",
+      "polish": "Bezrobotny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-126-word.mp3",
+      "audioSentence": "t1-p011-126-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-127",
+      "english": "Experienced",
+      "polish": "Doświadczony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-127-word.mp3",
+      "audioSentence": "t1-p011-127-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-128",
+      "english": "Effective",
+      "polish": "Skuteczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-128-word.mp3",
+      "audioSentence": "t1-p011-128-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-129",
+      "english": "Professional",
+      "polish": "Zawodowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-129-word.mp3",
+      "audioSentence": "t1-p011-129-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-130",
+      "english": "Flexible",
+      "polish": "Dyspozycyjny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-130-word.mp3",
+      "audioSentence": "t1-p011-130-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-131",
+      "english": "Formal",
+      "polish": "Formalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-131-word.mp3",
+      "audioSentence": "t1-p011-131-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-132",
+      "english": "Economic",
+      "polish": "Gospodarczy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-132-word.mp3",
+      "audioSentence": "t1-p011-132-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-133",
+      "english": "Costly",
+      "polish": "Kosztowny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-133-word.mp3",
+      "audioSentence": "t1-p011-133-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-134",
+      "english": "Best-selling",
+      "polish": "Najlepiej sprzedający się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-134-word.mp3",
+      "audioSentence": "t1-p011-134-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-135",
+      "english": "Informal",
+      "polish": "Nieformalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-135-word.mp3",
+      "audioSentence": "t1-p011-135-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-136",
+      "english": "Casual",
+      "polish": "Nieformalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-136-word.mp3",
+      "audioSentence": "t1-p011-136-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-137",
+      "english": "Part-time",
+      "polish": "Niepełnoetatowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-137-word.mp3",
+      "audioSentence": "t1-p011-137-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-138",
+      "english": "Low-cost",
+      "polish": "Niskonakładowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-138-word.mp3",
+      "audioSentence": "t1-p011-138-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-139",
+      "english": "Full-service",
+      "polish": "Oferujący pełen zakres usług",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-139-word.mp3",
+      "audioSentence": "t1-p011-139-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-140",
+      "english": "Official",
+      "polish": "Oficjalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-140-word.mp3",
+      "audioSentence": "t1-p011-140-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-141",
+      "english": "Export",
+      "polish": "Eksport",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-141-word.mp3",
+      "audioSentence": "t1-p011-141-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-142",
+      "english": "Exporter",
+      "polish": "Eksporter",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-142-word.mp3",
+      "audioSentence": "t1-p011-142-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-143",
+      "english": "Fund",
+      "polish": "Fundusz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-143-word.mp3",
+      "audioSentence": "t1-p011-143-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-144",
+      "english": "Commerce",
+      "polish": "Handel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-144-word.mp3",
+      "audioSentence": "t1-p011-144-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-145",
+      "english": "Trade",
+      "polish": "Handel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-145-word.mp3",
+      "audioSentence": "t1-p011-145-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-146",
+      "english": "Import",
+      "polish": "Import",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-146-word.mp3",
+      "audioSentence": "t1-p011-146-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-147",
+      "english": "Importer",
+      "polish": "Importer",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-147-word.mp3",
+      "audioSentence": "t1-p011-147-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-148",
+      "english": "License",
+      "polish": "Koncesja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-148-word.mp3",
+      "audioSentence": "t1-p011-148-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-149",
+      "english": "Consumer",
+      "polish": "Konsument",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-149-word.mp3",
+      "audioSentence": "t1-p011-149-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-150",
+      "english": "Bargain",
+      "polish": "Korzystny zakup",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-150-word.mp3",
+      "audioSentence": "t1-p011-150-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-151",
+      "english": "Accountancy",
+      "polish": "Księgowość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-151-word.mp3",
+      "audioSentence": "t1-p011-151-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-152",
+      "english": "Margin",
+      "polish": "Margines",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-152-word.mp3",
+      "audioSentence": "t1-p011-152-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-153",
+      "english": "Monopoly",
+      "polish": "Monopol",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-153-word.mp3",
+      "audioSentence": "t1-p011-153-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-154",
+      "english": "Liability",
+      "polish": "Wierzytelność",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-154-word.mp3",
+      "audioSentence": "t1-p011-154-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-155",
+      "english": "Original",
+      "polish": "Oryginał",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-155-word.mp3",
+      "audioSentence": "t1-p011-155-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-156",
+      "english": "Direct",
+      "polish": "Kierować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-156-word.mp3",
+      "audioSentence": "t1-p011-156-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-157",
+      "english": "Dismiss",
+      "polish": "Zwolnić kogoś z pracy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-157-word.mp3",
+      "audioSentence": "t1-p011-157-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-158",
+      "english": "Grant",
+      "polish": "Przyznawać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-158-word.mp3",
+      "audioSentence": "t1-p011-158-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-159",
+      "english": "Execute",
+      "polish": "Wykonać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-159-word.mp3",
+      "audioSentence": "t1-p011-159-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-160",
+      "english": "Expand",
+      "polish": "Rozszerzać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-160-word.mp3",
+      "audioSentence": "t1-p011-160-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-161",
+      "english": "Launch",
+      "polish": "Wprowadzić na rynek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-161-word.mp3",
+      "audioSentence": "t1-p011-161-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-162",
+      "english": "Permit",
+      "polish": "Zezwolić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-162-word.mp3",
+      "audioSentence": "t1-p011-162-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-163",
+      "english": "Punch",
+      "polish": "Odbić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-163-word.mp3",
+      "audioSentence": "t1-p011-163-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-164",
+      "english": "Rate",
+      "polish": "Oceniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-164-word.mp3",
+      "audioSentence": "t1-p011-164-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-165",
+      "english": "Release",
+      "polish": "Wypuszczać na rynek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-165-word.mp3",
+      "audioSentence": "t1-p011-165-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-166",
+      "english": "Research",
+      "polish": "Prowadzić badania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-166-word.mp3",
+      "audioSentence": "t1-p011-166-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-167",
+      "english": "Certify",
+      "polish": "Poświadczać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-167-word.mp3",
+      "audioSentence": "t1-p011-167-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-168",
+      "english": "Operate",
+      "polish": "Funkcjonować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-168-word.mp3",
+      "audioSentence": "t1-p011-168-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-169",
+      "english": "Innovate",
+      "polish": "Wprowadzać innowacje",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-169-word.mp3",
+      "audioSentence": "t1-p011-169-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-170",
+      "english": "Reopen",
+      "polish": "Otworzyć ponownie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-170-word.mp3",
+      "audioSentence": "t1-p011-170-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-171",
+      "english": "Taxpayer",
+      "polish": "Podatnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-171-word.mp3",
+      "audioSentence": "t1-p011-171-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-172",
+      "english": "Supply",
+      "polish": "Podaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-172-word.mp3",
+      "audioSentence": "t1-p011-172-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-173",
+      "english": "Forecast",
+      "polish": "Prognoza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-173-word.mp3",
+      "audioSentence": "t1-p011-173-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-174",
+      "english": "Prognosis",
+      "polish": "Rokowanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-174-word.mp3",
+      "audioSentence": "t1-p011-174-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-175",
+      "english": "Enterprise",
+      "polish": "Przedsiębiorstwo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-175-word.mp3",
+      "audioSentence": "t1-p011-175-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-176",
+      "english": "Takeover",
+      "polish": "Przejęcie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-176-word.mp3",
+      "audioSentence": "t1-p011-176-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-177",
+      "english": "Recession",
+      "polish": "Recesja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-177-word.mp3",
+      "audioSentence": "t1-p011-177-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-178",
+      "english": "Registration",
+      "polish": "Rejestracja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-178-word.mp3",
+      "audioSentence": "t1-p011-178-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-179",
+      "english": "Complaint",
+      "polish": "Reklamacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-179-word.mp3",
+      "audioSentence": "t1-p011-179-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-180",
+      "english": "Reserve",
+      "polish": "Rezerwa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-180-word.mp3",
+      "audioSentence": "t1-p011-180-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-181",
+      "english": "Claim",
+      "polish": "Roszczenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-181-word.mp3",
+      "audioSentence": "t1-p011-181-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-182",
+      "english": "Inventory",
+      "polish": "Inwentaryzacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-182-word.mp3",
+      "audioSentence": "t1-p011-182-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-183",
+      "english": "Transaction",
+      "polish": "Transakcja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-183-word.mp3",
+      "audioSentence": "t1-p011-183-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-184",
+      "english": "Vice-president",
+      "polish": "Wiceprezydent",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-184-word.mp3",
+      "audioSentence": "t1-p011-184-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-185",
+      "english": "Know-how",
+      "polish": "Wiedza praktyczna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-185-word.mp3",
+      "audioSentence": "t1-p011-185-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-186",
+      "english": "Pointer",
+      "polish": "Wskazówka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-186-word.mp3",
+      "audioSentence": "t1-p011-186-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-187",
+      "english": "Indicator",
+      "polish": "Wskaźnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-187-word.mp3",
+      "audioSentence": "t1-p011-187-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-188",
+      "english": "Co-founder",
+      "polish": "Współzałożyciel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-188-word.mp3",
+      "audioSentence": "t1-p011-188-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-189",
+      "english": "Growth",
+      "polish": "Wzrost",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-189-word.mp3",
+      "audioSentence": "t1-p011-189-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-190",
+      "english": "Delivery",
+      "polish": "Dostawa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-190-word.mp3",
+      "audioSentence": "t1-p011-190-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-191",
+      "english": "Label",
+      "polish": "Etykieta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-191-word.mp3",
+      "audioSentence": "t1-p011-191-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-192",
+      "english": "Tag",
+      "polish": "Metka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-192-word.mp3",
+      "audioSentence": "t1-p011-192-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-193",
+      "english": "Invoice",
+      "polish": "Faktura",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-193-word.mp3",
+      "audioSentence": "t1-p011-193-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-194",
+      "english": "Guarantee",
+      "polish": "Gwarancja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-194-word.mp3",
+      "audioSentence": "t1-p011-194-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-195",
+      "english": "Inflation",
+      "polish": "Inflacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-195-word.mp3",
+      "audioSentence": "t1-p011-195-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-196",
+      "english": "Initiative",
+      "polish": "Inicjatywa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-196-word.mp3",
+      "audioSentence": "t1-p011-196-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-197",
+      "english": "Investor",
+      "polish": "Inwestor",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-197-word.mp3",
+      "audioSentence": "t1-p011-197-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-198",
+      "english": "Investment",
+      "polish": "Inwestycja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-198-word.mp3",
+      "audioSentence": "t1-p011-198-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-199",
+      "english": "Cash register",
+      "polish": "Kasa fiskalna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-199-word.mp3",
+      "audioSentence": "t1-p011-199-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-200",
+      "english": "Catalog",
+      "polish": "Katalog",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-200-word.mp3",
+      "audioSentence": "t1-p011-200-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-201",
+      "english": "Corporation",
+      "polish": "Korporacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-201-word.mp3",
+      "audioSentence": "t1-p011-201-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-202",
+      "english": "Warehouse",
+      "polish": "Magazyn",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-202-word.mp3",
+      "audioSentence": "t1-p011-202-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-203",
+      "english": "Assessment",
+      "polish": "Ocena",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-203-word.mp3",
+      "audioSentence": "t1-p011-203-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-204",
+      "english": "Receipt",
+      "polish": "Paragon",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-204-word.mp3",
+      "audioSentence": "t1-p011-204-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-205",
+      "english": "Fake",
+      "polish": "Podróbka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-205-word.mp3",
+      "audioSentence": "t1-p011-205-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-206",
+      "english": "Demand",
+      "polish": "Popyt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-206-word.mp3",
+      "audioSentence": "t1-p011-206-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-207",
+      "english": "Permission",
+      "polish": "Pozwolenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-207-word.mp3",
+      "audioSentence": "t1-p011-207-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-208",
+      "english": "Copyright",
+      "polish": "Prawo autorskie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-208-word.mp3",
+      "audioSentence": "t1-p011-208-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-209",
+      "english": "Priority",
+      "polish": "Priorytet",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-209-word.mp3",
+      "audioSentence": "t1-p011-209-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-210",
+      "english": "Protocol",
+      "polish": "Protokół",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-210-word.mp3",
+      "audioSentence": "t1-p011-210-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-211",
+      "english": "Partnership",
+      "polish": "Spółka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-211-word.mp3",
+      "audioSentence": "t1-p011-211-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-212",
+      "english": "Sales",
+      "polish": "Sprzedaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-212-word.mp3",
+      "audioSentence": "t1-p011-212-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-213",
+      "english": "Start-up",
+      "polish": "Start-up",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-213-word.mp3",
+      "audioSentence": "t1-p011-213-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-214",
+      "english": "Sponsorship",
+      "polish": "Sponsoring",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-214-word.mp3",
+      "audioSentence": "t1-p011-214-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-215",
+      "english": "Sponsor",
+      "polish": "Sponsor",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-215-word.mp3",
+      "audioSentence": "t1-p011-215-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-216",
+      "english": "Full-time",
+      "polish": "Pełnoetatowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-216-word.mp3",
+      "audioSentence": "t1-p011-216-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-217",
+      "english": "Senior",
+      "polish": "Starszy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-217-word.mp3",
+      "audioSentence": "t1-p011-217-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-218",
+      "english": "Brand-new",
+      "polish": "Prosto z półki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-218-word.mp3",
+      "audioSentence": "t1-p011-218-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-219",
+      "english": "Valuable",
+      "polish": "Wartościowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-219-word.mp3",
+      "audioSentence": "t1-p011-219-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-220",
+      "english": "Own",
+      "polish": "Własny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-220-word.mp3",
+      "audioSentence": "t1-p011-220-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-221",
+      "english": "Skilled",
+      "polish": "Posiadający umiejętności",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-221-word.mp3",
+      "audioSentence": "t1-p011-221-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-222",
+      "english": "Certified",
+      "polish": "Certyfikowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-222-word.mp3",
+      "audioSentence": "t1-p011-222-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-223",
+      "english": "Pricey",
+      "polish": "Drogi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-223-word.mp3",
+      "audioSentence": "t1-p011-223-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-224",
+      "english": "Economical",
+      "polish": "Ekonomiczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-224-word.mp3",
+      "audioSentence": "t1-p011-224-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-225",
+      "english": "Commercial",
+      "polish": "Komercyjny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-225-word.mp3",
+      "audioSentence": "t1-p011-225-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-226",
+      "english": "Large-scale",
+      "polish": "Na dużą skalę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-226-word.mp3",
+      "audioSentence": "t1-p011-226-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-227",
+      "english": "Inefficient",
+      "polish": "Niewydajny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-227-word.mp3",
+      "audioSentence": "t1-p011-227-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-228",
+      "english": "Self-employed",
+      "polish": "Samozatrudniony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-228-word.mp3",
+      "audioSentence": "t1-p011-228-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-229",
+      "english": "Tax-free",
+      "polish": "Wolny od podatku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-229-word.mp3",
+      "audioSentence": "t1-p011-229-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-230",
+      "english": "Efficient",
+      "polish": "Wydajny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-230-word.mp3",
+      "audioSentence": "t1-p011-230-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-231",
+      "english": "Forecast",
+      "polish": "Prognozować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-231-word.mp3",
+      "audioSentence": "t1-p011-231-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-232",
+      "english": "Hustle",
+      "polish": "Pospieszać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-232-word.mp3",
+      "audioSentence": "t1-p011-232-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-233",
+      "english": "Issue",
+      "polish": "Wydawać oświadczenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-233-word.mp3",
+      "audioSentence": "t1-p011-233-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-234",
+      "english": "Lease",
+      "polish": "Dzierżawić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-234-word.mp3",
+      "audioSentence": "t1-p011-234-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-235",
+      "english": "Retail",
+      "polish": "Sprzedawać detalicznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-235-word.mp3",
+      "audioSentence": "t1-p011-235-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-236",
+      "english": "Surpass",
+      "polish": "Przekraczać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-236-word.mp3",
+      "audioSentence": "t1-p011-236-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-237",
+      "english": "Amend",
+      "polish": "Wnieść poprawki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-237-word.mp3",
+      "audioSentence": "t1-p011-237-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-238",
+      "english": "Appoint",
+      "polish": "Powołać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-238-word.mp3",
+      "audioSentence": "t1-p011-238-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-239",
+      "english": "Assess",
+      "polish": "Ustalać na podstawie szacunków",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-239-word.mp3",
+      "audioSentence": "t1-p011-239-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-240",
+      "english": "Enroll",
+      "polish": "Zapisać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-240-word.mp3",
+      "audioSentence": "t1-p011-240-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-241",
+      "english": "Preside",
+      "polish": "Przewodniczyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-241-word.mp3",
+      "audioSentence": "t1-p011-241-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-242",
+      "english": "Reclaim",
+      "polish": "Żądać zwrotu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-242-word.mp3",
+      "audioSentence": "t1-p011-242-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-243",
+      "english": "Validate",
+      "polish": "Uprawomocniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-243-word.mp3",
+      "audioSentence": "t1-p011-243-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-244",
+      "english": "Possess",
+      "polish": "Posiadać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-244-word.mp3",
+      "audioSentence": "t1-p011-244-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-245",
+      "english": "Lease",
+      "polish": "Dzierżawić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-245-word.mp3",
+      "audioSentence": "t1-p011-245-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-246",
+      "english": "Trade show",
+      "polish": "Targi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-246-word.mp3",
+      "audioSentence": "t1-p011-246-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-247",
+      "english": "Commodity",
+      "polish": "Towar",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-247-word.mp3",
+      "audioSentence": "t1-p011-247-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-248",
+      "english": "Trademark",
+      "polish": "Znak firmowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-248-word.mp3",
+      "audioSentence": "t1-p011-248-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-249",
+      "english": "Franchise",
+      "polish": "Franczyza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-249-word.mp3",
+      "audioSentence": "t1-p011-249-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-250",
+      "english": "Mortgage",
+      "polish": "Hipoteka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-250-word.mp3",
+      "audioSentence": "t1-p011-250-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-251",
+      "english": "Confirmation",
+      "polish": "Potwierdzenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-251-word.mp3",
+      "audioSentence": "t1-p011-251-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-252",
+      "english": "Speculation",
+      "polish": "Rozważanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-252-word.mp3",
+      "audioSentence": "t1-p011-252-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-253",
+      "english": "Headquarters",
+      "polish": "Siedziba",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-253-word.mp3",
+      "audioSentence": "t1-p011-253-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-254",
+      "english": "Complaint",
+      "polish": "Skarga",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-254-word.mp3",
+      "audioSentence": "t1-p011-254-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-255",
+      "english": "Chart",
+      "polish": "Wykres",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-255-word.mp3",
+      "audioSentence": "t1-p011-255-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-256",
+      "english": "Founder",
+      "polish": "Założyciel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-256-word.mp3",
+      "audioSentence": "t1-p011-256-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-257",
+      "english": "Management",
+      "polish": "Zarządzanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-257-word.mp3",
+      "audioSentence": "t1-p011-257-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-258",
+      "english": "Provider",
+      "polish": "Dostarczyciel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-258-word.mp3",
+      "audioSentence": "t1-p011-258-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-259",
+      "english": "Networking",
+      "polish": "Nawiązywanie kontaktów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-259-word.mp3",
+      "audioSentence": "t1-p011-259-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-260",
+      "english": "Assets",
+      "polish": "Aktywa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-260-word.mp3",
+      "audioSentence": "t1-p011-260-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-261",
+      "english": "Take on",
+      "polish": "Zatrudnić kogoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-261-word.mp3",
+      "audioSentence": "t1-p011-261-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-262",
+      "english": "Buy up",
+      "polish": "Kupować w dużych ilościach",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-262-word.mp3",
+      "audioSentence": "t1-p011-262-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-263",
+      "english": "Cash in on sth",
+      "polish": "Zyskać na czymś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-263-word.mp3",
+      "audioSentence": "t1-p011-263-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-264",
+      "english": "Put sth up",
+      "polish": "Wystawiać coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-264-word.mp3",
+      "audioSentence": "t1-p011-264-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-265",
+      "english": "Turn sth down",
+      "polish": "Odrzucać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-265-word.mp3",
+      "audioSentence": "t1-p011-265-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-266",
+      "english": "Bring sb in",
+      "polish": "Sprowadzić kogoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-266-word.mp3",
+      "audioSentence": "t1-p011-266-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-267",
+      "english": "Come in",
+      "polish": "Być produkowanym w określonej formie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-267-word.mp3",
+      "audioSentence": "t1-p011-267-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-268",
+      "english": "Come into sth",
+      "polish": "Odziedziczyć coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-268-word.mp3",
+      "audioSentence": "t1-p011-268-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-269",
+      "english": "Take up",
+      "polish": "Zajmować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-269-word.mp3",
+      "audioSentence": "t1-p011-269-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-270",
+      "english": "Trade sth in",
+      "polish": "Oddać coś w rozliczeniu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-270-word.mp3",
+      "audioSentence": "t1-p011-270-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-271",
+      "english": "Unprofitable",
+      "polish": "Nierentowny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-271-word.mp3",
+      "audioSentence": "t1-p011-271-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-272",
+      "english": "Earned",
+      "polish": "Zasłużony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-272-word.mp3",
+      "audioSentence": "t1-p011-272-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-273",
+      "english": "Gross",
+      "polish": "Brutto",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-273-word.mp3",
+      "audioSentence": "t1-p011-273-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-274",
+      "english": "Profitable",
+      "polish": "Dochodowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-274-word.mp3",
+      "audioSentence": "t1-p011-274-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-275",
+      "english": "Head",
+      "polish": "Kierowniczy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-275-word.mp3",
+      "audioSentence": "t1-p011-275-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-276",
+      "english": "On-site",
+      "polish": "Dostępny na miejscu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-276-word.mp3",
+      "audioSentence": "t1-p011-276-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-277",
+      "english": "Subsidiary",
+      "polish": "Podległy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-277-word.mp3",
+      "audioSentence": "t1-p011-277-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-278",
+      "english": "Non-stationary",
+      "polish": "Niestacjonarny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-278-word.mp3",
+      "audioSentence": "t1-p011-278-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-279",
+      "english": "Trial",
+      "polish": "Próbny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-279-word.mp3",
+      "audioSentence": "t1-p011-279-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-280",
+      "english": "Blank",
+      "polish": "Pusty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-280-word.mp3",
+      "audioSentence": "t1-p011-280-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-281",
+      "english": "Stationary",
+      "polish": "Stacjonarny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-281-word.mp3",
+      "audioSentence": "t1-p011-281-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-282",
+      "english": "Fixed",
+      "polish": "Ustalony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-282-word.mp3",
+      "audioSentence": "t1-p011-282-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-283",
+      "english": "White-collar",
+      "polish": "Biurowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-283-word.mp3",
+      "audioSentence": "t1-p011-283-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-284",
+      "english": "Hard-earned",
+      "polish": "Ciężko zarobiony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-284-word.mp3",
+      "audioSentence": "t1-p011-284-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-285",
+      "english": "Well-off",
+      "polish": "Dobrze sytuowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-285-word.mp3",
+      "audioSentence": "t1-p011-285-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-286",
+      "english": "Company",
+      "polish": "Firma",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-286-word.mp3",
+      "audioSentence": "t1-p011-286-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-287",
+      "english": "Client",
+      "polish": "Klient",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-287-word.mp3",
+      "audioSentence": "t1-p011-287-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-288",
+      "english": "Plan",
+      "polish": "Plan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-288-word.mp3",
+      "audioSentence": "t1-p011-288-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-289",
+      "english": "Product",
+      "polish": "Produkt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-289-word.mp3",
+      "audioSentence": "t1-p011-289-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-290",
+      "english": "Bill",
+      "polish": "Rachunek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-290-word.mp3",
+      "audioSentence": "t1-p011-290-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-291",
+      "english": "Chance",
+      "polish": "Szansa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-291-word.mp3",
+      "audioSentence": "t1-p011-291-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-292",
+      "english": "Deal",
+      "polish": "Umowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-292-word.mp3",
+      "audioSentence": "t1-p011-292-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-293",
+      "english": "Result",
+      "polish": "Rezultat",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-293-word.mp3",
+      "audioSentence": "t1-p011-293-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-294",
+      "english": "Sale",
+      "polish": "Wyprzedaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-294-word.mp3",
+      "audioSentence": "t1-p011-294-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-295",
+      "english": "Discount",
+      "polish": "Zniżka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-295-word.mp3",
+      "audioSentence": "t1-p011-295-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-296",
+      "english": "End",
+      "polish": "Kończyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-296-word.mp3",
+      "audioSentence": "t1-p011-296-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-297",
+      "english": "Happen",
+      "polish": "Wydarzać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-297-word.mp3",
+      "audioSentence": "t1-p011-297-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-298",
+      "english": "Mean",
+      "polish": "Znaczyć coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-298-word.mp3",
+      "audioSentence": "t1-p011-298-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-299",
+      "english": "Must",
+      "polish": "Musieć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-299-word.mp3",
+      "audioSentence": "t1-p011-299-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-300",
+      "english": "Offer",
+      "polish": "Oferować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-300-word.mp3",
+      "audioSentence": "t1-p011-300-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-301",
+      "english": "Stock",
+      "polish": "Akcja na giełdzie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-301-word.mp3",
+      "audioSentence": "t1-p011-301-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-302",
+      "english": "Omnichannel marketing",
+      "polish": "Marketing wielokanałowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-302-word.mp3",
+      "audioSentence": "t1-p011-302-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-303",
+      "english": "Supervisory board member",
+      "polish": "Członek rady nadzorczej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-303-word.mp3",
+      "audioSentence": "t1-p011-303-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-304",
+      "english": "Dividend",
+      "polish": "Dywidenda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-304-word.mp3",
+      "audioSentence": "t1-p011-304-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-305",
+      "english": "Leasing",
+      "polish": "Dzierżawa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-305-word.mp3",
+      "audioSentence": "t1-p011-305-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-306",
+      "english": "Leverage",
+      "polish": "Dźwignia finansowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-306-word.mp3",
+      "audioSentence": "t1-p011-306-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-307",
+      "english": "Establishment",
+      "polish": "Ustanowienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-307-word.mp3",
+      "audioSentence": "t1-p011-307-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-308",
+      "english": "Boom",
+      "polish": "Hossa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-308-word.mp3",
+      "audioSentence": "t1-p011-308-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-309",
+      "english": "Shutdown",
+      "polish": "Likwidacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-309-word.mp3",
+      "audioSentence": "t1-p011-309-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-310",
+      "english": "Lobby",
+      "polish": "Lobby",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-310-word.mp3",
+      "audioSentence": "t1-p011-310-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-311",
+      "english": "Profit margin",
+      "polish": "Marża zysku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-311-word.mp3",
+      "audioSentence": "t1-p011-311-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-312",
+      "english": "Downtime",
+      "polish": "Okres przestoju",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-312-word.mp3",
+      "audioSentence": "t1-p011-312-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-313",
+      "english": "Subsidiary",
+      "polish": "Pomocnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-313-word.mp3",
+      "audioSentence": "t1-p011-313-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-314",
+      "english": "Submission",
+      "polish": "Przedłożenie dokumentów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-314-word.mp3",
+      "audioSentence": "t1-p011-314-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-315",
+      "english": "Undertaking",
+      "polish": "Przedsięwzięcie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-315-word.mp3",
+      "audioSentence": "t1-p011-315-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-316",
+      "english": "Enclosed",
+      "polish": "Dołączony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-316-word.mp3",
+      "audioSentence": "t1-p011-316-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-317",
+      "english": "Door-to-door",
+      "polish": "Domokrążny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-317-word.mp3",
+      "audioSentence": "t1-p011-317-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-318",
+      "english": "Wholesale",
+      "polish": "Hurtowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-318-word.mp3",
+      "audioSentence": "t1-p011-318-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-319",
+      "english": "Competitive",
+      "polish": "Konkurencyjny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-319-word.mp3",
+      "audioSentence": "t1-p011-319-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-320",
+      "english": "Counterproductive",
+      "polish": "Dający odwrotny skutek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-320-word.mp3",
+      "audioSentence": "t1-p011-320-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-321",
+      "english": "Full-scale",
+      "polish": "Na szeroką skalę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-321-word.mp3",
+      "audioSentence": "t1-p011-321-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-322",
+      "english": "Non-profit",
+      "polish": "Nie dla zysku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-322-word.mp3",
+      "audioSentence": "t1-p011-322-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-323",
+      "english": "Middle-income",
+      "polish": "O średnich dochodach",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-323-word.mp3",
+      "audioSentence": "t1-p011-323-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-324",
+      "english": "Prepaid",
+      "polish": "Opłacony z góry",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-324-word.mp3",
+      "audioSentence": "t1-p011-324-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-325",
+      "english": "Confidential",
+      "polish": "Poufny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-325-word.mp3",
+      "audioSentence": "t1-p011-325-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-326",
+      "english": "Thriving",
+      "polish": "Prężnie rozwijający się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-326-word.mp3",
+      "audioSentence": "t1-p011-326-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-327",
+      "english": "Superior",
+      "polish": "Przełożony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-327-word.mp3",
+      "audioSentence": "t1-p011-327-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-328",
+      "english": "Assigned",
+      "polish": "Przypisany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-328-word.mp3",
+      "audioSentence": "t1-p011-328-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-329",
+      "english": "Well-to-do",
+      "polish": "Dobrze sobie radzący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-329-word.mp3",
+      "audioSentence": "t1-p011-329-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-330",
+      "english": "Working-class",
+      "polish": "Robotniczy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-330-word.mp3",
+      "audioSentence": "t1-p011-330-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-331",
+      "english": "Actively",
+      "polish": "Aktywnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-331-word.mp3",
+      "audioSentence": "t1-p011-331-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-332",
+      "english": "Automatically",
+      "polish": "Automatycznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-332-word.mp3",
+      "audioSentence": "t1-p011-332-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-333",
+      "english": "Legally",
+      "polish": "Legalnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-333-word.mp3",
+      "audioSentence": "t1-p011-333-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-334",
+      "english": "Officially",
+      "polish": "Oficjalnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-334-word.mp3",
+      "audioSentence": "t1-p011-334-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-335",
+      "english": "Physically",
+      "polish": "Fizycznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-335-word.mp3",
+      "audioSentence": "t1-p011-335-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-336",
+      "english": "Privately",
+      "polish": "Prywatnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-336-word.mp3",
+      "audioSentence": "t1-p011-336-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-337",
+      "english": "Professionally",
+      "polish": "Profesjonalnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-337-word.mp3",
+      "audioSentence": "t1-p011-337-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-338",
+      "english": "Publicly",
+      "polish": "Publicznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-338-word.mp3",
+      "audioSentence": "t1-p011-338-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-339",
+      "english": "Efficiently",
+      "polish": "Wydajnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-339-word.mp3",
+      "audioSentence": "t1-p011-339-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-340",
+      "english": "Industrially",
+      "polish": "Przemysłowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-340-word.mp3",
+      "audioSentence": "t1-p011-340-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-341",
+      "english": "Business-wise",
+      "polish": "Biznesowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-341-word.mp3",
+      "audioSentence": "t1-p011-341-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-342",
+      "english": "Domestically",
+      "polish": "Krajowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-342-word.mp3",
+      "audioSentence": "t1-p011-342-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-343",
+      "english": "Diligently",
+      "polish": "Pracowicie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-343-word.mp3",
+      "audioSentence": "t1-p011-343-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-344",
+      "english": "Resourcefully",
+      "polish": "Przedsiębiorczo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-344-word.mp3",
+      "audioSentence": "t1-p011-344-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-345",
+      "english": "Competitively",
+      "polish": "Konkurencyjnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-345-word.mp3",
+      "audioSentence": "t1-p011-345-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-346",
+      "english": "Unemployment rate",
+      "polish": "Stopa bezrobocia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-346-word.mp3",
+      "audioSentence": "t1-p011-346-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-347",
+      "english": "Shipment",
+      "polish": "Wysyłka towaru",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-347-word.mp3",
+      "audioSentence": "t1-p011-347-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-348",
+      "english": "Sustainability",
+      "polish": "Zrównoważony rozwój",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-348-word.mp3",
+      "audioSentence": "t1-p011-348-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-349",
+      "english": "Social insurance institution",
+      "polish": "Zus",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-349-word.mp3",
+      "audioSentence": "t1-p011-349-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-350",
+      "english": "Trade union",
+      "polish": "Związek zawodowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-350-word.mp3",
+      "audioSentence": "t1-p011-350-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-351",
+      "english": "Return on investment",
+      "polish": "Zwrot z inwestycji",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-351-word.mp3",
+      "audioSentence": "t1-p011-351-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-352",
+      "english": "Formality",
+      "polish": "Formalność",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-352-word.mp3",
+      "audioSentence": "t1-p011-352-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-353",
+      "english": "Deficit",
+      "polish": "Deficyt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-353-word.mp3",
+      "audioSentence": "t1-p011-353-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-354",
+      "english": "Acquisition",
+      "polish": "Nabycie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-354-word.mp3",
+      "audioSentence": "t1-p011-354-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-355",
+      "english": "Shareholder",
+      "polish": "Udziałowiec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-355-word.mp3",
+      "audioSentence": "t1-p011-355-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-356",
+      "english": "Stakeholder",
+      "polish": "Interesariusz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-356-word.mp3",
+      "audioSentence": "t1-p011-356-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-357",
+      "english": "Shutdown",
+      "polish": "Likwidacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-357-word.mp3",
+      "audioSentence": "t1-p011-357-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-358",
+      "english": "Complaint",
+      "polish": "Skarga",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-358-word.mp3",
+      "audioSentence": "t1-p011-358-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-359",
+      "english": "Demand",
+      "polish": "Popyt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-359-word.mp3",
+      "audioSentence": "t1-p011-359-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-360",
+      "english": "Label",
+      "polish": "Etykieta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-360-word.mp3",
+      "audioSentence": "t1-p011-360-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-361",
+      "english": "Fast-growing",
+      "polish": "Szybko wzrastający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-361-word.mp3",
+      "audioSentence": "t1-p011-361-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-362",
+      "english": "Authorized",
+      "polish": "Upoważniony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-362-word.mp3",
+      "audioSentence": "t1-p011-362-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-363",
+      "english": "Out-of-service",
+      "polish": "Niedziałający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-363-word.mp3",
+      "audioSentence": "t1-p011-363-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-364",
+      "english": "Viable",
+      "polish": "Wykonalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-364-word.mp3",
+      "audioSentence": "t1-p011-364-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-365",
+      "english": "High-profile",
+      "polish": "Wysokiej rangi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-365-word.mp3",
+      "audioSentence": "t1-p011-365-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-366",
+      "english": "Top-notch",
+      "polish": "Najwyższej klasy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-366-word.mp3",
+      "audioSentence": "t1-p011-366-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-367",
+      "english": "Top-shelf",
+      "polish": "Z górnej półki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-367-word.mp3",
+      "audioSentence": "t1-p011-367-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-368",
+      "english": "Upfront",
+      "polish": "Z góry",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-368-word.mp3",
+      "audioSentence": "t1-p011-368-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-369",
+      "english": "Liable",
+      "polish": "Zobowiązany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-369-word.mp3",
+      "audioSentence": "t1-p011-369-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-370",
+      "english": "Sustainable",
+      "polish": "Zrównoważony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-370-word.mp3",
+      "audioSentence": "t1-p011-370-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-371",
+      "english": "Third-party",
+      "polish": "Związany z osobami trzecimi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-371-word.mp3",
+      "audioSentence": "t1-p011-371-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-372",
+      "english": "Defunct",
+      "polish": "Zlikwidowana",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-372-word.mp3",
+      "audioSentence": "t1-p011-372-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-373",
+      "english": "Persuasive",
+      "polish": "Przekonujący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-373-word.mp3",
+      "audioSentence": "t1-p011-373-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-374",
+      "english": "Superior",
+      "polish": "Przełożony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-374-word.mp3",
+      "audioSentence": "t1-p011-374-sentence.mp3"
+    },
+    {
+      "id": "t1-p011-375",
+      "english": "Blank",
+      "polish": "Pusty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p011-375-word.mp3",
+      "audioSentence": "t1-p011-375-sentence.mp3"
     }
   ]
 }

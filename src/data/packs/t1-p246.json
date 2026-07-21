@@ -1,15 +1,15 @@
 {
   "id": "t1-p246",
-  "name": "Slang 23",
-  "volume": "Tom VI",
-  "level": 4,
-  "category": "Slang",
-  "chapter": "Rozdział LIII",
+  "name": "Przymiotniki 23",
+  "volume": "Tom V",
+  "level": 3,
+  "category": "Przymiotniki",
+  "chapter": "Rozdział L",
   "words": [
     {
       "id": "t1-p246-001",
-      "english": "On point",
-      "polish": "W punkt",
+      "english": "Premium",
+      "polish": "Premium",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p246-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p246-002",
-      "english": "Snap out of it",
-      "polish": "Obudź się",
+      "english": "Regional",
+      "polish": "Regionalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p246-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p246-003",
-      "english": "Give me a holler",
-      "polish": "Daj mi znaka",
+      "english": "Sexual",
+      "polish": "Seksualny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p246-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p246-004",
-      "english": "Hit me up",
-      "polish": "Odezwij się",
+      "english": "Standard",
+      "polish": "Standardowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p246-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p246-005",
-      "english": "How's hanging",
-      "polish": "Jak leci",
+      "english": "Tragic",
+      "polish": "Tragiczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p246-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p246-006",
-      "english": "Whatever floats your boat",
-      "polish": "Jak tam chcesz",
+      "english": "Vegetarian",
+      "polish": "Wegetariański",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p246-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p246-007",
-      "english": "Bible",
-      "polish": "Nie kłamię",
+      "english": "Organized",
+      "polish": "Zorganizowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p246-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p246-008",
-      "english": "New york minute",
-      "polish": "Chwila",
+      "english": "Final",
+      "polish": "Finalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p246-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p246-009",
-      "english": "All square",
-      "polish": "Po równo",
+      "english": "Limited",
+      "polish": "Limitowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p246-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p246-010",
-      "english": "Elephant in the room",
-      "polish": "Główny problem w debacie",
+      "english": "Practical",
+      "polish": "Praktyczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p246-010-word.mp3",
       "audioSentence": "t1-p246-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p246-011",
+      "english": "Frustrating",
+      "polish": "Frustrujący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p246-011-word.mp3",
+      "audioSentence": "t1-p246-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p246-012",
+      "english": "Characteristic",
+      "polish": "Charakterystyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p246-012-word.mp3",
+      "audioSentence": "t1-p246-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p246-013",
+      "english": "Musical",
+      "polish": "Muzyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p246-013-word.mp3",
+      "audioSentence": "t1-p246-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p246-014",
+      "english": "Motivational",
+      "polish": "Motywacyjny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p246-014-word.mp3",
+      "audioSentence": "t1-p246-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p246-015",
+      "english": "Absurd",
+      "polish": "Absurdalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p246-015-word.mp3",
+      "audioSentence": "t1-p246-015-sentence.mp3"
     }
   ]
 }

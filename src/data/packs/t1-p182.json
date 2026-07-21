@@ -1,15 +1,15 @@
 {
   "id": "t1-p182",
-  "name": "Rośliny I ogród",
+  "name": "Slang 17",
   "volume": "Tom IV",
   "level": 3,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XXXIII",
+  "category": "Slang",
+  "chapter": "Rozdział XXXII",
   "words": [
     {
       "id": "t1-p182-001",
-      "english": "Fence",
-      "polish": "Płot",
+      "english": "Quid",
+      "polish": "Funty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p182-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p182-002",
-      "english": "Backyard",
-      "polish": "Ogródek",
+      "english": "Blow money",
+      "polish": "Wywalać hajs",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p182-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p182-003",
-      "english": "Lawn",
-      "polish": "Trawnik",
+      "english": "Dime",
+      "polish": "Dziesięciocentówka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p182-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p182-004",
-      "english": "Bucket",
-      "polish": "Wiadro",
+      "english": "Fast money",
+      "polish": "Szybki szmal",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p182-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p182-005",
-      "english": "Watering can",
-      "polish": "Konewka",
+      "english": "Filthy rich",
+      "polish": "Bogaty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p182-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p182-006",
-      "english": "Cactus",
-      "polish": "Kaktus",
+      "english": "Flat broke",
+      "polish": "Totalnie spłukany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p182-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p182-007",
-      "english": "Lily",
-      "polish": "Lilia",
+      "english": "Gee",
+      "polish": "Patol",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p182-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p182-008",
-      "english": "Gardening",
-      "polish": "Ogrodnictwo",
+      "english": "Jackpot",
+      "polish": "Czysty zysk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p182-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p182-009",
-      "english": "Seed",
-      "polish": "Pestka",
+      "english": "Scratch",
+      "polish": "Forsa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p182-009-word.mp3",
@@ -89,327 +89,12 @@
     },
     {
       "id": "t1-p182-010",
-      "english": "Sunflower",
-      "polish": "Słonecznik",
+      "english": "Broke",
+      "polish": "Spłukany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p182-010-word.mp3",
       "audioSentence": "t1-p182-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-011",
-      "english": "Herb",
-      "polish": "Zioło",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-011-word.mp3",
-      "audioSentence": "t1-p182-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-012",
-      "english": "Bush",
-      "polish": "Krzew",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-012-word.mp3",
-      "audioSentence": "t1-p182-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-013",
-      "english": "Lawn mower",
-      "polish": "Kosiarka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-013-word.mp3",
-      "audioSentence": "t1-p182-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-014",
-      "english": "Pond",
-      "polish": "Staw",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-014-word.mp3",
-      "audioSentence": "t1-p182-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-015",
-      "english": "Daisy",
-      "polish": "Stokrotka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-015-word.mp3",
-      "audioSentence": "t1-p182-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-016",
-      "english": "Sandbox",
-      "polish": "Piaskownica",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-016-word.mp3",
-      "audioSentence": "t1-p182-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-017",
-      "english": "Hammock",
-      "polish": "Hamak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-017-word.mp3",
-      "audioSentence": "t1-p182-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-018",
-      "english": "Bunch",
-      "polish": "Bukiet",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-018-word.mp3",
-      "audioSentence": "t1-p182-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-019",
-      "english": "Clover",
-      "polish": "Koniczyna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-019-word.mp3",
-      "audioSentence": "t1-p182-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-020",
-      "english": "Poppy-seed",
-      "polish": "Mak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-020-word.mp3",
-      "audioSentence": "t1-p182-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-021",
-      "english": "Camomile",
-      "polish": "Rumianek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-021-word.mp3",
-      "audioSentence": "t1-p182-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-022",
-      "english": "Tulip",
-      "polish": "Tulipan",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-022-word.mp3",
-      "audioSentence": "t1-p182-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-023",
-      "english": "Weed",
-      "polish": "Chwast",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-023-word.mp3",
-      "audioSentence": "t1-p182-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-024",
-      "english": "Thorn",
-      "polish": "Cierń",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-024-word.mp3",
-      "audioSentence": "t1-p182-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-025",
-      "english": "Stalk",
-      "polish": "Łodyga",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-025-word.mp3",
-      "audioSentence": "t1-p182-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-026",
-      "english": "Garden shears",
-      "polish": "Sekator",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-026-word.mp3",
-      "audioSentence": "t1-p182-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-027",
-      "english": "Hose",
-      "polish": "Wąż ogrodowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-027-word.mp3",
-      "audioSentence": "t1-p182-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-028",
-      "english": "Lilac",
-      "polish": "Bez",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-028-word.mp3",
-      "audioSentence": "t1-p182-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-029",
-      "english": "Pansy",
-      "polish": "Bratek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-029-word.mp3",
-      "audioSentence": "t1-p182-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-030",
-      "english": "Violet",
-      "polish": "Fiołek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-030-word.mp3",
-      "audioSentence": "t1-p182-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-031",
-      "english": "Carnation",
-      "polish": "Goździk",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-031-word.mp3",
-      "audioSentence": "t1-p182-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-032",
-      "english": "Rake",
-      "polish": "Grabie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-032-word.mp3",
-      "audioSentence": "t1-p182-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-033",
-      "english": "Lily of the valley",
-      "polish": "Konwalia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-033-word.mp3",
-      "audioSentence": "t1-p182-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-034",
-      "english": "Shovel",
-      "polish": "Łopata",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-034-word.mp3",
-      "audioSentence": "t1-p182-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-035",
-      "english": "Fertilizer",
-      "polish": "Nawóz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-035-word.mp3",
-      "audioSentence": "t1-p182-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-036",
-      "english": "Forget-me-not",
-      "polish": "Niezapominajka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-036-word.mp3",
-      "audioSentence": "t1-p182-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-037",
-      "english": "Orchid",
-      "polish": "Orchidea",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-037-word.mp3",
-      "audioSentence": "t1-p182-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-038",
-      "english": "Acacia",
-      "polish": "Akacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-038-word.mp3",
-      "audioSentence": "t1-p182-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-039",
-      "english": "Hedge",
-      "polish": "Żywopłot",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-039-word.mp3",
-      "audioSentence": "t1-p182-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-040",
-      "english": "Wheelbarrow",
-      "polish": "Taczka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-040-word.mp3",
-      "audioSentence": "t1-p182-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-041",
-      "english": "Flowerbed",
-      "polish": "Klomb",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-041-word.mp3",
-      "audioSentence": "t1-p182-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-042",
-      "english": "Arbor",
-      "polish": "Pergola",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-042-word.mp3",
-      "audioSentence": "t1-p182-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-043",
-      "english": "Landscaping",
-      "polish": "Projektowanie krajobrazu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-043-word.mp3",
-      "audioSentence": "t1-p182-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-044",
-      "english": "Floriculture",
-      "polish": "Kwiaciarstwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-044-word.mp3",
-      "audioSentence": "t1-p182-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p182-045",
-      "english": "Gazebo",
-      "polish": "Altanka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p182-045-word.mp3",
-      "audioSentence": "t1-p182-045-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p289",
-  "name": "Slang 32",
+  "name": "Wymaga wysiłku",
   "volume": "Tom VIII",
   "level": 4,
-  "category": "Slang",
-  "chapter": "Rozdział LXXII",
+  "category": "Czasowniki",
+  "chapter": "Rozdział LXXI",
   "words": [
     {
       "id": "t1-p289-001",
-      "english": "Receipts",
-      "polish": "Dowody",
+      "english": "Dig",
+      "polish": "Kopać w czymś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p289-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p289-002",
-      "english": "Skrt",
-      "polish": "Stój, prrr",
+      "english": "Load",
+      "polish": "Ładować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p289-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p289-003",
-      "english": "Bogart",
-      "polish": "Skitrać coś dla siebie",
+      "english": "Lift",
+      "polish": "Podnieść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p289-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p289-004",
-      "english": "Code 9",
-      "polish": "Rodzice w pobliżu",
+      "english": "Raise",
+      "polish": "Podnieść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p289-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p289-005",
-      "english": "Fo' rizzle",
-      "polish": "Na serio",
+      "english": "Heave",
+      "polish": "Dźwigać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p289-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p289-006",
-      "english": "Here is the tea",
-      "polish": "Nadchodzą plotki",
+      "english": "Haul",
+      "polish": "Wlec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p289-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p289-007",
-      "english": "High key",
-      "polish": "Niezaprzeczalna prawda",
+      "english": "Chop",
+      "polish": "Rąbać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p289-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p289-008",
-      "english": "Plead the fifth",
-      "polish": "Odmówić składania zeznań",
+      "english": "Jam",
+      "polish": "Upchać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p289-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p289-009",
-      "english": "Knuckle up",
-      "polish": "Zapnij pasy",
+      "english": "Roll",
+      "polish": "Toczyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p289-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p289-010",
-      "english": "Let's blow this popsicle stand",
-      "polish": "Spadajmy stąd",
+      "english": "Struggle",
+      "polish": "Zmagać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p289-010-word.mp3",
       "audioSentence": "t1-p289-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p289-011",
+      "english": "Thrust",
+      "polish": "Wciskać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p289-011-word.mp3",
+      "audioSentence": "t1-p289-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p289-012",
+      "english": "Wrestle",
+      "polish": "Mocować się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p289-012-word.mp3",
+      "audioSentence": "t1-p289-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p289-013",
+      "english": "Cram",
+      "polish": "Upychać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p289-013-word.mp3",
+      "audioSentence": "t1-p289-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p289-014",
+      "english": "Drag",
+      "polish": "Wlec po ziemi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p289-014-word.mp3",
+      "audioSentence": "t1-p289-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p289-015",
+      "english": "Tighten",
+      "polish": "Zacieśniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p289-015-word.mp3",
+      "audioSentence": "t1-p289-015-sentence.mp3"
     }
   ]
 }

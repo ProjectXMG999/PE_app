@@ -1,15 +1,15 @@
 {
   "id": "t1-p138",
-  "name": "Przysłówki 2",
+  "name": "Człowiek jest piękny",
   "volume": "Tom II",
   "level": 2,
-  "category": "Przysłówki",
+  "category": "Slang",
   "chapter": "Rozdział XX",
   "words": [
     {
       "id": "t1-p138-001",
-      "english": "Anymore",
-      "polish": "Już",
+      "english": "Goddess",
+      "polish": "Bogini",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p138-002",
-      "english": "About",
-      "polish": "O",
+      "english": "Head turner",
+      "polish": "Ktoś, kto przyciąga wzrok",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p138-003",
-      "english": "Almost",
-      "polish": "Prawie",
+      "english": "Looker",
+      "polish": "Pięknisia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p138-004",
-      "english": "Also",
-      "polish": "Także",
+      "english": "Adorable",
+      "polish": "Urocza",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p138-005",
-      "english": "Apart",
-      "polish": "Osobno",
+      "english": "Appealing",
+      "polish": "Atrakcyjna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p138-006",
-      "english": "Actually",
-      "polish": "Właściwie",
+      "english": "Breathtaking",
+      "polish": "Zapierający dech w piersiach",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p138-007",
-      "english": "Probably",
-      "polish": "Prawdopodobnie",
+      "english": "Delightful",
+      "polish": "Rozkoszny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p138-008",
-      "english": "Especially",
-      "polish": "Szczególnie",
+      "english": "Divine",
+      "polish": "Boska",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p138-009",
-      "english": "Only",
-      "polish": "Zaledwie, właśnie",
+      "english": "Dreamy",
+      "polish": "Jak ze snu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p138-010",
-      "english": "Only",
-      "polish": "Tylko",
+      "english": "Eye-candy",
+      "polish": "Uczta dla oczu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p138-011",
-      "english": "Possibly",
-      "polish": "Możliwie",
+      "english": "Fabulous",
+      "polish": "Bajeczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p138-012",
-      "english": "Further",
-      "polish": "Dalej",
+      "english": "Fly",
+      "polish": "Odlotowa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p138-013",
-      "english": "Nearly",
-      "polish": "Prawie",
+      "english": "Glamorous",
+      "polish": "Przepiękna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p138-014",
-      "english": "Normally",
-      "polish": "Normalnie",
+      "english": "Heart-stopping",
+      "polish": "Trafia w serce",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-014-word.mp3",
@@ -134,12 +134,237 @@
     },
     {
       "id": "t1-p138-015",
-      "english": "At least",
-      "polish": "Przynajmniej",
+      "english": "Hypnotic",
+      "polish": "Hipnotyczna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p138-015-word.mp3",
       "audioSentence": "t1-p138-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-016",
+      "english": "Irresistible",
+      "polish": "Nie można się oprzeć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-016-word.mp3",
+      "audioSentence": "t1-p138-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-017",
+      "english": "Magnetic",
+      "polish": "Przyciągająca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-017-word.mp3",
+      "audioSentence": "t1-p138-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-018",
+      "english": "Seductive",
+      "polish": "Uwodzicielska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-018-word.mp3",
+      "audioSentence": "t1-p138-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-019",
+      "english": "Smoking hot",
+      "polish": "Gorąca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-019-word.mp3",
+      "audioSentence": "t1-p138-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-020",
+      "english": "Stunning",
+      "polish": "Odbierająca mowę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-020-word.mp3",
+      "audioSentence": "t1-p138-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-021",
+      "english": "Alluring",
+      "polish": "Kusząca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-021-word.mp3",
+      "audioSentence": "t1-p138-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-022",
+      "english": "Angelic",
+      "polish": "Anielska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-022-word.mp3",
+      "audioSentence": "t1-p138-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-023",
+      "english": "Banging",
+      "polish": "Superancka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-023-word.mp3",
+      "audioSentence": "t1-p138-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-024",
+      "english": "Eye-catching",
+      "polish": "Przykuwa wzrok",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-024-word.mp3",
+      "audioSentence": "t1-p138-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-025",
+      "english": "Foxy",
+      "polish": "Laseczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-025-word.mp3",
+      "audioSentence": "t1-p138-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-026",
+      "english": "Graceful",
+      "polish": "Pełna gracji",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-026-word.mp3",
+      "audioSentence": "t1-p138-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-027",
+      "english": "Mesmerizing",
+      "polish": "Hipnotyzująca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-027-word.mp3",
+      "audioSentence": "t1-p138-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-028",
+      "english": "Phenomenal",
+      "polish": "Zjawiskowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-028-word.mp3",
+      "audioSentence": "t1-p138-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-029",
+      "english": "Sensuous",
+      "polish": "Zmysłowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-029-word.mp3",
+      "audioSentence": "t1-p138-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-030",
+      "english": "Striking beauty",
+      "polish": "Uderzające piękno",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-030-word.mp3",
+      "audioSentence": "t1-p138-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-031",
+      "english": "Aesthetically pleasing",
+      "polish": "Estetyczna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-031-word.mp3",
+      "audioSentence": "t1-p138-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-032",
+      "english": "Beguiling",
+      "polish": "Nęcąca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-032-word.mp3",
+      "audioSentence": "t1-p138-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-033",
+      "english": "Bewitching",
+      "polish": "Urzekająca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-033-word.mp3",
+      "audioSentence": "t1-p138-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-034",
+      "english": "Captivating",
+      "polish": "Zniewalająca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-034-word.mp3",
+      "audioSentence": "t1-p138-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-035",
+      "english": "Comely",
+      "polish": "Nadobna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-035-word.mp3",
+      "audioSentence": "t1-p138-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-036",
+      "english": "Enchanting",
+      "polish": "Czarująca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-036-word.mp3",
+      "audioSentence": "t1-p138-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-037",
+      "english": "Petticoat",
+      "polish": "Białogłowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-037-word.mp3",
+      "audioSentence": "t1-p138-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-038",
+      "english": "Disarming",
+      "polish": "Rozbrajająca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-038-word.mp3",
+      "audioSentence": "t1-p138-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-039",
+      "english": "Riveting",
+      "polish": "Porywająca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-039-word.mp3",
+      "audioSentence": "t1-p138-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p138-040",
+      "english": "Winsome",
+      "polish": "Ujmujący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p138-040-word.mp3",
+      "audioSentence": "t1-p138-040-sentence.mp3"
     }
   ]
 }

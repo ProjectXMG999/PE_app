@@ -1,15 +1,15 @@
 {
   "id": "t1-p227",
-  "name": "Dodanie kolejnej myśli",
+  "name": "Woda wszędzie",
   "volume": "Tom V",
   "level": 3,
-  "category": "Spójniki",
-  "chapter": "Rozdział XLV",
+  "category": "Czasowniki",
+  "chapter": "Rozdział XLIV",
   "words": [
     {
       "id": "t1-p227-001",
-      "english": "Kind of",
-      "polish": "Poniekąd",
+      "english": "Bathe",
+      "polish": "Kąpać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p227-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p227-002",
-      "english": "Sort of",
-      "polish": "Niejako",
+      "english": "Rain",
+      "polish": "Padać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p227-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p227-003",
-      "english": "What's more",
-      "polish": "Co więcej",
+      "english": "Dribble",
+      "polish": "Skapywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p227-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p227-004",
-      "english": "As well as",
-      "polish": "Jak również",
+      "english": "Drizzle",
+      "polish": "Mżyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p227-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p227-005",
-      "english": "In addition",
-      "polish": "W dodatku",
+      "english": "Evaporate",
+      "polish": "Wyparować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p227-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p227-006",
-      "english": "Furthermore",
-      "polish": "Co więcej",
+      "english": "Freeze",
+      "polish": "Zamrażać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p227-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p227-007",
-      "english": "Importantly",
-      "polish": "Co ważne",
+      "english": "Leak",
+      "polish": "Przeciekać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p227-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p227-008",
-      "english": "Moreover",
-      "polish": "Ponadto",
+      "english": "Spill",
+      "polish": "Rozlewać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p227-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p227-009",
-      "english": "On top of that",
-      "polish": "Na dodatek",
+      "english": "Spout",
+      "polish": "Chlustać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p227-009-word.mp3",
@@ -89,12 +89,192 @@
     },
     {
       "id": "t1-p227-010",
-      "english": "Then",
-      "polish": "Potem",
+      "english": "Water",
+      "polish": "Podlewać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p227-010-word.mp3",
       "audioSentence": "t1-p227-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-011",
+      "english": "Flow",
+      "polish": "Płynąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-011-word.mp3",
+      "audioSentence": "t1-p227-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-012",
+      "english": "Flush",
+      "polish": "Spłukać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-012-word.mp3",
+      "audioSentence": "t1-p227-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-013",
+      "english": "Pump",
+      "polish": "Pompować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-013-word.mp3",
+      "audioSentence": "t1-p227-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-014",
+      "english": "Splash",
+      "polish": "Chlapać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-014-word.mp3",
+      "audioSentence": "t1-p227-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-015",
+      "english": "Wet",
+      "polish": "Moczyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-015-word.mp3",
+      "audioSentence": "t1-p227-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-016",
+      "english": "Rinse",
+      "polish": "Przemywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-016-word.mp3",
+      "audioSentence": "t1-p227-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-017",
+      "english": "Spurt",
+      "polish": "Wytryskać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-017-word.mp3",
+      "audioSentence": "t1-p227-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-018",
+      "english": "Squirt",
+      "polish": "Tryskać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-018-word.mp3",
+      "audioSentence": "t1-p227-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-019",
+      "english": "Submerge",
+      "polish": "Zanurzyć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-019-word.mp3",
+      "audioSentence": "t1-p227-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-020",
+      "english": "Drain",
+      "polish": "Odsączać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-020-word.mp3",
+      "audioSentence": "t1-p227-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-021",
+      "english": "Drench",
+      "polish": "Namoczyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-021-word.mp3",
+      "audioSentence": "t1-p227-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-022",
+      "english": "Drip",
+      "polish": "Kapać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-022-word.mp3",
+      "audioSentence": "t1-p227-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-023",
+      "english": "Float",
+      "polish": "Unosić się na wodzie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-023-word.mp3",
+      "audioSentence": "t1-p227-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-024",
+      "english": "Inflate",
+      "polish": "Wypełniać powietrzem lub gazem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-024-word.mp3",
+      "audioSentence": "t1-p227-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-025",
+      "english": "Moisten",
+      "polish": "Nawilżać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-025-word.mp3",
+      "audioSentence": "t1-p227-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-026",
+      "english": "Shower",
+      "polish": "Brać prysznic",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-026-word.mp3",
+      "audioSentence": "t1-p227-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-027",
+      "english": "Shower",
+      "polish": "Padać przelotnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-027-word.mp3",
+      "audioSentence": "t1-p227-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-028",
+      "english": "Soak",
+      "polish": "Przemoczyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-028-word.mp3",
+      "audioSentence": "t1-p227-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-029",
+      "english": "Plunge",
+      "polish": "Wpaść do wody",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-029-word.mp3",
+      "audioSentence": "t1-p227-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p227-030",
+      "english": "Seep",
+      "polish": "Przeciekać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p227-030-word.mp3",
+      "audioSentence": "t1-p227-030-sentence.mp3"
     }
   ]
 }

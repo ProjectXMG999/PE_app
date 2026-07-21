@@ -82,6 +82,15 @@
   },
   {
     "id": "t1-p010",
+    "name": "Wulgaryzmy 1",
+    "volume": "Tom I",
+    "level": 1,
+    "category": "Wulgaryzmy",
+    "wordCount": 10,
+    "chapter": "Rozdział X"
+  },
+  {
+    "id": "t1-p011",
     "name": "Biznes",
     "volume": "Tom I",
     "level": 1,
@@ -90,7 +99,16 @@
     "chapter": "Rozdział I"
   },
   {
-    "id": "t1-p011",
+    "id": "t1-p012",
+    "name": "Wulgaryzmy 2",
+    "volume": "Tom I",
+    "level": 1,
+    "category": "Wulgaryzmy",
+    "wordCount": 10,
+    "chapter": "Rozdział X"
+  },
+  {
+    "id": "t1-p013",
     "name": "Czasowniki 2",
     "volume": "Tom I",
     "level": 1,
@@ -99,7 +117,16 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p012",
+    "id": "t1-p014",
+    "name": "Wulgaryzmy 3",
+    "volume": "Tom I",
+    "level": 1,
+    "category": "Wulgaryzmy",
+    "wordCount": 10,
+    "chapter": "Rozdział X"
+  },
+  {
+    "id": "t1-p015",
     "name": "Slang 1",
     "volume": "Tom I",
     "level": 1,
@@ -108,7 +135,7 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p013",
+    "id": "t1-p016",
     "name": "Slang 2",
     "volume": "Tom I",
     "level": 1,
@@ -117,7 +144,7 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p014",
+    "id": "t1-p017",
     "name": "Każdy to robi",
     "volume": "Tom I",
     "level": 1,
@@ -126,7 +153,7 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p015",
+    "id": "t1-p018",
     "name": "Romantyczne",
     "volume": "Tom I",
     "level": 1,
@@ -135,7 +162,7 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p016",
+    "id": "t1-p019",
     "name": "Komunikacja",
     "volume": "Tom I",
     "level": 1,
@@ -144,7 +171,7 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p017",
+    "id": "t1-p020",
     "name": "Od świtu do zmierzchu",
     "volume": "Tom I",
     "level": 1,
@@ -153,7 +180,7 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p018",
+    "id": "t1-p021",
     "name": "Przymiotniki 1",
     "volume": "Tom I",
     "level": 1,
@@ -162,7 +189,7 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p019",
+    "id": "t1-p022",
     "name": "Czasowniki 3",
     "volume": "Tom I",
     "level": 1,
@@ -171,7 +198,7 @@
     "chapter": "Rozdział II"
   },
   {
-    "id": "t1-p020",
+    "id": "t1-p023",
     "name": "Człowiek",
     "volume": "Tom I",
     "level": 1,
@@ -180,7 +207,7 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p021",
+    "id": "t1-p024",
     "name": "W skali 1-10",
     "volume": "Tom I",
     "level": 1,
@@ -189,7 +216,7 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p022",
+    "id": "t1-p025",
     "name": "Rodzina",
     "volume": "Tom I",
     "level": 1,
@@ -198,7 +225,7 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p023",
+    "id": "t1-p026",
     "name": "Slang 3",
     "volume": "Tom I",
     "level": 1,
@@ -207,7 +234,7 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p024",
+    "id": "t1-p027",
     "name": "Dom",
     "volume": "Tom I",
     "level": 1,
@@ -216,7 +243,7 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p025",
+    "id": "t1-p028",
     "name": "Miary",
     "volume": "Tom I",
     "level": 1,
@@ -225,7 +252,7 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p026",
+    "id": "t1-p029",
     "name": "Jedzenie",
     "volume": "Tom I",
     "level": 1,
@@ -234,7 +261,7 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p027",
+    "id": "t1-p030",
     "name": "Czas to pieniądz",
     "volume": "Tom I",
     "level": 1,
@@ -243,7 +270,7 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p028",
+    "id": "t1-p031",
     "name": "Transport",
     "volume": "Tom I",
     "level": 1,
@@ -252,7 +279,7 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p029",
+    "id": "t1-p032",
     "name": "Części ciała",
     "volume": "Tom I",
     "level": 1,
@@ -261,7 +288,7 @@
     "chapter": "Rozdział III"
   },
   {
-    "id": "t1-p030",
+    "id": "t1-p033",
     "name": "Nie przestawaj liczyć!",
     "volume": "Tom I",
     "level": 1,
@@ -270,7 +297,7 @@
     "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p031",
+    "id": "t1-p034",
     "name": "Higiena I wygląd",
     "volume": "Tom I",
     "level": 1,
@@ -279,7 +306,7 @@
     "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p032",
+    "id": "t1-p035",
     "name": "Kalendarz I czas",
     "volume": "Tom I",
     "level": 1,
@@ -288,7 +315,7 @@
     "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p033",
+    "id": "t1-p036",
     "name": "Pogoda",
     "volume": "Tom I",
     "level": 1,
@@ -297,7 +324,7 @@
     "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p034",
+    "id": "t1-p037",
     "name": "Zwierzęta",
     "volume": "Tom I",
     "level": 1,
@@ -306,7 +333,7 @@
     "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p035",
+    "id": "t1-p038",
     "name": "Slang 4",
     "volume": "Tom I",
     "level": 1,
@@ -315,7 +342,7 @@
     "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p036",
+    "id": "t1-p039",
     "name": "Przymiotniki 2",
     "volume": "Tom I",
     "level": 1,
@@ -324,7 +351,7 @@
     "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p037",
+    "id": "t1-p040",
     "name": "Warzywa I owoce",
     "volume": "Tom I",
     "level": 1,
@@ -333,7 +360,7 @@
     "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p038",
+    "id": "t1-p041",
     "name": "Finanse",
     "volume": "Tom I",
     "level": 1,
@@ -342,7 +369,7 @@
     "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p039",
+    "id": "t1-p042",
     "name": "Mali, lecz ważni",
     "volume": "Tom I",
     "level": 1,
@@ -351,7 +378,7 @@
     "chapter": "Rozdział IV"
   },
   {
-    "id": "t1-p040",
+    "id": "t1-p043",
     "name": "Sprzęt elektroniczny",
     "volume": "Tom I",
     "level": 1,
@@ -360,7 +387,7 @@
     "chapter": "Rozdział V"
   },
   {
-    "id": "t1-p041",
+    "id": "t1-p044",
     "name": "Przymiotniki 3",
     "volume": "Tom I",
     "level": 1,
@@ -369,7 +396,7 @@
     "chapter": "Rozdział V"
   },
   {
-    "id": "t1-p042",
+    "id": "t1-p045",
     "name": "Szkoła",
     "volume": "Tom I",
     "level": 1,
@@ -378,7 +405,7 @@
     "chapter": "Rozdział V"
   },
   {
-    "id": "t1-p043",
+    "id": "t1-p046",
     "name": "Wyższa matematyka",
     "volume": "Tom I",
     "level": 1,
@@ -387,7 +414,7 @@
     "chapter": "Rozdział V"
   },
   {
-    "id": "t1-p044",
+    "id": "t1-p047",
     "name": "Czasowniki 4",
     "volume": "Tom I",
     "level": 1,
@@ -396,7 +423,7 @@
     "chapter": "Rozdział V"
   },
   {
-    "id": "t1-p045",
+    "id": "t1-p048",
     "name": "Rzeczowniki 1",
     "volume": "Tom I",
     "level": 1,
@@ -405,7 +432,7 @@
     "chapter": "Rozdział V"
   },
   {
-    "id": "t1-p046",
+    "id": "t1-p049",
     "name": "Rzeczowniki 2",
     "volume": "Tom I",
     "level": 1,
@@ -414,7 +441,7 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p047",
+    "id": "t1-p050",
     "name": "Rzeczowniki 3",
     "volume": "Tom I",
     "level": 1,
@@ -423,7 +450,7 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p048",
+    "id": "t1-p051",
     "name": "Kolory",
     "volume": "Tom I",
     "level": 1,
@@ -432,7 +459,7 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p049",
+    "id": "t1-p052",
     "name": "Rzeczowniki 4",
     "volume": "Tom I",
     "level": 1,
@@ -441,7 +468,7 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p050",
+    "id": "t1-p053",
     "name": "Media",
     "volume": "Tom I",
     "level": 1,
@@ -450,7 +477,7 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p051",
+    "id": "t1-p054",
     "name": "Kto jest kto",
     "volume": "Tom I",
     "level": 1,
@@ -459,7 +486,7 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p052",
+    "id": "t1-p055",
     "name": "Kuchnia",
     "volume": "Tom I",
     "level": 1,
@@ -468,7 +495,7 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p053",
+    "id": "t1-p056",
     "name": "Czas",
     "volume": "Tom I",
     "level": 1,
@@ -477,7 +504,7 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p054",
+    "id": "t1-p057",
     "name": "Na koncie",
     "volume": "Tom I",
     "level": 1,
@@ -486,7 +513,7 @@
     "chapter": "Rozdział VI"
   },
   {
-    "id": "t1-p055",
+    "id": "t1-p058",
     "name": "Języki (I nie tylko)",
     "volume": "Tom I",
     "level": 1,
@@ -495,7 +522,7 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p056",
+    "id": "t1-p059",
     "name": "Czas I miary",
     "volume": "Tom I",
     "level": 1,
@@ -504,7 +531,7 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p057",
+    "id": "t1-p060",
     "name": "Geografia",
     "volume": "Tom I",
     "level": 1,
@@ -513,7 +540,7 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p058",
+    "id": "t1-p061",
     "name": "Kto? Co?",
     "volume": "Tom I",
     "level": 1,
@@ -522,7 +549,7 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p059",
+    "id": "t1-p062",
     "name": "Rzeczowniki 5",
     "volume": "Tom I",
     "level": 1,
@@ -531,7 +558,7 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p060",
+    "id": "t1-p063",
     "name": "Kto pyta, nie błądzi",
     "volume": "Tom I",
     "level": 1,
@@ -540,7 +567,7 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p061",
+    "id": "t1-p064",
     "name": "Dolegliwości",
     "volume": "Tom I",
     "level": 1,
@@ -549,7 +576,7 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p062",
+    "id": "t1-p065",
     "name": "Mentalne",
     "volume": "Tom I",
     "level": 1,
@@ -558,7 +585,7 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p063",
+    "id": "t1-p066",
     "name": "Czasowniki 5",
     "volume": "Tom I",
     "level": 1,
@@ -567,7 +594,7 @@
     "chapter": "Rozdział VII"
   },
   {
-    "id": "t1-p064",
+    "id": "t1-p067",
     "name": "Sukces",
     "volume": "Tom I",
     "level": 1,
@@ -576,7 +603,7 @@
     "chapter": "Rozdział VIII"
   },
   {
-    "id": "t1-p065",
+    "id": "t1-p068",
     "name": "Czasowniki 6",
     "volume": "Tom I",
     "level": 1,
@@ -585,7 +612,7 @@
     "chapter": "Rozdział VIII"
   },
   {
-    "id": "t1-p066",
+    "id": "t1-p069",
     "name": "Komu? Czemu?",
     "volume": "Tom I",
     "level": 1,
@@ -594,7 +621,7 @@
     "chapter": "Rozdział VIII"
   },
   {
-    "id": "t1-p067",
+    "id": "t1-p070",
     "name": "Przymiotniki 4",
     "volume": "Tom I",
     "level": 1,
@@ -603,7 +630,7 @@
     "chapter": "Rozdział VIII"
   },
   {
-    "id": "t1-p068",
+    "id": "t1-p071",
     "name": "Przysłówki 1",
     "volume": "Tom I",
     "level": 1,
@@ -612,7 +639,7 @@
     "chapter": "Rozdział VIII"
   },
   {
-    "id": "t1-p069",
+    "id": "t1-p072",
     "name": "Ciągle w ruchu",
     "volume": "Tom I",
     "level": 1,
@@ -621,7 +648,7 @@
     "chapter": "Rozdział IX"
   },
   {
-    "id": "t1-p070",
+    "id": "t1-p073",
     "name": "Zostań w świecie skrótów",
     "volume": "Tom I",
     "level": 1,
@@ -630,7 +657,7 @@
     "chapter": "Rozdział IX"
   },
   {
-    "id": "t1-p071",
+    "id": "t1-p074",
     "name": "Kraje",
     "volume": "Tom I",
     "level": 1,
@@ -639,7 +666,7 @@
     "chapter": "Rozdział IX"
   },
   {
-    "id": "t1-p072",
+    "id": "t1-p075",
     "name": "Kierunek I miejsce",
     "volume": "Tom I",
     "level": 1,
@@ -648,7 +675,7 @@
     "chapter": "Rozdział IX"
   },
   {
-    "id": "t1-p073",
+    "id": "t1-p076",
     "name": "Czasowniki 7",
     "volume": "Tom I",
     "level": 1,
@@ -657,7 +684,7 @@
     "chapter": "Rozdział IX"
   },
   {
-    "id": "t1-p074",
+    "id": "t1-p077",
     "name": "Przymiotniki 5",
     "volume": "Tom I",
     "level": 1,
@@ -666,7 +693,7 @@
     "chapter": "Rozdział IX"
   },
   {
-    "id": "t1-p075",
+    "id": "t1-p078",
     "name": "Człowiekiem jestem",
     "volume": "Tom I",
     "level": 1,
@@ -675,7 +702,7 @@
     "chapter": "Rozdział X"
   },
   {
-    "id": "t1-p076",
+    "id": "t1-p079",
     "name": "Przymiotniki 6",
     "volume": "Tom I",
     "level": 1,
@@ -684,7 +711,7 @@
     "chapter": "Rozdział X"
   },
   {
-    "id": "t1-p077",
+    "id": "t1-p080",
     "name": "Kultura",
     "volume": "Tom I",
     "level": 1,
@@ -693,7 +720,7 @@
     "chapter": "Rozdział X"
   },
   {
-    "id": "t1-p078",
+    "id": "t1-p081",
     "name": "Emocje I uczucia",
     "volume": "Tom I",
     "level": 1,
@@ -702,7 +729,7 @@
     "chapter": "Rozdział X"
   },
   {
-    "id": "t1-p079",
+    "id": "t1-p082",
     "name": "Ręką",
     "volume": "Tom I",
     "level": 1,
@@ -711,7 +738,7 @@
     "chapter": "Rozdział X"
   },
   {
-    "id": "t1-p080",
+    "id": "t1-p083",
     "name": "Życie",
     "volume": "Tom I",
     "level": 1,
@@ -720,16 +747,7 @@
     "chapter": "Rozdział X"
   },
   {
-    "id": "t1-p081",
-    "name": "Atak klonów",
-    "volume": "Tom I",
-    "level": 1,
-    "category": "Klony",
-    "wordCount": 10,
-    "chapter": "Rozdział X"
-  },
-  {
-    "id": "t1-p082",
+    "id": "t1-p084",
     "name": "Biznes zaczyna się w głowie",
     "volume": "Tom II",
     "level": 1,
@@ -738,7 +756,7 @@
     "chapter": "Rozdział XI"
   },
   {
-    "id": "t1-p083",
+    "id": "t1-p085",
     "name": "Języki",
     "volume": "Tom II",
     "level": 1,
@@ -747,7 +765,7 @@
     "chapter": "Rozdział XI"
   },
   {
-    "id": "t1-p084",
+    "id": "t1-p086",
     "name": "Zawody",
     "volume": "Tom II",
     "level": 1,
@@ -756,7 +774,7 @@
     "chapter": "Rozdział XI"
   },
   {
-    "id": "t1-p085",
+    "id": "t1-p087",
     "name": "Rzeczowniki 6",
     "volume": "Tom II",
     "level": 1,
@@ -765,7 +783,7 @@
     "chapter": "Rozdział XI"
   },
   {
-    "id": "t1-p086",
+    "id": "t1-p088",
     "name": "Działania",
     "volume": "Tom II",
     "level": 2,
@@ -774,7 +792,7 @@
     "chapter": "Rozdział XI"
   },
   {
-    "id": "t1-p087",
+    "id": "t1-p089",
     "name": "Słodziak",
     "volume": "Tom II",
     "level": 2,
@@ -783,7 +801,7 @@
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p088",
+    "id": "t1-p090",
     "name": "Slang 5",
     "volume": "Tom II",
     "level": 2,
@@ -792,7 +810,7 @@
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p089",
+    "id": "t1-p091",
     "name": "Czasowniki 8",
     "volume": "Tom II",
     "level": 2,
@@ -801,7 +819,7 @@
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p090",
+    "id": "t1-p092",
     "name": "Slang 6",
     "volume": "Tom II",
     "level": 2,
@@ -810,7 +828,7 @@
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p091",
+    "id": "t1-p093",
     "name": "Dziecko",
     "volume": "Tom II",
     "level": 2,
@@ -819,7 +837,7 @@
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p092",
+    "id": "t1-p094",
     "name": "Unikać",
     "volume": "Tom II",
     "level": 2,
@@ -828,7 +846,7 @@
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p093",
+    "id": "t1-p095",
     "name": "Czasu mamy mało",
     "volume": "Tom II",
     "level": 2,
@@ -837,7 +855,7 @@
     "chapter": "Rozdział XII"
   },
   {
-    "id": "t1-p094",
+    "id": "t1-p096",
     "name": "Slang 7",
     "volume": "Tom II",
     "level": 2,
@@ -846,7 +864,7 @@
     "chapter": "Rozdział XIII"
   },
   {
-    "id": "t1-p095",
+    "id": "t1-p097",
     "name": "Czasowniki 9",
     "volume": "Tom II",
     "level": 2,
@@ -855,7 +873,7 @@
     "chapter": "Rozdział XIII"
   },
   {
-    "id": "t1-p096",
+    "id": "t1-p098",
     "name": "Niefajne",
     "volume": "Tom II",
     "level": 2,
@@ -864,7 +882,7 @@
     "chapter": "Rozdział XIII"
   },
   {
-    "id": "t1-p097",
+    "id": "t1-p099",
     "name": "Przymiotniki 7",
     "volume": "Tom II",
     "level": 2,
@@ -873,7 +891,7 @@
     "chapter": "Rozdział XIII"
   },
   {
-    "id": "t1-p098",
+    "id": "t1-p100",
     "name": "Popularne",
     "volume": "Tom II",
     "level": 2,
@@ -882,7 +900,7 @@
     "chapter": "Rozdział XIII"
   },
   {
-    "id": "t1-p099",
+    "id": "t1-p101",
     "name": "Który na mecie",
     "volume": "Tom II",
     "level": 2,
@@ -891,7 +909,7 @@
     "chapter": "Rozdział XIV"
   },
   {
-    "id": "t1-p100",
+    "id": "t1-p102",
     "name": "Slang 8",
     "volume": "Tom II",
     "level": 2,
@@ -900,7 +918,7 @@
     "chapter": "Rozdział XIV"
   },
   {
-    "id": "t1-p101",
+    "id": "t1-p103",
     "name": "Slang 9",
     "volume": "Tom II",
     "level": 2,
@@ -909,7 +927,7 @@
     "chapter": "Rozdział XIV"
   },
   {
-    "id": "t1-p102",
+    "id": "t1-p104",
     "name": "Umysłowe",
     "volume": "Tom II",
     "level": 2,
@@ -918,7 +936,7 @@
     "chapter": "Rozdział XIV"
   },
   {
-    "id": "t1-p103",
+    "id": "t1-p105",
     "name": "Slang 10",
     "volume": "Tom II",
     "level": 2,
@@ -927,7 +945,7 @@
     "chapter": "Rozdział XIV"
   },
   {
-    "id": "t1-p104",
+    "id": "t1-p106",
     "name": "Czas I kolejność",
     "volume": "Tom II",
     "level": 2,
@@ -936,7 +954,7 @@
     "chapter": "Rozdział XIV"
   },
   {
-    "id": "t1-p105",
+    "id": "t1-p107",
     "name": "Świat cyfrowy",
     "volume": "Tom II",
     "level": 2,
@@ -945,7 +963,7 @@
     "chapter": "Rozdział XV"
   },
   {
-    "id": "t1-p106",
+    "id": "t1-p108",
     "name": "Czasowniki 10",
     "volume": "Tom II",
     "level": 2,
@@ -954,7 +972,7 @@
     "chapter": "Rozdział XV"
   },
   {
-    "id": "t1-p107",
+    "id": "t1-p109",
     "name": "Wszystko, co najlepsze",
     "volume": "Tom II",
     "level": 2,
@@ -963,7 +981,7 @@
     "chapter": "Rozdział XV"
   },
   {
-    "id": "t1-p108",
+    "id": "t1-p110",
     "name": "Miejsce",
     "volume": "Tom II",
     "level": 2,
@@ -972,7 +990,7 @@
     "chapter": "Rozdział XV"
   },
   {
-    "id": "t1-p109",
+    "id": "t1-p111",
     "name": "Przymiotniki 8",
     "volume": "Tom II",
     "level": 2,
@@ -981,7 +999,7 @@
     "chapter": "Rozdział XVI"
   },
   {
-    "id": "t1-p110",
+    "id": "t1-p112",
     "name": "Spójniki 1",
     "volume": "Tom II",
     "level": 2,
@@ -990,7 +1008,7 @@
     "chapter": "Rozdział XVI"
   },
   {
-    "id": "t1-p111",
+    "id": "t1-p113",
     "name": "Elfy",
     "volume": "Tom II",
     "level": 2,
@@ -999,7 +1017,7 @@
     "chapter": "Rozdział XVI"
   },
   {
-    "id": "t1-p112",
+    "id": "t1-p114",
     "name": "It",
     "volume": "Tom II",
     "level": 2,
@@ -1008,7 +1026,16 @@
     "chapter": "Rozdział XVI"
   },
   {
-    "id": "t1-p113",
+    "id": "t1-p115",
+    "name": "Wulgaryzmy 4",
+    "volume": "Tom II",
+    "level": 2,
+    "category": "Wulgaryzmy",
+    "wordCount": 10,
+    "chapter": "Rozdział XVIII"
+  },
+  {
+    "id": "t1-p116",
     "name": "Sport",
     "volume": "Tom II",
     "level": 2,
@@ -1017,7 +1044,7 @@
     "chapter": "Rozdział XVI"
   },
   {
-    "id": "t1-p114",
+    "id": "t1-p117",
     "name": "Gadka",
     "volume": "Tom II",
     "level": 2,
@@ -1026,7 +1053,7 @@
     "chapter": "Rozdział XVI"
   },
   {
-    "id": "t1-p115",
+    "id": "t1-p118",
     "name": "Rewelacja",
     "volume": "Tom II",
     "level": 2,
@@ -1035,7 +1062,7 @@
     "chapter": "Rozdział XVII"
   },
   {
-    "id": "t1-p116",
+    "id": "t1-p119",
     "name": "Świętowanie",
     "volume": "Tom II",
     "level": 2,
@@ -1044,7 +1071,7 @@
     "chapter": "Rozdział XVII"
   },
   {
-    "id": "t1-p117",
+    "id": "t1-p120",
     "name": "Zdrowie",
     "volume": "Tom II",
     "level": 2,
@@ -1053,7 +1080,7 @@
     "chapter": "Rozdział XVII"
   },
   {
-    "id": "t1-p118",
+    "id": "t1-p121",
     "name": "Społeczeństwo",
     "volume": "Tom II",
     "level": 2,
@@ -1062,7 +1089,7 @@
     "chapter": "Rozdział XVII"
   },
   {
-    "id": "t1-p119",
+    "id": "t1-p122",
     "name": "Rzeczowniki 7",
     "volume": "Tom II",
     "level": 2,
@@ -1071,7 +1098,7 @@
     "chapter": "Rozdział XVII"
   },
   {
-    "id": "t1-p120",
+    "id": "t1-p123",
     "name": "Opakowania",
     "volume": "Tom II",
     "level": 2,
@@ -1080,7 +1107,7 @@
     "chapter": "Rozdział XVII"
   },
   {
-    "id": "t1-p121",
+    "id": "t1-p124",
     "name": "Materiały I substancje",
     "volume": "Tom II",
     "level": 2,
@@ -1089,7 +1116,7 @@
     "chapter": "Rozdział XVII"
   },
   {
-    "id": "t1-p122",
+    "id": "t1-p125",
     "name": "Rzeczowniki 8",
     "volume": "Tom II",
     "level": 2,
@@ -1098,7 +1125,7 @@
     "chapter": "Rozdział XVII"
   },
   {
-    "id": "t1-p123",
+    "id": "t1-p126",
     "name": "Wojskowe",
     "volume": "Tom II",
     "level": 2,
@@ -1107,7 +1134,7 @@
     "chapter": "Rozdział XVIII"
   },
   {
-    "id": "t1-p124",
+    "id": "t1-p127",
     "name": "Praca",
     "volume": "Tom II",
     "level": 2,
@@ -1116,7 +1143,7 @@
     "chapter": "Rozdział XVIII"
   },
   {
-    "id": "t1-p125",
+    "id": "t1-p128",
     "name": "Budynki",
     "volume": "Tom II",
     "level": 2,
@@ -1125,16 +1152,7 @@
     "chapter": "Rozdział XVIII"
   },
   {
-    "id": "t1-p126",
-    "name": "Klony",
-    "volume": "Tom II",
-    "level": 2,
-    "category": "Klony",
-    "wordCount": 30,
-    "chapter": "Rozdział XVIII"
-  },
-  {
-    "id": "t1-p127",
+    "id": "t1-p129",
     "name": "Dla dorosłych",
     "volume": "Tom II",
     "level": 2,
@@ -1143,7 +1161,7 @@
     "chapter": "Rozdział XVIII"
   },
   {
-    "id": "t1-p128",
+    "id": "t1-p130",
     "name": "Slang 11",
     "volume": "Tom II",
     "level": 2,
@@ -1152,7 +1170,7 @@
     "chapter": "Rozdział XIX"
   },
   {
-    "id": "t1-p129",
+    "id": "t1-p131",
     "name": "Restauracja",
     "volume": "Tom II",
     "level": 2,
@@ -1161,7 +1179,7 @@
     "chapter": "Rozdział XIX"
   },
   {
-    "id": "t1-p130",
+    "id": "t1-p132",
     "name": "Przemieszczanie się",
     "volume": "Tom II",
     "level": 2,
@@ -1170,7 +1188,7 @@
     "chapter": "Rozdział XIX"
   },
   {
-    "id": "t1-p131",
+    "id": "t1-p133",
     "name": "Biuro",
     "volume": "Tom II",
     "level": 2,
@@ -1179,7 +1197,7 @@
     "chapter": "Rozdział XIX"
   },
   {
-    "id": "t1-p132",
+    "id": "t1-p134",
     "name": "Książki I pisownia",
     "volume": "Tom II",
     "level": 2,
@@ -1188,7 +1206,7 @@
     "chapter": "Rozdział XIX"
   },
   {
-    "id": "t1-p133",
+    "id": "t1-p135",
     "name": "Gdy musisz coś zmierzyć",
     "volume": "Tom II",
     "level": 2,
@@ -1197,7 +1215,16 @@
     "chapter": "Rozdział XIX"
   },
   {
-    "id": "t1-p134",
+    "id": "t1-p136",
+    "name": "Wulgaryzmy 5",
+    "volume": "Tom II",
+    "level": 2,
+    "category": "Wulgaryzmy",
+    "wordCount": 10,
+    "chapter": "Rozdział XVIII"
+  },
+  {
+    "id": "t1-p137",
     "name": "Kierunek",
     "volume": "Tom II",
     "level": 2,
@@ -1206,7 +1233,7 @@
     "chapter": "Rozdział XX"
   },
   {
-    "id": "t1-p135",
+    "id": "t1-p138",
     "name": "Człowiek jest piękny",
     "volume": "Tom II",
     "level": 2,
@@ -1215,7 +1242,7 @@
     "chapter": "Rozdział XX"
   },
   {
-    "id": "t1-p136",
+    "id": "t1-p139",
     "name": "Szybcy I wściekli",
     "volume": "Tom II",
     "level": 2,
@@ -1224,7 +1251,7 @@
     "chapter": "Rozdział XX"
   },
   {
-    "id": "t1-p137",
+    "id": "t1-p140",
     "name": "Orientuj się",
     "volume": "Tom II",
     "level": 2,
@@ -1233,7 +1260,7 @@
     "chapter": "Rozdział XX"
   },
   {
-    "id": "t1-p138",
+    "id": "t1-p141",
     "name": "Przysłówki 2",
     "volume": "Tom II",
     "level": 2,
@@ -1242,7 +1269,7 @@
     "chapter": "Rozdział XX"
   },
   {
-    "id": "t1-p139",
+    "id": "t1-p142",
     "name": "Ruch",
     "volume": "Tom III",
     "level": 2,
@@ -1251,7 +1278,7 @@
     "chapter": "Rozdział XXI"
   },
   {
-    "id": "t1-p140",
+    "id": "t1-p143",
     "name": "Wieś",
     "volume": "Tom III",
     "level": 2,
@@ -1260,7 +1287,7 @@
     "chapter": "Rozdział XXI"
   },
   {
-    "id": "t1-p141",
+    "id": "t1-p144",
     "name": "Nauki ścisłe",
     "volume": "Tom III",
     "level": 2,
@@ -1269,7 +1296,7 @@
     "chapter": "Rozdział XXI"
   },
   {
-    "id": "t1-p142",
+    "id": "t1-p145",
     "name": "Slang 12",
     "volume": "Tom III",
     "level": 2,
@@ -1278,7 +1305,7 @@
     "chapter": "Rozdział XXI"
   },
   {
-    "id": "t1-p143",
+    "id": "t1-p146",
     "name": "Spójniki 2",
     "volume": "Tom III",
     "level": 2,
@@ -1287,7 +1314,7 @@
     "chapter": "Rozdział XXI"
   },
   {
-    "id": "t1-p144",
+    "id": "t1-p147",
     "name": "Fantasy",
     "volume": "Tom III",
     "level": 2,
@@ -1296,7 +1323,7 @@
     "chapter": "Rozdział XXI"
   },
   {
-    "id": "t1-p145",
+    "id": "t1-p148",
     "name": "Masterchef",
     "volume": "Tom III",
     "level": 2,
@@ -1305,7 +1332,7 @@
     "chapter": "Rozdział XXII"
   },
   {
-    "id": "t1-p146",
+    "id": "t1-p149",
     "name": "Słaby moment",
     "volume": "Tom III",
     "level": 2,
@@ -1314,7 +1341,7 @@
     "chapter": "Rozdział XXII"
   },
   {
-    "id": "t1-p147",
+    "id": "t1-p150",
     "name": "Emocje",
     "volume": "Tom III",
     "level": 2,
@@ -1323,7 +1350,7 @@
     "chapter": "Rozdział XXII"
   },
   {
-    "id": "t1-p148",
+    "id": "t1-p151",
     "name": "Najpiękniejsze słowa",
     "volume": "Tom III",
     "level": 2,
@@ -1332,7 +1359,7 @@
     "chapter": "Rozdział XXII"
   },
   {
-    "id": "t1-p149",
+    "id": "t1-p152",
     "name": "Przyczyna I skutek",
     "volume": "Tom III",
     "level": 2,
@@ -1341,7 +1368,7 @@
     "chapter": "Rozdział XXII"
   },
   {
-    "id": "t1-p150",
+    "id": "t1-p153",
     "name": "Przymiotniki 9",
     "volume": "Tom III",
     "level": 2,
@@ -1350,7 +1377,7 @@
     "chapter": "Rozdział XXIII"
   },
   {
-    "id": "t1-p151",
+    "id": "t1-p154",
     "name": "Bibka",
     "volume": "Tom III",
     "level": 2,
@@ -1359,7 +1386,7 @@
     "chapter": "Rozdział XXIII"
   },
   {
-    "id": "t1-p152",
+    "id": "t1-p155",
     "name": "Złota rączka",
     "volume": "Tom III",
     "level": 2,
@@ -1368,7 +1395,7 @@
     "chapter": "Rozdział XXIII"
   },
   {
-    "id": "t1-p153",
+    "id": "t1-p156",
     "name": "Przymiotniki 10",
     "volume": "Tom III",
     "level": 2,
@@ -1377,7 +1404,7 @@
     "chapter": "Rozdział XXIII"
   },
   {
-    "id": "t1-p154",
+    "id": "t1-p157",
     "name": "Rzeczowniki 9",
     "volume": "Tom III",
     "level": 2,
@@ -1386,7 +1413,7 @@
     "chapter": "Rozdział XXIII"
   },
   {
-    "id": "t1-p155",
+    "id": "t1-p158",
     "name": "Podryw",
     "volume": "Tom III",
     "level": 2,
@@ -1395,7 +1422,7 @@
     "chapter": "Rozdział XXIV"
   },
   {
-    "id": "t1-p156",
+    "id": "t1-p159",
     "name": "Phrasale 1",
     "volume": "Tom III",
     "level": 2,
@@ -1404,7 +1431,7 @@
     "chapter": "Rozdział XXIV"
   },
   {
-    "id": "t1-p157",
+    "id": "t1-p160",
     "name": "Czasowniki 11",
     "volume": "Tom III",
     "level": 2,
@@ -1413,7 +1440,7 @@
     "chapter": "Rozdział XXIV"
   },
   {
-    "id": "t1-p158",
+    "id": "t1-p161",
     "name": "Inaczej ubiorę to w słowa",
     "volume": "Tom III",
     "level": 2,
@@ -1422,7 +1449,7 @@
     "chapter": "Rozdział XXV"
   },
   {
-    "id": "t1-p159",
+    "id": "t1-p162",
     "name": "Rozkmina",
     "volume": "Tom III",
     "level": 2,
@@ -1431,7 +1458,7 @@
     "chapter": "Rozdział XXV"
   },
   {
-    "id": "t1-p160",
+    "id": "t1-p163",
     "name": "Ilość",
     "volume": "Tom III",
     "level": 2,
@@ -1440,7 +1467,7 @@
     "chapter": "Rozdział XXVI"
   },
   {
-    "id": "t1-p161",
+    "id": "t1-p164",
     "name": "Phrasale 2",
     "volume": "Tom III",
     "level": 2,
@@ -1449,7 +1476,7 @@
     "chapter": "Rozdział XXVI"
   },
   {
-    "id": "t1-p162",
+    "id": "t1-p165",
     "name": "Przymiotniki 11",
     "volume": "Tom III",
     "level": 2,
@@ -1458,7 +1485,7 @@
     "chapter": "Rozdział XXVI"
   },
   {
-    "id": "t1-p163",
+    "id": "t1-p166",
     "name": "Przykład",
     "volume": "Tom III",
     "level": 2,
@@ -1467,7 +1494,7 @@
     "chapter": "Rozdział XXVI"
   },
   {
-    "id": "t1-p164",
+    "id": "t1-p167",
     "name": "Przymiotniki 12",
     "volume": "Tom III",
     "level": 2,
@@ -1476,7 +1503,7 @@
     "chapter": "Rozdział XXVII"
   },
   {
-    "id": "t1-p165",
+    "id": "t1-p168",
     "name": "Porównania",
     "volume": "Tom III",
     "level": 2,
@@ -1485,7 +1512,16 @@
     "chapter": "Rozdział XXVII"
   },
   {
-    "id": "t1-p166",
+    "id": "t1-p169",
+    "name": "Wulgaryzmy 6",
+    "volume": "Tom II",
+    "level": 2,
+    "category": "Wulgaryzmy",
+    "wordCount": 10,
+    "chapter": "Rozdział XVIII"
+  },
+  {
+    "id": "t1-p170",
     "name": "Czasowniki 12",
     "volume": "Tom III",
     "level": 3,
@@ -1494,7 +1530,7 @@
     "chapter": "Rozdział XXVII"
   },
   {
-    "id": "t1-p167",
+    "id": "t1-p171",
     "name": "Czasowniki 13",
     "volume": "Tom III",
     "level": 3,
@@ -1503,7 +1539,7 @@
     "chapter": "Rozdział XXVII"
   },
   {
-    "id": "t1-p168",
+    "id": "t1-p172",
     "name": "Slang 13",
     "volume": "Tom III",
     "level": 3,
@@ -1512,7 +1548,7 @@
     "chapter": "Rozdział XXVIII"
   },
   {
-    "id": "t1-p169",
+    "id": "t1-p173",
     "name": "Mistrz kierownicy",
     "volume": "Tom III",
     "level": 3,
@@ -1521,7 +1557,7 @@
     "chapter": "Rozdział XXIX"
   },
   {
-    "id": "t1-p170",
+    "id": "t1-p174",
     "name": "Ocieka splendorem",
     "volume": "Tom III",
     "level": 3,
@@ -1530,7 +1566,7 @@
     "chapter": "Rozdział XXIX"
   },
   {
-    "id": "t1-p171",
+    "id": "t1-p175",
     "name": "Kontrakcje",
     "volume": "Tom III",
     "level": 3,
@@ -1539,7 +1575,7 @@
     "chapter": "Rozdział XXX"
   },
   {
-    "id": "t1-p172",
+    "id": "t1-p176",
     "name": "Slang 14",
     "volume": "Tom III",
     "level": 3,
@@ -1548,7 +1584,7 @@
     "chapter": "Rozdział XXX"
   },
   {
-    "id": "t1-p173",
+    "id": "t1-p177",
     "name": "Czasowniki 14",
     "volume": "Tom III",
     "level": 3,
@@ -1557,7 +1593,7 @@
     "chapter": "Rozdział XXX"
   },
   {
-    "id": "t1-p174",
+    "id": "t1-p178",
     "name": "Slang 15",
     "volume": "Tom III",
     "level": 3,
@@ -1566,7 +1602,7 @@
     "chapter": "Rozdział XXX"
   },
   {
-    "id": "t1-p175",
+    "id": "t1-p179",
     "name": "Slang 16",
     "volume": "Tom IV",
     "level": 3,
@@ -1575,7 +1611,7 @@
     "chapter": "Rozdział XXXI"
   },
   {
-    "id": "t1-p176",
+    "id": "t1-p180",
     "name": "Małżonkowie",
     "volume": "Tom IV",
     "level": 3,
@@ -1584,7 +1620,7 @@
     "chapter": "Rozdział XXXI"
   },
   {
-    "id": "t1-p177",
+    "id": "t1-p181",
     "name": "Czasowniki 15",
     "volume": "Tom IV",
     "level": 3,
@@ -1593,7 +1629,7 @@
     "chapter": "Rozdział XXXII"
   },
   {
-    "id": "t1-p178",
+    "id": "t1-p182",
     "name": "Slang 17",
     "volume": "Tom IV",
     "level": 3,
@@ -1602,7 +1638,7 @@
     "chapter": "Rozdział XXXII"
   },
   {
-    "id": "t1-p179",
+    "id": "t1-p183",
     "name": "Rycerz",
     "volume": "Tom IV",
     "level": 3,
@@ -1611,7 +1647,7 @@
     "chapter": "Rozdział XXXII"
   },
   {
-    "id": "t1-p180",
+    "id": "t1-p184",
     "name": "Rzeczowniki 10",
     "volume": "Tom IV",
     "level": 3,
@@ -1620,7 +1656,7 @@
     "chapter": "Rozdział XXXII"
   },
   {
-    "id": "t1-p181",
+    "id": "t1-p185",
     "name": "Rzeczowniki 11",
     "volume": "Tom IV",
     "level": 3,
@@ -1629,7 +1665,7 @@
     "chapter": "Rozdział XXXII"
   },
   {
-    "id": "t1-p182",
+    "id": "t1-p186",
     "name": "Rośliny I ogród",
     "volume": "Tom IV",
     "level": 3,
@@ -1638,7 +1674,7 @@
     "chapter": "Rozdział XXXIII"
   },
   {
-    "id": "t1-p183",
+    "id": "t1-p187",
     "name": "Rzeczowniki 12",
     "volume": "Tom IV",
     "level": 3,
@@ -1647,7 +1683,7 @@
     "chapter": "Rozdział XXXIII"
   },
   {
-    "id": "t1-p184",
+    "id": "t1-p188",
     "name": "Love",
     "volume": "Tom IV",
     "level": 3,
@@ -1656,7 +1692,7 @@
     "chapter": "Rozdział XXXIII"
   },
   {
-    "id": "t1-p185",
+    "id": "t1-p189",
     "name": "Zagrożenie",
     "volume": "Tom IV",
     "level": 3,
@@ -1665,7 +1701,7 @@
     "chapter": "Rozdział XXXIII"
   },
   {
-    "id": "t1-p186",
+    "id": "t1-p190",
     "name": "Przymiotniki 13",
     "volume": "Tom IV",
     "level": 3,
@@ -1674,7 +1710,7 @@
     "chapter": "Rozdział XXXIII"
   },
   {
-    "id": "t1-p187",
+    "id": "t1-p191",
     "name": "Telefon",
     "volume": "Tom IV",
     "level": 3,
@@ -1683,7 +1719,7 @@
     "chapter": "Rozdział XXXIII"
   },
   {
-    "id": "t1-p188",
+    "id": "t1-p192",
     "name": "Ruch abstrakcyjny",
     "volume": "Tom IV",
     "level": 3,
@@ -1692,7 +1728,7 @@
     "chapter": "Rozdział XXXIV"
   },
   {
-    "id": "t1-p189",
+    "id": "t1-p193",
     "name": "Jak często",
     "volume": "Tom IV",
     "level": 3,
@@ -1701,7 +1737,7 @@
     "chapter": "Rozdział XXXIV"
   },
   {
-    "id": "t1-p190",
+    "id": "t1-p194",
     "name": "Przymiotniki 14",
     "volume": "Tom IV",
     "level": 3,
@@ -1710,7 +1746,7 @@
     "chapter": "Rozdział XXXV"
   },
   {
-    "id": "t1-p191",
+    "id": "t1-p195",
     "name": "Wypadek",
     "volume": "Tom IV",
     "level": 3,
@@ -1719,7 +1755,7 @@
     "chapter": "Rozdział XXXV"
   },
   {
-    "id": "t1-p192",
+    "id": "t1-p196",
     "name": "Majsterkowanie",
     "volume": "Tom IV",
     "level": 3,
@@ -1728,7 +1764,7 @@
     "chapter": "Rozdział XXXV"
   },
   {
-    "id": "t1-p193",
+    "id": "t1-p197",
     "name": "Kalkulator",
     "volume": "Tom IV",
     "level": 3,
@@ -1737,7 +1773,7 @@
     "chapter": "Rozdział XXXVI"
   },
   {
-    "id": "t1-p194",
+    "id": "t1-p198",
     "name": "Slang 18",
     "volume": "Tom IV",
     "level": 3,
@@ -1746,7 +1782,7 @@
     "chapter": "Rozdział XXXVI"
   },
   {
-    "id": "t1-p195",
+    "id": "t1-p199",
     "name": "Spójniki 3",
     "volume": "Tom IV",
     "level": 3,
@@ -1755,7 +1791,7 @@
     "chapter": "Rozdział XXXVI"
   },
   {
-    "id": "t1-p196",
+    "id": "t1-p200",
     "name": "Kosmos",
     "volume": "Tom IV",
     "level": 3,
@@ -1764,7 +1800,7 @@
     "chapter": "Rozdział XXXVI"
   },
   {
-    "id": "t1-p197",
+    "id": "t1-p201",
     "name": "Co poszło nie tak?",
     "volume": "Tom IV",
     "level": 3,
@@ -1773,7 +1809,7 @@
     "chapter": "Rozdział XXXVII"
   },
   {
-    "id": "t1-p198",
+    "id": "t1-p202",
     "name": "Spójniki 4",
     "volume": "Tom IV",
     "level": 3,
@@ -1782,7 +1818,7 @@
     "chapter": "Rozdział XXXVII"
   },
   {
-    "id": "t1-p199",
+    "id": "t1-p203",
     "name": "Śmierć",
     "volume": "Tom IV",
     "level": 3,
@@ -1791,7 +1827,7 @@
     "chapter": "Rozdział XXXVIII"
   },
   {
-    "id": "t1-p200",
+    "id": "t1-p204",
     "name": "Sądownicze",
     "volume": "Tom IV",
     "level": 3,
@@ -1800,7 +1836,7 @@
     "chapter": "Rozdział XXXVIII"
   },
   {
-    "id": "t1-p201",
+    "id": "t1-p205",
     "name": "Przemysł",
     "volume": "Tom IV",
     "level": 3,
@@ -1809,7 +1845,7 @@
     "chapter": "Rozdział XXXVIII"
   },
   {
-    "id": "t1-p202",
+    "id": "t1-p206",
     "name": "Biżuteria",
     "volume": "Tom IV",
     "level": 3,
@@ -1818,7 +1854,7 @@
     "chapter": "Rozdział XXXVIII"
   },
   {
-    "id": "t1-p203",
+    "id": "t1-p207",
     "name": "Natura",
     "volume": "Tom IV",
     "level": 3,
@@ -1827,7 +1863,7 @@
     "chapter": "Rozdział XXXIX"
   },
   {
-    "id": "t1-p204",
+    "id": "t1-p208",
     "name": "Slang 19",
     "volume": "Tom IV",
     "level": 3,
@@ -1836,7 +1872,7 @@
     "chapter": "Rozdział XXXIX"
   },
   {
-    "id": "t1-p205",
+    "id": "t1-p209",
     "name": "Religia",
     "volume": "Tom IV",
     "level": 3,
@@ -1845,7 +1881,7 @@
     "chapter": "Rozdział XXXIX"
   },
   {
-    "id": "t1-p206",
+    "id": "t1-p210",
     "name": "Przymiotniki 15",
     "volume": "Tom IV",
     "level": 3,
@@ -1854,7 +1890,7 @@
     "chapter": "Rozdział XXXIX"
   },
   {
-    "id": "t1-p207",
+    "id": "t1-p211",
     "name": "Przymiotniki 16",
     "volume": "Tom IV",
     "level": 3,
@@ -1863,7 +1899,7 @@
     "chapter": "Rozdział XXXIX"
   },
   {
-    "id": "t1-p208",
+    "id": "t1-p212",
     "name": "W odniesieniu do",
     "volume": "Tom IV",
     "level": 3,
@@ -1872,7 +1908,7 @@
     "chapter": "Rozdział XL"
   },
   {
-    "id": "t1-p209",
+    "id": "t1-p213",
     "name": "Demolki małe I duże",
     "volume": "Tom IV",
     "level": 3,
@@ -1881,7 +1917,7 @@
     "chapter": "Rozdział XL"
   },
   {
-    "id": "t1-p210",
+    "id": "t1-p214",
     "name": "Phrasale 3",
     "volume": "Tom IV",
     "level": 3,
@@ -1890,7 +1926,7 @@
     "chapter": "Rozdział XL"
   },
   {
-    "id": "t1-p211",
+    "id": "t1-p215",
     "name": "Edukacja",
     "volume": "Tom IV",
     "level": 3,
@@ -1899,7 +1935,7 @@
     "chapter": "Rozdział XL"
   },
   {
-    "id": "t1-p212",
+    "id": "t1-p216",
     "name": "Przymiotniki 17",
     "volume": "Tom V",
     "level": 3,
@@ -1908,7 +1944,7 @@
     "chapter": "Rozdział XLI"
   },
   {
-    "id": "t1-p213",
+    "id": "t1-p217",
     "name": "Co się patrzysz?",
     "volume": "Tom V",
     "level": 3,
@@ -1917,7 +1953,7 @@
     "chapter": "Rozdział XLI"
   },
   {
-    "id": "t1-p214",
+    "id": "t1-p218",
     "name": "Mądre",
     "volume": "Tom V",
     "level": 3,
@@ -1926,7 +1962,7 @@
     "chapter": "Rozdział XLI"
   },
   {
-    "id": "t1-p215",
+    "id": "t1-p219",
     "name": "Złe",
     "volume": "Tom V",
     "level": 3,
@@ -1935,7 +1971,7 @@
     "chapter": "Rozdział XLII"
   },
   {
-    "id": "t1-p216",
+    "id": "t1-p220",
     "name": "Widzenie",
     "volume": "Tom V",
     "level": 3,
@@ -1944,7 +1980,7 @@
     "chapter": "Rozdział XLII"
   },
   {
-    "id": "t1-p217",
+    "id": "t1-p221",
     "name": "Ucieczka",
     "volume": "Tom V",
     "level": 3,
@@ -1953,7 +1989,7 @@
     "chapter": "Rozdział XLII"
   },
   {
-    "id": "t1-p218",
+    "id": "t1-p222",
     "name": "Przysłówki 3",
     "volume": "Tom V",
     "level": 3,
@@ -1962,7 +1998,7 @@
     "chapter": "Rozdział XLIII"
   },
   {
-    "id": "t1-p219",
+    "id": "t1-p223",
     "name": "Rzeczowniki 13",
     "volume": "Tom V",
     "level": 3,
@@ -1971,7 +2007,7 @@
     "chapter": "Rozdział XLIII"
   },
   {
-    "id": "t1-p220",
+    "id": "t1-p224",
     "name": "Slang 20",
     "volume": "Tom V",
     "level": 3,
@@ -1980,7 +2016,7 @@
     "chapter": "Rozdział XLIII"
   },
   {
-    "id": "t1-p221",
+    "id": "t1-p225",
     "name": "Przymiotniki 18",
     "volume": "Tom V",
     "level": 3,
@@ -1989,7 +2025,7 @@
     "chapter": "Rozdział XLIII"
   },
   {
-    "id": "t1-p222",
+    "id": "t1-p226",
     "name": "Skala I intensywność",
     "volume": "Tom V",
     "level": 3,
@@ -1998,7 +2034,7 @@
     "chapter": "Rozdział XLIII"
   },
   {
-    "id": "t1-p223",
+    "id": "t1-p227",
     "name": "Woda wszędzie",
     "volume": "Tom V",
     "level": 3,
@@ -2007,7 +2043,7 @@
     "chapter": "Rozdział XLIV"
   },
   {
-    "id": "t1-p224",
+    "id": "t1-p228",
     "name": "Przymiotniki 19",
     "volume": "Tom V",
     "level": 3,
@@ -2016,7 +2052,7 @@
     "chapter": "Rozdział XLIV"
   },
   {
-    "id": "t1-p225",
+    "id": "t1-p229",
     "name": "Gdy grasz w grę",
     "volume": "Tom V",
     "level": 3,
@@ -2025,7 +2061,7 @@
     "chapter": "Rozdział XLV"
   },
   {
-    "id": "t1-p226",
+    "id": "t1-p230",
     "name": "Poczta",
     "volume": "Tom V",
     "level": 3,
@@ -2034,7 +2070,7 @@
     "chapter": "Rozdział XLV"
   },
   {
-    "id": "t1-p227",
+    "id": "t1-p231",
     "name": "Dodanie kolejnej myśli",
     "volume": "Tom V",
     "level": 3,
@@ -2043,7 +2079,7 @@
     "chapter": "Rozdział XLV"
   },
   {
-    "id": "t1-p228",
+    "id": "t1-p232",
     "name": "Czasowniki 16",
     "volume": "Tom V",
     "level": 3,
@@ -2052,7 +2088,7 @@
     "chapter": "Rozdział XLVI"
   },
   {
-    "id": "t1-p229",
+    "id": "t1-p233",
     "name": "Przymiotniki 20",
     "volume": "Tom V",
     "level": 3,
@@ -2061,7 +2097,7 @@
     "chapter": "Rozdział XLVI"
   },
   {
-    "id": "t1-p230",
+    "id": "t1-p234",
     "name": "Slang 21",
     "volume": "Tom V",
     "level": 3,
@@ -2070,7 +2106,7 @@
     "chapter": "Rozdział XLVI"
   },
   {
-    "id": "t1-p231",
+    "id": "t1-p235",
     "name": "Przestrzeń I położenie",
     "volume": "Tom V",
     "level": 3,
@@ -2079,7 +2115,7 @@
     "chapter": "Rozdział XLVI"
   },
   {
-    "id": "t1-p232",
+    "id": "t1-p236",
     "name": "Czasowniki 17",
     "volume": "Tom V",
     "level": 3,
@@ -2088,7 +2124,7 @@
     "chapter": "Rozdział XLVII"
   },
   {
-    "id": "t1-p233",
+    "id": "t1-p237",
     "name": "Technologia",
     "volume": "Tom V",
     "level": 3,
@@ -2097,7 +2133,7 @@
     "chapter": "Rozdział XLVII"
   },
   {
-    "id": "t1-p234",
+    "id": "t1-p238",
     "name": "Czasowniki 18",
     "volume": "Tom V",
     "level": 3,
@@ -2106,7 +2142,7 @@
     "chapter": "Rozdział XLVII"
   },
   {
-    "id": "t1-p235",
+    "id": "t1-p239",
     "name": "Wykonane z czegoś",
     "volume": "Tom V",
     "level": 3,
@@ -2115,7 +2151,7 @@
     "chapter": "Rozdział XLVIII"
   },
   {
-    "id": "t1-p236",
+    "id": "t1-p240",
     "name": "Spójniki 5",
     "volume": "Tom V",
     "level": 3,
@@ -2124,7 +2160,7 @@
     "chapter": "Rozdział XLVIII"
   },
   {
-    "id": "t1-p237",
+    "id": "t1-p241",
     "name": "Czasowniki 19",
     "volume": "Tom V",
     "level": 3,
@@ -2133,7 +2169,7 @@
     "chapter": "Rozdział XLIX"
   },
   {
-    "id": "t1-p238",
+    "id": "t1-p242",
     "name": "Przymiotniki 21",
     "volume": "Tom V",
     "level": 3,
@@ -2142,7 +2178,7 @@
     "chapter": "Rozdział XLIX"
   },
   {
-    "id": "t1-p239",
+    "id": "t1-p243",
     "name": "Czasowniki 20",
     "volume": "Tom V",
     "level": 3,
@@ -2151,7 +2187,7 @@
     "chapter": "Rozdział L"
   },
   {
-    "id": "t1-p240",
+    "id": "t1-p244",
     "name": "Przymiotniki 22",
     "volume": "Tom V",
     "level": 3,
@@ -2160,7 +2196,7 @@
     "chapter": "Rozdział L"
   },
   {
-    "id": "t1-p241",
+    "id": "t1-p245",
     "name": "Przysłówki 4",
     "volume": "Tom V",
     "level": 3,
@@ -2169,7 +2205,7 @@
     "chapter": "Rozdział L"
   },
   {
-    "id": "t1-p242",
+    "id": "t1-p246",
     "name": "Przymiotniki 23",
     "volume": "Tom V",
     "level": 3,
@@ -2178,7 +2214,7 @@
     "chapter": "Rozdział L"
   },
   {
-    "id": "t1-p243",
+    "id": "t1-p247",
     "name": "Slang 22",
     "volume": "Tom VI",
     "level": 4,
@@ -2187,7 +2223,7 @@
     "chapter": "Rozdział LI"
   },
   {
-    "id": "t1-p244",
+    "id": "t1-p248",
     "name": "Czasowniki 21",
     "volume": "Tom VI",
     "level": 4,
@@ -2196,7 +2232,7 @@
     "chapter": "Rozdział LI"
   },
   {
-    "id": "t1-p245",
+    "id": "t1-p249",
     "name": "Czasowniki 22",
     "volume": "Tom VI",
     "level": 4,
@@ -2205,7 +2241,7 @@
     "chapter": "Rozdział LII"
   },
   {
-    "id": "t1-p246",
+    "id": "t1-p250",
     "name": "Slang 23",
     "volume": "Tom VI",
     "level": 4,
@@ -2214,7 +2250,7 @@
     "chapter": "Rozdział LIII"
   },
   {
-    "id": "t1-p247",
+    "id": "t1-p251",
     "name": "Memiczne",
     "volume": "Tom VI",
     "level": 4,
@@ -2223,7 +2259,7 @@
     "chapter": "Rozdział LIII"
   },
   {
-    "id": "t1-p248",
+    "id": "t1-p252",
     "name": "Slang 24",
     "volume": "Tom VI",
     "level": 4,
@@ -2232,7 +2268,7 @@
     "chapter": "Rozdział LIV"
   },
   {
-    "id": "t1-p249",
+    "id": "t1-p253",
     "name": "Slang 25",
     "volume": "Tom VI",
     "level": 4,
@@ -2241,7 +2277,7 @@
     "chapter": "Rozdział LIV"
   },
   {
-    "id": "t1-p250",
+    "id": "t1-p254",
     "name": "Slang 26",
     "volume": "Tom VI",
     "level": 4,
@@ -2250,7 +2286,7 @@
     "chapter": "Rozdział LIV"
   },
   {
-    "id": "t1-p251",
+    "id": "t1-p255",
     "name": "Czasowniki 23",
     "volume": "Tom VI",
     "level": 4,
@@ -2259,7 +2295,7 @@
     "chapter": "Rozdział LV"
   },
   {
-    "id": "t1-p252",
+    "id": "t1-p256",
     "name": "Spójniki 6",
     "volume": "Tom VI",
     "level": 4,
@@ -2268,7 +2304,7 @@
     "chapter": "Rozdział LV"
   },
   {
-    "id": "t1-p253",
+    "id": "t1-p257",
     "name": "Przymiotniki 24",
     "volume": "Tom VI",
     "level": 4,
@@ -2277,7 +2313,7 @@
     "chapter": "Rozdział LV"
   },
   {
-    "id": "t1-p254",
+    "id": "t1-p258",
     "name": "Rodzinka",
     "volume": "Tom VI",
     "level": 4,
@@ -2286,7 +2322,7 @@
     "chapter": "Rozdział LV"
   },
   {
-    "id": "t1-p255",
+    "id": "t1-p259",
     "name": "Rzeczowniki 14",
     "volume": "Tom VI",
     "level": 4,
@@ -2295,7 +2331,7 @@
     "chapter": "Rozdział  LVI"
   },
   {
-    "id": "t1-p256",
+    "id": "t1-p260",
     "name": "Rzeczowniki 15",
     "volume": "Tom VI",
     "level": 4,
@@ -2304,7 +2340,7 @@
     "chapter": "Rozdział  LVI"
   },
   {
-    "id": "t1-p257",
+    "id": "t1-p261",
     "name": "Przymiotniki 25",
     "volume": "Tom VI",
     "level": 4,
@@ -2313,7 +2349,7 @@
     "chapter": "Rozdział  LVI"
   },
   {
-    "id": "t1-p258",
+    "id": "t1-p262",
     "name": "Rzeczowniki 16",
     "volume": "Tom VI",
     "level": 4,
@@ -2322,7 +2358,7 @@
     "chapter": "Rozdział  LVI"
   },
   {
-    "id": "t1-p259",
+    "id": "t1-p263",
     "name": "Spójniki 7",
     "volume": "Tom VI",
     "level": 4,
@@ -2331,7 +2367,7 @@
     "chapter": "Rozdział  LVII"
   },
   {
-    "id": "t1-p260",
+    "id": "t1-p264",
     "name": "Rzeczowniki 17",
     "volume": "Tom VI",
     "level": 4,
@@ -2340,7 +2376,7 @@
     "chapter": "Rozdział  LVII"
   },
   {
-    "id": "t1-p261",
+    "id": "t1-p265",
     "name": "Ogniowe",
     "volume": "Tom VI",
     "level": 4,
@@ -2349,7 +2385,7 @@
     "chapter": "Rozdział LVIII"
   },
   {
-    "id": "t1-p262",
+    "id": "t1-p266",
     "name": "Slang 27",
     "volume": "Tom VI",
     "level": 4,
@@ -2358,7 +2394,7 @@
     "chapter": "Rozdział LVIII"
   },
   {
-    "id": "t1-p263",
+    "id": "t1-p267",
     "name": "Slang 28",
     "volume": "Tom VI",
     "level": 4,
@@ -2367,7 +2403,7 @@
     "chapter": "Rozdział LVIII"
   },
   {
-    "id": "t1-p264",
+    "id": "t1-p268",
     "name": "Slang 29",
     "volume": "Tom VI",
     "level": 4,
@@ -2376,7 +2412,7 @@
     "chapter": "Rozdział LIX"
   },
   {
-    "id": "t1-p265",
+    "id": "t1-p269",
     "name": "Przymiotniki 26",
     "volume": "Tom VII",
     "level": 4,
@@ -2385,7 +2421,7 @@
     "chapter": "Rozdział LXI"
   },
   {
-    "id": "t1-p266",
+    "id": "t1-p270",
     "name": "Przymiotniki 27",
     "volume": "Tom VII",
     "level": 4,
@@ -2394,7 +2430,7 @@
     "chapter": "Rozdział LXII"
   },
   {
-    "id": "t1-p267",
+    "id": "t1-p271",
     "name": "Przymiotniki 28",
     "volume": "Tom VII",
     "level": 4,
@@ -2403,7 +2439,7 @@
     "chapter": "Rozdział LXII"
   },
   {
-    "id": "t1-p268",
+    "id": "t1-p272",
     "name": "Phrasale 4",
     "volume": "Tom VII",
     "level": 4,
@@ -2412,7 +2448,7 @@
     "chapter": "Rozdział LXII"
   },
   {
-    "id": "t1-p269",
+    "id": "t1-p273",
     "name": "Drzewa",
     "volume": "Tom VII",
     "level": 4,
@@ -2421,7 +2457,7 @@
     "chapter": "Rozdział LXIII"
   },
   {
-    "id": "t1-p270",
+    "id": "t1-p274",
     "name": "Pani domu",
     "volume": "Tom VII",
     "level": 4,
@@ -2430,7 +2466,7 @@
     "chapter": "Rozdział LXIII"
   },
   {
-    "id": "t1-p271",
+    "id": "t1-p275",
     "name": "Slang 30",
     "volume": "Tom VII",
     "level": 4,
@@ -2439,7 +2475,7 @@
     "chapter": "Rozdział LXIV"
   },
   {
-    "id": "t1-p272",
+    "id": "t1-p276",
     "name": "Przymiotniki 29",
     "volume": "Tom VII",
     "level": 4,
@@ -2448,7 +2484,7 @@
     "chapter": "Rozdział LXIV"
   },
   {
-    "id": "t1-p273",
+    "id": "t1-p277",
     "name": "Przysłówki 5",
     "volume": "Tom VII",
     "level": 4,
@@ -2457,7 +2493,7 @@
     "chapter": "Rozdział LXV"
   },
   {
-    "id": "t1-p274",
+    "id": "t1-p278",
     "name": "Ptaki",
     "volume": "Tom VII",
     "level": 4,
@@ -2466,7 +2502,7 @@
     "chapter": "Rozdział LXV"
   },
   {
-    "id": "t1-p275",
+    "id": "t1-p279",
     "name": "Ryby",
     "volume": "Tom VII",
     "level": 4,
@@ -2475,7 +2511,7 @@
     "chapter": "Rozdział LXV"
   },
   {
-    "id": "t1-p276",
+    "id": "t1-p280",
     "name": "Przymiotniki 30",
     "volume": "Tom VII",
     "level": 4,
@@ -2484,7 +2520,7 @@
     "chapter": "Rozdział LXV"
   },
   {
-    "id": "t1-p277",
+    "id": "t1-p281",
     "name": "Znaki zodiaku",
     "volume": "Tom VII",
     "level": 4,
@@ -2493,7 +2529,7 @@
     "chapter": "Rozdział LXV"
   },
   {
-    "id": "t1-p278",
+    "id": "t1-p282",
     "name": "Przymiotniki 31",
     "volume": "Tom VII",
     "level": 4,
@@ -2502,7 +2538,7 @@
     "chapter": "Rozdział LXVI"
   },
   {
-    "id": "t1-p279",
+    "id": "t1-p283",
     "name": "Pewność",
     "volume": "Tom VII",
     "level": 4,
@@ -2511,7 +2547,7 @@
     "chapter": "Rozdział LXVI"
   },
   {
-    "id": "t1-p280",
+    "id": "t1-p284",
     "name": "Phrasale 5",
     "volume": "Tom VII",
     "level": 4,
@@ -2520,7 +2556,7 @@
     "chapter": "Rozdział LXVI"
   },
   {
-    "id": "t1-p281",
+    "id": "t1-p285",
     "name": "Przymiotniki 32",
     "volume": "Tom VII",
     "level": 4,
@@ -2529,7 +2565,7 @@
     "chapter": "Rozdział LXVII"
   },
   {
-    "id": "t1-p282",
+    "id": "t1-p286",
     "name": "Wzrost I spadek",
     "volume": "Tom VII",
     "level": 4,
@@ -2538,7 +2574,7 @@
     "chapter": "Rozdział LXVII"
   },
   {
-    "id": "t1-p283",
+    "id": "t1-p287",
     "name": "Szamka",
     "volume": "Tom VII",
     "level": 4,
@@ -2547,7 +2583,7 @@
     "chapter": "Rozdział LXX"
   },
   {
-    "id": "t1-p284",
+    "id": "t1-p288",
     "name": "Agresja",
     "volume": "Tom VII",
     "level": 4,
@@ -2556,7 +2592,7 @@
     "chapter": "Rozdział LXX"
   },
   {
-    "id": "t1-p285",
+    "id": "t1-p289",
     "name": "Wymaga wysiłku",
     "volume": "Tom VIII",
     "level": 4,
@@ -2565,7 +2601,7 @@
     "chapter": "Rozdział LXXI"
   },
   {
-    "id": "t1-p286",
+    "id": "t1-p290",
     "name": "Slang 31",
     "volume": "Tom VIII",
     "level": 4,
@@ -2574,7 +2610,7 @@
     "chapter": "Rozdział LXXI"
   },
   {
-    "id": "t1-p287",
+    "id": "t1-p291",
     "name": "Gangsterka",
     "volume": "Tom VIII",
     "level": 4,
@@ -2583,7 +2619,7 @@
     "chapter": "Rozdział LXXI"
   },
   {
-    "id": "t1-p288",
+    "id": "t1-p292",
     "name": "Substancje",
     "volume": "Tom VIII",
     "level": 4,
@@ -2592,7 +2628,7 @@
     "chapter": "Rozdział LXXII"
   },
   {
-    "id": "t1-p289",
+    "id": "t1-p293",
     "name": "Slang 32",
     "volume": "Tom VIII",
     "level": 4,
@@ -2601,7 +2637,7 @@
     "chapter": "Rozdział LXXII"
   },
   {
-    "id": "t1-p290",
+    "id": "t1-p294",
     "name": "Nagle",
     "volume": "Tom VIII",
     "level": 4,
@@ -2610,7 +2646,7 @@
     "chapter": "Rozdział LXXIII"
   },
   {
-    "id": "t1-p291",
+    "id": "t1-p295",
     "name": "Przymiotniki 33",
     "volume": "Tom VIII",
     "level": 4,
@@ -2619,7 +2655,7 @@
     "chapter": "Rozdział LXXIII"
   },
   {
-    "id": "t1-p292",
+    "id": "t1-p296",
     "name": "Phrasale 6",
     "volume": "Tom VIII",
     "level": 4,
@@ -2628,7 +2664,7 @@
     "chapter": "Rozdział LXXIII"
   },
   {
-    "id": "t1-p293",
+    "id": "t1-p297",
     "name": "Czasowniki 24",
     "volume": "Tom VIII",
     "level": 4,
@@ -2637,7 +2673,7 @@
     "chapter": "Rozdział LXXIV"
   },
   {
-    "id": "t1-p294",
+    "id": "t1-p298",
     "name": "Wakacje",
     "volume": "Tom VIII",
     "level": 4,
@@ -2646,7 +2682,7 @@
     "chapter": "Rozdział LXXIV"
   },
   {
-    "id": "t1-p295",
+    "id": "t1-p299",
     "name": "Przymiotniki 34",
     "volume": "Tom VIII",
     "level": 4,
@@ -2655,7 +2691,7 @@
     "chapter": "Rozdział LXXV"
   },
   {
-    "id": "t1-p296",
+    "id": "t1-p300",
     "name": "Przymiotniki 35",
     "volume": "Tom VIII",
     "level": 4,
@@ -2664,7 +2700,7 @@
     "chapter": "Rozdział LXXV"
   },
   {
-    "id": "t1-p297",
+    "id": "t1-p301",
     "name": "Czasowniki 25",
     "volume": "Tom VIII",
     "level": 4,
@@ -2673,7 +2709,7 @@
     "chapter": "Rozdział LXXV"
   },
   {
-    "id": "t1-p298",
+    "id": "t1-p302",
     "name": "Przymiotniki 36",
     "volume": "Tom VIII",
     "level": 4,
@@ -2682,7 +2718,7 @@
     "chapter": "Rozdział LXXV"
   },
   {
-    "id": "t1-p299",
+    "id": "t1-p303",
     "name": "Slang 33",
     "volume": "Tom VIII",
     "level": 4,
@@ -2691,7 +2727,7 @@
     "chapter": "Rozdział LXXVII"
   },
   {
-    "id": "t1-p300",
+    "id": "t1-p304",
     "name": "To już (prawie) koniec",
     "volume": "Tom VIII",
     "level": 4,
@@ -2700,7 +2736,7 @@
     "chapter": "Rozdział LXXVII"
   },
   {
-    "id": "t1-p301",
+    "id": "t1-p305",
     "name": "Slang 34",
     "volume": "Tom VIII",
     "level": 4,
@@ -2709,7 +2745,7 @@
     "chapter": "Rozdział LXXVII"
   },
   {
-    "id": "t1-p302",
+    "id": "t1-p306",
     "name": "Przysłówki 6",
     "volume": "Tom VIII",
     "level": 4,
@@ -2718,7 +2754,7 @@
     "chapter": "Rozdział LXXVII"
   },
   {
-    "id": "t1-p303",
+    "id": "t1-p307",
     "name": "Światło",
     "volume": "Tom VIII",
     "level": 4,
@@ -2727,7 +2763,7 @@
     "chapter": "Rozdział LXXVIII"
   },
   {
-    "id": "t1-p304",
+    "id": "t1-p308",
     "name": "Slang 35",
     "volume": "Tom VIII",
     "level": 4,
@@ -2736,7 +2772,7 @@
     "chapter": "Rozdział LXXVIII"
   },
   {
-    "id": "t1-p305",
+    "id": "t1-p309",
     "name": "Przymiotniki 37",
     "volume": "Tom VIII",
     "level": 4,
@@ -2745,7 +2781,7 @@
     "chapter": "Rozdział LXXX"
   },
   {
-    "id": "t1-p306",
+    "id": "t1-p310",
     "name": "Przymiotniki 38",
     "volume": "Tom IX",
     "level": 4,
@@ -2754,7 +2790,7 @@
     "chapter": "Rozdział LXXXI"
   },
   {
-    "id": "t1-p307",
+    "id": "t1-p311",
     "name": "Slang 36",
     "volume": "Tom IX",
     "level": 4,
@@ -2763,7 +2799,7 @@
     "chapter": "Rozdział LXXXI"
   },
   {
-    "id": "t1-p308",
+    "id": "t1-p312",
     "name": "Phrasale 7",
     "volume": "Tom IX",
     "level": 4,
@@ -2772,7 +2808,7 @@
     "chapter": "Rozdział LXXXI"
   },
   {
-    "id": "t1-p309",
+    "id": "t1-p313",
     "name": "Czasowniki 26",
     "volume": "Tom IX",
     "level": 4,
@@ -2781,7 +2817,7 @@
     "chapter": "Rozdział LXXXII"
   },
   {
-    "id": "t1-p310",
+    "id": "t1-p314",
     "name": "Phrasale 8",
     "volume": "Tom IX",
     "level": 4,
@@ -2790,7 +2826,7 @@
     "chapter": "Rozdział LXXXII"
   },
   {
-    "id": "t1-p311",
+    "id": "t1-p315",
     "name": "Przymiotniki 39",
     "volume": "Tom IX",
     "level": 4,
@@ -2799,7 +2835,7 @@
     "chapter": "Rozdział LXXXIII"
   },
   {
-    "id": "t1-p312",
+    "id": "t1-p316",
     "name": "Czasowniki 27",
     "volume": "Tom IX",
     "level": 4,
@@ -2808,7 +2844,7 @@
     "chapter": "Rozdział LXXXIV"
   },
   {
-    "id": "t1-p313",
+    "id": "t1-p317",
     "name": "Przymiotniki 40",
     "volume": "Tom IX",
     "level": 4,
@@ -2817,7 +2853,7 @@
     "chapter": "Rozdział LXXXIV"
   },
   {
-    "id": "t1-p314",
+    "id": "t1-p318",
     "name": "Przymiotniki 41",
     "volume": "Tom IX",
     "level": 4,
@@ -2826,7 +2862,7 @@
     "chapter": "Rozdział LXXXIV"
   },
   {
-    "id": "t1-p315",
+    "id": "t1-p319",
     "name": "Czasowniki 28",
     "volume": "Tom IX",
     "level": 4,
@@ -2835,7 +2871,7 @@
     "chapter": "Rozdział LXXXV"
   },
   {
-    "id": "t1-p316",
+    "id": "t1-p320",
     "name": "Przymiotniki 42",
     "volume": "Tom IX",
     "level": 4,
@@ -2844,7 +2880,7 @@
     "chapter": "Rozdział LXXXV"
   },
   {
-    "id": "t1-p317",
+    "id": "t1-p321",
     "name": "Czasowniki 29",
     "volume": "Tom IX",
     "level": 4,
@@ -2853,7 +2889,7 @@
     "chapter": "Rozdział LXXXV"
   },
   {
-    "id": "t1-p318",
+    "id": "t1-p322",
     "name": "Przymiotniki 43",
     "volume": "Tom IX",
     "level": 4,
@@ -2862,7 +2898,7 @@
     "chapter": "Rozdział LXXXV"
   },
   {
-    "id": "t1-p319",
+    "id": "t1-p323",
     "name": "Niefajne - Slang",
     "volume": "Tom IX",
     "level": 4,
@@ -2871,7 +2907,7 @@
     "chapter": "Rozdział LXXXV"
   },
   {
-    "id": "t1-p320",
+    "id": "t1-p324",
     "name": "Czasowniki 30",
     "volume": "Tom IX",
     "level": 4,
@@ -2880,7 +2916,7 @@
     "chapter": "Rozdział LXXXVI"
   },
   {
-    "id": "t1-p321",
+    "id": "t1-p325",
     "name": "Przymiotniki 44",
     "volume": "Tom IX",
     "level": 4,
@@ -2889,7 +2925,7 @@
     "chapter": "Rozdział LXXXVI"
   },
   {
-    "id": "t1-p322",
+    "id": "t1-p326",
     "name": "Czasowniki 31",
     "volume": "Tom IX",
     "level": 4,
@@ -2898,7 +2934,7 @@
     "chapter": "Rozdział LXXXVI"
   },
   {
-    "id": "t1-p323",
+    "id": "t1-p327",
     "name": "Slang 37",
     "volume": "Tom IX",
     "level": 4,
@@ -2907,7 +2943,7 @@
     "chapter": "Rozdział LXXXVI"
   },
   {
-    "id": "t1-p324",
+    "id": "t1-p328",
     "name": "Przymiotniki 45",
     "volume": "Tom IX",
     "level": 4,

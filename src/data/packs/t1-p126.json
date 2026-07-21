@@ -1,15 +1,15 @@
 {
   "id": "t1-p126",
-  "name": "Klony",
+  "name": "Wojskowe",
   "volume": "Tom II",
   "level": 2,
-  "category": "Klony",
+  "category": "Rzeczowniki",
   "chapter": "Rozdział XVIII",
   "words": [
     {
       "id": "t1-p126-001",
-      "english": "Boo-boo",
-      "polish": "Kuku",
+      "english": "Smoke",
+      "polish": "Dym",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p126-002",
-      "english": "Choo-choo",
-      "polish": "Ciuch-ciuch",
+      "english": "Conflict",
+      "polish": "Konflikt",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p126-003",
-      "english": "Chop chop",
-      "polish": "Migiem",
+      "english": "Fire",
+      "polish": "Ogień",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p126-004",
-      "english": "Ding-dong",
-      "polish": "Odgłos dzwonka",
+      "english": "Crisis",
+      "polish": "Kryzys",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p126-005",
-      "english": "Heebie-jeebies",
-      "polish": "Ciarki",
+      "english": "Gun",
+      "polish": "Spluwa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p126-006",
-      "english": "Jeepers creepers",
-      "polish": "O jejku, jejku! Coś takiego!",
+      "english": "Captain",
+      "polish": "Kapitan",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p126-007",
-      "english": "Mishmash",
-      "polish": "Miszmasz",
+      "english": "War",
+      "polish": "Wojna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p126-008",
-      "english": "Nitty-gritty",
-      "polish": "Sedno sprawy",
+      "english": "Soldier",
+      "polish": "Żołnierz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p126-009",
-      "english": "Super-duper",
-      "polish": "Fajowski",
+      "english": "Accuracy",
+      "polish": "Celność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p126-010",
-      "english": "Teeny-weeny",
-      "polish": "Tyci-tyci",
+      "english": "Bomb",
+      "polish": "Bomba",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p126-011",
-      "english": "Wish-wash",
-      "polish": "Pierdu-pierdu",
+      "english": "Weapon",
+      "polish": "Broń",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p126-012",
-      "english": "Artsy-fartsy",
-      "polish": "Wydumany",
+      "english": "Mission",
+      "polish": "Misja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p126-013",
-      "english": "Criss-cross",
-      "polish": "Wzdłuż I wszerz",
+      "english": "Military",
+      "polish": "Siły zbrojne",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p126-014",
-      "english": "Goody-goody",
-      "polish": "Świętoszkowaty",
+      "english": "Army",
+      "polish": "Armia, wojsko",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-014-word.mp3",
@@ -134,8 +134,8 @@
     },
     {
       "id": "t1-p126-015",
-      "english": "Helter-skelter",
-      "polish": "Na łeb na szyję",
+      "english": "Officer",
+      "polish": "Oficer",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-015-word.mp3",
@@ -143,8 +143,8 @@
     },
     {
       "id": "t1-p126-016",
-      "english": "Hoity-toity",
-      "polish": "Zadzierający nosa",
+      "english": "Battle",
+      "polish": "Bitwa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-016-word.mp3",
@@ -152,8 +152,8 @@
     },
     {
       "id": "t1-p126-017",
-      "english": "Hush-hush",
-      "polish": "Cicho, sza",
+      "english": "Dynamite",
+      "polish": "Dynamit",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-017-word.mp3",
@@ -161,8 +161,8 @@
     },
     {
       "id": "t1-p126-018",
-      "english": "Itsy-bitsy",
-      "polish": "Maleńki",
+      "english": "Survival",
+      "polish": "Przetrwanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-018-word.mp3",
@@ -170,8 +170,8 @@
     },
     {
       "id": "t1-p126-019",
-      "english": "Ju-ju",
-      "polish": "Talizman",
+      "english": "Duty",
+      "polish": "Obowiązek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-019-word.mp3",
@@ -179,8 +179,8 @@
     },
     {
       "id": "t1-p126-020",
-      "english": "Willy-nilly",
-      "polish": "Chcąc nie chcąc",
+      "english": "Lookout",
+      "polish": "Obserwator",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-020-word.mp3",
@@ -188,8 +188,8 @@
     },
     {
       "id": "t1-p126-021",
-      "english": "Hustle and bustle",
-      "polish": "Zgiełk",
+      "english": "Firearm",
+      "polish": "Broń palna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-021-word.mp3",
@@ -197,8 +197,8 @@
     },
     {
       "id": "t1-p126-022",
-      "english": "Bric-a-brac",
-      "polish": "Bibeloty",
+      "english": "Grenade",
+      "polish": "Granat",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-022-word.mp3",
@@ -206,8 +206,8 @@
     },
     {
       "id": "t1-p126-023",
-      "english": "Dilly-dally",
-      "polish": "Marnować czas",
+      "english": "Pistol",
+      "polish": "Pistolet",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-023-word.mp3",
@@ -215,8 +215,8 @@
     },
     {
       "id": "t1-p126-024",
-      "english": "Flim-flam",
-      "polish": "Zwodnicze bzdury",
+      "english": "Guard",
+      "polish": "Strażnik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-024-word.mp3",
@@ -224,8 +224,8 @@
     },
     {
       "id": "t1-p126-025",
-      "english": "Hanky-panky",
-      "polish": "Przekręty",
+      "english": "Spy",
+      "polish": "Szpieg",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-025-word.mp3",
@@ -233,8 +233,8 @@
     },
     {
       "id": "t1-p126-026",
-      "english": "Higgledy-piggledy",
-      "polish": "Jak groch z kapustą",
+      "english": "Backup",
+      "polish": "Wsparcie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-026-word.mp3",
@@ -242,8 +242,8 @@
     },
     {
       "id": "t1-p126-027",
-      "english": "Hodge-podge",
-      "polish": "Mieszanina",
+      "english": "Rookie",
+      "polish": "Żółtodziób",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-027-word.mp3",
@@ -251,8 +251,8 @@
     },
     {
       "id": "t1-p126-028",
-      "english": "Humpty-dumpty",
-      "polish": "Osoba przy kości",
+      "english": "Unit",
+      "polish": "Jednostka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-028-word.mp3",
@@ -260,8 +260,8 @@
     },
     {
       "id": "t1-p126-029",
-      "english": "Knick-knacks",
-      "polish": "Drobiazgi",
+      "english": "Predict",
+      "polish": "Przepowiadać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-029-word.mp3",
@@ -269,12 +269,147 @@
     },
     {
       "id": "t1-p126-030",
-      "english": "Riff-raff",
-      "polish": "Hołota",
+      "english": "Remind",
+      "polish": "Przypomnieć o czymś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p126-030-word.mp3",
       "audioSentence": "t1-p126-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-031",
+      "english": "Tank",
+      "polish": "Czołg",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-031-word.mp3",
+      "audioSentence": "t1-p126-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-032",
+      "english": "Evacuation",
+      "polish": "Ewakuacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-032-word.mp3",
+      "audioSentence": "t1-p126-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-033",
+      "english": "Rifle",
+      "polish": "Karabin",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-033-word.mp3",
+      "audioSentence": "t1-p126-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-034",
+      "english": "Air force",
+      "polish": "Siły powietrzne",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-034-word.mp3",
+      "audioSentence": "t1-p126-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-035",
+      "english": "Explosives",
+      "polish": "Ładunki wybuchowe",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-035-word.mp3",
+      "audioSentence": "t1-p126-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-036",
+      "english": "Bullet",
+      "polish": "Nabój, pocisk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-036-word.mp3",
+      "audioSentence": "t1-p126-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-037",
+      "english": "Troop",
+      "polish": "Oddział wojskowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-037-word.mp3",
+      "audioSentence": "t1-p126-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-038",
+      "english": "Ally",
+      "polish": "Sprzymierzeniec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-038-word.mp3",
+      "audioSentence": "t1-p126-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-039",
+      "english": "Gunpowder",
+      "polish": "Proch",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-039-word.mp3",
+      "audioSentence": "t1-p126-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-040",
+      "english": "Shot",
+      "polish": "Strzał",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-040-word.mp3",
+      "audioSentence": "t1-p126-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-041",
+      "english": "Private",
+      "polish": "Szeregowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-041-word.mp3",
+      "audioSentence": "t1-p126-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-042",
+      "english": "Outbreak",
+      "polish": "Wybuch",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-042-word.mp3",
+      "audioSentence": "t1-p126-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-043",
+      "english": "Collateral damage",
+      "polish": "Straty wśród cywilów powstałe w wyniku wojny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-043-word.mp3",
+      "audioSentence": "t1-p126-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-044",
+      "english": "Casualties",
+      "polish": "Straty w ludziach",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-044-word.mp3",
+      "audioSentence": "t1-p126-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p126-045",
+      "english": "Recruit",
+      "polish": "Rekrut",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p126-045-word.mp3",
+      "audioSentence": "t1-p126-045-sentence.mp3"
     }
   ]
 }

@@ -51,8 +51,9 @@ const CATEGORY_ORDER = [
   'Przysłówki',
   'Spójniki',
   'Slang',
+  'Piękne',
   'Skróty',
-  'Klony',
+  'Wulgaryzmy',
 ]
 
 // Derive unique categories in specified order

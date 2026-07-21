@@ -1,15 +1,15 @@
 {
   "id": "t1-p197",
-  "name": "Co poszło nie tak?",
+  "name": "Kalkulator",
   "volume": "Tom IV",
   "level": 3,
-  "category": "Phrasale",
-  "chapter": "Rozdział XXXVII",
+  "category": "Czasowniki",
+  "chapter": "Rozdział XXXVI",
   "words": [
     {
       "id": "t1-p197-001",
-      "english": "Break down",
-      "polish": "Popsuć się",
+      "english": "Add",
+      "polish": "Dodawać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p197-002",
-      "english": "Give up",
-      "polish": "Poddać się, zrezygnować",
+      "english": "Decrease",
+      "polish": "Zmniejszać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p197-003",
-      "english": "Fall down",
-      "polish": "Upaść",
+      "english": "Divide",
+      "polish": "Dzielić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p197-004",
-      "english": "End up",
-      "polish": "Skończyć",
+      "english": "Estimate",
+      "polish": "Szacować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p197-005",
-      "english": "Fall over",
-      "polish": "Przewracać się",
+      "english": "Increase",
+      "polish": "Zwiększać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p197-006",
-      "english": "Be off",
-      "polish": "Zepsuć się",
+      "english": "Multiply",
+      "polish": "Mnożyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p197-007",
-      "english": "Call off",
-      "polish": "Odwoływać",
+      "english": "Subtract",
+      "polish": "Odejmować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p197-008",
-      "english": "Run out of sth",
-      "polish": "Wyczerpywać",
+      "english": "Calculate",
+      "polish": "Obliczać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p197-009",
-      "english": "Fade out",
-      "polish": "Zanikać",
+      "english": "Double",
+      "polish": "Podwajać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p197-010",
-      "english": "Dry up",
-      "polish": "Wysychać",
+      "english": "Integrate",
+      "polish": "Całkować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p197-011",
-      "english": "Hold sb up",
-      "polish": "Zatrzymać",
+      "english": "Split",
+      "polish": "Dzielić się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p197-012",
-      "english": "Miss out on",
-      "polish": "Przegapić",
+      "english": "Triple",
+      "polish": "Potrajać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p197-013",
-      "english": "Screw up",
-      "polish": "Schrzanić coś",
+      "english": "Differentiate",
+      "polish": "Różniczkować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p197-014",
-      "english": "Act up",
-      "polish": "Nawalać",
+      "english": "Overestimate",
+      "polish": "Przeszacować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-014-word.mp3",
@@ -134,147 +134,12 @@
     },
     {
       "id": "t1-p197-015",
-      "english": "Mess up",
-      "polish": "Schrzanić",
+      "english": "Underestimate",
+      "polish": "Nie doszacować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-015-word.mp3",
       "audioSentence": "t1-p197-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-016",
-      "english": "Mistake sb for sb",
-      "polish": "Pomylić kogoś z kimś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-016-word.mp3",
-      "audioSentence": "t1-p197-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-017",
-      "english": "Use up",
-      "polish": "Zużyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-017-word.mp3",
-      "audioSentence": "t1-p197-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-018",
-      "english": "Be off",
-      "polish": "Być niezgodnym z ustaleniami",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-018-word.mp3",
-      "audioSentence": "t1-p197-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-019",
-      "english": "Get rid of sth",
-      "polish": "Pozbywać się czegoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-019-word.mp3",
-      "audioSentence": "t1-p197-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-020",
-      "english": "Break down",
-      "polish": "Załamywać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-020-word.mp3",
-      "audioSentence": "t1-p197-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-021",
-      "english": "Clog up",
-      "polish": "Zatkać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-021-word.mp3",
-      "audioSentence": "t1-p197-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-022",
-      "english": "Fade away",
-      "polish": "Blaknąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-022-word.mp3",
-      "audioSentence": "t1-p197-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-023",
-      "english": "Go off",
-      "polish": "Przestać działać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-023-word.mp3",
-      "audioSentence": "t1-p197-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-024",
-      "english": "Knock over",
-      "polish": "Przewrócić coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-024-word.mp3",
-      "audioSentence": "t1-p197-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-025",
-      "english": "Run down",
-      "polish": "Wyczerpać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-025-word.mp3",
-      "audioSentence": "t1-p197-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-026",
-      "english": "Wind up",
-      "polish": "Skończyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-026-word.mp3",
-      "audioSentence": "t1-p197-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-027",
-      "english": "Dry up",
-      "polish": "Wyczerpać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-027-word.mp3",
-      "audioSentence": "t1-p197-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-028",
-      "english": "Go down",
-      "polish": "Przegrać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-028-word.mp3",
-      "audioSentence": "t1-p197-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-029",
-      "english": "Go down",
-      "polish": "Spaść",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-029-word.mp3",
-      "audioSentence": "t1-p197-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-030",
-      "english": "Go down",
-      "polish": "Tonąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-030-word.mp3",
-      "audioSentence": "t1-p197-030-sentence.mp3"
     }
   ]
 }

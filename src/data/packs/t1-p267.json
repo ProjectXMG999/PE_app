@@ -1,15 +1,15 @@
 {
   "id": "t1-p267",
-  "name": "Przymiotniki 28",
-  "volume": "Tom VII",
+  "name": "Slang 28",
+  "volume": "Tom VI",
   "level": 4,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział LXII",
+  "category": "Slang",
+  "chapter": "Rozdział LVIII",
   "words": [
     {
       "id": "t1-p267-001",
-      "english": "Adopted",
-      "polish": "Adoptowany",
+      "english": "Nickel",
+      "polish": "25 centów",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p267-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p267-002",
-      "english": "Alphabetical",
-      "polish": "Alfabetyczny",
+      "english": "Dough",
+      "polish": "Pajda",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p267-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p267-003",
-      "english": "Alternative",
-      "polish": "Alternatywny",
+      "english": "Paper",
+      "polish": "Hajs",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p267-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p267-004",
-      "english": "Analytical",
-      "polish": "Analityczny",
+      "english": "Bacon",
+      "polish": "Pieniądze",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p267-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p267-005",
-      "english": "Animated",
-      "polish": "Animowany",
+      "english": "Be on the take",
+      "polish": "Brać w łapę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p267-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p267-006",
-      "english": "Aromatic",
-      "polish": "Aromatyczny",
+      "english": "Busted",
+      "polish": "Splajtowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p267-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p267-007",
-      "english": "Biological",
-      "polish": "Biologiczny",
+      "english": "Cha-ching",
+      "polish": "Siano",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p267-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p267-008",
-      "english": "Charismatic",
-      "polish": "Charyzmatyczny",
+      "english": "Cop",
+      "polish": "Kupić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p267-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p267-009",
-      "english": "Chemical",
-      "polish": "Chemiczny",
+      "english": "Loan shark",
+      "polish": "Lichwiarz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p267-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p267-010",
-      "english": "Christian",
-      "polish": "Chrześcijański",
+      "english": "Loot",
+      "polish": "Kabona",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p267-010-word.mp3",
       "audioSentence": "t1-p267-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p267-011",
-      "english": "Definitive",
-      "polish": "Definitywny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p267-011-word.mp3",
-      "audioSentence": "t1-p267-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p267-012",
-      "english": "Drastic",
-      "polish": "Drastyczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p267-012-word.mp3",
-      "audioSentence": "t1-p267-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p267-013",
-      "english": "Dynamic",
-      "polish": "Dynamiczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p267-013-word.mp3",
-      "audioSentence": "t1-p267-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p267-014",
-      "english": "Diplomatic",
-      "polish": "Dyplomatyczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p267-014-word.mp3",
-      "audioSentence": "t1-p267-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p267-015",
-      "english": "Egocentric",
-      "polish": "Egocentryczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p267-015-word.mp3",
-      "audioSentence": "t1-p267-015-sentence.mp3"
     }
   ]
 }

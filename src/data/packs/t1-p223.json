@@ -1,15 +1,15 @@
 {
   "id": "t1-p223",
-  "name": "Woda wszędzie",
+  "name": "Rzeczowniki 13",
   "volume": "Tom V",
   "level": 3,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XLIV",
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XLIII",
   "words": [
     {
       "id": "t1-p223-001",
-      "english": "Bathe",
-      "polish": "Kąpać się",
+      "english": "Advantage",
+      "polish": "Zaleta",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p223-002",
-      "english": "Rain",
-      "polish": "Padać",
+      "english": "Presence",
+      "polish": "Obecność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p223-003",
-      "english": "Dribble",
-      "polish": "Skapywać",
+      "english": "Continuation",
+      "polish": "Kontynuacja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p223-004",
-      "english": "Drizzle",
-      "polish": "Mżyć",
+      "english": "Progress",
+      "polish": "Postęp",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p223-005",
-      "english": "Evaporate",
-      "polish": "Wyparować",
+      "english": "Cause",
+      "polish": "Przyczyna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p223-006",
-      "english": "Freeze",
-      "polish": "Zamrażać",
+      "english": "Issue",
+      "polish": "Sprawa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p223-007",
-      "english": "Leak",
-      "polish": "Przeciekać",
+      "english": "Case",
+      "polish": "Sprawa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p223-008",
-      "english": "Spill",
-      "polish": "Rozlewać",
+      "english": "Stability",
+      "polish": "Stabilność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p223-009",
-      "english": "Spout",
-      "polish": "Chlustać",
+      "english": "Extent",
+      "polish": "Rozległość",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p223-010",
-      "english": "Water",
-      "polish": "Podlewać",
+      "english": "Decline",
+      "polish": "Obniżenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p223-011",
-      "english": "Flow",
-      "polish": "Płynąć",
+      "english": "Barrier",
+      "polish": "Bariera",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p223-012",
-      "english": "Flush",
-      "polish": "Spłukać",
+      "english": "Outcome",
+      "polish": "Wynik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p223-013",
-      "english": "Pump",
-      "polish": "Pompować",
+      "english": "Overview",
+      "polish": "Ogólny zarys",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p223-014",
-      "english": "Splash",
-      "polish": "Chlapać",
+      "english": "Destiny",
+      "polish": "Przeznaczenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-014-word.mp3",
@@ -134,147 +134,12 @@
     },
     {
       "id": "t1-p223-015",
-      "english": "Wet",
-      "polish": "Moczyć",
+      "english": "Pattern",
+      "polish": "Wzorzec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p223-015-word.mp3",
       "audioSentence": "t1-p223-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-016",
-      "english": "Rinse",
-      "polish": "Przemywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-016-word.mp3",
-      "audioSentence": "t1-p223-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-017",
-      "english": "Spurt",
-      "polish": "Wytryskać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-017-word.mp3",
-      "audioSentence": "t1-p223-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-018",
-      "english": "Squirt",
-      "polish": "Tryskać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-018-word.mp3",
-      "audioSentence": "t1-p223-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-019",
-      "english": "Submerge",
-      "polish": "Zanurzyć się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-019-word.mp3",
-      "audioSentence": "t1-p223-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-020",
-      "english": "Drain",
-      "polish": "Odsączać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-020-word.mp3",
-      "audioSentence": "t1-p223-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-021",
-      "english": "Drench",
-      "polish": "Namoczyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-021-word.mp3",
-      "audioSentence": "t1-p223-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-022",
-      "english": "Drip",
-      "polish": "Kapać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-022-word.mp3",
-      "audioSentence": "t1-p223-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-023",
-      "english": "Float",
-      "polish": "Unosić się na wodzie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-023-word.mp3",
-      "audioSentence": "t1-p223-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-024",
-      "english": "Inflate",
-      "polish": "Wypełniać powietrzem lub gazem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-024-word.mp3",
-      "audioSentence": "t1-p223-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-025",
-      "english": "Moisten",
-      "polish": "Nawilżać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-025-word.mp3",
-      "audioSentence": "t1-p223-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-026",
-      "english": "Shower",
-      "polish": "Brać prysznic",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-026-word.mp3",
-      "audioSentence": "t1-p223-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-027",
-      "english": "Shower",
-      "polish": "Padać przelotnie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-027-word.mp3",
-      "audioSentence": "t1-p223-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-028",
-      "english": "Soak",
-      "polish": "Przemoczyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-028-word.mp3",
-      "audioSentence": "t1-p223-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-029",
-      "english": "Plunge",
-      "polish": "Wpaść do wody",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-029-word.mp3",
-      "audioSentence": "t1-p223-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p223-030",
-      "english": "Seep",
-      "polish": "Przeciekać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p223-030-word.mp3",
-      "audioSentence": "t1-p223-030-sentence.mp3"
     }
   ]
 }

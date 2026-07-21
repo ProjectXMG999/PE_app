@@ -1,15 +1,15 @@
 {
   "id": "t1-p170",
-  "name": "Ocieka splendorem",
+  "name": "Czasowniki 12",
   "volume": "Tom III",
   "level": 3,
-  "category": "Slang",
-  "chapter": "Rozdział XXIX",
+  "category": "Czasowniki",
+  "chapter": "Rozdział XXVII",
   "words": [
     {
       "id": "t1-p170-001",
-      "english": "Banger",
-      "polish": "Coś wystrzałowego",
+      "english": "Invest",
+      "polish": "Inwestować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p170-002",
-      "english": "Big time",
-      "polish": "Na wypasie",
+      "english": "Note",
+      "polish": "Notować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p170-003",
-      "english": "Hardcore",
-      "polish": "Hardkorowe",
+      "english": "Complete",
+      "polish": "Kompletować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p170-004",
-      "english": "It slaps",
-      "polish": "To jest bombowe",
+      "english": "Emigrate",
+      "polish": "Emigrować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p170-005",
-      "english": "Mint",
-      "polish": "W doskonałym stanie",
+      "english": "Fascinate",
+      "polish": "Fascynować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p170-006",
-      "english": "Tight",
-      "polish": "Sztywniutko",
+      "english": "Irritate",
+      "polish": "Irytować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p170-007",
-      "english": "Turnt",
-      "polish": "Szalony",
+      "english": "Negotiate",
+      "polish": "Negocjować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p170-008",
-      "english": "Big",
-      "polish": "Na topie",
+      "english": "Publish",
+      "polish": "Publikować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p170-009",
-      "english": "Fresh",
-      "polish": "Super",
+      "english": "Segregate",
+      "polish": "Segregować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p170-010",
-      "english": "Hype",
-      "polish": "Zajawka",
+      "english": "Transfer",
+      "polish": "Transferować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p170-011",
-      "english": "Ratchet",
-      "polish": "Zarąbiście",
+      "english": "Block",
+      "polish": "Blokować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p170-012",
-      "english": "Thicc",
-      "polish": "Grubo",
+      "english": "Complicate",
+      "polish": "Komplikować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p170-013",
-      "english": "Epic",
-      "polish": "Epickie",
+      "english": "Decorate",
+      "polish": "Dekorować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p170-014",
-      "english": "Hot",
-      "polish": "Gorący",
+      "english": "Diagnose",
+      "polish": "Diagnozować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-014-word.mp3",
@@ -134,147 +134,12 @@
     },
     {
       "id": "t1-p170-015",
-      "english": "Lit",
-      "polish": "Mega",
+      "english": "Edit",
+      "polish": "Edytować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p170-015-word.mp3",
       "audioSentence": "t1-p170-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-016",
-      "english": "Rocking",
-      "polish": "Czaderski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-016-word.mp3",
-      "audioSentence": "t1-p170-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-017",
-      "english": "Sick",
-      "polish": "Odjazdowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-017-word.mp3",
-      "audioSentence": "t1-p170-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-018",
-      "english": "Peach",
-      "polish": "Bombowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-018-word.mp3",
-      "audioSentence": "t1-p170-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-019",
-      "english": "On fire",
-      "polish": "Super",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-019-word.mp3",
-      "audioSentence": "t1-p170-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-020",
-      "english": "Killing it",
-      "polish": "Rozwala",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-020-word.mp3",
-      "audioSentence": "t1-p170-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-021",
-      "english": "Bomb",
-      "polish": "Sztos",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-021-word.mp3",
-      "audioSentence": "t1-p170-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-022",
-      "english": "Groovy",
-      "polish": "Rewelka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-022-word.mp3",
-      "audioSentence": "t1-p170-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-023",
-      "english": "Wicked",
-      "polish": "Zarąbisty",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-023-word.mp3",
-      "audioSentence": "t1-p170-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-024",
-      "english": "Straight fire",
-      "polish": "Po prostu świetny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-024-word.mp3",
-      "audioSentence": "t1-p170-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-025",
-      "english": "Awesome sauce",
-      "polish": "Superanckie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-025-word.mp3",
-      "audioSentence": "t1-p170-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-026",
-      "english": "Cool beans",
-      "polish": "Fajowskie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-026-word.mp3",
-      "audioSentence": "t1-p170-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-027",
-      "english": "Meta",
-      "polish": "Super fajne",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-027-word.mp3",
-      "audioSentence": "t1-p170-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-028",
-      "english": "On a boat",
-      "polish": "Na fali",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-028-word.mp3",
-      "audioSentence": "t1-p170-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-029",
-      "english": "Super fly",
-      "polish": "Czadowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-029-word.mp3",
-      "audioSentence": "t1-p170-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p170-030",
-      "english": "X-factor",
-      "polish": "Cecha, która sprawia, że jest się wyjątkowym I pożądanym",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p170-030-word.mp3",
-      "audioSentence": "t1-p170-030-sentence.mp3"
     }
   ]
 }

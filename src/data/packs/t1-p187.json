@@ -1,6 +1,6 @@
 {
   "id": "t1-p187",
-  "name": "Telefon",
+  "name": "Rzeczowniki 12",
   "volume": "Tom IV",
   "level": 3,
   "category": "Rzeczowniki",
@@ -8,8 +8,8 @@
   "words": [
     {
       "id": "t1-p187-001",
-      "english": "Loudspeaker",
-      "polish": "Głośnik w telefonie",
+      "english": "Secret",
+      "polish": "Sekret",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p187-002",
-      "english": "Microphone",
-      "polish": "Mikrofon",
+      "english": "Domination",
+      "polish": "Dominacja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p187-003",
-      "english": "Roaming",
-      "polish": "Roaming",
+      "english": "Aid",
+      "polish": "Pomoc",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p187-004",
-      "english": "Earphones",
-      "polish": "Słuchawki",
+      "english": "Visit",
+      "polish": "Wizyta",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p187-005",
-      "english": "Sim card",
-      "polish": "Karta sim",
+      "english": "Handshake",
+      "polish": "Uścisk dłoni",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p187-006",
-      "english": "Answering machine",
-      "polish": "Automatyczna sekretarka",
+      "english": "Community",
+      "polish": "Wspólnota",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p187-007",
-      "english": "Hands-free set",
-      "polish": "Zestaw głośnomówiący",
+      "english": "Relation",
+      "polish": "Relacja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p187-008",
-      "english": "Telephone line",
-      "polish": "Linia telefoniczna",
+      "english": "Romance",
+      "polish": "Romans",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p187-009",
-      "english": "Phone book",
-      "polish": "Książka telefoniczna",
+      "english": "Love affair",
+      "polish": "Romans",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p187-010",
-      "english": "Long-distance call",
-      "polish": "Rozmowa międzymiastowa",
+      "english": "Sisterhood",
+      "polish": "Siostrzeństwo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p187-011",
-      "english": "Touchscreen",
-      "polish": "Ekran dotykowy",
+      "english": "Revenge",
+      "polish": "Zemsta",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p187-012",
-      "english": "Reception",
-      "polish": "Zasięg",
+      "english": "Attraction",
+      "polish": "Przyciąganie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p187-013",
-      "english": "Dialing",
-      "polish": "Dzwonienie",
+      "english": "Acquaintance",
+      "polish": "Znajomość",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p187-014",
-      "english": "Landline phone",
-      "polish": "Telefon stacjonarny",
+      "english": "Gesture",
+      "polish": "Gest",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-014-word.mp3",
@@ -134,12 +134,39 @@
     },
     {
       "id": "t1-p187-015",
-      "english": "Smartphone",
-      "polish": "Smartfon",
+      "english": "Intimacy",
+      "polish": "Intymność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-015-word.mp3",
       "audioSentence": "t1-p187-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p187-016",
+      "english": "Aid",
+      "polish": "Pomoc",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p187-016-word.mp3",
+      "audioSentence": "t1-p187-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p187-017",
+      "english": "Relation",
+      "polish": "Relacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p187-017-word.mp3",
+      "audioSentence": "t1-p187-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p187-018",
+      "english": "Attraction",
+      "polish": "Przyciąganie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p187-018-word.mp3",
+      "audioSentence": "t1-p187-018-sentence.mp3"
     }
   ]
 }

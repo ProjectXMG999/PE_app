@@ -1,15 +1,15 @@
 {
   "id": "t1-p271",
-  "name": "Slang 30",
+  "name": "Przymiotniki 28",
   "volume": "Tom VII",
   "level": 4,
-  "category": "Slang",
-  "chapter": "Rozdział LXIV",
+  "category": "Przymiotniki",
+  "chapter": "Rozdział LXII",
   "words": [
     {
       "id": "t1-p271-001",
-      "english": "Basket case",
-      "polish": "Strzępek nerwów",
+      "english": "Adopted",
+      "polish": "Adoptowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p271-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p271-002",
-      "english": "Jock",
-      "polish": "Mięśniak",
+      "english": "Alphabetical",
+      "polish": "Alfabetyczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p271-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p271-003",
-      "english": "Killjoy",
-      "polish": "Smutas",
+      "english": "Alternative",
+      "polish": "Alternatywny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p271-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p271-004",
-      "english": "Mamas boy",
-      "polish": "Maminsynek",
+      "english": "Analytical",
+      "polish": "Analityczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p271-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p271-005",
-      "english": "Phony",
-      "polish": "Pozer",
+      "english": "Animated",
+      "polish": "Animowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p271-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p271-006",
-      "english": "Preppy",
-      "polish": "Bananowa młodzież",
+      "english": "Aromatic",
+      "polish": "Aromatyczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p271-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p271-007",
-      "english": "Sassy",
-      "polish": "Złoty chłopak",
+      "english": "Biological",
+      "polish": "Biologiczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p271-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p271-008",
-      "english": "Wuss",
-      "polish": "Mięczak",
+      "english": "Charismatic",
+      "polish": "Charyzmatyczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p271-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p271-009",
-      "english": "Typeractive",
-      "polish": "Osoba zbyt wylewna w wiadomościach tekstowych I e-mailach",
+      "english": "Chemical",
+      "polish": "Chemiczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p271-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p271-010",
-      "english": "Airhead",
-      "polish": "Buja w obłokach",
+      "english": "Christian",
+      "polish": "Chrześcijański",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p271-010-word.mp3",
       "audioSentence": "t1-p271-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p271-011",
+      "english": "Definitive",
+      "polish": "Definitywny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p271-011-word.mp3",
+      "audioSentence": "t1-p271-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p271-012",
+      "english": "Drastic",
+      "polish": "Drastyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p271-012-word.mp3",
+      "audioSentence": "t1-p271-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p271-013",
+      "english": "Dynamic",
+      "polish": "Dynamiczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p271-013-word.mp3",
+      "audioSentence": "t1-p271-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p271-014",
+      "english": "Diplomatic",
+      "polish": "Dyplomatyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p271-014-word.mp3",
+      "audioSentence": "t1-p271-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p271-015",
+      "english": "Egocentric",
+      "polish": "Egocentryczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p271-015-word.mp3",
+      "audioSentence": "t1-p271-015-sentence.mp3"
     }
   ]
 }

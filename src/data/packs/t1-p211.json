@@ -1,15 +1,15 @@
 {
   "id": "t1-p211",
-  "name": "Edukacja",
+  "name": "Przymiotniki 16",
   "volume": "Tom IV",
   "level": 3,
-  "category": "Skróty",
-  "chapter": "Rozdział XL",
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XXXIX",
   "words": [
     {
       "id": "t1-p211-001",
-      "english": "BA",
-      "polish": "Lic. Nauk humanistycznych",
+      "english": "General",
+      "polish": "Generalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p211-002",
-      "english": "BSC",
-      "polish": "Lic. Nauk ścisłych",
+      "english": "Other",
+      "polish": "Inny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p211-003",
-      "english": "EFL",
-      "polish": "Angielski jako język obcy",
+      "english": "Same",
+      "polish": "Taki sam",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p211-004",
-      "english": "ESL",
-      "polish": "Angielski jako drugi język",
+      "english": "Right",
+      "polish": "Właściwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p211-005",
-      "english": "MA",
-      "polish": "Mgr nauk humanistycznych",
+      "english": "Similar",
+      "polish": "Podobny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p211-006",
-      "english": "MBA",
-      "polish": "Mgr administracji biznesowej",
+      "english": "Absent",
+      "polish": "Nieobecny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p211-007",
-      "english": "MD",
-      "polish": "Lek. Med.",
+      "english": "So-and-so",
+      "polish": "Taki owaki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p211-008",
-      "english": "MPHIL",
-      "polish": "Mgr filozofii",
+      "english": "Active",
+      "polish": "Aktywny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p211-009",
-      "english": "MSC",
-      "polish": "Mgr nauk ścisłych",
+      "english": "Direct",
+      "polish": "Bezpośredni",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p211-010",
-      "english": "PHD",
-      "polish": "Doktorat",
+      "english": "Passive",
+      "polish": "Pasywny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p211-010-word.mp3",
       "audioSentence": "t1-p211-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p211-011",
+      "english": "Indirect",
+      "polish": "Pośredni",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p211-011-word.mp3",
+      "audioSentence": "t1-p211-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p211-012",
+      "english": "Missing",
+      "polish": "Brakujący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p211-012-word.mp3",
+      "audioSentence": "t1-p211-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p211-013",
+      "english": "Pure",
+      "polish": "Bezgrzeszny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p211-013-word.mp3",
+      "audioSentence": "t1-p211-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p211-014",
+      "english": "Equal",
+      "polish": "Równy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p211-014-word.mp3",
+      "audioSentence": "t1-p211-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p211-015",
+      "english": "Particular",
+      "polish": "Konkretny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p211-015-word.mp3",
+      "audioSentence": "t1-p211-015-sentence.mp3"
     }
   ]
 }

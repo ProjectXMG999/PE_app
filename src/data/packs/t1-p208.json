@@ -1,15 +1,15 @@
 {
   "id": "t1-p208",
-  "name": "W odniesieniu do",
+  "name": "Slang 19",
   "volume": "Tom IV",
   "level": 3,
-  "category": "Spójniki",
-  "chapter": "Rozdział XL",
+  "category": "Slang",
+  "chapter": "Rozdział XXXIX",
   "words": [
     {
       "id": "t1-p208-001",
-      "english": "As far as",
-      "polish": "O ile",
+      "english": "Chillax",
+      "polish": "Pełen relaks",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p208-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p208-002",
-      "english": "As for",
-      "polish": "Co się tyczy",
+      "english": "Downtime",
+      "polish": "Przerwa w pracy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p208-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p208-003",
-      "english": "In the first place",
-      "polish": "W pierwszej kolejności",
+      "english": "Have a crash",
+      "polish": "Zasnąć bardzo szybko",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p208-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p208-004",
-      "english": "Depending on",
-      "polish": "Zależnie od",
+      "english": "Laid back",
+      "polish": "Ktoś kompletnie bez motywacji",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p208-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p208-005",
-      "english": "Given",
-      "polish": "Zważywszy",
+      "english": "Loafing",
+      "polish": "Obijać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p208-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p208-006",
-      "english": "Independent of",
-      "polish": "Niezależnie od",
+      "english": "Slide",
+      "polish": "Podskoczyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p208-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p208-007",
-      "english": "Owing to",
-      "polish": "Dzięki",
+      "english": "Kick back",
+      "polish": "Wrzucić na luz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p208-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p208-008",
-      "english": "Regarding",
-      "polish": "W sprawie",
+      "english": "Take five",
+      "polish": "Robić krótką przerwę w pracy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p208-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p208-009",
-      "english": "With regard to",
-      "polish": "W odniesieniu do",
+      "english": "Roll up to",
+      "polish": "Zawinąć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p208-009-word.mp3",
@@ -89,102 +89,12 @@
     },
     {
       "id": "t1-p208-010",
-      "english": "According to",
-      "polish": "Według",
+      "english": "Zone out",
+      "polish": "Wyłączyć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p208-010-word.mp3",
       "audioSentence": "t1-p208-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p208-011",
-      "english": "As per",
-      "polish": "Jak według",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p208-011-word.mp3",
-      "audioSentence": "t1-p208-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p208-012",
-      "english": "In accordance with",
-      "polish": "Zgodnie z",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p208-012-word.mp3",
-      "audioSentence": "t1-p208-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p208-013",
-      "english": "In connection with",
-      "polish": "W połączeniu z",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p208-013-word.mp3",
-      "audioSentence": "t1-p208-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p208-014",
-      "english": "In respect of",
-      "polish": "Pod względem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p208-014-word.mp3",
-      "audioSentence": "t1-p208-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p208-015",
-      "english": "On account of",
-      "polish": "Z racji",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p208-015-word.mp3",
-      "audioSentence": "t1-p208-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p208-016",
-      "english": "On behalf of",
-      "polish": "W imieniu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p208-016-word.mp3",
-      "audioSentence": "t1-p208-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p208-017",
-      "english": "Referring to",
-      "polish": "Odnosząc się do",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p208-017-word.mp3",
-      "audioSentence": "t1-p208-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p208-018",
-      "english": "Turning to",
-      "polish": "Zwracając się do",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p208-018-word.mp3",
-      "audioSentence": "t1-p208-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p208-019",
-      "english": "Further to",
-      "polish": "W nawiązaniu do",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p208-019-word.mp3",
-      "audioSentence": "t1-p208-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p208-020",
-      "english": "Pursuant to",
-      "polish": "Zgodnie z",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p208-020-word.mp3",
-      "audioSentence": "t1-p208-020-sentence.mp3"
     }
   ]
 }

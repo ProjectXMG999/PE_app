@@ -1,15 +1,15 @@
 {
   "id": "t1-p140",
-  "name": "Wieś",
-  "volume": "Tom III",
+  "name": "Orientuj się",
+  "volume": "Tom II",
   "level": 2,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XXI",
+  "category": "Skróty",
+  "chapter": "Rozdział XX",
   "words": [
     {
       "id": "t1-p140-001",
-      "english": "Cage",
-      "polish": "Klatka",
+      "english": "APT.",
+      "polish": "M.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p140-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p140-002",
-      "english": "Village",
-      "polish": "Wioska",
+      "english": "AVE",
+      "polish": "Al.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p140-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p140-003",
-      "english": "Farmer",
-      "polish": "Rolnik",
+      "english": "BLVD",
+      "polish": "Bulwar",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p140-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p140-004",
-      "english": "Ground",
-      "polish": "Grunt",
+      "english": "DEPT",
+      "polish": "Oddział",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p140-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p140-005",
-      "english": "Farm",
-      "polish": "Farma",
+      "english": "E",
+      "polish": "Wsch.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p140-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p140-006",
-      "english": "Farming",
-      "polish": "Rolnictwo",
+      "english": "N",
+      "polish": "Pn.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p140-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p140-007",
-      "english": "Countryside",
-      "polish": "Wieś",
+      "english": "S",
+      "polish": "Pd.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p140-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p140-008",
-      "english": "Cowboy",
-      "polish": "Kowboj",
+      "english": "ST.",
+      "polish": "Ul.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p140-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p140-009",
-      "english": "Soil",
-      "polish": "Gleba",
+      "english": "W",
+      "polish": "Zach.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p140-009-word.mp3",
@@ -89,462 +89,12 @@
     },
     {
       "id": "t1-p140-010",
-      "english": "Village festival",
-      "polish": "Festyn wiejski",
+      "english": "APT.",
+      "polish": "M.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p140-010-word.mp3",
       "audioSentence": "t1-p140-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-011",
-      "english": "Villager",
-      "polish": "Mieszkaniec wioski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-011-word.mp3",
-      "audioSentence": "t1-p140-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-012",
-      "english": "Tractor",
-      "polish": "Traktor",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-012-word.mp3",
-      "audioSentence": "t1-p140-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-013",
-      "english": "Wheat",
-      "polish": "Pszenica",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-013-word.mp3",
-      "audioSentence": "t1-p140-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-014",
-      "english": "Agrotourism",
-      "polish": "Agroturystyka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-014-word.mp3",
-      "audioSentence": "t1-p140-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-015",
-      "english": "Horseshoe",
-      "polish": "Podkowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-015-word.mp3",
-      "audioSentence": "t1-p140-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-016",
-      "english": "Poultry",
-      "polish": "Drób",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-016-word.mp3",
-      "audioSentence": "t1-p140-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-017",
-      "english": "Kennel",
-      "polish": "Buda",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-017-word.mp3",
-      "audioSentence": "t1-p140-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-018",
-      "english": "Cane",
-      "polish": "Trzcina",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-018-word.mp3",
-      "audioSentence": "t1-p140-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-019",
-      "english": "Ax",
-      "polish": "Siekiera",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-019-word.mp3",
-      "audioSentence": "t1-p140-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-020",
-      "english": "Stable",
-      "polish": "Stajnia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-020-word.mp3",
-      "audioSentence": "t1-p140-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-021",
-      "english": "Barn",
-      "polish": "Stodoła",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-021-word.mp3",
-      "audioSentence": "t1-p140-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-022",
-      "english": "Cottage",
-      "polish": "Chatka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-022-word.mp3",
-      "audioSentence": "t1-p140-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-023",
-      "english": "Windmill",
-      "polish": "Wiatrak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-023-word.mp3",
-      "audioSentence": "t1-p140-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-024",
-      "english": "Breeding",
-      "polish": "Rozmnażanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-024-word.mp3",
-      "audioSentence": "t1-p140-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-025",
-      "english": "Cattle",
-      "polish": "Bydło",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-025-word.mp3",
-      "audioSentence": "t1-p140-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-026",
-      "english": "Hut",
-      "polish": "Chata",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-026-word.mp3",
-      "audioSentence": "t1-p140-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-027",
-      "english": "Pigsty",
-      "polish": "Chlew",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-027-word.mp3",
-      "audioSentence": "t1-p140-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-028",
-      "english": "Pigeon fancier",
-      "polish": "Gołębiarz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-028-word.mp3",
-      "audioSentence": "t1-p140-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-029",
-      "english": "Peasant",
-      "polish": "Chłop",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-029-word.mp3",
-      "audioSentence": "t1-p140-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-030",
-      "english": "Buckwheat",
-      "polish": "Gryka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-030-word.mp3",
-      "audioSentence": "t1-p140-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-031",
-      "english": "Dung",
-      "polish": "Łajno",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-031-word.mp3",
-      "audioSentence": "t1-p140-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-032",
-      "english": "Cultivation",
-      "polish": "Hodowla",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-032-word.mp3",
-      "audioSentence": "t1-p140-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-033",
-      "english": "Livestock",
-      "polish": "Inwentarz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-033-word.mp3",
-      "audioSentence": "t1-p140-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-034",
-      "english": "Barley",
-      "polish": "Jęczmień",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-034-word.mp3",
-      "audioSentence": "t1-p140-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-035",
-      "english": "Mud floor",
-      "polish": "Klepisko",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-035-word.mp3",
-      "audioSentence": "t1-p140-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-036",
-      "english": "Harvester",
-      "polish": "Kombajn",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-036-word.mp3",
-      "audioSentence": "t1-p140-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-037",
-      "english": "Molehill",
-      "polish": "Kretowisko",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-037-word.mp3",
-      "audioSentence": "t1-p140-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-038",
-      "english": "Henhouse",
-      "polish": "Kurnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-038-word.mp3",
-      "audioSentence": "t1-p140-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-039",
-      "english": "Thresher",
-      "polish": "Młockarnia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-039-word.mp3",
-      "audioSentence": "t1-p140-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-040",
-      "english": "Cowshed",
-      "polish": "Obora",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-040-word.mp3",
-      "audioSentence": "t1-p140-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-041",
-      "english": "Manure",
-      "polish": "Obornik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-041-word.mp3",
-      "audioSentence": "t1-p140-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-042",
-      "english": "Strain",
-      "polish": "Szczep",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-042-word.mp3",
-      "audioSentence": "t1-p140-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-043",
-      "english": "Oat",
-      "polish": "Owies",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-043-word.mp3",
-      "audioSentence": "t1-p140-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-044",
-      "english": "Shepherd",
-      "polish": "Pasterz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-044-word.mp3",
-      "audioSentence": "t1-p140-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-045",
-      "english": "Pasture",
-      "polish": "Pastwisko",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-045-word.mp3",
-      "audioSentence": "t1-p140-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-046",
-      "english": "Plow",
-      "polish": "Pług",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-046-word.mp3",
-      "audioSentence": "t1-p140-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-047",
-      "english": "Yard",
-      "polish": "Podwórze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-047-word.mp3",
-      "audioSentence": "t1-p140-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-048",
-      "english": "Farmland",
-      "polish": "Pole uprawne",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-048-word.mp3",
-      "audioSentence": "t1-p140-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-049",
-      "english": "Hay",
-      "polish": "Siano",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-049-word.mp3",
-      "audioSentence": "t1-p140-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-050",
-      "english": "Straw",
-      "polish": "Słoma",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-050-word.mp3",
-      "audioSentence": "t1-p140-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-051",
-      "english": "Village administrator",
-      "polish": "Sołtys",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-051-word.mp3",
-      "audioSentence": "t1-p140-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-052",
-      "english": "Well",
-      "polish": "Studnia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-052-word.mp3",
-      "audioSentence": "t1-p140-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-053",
-      "english": "Shed",
-      "polish": "Szopa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-053-word.mp3",
-      "audioSentence": "t1-p140-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-054",
-      "english": "Spade",
-      "polish": "Szpadel",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-054-word.mp3",
-      "audioSentence": "t1-p140-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-055",
-      "english": "Rail",
-      "polish": "Sztacheta",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-055-word.mp3",
-      "audioSentence": "t1-p140-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-056",
-      "english": "Swine",
-      "polish": "Trzoda chlewna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-056-word.mp3",
-      "audioSentence": "t1-p140-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-057",
-      "english": "Pitchfork",
-      "polish": "Widły",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-057-word.mp3",
-      "audioSentence": "t1-p140-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-058",
-      "english": "Croft",
-      "polish": "Małe gospodarstwo rolne",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-058-word.mp3",
-      "audioSentence": "t1-p140-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-059",
-      "english": "Harvest",
-      "polish": "Żniwa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-059-word.mp3",
-      "audioSentence": "t1-p140-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p140-060",
-      "english": "Rye",
-      "polish": "Żyto",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p140-060-word.mp3",
-      "audioSentence": "t1-p140-060-sentence.mp3"
     }
   ]
 }

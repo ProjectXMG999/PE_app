@@ -1,15 +1,15 @@
 {
   "id": "t1-p257",
-  "name": "Przymiotniki 25",
+  "name": "Przymiotniki 24",
   "volume": "Tom VI",
   "level": 4,
   "category": "Przymiotniki",
-  "chapter": "Rozdział  LVI",
+  "chapter": "Rozdział LV",
   "words": [
     {
       "id": "t1-p257-001",
-      "english": "Chic",
-      "polish": "Elegancko",
+      "english": "Matching",
+      "polish": "Dobrany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p257-002",
-      "english": "Intimidating",
-      "polish": "Zastraszający",
+      "english": "Provocative",
+      "polish": "Prowokacyjny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p257-003",
-      "english": "Self-evident",
-      "polish": "Ewidentny",
+      "english": "Dyed",
+      "polish": "Farbowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p257-004",
-      "english": "Virtual",
-      "polish": "Zupełny",
+      "english": "Tempting",
+      "polish": "Kuszący",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p257-005",
-      "english": "Distinct",
-      "polish": "Wyraźnie widoczny",
+      "english": "Outdated",
+      "polish": "Przestarzały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p257-006",
-      "english": "Thrilling",
-      "polish": "Wywołujący dreszcze",
+      "english": "Distinctive",
+      "polish": "Wyróżniający",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p257-007",
-      "english": "Supposed",
-      "polish": "Rzekomy",
+      "english": "Checkered",
+      "polish": "W kratkę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p257-008",
-      "english": "Alleged",
-      "polish": "Domniemany",
+      "english": "Spotted",
+      "polish": "W kropki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p257-009",
-      "english": "Notable",
-      "polish": "Godny uwagi",
+      "english": "Uptown",
+      "polish": "Wytworny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p257-010",
-      "english": "Grotesque",
-      "polish": "Groteskowy",
+      "english": "Patterned",
+      "polish": "Wzorzysty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p257-011",
-      "english": "Inadequate",
-      "polish": "Nieadekwatny",
+      "english": "Filthy",
+      "polish": "Bardzo brudny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p257-012",
-      "english": "Harsh",
-      "polish": "Szorstki",
+      "english": "Frumpy",
+      "polish": "Bez gustu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p257-013",
-      "english": "Unbearable",
-      "polish": "Nie do zniesienia",
+      "english": "Tailored",
+      "polish": "Dopasowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p257-014",
-      "english": "Bewildering",
-      "polish": "Oszałamiający",
+      "english": "Feminine",
+      "polish": "Kobiecy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-014-word.mp3",
@@ -134,12 +134,21 @@
     },
     {
       "id": "t1-p257-015",
-      "english": "Rash",
-      "polish": "Pochopny",
+      "english": "Stocky",
+      "polish": "Krępy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-015-word.mp3",
       "audioSentence": "t1-p257-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p257-016",
+      "english": "Outdated",
+      "polish": "Przestarzały",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p257-016-word.mp3",
+      "audioSentence": "t1-p257-016-sentence.mp3"
     }
   ]
 }

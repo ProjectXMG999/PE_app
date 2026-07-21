@@ -1,15 +1,15 @@
 {
   "id": "t1-p160",
-  "name": "Ilość",
+  "name": "Czasowniki 11",
   "volume": "Tom III",
   "level": 2,
-  "category": "Przysłówki",
-  "chapter": "Rozdział XXVI",
+  "category": "Czasowniki",
+  "chapter": "Rozdział XXIV",
   "words": [
     {
       "id": "t1-p160-001",
-      "english": "About",
-      "polish": "Mniej więcej",
+      "english": "Guarantee",
+      "polish": "Gwarantować coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p160-002",
-      "english": "Around",
-      "polish": "Około",
+      "english": "Ignore",
+      "polish": "Ignorować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p160-003",
-      "english": "Both",
-      "polish": "Oba",
+      "english": "Inspire",
+      "polish": "Inspirować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p160-004",
-      "english": "None",
-      "polish": "Nic",
+      "english": "Motivate",
+      "polish": "Motywować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p160-005",
-      "english": "Some",
-      "polish": "Kilka",
+      "english": "Observe",
+      "polish": "Obserwować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p160-006",
-      "english": "Each",
-      "polish": "Każdy z",
+      "english": "Organize",
+      "polish": "Organizować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p160-007",
-      "english": "Enough",
-      "polish": "Wystarczająco",
+      "english": "Park",
+      "polish": "Parkować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p160-008",
-      "english": "Every",
-      "polish": "Każdy",
+      "english": "Practice",
+      "polish": "Praktykować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p160-009",
-      "english": "Less",
-      "polish": "Mniej",
+      "english": "Prefer",
+      "polish": "Preferować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p160-010",
-      "english": "More",
-      "polish": "Więcej",
+      "english": "Produce",
+      "polish": "Produkować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p160-011",
-      "english": "Up to",
-      "polish": "Aż do",
+      "english": "Resign",
+      "polish": "Rezygnować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p160-012",
-      "english": "Most",
-      "polish": "Większość",
+      "english": "Test",
+      "polish": "Testować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p160-013",
-      "english": "Once",
-      "polish": "Raz",
+      "english": "Tolerate",
+      "polish": "Tolerować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p160-014",
-      "english": "Twice",
-      "polish": "Dwa razy",
+      "english": "Concentrate",
+      "polish": "Koncentrować się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-014-word.mp3",
@@ -134,552 +134,12 @@
     },
     {
       "id": "t1-p160-015",
-      "english": "Least",
-      "polish": "Najmniej",
+      "english": "Identify",
+      "polish": "Identyfikować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-015-word.mp3",
       "audioSentence": "t1-p160-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-016",
-      "english": "Total",
-      "polish": "Całkowity",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-016-word.mp3",
-      "audioSentence": "t1-p160-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-017",
-      "english": "Extra",
-      "polish": "Ekstra",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-017-word.mp3",
-      "audioSentence": "t1-p160-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-018",
-      "english": "Moderate",
-      "polish": "Umiarkowany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-018-word.mp3",
-      "audioSentence": "t1-p160-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-019",
-      "english": "Whole",
-      "polish": "Cały",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-019-word.mp3",
-      "audioSentence": "t1-p160-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-020",
-      "english": "Numerous",
-      "polish": "Liczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-020-word.mp3",
-      "audioSentence": "t1-p160-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-021",
-      "english": "Maximal",
-      "polish": "Maksymalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-021-word.mp3",
-      "audioSentence": "t1-p160-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-022",
-      "english": "Minimal",
-      "polish": "Minimalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-022-word.mp3",
-      "audioSentence": "t1-p160-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-023",
-      "english": "Plural",
-      "polish": "Mnogi",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-023-word.mp3",
-      "audioSentence": "t1-p160-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-024",
-      "english": "Singular",
-      "polish": "Pojedynczy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-024-word.mp3",
-      "audioSentence": "t1-p160-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-025",
-      "english": "Entire",
-      "polish": "Cały",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-025-word.mp3",
-      "audioSentence": "t1-p160-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-026",
-      "english": "Decreasing",
-      "polish": "Malejący",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-026-word.mp3",
-      "audioSentence": "t1-p160-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-027",
-      "english": "Countless",
-      "polish": "Niezliczony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-027-word.mp3",
-      "audioSentence": "t1-p160-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-028",
-      "english": "Countable",
-      "polish": "Policzalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-028-word.mp3",
-      "audioSentence": "t1-p160-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-029",
-      "english": "Multiple",
-      "polish": "Wielokrotny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-029-word.mp3",
-      "audioSentence": "t1-p160-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-030",
-      "english": "Increasing",
-      "polish": "Wzrastający",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-030-word.mp3",
-      "audioSentence": "t1-p160-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-031",
-      "english": "Minority",
-      "polish": "Mniejszość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-031-word.mp3",
-      "audioSentence": "t1-p160-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-032",
-      "english": "Majority",
-      "polish": "Większość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-032-word.mp3",
-      "audioSentence": "t1-p160-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-033",
-      "english": "Quarter",
-      "polish": "Ćwierć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-033-word.mp3",
-      "audioSentence": "t1-p160-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-034",
-      "english": "Lack",
-      "polish": "Brak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-034-word.mp3",
-      "audioSentence": "t1-p160-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-035",
-      "english": "Surplus",
-      "polish": "Nadwyżka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-035-word.mp3",
-      "audioSentence": "t1-p160-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-036",
-      "english": "Shortage",
-      "polish": "Niedobór",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-036-word.mp3",
-      "audioSentence": "t1-p160-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-037",
-      "english": "Quantity",
-      "polish": "Ilość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-037-word.mp3",
-      "audioSentence": "t1-p160-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-038",
-      "english": "Amount",
-      "polish": "Kwota",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-038-word.mp3",
-      "audioSentence": "t1-p160-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-039",
-      "english": "Pile",
-      "polish": "Stos",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-039-word.mp3",
-      "audioSentence": "t1-p160-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-040",
-      "english": "Dozen",
-      "polish": "Tuzin",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-040-word.mp3",
-      "audioSentence": "t1-p160-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-041",
-      "english": "Excess",
-      "polish": "Nadmiar",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-041-word.mp3",
-      "audioSentence": "t1-p160-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-042",
-      "english": "Overflow",
-      "polish": "Przepełnienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-042-word.mp3",
-      "audioSentence": "t1-p160-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-043",
-      "english": "Ounce",
-      "polish": "Uncja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-043-word.mp3",
-      "audioSentence": "t1-p160-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-044",
-      "english": "Lack",
-      "polish": "Brak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-044-word.mp3",
-      "audioSentence": "t1-p160-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-045",
-      "english": "Dozen",
-      "polish": "Tuzin",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-045-word.mp3",
-      "audioSentence": "t1-p160-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-046",
-      "english": "Decreased",
-      "polish": "Zmniejszony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-046-word.mp3",
-      "audioSentence": "t1-p160-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-047",
-      "english": "Increased",
-      "polish": "Zwiększony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-047-word.mp3",
-      "audioSentence": "t1-p160-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-048",
-      "english": "Partial",
-      "polish": "Częściowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-048-word.mp3",
-      "audioSentence": "t1-p160-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-049",
-      "english": "Excess",
-      "polish": "Nadmiarowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-049-word.mp3",
-      "audioSentence": "t1-p160-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-050",
-      "english": "Excessive",
-      "polish": "Nadmierny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-050-word.mp3",
-      "audioSentence": "t1-p160-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-051",
-      "english": "Substantial",
-      "polish": "Pokaźny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-051-word.mp3",
-      "audioSentence": "t1-p160-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-052",
-      "english": "Considerable",
-      "polish": "Znaczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-052-word.mp3",
-      "audioSentence": "t1-p160-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-053",
-      "english": "Additional",
-      "polish": "Dodatkowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-053-word.mp3",
-      "audioSentence": "t1-p160-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-054",
-      "english": "Insufficient",
-      "polish": "Niewystarczający",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-054-word.mp3",
-      "audioSentence": "t1-p160-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-055",
-      "english": "Approximate",
-      "polish": "Przybliżony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-055-word.mp3",
-      "audioSentence": "t1-p160-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-056",
-      "english": "Sufficient",
-      "polish": "Wystarczający",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-056-word.mp3",
-      "audioSentence": "t1-p160-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-057",
-      "english": "Abundant",
-      "polish": "Zasobny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-057-word.mp3",
-      "audioSentence": "t1-p160-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-058",
-      "english": "Copious",
-      "polish": "Obfity",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-058-word.mp3",
-      "audioSentence": "t1-p160-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-059",
-      "english": "Ample",
-      "polish": "Wystarczająco duży",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-059-word.mp3",
-      "audioSentence": "t1-p160-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-060",
-      "english": "Inexhaustible",
-      "polish": "Niewyczerpany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-060-word.mp3",
-      "audioSentence": "t1-p160-060-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-061",
-      "english": "Several",
-      "polish": "Kilka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-061-word.mp3",
-      "audioSentence": "t1-p160-061-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-062",
-      "english": "Partly",
-      "polish": "Częściowo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-062-word.mp3",
-      "audioSentence": "t1-p160-062-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-063",
-      "english": "Scarcely",
-      "polish": "Zaledwie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-063-word.mp3",
-      "audioSentence": "t1-p160-063-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-064",
-      "english": "Approximately",
-      "polish": "Około",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-064-word.mp3",
-      "audioSentence": "t1-p160-064-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-065",
-      "english": "Thrice",
-      "polish": "Trzykrotnie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-065-word.mp3",
-      "audioSentence": "t1-p160-065-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-066",
-      "english": "Abundantly",
-      "polish": "Suto",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-066-word.mp3",
-      "audioSentence": "t1-p160-066-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-067",
-      "english": "Individually",
-      "polish": "Jednostkowo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-067-word.mp3",
-      "audioSentence": "t1-p160-067-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-068",
-      "english": "Partially",
-      "polish": "Po części",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-068-word.mp3",
-      "audioSentence": "t1-p160-068-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-069",
-      "english": "Roughly",
-      "polish": "Mniej więcej",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-069-word.mp3",
-      "audioSentence": "t1-p160-069-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-070",
-      "english": "Solely",
-      "polish": "Wyłącznie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-070-word.mp3",
-      "audioSentence": "t1-p160-070-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-071",
-      "english": "Solo",
-      "polish": "Pojedynczo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-071-word.mp3",
-      "audioSentence": "t1-p160-071-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-072",
-      "english": "In bulk",
-      "polish": "Hurtowo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-072-word.mp3",
-      "audioSentence": "t1-p160-072-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-073",
-      "english": "Broadly",
-      "polish": "Z grubsza",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-073-word.mp3",
-      "audioSentence": "t1-p160-073-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-074",
-      "english": "Plentifully",
-      "polish": "Obficie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-074-word.mp3",
-      "audioSentence": "t1-p160-074-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-075",
-      "english": "Profusely",
-      "polish": "Na bogato",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-075-word.mp3",
-      "audioSentence": "t1-p160-075-sentence.mp3"
     }
   ]
 }

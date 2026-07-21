@@ -1,15 +1,15 @@
 {
   "id": "t1-p260",
-  "name": "Rzeczowniki 17",
+  "name": "Rzeczowniki 15",
   "volume": "Tom VI",
   "level": 4,
   "category": "Rzeczowniki",
-  "chapter": "Rozdział  LVII",
+  "chapter": "Rozdział  LVI",
   "words": [
     {
       "id": "t1-p260-001",
-      "english": "Privacy",
-      "polish": "Prywatność",
+      "english": "Necessity",
+      "polish": "Konieczność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p260-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p260-002",
-      "english": "Favor",
-      "polish": "Przysługa",
+      "english": "Selection",
+      "polish": "Wybór",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p260-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p260-003",
-      "english": "Assistance",
-      "polish": "Wsparcie",
+      "english": "Outline",
+      "polish": "Zarys",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p260-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p260-004",
-      "english": "Hospitality",
-      "polish": "Gościnność",
+      "english": "Fortune",
+      "polish": "Fortuna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p260-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p260-005",
-      "english": "Cheating",
-      "polish": "Oszukiwanie",
+      "english": "Fate",
+      "polish": "Los",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p260-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p260-006",
-      "english": "Scapegoat",
-      "polish": "Kozioł ofiarny",
+      "english": "Scenario",
+      "polish": "Scenariusz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p260-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p260-007",
-      "english": "Alliance",
-      "polish": "Przymierze",
+      "english": "Coincidence",
+      "polish": "Zbieg okoliczności",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p260-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p260-008",
-      "english": "Hostility",
-      "polish": "Wrogość",
+      "english": "Ambiguity",
+      "polish": "Dwuznaczność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p260-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p260-009",
-      "english": "Animosity",
-      "polish": "Animozja",
+      "english": "Extreme",
+      "polish": "Skrajność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p260-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p260-010",
-      "english": "Hatred",
-      "polish": "Głęboka nienawiść",
+      "english": "Simplification",
+      "polish": "Uproszczenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p260-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p260-011",
-      "english": "Misanthropy",
-      "polish": "Mizantropia",
+      "english": "Counterpart",
+      "polish": "Odpowiednik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p260-011-word.mp3",
@@ -107,12 +107,39 @@
     },
     {
       "id": "t1-p260-012",
-      "english": "Brotherhood",
-      "polish": "Braterstwo",
+      "english": "Simplicity",
+      "polish": "Prostota",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p260-012-word.mp3",
       "audioSentence": "t1-p260-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p260-013",
+      "english": "Odds",
+      "polish": "Szanse",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p260-013-word.mp3",
+      "audioSentence": "t1-p260-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p260-014",
+      "english": "Absence",
+      "polish": "Nieobecność",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p260-014-word.mp3",
+      "audioSentence": "t1-p260-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p260-015",
+      "english": "Boundary",
+      "polish": "Granica",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p260-015-word.mp3",
+      "audioSentence": "t1-p260-015-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p056",
-  "name": "Czas I miary",
+  "name": "Czas",
   "volume": "Tom I",
   "level": 1,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział VII",
+  "category": "Maleństwa",
+  "chapter": "Rozdział VI",
   "words": [
     {
       "id": "t1-p056-001",
-      "english": "Next",
-      "polish": "Następny",
+      "english": "Ago",
+      "polish": "temu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p056-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p056-002",
-      "english": "Last",
-      "polish": "Ostatni",
+      "english": "All",
+      "polish": "Cały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p056-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p056-003",
-      "english": "Late",
-      "polish": "Późny",
+      "english": "To",
+      "polish": "Do",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p056-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p056-004",
-      "english": "Early",
-      "polish": "Wczesny",
+      "english": "At",
+      "polish": "O",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p056-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p056-005",
-      "english": "Previous",
-      "polish": "Poprzedni",
+      "english": "As",
+      "polish": "Podczas gdy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p056-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p056-006",
-      "english": "Later",
-      "polish": "Późniejszy",
+      "english": "On",
+      "polish": "Przed dniami tygodnia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p056-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p056-007",
-      "english": "Hard",
-      "polish": "Twardy",
+      "english": "In",
+      "polish": "Przed miesiącami I latami",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p056-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p056-008",
-      "english": "Low",
-      "polish": "Niski",
+      "english": "For",
+      "polish": "Przez",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p056-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p056-009",
-      "english": "Slow",
-      "polish": "Powolny",
+      "english": "In",
+      "polish": "W ciągu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p056-009-word.mp3",
@@ -89,12 +89,417 @@
     },
     {
       "id": "t1-p056-010",
-      "english": "Fast",
-      "polish": "Szybki",
+      "english": "In",
+      "polish": "Za",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p056-010-word.mp3",
       "audioSentence": "t1-p056-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-011",
+      "english": "Be over",
+      "polish": "Kończyć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-011-word.mp3",
+      "audioSentence": "t1-p056-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-012",
+      "english": "Go on",
+      "polish": "Dziać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-012-word.mp3",
+      "audioSentence": "t1-p056-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-013",
+      "english": "Go on",
+      "polish": "Kontynuować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-013-word.mp3",
+      "audioSentence": "t1-p056-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-014",
+      "english": "Hang on",
+      "polish": "Poczekać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-014-word.mp3",
+      "audioSentence": "t1-p056-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-015",
+      "english": "Go ahead with",
+      "polish": "Zaczynać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-015-word.mp3",
+      "audioSentence": "t1-p056-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-016",
+      "english": "Hold on",
+      "polish": "Wstrzymać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-016-word.mp3",
+      "audioSentence": "t1-p056-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-017",
+      "english": "Go by",
+      "polish": "Mijać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-017-word.mp3",
+      "audioSentence": "t1-p056-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-018",
+      "english": "Be over",
+      "polish": "Skończyć z czymś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-018-word.mp3",
+      "audioSentence": "t1-p056-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-019",
+      "english": "Keep up",
+      "polish": "Trwać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-019-word.mp3",
+      "audioSentence": "t1-p056-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-020",
+      "english": "Start off",
+      "polish": "Rozpoczynać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-020-word.mp3",
+      "audioSentence": "t1-p056-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-021",
+      "english": "Begin",
+      "polish": "Zaczynać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-021-word.mp3",
+      "audioSentence": "t1-p056-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-022",
+      "english": "Start",
+      "polish": "Zacząć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-022-word.mp3",
+      "audioSentence": "t1-p056-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-023",
+      "english": "Tick",
+      "polish": "Tykać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-023-word.mp3",
+      "audioSentence": "t1-p056-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-024",
+      "english": "Last",
+      "polish": "Trwać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-024-word.mp3",
+      "audioSentence": "t1-p056-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-025",
+      "english": "Skip",
+      "polish": "Pominąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-025-word.mp3",
+      "audioSentence": "t1-p056-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-026",
+      "english": "Pass",
+      "polish": "Przemijać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-026-word.mp3",
+      "audioSentence": "t1-p056-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-027",
+      "english": "Time",
+      "polish": "Mierzyć czas",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-027-word.mp3",
+      "audioSentence": "t1-p056-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-028",
+      "english": "Delay",
+      "polish": "Opóźniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-028-word.mp3",
+      "audioSentence": "t1-p056-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-029",
+      "english": "Resume",
+      "polish": "Wznawiać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-029-word.mp3",
+      "audioSentence": "t1-p056-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-030",
+      "english": "Prolong",
+      "polish": "Przedłużać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-030-word.mp3",
+      "audioSentence": "t1-p056-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-031",
+      "english": "Await",
+      "polish": "Czekać na",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-031-word.mp3",
+      "audioSentence": "t1-p056-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-032",
+      "english": "Terminate",
+      "polish": "Zakończyć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-032-word.mp3",
+      "audioSentence": "t1-p056-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-033",
+      "english": "Coincide",
+      "polish": "Zbiec się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-033-word.mp3",
+      "audioSentence": "t1-p056-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-034",
+      "english": "Proceed",
+      "polish": "Postępować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-034-word.mp3",
+      "audioSentence": "t1-p056-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-035",
+      "english": "Schedule",
+      "polish": "Zaplanować czasowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-035-word.mp3",
+      "audioSentence": "t1-p056-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-036",
+      "english": "Be on",
+      "polish": "Zacząć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-036-word.mp3",
+      "audioSentence": "t1-p056-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-037",
+      "english": "Get on",
+      "polish": "Kontynuować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-037-word.mp3",
+      "audioSentence": "t1-p056-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-038",
+      "english": "Hold sth up",
+      "polish": "Opóźniać coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-038-word.mp3",
+      "audioSentence": "t1-p056-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-039",
+      "english": "Wrap sth up",
+      "polish": "Zawijać coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-039-word.mp3",
+      "audioSentence": "t1-p056-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-040",
+      "english": "Put off",
+      "polish": "Przełożyć coś na później",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-040-word.mp3",
+      "audioSentence": "t1-p056-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-041",
+      "english": "Take up",
+      "polish": "Zajmować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-041-word.mp3",
+      "audioSentence": "t1-p056-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-042",
+      "english": "Go back",
+      "polish": "Być datowanym na",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-042-word.mp3",
+      "audioSentence": "t1-p056-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-043",
+      "english": "Leave off",
+      "polish": "Kończyć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-043-word.mp3",
+      "audioSentence": "t1-p056-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-044",
+      "english": "Round sth off",
+      "polish": "Zakończyć coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-044-word.mp3",
+      "audioSentence": "t1-p056-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-045",
+      "english": "Come about",
+      "polish": "Powstawać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-045-word.mp3",
+      "audioSentence": "t1-p056-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-046",
+      "english": "Come on",
+      "polish": "Zaczynać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-046-word.mp3",
+      "audioSentence": "t1-p056-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-047",
+      "english": "Drag on",
+      "polish": "Ciągnąć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-047-word.mp3",
+      "audioSentence": "t1-p056-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-048",
+      "english": "Hold off",
+      "polish": "Wstrzymać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-048-word.mp3",
+      "audioSentence": "t1-p056-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-049",
+      "english": "Pick up",
+      "polish": "Zaczynać na nowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-049-word.mp3",
+      "audioSentence": "t1-p056-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-050",
+      "english": "Set in",
+      "polish": "Nastać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-050-word.mp3",
+      "audioSentence": "t1-p056-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-051",
+      "english": "Drag out",
+      "polish": "Przeciągać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-051-word.mp3",
+      "audioSentence": "t1-p056-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-052",
+      "english": "Tick away",
+      "polish": "Przemijać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-052-word.mp3",
+      "audioSentence": "t1-p056-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-053",
+      "english": "Wear on",
+      "polish": "Dłużyć się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-053-word.mp3",
+      "audioSentence": "t1-p056-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-054",
+      "english": "Creep by",
+      "polish": "Wlec się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-054-word.mp3",
+      "audioSentence": "t1-p056-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p056-055",
+      "english": "Slip by",
+      "polish": "Umykać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p056-055-word.mp3",
+      "audioSentence": "t1-p056-055-sentence.mp3"
     }
   ]
 }

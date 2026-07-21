@@ -1,15 +1,15 @@
 {
   "id": "t1-p221",
-  "name": "Przymiotniki 18",
+  "name": "Ucieczka",
   "volume": "Tom V",
   "level": 3,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział XLIII",
+  "category": "Phrasale",
+  "chapter": "Rozdział XLII",
   "words": [
     {
       "id": "t1-p221-001",
-      "english": "Necessary",
-      "polish": "Konieczny",
+      "english": "Run away from",
+      "polish": "Uciekać od",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p221-002",
-      "english": "Needed",
-      "polish": "Potrzebny",
+      "english": "Walk away",
+      "polish": "Odejść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p221-003",
-      "english": "Major",
-      "polish": "Znaczny",
+      "english": "Get out",
+      "polish": "Wydostać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p221-004",
-      "english": "Minor",
-      "polish": "Pomniejszy",
+      "english": "Run out",
+      "polish": "Wybiec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p221-005",
-      "english": "Primary",
-      "polish": "Podstawowy",
+      "english": "Walk off",
+      "polish": "Odejść nagle",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p221-006",
-      "english": "Unnecessary",
-      "polish": "Niekonieczny",
+      "english": "Walk out on",
+      "polish": "Opuścić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p221-007",
-      "english": "Required",
-      "polish": "Wymagany",
+      "english": "Back away",
+      "polish": "Wycofać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p221-008",
-      "english": "Main",
-      "polish": "Główny",
+      "english": "Sneak out",
+      "polish": "Wykraść się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p221-009",
-      "english": "Key",
-      "polish": "Kluczowy",
+      "english": "Break away",
+      "polish": "Wyrwać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p221-010",
-      "english": "Crucial",
-      "polish": "Bardzo istotny",
+      "english": "Slip away",
+      "polish": "Umknąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p221-011",
-      "english": "Significant",
-      "polish": "Znaczący",
+      "english": "Drop out of",
+      "polish": "Rzucić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p221-012",
-      "english": "Insignificant",
-      "polish": "Nieznaczący",
+      "english": "Back out",
+      "polish": "Wycofać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p221-013",
-      "english": "Secondary",
-      "polish": "Drugorzędny",
+      "english": "Clear off",
+      "polish": "Zmyć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p221-014",
-      "english": "Weighty",
-      "polish": "Doniosły",
+      "english": "Draw back",
+      "polish": "Cofać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-014-word.mp3",
@@ -134,12 +134,57 @@
     },
     {
       "id": "t1-p221-015",
-      "english": "Decisive",
-      "polish": "Decydujący",
+      "english": "Pull out",
+      "polish": "Wycofać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-015-word.mp3",
       "audioSentence": "t1-p221-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p221-016",
+      "english": "Buzz off",
+      "polish": "Zmywać się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p221-016-word.mp3",
+      "audioSentence": "t1-p221-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p221-017",
+      "english": "Make off with sth",
+      "polish": "Nawiać z czymś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p221-017-word.mp3",
+      "audioSentence": "t1-p221-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p221-018",
+      "english": "Light out",
+      "polish": "Nagle się zawinąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p221-018-word.mp3",
+      "audioSentence": "t1-p221-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p221-019",
+      "english": "Run off",
+      "polish": "Dawać nogę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p221-019-word.mp3",
+      "audioSentence": "t1-p221-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p221-020",
+      "english": "Shuffle off",
+      "polish": "Odejść gdzieś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p221-020-word.mp3",
+      "audioSentence": "t1-p221-020-sentence.mp3"
     }
   ]
 }

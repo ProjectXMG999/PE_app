@@ -1,15 +1,15 @@
 {
   "id": "t1-p310",
-  "name": "Phrasale 8",
+  "name": "Przymiotniki 38",
   "volume": "Tom IX",
   "level": 4,
-  "category": "Phrasale",
-  "chapter": "Rozdział LXXXII",
+  "category": "Przymiotniki",
+  "chapter": "Rozdział LXXXI",
   "words": [
     {
       "id": "t1-p310-001",
-      "english": "Bring about",
-      "polish": "Spowodować coś",
+      "english": "Idealistic",
+      "polish": "Idealistyczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p310-002",
-      "english": "Bring out",
-      "polish": "Uwydatnić coś",
+      "english": "Identical",
+      "polish": "Identyczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p310-003",
-      "english": "Come from",
-      "polish": "Wynikać z czegoś",
+      "english": "Impulsive",
+      "polish": "Impulsywny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p310-004",
-      "english": "Crack down",
-      "polish": "Rozprawić się z czymś",
+      "english": "Innovative",
+      "polish": "Innowacyjny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p310-005",
-      "english": "Go down as",
-      "polish": "Zostać zapamiętanym",
+      "english": "Instrumental",
+      "polish": "Instrumentalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p310-006",
-      "english": "Keep sth from sb",
-      "polish": "Zataić coś przed kimś",
+      "english": "Instinctive",
+      "polish": "Instynktowny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p310-007",
-      "english": "Hold out",
-      "polish": "Przetrwać coś",
+      "english": "Intellectual",
+      "polish": "Intelektualny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p310-008",
-      "english": "Pull through",
-      "polish": "Wytrzymać",
+      "english": "Ironic",
+      "polish": "Ironiczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p310-009",
-      "english": "Settle for",
-      "polish": "Zadowolić się",
+      "english": "Irritating",
+      "polish": "Irytujący",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p310-010",
-      "english": "Stand by",
-      "polish": "Być w pogotowiu",
+      "english": "Islamic",
+      "polish": "Islamski",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-010-word.mp3",
       "audioSentence": "t1-p310-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p310-011",
+      "english": "Catholic",
+      "polish": "Katolicki",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p310-011-word.mp3",
+      "audioSentence": "t1-p310-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p310-012",
+      "english": "Cosmetic",
+      "polish": "Kosmetyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p310-012-word.mp3",
+      "audioSentence": "t1-p310-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p310-013",
+      "english": "Mathematical",
+      "polish": "Matematyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p310-013-word.mp3",
+      "audioSentence": "t1-p310-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p310-014",
+      "english": "Materialistic",
+      "polish": "Materialistyczy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p310-014-word.mp3",
+      "audioSentence": "t1-p310-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p310-015",
+      "english": "Mechanical",
+      "polish": "Mechaniczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p310-015-word.mp3",
+      "audioSentence": "t1-p310-015-sentence.mp3"
     }
   ]
 }

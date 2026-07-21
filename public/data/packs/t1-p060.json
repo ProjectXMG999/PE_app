@@ -1,15 +1,15 @@
 {
   "id": "t1-p060",
-  "name": "Kto pyta, nie błądzi",
+  "name": "Geografia",
   "volume": "Tom I",
   "level": 1,
-  "category": "Maleństwa",
+  "category": "Rzeczowniki",
   "chapter": "Rozdział VII",
   "words": [
     {
       "id": "t1-p060-001",
-      "english": "Which",
-      "polish": "Który",
+      "english": "Mountain",
+      "polish": "Góra",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p060-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p060-002",
-      "english": "Why",
-      "polish": "Dlaczego",
+      "english": "Lake",
+      "polish": "Jezioro",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p060-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p060-003",
-      "english": "Where",
-      "polish": "Gdzie",
+      "english": "Forest",
+      "polish": "Las",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p060-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p060-004",
-      "english": "How",
-      "polish": "Jak",
+      "english": "Sea",
+      "polish": "Morze",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p060-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p060-005",
-      "english": "When",
-      "polish": "Kiedy",
+      "english": "Nature",
+      "polish": "Natura",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p060-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p060-006",
-      "english": "What",
-      "polish": "Co",
+      "english": "Beach",
+      "polish": "Plaża",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p060-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p060-007",
-      "english": "Who",
-      "polish": "Kto",
+      "english": "River",
+      "polish": "Rzeka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p060-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p060-008",
-      "english": "Or",
-      "polish": "Lub",
+      "english": "World",
+      "polish": "Świat",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p060-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p060-009",
-      "english": "Whose",
-      "polish": "Czyje",
+      "english": "Island",
+      "polish": "Wyspa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p060-009-word.mp3",
@@ -89,12 +89,687 @@
     },
     {
       "id": "t1-p060-010",
-      "english": "Whom",
-      "polish": "Komu",
+      "english": "Land",
+      "polish": "Ziemia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p060-010-word.mp3",
       "audioSentence": "t1-p060-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-011",
+      "english": "Africa",
+      "polish": "Afryka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-011-word.mp3",
+      "audioSentence": "t1-p060-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-012",
+      "english": "South america",
+      "polish": "Ameryka południowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-012-word.mp3",
+      "audioSentence": "t1-p060-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-013",
+      "english": "North america",
+      "polish": "Ameryka północna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-013-word.mp3",
+      "audioSentence": "t1-p060-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-014",
+      "english": "Sand",
+      "polish": "Piasek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-014-word.mp3",
+      "audioSentence": "t1-p060-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-015",
+      "english": "Antarctica",
+      "polish": "Antarktyda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-015-word.mp3",
+      "audioSentence": "t1-p060-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-016",
+      "english": "Australia",
+      "polish": "Australia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-016-word.mp3",
+      "audioSentence": "t1-p060-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-017",
+      "english": "Asia",
+      "polish": "Azja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-017-word.mp3",
+      "audioSentence": "t1-p060-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-018",
+      "english": "Europe",
+      "polish": "Europa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-018-word.mp3",
+      "audioSentence": "t1-p060-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-019",
+      "english": "Geography",
+      "polish": "Geografia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-019-word.mp3",
+      "audioSentence": "t1-p060-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-020",
+      "english": "Direction",
+      "polish": "Kierunek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-020-word.mp3",
+      "audioSentence": "t1-p060-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-021",
+      "english": "Ocean",
+      "polish": "Ocean",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-021-word.mp3",
+      "audioSentence": "t1-p060-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-022",
+      "english": "South",
+      "polish": "Południe",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-022-word.mp3",
+      "audioSentence": "t1-p060-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-023",
+      "english": "North",
+      "polish": "Północ",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-023-word.mp3",
+      "audioSentence": "t1-p060-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-024",
+      "english": "East",
+      "polish": "Wschód",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-024-word.mp3",
+      "audioSentence": "t1-p060-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-025",
+      "english": "West",
+      "polish": "Zachód",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-025-word.mp3",
+      "audioSentence": "t1-p060-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-026",
+      "english": "Atmosphere",
+      "polish": "Atmosfera",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-026-word.mp3",
+      "audioSentence": "t1-p060-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-027",
+      "english": "Valley",
+      "polish": "Dolina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-027-word.mp3",
+      "audioSentence": "t1-p060-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-028",
+      "english": "Jungle",
+      "polish": "Dżungla",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-028-word.mp3",
+      "audioSentence": "t1-p060-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-029",
+      "english": "Wave",
+      "polish": "Fala",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-029-word.mp3",
+      "audioSentence": "t1-p060-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-030",
+      "english": "Canal",
+      "polish": "Kanał",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-030-word.mp3",
+      "audioSentence": "t1-p060-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-031",
+      "english": "Desert",
+      "polish": "Pustynia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-031-word.mp3",
+      "audioSentence": "t1-p060-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-032",
+      "english": "Rock",
+      "polish": "Skała",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-032-word.mp3",
+      "audioSentence": "t1-p060-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-033",
+      "english": "Environment",
+      "polish": "Środowisko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-033-word.mp3",
+      "audioSentence": "t1-p060-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-034",
+      "english": "Territory",
+      "polish": "Terytorium",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-034-word.mp3",
+      "audioSentence": "t1-p060-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-035",
+      "english": "Waterfall",
+      "polish": "Wodospad",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-035-word.mp3",
+      "audioSentence": "t1-p060-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-036",
+      "english": "Volcano",
+      "polish": "Wulkan",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-036-word.mp3",
+      "audioSentence": "t1-p060-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-037",
+      "english": "Altitude",
+      "polish": "Wysokość nad poziomem morza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-037-word.mp3",
+      "audioSentence": "t1-p060-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-038",
+      "english": "Hill",
+      "polish": "Wzgórze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-038-word.mp3",
+      "audioSentence": "t1-p060-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-039",
+      "english": "Globe",
+      "polish": "Glob",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-039-word.mp3",
+      "audioSentence": "t1-p060-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-040",
+      "english": "Diet",
+      "polish": "Dieta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-040-word.mp3",
+      "audioSentence": "t1-p060-040-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-041",
+      "english": "Swamp",
+      "polish": "Bagno",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-041-word.mp3",
+      "audioSentence": "t1-p060-041-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-042",
+      "english": "Shore",
+      "polish": "Brzeg morza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-042-word.mp3",
+      "audioSentence": "t1-p060-042-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-043",
+      "english": "Longitude",
+      "polish": "Długość geograficzna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-043-word.mp3",
+      "audioSentence": "t1-p060-043-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-044",
+      "english": "Global warming",
+      "polish": "Globalne ocieplenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-044-word.mp3",
+      "audioSentence": "t1-p060-044-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-045",
+      "english": "Iceberg",
+      "polish": "Góra lodowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-045-word.mp3",
+      "audioSentence": "t1-p060-045-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-046",
+      "english": "Cave",
+      "polish": "Jaskinia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-046-word.mp3",
+      "audioSentence": "t1-p060-046-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-047",
+      "english": "Canyon",
+      "polish": "Kanion",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-047-word.mp3",
+      "audioSentence": "t1-p060-047-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-048",
+      "english": "Landscape",
+      "polish": "Krajobraz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-048-word.mp3",
+      "audioSentence": "t1-p060-048-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-049",
+      "english": "Rainforest",
+      "polish": "Las deszczowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-049-word.mp3",
+      "audioSentence": "t1-p060-049-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-050",
+      "english": "Avalanche",
+      "polish": "Lawina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-050-word.mp3",
+      "audioSentence": "t1-p060-050-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-051",
+      "english": "Coastline",
+      "polish": "Linia brzegowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-051-word.mp3",
+      "audioSentence": "t1-p060-051-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-052",
+      "english": "Meadow",
+      "polish": "Łąka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-052-word.mp3",
+      "audioSentence": "t1-p060-052-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-053",
+      "english": "Site",
+      "polish": "Teren",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-053-word.mp3",
+      "audioSentence": "t1-p060-053-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-054",
+      "english": "Oasis",
+      "polish": "Oaza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-054-word.mp3",
+      "audioSentence": "t1-p060-054-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-055",
+      "english": "Stream",
+      "polish": "Strumień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-055-word.mp3",
+      "audioSentence": "t1-p060-055-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-056",
+      "english": "Lowlands",
+      "polish": "Nizina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-056-word.mp3",
+      "audioSentence": "t1-p060-056-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-057",
+      "english": "Glade",
+      "polish": "Polana",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-057-word.mp3",
+      "audioSentence": "t1-p060-057-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-058",
+      "english": "Peak",
+      "polish": "Szczyt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-058-word.mp3",
+      "audioSentence": "t1-p060-058-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-059",
+      "english": "Summit",
+      "polish": "Szczyt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-059-word.mp3",
+      "audioSentence": "t1-p060-059-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-060",
+      "english": "Latitude",
+      "polish": "Szerokość geograficzna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-060-word.mp3",
+      "audioSentence": "t1-p060-060-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-061",
+      "english": "Waterfront",
+      "polish": "Nadbrzeże",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-061-word.mp3",
+      "audioSentence": "t1-p060-061-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-062",
+      "english": "Seaside",
+      "polish": "Wybrzeże",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-062-word.mp3",
+      "audioSentence": "t1-p060-062-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-063",
+      "english": "Highland",
+      "polish": "Wyżyna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-063-word.mp3",
+      "audioSentence": "t1-p060-063-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-064",
+      "english": "Gulf",
+      "polish": "Zatoka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-064-word.mp3",
+      "audioSentence": "t1-p060-064-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-065",
+      "english": "Bay",
+      "polish": "Zatoka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-065-word.mp3",
+      "audioSentence": "t1-p060-065-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-066",
+      "english": "Slope",
+      "polish": "Zbocze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-066-word.mp3",
+      "audioSentence": "t1-p060-066-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-067",
+      "english": "Wildlife",
+      "polish": "Dzika przyroda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-067-word.mp3",
+      "audioSentence": "t1-p060-067-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-068",
+      "english": "Horizon",
+      "polish": "Horyzont",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-068-word.mp3",
+      "audioSentence": "t1-p060-068-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-069",
+      "english": "Edge",
+      "polish": "Krawędź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-069-word.mp3",
+      "audioSentence": "t1-p060-069-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-070",
+      "english": "Crack",
+      "polish": "Szczelina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-070-word.mp3",
+      "audioSentence": "t1-p060-070-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-071",
+      "english": "Glacier",
+      "polish": "Lodowiec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-071-word.mp3",
+      "audioSentence": "t1-p060-071-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-072",
+      "english": "Estuary",
+      "polish": "Ujście",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-072-word.mp3",
+      "audioSentence": "t1-p060-072-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-073",
+      "english": "Heath",
+      "polish": "Wrzosowisko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-073-word.mp3",
+      "audioSentence": "t1-p060-073-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-074",
+      "english": "Dune",
+      "polish": "Wydma",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-074-word.mp3",
+      "audioSentence": "t1-p060-074-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-075",
+      "english": "Topography",
+      "polish": "Topografia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-075-word.mp3",
+      "audioSentence": "t1-p060-075-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-076",
+      "english": "The equator",
+      "polish": "Równik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-076-word.mp3",
+      "audioSentence": "t1-p060-076-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-077",
+      "english": "Hemisphere",
+      "polish": "Półkula",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-077-word.mp3",
+      "audioSentence": "t1-p060-077-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-078",
+      "english": "Parallel",
+      "polish": "Równoleżnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-078-word.mp3",
+      "audioSentence": "t1-p060-078-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-079",
+      "english": "Slope",
+      "polish": "Zbocze",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-079-word.mp3",
+      "audioSentence": "t1-p060-079-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-080",
+      "english": "Seaside",
+      "polish": "Wybrzeże",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-080-word.mp3",
+      "audioSentence": "t1-p060-080-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-081",
+      "english": "Glade",
+      "polish": "Polana",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-081-word.mp3",
+      "audioSentence": "t1-p060-081-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-082",
+      "english": "Heath",
+      "polish": "Wrzosowisko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-082-word.mp3",
+      "audioSentence": "t1-p060-082-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-083",
+      "english": "Canyon",
+      "polish": "Kanion",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-083-word.mp3",
+      "audioSentence": "t1-p060-083-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-084",
+      "english": "Canal",
+      "polish": "Kanał",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-084-word.mp3",
+      "audioSentence": "t1-p060-084-sentence.mp3"
+    },
+    {
+      "id": "t1-p060-085",
+      "english": "South",
+      "polish": "Południe",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p060-085-word.mp3",
+      "audioSentence": "t1-p060-085-sentence.mp3"
     }
   ]
 }

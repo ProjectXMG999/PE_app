@@ -1,15 +1,15 @@
 {
   "id": "t1-p218",
-  "name": "Przysłówki 3",
+  "name": "Mądre",
   "volume": "Tom V",
   "level": 3,
-  "category": "Przysłówki",
-  "chapter": "Rozdział XLIII",
+  "category": "Skróty",
+  "chapter": "Rozdział XLI",
   "words": [
     {
       "id": "t1-p218-001",
-      "english": "Somewhat",
-      "polish": "Nieco",
+      "english": "AD",
+      "polish": "Roku pańskiego",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p218-002",
-      "english": "Additionally",
-      "polish": "Dodatkowo",
+      "english": "BC",
+      "polish": "P.N.E.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p218-003",
-      "english": "Apparently",
-      "polish": "Najwyraźniej",
+      "english": "CE",
+      "polish": "N.E.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p218-004",
-      "english": "At most",
-      "polish": "najwyżej",
+      "english": "CF.",
+      "polish": "Por.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p218-005",
-      "english": "In hand",
-      "polish": "Pod kontrolą",
+      "english": "E.G.",
+      "polish": "Np.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p218-006",
-      "english": "Little by little",
-      "polish": "Kroczek po kroczku",
+      "english": "ETC.",
+      "polish": "Itd.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p218-007",
-      "english": "Definitely",
-      "polish": "Zdecydowanie",
+      "english": "I.E.",
+      "polish": "Tzn.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p218-008",
-      "english": "Accordingly",
-      "polish": "Adekwatnie",
+      "english": "P.S.",
+      "polish": "Postscriptum",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p218-009",
-      "english": "Assuredly",
-      "polish": "Niezawodnie",
+      "english": "QED",
+      "polish": "Co było do udowodnienia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p218-010",
-      "english": "Consequently",
-      "polish": "Konsekwentnie",
+      "english": "VIZ.",
+      "polish": "Mianowicie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-010-word.mp3",
       "audioSentence": "t1-p218-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p218-011",
-      "english": "Equally",
-      "polish": "Równo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p218-011-word.mp3",
-      "audioSentence": "t1-p218-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p218-012",
-      "english": "In detail",
-      "polish": "Szczegółowo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p218-012-word.mp3",
-      "audioSentence": "t1-p218-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p218-013",
-      "english": "Interestingly",
-      "polish": "Ciekawie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p218-013-word.mp3",
-      "audioSentence": "t1-p218-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p218-014",
-      "english": "Mainly",
-      "polish": "Głównie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p218-014-word.mp3",
-      "audioSentence": "t1-p218-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p218-015",
-      "english": "Similarly",
-      "polish": "Podobnie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p218-015-word.mp3",
-      "audioSentence": "t1-p218-015-sentence.mp3"
     }
   ]
 }

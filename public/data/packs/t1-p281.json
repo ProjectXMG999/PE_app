@@ -1,15 +1,15 @@
 {
   "id": "t1-p281",
-  "name": "Przymiotniki 32",
+  "name": "Znaki zodiaku",
   "volume": "Tom VII",
   "level": 4,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział LXVII",
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział LXV",
   "words": [
     {
       "id": "t1-p281-001",
-      "english": "Sticky",
-      "polish": "Lepki",
+      "english": "Numerology",
+      "polish": "Numerologia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p281-002",
-      "english": "Fixed",
-      "polish": "Naprawiony",
+      "english": "Aries",
+      "polish": "Baran",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p281-003",
-      "english": "Protective",
-      "polish": "Ochronny",
+      "english": "Gemini",
+      "polish": "Bliźnięta",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p281-004",
-      "english": "Makeshift",
-      "polish": "Zastępczy",
+      "english": "Taurus",
+      "polish": "Byk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p281-005",
-      "english": "Sacred",
-      "polish": "Święty",
+      "english": "Horoscope",
+      "polish": "Horoskop",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p281-006",
-      "english": "Household",
-      "polish": "Domowy",
+      "english": "Capricorn",
+      "polish": "Koziorożec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p281-007",
-      "english": "Leaky",
-      "polish": "Dziurawy",
+      "english": "Leo",
+      "polish": "Lew",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p281-008",
-      "english": "Disposable",
-      "polish": "Jednorazowy",
+      "english": "Virgo",
+      "polish": "Panna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p281-009",
-      "english": "Unhandy",
-      "polish": "Nieporęczny",
+      "english": "Cancer",
+      "polish": "Rak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p281-010",
-      "english": "Resistant",
-      "polish": "Odporny",
+      "english": "Pisces",
+      "polish": "Ryby",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p281-011",
-      "english": "Handheld",
-      "polish": "Podręczny",
+      "english": "Scorpio",
+      "polish": "Skorpion",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p281-012",
-      "english": "Hollow",
-      "polish": "Pusty w środku",
+      "english": "Sagittarius",
+      "polish": "Strzelec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-012-word.mp3",
@@ -116,12 +116,30 @@
     },
     {
       "id": "t1-p281-013",
-      "english": "Torn",
-      "polish": "Podarty",
+      "english": "Libra",
+      "polish": "Waga",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p281-013-word.mp3",
       "audioSentence": "t1-p281-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p281-014",
+      "english": "Aquarius",
+      "polish": "Wodnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p281-014-word.mp3",
+      "audioSentence": "t1-p281-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p281-015",
+      "english": "Zodiac sign",
+      "polish": "Znak zodiaku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p281-015-word.mp3",
+      "audioSentence": "t1-p281-015-sentence.mp3"
     }
   ]
 }

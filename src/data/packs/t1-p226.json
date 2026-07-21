@@ -1,15 +1,15 @@
 {
   "id": "t1-p226",
-  "name": "Poczta",
+  "name": "Skala I intensywność",
   "volume": "Tom V",
   "level": 3,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XLV",
+  "category": "Przysłówki",
+  "chapter": "Rozdział XLIII",
   "words": [
     {
       "id": "t1-p226-001",
-      "english": "Pack",
-      "polish": "Pakować",
+      "english": "Quite",
+      "polish": "Całkiem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p226-002",
-      "english": "Receive",
-      "polish": "Otrzymywać",
+      "english": "Barely",
+      "polish": "Ledwie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p226-003",
-      "english": "Deliver",
-      "polish": "Doręczać",
+      "english": "Fully",
+      "polish": "W pełni",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p226-004",
-      "english": "Ship",
-      "polish": "Wysyłać",
+      "english": "Hardly",
+      "polish": "Prawie nie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p226-005",
-      "english": "Unfold",
-      "polish": "Rozkładać",
+      "english": "Entirely",
+      "polish": "W całości",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p226-006",
-      "english": "Fold",
-      "polish": "Składać",
+      "english": "Easily",
+      "polish": "Łatwo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p226-007",
-      "english": "Wrap",
-      "polish": "Owijać",
+      "english": "Heavily",
+      "polish": "W znacznym stopniu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p226-008",
-      "english": "Mail",
-      "polish": "Wysłać pocztą",
+      "english": "Strongly",
+      "polish": "Mocno",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p226-009",
-      "english": "Unload",
-      "polish": "Rozładować",
+      "english": "Widely",
+      "polish": "Szeroko",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p226-010",
-      "english": "Package",
-      "polish": "Paczkować",
+      "english": "Worldwide",
+      "polish": "Na całym świecie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p226-011",
-      "english": "Unwind",
-      "polish": "Odwijać",
+      "english": "Highly",
+      "polish": "W wysokim stopniu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p226-012",
-      "english": "Dispatch",
-      "polish": "Wysłać",
+      "english": "Deeply",
+      "polish": "Głęboko",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p226-013",
-      "english": "Parcel",
-      "polish": "Przygotowywać przesyłkę",
+      "english": "Greatly",
+      "polish": "Wielce",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p226-014",
-      "english": "Enclose",
-      "polish": "Załączyć do wiadomości",
+      "english": "Largely",
+      "polish": "W dużej mierze",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-014-word.mp3",
@@ -134,12 +134,147 @@
     },
     {
       "id": "t1-p226-015",
-      "english": "Post",
-      "polish": "Nadać pocztą",
+      "english": "Globally",
+      "polish": "Globalnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-015-word.mp3",
       "audioSentence": "t1-p226-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-016",
+      "english": "Considerably",
+      "polish": "Znacznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-016-word.mp3",
+      "audioSentence": "t1-p226-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-017",
+      "english": "Drastically",
+      "polish": "Drastycznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-017-word.mp3",
+      "audioSentence": "t1-p226-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-018",
+      "english": "Extremely",
+      "polish": "Niezwykle",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-018-word.mp3",
+      "audioSentence": "t1-p226-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-019",
+      "english": "Intensely",
+      "polish": "Intensywnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-019-word.mp3",
+      "audioSentence": "t1-p226-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-020",
+      "english": "Urgently",
+      "polish": "Pilnie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-020-word.mp3",
+      "audioSentence": "t1-p226-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-021",
+      "english": "Exceptionally",
+      "polish": "Wyjątkowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-021-word.mp3",
+      "audioSentence": "t1-p226-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-022",
+      "english": "Insanely",
+      "polish": "Szaleńczo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-022-word.mp3",
+      "audioSentence": "t1-p226-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-023",
+      "english": "Nationwide",
+      "polish": "Ogólnonarodowo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-023-word.mp3",
+      "audioSentence": "t1-p226-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-024",
+      "english": "Statistically",
+      "polish": "Statystycznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-024-word.mp3",
+      "audioSentence": "t1-p226-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-025",
+      "english": "Substantially",
+      "polish": "Znacznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-025-word.mp3",
+      "audioSentence": "t1-p226-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-026",
+      "english": "Utterly",
+      "polish": "Całkowicie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-026-word.mp3",
+      "audioSentence": "t1-p226-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-027",
+      "english": "Wildly",
+      "polish": "Dziko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-027-word.mp3",
+      "audioSentence": "t1-p226-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-028",
+      "english": "Faintly",
+      "polish": "Nieznacznie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-028-word.mp3",
+      "audioSentence": "t1-p226-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-029",
+      "english": "Exhaustively",
+      "polish": "Wyczerpująco",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-029-word.mp3",
+      "audioSentence": "t1-p226-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p226-030",
+      "english": "Comprehensively",
+      "polish": "Gruntownie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p226-030-word.mp3",
+      "audioSentence": "t1-p226-030-sentence.mp3"
     }
   ]
 }

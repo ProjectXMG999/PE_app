@@ -1,15 +1,15 @@
 {
   "id": "t1-p055",
-  "name": "Języki (I nie tylko)",
+  "name": "Kuchnia",
   "volume": "Tom I",
   "level": 1,
   "category": "Rzeczowniki",
-  "chapter": "Rozdział VII",
+  "chapter": "Rozdział VI",
   "words": [
     {
       "id": "t1-p055-001",
-      "english": "Alphabet",
-      "polish": "Alfabet",
+      "english": "Cup",
+      "polish": "Filiżanka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p055-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p055-002",
-      "english": "Language",
-      "polish": "Język",
+      "english": "Mug",
+      "polish": "Kubek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p055-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p055-003",
-      "english": "Book",
-      "polish": "Książka",
+      "english": "Kitchen",
+      "polish": "Kuchnia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p055-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p055-004",
-      "english": "Letter",
-      "polish": "List",
+      "english": "Fridge",
+      "polish": "Lodówka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p055-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p055-005",
-      "english": "Answer",
-      "polish": "Odpowiedź",
+      "english": "Spoon",
+      "polish": "Łyżka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p055-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p055-006",
-      "english": "Question",
-      "polish": "Pytanie",
+      "english": "Bowl",
+      "polish": "Miska",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p055-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p055-007",
-      "english": "Word",
-      "polish": "Słowo",
+      "english": "Knife",
+      "polish": "Nóż",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p055-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p055-008",
-      "english": "Text",
-      "polish": "Tekst",
+      "english": "Pan",
+      "polish": "Patelnia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p055-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p055-009",
-      "english": "Sentence",
-      "polish": "Zdanie",
+      "english": "Glass",
+      "polish": "Szklanka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p055-009-word.mp3",
@@ -89,12 +89,282 @@
     },
     {
       "id": "t1-p055-010",
-      "english": "Meaning",
-      "polish": "Znaczenie",
+      "english": "Plate",
+      "polish": "Talerz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p055-010-word.mp3",
       "audioSentence": "t1-p055-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-011",
+      "english": "Kettle",
+      "polish": "Czajnik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-011-word.mp3",
+      "audioSentence": "t1-p055-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-012",
+      "english": "Tap",
+      "polish": "Kran",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-012-word.mp3",
+      "audioSentence": "t1-p055-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-013",
+      "english": "Teaspoon",
+      "polish": "Łyżeczka do herbaty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-013-word.mp3",
+      "audioSentence": "t1-p055-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-014",
+      "english": "Cutlery",
+      "polish": "Sztućce",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-014-word.mp3",
+      "audioSentence": "t1-p055-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-015",
+      "english": "Cloth",
+      "polish": "Ścierka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-015-word.mp3",
+      "audioSentence": "t1-p055-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-016",
+      "english": "Fork",
+      "polish": "Widelec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-016-word.mp3",
+      "audioSentence": "t1-p055-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-017",
+      "english": "Opener",
+      "polish": "Otwieracz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-017-word.mp3",
+      "audioSentence": "t1-p055-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-018",
+      "english": "Sink",
+      "polish": "Zlew",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-018-word.mp3",
+      "audioSentence": "t1-p055-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-019",
+      "english": "Napkin",
+      "polish": "Serwetka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-019-word.mp3",
+      "audioSentence": "t1-p055-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-020",
+      "english": "Corkscrew",
+      "polish": "Korkociąg",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-020-word.mp3",
+      "audioSentence": "t1-p055-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-021",
+      "english": "Saucepan",
+      "polish": "Rondel",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-021-word.mp3",
+      "audioSentence": "t1-p055-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-022",
+      "english": "Aluminum foil",
+      "polish": "Folia aluminiowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-022-word.mp3",
+      "audioSentence": "t1-p055-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-023",
+      "english": "Tray",
+      "polish": "Kosz na śmieci",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-023-word.mp3",
+      "audioSentence": "t1-p055-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-024",
+      "english": "Pepper shaker",
+      "polish": "Pieprzniczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-024-word.mp3",
+      "audioSentence": "t1-p055-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-025",
+      "english": "Salt shaker",
+      "polish": "Solniczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-025-word.mp3",
+      "audioSentence": "t1-p055-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-026",
+      "english": "Spatula",
+      "polish": "Szpatułka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-026-word.mp3",
+      "audioSentence": "t1-p055-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-027",
+      "english": "Cookbook",
+      "polish": "Książka kucharska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-027-word.mp3",
+      "audioSentence": "t1-p055-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-028",
+      "english": "Food processor",
+      "polish": "Robot kuchenny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-028-word.mp3",
+      "audioSentence": "t1-p055-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-029",
+      "english": "Ladle",
+      "polish": "Chochla",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-029-word.mp3",
+      "audioSentence": "t1-p055-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-030",
+      "english": "Cutting board",
+      "polish": "Deska do krojenia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-030-word.mp3",
+      "audioSentence": "t1-p055-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-031",
+      "english": "Colander",
+      "polish": "Durszlak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-031-word.mp3",
+      "audioSentence": "t1-p055-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-032",
+      "english": "Cake tin",
+      "polish": "Foremka do pieczenia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-032-word.mp3",
+      "audioSentence": "t1-p055-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-033",
+      "english": "Funnel",
+      "polish": "Lejek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-033-word.mp3",
+      "audioSentence": "t1-p055-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-034",
+      "english": "Tablecloth",
+      "polish": "Obrus",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-034-word.mp3",
+      "audioSentence": "t1-p055-034-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-035",
+      "english": "Chopsticks",
+      "polish": "Pałeczki do jedzenia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-035-word.mp3",
+      "audioSentence": "t1-p055-035-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-036",
+      "english": "Sieve",
+      "polish": "Sitko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-036-word.mp3",
+      "audioSentence": "t1-p055-036-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-037",
+      "english": "Grater",
+      "polish": "Tarka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-037-word.mp3",
+      "audioSentence": "t1-p055-037-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-038",
+      "english": "Chopping knife",
+      "polish": "Tasak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-038-word.mp3",
+      "audioSentence": "t1-p055-038-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-039",
+      "english": "Rolling pin",
+      "polish": "Wałek do ciasta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-039-word.mp3",
+      "audioSentence": "t1-p055-039-sentence.mp3"
+    },
+    {
+      "id": "t1-p055-040",
+      "english": "Baking tray",
+      "polish": "Blacha do pieczenia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p055-040-word.mp3",
+      "audioSentence": "t1-p055-040-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p206",
-  "name": "Przymiotniki 15",
+  "name": "Biżuteria",
   "volume": "Tom IV",
   "level": 3,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział XXXIX",
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXXVIII",
   "words": [
     {
       "id": "t1-p206-001",
-      "english": "Daring",
-      "polish": "Brawurowy",
+      "english": "Wedding ring",
+      "polish": "Obrączka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p206-002",
-      "english": "Old-fashioned",
-      "polish": "Staromodny",
+      "english": "Gem",
+      "polish": "Kamień szlachetny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p206-003",
-      "english": "Demanding",
-      "polish": "Wymagający",
+      "english": "Crown",
+      "polish": "Korona",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p206-004",
-      "english": "Mysterious",
-      "polish": "Tajemniczy",
+      "english": "Chain",
+      "polish": "Łańcuch",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p206-005",
-      "english": "Straightforward",
-      "polish": "Porostolinijny",
+      "english": "Necklace",
+      "polish": "Naszyjnik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p206-006",
-      "english": "Fragile",
-      "polish": "Kruchy",
+      "english": "Pearls",
+      "polish": "Perły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p206-007",
-      "english": "Outspoken",
-      "polish": "Szczery do bólu",
+      "english": "Ruby",
+      "polish": "Rubin",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p206-008",
-      "english": "Peaceful",
-      "polish": "Pokojowy",
+      "english": "Signet ring",
+      "polish": "Sygnet",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p206-009",
-      "english": "Reserved",
-      "polish": "Powściągliwy",
+      "english": "Keyring",
+      "polish": "Breloczek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p206-010",
-      "english": "Trustful",
-      "polish": "Ufny",
+      "english": "Jewel",
+      "polish": "Klejnot",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p206-011",
-      "english": "Addictive",
-      "polish": "Uzależniający",
+      "english": "Clasp",
+      "polish": "Zapięcie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p206-012",
-      "english": "Bossy",
-      "polish": "Władczy",
+      "english": "Medallion",
+      "polish": "Medalion",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p206-013",
-      "english": "Capable",
-      "polish": "Zdolny do czegoś",
+      "english": "Buckle",
+      "polish": "Klamra",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p206-014",
-      "english": "Odd",
-      "polish": "Dziwny",
+      "english": "Bracelet",
+      "polish": "Bransoletka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-014-word.mp3",
@@ -134,12 +134,147 @@
     },
     {
       "id": "t1-p206-015",
-      "english": "Stable",
-      "polish": "Stabilny",
+      "english": "Sapphire",
+      "polish": "Szafir",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-015-word.mp3",
       "audioSentence": "t1-p206-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-016",
+      "english": "Amethyst",
+      "polish": "Ametyst",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-016-word.mp3",
+      "audioSentence": "t1-p206-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-017",
+      "english": "Bling",
+      "polish": "Błyskotka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-017-word.mp3",
+      "audioSentence": "t1-p206-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-018",
+      "english": "Circlet",
+      "polish": "Diadem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-018-word.mp3",
+      "audioSentence": "t1-p206-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-019",
+      "english": "Bead",
+      "polish": "Koralik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-019-word.mp3",
+      "audioSentence": "t1-p206-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-020",
+      "english": "Emerald",
+      "polish": "Szmaragd",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-020-word.mp3",
+      "audioSentence": "t1-p206-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-021",
+      "english": "Trinket",
+      "polish": "Świecidełko",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-021-word.mp3",
+      "audioSentence": "t1-p206-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-022",
+      "english": "Turquoise",
+      "polish": "Turkus",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-022-word.mp3",
+      "audioSentence": "t1-p206-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-023",
+      "english": "Pendant",
+      "polish": "Wisiorek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-023-word.mp3",
+      "audioSentence": "t1-p206-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-024",
+      "english": "Agate",
+      "polish": "Agat",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-024-word.mp3",
+      "audioSentence": "t1-p206-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-025",
+      "english": "Brooch",
+      "polish": "Broszka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-025-word.mp3",
+      "audioSentence": "t1-p206-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-026",
+      "english": "Clip-on earring",
+      "polish": "Klips damski",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-026-word.mp3",
+      "audioSentence": "t1-p206-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-027",
+      "english": "Garnet",
+      "polish": "Granat",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-027-word.mp3",
+      "audioSentence": "t1-p206-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-028",
+      "english": "Tie pin",
+      "polish": "Spinka do krawata",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-028-word.mp3",
+      "audioSentence": "t1-p206-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-029",
+      "english": "Anklet",
+      "polish": "Łańcuszek na nogę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-029-word.mp3",
+      "audioSentence": "t1-p206-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p206-030",
+      "english": "Cufflinks",
+      "polish": "Spinki do mankietów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p206-030-word.mp3",
+      "audioSentence": "t1-p206-030-sentence.mp3"
     }
   ]
 }

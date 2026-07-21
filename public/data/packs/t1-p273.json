@@ -1,15 +1,15 @@
 {
   "id": "t1-p273",
-  "name": "Przysłówki 5",
+  "name": "Drzewa",
   "volume": "Tom VII",
   "level": 4,
-  "category": "Przysłówki",
-  "chapter": "Rozdział LXV",
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział LXIII",
   "words": [
     {
       "id": "t1-p273-001",
-      "english": "Undoubtedly",
-      "polish": "Niewątpliwie",
+      "english": "Root",
+      "polish": "Korzeń",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p273-002",
-      "english": "Practically",
-      "polish": "Praktycznie",
+      "english": "Leaf",
+      "polish": "Liść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p273-003",
-      "english": "Particularly",
-      "polish": "Szczególnie",
+      "english": "Palm tree",
+      "polish": "Palma",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p273-004",
-      "english": "Undeniably",
-      "polish": "Niezaprzeczalnie",
+      "english": "Bushes",
+      "polish": "Krzaki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p273-005",
-      "english": "Unquestionably",
-      "polish": "Bezsprzecznie",
+      "english": "Birch",
+      "polish": "Brzoza",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p273-006",
-      "english": "Admittedly",
-      "polish": "Wprawdzie",
+      "english": "Beech",
+      "polish": "Buk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p273-007",
-      "english": "Altogether",
-      "polish": "W sumie",
+      "english": "Chestnut tree",
+      "polish": "Kasztanowiec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p273-008",
-      "english": "Thankfully",
-      "polish": "Na całe szczęście",
+      "english": "Maple",
+      "polish": "Klon",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p273-009",
-      "english": "Chiefly",
-      "polish": "Zwłaszcza",
+      "english": "Pine",
+      "polish": "Sosna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p273-010",
-      "english": "Critically",
-      "polish": "Krytycznie",
+      "english": "Spruce",
+      "polish": "Świerk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p273-011",
-      "english": "Essentially",
-      "polish": "Zasadniczo",
+      "english": "Willow",
+      "polish": "Wierzba",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p273-012",
-      "english": "Literally",
-      "polish": "Dosłownie",
+      "english": "Oak",
+      "polish": "Dąb",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p273-013",
-      "english": "Namely",
-      "polish": "Mianowicie",
+      "english": "Baobab",
+      "polish": "Baobab",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p273-014",
-      "english": "Naturally",
-      "polish": "Oczywiście",
+      "english": "Boxwood",
+      "polish": "Bukszpan",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-014-word.mp3",
@@ -134,12 +134,147 @@
     },
     {
       "id": "t1-p273-015",
-      "english": "Presumably",
-      "polish": "Przypuszczalnie",
+      "english": "Cedar",
+      "polish": "Cedr",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p273-015-word.mp3",
       "audioSentence": "t1-p273-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-016",
+      "english": "Yew",
+      "polish": "Cis",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-016-word.mp3",
+      "audioSentence": "t1-p273-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-017",
+      "english": "Branch",
+      "polish": "Gałąź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-017-word.mp3",
+      "audioSentence": "t1-p273-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-018",
+      "english": "Rowan",
+      "polish": "Jarzębina",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-018-word.mp3",
+      "audioSentence": "t1-p273-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-019",
+      "english": "Ash",
+      "polish": "Jesion",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-019-word.mp3",
+      "audioSentence": "t1-p273-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-020",
+      "english": "Fir",
+      "polish": "Jodła",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-020-word.mp3",
+      "audioSentence": "t1-p273-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-021",
+      "english": "Bark",
+      "polish": "Kora",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-021-word.mp3",
+      "audioSentence": "t1-p273-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-022",
+      "english": "Hazel",
+      "polish": "Leszczyna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-022-word.mp3",
+      "audioSentence": "t1-p273-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-023",
+      "english": "Linden",
+      "polish": "Lipa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-023-word.mp3",
+      "audioSentence": "t1-p273-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-024",
+      "english": "Larch",
+      "polish": "Modrzew",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-024-word.mp3",
+      "audioSentence": "t1-p273-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-025",
+      "english": "Sequoia",
+      "polish": "Sekwoja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-025-word.mp3",
+      "audioSentence": "t1-p273-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-026",
+      "english": "Cone",
+      "polish": "Szyszka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-026-word.mp3",
+      "audioSentence": "t1-p273-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-027",
+      "english": "Acorn",
+      "polish": "Żołądź",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-027-word.mp3",
+      "audioSentence": "t1-p273-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-028",
+      "english": "Elm",
+      "polish": "Wiąz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-028-word.mp3",
+      "audioSentence": "t1-p273-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-029",
+      "english": "Poplar",
+      "polish": "Topola",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-029-word.mp3",
+      "audioSentence": "t1-p273-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p273-030",
+      "english": "Rowan",
+      "polish": "Jarząb",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p273-030-word.mp3",
+      "audioSentence": "t1-p273-030-sentence.mp3"
     }
   ]
 }
