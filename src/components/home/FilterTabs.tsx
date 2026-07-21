@@ -7,11 +7,11 @@ import './FilterTabs.css'
 const allPacks = packagesIndex as PackMeta[]
 
 const STATUS_TABS = [
-  { id: 'all',       label: 'Wszystkie' },
-  { id: 'new',       label: 'Nowe' },
-  { id: 'started',   label: 'W toku' },
-  { id: 'completed', label: '✓ Odsłuchane' },
   { id: 'mastered',  label: '★ Opanowane' },
+  { id: 'completed', label: '✓ Odsłuchane' },
+  { id: 'started',   label: 'W toku' },
+  { id: 'new',       label: 'Nowe' },
+  { id: 'all',       label: 'Wszystkie' },
 ] as const
 
 type StatusTabId = typeof STATUS_TABS[number]['id']
@@ -69,20 +69,7 @@ export function FilterTabs() {
 
   return (
     <div className="filtertabs">
-      {/* Row 1: Status */}
-      <div className="filtertabs__row filtertabs__row--scroll">
-        {STATUS_TABS.map(tab => (
-          <button
-            key={tab.id}
-            className={`filtertabs__tab ${activeFilter === tab.id ? 'filtertabs__tab--active' : ''}`}
-            onClick={() => setFilter(tab.id as StatusTabId)}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-
-      {/* Row 2: Level */}
+      {/* Row 1: Level */}
       <div className="filtertabs__row filtertabs__row--scroll">
         {LEVELS.map(lvlData => (
           <button
@@ -113,7 +100,7 @@ export function FilterTabs() {
         </div>
       )}
 
-      {/* Row 3: Category — horizontal scroll */}
+      {/* Row 2: Category — horizontal scroll */}
       <div className="filtertabs__row filtertabs__row--scroll">
         {CATEGORIES.map(cat => (
           <button
@@ -122,6 +109,19 @@ export function FilterTabs() {
             onClick={() => setCategory(activeCategory === cat ? null : cat)}
           >
             {cat}
+          </button>
+        ))}
+      </div>
+
+      {/* Row 3: Status */}
+      <div className="filtertabs__row filtertabs__row--scroll">
+        {STATUS_TABS.map(tab => (
+          <button
+            key={tab.id}
+            className={`filtertabs__tab ${activeFilter === tab.id ? 'filtertabs__tab--active' : ''}`}
+            onClick={() => setFilter(tab.id as StatusTabId)}
+          >
+            {tab.label}
           </button>
         ))}
       </div>
