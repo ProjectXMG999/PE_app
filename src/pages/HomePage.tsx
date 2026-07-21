@@ -3,7 +3,6 @@ import { AppShell } from '../components/layout/AppShell'
 import { InstallBanner } from '../components/home/InstallBanner'
 import { QuickStartCards } from '../components/home/QuickStartCards'
 import { StatsRow } from '../components/home/StatsRow'
-import { SearchBar } from '../components/home/SearchBar'
 import { FilterTabs } from '../components/home/FilterTabs'
 import { LevelProgressBars } from '../components/home/LevelProgressBars'
 import { SectionHeader } from '../components/home/SectionHeader'
@@ -69,7 +68,6 @@ export function HomePage() {
         <OnboardingCard />
         <QuickStartCards />
         <StatsRow />
-        <SearchBar />
         <FilterTabs />
         <LevelProgressBars allPacks={allPacks} knownMap={knownMap} />
         <SectionHeader label="Pakiety" count={filtered.length} />
