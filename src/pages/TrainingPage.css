@@ -144,6 +144,35 @@
   color: var(--text-primary);
 }
 
+.training-detail__audio-btn {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.35);
+  margin-top: 4px;
+}
+
+.training-detail__audio-btn:hover {
+  background: var(--accent-bright);
+}
+
+.training-detail__audio-duration {
+  font-size: 11px;
+  opacity: 0.75;
+  font-weight: 400;
+}
+
 .training-detail__subtitle {
   font-family: var(--font-body);
   font-size: 14px;

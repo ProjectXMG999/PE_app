@@ -2,7 +2,15 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell'
 import { TrainingOnboardingCard } from '../components/training/TrainingOnboardingCard'
+import { AudioModal } from '../components/shared/AudioModal'
 import './TrainingPage.css'
+
+function descToParagraphs(text: string): string[] {
+  return text
+    .split('\n')
+    .map(l => l.replace(/\*\*(.*?)\*\*/g, '$1').replace(/\*(.*?)\*/g, '$1').replace(/^-\s+/, '').trim())
+    .filter(l => l.length > 0)
+}
 
 const TRAINING_EXERCISES = [
   {
@@ -11,6 +19,7 @@ const TRAINING_EXERCISES = [
     titleEN: 'Word in Action',
     description: 'Zrób pierwsze frazy ze słowem.',
     duration: '2 min',
+    audioDuration: '2 min',
     fullDescription: `
 Od lęku do ciekawości
 
@@ -51,6 +60,7 @@ Tu nie chodzi o perfekcję. Chodzi o **pierwszy bezpieczny kontakt ze słowem w 
     titleEN: 'Personal Sentence Method',
     description: 'Zamień słowo w zdanie z Twojego życia.',
     duration: '3 min',
+    audioDuration: '2 min',
     fullDescription: `
 Język, który dotyka Twojego świata
 
@@ -101,6 +111,7 @@ Rezultat
     titleEN: 'One Word, Three Lives',
     description: 'Użyj słowa w domu, pracy i codzienności.',
     duration: '3 min',
+    audioDuration: '2 min',
     fullDescription: `
 Słowo, które pracuje wszędzie
 
@@ -147,6 +158,7 @@ Słowo, które działa tylko w jednym zdaniu, jest jeszcze kruche. Słowo, któr
     titleEN: 'Sentence Ladder',
     description: 'Rozwiń krótkie zdanie w prawdziwą wypowiedź.',
     duration: '4 min',
+    audioDuration: '2 min',
     fullDescription: `
 Od małego zdania do pełnej wypowiedzi
 
@@ -203,6 +215,7 @@ Słowo przestaje być punktem. **Zaczyna być początkiem wypowiedzi.**
 export function TrainingPage() {
   const navigate = useNavigate()
   const [selectedExerciseId, setSelectedExerciseId] = useState<string | null>(null)
+  const [isPlayingAudio, setIsPlayingAudio] = useState(false)
 
   const selectedExercise = selectedExerciseId
     ? TRAINING_EXERCISES.find(e => e.id === selectedExerciseId)
@@ -222,7 +235,28 @@ export function TrainingPage() {
           <div className="training-detail__header">
             <h1>{selectedExercise.titlePL}</h1>
             <p className="training-detail__subtitle">{selectedExercise.titleEN}</p>
+            <button
+              className="training-detail__audio-btn"
+              onClick={() => setIsPlayingAudio(true)}
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5,3 19,12 5,21"/>
+              </svg>
+              Słuchaj opis ćwiczenia
+              <span className="training-detail__audio-duration">{selectedExercise.audioDuration}</span>
+            </button>
           </div>
+
+          {isPlayingAudio && (
+            <AudioModal
+              title={selectedExercise.titlePL}
+              label="Ćwiczenie"
+              duration={selectedExercise.audioDuration}
+              src={`/audio/exercise-${selectedExercise.id}.mp3`}
+              paragraphs={descToParagraphs(selectedExercise.fullDescription)}
+              onClose={() => setIsPlayingAudio(false)}
+            />
+          )}
 
           <div className="training-detail__content">
             {selectedExercise.fullDescription.split('\n').map((line, idx) => {
