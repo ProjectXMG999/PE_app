@@ -8,7 +8,7 @@ import { useStats } from '../hooks/useStats'
 import './StatsPage.css'
 
 export function StatsPage() {
-  const { streak, knownWords, sessionCount, masteredPacks, activity, loading, reload, tick } = useStats()
+  const { streak, knownWords, sessionCount, masteredPacks, activity, levelStats, loading, reload, tick } = useStats()
   const [showReset, setShowReset] = useState(false)
 
   function handleReset() {
@@ -27,6 +27,23 @@ export function StatsPage() {
           <StatCard value={sessionCount} label="Sesji ukończono" />
           <StatCard value={masteredPacks} label="Paczek opanowanych" icon="★" />
         </div>
+
+        {levelStats && (
+          <div className="statspage__level-stats">
+            <div className="statspage__level-stat-item">
+              <div className="statspage__level-stat-label">Średnio dziennie</div>
+              <div className="statspage__level-stat-value">{levelStats.avgWordsPerDay}</div>
+              <div className="statspage__level-stat-unit">słów/dzień</div>
+            </div>
+            {levelStats.nextLevel && (
+              <div className="statspage__level-stat-item">
+                <div className="statspage__level-stat-label">Do poziomu {levelStats.nextLevel}</div>
+                <div className="statspage__level-stat-value">{levelStats.daysToNextLevel}</div>
+                <div className="statspage__level-stat-unit">dni przy tym tempie</div>
+              </div>
+            )}
+          </div>
+        )}
 
         <section className="statspage__section">
           <h2 className="statspage__section-title">Aktywność — ostatnie 7 dni</h2>

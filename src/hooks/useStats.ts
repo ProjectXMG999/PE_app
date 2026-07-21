@@ -2,6 +2,20 @@ import { useState, useEffect, useCallback } from 'react'
 import { getAllSessions, getStreak, getTotalKnownWords, getAllPackageProgress } from '../services/db'
 import { DayActivity } from '../types/progress'
 
+const LEVEL_THRESHOLDS = [
+  { level: 1, words: 1000 },
+  { level: 2, words: 3000 },
+  { level: 3, words: 6000 },
+  { level: 4, words: 10000 },
+]
+
+export interface LevelStats {
+  avgWordsPerDay: number
+  nextLevel: number | null
+  nextLevelWords: number | null
+  daysToNextLevel: number | null
+}
+
 export function useStats() {
   const [streak, setStreak] = useState(0)
   const [knownWords, setKnownWords] = useState(0)
@@ -9,6 +23,7 @@ export function useStats() {
   const [startedPacks, setStartedPacks] = useState(0)
   const [masteredPacks, setMasteredPacks] = useState(0)
   const [activity, setActivity] = useState<DayActivity[]>([])
+  const [levelStats, setLevelStats] = useState<LevelStats | null>(null)
   const [loading, setLoading] = useState(true)
   const [tick, setTick] = useState(0)
   const reload = useCallback(() => setTick(t => t + 1), [])
@@ -41,6 +56,28 @@ export function useStats() {
           days.push({ date: dateStr, count })
         }
         setActivity(days)
+
+        // Calculate level stats
+        if (sessions.length > 0) {
+          const firstSession = sessions[sessions.length - 1]
+          const lastSession = sessions[0]
+          const startDate = new Date(firstSession.date)
+          const endDate = new Date(lastSession.date)
+          const daysElapsed = Math.max(1, Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1)
+          const avgWordsPerDay = Math.round(kw / daysElapsed)
+
+          const nextLevelThreshold = LEVEL_THRESHOLDS.find(t => t.words > kw)
+          const daysToNextLevel = nextLevelThreshold
+            ? Math.ceil((nextLevelThreshold.words - kw) / Math.max(1, avgWordsPerDay))
+            : null
+
+          setLevelStats({
+            avgWordsPerDay,
+            nextLevel: nextLevelThreshold?.level ?? null,
+            nextLevelWords: nextLevelThreshold?.words ?? null,
+            daysToNextLevel,
+          })
+        }
       } finally {
         setLoading(false)
       }
@@ -48,5 +85,5 @@ export function useStats() {
     load()
   }, [tick])
 
-  return { streak, knownWords, sessionCount, startedPacks, masteredPacks, activity, loading, reload, tick }
+  return { streak, knownWords, sessionCount, startedPacks, masteredPacks, activity, levelStats, loading, reload, tick }
 }
