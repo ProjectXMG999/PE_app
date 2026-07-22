@@ -10,7 +10,7 @@ export function SectionHeader({ label, count }: Props) {
       alignItems: 'center',
       gap: 'var(--spacing-sm)',
       padding: '0 var(--spacing-md)',
-      marginBottom: 'var(--spacing-sm)',
+      marginBottom: '6px',
     }}>
       <span style={{
         fontFamily: 'var(--font-heading)',

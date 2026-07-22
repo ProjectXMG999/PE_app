@@ -67,7 +67,7 @@
   font-size: 14px;
   color: var(--text-secondary);
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.5;
   word-wrap: break-word;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .onboarding-card__btn {
-  padding: 10px var(--spacing-md);
+  padding: 8px var(--spacing-md);
   border-radius: var(--radius-sm);
   font-family: var(--font-heading);
   font-size: 13px;
@@ -130,8 +130,8 @@
 
 @media (max-width: 768px) {
   .onboarding-card {
-    margin: 0 var(--spacing-md) var(--spacing-md);
-    padding: var(--spacing-md);
+    margin: 0 var(--spacing-md) 12px;
+    padding: 12px;
     max-width: none;
   }
 
@@ -145,7 +145,7 @@
 
   .onboarding-card__btn {
     font-size: 12px;
-    padding: 9px var(--spacing-md);
+    padding: 8px var(--spacing-md);
   }
 
   .onboarding-card__link {

@@ -1,8 +1,8 @@
 .level-progress {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 0 var(--spacing-md) var(--spacing-md);
+  gap: 6px;
+  padding: 0 var(--spacing-md) 10px;
 }
 
 .level-progress__row {
@@ -22,7 +22,7 @@
 
 .level-progress__bar {
   flex: 1;
-  height: 8px;
+  height: 6px;
   background: var(--bg-surface);
   border-radius: var(--radius-full);
   overflow: hidden;
