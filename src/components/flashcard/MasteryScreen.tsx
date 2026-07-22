@@ -33,6 +33,11 @@ const COLORS = [
   '#ffffff',
 ]
 
+function prefersReducedMotion(): boolean {
+  return typeof window !== 'undefined' &&
+    window.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true
+}
+
 function createParticle(canvas: HTMLCanvasElement): Particle {
   const dpr = window.devicePixelRatio || 1
   const shapes: Particle['shape'][] = ['rect', 'rect', 'circle', 'star']
@@ -66,9 +71,9 @@ export function MasteryScreen({ packName, wordCount, onRepeat, onNext, nextPackN
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const rafRef = useRef<number>(0)
   const particles = useRef<Particle[]>([])
-  const burstCount = useRef(0)
 
   useEffect(() => {
+    if (prefersReducedMotion()) return
     const canvas = canvasRef.current
     if (!canvas) return
     const ctx = canvas.getContext('2d')
@@ -79,16 +84,16 @@ export function MasteryScreen({ packName, wordCount, onRepeat, onNext, nextPackN
     const resize = () => {
       canvas.width = canvas.offsetWidth * dpr
       canvas.height = canvas.offsetHeight * dpr
-      ctx.scale(dpr, dpr)
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
     }
     resize()
     window.addEventListener('resize', resize)
 
-    // Initial burst — 3 waves
+    const timers: ReturnType<typeof setTimeout>[] = []
     const burst = (count: number, delay: number) => {
-      setTimeout(() => {
+      timers.push(setTimeout(() => {
         for (let i = 0; i < count; i++) particles.current.push(createParticle(canvas))
-      }, delay)
+      }, delay))
     }
     burst(80, 0)
     burst(60, 400)
@@ -96,12 +101,11 @@ export function MasteryScreen({ packName, wordCount, onRepeat, onNext, nextPackN
     burst(40, 1600)
 
     const animate = () => {
-      const dpr = window.devicePixelRatio || 1
       const w = canvas.width / dpr
       const h = canvas.height / dpr
       ctx.clearRect(0, 0, w, h)
 
-      particles.current = particles.current.filter(p => p.opacity > 0.02)
+      particles.current = particles.current.filter(p => p.opacity > 0.02 && p.y < h + 20)
 
       for (const p of particles.current) {
         p.x += p.vx
@@ -139,46 +143,81 @@ export function MasteryScreen({ packName, wordCount, onRepeat, onNext, nextPackN
     return () => {
       cancelAnimationFrame(rafRef.current)
       window.removeEventListener('resize', resize)
+      timers.forEach(clearTimeout)
     }
   }, [])
 
   return (
     <div className="mastery">
-      <canvas ref={canvasRef} className="mastery__canvas" />
+      <canvas ref={canvasRef} className="mastery__canvas" aria-hidden="true" />
 
-      <div className="mastery__content">
-        <div className="mastery__trophy">🏆</div>
-
-        <div className="mastery__text">
-          <h1 className="mastery__title">Opanowane!</h1>
-          <p className="mastery__sub">{packName}</p>
-          <p className="mastery__count">Wszystkie {wordCount} słów znasz na pamięć</p>
+      <div className="mastery__content" role="dialog" aria-label="Paczka opanowana">
+        <div className="mastery__badge">
+          <span className="mastery__ring" aria-hidden="true" />
+          <span className="mastery__ring mastery__ring--inner" aria-hidden="true" />
+          <span className="mastery__medal">
+            <span className="mastery__trophy" aria-hidden="true">🏆</span>
+          </span>
+          <div className="mastery__stars" aria-hidden="true">
+            {[0, 1, 2].map(i => (
+              <span key={i} className="mastery__star" style={{ '--i': i } as React.CSSProperties}>★</span>
+            ))}
+          </div>
         </div>
 
-        <div className="mastery__stars">
-          {[0, 1, 2].map(i => (
-            <span key={i} className="mastery__star" style={{ animationDelay: `${0.3 + i * 0.15}s` }}>★</span>
-          ))}
+        <div className="mastery__text">
+          <p className="mastery__eyebrow">Paczka opanowana</p>
+          <h1 className="mastery__title">Brawo!</h1>
+          <p className="mastery__sub">{packName}</p>
+        </div>
+
+        <div className="mastery__chip">
+          <span className="mastery__chip-check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </span>
+          Wszystkie {wordCount} słów w pamięci
         </div>
 
         <div className="mastery__actions">
           <button className="mastery__btn mastery__btn--repeat" onClick={onRepeat}>
-            ↺ Powtórz
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+              <path d="M21 3v5h-5" />
+              <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+              <path d="M3 21v-5h5" />
+            </svg>
+            <span>Od nowa</span>
           </button>
           {onNext ? (
             <button className="mastery__btn mastery__btn--next" onClick={onNext}>
-              {nextPackName} ▶
+              <span className="mastery__btn-label">{nextPackName ?? 'Następna paczka'}</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="m13 6 6 6-6 6" />
+              </svg>
             </button>
           ) : (
             <button className="mastery__btn mastery__btn--next" onClick={onExit}>
-              ⌂ Menu
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="m3 10.5 9-7 9 7" />
+                <path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5" />
+              </svg>
+              <span>Strona główna</span>
             </button>
           )}
         </div>
 
-        <button className="mastery__exit" onClick={onExit}>
-          Wróć do listy paczek
-        </button>
+        {onNext && (
+          <button className="mastery__exit" onClick={onExit}>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="m3 10.5 9-7 9 7" />
+              <path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5" />
+            </svg>
+            Wróć do strony głównej
+          </button>
+        )}
       </div>
     </div>
   )
