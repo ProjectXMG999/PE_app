@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell'
 import { useAppStore } from '../store/useAppStore'
 import { unlockAudioGlobally } from '../audio/audioUnlock'
+import { unlockKeepAlive } from '../audio/keepAlive'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import './AutoplayModePage.css'
@@ -45,6 +46,9 @@ export function AutoplayModePage() {
     // Unlock iOS audio NOW while we're in a synchronous user gesture context
     // Using AudioContext.resume() which permanently unlocks audio for the session
     unlockAudioGlobally()
+    // Also unlock the keep-alive element within the same gesture (used only
+    // when the experimental keep-alive is enabled via showDebug)
+    unlockKeepAlive()
     console.log('[action] autoplay mode selected, audio unlock called')
     setAutoplayMode(mode)
     navigate(`/pakiet/${packageId}/autoplay`)

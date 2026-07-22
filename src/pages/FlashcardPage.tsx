@@ -8,9 +8,14 @@ import { AudioButton } from '../components/flashcard/AudioButton'
 import { ProgressBar } from '../components/flashcard/ProgressBar'
 import { MasteryScreen } from '../components/flashcard/MasteryScreen'
 import { AutoplayDoneScreen } from '../components/flashcard/AutoplayDoneScreen'
+import { AutoplayControls } from '../components/flashcard/AutoplayControls'
+import { AutoplaySettingsSheet } from '../components/flashcard/AutoplaySettingsSheet'
 import { usePackageData } from '../hooks/usePackageData'
 import { useFlashcard } from '../hooks/useFlashcard'
 import { useAudio } from '../hooks/useAudio'
+import { useWakeLock } from '../hooks/useWakeLock'
+import { useMediaSession } from '../hooks/useMediaSession'
+import { startKeepAlive, stopKeepAlive } from '../audio/keepAlive'
 import { useAppStore } from '../store/useAppStore'
 import { saveSession, savePackageProgress, getPackageProgress, saveWordProgress, getPackageWordProgress } from '../services/db'
 import { StudyMode } from '../types/progress'
@@ -30,7 +35,7 @@ export function FlashcardPage() {
   const navigate = useNavigate()
   const studyMode = (mode === 'autoplay' ? 'autoplay' : 'fiszki') as StudyMode
 
-  const { setPackage, autoplayMode, setAutoplayMode, enRate, plRate } = useAppStore()
+  const { setPackage, autoplayMode, setAutoplayMode, enRate, plRate, showDebug } = useAppStore()
   const { pack, loading, error } = usePackageData(packageId ?? null)
   const allWords = pack?.words ?? []
   // In fiszki mode: only show words not yet marked 'known'. Autoplay always shows all.
@@ -43,6 +48,7 @@ export function FlashcardPage() {
     revealStep,
     isLastCard,
     advance,
+    goBack,
     reveal,
     reset,
     total,
@@ -69,6 +75,10 @@ export function FlashcardPage() {
   const [knownCount, setKnownCount] = useState(0)
   const [autoContinue, setAutoContinue] = useState(true)
   const [countdown, setCountdown] = useState(6)
+  const [sheetOpen, setSheetOpen] = useState(false)
+  // Speaking-mode "repeat aloud" countdown — {ms, key} drives a pure-CSS ring
+  const [speakCountdown, setSpeakCountdown] = useState<{ ms: number; key: number } | null>(null)
+  const countdownKeyRef = useRef(0)
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
 
   const nextPack = packageId ? getNextPack(packageId) : null
@@ -98,29 +108,38 @@ export function FlashcardPage() {
     setRestartKey(k => k + 1)
   }, [stop])
 
-  const handlePauseResume = useCallback(() => {
-    if (isPaused) {
-      console.log('[action] handlePauseResume RESUME, resumeFrom=', resumeFromStepRef.current)
-      // Resume from the step we paused on — don't reset playStep so pill stays lit
-      setIsPaused(false)
-      setAudioLoading(false)
-      setAudioError(null)
-      setRestartKey(k => k + 1)
-    } else {
-      console.log('[action] handlePauseResume PAUSE, playStep=', playStep)
-      abortSequence()
-      clearAutoplay()
-      // Do NOT call skipStepRef.current?.() — that advances the sequence to next audio.
-      // Cleanup (controller.abort + clearTimeout) kills the pause timer instead.
-      skipStepRef.current = null
-      stop()
-      // Remember which step was active so resume can skip back to it
-      resumeFromStepRef.current = playStep
-      setAudioLoading(false)
-      setAudioError(null)
-      setIsPaused(true)
-    }
+  // Split into pause/resume so Media Session 'play' while playing is a no-op
+  // (a toggle would flip to paused when the OS re-sends 'play')
+  const handleResume = useCallback(() => {
+    if (!isPaused) return
+    console.log('[action] handleResume, resumeFrom=', resumeFromStepRef.current)
+    // Resume from the step we paused on — don't reset playStep so pill stays lit
+    setIsPaused(false)
+    setAudioLoading(false)
+    setAudioError(null)
+    setRestartKey(k => k + 1)
+  }, [isPaused])
+
+  const handlePause = useCallback(() => {
+    if (isPaused) return
+    console.log('[action] handlePause, playStep=', playStep)
+    abortSequence()
+    clearAutoplay()
+    // Do NOT call skipStepRef.current?.() — that advances the sequence to next audio.
+    // Cleanup (controller.abort + clearTimeout) kills the pause timer instead.
+    skipStepRef.current = null
+    stop()
+    // Remember which step was active so resume can skip back to it
+    resumeFromStepRef.current = playStep
+    setAudioLoading(false)
+    setAudioError(null)
+    setIsPaused(true)
   }, [isPaused, playStep, stop])
+
+  const handlePauseResume = useCallback(() => {
+    if (isPaused) handleResume()
+    else handlePause()
+  }, [isPaused, handleResume, handlePause])
 
   const handleModeChange = useCallback((m: 'fast' | 'standard' | 'speaking') => {
     abortSequence()
@@ -318,6 +337,24 @@ export function FlashcardPage() {
     }
   }, [isLastCard, advance, preloadNext, studyWords, currentCardIndex, saveProgress, total, stop])
 
+  // Previous card in autoplay (Media Session previoustrack) — teardown mirrors
+  // handleSkip exactly; on the first card it restarts the current word instead
+  const handlePrev = useCallback(() => {
+    console.log('[action] handlePrev, currentCardIndex=', currentCardIndex)
+    abortSequence()
+    clearAutoplay()
+    skipStepRef.current = null
+    stop()
+    resumeFromStepRef.current = null
+    setPlayStep(null)
+    setIsPaused(false)
+    if (currentCardIndex > 0) {
+      goBack()
+    } else {
+      setRestartKey(k => k + 1)
+    }
+  }, [currentCardIndex, goBack, stop])
+
   // Autoplay end → always show completion screen; countdown handles auto-continue
   const handleAutoplayEnd = useCallback(async () => {
     await saveProgress(total, true)
@@ -376,6 +413,33 @@ export function FlashcardPage() {
     return () => clearTimeout(t)
   }, [showCompletion, autoContinue, nextPack, countdown, handleNextPack])
 
+  // Keep screen awake while autoplay is actively running (paused → dim normally)
+  useWakeLock(studyMode === 'autoplay' && !isPaused && !showCompletion && !loading)
+
+  // Experimental (showDebug-gated): silent loop keeps timers + media session
+  // alive during gaps with the screen off — see audio/keepAlive.ts
+  const keepAliveActive = showDebug && studyMode === 'autoplay' && !isPaused && !showCompletion && !loading
+  useEffect(() => {
+    if (keepAliveActive) startKeepAlive()
+    else stopKeepAlive()
+    return () => stopKeepAlive()
+  }, [keepAliveActive])
+
+  // Lock-screen / notification transport controls + metadata.
+  // Full support on Android Chrome; best-effort on iOS (stop() clears src between
+  // cards, which tears down Now Playing — accepted, see useMediaSession docs).
+  useMediaSession({
+    enabled: studyMode === 'autoplay' && !showCompletion && !!currentWord,
+    title: currentWord?.english ?? '',
+    artist: currentWord?.polish ?? '',
+    album: pack?.name ?? 'Project English',
+    playing: !isPaused,
+    onPlay: handleResume,
+    onPause: handlePause,
+    onNext: handleSkip,
+    onPrev: handlePrev,
+  })
+
   // Auto-play sequence
   useEffect(() => {
     if (studyMode !== 'autoplay' || !currentWord || studyWords.length === 0 || showCompletion || isPaused) return
@@ -386,13 +450,15 @@ export function FlashcardPage() {
     const isCancelled = () => controller.signal.aborted
     let pauseTimer: ReturnType<typeof setTimeout> | null = null
 
-    const pause = (ms: number) => new Promise<void>(r => {
+    const pause = (ms: number, opts?: { countdown?: boolean }) => new Promise<void>(r => {
       console.log('[seq] pause START ms=', ms)
+      if (opts?.countdown) setSpeakCountdown({ ms, key: ++countdownKeyRef.current })
       const end = (reason: string) => {
         clearTimeout(pauseTimer!)
         pauseTimer = null
         skipStepRef.current = null
         controller.signal.removeEventListener('abort', onAbort)
+        if (opts?.countdown) setSpeakCountdown(null)
         console.log('[seq] pause END', reason)
         r()
       }
@@ -449,16 +515,17 @@ export function FlashcardPage() {
       }
 
       if (autoplayMode === 'speaking') {
+        // countdown: true marks the "repeat aloud" gaps — drives the ring around Pauza
         if (!shouldSkip(0)) { setPlayStep(0); await playWithStatus(() => playWordPl(word)); if (isCancelled()) return }
-        await pause(3000); if (isCancelled()) return
+        await pause(3000, { countdown: true }); if (isCancelled()) return
         if (!shouldSkip(1)) {
           setPlayStep(1); await playWithStatus(() => playWord(word)); if (isCancelled()) return
           await pause(1400); if (isCancelled()) return
           await playWithStatus(() => playWord(word)); if (isCancelled()) return
-          await pause(3000); if (isCancelled()) return
+          await pause(3000, { countdown: true }); if (isCancelled()) return
         }
-        if (word.sentencePl && !shouldSkip(2)) { setPlayStep(2); await playWithStatus(() => playSentencePl(word)); if (isCancelled()) return; await pause(8000); if (isCancelled()) return }
-        if (word.sentenceEn && !shouldSkip(3)) { setPlayStep(3); await playWithStatus(() => playSentence(word)); if (isCancelled()) return; await pause(3000); if (isCancelled()) return }
+        if (word.sentencePl && !shouldSkip(2)) { setPlayStep(2); await playWithStatus(() => playSentencePl(word)); if (isCancelled()) return; await pause(8000, { countdown: true }); if (isCancelled()) return }
+        if (word.sentenceEn && !shouldSkip(3)) { setPlayStep(3); await playWithStatus(() => playSentence(word)); if (isCancelled()) return; await pause(3000, { countdown: true }); if (isCancelled()) return }
       }
 
       if (isCancelled()) return
@@ -480,6 +547,7 @@ export function FlashcardPage() {
       stop()
       setAudioLoading(false)
       setAudioError(null)
+      setSpeakCountdown(null)
     }
   // studyWords.length triggers re-run when DB finishes loading (studyWords: [] → pack.words)
   // isPaused gates the sequence; autoplayMode change re-fires with new timing
@@ -637,6 +705,7 @@ export function FlashcardPage() {
         revealStep={revealStep}
         mode={studyMode}
         onClick={studyMode === 'autoplay' ? handleSkipStep : reveal}
+        activeLine={studyMode === 'autoplay' ? playStep : null}
       />
 
       {studyMode === 'fiszki' && (
@@ -681,64 +750,22 @@ export function FlashcardPage() {
       )}
 
       {studyMode === 'autoplay' && (
-        <div className="flashcard-page__autoplay-bar">
-          <div className="flashcard-page__mode-pills">
-            {(['fast', 'standard', 'speaking'] as const).map(m => (
-              <button
-                key={m}
-                className={`flashcard-page__mode-pill ${autoplayMode === m ? 'active' : ''}`}
-                onClick={() => handleModeChange(m)}
-              >
-                {m === 'fast' ? '⚡ Szybko' : m === 'standard' ? '★ Standard' : '🎙 Speaking'}
-              </button>
-            ))}
-          </div>
-          <div className="flashcard-page__playsteps">
-            {(['PL', 'EN', 'PL zdanie', 'EN zdanie'] as const).map((label, i) => {
-              const isActive = playStep === i
-              const showSpinner = isActive && audioLoading
-              const showError = isActive && !!audioError
-              return (
-                <span
-                  key={i}
-                  className={`flashcard-page__playstep ${isActive ? 'active' : ''} ${showError ? 'flashcard-page__playstep--error' : ''}`}
-                >
-                  {showSpinner ? <span className="flashcard-page__playstep-spinner" /> : null}
-                  {showError ? '⚠' : label}
-                </span>
-              )
-            })}
-          </div>
-          <div className="flashcard-page__autoplay-btns">
-            <button className="flashcard-page__restart-btn" onClick={restartCurrentWord} aria-label="Powtórz słowo">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4"/>
-              </svg>
-              Powtórz
-            </button>
-            <button className="flashcard-page__pause-btn" onClick={handlePauseResume} aria-label={isPaused ? 'Wznów' : 'Pauza'}>
-              {isPaused ? (
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <polygon points="5,3 19,12 5,21"/>
-                </svg>
-              ) : (
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <rect x="6" y="4" width="4" height="16" rx="1"/>
-                  <rect x="14" y="4" width="4" height="16" rx="1"/>
-                </svg>
-              )}
-              {isPaused ? 'Wznów' : 'Pauza'}
-            </button>
-            <button className="flashcard-page__skip-btn" onClick={handleSkip} aria-label="Pomiń słowo">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/>
-              </svg>
-              Pomiń
-            </button>
-          </div>
-        </div>
+        <AutoplayControls
+          autoplayMode={autoplayMode}
+          onModeChange={handleModeChange}
+          playStep={playStep}
+          audioLoading={audioLoading}
+          audioError={audioError}
+          isPaused={isPaused}
+          onPauseResume={handlePauseResume}
+          onRestart={restartCurrentWord}
+          onSkip={handleSkip}
+          onOpenSettings={() => setSheetOpen(true)}
+          countdown={speakCountdown}
+        />
       )}
       </div>
+      {sheetOpen && <AutoplaySettingsSheet onClose={() => setSheetOpen(false)} />}
     </AppShell>
   )
 }

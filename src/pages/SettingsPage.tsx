@@ -4,16 +4,8 @@ import { AboutAppSection } from '../components/settings/AboutAppSection'
 import { InstallGuideSection } from '../components/settings/InstallGuideSection'
 import { ResetProgressModal } from '../components/stats/ResetProgressModal'
 import { useAppStore, ThemePreference } from '../store/useAppStore'
+import { RATES } from '../constants/audioRates'
 import './SettingsPage.css'
-
-// Multipliers relative to default speed: 1.0 = 100% = default
-const RATES: { value: number; label: string }[] = [
-  { value: 0.50, label: '50%' },
-  { value: 0.75, label: '75%' },
-  { value: 1.00, label: '100%' },
-  { value: 1.25, label: '125%' },
-  { value: 1.50, label: '150%' },
-]
 
 const THEMES: { value: ThemePreference; label: string }[] = [
   { value: 'dark', label: 'Ciemny' },

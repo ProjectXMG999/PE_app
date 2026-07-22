@@ -17,6 +17,12 @@ export function useFlashcard(words: Word[]) {
     }
   }, [currentCardIndex, isLastCard, setCardIndex])
 
+  const goBack = useCallback(() => {
+    if (currentCardIndex > 0) {
+      setCardIndex(currentCardIndex - 1)
+    }
+  }, [currentCardIndex, setCardIndex])
+
   const reveal = useCallback(() => {
     if (!isFullyRevealed) {
       advanceReveal()
@@ -35,6 +41,7 @@ export function useFlashcard(words: Word[]) {
     isLastCard,
     isFullyRevealed,
     advance,
+    goBack,
     reveal,
     reset,
     total: words.length,

@@ -21,6 +21,8 @@
   --border: rgba(255, 255, 255, 0.08);
   --border-accent: rgba(139, 92, 246, 0.4);
 
+  --overlay: rgba(0, 0, 0, 0.55);
+
   --success: #34D399;
   --warning: #FBBF24;
   --danger: #F87171;
@@ -98,6 +100,8 @@
 
   --border: rgba(17, 24, 39, 0.1);
   --border-accent: rgba(124, 58, 237, 0.35);
+
+  --overlay: rgba(17, 24, 39, 0.35);
 
   --shadow-sm: 0 1px 4px rgba(17, 24, 39, 0.08), 0 0 0 1px rgba(17, 24, 39, 0.04);
   --shadow-md: 0 4px 16px rgba(17, 24, 39, 0.1);

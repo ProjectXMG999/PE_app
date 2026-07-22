@@ -59,7 +59,7 @@
 }
 
 .flashcard__sentence-en {
-  font-size: 14px;
+  font-size: var(--text-md);
   color: var(--text-primary);
   font-style: italic;
   text-align: center;
@@ -68,9 +68,25 @@
 }
 
 .flashcard__sentence-pl {
-  font-size: 13px;
-  color: var(--text-muted);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
   text-align: center;
   line-height: 1.6;
   font-family: var(--font-body);
+}
+
+/* Autoplay: line currently being spoken */
+.flashcard__polish,
+.flashcard__english,
+.flashcard__sentence-pl,
+.flashcard__sentence-en {
+  transition: color var(--transition-med), text-shadow var(--transition-med);
+}
+
+.flashcard__line--active {
+  color: var(--accent-bright);
+}
+
+.flashcard__english.flashcard__line--active {
+  text-shadow: 0 0 24px var(--accent-glow);
 }

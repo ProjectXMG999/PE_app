@@ -12,6 +12,11 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
   // Resolver for the currently pending play() promise — lets stop() unblock awaits
   const resolveCurrentRef = useRef<(() => void) | null>(null)
 
+  // Rates read at call time via ref — the autoplay sequence effect captures the play
+  // callbacks once per card, so baking rates into them would freeze mid-card changes
+  const ratesRef = useRef({ enRate, plRate })
+  ratesRef.current = { enRate, plRate }
+
   // Return the singleton audio element — survives component unmount/remount so iOS
   // retains its activation state across pack auto-transitions (no new element = no new unlock needed)
   const ensureAudio = useCallback(() => {
@@ -87,24 +92,24 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
 
   const playWord = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId) return Promise.resolve('ok' as const)
-    return play(getAudioUrl(packId, word.audioWord), EN_BASE * enRate)
-  }, [packId, play, enRate])
+    return play(getAudioUrl(packId, word.audioWord), EN_BASE * ratesRef.current.enRate)
+  }, [packId, play])
 
   const playSentence = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     // Audio zdań istnieje tylko dla słów z sentenceEn — baza "bez zdań" ma same nulle
     if (!packId || !word.sentenceEn) return Promise.resolve('ok' as const)
-    return play(getAudioUrl(packId, word.audioSentence), EN_BASE * enRate)
-  }, [packId, play, enRate])
+    return play(getAudioUrl(packId, word.audioSentence), EN_BASE * ratesRef.current.enRate)
+  }, [packId, play])
 
   const playWordPl = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId || !word.audioWordPl) return Promise.resolve('ok' as const)
-    return play(getAudioUrl(packId, word.audioWordPl), PL_BASE * plRate)
-  }, [packId, play, plRate])
+    return play(getAudioUrl(packId, word.audioWordPl), PL_BASE * ratesRef.current.plRate)
+  }, [packId, play])
 
   const playSentencePl = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     if (!packId || !word.audioSentencePl) return Promise.resolve('ok' as const)
-    return play(getAudioUrl(packId, word.audioSentencePl), PL_BASE * plRate)
-  }, [packId, play, plRate])
+    return play(getAudioUrl(packId, word.audioSentencePl), PL_BASE * ratesRef.current.plRate)
+  }, [packId, play])
 
   const stop = useCallback(() => {
     console.log('[audio] stop() called')

@@ -38,7 +38,9 @@ export function unlockAudioGlobally() {
     const el = getAudioElement()
     if (el) {
       el.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA'
-      el.volume = 0
+      // The WAV is silent — do NOT set volume=0 here: iOS ignores element volume,
+      // but Android/desktop persist it across src changes, muting all later playback
+      el.volume = 1
       el.play().catch(() => {})
     }
   } catch (e) {
