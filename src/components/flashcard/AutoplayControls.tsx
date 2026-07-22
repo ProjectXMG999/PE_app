@@ -72,7 +72,7 @@ export function AutoplayControls({
             {audioError === 'timeout' ? 'Audio nie odpowiada — pomijam' : 'Problem z audio — pomijam ten fragment'}
           </div>
         ) : countdown ? (
-          <div className="apc__speak-label">Powtórz na głos</div>
+          <div className="apc__speak-label">Powiedz na głos</div>
         ) : null}
       </div>
 
