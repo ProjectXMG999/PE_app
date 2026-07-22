@@ -5,6 +5,7 @@ import { useAudio } from '../hooks/useAudio'
 import { useCardFlip } from '../hooks/useCardFlip'
 import { useAppStore } from '../store/useAppStore'
 import { MasteryScreen } from '../components/flashcard/MasteryScreen'
+import { SessionDoneScreen } from '../components/flashcard/SessionDoneScreen'
 import { Word } from '../types/vocabulary'
 import { WordProgress } from '../types/progress'
 import { getPackageWordProgress, saveWordProgress, saveSession, savePackageProgress, getPackageProgress } from '../services/db'
@@ -153,18 +154,16 @@ export function WordFlashPage() {
 
   if (done) {
     return (
-      <div className="wf-done">
-        <div className="wf-done__content">
-          <div className="wf-done__icon">✓</div>
-          <h1 className="wf-done__title">Sesja zakończona</h1>
-          <p className="wf-done__sub">{pack?.name}</p>
-          <p className="wf-done__count">Opanowano: <strong>{sessionKnown}</strong></p>
-          <div className="wf-done__actions">
-            <button className="wf-done__btn wf-done__btn--repeat" onClick={handleRepeat}>↺ Powtórz</button>
-            <button className="wf-done__btn wf-done__btn--exit" onClick={() => navigate('/')}>⌂ Menu</button>
-          </div>
-        </div>
-      </div>
+      <SessionDoneScreen
+        packName={pack?.name ?? ''}
+        sessionKnown={sessionKnown}
+        packKnown={knownCount}
+        packTotal={pack?.wordCount ?? 0}
+        onRepeat={handleRepeat}
+        onNext={nextPack ? () => navigate(`/pakiet/${nextPack.id}/fiszki-start`) : null}
+        nextPackName={nextPack?.name}
+        onExit={() => navigate('/')}
+      />
     )
   }
 
