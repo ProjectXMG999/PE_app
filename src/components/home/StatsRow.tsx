@@ -1,10 +1,6 @@
 import { useProgressData, avgWordsPerDay } from '../../hooks/useProgressData'
-import { nextLevelFromPacks } from '../../data/levels'
-import packagesIndex from '../../data/packages-index.json'
-import { PackMeta } from '../../types/vocabulary'
+import { nextLevelFromTotalKnown } from '../../data/levels'
 import './StatsRow.css'
-
-const allPacks = packagesIndex as PackMeta[]
 
 export function StatsRow() {
   const snapshot = useProgressData()
@@ -19,15 +15,14 @@ export function StatsRow() {
     )
   }
 
-  const { streak, knownTotal, knownMap } = snapshot
+  const { streak, knownTotal } = snapshot
   const avg = avgWordsPerDay(snapshot)
-  const next = nextLevelFromPacks(allPacks, knownMap)
+  const next = nextLevelFromTotalKnown(knownTotal)
   const daysTo = next ? (avg > 0 ? Math.ceil(next.wordsToNext / avg) : null) : null
 
   return (
     <div className="statsrow">
       <div className={`statsrow__chip${streak > 0 ? ' statsrow__chip--streak-active' : ''}`}>
-        <span className="statsrow__icon">🔥</span>
         <span className="statsrow__value">{streak}</span>
         <span className="statsrow__label--solo">dni z rzędu</span>
         <div className="statsrow__dots">
@@ -37,17 +32,14 @@ export function StatsRow() {
         </div>
       </div>
       <div className="statsrow__chip">
-        <span className="statsrow__icon">📚</span>
         <span className="statsrow__value">{knownTotal}</span>
         <span className="statsrow__label--solo">słów poznanych</span>
       </div>
       <div className="statsrow__chip statsrow__chip--sm">
-        <span className="statsrow__icon">⚡</span>
         <span className="statsrow__value statsrow__value--sm">{avg || '—'}</span>
         <span className="statsrow__label--solo">słów / dzień</span>
       </div>
       <div className="statsrow__chip statsrow__chip--sm">
-        <span className="statsrow__icon">🎯</span>
         <span className="statsrow__value statsrow__value--sm">
           {daysTo ?? (next ? '—' : '✓')}
         </span>

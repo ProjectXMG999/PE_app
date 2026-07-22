@@ -1,10 +1,17 @@
-import { PackMeta } from '../types/vocabulary'
-
 export const LEVEL_COLORS: Record<number, string> = {
   1: 'var(--accent-yellow)',
   2: 'var(--accent-orange)',
   3: 'var(--accent-green)',
   4: 'var(--accent-blue)',
+}
+
+// Cumulative known-word thresholds that define overall vocabulary knowledge
+// levels — independent of which difficulty tier a pack is tagged with.
+export const LEVEL_THRESHOLDS: Record<number, number> = {
+  1: 1000,
+  2: 3000,
+  3: 6000,
+  4: 10000,
 }
 
 export interface NextLevelInfo {
@@ -14,21 +21,24 @@ export interface NextLevelInfo {
 }
 
 /**
- * First level (1-4) not yet fully known, based on real per-pack word counts
- * (same grouping LevelProgressBars uses), instead of arbitrary global totals.
+ * Knowledge level derived from the total count of mastered words across the
+ * whole app (not per pack-level). Returns the next level to reach, how many
+ * more mastered words that takes, and progress (%) through the current band.
  */
-export function nextLevelFromPacks(allPacks: PackMeta[], knownMap: Map<string, number>): NextLevelInfo | null {
+export function nextLevelFromTotalKnown(knownTotal: number): NextLevelInfo | null {
+  let prevThreshold = 0
   for (const lvl of [1, 2, 3, 4] as const) {
-    const packs = allPacks.filter(p => p.level === lvl)
-    const total = packs.reduce((s, p) => s + p.wordCount, 0)
-    const known = packs.reduce((s, p) => s + (knownMap.get(p.id) ?? 0), 0)
-    if (known < total) {
+    const threshold = LEVEL_THRESHOLDS[lvl]
+    if (knownTotal < threshold) {
+      const span = threshold - prevThreshold
+      const progressed = knownTotal - prevThreshold
       return {
         level: lvl,
-        wordsToNext: total - known,
-        pct: total > 0 ? Math.min(100, Math.round((known / total) * 100)) : 100,
+        wordsToNext: threshold - knownTotal,
+        pct: span > 0 ? Math.min(100, Math.max(0, Math.round((progressed / span) * 100))) : 100,
       }
     }
+    prevThreshold = threshold
   }
   return null
 }

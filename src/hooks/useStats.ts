@@ -1,11 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { DayActivity } from '../types/progress'
-import { nextLevelFromPacks } from '../data/levels'
+import { nextLevelFromTotalKnown } from '../data/levels'
 import { loadProgressSnapshot, avgWordsPerDay } from './useProgressData'
-import packagesIndex from '../data/packages-index.json'
-import { PackMeta } from '../types/vocabulary'
-
-const allPacks = packagesIndex as PackMeta[]
 
 export interface LevelStats {
   avgWordsPerDay: number
@@ -33,7 +29,7 @@ export function useStats() {
     async function load() {
       try {
         const snap = await loadProgressSnapshot(tick > 0)
-        const { sessions, packageProgress, knownTotal, knownMap } = snap
+        const { sessions, packageProgress, knownTotal } = snap
 
         setStreak(snap.streak)
         setKnownWords(knownTotal)
@@ -59,7 +55,7 @@ export function useStats() {
         setActivity(days)
 
         const avg = avgWordsPerDay(snap)
-        const next = nextLevelFromPacks(allPacks, knownMap)
+        const next = nextLevelFromTotalKnown(knownTotal)
         setLevelStats({
           avgWordsPerDay: avg,
           nextLevel: next?.level ?? null,
