@@ -3,7 +3,6 @@ import { getAllSessions, getStreak, getTotalKnownWords, getAllPackageProgress } 
 import { DayActivity } from '../types/progress'
 
 const LEVEL_THRESHOLDS = [
-  { level: 1, words: 1000 },
   { level: 2, words: 3000 },
   { level: 3, words: 6000 },
   { level: 4, words: 10000 },

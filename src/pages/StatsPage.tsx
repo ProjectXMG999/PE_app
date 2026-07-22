@@ -9,10 +9,9 @@ import './StatsPage.css'
 
 const LEVEL_THRESHOLDS = [
   { level: 1, words: 0 },
-  { level: 2, words: 1000 },
-  { level: 3, words: 3000 },
-  { level: 4, words: 6000 },
-  { level: 5, words: 10000 },
+  { level: 2, words: 3000 },
+  { level: 3, words: 6000 },
+  { level: 4, words: 10000 },
 ]
 
 export function StatsPage() {
