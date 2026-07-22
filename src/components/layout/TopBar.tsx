@@ -1,12 +1,26 @@
+import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAppStore } from '../../store/useAppStore'
+import { useAppStore, resolveTheme } from '../../store/useAppStore'
 import './TopBar.css'
 
 export function TopBar() {
-  const { theme, toggleTheme } = useAppStore()
+  const { theme, toggleTheme, devUnlocked, setDevUnlocked } = useAppStore()
   const navigate = useNavigate()
+  const tapsRef = useRef<number[]>([])
 
   const version = import.meta.env.VITE_APP_VERSION || '1.0.0'
+  const resolved = resolveTheme(theme)
+
+  // Easter egg: 5 quick taps on the version string toggles the hidden
+  // developer section in Personalizacja.
+  function handleVersionTap() {
+    const now = Date.now()
+    tapsRef.current = [...tapsRef.current.filter(t => now - t < 3000), now]
+    if (tapsRef.current.length >= 5) {
+      tapsRef.current = []
+      setDevUnlocked(!devUnlocked)
+    }
+  }
 
   return (
     <header className="topbar">
@@ -14,7 +28,7 @@ export function TopBar() {
 
       <div className="topbar__center" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
         <img
-          src={theme === 'dark' ? '/icons/logo-white.svg' : '/icons/logo-dark.svg'}
+          src={resolved === 'dark' ? '/icons/logo-white.svg' : '/icons/logo-dark.svg'}
           alt="Project English"
           className="topbar__logo-img"
           onError={(e) => {
@@ -34,11 +48,11 @@ export function TopBar() {
         <button
           className="topbar__theme-btn"
           onClick={toggleTheme}
-          aria-label={theme === 'dark' ? 'Włącz jasny motyw' : 'Włącz ciemny motyw'}
-          title={theme === 'dark' ? 'Jasny motyw' : 'Ciemny motyw'}
+          aria-label={resolved === 'dark' ? 'Włącz jasny motyw' : 'Włącz ciemny motyw'}
+          title={resolved === 'dark' ? 'Jasny motyw' : 'Ciemny motyw'}
           style={{ marginBottom: '0px' }}
         >
-          {theme === 'dark' ? (
+          {resolved === 'dark' ? (
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="12" r="5"/>
               <line x1="12" y1="1" x2="12" y2="3"/>
@@ -65,6 +79,7 @@ export function TopBar() {
             lineHeight: 1,
           }}
           title={`Version ${version}`}
+          onClick={handleVersionTap}
         >
           {version}
         </span>

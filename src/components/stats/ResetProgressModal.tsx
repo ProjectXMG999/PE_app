@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { PackMeta } from '../../types/vocabulary'
 import packagesIndex from '../../data/packages-index.json'
 import { resetAllProgress, resetProgressForPackages } from '../../services/db'
+import { invalidateProgressSnapshot } from '../../hooks/useProgressData'
 import './ResetProgressModal.css'
 
 const allPacks = packagesIndex as PackMeta[]
@@ -69,6 +70,7 @@ export function ResetProgressModal({ onClose, onReset }: Props) {
       } else {
         await resetProgressForPackages(getPackageIds(scope))
       }
+      invalidateProgressSnapshot()
       onReset()
     } finally {
       setBusy(false)

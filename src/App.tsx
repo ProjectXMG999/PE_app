@@ -1,7 +1,7 @@
 import { Suspense, lazy, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useRegisterSW } from 'virtual:pwa-register/react'
-import { useAppStore } from './store/useAppStore'
+import { useAppStore, resolveTheme } from './store/useAppStore'
 import { initInstallService } from './services/installService'
 import { DebugOverlay } from './components/debug/DebugOverlay'
 import { VersionBadge } from './components/debug/VersionBadge'
@@ -47,14 +47,23 @@ export function App() {
 
   useEffect(() => {
     const el = document.documentElement
-    el.classList.add('no-transition')
-    el.setAttribute('data-theme', theme)
-    // One rAF to let the attribute apply, then remove the class so transitions resume
-    requestAnimationFrame(() => {
+    const apply = () => {
+      el.classList.add('no-transition')
+      el.setAttribute('data-theme', resolveTheme(theme))
+      // One rAF to let the attribute apply, then remove the class so transitions resume
       requestAnimationFrame(() => {
-        el.classList.remove('no-transition')
+        requestAnimationFrame(() => {
+          el.classList.remove('no-transition')
+        })
       })
-    })
+    }
+    apply()
+    // In "system" mode, follow live OS theme changes
+    if (theme === 'system') {
+      const mq = window.matchMedia('(prefers-color-scheme: light)')
+      mq.addEventListener('change', apply)
+      return () => mq.removeEventListener('change', apply)
+    }
   }, [theme])
 
   useEffect(() => {

@@ -1,12 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
-import { getAllSessions, getStreak, getTotalKnownWords, getAllPackageProgress } from '../services/db'
 import { DayActivity } from '../types/progress'
-
-const LEVEL_THRESHOLDS = [
-  { level: 2, words: 3000 },
-  { level: 3, words: 6000 },
-  { level: 4, words: 10000 },
-]
+import { nextLevelThreshold } from '../data/levels'
+import { loadProgressSnapshot, avgWordsPerDay } from './useProgressData'
 
 export interface LevelStats {
   avgWordsPerDay: number
@@ -32,18 +27,14 @@ export function useStats() {
   useEffect(() => {
     async function load() {
       try {
-        const [s, kw, sessions, packs] = await Promise.all([
-          getStreak(),
-          getTotalKnownWords(),
-          getAllSessions(),
-          getAllPackageProgress(),
-        ])
+        const snap = await loadProgressSnapshot(tick > 0)
+        const { sessions, packageProgress, knownTotal } = snap
 
-        setStreak(s)
-        setKnownWords(kw)
+        setStreak(snap.streak)
+        setKnownWords(knownTotal)
         setSessionCount(sessions.length)
-        setStartedPacks(packs.length)
-        setMasteredPacks(packs.filter(p => p.masteredAt != null).length)
+        setStartedPacks(packageProgress.length)
+        setMasteredPacks(packageProgress.filter(p => p.masteredAt != null).length)
 
         const heard = sessions.reduce((sum, s) => sum + s.wordsCompleted, 0)
         setTotalWordsHeard(heard)
@@ -62,30 +53,15 @@ export function useStats() {
         }
         setActivity(days)
 
-        // Calculate level stats
-        const avgWordsPerDay = sessions.length > 0
-          ? (() => {
-              const firstSession = sessions[sessions.length - 1]
-              const lastSession = sessions[0]
-              const startDate = new Date(firstSession.date)
-              const endDate = new Date(lastSession.date)
-              const daysElapsed = Math.max(1, Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1)
-              return Math.round(kw / daysElapsed)
-            })()
-          : 0
-
-        const nextLevelThreshold = LEVEL_THRESHOLDS.find(t => t.words > kw)
-        const daysToNextLevel = nextLevelThreshold
-          ? (avgWordsPerDay > 0
-              ? Math.ceil((nextLevelThreshold.words - kw) / avgWordsPerDay)
-              : 0)  // Show 0 if no progress yet
-          : null
-
+        const avg = avgWordsPerDay(snap)
+        const next = nextLevelThreshold(knownTotal)
         setLevelStats({
-          avgWordsPerDay,
-          nextLevel: nextLevelThreshold?.level ?? null,
-          nextLevelWords: nextLevelThreshold?.words ?? null,
-          daysToNextLevel,
+          avgWordsPerDay: avg,
+          nextLevel: next?.level ?? null,
+          nextLevelWords: next?.words ?? null,
+          daysToNextLevel: next
+            ? (avg > 0 ? Math.ceil((next.words - knownTotal) / avg) : 0)
+            : null,
         })
       } finally {
         setLoading(false)

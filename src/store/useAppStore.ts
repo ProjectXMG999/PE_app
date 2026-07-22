@@ -9,8 +9,19 @@ type BeforeInstallPromptEvent = Event & {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
 }
 
+export type ThemePreference = 'dark' | 'light' | 'system'
+
+/** Resolves the stored preference to the theme actually applied. */
+export function resolveTheme(pref: ThemePreference): 'dark' | 'light' {
+  if (pref === 'system') {
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+  }
+  return pref
+}
+
 interface AppStore {
-  theme: 'dark' | 'light'
+  theme: ThemePreference
+  setTheme: (t: ThemePreference) => void
   toggleTheme: () => void
 
   currentPackageId: string | null
@@ -55,18 +66,22 @@ interface AppStore {
 
   showDebug: boolean
   setShowDebug: (v: boolean) => void
+
+  devUnlocked: boolean
+  setDevUnlocked: (v: boolean) => void
 }
 
 type PersistedState = Pick<
   AppStore,
-  'theme' | 'isInstalled' | 'iosBannerDismissed' | 'autoplayMode' | 'enRate' | 'plRate' | 'showDebug'
+  'theme' | 'isInstalled' | 'iosBannerDismissed' | 'autoplayMode' | 'enRate' | 'plRate' | 'showDebug' | 'devUnlocked'
 >
 
 export const useAppStore = create<AppStore>()(
   persist(
     (set) => ({
       theme: 'dark',
-      toggleTheme: () => set(s => ({ theme: s.theme === 'dark' ? 'light' : 'dark' })),
+      setTheme: (t) => set({ theme: t }),
+      toggleTheme: () => set(s => ({ theme: resolveTheme(s.theme) === 'dark' ? 'light' : 'dark' })),
 
       currentPackageId: null,
       currentMode: null,
@@ -110,6 +125,9 @@ export const useAppStore = create<AppStore>()(
 
       showDebug: false,
       setShowDebug: (v) => set({ showDebug: v }),
+
+      devUnlocked: false,
+      setDevUnlocked: (v) => set(v ? { devUnlocked: true } : { devUnlocked: false, showDebug: false }),
     }),
     {
       name: 'pe-store',
@@ -133,6 +151,7 @@ export const useAppStore = create<AppStore>()(
         enRate: s.enRate,
         plRate: s.plRate,
         showDebug: s.showDebug,
+        devUnlocked: s.devUnlocked,
       }),
     }
   )

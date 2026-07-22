@@ -7,7 +7,11 @@
     <script>
       try {
         var s = JSON.parse(localStorage.getItem('pe-store') || '{}')
-        if (s.state && s.state.theme === 'light') {
+        var t = s.state && s.state.theme
+        if (t === 'system') {
+          t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+        }
+        if (t === 'light') {
           document.documentElement.setAttribute('data-theme', 'light')
         }
       } catch(e) {}

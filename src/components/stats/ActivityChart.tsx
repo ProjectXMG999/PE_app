@@ -1,4 +1,3 @@
-import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts'
 import { DayActivity } from '../../types/progress'
 import './ActivityChart.css'
 
@@ -16,39 +15,36 @@ function formatLabel(dateStr: string) {
 export function ActivityChart({ data }: Props) {
   const max = Math.max(...data.map(d => d.count), 1)
   const today = new Date().toISOString().split('T')[0]
+  const total = data.reduce((s, d) => s + d.count, 0)
 
   return (
-    <div className="activity-chart">
-      <ResponsiveContainer width="100%" height={120}>
-        <BarChart data={data} margin={{ top: 8, right: 8, left: 8, bottom: 0 }} barSize={24}>
-          <XAxis
-            dataKey="date"
-            tickFormatter={formatLabel}
-            tick={{ fill: 'var(--text-muted)', fontSize: 12, fontFamily: 'var(--font-heading)' }}
-            axisLine={false}
-            tickLine={false}
-          />
-          <Tooltip
-            cursor={{ fill: 'rgba(139,92,246,0.1)' }}
-            content={({ active, payload }) => {
-              if (!active || !payload?.length) return null
-              return (
-                <div className="activity-chart__tooltip">
-                  <span>{payload[0].value} słów</span>
-                </div>
-              )
-            }}
-          />
-          <Bar dataKey="count" radius={[4, 4, 0, 0]}>
-            {data.map((entry) => (
-              <Cell
-                key={entry.date}
-                fill={entry.count > 0 ? (entry.date === today ? 'var(--accent)' : 'var(--accent-dim)') : 'var(--bg-surface)'}
-              />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
+    <div
+      className="activity-chart"
+      role="img"
+      aria-label={`Aktywność z ostatnich 7 dni: ${total} słów`}
+    >
+      <div className="activity-chart__bars">
+        {data.map((d, i) => {
+          const isToday = d.date === today
+          const heightPct = d.count > 0 ? Math.max(6, (d.count / max) * 100) : 0
+          return (
+            <div key={d.date} className="activity-chart__col" title={`${d.count} słów`}>
+              <span className={`activity-chart__count${d.count > 0 ? '' : ' activity-chart__count--zero'}`}>
+                {d.count > 0 ? d.count : ''}
+              </span>
+              <div className="activity-chart__track">
+                <div
+                  className={`activity-chart__bar${isToday ? ' activity-chart__bar--today' : ''}`}
+                  style={{ height: `${heightPct}%`, animationDelay: `${i * 40}ms` }}
+                />
+              </div>
+              <span className={`activity-chart__label${isToday ? ' activity-chart__label--today' : ''}`}>
+                {formatLabel(d.date)}
+              </span>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

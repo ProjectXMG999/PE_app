@@ -1,18 +1,13 @@
-import { useEffect, useState } from 'react'
-import { getAllPackageProgress } from '../../services/db'
-import { PackageProgress } from '../../types/progress'
 import packagesIndex from '../../data/packages-index.json'
 import { PackMeta } from '../../types/vocabulary'
+import { useProgressData } from '../../hooks/useProgressData'
 import './PackageProgressList.css'
 
 const packs = packagesIndex as PackMeta[]
 
 export function PackageProgressList() {
-  const [progress, setProgress] = useState<PackageProgress[]>([])
-
-  useEffect(() => {
-    getAllPackageProgress().then(setProgress)
-  }, [])
+  const snapshot = useProgressData()
+  const progress = snapshot?.packageProgress ?? []
 
   if (progress.length === 0) {
     return (

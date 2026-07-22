@@ -93,7 +93,6 @@ export default defineConfig({
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'chart-vendor': ['recharts'],
           'store-vendor': ['zustand', 'idb'],
         },
       },

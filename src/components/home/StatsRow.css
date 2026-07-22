@@ -73,6 +73,10 @@
   background: var(--accent);
 }
 
+.statsrow__chip--skeleton {
+  height: 68px;
+}
+
 /* streak chip active glow */
 .statsrow__chip--streak-active {
   border-color: rgba(139, 92, 246, 0.5);

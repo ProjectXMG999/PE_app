@@ -114,6 +114,26 @@
   border-color: var(--accent);
 }
 
+.settings__danger-btn {
+  height: 36px;
+  padding: 0 var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.settings__danger-btn:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
 .settings__row--toggle {
   flex-direction: row;
   align-items: center;

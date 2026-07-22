@@ -17,9 +17,36 @@
   contain-intrinsic-size: auto 148px;
 }
 
+.homepage__card-skeleton {
+  height: 148px;
+  border-radius: var(--radius-lg);
+}
+
 .homepage__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
   text-align: center;
   color: var(--text-muted);
   font-size: 14px;
   padding: var(--spacing-2xl) 0;
+}
+
+.homepage__empty-cta {
+  height: 36px;
+  padding: 0 var(--spacing-lg);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.homepage__empty-cta:hover {
+  background: var(--accent-bright);
 }

@@ -1,16 +1,10 @@
 import { PackMeta } from '../../types/vocabulary'
+import { LEVEL_COLORS } from '../../data/levels'
 import './LevelProgressBars.css'
 
 interface Props {
   allPacks: PackMeta[]
   knownMap: Map<string, number>
-}
-
-const LEVEL_COLORS: Record<number, string> = {
-  1: '#eab308',
-  2: '#f97316',
-  3: '#22c55e',
-  4: '#3b82f6',
 }
 
 export function LevelProgressBars({ allPacks, knownMap }: Props) {

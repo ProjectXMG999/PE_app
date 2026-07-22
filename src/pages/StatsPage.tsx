@@ -1,27 +1,22 @@
-import { useState } from 'react'
 import { AppShell } from '../components/layout/AppShell'
 import { StatCard } from '../components/stats/StatCard'
 import { ActivityChart } from '../components/stats/ActivityChart'
 import { PackageProgressList } from '../components/stats/PackageProgressList'
-import { ResetProgressModal } from '../components/stats/ResetProgressModal'
+import { LevelProgressBars } from '../components/home/LevelProgressBars'
 import { useStats } from '../hooks/useStats'
+import { useProgressData } from '../hooks/useProgressData'
+import { useCountUp } from '../hooks/useCountUp'
+import { LEVEL_THRESHOLDS } from '../data/levels'
+import packagesIndex from '../data/packages-index.json'
+import { PackMeta } from '../types/vocabulary'
 import './StatsPage.css'
 
-const LEVEL_THRESHOLDS = [
-  { level: 1, words: 0 },
-  { level: 2, words: 3000 },
-  { level: 3, words: 6000 },
-  { level: 4, words: 10000 },
-]
+const allPacks = packagesIndex as PackMeta[]
 
 export function StatsPage() {
-  const { streak, knownWords, sessionCount, masteredPacks, totalWordsHeard, estimatedMinutes, activity, levelStats, loading, reload, tick } = useStats()
-  const [showReset, setShowReset] = useState(false)
-
-  function handleReset() {
-    setShowReset(false)
-    reload()
-  }
+  const { streak, knownWords, sessionCount, masteredPacks, totalWordsHeard, estimatedMinutes, activity, levelStats, loading, tick } = useStats()
+  const snapshot = useProgressData()
+  const animatedKnown = useCountUp(loading ? 0 : knownWords)
 
   // Compute progress bar to next level
   let levelPct = 0
@@ -43,86 +38,108 @@ export function StatsPage() {
           <p className="statspage__sub">Twoja nauka w liczbach</p>
         </div>
 
-        {/* Hero card */}
-        <div className="statspage__hero-wrap">
-          <StatCard
-            hero
-            value={knownWords}
-            label="słów poznanych"
-          />
-          {levelStats && (
-            <div className="statspage__level-bar-wrap">
-              <div className="statspage__level-bar-track">
-                <div className="statspage__level-bar-fill" style={{ width: `${levelPct}%` }} />
-              </div>
-              <div className="statspage__level-meta">
-                <span className="statspage__level-pct">{levelPct}%</span>
-                {wordsToNext != null && levelStats.nextLevel ? (
-                  <span className="statspage__level-hint">{wordsToNext} słów do Level {levelStats.nextLevel}</span>
-                ) : (
-                  <span className="statspage__level-hint">Maks. poziom osiągnięty ★</span>
-                )}
-              </div>
+        {loading ? (
+          <>
+            <div className="statspage__skeleton skeleton" style={{ height: 148 }} />
+            <div className="statspage__grid">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <div key={i} className="statspage__skeleton skeleton" style={{ height: 104 }} />
+              ))}
             </div>
-          )}
-        </div>
+          </>
+        ) : (
+          <>
+            {/* Hero card */}
+            <div className="statspage__hero-wrap">
+              <StatCard
+                hero
+                value={animatedKnown}
+                label="słów poznanych"
+              />
+              {levelStats && (
+                <div className="statspage__level-bar-wrap">
+                  <div className="statspage__level-bar-track">
+                    <div className="statspage__level-bar-fill" style={{ width: `${levelPct}%` }} />
+                  </div>
+                  <div className="statspage__level-meta">
+                    <span className="statspage__level-pct">{levelPct}%</span>
+                    {wordsToNext != null && levelStats.nextLevel ? (
+                      <span className="statspage__level-hint">{wordsToNext} słów do Level {levelStats.nextLevel}</span>
+                    ) : (
+                      <span className="statspage__level-hint">Maks. poziom osiągnięty ★</span>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
 
-        {/* 2×2 core stats */}
-        <div className="statspage__grid">
-          <StatCard
-            value={streak}
-            label="dni z rzędu"
-            icon="🔥"
-            accentColor="#f97316"
-          />
-          <StatCard
-            value={masteredPacks}
-            label="paczek opanowanych"
-            icon="📦"
-            accentColor="#22c55e"
-          />
-          <StatCard
-            value={sessionCount}
-            label="sesji ukończono"
-            icon="⚡"
-            accentColor="#3b82f6"
-          />
-          {levelStats?.nextLevel ? (
-            <StatCard
-              value={levelStats.daysToNextLevel ?? '—'}
-              label={`dni do Level ${levelStats.nextLevel}`}
-              icon="🎯"
-              accentColor="var(--accent)"
-            />
+            {/* 2×2 core stats */}
+            <div className="statspage__grid">
+              <StatCard
+                value={streak}
+                label="dni z rzędu"
+                icon="🔥"
+                accentColor="var(--accent-orange)"
+              />
+              <StatCard
+                value={masteredPacks}
+                label="paczek opanowanych"
+                icon="📦"
+                accentColor="var(--accent-green)"
+              />
+              <StatCard
+                value={sessionCount}
+                label="sesji ukończono"
+                icon="⚡"
+                accentColor="var(--accent-blue)"
+              />
+              {levelStats?.nextLevel ? (
+                <StatCard
+                  value={levelStats.daysToNextLevel ?? '—'}
+                  label={`dni do Level ${levelStats.nextLevel}`}
+                  icon="🎯"
+                  accentColor="var(--accent)"
+                />
+              ) : (
+                <StatCard
+                  value="MAX"
+                  label="poziom słownictwa"
+                  icon="🎯"
+                  accentColor="var(--accent)"
+                />
+              )}
+            </div>
+
+            {/* 2 new stats */}
+            <div className="statspage__grid statspage__grid--secondary">
+              <StatCard
+                small
+                value={`~${estimatedMinutes}`}
+                label="minut nauki"
+                icon="⏱"
+                unit="szacunkowo"
+                accentColor="var(--accent-teal)"
+              />
+              <StatCard
+                small
+                value={totalWordsHeard}
+                label="słów odsłuchanych"
+                icon="👂"
+                unit="łącznie"
+                accentColor="var(--accent-indigo)"
+              />
+            </div>
+          </>
+        )}
+
+        <section className="statspage__section">
+          <h2 className="statspage__section-title">Poziomy słownictwa</h2>
+          {snapshot == null ? (
+            <div className="statspage__skeleton skeleton" style={{ height: 120 }} />
           ) : (
-            <StatCard
-              value="MAX"
-              label="poziom słownictwa"
-              icon="🎯"
-              accentColor="var(--accent)"
-            />
+            <LevelProgressBars allPacks={allPacks} knownMap={snapshot.knownMap} />
           )}
-        </div>
-
-        {/* 2 new stats */}
-        <div className="statspage__grid statspage__grid--secondary">
-          <StatCard
-            small
-            value={`~${estimatedMinutes}`}
-            label="minut nauki"
-            icon="⏱"
-            unit="szacunkowo"
-            accentColor="#14b8a6"
-          />
-          <StatCard
-            small
-            value={totalWordsHeard}
-            label="słów odsłuchanych"
-            icon="👂"
-            unit="łącznie"
-            accentColor="#6366f1"
-          />
-        </div>
+        </section>
 
         <section className="statspage__section">
           <h2 className="statspage__section-title">Aktywność — ostatnie 7 dni</h2>
@@ -141,23 +158,7 @@ export function StatsPage() {
             <PackageProgressList key={tick} />
           )}
         </section>
-
-        <div className="statspage__danger-zone">
-          <button
-            className="statspage__reset-btn"
-            onClick={() => setShowReset(true)}
-          >
-            Resetuj progres…
-          </button>
-        </div>
       </div>
-
-      {showReset && (
-        <ResetProgressModal
-          onClose={() => setShowReset(false)}
-          onReset={handleReset}
-        />
-      )}
     </AppShell>
   )
 }
