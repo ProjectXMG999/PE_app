@@ -458,6 +458,13 @@
   color: var(--text-muted);
 }
 
+.completion__btn-icon--svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
 [data-theme="light"] .completion__btn--repeat,
 [data-theme="light"] .completion__btn--next {
   box-shadow: var(--shadow-sm);

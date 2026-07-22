@@ -8,6 +8,8 @@ dialog.reset-modal {
   position: fixed;
   inset: auto 0 0 0;
   margin: 0 auto;
+  box-sizing: border-box;
+  color: var(--text-primary);
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl) var(--radius-xl) 0 0;

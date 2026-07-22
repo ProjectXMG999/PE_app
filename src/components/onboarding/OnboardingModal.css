@@ -10,6 +10,7 @@ dialog.onboarding-modal::backdrop {
 }
 
 dialog.onboarding-modal {
+  color: var(--text-primary);
   position: fixed;
   top: calc(50% - var(--bottomnav-height) / 2);
   left: 16px;

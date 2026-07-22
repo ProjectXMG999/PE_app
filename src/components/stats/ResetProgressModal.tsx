@@ -51,7 +51,7 @@ export function ResetProgressModal({ onClose, onReset }: Props) {
   useEffect(() => {
     const dialog = dialogRef.current
     if (!dialog) return
-    dialog.showModal()
+    if (!dialog.open) dialog.showModal()
     inputRef.current?.focus()
     dialog.addEventListener('close', onClose)
     return () => dialog.removeEventListener('close', onClose)

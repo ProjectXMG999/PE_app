@@ -35,7 +35,7 @@ export function OnboardingModal() {
   useEffect(() => {
     const dialog = dialogRef.current
     if (!isOpen || !dialog) return
-    dialog.showModal()
+    if (!dialog.open) dialog.showModal()
     const onNativeClose = () => handleClose()
     dialog.addEventListener('close', onNativeClose)
     return () => dialog.removeEventListener('close', onNativeClose)

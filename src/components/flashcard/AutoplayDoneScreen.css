@@ -166,6 +166,13 @@
   color: var(--text-muted);
 }
 
+.apdone__btn-icon--svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
 .apdone__exit {
   width: 100%;
   padding: var(--spacing-sm) 0;

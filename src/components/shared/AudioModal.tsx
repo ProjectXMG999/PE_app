@@ -59,7 +59,9 @@ export function AudioModal({ title, label, duration, src, paragraphs, timings, o
       }
     }
     const onBuf     = () => { if (a.buffered.length) setBuffered(a.buffered.end(a.buffered.length - 1)) }
-    const onEnded   = () => { setPlaying(false); dialogRef.current?.close() }
+    // Keep the sheet open when playback ends — the play button replays
+    // from the start, and the transcript stays readable.
+    const onEnded   = () => setPlaying(false)
 
     a.addEventListener('play',             onPlay)
     a.addEventListener('pause',            onPause)
@@ -90,7 +92,7 @@ export function AudioModal({ title, label, duration, src, paragraphs, timings, o
   useEffect(() => {
     const dialog = dialogRef.current
     if (!dialog) return
-    dialog.showModal()
+    if (!dialog.open) dialog.showModal()
     dialog.addEventListener('close', onClose)
     return () => dialog.removeEventListener('close', onClose)
     // eslint-disable-next-line react-hooks/exhaustive-deps
