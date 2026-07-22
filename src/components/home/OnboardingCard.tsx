@@ -19,16 +19,9 @@ const WELCOME_PARAGRAPHS = [
 ]
 
 export function OnboardingCard() {
-  const [isVisible, setIsVisible] = useState(true)
+  const [isVisible, setIsVisible] = useState(() => !localStorage.getItem(ONBOARDING_CARD_HIDDEN_KEY))
   const [isPlaying, setIsPlaying] = useState(false)
   const navigate = useNavigate()
-
-  useEffect(() => {
-    const hidden = localStorage.getItem(ONBOARDING_CARD_HIDDEN_KEY)
-    if (hidden) {
-      setIsVisible(false)
-    }
-  }, [])
 
   const handleHide = () => {
     setIsVisible(false)
