@@ -17,7 +17,7 @@ export function ModeToggle({ mode }: Props) {
         onClick={() => navigate(`/pakiet/${packageId}/fiszki`, { replace: true })}
       >
         <div className="modetoggle__content">
-          <div className="modetoggle__label">⚡ Aktywuj</div>
+          <div className="modetoggle__label">⚡ Trenuj</div>
           <div className="modetoggle__sublabel">Flashcards</div>
         </div>
       </button>

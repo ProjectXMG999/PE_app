@@ -20,7 +20,7 @@ const MODE_INFO = {
     desc: 'Tryb audio do osłuchania, powtórki i nauki w tle. Uczysz się słów bez patrzenia w ekran. Idealne w aucie, na spacerze, na siłowni, w poczekalni albo w metrze.',
   },
   aktywuj: {
-    title: 'Aktywuj',
+    title: 'Trenuj',
     icon: '⚡',
     desc: 'Tryb głębokiego treningu słowa. Przypominasz sobie znaczenie, mówisz na głos i budujesz własne frazy lub zdania. Tutaj słowo przestaje być tylko znane — zaczynasz czuć, że potrafisz go użyć w prawdziwej rozmowie.',
   },
@@ -208,12 +208,12 @@ export function PackPreviewPage() {
               className="packpreview__btn packpreview__btn--fiszki"
               onClick={() => navigate(`/pakiet/${packageId}/fiszki-start`)}
             >
-              <span>⚡</span> Aktywuj
+              <span>⚡</span> Trenuj
             </button>
             <button
               className={`packpreview__info-btn${activeInfo === 'aktywuj' ? ' packpreview__info-btn--active' : ''}`}
               onClick={e => { e.stopPropagation(); setActiveInfo(v => v === 'aktywuj' ? null : 'aktywuj') }}
-              aria-label="Informacje o trybie Aktywuj"
+              aria-label="Informacje o trybie Trenuj"
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8" strokeWidth="3" strokeLinecap="round"/><line x1="12" y1="12" x2="12" y2="16"/>

@@ -1,45 +1,95 @@
 {
   "intro-welcome.mp3": {
-    "duration": 123.0,
+    "duration": 107.83,
     "paragraphs": [
       "Witaj w Language Performance.",
       "To nie jest zwykła aplikacja do klikania słówek. To jest Twój językowy trening. Zaprojektowaliśmy ją tak, żeby prowadzić Cię krok po kroku — jak trener na siłowni albo dobry plan treningowy.",
       "Naszym celem jest prosta rzecz: chcemy nauczyć Cię tych słów, które dadzą Ci najwięcej mówienia w najkrótszym czasie. Dlatego słownictwo nie jest tutaj przypadkowe. Jest ułożone od najważniejszych słów do coraz bardziej precyzyjnych. Najpierw uczysz się tego, co naprawdę pozwala przetrwać, dogadać się, zareagować i powiedzieć coś o sobie.",
       "Masz tutaj dwa główne tryby.",
       "Pierwszy to Słuchaj. To tryb audio. Możesz uczyć się w drodze, na spacerze, w samochodzie albo wtedy, kiedy nie chcesz patrzeć w ekran. Osłuchujesz się ze słowami, zdaniami i rytmem języka.",
-      "Drugi to Aktywuj. To tryb treningowy. Tutaj słowo przestaje być tylko znane. Zaczynasz je przypominać sobie, mówić na głos, łączyć w frazy i budować z nim zdania.",
+      "Drugi to Trenuj. To tryb treningowy. Tutaj słowo przestaje być tylko znane. Zaczynasz je przypominać sobie, mówić na głos, łączyć w frazy i budować z nim zdania.",
       "W treningu spotkasz cztery ćwiczenia: Słowo w Akcji, Moje Zdanie, Jedno Słowo, Trzy Dziedziny i Drabina Zdania. Każde z nich robi coś innego. Najpierw uczysz mózg, że słowo działa. Potem tworzysz własne zdanie. Potem przenosisz słowo do różnych sytuacji. A na końcu uczysz się rozwijać wypowiedź.",
       "Będziesz też przechodzić przez poziomy. Level 1 to survival — zaczynasz sobie radzić. Level 2 to codzienna komunikacja. Level 3 to językowa wolność. Level 4 to angielski, który robi wrażenie.",
-      "Nie musisz robić wszystkiego idealnie. Masz robić małe kroki. Słuchać. Aktywować. Mówić na głos. Wracać. I widzieć progres.",
+      "Nie musisz robić wszystkiego idealnie. Masz robić małe kroki. Słuchać. Trenować. Mówić na głos. Wracać. I widzieć progres.",
       "Zaczynamy. Wybierz paczkę i zrób pierwszy trening."
     ],
     "timings": [
-      {"index": 0, "startTime": 0.0, "endTime": 1.0, "words": 4},
-      {"index": 1, "startTime": 1.0, "endTime": 20.4, "words": 38},
-      {"index": 2, "startTime": 20.4, "endTime": 51.3, "words": 91},
-      {"index": 3, "startTime": 51.3, "endTime": 53.1, "words": 5},
-      {"index": 4, "startTime": 53.1, "endTime": 65.8, "words": 32},
-      {"index": 5, "startTime": 65.8, "endTime": 78.4, "words": 32},
-      {"index": 6, "startTime": 78.4, "endTime": 101.1, "words": 68},
-      {"index": 7, "startTime": 101.1, "endTime": 112.8, "words": 35},
-      {"index": 8, "startTime": 112.8, "endTime": 121.6, "words": 23},
-      {"index": 9, "startTime": 121.6, "endTime": 123.0, "words": 12}
+      {
+        "index": 0,
+        "startTime": 0,
+        "endTime": 1.6,
+        "words": 4
+      },
+      {
+        "index": 1,
+        "startTime": 1.6,
+        "endTime": 14,
+        "words": 31
+      },
+      {
+        "index": 2,
+        "startTime": 14,
+        "endTime": 33.6,
+        "words": 49
+      },
+      {
+        "index": 3,
+        "startTime": 33.6,
+        "endTime": 35.6,
+        "words": 5
+      },
+      {
+        "index": 4,
+        "startTime": 35.6,
+        "endTime": 48,
+        "words": 31
+      },
+      {
+        "index": 5,
+        "startTime": 48,
+        "endTime": 58.8,
+        "words": 27
+      },
+      {
+        "index": 6,
+        "startTime": 58.8,
+        "endTime": 77.2,
+        "words": 46
+      },
+      {
+        "index": 7,
+        "startTime": 77.2,
+        "endTime": 89.2,
+        "words": 30
+      },
+      {
+        "index": 8,
+        "startTime": 89.2,
+        "endTime": 96.4,
+        "words": 18
+      },
+      {
+        "index": 9,
+        "startTime": 96.4,
+        "endTime": 99.2,
+        "words": 7
+      }
     ]
   },
   "intro-story.mp3": {
-    "duration": 301.0,
+    "duration": 165.98,
     "paragraphs": [
       "Cześć!",
       "Za chwilę rozpoczniesz trening słownictwa, ale zanim to zrobisz, chciałbym opowiedzieć Ci krótką historię. To historia o tym, dlaczego stworzyliśmy ten system i dlaczego wierzę, że może całkowicie zmienić sposób, w jaki uczysz się języka.",
       "Przez wiele lat uczyłem języka angielskiego i obserwowałem tysiące uczniów. Widziałem ludzi bardzo ambitnych, którzy poświęcali nauce mnóstwo czasu. Kupowali książki, robili fiszki, oglądali filmy, zapisywali słówka w zeszytach. Naprawdę się starali.",
       "A mimo to po kilku miesiącach często mówili dokładnie to samo.",
-      "Znam wiele słów, ale kiedy przychodzi rozmowa... wszystko znika.",
+      "„Znam wiele słów, ale kiedy przychodzi rozmowa… wszystko znika.\"",
       "To bardzo ciekawe, prawda?",
       "Problemem nie jest nawet brak motywacji. Problem polega na tym, że większość ludzi przez lata uczy się języka tak, jakby zbierała informacje, a nie trenowała umiejętność. Wyobraź sobie osobę, która chce nauczyć się jeździć na nartach. Czy wystarczy przeczytać książkę o narciarstwie? Oczywiście, że nie. Trzeba wsiąść na narty i zacząć jechać.",
       "Z językiem jest dokładnie tak samo. Możesz znać definicję słowa, ale dopóki nie użyjesz go w swoim życiu, Twój mózg traktuje je jak ciekawostkę, a nie jak narzędzie.",
       "I właśnie dlatego stworzyliśmy Language Performance Training.",
       "Chcemy, żebyś zaczął ze słów robić wreszcie użytek. Bo dopiero wtedy język naprawdę staje się Twój.",
-      "Zadaliśmy sobie pytanie badawcze. Gdybyśmy sami mieli dziś uczyć się angielskiego od zera... którego słowa nauczylibyśmy się jako pierwszego? A którego jako setnego? A którego jako tysięcznego?",
+      "Zadaliśmy sobie pytanie badawcze. „Gdybyśmy sami mieli dziś uczyć się angielskiego od zera… którego słowa nauczylibyśmy się jako pierwszego? A którego jako setnego? A którego jako tysięcznego?\"",
       "Brzmi trochę dziwnie. Ale właśnie od tego wszystko się zaczęło.",
       "Przez setki godzin analizowaliśmy język angielski. Nie tylko pojedyncze słowa, ale również sytuacje, w których ludzie naprawdę ich używają. Zastanawialiśmy się, które słownictwo daje największy zwrot z czasu poświęconego na naukę. Jak połączyć słowa w logiczne grupy. Jak ułożyć je w takiej kolejności, aby każde kolejne budowało na poprzednim.",
       "Efektem tej pracy nie jest zwykła lista słówek. To mapa języka.",
@@ -50,24 +100,120 @@
       "Mózg uwielbia częsty kontakt z językiem. Właśnie dlatego zachęcam Cię do krótkich, ale codziennych treningów."
     ],
     "timings": [
-      {"index": 0, "startTime": 0.0, "endTime": 1.0, "words": 1},
-      {"index": 1, "startTime": 1.0, "endTime": 24.8, "words": 58},
-      {"index": 2, "startTime": 24.8, "endTime": 46.6, "words": 65},
-      {"index": 3, "startTime": 46.6, "endTime": 54.0, "words": 17},
-      {"index": 4, "startTime": 54.0, "endTime": 61.2, "words": 17},
-      {"index": 5, "startTime": 61.2, "endTime": 65.4, "words": 8},
-      {"index": 6, "startTime": 65.4, "endTime": 93.0, "words": 83},
-      {"index": 7, "startTime": 93.0, "endTime": 110.4, "words": 52},
-      {"index": 8, "startTime": 110.4, "endTime": 119.4, "words": 25},
-      {"index": 9, "startTime": 119.4, "endTime": 130.2, "words": 30},
-      {"index": 10, "startTime": 130.2, "endTime": 154.8, "words": 73},
-      {"index": 11, "startTime": 154.8, "endTime": 164.4, "words": 9},
-      {"index": 12, "startTime": 164.4, "endTime": 193.8, "words": 88},
-      {"index": 13, "startTime": 193.8, "endTime": 203.4, "words": 16},
-      {"index": 14, "startTime": 203.4, "endTime": 227.4, "words": 65},
-      {"index": 15, "startTime": 227.4, "endTime": 241.8, "words": 38},
-      {"index": 16, "startTime": 241.8, "endTime": 253.2, "words": 27},
-      {"index": 17, "startTime": 253.2, "endTime": 301.0, "words": 118}
+      {
+        "index": 0,
+        "startTime": 0,
+        "endTime": 0.4,
+        "words": 1
+      },
+      {
+        "index": 1,
+        "startTime": 0.4,
+        "endTime": 14.4,
+        "words": 35
+      },
+      {
+        "index": 2,
+        "startTime": 14.4,
+        "endTime": 27.2,
+        "words": 32
+      },
+      {
+        "index": 3,
+        "startTime": 27.2,
+        "endTime": 31.6,
+        "words": 11
+      },
+      {
+        "index": 4,
+        "startTime": 31.6,
+        "endTime": 35.2,
+        "words": 9
+      },
+      {
+        "index": 5,
+        "startTime": 35.2,
+        "endTime": 36.8,
+        "words": 4
+      },
+      {
+        "index": 6,
+        "startTime": 36.8,
+        "endTime": 57.6,
+        "words": 52
+      },
+      {
+        "index": 7,
+        "startTime": 57.6,
+        "endTime": 68.8,
+        "words": 28
+      },
+      {
+        "index": 8,
+        "startTime": 68.8,
+        "endTime": 71.6,
+        "words": 7
+      },
+      {
+        "index": 9,
+        "startTime": 71.6,
+        "endTime": 78,
+        "words": 16
+      },
+      {
+        "index": 10,
+        "startTime": 78,
+        "endTime": 88.8,
+        "words": 27
+      },
+      {
+        "index": 11,
+        "startTime": 88.8,
+        "endTime": 92.8,
+        "words": 10
+      },
+      {
+        "index": 12,
+        "startTime": 92.8,
+        "endTime": 112.4,
+        "words": 49
+      },
+      {
+        "index": 13,
+        "startTime": 112.4,
+        "endTime": 116.8,
+        "words": 11
+      },
+      {
+        "index": 14,
+        "startTime": 116.8,
+        "endTime": 124.4,
+        "words": 19
+      },
+      {
+        "index": 15,
+        "startTime": 124.4,
+        "endTime": 134,
+        "words": 24
+      },
+      {
+        "index": 16,
+        "startTime": 134,
+        "endTime": 139.2,
+        "words": 13
+      },
+      {
+        "index": 17,
+        "startTime": 139.2,
+        "endTime": 145.2,
+        "words": 15
+      },
+      {
+        "index": 18,
+        "startTime": 145.2,
+        "endTime": 151.2,
+        "words": 15
+      }
     ]
   }
 }

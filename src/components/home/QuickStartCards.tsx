@@ -13,7 +13,7 @@ const MODE_INFO = {
   },
   aktywuj: {
     icon: '⚡',
-    title: 'Aktywuj',
+    title: 'Trenuj',
     desc: 'Tryb głębokiego treningu słowa. Przypominasz sobie znaczenie, mówisz na głos i budujesz własne frazy lub zdania. Tutaj słowo przestaje być tylko znane — zaczynasz czuć, że potrafisz go użyć w prawdziwej rozmowie.',
   },
 }
@@ -116,7 +116,7 @@ export function QuickStartCards() {
           onClick={() => navigate(`/pakiet/${fiszkiCard.pack.id}/fiszki-start`)}
         >
           <div className="quickstart__card-top">
-            <span className="quickstart__label">AKTYWUJ</span>
+            <span className="quickstart__label">TRENUJ</span>
             <span className="quickstart__icon">⚡</span>
           </div>
           <span className="quickstart__title">{fiszkiCard.pack.name}</span>
@@ -126,7 +126,7 @@ export function QuickStartCards() {
         <button
           className={`quickstart__info-btn${activeInfo === 'aktywuj' ? ' quickstart__info-btn--active' : ''}`}
           onClick={e => { e.stopPropagation(); setActiveInfo(v => v === 'aktywuj' ? null : 'aktywuj') }}
-          aria-label="Informacje o trybie Aktywuj"
+          aria-label="Informacje o trybie Trenuj"
         >
           {INFO_SVG}
         </button>

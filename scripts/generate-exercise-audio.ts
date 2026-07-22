@@ -46,7 +46,7 @@ Twój mózg lubi rzeczy oswojone, takie, które zadziałały w przeszłości.
 
 Jak wykonujesz Słowo w Akcji?
 
-W aplikacji wchodzisz w daną paczkę i klikasz: Aktywuj. Najpierw wybierasz tryb Szybki Przegląd Słów. Widzisz polskie słowo, na przykład wierzyć. Przypominasz sobie: wierzyć to believe.
+W aplikacji wchodzisz w daną paczkę i klikasz: Trenuj. Najpierw wybierasz tryb Szybki Przegląd Słów. Widzisz polskie słowo, na przykład wierzyć. Przypominasz sobie: wierzyć to believe.
 
 I teraz zadajesz sobie pytanie: co mogę już powiedzieć z tym słowem na głos?
 
@@ -84,7 +84,7 @@ Mózg nie ma powodu, żeby traktować je jako coś ważnego. I za chwilę je zap
 
 Jak wykonujesz ćwiczenie Moje Zdanie?
 
-W aplikacji wchodzisz w daną paczkę i klikasz: Aktywuj. Wybierasz tryb Szybki Przegląd Słów. Widzisz polskie słowo, na przykład czuć, czyli feel.
+W aplikacji wchodzisz w daną paczkę i klikasz: Trenuj. Wybierasz tryb Szybki Przegląd Słów. Widzisz polskie słowo, na przykład czuć, czyli feel.
 
 Zadajesz sobie trzy pytania: Co mógłbym powiedzieć o sobie z tym słowem? Co mógłbym powiedzieć do bliskiej osoby? Co mógłbym powiedzieć w pracy, w domu albo w trakcie zwykłego dnia?
 
@@ -120,7 +120,7 @@ Budujesz bogatszą sieć skojarzeń, a im więcej sensownych połączeń, tym ł
 
 Jak wykonujesz ćwiczenie?
 
-W aplikacji wchodzisz w daną paczkę i klikasz: Aktywuj. Wybierasz tryb Szybki Przegląd Słów. Widzisz słowo: wybierać, czyli choose.
+W aplikacji wchodzisz w daną paczkę i klikasz: Trenuj. Wybierasz tryb Szybki Przegląd Słów. Widzisz słowo: wybierać, czyli choose.
 
 I teraz wyobrażasz sobie siebie mówiącego trzy zdania w trzech miejscach. Do kogoś, z kim mieszkasz, do kogoś, z kim pracujesz, i do znajomego.
 
@@ -164,7 +164,7 @@ Dlatego powstała Drabina Zdania.
 
 Jak wykonujesz ćwiczenie?
 
-W aplikacji wchodzisz w daną paczkę i klikasz: Aktywuj. Wybierasz tryb Szybki Przegląd Słów. Widzisz słowo: szalony, czyli crazy.
+W aplikacji wchodzisz w daną paczkę i klikasz: Trenuj. Wybierasz tryb Szybki Przegląd Słów. Widzisz słowo: szalony, czyli crazy.
 
 I teraz budujesz drabinę, poziom po poziomie.
 

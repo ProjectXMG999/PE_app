@@ -317,7 +317,7 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
           className="packcard__btn packcard__btn--fiszki"
           onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/fiszki-start`) }}
         >
-          <span>⚡</span> Aktywuj
+          <span>⚡</span> Trenuj
         </button>
       </div>
     </div>
