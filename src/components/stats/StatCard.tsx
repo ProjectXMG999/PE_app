@@ -5,18 +5,29 @@ interface Props {
   label: string
   icon?: string
   color?: string
+  accentColor?: string
   unit?: string
   small?: boolean
+  hero?: boolean
 }
 
-export function StatCard({ value, label, icon, color = 'var(--accent)', unit, small }: Props) {
+export function StatCard({ value, label, icon, color = 'var(--accent)', accentColor, unit, small, hero }: Props) {
+  const cls = [
+    'statcard',
+    small ? 'statcard--small' : '',
+    hero ? 'statcard--hero' : '',
+  ].filter(Boolean).join(' ')
+
   return (
-    <div className={`statcard${small ? ' statcard--small' : ''}`}>
-      <div className="statcard__value" style={{ color }}>
+    <div
+      className={cls}
+      style={accentColor ? { borderTop: `3px solid ${accentColor}` } : undefined}
+    >
+      {icon && <span className="statcard__icon-top">{icon}</span>}
+      <div className="statcard__value" style={{ color: hero ? '#fff' : color }}>
         {value ?? '—'}
-        {icon && <span className="statcard__icon">{icon}</span>}
       </div>
-      <div className="statcard__label">{label}</div>
+      <div className={`statcard__label${hero ? ' statcard__label--hero' : ''}`}>{label}</div>
       {unit && <div className="statcard__unit">{unit}</div>}
     </div>
   )

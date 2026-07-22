@@ -22,6 +22,8 @@ export function useStats() {
   const [sessionCount, setSessionCount] = useState(0)
   const [startedPacks, setStartedPacks] = useState(0)
   const [masteredPacks, setMasteredPacks] = useState(0)
+  const [totalWordsHeard, setTotalWordsHeard] = useState(0)
+  const [estimatedMinutes, setEstimatedMinutes] = useState(0)
   const [activity, setActivity] = useState<DayActivity[]>([])
   const [levelStats, setLevelStats] = useState<LevelStats | null>(null)
   const [loading, setLoading] = useState(true)
@@ -43,6 +45,10 @@ export function useStats() {
         setSessionCount(sessions.length)
         setStartedPacks(packs.length)
         setMasteredPacks(packs.filter(p => p.masteredAt != null).length)
+
+        const heard = sessions.reduce((sum, s) => sum + s.wordsCompleted, 0)
+        setTotalWordsHeard(heard)
+        setEstimatedMinutes(Math.round(heard * 8 / 60))
 
         // Build 7-day activity
         const days: DayActivity[] = []
@@ -89,5 +95,5 @@ export function useStats() {
     load()
   }, [tick])
 
-  return { streak, knownWords, sessionCount, startedPacks, masteredPacks, activity, levelStats, loading, reload, tick }
+  return { streak, knownWords, sessionCount, startedPacks, masteredPacks, totalWordsHeard, estimatedMinutes, activity, levelStats, loading, reload, tick }
 }
