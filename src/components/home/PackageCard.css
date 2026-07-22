@@ -96,30 +96,6 @@
   .packcard--mastered::before { animation: none; }
 }
 
-/* "PE" monogram canvas — Louis-Vuitton-style repeating lattice tiled across
-   the whole glass. An SVG (offset pair of "PE" per tile) is used as a mask so
-   the colour comes from background-color and swaps cleanly per theme. Sits
-   behind the content and behind the foil glint, so the sweep grazes it.
-   White fill in the SVG works whether the engine masks by alpha or luminance. */
-.packcard--mastered::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background-color: rgba(255, 255, 255, 0.07);
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='54'%3E%3Ctext x='13' y='19' font-family='Montserrat,Arial,sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3EPE%3C/text%3E%3Ctext x='40' y='46' font-family='Montserrat,Arial,sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3EPE%3C/text%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='54'%3E%3Ctext x='13' y='19' font-family='Montserrat,Arial,sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3EPE%3C/text%3E%3Ctext x='40' y='46' font-family='Montserrat,Arial,sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3EPE%3C/text%3E%3C/svg%3E");
-  -webkit-mask-repeat: repeat;
-  mask-repeat: repeat;
-  -webkit-mask-size: 54px 54px;
-  mask-size: 54px 54px;
-}
-
-[data-theme="light"] .packcard--mastered::after {
-  background-color: rgba(120, 90, 25, 0.1);
-}
-
 /* Gold-gradient number — filled metal, not a solid yellow */
 .packcard--mastered .packcard__num-text {
   background: linear-gradient(160deg, #fff7d6 0%, #f3ce74 48%, #c79320 100%);
