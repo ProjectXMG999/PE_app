@@ -92,13 +92,23 @@ function normalizePolishForAudio(translation: string): string {
   // 2. Trim (usuń trailing spaces)
   translation = translation.trim()
 
-  // 3. Tylko pierwsze znaczenie (przed pierwszym średnikiem)
+  // 3. Usuń zawartość nawiasów PRZED splitem po średniku — średnik może być
+  //    wewnątrz nawiasu ("Oszaleć (z wściekłości; przesadzać…)") i split
+  //    zostawiłby niedomknięty nawias
+  const noParens = translation.replace(/\s*\(.*?\)/g, '').trim()
+  if (noParens) {
+    translation = noParens
+  } else {
+    // Tłumaczenie było wyłącznie nawiasem (np. "(służy do wyrażania przyszłości)")
+    // — użyj jego treści, z wielką literą jak pozostałe tłumaczenia
+    translation = translation.replace(/[()]/g, '').trim()
+    translation = translation.charAt(0).toUpperCase() + translation.slice(1)
+  }
+
+  // 4. Tylko pierwsze znaczenie (przed pierwszym średnikiem)
   if (translation.includes(';')) {
     translation = translation.split(';')[0].trim()
   }
-
-  // 4. Usuń zawartość nawiasów (wyjaśnienia kontekstowe)
-  translation = translation.replace(/\s*\(.*?\)/g, '').trim()
 
   // 5. Ukośniki: "sam/sama" -> "sam lub sama"
   translation = translation.replace(/(\w+)\/(\w+)/g, '$1 lub $2')
