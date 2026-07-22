@@ -1,12 +1,17 @@
 import { useState, useEffect, useCallback } from 'react'
 import { DayActivity } from '../types/progress'
-import { nextLevelThreshold } from '../data/levels'
+import { nextLevelFromPacks } from '../data/levels'
 import { loadProgressSnapshot, avgWordsPerDay } from './useProgressData'
+import packagesIndex from '../data/packages-index.json'
+import { PackMeta } from '../types/vocabulary'
+
+const allPacks = packagesIndex as PackMeta[]
 
 export interface LevelStats {
   avgWordsPerDay: number
   nextLevel: number | null
   nextLevelWords: number | null
+  levelPct: number
   daysToNextLevel: number | null
 }
 
@@ -28,7 +33,7 @@ export function useStats() {
     async function load() {
       try {
         const snap = await loadProgressSnapshot(tick > 0)
-        const { sessions, packageProgress, knownTotal } = snap
+        const { sessions, packageProgress, knownTotal, knownMap } = snap
 
         setStreak(snap.streak)
         setKnownWords(knownTotal)
@@ -54,13 +59,14 @@ export function useStats() {
         setActivity(days)
 
         const avg = avgWordsPerDay(snap)
-        const next = nextLevelThreshold(knownTotal)
+        const next = nextLevelFromPacks(allPacks, knownMap)
         setLevelStats({
           avgWordsPerDay: avg,
           nextLevel: next?.level ?? null,
-          nextLevelWords: next?.words ?? null,
+          nextLevelWords: next?.wordsToNext ?? null,
+          levelPct: next?.pct ?? 100,
           daysToNextLevel: next
-            ? (avg > 0 ? Math.ceil((next.words - knownTotal) / avg) : 0)
+            ? (avg > 0 ? Math.ceil(next.wordsToNext / avg) : 0)
             : null,
         })
       } finally {

@@ -1,6 +1,10 @@
 import { useProgressData, avgWordsPerDay } from '../../hooks/useProgressData'
-import { nextLevelThreshold } from '../../data/levels'
+import { nextLevelFromPacks } from '../../data/levels'
+import packagesIndex from '../../data/packages-index.json'
+import { PackMeta } from '../../types/vocabulary'
 import './StatsRow.css'
+
+const allPacks = packagesIndex as PackMeta[]
 
 export function StatsRow() {
   const snapshot = useProgressData()
@@ -15,10 +19,10 @@ export function StatsRow() {
     )
   }
 
-  const { streak, knownTotal } = snapshot
+  const { streak, knownTotal, knownMap } = snapshot
   const avg = avgWordsPerDay(snapshot)
-  const next = nextLevelThreshold(knownTotal)
-  const daysTo = next ? (avg > 0 ? Math.ceil((next.words - knownTotal) / avg) : null) : null
+  const next = nextLevelFromPacks(allPacks, knownMap)
+  const daysTo = next ? (avg > 0 ? Math.ceil(next.wordsToNext / avg) : null) : null
 
   return (
     <div className="statsrow">

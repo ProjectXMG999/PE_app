@@ -127,8 +127,7 @@ export function QuickStartCards() {
           <div className="quickstart__bottom">
             {WAVEFORM}
             <span className="quickstart__bottom-text">
-              <span className="quickstart__sub--main">{listenStarted ? 'Kontynuuj kurs' : 'Zacznij kurs'}</span>
-              <span className="quickstart__sub">
+              <span className="quickstart__sub--main">
                 {listenStarted
                   ? `Słowo ${autoplayCard.startIndex + 1} z ${autoplayCard.pack.wordCount} • ${listenPct}%`
                   : `${autoplayCard.pack.wordCount} ${slowaForm(autoplayCard.pack.wordCount)} • od początku`}
@@ -164,8 +163,7 @@ export function QuickStartCards() {
           <div className="quickstart__bottom">
             {WAVEFORM}
             <span className="quickstart__bottom-text">
-              <span className="quickstart__sub--main">Ucz się głęboko</span>
-              <span className="quickstart__sub">
+              <span className="quickstart__sub--main">
                 {fiszkiKnown > 0
                   ? `Zostało ${trainRemaining} z ${fiszkiCard.pack.wordCount} ${slowaForm(fiszkiCard.pack.wordCount)}`
                   : `${fiszkiCard.pack.wordCount} ${slowaForm(fiszkiCard.pack.wordCount)} do nauki`}

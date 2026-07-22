@@ -211,15 +211,6 @@
   color: var(--text-primary);
 }
 
-.wf__sentence {
-  font-family: var(--font-body);
-  font-size: 15px;
-  color: var(--text-secondary);
-  line-height: 1.55;
-  padding-top: 14px;
-  border-top: 1px solid var(--border);
-}
-
 /* ── Play button ── */
 .wf__play {
   display: flex;

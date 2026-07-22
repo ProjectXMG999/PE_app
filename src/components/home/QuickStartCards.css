@@ -67,7 +67,7 @@
   gap: 5px;
   text-align: left;
   transition: all var(--transition-fast);
-  min-height: 110px;
+  min-height: 92px;
 }
 
 .quickstart__card:active {
@@ -117,7 +117,7 @@
   background: var(--bg-card);
   animation: skeleton-pulse 1.4s ease-in-out infinite;
   pointer-events: none;
-  min-height: 110px;
+  min-height: 92px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
 }
@@ -160,20 +160,13 @@
   z-index: 2;
 }
 
-/* Main CTA — "Kontynuuj kurs" / "Ucz się głęboko" */
+/* Main line — progress / remaining-words text */
 .quickstart__sub--main {
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: #fff;
   line-height: 1.2;
-  position: relative;
-  z-index: 2;
-}
-
-.quickstart__sub {
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.5);
   position: relative;
   z-index: 2;
 }

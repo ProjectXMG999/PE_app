@@ -24,7 +24,13 @@ export function TopBar() {
 
   return (
     <header className="topbar">
-      <img src="/icons/icon-192.png" alt="PE" className="topbar__pe-icon" />
+      <img
+        src="/icons/icon-192.png"
+        alt="PE"
+        className="topbar__pe-icon"
+        onClick={() => navigate('/')}
+        style={{ cursor: 'pointer' }}
+      />
 
       <div className="topbar__center" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
         <img

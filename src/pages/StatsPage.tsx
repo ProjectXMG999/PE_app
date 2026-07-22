@@ -6,7 +6,6 @@ import { LevelProgressBars } from '../components/home/LevelProgressBars'
 import { useStats } from '../hooks/useStats'
 import { useProgressData } from '../hooks/useProgressData'
 import { useCountUp } from '../hooks/useCountUp'
-import { LEVEL_THRESHOLDS } from '../data/levels'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import './StatsPage.css'
@@ -18,17 +17,9 @@ export function StatsPage() {
   const snapshot = useProgressData()
   const animatedKnown = useCountUp(loading ? 0 : knownWords)
 
-  // Compute progress bar to next level
-  let levelPct = 0
-  let wordsToNext: number | null = null
-  if (levelStats) {
-    const prevThreshold = LEVEL_THRESHOLDS.slice().reverse().find(t => t.words <= knownWords)
-    const prevWords = prevThreshold?.words ?? 0
-    const nextWords = levelStats.nextLevelWords ?? 10000
-    const range = nextWords - prevWords
-    levelPct = range > 0 ? Math.min(100, Math.round(((knownWords - prevWords) / range) * 100)) : 100
-    wordsToNext = levelStats.nextLevelWords ? Math.max(0, levelStats.nextLevelWords - knownWords) : null
-  }
+  // Progress bar to next level — sourced from the same per-pack level totals as LevelProgressBars
+  const levelPct = levelStats?.levelPct ?? 0
+  const wordsToNext = levelStats?.nextLevelWords ?? null
 
   return (
     <AppShell>
