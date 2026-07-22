@@ -157,8 +157,8 @@ function main() {
     }
   })
 
-  // Filtruj: tylko wiersze z angielskim i polskim
-  const validRows = mapped.filter(r => r.english && r.polish && r.packName)
+  // Filtruj: tylko wiersze z angielskim i polskim; Klony usunięte z bazy
+  const validRows = mapped.filter(r => r.english && r.polish && r.packName && r.category !== 'Klony')
   console.log(`Valid rows (with ENG + PL + pack name): ${validRows.length}`)
 
   processRows(validRows)

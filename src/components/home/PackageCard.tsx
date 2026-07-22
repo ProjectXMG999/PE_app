@@ -4,14 +4,19 @@ import { PackageProgress } from '../../types/progress'
 import './PackageCard.css'
 
 const CATEGORY_ICONS: Record<string, string> = {
-  'Rzeczowniki': '📦',
-  'Czasowniki': '🏃',
-  'Przymiotniki': '🎨',
-  'Przysłówki': '🔄',
-  'Phrasale': '🔗',
-  'Slang': '💬',
-  'Wulgaryzmy': '🤬',
-  'default': '📚',
+  'Rzeczowniki':  '🏷️',
+  'Czasowniki':   '🎬',
+  'Przymiotniki': '✨',
+  'Przysłówki':   '🚀',
+  'Phrasale':     '🧩',
+  'Slang':        '😎',
+  'Wulgaryzmy':   '💢',
+  'Skróty':       '✂️',
+  'Spójniki':     '➕',
+  'Liczby':       '🔢',
+  'Maleństwa':    '🌱',
+  'Zaimki':       '👤',
+  'default':      '📖',
 }
 
 const LEVEL_COLORS: Record<number, string> = {
