@@ -1,15 +1,15 @@
 {
   "id": "t1-p324",
-  "name": "Czasowniki 30",
-  "volume": "Tom IX",
-  "level": 4,
-  "category": "Czasowniki",
-  "chapter": "Rozdział LXXXVI",
+  "name": "Świat cyfrowy",
+  "volume": "Tom IV",
+  "level": 3,
+  "category": "Phrasale",
+  "chapter": "Rozdział XXXII",
   "words": [
     {
       "id": "t1-p324-001",
-      "english": "Visualize",
-      "polish": "Wizualizować",
+      "english": "Log in",
+      "polish": "Zalogować się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p324-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p324-002",
-      "english": "Allocate",
-      "polish": "Alokować",
+      "english": "Log out",
+      "polish": "Wylogować się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p324-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p324-003",
-      "english": "Aspire",
-      "polish": "Aspirować",
+      "english": "Go offline",
+      "polish": "Wyjść z internetu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p324-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p324-004",
-      "english": "Assimilate",
-      "polish": "Asymilować",
+      "english": "Go online",
+      "polish": "Wejść do internetu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p324-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p324-005",
-      "english": "Capitalize",
-      "polish": "Kapitalizować",
+      "english": "Load up",
+      "polish": "Załadować się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p324-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p324-006",
-      "english": "Compile",
-      "polish": "Kompilować",
+      "english": "Print out",
+      "polish": "Wydrukować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p324-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p324-007",
-      "english": "Confront",
-      "polish": "Konfrontować",
+      "english": "Scroll down",
+      "polish": "Przewijać w dół",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p324-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p324-008",
-      "english": "Constitute",
-      "polish": "Konstytuować",
+      "english": "Scroll up",
+      "polish": "Przewijać do góry",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p324-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p324-009",
-      "english": "Contemplate",
-      "polish": "Kontemplować",
+      "english": "Shut down",
+      "polish": "Wyłączać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p324-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p324-010",
-      "english": "Culminate",
-      "polish": "Kulminować",
+      "english": "Filter out",
+      "polish": "Odfiltrować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p324-010-word.mp3",
       "audioSentence": "t1-p324-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p324-011",
-      "english": "Degrade",
-      "polish": "Degradować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p324-011-word.mp3",
-      "audioSentence": "t1-p324-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p324-012",
-      "english": "Diversify",
-      "polish": "Dywersyfikować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p324-012-word.mp3",
-      "audioSentence": "t1-p324-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p324-013",
-      "english": "Dramatize",
-      "polish": "Dramatyzować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p324-013-word.mp3",
-      "audioSentence": "t1-p324-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p324-014",
-      "english": "Dub",
-      "polish": "Dubingować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p324-014-word.mp3",
-      "audioSentence": "t1-p324-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p324-015",
-      "english": "Emanate",
-      "polish": "Emanować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p324-015-word.mp3",
-      "audioSentence": "t1-p324-015-sentence.mp3"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "id": "t1-p048",
-  "name": "Rzeczowniki 1",
+  "name": "Jedzenie",
   "volume": "Tom I",
   "level": 1,
   "category": "Rzeczowniki",
@@ -8,8 +8,8 @@
   "words": [
     {
       "id": "t1-p048-001",
-      "english": "Star",
-      "polish": "Gwiazda",
+      "english": "Sugar",
+      "polish": "Cukier",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p048-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p048-002",
-      "english": "Duck",
-      "polish": "Kaczka",
+      "english": "Egg",
+      "polish": "Jajko",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p048-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p048-003",
-      "english": "Moon",
-      "polish": "Księżyc",
+      "english": "Supper",
+      "polish": "Kolacja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p048-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p048-004",
-      "english": "Chicken",
-      "polish": "Kurczak",
+      "english": "Lunch",
+      "polish": "Lunch",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p048-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p048-005",
-      "english": "Flower",
-      "polish": "Kwiat",
+      "english": "Pasta",
+      "polish": "Makaron",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p048-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p048-006",
-      "english": "Garden",
-      "polish": "Ogród",
+      "english": "Dinner",
+      "polish": "Obiad",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p048-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p048-007",
-      "english": "Bird",
-      "polish": "Ptak",
+      "english": "Pizza",
+      "polish": "Pizza",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p048-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p048-008",
-      "english": "Plant",
-      "polish": "Roślina",
+      "english": "Salad",
+      "polish": "Sałatka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p048-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p048-009",
-      "english": "Rose",
-      "polish": "Róża",
+      "english": "Sweets",
+      "polish": "Słodycze",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p048-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p048-010",
-      "english": "Grass",
-      "polish": "Trawa",
+      "english": "Soup",
+      "polish": "Zupa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p048-010-word.mp3",

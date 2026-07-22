@@ -1,15 +1,15 @@
 {
   "id": "t1-p266",
-  "name": "Slang 27",
-  "volume": "Tom VI",
-  "level": 4,
-  "category": "Slang",
-  "chapter": "Rozdział LVIII",
+  "name": "Mile widziane",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XXVI",
   "words": [
     {
       "id": "t1-p266-001",
-      "english": "Glow up",
-      "polish": "Rozkwitać",
+      "english": "Broad-minded",
+      "polish": "Otwarty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p266-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p266-002",
-      "english": "Bent",
-      "polish": "Podrabiany",
+      "english": "Respectful",
+      "polish": "Pełen szacunku I poważania",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p266-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p266-003",
-      "english": "Blinkers",
-      "polish": "Gały",
+      "english": "Sympathetic",
+      "polish": "Współczujący",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p266-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p266-004",
-      "english": "Cornrows",
-      "polish": "Warkoczyki plecione przy głowie",
+      "english": "Diligent",
+      "polish": "Pilny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p266-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p266-005",
-      "english": "Dressed to kill",
-      "polish": "Bardzo atrakcyjnie ubrany",
+      "english": "Teachable",
+      "polish": "Pojętny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p266-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p266-006",
-      "english": "Guns",
-      "polish": "Bicki",
+      "english": "Desirable",
+      "polish": "Pożądany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p266-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p266-007",
-      "english": "Knock off",
-      "polish": "Podróba",
+      "english": "Proactive",
+      "polish": "Proaktywny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p266-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p266-008",
-      "english": "Pecks",
-      "polish": "Mięśnie",
+      "english": "Provident",
+      "polish": "Zapobiegliwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p266-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p266-009",
-      "english": "Snatched",
-      "polish": "Super modny",
+      "english": "Prudent",
+      "polish": "Rozważny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p266-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p266-010",
-      "english": "Zaddy",
-      "polish": "Ciacho",
+      "english": "Businesslike",
+      "polish": "Rzeczowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p266-010-word.mp3",
       "audioSentence": "t1-p266-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p266-011",
+      "english": "Self-sufficient",
+      "polish": "Samowystarczalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p266-011-word.mp3",
+      "audioSentence": "t1-p266-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p266-012",
+      "english": "Cordial",
+      "polish": "Serdeczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p266-012-word.mp3",
+      "audioSentence": "t1-p266-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p266-013",
+      "english": "Conscientious",
+      "polish": "Sumienny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p266-013-word.mp3",
+      "audioSentence": "t1-p266-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p266-014",
+      "english": "Supportive",
+      "polish": "Wspierający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p266-014-word.mp3",
+      "audioSentence": "t1-p266-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p266-015",
+      "english": "Considerate",
+      "polish": "Liczący się z innymi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p266-015-word.mp3",
+      "audioSentence": "t1-p266-015-sentence.mp3"
     }
   ]
 }

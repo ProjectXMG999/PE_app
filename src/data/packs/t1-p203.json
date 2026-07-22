@@ -1,15 +1,15 @@
 {
   "id": "t1-p203",
-  "name": "Śmierć",
-  "volume": "Tom IV",
-  "level": 3,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XXXVIII",
+  "name": "Orientuj się",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Skróty",
+  "chapter": "Rozdział XX",
   "words": [
     {
       "id": "t1-p203-001",
-      "english": "Funeral",
-      "polish": "Pogrzeb",
+      "english": "APT.",
+      "polish": "M.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p203-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p203-002",
-      "english": "Death",
-      "polish": "Śmierć",
+      "english": "AVE",
+      "polish": "Al.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p203-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p203-003",
-      "english": "Poison",
-      "polish": "Trucizna",
+      "english": "BLVD",
+      "polish": "Bulwar",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p203-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p203-004",
-      "english": "Grave",
-      "polish": "Grób",
+      "english": "DEPT",
+      "polish": "Oddział",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p203-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p203-005",
-      "english": "Suicide",
-      "polish": "Samobójstwo",
+      "english": "E",
+      "polish": "Wsch.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p203-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p203-006",
-      "english": "Testament",
-      "polish": "Testament",
+      "english": "N",
+      "polish": "Pn.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p203-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p203-007",
-      "english": "Dying",
-      "polish": "Umieranie",
+      "english": "S",
+      "polish": "Pd.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p203-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p203-008",
-      "english": "Abortion",
-      "polish": "Aborcja",
+      "english": "ST.",
+      "polish": "Ul.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p203-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p203-009",
-      "english": "Death certificate",
-      "polish": "Akt zgonu",
+      "english": "W",
+      "polish": "Zach.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p203-009-word.mp3",
@@ -89,327 +89,12 @@
     },
     {
       "id": "t1-p203-010",
-      "english": "Cemetery",
-      "polish": "Cmentarz",
+      "english": "APT.",
+      "polish": "M.",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p203-010-word.mp3",
       "audioSentence": "t1-p203-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-011",
-      "english": "Execution",
-      "polish": "Egzekucja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-011-word.mp3",
-      "audioSentence": "t1-p203-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-012",
-      "english": "Tomb",
-      "polish": "Grobowiec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-012-word.mp3",
-      "audioSentence": "t1-p203-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-013",
-      "english": "Condolences",
-      "polish": "Kondolencje",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-013-word.mp3",
-      "audioSentence": "t1-p203-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-014",
-      "english": "Last will",
-      "polish": "Ostatnia wola",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-014-word.mp3",
-      "audioSentence": "t1-p203-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-015",
-      "english": "Corpse",
-      "polish": "Zwłoki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-015-word.mp3",
-      "audioSentence": "t1-p203-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-016",
-      "english": "Hospice",
-      "polish": "Hospicjum",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-016-word.mp3",
-      "audioSentence": "t1-p203-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-017",
-      "english": "Genocide",
-      "polish": "Ludobójstwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-017-word.mp3",
-      "audioSentence": "t1-p203-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-018",
-      "english": "Fatality",
-      "polish": "Ofiara śmiertelna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-018-word.mp3",
-      "audioSentence": "t1-p203-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-019",
-      "english": "Heir",
-      "polish": "Spadkobiorca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-019-word.mp3",
-      "audioSentence": "t1-p203-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-020",
-      "english": "Coffin",
-      "polish": "Trumna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-020-word.mp3",
-      "audioSentence": "t1-p203-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-021",
-      "english": "Mourning",
-      "polish": "Żałoba",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-021-word.mp3",
-      "audioSentence": "t1-p203-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-022",
-      "english": "Agony",
-      "polish": "Agonia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-022-word.mp3",
-      "audioSentence": "t1-p203-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-023",
-      "english": "Fratricide",
-      "polish": "Bratobójstwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-023-word.mp3",
-      "audioSentence": "t1-p203-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-024",
-      "english": "Funeral home",
-      "polish": "Dom pogrzebowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-024-word.mp3",
-      "audioSentence": "t1-p203-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-025",
-      "english": "Epitaph",
-      "polish": "Epitafium",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-025-word.mp3",
-      "audioSentence": "t1-p203-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-026",
-      "english": "Gravedigger",
-      "polish": "Grabarz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-026-word.mp3",
-      "audioSentence": "t1-p203-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-027",
-      "english": "Funeral procession",
-      "polish": "Kondukt pogrzebowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-027-word.mp3",
-      "audioSentence": "t1-p203-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-028",
-      "english": "Crematory",
-      "polish": "Krematorium",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-028-word.mp3",
-      "audioSentence": "t1-p203-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-029",
-      "english": "Gravestone",
-      "polish": "Nagrobek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-029-word.mp3",
-      "audioSentence": "t1-p203-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-030",
-      "english": "Obituary",
-      "polish": "Nekrolog",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-030-word.mp3",
-      "audioSentence": "t1-p203-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-031",
-      "english": "Deceased",
-      "polish": "Nieboszczyk",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-031-word.mp3",
-      "audioSentence": "t1-p203-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-032",
-      "english": "Patricide",
-      "polish": "Ojcobójstwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-032-word.mp3",
-      "audioSentence": "t1-p203-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-033",
-      "english": "Interment",
-      "polish": "Pochówek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-033-word.mp3",
-      "audioSentence": "t1-p203-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-034",
-      "english": "Autopsy",
-      "polish": "Sekcja zwłok",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-034-word.mp3",
-      "audioSentence": "t1-p203-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-035",
-      "english": "Devisor",
-      "polish": "Spadkodawca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-035-word.mp3",
-      "audioSentence": "t1-p203-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-036",
-      "english": "Remains",
-      "polish": "Szczątki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-036-word.mp3",
-      "audioSentence": "t1-p203-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-037",
-      "english": "Beheading",
-      "polish": "Ścięcie głowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-037-word.mp3",
-      "audioSentence": "t1-p203-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-038",
-      "english": "Stoning",
-      "polish": "Ukamienowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-038-word.mp3",
-      "audioSentence": "t1-p203-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-039",
-      "english": "Urn",
-      "polish": "Urna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-039-word.mp3",
-      "audioSentence": "t1-p203-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-040",
-      "english": "Wreath",
-      "polish": "Wieniec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-040-word.mp3",
-      "audioSentence": "t1-p203-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-041",
-      "english": "Homicide",
-      "polish": "Zabójstwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-041-word.mp3",
-      "audioSentence": "t1-p203-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-042",
-      "english": "Decapitation",
-      "polish": "Dekapitacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-042-word.mp3",
-      "audioSentence": "t1-p203-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-043",
-      "english": "Euthanasia",
-      "polish": "Eutanazja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-043-word.mp3",
-      "audioSentence": "t1-p203-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-044",
-      "english": "Cremation",
-      "polish": "Kremacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-044-word.mp3",
-      "audioSentence": "t1-p203-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p203-045",
-      "english": "Funeral reception",
-      "polish": "Stypa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p203-045-word.mp3",
-      "audioSentence": "t1-p203-045-sentence.mp3"
     }
   ]
 }

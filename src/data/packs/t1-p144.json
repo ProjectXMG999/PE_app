@@ -1,15 +1,15 @@
 {
   "id": "t1-p144",
-  "name": "Nauki ścisłe",
-  "volume": "Tom III",
+  "name": "Świat cyfrowy",
+  "volume": "Tom II",
   "level": 2,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XXI",
+  "category": "Czasowniki",
+  "chapter": "Rozdział XV",
   "words": [
     {
       "id": "t1-p144-001",
-      "english": "Half",
-      "polish": "Połowa",
+      "english": "Charge",
+      "polish": "Ładować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p144-002",
-      "english": "Argument",
-      "polish": "Argument",
+      "english": "Click",
+      "polish": "Klikać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p144-003",
-      "english": "Pair",
-      "polish": "Para",
+      "english": "Copy",
+      "polish": "Kopiować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p144-004",
-      "english": "Action",
-      "polish": "Akcja",
+      "english": "Lock",
+      "polish": "Zablokować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p144-005",
-      "english": "Chemistry",
-      "polish": "Chemia",
+      "english": "E-mail",
+      "polish": "Napisać e-mail",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p144-006",
-      "english": "Physics",
-      "polish": "Fizyka",
+      "english": "Paste",
+      "polish": "Wklejać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p144-007",
-      "english": "Maximum",
-      "polish": "Maksimum",
+      "english": "Print",
+      "polish": "Drukować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p144-008",
-      "english": "Mathematics",
-      "polish": "Matematyka",
+      "english": "Sound",
+      "polish": "Brzmieć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p144-009",
-      "english": "Minimum",
-      "polish": "Minimum",
+      "english": "Attach",
+      "polish": "Załączać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p144-010",
-      "english": "Science",
-      "polish": "Nauka",
+      "english": "Cancel",
+      "polish": "Anulować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p144-011",
-      "english": "Example",
-      "polish": "Przykład",
+      "english": "Mark",
+      "polish": "Zaznaczać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p144-012",
-      "english": "Solution",
-      "polish": "Rozwiązanie",
+      "english": "Save",
+      "polish": "Zapisywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p144-013",
-      "english": "Reaction",
-      "polish": "Reakcja",
+      "english": "Search",
+      "polish": "Szukać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p144-014",
-      "english": "Expert",
-      "polish": "Ekspert",
+      "english": "Press",
+      "polish": "Naciskać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-014-word.mp3",
@@ -134,957 +134,12 @@
     },
     {
       "id": "t1-p144-015",
-      "english": "Function",
-      "polish": "Funkcja",
+      "english": "Disconnect",
+      "polish": "Rozłączyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p144-015-word.mp3",
       "audioSentence": "t1-p144-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-016",
-      "english": "Observation",
-      "polish": "Obserwacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-016-word.mp3",
-      "audioSentence": "t1-p144-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-017",
-      "english": "Precision",
-      "polish": "Precyzja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-017-word.mp3",
-      "audioSentence": "t1-p144-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-018",
-      "english": "Infinity",
-      "polish": "Nieskończoność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-018-word.mp3",
-      "audioSentence": "t1-p144-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-019",
-      "english": "Oxygen",
-      "polish": "Tlen",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-019-word.mp3",
-      "audioSentence": "t1-p144-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-020",
-      "english": "Clarification",
-      "polish": "Doprecyzowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-020-word.mp3",
-      "audioSentence": "t1-p144-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-021",
-      "english": "Aspect",
-      "polish": "Aspekt",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-021-word.mp3",
-      "audioSentence": "t1-p144-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-022",
-      "english": "Column",
-      "polish": "Kolumna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-022-word.mp3",
-      "audioSentence": "t1-p144-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-023",
-      "english": "Row",
-      "polish": "Rząd",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-023-word.mp3",
-      "audioSentence": "t1-p144-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-024",
-      "english": "Research",
-      "polish": "Badanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-024-word.mp3",
-      "audioSentence": "t1-p144-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-025",
-      "english": "Digit",
-      "polish": "Cyfra",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-025-word.mp3",
-      "audioSentence": "t1-p144-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-026",
-      "english": "Factor",
-      "polish": "Czynnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-026-word.mp3",
-      "audioSentence": "t1-p144-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-027",
-      "english": "Diagram",
-      "polish": "Diagram",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-027-word.mp3",
-      "audioSentence": "t1-p144-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-028",
-      "english": "Definition",
-      "polish": "Definicja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-028-word.mp3",
-      "audioSentence": "t1-p144-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-029",
-      "english": "Addition",
-      "polish": "Dodawanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-029-word.mp3",
-      "audioSentence": "t1-p144-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-030",
-      "english": "Division",
-      "polish": "Dzielenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-030-word.mp3",
-      "audioSentence": "t1-p144-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-031",
-      "english": "Geometry",
-      "polish": "Geometria",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-031-word.mp3",
-      "audioSentence": "t1-p144-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-032",
-      "english": "Calculation",
-      "polish": "Kalkulacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-032-word.mp3",
-      "audioSentence": "t1-p144-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-033",
-      "english": "Combination",
-      "polish": "Kombinacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-033-word.mp3",
-      "audioSentence": "t1-p144-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-034",
-      "english": "Logic",
-      "polish": "Logika",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-034-word.mp3",
-      "audioSentence": "t1-p144-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-035",
-      "english": "Method",
-      "polish": "Metoda",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-035-word.mp3",
-      "audioSentence": "t1-p144-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-036",
-      "english": "Microscope",
-      "polish": "Mikroskop",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-036-word.mp3",
-      "audioSentence": "t1-p144-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-037",
-      "english": "Multiplication",
-      "polish": "Mnożenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-037-word.mp3",
-      "audioSentence": "t1-p144-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-038",
-      "english": "Subtraction",
-      "polish": "Odejmowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-038-word.mp3",
-      "audioSentence": "t1-p144-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-039",
-      "english": "Discovery",
-      "polish": "Odkrycie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-039-word.mp3",
-      "audioSentence": "t1-p144-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-040",
-      "english": "Circumstance",
-      "polish": "Okoliczność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-040-word.mp3",
-      "audioSentence": "t1-p144-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-041",
-      "english": "Optimization",
-      "polish": "Optymalizacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-041-word.mp3",
-      "audioSentence": "t1-p144-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-042",
-      "english": "Root",
-      "polish": "Pierwiastek matematyczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-042-word.mp3",
-      "audioSentence": "t1-p144-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-043",
-      "english": "Basis",
-      "polish": "Podstawa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-043-word.mp3",
-      "audioSentence": "t1-p144-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-044",
-      "english": "Comparison",
-      "polish": "Porównanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-044-word.mp3",
-      "audioSentence": "t1-p144-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-045",
-      "english": "Power",
-      "polish": "Potęga matematyczna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-045-word.mp3",
-      "audioSentence": "t1-p144-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-046",
-      "english": "Difficulty",
-      "polish": "Trudność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-046-word.mp3",
-      "audioSentence": "t1-p144-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-047",
-      "english": "Exponentiation",
-      "polish": "Potęgowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-047-word.mp3",
-      "audioSentence": "t1-p144-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-048",
-      "english": "Criterion",
-      "polish": "Kryterium",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-048-word.mp3",
-      "audioSentence": "t1-p144-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-049",
-      "english": "Prototype",
-      "polish": "Prototyp",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-049-word.mp3",
-      "audioSentence": "t1-p144-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-050",
-      "english": "Sample",
-      "polish": "Próbka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-050-word.mp3",
-      "audioSentence": "t1-p144-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-051",
-      "english": "Transition",
-      "polish": "Przemiana",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-051-word.mp3",
-      "audioSentence": "t1-p144-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-052",
-      "english": "Presumption",
-      "polish": "Przypuszczenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-052-word.mp3",
-      "audioSentence": "t1-p144-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-053",
-      "english": "Distinction",
-      "polish": "Rozróżnienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-053-word.mp3",
-      "audioSentence": "t1-p144-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-054",
-      "english": "Scheme",
-      "polish": "Schemat",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-054-word.mp3",
-      "audioSentence": "t1-p144-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-055",
-      "english": "Core",
-      "polish": "Sedno",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-055-word.mp3",
-      "audioSentence": "t1-p144-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-056",
-      "english": "Sequence",
-      "polish": "Sekwencja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-056-word.mp3",
-      "audioSentence": "t1-p144-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-057",
-      "english": "Sum",
-      "polish": "Suma",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-057-word.mp3",
-      "audioSentence": "t1-p144-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-058",
-      "english": "Principle",
-      "polish": "Zasada",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-058-word.mp3",
-      "audioSentence": "t1-p144-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-059",
-      "english": "Theory",
-      "polish": "Teoria",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-059-word.mp3",
-      "audioSentence": "t1-p144-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-060",
-      "english": "Explanation",
-      "polish": "Wyjaśnienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-060-word.mp3",
-      "audioSentence": "t1-p144-060-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-061",
-      "english": "Thesis",
-      "polish": "Teza",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-061-word.mp3",
-      "audioSentence": "t1-p144-061-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-062",
-      "english": "Transformation",
-      "polish": "Transformacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-062-word.mp3",
-      "audioSentence": "t1-p144-062-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-063",
-      "english": "Variation",
-      "polish": "Wariacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-063-word.mp3",
-      "audioSentence": "t1-p144-063-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-064",
-      "english": "Verification",
-      "polish": "Weryfikacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-064-word.mp3",
-      "audioSentence": "t1-p144-064-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-065",
-      "english": "Conclusion",
-      "polish": "Wniosek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-065-word.mp3",
-      "audioSentence": "t1-p144-065-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-066",
-      "english": "Assumption",
-      "polish": "Założenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-066-word.mp3",
-      "audioSentence": "t1-p144-066-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-067",
-      "english": "Inquiry",
-      "polish": "Zapytanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-067-word.mp3",
-      "audioSentence": "t1-p144-067-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-068",
-      "english": "Analysis",
-      "polish": "Analiza",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-068-word.mp3",
-      "audioSentence": "t1-p144-068-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-069",
-      "english": "Experiment",
-      "polish": "Eksperyment",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-069-word.mp3",
-      "audioSentence": "t1-p144-069-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-070",
-      "english": "Evolution",
-      "polish": "Ewolucja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-070-word.mp3",
-      "audioSentence": "t1-p144-070-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-071",
-      "english": "Structure",
-      "polish": "Struktura",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-071-word.mp3",
-      "audioSentence": "t1-p144-071-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-072",
-      "english": "Inspection",
-      "polish": "Inspekcja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-072-word.mp3",
-      "audioSentence": "t1-p144-072-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-073",
-      "english": "Simulation",
-      "polish": "Symulacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-073-word.mp3",
-      "audioSentence": "t1-p144-073-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-074",
-      "english": "Angle",
-      "polish": "Kąt",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-074-word.mp3",
-      "audioSentence": "t1-p144-074-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-075",
-      "english": "Mass",
-      "polish": "Masa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-075-word.mp3",
-      "audioSentence": "t1-p144-075-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-076",
-      "english": "Percentage",
-      "polish": "Procent",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-076-word.mp3",
-      "audioSentence": "t1-p144-076-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-077",
-      "english": "Proportion",
-      "polish": "Proporcja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-077-word.mp3",
-      "audioSentence": "t1-p144-077-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-078",
-      "english": "Motion",
-      "polish": "Ruch",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-078-word.mp3",
-      "audioSentence": "t1-p144-078-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-079",
-      "english": "Scale",
-      "polish": "Skala",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-079-word.mp3",
-      "audioSentence": "t1-p144-079-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-080",
-      "english": "Average",
-      "polish": "Średnia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-080-word.mp3",
-      "audioSentence": "t1-p144-080-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-081",
-      "english": "Friction",
-      "polish": "Tarcie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-081-word.mp3",
-      "audioSentence": "t1-p144-081-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-082",
-      "english": "Layer",
-      "polish": "Warstwa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-082-word.mp3",
-      "audioSentence": "t1-p144-082-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-083",
-      "english": "Dimension",
-      "polish": "Wymiar",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-083-word.mp3",
-      "audioSentence": "t1-p144-083-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-084",
-      "english": "Scope",
-      "polish": "Zakres",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-084-word.mp3",
-      "audioSentence": "t1-p144-084-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-085",
-      "english": "Range",
-      "polish": "Zasięg",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-085-word.mp3",
-      "audioSentence": "t1-p144-085-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-086",
-      "english": "Phenomenon",
-      "polish": "Zjawisko",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-086-word.mp3",
-      "audioSentence": "t1-p144-086-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-087",
-      "english": "Identification",
-      "polish": "Identyfikacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-087-word.mp3",
-      "audioSentence": "t1-p144-087-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-088",
-      "english": "Fluid",
-      "polish": "Ciecz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-088-word.mp3",
-      "audioSentence": "t1-p144-088-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-089",
-      "english": "Formula",
-      "polish": "Formuła",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-089-word.mp3",
-      "audioSentence": "t1-p144-089-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-090",
-      "english": "Hypothesis",
-      "polish": "Hipoteza",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-090-word.mp3",
-      "audioSentence": "t1-p144-090-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-091",
-      "english": "Laboratory",
-      "polish": "Laboratorium",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-091-word.mp3",
-      "audioSentence": "t1-p144-091-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-092",
-      "english": "Paradox",
-      "polish": "Paradoks",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-092-word.mp3",
-      "audioSentence": "t1-p144-092-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-093",
-      "english": "Parameter",
-      "polish": "Parametr",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-093-word.mp3",
-      "audioSentence": "t1-p144-093-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-094",
-      "english": "Probability",
-      "polish": "Prawdopodobieństwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-094-word.mp3",
-      "audioSentence": "t1-p144-094-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-095",
-      "english": "Expansion",
-      "polish": "Rozszerzenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-095-word.mp3",
-      "audioSentence": "t1-p144-095-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-096",
-      "english": "Equation",
-      "polish": "Równanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-096-word.mp3",
-      "audioSentence": "t1-p144-096-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-097",
-      "english": "Force",
-      "polish": "Siła",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-097-word.mp3",
-      "audioSentence": "t1-p144-097-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-098",
-      "english": "Immersion",
-      "polish": "Zanurzenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-098-word.mp3",
-      "audioSentence": "t1-p144-098-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-099",
-      "english": "Expression",
-      "polish": "Wyrażenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-099-word.mp3",
-      "audioSentence": "t1-p144-099-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-100",
-      "english": "Atom",
-      "polish": "Atom",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-100-word.mp3",
-      "audioSentence": "t1-p144-100-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-101",
-      "english": "Integration",
-      "polish": "Całkowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-101-word.mp3",
-      "audioSentence": "t1-p144-101-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-102",
-      "english": "Cell",
-      "polish": "Komórka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-102-word.mp3",
-      "audioSentence": "t1-p144-102-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-103",
-      "english": "Acid",
-      "polish": "Kwas",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-103-word.mp3",
-      "audioSentence": "t1-p144-103-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-104",
-      "english": "Inversion",
-      "polish": "Odwrotność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-104-word.mp3",
-      "audioSentence": "t1-p144-104-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-105",
-      "english": "Element",
-      "polish": "Pierwiastek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-105-word.mp3",
-      "audioSentence": "t1-p144-105-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-106",
-      "english": "Extraction of a root",
-      "polish": "Pierwiastkowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-106-word.mp3",
-      "audioSentence": "t1-p144-106-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-107",
-      "english": "Contradiction",
-      "polish": "Sprzeczność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-107-word.mp3",
-      "audioSentence": "t1-p144-107-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-108",
-      "english": "Differentiation",
-      "polish": "Różniczkowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-108-word.mp3",
-      "audioSentence": "t1-p144-108-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-109",
-      "english": "Terminology",
-      "polish": "Terminologia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-109-word.mp3",
-      "audioSentence": "t1-p144-109-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-110",
-      "english": "Coefficient",
-      "polish": "Współczynnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-110-word.mp3",
-      "audioSentence": "t1-p144-110-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-111",
-      "english": "Loop",
-      "polish": "Zapętlenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-111-word.mp3",
-      "audioSentence": "t1-p144-111-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-112",
-      "english": "Alkali",
-      "polish": "Zasada",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-112-word.mp3",
-      "audioSentence": "t1-p144-112-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-113",
-      "english": "Incentive",
-      "polish": "Bodziec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-113-word.mp3",
-      "audioSentence": "t1-p144-113-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-114",
-      "english": "Variable",
-      "polish": "Zmienna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-114-word.mp3",
-      "audioSentence": "t1-p144-114-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-115",
-      "english": "Expertise",
-      "polish": "Ekspertyza",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-115-word.mp3",
-      "audioSentence": "t1-p144-115-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-116",
-      "english": "Algebra",
-      "polish": "Algebra",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-116-word.mp3",
-      "audioSentence": "t1-p144-116-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-117",
-      "english": "Arithmetics",
-      "polish": "Arytmetyka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-117-word.mp3",
-      "audioSentence": "t1-p144-117-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-118",
-      "english": "Radius",
-      "polish": "Promień",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-118-word.mp3",
-      "audioSentence": "t1-p144-118-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-119",
-      "english": "Ratio",
-      "polish": "Stosunek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-119-word.mp3",
-      "audioSentence": "t1-p144-119-sentence.mp3"
-    },
-    {
-      "id": "t1-p144-120",
-      "english": "Diameter",
-      "polish": "Średnica",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p144-120-word.mp3",
-      "audioSentence": "t1-p144-120-sentence.mp3"
     }
   ]
 }

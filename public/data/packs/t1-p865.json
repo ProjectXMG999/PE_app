@@ -1,0 +1,316 @@
+{
+  "id": "t1-p865",
+  "name": "Fantasy",
+  "volume": "Tom IX",
+  "level": 4,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział LXXXVI",
+  "words": [
+    {
+      "id": "t1-p865-001",
+      "english": "Berserk",
+      "polish": "Szał",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-001-word.mp3",
+      "audioSentence": "t1-p865-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-002",
+      "english": "Witch doctor",
+      "polish": "Wiedźmarz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-002-word.mp3",
+      "audioSentence": "t1-p865-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-003",
+      "english": "Tarot",
+      "polish": "Tarot",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-003-word.mp3",
+      "audioSentence": "t1-p865-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-004",
+      "english": "Falchion",
+      "polish": "Tasak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-004-word.mp3",
+      "audioSentence": "t1-p865-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-005",
+      "english": "Teleportation",
+      "polish": "Teleportacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-005-word.mp3",
+      "audioSentence": "t1-p865-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-006",
+      "english": "Transmutation",
+      "polish": "Transmutacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-006-word.mp3",
+      "audioSentence": "t1-p865-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-007",
+      "english": "Trident",
+      "polish": "Trójząb",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-007-word.mp3",
+      "audioSentence": "t1-p865-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-008",
+      "english": "Specter",
+      "polish": "Upiór",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-008-word.mp3",
+      "audioSentence": "t1-p865-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-009",
+      "english": "Enchantment",
+      "polish": "Urok",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-009-word.mp3",
+      "audioSentence": "t1-p865-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-010",
+      "english": "Vampire",
+      "polish": "Wampir",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-010-word.mp3",
+      "audioSentence": "t1-p865-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-011",
+      "english": "Wraith",
+      "polish": "Widmo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-011-word.mp3",
+      "audioSentence": "t1-p865-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-012",
+      "english": "Werewolf",
+      "polish": "Wilkołak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-012-word.mp3",
+      "audioSentence": "t1-p865-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-013",
+      "english": "Wyvern",
+      "polish": "Wiwerna",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-013-word.mp3",
+      "audioSentence": "t1-p865-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-014",
+      "english": "Divination",
+      "polish": "Wróżenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-014-word.mp3",
+      "audioSentence": "t1-p865-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-015",
+      "english": "Spell",
+      "polish": "Zaklęcie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-015-word.mp3",
+      "audioSentence": "t1-p865-015-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-016",
+      "english": "Mojo",
+      "polish": "Zaklęcie szamańskie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-016-word.mp3",
+      "audioSentence": "t1-p865-016-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-017",
+      "english": "Enchanter",
+      "polish": "Zaklinacz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-017-word.mp3",
+      "audioSentence": "t1-p865-017-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-018",
+      "english": "Invocation",
+      "polish": "Zaklinanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-018-word.mp3",
+      "audioSentence": "t1-p865-018-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-019",
+      "english": "Scale armor",
+      "polish": "Zbroja łuskowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-019-word.mp3",
+      "audioSentence": "t1-p865-019-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-020",
+      "english": "Revenant",
+      "polish": "Zjawa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-020-word.mp3",
+      "audioSentence": "t1-p865-020-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-021",
+      "english": "Shapeshifter",
+      "polish": "Zmiennokształtny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-021-word.mp3",
+      "audioSentence": "t1-p865-021-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-022",
+      "english": "Elemental",
+      "polish": "Żywiołak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-022-word.mp3",
+      "audioSentence": "t1-p865-022-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-023",
+      "english": "Bastard sword",
+      "polish": "Miecz półtoraręczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-023-word.mp3",
+      "audioSentence": "t1-p865-023-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-024",
+      "english": "Mimic",
+      "polish": "Mimik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-024-word.mp3",
+      "audioSentence": "t1-p865-024-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-025",
+      "english": "Flail",
+      "polish": "Kiścień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-025-word.mp3",
+      "audioSentence": "t1-p865-025-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-026",
+      "english": "Cleric",
+      "polish": "Kleryk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-026-word.mp3",
+      "audioSentence": "t1-p865-026-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-027",
+      "english": "Artifact",
+      "polish": "Artefakt",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-027-word.mp3",
+      "audioSentence": "t1-p865-027-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-028",
+      "english": "Barbarian",
+      "polish": "Barbarzyńca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-028-word.mp3",
+      "audioSentence": "t1-p865-028-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-029",
+      "english": "Chimera",
+      "polish": "Chimera",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-029-word.mp3",
+      "audioSentence": "t1-p865-029-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-030",
+      "english": "Chiromancy",
+      "polish": "Chiromancja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-030-word.mp3",
+      "audioSentence": "t1-p865-030-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-031",
+      "english": "Demon",
+      "polish": "Demon",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-031-word.mp3",
+      "audioSentence": "t1-p865-031-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-032",
+      "english": "Mermaid",
+      "polish": "Syrena",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-032-word.mp3",
+      "audioSentence": "t1-p865-032-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-033",
+      "english": "Cutlass",
+      "polish": "Kordelas",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-033-word.mp3",
+      "audioSentence": "t1-p865-033-sentence.mp3"
+    },
+    {
+      "id": "t1-p865-034",
+      "english": "Staff",
+      "polish": "Kostur",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p865-034-word.mp3",
+      "audioSentence": "t1-p865-034-sentence.mp3"
+    }
+  ]
+}

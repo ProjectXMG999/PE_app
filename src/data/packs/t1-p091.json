@@ -1,15 +1,15 @@
 {
   "id": "t1-p091",
-  "name": "Czasowniki 8",
-  "volume": "Tom II",
-  "level": 2,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XII",
+  "name": "Ubrania",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział IX",
   "words": [
     {
       "id": "t1-p091-001",
-      "english": "Complement",
-      "polish": "Komplementować",
+      "english": "Cap",
+      "polish": "Czapka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p091-002",
-      "english": "Install",
-      "polish": "Instalować",
+      "english": "Suit",
+      "polish": "Garnitur",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p091-003",
-      "english": "Propose",
-      "polish": "Proponować",
+      "english": "Tie",
+      "polish": "Krawat",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p091-004",
-      "english": "Realize",
-      "polish": "Realizować",
+      "english": "Fashion",
+      "polish": "Moda",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p091-005",
-      "english": "Present",
-      "polish": "Zaprezentować",
+      "english": "Sunglasses",
+      "polish": "Okulary przeciwsłoneczne",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p091-006",
-      "english": "Accept",
-      "polish": "Akceptować",
+      "english": "Wallet",
+      "polish": "Portfel",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p091-007",
-      "english": "Analyze",
-      "polish": "Analizować",
+      "english": "Shorts",
+      "polish": "Spodenki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p091-008",
-      "english": "Arrange",
-      "polish": "Aranżować coś",
+      "english": "Skirt",
+      "polish": "Spódnica",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-008-word.mp3",
@@ -80,66 +80,12 @@
     },
     {
       "id": "t1-p091-009",
-      "english": "Arrest",
-      "polish": "Aresztować",
+      "english": "Dress",
+      "polish": "Suknia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p091-009-word.mp3",
       "audioSentence": "t1-p091-009-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-010",
-      "english": "Attack",
-      "polish": "Atakować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-010-word.mp3",
-      "audioSentence": "t1-p091-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-011",
-      "english": "Comment",
-      "polish": "Komentować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-011-word.mp3",
-      "audioSentence": "t1-p091-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-012",
-      "english": "Communicate",
-      "polish": "Komunikować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-012-word.mp3",
-      "audioSentence": "t1-p091-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-013",
-      "english": "Congratulate",
-      "polish": "Gratulować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-013-word.mp3",
-      "audioSentence": "t1-p091-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-014",
-      "english": "Control",
-      "polish": "Kontrolować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-014-word.mp3",
-      "audioSentence": "t1-p091-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p091-015",
-      "english": "Flirt",
-      "polish": "Flirtować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p091-015-word.mp3",
-      "audioSentence": "t1-p091-015-sentence.mp3"
     }
   ]
 }

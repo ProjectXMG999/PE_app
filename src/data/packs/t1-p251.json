@@ -1,15 +1,15 @@
 {
   "id": "t1-p251",
-  "name": "Memiczne",
-  "volume": "Tom VI",
-  "level": 4,
+  "name": "Biznes",
+  "volume": "Tom III",
+  "level": 2,
   "category": "Skróty",
-  "chapter": "Rozdział LIII",
+  "chapter": "Rozdział XXV",
   "words": [
     {
       "id": "t1-p251-001",
-      "english": "FOMO",
-      "polish": "Obawa że coś nas omija",
+      "english": "ETA",
+      "polish": "Oczekiwany czas przyjazdu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p251-002",
-      "english": "TIL",
-      "polish": "Dziś dowiedziałem się",
+      "english": "B two B",
+      "polish": "Biznes z biznesem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p251-003",
-      "english": "ADIH",
-      "polish": "Kolejny dzień w piekle",
+      "english": "B two C",
+      "polish": "Biznes z konsumentem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p251-004",
-      "english": "NFSW",
-      "polish": "Niebezpieczne w pracy",
+      "english": "CEO",
+      "polish": "Dyrektor generalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p251-005",
-      "english": "HIFW",
-      "polish": "Jak się czuję, kiedy",
+      "english": "CSO",
+      "polish": "Dyrektor ds. Sprzedaży",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p251-006",
-      "english": "MFW",
-      "polish": "Moja twarz, kiedy",
+      "english": "HR",
+      "polish": "Zasoby ludzkie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p251-007",
-      "english": "MIA",
-      "polish": "Zaginiony w akcji",
+      "english": "OOO",
+      "polish": "Poza biurem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p251-008",
-      "english": "NSFL",
-      "polish": "Powalony",
+      "english": "N/A",
+      "polish": "Niedostępny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p251-009",
-      "english": "OG",
-      "polish": "Oryginalny gangster",
+      "english": "PA",
+      "polish": "Asystent",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-009-word.mp3",
@@ -89,102 +89,12 @@
     },
     {
       "id": "t1-p251-010",
-      "english": "QQ",
-      "polish": "Płaczę",
+      "english": "PR",
+      "polish": "Relacje publiczne",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p251-010-word.mp3",
       "audioSentence": "t1-p251-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p251-011",
-      "english": "FTW",
-      "polish": "górą",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p251-011-word.mp3",
-      "audioSentence": "t1-p251-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p251-012",
-      "english": "SFW",
-      "polish": "Bezpieczne w pracy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p251-012-word.mp3",
-      "audioSentence": "t1-p251-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p251-013",
-      "english": "SOML",
-      "polish": "Historia mojego życia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p251-013-word.mp3",
-      "audioSentence": "t1-p251-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p251-014",
-      "english": "TFW",
-      "polish": "To uczucie, gdy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p251-014-word.mp3",
-      "audioSentence": "t1-p251-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p251-015",
-      "english": "TNTL",
-      "polish": "Spróbuj się nie zaśmiać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p251-015-word.mp3",
-      "audioSentence": "t1-p251-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p251-016",
-      "english": "MRW",
-      "polish": "Moja reakcja, kiedy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p251-016-word.mp3",
-      "audioSentence": "t1-p251-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p251-017",
-      "english": "TBT",
-      "polish": "Czwartkowy powrót do przeszłości",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p251-017-word.mp3",
-      "audioSentence": "t1-p251-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p251-018",
-      "english": "ORLY",
-      "polish": "Doprawdy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p251-018-word.mp3",
-      "audioSentence": "t1-p251-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p251-019",
-      "english": "QOTD",
-      "polish": "Cytat dnia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p251-019-word.mp3",
-      "audioSentence": "t1-p251-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p251-020",
-      "english": "OOTD",
-      "polish": "Strój dnia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p251-020-word.mp3",
-      "audioSentence": "t1-p251-020-sentence.mp3"
     }
   ]
 }

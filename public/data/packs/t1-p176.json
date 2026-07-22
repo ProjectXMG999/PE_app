@@ -1,15 +1,15 @@
 {
   "id": "t1-p176",
-  "name": "Slang 14",
-  "volume": "Tom III",
-  "level": 3,
-  "category": "Slang",
-  "chapter": "Rozdział XXX",
+  "name": "Mile widziane",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XVIII",
   "words": [
     {
       "id": "t1-p176-001",
-      "english": "Yais!",
-      "polish": "Więcej niż tylko \"Tak!\"",
+      "english": "In love",
+      "polish": "Zakochany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p176-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p176-002",
-      "english": "Dope",
-      "polish": "Odlotowy",
+      "english": "Dear",
+      "polish": "Szanowny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p176-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p176-003",
-      "english": "Sweet",
-      "polish": "Fajowsko",
+      "english": "Loving",
+      "polish": "Kochający",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p176-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p176-004",
-      "english": "Go you!",
-      "polish": "Brawo ty!",
+      "english": "Ambitious",
+      "polish": "Ambitny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p176-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p176-005",
-      "english": "Wack",
-      "polish": "Bardzo spoko",
+      "english": "Patient",
+      "polish": "Cierpliwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p176-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p176-006",
-      "english": "Bang!",
-      "polish": "Podkreślenie, że zrobiłem coś super",
+      "english": "Proud",
+      "polish": "Dumny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p176-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p176-007",
-      "english": "I'm down",
-      "polish": "Wchodzę w to",
+      "english": "Generous",
+      "polish": "Hojny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p176-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p176-008",
-      "english": "No sweat",
-      "polish": "Nic wielkiego",
+      "english": "Outgoing",
+      "polish": "Łatwo poznający nowych ludzi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p176-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p176-009",
-      "english": "Kek",
-      "polish": "Śmieszki",
+      "english": "Wise",
+      "polish": "Mądry",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p176-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p176-010",
-      "english": "Savage",
-      "polish": "Brutal",
+      "english": "Kind",
+      "polish": "Miły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p176-010-word.mp3",
       "audioSentence": "t1-p176-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p176-011",
+      "english": "Reliable",
+      "polish": "Niezawodny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p176-011-word.mp3",
+      "audioSentence": "t1-p176-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p176-012",
+      "english": "Responsible",
+      "polish": "Odpowiedzialny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p176-012-word.mp3",
+      "audioSentence": "t1-p176-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p176-013",
+      "english": "Optimistic",
+      "polish": "Optymistyczny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p176-013-word.mp3",
+      "audioSentence": "t1-p176-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p176-014",
+      "english": "Confident",
+      "polish": "Pewny siebie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p176-014-word.mp3",
+      "audioSentence": "t1-p176-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p176-015",
+      "english": "Cheerful",
+      "polish": "Pogodny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p176-015-word.mp3",
+      "audioSentence": "t1-p176-015-sentence.mp3"
     }
   ]
 }

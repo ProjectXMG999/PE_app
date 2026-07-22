@@ -1,15 +1,15 @@
 {
   "id": "t1-p184",
-  "name": "Rzeczowniki 10",
-  "volume": "Tom IV",
-  "level": 3,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XXXII",
+  "name": "Klony",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Klony",
+  "chapter": "Rozdział XVIII",
   "words": [
     {
       "id": "t1-p184-001",
-      "english": "Bang",
-      "polish": "Huk",
+      "english": "Boo-boo",
+      "polish": "Kuku",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p184-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p184-002",
-      "english": "Whistle",
-      "polish": "Gwizd",
+      "english": "Choo-choo",
+      "polish": "Ciuch-ciuch",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p184-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p184-003",
-      "english": "Cube",
-      "polish": "Kostka",
+      "english": "Chop chop",
+      "polish": "Migiem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p184-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p184-004",
-      "english": "Sphere",
-      "polish": "Kula",
+      "english": "Ding-dong",
+      "polish": "Odgłos dzwonka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p184-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p184-005",
-      "english": "Melody",
-      "polish": "Melodia",
+      "english": "Heebie-jeebies",
+      "polish": "Ciarki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p184-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p184-006",
-      "english": "Tune",
-      "polish": "Melodia",
+      "english": "Jeepers creepers",
+      "polish": "O jejku, jejku! Coś takiego!",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p184-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p184-007",
-      "english": "Circle",
-      "polish": "Okrąg",
+      "english": "Mishmash",
+      "polish": "Miszmasz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p184-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p184-008",
-      "english": "Square",
-      "polish": "Kwadrat",
+      "english": "Nitty-gritty",
+      "polish": "Sedno sprawy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p184-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p184-009",
-      "english": "Orientation",
-      "polish": "Orientacja",
+      "english": "Super-duper",
+      "polish": "Fajowski",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p184-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p184-010",
-      "english": "Rectangle",
-      "polish": "Prostokąt",
+      "english": "Teeny-weeny",
+      "polish": "Tyci-tyci",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p184-010-word.mp3",
       "audioSentence": "t1-p184-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p184-011",
-      "english": "Whisper",
-      "polish": "Szept",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p184-011-word.mp3",
-      "audioSentence": "t1-p184-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p184-012",
-      "english": "Triangle",
-      "polish": "Trójkąt",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p184-012-word.mp3",
-      "audioSentence": "t1-p184-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p184-013",
-      "english": "Snoring",
-      "polish": "Chrapanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p184-013-word.mp3",
-      "audioSentence": "t1-p184-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p184-014",
-      "english": "Placement",
-      "polish": "Umieszczenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p184-014-word.mp3",
-      "audioSentence": "t1-p184-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p184-015",
-      "english": "Location",
-      "polish": "Lokalizacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p184-015-word.mp3",
-      "audioSentence": "t1-p184-015-sentence.mp3"
     }
   ]
 }

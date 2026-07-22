@@ -1,15 +1,15 @@
 {
   "id": "t1-p178",
-  "name": "Slang 15",
-  "volume": "Tom III",
-  "level": 3,
-  "category": "Slang",
-  "chapter": "Rozdział XXX",
+  "name": "Praca",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XVIII",
   "words": [
     {
       "id": "t1-p178-001",
-      "english": "Slick",
-      "polish": "Gładki",
+      "english": "Promotion",
+      "polish": "Awans",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p178-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p178-002",
-      "english": "Social butterfly",
-      "polish": "Mistrz interakcji społecznych",
+      "english": "Workday",
+      "polish": "Dzień pracy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p178-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p178-003",
-      "english": "Whiz",
-      "polish": "Szpenio",
+      "english": "Working hours",
+      "polish": "Godziny pracy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p178-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p178-004",
-      "english": "Pro",
-      "polish": "Mega spec",
+      "english": "Meeting",
+      "polish": "Spotkanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p178-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p178-005",
-      "english": "Fella",
-      "polish": "Facet",
+      "english": "Staff",
+      "polish": "Kadra",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p178-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p178-006",
-      "english": "Homeboy",
-      "polish": "Ziomeczek",
+      "english": "Position",
+      "polish": "Stanowisko",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p178-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p178-007",
-      "english": "Punk kid",
-      "polish": "Nastolatek",
+      "english": "Career",
+      "polish": "Kariera",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p178-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p178-008",
-      "english": "Gal",
-      "polish": "Porządna dziewczyna",
+      "english": "Colleague",
+      "polish": "Kolega z pracy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p178-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p178-009",
-      "english": "Homegirl",
-      "polish": "Ziomalka",
+      "english": "Workplace",
+      "polish": "Miejsce pracy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p178-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p178-010",
-      "english": "Chap",
-      "polish": "Chłopina",
+      "english": "Personnel",
+      "polish": "Personel",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p178-010-word.mp3",
       "audioSentence": "t1-p178-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p178-011",
+      "english": "Agreement",
+      "polish": "Porozumienie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p178-011-word.mp3",
+      "audioSentence": "t1-p178-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p178-012",
+      "english": "Full-time job",
+      "polish": "Praca na cały etat",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p178-012-word.mp3",
+      "audioSentence": "t1-p178-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p178-013",
+      "english": "Part-time job",
+      "polish": "Praca na pół etatu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p178-013-word.mp3",
+      "audioSentence": "t1-p178-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p178-014",
+      "english": "Employer",
+      "polish": "Pracodawca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p178-014-word.mp3",
+      "audioSentence": "t1-p178-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p178-015",
+      "english": "Employee",
+      "polish": "Pracownik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p178-015-word.mp3",
+      "audioSentence": "t1-p178-015-sentence.mp3"
     }
   ]
 }

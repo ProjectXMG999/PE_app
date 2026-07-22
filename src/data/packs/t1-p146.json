@@ -1,15 +1,15 @@
 {
   "id": "t1-p146",
-  "name": "Spójniki 2",
-  "volume": "Tom III",
+  "name": "Pogoda",
+  "volume": "Tom II",
   "level": 2,
-  "category": "Spójniki",
-  "chapter": "Rozdział XXI",
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XV",
   "words": [
     {
       "id": "t1-p146-001",
-      "english": "With",
-      "polish": "Z",
+      "english": "Storm",
+      "polish": "Burza",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p146-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p146-002",
-      "english": "Without",
-      "polish": "Bez",
+      "english": "Cloud",
+      "polish": "Chmura",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p146-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p146-003",
-      "english": "Next",
-      "polish": "Następnie",
+      "english": "Climate",
+      "polish": "Klimat",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p146-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p146-004",
-      "english": "First of all",
-      "polish": "Przede wszystkim",
+      "english": "Fog",
+      "polish": "Mgła",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p146-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p146-005",
-      "english": "Firstly",
-      "polish": "Po pierwsze",
+      "english": "Weather forecast",
+      "polish": "Prognoza pogody",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p146-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p146-006",
-      "english": "Secondly",
-      "polish": "Po drugie",
+      "english": "Degree",
+      "polish": "Stopień",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p146-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p146-007",
-      "english": "So far",
-      "polish": "Do teraz",
+      "english": "Sunshine",
+      "polish": "Blask słońca",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p146-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p146-008",
-      "english": "Then",
-      "polish": "Wtedy",
+      "english": "Shade",
+      "polish": "Cień",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p146-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p146-009",
-      "english": "To sum up",
-      "polish": "Podsumowując",
+      "english": "Shadow",
+      "polish": "Cień",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p146-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p146-010",
-      "english": "In general",
-      "polish": "W ogóle",
+      "english": "Thunder",
+      "polish": "Grzmot",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p146-010-word.mp3",
       "audioSentence": "t1-p146-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p146-011",
+      "english": "Frost",
+      "polish": "Mróz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p146-011-word.mp3",
+      "audioSentence": "t1-p146-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p146-012",
+      "english": "Steam",
+      "polish": "Para",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p146-012-word.mp3",
+      "audioSentence": "t1-p146-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p146-013",
+      "english": "Rainbow",
+      "polish": "Tęcza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p146-013-word.mp3",
+      "audioSentence": "t1-p146-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p146-014",
+      "english": "Sunrise",
+      "polish": "Wschód słońca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p146-014-word.mp3",
+      "audioSentence": "t1-p146-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p146-015",
+      "english": "Sunset",
+      "polish": "Zachód słońca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p146-015-word.mp3",
+      "audioSentence": "t1-p146-015-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p255",
-  "name": "Czasowniki 23",
-  "volume": "Tom VI",
-  "level": 4,
-  "category": "Czasowniki",
-  "chapter": "Rozdział LV",
+  "name": "Rewelacja",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Slang",
+  "chapter": "Rozdział XXV",
   "words": [
     {
       "id": "t1-p255-001",
-      "english": "Surrender",
-      "polish": "Poddawać się",
+      "english": "Heavenly",
+      "polish": "Niebiański",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p255-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p255-002",
-      "english": "Accompany",
-      "polish": "Towarzyszyć",
+      "english": "Awe-inspiring",
+      "polish": "Budzący podziw",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p255-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p255-003",
-      "english": "Coddle",
-      "polish": "Hołubić",
+      "english": "Beyond the call",
+      "polish": "Ponad to, co wymagane",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p255-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p255-004",
-      "english": "Devote",
-      "polish": "Poświęcać",
+      "english": "Cracking",
+      "polish": "Doskonały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p255-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p255-005",
-      "english": "Empower",
-      "polish": "Umożliwiać",
+      "english": "Dazzling",
+      "polish": "Olśniewający",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p255-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p255-006",
-      "english": "Encounter",
-      "polish": "Napotkać",
+      "english": "Illustrious",
+      "polish": "Prześwietny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p255-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p255-007",
-      "english": "Favor",
-      "polish": "Faworyzować",
+      "english": "Immense",
+      "polish": "Niezmierny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p255-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p255-008",
-      "english": "Hail",
-      "polish": "Pozdrowić",
+      "english": "Marvelous",
+      "polish": "Cudowny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p255-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p255-009",
-      "english": "Nurse",
-      "polish": "Pielęgnować",
+      "english": "Mind-blowing",
+      "polish": "Nie do pojęcia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p255-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p255-010",
-      "english": "Soothe",
-      "polish": "Uspokajać",
+      "english": "Moving",
+      "polish": "Poruszający",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p255-010-word.mp3",
       "audioSentence": "t1-p255-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p255-011",
-      "english": "Withhold",
-      "polish": "Wstrzymywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p255-011-word.mp3",
-      "audioSentence": "t1-p255-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p255-012",
-      "english": "Defy",
-      "polish": "Przeciwstawiać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p255-012-word.mp3",
-      "audioSentence": "t1-p255-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p255-013",
-      "english": "Dub",
-      "polish": "Nadać przydomek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p255-013-word.mp3",
-      "audioSentence": "t1-p255-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p255-014",
-      "english": "Mimic",
-      "polish": "Naśladować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p255-014-word.mp3",
-      "audioSentence": "t1-p255-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p255-015",
-      "english": "Succumb",
-      "polish": "Ulec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p255-015-word.mp3",
-      "audioSentence": "t1-p255-015-sentence.mp3"
     }
   ]
 }

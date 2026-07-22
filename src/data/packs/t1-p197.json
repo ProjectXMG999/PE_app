@@ -1,15 +1,15 @@
 {
   "id": "t1-p197",
-  "name": "Kalkulator",
-  "volume": "Tom IV",
-  "level": 3,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XXXVI",
+  "name": "Wulgaryzmy 6",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Slang",
+  "chapter": "Rozdział XX",
   "words": [
     {
       "id": "t1-p197-001",
-      "english": "Add",
-      "polish": "Dodawać",
+      "english": "Arse",
+      "polish": "Dupa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p197-002",
-      "english": "Decrease",
-      "polish": "Zmniejszać",
+      "english": "Dumbass",
+      "polish": "Debil",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p197-003",
-      "english": "Divide",
-      "polish": "Dzielić",
+      "english": "Fucktard",
+      "polish": "Pierdolony debil",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p197-004",
-      "english": "Estimate",
-      "polish": "Szacować",
+      "english": "Prat",
+      "polish": "Debil",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p197-005",
-      "english": "Increase",
-      "polish": "Zwiększać",
+      "english": "Scum",
+      "polish": "Szmaciarz, lump",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p197-006",
-      "english": "Multiply",
-      "polish": "Mnożyć",
+      "english": "Do the dick move",
+      "polish": "Zrobić coś skurwysyńskiego",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p197-007",
-      "english": "Subtract",
-      "polish": "Odejmować",
+      "english": "Assbag",
+      "polish": "Idiota",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p197-008",
-      "english": "Calculate",
-      "polish": "Obliczać",
+      "english": "Shlong",
+      "polish": "Kutanga",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p197-009",
-      "english": "Double",
-      "polish": "Podwajać",
+      "english": "Prick",
+      "polish": "Fiut",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p197-010",
-      "english": "Integrate",
-      "polish": "Całkować",
+      "english": "Weenie",
+      "polish": "Fiutek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p197-010-word.mp3",
       "audioSentence": "t1-p197-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-011",
-      "english": "Split",
-      "polish": "Dzielić się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-011-word.mp3",
-      "audioSentence": "t1-p197-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-012",
-      "english": "Triple",
-      "polish": "Potrajać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-012-word.mp3",
-      "audioSentence": "t1-p197-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-013",
-      "english": "Differentiate",
-      "polish": "Różniczkować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-013-word.mp3",
-      "audioSentence": "t1-p197-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-014",
-      "english": "Overestimate",
-      "polish": "Przeszacować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-014-word.mp3",
-      "audioSentence": "t1-p197-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p197-015",
-      "english": "Underestimate",
-      "polish": "Nie doszacować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p197-015-word.mp3",
-      "audioSentence": "t1-p197-015-sentence.mp3"
     }
   ]
 }

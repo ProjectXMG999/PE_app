@@ -1,15 +1,15 @@
 {
   "id": "t1-p196",
-  "name": "Majsterkowanie",
-  "volume": "Tom IV",
-  "level": 3,
+  "name": "Unikać",
+  "volume": "Tom II",
+  "level": 2,
   "category": "Rzeczowniki",
-  "chapter": "Rozdział XXXV",
+  "chapter": "Rozdział XX",
   "words": [
     {
       "id": "t1-p196-001",
-      "english": "Repair",
-      "polish": "Naprawa",
+      "english": "Anger",
+      "polish": "Gniew",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p196-002",
-      "english": "Renovation",
-      "polish": "Remont",
+      "english": "Narcotics",
+      "polish": "Narkotyki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p196-003",
-      "english": "Rope",
-      "polish": "Lina",
+      "english": "Lie",
+      "polish": "Kłamstwo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p196-004",
-      "english": "Flashlight",
-      "polish": "Latarka",
+      "english": "Trouble",
+      "polish": "Kłopot",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p196-005",
-      "english": "Hammer",
-      "polish": "Młotek",
+      "english": "Tear",
+      "polish": "Łza",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p196-006",
-      "english": "Tool",
-      "polish": "Narzędzie",
+      "english": "Hate",
+      "polish": "Nienawiść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p196-007",
-      "english": "Tape",
-      "polish": "Taśma",
+      "english": "Bad luck",
+      "polish": "Pech",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p196-008",
-      "english": "Ladder",
-      "polish": "Drabina",
+      "english": "Cry",
+      "polish": "Płacz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p196-009",
-      "english": "Saw",
-      "polish": "Piła",
+      "english": "Sorrow",
+      "polish": "Zasmucenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p196-010",
-      "english": "Screw",
-      "polish": "Śruba",
+      "english": "Fear",
+      "polish": "Strach",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p196-011",
-      "english": "Screwdriver",
-      "polish": "Śrubokręt",
+      "english": "Shock",
+      "polish": "Szok",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p196-012",
-      "english": "Do-it-yourself",
-      "polish": "Majsterkowanie",
+      "english": "Fault",
+      "polish": "Wina",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p196-013",
-      "english": "Toolbox",
-      "polish": "Skrzynka na narzędzia",
+      "english": "Burnout",
+      "polish": "Wypalenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p196-014",
-      "english": "Workshop",
-      "polish": "Warsztat",
+      "english": "Aggression",
+      "polish": "Agresja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-014-word.mp3",
@@ -134,282 +134,12 @@
     },
     {
       "id": "t1-p196-015",
-      "english": "Hook",
-      "polish": "Hak",
+      "english": "Suffering",
+      "polish": "Cierpienie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p196-015-word.mp3",
       "audioSentence": "t1-p196-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-016",
-      "english": "Cord",
-      "polish": "Sznur",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-016-word.mp3",
-      "audioSentence": "t1-p196-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-017",
-      "english": "String",
-      "polish": "Sznurek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-017-word.mp3",
-      "audioSentence": "t1-p196-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-018",
-      "english": "Plank",
-      "polish": "Deska",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-018-word.mp3",
-      "audioSentence": "t1-p196-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-019",
-      "english": "Pocket knife",
-      "polish": "Scyzoryk",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-019-word.mp3",
-      "audioSentence": "t1-p196-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-020",
-      "english": "Nut",
-      "polish": "Nakrętka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-020-word.mp3",
-      "audioSentence": "t1-p196-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-021",
-      "english": "Bolt",
-      "polish": "Śruba",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-021-word.mp3",
-      "audioSentence": "t1-p196-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-022",
-      "english": "Lever",
-      "polish": "Dźwignia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-022-word.mp3",
-      "audioSentence": "t1-p196-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-023",
-      "english": "Adhesive tape",
-      "polish": "Taśma klejąca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-023-word.mp3",
-      "audioSentence": "t1-p196-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-024",
-      "english": "Drill",
-      "polish": "Wiertarka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-024-word.mp3",
-      "audioSentence": "t1-p196-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-025",
-      "english": "Drill bits",
-      "polish": "Wiertła",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-025-word.mp3",
-      "audioSentence": "t1-p196-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-026",
-      "english": "Adjustment",
-      "polish": "Korekta",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-026-word.mp3",
-      "audioSentence": "t1-p196-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-027",
-      "english": "Vice",
-      "polish": "Imadło",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-027-word.mp3",
-      "audioSentence": "t1-p196-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-028",
-      "english": "Jack",
-      "polish": "Lewarek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-028-word.mp3",
-      "audioSentence": "t1-p196-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-029",
-      "english": "Wrench",
-      "polish": "Klucz francuski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-029-word.mp3",
-      "audioSentence": "t1-p196-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-030",
-      "english": "Combination pliers",
-      "polish": "Kombinerki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-030-word.mp3",
-      "audioSentence": "t1-p196-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-031",
-      "english": "Pincers",
-      "polish": "Obcęgi",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-031-word.mp3",
-      "audioSentence": "t1-p196-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-032",
-      "english": "Tiles",
-      "polish": "Płytki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-032-word.mp3",
-      "audioSentence": "t1-p196-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-033",
-      "english": "Spirit level",
-      "polish": "Poziomica",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-033-word.mp3",
-      "audioSentence": "t1-p196-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-034",
-      "english": "Pliers",
-      "polish": "Szczypce",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-034-word.mp3",
-      "audioSentence": "t1-p196-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-035",
-      "english": "Brush",
-      "polish": "Pędzel",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-035-word.mp3",
-      "audioSentence": "t1-p196-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-036",
-      "english": "Overhaul",
-      "polish": "Remont kapitalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-036-word.mp3",
-      "audioSentence": "t1-p196-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-037",
-      "english": "Box cutter",
-      "polish": "Nożyk tapicerski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-037-word.mp3",
-      "audioSentence": "t1-p196-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-038",
-      "english": "Chisel",
-      "polish": "Dłuto",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-038-word.mp3",
-      "audioSentence": "t1-p196-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-039",
-      "english": "Sandpaper",
-      "polish": "Papier ścierny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-039-word.mp3",
-      "audioSentence": "t1-p196-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-040",
-      "english": "Extension",
-      "polish": "Przedłużenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-040-word.mp3",
-      "audioSentence": "t1-p196-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-041",
-      "english": "Shortening",
-      "polish": "Skrócenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-041-word.mp3",
-      "audioSentence": "t1-p196-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-042",
-      "english": "Paint roller",
-      "polish": "Wałek malarski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-042-word.mp3",
-      "audioSentence": "t1-p196-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-043",
-      "english": "Tape measure",
-      "polish": "Miarka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-043-word.mp3",
-      "audioSentence": "t1-p196-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-044",
-      "english": "Allen key",
-      "polish": "Klucz imbusowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-044-word.mp3",
-      "audioSentence": "t1-p196-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p196-045",
-      "english": "Tongue-and-groove pliers",
-      "polish": "Żabka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p196-045-word.mp3",
-      "audioSentence": "t1-p196-045-sentence.mp3"
     }
   ]
 }

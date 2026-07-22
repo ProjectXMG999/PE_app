@@ -1,15 +1,15 @@
 {
   "id": "t1-p117",
-  "name": "Gadka",
+  "name": "Slang 5",
   "volume": "Tom II",
   "level": 2,
-  "category": "Maleństwa",
-  "chapter": "Rozdział XVI",
+  "category": "Slang",
+  "chapter": "Rozdział XII",
   "words": [
     {
       "id": "t1-p117-001",
-      "english": "As",
-      "polish": "Jako",
+      "english": "Big guy",
+      "polish": "Chłopie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p117-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p117-002",
-      "english": "Too",
-      "polish": "Też",
+      "english": "Freeze!",
+      "polish": "Stój!",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p117-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p117-003",
-      "english": "By",
-      "polish": "Przez",
+      "english": "Holy smokes",
+      "polish": "Cholera jasna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p117-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p117-004",
-      "english": "So",
-      "polish": "Taki",
+      "english": "No cap",
+      "polish": "Bez jaj",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p117-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p117-005",
-      "english": "Such",
-      "polish": "Taki",
+      "english": "Not in my book",
+      "polish": "Nie według moich zasad",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p117-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p117-006",
-      "english": "Nor",
-      "polish": "Też nie",
+      "english": "On your six",
+      "polish": "Za tobą",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p117-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p117-007",
-      "english": "Yet",
-      "polish": "Jeszcze",
+      "english": "Period",
+      "polish": "I kropka – totalnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p117-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p117-008",
-      "english": "Of",
-      "polish": "Z",
+      "english": "Trill",
+      "polish": "Mega prawdziwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p117-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p117-009",
-      "english": "Too",
-      "polish": "Zbyt",
+      "english": "What's poppin",
+      "polish": "Co jest grane?",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p117-009-word.mp3",
@@ -89,102 +89,12 @@
     },
     {
       "id": "t1-p117-010",
-      "english": "Few",
-      "polish": "Mało",
+      "english": "Later",
+      "polish": "Pożegnanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p117-010-word.mp3",
       "audioSentence": "t1-p117-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p117-011",
-      "english": "Anyway",
-      "polish": "Tak czy inaczej",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p117-011-word.mp3",
-      "audioSentence": "t1-p117-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p117-012",
-      "english": "Whatever",
-      "polish": "Cokolwiek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p117-012-word.mp3",
-      "audioSentence": "t1-p117-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p117-013",
-      "english": "Whenever",
-      "polish": "Kiedykolwiek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p117-013-word.mp3",
-      "audioSentence": "t1-p117-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p117-014",
-      "english": "Whether",
-      "polish": "Czy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p117-014-word.mp3",
-      "audioSentence": "t1-p117-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p117-015",
-      "english": "Somehow",
-      "polish": "Jakoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p117-015-word.mp3",
-      "audioSentence": "t1-p117-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p117-016",
-      "english": "Anyhoo",
-      "polish": "Bądź co bądź",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p117-016-word.mp3",
-      "audioSentence": "t1-p117-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p117-017",
-      "english": "Anyhow",
-      "polish": "I tak I tak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p117-017-word.mp3",
-      "audioSentence": "t1-p117-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p117-018",
-      "english": "Anyways",
-      "polish": "Tak czy owak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p117-018-word.mp3",
-      "audioSentence": "t1-p117-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p117-019",
-      "english": "Perhaps",
-      "polish": "Być może",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p117-019-word.mp3",
-      "audioSentence": "t1-p117-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p117-020",
-      "english": "Whatsoever",
-      "polish": "Cokolwiek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p117-020-word.mp3",
-      "audioSentence": "t1-p117-020-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p045",
-  "name": "Szkoła",
+  "name": "Wyższa matematyka",
   "volume": "Tom I",
   "level": 1,
-  "category": "Rzeczowniki",
+  "category": "Liczby",
   "chapter": "Rozdział V",
   "words": [
     {
       "id": "t1-p045-001",
-      "english": "Mistake",
-      "polish": "Błąd",
+      "english": "Twenty",
+      "polish": "Dwadzieścia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p045-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p045-002",
-      "english": "Pen",
-      "polish": "Długopis",
+      "english": "Twenty-one",
+      "polish": "Dwadzieścia jeden",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p045-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p045-003",
-      "english": "Exam",
-      "polish": "Egzamin",
+      "english": "Twenty-two",
+      "polish": "Dwadzieścia dwa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p045-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p045-004",
-      "english": "Lesson",
-      "polish": "Lekcja",
+      "english": "Twenty-three",
+      "polish": "Dwadzieścia trzy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p045-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p045-005",
-      "english": "Pencil",
-      "polish": "Ołówek",
+      "english": "Thirty",
+      "polish": "Trzydzieści",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p045-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p045-006",
-      "english": "Homework",
-      "polish": "Praca domowa",
+      "english": "Forty",
+      "polish": "Czterdzieści",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p045-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p045-007",
-      "english": "Topic",
-      "polish": "Temat",
+      "english": "Fifty",
+      "polish": "Pięćdziesiąt",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p045-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p045-008",
-      "english": "Test",
-      "polish": "Test",
+      "english": "Sixty",
+      "polish": "Sześćdziesiąt",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p045-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p045-009",
-      "english": "Student",
-      "polish": "Uczeń",
+      "english": "Seventy",
+      "polish": "Siedemdziesiąt",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p045-009-word.mp3",
@@ -89,687 +89,12 @@
     },
     {
       "id": "t1-p045-010",
-      "english": "Notebook",
-      "polish": "Zeszyt",
+      "english": "Eighty",
+      "polish": "Osiemdziesiąt",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p045-010-word.mp3",
       "audioSentence": "t1-p045-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-011",
-      "english": "Academy",
-      "polish": "Akademia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-011-word.mp3",
-      "audioSentence": "t1-p045-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-012",
-      "english": "Biology",
-      "polish": "Biologia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-012-word.mp3",
-      "audioSentence": "t1-p045-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-013",
-      "english": "Bell",
-      "polish": "Dzwonek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-013-word.mp3",
-      "audioSentence": "t1-p045-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-014",
-      "english": "Behavior",
-      "polish": "Zachowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-014-word.mp3",
-      "audioSentence": "t1-p045-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-015",
-      "english": "Discussion",
-      "polish": "Dyskusja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-015-word.mp3",
-      "audioSentence": "t1-p045-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-016",
-      "english": "History",
-      "polish": "Historia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-016-word.mp3",
-      "audioSentence": "t1-p045-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-017",
-      "english": "Institute",
-      "polish": "Instytut",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-017-word.mp3",
-      "audioSentence": "t1-p045-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-018",
-      "english": "Class",
-      "polish": "Klasa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-018-word.mp3",
-      "audioSentence": "t1-p045-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-019",
-      "english": "Schoolmate",
-      "polish": "Kolega szkolny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-019-word.mp3",
-      "audioSentence": "t1-p045-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-020",
-      "english": "Classmate",
-      "polish": "Kolega z klasy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-020-word.mp3",
-      "audioSentence": "t1-p045-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-021",
-      "english": "Course",
-      "polish": "Kurs",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-021-word.mp3",
-      "audioSentence": "t1-p045-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-022",
-      "english": "High school",
-      "polish": "Liceum",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-022-word.mp3",
-      "audioSentence": "t1-p045-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-023",
-      "english": "Ruler",
-      "polish": "Linijka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-023-word.mp3",
-      "audioSentence": "t1-p045-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-024",
-      "english": "Campus",
-      "polish": "Miasteczko uniwersyteckie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-024-word.mp3",
-      "audioSentence": "t1-p045-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-025",
-      "english": "Note",
-      "polish": "Notatka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-025-word.mp3",
-      "audioSentence": "t1-p045-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-026",
-      "english": "Mark",
-      "polish": "Ocena",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-026-word.mp3",
-      "audioSentence": "t1-p045-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-027",
-      "english": "Handbook",
-      "polish": "Podręcznik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-027-word.mp3",
-      "audioSentence": "t1-p045-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-028",
-      "english": "Kindergarten",
-      "polish": "Przedszkole",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-028-word.mp3",
-      "audioSentence": "t1-p045-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-029",
-      "english": "Break",
-      "polish": "Przerwa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-029-word.mp3",
-      "audioSentence": "t1-p045-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-030",
-      "english": "Classroom",
-      "polish": "Sala lekcyjna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-030-word.mp3",
-      "audioSentence": "t1-p045-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-031",
-      "english": "Elementary school",
-      "polish": "Szkoła podstawowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-031-word.mp3",
-      "audioSentence": "t1-p045-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-032",
-      "english": "Primary school",
-      "polish": "Szkoła podstawowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-032-word.mp3",
-      "audioSentence": "t1-p045-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-033",
-      "english": "College",
-      "polish": "Szkoła policealna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-033-word.mp3",
-      "audioSentence": "t1-p045-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-034",
-      "english": "Board",
-      "polish": "Tablica",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-034-word.mp3",
-      "audioSentence": "t1-p045-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-035",
-      "english": "Subject",
-      "polish": "Temat",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-035-word.mp3",
-      "audioSentence": "t1-p045-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-036",
-      "english": "University",
-      "polish": "Uniwersytet",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-036-word.mp3",
-      "audioSentence": "t1-p045-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-037",
-      "english": "Knowledge",
-      "polish": "Wiedza",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-037-word.mp3",
-      "audioSentence": "t1-p045-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-038",
-      "english": "Education",
-      "polish": "Wykształcenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-038-word.mp3",
-      "audioSentence": "t1-p045-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-039",
-      "english": "Scissors",
-      "polish": "Nożyczki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-039-word.mp3",
-      "audioSentence": "t1-p045-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-040",
-      "english": "Locker",
-      "polish": "Szafka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-040-word.mp3",
-      "audioSentence": "t1-p045-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-041",
-      "english": "Crayons",
-      "polish": "Kredki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-041-word.mp3",
-      "audioSentence": "t1-p045-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-042",
-      "english": "Sticker",
-      "polish": "Naklejka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-042-word.mp3",
-      "audioSentence": "t1-p045-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-043",
-      "english": "Draft",
-      "polish": "Brudnopis",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-043-word.mp3",
-      "audioSentence": "t1-p045-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-044",
-      "english": "Consultation",
-      "polish": "Konsultacje",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-044-word.mp3",
-      "audioSentence": "t1-p045-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-045",
-      "english": "Instruction",
-      "polish": "Polecenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-045-word.mp3",
-      "audioSentence": "t1-p045-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-046",
-      "english": "Master",
-      "polish": "Magister",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-046-word.mp3",
-      "audioSentence": "t1-p045-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-047",
-      "english": "Matura exam",
-      "polish": "Matura",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-047-word.mp3",
-      "audioSentence": "t1-p045-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-048",
-      "english": "Attendance",
-      "polish": "Obecność na czymś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-048-word.mp3",
-      "audioSentence": "t1-p045-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-049",
-      "english": "Institute of technology",
-      "polish": "Politechnika",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-049-word.mp3",
-      "audioSentence": "t1-p045-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-050",
-      "english": "Retake",
-      "polish": "Poprawa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-050-word.mp3",
-      "audioSentence": "t1-p045-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-051",
-      "english": "School subject",
-      "polish": "Przedmiot szkolny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-051-word.mp3",
-      "audioSentence": "t1-p045-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-052",
-      "english": "Semester",
-      "polish": "Semestr",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-052-word.mp3",
-      "audioSentence": "t1-p045-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-053",
-      "english": "Grade",
-      "polish": "Stopień",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-053-word.mp3",
-      "audioSentence": "t1-p045-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-054",
-      "english": "Chalkboard",
-      "polish": "Tablica kredowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-054-word.mp3",
-      "audioSentence": "t1-p045-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-055",
-      "english": "Faculty",
-      "polish": "Wydział",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-055-word.mp3",
-      "audioSentence": "t1-p045-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-056",
-      "english": "Lecture",
-      "polish": "Wykład",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-056-word.mp3",
-      "audioSentence": "t1-p045-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-057",
-      "english": "Essay",
-      "polish": "Wypracowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-057-word.mp3",
-      "audioSentence": "t1-p045-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-058",
-      "english": "Guideline",
-      "polish": "Wytyczna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-058-word.mp3",
-      "audioSentence": "t1-p045-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-059",
-      "english": "Graduate",
-      "polish": "Absolwent",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-059-word.mp3",
-      "audioSentence": "t1-p045-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-060",
-      "english": "Dorm",
-      "polish": "Akademik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-060-word.mp3",
-      "audioSentence": "t1-p045-060-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-061",
-      "english": "Doctorate",
-      "polish": "Doktorat",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-061-word.mp3",
-      "audioSentence": "t1-p045-061-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-062",
-      "english": "Diploma",
-      "polish": "Dyplom",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-062-word.mp3",
-      "audioSentence": "t1-p045-062-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-063",
-      "english": "Chalk",
-      "polish": "Kreda",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-063-word.mp3",
-      "audioSentence": "t1-p045-063-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-064",
-      "english": "Bachelor",
-      "polish": "Licencjat",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-064-word.mp3",
-      "audioSentence": "t1-p045-064-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-065",
-      "english": "Scholarship",
-      "polish": "Stypendium",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-065-word.mp3",
-      "audioSentence": "t1-p045-065-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-066",
-      "english": "Crossword",
-      "polish": "Krzyżówka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-066-word.mp3",
-      "audioSentence": "t1-p045-066-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-067",
-      "english": "Puzzle",
-      "polish": "Zagadka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-067-word.mp3",
-      "audioSentence": "t1-p045-067-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-068",
-      "english": "Eraser",
-      "polish": "Gumka do ścierania",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-068-word.mp3",
-      "audioSentence": "t1-p045-068-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-069",
-      "english": "Peer",
-      "polish": "Rówieśnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-069-word.mp3",
-      "audioSentence": "t1-p045-069-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-070",
-      "english": "Mentor",
-      "polish": "Mentor",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-070-word.mp3",
-      "audioSentence": "t1-p045-070-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-071",
-      "english": "Compass",
-      "polish": "Cyrkiel",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-071-word.mp3",
-      "audioSentence": "t1-p045-071-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-072",
-      "english": "Set square",
-      "polish": "Ekierka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-072-word.mp3",
-      "audioSentence": "t1-p045-072-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-073",
-      "english": "Interpretation",
-      "polish": "Interpretacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-073-word.mp3",
-      "audioSentence": "t1-p045-073-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-074",
-      "english": "Protractor",
-      "polish": "Kątomierz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-074-word.mp3",
-      "audioSentence": "t1-p045-074-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-075",
-      "english": "Pencil case",
-      "polish": "Piórnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-075-word.mp3",
-      "audioSentence": "t1-p045-075-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-076",
-      "english": "Ballpoint pen",
-      "polish": "Pióro kulkowe",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-076-word.mp3",
-      "audioSentence": "t1-p045-076-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-077",
-      "english": "Fountain pen",
-      "polish": "Pióro wieczne",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-077-word.mp3",
-      "audioSentence": "t1-p045-077-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-078",
-      "english": "School equipment",
-      "polish": "Przybory szkolne",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-078-word.mp3",
-      "audioSentence": "t1-p045-078-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-079",
-      "english": "Provost",
-      "polish": "Rektor uniwersytecki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-079-word.mp3",
-      "audioSentence": "t1-p045-079-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-080",
-      "english": "Sharpener",
-      "polish": "Temperówka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-080-word.mp3",
-      "audioSentence": "t1-p045-080-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-081",
-      "english": "Intelligence test",
-      "polish": "Test na inteligencję",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-081-word.mp3",
-      "audioSentence": "t1-p045-081-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-082",
-      "english": "Dean",
-      "polish": "Dziekan",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-082-word.mp3",
-      "audioSentence": "t1-p045-082-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-083",
-      "english": "Psychology",
-      "polish": "Psychologia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-083-word.mp3",
-      "audioSentence": "t1-p045-083-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-084",
-      "english": "Peer group",
-      "polish": "Grupa rówieśnicza",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-084-word.mp3",
-      "audioSentence": "t1-p045-084-sentence.mp3"
-    },
-    {
-      "id": "t1-p045-085",
-      "english": "Curriculum",
-      "polish": "Program nauczania",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p045-085-word.mp3",
-      "audioSentence": "t1-p045-085-sentence.mp3"
     }
   ]
 }

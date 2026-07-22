@@ -1,100 +1,19 @@
 {
   "id": "t1-p308",
-  "name": "Slang 35",
-  "volume": "Tom VIII",
-  "level": 4,
-  "category": "Slang",
-  "chapter": "Rozdział LXXVIII",
+  "name": "Slang 16",
+  "volume": "Tom IV",
+  "level": 3,
+  "category": "Czasowniki",
+  "chapter": "Rozdział XXXI",
   "words": [
     {
       "id": "t1-p308-001",
-      "english": "Swipe left",
-      "polish": "Olać to",
+      "english": "Heat up",
+      "polish": "Napalić się na coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p308-001-word.mp3",
       "audioSentence": "t1-p308-001-sentence.mp3"
-    },
-    {
-      "id": "t1-p308-002",
-      "english": "That's what she said",
-      "polish": "Twoja laska powiedziała wczoraj to samo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p308-002-word.mp3",
-      "audioSentence": "t1-p308-002-sentence.mp3"
-    },
-    {
-      "id": "t1-p308-003",
-      "english": "Whatshisface",
-      "polish": "Ten jak mu tam",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p308-003-word.mp3",
-      "audioSentence": "t1-p308-003-sentence.mp3"
-    },
-    {
-      "id": "t1-p308-004",
-      "english": "Sus",
-      "polish": "Podejrzane",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p308-004-word.mp3",
-      "audioSentence": "t1-p308-004-sentence.mp3"
-    },
-    {
-      "id": "t1-p308-005",
-      "english": "Black flag",
-      "polish": "Koniec z tym",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p308-005-word.mp3",
-      "audioSentence": "t1-p308-005-sentence.mp3"
-    },
-    {
-      "id": "t1-p308-006",
-      "english": "Five-o",
-      "polish": "Policja idzie!",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p308-006-word.mp3",
-      "audioSentence": "t1-p308-006-sentence.mp3"
-    },
-    {
-      "id": "t1-p308-007",
-      "english": "Your mom",
-      "polish": "Twoja stara",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p308-007-word.mp3",
-      "audioSentence": "t1-p308-007-sentence.mp3"
-    },
-    {
-      "id": "t1-p308-008",
-      "english": "Rain on one's parade",
-      "polish": "Zgasić kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p308-008-word.mp3",
-      "audioSentence": "t1-p308-008-sentence.mp3"
-    },
-    {
-      "id": "t1-p308-009",
-      "english": "That's bull",
-      "polish": "Chrzanienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p308-009-word.mp3",
-      "audioSentence": "t1-p308-009-sentence.mp3"
-    },
-    {
-      "id": "t1-p308-010",
-      "english": "Scram",
-      "polish": "Spadaj",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p308-010-word.mp3",
-      "audioSentence": "t1-p308-010-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p307",
-  "name": "Światło",
-  "volume": "Tom VIII",
-  "level": 4,
-  "category": "Phrasale",
-  "chapter": "Rozdział LXXVIII",
+  "name": "Ilość",
+  "volume": "Tom IV",
+  "level": 3,
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XXXI",
   "words": [
     {
       "id": "t1-p307-001",
-      "english": "Light up",
-      "polish": "Oświetlać coś",
+      "english": "Total",
+      "polish": "Całkowity",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p307-002",
-      "english": "Clear up",
-      "polish": "Przejaśniać się",
+      "english": "Extra",
+      "polish": "Ekstra",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p307-003",
-      "english": "Turn down",
-      "polish": "Przygaszać",
+      "english": "Moderate",
+      "polish": "Umiarkowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p307-004",
-      "english": "Put out sth",
-      "polish": "Zgasić coś",
+      "english": "Whole",
+      "polish": "Cały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p307-005",
-      "english": "Go out",
-      "polish": "Zgasnąć",
+      "english": "Numerous",
+      "polish": "Liczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p307-006",
-      "english": "Go up",
-      "polish": "Rozjaśniać się",
+      "english": "Maximal",
+      "polish": "Maksymalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p307-007",
-      "english": "Let out",
-      "polish": "Wydawać",
+      "english": "Minimal",
+      "polish": "Minimalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p307-008",
-      "english": "Burn out",
-      "polish": "Wypalać się",
+      "english": "Plural",
+      "polish": "Mnogi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p307-009",
-      "english": "Block sth out",
-      "polish": "Zablokować",
+      "english": "Singular",
+      "polish": "Pojedynczy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p307-010",
-      "english": "Flare up",
-      "polish": "Rozbłysnąć",
+      "english": "Entire",
+      "polish": "Cały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-010-word.mp3",
       "audioSentence": "t1-p307-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p307-011",
+      "english": "Decreasing",
+      "polish": "Malejący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p307-011-word.mp3",
+      "audioSentence": "t1-p307-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p307-012",
+      "english": "Countless",
+      "polish": "Niezliczony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p307-012-word.mp3",
+      "audioSentence": "t1-p307-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p307-013",
+      "english": "Countable",
+      "polish": "Policzalny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p307-013-word.mp3",
+      "audioSentence": "t1-p307-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p307-014",
+      "english": "Multiple",
+      "polish": "Wielokrotny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p307-014-word.mp3",
+      "audioSentence": "t1-p307-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p307-015",
+      "english": "Increasing",
+      "polish": "Wzrastający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p307-015-word.mp3",
+      "audioSentence": "t1-p307-015-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p190",
-  "name": "Przymiotniki 13",
-  "volume": "Tom IV",
-  "level": 3,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział XXXIII",
+  "name": "Przemieszczanie się",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Phrasale",
+  "chapter": "Rozdział XIX",
   "words": [
     {
       "id": "t1-p190-001",
-      "english": "Fashionable",
-      "polish": "Modny",
+      "english": "Get back",
+      "polish": "Wrócić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p190-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p190-002",
-      "english": "Funky",
-      "polish": "Odjechany",
+      "english": "Go for sth",
+      "polish": "Iść po coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p190-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p190-003",
-      "english": "Gorgeous",
-      "polish": "Przepiękny, cudny",
+      "english": "Go in",
+      "polish": "Wejść do",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p190-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p190-004",
-      "english": "Dark-haired",
-      "polish": "Ciemnowłosy",
+      "english": "Go out",
+      "polish": "Wyjść na zewnątrz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p190-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p190-005",
-      "english": "Well-dressed",
-      "polish": "Dobrze ubrany",
+      "english": "Walk into",
+      "polish": "Wchodzić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p190-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p190-006",
-      "english": "Well-trained",
-      "polish": "Dobrze wyszkolony",
+      "english": "Come down",
+      "polish": "Zejść na dół",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p190-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p190-007",
-      "english": "Wavy",
-      "polish": "Falowane",
+      "english": "Come up",
+      "polish": "Podejść bliżej",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p190-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p190-008",
-      "english": "Aging",
-      "polish": "Podstarzały",
+      "english": "Drop by",
+      "polish": "Zahaczyć gdzieś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p190-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p190-009",
-      "english": "Intriguing",
-      "polish": "Intrygujący",
+      "english": "Drop in",
+      "polish": "Wpaść gdzieś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p190-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p190-010",
-      "english": "Elderly",
-      "polish": "Leciwy",
+      "english": "Get out",
+      "polish": "Wyjść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p190-010-word.mp3",
       "audioSentence": "t1-p190-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p190-011",
-      "english": "Chubby",
-      "polish": "Pyzaty",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p190-011-word.mp3",
-      "audioSentence": "t1-p190-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p190-012",
-      "english": "Slender",
-      "polish": "Smukły",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p190-012-word.mp3",
-      "audioSentence": "t1-p190-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p190-013",
-      "english": "Bold",
-      "polish": "Śmiały",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p190-013-word.mp3",
-      "audioSentence": "t1-p190-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p190-014",
-      "english": "Sensual",
-      "polish": "Zmysłowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p190-014-word.mp3",
-      "audioSentence": "t1-p190-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p190-015",
-      "english": "Wooden",
-      "polish": "Drewniany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p190-015-word.mp3",
-      "audioSentence": "t1-p190-015-sentence.mp3"
     }
   ]
 }

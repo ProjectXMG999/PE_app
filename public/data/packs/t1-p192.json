@@ -1,15 +1,15 @@
 {
   "id": "t1-p192",
-  "name": "Ruch abstrakcyjny",
-  "volume": "Tom IV",
-  "level": 3,
-  "category": "Phrasale",
-  "chapter": "Rozdział XXXIV",
+  "name": "Książki I pisownia",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XIX",
   "words": [
     {
       "id": "t1-p192-001",
-      "english": "Be in",
-      "polish": "Wchodzić w coś",
+      "english": "Verb",
+      "polish": "Czasownik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p192-002",
-      "english": "Give up",
-      "polish": "Przestać coś robić",
+      "english": "Grammar",
+      "polish": "Gramatyka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p192-003",
-      "english": "Be left over",
-      "polish": "Pozostać",
+      "english": "Story",
+      "polish": "Historia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p192-004",
-      "english": "Get in",
-      "polish": "Dostać się",
+      "english": "Description",
+      "polish": "Opis",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p192-005",
-      "english": "Get over",
-      "polish": "Dochodzić do siebie",
+      "english": "Adjective",
+      "polish": "Przymiotnik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p192-006",
-      "english": "Give way",
-      "polish": "Ustępować",
+      "english": "Adverb",
+      "polish": "Przysłówek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p192-007",
-      "english": "Get into sth",
-      "polish": "Dostać się do środka czegoś",
+      "english": "Chapter",
+      "polish": "Rozdział",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p192-008",
-      "english": "Get into",
-      "polish": "Zaangażować się",
+      "english": "Noun",
+      "polish": "Rzeczownik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p192-009",
-      "english": "Get into sth",
-      "polish": "Wplątać się",
+      "english": "Vocabulary",
+      "polish": "Słownictwo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p192-010",
-      "english": "Stick with",
-      "polish": "Trzymać się",
+      "english": "Dictionary",
+      "polish": "Słownik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p192-011",
-      "english": "Give sth back",
-      "polish": "Przywrócić coś",
+      "english": "Page",
+      "polish": "Strona",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p192-012",
-      "english": "Go through",
-      "polish": "Przejść przez coś",
+      "english": "Translation",
+      "polish": "Tłumaczenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p192-013",
-      "english": "Keep away",
-      "polish": "Trzymać się z daleka od",
+      "english": "Title",
+      "polish": "Tytuł",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p192-014",
-      "english": "Show up",
-      "polish": "Pojawić się",
+      "english": "Publication",
+      "polish": "Publikacja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-014-word.mp3",
@@ -134,597 +134,12 @@
     },
     {
       "id": "t1-p192-015",
-      "english": "Leave behind",
-      "polish": "Zostawić",
+      "english": "Encyclopedia",
+      "polish": "Encyklopedia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p192-015-word.mp3",
       "audioSentence": "t1-p192-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-016",
-      "english": "Let out",
-      "polish": "Wypuszczać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-016-word.mp3",
-      "audioSentence": "t1-p192-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-017",
-      "english": "Turn up",
-      "polish": "Zjawić się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-017-word.mp3",
-      "audioSentence": "t1-p192-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-018",
-      "english": "Stick to sth",
-      "polish": "Poprzestawać na czymś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-018-word.mp3",
-      "audioSentence": "t1-p192-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-019",
-      "english": "Come out",
-      "polish": "Ukazać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-019-word.mp3",
-      "audioSentence": "t1-p192-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-020",
-      "english": "Keep off",
-      "polish": "Trzymać się z dala",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-020-word.mp3",
-      "audioSentence": "t1-p192-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-021",
-      "english": "Keep up with",
-      "polish": "Nadążać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-021-word.mp3",
-      "audioSentence": "t1-p192-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-022",
-      "english": "Lead up to",
-      "polish": "Prowadzić do",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-022-word.mp3",
-      "audioSentence": "t1-p192-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-023",
-      "english": "Stay off",
-      "polish": "Unikać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-023-word.mp3",
-      "audioSentence": "t1-p192-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-024",
-      "english": "Put aside",
-      "polish": "Odkładać na bok",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-024-word.mp3",
-      "audioSentence": "t1-p192-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-025",
-      "english": "Come out",
-      "polish": "Wychodzić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-025-word.mp3",
-      "audioSentence": "t1-p192-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-026",
-      "english": "Come up",
-      "polish": "Nadarzyć się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-026-word.mp3",
-      "audioSentence": "t1-p192-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-027",
-      "english": "Point to",
-      "polish": "Wskazywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-027-word.mp3",
-      "audioSentence": "t1-p192-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-028",
-      "english": "Come up",
-      "polish": "Wypaść",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-028-word.mp3",
-      "audioSentence": "t1-p192-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-029",
-      "english": "Go under",
-      "polish": "Iść pod (pasować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-029-word.mp3",
-      "audioSentence": "t1-p192-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-030",
-      "english": "Block sth off",
-      "polish": "Zastawiać coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-030-word.mp3",
-      "audioSentence": "t1-p192-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-031",
-      "english": "Come up",
-      "polish": "Wzejść",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-031-word.mp3",
-      "audioSentence": "t1-p192-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-032",
-      "english": "Cover up",
-      "polish": "Ukryć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-032-word.mp3",
-      "audioSentence": "t1-p192-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-033",
-      "english": "Lock sb up",
-      "polish": "Wsadzić kogoś do więzienia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-033-word.mp3",
-      "audioSentence": "t1-p192-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-034",
-      "english": "Step up",
-      "polish": "Przyspieszać coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-034-word.mp3",
-      "audioSentence": "t1-p192-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-035",
-      "english": "Take sth away",
-      "polish": "Zabierać coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-035-word.mp3",
-      "audioSentence": "t1-p192-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-036",
-      "english": "Base sth on",
-      "polish": "Opierać coś na",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-036-word.mp3",
-      "audioSentence": "t1-p192-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-037",
-      "english": "Take up",
-      "polish": "Podejmować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-037-word.mp3",
-      "audioSentence": "t1-p192-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-038",
-      "english": "Turn away from",
-      "polish": "Odwrócić się od",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-038-word.mp3",
-      "audioSentence": "t1-p192-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-039",
-      "english": "Come across",
-      "polish": "Natknąć się na coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-039-word.mp3",
-      "audioSentence": "t1-p192-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-040",
-      "english": "Come down to",
-      "polish": "Sprowadzać się do",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-040-word.mp3",
-      "audioSentence": "t1-p192-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-041",
-      "english": "Come up",
-      "polish": "Wypływać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-041-word.mp3",
-      "audioSentence": "t1-p192-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-042",
-      "english": "Get away with",
-      "polish": "Uniknąć kary",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-042-word.mp3",
-      "audioSentence": "t1-p192-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-043",
-      "english": "Get through sth",
-      "polish": "Przebrnąć przez coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-043-word.mp3",
-      "audioSentence": "t1-p192-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-044",
-      "english": "Go against",
-      "polish": "Postępować wbrew czemuś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-044-word.mp3",
-      "audioSentence": "t1-p192-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-045",
-      "english": "Go around",
-      "polish": "Krążyć po czymś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-045-word.mp3",
-      "audioSentence": "t1-p192-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-046",
-      "english": "Go around",
-      "polish": "Rozprzestrzeniać się po czymś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-046-word.mp3",
-      "audioSentence": "t1-p192-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-047",
-      "english": "Go into",
-      "polish": "Pójść w coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-047-word.mp3",
-      "audioSentence": "t1-p192-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-048",
-      "english": "Come across as",
-      "polish": "Uchodzić za kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-048-word.mp3",
-      "audioSentence": "t1-p192-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-049",
-      "english": "Go without",
-      "polish": "Obejść się bez czegoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-049-word.mp3",
-      "audioSentence": "t1-p192-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-050",
-      "english": "Move on to sth",
-      "polish": "Przejść do czegoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-050-word.mp3",
-      "audioSentence": "t1-p192-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-051",
-      "english": "Move in",
-      "polish": "Wkraczać do akcji",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-051-word.mp3",
-      "audioSentence": "t1-p192-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-052",
-      "english": "Go off",
-      "polish": "Odstawić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-052-word.mp3",
-      "audioSentence": "t1-p192-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-053",
-      "english": "Get into sb",
-      "polish": "Wstępować w kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-053-word.mp3",
-      "audioSentence": "t1-p192-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-054",
-      "english": "Hold sth back",
-      "polish": "Powstrzymywać coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-054-word.mp3",
-      "audioSentence": "t1-p192-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-055",
-      "english": "Keep off",
-      "polish": "Wstrzymać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-055-word.mp3",
-      "audioSentence": "t1-p192-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-056",
-      "english": "Tie in with",
-      "polish": "Pokrywać się z czymś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-056-word.mp3",
-      "audioSentence": "t1-p192-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-057",
-      "english": "Fish for sth",
-      "polish": "Poszukiwać czegoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-057-word.mp3",
-      "audioSentence": "t1-p192-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-058",
-      "english": "Blend in",
-      "polish": "Wtapiać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-058-word.mp3",
-      "audioSentence": "t1-p192-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-059",
-      "english": "Bounce back",
-      "polish": "Wrócić do formy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-059-word.mp3",
-      "audioSentence": "t1-p192-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-060",
-      "english": "Break out",
-      "polish": "Wyrwać się, wyzwolić się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-060-word.mp3",
-      "audioSentence": "t1-p192-060-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-061",
-      "english": "Come forward",
-      "polish": "Przyznać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-061-word.mp3",
-      "audioSentence": "t1-p192-061-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-062",
-      "english": "Come over sb",
-      "polish": "Ogarniać kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-062-word.mp3",
-      "audioSentence": "t1-p192-062-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-063",
-      "english": "Come through",
-      "polish": "Dojść do skutku",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-063-word.mp3",
-      "audioSentence": "t1-p192-063-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-064",
-      "english": "Come through",
-      "polish": "Nadchodzić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-064-word.mp3",
-      "audioSentence": "t1-p192-064-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-065",
-      "english": "Go along with",
-      "polish": "Przystać na coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-065-word.mp3",
-      "audioSentence": "t1-p192-065-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-066",
-      "english": "Go beyond",
-      "polish": "Wykraczać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-066-word.mp3",
-      "audioSentence": "t1-p192-066-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-067",
-      "english": "Leave out",
-      "polish": "Opuszczać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-067-word.mp3",
-      "audioSentence": "t1-p192-067-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-068",
-      "english": "Take over",
-      "polish": "Zdobywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-068-word.mp3",
-      "audioSentence": "t1-p192-068-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-069",
-      "english": "Pick up",
-      "polish": "Złapać coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-069-word.mp3",
-      "audioSentence": "t1-p192-069-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-070",
-      "english": "Resort to",
-      "polish": "Uciekać się do czegoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-070-word.mp3",
-      "audioSentence": "t1-p192-070-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-071",
-      "english": "Run up against sth",
-      "polish": "Napotkać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-071-word.mp3",
-      "audioSentence": "t1-p192-071-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-072",
-      "english": "Settle down",
-      "polish": "Osiąść gdzieś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-072-word.mp3",
-      "audioSentence": "t1-p192-072-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-073",
-      "english": "Stick out",
-      "polish": "Rzucać się w oczy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-073-word.mp3",
-      "audioSentence": "t1-p192-073-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-074",
-      "english": "Turn in",
-      "polish": "Zgłosić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-074-word.mp3",
-      "audioSentence": "t1-p192-074-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-075",
-      "english": "Turn sb over",
-      "polish": "Wydać kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-075-word.mp3",
-      "audioSentence": "t1-p192-075-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-076",
-      "english": "Turn up",
-      "polish": "Odnaleźć się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-076-word.mp3",
-      "audioSentence": "t1-p192-076-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-077",
-      "english": "Turn into sth",
-      "polish": "Zmieniać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-077-word.mp3",
-      "audioSentence": "t1-p192-077-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-078",
-      "english": "Stumble upon sth",
-      "polish": "Wpaść na",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-078-word.mp3",
-      "audioSentence": "t1-p192-078-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-079",
-      "english": "Keep off",
-      "polish": "Wstrzymać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-079-word.mp3",
-      "audioSentence": "t1-p192-079-sentence.mp3"
-    },
-    {
-      "id": "t1-p192-080",
-      "english": "Move on to sth",
-      "polish": "Przejść do czegoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p192-080-word.mp3",
-      "audioSentence": "t1-p192-080-sentence.mp3"
     }
   ]
 }

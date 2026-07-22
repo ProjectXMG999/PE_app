@@ -1,0 +1,100 @@
+{
+  "id": "t1-p404",
+  "name": "Edukacja",
+  "volume": "Tom IV",
+  "level": 3,
+  "category": "Skróty",
+  "chapter": "Rozdział XL",
+  "words": [
+    {
+      "id": "t1-p404-001",
+      "english": "BA",
+      "polish": "Lic. Nauk humanistycznych",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p404-001-word.mp3",
+      "audioSentence": "t1-p404-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p404-002",
+      "english": "BSC",
+      "polish": "Lic. Nauk ścisłych",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p404-002-word.mp3",
+      "audioSentence": "t1-p404-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p404-003",
+      "english": "EFL",
+      "polish": "Angielski jako język obcy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p404-003-word.mp3",
+      "audioSentence": "t1-p404-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p404-004",
+      "english": "ESL",
+      "polish": "Angielski jako drugi język",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p404-004-word.mp3",
+      "audioSentence": "t1-p404-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p404-005",
+      "english": "MA",
+      "polish": "Mgr nauk humanistycznych",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p404-005-word.mp3",
+      "audioSentence": "t1-p404-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p404-006",
+      "english": "MBA",
+      "polish": "Mgr administracji biznesowej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p404-006-word.mp3",
+      "audioSentence": "t1-p404-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p404-007",
+      "english": "MD",
+      "polish": "Lek. Med.",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p404-007-word.mp3",
+      "audioSentence": "t1-p404-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p404-008",
+      "english": "MPHIL",
+      "polish": "Mgr filozofii",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p404-008-word.mp3",
+      "audioSentence": "t1-p404-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p404-009",
+      "english": "MSC",
+      "polish": "Mgr nauk ścisłych",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p404-009-word.mp3",
+      "audioSentence": "t1-p404-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p404-010",
+      "english": "PHD",
+      "polish": "Doktorat",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p404-010-word.mp3",
+      "audioSentence": "t1-p404-010-sentence.mp3"
+    }
+  ]
+}

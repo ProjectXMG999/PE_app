@@ -1,15 +1,15 @@
 {
   "id": "t1-p218",
-  "name": "Mądre",
-  "volume": "Tom V",
-  "level": 3,
-  "category": "Skróty",
-  "chapter": "Rozdział XLI",
+  "name": "Słaby moment",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XXII",
   "words": [
     {
       "id": "t1-p218-001",
-      "english": "AD",
-      "polish": "Roku pańskiego",
+      "english": "Afraid",
+      "polish": "Bojący się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p218-002",
-      "english": "BC",
-      "polish": "P.N.E.",
+      "english": "Hurting",
+      "polish": "Cierpiący",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p218-003",
-      "english": "CE",
-      "polish": "N.E.",
+      "english": "Scared",
+      "polish": "Przestraszony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p218-004",
-      "english": "CF.",
-      "polish": "Por.",
+      "english": "Furious",
+      "polish": "Rozwścieczony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p218-005",
-      "english": "E.G.",
-      "polish": "Np.",
+      "english": "Thirsty",
+      "polish": "Spragniony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p218-006",
-      "english": "ETC.",
-      "polish": "Itd.",
+      "english": "Mad",
+      "polish": "Oszalały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p218-007",
-      "english": "I.E.",
-      "polish": "Tzn.",
+      "english": "Angry",
+      "polish": "Zły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p218-008",
-      "english": "P.S.",
-      "polish": "Postscriptum",
+      "english": "Exhausted",
+      "polish": "Wyczerpany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p218-009",
-      "english": "QED",
-      "polish": "Co było do udowodnienia",
+      "english": "Upset",
+      "polish": "Zasmucony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p218-010",
-      "english": "VIZ.",
-      "polish": "Mianowicie",
+      "english": "Worried",
+      "polish": "Zmartwiony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p218-010-word.mp3",
       "audioSentence": "t1-p218-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p218-011",
+      "english": "Disappointed",
+      "polish": "Rozczarowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p218-011-word.mp3",
+      "audioSentence": "t1-p218-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p218-012",
+      "english": "Panicked",
+      "polish": "Spanikowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p218-012-word.mp3",
+      "audioSentence": "t1-p218-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p218-013",
+      "english": "Distracted",
+      "polish": "Roztargniony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p218-013-word.mp3",
+      "audioSentence": "t1-p218-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p218-014",
+      "english": "Embarrassing",
+      "polish": "Żenujący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p218-014-word.mp3",
+      "audioSentence": "t1-p218-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p218-015",
+      "english": "Offended",
+      "polish": "Urażony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p218-015-word.mp3",
+      "audioSentence": "t1-p218-015-sentence.mp3"
     }
   ]
 }

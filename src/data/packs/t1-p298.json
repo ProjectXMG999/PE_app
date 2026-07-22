@@ -1,15 +1,15 @@
 {
   "id": "t1-p298",
-  "name": "Wakacje",
-  "volume": "Tom VIII",
-  "level": 4,
-  "category": "Phrasale",
-  "chapter": "Rozdział LXXIV",
+  "name": "Pogoda",
+  "volume": "Tom III",
+  "level": 3,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXX",
   "words": [
     {
       "id": "t1-p298-001",
-      "english": "Check in",
-      "polish": "Zameldować się",
+      "english": "Thunderstorm",
+      "polish": "Burza z piorunami",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p298-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p298-002",
-      "english": "Check out",
-      "polish": "Wymeldować się",
+      "english": "Darkness",
+      "polish": "Ciemność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p298-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p298-003",
-      "english": "Fool around",
-      "polish": "Wydurniać się",
+      "english": "Hail",
+      "polish": "Grad",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p298-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p298-004",
-      "english": "Kick back",
-      "polish": "Wyluzować się",
+      "english": "Hurricane",
+      "polish": "Huragan",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p298-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p298-005",
-      "english": "Camp out",
-      "polish": "Obozować",
+      "english": "Drizzle",
+      "polish": "Mżawka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p298-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p298-006",
-      "english": "Play around",
-      "polish": "Bawić się",
+      "english": "Rainfall",
+      "polish": "Opad deszczu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p298-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p298-007",
-      "english": "Wind down",
-      "polish": "Odprężyć się",
+      "english": "Lightning",
+      "polish": "Błyskawica",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p298-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p298-008",
-      "english": "Crack up",
-      "polish": "Rozśmieszać",
+      "english": "Flood",
+      "polish": "Powódź",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p298-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p298-009",
-      "english": "Goof around",
-      "polish": "Wygłupiać się",
+      "english": "Drought",
+      "polish": "Susza",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p298-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p298-010",
-      "english": "Book into sth",
-      "polish": "Zameldować się gdzieś",
+      "english": "Snowfall",
+      "polish": "Opad śniegu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p298-010-word.mp3",
       "audioSentence": "t1-p298-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p298-011",
+      "english": "Moonlight",
+      "polish": "Światło księżyca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p298-011-word.mp3",
+      "audioSentence": "t1-p298-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p298-012",
+      "english": "Daylight",
+      "polish": "Światło słoneczne",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p298-012-word.mp3",
+      "audioSentence": "t1-p298-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p298-013",
+      "english": "Downpour",
+      "polish": "Ulewa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p298-013-word.mp3",
+      "audioSentence": "t1-p298-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p298-014",
+      "english": "Heat",
+      "polish": "Upał",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p298-014-word.mp3",
+      "audioSentence": "t1-p298-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p298-015",
+      "english": "Nightfall",
+      "polish": "Nadejście nocy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p298-015-word.mp3",
+      "audioSentence": "t1-p298-015-sentence.mp3"
     }
   ]
 }

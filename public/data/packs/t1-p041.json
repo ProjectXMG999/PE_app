@@ -1,15 +1,15 @@
 {
   "id": "t1-p041",
-  "name": "Finanse",
+  "name": "Sprzęt elektroniczny",
   "volume": "Tom I",
   "level": 1,
   "category": "Rzeczowniki",
-  "chapter": "Rozdział IV",
+  "chapter": "Rozdział V",
   "words": [
     {
       "id": "t1-p041-001",
-      "english": "Banknote",
-      "polish": "Banknot",
+      "english": "Battery",
+      "polish": "Bateria",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p041-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p041-002",
-      "english": "Budget",
-      "polish": "Budżet",
+      "english": "Camera",
+      "polish": "Aparat",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p041-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p041-003",
-      "english": "Price",
-      "polish": "Cena",
+      "english": "Computer",
+      "polish": "Komputer",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p041-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p041-004",
-      "english": "Cash",
-      "polish": "Gotówka",
+      "english": "Laptop",
+      "polish": "Laptop",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p041-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p041-005",
-      "english": "Debit card",
-      "polish": "Karta debetowa",
+      "english": "Charger",
+      "polish": "Ładowarka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p041-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p041-006",
-      "english": "Credit card",
-      "polish": "Karta kredytowa",
+      "english": "Phone call",
+      "polish": "Rozmowa telefoniczna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p041-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p041-007",
-      "english": "Account",
-      "polish": "Konto",
+      "english": "Hairdryer",
+      "polish": "Suszarka do włosów",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p041-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p041-008",
-      "english": "Credit",
-      "polish": "Kredyt",
+      "english": "Telephone",
+      "polish": "Telefon",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p041-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p041-009",
-      "english": "Salary",
-      "polish": "Pensja",
+      "english": "Mobile phone",
+      "polish": "Telefon komórkowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p041-009-word.mp3",
@@ -89,867 +89,12 @@
     },
     {
       "id": "t1-p041-010",
-      "english": "Money",
-      "polish": "Pieniądze",
+      "english": "Message",
+      "polish": "Wiadomość",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p041-010-word.mp3",
       "audioSentence": "t1-p041-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-011",
-      "english": "Charge",
-      "polish": "Pobierać opłatę",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-011-word.mp3",
-      "audioSentence": "t1-p041-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-012",
-      "english": "Can afford",
-      "polish": "Móc pozwolić sobie na coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-012-word.mp3",
-      "audioSentence": "t1-p041-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-013",
-      "english": "Withdraw",
-      "polish": "Wypłacić pieniądze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-013-word.mp3",
-      "audioSentence": "t1-p041-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-014",
-      "english": "Purchase",
-      "polish": "Nabywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-014-word.mp3",
-      "audioSentence": "t1-p041-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-015",
-      "english": "Acquire",
-      "polish": "Nabywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-015-word.mp3",
-      "audioSentence": "t1-p041-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-016",
-      "english": "Cash",
-      "polish": "Zrealizować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-016-word.mp3",
-      "audioSentence": "t1-p041-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-017",
-      "english": "Expend",
-      "polish": "Wydatkować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-017-word.mp3",
-      "audioSentence": "t1-p041-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-018",
-      "english": "Gain",
-      "polish": "Zyskiwać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-018-word.mp3",
-      "audioSentence": "t1-p041-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-019",
-      "english": "Repay",
-      "polish": "Odpłacać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-019-word.mp3",
-      "audioSentence": "t1-p041-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-020",
-      "english": "Economize",
-      "polish": "Oszczędzać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-020-word.mp3",
-      "audioSentence": "t1-p041-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-021",
-      "english": "Tip",
-      "polish": "Dawać napiwek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-021-word.mp3",
-      "audioSentence": "t1-p041-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-022",
-      "english": "Tout",
-      "polish": "Nagabywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-022-word.mp3",
-      "audioSentence": "t1-p041-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-023",
-      "english": "Monetize",
-      "polish": "Zmonetyzować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-023-word.mp3",
-      "audioSentence": "t1-p041-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-024",
-      "english": "Remunerate",
-      "polish": "Wypłacić wynagrodzenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-024-word.mp3",
-      "audioSentence": "t1-p041-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-025",
-      "english": "Overpay",
-      "polish": "Przepłacić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-025-word.mp3",
-      "audioSentence": "t1-p041-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-026",
-      "english": "Debt",
-      "polish": "Dług",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-026-word.mp3",
-      "audioSentence": "t1-p041-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-027",
-      "english": "Coin",
-      "polish": "Moneta",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-027-word.mp3",
-      "audioSentence": "t1-p041-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-028",
-      "english": "Tip",
-      "polish": "Napiwek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-028-word.mp3",
-      "audioSentence": "t1-p041-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-029",
-      "english": "Tax",
-      "polish": "Podatek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-029-word.mp3",
-      "audioSentence": "t1-p041-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-030",
-      "english": "Loan",
-      "polish": "Pożyczka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-030-word.mp3",
-      "audioSentence": "t1-p041-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-031",
-      "english": "Phone bill",
-      "polish": "Rachunek za telefon",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-031-word.mp3",
-      "audioSentence": "t1-p041-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-032",
-      "english": "Fifty-fifty",
-      "polish": "Po połowie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-032-word.mp3",
-      "audioSentence": "t1-p041-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-033",
-      "english": "Earnings",
-      "polish": "Zarobki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-033-word.mp3",
-      "audioSentence": "t1-p041-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-034",
-      "english": "Bonus",
-      "polish": "Dodatek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-034-word.mp3",
-      "audioSentence": "t1-p041-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-035",
-      "english": "Fortune",
-      "polish": "Fortuna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-035-word.mp3",
-      "audioSentence": "t1-p041-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-036",
-      "english": "Wage",
-      "polish": "Płaca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-036-word.mp3",
-      "audioSentence": "t1-p041-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-037",
-      "english": "Raise",
-      "polish": "Podwyżka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-037-word.mp3",
-      "audioSentence": "t1-p041-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-038",
-      "english": "Payout",
-      "polish": "Wypłata",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-038-word.mp3",
-      "audioSentence": "t1-p041-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-039",
-      "english": "Payday",
-      "polish": "Dzień wypłaty",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-039-word.mp3",
-      "audioSentence": "t1-p041-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-040",
-      "english": "Payoff",
-      "polish": "Wypłata",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-040-word.mp3",
-      "audioSentence": "t1-p041-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-041",
-      "english": "Pay for",
-      "polish": "Zapłacić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-041-word.mp3",
-      "audioSentence": "t1-p041-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-042",
-      "english": "Take away",
-      "polish": "Kupić na wynos",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-042-word.mp3",
-      "audioSentence": "t1-p041-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-043",
-      "english": "Sell out",
-      "polish": "Wyprzedać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-043-word.mp3",
-      "audioSentence": "t1-p041-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-044",
-      "english": "Cut back",
-      "polish": "Wydawać mniej",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-044-word.mp3",
-      "audioSentence": "t1-p041-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-045",
-      "english": "Get by",
-      "polish": "Przetrwać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-045-word.mp3",
-      "audioSentence": "t1-p041-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-046",
-      "english": "Go for sth",
-      "polish": "Chodzić za ileś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-046-word.mp3",
-      "audioSentence": "t1-p041-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-047",
-      "english": "Take out",
-      "polish": "Wypłacać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-047-word.mp3",
-      "audioSentence": "t1-p041-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-048",
-      "english": "Bail sb out",
-      "polish": "Wykupić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-048-word.mp3",
-      "audioSentence": "t1-p041-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-049",
-      "english": "Pay sth back",
-      "polish": "Zwracać komuś kasę",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-049-word.mp3",
-      "audioSentence": "t1-p041-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-050",
-      "english": "Pay sth off",
-      "polish": "Spłacać coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-050-word.mp3",
-      "audioSentence": "t1-p041-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-051",
-      "english": "Gross price",
-      "polish": "Cena brutto",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-051-word.mp3",
-      "audioSentence": "t1-p041-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-052",
-      "english": "List price",
-      "polish": "Cena katalogowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-052-word.mp3",
-      "audioSentence": "t1-p041-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-053",
-      "english": "Net price",
-      "polish": "Cena netto",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-053-word.mp3",
-      "audioSentence": "t1-p041-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-054",
-      "english": "Pension",
-      "polish": "Emerytura",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-054-word.mp3",
-      "audioSentence": "t1-p041-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-055",
-      "english": "Finance",
-      "polish": "Finanse",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-055-word.mp3",
-      "audioSentence": "t1-p041-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-056",
-      "english": "Cost",
-      "polish": "Koszt",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-056-word.mp3",
-      "audioSentence": "t1-p041-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-057",
-      "english": "Turnover",
-      "polish": "Obrót",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-057-word.mp3",
-      "audioSentence": "t1-p041-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-058",
-      "english": "Fee",
-      "polish": "Opłata",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-058-word.mp3",
-      "audioSentence": "t1-p041-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-059",
-      "english": "Savings",
-      "polish": "Oszczędności",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-059-word.mp3",
-      "audioSentence": "t1-p041-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-060",
-      "english": "Liability",
-      "polish": "Pasywa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-060-word.mp3",
-      "audioSentence": "t1-p041-060-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-061",
-      "english": "Cash on delivery",
-      "polish": "Płatność przy odbiorze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-061-word.mp3",
-      "audioSentence": "t1-p041-061-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-062",
-      "english": "Commission",
-      "polish": "Prowizja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-062-word.mp3",
-      "audioSentence": "t1-p041-062-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-063",
-      "english": "Inheritance",
-      "polish": "Spadek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-063-word.mp3",
-      "audioSentence": "t1-p041-063-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-064",
-      "english": "Interest rate",
-      "polish": "Stopa procentowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-064-word.mp3",
-      "audioSentence": "t1-p041-064-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-065",
-      "english": "Loss",
-      "polish": "Strata",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-065-word.mp3",
-      "audioSentence": "t1-p041-065-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-066",
-      "english": "Currency",
-      "polish": "Waluta",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-066-word.mp3",
-      "audioSentence": "t1-p041-066-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-067",
-      "english": "Foreign currency",
-      "polish": "Waluta obca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-067-word.mp3",
-      "audioSentence": "t1-p041-067-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-068",
-      "english": "Payment",
-      "polish": "Wpłata",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-068-word.mp3",
-      "audioSentence": "t1-p041-068-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-069",
-      "english": "Expense",
-      "polish": "Wydatek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-069-word.mp3",
-      "audioSentence": "t1-p041-069-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-070",
-      "english": "Exchange",
-      "polish": "Wymiana",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-070-word.mp3",
-      "audioSentence": "t1-p041-070-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-071",
-      "english": "Withdrawal",
-      "polish": "Wypłata",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-071-word.mp3",
-      "audioSentence": "t1-p041-071-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-072",
-      "english": "Refund",
-      "polish": "Zwrot pieniędzy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-072-word.mp3",
-      "audioSentence": "t1-p041-072-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-073",
-      "english": "Income",
-      "polish": "Dochód",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-073-word.mp3",
-      "audioSentence": "t1-p041-073-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-074",
-      "english": "Installment",
-      "polish": "Rata",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-074-word.mp3",
-      "audioSentence": "t1-p041-074-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-075",
-      "english": "Profit",
-      "polish": "Zysk",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-075-word.mp3",
-      "audioSentence": "t1-p041-075-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-076",
-      "english": "Value",
-      "polish": "Wartość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-076-word.mp3",
-      "audioSentence": "t1-p041-076-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-077",
-      "english": "Balance",
-      "polish": "Saldo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-077-word.mp3",
-      "audioSentence": "t1-p041-077-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-078",
-      "english": "Livelihood",
-      "polish": "Źródło utrzymania",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-078-word.mp3",
-      "audioSentence": "t1-p041-078-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-079",
-      "english": "Bribe",
-      "polish": "Łapówka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-079-word.mp3",
-      "audioSentence": "t1-p041-079-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-080",
-      "english": "Minimum wage",
-      "polish": "Płaca minimalna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-080-word.mp3",
-      "audioSentence": "t1-p041-080-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-081",
-      "english": "Surcharge",
-      "polish": "Dopłata",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-081-word.mp3",
-      "audioSentence": "t1-p041-081-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-082",
-      "english": "Subsidy",
-      "polish": "Dotacja na coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-082-word.mp3",
-      "audioSentence": "t1-p041-082-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-083",
-      "english": "Postal order",
-      "polish": "Przekaz pocztowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-083-word.mp3",
-      "audioSentence": "t1-p041-083-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-084",
-      "english": "Revenue",
-      "polish": "Przychód",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-084-word.mp3",
-      "audioSentence": "t1-p041-084-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-085",
-      "english": "Reimbursement",
-      "polish": "Zwrot kosztów",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-085-word.mp3",
-      "audioSentence": "t1-p041-085-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-086",
-      "english": "Small change",
-      "polish": "Drobne pieniądze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-086-word.mp3",
-      "audioSentence": "t1-p041-086-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-087",
-      "english": "Mortgage loan",
-      "polish": "Kredyt hipoteczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-087-word.mp3",
-      "audioSentence": "t1-p041-087-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-088",
-      "english": "Remuneration",
-      "polish": "Wynagrodzenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-088-word.mp3",
-      "audioSentence": "t1-p041-088-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-089",
-      "english": "Wherewithal",
-      "polish": "Niezbędne fundusze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-089-word.mp3",
-      "audioSentence": "t1-p041-089-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-090",
-      "english": "Value",
-      "polish": "Wartość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-090-word.mp3",
-      "audioSentence": "t1-p041-090-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-091",
-      "english": "Foreign currency",
-      "polish": "Waluta obca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-091-word.mp3",
-      "audioSentence": "t1-p041-091-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-092",
-      "english": "Liability",
-      "polish": "Pasywa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-092-word.mp3",
-      "audioSentence": "t1-p041-092-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-093",
-      "english": "Tip",
-      "polish": "Napiwek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-093-word.mp3",
-      "audioSentence": "t1-p041-093-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-094",
-      "english": "Debit card",
-      "polish": "Karta debetowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-094-word.mp3",
-      "audioSentence": "t1-p041-094-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-095",
-      "english": "Commission",
-      "polish": "Prowizja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-095-word.mp3",
-      "audioSentence": "t1-p041-095-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-096",
-      "english": "Pay in",
-      "polish": "Wpłacać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-096-word.mp3",
-      "audioSentence": "t1-p041-096-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-097",
-      "english": "Pay off",
-      "polish": "Przekupić kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-097-word.mp3",
-      "audioSentence": "t1-p041-097-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-098",
-      "english": "Put down",
-      "polish": "Wpłacić zaliczkę",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-098-word.mp3",
-      "audioSentence": "t1-p041-098-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-099",
-      "english": "Round sth off",
-      "polish": "Zaokrąglić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-099-word.mp3",
-      "audioSentence": "t1-p041-099-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-100",
-      "english": "Break down",
-      "polish": "Rozbić koszty",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-100-word.mp3",
-      "audioSentence": "t1-p041-100-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-101",
-      "english": "Cash sth in",
-      "polish": "Spieniężyć coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-101-word.mp3",
-      "audioSentence": "t1-p041-101-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-102",
-      "english": "Settle up with",
-      "polish": "Rozliczać się z",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-102-word.mp3",
-      "audioSentence": "t1-p041-102-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-103",
-      "english": "Draw out",
-      "polish": "Wyciągnąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-103-word.mp3",
-      "audioSentence": "t1-p041-103-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-104",
-      "english": "Fork out",
-      "polish": "Wybulić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-104-word.mp3",
-      "audioSentence": "t1-p041-104-sentence.mp3"
-    },
-    {
-      "id": "t1-p041-105",
-      "english": "Squirrel sth away",
-      "polish": "Chomikować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p041-105-word.mp3",
-      "audioSentence": "t1-p041-105-sentence.mp3"
     }
   ]
 }

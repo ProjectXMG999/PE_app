@@ -1,15 +1,15 @@
 {
   "id": "t1-p226",
-  "name": "Skala I intensywność",
-  "volume": "Tom V",
-  "level": 3,
-  "category": "Przysłówki",
-  "chapter": "Rozdział XLIII",
+  "name": "Podróże",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXII",
   "words": [
     {
       "id": "t1-p226-001",
-      "english": "Quite",
-      "polish": "Całkiem",
+      "english": "Tent",
+      "polish": "Namiot",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p226-002",
-      "english": "Barely",
-      "polish": "Ledwie",
+      "english": "Pyramid",
+      "polish": "Piramida",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p226-003",
-      "english": "Fully",
-      "polish": "W pełni",
+      "english": "Overnight stay",
+      "polish": "Pobyt z noclegiem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p226-004",
-      "english": "Hardly",
-      "polish": "Prawie nie",
+      "english": "Traveler",
+      "polish": "Podróżnik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p226-005",
-      "english": "Entirely",
-      "polish": "W całości",
+      "english": "Tour guide",
+      "polish": "Przewodnik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p226-006",
-      "english": "Easily",
-      "polish": "Łatwo",
+      "english": "Adventure",
+      "polish": "Przygoda",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p226-007",
-      "english": "Heavily",
-      "polish": "W znacznym stopniu",
+      "english": "Preparation",
+      "polish": "Przygotowanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p226-008",
-      "english": "Strongly",
-      "polish": "Mocno",
+      "english": "Holiday season",
+      "polish": "Okres świąteczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p226-009",
-      "english": "Widely",
-      "polish": "Szeroko",
+      "english": "Trail",
+      "polish": "Szlak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p226-010",
-      "english": "Worldwide",
-      "polish": "Na całym świecie",
+      "english": "Path",
+      "polish": "Ścieżka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p226-011",
-      "english": "Highly",
-      "polish": "W wysokim stopniu",
+      "english": "Tropics",
+      "polish": "Tropiki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p226-012",
-      "english": "Deeply",
-      "polish": "Głęboko",
+      "english": "Tourism",
+      "polish": "Turystyka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p226-013",
-      "english": "Greatly",
-      "polish": "Wielce",
+      "english": "Suitcase",
+      "polish": "Walizka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p226-014",
-      "english": "Largely",
-      "polish": "W dużej mierze",
+      "english": "Entry",
+      "polish": "Wstęp",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-014-word.mp3",
@@ -134,147 +134,12 @@
     },
     {
       "id": "t1-p226-015",
-      "english": "Globally",
-      "polish": "Globalnie",
+      "english": "Sightseeing",
+      "polish": "Zwiedzanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p226-015-word.mp3",
       "audioSentence": "t1-p226-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-016",
-      "english": "Considerably",
-      "polish": "Znacznie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-016-word.mp3",
-      "audioSentence": "t1-p226-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-017",
-      "english": "Drastically",
-      "polish": "Drastycznie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-017-word.mp3",
-      "audioSentence": "t1-p226-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-018",
-      "english": "Extremely",
-      "polish": "Niezwykle",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-018-word.mp3",
-      "audioSentence": "t1-p226-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-019",
-      "english": "Intensely",
-      "polish": "Intensywnie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-019-word.mp3",
-      "audioSentence": "t1-p226-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-020",
-      "english": "Urgently",
-      "polish": "Pilnie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-020-word.mp3",
-      "audioSentence": "t1-p226-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-021",
-      "english": "Exceptionally",
-      "polish": "Wyjątkowo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-021-word.mp3",
-      "audioSentence": "t1-p226-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-022",
-      "english": "Insanely",
-      "polish": "Szaleńczo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-022-word.mp3",
-      "audioSentence": "t1-p226-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-023",
-      "english": "Nationwide",
-      "polish": "Ogólnonarodowo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-023-word.mp3",
-      "audioSentence": "t1-p226-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-024",
-      "english": "Statistically",
-      "polish": "Statystycznie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-024-word.mp3",
-      "audioSentence": "t1-p226-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-025",
-      "english": "Substantially",
-      "polish": "Znacznie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-025-word.mp3",
-      "audioSentence": "t1-p226-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-026",
-      "english": "Utterly",
-      "polish": "Całkowicie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-026-word.mp3",
-      "audioSentence": "t1-p226-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-027",
-      "english": "Wildly",
-      "polish": "Dziko",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-027-word.mp3",
-      "audioSentence": "t1-p226-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-028",
-      "english": "Faintly",
-      "polish": "Nieznacznie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-028-word.mp3",
-      "audioSentence": "t1-p226-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-029",
-      "english": "Exhaustively",
-      "polish": "Wyczerpująco",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-029-word.mp3",
-      "audioSentence": "t1-p226-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p226-030",
-      "english": "Comprehensively",
-      "polish": "Gruntownie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p226-030-word.mp3",
-      "audioSentence": "t1-p226-030-sentence.mp3"
     }
   ]
 }

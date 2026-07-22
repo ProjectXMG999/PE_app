@@ -1,15 +1,15 @@
 {
   "id": "t1-p188",
-  "name": "Love",
-  "volume": "Tom IV",
-  "level": 3,
-  "category": "Slang",
-  "chapter": "Rozdział XXXIII",
+  "name": "Restauracja",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XIX",
   "words": [
     {
       "id": "t1-p188-001",
-      "english": "Bestie",
-      "polish": "Najlepsza kumpela",
+      "english": "Average",
+      "polish": "Przeciętny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p188-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p188-002",
-      "english": "Beau",
-      "polish": "Śliczności",
+      "english": "Decent",
+      "polish": "Przyzwoity",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p188-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p188-003",
-      "english": "Darling",
-      "polish": "Kochanie",
+      "english": "Known",
+      "polish": "Wiadomy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p188-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p188-004",
-      "english": "One-and-only",
-      "polish": "Ta jedna jedyna",
+      "english": "Unknown",
+      "polish": "Nieznany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p188-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p188-005",
-      "english": "Sisters in spirit",
-      "polish": "Najlepsze przyjaciółki",
+      "english": "Available",
+      "polish": "Dostępny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p188-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p188-006",
-      "english": "Sugar",
-      "polish": "Ukochana",
+      "english": "Ordinary",
+      "polish": "Zwyczajny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p188-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p188-007",
-      "english": "Sugar thing",
-      "polish": "Ukochana",
+      "english": "Cozy",
+      "polish": "Przytulny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p188-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p188-008",
-      "english": "Sweetheart",
-      "polish": "Serduszko",
+      "english": "Well-known",
+      "polish": "Dobrze znany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p188-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p188-009",
-      "english": "Wifey",
-      "polish": "Żonka",
+      "english": "Four-star",
+      "polish": "Czterogwiazdkowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p188-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p188-010",
-      "english": "Hubby",
-      "polish": "Mężuś",
+      "english": "Recommended",
+      "polish": "Polecany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p188-010-word.mp3",
       "audioSentence": "t1-p188-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p188-011",
+      "english": "Booked",
+      "polish": "Zarezerwowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p188-011-word.mp3",
+      "audioSentence": "t1-p188-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p188-012",
+      "english": "Top-rated",
+      "polish": "Najwyżej oceniany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p188-012-word.mp3",
+      "audioSentence": "t1-p188-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p188-013",
+      "english": "High-quality",
+      "polish": "Wysokiej jakości",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p188-013-word.mp3",
+      "audioSentence": "t1-p188-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p188-014",
+      "english": "Five-star",
+      "polish": "Pięciogwiazdkowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p188-014-word.mp3",
+      "audioSentence": "t1-p188-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p188-015",
+      "english": "Little-known",
+      "polish": "Słabo znany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p188-015-word.mp3",
+      "audioSentence": "t1-p188-015-sentence.mp3"
     }
   ]
 }

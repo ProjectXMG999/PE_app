@@ -1,15 +1,15 @@
 {
   "id": "t1-p051",
-  "name": "Kolory",
+  "name": "Rzeczowniki 2",
   "volume": "Tom I",
   "level": 1,
-  "category": "Przymiotniki",
+  "category": "Rzeczowniki",
   "chapter": "Rozdział VI",
   "words": [
     {
       "id": "t1-p051-001",
-      "english": "White",
-      "polish": "Biały",
+      "english": "Building",
+      "polish": "Budynek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p051-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p051-002",
-      "english": "Brown",
-      "polish": "Brązowy",
+      "english": "Document",
+      "polish": "Dokument",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p051-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p051-003",
-      "english": "Black",
-      "polish": "Czarny",
+      "english": "House",
+      "polish": "Dom",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p051-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p051-004",
-      "english": "Red",
-      "polish": "Czerwony",
+      "english": "Card",
+      "polish": "Karta",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p051-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p051-005",
-      "english": "Blue",
-      "polish": "Niebieski",
+      "english": "Apartment",
+      "polish": "Mieszkanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p051-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p051-006",
-      "english": "Orange",
-      "polish": "Pomarańczowy",
+      "english": "Paper",
+      "polish": "Papier",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p051-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p051-007",
-      "english": "Pink",
-      "polish": "Różowy",
+      "english": "Floor",
+      "polish": "Podłoga",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p051-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p051-008",
-      "english": "Gray",
-      "polish": "Szary",
+      "english": "Job",
+      "polish": "Praca",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p051-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p051-009",
-      "english": "Green",
-      "polish": "Zielony",
+      "english": "Work",
+      "polish": "Praca",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p051-009-word.mp3",
@@ -89,147 +89,12 @@
     },
     {
       "id": "t1-p051-010",
-      "english": "Yellow",
-      "polish": "Żółty",
+      "english": "Profession",
+      "polish": "Zawód",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p051-010-word.mp3",
       "audioSentence": "t1-p051-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-011",
-      "english": "Black-and-white",
-      "polish": "Czarno-biały",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-011-word.mp3",
-      "audioSentence": "t1-p051-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-012",
-      "english": "Red-hair",
-      "polish": "Rudy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-012-word.mp3",
-      "audioSentence": "t1-p051-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-013",
-      "english": "Purple",
-      "polish": "Fioletowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-013-word.mp3",
-      "audioSentence": "t1-p051-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-014",
-      "english": "Colorful",
-      "polish": "Kolorowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-014-word.mp3",
-      "audioSentence": "t1-p051-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-015",
-      "english": "Colorless",
-      "polish": "Bezbarwny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-015-word.mp3",
-      "audioSentence": "t1-p051-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-016",
-      "english": "Beige",
-      "polish": "Beżowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-016-word.mp3",
-      "audioSentence": "t1-p051-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-017",
-      "english": "Multicolor",
-      "polish": "Wielokolorowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-017-word.mp3",
-      "audioSentence": "t1-p051-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-018",
-      "english": "Radiant",
-      "polish": "Promienny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-018-word.mp3",
-      "audioSentence": "t1-p051-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-019",
-      "english": "Pale",
-      "polish": "Blady",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-019-word.mp3",
-      "audioSentence": "t1-p051-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-020",
-      "english": "Claret",
-      "polish": "Bordo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-020-word.mp3",
-      "audioSentence": "t1-p051-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-021",
-      "english": "Magenta",
-      "polish": "W kolorze fuksji",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-021-word.mp3",
-      "audioSentence": "t1-p051-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-022",
-      "english": "Cyan",
-      "polish": "Niebieskozielony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-022-word.mp3",
-      "audioSentence": "t1-p051-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-023",
-      "english": "Navy blue",
-      "polish": "Granatowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-023-word.mp3",
-      "audioSentence": "t1-p051-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-024",
-      "english": "Vivid",
-      "polish": "Jaskrawy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-024-word.mp3",
-      "audioSentence": "t1-p051-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p051-025",
-      "english": "Faded",
-      "polish": "Wyblakły",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p051-025-word.mp3",
-      "audioSentence": "t1-p051-025-sentence.mp3"
     }
   ]
 }

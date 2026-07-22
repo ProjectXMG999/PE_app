@@ -165,27 +165,29 @@ function main() {
 }
 
 function processRows(rows: WizardRow[]) {
-  // Grupuj po nazwie paczki
-  const packs = new Map<string, WizardRow[]>()
+  // Normalizuj kategorie przed grupowaniem
   for (const row of rows) {
-    if (!row.english || !row.polish || !row.packName) continue
-
-    // Mapuj kategorie: "Zabronione" -> "Slang"
-    let category = row.category || 'Inne'
-    if (category === 'Zabronione') {
-      category = 'Slang'
-    }
-
-    // Aktualizuj kategorię w row
-    row.category = category
-
-    // Poziomy z CSV są używane bezpośrednio: 1=Tom I (World-Class), 4=Tom IX (Survival)
-
-    if (!packs.has(row.packName)) packs.set(row.packName, [])
-    packs.get(row.packName)!.push(row)
+    if (row.category === 'Zabronione') row.category = 'Slang'
+    if (!row.category) row.category = 'Inne'
   }
 
-  console.log(`Unique packs: ${packs.size}`)
+  // Grupuj po ciągłych blokach: nowa paczka gdy zmienia się Nazwa paczki LUB Jednostka
+  const packs: WizardRow[][] = []
+  let current: WizardRow[] = []
+  let prevKey = ''
+  for (const row of rows) {
+    if (!row.english || !row.polish || !row.packName) continue
+    const key = `${row.packName}|||${row.category}`
+    if (key !== prevKey) {
+      if (current.length > 0) packs.push(current)
+      current = []
+      prevKey = key
+    }
+    current.push(row)
+  }
+  if (current.length > 0) packs.push(current)
+
+  console.log(`Contiguous packs: ${packs.length}`)
 
   if (!fs.existsSync(OUT_DIR)) {
     fs.mkdirSync(OUT_DIR, { recursive: true })
@@ -208,7 +210,8 @@ function processRows(rows: WizardRow[]) {
     audioNormalizedPL: 0,
   }
 
-  for (const [packName, words] of packs) {
+  for (const words of packs) {
+    const packName = words[0].packName!
     packNum++
     const id = `t1-p${String(packNum).padStart(3, '0')}`
     const firstWord = words[0]

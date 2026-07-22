@@ -1,15 +1,15 @@
 {
   "id": "t1-p189",
-  "name": "Zagrożenie",
-  "volume": "Tom IV",
-  "level": 3,
+  "name": "Sukces",
+  "volume": "Tom II",
+  "level": 2,
   "category": "Rzeczowniki",
-  "chapter": "Rozdział XXXIII",
+  "chapter": "Rozdział XIX",
   "words": [
     {
       "id": "t1-p189-001",
-      "english": "Alarm",
-      "polish": "Alarm",
+      "english": "Determination",
+      "polish": "Determinacja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p189-002",
-      "english": "Elimination",
-      "polish": "Eliminacja",
+      "english": "Congratulations",
+      "polish": "Gratulacje",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p189-003",
-      "english": "Murder",
-      "polish": "Morderstwo",
+      "english": "Billionaire",
+      "polish": "Miliarder",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p189-004",
-      "english": "Stick",
-      "polish": "Kij",
+      "english": "Millionaire",
+      "polish": "Milioner",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p189-005",
-      "english": "Violence",
-      "polish": "Przemoc",
+      "english": "Champion",
+      "polish": "Mistrz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p189-006",
-      "english": "Robber",
-      "polish": "Rozbójnik",
+      "english": "Prize",
+      "polish": "Nagroda",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p189-007",
-      "english": "Burglar",
-      "polish": "Włamywacz",
+      "english": "Success",
+      "polish": "Sukces",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p189-008",
-      "english": "Bandit",
-      "polish": "Bandyta",
+      "english": "Winner",
+      "polish": "Wygrany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p189-009",
-      "english": "Depravation",
-      "polish": "Deprawacja",
+      "english": "Wealth",
+      "polish": "Bogactwo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p189-010",
-      "english": "Gang",
-      "polish": "Gang",
+      "english": "Opportunity",
+      "polish": "Okazja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p189-011",
-      "english": "Gangster",
-      "polish": "Gangster",
+      "english": "Prestige",
+      "polish": "Prestiż",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p189-012",
-      "english": "Threat",
-      "polish": "Groźba",
+      "english": "World champion",
+      "polish": "Mistrz świata",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p189-013",
-      "english": "Rape",
-      "polish": "Gwałt",
+      "english": "Luxury",
+      "polish": "Luksus",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p189-014",
-      "english": "Intervention",
-      "polish": "Interwencja",
+      "english": "Award",
+      "polish": "Nagroda",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-014-word.mp3",
@@ -134,417 +134,12 @@
     },
     {
       "id": "t1-p189-015",
-      "english": "Murderer",
-      "polish": "Morderca",
+      "english": "Applause",
+      "polish": "Aplauz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p189-015-word.mp3",
       "audioSentence": "t1-p189-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-016",
-      "english": "Rapist",
-      "polish": "Gwałciciel",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-016-word.mp3",
-      "audioSentence": "t1-p189-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-017",
-      "english": "Handcuffs",
-      "polish": "Kajdanki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-017-word.mp3",
-      "audioSentence": "t1-p189-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-018",
-      "english": "Pickpocket",
-      "polish": "Kieszonkowiec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-018-word.mp3",
-      "audioSentence": "t1-p189-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-019",
-      "english": "Molestation",
-      "polish": "Molestowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-019-word.mp3",
-      "audioSentence": "t1-p189-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-020",
-      "english": "Mentally unbalanced",
-      "polish": "Niezrównoważony psychicznie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-020-word.mp3",
-      "audioSentence": "t1-p189-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-021",
-      "english": "Ransom",
-      "polish": "Okup",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-021-word.mp3",
-      "audioSentence": "t1-p189-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-022",
-      "english": "Cheater",
-      "polish": "Oszust",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-022-word.mp3",
-      "audioSentence": "t1-p189-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-023",
-      "english": "Fraud",
-      "polish": "Oszust",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-023-word.mp3",
-      "audioSentence": "t1-p189-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-024",
-      "english": "Fraud",
-      "polish": "Oszustwo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-024-word.mp3",
-      "audioSentence": "t1-p189-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-025",
-      "english": "Pedophile",
-      "polish": "Pedofil",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-025-word.mp3",
-      "audioSentence": "t1-p189-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-026",
-      "english": "Kidnapper",
-      "polish": "Porywacz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-026-word.mp3",
-      "audioSentence": "t1-p189-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-027",
-      "english": "Hijacker",
-      "polish": "Porywacz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-027-word.mp3",
-      "audioSentence": "t1-p189-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-028",
-      "english": "Pitfall",
-      "polish": "Potrzask",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-028-word.mp3",
-      "audioSentence": "t1-p189-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-029",
-      "english": "Psycho",
-      "polish": "Psychol",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-029-word.mp3",
-      "audioSentence": "t1-p189-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-030",
-      "english": "Trap",
-      "polish": "Pułapka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-030-word.mp3",
-      "audioSentence": "t1-p189-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-031",
-      "english": "Robbery",
-      "polish": "Rabunek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-031-word.mp3",
-      "audioSentence": "t1-p189-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-032",
-      "english": "Shootout",
-      "polish": "Strzelanina",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-032-word.mp3",
-      "audioSentence": "t1-p189-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-033",
-      "english": "Underworld",
-      "polish": "Świat przestępczy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-033-word.mp3",
-      "audioSentence": "t1-p189-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-034",
-      "english": "Terror",
-      "polish": "Terror",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-034-word.mp3",
-      "audioSentence": "t1-p189-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-035",
-      "english": "Terrorist",
-      "polish": "Terrorysta",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-035-word.mp3",
-      "audioSentence": "t1-p189-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-036",
-      "english": "Terrorism",
-      "polish": "Terroryzm",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-036-word.mp3",
-      "audioSentence": "t1-p189-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-037",
-      "english": "Torture",
-      "polish": "Tortury",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-037-word.mp3",
-      "audioSentence": "t1-p189-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-038",
-      "english": "Prison break",
-      "polish": "Ucieczka z więzienia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-038-word.mp3",
-      "audioSentence": "t1-p189-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-039",
-      "english": "Kidnapping",
-      "polish": "Uprowadzenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-039-word.mp3",
-      "audioSentence": "t1-p189-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-040",
-      "english": "Burglary",
-      "polish": "Włamanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-040-word.mp3",
-      "audioSentence": "t1-p189-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-041",
-      "english": "Breakout",
-      "polish": "Ucieczka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-041-word.mp3",
-      "audioSentence": "t1-p189-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-042",
-      "english": "Outlaw",
-      "polish": "Wyjęty spod prawa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-042-word.mp3",
-      "audioSentence": "t1-p189-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-043",
-      "english": "Killer",
-      "polish": "Zabójca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-043-word.mp3",
-      "audioSentence": "t1-p189-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-044",
-      "english": "Penitentiary",
-      "polish": "Zakład karny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-044-word.mp3",
-      "audioSentence": "t1-p189-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-045",
-      "english": "Terrorist attack",
-      "polish": "Zamach terrorystyczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-045-word.mp3",
-      "audioSentence": "t1-p189-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-046",
-      "english": "Bomber",
-      "polish": "Zamachowiec",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-046-word.mp3",
-      "audioSentence": "t1-p189-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-047",
-      "english": "Ambush",
-      "polish": "Zasadzka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-047-word.mp3",
-      "audioSentence": "t1-p189-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-048",
-      "english": "Shoplifting",
-      "polish": "Kradzież sklepowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-048-word.mp3",
-      "audioSentence": "t1-p189-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-049",
-      "english": "Pirate",
-      "polish": "Pirat",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-049-word.mp3",
-      "audioSentence": "t1-p189-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-050",
-      "english": "Devastation",
-      "polish": "Spustoszenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-050-word.mp3",
-      "audioSentence": "t1-p189-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-051",
-      "english": "Blackmail",
-      "polish": "Szantaż",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-051-word.mp3",
-      "audioSentence": "t1-p189-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-052",
-      "english": "Hostage",
-      "polish": "Zakładnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-052-word.mp3",
-      "audioSentence": "t1-p189-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-053",
-      "english": "Defect",
-      "polish": "Defekt",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-053-word.mp3",
-      "audioSentence": "t1-p189-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-054",
-      "english": "Fallout",
-      "polish": "Opad",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-054-word.mp3",
-      "audioSentence": "t1-p189-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-055",
-      "english": "Blackout",
-      "polish": "Przerwa w dostawie prądu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-055-word.mp3",
-      "audioSentence": "t1-p189-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-056",
-      "english": "Obstacle",
-      "polish": "Przeszkoda",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-056-word.mp3",
-      "audioSentence": "t1-p189-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-057",
-      "english": "Threat",
-      "polish": "Groźba",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-057-word.mp3",
-      "audioSentence": "t1-p189-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-058",
-      "english": "Stick",
-      "polish": "Kij",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-058-word.mp3",
-      "audioSentence": "t1-p189-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-059",
-      "english": "Killer",
-      "polish": "Zabójca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-059-word.mp3",
-      "audioSentence": "t1-p189-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p189-060",
-      "english": "Hostage",
-      "polish": "Zakładnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p189-060-word.mp3",
-      "audioSentence": "t1-p189-060-sentence.mp3"
     }
   ]
 }

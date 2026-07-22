@@ -1,15 +1,15 @@
 {
   "id": "t1-p131",
-  "name": "Restauracja",
+  "name": "Kraje",
   "volume": "Tom II",
   "level": 2,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział XIX",
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XIII",
   "words": [
     {
       "id": "t1-p131-001",
-      "english": "Average",
-      "polish": "Przeciętny",
+      "english": "Italy",
+      "polish": "Włochy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p131-002",
-      "english": "Decent",
-      "polish": "Przyzwoity",
+      "english": "Italian",
+      "polish": "Włoszka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p131-003",
-      "english": "Known",
-      "polish": "Wiadomy",
+      "english": "Czech republic",
+      "polish": "Czechy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p131-004",
-      "english": "Unknown",
-      "polish": "Nieznany",
+      "english": "Czech",
+      "polish": "Czeszka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p131-005",
-      "english": "Available",
-      "polish": "Dostępny",
+      "english": "Greece",
+      "polish": "Grecja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p131-006",
-      "english": "Ordinary",
-      "polish": "Zwyczajny",
+      "english": "Greek",
+      "polish": "Greczynka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p131-007",
-      "english": "Cozy",
-      "polish": "Przytulny",
+      "english": "Spain",
+      "polish": "Hiszpania",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p131-008",
-      "english": "Well-known",
-      "polish": "Dobrze znany",
+      "english": "Spanish",
+      "polish": "Hiszpanka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p131-009",
-      "english": "Four-star",
-      "polish": "Czterogwiazdkowy",
+      "english": "The netherlands",
+      "polish": "Holandia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p131-010",
-      "english": "Recommended",
-      "polish": "Polecany",
+      "english": "Dutch",
+      "polish": "Holenderka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p131-011",
-      "english": "Booked",
-      "polish": "Zarezerwowany",
+      "english": "Ireland",
+      "polish": "Irlandia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p131-012",
-      "english": "Top-rated",
-      "polish": "Najwyżej oceniany",
+      "english": "Irish",
+      "polish": "Irlandka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p131-013",
-      "english": "High-quality",
-      "polish": "Wysokiej jakości",
+      "english": "Japan",
+      "polish": "Japonia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p131-014",
-      "english": "Five-star",
-      "polish": "Pięciogwiazdkowy",
+      "english": "Japanese",
+      "polish": "Japonka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-014-word.mp3",
@@ -134,147 +134,12 @@
     },
     {
       "id": "t1-p131-015",
-      "english": "Little-known",
-      "polish": "Słabo znany",
+      "english": "Norway",
+      "polish": "Norwegia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p131-015-word.mp3",
       "audioSentence": "t1-p131-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-016",
-      "english": "Disappointing",
-      "polish": "Rozczarowujący",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-016-word.mp3",
-      "audioSentence": "t1-p131-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-017",
-      "english": "Posh",
-      "polish": "Wykwintny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-017-word.mp3",
-      "audioSentence": "t1-p131-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-018",
-      "english": "Luxurious",
-      "polish": "Luksusowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-018-word.mp3",
-      "audioSentence": "t1-p131-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-019",
-      "english": "Acceptable",
-      "polish": "Akceptowalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-019-word.mp3",
-      "audioSentence": "t1-p131-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-020",
-      "english": "Unacceptable",
-      "polish": "Niedopuszczalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-020-word.mp3",
-      "audioSentence": "t1-p131-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-021",
-      "english": "Overrated",
-      "polish": "Przereklamowany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-021-word.mp3",
-      "audioSentence": "t1-p131-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-022",
-      "english": "Outrageous",
-      "polish": "Oburzający",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-022-word.mp3",
-      "audioSentence": "t1-p131-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-023",
-      "english": "Affordable",
-      "polish": "W przystępnej cenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-023-word.mp3",
-      "audioSentence": "t1-p131-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-024",
-      "english": "Tolerable",
-      "polish": "Do wytrzymania",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-024-word.mp3",
-      "audioSentence": "t1-p131-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-025",
-      "english": "Preferable",
-      "polish": "Wskazany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-025-word.mp3",
-      "audioSentence": "t1-p131-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-026",
-      "english": "Run-down",
-      "polish": "Zapuszczony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-026-word.mp3",
-      "audioSentence": "t1-p131-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-027",
-      "english": "Neglected",
-      "polish": "Zaniedbany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-027-word.mp3",
-      "audioSentence": "t1-p131-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-028",
-      "english": "Abandoned",
-      "polish": "Opuszczony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-028-word.mp3",
-      "audioSentence": "t1-p131-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-029",
-      "english": "Classy",
-      "polish": "Z klasą",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-029-word.mp3",
-      "audioSentence": "t1-p131-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p131-030",
-      "english": "First-rate",
-      "polish": "Pierwszorzędny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p131-030-word.mp3",
-      "audioSentence": "t1-p131-030-sentence.mp3"
     }
   ]
 }

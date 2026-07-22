@@ -1,15 +1,15 @@
 {
   "id": "t1-p158",
-  "name": "Podryw",
-  "volume": "Tom III",
+  "name": "Biznes",
+  "volume": "Tom II",
   "level": 2,
-  "category": "Slang",
-  "chapter": "Rozdział XXIV",
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XVI",
   "words": [
     {
       "id": "t1-p158-001",
-      "english": "Chad",
-      "polish": "Samiec alfa",
+      "english": "Business",
+      "polish": "Biznes",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p158-002",
-      "english": "Fap",
-      "polish": "Walczyć z krakenem",
+      "english": "Businessman",
+      "polish": "Biznesmen",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p158-003",
-      "english": "Friendzone",
-      "polish": "Relacja przyjacielska dwóch osób, gdy jedna liczy na coś więcej",
+      "english": "Department",
+      "polish": "Dział",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p158-004",
-      "english": "Go all the way",
-      "polish": "Pójść na całego",
+      "english": "Opening hours",
+      "polish": "Godziny otwarcia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p158-005",
-      "english": "Have a crush on sb",
-      "polish": "Być kimś zauroczonym",
+      "english": "Economy",
+      "polish": "Gospodarka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p158-006",
-      "english": "Keeper",
-      "polish": "Świetny materiał na męża/żonę",
+      "english": "Logo",
+      "polish": "Logo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p158-007",
-      "english": "Make eyes at sb",
-      "polish": "Flirtować z kimś",
+      "english": "Brand",
+      "polish": "Marka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p158-008",
-      "english": "Sniff test",
-      "polish": "Powąchać ciuch, żeby sprawdzić, czy nadaje się do ubrania",
+      "english": "Offer",
+      "polish": "Oferta",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p158-009",
-      "english": "Tralala",
-      "polish": "Genitalia",
+      "english": "Organization",
+      "polish": "Organizacja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p158-010",
-      "english": "Wingman",
-      "polish": "Kumpel, który idzie z tobą na podryw",
+      "english": "Signature",
+      "polish": "Podpis",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p158-011",
-      "english": "Hug",
-      "polish": "Przytulać",
+      "english": "Advertisement",
+      "polish": "Reklama",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p158-012",
-      "english": "Propose",
-      "polish": "Oświadczać się",
+      "english": "Advert",
+      "polish": "Ogłoszenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p158-013",
-      "english": "Date",
-      "polish": "Randkować",
+      "english": "He who doesn't risk, never gets to drink champagne!",
+      "polish": "Ryzyko",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p158-014",
-      "english": "Desire",
-      "polish": "Pragnąć",
+      "english": "Boss",
+      "polish": "Szef",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-014-word.mp3",
@@ -134,417 +134,12 @@
     },
     {
       "id": "t1-p158-015",
-      "english": "Impress",
-      "polish": "Imponować",
+      "english": "Order",
+      "polish": "Zamówienie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p158-015-word.mp3",
       "audioSentence": "t1-p158-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-016",
-      "english": "Massage",
-      "polish": "Masować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-016-word.mp3",
-      "audioSentence": "t1-p158-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-017",
-      "english": "Seduce",
-      "polish": "Uwodzić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-017-word.mp3",
-      "audioSentence": "t1-p158-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-018",
-      "english": "Attract",
-      "polish": "Przyciągać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-018-word.mp3",
-      "audioSentence": "t1-p158-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-019",
-      "english": "Cuddle",
-      "polish": "Przytulać się wzajemnie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-019-word.mp3",
-      "audioSentence": "t1-p158-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-020",
-      "english": "Tickle",
-      "polish": "Łaskotać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-020-word.mp3",
-      "audioSentence": "t1-p158-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-021",
-      "english": "Care",
-      "polish": "Przejmować się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-021-word.mp3",
-      "audioSentence": "t1-p158-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-022",
-      "english": "Tease",
-      "polish": "Kokietować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-022-word.mp3",
-      "audioSentence": "t1-p158-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-023",
-      "english": "Tempt",
-      "polish": "Kusić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-023-word.mp3",
-      "audioSentence": "t1-p158-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-024",
-      "english": "Embrace",
-      "polish": "Uściskać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-024-word.mp3",
-      "audioSentence": "t1-p158-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-025",
-      "english": "Arouse",
-      "polish": "Podniecać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-025-word.mp3",
-      "audioSentence": "t1-p158-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-026",
-      "english": "Ask out",
-      "polish": "Zaprosić kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-026-word.mp3",
-      "audioSentence": "t1-p158-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-027",
-      "english": "Ask sb in",
-      "polish": "Zaprosić kogoś do środka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-027-word.mp3",
-      "audioSentence": "t1-p158-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-028",
-      "english": "Be crazy about",
-      "polish": "Zwariować na punkcie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-028-word.mp3",
-      "audioSentence": "t1-p158-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-029",
-      "english": "Get together",
-      "polish": "Spotkać się razem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-029-word.mp3",
-      "audioSentence": "t1-p158-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-030",
-      "english": "Go out",
-      "polish": "Spotykać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-030-word.mp3",
-      "audioSentence": "t1-p158-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-031",
-      "english": "Pick sb up",
-      "polish": "Podrywać kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-031-word.mp3",
-      "audioSentence": "t1-p158-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-032",
-      "english": "Show off",
-      "polish": "Popisywać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-032-word.mp3",
-      "audioSentence": "t1-p158-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-033",
-      "english": "Make out",
-      "polish": "Obściskiwać się namiętnie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-033-word.mp3",
-      "audioSentence": "t1-p158-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-034",
-      "english": "Fall in love",
-      "polish": "Zakochać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-034-word.mp3",
-      "audioSentence": "t1-p158-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-035",
-      "english": "Turn on",
-      "polish": "Podniecać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-035-word.mp3",
-      "audioSentence": "t1-p158-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-036",
-      "english": "Blush",
-      "polish": "Rumienić się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-036-word.mp3",
-      "audioSentence": "t1-p158-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-037",
-      "english": "Simper",
-      "polish": "Mizdrzyć się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-037-word.mp3",
-      "audioSentence": "t1-p158-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-038",
-      "english": "Caress",
-      "polish": "Pieścić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-038-word.mp3",
-      "audioSentence": "t1-p158-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-039",
-      "english": "Entice",
-      "polish": "Nęcić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-039-word.mp3",
-      "audioSentence": "t1-p158-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-040",
-      "english": "Flatter",
-      "polish": "Schlebiać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-040-word.mp3",
-      "audioSentence": "t1-p158-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-041",
-      "english": "Intrigue",
-      "polish": "Romansować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-041-word.mp3",
-      "audioSentence": "t1-p158-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-042",
-      "english": "Lure",
-      "polish": "Wabić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-042-word.mp3",
-      "audioSentence": "t1-p158-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-043",
-      "english": "Content",
-      "polish": "Zadowalać kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-043-word.mp3",
-      "audioSentence": "t1-p158-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-044",
-      "english": "Gallant",
-      "polish": "Zalecać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-044-word.mp3",
-      "audioSentence": "t1-p158-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-045",
-      "english": "Giggle",
-      "polish": "Chichotać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-045-word.mp3",
-      "audioSentence": "t1-p158-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-046",
-      "english": "Snuggle",
-      "polish": "Wtulić się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-046-word.mp3",
-      "audioSentence": "t1-p158-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-047",
-      "english": "Fondle",
-      "polish": "Miziać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-047-word.mp3",
-      "audioSentence": "t1-p158-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-048",
-      "english": "Flush",
-      "polish": "Poczerwienieć ze wstydu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-048-word.mp3",
-      "audioSentence": "t1-p158-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-049",
-      "english": "Infatuate",
-      "polish": "Zauroczyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-049-word.mp3",
-      "audioSentence": "t1-p158-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-050",
-      "english": "Thrill",
-      "polish": "Zachwycać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-050-word.mp3",
-      "audioSentence": "t1-p158-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-051",
-      "english": "Fool around",
-      "polish": "Figlować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-051-word.mp3",
-      "audioSentence": "t1-p158-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-052",
-      "english": "Eat out",
-      "polish": "Jeść poza domem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-052-word.mp3",
-      "audioSentence": "t1-p158-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-053",
-      "english": "Hit on sb",
-      "polish": "Podbijać do kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-053-word.mp3",
-      "audioSentence": "t1-p158-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-054",
-      "english": "Fall for sb",
-      "polish": "Stracić dla kogoś głowę",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-054-word.mp3",
-      "audioSentence": "t1-p158-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-055",
-      "english": "Hang out",
-      "polish": "Spędzać czas",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-055-word.mp3",
-      "audioSentence": "t1-p158-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-056",
-      "english": "Take sb out",
-      "polish": "Wyjść z kimś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-056-word.mp3",
-      "audioSentence": "t1-p158-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-057",
-      "english": "Hook sb up with sb",
-      "polish": "Ustawić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-057-word.mp3",
-      "audioSentence": "t1-p158-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-058",
-      "english": "Come on to sb",
-      "polish": "Mocno kogoś podrywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-058-word.mp3",
-      "audioSentence": "t1-p158-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-059",
-      "english": "Put sb up",
-      "polish": "Przenocować kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-059-word.mp3",
-      "audioSentence": "t1-p158-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p158-060",
-      "english": "Lead on",
-      "polish": "Robić nadzieję",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p158-060-word.mp3",
-      "audioSentence": "t1-p158-060-sentence.mp3"
     }
   ]
 }

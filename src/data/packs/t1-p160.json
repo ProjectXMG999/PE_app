@@ -1,15 +1,15 @@
 {
   "id": "t1-p160",
-  "name": "Czasowniki 11",
-  "volume": "Tom III",
+  "name": "Elfy",
+  "volume": "Tom II",
   "level": 2,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XXIV",
+  "category": "Zaimki",
+  "chapter": "Rozdział XVI",
   "words": [
     {
       "id": "t1-p160-001",
-      "english": "Guarantee",
-      "polish": "Gwarantować coś",
+      "english": "Myself",
+      "polish": "Ja sam lub sama",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p160-002",
-      "english": "Ignore",
-      "polish": "Ignorować",
+      "english": "Ourselves",
+      "polish": "My sami",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p160-003",
-      "english": "Inspire",
-      "polish": "Inspirować",
+      "english": "Itself",
+      "polish": "Ono samo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p160-004",
-      "english": "Motivate",
-      "polish": "Motywować",
+      "english": "Themselves",
+      "polish": "Oni sami",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p160-005",
-      "english": "Observe",
-      "polish": "Obserwować",
+      "english": "Yourself",
+      "polish": "Ty sam lub sama",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p160-006",
-      "english": "Organize",
-      "polish": "Organizować",
+      "english": "Yourselves",
+      "polish": "Wy sami",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p160-007",
-      "english": "Park",
-      "polish": "Parkować",
+      "english": "Herself",
+      "polish": "Ona sama",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p160-008",
-      "english": "Practice",
-      "polish": "Praktykować",
+      "english": "Himself",
+      "polish": "On sam",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p160-009",
-      "english": "Prefer",
-      "polish": "Preferować",
+      "english": "Myself",
+      "polish": "Ja sam lub sama",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p160-010",
-      "english": "Produce",
-      "polish": "Produkować",
+      "english": "Ourselves",
+      "polish": "My sami",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p160-010-word.mp3",
       "audioSentence": "t1-p160-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-011",
-      "english": "Resign",
-      "polish": "Rezygnować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-011-word.mp3",
-      "audioSentence": "t1-p160-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-012",
-      "english": "Test",
-      "polish": "Testować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-012-word.mp3",
-      "audioSentence": "t1-p160-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-013",
-      "english": "Tolerate",
-      "polish": "Tolerować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-013-word.mp3",
-      "audioSentence": "t1-p160-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-014",
-      "english": "Concentrate",
-      "polish": "Koncentrować się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-014-word.mp3",
-      "audioSentence": "t1-p160-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p160-015",
-      "english": "Identify",
-      "polish": "Identyfikować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p160-015-word.mp3",
-      "audioSentence": "t1-p160-015-sentence.mp3"
     }
   ]
 }

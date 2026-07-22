@@ -1,15 +1,15 @@
 {
   "id": "t1-p108",
-  "name": "Czasowniki 10",
+  "name": "Sprzęt elektroniczny",
   "volume": "Tom II",
-  "level": 2,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XV",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XI",
   "words": [
     {
       "id": "t1-p108-001",
-      "english": "Allow",
-      "polish": "Dopuścić",
+      "english": "Update",
+      "polish": "Aktualizacja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p108-002",
-      "english": "Borrow",
-      "polish": "Pożyczać",
+      "english": "Air conditioning",
+      "polish": "Klimatyzacja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p108-003",
-      "english": "Deal",
-      "polish": "Zająć się czymś",
+      "english": "Code",
+      "polish": "Kod",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p108-004",
-      "english": "Leave",
-      "polish": "Zostawiać",
+      "english": "Comment",
+      "polish": "Komentarz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p108-005",
-      "english": "Lend",
-      "polish": "Pożyczać",
+      "english": "Microwave",
+      "polish": "Mikrofalówka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p108-006",
-      "english": "Let",
-      "polish": "Pozwalać",
+      "english": "Phone number",
+      "polish": "Numer telefonu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p108-007",
-      "english": "Avoid",
-      "polish": "Unikać",
+      "english": "Headphones",
+      "polish": "Słuchawki na głowę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p108-008",
-      "english": "Cooperate",
-      "polish": "Współpracować",
+      "english": "Status",
+      "polish": "Status",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p108-009",
-      "english": "Depend",
-      "polish": "Zależeć od",
+      "english": "Signal",
+      "polish": "Sygnał",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p108-010",
-      "english": "Join",
-      "polish": "Przyłączać się",
+      "english": "User",
+      "polish": "Użytkownik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p108-010-word.mp3",
       "audioSentence": "t1-p108-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-011",
-      "english": "Reject",
-      "polish": "Odrzucać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-011-word.mp3",
-      "audioSentence": "t1-p108-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-012",
-      "english": "Serve",
-      "polish": "Służyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-012-word.mp3",
-      "audioSentence": "t1-p108-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-013",
-      "english": "Treat",
-      "polish": "Traktować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-013-word.mp3",
-      "audioSentence": "t1-p108-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-014",
-      "english": "Require",
-      "polish": "Wymagać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-014-word.mp3",
-      "audioSentence": "t1-p108-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p108-015",
-      "english": "Priest",
-      "polish": "Kapłan",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p108-015-word.mp3",
-      "audioSentence": "t1-p108-015-sentence.mp3"
     }
   ]
 }

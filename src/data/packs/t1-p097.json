@@ -1,15 +1,15 @@
 {
   "id": "t1-p097",
-  "name": "Czasowniki 9",
-  "volume": "Tom II",
-  "level": 2,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XIII",
+  "name": "Podróże",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział X",
   "words": [
     {
       "id": "t1-p097-001",
-      "english": "Create",
-      "polish": "Tworzyć",
+      "english": "Attraction",
+      "polish": "Atrakcja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p097-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p097-002",
-      "english": "Keep",
-      "polish": "Trzymać",
+      "english": "Trip",
+      "polish": "Krótka podróż",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p097-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p097-003",
-      "english": "Order",
-      "polish": "Układać w kolejności",
+      "english": "Rest",
+      "polish": "Odpoczynek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p097-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p097-004",
-      "english": "Set",
-      "polish": "Ustawiać",
+      "english": "Souvenir",
+      "polish": "Pamiątka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p097-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p097-005",
-      "english": "Will",
-      "polish": "",
+      "english": "Picnic",
+      "polish": "Piknik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p097-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p097-006",
-      "english": "Act",
-      "polish": "Działać",
+      "english": "Backpack",
+      "polish": "Plecak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p097-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p097-007",
-      "english": "Become",
-      "polish": "Stawać się",
+      "english": "Journey",
+      "polish": "Podróż",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p097-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p097-008",
-      "english": "Collect",
-      "polish": "Odbierać",
+      "english": "Reception",
+      "polish": "Recepcja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p097-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p097-009",
-      "english": "Could",
-      "polish": "Mogłem",
+      "english": "Visa",
+      "polish": "Wiza",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p097-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p097-010",
-      "english": "May",
-      "polish": "Móc",
+      "english": "Tour",
+      "polish": "Wycieczka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p097-010-word.mp3",
       "audioSentence": "t1-p097-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p097-011",
-      "english": "Might",
-      "polish": "Może coś się stać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p097-011-word.mp3",
-      "audioSentence": "t1-p097-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p097-012",
-      "english": "Perform",
-      "polish": "Wykonywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p097-012-word.mp3",
-      "audioSentence": "t1-p097-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p097-013",
-      "english": "Seem",
-      "polish": "Wydawać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p097-013-word.mp3",
-      "audioSentence": "t1-p097-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p097-014",
-      "english": "Belong",
-      "polish": "Należeć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p097-014-word.mp3",
-      "audioSentence": "t1-p097-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p097-015",
-      "english": "Discover",
-      "polish": "Odkrywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p097-015-word.mp3",
-      "audioSentence": "t1-p097-015-sentence.mp3"
     }
   ]
 }

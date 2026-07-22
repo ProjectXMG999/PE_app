@@ -1,0 +1,37 @@
+{
+  "id": "t1-p819",
+  "name": "Phrasale 7",
+  "volume": "Tom IX",
+  "level": 4,
+  "category": "Phrasale",
+  "chapter": "Rozdział LXXXI",
+  "words": [
+    {
+      "id": "t1-p819-001",
+      "english": "Shake up",
+      "polish": "Wstrząsnąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p819-001-word.mp3",
+      "audioSentence": "t1-p819-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p819-002",
+      "english": "Stand by",
+      "polish": "Trwać przy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p819-002-word.mp3",
+      "audioSentence": "t1-p819-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p819-003",
+      "english": "Stand up to",
+      "polish": "Postawić się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p819-003-word.mp3",
+      "audioSentence": "t1-p819-003-sentence.mp3"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "t1-p352",
+  "name": "Wypadek",
+  "volume": "Tom IV",
+  "level": 3,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXXV",
+  "words": [
+    {
+      "id": "t1-p352-001",
+      "english": "Damage",
+      "polish": "Uszkodzenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-001-word.mp3",
+      "audioSentence": "t1-p352-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-002",
+      "english": "Accident",
+      "polish": "Wypadek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-002-word.mp3",
+      "audioSentence": "t1-p352-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-003",
+      "english": "Aftermath",
+      "polish": "Pokłosie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-003-word.mp3",
+      "audioSentence": "t1-p352-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-004",
+      "english": "Breakdown",
+      "polish": "Awaria",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-004-word.mp3",
+      "audioSentence": "t1-p352-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-005",
+      "english": "Turbulence",
+      "polish": "Turbulencja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-005-word.mp3",
+      "audioSentence": "t1-p352-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-006",
+      "english": "Collision",
+      "polish": "Kolizja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-006-word.mp3",
+      "audioSentence": "t1-p352-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-007",
+      "english": "Crash",
+      "polish": "Kraksa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-007-word.mp3",
+      "audioSentence": "t1-p352-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-008",
+      "english": "Disaster",
+      "polish": "Klęska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-008-word.mp3",
+      "audioSentence": "t1-p352-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-009",
+      "english": "Catastrophe",
+      "polish": "Katastrofa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-009-word.mp3",
+      "audioSentence": "t1-p352-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-010",
+      "english": "Emergency",
+      "polish": "Nagły wypadek",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-010-word.mp3",
+      "audioSentence": "t1-p352-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-011",
+      "english": "Survivor",
+      "polish": "Ocalały",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-011-word.mp3",
+      "audioSentence": "t1-p352-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-012",
+      "english": "Destruction",
+      "polish": "Zniszczenie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-012-word.mp3",
+      "audioSentence": "t1-p352-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-013",
+      "english": "Incident",
+      "polish": "Incydent",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-013-word.mp3",
+      "audioSentence": "t1-p352-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-014",
+      "english": "Fender bender",
+      "polish": "Stłuczka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-014-word.mp3",
+      "audioSentence": "t1-p352-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p352-015",
+      "english": "Casualty",
+      "polish": "Ofiara wypadku lub wojny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p352-015-word.mp3",
+      "audioSentence": "t1-p352-015-sentence.mp3"
+    }
+  ]
+}

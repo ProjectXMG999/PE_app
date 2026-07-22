@@ -1,15 +1,15 @@
 {
   "id": "t1-p257",
-  "name": "Przymiotniki 24",
-  "volume": "Tom VI",
-  "level": 4,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział LV",
+  "name": "Popularne",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Skróty",
+  "chapter": "Rozdział XXVI",
   "words": [
     {
       "id": "t1-p257-001",
-      "english": "Matching",
-      "polish": "Dobrany",
+      "english": "AM",
+      "polish": "Przed południem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p257-002",
-      "english": "Provocative",
-      "polish": "Prowokacyjny",
+      "english": "GPA",
+      "polish": "Średnia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p257-003",
-      "english": "Dyed",
-      "polish": "Farbowany",
+      "english": "DIY",
+      "polish": "Zrób to sam",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p257-004",
-      "english": "Tempting",
-      "polish": "Kuszący",
+      "english": "DND",
+      "polish": "Nie przeszkadzać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p257-005",
-      "english": "Outdated",
-      "polish": "Przestarzały",
+      "english": "IB",
+      "polish": "Funt",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p257-006",
-      "english": "Distinctive",
-      "polish": "Wyróżniający",
+      "english": "ID",
+      "polish": "Dowód osobisty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p257-007",
-      "english": "Checkered",
-      "polish": "W kratkę",
+      "english": "IQ",
+      "polish": "Iloraz inteligencji",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p257-008",
-      "english": "Spotted",
-      "polish": "W kropki",
+      "english": "PM",
+      "polish": "Po południu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p257-009",
-      "english": "Uptown",
-      "polish": "Wytworny",
+      "english": "RIP",
+      "polish": "Spoczywaj w pokoju",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-009-word.mp3",
@@ -89,66 +89,12 @@
     },
     {
       "id": "t1-p257-010",
-      "english": "Patterned",
-      "polish": "Wzorzysty",
+      "english": "VIP",
+      "polish": "Bardzo ważna osoba",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p257-010-word.mp3",
       "audioSentence": "t1-p257-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p257-011",
-      "english": "Filthy",
-      "polish": "Bardzo brudny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p257-011-word.mp3",
-      "audioSentence": "t1-p257-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p257-012",
-      "english": "Frumpy",
-      "polish": "Bez gustu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p257-012-word.mp3",
-      "audioSentence": "t1-p257-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p257-013",
-      "english": "Tailored",
-      "polish": "Dopasowany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p257-013-word.mp3",
-      "audioSentence": "t1-p257-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p257-014",
-      "english": "Feminine",
-      "polish": "Kobiecy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p257-014-word.mp3",
-      "audioSentence": "t1-p257-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p257-015",
-      "english": "Stocky",
-      "polish": "Krępy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p257-015-word.mp3",
-      "audioSentence": "t1-p257-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p257-016",
-      "english": "Outdated",
-      "polish": "Przestarzały",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p257-016-word.mp3",
-      "audioSentence": "t1-p257-016-sentence.mp3"
     }
   ]
 }

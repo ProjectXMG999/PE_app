@@ -1,15 +1,15 @@
 {
   "id": "t1-p235",
-  "name": "Przestrzeń I położenie",
-  "volume": "Tom V",
-  "level": 3,
+  "name": "Przymiotniki 10",
+  "volume": "Tom III",
+  "level": 2,
   "category": "Przymiotniki",
-  "chapter": "Rozdział XLVI",
+  "chapter": "Rozdział XXIII",
   "words": [
     {
       "id": "t1-p235-001",
-      "english": "Central",
-      "polish": "Centralny",
+      "english": "Systematic",
+      "polish": "Systematyczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p235-002",
-      "english": "Near",
-      "polish": "Niedaleki",
+      "english": "Interested",
+      "polish": "Zainteresowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p235-003",
-      "english": "Lower",
-      "polish": "Będący poniżej",
+      "english": "Emotional",
+      "polish": "Emocjonalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p235-004",
-      "english": "Upper",
-      "polish": "Będący powyżej",
+      "english": "Communicative",
+      "polish": "Komunikatywny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p235-005",
-      "english": "Front",
-      "polish": "Przedni",
+      "english": "Creative",
+      "polish": "Kreatywny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p235-006",
-      "english": "Middle",
-      "polish": "Środkowy",
+      "english": "Magical",
+      "polish": "Magiczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p235-007",
-      "english": "Back",
-      "polish": "Tylni",
+      "english": "Negative",
+      "polish": "Negatywny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p235-008",
-      "english": "Southern",
-      "polish": "Południowy",
+      "english": "Loyal",
+      "polish": "Lojalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p235-009",
-      "english": "Northern",
-      "polish": "Północny",
+      "english": "Positive",
+      "polish": "Pozytywny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p235-010",
-      "english": "Nearby",
-      "polish": "Pobliski",
+      "english": "Religious",
+      "polish": "Religijny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p235-011",
-      "english": "Bottom",
-      "polish": "Dolny",
+      "english": "Moral",
+      "polish": "Moralny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p235-012",
-      "english": "Eastern",
-      "polish": "Wschodni",
+      "english": "Regular",
+      "polish": "Regularny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p235-013",
-      "english": "Western",
-      "polish": "Zachodni",
+      "english": "Professional",
+      "polish": "Profesjonalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p235-014",
-      "english": "Top",
-      "polish": "Górny",
+      "english": "Realistic",
+      "polish": "Realistyczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-014-word.mp3",
@@ -134,282 +134,12 @@
     },
     {
       "id": "t1-p235-015",
-      "english": "Underground",
-      "polish": "Podziemny",
+      "english": "Natural",
+      "polish": "Naturalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p235-015-word.mp3",
       "audioSentence": "t1-p235-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-016",
-      "english": "Outdoor",
-      "polish": "Na świeżym powietrzu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-016-word.mp3",
-      "audioSentence": "t1-p235-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-017",
-      "english": "Indoor",
-      "polish": "Domowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-017-word.mp3",
-      "audioSentence": "t1-p235-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-018",
-      "english": "Internal",
-      "polish": "Wewnętrzny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-018-word.mp3",
-      "audioSentence": "t1-p235-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-019",
-      "english": "External",
-      "polish": "Zewnętrzny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-019-word.mp3",
-      "audioSentence": "t1-p235-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-020",
-      "english": "Bordering",
-      "polish": "Graniczący",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-020-word.mp3",
-      "audioSentence": "t1-p235-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-021",
-      "english": "Foremost",
-      "polish": "Czołowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-021-word.mp3",
-      "audioSentence": "t1-p235-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-022",
-      "english": "Rear",
-      "polish": "Tylny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-022-word.mp3",
-      "audioSentence": "t1-p235-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-023",
-      "english": "Distant",
-      "polish": "Odległy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-023-word.mp3",
-      "audioSentence": "t1-p235-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-024",
-      "english": "Inner",
-      "polish": "Wewnętrzny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-024-word.mp3",
-      "audioSentence": "t1-p235-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-025",
-      "english": "Outer",
-      "polish": "Wierzchni",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-025-word.mp3",
-      "audioSentence": "t1-p235-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-026",
-      "english": "Open-air",
-      "polish": "Na powietrzu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-026-word.mp3",
-      "audioSentence": "t1-p235-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-027",
-      "english": "Underwater",
-      "polish": "Podwodny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-027-word.mp3",
-      "audioSentence": "t1-p235-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-028",
-      "english": "Surrounding",
-      "polish": "Otaczający",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-028-word.mp3",
-      "audioSentence": "t1-p235-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-029",
-      "english": "Located",
-      "polish": "Położony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-029-word.mp3",
-      "audioSentence": "t1-p235-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-030",
-      "english": "Spatial",
-      "polish": "Przestrzenny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-030-word.mp3",
-      "audioSentence": "t1-p235-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-031",
-      "english": "Parallel",
-      "polish": "Równoległy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-031-word.mp3",
-      "audioSentence": "t1-p235-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-032",
-      "english": "Adjacent",
-      "polish": "Sąsiedni",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-032-word.mp3",
-      "audioSentence": "t1-p235-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-033",
-      "english": "Placed",
-      "polish": "Umiejscowiony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-033-word.mp3",
-      "audioSentence": "t1-p235-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-034",
-      "english": "Remote",
-      "polish": "Zdalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-034-word.mp3",
-      "audioSentence": "t1-p235-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-035",
-      "english": "Perpendicular",
-      "polish": "Prostopadły",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-035-word.mp3",
-      "audioSentence": "t1-p235-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-036",
-      "english": "Celestial",
-      "polish": "Podniebny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-036-word.mp3",
-      "audioSentence": "t1-p235-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-037",
-      "english": "Overland",
-      "polish": "Naziemny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-037-word.mp3",
-      "audioSentence": "t1-p235-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-038",
-      "english": "Inland",
-      "polish": "Śródlądowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-038-word.mp3",
-      "audioSentence": "t1-p235-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-039",
-      "english": "Right-hand",
-      "polish": "Prawostronny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-039-word.mp3",
-      "audioSentence": "t1-p235-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-040",
-      "english": "Left-hand",
-      "polish": "Lewostronny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-040-word.mp3",
-      "audioSentence": "t1-p235-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-041",
-      "english": "Continental",
-      "polish": "Kontynentalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-041-word.mp3",
-      "audioSentence": "t1-p235-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-042",
-      "english": "Proximate",
-      "polish": "Będący w pobliżu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-042-word.mp3",
-      "audioSentence": "t1-p235-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-043",
-      "english": "Coastal",
-      "polish": "Przybrzeżny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-043-word.mp3",
-      "audioSentence": "t1-p235-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-044",
-      "english": "Intercontinental",
-      "polish": "Międzykontynentalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-044-word.mp3",
-      "audioSentence": "t1-p235-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p235-045",
-      "english": "Overseas",
-      "polish": "Zamorski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p235-045-word.mp3",
-      "audioSentence": "t1-p235-045-sentence.mp3"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "id": "t1-p062",
-  "name": "Rzeczowniki 5",
+  "name": "Języki (I nie tylko)",
   "volume": "Tom I",
   "level": 1,
   "category": "Rzeczowniki",
@@ -8,8 +8,8 @@
   "words": [
     {
       "id": "t1-p062-001",
-      "english": "Goal",
-      "polish": "Cel",
+      "english": "Language",
+      "polish": "Język",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p062-002",
-      "english": "Center",
-      "polish": "Centrum",
+      "english": "Book",
+      "polish": "Książka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p062-003",
-      "english": "Category",
-      "polish": "Kategoria",
+      "english": "Letter",
+      "polish": "List",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p062-004",
-      "english": "Place",
-      "polish": "Miejsce",
+      "english": "Answer",
+      "polish": "Odpowiedź",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p062-005",
-      "english": "Problem",
-      "polish": "Problem",
+      "english": "Question",
+      "polish": "Pytanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p062-006",
-      "english": "Object",
-      "polish": "Przedmiot",
+      "english": "Word",
+      "polish": "Słowo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p062-007",
-      "english": "Thing",
-      "polish": "Rzecz",
+      "english": "Text",
+      "polish": "Tekst",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p062-008",
-      "english": "Way",
-      "polish": "Sposób",
+      "english": "Sentence",
+      "polish": "Zdanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-008-word.mp3",
@@ -80,21 +80,12 @@
     },
     {
       "id": "t1-p062-009",
-      "english": "Detail",
-      "polish": "Szczegół",
+      "english": "Meaning",
+      "polish": "Znaczenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p062-009-word.mp3",
       "audioSentence": "t1-p062-009-sentence.mp3"
-    },
-    {
-      "id": "t1-p062-010",
-      "english": "Sign",
-      "polish": "Znak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p062-010-word.mp3",
-      "audioSentence": "t1-p062-010-sentence.mp3"
     }
   ]
 }

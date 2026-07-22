@@ -1,15 +1,15 @@
 {
   "id": "t1-p124",
-  "name": "Materiały I substancje",
+  "name": "Slang 7",
   "volume": "Tom II",
   "level": 2,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XVII",
+  "category": "Slang",
+  "chapter": "Rozdział XIII",
   "words": [
     {
       "id": "t1-p124-001",
-      "english": "Paint",
-      "polish": "Farba",
+      "english": "Bruh",
+      "polish": "Brachu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p124-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p124-002",
-      "english": "Stone",
-      "polish": "Kamień",
+      "english": "Buddy",
+      "polish": "Koleżka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p124-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p124-003",
-      "english": "Wood",
-      "polish": "Drewno",
+      "english": "Lad",
+      "polish": "Ziomek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p124-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p124-004",
-      "english": "Rubber",
-      "polish": "Guma",
+      "english": "Roomie",
+      "polish": "Współlokator",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p124-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p124-005",
-      "english": "Glue",
-      "polish": "Klej",
+      "english": "Amigo",
+      "polish": "Hiszpański ziomuś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p124-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p124-006",
-      "english": "Material",
-      "polish": "Materiał",
+      "english": "Bloke",
+      "polish": "Facet",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p124-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p124-007",
-      "english": "Metal",
-      "polish": "Metal",
+      "english": "Dawg",
+      "polish": "Ziomal",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p124-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p124-008",
-      "english": "Mineral",
-      "polish": "Minerał",
+      "english": "Fellow",
+      "polish": "Kolega",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p124-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p124-009",
-      "english": "Plastic",
-      "polish": "Plastik",
+      "english": "Newbie",
+      "polish": "Nowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p124-009-word.mp3",
@@ -89,327 +89,12 @@
     },
     {
       "id": "t1-p124-010",
-      "english": "Powder",
-      "polish": "Proszek",
+      "english": "Homie",
+      "polish": "Ziomuś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p124-010-word.mp3",
       "audioSentence": "t1-p124-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-011",
-      "english": "Silver",
-      "polish": "Srebro",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-011-word.mp3",
-      "audioSentence": "t1-p124-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-012",
-      "english": "Substance",
-      "polish": "Substancja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-012-word.mp3",
-      "audioSentence": "t1-p124-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-013",
-      "english": "Brick",
-      "polish": "Cegła",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-013-word.mp3",
-      "audioSentence": "t1-p124-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-014",
-      "english": "Gold",
-      "polish": "Złoto",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-014-word.mp3",
-      "audioSentence": "t1-p124-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-015",
-      "english": "Cement",
-      "polish": "Cement",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-015-word.mp3",
-      "audioSentence": "t1-p124-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-016",
-      "english": "Cotton",
-      "polish": "Bawełna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-016-word.mp3",
-      "audioSentence": "t1-p124-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-017",
-      "english": "Silk",
-      "polish": "Jedwab",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-017-word.mp3",
-      "audioSentence": "t1-p124-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-018",
-      "english": "Drop",
-      "polish": "Kropla",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-018-word.mp3",
-      "audioSentence": "t1-p124-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-019",
-      "english": "Fabric",
-      "polish": "Tkanina",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-019-word.mp3",
-      "audioSentence": "t1-p124-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-020",
-      "english": "Steel",
-      "polish": "Stal",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-020-word.mp3",
-      "audioSentence": "t1-p124-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-021",
-      "english": "Wool",
-      "polish": "Wełna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-021-word.mp3",
-      "audioSentence": "t1-p124-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-022",
-      "english": "Coal",
-      "polish": "Węgiel",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-022-word.mp3",
-      "audioSentence": "t1-p124-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-023",
-      "english": "Marble",
-      "polish": "Marmur",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-023-word.mp3",
-      "audioSentence": "t1-p124-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-024",
-      "english": "Leather",
-      "polish": "Skóra",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-024-word.mp3",
-      "audioSentence": "t1-p124-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-025",
-      "english": "Velvet",
-      "polish": "Aksamit",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-025-word.mp3",
-      "audioSentence": "t1-p124-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-026",
-      "english": "Foam",
-      "polish": "Pianka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-026-word.mp3",
-      "audioSentence": "t1-p124-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-027",
-      "english": "Aluminum",
-      "polish": "Aluminum",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-027-word.mp3",
-      "audioSentence": "t1-p124-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-028",
-      "english": "Amber",
-      "polish": "Bursztyn",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-028-word.mp3",
-      "audioSentence": "t1-p124-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-029",
-      "english": "Ointment",
-      "polish": "Maść",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-029-word.mp3",
-      "audioSentence": "t1-p124-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-030",
-      "english": "Porcelain",
-      "polish": "Porcelana",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-030-word.mp3",
-      "audioSentence": "t1-p124-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-031",
-      "english": "Petroleum",
-      "polish": "Ropa naftowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-031-word.mp3",
-      "audioSentence": "t1-p124-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-032",
-      "english": "Asphalt",
-      "polish": "Asfalt",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-032-word.mp3",
-      "audioSentence": "t1-p124-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-033",
-      "english": "Sheet metal",
-      "polish": "Blacha",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-033-word.mp3",
-      "audioSentence": "t1-p124-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-034",
-      "english": "Bronze",
-      "polish": "Brąz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-034-word.mp3",
-      "audioSentence": "t1-p124-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-035",
-      "english": "Ceramic",
-      "polish": "Ceramika",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-035-word.mp3",
-      "audioSentence": "t1-p124-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-036",
-      "english": "Clay",
-      "polish": "Glina",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-036-word.mp3",
-      "audioSentence": "t1-p124-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-037",
-      "english": "Cardboard",
-      "polish": "Karton",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-037-word.mp3",
-      "audioSentence": "t1-p124-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-038",
-      "english": "Ivory",
-      "polish": "Kość słoniowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-038-word.mp3",
-      "audioSentence": "t1-p124-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-039",
-      "english": "Copper",
-      "polish": "Miedź",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-039-word.mp3",
-      "audioSentence": "t1-p124-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-040",
-      "english": "Brass",
-      "polish": "Mosiądz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-040-word.mp3",
-      "audioSentence": "t1-p124-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-041",
-      "english": "Rust",
-      "polish": "Rdza",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-041-word.mp3",
-      "audioSentence": "t1-p124-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-042",
-      "english": "Solvent",
-      "polish": "Rozpuszczalnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-042-word.mp3",
-      "audioSentence": "t1-p124-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-043",
-      "english": "Sulfur",
-      "polish": "Siarka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-043-word.mp3",
-      "audioSentence": "t1-p124-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-044",
-      "english": "Iron",
-      "polish": "Żelazo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-044-word.mp3",
-      "audioSentence": "t1-p124-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p124-045",
-      "english": "Platinum",
-      "polish": "Platyna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p124-045-word.mp3",
-      "audioSentence": "t1-p124-045-sentence.mp3"
     }
   ]
 }

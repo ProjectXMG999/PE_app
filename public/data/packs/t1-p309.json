@@ -1,15 +1,15 @@
 {
   "id": "t1-p309",
-  "name": "Przymiotniki 37",
-  "volume": "Tom VIII",
-  "level": 4,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział LXXX",
+  "name": "Slang 16",
+  "volume": "Tom IV",
+  "level": 3,
+  "category": "Slang",
+  "chapter": "Rozdział XXXI",
   "words": [
     {
       "id": "t1-p309-001",
-      "english": "Equivalent",
-      "polish": "Równoważny",
+      "english": "Let it slide",
+      "polish": "Darować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p309-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p309-002",
-      "english": "Emphasized",
-      "polish": "Uwypuklony",
+      "english": "Mom",
+      "polish": "Określenie opisujące najtroskliwszego przyjaciela",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p309-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p309-003",
-      "english": "Pronounced",
-      "polish": "Wyraźny",
+      "english": "Root for",
+      "polish": "Dopingować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p309-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p309-004",
-      "english": "Preventive",
-      "polish": "Zapobiegawczy",
+      "english": "Be extra",
+      "polish": "Przesadzać z reakcją",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p309-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p309-005",
-      "english": "Redundant",
-      "polish": "Zbędny",
+      "english": "Get hitched",
+      "polish": "Hajtnąć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p309-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p309-006",
-      "english": "Infinite",
-      "polish": "Nieskończony",
+      "english": "Diss",
+      "polish": "Odnosić się do kogoś z brakiem szacunku",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p309-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p309-007",
-      "english": "Endless",
-      "polish": "Niewyczerpany",
+      "english": "10 foot stick",
+      "polish": "Na odległość",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p309-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p309-008",
-      "english": "Inevitable",
-      "polish": "Nieunikniony",
+      "english": "Bear hug",
+      "polish": "Przytulić na misia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p309-008-word.mp3",
@@ -80,66 +80,12 @@
     },
     {
       "id": "t1-p309-009",
-      "english": "Steady",
-      "polish": "Stały",
+      "english": "Roast",
+      "polish": "Robić sobie z kogoś jaja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p309-009-word.mp3",
       "audioSentence": "t1-p309-009-sentence.mp3"
-    },
-    {
-      "id": "t1-p309-010",
-      "english": "Lacking",
-      "polish": "Mający braki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p309-010-word.mp3",
-      "audioSentence": "t1-p309-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p309-011",
-      "english": "Overall",
-      "polish": "Ogólny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p309-011-word.mp3",
-      "audioSentence": "t1-p309-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p309-012",
-      "english": "Affected",
-      "polish": "Dotknięty",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p309-012-word.mp3",
-      "audioSentence": "t1-p309-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p309-013",
-      "english": "Effortless",
-      "polish": "Łatwy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p309-013-word.mp3",
-      "audioSentence": "t1-p309-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p309-014",
-      "english": "Inconvenient",
-      "polish": "Niedogodny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p309-014-word.mp3",
-      "audioSentence": "t1-p309-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p309-015",
-      "english": "Superficial",
-      "polish": "Powierzchowny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p309-015-word.mp3",
-      "audioSentence": "t1-p309-015-sentence.mp3"
     }
   ]
 }

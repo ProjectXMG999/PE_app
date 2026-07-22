@@ -1,0 +1,145 @@
+{
+  "id": "t1-p602",
+  "name": "Pogoda",
+  "volume": "Tom VI",
+  "level": 4,
+  "category": "Przymiotniki",
+  "chapter": "Rozdział LX",
+  "words": [
+    {
+      "id": "t1-p602-001",
+      "english": "Freezing",
+      "polish": "Zamarzający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-001-word.mp3",
+      "audioSentence": "t1-p602-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-002",
+      "english": "Stormy",
+      "polish": "Burzowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-002-word.mp3",
+      "audioSentence": "t1-p602-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-003",
+      "english": "Chilly",
+      "polish": "Chłodny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-003-word.mp3",
+      "audioSentence": "t1-p602-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-004",
+      "english": "Molten",
+      "polish": "Roztopiony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-004-word.mp3",
+      "audioSentence": "t1-p602-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-005",
+      "english": "Slippery",
+      "polish": "Śliski",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-005-word.mp3",
+      "audioSentence": "t1-p602-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-006",
+      "english": "Humid",
+      "polish": "Wilgotny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-006-word.mp3",
+      "audioSentence": "t1-p602-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-007",
+      "english": "Dried",
+      "polish": "Wysuszony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-007-word.mp3",
+      "audioSentence": "t1-p602-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-008",
+      "english": "Swampy",
+      "polish": "Bagienny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-008-word.mp3",
+      "audioSentence": "t1-p602-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-009",
+      "english": "Boggy",
+      "polish": "Bagnisty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-009-word.mp3",
+      "audioSentence": "t1-p602-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-010",
+      "english": "Cloudless",
+      "polish": "Bezchmurny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-010-word.mp3",
+      "audioSentence": "t1-p602-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-011",
+      "english": "Lukewarm",
+      "polish": "Letni",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-011-word.mp3",
+      "audioSentence": "t1-p602-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-012",
+      "english": "Frosted",
+      "polish": "Oszroniony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-012-word.mp3",
+      "audioSentence": "t1-p602-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-013",
+      "english": "Overcast",
+      "polish": "Zachmurzony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-013-word.mp3",
+      "audioSentence": "t1-p602-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-014",
+      "english": "Watery",
+      "polish": "Podmokły",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-014-word.mp3",
+      "audioSentence": "t1-p602-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p602-015",
+      "english": "Moist",
+      "polish": "Wilgotny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p602-015-word.mp3",
+      "audioSentence": "t1-p602-015-sentence.mp3"
+    }
+  ]
+}

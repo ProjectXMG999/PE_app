@@ -1,15 +1,15 @@
 {
   "id": "t1-p180",
-  "name": "Małżonkowie",
-  "volume": "Tom IV",
-  "level": 3,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XXXI",
+  "name": "Miary",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XVIII",
   "words": [
     {
       "id": "t1-p180-001",
-      "english": "Groom",
-      "polish": "Pan młody",
+      "english": "Thin",
+      "polish": "Chudy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p180-002",
-      "english": "Bride",
-      "polish": "Panna młoda",
+      "english": "Tight",
+      "polish": "Ciasny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p180-003",
-      "english": "Divorce",
-      "polish": "Rozwód",
+      "english": "Large",
+      "polish": "Wielki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p180-004",
-      "english": "Wedding",
-      "polish": "Ślub",
+      "english": "Deep",
+      "polish": "Głęboki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p180-005",
-      "english": "Everyday life",
-      "polish": "Życie codzienne",
+      "english": "Thick",
+      "polish": "Gruby",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p180-006",
-      "english": "Ex-wife",
-      "polish": "Była żona",
+      "english": "Round",
+      "polish": "Okrągły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p180-007",
-      "english": "Bachelor",
-      "polish": "Kawaler",
+      "english": "Light",
+      "polish": "Lekki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p180-008",
-      "english": "Ex-husband",
-      "polish": "Były mąż",
+      "english": "Loose",
+      "polish": "Luźny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p180-009",
-      "english": "Widow",
-      "polish": "Wdowa",
+      "english": "Tiny",
+      "polish": "Malutki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p180-010",
-      "english": "Widower",
-      "polish": "Wdowiec",
+      "english": "Broad",
+      "polish": "Obszerny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p180-011",
-      "english": "Honeymoon",
-      "polish": "Miesiąc miodowy",
+      "english": "Huge",
+      "polish": "Ogromny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p180-012",
-      "english": "Betrayal",
-      "polish": "Zdrada",
+      "english": "Sharp",
+      "polish": "Ostry",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p180-013",
-      "english": "Ceremony",
-      "polish": "Ceremonia",
+      "english": "Flat",
+      "polish": "Równy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p180-014",
-      "english": "Maturity",
-      "polish": "Dojrzałość",
+      "english": "Wide",
+      "polish": "Szeroki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-014-word.mp3",
@@ -134,147 +134,12 @@
     },
     {
       "id": "t1-p180-015",
-      "english": "Bridesmaid",
-      "polish": "Druhna",
+      "english": "Narrow",
+      "polish": "Wąski",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p180-015-word.mp3",
       "audioSentence": "t1-p180-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-016",
-      "english": "Best man",
-      "polish": "Drużba",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-016-word.mp3",
-      "audioSentence": "t1-p180-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-017",
-      "english": "Newlyweds",
-      "polish": "Nowożeńcy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-017-word.mp3",
-      "audioSentence": "t1-p180-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-018",
-      "english": "Proposal",
-      "polish": "Oświadczyny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-018-word.mp3",
-      "audioSentence": "t1-p180-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-019",
-      "english": "Civil wedding",
-      "polish": "Ślub cywilny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-019-word.mp3",
-      "audioSentence": "t1-p180-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-020",
-      "english": "Church wedding",
-      "polish": "Ślub kościelny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-020-word.mp3",
-      "audioSentence": "t1-p180-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-021",
-      "english": "Bachelor party",
-      "polish": "Wieczór kawalerski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-021-word.mp3",
-      "audioSentence": "t1-p180-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-022",
-      "english": "Bachelorette party",
-      "polish": "Wieczór panieński",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-022-word.mp3",
-      "audioSentence": "t1-p180-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-023",
-      "english": "Separation",
-      "polish": "Separacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-023-word.mp3",
-      "audioSentence": "t1-p180-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-024",
-      "english": "Marital status",
-      "polish": "Stan cywilny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-024-word.mp3",
-      "audioSentence": "t1-p180-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-025",
-      "english": "Spouse",
-      "polish": "Małżonek",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-025-word.mp3",
-      "audioSentence": "t1-p180-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-026",
-      "english": "Fiancé",
-      "polish": "Narzeczony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-026-word.mp3",
-      "audioSentence": "t1-p180-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-027",
-      "english": "Maiden",
-      "polish": "Panna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-027-word.mp3",
-      "audioSentence": "t1-p180-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-028",
-      "english": "Wedding reception",
-      "polish": "Przyjęcie weselne",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-028-word.mp3",
-      "audioSentence": "t1-p180-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-029",
-      "english": "Infidelity",
-      "polish": "Niewierność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-029-word.mp3",
-      "audioSentence": "t1-p180-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p180-030",
-      "english": "Wedlock",
-      "polish": "Związek małżeński",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p180-030-word.mp3",
-      "audioSentence": "t1-p180-030-sentence.mp3"
     }
   ]
 }

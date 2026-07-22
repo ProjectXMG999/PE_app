@@ -1,15 +1,15 @@
 {
   "id": "t1-p028",
-  "name": "Miary",
+  "name": "Czas to pieniądz",
   "volume": "Tom I",
   "level": 1,
-  "category": "Przymiotniki",
+  "category": "Przysłówki",
   "chapter": "Rozdział III",
   "words": [
     {
       "id": "t1-p028-001",
-      "english": "Heavy",
-      "polish": "Ciężki",
+      "english": "A few",
+      "polish": "Kilka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p028-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p028-002",
-      "english": "Long",
-      "polish": "Długi",
+      "english": "Always",
+      "polish": "Zawsze",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p028-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p028-003",
-      "english": "Big",
-      "polish": "Duży",
+      "english": "Another",
+      "polish": "Jeszcze jeden",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p028-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p028-004",
-      "english": "Short",
-      "polish": "Krótki",
+      "english": "Just",
+      "polish": "Tylko",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p028-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p028-005",
-      "english": "Small",
-      "polish": "Mały",
+      "english": "Little",
+      "polish": "Mało",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p028-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p028-006",
-      "english": "Little",
-      "polish": "Mały",
+      "english": "Much",
+      "polish": "Dużo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p028-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p028-007",
-      "english": "Soft",
-      "polish": "Miękki",
+      "english": "Many",
+      "polish": "Wiele",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p028-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p028-008",
-      "english": "Mini",
-      "polish": "Mini",
+      "english": "Never",
+      "polish": "Nigdy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p028-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p028-009",
-      "english": "Tall",
-      "polish": "Wysoki",
+      "english": "Often",
+      "polish": "Często",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p028-009-word.mp3",
@@ -89,417 +89,12 @@
     },
     {
       "id": "t1-p028-010",
-      "english": "High",
-      "polish": "Wysoki",
+      "english": "Very",
+      "polish": "Bardzo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p028-010-word.mp3",
       "audioSentence": "t1-p028-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-011",
-      "english": "Thin",
-      "polish": "Chudy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-011-word.mp3",
-      "audioSentence": "t1-p028-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-012",
-      "english": "Tight",
-      "polish": "Ciasny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-012-word.mp3",
-      "audioSentence": "t1-p028-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-013",
-      "english": "Large",
-      "polish": "Wielki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-013-word.mp3",
-      "audioSentence": "t1-p028-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-014",
-      "english": "Deep",
-      "polish": "Głęboki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-014-word.mp3",
-      "audioSentence": "t1-p028-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-015",
-      "english": "Thick",
-      "polish": "Gruby",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-015-word.mp3",
-      "audioSentence": "t1-p028-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-016",
-      "english": "Round",
-      "polish": "Okrągły",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-016-word.mp3",
-      "audioSentence": "t1-p028-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-017",
-      "english": "Light",
-      "polish": "Lekki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-017-word.mp3",
-      "audioSentence": "t1-p028-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-018",
-      "english": "Loose",
-      "polish": "Luźny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-018-word.mp3",
-      "audioSentence": "t1-p028-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-019",
-      "english": "Tiny",
-      "polish": "Malutki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-019-word.mp3",
-      "audioSentence": "t1-p028-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-020",
-      "english": "Broad",
-      "polish": "Obszerny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-020-word.mp3",
-      "audioSentence": "t1-p028-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-021",
-      "english": "Huge",
-      "polish": "Ogromny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-021-word.mp3",
-      "audioSentence": "t1-p028-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-022",
-      "english": "Sharp",
-      "polish": "Ostry",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-022-word.mp3",
-      "audioSentence": "t1-p028-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-023",
-      "english": "Flat",
-      "polish": "Równy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-023-word.mp3",
-      "audioSentence": "t1-p028-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-024",
-      "english": "Wide",
-      "polish": "Szeroki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-024-word.mp3",
-      "audioSentence": "t1-p028-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-025",
-      "english": "Narrow",
-      "polish": "Wąski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-025-word.mp3",
-      "audioSentence": "t1-p028-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-026",
-      "english": "Spacious",
-      "polish": "Przestronny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-026-word.mp3",
-      "audioSentence": "t1-p028-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-027",
-      "english": "Smooth",
-      "polish": "Gładki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-027-word.mp3",
-      "audioSentence": "t1-p028-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-028",
-      "english": "Massive",
-      "polish": "Masywny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-028-word.mp3",
-      "audioSentence": "t1-p028-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-029",
-      "english": "Enormous",
-      "polish": "Olbrzymi",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-029-word.mp3",
-      "audioSentence": "t1-p028-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-030",
-      "english": "Full-size",
-      "polish": "Pełnego rozmiaru",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-030-word.mp3",
-      "audioSentence": "t1-p028-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-031",
-      "english": "Curvy",
-      "polish": "Wygięty",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-031-word.mp3",
-      "audioSentence": "t1-p028-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-032",
-      "english": "Petite",
-      "polish": "Drobny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-032-word.mp3",
-      "audioSentence": "t1-p028-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-033",
-      "english": "Mid-size",
-      "polish": "Średniej wielkości",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-033-word.mp3",
-      "audioSentence": "t1-p028-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-034",
-      "english": "Circular",
-      "polish": "Okrężny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-034-word.mp3",
-      "audioSentence": "t1-p028-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-035",
-      "english": "Rough",
-      "polish": "Szorstki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-035-word.mp3",
-      "audioSentence": "t1-p028-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-036",
-      "english": "Square",
-      "polish": "Kwadratowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-036-word.mp3",
-      "audioSentence": "t1-p028-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-037",
-      "english": "Slight",
-      "polish": "Niewielki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-037-word.mp3",
-      "audioSentence": "t1-p028-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-038",
-      "english": "Even",
-      "polish": "Płaski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-038-word.mp3",
-      "audioSentence": "t1-p028-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-039",
-      "english": "Even",
-      "polish": "Wyrównany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-039-word.mp3",
-      "audioSentence": "t1-p028-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-040",
-      "english": "Curious",
-      "polish": "Ciekawy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-040-word.mp3",
-      "audioSentence": "t1-p028-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-041",
-      "english": "Shallow",
-      "polish": "Płytki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-041-word.mp3",
-      "audioSentence": "t1-p028-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-042",
-      "english": "Crooked",
-      "polish": "Krzywy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-042-word.mp3",
-      "audioSentence": "t1-p028-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-043",
-      "english": "Vast",
-      "polish": "Obszerny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-043-word.mp3",
-      "audioSentence": "t1-p028-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-044",
-      "english": "Rectangular",
-      "polish": "Prostokątny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-044-word.mp3",
-      "audioSentence": "t1-p028-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-045",
-      "english": "Triangular",
-      "polish": "Trójkątny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-045-word.mp3",
-      "audioSentence": "t1-p028-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-046",
-      "english": "Extensive",
-      "polish": "Rozległy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-046-word.mp3",
-      "audioSentence": "t1-p028-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-047",
-      "english": "Life-size",
-      "polish": "W skali rzeczywistej",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-047-word.mp3",
-      "audioSentence": "t1-p028-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-048",
-      "english": "Second-largest",
-      "polish": "Drugi największy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-048-word.mp3",
-      "audioSentence": "t1-p028-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-049",
-      "english": "Small-scale",
-      "polish": "Na małą skalę",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-049-word.mp3",
-      "audioSentence": "t1-p028-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-050",
-      "english": "Tremendous",
-      "polish": "Okazały",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-050-word.mp3",
-      "audioSentence": "t1-p028-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-051",
-      "english": "Extended",
-      "polish": "Przedłużony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-051-word.mp3",
-      "audioSentence": "t1-p028-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-052",
-      "english": "Overgrown",
-      "polish": "Przerośnięty",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-052-word.mp3",
-      "audioSentence": "t1-p028-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-053",
-      "english": "Roomy",
-      "polish": "Pojemny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-053-word.mp3",
-      "audioSentence": "t1-p028-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-054",
-      "english": "Medium-sized",
-      "polish": "Średniego rozmiaru",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-054-word.mp3",
-      "audioSentence": "t1-p028-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p028-055",
-      "english": "High-rise",
-      "polish": "Wysoki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p028-055-word.mp3",
-      "audioSentence": "t1-p028-055-sentence.mp3"
     }
   ]
 }

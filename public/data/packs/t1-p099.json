@@ -1,15 +1,15 @@
 {
   "id": "t1-p099",
-  "name": "Przymiotniki 7",
-  "volume": "Tom II",
-  "level": 2,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział XIII",
+  "name": "Emocje I uczucia",
+  "volume": "Tom I",
+  "level": 1,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział X",
   "words": [
     {
       "id": "t1-p099-001",
-      "english": "Attractive",
-      "polish": "Atrakcyjny",
+      "english": "Appetite",
+      "polish": "Apetyt",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p099-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p099-002",
-      "english": "Messy",
-      "polish": "Bałaganiarski",
+      "english": "Emotion",
+      "polish": "Emocja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p099-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p099-003",
-      "english": "Skinny",
-      "polish": "Bardzo szczupły",
+      "english": "Dream",
+      "polish": "Marzenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p099-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p099-004",
-      "english": "Blond",
-      "polish": "Blond",
+      "english": "Surprise",
+      "polish": "Niespodzianka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p099-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p099-005",
-      "english": "Ugly",
-      "polish": "Brzydki",
+      "english": "Need",
+      "polish": "Potrzeba",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p099-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p099-006",
-      "english": "Good-looking",
-      "polish": "Dobrze wyglądający",
+      "english": "Laughter",
+      "polish": "Śmiech",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p099-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p099-007",
-      "english": "Well-built",
-      "polish": "Dobrze zbudowany",
+      "english": "Feeling",
+      "polish": "Uczucie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p099-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p099-008",
-      "english": "Curly",
-      "polish": "Kręcone",
+      "english": "Smell",
+      "polish": "Zapach",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p099-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p099-009",
-      "english": "Bald",
-      "polish": "Łysy",
+      "english": "Taste",
+      "polish": "Zmysł smaku",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p099-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p099-010",
-      "english": "Overweight",
-      "polish": "Mający nadwagę",
+      "english": "Wish",
+      "polish": "Życzenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p099-010-word.mp3",
       "audioSentence": "t1-p099-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p099-011",
-      "english": "Nude",
-      "polish": "Nagi",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p099-011-word.mp3",
-      "audioSentence": "t1-p099-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p099-012",
-      "english": "Out of shape",
-      "polish": "Nie w formie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p099-012-word.mp3",
-      "audioSentence": "t1-p099-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p099-013",
-      "english": "Obese",
-      "polish": "Otyły",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p099-013-word.mp3",
-      "audioSentence": "t1-p099-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p099-014",
-      "english": "Hairy",
-      "polish": "Owłosiony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p099-014-word.mp3",
-      "audioSentence": "t1-p099-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p099-015",
-      "english": "Neat",
-      "polish": "Schludny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p099-015-word.mp3",
-      "audioSentence": "t1-p099-015-sentence.mp3"
     }
   ]
 }

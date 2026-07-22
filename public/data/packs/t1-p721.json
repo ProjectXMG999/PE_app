@@ -1,0 +1,100 @@
+{
+  "id": "t1-p721",
+  "name": "It",
+  "volume": "Tom VIII",
+  "level": 4,
+  "category": "Slang",
+  "chapter": "Rozdział LXXII",
+  "words": [
+    {
+      "id": "t1-p721-001",
+      "english": "Abandonware",
+      "polish": "Programy, które nie są już chronione licencją",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p721-001-word.mp3",
+      "audioSentence": "t1-p721-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p721-002",
+      "english": "Ad",
+      "polish": "Reklama wyskakująca w apkach",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p721-002-word.mp3",
+      "audioSentence": "t1-p721-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p721-003",
+      "english": "Appz",
+      "polish": "Piraty",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p721-003-word.mp3",
+      "audioSentence": "t1-p721-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p721-004",
+      "english": "Black hat",
+      "polish": "Haker, który łamie standardy etyczne w niecnych celach",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p721-004-word.mp3",
+      "audioSentence": "t1-p721-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p721-005",
+      "english": "Buggy",
+      "polish": "Program pełen błędów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p721-005-word.mp3",
+      "audioSentence": "t1-p721-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p721-006",
+      "english": "Flame war",
+      "polish": "Zadyma w necie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p721-006-word.mp3",
+      "audioSentence": "t1-p721-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p721-007",
+      "english": "Glitch",
+      "polish": "Błąd w systemie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p721-007-word.mp3",
+      "audioSentence": "t1-p721-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p721-008",
+      "english": "Go-code",
+      "polish": "Rozkaz do rozpoczęcia akcji",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p721-008-word.mp3",
+      "audioSentence": "t1-p721-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p721-009",
+      "english": "Plug",
+      "polish": "Płatna reklama w mediach społecznościowych",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p721-009-word.mp3",
+      "audioSentence": "t1-p721-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p721-010",
+      "english": "White hat",
+      "polish": "Haker działający w dobrym interesie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p721-010-word.mp3",
+      "audioSentence": "t1-p721-010-sentence.mp3"
+    }
+  ]
+}

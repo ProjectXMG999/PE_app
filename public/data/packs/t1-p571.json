@@ -1,0 +1,37 @@
+{
+  "id": "t1-p571",
+  "name": "Rzeczowniki 12",
+  "volume": "Tom VI",
+  "level": 4,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział  LVII",
+  "words": [
+    {
+      "id": "t1-p571-001",
+      "english": "Aid",
+      "polish": "Pomoc",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p571-001-word.mp3",
+      "audioSentence": "t1-p571-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p571-002",
+      "english": "Relation",
+      "polish": "Relacja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p571-002-word.mp3",
+      "audioSentence": "t1-p571-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p571-003",
+      "english": "Attraction",
+      "polish": "Przyciąganie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p571-003-word.mp3",
+      "audioSentence": "t1-p571-003-sentence.mp3"
+    }
+  ]
+}

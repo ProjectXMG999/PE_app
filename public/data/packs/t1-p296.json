@@ -1,15 +1,15 @@
 {
   "id": "t1-p296",
-  "name": "Phrasale 6",
-  "volume": "Tom VIII",
-  "level": 4,
-  "category": "Phrasale",
-  "chapter": "Rozdział LXXIII",
+  "name": "Świat cyfrowy",
+  "volume": "Tom III",
+  "level": 3,
+  "category": "Czasowniki",
+  "chapter": "Rozdział XXIX",
   "words": [
     {
       "id": "t1-p296-001",
-      "english": "Cool off",
-      "polish": "Ochłoń",
+      "english": "Subscribe",
+      "polish": "Subskrybować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p296-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p296-002",
-      "english": "Pull yourself together",
-      "polish": "Weź się w garść",
+      "english": "Type",
+      "polish": "Pisać na wszystkim co ma klawisze",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p296-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p296-003",
-      "english": "Back off",
-      "polish": "Odczep się",
+      "english": "Unlock",
+      "polish": "Odblokować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p296-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p296-004",
-      "english": "Come off it",
-      "polish": "Daruj sobie",
+      "english": "Update",
+      "polish": "Zaktualizować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p296-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p296-005",
-      "english": "Walk sth off",
-      "polish": "Rozchodzić coś",
+      "english": "Switch",
+      "polish": "Przełączać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p296-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p296-006",
-      "english": "Back down",
-      "polish": "Odsuń się",
+      "english": "Connect",
+      "polish": "Podłączać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p296-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p296-007",
-      "english": "Stand down",
-      "polish": "Opuścić broń",
+      "english": "Downgrade",
+      "polish": "Zainstalować do starszej wersji",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p296-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p296-008",
-      "english": "Buckle up",
-      "polish": "Zapnij pasy",
+      "english": "Download",
+      "polish": "Zgrać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p296-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p296-009",
-      "english": "Man up",
-      "polish": "Zmężniej",
+      "english": "Load",
+      "polish": "Wczytywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p296-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p296-010",
-      "english": "Word up",
-      "polish": "No a jak",
+      "english": "Plug",
+      "polish": "Wetknąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p296-010-word.mp3",
       "audioSentence": "t1-p296-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p296-011",
+      "english": "Reset",
+      "polish": "Wyzerować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p296-011-word.mp3",
+      "audioSentence": "t1-p296-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p296-012",
+      "english": "Rewind",
+      "polish": "Przewijać do tyłu",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p296-012-word.mp3",
+      "audioSentence": "t1-p296-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p296-013",
+      "english": "Upgrade",
+      "polish": "Unowocześniać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p296-013-word.mp3",
+      "audioSentence": "t1-p296-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p296-014",
+      "english": "Upload",
+      "polish": "Wgrać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p296-014-word.mp3",
+      "audioSentence": "t1-p296-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p296-015",
+      "english": "Adjust",
+      "polish": "Przystosowywać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p296-015-word.mp3",
+      "audioSentence": "t1-p296-015-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p272",
-  "name": "Phrasale 4",
-  "volume": "Tom VII",
-  "level": 4,
-  "category": "Phrasale",
-  "chapter": "Rozdział LXII",
+  "name": "Człowiek",
+  "volume": "Tom III",
+  "level": 3,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXVII",
   "words": [
     {
       "id": "t1-p272-001",
-      "english": "It is up to sb",
-      "polish": "Coś zależy od kogoś",
+      "english": "Disabled person",
+      "polish": "Osoba niepełnosprawna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p272-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p272-002",
-      "english": "Split up",
-      "polish": "Rozdzielić się",
+      "english": "Origin",
+      "polish": "Pochodzenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p272-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p272-003",
-      "english": "Make up with sb",
-      "polish": "Pogodzić się",
+      "english": "Mistress",
+      "polish": "Kochanka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p272-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p272-004",
-      "english": "Step in for sb",
-      "polish": "Zgłosić się za kogoś",
+      "english": "Disability",
+      "polish": "Niepełnosprawność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p272-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p272-005",
-      "english": "Come along",
-      "polish": "Dołączyć",
+      "english": "Orphan",
+      "polish": "Sierota",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p272-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p272-006",
-      "english": "Count on",
-      "polish": "Liczyć na",
+      "english": "Prodigy",
+      "polish": "Wrodzony talent",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p272-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p272-007",
-      "english": "Give sth over to sb",
-      "polish": "Przekazać coś komuś",
+      "english": "Fool",
+      "polish": "Głupiec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p272-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p272-008",
-      "english": "Stand up for sb",
-      "polish": "Stawać w obronie",
+      "english": "Individualist",
+      "polish": "Indywidualista",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p272-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p272-009",
-      "english": "Back sb up",
-      "polish": "Popierać kogoś",
+      "english": "Humankind",
+      "polish": "Ludzkość",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p272-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p272-010",
-      "english": "Feel for sb",
-      "polish": "Współczuć",
+      "english": "Mankind",
+      "polish": "Ludzkość",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p272-010-word.mp3",
       "audioSentence": "t1-p272-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p272-011",
+      "english": "Identity",
+      "polish": "Tożsamość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p272-011-word.mp3",
+      "audioSentence": "t1-p272-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p272-012",
+      "english": "Adulthood",
+      "polish": "Dorosłość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p272-012-word.mp3",
+      "audioSentence": "t1-p272-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p272-013",
+      "english": "Extrovert",
+      "polish": "Ekstrawertyk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p272-013-word.mp3",
+      "audioSentence": "t1-p272-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p272-014",
+      "english": "Hypocrite",
+      "polish": "Hipokryta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p272-014-word.mp3",
+      "audioSentence": "t1-p272-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p272-015",
+      "english": "Introvert",
+      "polish": "Introwertyk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p272-015-word.mp3",
+      "audioSentence": "t1-p272-015-sentence.mp3"
     }
   ]
 }

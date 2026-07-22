@@ -1,15 +1,15 @@
 {
   "id": "t1-p172",
-  "name": "Slang 13",
-  "volume": "Tom III",
-  "level": 3,
-  "category": "Slang",
-  "chapter": "Rozdział XXVIII",
+  "name": "Materiały I substancje",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XVII",
   "words": [
     {
       "id": "t1-p172-001",
-      "english": "Legit",
-      "polish": "Prawilne",
+      "english": "Paint",
+      "polish": "Farba",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p172-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p172-002",
-      "english": "Mad skills",
-      "polish": "Mega umiejętności",
+      "english": "Stone",
+      "polish": "Kamień",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p172-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p172-003",
-      "english": "Cruising",
-      "polish": "Wozić się",
+      "english": "Wood",
+      "polish": "Drewno",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p172-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p172-004",
-      "english": "High roller",
-      "polish": "Nadziany koleś",
+      "english": "Rubber",
+      "polish": "Guma",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p172-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p172-005",
-      "english": "Tap something",
-      "polish": "Okiełznać coś",
+      "english": "Glue",
+      "polish": "Klej",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p172-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p172-006",
-      "english": "Off the hook",
-      "polish": "Najnowsza moda",
+      "english": "Material",
+      "polish": "Materiał",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p172-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p172-007",
-      "english": "Number",
-      "polish": "Numer",
+      "english": "Metal",
+      "polish": "Metal",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p172-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p172-008",
-      "english": "Step up own game",
-      "polish": "Polepszyć swoją grę",
+      "english": "Mineral",
+      "polish": "Minerał",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p172-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p172-009",
-      "english": "Talk of the town",
-      "polish": "na ustach wszystkich",
+      "english": "Plastic",
+      "polish": "Plastik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p172-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p172-010",
-      "english": "Ballin",
-      "polish": "Żyć na wypasie",
+      "english": "Powder",
+      "polish": "Proszek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p172-010-word.mp3",
       "audioSentence": "t1-p172-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p172-011",
+      "english": "Silver",
+      "polish": "Srebro",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p172-011-word.mp3",
+      "audioSentence": "t1-p172-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p172-012",
+      "english": "Substance",
+      "polish": "Substancja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p172-012-word.mp3",
+      "audioSentence": "t1-p172-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p172-013",
+      "english": "Brick",
+      "polish": "Cegła",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p172-013-word.mp3",
+      "audioSentence": "t1-p172-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p172-014",
+      "english": "Gold",
+      "polish": "Złoto",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p172-014-word.mp3",
+      "audioSentence": "t1-p172-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p172-015",
+      "english": "Cement",
+      "polish": "Cement",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p172-015-word.mp3",
+      "audioSentence": "t1-p172-015-sentence.mp3"
     }
   ]
 }

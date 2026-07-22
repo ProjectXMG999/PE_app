@@ -1,0 +1,100 @@
+{
+  "id": "t1-p384",
+  "name": "Biznes",
+  "volume": "Tom IV",
+  "level": 3,
+  "category": "Skróty",
+  "chapter": "Rozdział XXXVIII",
+  "words": [
+    {
+      "id": "t1-p384-001",
+      "english": "VP",
+      "polish": "Wiceprezydent",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p384-001-word.mp3",
+      "audioSentence": "t1-p384-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p384-002",
+      "english": "WYSIWYG",
+      "polish": "Dostajesz to, co widzisz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p384-002-word.mp3",
+      "audioSentence": "t1-p384-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p384-003",
+      "english": "CTA",
+      "polish": "Wezwanie do działania",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p384-003-word.mp3",
+      "audioSentence": "t1-p384-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p384-004",
+      "english": "EOD",
+      "polish": "Koniec dnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p384-004-word.mp3",
+      "audioSentence": "t1-p384-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p384-005",
+      "english": "FIFO",
+      "polish": "Pierwsze wchodzi, pierwsze wychodzi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p384-005-word.mp3",
+      "audioSentence": "t1-p384-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p384-006",
+      "english": "ROA",
+      "polish": "Zwrot z aktywów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p384-006-word.mp3",
+      "audioSentence": "t1-p384-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p384-007",
+      "english": "ROI",
+      "polish": "Zwrot z inwestycji",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p384-007-word.mp3",
+      "audioSentence": "t1-p384-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p384-008",
+      "english": "TBD",
+      "polish": "Do rozstrzygnięcia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p384-008-word.mp3",
+      "audioSentence": "t1-p384-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p384-009",
+      "english": "NFS",
+      "polish": "Nie na sprzedaż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p384-009-word.mp3",
+      "audioSentence": "t1-p384-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p384-010",
+      "english": "NTH",
+      "polish": "Fajnie mieć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p384-010-word.mp3",
+      "audioSentence": "t1-p384-010-sentence.mp3"
+    }
+  ]
+}

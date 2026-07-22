@@ -1,15 +1,15 @@
 {
   "id": "t1-p209",
-  "name": "Religia",
-  "volume": "Tom IV",
-  "level": 3,
+  "name": "Nauki ścisłe",
+  "volume": "Tom III",
+  "level": 2,
   "category": "Rzeczowniki",
-  "chapter": "Rozdział XXXIX",
+  "chapter": "Rozdział XXI",
   "words": [
     {
       "id": "t1-p209-001",
-      "english": "Priest",
-      "polish": "Kapłan",
+      "english": "Half",
+      "polish": "Połowa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p209-002",
-      "english": "Heaven",
-      "polish": "Niebo",
+      "english": "Argument",
+      "polish": "Argument",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p209-003",
-      "english": "Hell",
-      "polish": "Piekło",
+      "english": "Pair",
+      "polish": "Para",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p209-004",
-      "english": "Religion",
-      "polish": "Religia",
+      "english": "Action",
+      "polish": "Akcja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p209-005",
-      "english": "Angel",
-      "polish": "Anioł",
+      "english": "Chemistry",
+      "polish": "Chemia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p209-006",
-      "english": "Atheist",
-      "polish": "Ateista",
+      "english": "Physics",
+      "polish": "Fizyka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p209-007",
-      "english": "Devil",
-      "polish": "Diabeł",
+      "english": "Maximum",
+      "polish": "Maksimum",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p209-008",
-      "english": "Soul",
-      "polish": "Dusza",
+      "english": "Mathematics",
+      "polish": "Matematyka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p209-009",
-      "english": "Fanatic",
-      "polish": "Fanatyk",
+      "english": "Minimum",
+      "polish": "Minimum",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p209-010",
-      "english": "Sin",
-      "polish": "Grzech",
+      "english": "Science",
+      "polish": "Nauka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p209-011",
-      "english": "Guru",
-      "polish": "Guru",
+      "english": "Example",
+      "polish": "Przykład",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p209-012",
-      "english": "Cross",
-      "polish": "Krzyż",
+      "english": "Solution",
+      "polish": "Rozwiązanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p209-013",
-      "english": "Monk",
-      "polish": "Mnich",
+      "english": "Reaction",
+      "polish": "Reakcja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p209-014",
-      "english": "Prayer",
-      "polish": "Modlitwa",
+      "english": "Expert",
+      "polish": "Ekspert",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-014-word.mp3",
@@ -134,147 +134,12 @@
     },
     {
       "id": "t1-p209-015",
-      "english": "Crayons",
-      "polish": "Kredki",
+      "english": "Function",
+      "polish": "Funkcja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p209-015-word.mp3",
       "audioSentence": "t1-p209-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-016",
-      "english": "Paradise",
-      "polish": "Raj",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-016-word.mp3",
-      "audioSentence": "t1-p209-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-017",
-      "english": "Taboo",
-      "polish": "Tabu",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-017-word.mp3",
-      "audioSentence": "t1-p209-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-018",
-      "english": "Faith",
-      "polish": "Wiara",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-018-word.mp3",
-      "audioSentence": "t1-p209-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-019",
-      "english": "Miracle",
-      "polish": "Cud",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-019-word.mp3",
-      "audioSentence": "t1-p209-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-020",
-      "english": "Cathedral",
-      "polish": "Katedra",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-020-word.mp3",
-      "audioSentence": "t1-p209-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-021",
-      "english": "Carol",
-      "polish": "Kolęda",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-021-word.mp3",
-      "audioSentence": "t1-p209-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-022",
-      "english": "Spirit",
-      "polish": "Duch",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-022-word.mp3",
-      "audioSentence": "t1-p209-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-023",
-      "english": "Atonement",
-      "polish": "Pokuta",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-023-word.mp3",
-      "audioSentence": "t1-p209-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-024",
-      "english": "Rector",
-      "polish": "Proboszcz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-024-word.mp3",
-      "audioSentence": "t1-p209-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-025",
-      "english": "Revelation",
-      "polish": "Rewelacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-025-word.mp3",
-      "audioSentence": "t1-p209-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-026",
-      "english": "Temple",
-      "polish": "Świątynia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-026-word.mp3",
-      "audioSentence": "t1-p209-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-027",
-      "english": "Holy day",
-      "polish": "Dzień święty",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-027-word.mp3",
-      "audioSentence": "t1-p209-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-028",
-      "english": "Eternity",
-      "polish": "Wieczność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-028-word.mp3",
-      "audioSentence": "t1-p209-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-029",
-      "english": "Chalice",
-      "polish": "Kielich",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-029-word.mp3",
-      "audioSentence": "t1-p209-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p209-030",
-      "english": "Communion",
-      "polish": "Komunia święta",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p209-030-word.mp3",
-      "audioSentence": "t1-p209-030-sentence.mp3"
     }
   ]
 }

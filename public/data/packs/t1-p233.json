@@ -1,15 +1,15 @@
 {
   "id": "t1-p233",
-  "name": "Przymiotniki 20",
-  "volume": "Tom V",
-  "level": 3,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział XLVI",
+  "name": "Społeczeństwo",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXIII",
   "words": [
     {
       "id": "t1-p233-001",
-      "english": "Fake",
-      "polish": "Nieprawdziwy",
+      "english": "Crowd",
+      "polish": "Tłum",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p233-002",
-      "english": "Original",
-      "polish": "Oryginalny",
+      "english": "Administration",
+      "polish": "Administracja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p233-003",
-      "english": "Out of order",
-      "polish": "Niesprawny",
+      "english": "Follower",
+      "polish": "Zwolennik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p233-004",
-      "english": "Artificial",
-      "polish": "Sztuczny",
+      "english": "Ecology",
+      "polish": "Ekologia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p233-005",
-      "english": "Shiny",
-      "polish": "Błyszczący",
+      "english": "Politician",
+      "polish": "Polityk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p233-006",
-      "english": "Genuine",
-      "polish": "Prawdziwy",
+      "english": "Ambassador",
+      "polish": "Ambasador",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p233-007",
-      "english": "Second-hand",
-      "polish": "Z drugiej ręki",
+      "english": "Police blockade",
+      "polish": "Blokada policyjna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p233-008",
-      "english": "Used",
-      "polish": "Używany",
+      "english": "Member",
+      "polish": "Członek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p233-009",
-      "english": "Dusty",
-      "polish": "Zakurzony",
+      "english": "Volunteer",
+      "polish": "Ochotnik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p233-010",
-      "english": "Lost",
-      "polish": "Zgubiony",
+      "english": "Democracy",
+      "polish": "Demokracja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p233-011",
-      "english": "Broken",
-      "polish": "Złamany",
+      "english": "Demonstration",
+      "polish": "Demonstracja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p233-012",
-      "english": "Found",
-      "polish": "Znaleziony",
+      "english": "Elite",
+      "polish": "Elita",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p233-013",
-      "english": "Precious",
-      "polish": "Drogocenny",
+      "english": "Emigrant",
+      "polish": "Emigrant",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p233-014",
-      "english": "Handmade",
-      "polish": "Ręcznie wykonany",
+      "english": "Vote",
+      "polish": "Głos",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-014-word.mp3",
@@ -134,30 +134,12 @@
     },
     {
       "id": "t1-p233-015",
-      "english": "Dull",
-      "polish": "Tępy",
+      "english": "Immigration",
+      "polish": "Imigracja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p233-015-word.mp3",
       "audioSentence": "t1-p233-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p233-016",
-      "english": "Lost",
-      "polish": "Zgubiony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p233-016-word.mp3",
-      "audioSentence": "t1-p233-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p233-017",
-      "english": "Fake",
-      "polish": "Nieprawdziwy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p233-017-word.mp3",
-      "audioSentence": "t1-p233-017-sentence.mp3"
     }
   ]
 }

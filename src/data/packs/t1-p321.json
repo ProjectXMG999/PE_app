@@ -1,15 +1,15 @@
 {
   "id": "t1-p321",
-  "name": "Czasowniki 29",
-  "volume": "Tom IX",
-  "level": 4,
-  "category": "Czasowniki",
-  "chapter": "Rozdział LXXXV",
+  "name": "Slang 17",
+  "volume": "Tom IV",
+  "level": 3,
+  "category": "Slang",
+  "chapter": "Rozdział XXXII",
   "words": [
     {
       "id": "t1-p321-001",
-      "english": "Pedal",
-      "polish": "Pedałować",
+      "english": "Quid",
+      "polish": "Funty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p321-002",
-      "english": "Penetrate",
-      "polish": "Penetrować",
+      "english": "Blow money",
+      "polish": "Wywalać hajs",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p321-003",
-      "english": "Postulate",
-      "polish": "Postulować",
+      "english": "Dime",
+      "polish": "Dziesięciocentówka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p321-004",
-      "english": "Propagate",
-      "polish": "Propagować",
+      "english": "Fast money",
+      "polish": "Szybki szmal",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p321-005",
-      "english": "Rehabilitate",
-      "polish": "Rehabilitować",
+      "english": "Filthy rich",
+      "polish": "Bogaty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p321-006",
-      "english": "Reorganize",
-      "polish": "Reorganizować",
+      "english": "Flat broke",
+      "polish": "Totalnie spłukany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p321-007",
-      "english": "Reside",
-      "polish": "Rezydować",
+      "english": "Gee",
+      "polish": "Patol",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p321-008",
-      "english": "Service",
-      "polish": "Serwisować",
+      "english": "Jackpot",
+      "polish": "Czysty zysk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p321-009",
-      "english": "Speculate",
-      "polish": "Spekulować",
+      "english": "Scratch",
+      "polish": "Forsa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p321-010",
-      "english": "Steer",
-      "polish": "Sterować",
+      "english": "Broke",
+      "polish": "Spłukany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-010-word.mp3",
       "audioSentence": "t1-p321-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p321-011",
-      "english": "Stress",
-      "polish": "Stresować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p321-011-word.mp3",
-      "audioSentence": "t1-p321-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p321-012",
-      "english": "Symbolize",
-      "polish": "Symbolizować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p321-012-word.mp3",
-      "audioSentence": "t1-p321-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p321-013",
-      "english": "Transmit",
-      "polish": "Transmitować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p321-013-word.mp3",
-      "audioSentence": "t1-p321-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p321-014",
-      "english": "Verify",
-      "polish": "Weryfikować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p321-014-word.mp3",
-      "audioSentence": "t1-p321-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p321-015",
-      "english": "Vibrate",
-      "polish": "Wibrować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p321-015-word.mp3",
-      "audioSentence": "t1-p321-015-sentence.mp3"
     }
   ]
 }

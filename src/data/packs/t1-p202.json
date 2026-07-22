@@ -1,15 +1,15 @@
 {
   "id": "t1-p202",
-  "name": "Spójniki 4",
-  "volume": "Tom IV",
-  "level": 3,
-  "category": "Spójniki",
-  "chapter": "Rozdział XXXVII",
+  "name": "Szkoła",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XX",
   "words": [
     {
       "id": "t1-p202-001",
-      "english": "Overall",
-      "polish": "Sumarycznie",
+      "english": "Academy",
+      "polish": "Akademia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p202-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p202-002",
-      "english": "Thirdly",
-      "polish": "Po trzecie",
+      "english": "Biology",
+      "polish": "Biologia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p202-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p202-003",
-      "english": "While",
-      "polish": "Kiedy",
+      "english": "Bell",
+      "polish": "Dzwonek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p202-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p202-004",
-      "english": "At first",
-      "polish": "Na początku",
+      "english": "Behavior",
+      "polish": "Zachowanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p202-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p202-005",
-      "english": "After all",
-      "polish": "Mimo wszystko",
+      "english": "Discussion",
+      "polish": "Dyskusja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p202-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p202-006",
-      "english": "In conclusion",
-      "polish": "Na zakończenie",
+      "english": "History",
+      "polish": "Historia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p202-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p202-007",
-      "english": "In summary",
-      "polish": "W skrócie",
+      "english": "Institute",
+      "polish": "Instytut",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p202-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p202-008",
-      "english": "Above all",
-      "polish": "Ponad wszystko",
+      "english": "Class",
+      "polish": "Klasa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p202-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p202-009",
-      "english": "All in all",
-      "polish": "Ogólnie rzecz biorąc",
+      "english": "Schoolmate",
+      "polish": "Kolega szkolny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p202-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p202-010",
-      "english": "In particular",
-      "polish": "W szczególności",
+      "english": "Classmate",
+      "polish": "Kolega z klasy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p202-010-word.mp3",
       "audioSentence": "t1-p202-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p202-011",
+      "english": "Course",
+      "polish": "Kurs",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p202-011-word.mp3",
+      "audioSentence": "t1-p202-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p202-012",
+      "english": "High school",
+      "polish": "Liceum",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p202-012-word.mp3",
+      "audioSentence": "t1-p202-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p202-013",
+      "english": "Ruler",
+      "polish": "Linijka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p202-013-word.mp3",
+      "audioSentence": "t1-p202-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p202-014",
+      "english": "Campus",
+      "polish": "Miasteczko uniwersyteckie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p202-014-word.mp3",
+      "audioSentence": "t1-p202-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p202-015",
+      "english": "Note",
+      "polish": "Notatka",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p202-015-word.mp3",
+      "audioSentence": "t1-p202-015-sentence.mp3"
     }
   ]
 }

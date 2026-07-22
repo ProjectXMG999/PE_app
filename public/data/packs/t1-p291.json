@@ -1,15 +1,15 @@
 {
   "id": "t1-p291",
-  "name": "Gangsterka",
-  "volume": "Tom VIII",
-  "level": 4,
-  "category": "Slang",
-  "chapter": "Rozdział LXXI",
+  "name": "Ubrania",
+  "volume": "Tom III",
+  "level": 3,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXIX",
   "words": [
     {
       "id": "t1-p291-001",
-      "english": "Bail",
-      "polish": "Zwiać",
+      "english": "Lingerie",
+      "polish": "Bielizna damska",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p291-002",
-      "english": "Crook",
-      "polish": "Oszust",
+      "english": "Trainers",
+      "polish": "Buty sportowe",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p291-003",
-      "english": "Goodfella",
-      "polish": "Mafiozo",
+      "english": "Tracksuit",
+      "polish": "Dres",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p291-004",
-      "english": "Goon",
-      "polish": "Pomagier",
+      "english": "Tights",
+      "polish": "Rajstopy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p291-005",
-      "english": "Hoodlum",
-      "polish": "Zbir",
+      "english": "Thongs",
+      "polish": "Stringi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p291-006",
-      "english": "Hustler",
-      "polish": "Kanciarz",
+      "english": "High heels",
+      "polish": "Szpilki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p291-007",
-      "english": "Merc",
-      "polish": "Najemnik",
+      "english": "Handbag",
+      "polish": "Torba na ramię",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p291-008",
-      "english": "Mugger",
-      "polish": "Rabuś",
+      "english": "Sneakers",
+      "polish": "Trampki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p291-009",
-      "english": "Stan",
-      "polish": "Maniakalny fan",
+      "english": "Flip-flops",
+      "polish": "Klapki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p291-010",
-      "english": "Thug",
-      "polish": "Oprych",
+      "english": "Stockings",
+      "polish": "Pończochy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p291-011",
-      "english": "Bracelets",
-      "polish": "Bransoletki",
+      "english": "Fitting room",
+      "polish": "Przymierzalnia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p291-012",
-      "english": "Busta",
-      "polish": "Frajer",
+      "english": "Gloves",
+      "polish": "Rękawiczki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p291-013",
-      "english": "Charley",
-      "polish": "Stróż nocny",
+      "english": "Pullover",
+      "polish": "Sweter",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p291-014",
-      "english": "Copper",
-      "polish": "Glina",
+      "english": "Handkerchief",
+      "polish": "Chusteczka wielokrotnego użytku",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-014-word.mp3",
@@ -134,57 +134,12 @@
     },
     {
       "id": "t1-p291-015",
-      "english": "Gangbanger",
-      "polish": "Gangus",
+      "english": "Needle",
+      "polish": "Igła",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-015-word.mp3",
       "audioSentence": "t1-p291-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p291-016",
-      "english": "Loc",
-      "polish": "Stuknięty",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p291-016-word.mp3",
-      "audioSentence": "t1-p291-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p291-017",
-      "english": "Pop a cap",
-      "polish": "Wypalić ze spluwy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p291-017-word.mp3",
-      "audioSentence": "t1-p291-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p291-018",
-      "english": "Jack",
-      "polish": "Zwinąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p291-018-word.mp3",
-      "audioSentence": "t1-p291-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p291-019",
-      "english": "Heat",
-      "polish": "Spluwa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p291-019-word.mp3",
-      "audioSentence": "t1-p291-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p291-020",
-      "english": "Pack heat",
-      "polish": "Być uzbrojonym",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p291-020-word.mp3",
-      "audioSentence": "t1-p291-020-sentence.mp3"
     }
   ]
 }

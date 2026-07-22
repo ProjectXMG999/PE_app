@@ -1,15 +1,15 @@
 {
   "id": "t1-p285",
-  "name": "Przymiotniki 32",
-  "volume": "Tom VII",
-  "level": 4,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział LXVII",
+  "name": "Rewelacja",
+  "volume": "Tom III",
+  "level": 3,
+  "category": "Slang",
+  "chapter": "Rozdział XXVIII",
   "words": [
     {
       "id": "t1-p285-001",
-      "english": "Sticky",
-      "polish": "Lepki",
+      "english": "Overwhelming",
+      "polish": "Przemożny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p285-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p285-002",
-      "english": "Fixed",
-      "polish": "Naprawiony",
+      "english": "Remarkable",
+      "polish": "Godny uwagi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p285-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p285-003",
-      "english": "Protective",
-      "polish": "Ochronny",
+      "english": "Spectacular",
+      "polish": "Spektakularny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p285-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p285-004",
-      "english": "Makeshift",
-      "polish": "Zastępczy",
+      "english": "Speechless",
+      "polish": "Oniemiały z wrażenia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p285-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p285-005",
-      "english": "Sacred",
-      "polish": "Święty",
+      "english": "Staggering",
+      "polish": "Wprawiający w osłupienie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p285-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p285-006",
-      "english": "Household",
-      "polish": "Domowy",
+      "english": "Sublime",
+      "polish": "Wzniosły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p285-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p285-007",
-      "english": "Leaky",
-      "polish": "Dziurawy",
+      "english": "Superb",
+      "polish": "Pierwszorzędny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p285-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p285-008",
-      "english": "Disposable",
-      "polish": "Jednorazowy",
+      "english": "Prodigious",
+      "polish": "Zdumiewający",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p285-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p285-009",
-      "english": "Unhandy",
-      "polish": "Nieporęczny",
+      "english": "Unreal",
+      "polish": "Nie z tej ziemi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p285-009-word.mp3",
@@ -89,39 +89,12 @@
     },
     {
       "id": "t1-p285-010",
-      "english": "Resistant",
-      "polish": "Odporny",
+      "english": "Awestruck",
+      "polish": "Oniemiały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p285-010-word.mp3",
       "audioSentence": "t1-p285-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p285-011",
-      "english": "Handheld",
-      "polish": "Podręczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p285-011-word.mp3",
-      "audioSentence": "t1-p285-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p285-012",
-      "english": "Hollow",
-      "polish": "Pusty w środku",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p285-012-word.mp3",
-      "audioSentence": "t1-p285-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p285-013",
-      "english": "Torn",
-      "polish": "Podarty",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p285-013-word.mp3",
-      "audioSentence": "t1-p285-013-sentence.mp3"
     }
   ]
 }

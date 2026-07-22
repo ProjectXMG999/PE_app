@@ -1,15 +1,15 @@
 {
   "id": "t1-p085",
-  "name": "Języki",
-  "volume": "Tom II",
+  "name": "Kraje",
+  "volume": "Tom I",
   "level": 1,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział XI",
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział IX",
   "words": [
     {
       "id": "t1-p085-001",
-      "english": "Italian",
-      "polish": "Włoski",
+      "english": "England",
+      "polish": "Anglia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p085-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p085-002",
-      "english": "Hindi",
-      "polish": "Hindi",
+      "english": "English",
+      "polish": "Angielka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p085-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p085-003",
-      "english": "Spanish",
-      "polish": "Hiszpański",
+      "english": "United kingdom",
+      "polish": "Zjednoczone królestwo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p085-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p085-004",
-      "english": "Japanese",
-      "polish": "Japoński",
+      "english": "Great britain",
+      "polish": "Wielka brytania",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p085-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p085-005",
-      "english": "Turkish",
-      "polish": "Turecki",
+      "english": "British",
+      "polish": "Brytyjka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p085-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p085-006",
-      "english": "English",
-      "polish": "Angielski",
+      "english": "China",
+      "polish": "Chiny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p085-006-word.mp3",
@@ -63,7 +63,7 @@
     {
       "id": "t1-p085-007",
       "english": "Chinese",
-      "polish": "Chiński",
+      "polish": "Chinka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p085-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p085-008",
-      "english": "French",
-      "polish": "Francuski",
+      "english": "France",
+      "polish": "Francja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p085-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p085-009",
-      "english": "Polish",
-      "polish": "Polski",
+      "english": "French",
+      "polish": "Francuzka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p085-009-word.mp3",
@@ -89,417 +89,12 @@
     },
     {
       "id": "t1-p085-010",
-      "english": "German",
-      "polish": "Niemiecki",
+      "english": "Country",
+      "polish": "Kraj",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p085-010-word.mp3",
       "audioSentence": "t1-p085-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-011",
-      "english": "Czech",
-      "polish": "Czeski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-011-word.mp3",
-      "audioSentence": "t1-p085-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-012",
-      "english": "Greek",
-      "polish": "Grecki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-012-word.mp3",
-      "audioSentence": "t1-p085-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-013",
-      "english": "Dutch",
-      "polish": "Niderlandzki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-013-word.mp3",
-      "audioSentence": "t1-p085-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-014",
-      "english": "Irish",
-      "polish": "Irlandzki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-014-word.mp3",
-      "audioSentence": "t1-p085-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-015",
-      "english": "Norwegian",
-      "polish": "Norweski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-015-word.mp3",
-      "audioSentence": "t1-p085-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-016",
-      "english": "Russian",
-      "polish": "Rosyjski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-016-word.mp3",
-      "audioSentence": "t1-p085-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-017",
-      "english": "Hungarian",
-      "polish": "Węgierski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-017-word.mp3",
-      "audioSentence": "t1-p085-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-018",
-      "english": "Belarusian",
-      "polish": "Białoruski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-018-word.mp3",
-      "audioSentence": "t1-p085-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-019",
-      "english": "Croatian",
-      "polish": "Chorwacki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-019-word.mp3",
-      "audioSentence": "t1-p085-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-020",
-      "english": "Portuguese",
-      "polish": "Portugalski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-020-word.mp3",
-      "audioSentence": "t1-p085-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-021",
-      "english": "Serbian",
-      "polish": "Serbski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-021-word.mp3",
-      "audioSentence": "t1-p085-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-022",
-      "english": "Slovak",
-      "polish": "Słowacki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-022-word.mp3",
-      "audioSentence": "t1-p085-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-023",
-      "english": "Scottish",
-      "polish": "Szkocki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-023-word.mp3",
-      "audioSentence": "t1-p085-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-024",
-      "english": "Swedish",
-      "polish": "Szwedzki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-024-word.mp3",
-      "audioSentence": "t1-p085-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-025",
-      "english": "Ukrainian",
-      "polish": "Ukraiński",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-025-word.mp3",
-      "audioSentence": "t1-p085-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-026",
-      "english": "Flemish",
-      "polish": "Flamandzki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-026-word.mp3",
-      "audioSentence": "t1-p085-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-027",
-      "english": "Danish",
-      "polish": "Duński",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-027-word.mp3",
-      "audioSentence": "t1-p085-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-028",
-      "english": "Finnish",
-      "polish": "Fiński",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-028-word.mp3",
-      "audioSentence": "t1-p085-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-029",
-      "english": "Hebrew",
-      "polish": "Hebrajski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-029-word.mp3",
-      "audioSentence": "t1-p085-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-030",
-      "english": "Lithuanian",
-      "polish": "Litewski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-030-word.mp3",
-      "audioSentence": "t1-p085-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-031",
-      "english": "Bulgarian",
-      "polish": "Bułgarski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-031-word.mp3",
-      "audioSentence": "t1-p085-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-032",
-      "english": "Romanian",
-      "polish": "Rumuński",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-032-word.mp3",
-      "audioSentence": "t1-p085-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-033",
-      "english": "Thai",
-      "polish": "Tajski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-033-word.mp3",
-      "audioSentence": "t1-p085-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-034",
-      "english": "Arabic",
-      "polish": "Arabski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-034-word.mp3",
-      "audioSentence": "t1-p085-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-035",
-      "english": "Persian",
-      "polish": "Perski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-035-word.mp3",
-      "audioSentence": "t1-p085-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-036",
-      "english": "Bengali",
-      "polish": "Bengalski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-036-word.mp3",
-      "audioSentence": "t1-p085-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-037",
-      "english": "Bosnian",
-      "polish": "Bośniacki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-037-word.mp3",
-      "audioSentence": "t1-p085-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-038",
-      "english": "Estonian",
-      "polish": "Estoński",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-038-word.mp3",
-      "audioSentence": "t1-p085-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-039",
-      "english": "Filipino",
-      "polish": "Filipiński",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-039-word.mp3",
-      "audioSentence": "t1-p085-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-040",
-      "english": "Indonesian",
-      "polish": "Indonezyjski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-040-word.mp3",
-      "audioSentence": "t1-p085-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-041",
-      "english": "Kazakh",
-      "polish": "Kazachski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-041-word.mp3",
-      "audioSentence": "t1-p085-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-042",
-      "english": "Latvian",
-      "polish": "Łotewski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-042-word.mp3",
-      "audioSentence": "t1-p085-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-043",
-      "english": "Malagasy",
-      "polish": "Malgaski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-043-word.mp3",
-      "audioSentence": "t1-p085-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-044",
-      "english": "Malaysian",
-      "polish": "Malajski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-044-word.mp3",
-      "audioSentence": "t1-p085-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-045",
-      "english": "Afrikaans",
-      "polish": "Afrikaans",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-045-word.mp3",
-      "audioSentence": "t1-p085-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-046",
-      "english": "Somalian",
-      "polish": "Somalijski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-046-word.mp3",
-      "audioSentence": "t1-p085-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-047",
-      "english": "Khmer",
-      "polish": "Język khmerski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-047-word.mp3",
-      "audioSentence": "t1-p085-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-048",
-      "english": "Turkmen",
-      "polish": "Turkmeński",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-048-word.mp3",
-      "audioSentence": "t1-p085-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-049",
-      "english": "Vietnamese",
-      "polish": "Wietnamski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-049-word.mp3",
-      "audioSentence": "t1-p085-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-050",
-      "english": "Icelandic",
-      "polish": "Islandzki",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-050-word.mp3",
-      "audioSentence": "t1-p085-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-051",
-      "english": "Hebrew",
-      "polish": "Hebrajski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-051-word.mp3",
-      "audioSentence": "t1-p085-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-052",
-      "english": "Polish",
-      "polish": "Polski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-052-word.mp3",
-      "audioSentence": "t1-p085-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-053",
-      "english": "Spanish",
-      "polish": "Hiszpański",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-053-word.mp3",
-      "audioSentence": "t1-p085-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-054",
-      "english": "Indonesian",
-      "polish": "Indonezyjski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-054-word.mp3",
-      "audioSentence": "t1-p085-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p085-055",
-      "english": "Hindi",
-      "polish": "Hindi",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p085-055-word.mp3",
-      "audioSentence": "t1-p085-055-sentence.mp3"
     }
   ]
 }

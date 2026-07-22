@@ -1,15 +1,15 @@
 {
   "id": "t1-p312",
-  "name": "Phrasale 7",
-  "volume": "Tom IX",
-  "level": 4,
-  "category": "Phrasale",
-  "chapter": "Rozdział LXXXI",
+  "name": "Podryw",
+  "volume": "Tom IV",
+  "level": 3,
+  "category": "Czasowniki",
+  "chapter": "Rozdział XXXI",
   "words": [
     {
       "id": "t1-p312-001",
-      "english": "Get along with",
-      "polish": "Dogadywać się z kimś",
+      "english": "Hug",
+      "polish": "Przytulać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p312-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p312-002",
-      "english": "Hand sth down",
-      "polish": "Przekazywać komuś coś",
+      "english": "Propose",
+      "polish": "Oświadczać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p312-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p312-003",
-      "english": "Bring round",
-      "polish": "Przywracać do przytomności",
+      "english": "Date",
+      "polish": "Randkować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p312-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p312-004",
-      "english": "Come under",
-      "polish": "Podlegać",
+      "english": "Desire",
+      "polish": "Pragnąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p312-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p312-005",
-      "english": "Cut sb off",
-      "polish": "Odseparować się od kogoś",
+      "english": "Impress",
+      "polish": "Imponować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p312-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p312-006",
-      "english": "Draw sb into sth",
-      "polish": "Zaangażować kogoś w coś",
+      "english": "Massage",
+      "polish": "Masować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p312-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p312-007",
-      "english": "Look to sb to do sth",
-      "polish": "Liczyć na to, że ktoś coś zrobi",
+      "english": "Seduce",
+      "polish": "Uwodzić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p312-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p312-008",
-      "english": "Shake up",
-      "polish": "Wstrząsnąć",
+      "english": "Attract",
+      "polish": "Przyciągać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p312-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p312-009",
-      "english": "Stand by",
-      "polish": "Trwać przy",
+      "english": "Cuddle",
+      "polish": "Przytulać się wzajemnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p312-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p312-010",
-      "english": "Stand up to",
-      "polish": "Postawić się",
+      "english": "Tickle",
+      "polish": "Łaskotać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p312-010-word.mp3",
       "audioSentence": "t1-p312-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p312-011",
+      "english": "Care",
+      "polish": "Przejmować się",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p312-011-word.mp3",
+      "audioSentence": "t1-p312-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p312-012",
+      "english": "Tease",
+      "polish": "Kokietować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p312-012-word.mp3",
+      "audioSentence": "t1-p312-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p312-013",
+      "english": "Tempt",
+      "polish": "Kusić",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p312-013-word.mp3",
+      "audioSentence": "t1-p312-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p312-014",
+      "english": "Embrace",
+      "polish": "Uściskać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p312-014-word.mp3",
+      "audioSentence": "t1-p312-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p312-015",
+      "english": "Arouse",
+      "polish": "Podniecać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p312-015-word.mp3",
+      "audioSentence": "t1-p312-015-sentence.mp3"
     }
   ]
 }

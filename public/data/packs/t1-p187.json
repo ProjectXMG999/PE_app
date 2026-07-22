@@ -1,15 +1,15 @@
 {
   "id": "t1-p187",
-  "name": "Rzeczowniki 12",
-  "volume": "Tom IV",
-  "level": 3,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XXXIII",
+  "name": "Ręką",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Czasowniki",
+  "chapter": "Rozdział XIX",
   "words": [
     {
       "id": "t1-p187-001",
-      "english": "Secret",
-      "polish": "Sekret",
+      "english": "Carry",
+      "polish": "Nieść coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p187-002",
-      "english": "Domination",
-      "polish": "Dominacja",
+      "english": "Knock",
+      "polish": "Pukać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p187-003",
-      "english": "Aid",
-      "polish": "Pomoc",
+      "english": "Lock",
+      "polish": "Zamykać na klucz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p187-004",
-      "english": "Visit",
-      "polish": "Wizyta",
+      "english": "Pick",
+      "polish": "Zrywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p187-005",
-      "english": "Handshake",
-      "polish": "Uścisk dłoni",
+      "english": "Throw",
+      "polish": "Rzucać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p187-006",
-      "english": "Community",
-      "polish": "Wspólnota",
+      "english": "Hang",
+      "polish": "Powiesić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p187-007",
-      "english": "Relation",
-      "polish": "Relacja",
+      "english": "Place",
+      "polish": "Umieszczać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p187-008",
-      "english": "Romance",
-      "polish": "Romans",
+      "english": "Shut",
+      "polish": "Zamknąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p187-009",
-      "english": "Love affair",
-      "polish": "Romans",
+      "english": "Sign",
+      "polish": "Podpisywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p187-010",
-      "english": "Sisterhood",
-      "polish": "Siostrzeństwo",
+      "english": "Clap",
+      "polish": "Klaskać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p187-011",
-      "english": "Revenge",
-      "polish": "Zemsta",
+      "english": "Grab",
+      "polish": "Chwytać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p187-012",
-      "english": "Attraction",
-      "polish": "Przyciąganie",
+      "english": "Lay",
+      "polish": "Położyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p187-013",
-      "english": "Acquaintance",
-      "polish": "Znajomość",
+      "english": "Reach",
+      "polish": "Dosięgać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p187-014",
-      "english": "Gesture",
-      "polish": "Gest",
+      "english": "Shake",
+      "polish": "Trząść",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-014-word.mp3",
@@ -134,39 +134,12 @@
     },
     {
       "id": "t1-p187-015",
-      "english": "Intimacy",
-      "polish": "Intymność",
+      "english": "Drop",
+      "polish": "Upuszczać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p187-015-word.mp3",
       "audioSentence": "t1-p187-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p187-016",
-      "english": "Aid",
-      "polish": "Pomoc",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p187-016-word.mp3",
-      "audioSentence": "t1-p187-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p187-017",
-      "english": "Relation",
-      "polish": "Relacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p187-017-word.mp3",
-      "audioSentence": "t1-p187-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p187-018",
-      "english": "Attraction",
-      "polish": "Przyciąganie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p187-018-word.mp3",
-      "audioSentence": "t1-p187-018-sentence.mp3"
     }
   ]
 }

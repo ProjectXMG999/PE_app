@@ -1,15 +1,15 @@
 {
   "id": "t1-p155",
-  "name": "Złota rączka",
-  "volume": "Tom III",
+  "name": "Spójniki 1",
+  "volume": "Tom II",
   "level": 2,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XXIII",
+  "category": "Spójniki",
+  "chapter": "Rozdział XVI",
   "words": [
     {
       "id": "t1-p155-001",
-      "english": "Cut",
-      "polish": "Ciąć",
+      "english": "Even",
+      "polish": "Nawet",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p155-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p155-002",
-      "english": "Fix",
-      "polish": "Naprawiać",
+      "english": "However",
+      "polish": "Jednakże",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p155-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p155-003",
-      "english": "Repair",
-      "polish": "Naprawiać",
+      "english": "Besides",
+      "polish": "Oprócz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p155-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p155-004",
-      "english": "Replace",
-      "polish": "Wymieniać",
+      "english": "Though",
+      "polish": "Chociaż",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p155-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p155-005",
-      "english": "Stick",
-      "polish": "Przyklejać",
+      "english": "Although",
+      "polish": "Mimo że",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p155-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p155-006",
-      "english": "Glue",
-      "polish": "Przyklejać",
+      "english": "At the same time",
+      "polish": "Jednocześnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p155-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p155-007",
-      "english": "Tie",
-      "polish": "Związać",
+      "english": "In fact",
+      "polish": "Właściwie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p155-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p155-008",
-      "english": "Combine",
-      "polish": "Połączyć",
+      "english": "Instead of",
+      "polish": "Zamiast",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p155-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p155-009",
-      "english": "Lower",
-      "polish": "Zniżać",
+      "english": "Rather than",
+      "polish": "Raczej niż",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p155-009-word.mp3",
@@ -89,417 +89,12 @@
     },
     {
       "id": "t1-p155-010",
-      "english": "Renew",
-      "polish": "Odnawiać",
+      "english": "Than",
+      "polish": "Niż",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p155-010-word.mp3",
       "audioSentence": "t1-p155-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-011",
-      "english": "Renovate",
-      "polish": "Remontować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-011-word.mp3",
-      "audioSentence": "t1-p155-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-012",
-      "english": "Bend",
-      "polish": "Zagiąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-012-word.mp3",
-      "audioSentence": "t1-p155-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-013",
-      "english": "Improve",
-      "polish": "Ulepszać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-013-word.mp3",
-      "audioSentence": "t1-p155-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-014",
-      "english": "Craft",
-      "polish": "Wytwarzać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-014-word.mp3",
-      "audioSentence": "t1-p155-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-015",
-      "english": "Engineer",
-      "polish": "Konstruować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-015-word.mp3",
-      "audioSentence": "t1-p155-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-016",
-      "english": "Tinker",
-      "polish": "Majsterkować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-016-word.mp3",
-      "audioSentence": "t1-p155-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-017",
-      "english": "Assemble",
-      "polish": "Składać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-017-word.mp3",
-      "audioSentence": "t1-p155-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-018",
-      "english": "Fasten",
-      "polish": "Przymocować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-018-word.mp3",
-      "audioSentence": "t1-p155-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-019",
-      "english": "Bind",
-      "polish": "Wiązać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-019-word.mp3",
-      "audioSentence": "t1-p155-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-020",
-      "english": "Drill",
-      "polish": "Wiercić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-020-word.mp3",
-      "audioSentence": "t1-p155-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-021",
-      "english": "Recreate",
-      "polish": "Odtworzyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-021-word.mp3",
-      "audioSentence": "t1-p155-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-022",
-      "english": "Deepen",
-      "polish": "Pogłębiać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-022-word.mp3",
-      "audioSentence": "t1-p155-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-023",
-      "english": "Frame",
-      "polish": "Oprawić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-023-word.mp3",
-      "audioSentence": "t1-p155-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-024",
-      "english": "Hammer",
-      "polish": "Wbić młotkiem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-024-word.mp3",
-      "audioSentence": "t1-p155-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-025",
-      "english": "Heighten",
-      "polish": "Podwyższyć coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-025-word.mp3",
-      "audioSentence": "t1-p155-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-026",
-      "english": "Plaster",
-      "polish": "Oklejać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-026-word.mp3",
-      "audioSentence": "t1-p155-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-027",
-      "english": "Sew",
-      "polish": "Szyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-027-word.mp3",
-      "audioSentence": "t1-p155-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-028",
-      "english": "Smooth",
-      "polish": "Wygładzać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-028-word.mp3",
-      "audioSentence": "t1-p155-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-029",
-      "english": "Stitch",
-      "polish": "Zszywać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-029-word.mp3",
-      "audioSentence": "t1-p155-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-030",
-      "english": "Strap",
-      "polish": "Podpinać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-030-word.mp3",
-      "audioSentence": "t1-p155-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-031",
-      "english": "Put sth up",
-      "polish": "Wznosić coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-031-word.mp3",
-      "audioSentence": "t1-p155-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-032",
-      "english": "Put sth together",
-      "polish": "Składać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-032-word.mp3",
-      "audioSentence": "t1-p155-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-033",
-      "english": "Go up",
-      "polish": "Wznieść",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-033-word.mp3",
-      "audioSentence": "t1-p155-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-034",
-      "english": "Work up",
-      "polish": "Poprawić coś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-034-word.mp3",
-      "audioSentence": "t1-p155-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-035",
-      "english": "Build in",
-      "polish": "Wbudować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-035-word.mp3",
-      "audioSentence": "t1-p155-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-036",
-      "english": "Do sth up",
-      "polish": "Podreperować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-036-word.mp3",
-      "audioSentence": "t1-p155-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-037",
-      "english": "Let down",
-      "polish": "Przedłużyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-037-word.mp3",
-      "audioSentence": "t1-p155-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-038",
-      "english": "Let sth out",
-      "polish": "Poszerzyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-038-word.mp3",
-      "audioSentence": "t1-p155-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-039",
-      "english": "Take sth apart",
-      "polish": "Rozłożyć coś na części",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-039-word.mp3",
-      "audioSentence": "t1-p155-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-040",
-      "english": "Break down",
-      "polish": "Rozłożyć na części pierwsze",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-040-word.mp3",
-      "audioSentence": "t1-p155-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-041",
-      "english": "Strengthen",
-      "polish": "Wzmacniać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-041-word.mp3",
-      "audioSentence": "t1-p155-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-042",
-      "english": "Broaden",
-      "polish": "Poszerzać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-042-word.mp3",
-      "audioSentence": "t1-p155-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-043",
-      "english": "Carve",
-      "polish": "Wyrzeźbić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-043-word.mp3",
-      "audioSentence": "t1-p155-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-044",
-      "english": "Clip",
-      "polish": "Spiąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-044-word.mp3",
-      "audioSentence": "t1-p155-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-045",
-      "english": "Disarm",
-      "polish": "Rozbrajać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-045-word.mp3",
-      "audioSentence": "t1-p155-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-046",
-      "english": "Flatten",
-      "polish": "Spłaszczyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-046-word.mp3",
-      "audioSentence": "t1-p155-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-047",
-      "english": "Forge",
-      "polish": "Kuć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-047-word.mp3",
-      "audioSentence": "t1-p155-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-048",
-      "english": "Harden",
-      "polish": "Stwardnieć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-048-word.mp3",
-      "audioSentence": "t1-p155-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-049",
-      "english": "Lengthen",
-      "polish": "Wydłużać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-049-word.mp3",
-      "audioSentence": "t1-p155-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-050",
-      "english": "Loosen",
-      "polish": "Rozluźnić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-050-word.mp3",
-      "audioSentence": "t1-p155-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-051",
-      "english": "Mount",
-      "polish": "Montować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-051-word.mp3",
-      "audioSentence": "t1-p155-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-052",
-      "english": "Sharpen",
-      "polish": "Naostrzyć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-052-word.mp3",
-      "audioSentence": "t1-p155-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-053",
-      "english": "Stiffen",
-      "polish": "Sztywnieć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-053-word.mp3",
-      "audioSentence": "t1-p155-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-054",
-      "english": "Thicken",
-      "polish": "Gęstnieć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-054-word.mp3",
-      "audioSentence": "t1-p155-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p155-055",
-      "english": "Unscrew",
-      "polish": "Rozkręcić",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p155-055-word.mp3",
-      "audioSentence": "t1-p155-055-sentence.mp3"
     }
   ]
 }

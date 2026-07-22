@@ -1,15 +1,15 @@
 {
   "id": "t1-p135",
-  "name": "Gdy musisz coś zmierzyć",
+  "name": "Ubrania",
   "volume": "Tom II",
   "level": 2,
   "category": "Rzeczowniki",
-  "chapter": "Rozdział XIX",
+  "chapter": "Rozdział XIV",
   "words": [
     {
       "id": "t1-p135-001",
-      "english": "Centimeter",
-      "polish": "Centymetr",
+      "english": "Bikini",
+      "polish": "Bikini",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p135-002",
-      "english": "Gram",
-      "polish": "Gram",
+      "english": "Button",
+      "polish": "Guzik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p135-003",
-      "english": "Group",
-      "polish": "Grupa",
+      "english": "Hat",
+      "polish": "Kapelusz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p135-004",
-      "english": "Piece",
-      "polish": "Kawałek",
+      "english": "Pocket",
+      "polish": "Kieszeń",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p135-005",
-      "english": "Kilogram",
-      "polish": "Kilogram",
+      "english": "Jacket",
+      "polish": "Kurtka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p135-006",
-      "english": "Kilometer",
-      "polish": "Kilometr",
+      "english": "Belt",
+      "polish": "Pasek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p135-007",
-      "english": "Liter",
-      "polish": "Litr",
+      "english": "Pajamas",
+      "polish": "Piżama",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p135-008",
-      "english": "Meter",
-      "polish": "Metr",
+      "english": "Coat",
+      "polish": "Płaszcz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p135-009",
-      "english": "Speed",
-      "polish": "Prędkość",
+      "english": "Sandals",
+      "polish": "Sandały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p135-010",
-      "english": "Size",
-      "polish": "Rozmiar",
+      "english": "Bra",
+      "polish": "Stanik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p135-011",
-      "english": "Set",
-      "polish": "Zestaw",
+      "english": "Sweater",
+      "polish": "Sweter",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p135-012",
-      "english": "Pressure",
-      "polish": "Ciśnienie",
+      "english": "Scarf",
+      "polish": "Szalik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p135-013",
-      "english": "Dose",
-      "polish": "Dawka",
+      "english": "Purse",
+      "polish": "Torebka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p135-014",
-      "english": "Limit",
-      "polish": "Granica",
+      "english": "Trend",
+      "polish": "Trend",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-014-word.mp3",
@@ -134,417 +134,12 @@
     },
     {
       "id": "t1-p135-015",
-      "english": "Calorie",
-      "polish": "Kaloria",
+      "english": "Miniskirt",
+      "polish": "Minispódniczka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p135-015-word.mp3",
       "audioSentence": "t1-p135-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-016",
-      "english": "Frequency",
-      "polish": "Częstotliwość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-016-word.mp3",
-      "audioSentence": "t1-p135-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-017",
-      "english": "Inch",
-      "polish": "Cal",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-017-word.mp3",
-      "audioSentence": "t1-p135-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-018",
-      "english": "Length",
-      "polish": "Długość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-018-word.mp3",
-      "audioSentence": "t1-p135-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-019",
-      "english": "Density",
-      "polish": "Gęstość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-019-word.mp3",
-      "audioSentence": "t1-p135-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-020",
-      "english": "Depth",
-      "polish": "Głębokość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-020-word.mp3",
-      "audioSentence": "t1-p135-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-021",
-      "english": "Thickness",
-      "polish": "Grubość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-021-word.mp3",
-      "audioSentence": "t1-p135-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-022",
-      "english": "Square meter",
-      "polish": "Metr kwadratowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-022-word.mp3",
-      "audioSentence": "t1-p135-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-023",
-      "english": "Cubic meter",
-      "polish": "Metr sześcienny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-023-word.mp3",
-      "audioSentence": "t1-p135-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-024",
-      "english": "Mile",
-      "polish": "Mila",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-024-word.mp3",
-      "audioSentence": "t1-p135-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-025",
-      "english": "Volume",
-      "polish": "Objętość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-025-word.mp3",
-      "audioSentence": "t1-p135-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-026",
-      "english": "Distance",
-      "polish": "Odległość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-026-word.mp3",
-      "audioSentence": "t1-p135-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-027",
-      "english": "Surface",
-      "polish": "Powierzchnia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-027-word.mp3",
-      "audioSentence": "t1-p135-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-028",
-      "english": "Tier",
-      "polish": "Poziom",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-028-word.mp3",
-      "audioSentence": "t1-p135-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-029",
-      "english": "Width",
-      "polish": "Szerokość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-029-word.mp3",
-      "audioSentence": "t1-p135-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-030",
-      "english": "Measure",
-      "polish": "Miara",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-030-word.mp3",
-      "audioSentence": "t1-p135-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-031",
-      "english": "Ton",
-      "polish": "Tona",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-031-word.mp3",
-      "audioSentence": "t1-p135-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-032",
-      "english": "Intensity",
-      "polish": "Intensywność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-032-word.mp3",
-      "audioSentence": "t1-p135-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-033",
-      "english": "Acre",
-      "polish": "Akr",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-033-word.mp3",
-      "audioSentence": "t1-p135-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-034",
-      "english": "Ampere",
-      "polish": "Amper",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-034-word.mp3",
-      "audioSentence": "t1-p135-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-035",
-      "english": "Are",
-      "polish": "Ar",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-035-word.mp3",
-      "audioSentence": "t1-p135-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-036",
-      "english": "Tithe",
-      "polish": "Dziesięcina",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-036-word.mp3",
-      "audioSentence": "t1-p135-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-037",
-      "english": "Joule",
-      "polish": "Dżul",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-037-word.mp3",
-      "audioSentence": "t1-p135-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-038",
-      "english": "Gallon",
-      "polish": "Galon",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-038-word.mp3",
-      "audioSentence": "t1-p135-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-039",
-      "english": "Hectare",
-      "polish": "Hektar",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-039-word.mp3",
-      "audioSentence": "t1-p135-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-040",
-      "english": "Hertz",
-      "polish": "Herc",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-040-word.mp3",
-      "audioSentence": "t1-p135-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-041",
-      "english": "Candela",
-      "polish": "Kandela",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-041-word.mp3",
-      "audioSentence": "t1-p135-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-042",
-      "english": "Kelvin",
-      "polish": "Kelwin",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-042-word.mp3",
-      "audioSentence": "t1-p135-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-043",
-      "english": "Coulomb",
-      "polish": "Kulomb",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-043-word.mp3",
-      "audioSentence": "t1-p135-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-044",
-      "english": "Quintal",
-      "polish": "Kwintal",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-044-word.mp3",
-      "audioSentence": "t1-p135-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-045",
-      "english": "Lumen",
-      "polish": "Lumen",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-045-word.mp3",
-      "audioSentence": "t1-p135-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-046",
-      "english": "Ell",
-      "polish": "Łokieć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-046-word.mp3",
-      "audioSentence": "t1-p135-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-047",
-      "english": "Nautical mile",
-      "polish": "Mila morska",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-047-word.mp3",
-      "audioSentence": "t1-p135-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-048",
-      "english": "Minute of arc",
-      "polish": "Minuta kątowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-048-word.mp3",
-      "audioSentence": "t1-p135-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-049",
-      "english": "Mole",
-      "polish": "Mol",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-049-word.mp3",
-      "audioSentence": "t1-p135-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-050",
-      "english": "Newton",
-      "polish": "Niuton",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-050-word.mp3",
-      "audioSentence": "t1-p135-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-051",
-      "english": "Ohm",
-      "polish": "Om",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-051-word.mp3",
-      "audioSentence": "t1-p135-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-052",
-      "english": "Pascal",
-      "polish": "Paskal",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-052-word.mp3",
-      "audioSentence": "t1-p135-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-053",
-      "english": "Capacity",
-      "polish": "Pojemność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-053-word.mp3",
-      "audioSentence": "t1-p135-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-054",
-      "english": "Fathom",
-      "polish": "Sążeń",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-054-word.mp3",
-      "audioSentence": "t1-p135-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-055",
-      "english": "Foot",
-      "polish": "Stopa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-055-word.mp3",
-      "audioSentence": "t1-p135-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-056",
-      "english": "Watt",
-      "polish": "Wat",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-056-word.mp3",
-      "audioSentence": "t1-p135-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-057",
-      "english": "Knot",
-      "polish": "Węzeł",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-057-word.mp3",
-      "audioSentence": "t1-p135-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-058",
-      "english": "Volt",
-      "polish": "Wolt",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-058-word.mp3",
-      "audioSentence": "t1-p135-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-059",
-      "english": "Span",
-      "polish": "Piędź",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-059-word.mp3",
-      "audioSentence": "t1-p135-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p135-060",
-      "english": "Light-years",
-      "polish": "Lata świetlne",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p135-060-word.mp3",
-      "audioSentence": "t1-p135-060-sentence.mp3"
     }
   ]
 }

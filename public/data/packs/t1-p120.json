@@ -1,15 +1,15 @@
 {
   "id": "t1-p120",
-  "name": "Zdrowie",
+  "name": "Slang 6",
   "volume": "Tom II",
   "level": 2,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XVII",
+  "category": "Slang",
+  "chapter": "Rozdział XII",
   "words": [
     {
       "id": "t1-p120-001",
-      "english": "Diet",
-      "polish": "Dieta",
+      "english": "Ain't no thang",
+      "polish": "Nic takiego",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p120-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p120-002",
-      "english": "Breath",
-      "polish": "Oddech",
+      "english": "Don't sweat it",
+      "polish": "Nie przejmuj się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p120-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p120-003",
-      "english": "Sleep",
-      "polish": "Sen",
+      "english": "Giddy up",
+      "polish": "Wchodzę w to",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p120-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p120-004",
-      "english": "Vitamins",
-      "polish": "Witaminy",
+      "english": "If you catch my drift",
+      "polish": "Jeśli czaisz, o co mi chodzi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p120-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p120-005",
-      "english": "Cholesterol",
-      "polish": "Cholesterol",
+      "english": "It hit the spot",
+      "polish": "Tego właśnie potrzebowałem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p120-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p120-006",
-      "english": "Well-being",
-      "polish": "Dobre samopoczucie",
+      "english": "Keep your cool",
+      "polish": "Trzymaj luzik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p120-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p120-007",
-      "english": "First aid",
-      "polish": "Pierwsza pomoc",
+      "english": "Kudos",
+      "polish": "Czapki z głów",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p120-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p120-008",
-      "english": "Regeneration",
-      "polish": "Regeneracja",
+      "english": "Moar!",
+      "polish": "Więcej, dawaj!",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p120-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p120-009",
-      "english": "Rehabilitation",
-      "polish": "Rehabilitacja",
+      "english": "Yummy!",
+      "polish": "Pycha!",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p120-009-word.mp3",
@@ -89,192 +89,12 @@
     },
     {
       "id": "t1-p120-010",
-      "english": "Thermometer",
-      "polish": "Termometr",
+      "english": "True dat",
+      "polish": "Prawda to",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p120-010-word.mp3",
       "audioSentence": "t1-p120-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-011",
-      "english": "Blood pressure",
-      "polish": "Ciśnienie krwi",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-011-word.mp3",
-      "audioSentence": "t1-p120-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-012",
-      "english": "Protein",
-      "polish": "Białko",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-012-word.mp3",
-      "audioSentence": "t1-p120-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-013",
-      "english": "Fat",
-      "polish": "Tłuszcz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-013-word.mp3",
-      "audioSentence": "t1-p120-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-014",
-      "english": "Physical activity",
-      "polish": "Aktywność fizyczna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-014-word.mp3",
-      "audioSentence": "t1-p120-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-015",
-      "english": "Psychotherapy",
-      "polish": "Psychoterapia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-015-word.mp3",
-      "audioSentence": "t1-p120-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-016",
-      "english": "Recovery",
-      "polish": "Powrót do zdrowia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-016-word.mp3",
-      "audioSentence": "t1-p120-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-017",
-      "english": "Supplementation",
-      "polish": "Suplementacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-017-word.mp3",
-      "audioSentence": "t1-p120-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-018",
-      "english": "Contraception",
-      "polish": "Antykoncepcja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-018-word.mp3",
-      "audioSentence": "t1-p120-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-019",
-      "english": "Carbohydrates",
-      "polish": "Węglowodany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-019-word.mp3",
-      "audioSentence": "t1-p120-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-020",
-      "english": "Steroids",
-      "polish": "Sterydy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-020-word.mp3",
-      "audioSentence": "t1-p120-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-021",
-      "english": "Lifespan",
-      "polish": "Długość życia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-021-word.mp3",
-      "audioSentence": "t1-p120-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-022",
-      "english": "Bloodstream",
-      "polish": "Krwioobieg",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-022-word.mp3",
-      "audioSentence": "t1-p120-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-023",
-      "english": "Immunity",
-      "polish": "Odporność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-023-word.mp3",
-      "audioSentence": "t1-p120-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-024",
-      "english": "Nutrition",
-      "polish": "Odżywianie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-024-word.mp3",
-      "audioSentence": "t1-p120-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-025",
-      "english": "Prevention",
-      "polish": "Profilaktyka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-025-word.mp3",
-      "audioSentence": "t1-p120-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-026",
-      "english": "Immune system",
-      "polish": "Układ odpornościowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-026-word.mp3",
-      "audioSentence": "t1-p120-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-027",
-      "english": "Erection",
-      "polish": "Erekcja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-027-word.mp3",
-      "audioSentence": "t1-p120-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-028",
-      "english": "Longevity",
-      "polish": "Długowieczność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-028-word.mp3",
-      "audioSentence": "t1-p120-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-029",
-      "english": "Blood circulation",
-      "polish": "Krążenie krwi",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-029-word.mp3",
-      "audioSentence": "t1-p120-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p120-030",
-      "english": "Digestion",
-      "polish": "Trawienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p120-030-word.mp3",
-      "audioSentence": "t1-p120-030-sentence.mp3"
     }
   ]
 }

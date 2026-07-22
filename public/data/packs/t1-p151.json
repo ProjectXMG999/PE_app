@@ -1,15 +1,15 @@
 {
   "id": "t1-p151",
-  "name": "Najpiękniejsze słowa",
-  "volume": "Tom III",
+  "name": "Wszystko, co najlepsze",
+  "volume": "Tom II",
   "level": 2,
-  "category": "Slang",
-  "chapter": "Rozdział XXII",
+  "category": "Czasowniki",
+  "chapter": "Rozdział XV",
   "words": [
     {
       "id": "t1-p151-001",
-      "english": "Malarky",
-      "polish": "Brednie",
+      "english": "Enjoy",
+      "polish": "Cieszyć się czymś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p151-002",
-      "english": "Daffodil",
-      "polish": "Żonkil",
+      "english": "Forgive",
+      "polish": "Wybaczać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p151-003",
-      "english": "Riposte",
-      "polish": "Riposta",
+      "english": "Pray",
+      "polish": "Modlić się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p151-004",
-      "english": "Intricate",
-      "polish": "Zawiły",
+      "english": "Respect",
+      "polish": "Szanować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p151-005",
-      "english": "Leisure",
-      "polish": "Czas wypoczynku",
+      "english": "Save",
+      "polish": "Ocalić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p151-006",
-      "english": "Junoesque",
-      "polish": "Posągowy",
+      "english": "Share",
+      "polish": "Dzielić się z innymi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p151-007",
-      "english": "Mellow",
-      "polish": "Rozpływający się w ustach",
+      "english": "Admire",
+      "polish": "Podziwiać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p151-008",
-      "english": "Nightingale",
-      "polish": "Słowik",
+      "english": "Appreciate",
+      "polish": "Doceniać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p151-009",
-      "english": "Soulmate",
-      "polish": "Bratnia dusza",
+      "english": "Protect",
+      "polish": "Chronić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p151-010",
-      "english": "Unicorn",
-      "polish": "Jednorożec",
+      "english": "Satisfy",
+      "polish": "Usatysfakcjonować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p151-011",
-      "english": "Almighty",
-      "polish": "Wszechmocny",
+      "english": "Please",
+      "polish": "Zadowalać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p151-012",
-      "english": "Intuitionistic",
-      "polish": "Intuicjonistyczny",
+      "english": "Praise",
+      "polish": "Pochwalić kogoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p151-013",
-      "english": "Elderflower",
-      "polish": "Dziki bez",
+      "english": "Cheer",
+      "polish": "Wiwatować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p151-014",
-      "english": "Esteemed",
-      "polish": "Ceniony",
+      "english": "Encourage",
+      "polish": "Zachęcać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-014-word.mp3",
@@ -134,417 +134,12 @@
     },
     {
       "id": "t1-p151-015",
-      "english": "Evocative",
-      "polish": "Sugestywny",
+      "english": "Rescue",
+      "polish": "Ratować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p151-015-word.mp3",
       "audioSentence": "t1-p151-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-016",
-      "english": "Felicity",
-      "polish": "Szczęście",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-016-word.mp3",
-      "audioSentence": "t1-p151-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-017",
-      "english": "Luscious",
-      "polish": "Ponętny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-017-word.mp3",
-      "audioSentence": "t1-p151-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-018",
-      "english": "Resplendent",
-      "polish": "Olśniewający",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-018-word.mp3",
-      "audioSentence": "t1-p151-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-019",
-      "english": "Supersonic",
-      "polish": "Ponaddźwiękowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-019-word.mp3",
-      "audioSentence": "t1-p151-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-020",
-      "english": "Suspicious",
-      "polish": "Podejrzliwy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-020-word.mp3",
-      "audioSentence": "t1-p151-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-021",
-      "english": "Ambiguous",
-      "polish": "Niejednoznaczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-021-word.mp3",
-      "audioSentence": "t1-p151-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-022",
-      "english": "Bewilderment",
-      "polish": "Oszołomienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-022-word.mp3",
-      "audioSentence": "t1-p151-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-023",
-      "english": "Chunky",
-      "polish": "Masywny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-023-word.mp3",
-      "audioSentence": "t1-p151-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-024",
-      "english": "Entrepreneurship",
-      "polish": "Przedsiębiorczość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-024-word.mp3",
-      "audioSentence": "t1-p151-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-025",
-      "english": "Evanescent",
-      "polish": "Ulotny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-025-word.mp3",
-      "audioSentence": "t1-p151-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-026",
-      "english": "Extravaganza",
-      "polish": "Widowisko",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-026-word.mp3",
-      "audioSentence": "t1-p151-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-027",
-      "english": "Fugacious",
-      "polish": "Nietrwały",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-027-word.mp3",
-      "audioSentence": "t1-p151-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-028",
-      "english": "Grandiloquent",
-      "polish": "Górnolotny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-028-word.mp3",
-      "audioSentence": "t1-p151-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-029",
-      "english": "Intangible",
-      "polish": "Nieuchwytny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-029-word.mp3",
-      "audioSentence": "t1-p151-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-030",
-      "english": "Galvanize",
-      "polish": "Pobudzać do działania",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-030-word.mp3",
-      "audioSentence": "t1-p151-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-031",
-      "english": "Serendipity",
-      "polish": "Szczęśliwy zbieg okoliczności",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-031-word.mp3",
-      "audioSentence": "t1-p151-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-032",
-      "english": "Pernicious",
-      "polish": "Zgubny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-032-word.mp3",
-      "audioSentence": "t1-p151-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-033",
-      "english": "Sophisticated",
-      "polish": "Wyrafinowany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-033-word.mp3",
-      "audioSentence": "t1-p151-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-034",
-      "english": "Splendiferous",
-      "polish": "Przewyborny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-034-word.mp3",
-      "audioSentence": "t1-p151-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-035",
-      "english": "Stupendous",
-      "polish": "Zdumiewający",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-035-word.mp3",
-      "audioSentence": "t1-p151-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-036",
-      "english": "Surreptitious",
-      "polish": "Ukradkiem",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-036-word.mp3",
-      "audioSentence": "t1-p151-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-037",
-      "english": "Tranquility",
-      "polish": "Spokój",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-037-word.mp3",
-      "audioSentence": "t1-p151-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-038",
-      "english": "Ubiquitous",
-      "polish": "Wszechobecny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-038-word.mp3",
-      "audioSentence": "t1-p151-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-039",
-      "english": "Woebegone",
-      "polish": "Pogrążony w smutku",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-039-word.mp3",
-      "audioSentence": "t1-p151-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-040",
-      "english": "Relentless",
-      "polish": "Nieustępliwy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-040-word.mp3",
-      "audioSentence": "t1-p151-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-041",
-      "english": "Ebullience",
-      "polish": "Żywiołowość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-041-word.mp3",
-      "audioSentence": "t1-p151-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-042",
-      "english": "Eloquence",
-      "polish": "Elokwencja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-042-word.mp3",
-      "audioSentence": "t1-p151-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-043",
-      "english": "Ephemeral",
-      "polish": "Efemeryczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-043-word.mp3",
-      "audioSentence": "t1-p151-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-044",
-      "english": "Epiphany",
-      "polish": "Objawienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-044-word.mp3",
-      "audioSentence": "t1-p151-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-045",
-      "english": "Exuberant",
-      "polish": "Bujny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-045-word.mp3",
-      "audioSentence": "t1-p151-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-046",
-      "english": "Fantabulous",
-      "polish": "Fajowski",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-046-word.mp3",
-      "audioSentence": "t1-p151-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-047",
-      "english": "Incandescent",
-      "polish": "Żarowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-047-word.mp3",
-      "audioSentence": "t1-p151-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-048",
-      "english": "Ineffable",
-      "polish": "Nieopisany",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-048-word.mp3",
-      "audioSentence": "t1-p151-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-049",
-      "english": "Infatuation",
-      "polish": "Zauroczenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-049-word.mp3",
-      "audioSentence": "t1-p151-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-050",
-      "english": "Ludicrous",
-      "polish": "Niedorzeczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-050-word.mp3",
-      "audioSentence": "t1-p151-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-051",
-      "english": "Miraculous",
-      "polish": "Cudowny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-051-word.mp3",
-      "audioSentence": "t1-p151-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-052",
-      "english": "Miscellaneous",
-      "polish": "Rozmaity",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-052-word.mp3",
-      "audioSentence": "t1-p151-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-053",
-      "english": "Mischievous",
-      "polish": "Figlarny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-053-word.mp3",
-      "audioSentence": "t1-p151-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-054",
-      "english": "Opulence",
-      "polish": "Obfitość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-054-word.mp3",
-      "audioSentence": "t1-p151-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-055",
-      "english": "Perpetuate",
-      "polish": "Uwieczniać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-055-word.mp3",
-      "audioSentence": "t1-p151-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-056",
-      "english": "Perseverance",
-      "polish": "Wytrwałość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-056-word.mp3",
-      "audioSentence": "t1-p151-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-057",
-      "english": "Phantasmagorical",
-      "polish": "Fantasmagoryczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-057-word.mp3",
-      "audioSentence": "t1-p151-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-058",
-      "english": "Pristine",
-      "polish": "Nieskazitelny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-058-word.mp3",
-      "audioSentence": "t1-p151-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-059",
-      "english": "Resourceful",
-      "polish": "Zaradny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-059-word.mp3",
-      "audioSentence": "t1-p151-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p151-060",
-      "english": "Accolade",
-      "polish": "Wyrazy uznania",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p151-060-word.mp3",
-      "audioSentence": "t1-p151-060-sentence.mp3"
     }
   ]
 }

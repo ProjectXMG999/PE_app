@@ -1,15 +1,15 @@
 {
   "id": "t1-p230",
-  "name": "Poczta",
-  "volume": "Tom V",
-  "level": 3,
-  "category": "Czasowniki",
-  "chapter": "Rozdział XLV",
+  "name": "Słodziak",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Slang",
+  "chapter": "Rozdział XXIII",
   "words": [
     {
       "id": "t1-p230-001",
-      "english": "Pack",
-      "polish": "Pakować",
+      "english": "Boo",
+      "polish": "Misiu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p230-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p230-002",
-      "english": "Receive",
-      "polish": "Otrzymywać",
+      "english": "Daisy",
+      "polish": "Kwiatuszek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p230-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p230-003",
-      "english": "Deliver",
-      "polish": "Doręczać",
+      "english": "Dimples",
+      "polish": "Dołeczki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p230-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p230-004",
-      "english": "Ship",
-      "polish": "Wysyłać",
+      "english": "Donut",
+      "polish": "Pączuś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p230-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p230-005",
-      "english": "Unfold",
-      "polish": "Rozkładać",
+      "english": "Little dove",
+      "polish": "Gołąbek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p230-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p230-006",
-      "english": "Fold",
-      "polish": "Składać",
+      "english": "Magical fairy",
+      "polish": "Czarodziejka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p230-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p230-007",
-      "english": "Wrap",
-      "polish": "Owijać",
+      "english": "Miss kitty",
+      "polish": "Koteczek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p230-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p230-008",
-      "english": "Mail",
-      "polish": "Wysłać pocztą",
+      "english": "My tiger",
+      "polish": "Tygrysek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p230-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p230-009",
-      "english": "Unload",
-      "polish": "Rozładować",
+      "english": "Pretty lady",
+      "polish": "Piękna pani",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p230-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p230-010",
-      "english": "Package",
-      "polish": "Paczkować",
+      "english": "Rabbit",
+      "polish": "Zajączek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p230-010-word.mp3",
       "audioSentence": "t1-p230-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p230-011",
-      "english": "Unwind",
-      "polish": "Odwijać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p230-011-word.mp3",
-      "audioSentence": "t1-p230-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p230-012",
-      "english": "Dispatch",
-      "polish": "Wysłać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p230-012-word.mp3",
-      "audioSentence": "t1-p230-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p230-013",
-      "english": "Parcel",
-      "polish": "Przygotowywać przesyłkę",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p230-013-word.mp3",
-      "audioSentence": "t1-p230-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p230-014",
-      "english": "Enclose",
-      "polish": "Załączyć do wiadomości",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p230-014-word.mp3",
-      "audioSentence": "t1-p230-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p230-015",
-      "english": "Post",
-      "polish": "Nadać pocztą",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p230-015-word.mp3",
-      "audioSentence": "t1-p230-015-sentence.mp3"
     }
   ]
 }

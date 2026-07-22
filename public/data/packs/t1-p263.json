@@ -1,15 +1,15 @@
 {
   "id": "t1-p263",
-  "name": "Spójniki 7",
-  "volume": "Tom VI",
-  "level": 4,
-  "category": "Spójniki",
-  "chapter": "Rozdział  LVII",
+  "name": "Przymiotniki 11",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XXVI",
   "words": [
     {
       "id": "t1-p263-001",
-      "english": "For the most part",
-      "polish": "W przeważającym stopniu",
+      "english": "Glad",
+      "polish": "Szczęśliwy z jakiegoś powodu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p263-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p263-002",
-      "english": "In the meantime",
-      "polish": "W międzyczasie",
+      "english": "Satisfied",
+      "polish": "Usatysfakcjonowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p263-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p263-003",
-      "english": "Most of all",
-      "polish": "Nade wszystko",
+      "english": "Thankful",
+      "polish": "Wdzięczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p263-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p263-004",
-      "english": "No wonder",
-      "polish": "Nic dziwnego że",
+      "english": "Pleased",
+      "polish": "Zadowolony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p263-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p263-005",
-      "english": "To conclude",
-      "polish": "Konkludując",
+      "english": "Relaxed",
+      "polish": "Zrelaksowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p263-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p263-006",
-      "english": "Notably",
-      "polish": "Co warte uwagi",
+      "english": "Drunk",
+      "polish": "Pijany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p263-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p263-007",
-      "english": "Prior to",
-      "polish": "Przed",
+      "english": "Sleepy",
+      "polish": "Senny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p263-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p263-008",
-      "english": "At last",
-      "polish": "Nareszcie",
+      "english": "Delighted",
+      "polish": "Zachwycony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p263-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p263-009",
-      "english": "Recapitulate",
-      "polish": "Rekapitulując",
+      "english": "Excited",
+      "polish": "Podekscytowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p263-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p263-010",
-      "english": "Summarize",
-      "polish": "By podsumować",
+      "english": "Prepared",
+      "polish": "Przygotowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p263-010-word.mp3",
       "audioSentence": "t1-p263-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p263-011",
+      "english": "Enjoyable",
+      "polish": "Przyjemny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p263-011-word.mp3",
+      "audioSentence": "t1-p263-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p263-012",
+      "english": "Hopeful",
+      "polish": "Pełen nadziei",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p263-012-word.mp3",
+      "audioSentence": "t1-p263-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p263-013",
+      "english": "Willing",
+      "polish": "Skłonny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p263-013-word.mp3",
+      "audioSentence": "t1-p263-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p263-014",
+      "english": "Challenging",
+      "polish": "Ambitny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p263-014-word.mp3",
+      "audioSentence": "t1-p263-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p263-015",
+      "english": "Touched",
+      "polish": "Wzruszony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p263-015-word.mp3",
+      "audioSentence": "t1-p263-015-sentence.mp3"
     }
   ]
 }

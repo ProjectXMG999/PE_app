@@ -1,0 +1,145 @@
+{
+  "id": "t1-p828",
+  "name": "Fantasy",
+  "volume": "Tom IX",
+  "level": 4,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział LXXXII",
+  "words": [
+    {
+      "id": "t1-p828-001",
+      "english": "Quarterstaff",
+      "polish": "Kij bojowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-001-word.mp3",
+      "audioSentence": "t1-p828-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-002",
+      "english": "Flail",
+      "polish": "Kiścień",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-002-word.mp3",
+      "audioSentence": "t1-p828-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-003",
+      "english": "Cleric",
+      "polish": "Kleryk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-003-word.mp3",
+      "audioSentence": "t1-p828-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-004",
+      "english": "Chain mail",
+      "polish": "Kolczuga",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-004-word.mp3",
+      "audioSentence": "t1-p828-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-005",
+      "english": "Cutlass",
+      "polish": "Kordelas",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-005-word.mp3",
+      "audioSentence": "t1-p828-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-006",
+      "english": "Staff",
+      "polish": "Kostur",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-006-word.mp3",
+      "audioSentence": "t1-p828-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-007",
+      "english": "Crusader",
+      "polish": "Krzyżowiec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-007-word.mp3",
+      "audioSentence": "t1-p828-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-008",
+      "english": "Lance",
+      "polish": "Lanca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-008-word.mp3",
+      "audioSentence": "t1-p828-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-009",
+      "english": "Lich",
+      "polish": "Licz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-009-word.mp3",
+      "audioSentence": "t1-p828-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-010",
+      "english": "Club",
+      "polish": "Maczuga",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-010-word.mp3",
+      "audioSentence": "t1-p828-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-011",
+      "english": "Juju",
+      "polish": "Magia szamańska",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-011-word.mp3",
+      "audioSentence": "t1-p828-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-012",
+      "english": "Conjurer",
+      "polish": "Magik przywołujący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-012-word.mp3",
+      "audioSentence": "t1-p828-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-013",
+      "english": "Manticore",
+      "polish": "Mantykora",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-013-word.mp3",
+      "audioSentence": "t1-p828-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-014",
+      "english": "Gargoyle",
+      "polish": "Maszkaron",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-014-word.mp3",
+      "audioSentence": "t1-p828-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p828-015",
+      "english": "Mephit",
+      "polish": "Mefit",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p828-015-word.mp3",
+      "audioSentence": "t1-p828-015-sentence.mp3"
+    }
+  ]
+}

@@ -1,15 +1,15 @@
 {
   "id": "t1-p297",
-  "name": "Czasowniki 24",
-  "volume": "Tom VIII",
-  "level": 4,
-  "category": "Czasowniki",
-  "chapter": "Rozdział LXXIV",
+  "name": "Kontrakcje",
+  "volume": "Tom III",
+  "level": 3,
+  "category": "Skróty",
+  "chapter": "Rozdział XXX",
   "words": [
     {
       "id": "t1-p297-001",
-      "english": "Conspire",
-      "polish": "Konspirować",
+      "english": "C'MON",
+      "polish": "No cho",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p297-002",
-      "english": "Evacuate",
-      "polish": "Ewakuować",
+      "english": "COZ",
+      "polish": "Bo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p297-003",
-      "english": "Discipline",
-      "polish": "Dyscyplinować",
+      "english": "DONTCHA",
+      "polish": "C'nie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p297-004",
-      "english": "Idealize",
-      "polish": "Idealizować",
+      "english": "DUNNO",
+      "polish": "Nie wiem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p297-005",
-      "english": "Inspect",
-      "polish": "Przeprowadzać inspekcję",
+      "english": "GIMME",
+      "polish": "Daj mi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p297-006",
-      "english": "Intensify",
-      "polish": "Intensyfikować",
+      "english": "KINDA",
+      "polish": "Trochę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p297-007",
-      "english": "Privatize",
-      "polish": "Prywatyzować",
+      "english": "EM",
+      "polish": "Im",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p297-008",
-      "english": "Prosper",
-      "polish": "Prosperować",
+      "english": "WANNA",
+      "polish": "Chcieć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p297-009",
-      "english": "Recite",
-      "polish": "Recytować",
+      "english": "AIN'T",
+      "polish": "Nie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p297-010",
-      "english": "Supplement",
-      "polish": "Suplementować",
+      "english": "GONNA",
+      "polish": "Mieć zamiar",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-010-word.mp3",
       "audioSentence": "t1-p297-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p297-011",
-      "english": "Accumulate",
-      "polish": "Akumulować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p297-011-word.mp3",
-      "audioSentence": "t1-p297-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p297-012",
-      "english": "Adopt",
-      "polish": "Adoptować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p297-012-word.mp3",
-      "audioSentence": "t1-p297-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p297-013",
-      "english": "Authorize",
-      "polish": "Autoryzować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p297-013-word.mp3",
-      "audioSentence": "t1-p297-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p297-014",
-      "english": "Balance",
-      "polish": "Balansować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p297-014-word.mp3",
-      "audioSentence": "t1-p297-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p297-015",
-      "english": "Campaign",
-      "polish": "Prowadzić kampanię",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p297-015-word.mp3",
-      "audioSentence": "t1-p297-015-sentence.mp3"
     }
   ]
 }

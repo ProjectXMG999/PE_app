@@ -1,15 +1,15 @@
 {
   "id": "t1-p323",
-  "name": "Niefajne - Slang",
-  "volume": "Tom IX",
-  "level": 4,
-  "category": "Slang",
-  "chapter": "Rozdział LXXXV",
+  "name": "Rycerz",
+  "volume": "Tom IV",
+  "level": 3,
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XXXII",
   "words": [
     {
       "id": "t1-p323-001",
-      "english": "Damp squib",
-      "polish": "Totalny niewypał",
+      "english": "Worthy",
+      "polish": "Godny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p323-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p323-002",
-      "english": "Fauxpology",
-      "polish": "Nieszczere przeprosiny",
+      "english": "Brave",
+      "polish": "Odważny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p323-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p323-003",
-      "english": "Fuzzy math",
-      "polish": "Słabo przemyślane rozwiązanie",
+      "english": "Sincere",
+      "polish": "Szczery",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p323-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p323-004",
-      "english": "Hit and run",
-      "polish": "Potrącenie przechodnia z ucieczką",
+      "english": "Modest",
+      "polish": "Skromny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p323-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p323-005",
-      "english": "Hosed",
-      "polish": "W przewalonej sytuacji",
+      "english": "Honest",
+      "polish": "Uczciwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p323-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p323-006",
-      "english": "Off the hinges",
-      "polish": "Wystrzelony w kosmos",
+      "english": "Caring",
+      "polish": "Troskliwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p323-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p323-007",
-      "english": "411",
-      "polish": "Ploteczka",
+      "english": "Faithful",
+      "polish": "Wierny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p323-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p323-008",
-      "english": "Pregret",
-      "polish": "Poczucie żałowania czegoś, co I tak się zrobi",
+      "english": "Gentle",
+      "polish": "Delikatny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p323-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p323-009",
-      "english": "Shack up",
-      "polish": "Żyć na kocią łapę",
+      "english": "Charming",
+      "polish": "Czarujący uroczy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p323-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p323-010",
-      "english": "Red-flag",
-      "polish": "Czerwone światło",
+      "english": "Subtle",
+      "polish": "Subtelny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p323-010-word.mp3",
       "audioSentence": "t1-p323-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p323-011",
+      "english": "Fond",
+      "polish": "Lubiący",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p323-011-word.mp3",
+      "audioSentence": "t1-p323-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p323-012",
+      "english": "Well-mannered",
+      "polish": "Dobrze wychowany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p323-012-word.mp3",
+      "audioSentence": "t1-p323-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p323-013",
+      "english": "Courageous",
+      "polish": "Dzielny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p323-013-word.mp3",
+      "audioSentence": "t1-p323-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p323-014",
+      "english": "Adventurous",
+      "polish": "Żądny przygód",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p323-014-word.mp3",
+      "audioSentence": "t1-p323-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p323-015",
+      "english": "Humble",
+      "polish": "Pokorny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p323-015-word.mp3",
+      "audioSentence": "t1-p323-015-sentence.mp3"
     }
   ]
 }

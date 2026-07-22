@@ -1,15 +1,15 @@
 {
   "id": "t1-p081",
-  "name": "Emocje I uczucia",
+  "name": "Miasto",
   "volume": "Tom I",
   "level": 1,
   "category": "Rzeczowniki",
-  "chapter": "Rozdział X",
+  "chapter": "Rozdział VIII",
   "words": [
     {
       "id": "t1-p081-001",
-      "english": "Appetite",
-      "polish": "Apetyt",
+      "english": "Pharmacy",
+      "polish": "Apteka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p081-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p081-002",
-      "english": "Emotion",
-      "polish": "Emocja",
+      "english": "Swimming pool",
+      "polish": "Basen",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p081-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p081-003",
-      "english": "Dream",
-      "polish": "Marzenie",
+      "english": "Library",
+      "polish": "Biblioteka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p081-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p081-004",
-      "english": "Surprise",
-      "polish": "Niespodzianka",
+      "english": "Disco",
+      "polish": "Dyskoteka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p081-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p081-005",
-      "english": "Need",
-      "polish": "Potrzeba",
+      "english": "Church",
+      "polish": "Kościół",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p081-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p081-006",
-      "english": "Laughter",
-      "polish": "Śmiech",
+      "english": "Museum",
+      "polish": "Muzeum",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p081-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p081-007",
-      "english": "Feeling",
-      "polish": "Uczucie",
+      "english": "Bus stop",
+      "polish": "Przystanek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p081-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p081-008",
-      "english": "Smell",
-      "polish": "Zapach",
+      "english": "Supermarket",
+      "polish": "Supermarket",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p081-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p081-009",
-      "english": "Taste",
-      "polish": "Zmysł smaku",
+      "english": "Shopping",
+      "polish": "Zakupy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p081-009-word.mp3",
@@ -89,282 +89,12 @@
     },
     {
       "id": "t1-p081-010",
-      "english": "Wish",
-      "polish": "Życzenie",
+      "english": "Zoo",
+      "polish": "Zoo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p081-010-word.mp3",
       "audioSentence": "t1-p081-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-011",
-      "english": "Impression",
-      "polish": "Wrażenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-011-word.mp3",
-      "audioSentence": "t1-p081-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-012",
-      "english": "Aspiration",
-      "polish": "Aspiracja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-012-word.mp3",
-      "audioSentence": "t1-p081-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-013",
-      "english": "Urge",
-      "polish": "Pragnienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-013-word.mp3",
-      "audioSentence": "t1-p081-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-014",
-      "english": "Sense",
-      "polish": "Sens",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-014-word.mp3",
-      "audioSentence": "t1-p081-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-015",
-      "english": "Touch",
-      "polish": "Dotyk",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-015-word.mp3",
-      "audioSentence": "t1-p081-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-016",
-      "english": "Sense",
-      "polish": "Zmysł",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-016-word.mp3",
-      "audioSentence": "t1-p081-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-017",
-      "english": "Hunger",
-      "polish": "Głód",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-017-word.mp3",
-      "audioSentence": "t1-p081-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-018",
-      "english": "Nostalgia",
-      "polish": "Nostalgia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-018-word.mp3",
-      "audioSentence": "t1-p081-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-019",
-      "english": "Expectation",
-      "polish": "Oczekiwanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-019-word.mp3",
-      "audioSentence": "t1-p081-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-020",
-      "english": "Thirst",
-      "polish": "Pragnienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-020-word.mp3",
-      "audioSentence": "t1-p081-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-021",
-      "english": "Sensation",
-      "polish": "Sensacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-021-word.mp3",
-      "audioSentence": "t1-p081-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-022",
-      "english": "Sentiment",
-      "polish": "Sentyment",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-022-word.mp3",
-      "audioSentence": "t1-p081-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-023",
-      "english": "Hearing",
-      "polish": "Słuch",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-023-word.mp3",
-      "audioSentence": "t1-p081-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-024",
-      "english": "Laugh",
-      "polish": "Śmiech",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-024-word.mp3",
-      "audioSentence": "t1-p081-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-025",
-      "english": "Desire",
-      "polish": "Żądza",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-025-word.mp3",
-      "audioSentence": "t1-p081-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-026",
-      "english": "Sight",
-      "polish": "Wzrok",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-026-word.mp3",
-      "audioSentence": "t1-p081-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-027",
-      "english": "Tension",
-      "polish": "Napięcie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-027-word.mp3",
-      "audioSentence": "t1-p081-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-028",
-      "english": "Drive",
-      "polish": "Popęd",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-028-word.mp3",
-      "audioSentence": "t1-p081-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-029",
-      "english": "Concern",
-      "polish": "Niepokój",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-029-word.mp3",
-      "audioSentence": "t1-p081-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-030",
-      "english": "Remorse",
-      "polish": "Wyrzuty sumienia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-030-word.mp3",
-      "audioSentence": "t1-p081-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-031",
-      "english": "Criticism",
-      "polish": "Krytyka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-031-word.mp3",
-      "audioSentence": "t1-p081-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-032",
-      "english": "Lust",
-      "polish": "Pożądanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-032-word.mp3",
-      "audioSentence": "t1-p081-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-033",
-      "english": "Craving",
-      "polish": "Łaknienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-033-word.mp3",
-      "audioSentence": "t1-p081-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-034",
-      "english": "Apathy",
-      "polish": "Apatia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-034-word.mp3",
-      "audioSentence": "t1-p081-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-035",
-      "english": "Manner",
-      "polish": "Sposób zachowania",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-035-word.mp3",
-      "audioSentence": "t1-p081-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-036",
-      "english": "Yearning",
-      "polish": "Tęsknota",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-036-word.mp3",
-      "audioSentence": "t1-p081-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-037",
-      "english": "Affection",
-      "polish": "Przywiązanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-037-word.mp3",
-      "audioSentence": "t1-p081-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-038",
-      "english": "Vehemence",
-      "polish": "Gwałtowność",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-038-word.mp3",
-      "audioSentence": "t1-p081-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-039",
-      "english": "Zeal",
-      "polish": "Gorliwość",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-039-word.mp3",
-      "audioSentence": "t1-p081-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p081-040",
-      "english": "Melancholy",
-      "polish": "Melancholia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p081-040-word.mp3",
-      "audioSentence": "t1-p081-040-sentence.mp3"
     }
   ]
 }

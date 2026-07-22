@@ -1,15 +1,15 @@
 {
   "id": "t1-p129",
-  "name": "Dla dorosłych",
+  "name": "Przymiotniki 7",
   "volume": "Tom II",
   "level": 2,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XVIII",
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XIII",
   "words": [
     {
       "id": "t1-p129-001",
-      "english": "Masturbation",
-      "polish": "Masturbacja",
+      "english": "Attractive",
+      "polish": "Atrakcyjny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p129-002",
-      "english": "Hangover",
-      "polish": "Kac",
+      "english": "Messy",
+      "polish": "Bałaganiarski",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p129-003",
-      "english": "Orgasm",
-      "polish": "Orgazm",
+      "english": "Skinny",
+      "polish": "Bardzo szczupły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p129-004",
-      "english": "Smoking",
-      "polish": "Palenie papierosów",
+      "english": "Blond",
+      "polish": "Blond",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p129-005",
-      "english": "Champagne",
-      "polish": "Szampan",
+      "english": "Ugly",
+      "polish": "Brzydki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p129-006",
-      "english": "Cigar",
-      "polish": "Cygaro",
+      "english": "Good-looking",
+      "polish": "Dobrze wyglądający",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p129-007",
-      "english": "Pipe",
-      "polish": "Fajka",
+      "english": "Well-built",
+      "polish": "Dobrze zbudowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p129-008",
-      "english": "Pornography",
-      "polish": "Pornografia",
+      "english": "Curly",
+      "polish": "Kręcone",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p129-009",
-      "english": "Condom",
-      "polish": "Prezerwatywa",
+      "english": "Bald",
+      "polish": "Łysy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p129-010",
-      "english": "Poker",
-      "polish": "Poker",
+      "english": "Overweight",
+      "polish": "Mający nadwagę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p129-011",
-      "english": "Prostitute",
-      "polish": "Prostytutka",
+      "english": "Nude",
+      "polish": "Nagi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p129-012",
-      "english": "Aperitif",
-      "polish": "Aperitif",
+      "english": "Out of shape",
+      "polish": "Nie w formie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p129-013",
-      "english": "Rum",
-      "polish": "Rum",
+      "english": "Obese",
+      "polish": "Otyły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p129-014",
-      "english": "Cocktail",
-      "polish": "Koktajl",
+      "english": "Hairy",
+      "polish": "Owłosiony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-014-word.mp3",
@@ -134,147 +134,12 @@
     },
     {
       "id": "t1-p129-015",
-      "english": "Casino",
-      "polish": "Kasyno",
+      "english": "Neat",
+      "polish": "Schludny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p129-015-word.mp3",
       "audioSentence": "t1-p129-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-016",
-      "english": "Marijuana",
-      "polish": "Marihuana",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-016-word.mp3",
-      "audioSentence": "t1-p129-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-017",
-      "english": "Draught beer",
-      "polish": "Piwo beczkowe",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-017-word.mp3",
-      "audioSentence": "t1-p129-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-018",
-      "english": "Ashtray",
-      "polish": "Popielniczka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-018-word.mp3",
-      "audioSentence": "t1-p129-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-019",
-      "english": "Sparkling wine",
-      "polish": "Wino musujące",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-019-word.mp3",
-      "audioSentence": "t1-p129-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-020",
-      "english": "Cider",
-      "polish": "Cydr",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-020-word.mp3",
-      "audioSentence": "t1-p129-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-021",
-      "english": "Gambling",
-      "polish": "Hazard",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-021-word.mp3",
-      "audioSentence": "t1-p129-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-022",
-      "english": "Scotch",
-      "polish": "Szkocka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-022-word.mp3",
-      "audioSentence": "t1-p129-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-023",
-      "english": "Cognac",
-      "polish": "Koniak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-023-word.mp3",
-      "audioSentence": "t1-p129-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-024",
-      "english": "Liqueur",
-      "polish": "Likier",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-024-word.mp3",
-      "audioSentence": "t1-p129-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-025",
-      "english": "Vermouth",
-      "polish": "Wermut",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-025-word.mp3",
-      "audioSentence": "t1-p129-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-026",
-      "english": "Moonshine",
-      "polish": "Bimber",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-026-word.mp3",
-      "audioSentence": "t1-p129-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-027",
-      "english": "Ejaculation",
-      "polish": "Wytrysk",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-027-word.mp3",
-      "audioSentence": "t1-p129-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-028",
-      "english": "Clitoris",
-      "polish": "Łechtaczka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-028-word.mp3",
-      "audioSentence": "t1-p129-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-029",
-      "english": "Climax",
-      "polish": "Szczytowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-029-word.mp3",
-      "audioSentence": "t1-p129-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p129-030",
-      "english": "Semen",
-      "polish": "Sperma",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p129-030-word.mp3",
-      "audioSentence": "t1-p129-030-sentence.mp3"
     }
   ]
 }

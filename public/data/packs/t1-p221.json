@@ -1,15 +1,15 @@
 {
   "id": "t1-p221",
-  "name": "Ucieczka",
-  "volume": "Tom V",
-  "level": 3,
-  "category": "Phrasale",
-  "chapter": "Rozdział XLII",
+  "name": "Kraje",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXII",
   "words": [
     {
       "id": "t1-p221-001",
-      "english": "Run away from",
-      "polish": "Uciekać od",
+      "english": "Norwegian",
+      "polish": "Norweżka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p221-002",
-      "english": "Walk away",
-      "polish": "Odejść",
+      "english": "Russia",
+      "polish": "Rosja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p221-003",
-      "english": "Get out",
-      "polish": "Wydostać",
+      "english": "Russian",
+      "polish": "Rosjanka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p221-004",
-      "english": "Run out",
-      "polish": "Wybiec",
+      "english": "Turkey",
+      "polish": "Turcja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p221-005",
-      "english": "Walk off",
-      "polish": "Odejść nagle",
+      "english": "Turkish",
+      "polish": "Turczynka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p221-006",
-      "english": "Walk out on",
-      "polish": "Opuścić",
+      "english": "Hungarian",
+      "polish": "Węgierka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p221-007",
-      "english": "Back away",
-      "polish": "Wycofać się",
+      "english": "Hungary",
+      "polish": "Węgry",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p221-008",
-      "english": "Sneak out",
-      "polish": "Wykraść się",
+      "english": "Austria",
+      "polish": "Austria",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p221-009",
-      "english": "Break away",
-      "polish": "Wyrwać się",
+      "english": "Austrian",
+      "polish": "Austriaczka, austriak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p221-010",
-      "english": "Slip away",
-      "polish": "Umknąć",
+      "english": "Argentina",
+      "polish": "Argentyna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p221-011",
-      "english": "Drop out of",
-      "polish": "Rzucić",
+      "english": "Argentinian",
+      "polish": "Argentynka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p221-012",
-      "english": "Back out",
-      "polish": "Wycofać się",
+      "english": "Belgium",
+      "polish": "Belgia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p221-013",
-      "english": "Clear off",
-      "polish": "Zmyć się",
+      "english": "Belgian",
+      "polish": "Belgijka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p221-014",
-      "english": "Draw back",
-      "polish": "Cofać się",
+      "english": "Belarusian",
+      "polish": "Białorusinka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-014-word.mp3",
@@ -134,57 +134,12 @@
     },
     {
       "id": "t1-p221-015",
-      "english": "Pull out",
-      "polish": "Wycofać się",
+      "english": "Belarus",
+      "polish": "Białoruś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p221-015-word.mp3",
       "audioSentence": "t1-p221-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p221-016",
-      "english": "Buzz off",
-      "polish": "Zmywać się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p221-016-word.mp3",
-      "audioSentence": "t1-p221-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p221-017",
-      "english": "Make off with sth",
-      "polish": "Nawiać z czymś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p221-017-word.mp3",
-      "audioSentence": "t1-p221-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p221-018",
-      "english": "Light out",
-      "polish": "Nagle się zawinąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p221-018-word.mp3",
-      "audioSentence": "t1-p221-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p221-019",
-      "english": "Run off",
-      "polish": "Dawać nogę",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p221-019-word.mp3",
-      "audioSentence": "t1-p221-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p221-020",
-      "english": "Shuffle off",
-      "polish": "Odejść gdzieś",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p221-020-word.mp3",
-      "audioSentence": "t1-p221-020-sentence.mp3"
     }
   ]
 }

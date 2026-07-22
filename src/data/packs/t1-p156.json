@@ -1,15 +1,15 @@
 {
   "id": "t1-p156",
-  "name": "Przymiotniki 10",
-  "volume": "Tom III",
+  "name": "Komunikacja",
+  "volume": "Tom II",
   "level": 2,
-  "category": "Przymiotniki",
-  "chapter": "Rozdział XXIII",
+  "category": "Phrasale",
+  "chapter": "Rozdział XVI",
   "words": [
     {
       "id": "t1-p156-001",
-      "english": "Systematic",
-      "polish": "Systematyczny",
+      "english": "Ask for",
+      "polish": "Prosić o",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p156-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p156-002",
-      "english": "Interested",
-      "polish": "Zainteresowany",
+      "english": "Call back",
+      "polish": "Oddzwonić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p156-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p156-003",
-      "english": "Emotional",
-      "polish": "Emocjonalny",
+      "english": "Talk to",
+      "polish": "Mówić do kogoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p156-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p156-004",
-      "english": "Communicative",
-      "polish": "Komunikatywny",
+      "english": "Talk over",
+      "polish": "Przegadać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p156-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p156-005",
-      "english": "Creative",
-      "polish": "Kreatywny",
+      "english": "Sum up",
+      "polish": "Zsumować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p156-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p156-006",
-      "english": "Magical",
-      "polish": "Magiczny",
+      "english": "Agree with",
+      "polish": "Akceptować coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p156-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p156-007",
-      "english": "Negative",
-      "polish": "Negatywny",
+      "english": "Hear about",
+      "polish": "Usłyszeć o",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p156-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p156-008",
-      "english": "Loyal",
-      "polish": "Lojalny",
+      "english": "Make sth up",
+      "polish": "Zmyślić coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p156-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p156-009",
-      "english": "Positive",
-      "polish": "Pozytywny",
+      "english": "Break up",
+      "polish": "Przerywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p156-009-word.mp3",
@@ -89,57 +89,12 @@
     },
     {
       "id": "t1-p156-010",
-      "english": "Religious",
-      "polish": "Religijny",
+      "english": "Hang up",
+      "polish": "Rozłączyć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p156-010-word.mp3",
       "audioSentence": "t1-p156-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p156-011",
-      "english": "Moral",
-      "polish": "Moralny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p156-011-word.mp3",
-      "audioSentence": "t1-p156-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p156-012",
-      "english": "Regular",
-      "polish": "Regularny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p156-012-word.mp3",
-      "audioSentence": "t1-p156-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p156-013",
-      "english": "Professional",
-      "polish": "Profesjonalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p156-013-word.mp3",
-      "audioSentence": "t1-p156-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p156-014",
-      "english": "Realistic",
-      "polish": "Realistyczny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p156-014-word.mp3",
-      "audioSentence": "t1-p156-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p156-015",
-      "english": "Natural",
-      "polish": "Naturalny",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p156-015-word.mp3",
-      "audioSentence": "t1-p156-015-sentence.mp3"
     }
   ]
 }

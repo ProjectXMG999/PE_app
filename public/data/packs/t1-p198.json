@@ -1,15 +1,15 @@
 {
   "id": "t1-p198",
-  "name": "Slang 18",
-  "volume": "Tom IV",
-  "level": 3,
-  "category": "Slang",
-  "chapter": "Rozdział XXXVI",
+  "name": "Kierunek",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Przysłówki",
+  "chapter": "Rozdział XX",
   "words": [
     {
       "id": "t1-p198-001",
-      "english": "All talk",
-      "polish": "Mocny w gębie",
+      "english": "Along",
+      "polish": "Wzdłuż",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p198-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p198-002",
-      "english": "Easy mark",
-      "polish": "Łatwy cel",
+      "english": "Around",
+      "polish": "Wokół",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p198-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p198-003",
-      "english": "Faker",
-      "polish": "Ściemniacz",
+      "english": "Back",
+      "polish": "Z powrotem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p198-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p198-004",
-      "english": "Imposter",
-      "polish": "Podszywacz",
+      "english": "Down",
+      "polish": "Na dole",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p198-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p198-005",
-      "english": "Sheeple",
-      "polish": "Ludzie owce",
+      "english": "Into",
+      "polish": "Do środka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p198-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p198-006",
-      "english": "Slacker",
-      "polish": "Cholernie leniwy",
+      "english": "Out of",
+      "polish": "Poza",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p198-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p198-007",
-      "english": "Thirsty",
-      "polish": "Pragnący akceptacji",
+      "english": "Over",
+      "polish": "Przez",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p198-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p198-008",
-      "english": "Wise guy",
-      "polish": "Mądrala",
+      "english": "Round",
+      "polish": "Wokół",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p198-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p198-009",
-      "english": "Simp",
-      "polish": "Pantoflarz",
+      "english": "Straight",
+      "polish": "Prosto",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p198-009-word.mp3",
@@ -89,12 +89,48 @@
     },
     {
       "id": "t1-p198-010",
-      "english": "Rat",
-      "polish": "Kapuś",
+      "english": "Through",
+      "polish": "Przez",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p198-010-word.mp3",
       "audioSentence": "t1-p198-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p198-011",
+      "english": "Ahead",
+      "polish": "Dalej",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p198-011-word.mp3",
+      "audioSentence": "t1-p198-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p198-012",
+      "english": "Forth",
+      "polish": "Naprzód",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p198-012-word.mp3",
+      "audioSentence": "t1-p198-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p198-013",
+      "english": "Towards",
+      "polish": "W kierunku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p198-013-word.mp3",
+      "audioSentence": "t1-p198-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p198-014",
+      "english": "Upstairs",
+      "polish": "Na górę",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p198-014-word.mp3",
+      "audioSentence": "t1-p198-014-sentence.mp3"
     }
   ]
 }

@@ -1,0 +1,145 @@
+{
+  "id": "t1-p512",
+  "name": "Dom",
+  "volume": "Tom VI",
+  "level": 4,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział LI",
+  "words": [
+    {
+      "id": "t1-p512-001",
+      "english": "Cupboard",
+      "polish": "Kredens",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-001-word.mp3",
+      "audioSentence": "t1-p512-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-002",
+      "english": "Threshold",
+      "polish": "Próg",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-002-word.mp3",
+      "audioSentence": "t1-p512-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-003",
+      "english": "Rack",
+      "polish": "Regał",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-003-word.mp3",
+      "audioSentence": "t1-p512-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-004",
+      "english": "Residence",
+      "polish": "Rezydencja",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-004-word.mp3",
+      "audioSentence": "t1-p512-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-005",
+      "english": "Pantry",
+      "polish": "Spiżarnia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-005-word.mp3",
+      "audioSentence": "t1-p512-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-006",
+      "english": "Stool",
+      "polish": "Taboret",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-006-word.mp3",
+      "audioSentence": "t1-p512-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-007",
+      "english": "Wallpaper",
+      "polish": "Tapeta",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-007-word.mp3",
+      "audioSentence": "t1-p512-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-008",
+      "english": "Porch",
+      "polish": "Weranda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-008-word.mp3",
+      "audioSentence": "t1-p512-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-009",
+      "english": "Peephole",
+      "polish": "Wizjer",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-009-word.mp3",
+      "audioSentence": "t1-p512-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-010",
+      "english": "Door mat",
+      "polish": "Wycieraczka do butów",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-010-word.mp3",
+      "audioSentence": "t1-p512-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-011",
+      "english": "Curtain",
+      "polish": "Zasłona",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-011-word.mp3",
+      "audioSentence": "t1-p512-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-012",
+      "english": "Running water",
+      "polish": "Bieżąca woda",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-012-word.mp3",
+      "audioSentence": "t1-p512-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-013",
+      "english": "Doorbell",
+      "polish": "Dzwonek do drzwi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-013-word.mp3",
+      "audioSentence": "t1-p512-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-014",
+      "english": "Walk-in wardrobe",
+      "polish": "Garderoba",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-014-word.mp3",
+      "audioSentence": "t1-p512-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p512-015",
+      "english": "Mold",
+      "polish": "Pleśń",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p512-015-word.mp3",
+      "audioSentence": "t1-p512-015-sentence.mp3"
+    }
+  ]
+}

@@ -1,15 +1,15 @@
 {
   "id": "t1-p175",
-  "name": "Kontrakcje",
-  "volume": "Tom III",
-  "level": 3,
-  "category": "Skróty",
-  "chapter": "Rozdział XXX",
+  "name": "Jedzenie",
+  "volume": "Tom II",
+  "level": 2,
+  "category": "Przymiotniki",
+  "chapter": "Rozdział XVIII",
   "words": [
     {
       "id": "t1-p175-001",
-      "english": "C'MON",
-      "polish": "No cho",
+      "english": "Cut",
+      "polish": "Pokrojony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p175-002",
-      "english": "COZ",
-      "polish": "Bo",
+      "english": "Crispy",
+      "polish": "Chrupiący",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p175-003",
-      "english": "DONTCHA",
-      "polish": "C'nie",
+      "english": "Diet",
+      "polish": "Dietetyczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p175-004",
-      "english": "DUNNO",
-      "polish": "Nie wiem",
+      "english": "Fizzy",
+      "polish": "Gazowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p175-005",
-      "english": "GIMME",
-      "polish": "Daj mi",
+      "english": "Bitter",
+      "polish": "Gorzki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p175-006",
-      "english": "KINDA",
-      "polish": "Trochę",
+      "english": "Sour",
+      "polish": "Kwaśny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p175-007",
-      "english": "EM",
-      "polish": "Im",
+      "english": "Still",
+      "polish": "Niegazowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p175-008",
-      "english": "WANNA",
-      "polish": "Chcieć",
+      "english": "Low-fat",
+      "polish": "Niskotłuszczowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p175-009",
-      "english": "AIN'T",
-      "polish": "Nie",
+      "english": "Yucky",
+      "polish": "Ohydne",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-009-word.mp3",
@@ -89,8 +89,8 @@
     },
     {
       "id": "t1-p175-010",
-      "english": "GONNA",
-      "polish": "Mieć zamiar",
+      "english": "Spicy",
+      "polish": "Pikantny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-010-word.mp3",
@@ -98,8 +98,8 @@
     },
     {
       "id": "t1-p175-011",
-      "english": "GOTTA",
-      "polish": "Musieć",
+      "english": "Semi-sweet",
+      "polish": "Półsłodki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-011-word.mp3",
@@ -107,8 +107,8 @@
     },
     {
       "id": "t1-p175-012",
-      "english": "I'MMA",
-      "polish": "Zamierzam",
+      "english": "Yummy",
+      "polish": "Pyszne",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-012-word.mp3",
@@ -116,8 +116,8 @@
     },
     {
       "id": "t1-p175-013",
-      "english": "INNIT",
-      "polish": "C'nie",
+      "english": "Raw",
+      "polish": "Surowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-013-word.mp3",
@@ -125,8 +125,8 @@
     },
     {
       "id": "t1-p175-014",
-      "english": "LEMME",
-      "polish": "Daj mi",
+      "english": "Salty",
+      "polish": "Słony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-014-word.mp3",
@@ -134,57 +134,12 @@
     },
     {
       "id": "t1-p175-015",
-      "english": "OUTTA",
-      "polish": "Z",
+      "english": "Tasty",
+      "polish": "Smaczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p175-015-word.mp3",
       "audioSentence": "t1-p175-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p175-016",
-      "english": "SHOULDA",
-      "polish": "Powinien był",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p175-016-word.mp3",
-      "audioSentence": "t1-p175-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p175-017",
-      "english": "SORTA",
-      "polish": "Trochę jak",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p175-017-word.mp3",
-      "audioSentence": "t1-p175-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p175-018",
-      "english": "WHATCHA",
-      "polish": "Co tam",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p175-018-word.mp3",
-      "audioSentence": "t1-p175-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p175-019",
-      "english": "FINNA",
-      "polish": "Zamierzać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p175-019-word.mp3",
-      "audioSentence": "t1-p175-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p175-020",
-      "english": "WONTCHA",
-      "polish": "C'nie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p175-020-word.mp3",
-      "audioSentence": "t1-p175-020-sentence.mp3"
     }
   ]
 }

@@ -1,15 +1,15 @@
 {
   "id": "t1-p215",
-  "name": "Edukacja",
-  "volume": "Tom IV",
-  "level": 3,
-  "category": "Skróty",
-  "chapter": "Rozdział XL",
+  "name": "Człowiek",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXI",
   "words": [
     {
       "id": "t1-p215-001",
-      "english": "BA",
-      "polish": "Lic. Nauk humanistycznych",
+      "english": "Lesbian",
+      "polish": "Lesbijka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p215-002",
-      "english": "BSC",
-      "polish": "Lic. Nauk ścisłych",
+      "english": "Dreamer",
+      "polish": "Marzyciel",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p215-003",
-      "english": "EFL",
-      "polish": "Angielski jako język obcy",
+      "english": "Mr.",
+      "polish": "Pan",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p215-004",
-      "english": "ESL",
-      "polish": "Angielski jako drugi język",
+      "english": "Mrs.",
+      "polish": "Pani",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p215-005",
-      "english": "MA",
-      "polish": "Mgr nauk humanistycznych",
+      "english": "Miss",
+      "polish": "Pani",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p215-006",
-      "english": "MBA",
-      "polish": "Mgr administracji biznesowej",
+      "english": "Sex",
+      "polish": "Płeć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p215-007",
-      "english": "MD",
-      "polish": "Lek. Med.",
+      "english": "Gender",
+      "polish": "Płeć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p215-008",
-      "english": "MPHIL",
-      "polish": "Mgr filozofii",
+      "english": "Vegan",
+      "polish": "Weganin",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p215-009",
-      "english": "MSC",
-      "polish": "Mgr nauk ścisłych",
+      "english": "Vegetarian",
+      "polish": "Wegetarianin",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-009-word.mp3",
@@ -89,12 +89,57 @@
     },
     {
       "id": "t1-p215-010",
-      "english": "PHD",
-      "polish": "Doktorat",
+      "english": "Personality",
+      "polish": "Osobowość",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p215-010-word.mp3",
       "audioSentence": "t1-p215-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p215-011",
+      "english": "Genius",
+      "polish": "Geniusz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p215-011-word.mp3",
+      "audioSentence": "t1-p215-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p215-012",
+      "english": "Race",
+      "polish": "Rasa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p215-012-word.mp3",
+      "audioSentence": "t1-p215-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p215-013",
+      "english": "Perfectionist",
+      "polish": "Perfekcjonista",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p215-013-word.mp3",
+      "audioSentence": "t1-p215-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p215-014",
+      "english": "Youth",
+      "polish": "Młodość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p215-014-word.mp3",
+      "audioSentence": "t1-p215-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p215-015",
+      "english": "Old age",
+      "polish": "Starość",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p215-015-word.mp3",
+      "audioSentence": "t1-p215-015-sentence.mp3"
     }
   ]
 }

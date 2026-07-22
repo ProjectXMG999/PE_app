@@ -1,15 +1,15 @@
 {
   "id": "t1-p114",
-  "name": "It",
+  "name": "Słodziak",
   "volume": "Tom II",
   "level": 2,
-  "category": "Rzeczowniki",
-  "chapter": "Rozdział XVI",
+  "category": "Slang",
+  "chapter": "Rozdział XII",
   "words": [
     {
       "id": "t1-p114-001",
-      "english": "Chat",
-      "polish": "Czat",
+      "english": "All mine",
+      "polish": "Moja ty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p114-001-word.mp3",
@@ -17,8 +17,8 @@
     },
     {
       "id": "t1-p114-002",
-      "english": "Button",
-      "polish": "Klawisz",
+      "english": "Butterfly",
+      "polish": "Motylek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p114-002-word.mp3",
@@ -26,8 +26,8 @@
     },
     {
       "id": "t1-p114-003",
-      "english": "Printer",
-      "polish": "Drukarka",
+      "english": "Cookie",
+      "polish": "Cukiereczek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p114-003-word.mp3",
@@ -35,8 +35,8 @@
     },
     {
       "id": "t1-p114-004",
-      "english": "Data",
-      "polish": "Dane",
+      "english": "Cutie",
+      "polish": "Słodziutka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p114-004-word.mp3",
@@ -44,8 +44,8 @@
     },
     {
       "id": "t1-p114-005",
-      "english": "Screen",
-      "polish": "Ekran",
+      "english": "Doll",
+      "polish": "Laleczka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p114-005-word.mp3",
@@ -53,8 +53,8 @@
     },
     {
       "id": "t1-p114-006",
-      "english": "Folder",
-      "polish": "Folder",
+      "english": "Honey bunch",
+      "polish": "Słodyczy moja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p114-006-word.mp3",
@@ -62,8 +62,8 @@
     },
     {
       "id": "t1-p114-007",
-      "english": "Message board",
-      "polish": "Forum",
+      "english": "Kitten",
+      "polish": "Kicia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p114-007-word.mp3",
@@ -71,8 +71,8 @@
     },
     {
       "id": "t1-p114-008",
-      "english": "Password",
-      "polish": "Hasło",
+      "english": "Peaches",
+      "polish": "Brzoskwinka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p114-008-word.mp3",
@@ -80,8 +80,8 @@
     },
     {
       "id": "t1-p114-009",
-      "english": "Keyboard",
-      "polish": "Klawiatura",
+      "english": "Sweetness",
+      "polish": "Słodziak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p114-009-word.mp3",
@@ -89,777 +89,12 @@
     },
     {
       "id": "t1-p114-010",
-      "english": "Copy",
-      "polish": "Kopia",
+      "english": "Teddy bear",
+      "polish": "Misiaczek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p114-010-word.mp3",
       "audioSentence": "t1-p114-010-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-011",
-      "english": "Monitor",
-      "polish": "Monitor",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-011-word.mp3",
-      "audioSentence": "t1-p114-011-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-012",
-      "english": "Option",
-      "polish": "Opcja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-012-word.mp3",
-      "audioSentence": "t1-p114-012-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-013",
-      "english": "Technology",
-      "polish": "Technologia",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-013-word.mp3",
-      "audioSentence": "t1-p114-013-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-014",
-      "english": "File",
-      "polish": "Plik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-014-word.mp3",
-      "audioSentence": "t1-p114-014-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-015",
-      "english": "E-mail",
-      "polish": "Poczta elektroniczna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-015-word.mp3",
-      "audioSentence": "t1-p114-015-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-016",
-      "english": "Post",
-      "polish": "Post",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-016-word.mp3",
-      "audioSentence": "t1-p114-016-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-017",
-      "english": "Level",
-      "polish": "Poziom",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-017-word.mp3",
-      "audioSentence": "t1-p114-017-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-018",
-      "english": "Program",
-      "polish": "Program",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-018-word.mp3",
-      "audioSentence": "t1-p114-018-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-019",
-      "english": "Desktop",
-      "polish": "Pulpit",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-019-word.mp3",
-      "audioSentence": "t1-p114-019-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-020",
-      "english": "Network",
-      "polish": "Sieć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-020-word.mp3",
-      "audioSentence": "t1-p114-020-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-021",
-      "english": "Mailbox",
-      "polish": "Skrzynka e-mail",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-021-word.mp3",
-      "audioSentence": "t1-p114-021-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-022",
-      "english": "Spam",
-      "polish": "Spam",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-022-word.mp3",
-      "audioSentence": "t1-p114-022-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-023",
-      "english": "Website",
-      "polish": "Strona internetowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-023-word.mp3",
-      "audioSentence": "t1-p114-023-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-024",
-      "english": "System",
-      "polish": "System",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-024-word.mp3",
-      "audioSentence": "t1-p114-024-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-025",
-      "english": "Filter",
-      "polish": "Filtr",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-025-word.mp3",
-      "audioSentence": "t1-p114-025-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-026",
-      "english": "Error",
-      "polish": "Błąd",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-026-word.mp3",
-      "audioSentence": "t1-p114-026-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-027",
-      "english": "Setting",
-      "polish": "Ustawienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-027-word.mp3",
-      "audioSentence": "t1-p114-027-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-028",
-      "english": "Edition",
-      "polish": "Edycja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-028-word.mp3",
-      "audioSentence": "t1-p114-028-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-029",
-      "english": "Version",
-      "polish": "Wersja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-029-word.mp3",
-      "audioSentence": "t1-p114-029-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-030",
-      "english": "Profile",
-      "polish": "Profil",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-030-word.mp3",
-      "audioSentence": "t1-p114-030-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-031",
-      "english": "Sender",
-      "polish": "Nadawca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-031-word.mp3",
-      "audioSentence": "t1-p114-031-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-032",
-      "english": "Receiver",
-      "polish": "Odbiorca",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-032-word.mp3",
-      "audioSentence": "t1-p114-032-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-033",
-      "english": "Notification",
-      "polish": "Powiadomienie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-033-word.mp3",
-      "audioSentence": "t1-p114-033-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-034",
-      "english": "Feature",
-      "polish": "Cecha",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-034-word.mp3",
-      "audioSentence": "t1-p114-034-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-035",
-      "english": "Compilation",
-      "polish": "Kompilacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-035-word.mp3",
-      "audioSentence": "t1-p114-035-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-036",
-      "english": "Configuration",
-      "polish": "Konfiguracja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-036-word.mp3",
-      "audioSentence": "t1-p114-036-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-037",
-      "english": "Dot",
-      "polish": "Kropka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-037-word.mp3",
-      "audioSentence": "t1-p114-037-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-038",
-      "english": "Modification",
-      "polish": "Modyfikacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-038-word.mp3",
-      "audioSentence": "t1-p114-038-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-039",
-      "english": "Pause",
-      "polish": "Pauza",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-039-word.mp3",
-      "audioSentence": "t1-p114-039-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-040",
-      "english": "Mode",
-      "polish": "Tryb",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-040-word.mp3",
-      "audioSentence": "t1-p114-040-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-041",
-      "english": "Attachment",
-      "polish": "Załącznik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-041-word.mp3",
-      "audioSentence": "t1-p114-041-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-042",
-      "english": "Background",
-      "polish": "Tło",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-042-word.mp3",
-      "audioSentence": "t1-p114-042-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-043",
-      "english": "Communicator",
-      "polish": "Komunikator",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-043-word.mp3",
-      "audioSentence": "t1-p114-043-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-044",
-      "english": "Administrator",
-      "polish": "Administrator",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-044-word.mp3",
-      "audioSentence": "t1-p114-044-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-045",
-      "english": "Database",
-      "polish": "Baza danych",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-045-word.mp3",
-      "audioSentence": "t1-p114-045-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-046",
-      "english": "Connection",
-      "polish": "Połączenie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-046-word.mp3",
-      "audioSentence": "t1-p114-046-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-047",
-      "english": "Input",
-      "polish": "Dane wejściowe",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-047-word.mp3",
-      "audioSentence": "t1-p114-047-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-048",
-      "english": "Output",
-      "polish": "Dane wyjściowe",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-048-word.mp3",
-      "audioSentence": "t1-p114-048-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-049",
-      "english": "Disk",
-      "polish": "Dysk",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-049-word.mp3",
-      "audioSentence": "t1-p114-049-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-050",
-      "english": "Hard drive",
-      "polish": "Dysk twardy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-050-word.mp3",
-      "audioSentence": "t1-p114-050-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-051",
-      "english": "Video",
-      "polish": "Filmik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-051-word.mp3",
-      "audioSentence": "t1-p114-051-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-052",
-      "english": "Format",
-      "polish": "Format",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-052-word.mp3",
-      "audioSentence": "t1-p114-052-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-053",
-      "english": "Graphics",
-      "polish": "Grafika",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-053-word.mp3",
-      "audioSentence": "t1-p114-053-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-054",
-      "english": "Installation",
-      "polish": "Instalacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-054-word.mp3",
-      "audioSentence": "t1-p114-054-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-055",
-      "english": "Microprocessor",
-      "polish": "Mikroprocesor",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-055-word.mp3",
-      "audioSentence": "t1-p114-055-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-056",
-      "english": "Moderator",
-      "polish": "Moderator",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-056-word.mp3",
-      "audioSentence": "t1-p114-056-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-057",
-      "english": "Link",
-      "polish": "Odnośnik",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-057-word.mp3",
-      "audioSentence": "t1-p114-057-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-058",
-      "english": "Software",
-      "polish": "Oprogramowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-058-word.mp3",
-      "audioSentence": "t1-p114-058-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-059",
-      "english": "Motherboard",
-      "polish": "Płyta główna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-059-word.mp3",
-      "audioSentence": "t1-p114-059-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-060",
-      "english": "Browser",
-      "polish": "Przeglądarka",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-060-word.mp3",
-      "audioSentence": "t1-p114-060-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-061",
-      "english": "Hardware",
-      "polish": "Sprzęt komputerowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-061-word.mp3",
-      "audioSentence": "t1-p114-061-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-062",
-      "english": "Artwork",
-      "polish": "Szata graficzna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-062-word.mp3",
-      "audioSentence": "t1-p114-062-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-063",
-      "english": "Integrated circuit",
-      "polish": "Układ scalony",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-063-word.mp3",
-      "audioSentence": "t1-p114-063-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-064",
-      "english": "Usb stick",
-      "polish": "Wtyczka usb",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-064-word.mp3",
-      "audioSentence": "t1-p114-064-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-065",
-      "english": "Power adapter",
-      "polish": "Zasilacz",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-065-word.mp3",
-      "audioSentence": "t1-p114-065-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-066",
-      "english": "Power supply",
-      "polish": "Zasilanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-066-word.mp3",
-      "audioSentence": "t1-p114-066-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-067",
-      "english": "Access",
-      "polish": "Dostęp",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-067-word.mp3",
-      "audioSentence": "t1-p114-067-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-068",
-      "english": "Backup",
-      "polish": "Kopia zapasowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-068-word.mp3",
-      "audioSentence": "t1-p114-068-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-069",
-      "english": "Computational power",
-      "polish": "Moc obliczeniowa",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-069-word.mp3",
-      "audioSentence": "t1-p114-069-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-070",
-      "english": "Data",
-      "polish": "Dane",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-070-word.mp3",
-      "audioSentence": "t1-p114-070-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-071",
-      "english": "Installation",
-      "polish": "Instalacja",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-071-word.mp3",
-      "audioSentence": "t1-p114-071-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-072",
-      "english": "Hardware",
-      "polish": "Sprzęt komputerowy",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-072-word.mp3",
-      "audioSentence": "t1-p114-072-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-073",
-      "english": "Spam",
-      "polish": "Spam",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-073-word.mp3",
-      "audioSentence": "t1-p114-073-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-074",
-      "english": "Pause",
-      "polish": "Pauza",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-074-word.mp3",
-      "audioSentence": "t1-p114-074-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-075",
-      "english": "Communicator",
-      "polish": "Komunikator",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-075-word.mp3",
-      "audioSentence": "t1-p114-075-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-076",
-      "english": "Abandonware",
-      "polish": "Programy, które nie są już chronione licencją",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-076-word.mp3",
-      "audioSentence": "t1-p114-076-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-077",
-      "english": "Ad",
-      "polish": "Reklama wyskakująca w apkach",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-077-word.mp3",
-      "audioSentence": "t1-p114-077-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-078",
-      "english": "Appz",
-      "polish": "Piraty",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-078-word.mp3",
-      "audioSentence": "t1-p114-078-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-079",
-      "english": "Black hat",
-      "polish": "Haker, który łamie standardy etyczne w niecnych celach",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-079-word.mp3",
-      "audioSentence": "t1-p114-079-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-080",
-      "english": "Buggy",
-      "polish": "Program pełen błędów",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-080-word.mp3",
-      "audioSentence": "t1-p114-080-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-081",
-      "english": "Flame war",
-      "polish": "Zadyma w necie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-081-word.mp3",
-      "audioSentence": "t1-p114-081-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-082",
-      "english": "Glitch",
-      "polish": "Błąd w systemie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-082-word.mp3",
-      "audioSentence": "t1-p114-082-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-083",
-      "english": "Go-code",
-      "polish": "Rozkaz do rozpoczęcia akcji",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-083-word.mp3",
-      "audioSentence": "t1-p114-083-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-084",
-      "english": "Plug",
-      "polish": "Płatna reklama w mediach społecznościowych",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-084-word.mp3",
-      "audioSentence": "t1-p114-084-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-085",
-      "english": "White hat",
-      "polish": "Haker działający w dobrym interesie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-085-word.mp3",
-      "audioSentence": "t1-p114-085-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-086",
-      "english": "Bullet time",
-      "polish": "Zwolnione tempo",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-086-word.mp3",
-      "audioSentence": "t1-p114-086-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-087",
-      "english": "Zombie ad",
-      "polish": "Reklama, która pojawia się wciąż \nNawet po zakończeniu kampanii",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-087-word.mp3",
-      "audioSentence": "t1-p114-087-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-088",
-      "english": "Cold monkey",
-      "polish": "Programista 24 lub 7",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-088-word.mp3",
-      "audioSentence": "t1-p114-088-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-089",
-      "english": "Phishing",
-      "polish": "Wyciąganie danych personalnych",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-089-word.mp3",
-      "audioSentence": "t1-p114-089-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-090",
-      "english": "Malware",
-      "polish": "Złośliwe oprogramowanie",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-090-word.mp3",
-      "audioSentence": "t1-p114-090-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-091",
-      "english": "Brogrammer",
-      "polish": "Programista mężczyzna",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-091-word.mp3",
-      "audioSentence": "t1-p114-091-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-092",
-      "english": "Dev",
-      "polish": "Deweloper w branży it",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-092-word.mp3",
-      "audioSentence": "t1-p114-092-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-093",
-      "english": "Spoofing",
-      "polish": "Podszywanie się pod użytkownika",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-093-word.mp3",
-      "audioSentence": "t1-p114-093-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-094",
-      "english": "Spaghetti code",
-      "polish": "Nieuporządkowany kod",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-094-word.mp3",
-      "audioSentence": "t1-p114-094-sentence.mp3"
-    },
-    {
-      "id": "t1-p114-095",
-      "english": "Leet hacker",
-      "polish": "Świetny haker",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p114-095-word.mp3",
-      "audioSentence": "t1-p114-095-sentence.mp3"
     }
   ]
 }
