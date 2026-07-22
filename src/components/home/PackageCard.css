@@ -26,72 +26,121 @@
   border-color: rgba(16, 185, 129, 0.35);
 }
 
-/* ── Mastered: VIP gold treatment ─────────────────────────────────── */
+/* ── Mastered: VIP "golden ticket" treatment ──────────────────────── */
 
 .packcard--mastered {
-  border: 1.5px solid rgba(251, 191, 36, 0.8);
+  /* Own stacking context so the shine pseudo can sit above the base fill
+     but below the content (z-index: -1 below). */
+  isolation: isolate;
+  /* Metallic gold rim (gradient-border technique) around a warm dark base —
+     the gold reads as real gold instead of muddying against the purple card. */
+  border: 1.5px solid transparent;
   background:
-    linear-gradient(115deg,
-      rgba(251, 191, 36, 0.18) 0%,
-      rgba(180, 83, 9, 0.12) 32%,
-      rgba(251, 191, 36, 0.06) 55%,
-      rgba(120, 53, 15, 0.16) 100%),
-    var(--bg-card);
+    linear-gradient(158deg, #2c2007 0%, #1c1405 52%, #100b03 100%) padding-box,
+    linear-gradient(135deg, #fff6c9 0%, #f6cf5b 22%, #b17d12 50%, #f6cf5b 78%, #fff2ad 100%) border-box;
   box-shadow:
-    0 0 20px rgba(251, 191, 36, 0.28),
-    inset 0 0 34px rgba(251, 191, 36, 0.07);
+    0 8px 28px rgba(0, 0, 0, 0.55),
+    0 0 22px rgba(246, 197, 66, 0.30),
+    inset 0 1px 0 rgba(255, 247, 204, 0.28);
 }
 
-/* Diagonal shine streaks over the gold surface */
+/* Sweeping foil glint — the golden-ticket shine */
 .packcard--mastered::before {
   content: '';
   position: absolute;
   inset: 0;
+  z-index: -1;
   pointer-events: none;
-  background: linear-gradient(65deg,
-    transparent 18%,
-    rgba(253, 230, 138, 0.08) 26%,
-    transparent 33%,
-    transparent 46%,
-    rgba(253, 230, 138, 0.05) 55%,
-    transparent 61%,
-    transparent 76%,
-    rgba(253, 230, 138, 0.07) 85%,
-    transparent 92%);
+  background: linear-gradient(105deg,
+    transparent 34%,
+    rgba(255, 246, 201, 0.16) 44%,
+    rgba(255, 255, 255, 0.34) 50%,
+    rgba(255, 246, 201, 0.16) 56%,
+    transparent 66%);
+  transform: translateX(-160%) skewX(-14deg);
+  animation: goldSheen 5s ease-in-out infinite;
+}
+
+@keyframes goldSheen {
+  0%   { transform: translateX(-160%) skewX(-14deg); }
+  16%  { transform: translateX(160%)  skewX(-14deg); }
+  100% { transform: translateX(160%)  skewX(-14deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .packcard--mastered::before { animation: none; }
 }
 
 .packcard--mastered .packcard__num-text {
-  color: #FBBF24;
-  text-shadow: 0 0 12px rgba(251, 191, 36, 0.55);
+  color: #FCD34D;
+  text-shadow: 0 0 14px rgba(252, 211, 77, 0.6);
 }
 
 .packcard--mastered .packcard__icon {
-  background: rgba(251, 191, 36, 0.14);
-  border: 1px solid rgba(251, 191, 36, 0.4);
+  background: linear-gradient(145deg, rgba(252, 211, 77, 0.22), rgba(120, 80, 8, 0.28));
+  border: 1px solid rgba(252, 211, 77, 0.55);
+  box-shadow: inset 0 1px 2px rgba(255, 247, 204, 0.3);
+}
+
+.packcard--mastered .packcard__name {
+  color: #FFF7DC;
+}
+
+.packcard--mastered .packcard__meta,
+.packcard--mastered .packcard__count {
+  color: rgba(253, 230, 138, 0.68);
 }
 
 .packcard--mastered .packcard__right {
-  color: rgba(253, 230, 138, 0.75);
+  color: rgba(253, 230, 138, 0.8);
 }
 
 .packcard--mastered .packcard__level {
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  color: #FDE68A;
+  border: 1px solid rgba(252, 211, 77, 0.4);
 }
 
 [data-theme="light"] .packcard--completed {
   border-color: rgba(16, 185, 129, 0.5);
 }
 
+/* Light theme — warm cream ticket with the same metallic gold rim */
 [data-theme="light"] .packcard--mastered {
-  border-color: #F59E0B;
+  border: 1.5px solid transparent;
   background:
-    linear-gradient(115deg,
-      rgba(251, 191, 36, 0.22) 0%,
-      rgba(253, 230, 138, 0.14) 45%,
-      rgba(245, 158, 11, 0.18) 100%),
-    var(--bg-card);
-  box-shadow: 0 0 16px rgba(245, 158, 11, 0.25);
+    linear-gradient(158deg, #fffdf4 0%, #fff3d0 58%, #ffe6a3 100%) padding-box,
+    linear-gradient(135deg, #fdeaa0 0%, #d99b0d 24%, #9a6c07 50%, #d99b0d 76%, #fdeaa0 100%) border-box;
+  box-shadow:
+    0 6px 20px rgba(160, 110, 8, 0.22),
+    0 0 16px rgba(245, 197, 66, 0.4);
+}
+
+[data-theme="light"] .packcard--mastered::before {
+  background: linear-gradient(105deg,
+    transparent 34%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 66%);
+}
+
+[data-theme="light"] .packcard--mastered .packcard__num-text {
+  color: #B45309;
+  text-shadow: none;
+}
+
+[data-theme="light"] .packcard--mastered .packcard__name {
+  color: #4A2E05;
+}
+
+[data-theme="light"] .packcard--mastered .packcard__meta,
+[data-theme="light"] .packcard--mastered .packcard__count {
+  color: #8A6410;
+}
+
+[data-theme="light"] .packcard--mastered .packcard__level {
+  background: rgba(255, 255, 255, 0.7);
+  color: #92400E;
+  border: 1px solid rgba(217, 155, 13, 0.5);
 }
 
 /* Left stripe accent */
@@ -110,10 +159,6 @@
 
 .packcard--completed .packcard__stripe {
   background: #10B981;
-}
-
-.packcard--mastered .packcard__stripe {
-  background: linear-gradient(180deg, var(--accent), #10B981);
 }
 
 /* Number — left column in header flow */
@@ -306,28 +351,42 @@
   box-shadow: 0 4px 18px rgba(16, 185, 129, 0.5);
 }
 
-/* Mastered: both actions become the VIP gold-outline treatment */
-.packcard--mastered .packcard__btn--fiszki,
+/* Mastered VIP actions: solid gold primary (Słuchaj) + gold-outline secondary (Trenuj) */
 .packcard--mastered .packcard__btn--autoplay {
-  background: rgba(120, 53, 15, 0.22);
-  border: 1.5px solid #F59E0B;
-  color: #FDE68A;
+  background: linear-gradient(135deg, #fde08a 0%, #f2b619 45%, #c8860c 100%);
+  border: 1px solid rgba(255, 247, 204, 0.6);
+  color: #3a2600;
+  text-shadow: 0 1px 0 rgba(255, 247, 204, 0.5);
   box-shadow:
-    0 0 14px rgba(251, 191, 36, 0.35),
-    inset 0 0 12px rgba(251, 191, 36, 0.12);
+    0 4px 16px rgba(200, 134, 12, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-.packcard--mastered .packcard__btn--fiszki:hover,
 .packcard--mastered .packcard__btn--autoplay:hover {
   box-shadow:
-    0 0 20px rgba(251, 191, 36, 0.5),
-    inset 0 0 14px rgba(251, 191, 36, 0.18);
+    0 4px 22px rgba(242, 182, 25, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
-[data-theme="light"] .packcard--mastered .packcard__btn--fiszki,
-[data-theme="light"] .packcard--mastered .packcard__btn--autoplay {
-  background: rgba(251, 191, 36, 0.14);
+.packcard--mastered .packcard__btn--fiszki {
+  background: rgba(120, 80, 8, 0.22);
+  border: 1.5px solid #F5C542;
+  color: #FDE68A;
+  box-shadow:
+    0 0 12px rgba(245, 197, 66, 0.3),
+    inset 0 0 12px rgba(245, 197, 66, 0.1);
+}
+
+.packcard--mastered .packcard__btn--fiszki:hover {
+  box-shadow:
+    0 0 18px rgba(245, 197, 66, 0.5),
+    inset 0 0 14px rgba(245, 197, 66, 0.16);
+}
+
+[data-theme="light"] .packcard--mastered .packcard__btn--fiszki {
+  background: rgba(245, 197, 66, 0.16);
+  border-color: #D99B0D;
   color: #92400E;
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 10px rgba(217, 155, 13, 0.25);
 }
 
