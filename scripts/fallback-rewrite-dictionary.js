@@ -1,0 +1,781 @@
+// Dictionary of rubric-compliant replacement sentences for the 626 "I use X." fallback
+// entries, keyed by wordId (safe against duplicate English words across packs).
+export const rewrites = {
+  // t1-p031 Nie przestawaj liczyć! (Liczby)
+  't1-p031-002': { en: 'Eleven players make a team.', pl: 'Jedenastu zawodników tworzy drużynę.' },
+  't1-p031-004': { en: 'Thirteen is my lucky number.', pl: 'Trzynastka to moja szczęśliwa liczba.' },
+  't1-p031-005': { en: 'She turned fourteen today.', pl: 'Ona skończyła dziś czternaście lat.' },
+  't1-p031-007': { en: 'Sweet sixteen!', pl: 'Słodkie szesnastka!' },
+  't1-p031-008': { en: 'Room number seventeen.', pl: 'Pokój numer siedemnaście.' },
+  't1-p031-009': { en: "You're an adult at eighteen.", pl: 'W wieku osiemnastu lat jesteś dorosły.' },
+  't1-p031-010': { en: "She's nineteen next month.", pl: 'Ona kończy dziewiętnaście lat w przyszłym miesiącu.' },
+
+  // t1-p032 Higiena I wygląd
+  't1-p032-001': { en: 'Pass me a tissue.', pl: 'Podaj mi chusteczkę.' },
+  't1-p032-002': { en: "Where's my comb?", pl: 'Gdzie jest mój grzebień?' },
+  't1-p032-003': { en: 'Wash with soap.', pl: 'Umyj się mydłem.' },
+  't1-p032-004': { en: 'We need more toilet paper.', pl: 'Potrzebujemy więcej papieru toaletowego.' },
+  't1-p032-005': { en: 'Squeeze the toothpaste.', pl: 'Wyciśnij pastę do zębów.' },
+  't1-p032-006': { en: 'I take a shower every morning.', pl: 'Biorę prysznic każdego ranka.' },
+  't1-p032-007': { en: 'Hand me a towel.', pl: 'Podaj mi ręcznik.' },
+  't1-p032-008': { en: 'This shampoo smells nice.', pl: 'Ten szampon ładnie pachnie.' },
+  't1-p032-009': { en: 'My toothbrush is blue.', pl: 'Moja szczoteczka do zębów jest niebieska.' },
+  't1-p032-010': { en: 'She lost her hairbrush.', pl: 'Zgubiła swoją szczotkę do włosów.' },
+
+  // t1-p033 Kalendarz I czas
+  't1-p033-002': { en: 'Give me a minute.', pl: 'Daj mi minutę.' },
+  't1-p033-003': { en: 'Good night, sleep well.', pl: 'Dobranoc, śpij dobrze.' },
+  't1-p033-005': { en: 'See you this afternoon.', pl: 'Do zobaczenia po południu.' },
+  't1-p033-006': { en: 'This year flew by.', pl: 'Ten rok przeleciał szybko.' },
+  't1-p033-008': { en: "I'll call you next week.", pl: 'Zadzwonię do ciebie w przyszłym tygodniu.' },
+  't1-p033-009': { en: 'Any plans for the weekend?', pl: 'Masz jakieś plany na weekend?' },
+  't1-p033-010': { en: "We're free this evening.", pl: 'Jesteśmy wolni dziś wieczorem.' },
+
+  // t1-p034 Pogoda
+  't1-p034-002': { en: 'The lake froze to ice.', pl: 'Jezioro zamarzło na lód.' },
+  't1-p034-003': { en: 'The sky turned orange.', pl: 'Niebo zrobiło się pomarańczowe.' },
+  't1-p034-005': { en: 'The air feels fresh.', pl: 'Powietrze jest świeże.' },
+  't1-p034-007': { en: "It's thirty degrees Celsius.", pl: 'Jest trzydzieści stopni Celsjusza.' },
+
+  // t1-p036 Slang 4
+  't1-p036-001': { en: "I ain't got no money.", pl: 'Nie mam ani grosza.' },
+  't1-p036-002': { en: 'Back in the day, things were simple.', pl: 'Za starych czasów było prościej.' },
+  't1-p036-004': { en: 'Just keep it 100 with me.', pl: 'Bądź ze mną szczery.' },
+  't1-p036-005': { en: 'Ping me when you land.', pl: 'Napisz do mnie, jak wylądujesz.' },
+  't1-p036-006': { en: 'You dig?', pl: 'Kumasz?' },
+  't1-p036-007': { en: 'I gotta split, see ya.', pl: 'Muszę spadać, nara.' },
+  't1-p036-008': { en: "I can't even deal with this.", pl: 'Nie ogarniam tego w ogóle.' },
+  't1-p036-009': { en: 'Just seen your message.', pl: 'Właśnie widziałem twoją wiadomość.' },
+  't1-p036-010': { en: "You're telling me!", pl: 'Nawet mi nie mów!' },
+
+  // t1-p037 Przymiotniki 2
+  't1-p037-001': { en: 'The fridge is empty.', pl: 'Lodówka jest pusta.' },
+  't1-p037-002': { en: 'The shop is open.', pl: 'Sklep jest otwarty.' },
+  't1-p037-003': { en: "Sorry, we're closed.", pl: 'Przepraszamy, jesteśmy zamknięci.' },
+  't1-p037-004': { en: 'Entry is free today.', pl: 'Wstęp jest dziś bezpłatny.' },
+  't1-p037-005': { en: 'This watch is expensive.', pl: 'Ten zegarek jest drogi.' },
+  't1-p037-006': { en: 'I found a cheap flight.', pl: 'Znalazłem tani lot.' },
+  't1-p037-007': { en: 'Turn left at the corner.', pl: 'Skręć w lewo na rogu.' },
+  't1-p037-008': { en: "It's on your right.", pl: 'To jest po twojej prawej.' },
+  't1-p037-010': { en: 'This color is very light.', pl: 'Ten kolor jest bardzo jasny.' },
+
+  // t1-p038 Warzywa I owoce
+  't1-p038-001': { en: 'I eat a banana for breakfast.', pl: 'Jem banana na śniadanie.' },
+  't1-p038-002': { en: 'Add a slice of lemon.', pl: 'Dodaj plasterek cytryny.' },
+  't1-p038-003': { en: 'This apple is crunchy.', pl: 'To jabłko jest chrupiące.' },
+
+  // t1-p039 Finanse
+  't1-p039-001': { en: 'This banknote is torn.', pl: 'Ten banknot jest podarty.' },
+  't1-p039-004': { en: 'Do you accept cash?', pl: 'Przyjmujecie gotówkę?' },
+  't1-p039-005': { en: "I'll pay by debit card.", pl: 'Zapłacę kartą debetową.' },
+  't1-p039-006': { en: 'My credit card expired.', pl: 'Moja karta kredytowa straciła ważność.' },
+  't1-p039-007': { en: 'I opened a new account.', pl: 'Otworzyłem nowe konto.' },
+  't1-p039-008': { en: 'I bought it on credit.', pl: 'Kupiłem to na kredyt.' },
+  't1-p039-009': { en: 'My salary arrives on Friday.', pl: 'Moja pensja przychodzi w piątek.' },
+
+  // t1-p040 Mali, lecz ważni
+  't1-p040-001': { en: "I'm tired, but happy.", pl: 'Jestem zmęczony, ale szczęśliwy.' },
+  't1-p040-002': { en: "Well, let's begin.", pl: 'Cóż, zacznijmy.' },
+  't1-p040-003': { en: 'This gift is for you.', pl: 'Ten prezent jest dla ciebie.' },
+  't1-p040-004': { en: 'Salt and pepper, please.', pl: 'Sól i pieprz, proszę.' },
+  't1-p040-005': { en: 'If you need help, ask.', pl: 'Jeśli potrzebujesz pomocy, poproś.' },
+  't1-p040-008': { en: "So, what's the plan?", pl: 'Więc jaki jest plan?' },
+  't1-p040-009': { en: 'We all agreed.', pl: 'Wszyscy się zgodziliśmy.' },
+  't1-p040-010': { en: 'I saved money to travel.', pl: 'Oszczędzałem pieniądze, żeby podróżować.' },
+
+  // t1-p041 Sprzęt elektroniczny
+  't1-p041-001': { en: 'My battery is low.', pl: 'Mój akumulator jest słaby.' },
+  't1-p041-003': { en: 'My computer crashed again.', pl: 'Mój komputer znowu się zawiesił.' },
+  't1-p041-004': { en: 'I forgot my laptop at home.', pl: 'Zapomniałem laptopa w domu.' },
+  't1-p041-005': { en: 'Can I borrow your charger?', pl: 'Mogę pożyczyć twoją ładowarkę?' },
+  't1-p041-006': { en: 'I missed your phone call.', pl: 'Nie odebrałem twojego telefonu.' },
+  't1-p041-007': { en: 'The hairdryer is too loud.', pl: 'Suszarka do włosów jest za głośna.' },
+  't1-p041-008': { en: 'Answer the telephone, please.', pl: 'Odbierz telefon, proszę.' },
+  't1-p041-009': { en: 'I lost my mobile phone.', pl: 'Zgubiłem telefon komórkowy.' },
+  't1-p041-010': { en: 'You have a new message.', pl: 'Masz nową wiadomość.' },
+
+  // t1-p042 Przymiotniki 3
+  't1-p042-001': { en: "I'm already full.", pl: 'Jestem już najedzony.' },
+  't1-p042-002': { en: 'A medium coffee, please.', pl: 'Średnią kawę, proszę.' },
+  't1-p042-003': { en: 'This building is very old.', pl: 'Ten budynek jest bardzo stary.' },
+  't1-p042-005': { en: 'The station is quite far.', pl: 'Stacja jest dość daleko.' },
+  't1-p042-006': { en: "I'm getting hungry.", pl: 'Robię się głodny.' },
+  't1-p042-008': { en: 'Are you free tonight?', pl: 'Jesteś wolny dziś wieczorem?' },
+  't1-p042-009': { en: 'That was a stupid mistake.', pl: 'To był głupi błąd.' },
+  't1-p042-010': { en: 'This road is dangerous.', pl: 'Ta droga jest niebezpieczna.' },
+
+  // t1-p043 Szkoła
+  't1-p043-004': { en: 'The lesson starts at nine.', pl: 'Lekcja zaczyna się o dziewiątej.' },
+  't1-p043-005': { en: 'Do you have a pencil?', pl: 'Masz ołówek?' },
+  't1-p043-007': { en: "Let's change the topic.", pl: 'Zmieńmy temat.' },
+  't1-p043-008': { en: 'I passed the test.', pl: 'Zdałem test.' },
+
+  // t1-p044 Człowiek
+  't1-p044-001': { en: "You're my hero.", pl: 'Jesteś moim bohaterem.' },
+  't1-p044-002': { en: 'This is my boyfriend.', pl: 'To jest mój chłopak.' },
+  't1-p044-003': { en: 'That boy is my nephew.', pl: 'Ten chłopak to mój bratanek.' },
+  't1-p044-004': { en: 'Have you met his girlfriend?', pl: 'Poznałeś jego dziewczynę?' },
+  't1-p044-005': { en: "What's your name?", pl: 'Jak masz na imię?' },
+  't1-p044-006': { en: 'That woman looks familiar.', pl: 'Ta kobieta wygląda znajomo.' },
+  't1-p044-007': { en: 'Some people never change.', pl: 'Niektórzy ludzie nigdy się nie zmieniają.' },
+  't1-p044-008': { en: 'My daughter is a teenager now.', pl: 'Moja córka jest teraz nastolatką.' },
+  't1-p044-010': { en: "She's my business partner.", pl: 'Ona jest moim wspólnikiem biznesowym.' },
+
+  // t1-p045 Wyższa matematyka
+  't1-p045-001': { en: "I'll be there in twenty minutes.", pl: 'Będę tam za dwadzieścia minut.' },
+  't1-p045-002': { en: 'She just turned twenty-one.', pl: 'Ona właśnie skończyła dwadzieścia jeden lat.' },
+  't1-p045-003': { en: 'Room twenty-two, please.', pl: 'Pokój dwadzieścia dwa, proszę.' },
+  't1-p045-004': { en: 'He scored twenty-three points.', pl: 'Zdobył dwadzieścia trzy punkty.' },
+  't1-p045-005': { en: "I'll be thirty next year.", pl: 'W przyszłym roku skończę trzydzieści lat.' },
+  't1-p045-006': { en: 'Speed limit: forty.', pl: 'Ograniczenie prędkości: czterdzieści.' },
+  't1-p045-008': { en: 'Grandpa is turning sixty.', pl: 'Dziadek kończy sześćdziesiąt lat.' },
+  't1-p045-009': { en: 'The bus holds seventy people.', pl: 'Autobus mieści siedemdziesiąt osób.' },
+  't1-p045-010': { en: 'She still runs at eighty.', pl: 'Ona wciąż biega w wieku osiemdziesięciu lat.' },
+
+  // t1-p046 Dom
+  't1-p046-001': { en: "What's your address?", pl: 'Jaki jest twój adres?' },
+  't1-p046-005': { en: 'I made my bed.', pl: 'Posłałem łóżko.' },
+  't1-p046-007': { en: "Let's sit on the sofa.", pl: 'Usiądźmy na kanapie.' },
+  't1-p046-008': { en: 'Hang it in the wardrobe.', pl: 'Powieś to w szafie.' },
+  't1-p046-010': { en: "Where's the toilet?", pl: 'Gdzie jest toaleta?' },
+
+  // t1-p047 Czasowniki 4
+  't1-p047-001': { en: 'Give me a second.', pl: 'Daj mi sekundę.' },
+  't1-p047-002': { en: 'Look over there!', pl: 'Spójrz tam!' },
+  't1-p047-003': { en: 'Take your time.', pl: 'Nie spiesz się.' },
+  't1-p047-005': { en: 'We built this together.', pl: 'Zbudowaliśmy to razem.' },
+  't1-p047-006': { en: 'The battery died.', pl: 'Bateria padła.' },
+  't1-p047-007': { en: 'I hate waiting.', pl: 'Nienawidzę czekania.' },
+  't1-p047-008': { en: "Don't lose your keys.", pl: 'Nie zgub kluczy.' },
+  't1-p047-009': { en: 'I miss my family.', pl: 'Tęsknię za rodziną.' },
+  't1-p047-010': { en: 'Can you speak louder?', pl: 'Możesz mówić głośniej?' },
+
+  // t1-p048 Jedzenie
+  't1-p048-002': { en: "I'll have a boiled egg.", pl: 'Poproszę jajko na twardo.' },
+  't1-p048-003': { en: 'Supper is ready.', pl: 'Kolacja jest gotowa.' },
+  't1-p048-004': { en: "Let's grab lunch together.", pl: 'Zjedzmy razem lunch.' },
+  't1-p048-006': { en: "What's for dinner tonight?", pl: 'Co dziś na obiad?' },
+  't1-p048-007': { en: "Let's order pizza.", pl: 'Zamówmy pizzę.' },
+  't1-p048-008': { en: "I'll just have a salad.", pl: 'Poproszę tylko sałatkę.' },
+  't1-p048-009': { en: "Don't eat too many sweets.", pl: 'Nie jedz za dużo słodyczy.' },
+  't1-p048-010': { en: 'This soup needs more salt.', pl: 'Ta zupa potrzebuje więcej soli.' },
+
+  // t1-p049 Kalendarz I czas
+  't1-p049-001': { en: 'What time is it?', pl: 'Która jest godzina?' },
+  't1-p049-003': { en: 'Have a great day!', pl: 'Miłego dnia!' },
+  't1-p049-004': { en: 'See you next month.', pl: 'Do zobaczenia za miesiąc.' },
+  't1-p049-007': { en: 'I love early mornings.', pl: 'Uwielbiam wczesne poranki.' },
+
+  // t1-p050 Rzeczowniki 1
+  't1-p050-001': { en: 'Look, a shooting star!', pl: 'Patrz, spadająca gwiazda!' },
+  't1-p050-002': { en: 'A duck swam by.', pl: 'Kaczka przepłynęła obok.' },
+  't1-p050-003': { en: 'The moon is full tonight.', pl: 'Dziś księżyc jest w pełni.' },
+  't1-p050-005': { en: 'She picked a flower.', pl: 'Zerwała kwiat.' },
+  't1-p050-006': { en: 'We planted a garden.', pl: 'Założyliśmy ogród.' },
+  't1-p050-007': { en: 'A bird landed on the roof.', pl: 'Ptak wylądował na dachu.' },
+  't1-p050-008': { en: 'This plant needs water.', pl: 'Ta roślina potrzebuje wody.' },
+  't1-p050-009': { en: 'He gave her a rose.', pl: 'Podarował jej różę.' },
+  't1-p050-010': { en: 'The grass is wet.', pl: 'Trawa jest mokra.' },
+
+  // t1-p051 Rzeczowniki 2
+  't1-p051-002': { en: 'Sign this document, please.', pl: 'Podpisz ten dokument, proszę.' },
+  't1-p051-003': { en: 'We bought a new house.', pl: 'Kupiliśmy nowy dom.' },
+  't1-p051-004': { en: 'Pick a card.', pl: 'Wybierz kartę.' },
+  't1-p051-006': { en: 'I need a piece of paper.', pl: 'Potrzebuję kartkę papieru.' },
+  't1-p051-008': { en: 'I love my job.', pl: 'Kocham swoją pracę.' },
+  't1-p051-009': { en: 'See you at work.', pl: 'Do zobaczenia w pracy.' },
+  't1-p051-010': { en: "What's your profession?", pl: 'Jaki jest twój zawód?' },
+
+  // t1-p052 Rzeczowniki 3
+  't1-p052-001': { en: 'Call the police!', pl: 'Zadzwoń na policję!' },
+  't1-p052-002': { en: 'Oh my God!', pl: 'O mój Boże!' },
+  't1-p052-003': { en: 'Show your ID card.', pl: 'Pokaż dowód osobisty.' },
+  't1-p052-004': { en: 'We planted a tree.', pl: 'Posadziliśmy drzewo.' },
+  't1-p052-005': { en: 'The machine broke down.', pl: 'Maszyna się zepsuła.' },
+  't1-p052-006': { en: "I'm in a good mood.", pl: 'Jestem w dobrym nastroju.' },
+  't1-p052-007': { en: "That's a good start.", pl: 'To dobry start.' },
+  't1-p052-008': { en: 'I want to lose weight.', pl: 'Chcę zrzucić wagę.' },
+  't1-p052-009': { en: 'We gather on Christmas Eve.', pl: 'Spotykamy się w Wigilię.' },
+  't1-p052-010': { en: "What's your height?", pl: 'Jaki jest twój wzrost?' },
+
+  // t1-p053 Kolory
+  't1-p053-007': { en: 'She loves the color pink.', pl: 'Ona kocha kolor różowy.' },
+
+  // t1-p054 Rzeczowniki 4
+  't1-p054-001': { en: 'Go to the tax bureau.', pl: 'Idź do urzędu skarbowego.' },
+  't1-p054-002': { en: 'I need a haircut.', pl: 'Potrzebuję strzyżenia.' },
+  't1-p054-003': { en: 'We went to a nightclub.', pl: 'Poszliśmy do klubu nocnego.' },
+  't1-p054-004': { en: 'She sells cosmetics.', pl: 'Ona sprzedaje kosmetyki.' },
+  't1-p054-005': { en: 'The kids are at the playground.', pl: 'Dzieci są na placu zabaw.' },
+  't1-p054-006': { en: "Let's meet at the square.", pl: 'Spotkajmy się na placu.' },
+  't1-p054-007': { en: 'Is the post office open?', pl: 'Czy poczta jest otwarta?' },
+  't1-p054-008': { en: 'Cows graze in the field.', pl: 'Krowy pasą się na polu.' },
+  't1-p054-009': { en: 'We saw a shark!', pl: 'Zobaczyliśmy rekina!' },
+  't1-p054-010': { en: 'I caught a big fish.', pl: 'Złapałem dużą rybę.' },
+
+  // t1-p055 Media
+  't1-p055-001': { en: "That's an interesting fact.", pl: 'To ciekawy fakt.' },
+  't1-p055-004': { en: 'I need more information.', pl: 'Potrzebuję więcej informacji.' },
+  't1-p055-005': { en: 'The internet is down.', pl: 'Internet nie działa.' },
+  't1-p055-006': { en: "Let's watch one more episode.", pl: 'Obejrzyjmy jeszcze jeden odcinek.' },
+  't1-p055-008': { en: 'This series is addictive.', pl: 'Ten serial wciąga.' },
+
+  // t1-p056 Mile widziane
+  't1-p056-001': { en: 'Safety comes first.', pl: 'Bezpieczeństwo jest najważniejsze.' },
+  't1-p056-002': { en: 'I could feel her excitement.', pl: 'Czułem jej ekscytację.' },
+  't1-p056-003': { en: "It's an honor to meet you.", pl: 'To zaszczyt cię poznać.' },
+  't1-p056-004': { en: "You're my biggest inspiration.", pl: 'Jesteś moją największą inspiracją.' },
+  't1-p056-005': { en: "She's known for her intelligence.", pl: 'Jest znana ze swojej inteligencji.' },
+  't1-p056-007': { en: 'This chair gives real comfort.', pl: 'To krzesło daje prawdziwy komfort.' },
+  't1-p056-008': { en: 'I lost my motivation today.', pl: 'Straciłem dziś motywację.' },
+  't1-p056-009': { en: 'Children bring so much joy.', pl: 'Dzieci przynoszą tyle radości.' },
+  't1-p056-010': { en: "There's satisfaction in finishing a job.", pl: 'Jest satysfakcja w kończeniu pracy.' },
+
+  // t1-p058 Kuchnia
+  't1-p058-003': { en: 'Meet me in the kitchen.', pl: 'Spotkajmy się w kuchni.' },
+  't1-p058-005': { en: 'Use a bigger spoon.', pl: 'Użyj większej łyżki.' },
+  't1-p058-006': { en: 'Fill the bowl with rice.', pl: 'Napełnij miskę ryżem.' },
+  't1-p058-007': { en: 'Be careful with that knife.', pl: 'Uważaj z tym nożem.' },
+  't1-p058-008': { en: 'The pan is too hot.', pl: 'Patelnia jest za gorąca.' },
+  't1-p058-010': { en: 'Clean your plate.', pl: 'Wyczyść swój talerz.' },
+
+  // t1-p059 Czas
+  't1-p059-003': { en: "I'm counting to ten.", pl: 'Liczę do dziesięciu.' },
+  't1-p059-004': { en: 'The meeting is at three.', pl: 'Spotkanie jest o trzeciej.' },
+  't1-p059-005': { en: 'As I was leaving, it rained.', pl: 'Podczas gdy wychodziłem, zaczęło padać.' },
+  't1-p059-006': { en: "I'll see you on Monday.", pl: 'Zobaczymy się w poniedziałek.' },
+  't1-p059-007': { en: 'I was born in June.', pl: 'Urodziłem się w czerwcu.' },
+  't1-p059-008': { en: 'I waited for two hours.', pl: 'Czekałem przez dwie godziny.' },
+  't1-p059-009': { en: "I'll finish in an hour.", pl: 'Skończę w ciągu godziny.' },
+  't1-p059-010': { en: 'We leave in ten minutes.', pl: 'Wyjeżdżamy za dziesięć minut.' },
+
+  // t1-p060 Na koncie
+  't1-p060-001': { en: 'It costs four hundred dollars.', pl: 'To kosztuje czterysta dolarów.' },
+  't1-p060-002': { en: 'A thousand thanks!', pl: 'Tysiąc podziękowań!' },
+  't1-p060-003': { en: 'We saved two thousand dollars.', pl: 'Zaoszczędziliśmy dwa tysiące dolarów.' },
+  't1-p060-004': { en: 'She won a million dollars.', pl: 'Wygrała milion dolarów.' },
+  't1-p060-005': { en: 'The company is worth a billion.', pl: 'Firma jest warta miliard.' },
+  't1-p060-006': { en: 'The debt reached a trillion.', pl: 'Dług osiągnął bilion.' },
+  't1-p060-007': { en: 'My grandma is ninety.', pl: 'Moja babcia ma dziewięćdziesiąt lat.' },
+  't1-p060-008': { en: 'Give me a hundred reasons.', pl: 'Podaj mi sto powodów.' },
+  't1-p060-009': { en: 'It weighs two hundred grams.', pl: 'To waży dwieście gramów.' },
+  't1-p060-010': { en: 'The room fits three hundred people.', pl: 'Sala mieści trzysta osób.' },
+
+  // t1-p061 Wulgaryzmy 1
+  't1-p061-001': { en: 'Oh shit, I forgot!', pl: 'O kurwa, zapomniałem!' },
+  't1-p061-002': { en: "That's total bullshit.", pl: 'To kompletna bzdura.' },
+  't1-p061-003': { en: 'What the fuck happened?', pl: 'Co się kurwa stało?' },
+  't1-p061-004': { en: "Fuck you, I'm done!", pl: 'Pierdol się, mam dość!' },
+  't1-p061-005': { en: 'Damn, that hurt.', pl: 'Cholera, to zabolało.' },
+  't1-p061-006': { en: 'This party is fucking great!', pl: 'Ta impreza jest zajebista!' },
+  't1-p061-007': { en: 'Stop being a dickhead.', pl: 'Przestań być kretynem.' },
+  't1-p061-008': { en: 'That son of a bitch lied.', pl: 'Ten sukinsyn skłamał.' },
+  't1-p061-009': { en: "He's a lying motherfucker.", pl: 'On jest kłamliwym skurwysynem.' },
+  't1-p061-010': { en: "Don't be such a dick.", pl: 'Nie bądź takim kutasem.' },
+
+  // t1-p062 Języki (I nie tylko)
+  't1-p062-001': { en: 'English is a global language.', pl: 'Angielski jest globalnym językiem.' },
+  't1-p062-002': { en: "I'm reading a good book.", pl: 'Czytam dobrą książkę.' },
+  't1-p062-003': { en: 'I wrote her a letter.', pl: 'Napisałem do niej list.' },
+  't1-p062-004': { en: "I don't know the answer.", pl: 'Nie znam odpowiedzi.' },
+  't1-p062-005': { en: 'Can I ask a question?', pl: 'Mogę zadać pytanie?' },
+  't1-p062-006': { en: 'What does this word mean?', pl: 'Co znaczy to słowo?' },
+  't1-p062-007': { en: 'Read the whole text.', pl: 'Przeczytaj cały tekst.' },
+  't1-p062-008': { en: 'Write one full sentence.', pl: 'Napisz jedno pełne zdanie.' },
+  't1-p062-009': { en: "I don't get the meaning.", pl: 'Nie rozumiem znaczenia.' },
+
+  // t1-p063 Czas I miary
+  't1-p063-001': { en: "Who's next?", pl: 'Kto następny?' },
+  't1-p063-002': { en: 'This is my last coffee.', pl: 'To moja ostatnia kawa.' },
+  't1-p063-003': { en: "Sorry, I'm running late.", pl: 'Przepraszam, spóźniam się.' },
+  't1-p063-004': { en: 'We arrived early.', pl: 'Przyjechaliśmy wcześnie.' },
+  't1-p063-005': { en: 'The previous owner sold it.', pl: 'Poprzedni właściciel to sprzedał.' },
+  't1-p063-006': { en: "I'll explain later.", pl: 'Wytłumaczę później.' },
+  't1-p063-008': { en: 'Prices are quite low here.', pl: 'Ceny są tutaj dość niskie.' },
+  't1-p063-009': { en: 'The internet is so slow.', pl: 'Internet jest taki wolny.' },
+  't1-p063-010': { en: 'He drives too fast.', pl: 'On jeździ za szybko.' },
+
+  // t1-p064 Geografia
+  't1-p064-001': { en: 'We climbed the mountain.', pl: 'Wspięliśmy się na górę.' },
+  't1-p064-002': { en: 'We swam in the lake.', pl: 'Pływaliśmy w jeziorze.' },
+  't1-p064-003': { en: 'We got lost in the forest.', pl: 'Zgubiliśmy się w lesie.' },
+  't1-p064-004': { en: 'The sea looks calm today.', pl: 'Morze wygląda dziś spokojnie.' },
+  't1-p064-005': { en: 'I love spending time in nature.', pl: 'Uwielbiam spędzać czas na łonie natury.' },
+  't1-p064-006': { en: "Let's go to the beach.", pl: 'Chodźmy na plażę.' },
+  't1-p064-007': { en: 'The river runs through the city.', pl: 'Rzeka przepływa przez miasto.' },
+  't1-p064-008': { en: 'Travel around the world.', pl: 'Podróżuj po świecie.' },
+  't1-p064-009': { en: 'They live on a small island.', pl: 'Mieszkają na małej wyspie.' },
+  't1-p064-010': { en: 'This land belongs to us.', pl: 'Ta ziemia należy do nas.' },
+
+  // t1-p065 Kto? Co?
+  't1-p065-003': { en: 'Is this your bag?', pl: 'Czy to twoja torba?' },
+  't1-p065-004': { en: 'Your team won!', pl: 'Wasza drużyna wygrała!' },
+  't1-p065-006': { en: 'This is our home.', pl: 'To jest nasz dom.' },
+  't1-p065-008': { en: 'The dog wagged its tail.', pl: 'Pies machał ogonem.' },
+
+  // t1-p066 Rzeczowniki 5
+  't1-p066-001': { en: 'My goal is to learn English.', pl: 'Moim celem jest nauczyć się angielskiego.' },
+  't1-p066-003': { en: 'Choose the right category.', pl: 'Wybierz właściwą kategorię.' },
+  't1-p066-004': { en: 'This is a nice place.', pl: 'To jest miłe miejsce.' },
+  't1-p066-005': { en: 'We have a small problem.', pl: 'Mamy mały problem.' },
+  't1-p066-006': { en: 'What is this object?', pl: 'Co to za przedmiot?' },
+  't1-p066-007': { en: "That's a strange thing to say.", pl: 'To dziwna rzecz do powiedzenia.' },
+  't1-p066-008': { en: "There's no other way.", pl: 'Nie ma innego sposobu.' },
+  't1-p066-009': { en: 'Tell me every detail.', pl: 'Opowiedz mi każdy szczegół.' },
+  't1-p066-010': { en: 'I saw a warning sign.', pl: 'Zobaczyłem znak ostrzegawczy.' },
+
+  // t1-p067 Kto pyta, nie błądzi
+  't1-p067-001': { en: 'Which one do you want?', pl: 'Który chcesz?' },
+  't1-p067-002': { en: 'Why did you leave?', pl: 'Dlaczego wyjechałeś?' },
+  't1-p067-003': { en: 'Where are you now?', pl: 'Gdzie teraz jesteś?' },
+  't1-p067-004': { en: 'How does this work?', pl: 'Jak to działa?' },
+  't1-p067-005': { en: 'When are you coming back?', pl: 'Kiedy wracasz?' },
+  't1-p067-006': { en: "What's going on?", pl: 'Co się dzieje?' },
+  't1-p067-007': { en: 'Who told you that?', pl: 'Kto ci to powiedział?' },
+  't1-p067-008': { en: 'Tea or coffee?', pl: 'Herbata czy kawa?' },
+  't1-p067-009': { en: 'Whose phone is this?', pl: 'Czyj to telefon?' },
+  't1-p067-010': { en: 'To whom should I speak?', pl: 'Z kim powinienem porozmawiać?' },
+
+  // t1-p068 Dolegliwości
+  't1-p068-001': { en: 'Take an aspirin.', pl: 'Weź aspirynę.' },
+  't1-p068-002': { en: 'I have a stomach ache.', pl: 'Boli mnie brzuch.' },
+  't1-p068-003': { en: "The pain won't stop.", pl: 'Ból nie ustaje.' },
+  't1-p068-004': { en: 'I have a terrible headache.', pl: 'Mam okropny ból głowy.' },
+  't1-p068-005': { en: 'She has a high fever.', pl: 'Ona ma wysoką gorączkę.' },
+  't1-p068-006': { en: "That's a nasty cough.", pl: 'To paskudny kaszel.' },
+  't1-p068-007': { en: 'I have a runny nose.', pl: 'Mam katar.' },
+  't1-p068-008': { en: 'Take your medicine.', pl: 'Weź lekarstwo.' },
+  't1-p068-009': { en: 'Work is causing me stress.', pl: 'Praca powoduje u mnie stres.' },
+  't1-p068-010': { en: 'Swallow this pill.', pl: 'Połknij tę tabletkę.' },
+
+  // t1-p069 Mentalne
+  't1-p069-001': { en: 'He has a strong character.', pl: 'On ma silny charakter.' },
+  't1-p069-002': { en: 'That was a hard decision.', pl: 'To była trudna decyzja.' },
+  't1-p069-003': { en: 'Trust your intuition.', pl: 'Zaufaj swojej intuicji.' },
+  't1-p069-004': { en: 'It was just a thought.', pl: 'To była tylko myśl.' },
+  't1-p069-005': { en: "That's just my opinion.", pl: 'To tylko moja opinia.' },
+  't1-p069-006': { en: 'I have a great idea.', pl: 'Mam świetny pomysł.' },
+  't1-p069-007': { en: 'Give me one good reason.', pl: 'Podaj mi jeden dobry powód.' },
+  't1-p069-009': { en: 'She has real talent.', pl: 'Ona ma prawdziwy talent.' },
+  't1-p069-010': { en: 'It was only a joke.', pl: 'To był tylko żart.' },
+
+  // t1-p070 Czasowniki 5
+  't1-p070-001': { en: 'You have to choose one.', pl: 'Musisz wybrać jedno.' },
+  't1-p070-002': { en: "Let's continue tomorrow.", pl: 'Kontynuujmy jutro.' },
+  't1-p070-003': { en: 'Can you explain that again?', pl: 'Możesz to jeszcze raz wytłumaczyć?' },
+  't1-p070-004': { en: "Don't forget your keys.", pl: 'Nie zapomnij kluczy.' },
+  't1-p070-007': { en: 'I remember your face.', pl: 'Pamiętam twoją twarz.' },
+  't1-p070-008': { en: "My phone didn't ring.", pl: 'Mój telefon nie zadzwonił.' },
+  't1-p070-009': { en: "I don't want to risk it.", pl: 'Nie chcę tego ryzykować.' },
+
+  // t1-p071 Warzywa I owoce
+  't1-p071-001': { en: 'This avocado is ripe.', pl: 'To awokado jest dojrzałe.' },
+  't1-p071-002': { en: 'The peach is so juicy.', pl: 'Ta brzoskwinia jest bardzo soczysta.' },
+  't1-p071-003': { en: 'Chop the onion finely.', pl: 'Posiekaj cebulę drobno.' },
+  't1-p071-004': { en: 'I baked cauliflower for dinner.', pl: 'Upiekłem kalafior na obiad.' },
+  't1-p071-005': { en: 'We grilled corn on the cob.', pl: 'Grillowaliśmy kukurydzę.' },
+  't1-p071-006': { en: 'Rabbits love carrots.', pl: 'Króliki uwielbiają marchewki.' },
+  't1-p071-007': { en: 'Add some lettuce to the sandwich.', pl: 'Dodaj trochę sałaty do kanapki.' },
+  't1-p071-008': { en: 'These strawberries are sweet.', pl: 'Te truskawki są słodkie.' },
+  't1-p071-009': { en: 'Try this purple grape.', pl: 'Spróbuj tego fioletowego winogrona.' },
+  't1-p071-010': { en: 'She picked a cherry.', pl: 'Zerwała wiśnię.' },
+
+  // t1-p072 Sukces
+  't1-p072-001': { en: 'Are you sure about this?', pl: 'Jesteś tego pewny?' },
+  't1-p072-002': { en: 'This song is very popular.', pl: 'Ta piosenka jest bardzo popularna.' },
+  't1-p072-003': { en: 'He became rich overnight.', pl: 'Wzbogacił się z dnia na dzień.' },
+  't1-p072-004': { en: 'Everything went perfect.', pl: 'Wszystko poszło perfekcyjnie.' },
+  't1-p072-005': { en: 'You did a fantastic job.', pl: 'Wykonałeś fantastyczną robotę.' },
+  't1-p072-006': { en: 'I feel much better now.', pl: 'Czuję się teraz dużo lepiej.' },
+  't1-p072-007': { en: 'This view is amazing.', pl: 'Ten widok jest niesamowity.' },
+  't1-p072-008': { en: "That's a super idea!", pl: 'To super pomysł!' },
+  't1-p072-009': { en: 'You look great today.', pl: 'Świetnie dziś wyglądasz.' },
+  't1-p072-010': { en: "You're the only one who understands.", pl: 'Jesteś jedyną osobą, która rozumie.' },
+
+  // t1-p073 Człowiek
+  't1-p073-001': { en: "He's tall and blond.", pl: 'On jest wysoki i blond.' },
+  't1-p073-002': { en: "She's a natural blonde.", pl: 'Ona jest naturalną blondynką.' },
+  't1-p073-003': { en: 'My brother is a brunet.', pl: 'Mój brat jest brunetem.' },
+  't1-p073-004': { en: 'I prefer brunettes.', pl: 'Wolę brunetki.' },
+  't1-p073-005': { en: "Don't be such an egoist.", pl: 'Nie bądź takim egoistą.' },
+  't1-p073-006': { en: 'Women run this company.', pl: 'Kobiety prowadzą tę firmę.' },
+  't1-p073-007': { en: 'Men and women are equal.', pl: 'Mężczyźni i kobiety są równi.' },
+  't1-p073-008': { en: "She's a true optimist.", pl: 'Ona jest prawdziwym optymistą.' },
+  't1-p073-009': { en: 'Stop being such a pessimist.', pl: 'Przestań być takim pesymistą.' },
+  't1-p073-010': { en: 'My grandfather is a senior now.', pl: 'Mój dziadek jest teraz seniorem.' },
+
+  // t1-p074 Rodzina
+  't1-p074-002': { en: 'My grandmother bakes bread.', pl: 'Moja babcia piecze chleb.' },
+  't1-p074-004': { en: 'My grandfather tells great stories.', pl: 'Mój dziadek opowiada świetne historie.' },
+  't1-p074-008': { en: 'Being a parent is hard.', pl: 'Bycie rodzicem jest trudne.' },
+
+  // t1-p075 Wulgaryzmy 2
+  't1-p075-001': { en: "He's such a cock sometimes.", pl: 'Czasem jest takim chujem.' },
+  't1-p075-002': { en: "Don't be such a pussy.", pl: 'Nie bądź taką cipą.' },
+  't1-p075-003': { en: "He's a real asshole.", pl: 'On jest prawdziwym dupkiem.' },
+  't1-p075-004': { en: 'That lucky bastard won again.', pl: 'Ten szczęściarz znowu wygrał.' },
+  't1-p075-005': { en: 'He called him a fag.', pl: 'Nazwał go pedałem.' },
+  't1-p075-006': { en: 'Stop being such a bitch.', pl: 'Przestań być taką suką.' },
+  't1-p075-007': { en: 'Just fuck off already!', pl: 'Po prostu odpierdol się!' },
+  't1-p075-008': { en: "Piss off, I'm busy!", pl: 'Wypierdalaj, jestem zajęty!' },
+  't1-p075-009': { en: 'Sod off, leave me alone!', pl: 'Spierdalaj, zostaw mnie!' },
+  't1-p075-010': { en: 'This weather really sucks.', pl: 'Ta pogoda naprawdę jest do dupy.' },
+
+  // t1-p076 Czasowniki 6
+  't1-p076-004': { en: "Just relax, it's fine.", pl: 'Po prostu się zrelaksuj, wszystko gra.' },
+  't1-p076-005': { en: 'You need to rest.', pl: 'Musisz odpocząć.' },
+  't1-p076-009': { en: 'I love to travel.', pl: 'Uwielbiam podróżować.' },
+
+  // t1-p077 Dom
+  't1-p077-001': { en: "My alarm clock didn't go off.", pl: 'Mój budzik nie zadzwonił.' },
+  't1-p077-002': { en: 'Park the car in the garage.', pl: 'Zaparkuj samochód w garażu.' },
+  't1-p077-003': { en: 'The bathroom is upstairs.', pl: 'Łazienka jest na górze.' },
+  't1-p077-004': { en: 'We need new furniture.', pl: 'Potrzebujemy nowych mebli.' },
+  't1-p077-005': { en: "Take an umbrella, it's raining.", pl: 'Weź parasol, pada deszcz.' },
+  't1-p077-006': { en: 'This pillow is too flat.', pl: 'Ta poduszka jest za płaska.' },
+  't1-p077-007': { en: 'The washing machine is broken.', pl: 'Pralka jest zepsuta.' },
+  't1-p077-008': { en: "Let's watch TV in the living room.", pl: 'Oglądajmy telewizję w salonie.' },
+  't1-p077-009': { en: 'My neighbor is very friendly.', pl: 'Mój sąsiad jest bardzo przyjazny.' },
+  't1-p077-010': { en: 'Clean your bedroom, please.', pl: 'Posprzątaj swoją sypialnię, proszę.' },
+
+  // t1-p078 Jedzenie
+  't1-p078-001': { en: 'Can I have a cookie?', pl: 'Mogę dostać ciastko?' },
+  't1-p078-002': { en: "What's for dessert?", pl: 'Co na deser?' },
+  't1-p078-003': { en: 'I ordered fries with that.', pl: 'Zamówiłem do tego frytki.' },
+  't1-p078-004': { en: 'This hamburger is huge.', pl: 'Ten hamburger jest ogromny.' },
+  't1-p078-005': { en: 'I eat yogurt every morning.', pl: 'Jem jogurt każdego ranka.' },
+  't1-p078-006': { en: 'I made a sandwich for lunch.', pl: 'Zrobiłem kanapkę na lunch.' },
+  't1-p078-007': { en: 'That was a delicious meal.', pl: 'To był pyszny posiłek.' },
+  't1-p078-008': { en: "Grab a snack if you're hungry.", pl: 'Weź przekąskę, jeśli jesteś głodny.' },
+  't1-p078-009': { en: 'This soup needs salt.', pl: 'Ta zupa potrzebuje soli.' },
+  't1-p078-010': { en: "I'll have a ham sandwich.", pl: 'Poproszę kanapkę z szynką.' },
+
+  // t1-p080 Przymiotniki 4
+  't1-p080-002': { en: 'Try to eat healthy food.', pl: 'Staraj się jeść zdrowe jedzenie.' },
+  't1-p080-003': { en: "You're so lucky!", pl: 'Masz takie szczęście!' },
+  't1-p080-004': { en: 'That was a smart decision.', pl: 'To była mądra decyzja.' },
+  't1-p080-006': { en: "That's not fair.", pl: 'To nie fair.' },
+  't1-p080-007': { en: 'Your shoes are dirty.', pl: 'Twoje buty są brudne.' },
+  't1-p080-009': { en: 'The cat got really fat.', pl: 'Kot naprawdę utył.' },
+  't1-p080-010': { en: 'She looked absolutely sexy.', pl: 'Wyglądała absolutnie seksownie.' },
+
+  // t1-p081 Miasto
+  't1-p081-001': { en: 'The pharmacy closes at eight.', pl: 'Apteka zamyka się o ósmej.' },
+  't1-p081-002': { en: "Let's go to the swimming pool.", pl: 'Chodźmy na basen.' },
+  't1-p081-003': { en: 'I borrowed a book from the library.', pl: 'Wypożyczyłem książkę z biblioteki.' },
+  't1-p081-004': { en: 'We danced all night at the disco.', pl: 'Tańczyliśmy całą noc na dyskotece.' },
+  't1-p081-005': { en: 'The church bells are ringing.', pl: 'Dzwony kościelne dzwonią.' },
+  't1-p081-006': { en: 'The museum is free on Sundays.', pl: 'Muzeum jest darmowe w niedziele.' },
+  't1-p081-007': { en: 'Wait for me at the bus stop.', pl: 'Czekaj na mnie na przystanku.' },
+  't1-p081-008': { en: 'I need to go to the supermarket.', pl: 'Muszę iść do supermarketu.' },
+  't1-p081-009': { en: "Let's go shopping this weekend.", pl: 'Chodźmy na zakupy w ten weekend.' },
+  't1-p081-010': { en: 'The kids loved the zoo.', pl: 'Dzieciom bardzo podobało się zoo.' },
+
+  // t1-p082 Przysłówki 1
+  't1-p082-001': { en: 'I speak a little English.', pl: 'Mówię trochę po angielsku.' },
+  't1-p082-002': { en: 'Everything will be alright.', pl: 'Wszystko będzie w porządku.' },
+  't1-p082-003': { en: 'We live close to the park.', pl: 'Mieszkamy blisko parku.' },
+  't1-p082-004': { en: "I'm fine, thanks.", pl: 'W porządku, dzięki.' },
+  't1-p082-005': { en: 'That sounds great!', pl: 'To brzmi świetnie!' },
+  't1-p082-006': { en: 'Maybe we should wait.', pl: 'Może powinniśmy poczekać.' },
+  't1-p082-007': { en: "Ok, let's do it.", pl: 'Ok, zróbmy to.' },
+  't1-p082-008': { en: 'Do you really mean that?', pl: 'Naprawdę tak myślisz?' },
+  't1-p082-009': { en: 'How was the movie? So-so.', pl: 'Jaki był film? Tak sobie.' },
+  't1-p082-010': { en: 'We grew up together.', pl: 'Dorastaliśmy razem.' },
+
+  // t1-p083 Ciągle w ruchu
+  't1-p083-001': { en: 'Carry on without me.', pl: 'Kontynuuj beze mnie.' },
+  't1-p083-002': { en: "Come on, we're late!", pl: 'Chodź szybko, spóźniamy się!' },
+  't1-p083-003': { en: "I'll be back in five minutes.", pl: 'Będę z powrotem za pięć minut.' },
+  't1-p083-004': { en: 'Please come back soon.', pl: 'Proszę, wróć szybko.' },
+  't1-p083-005': { en: "Come in, the door's open.", pl: 'Wejdź, drzwi są otwarte.' },
+  't1-p083-006': { en: 'How do I get to the station?', pl: 'Jak dotrę na stację?' },
+  't1-p083-007': { en: 'I want to go back home.', pl: 'Chcę wrócić do domu.' },
+  't1-p083-008': { en: "Get up, we're leaving!", pl: 'Wstawaj, wyjeżdżamy!' },
+  't1-p083-009': { en: 'Sit down and relax.', pl: 'Usiądź i zrelaksuj się.' },
+  't1-p083-010': { en: 'I need to find out the truth.', pl: 'Muszę dowiedzieć się prawdy.' },
+
+  // t1-p084 Zostań w świecie skrótów
+  't1-p084-001': { en: "BRB, someone's at the door.", pl: 'ZW, ktoś jest przy drzwiach.' },
+  't1-p084-002': { en: 'Gotta go, CYA!', pl: 'Muszę iść, NARA!' },
+  't1-p084-003': { en: 'IDK, maybe later.', pl: 'NWM, może później.' },
+  't1-p084-004': { en: 'IMO, this is the best option.', pl: 'MOIM ZDANIEM to najlepsza opcja.' },
+  't1-p084-005': { en: 'This is my BF.', pl: 'To mój CHŁOPAK.' },
+  't1-p084-006': { en: "LMAO, that's hilarious!", pl: 'PADAM ZE ŚMIECHU, to jest zabawne!' },
+  't1-p084-007': { en: 'Meet my GF.', pl: 'Poznaj moją DZIEWCZYNĘ.' },
+  't1-p084-008': { en: "YOLO, let's do it!", pl: 'ŻYJE SIĘ TYLKO RAZ, zróbmy to!' },
+  't1-p084-009': { en: "This one's for you.", pl: 'Ten jest dla ciebie.' },
+  't1-p084-010': { en: 'Send me a PM.', pl: 'Wyślij mi PW.' },
+
+  // t1-p085 Kraje
+  't1-p085-001': { en: "I've never been to England.", pl: 'Nigdy nie byłem w Anglii.' },
+  't1-p085-002': { en: 'My teacher is English.', pl: 'Moja nauczycielka jest Angielką.' },
+  't1-p085-003': { en: 'The United Kingdom has four nations.', pl: 'Zjednoczone Królestwo ma cztery narody.' },
+  't1-p085-004': { en: 'Great Britain is an island.', pl: 'Wielka Brytania jest wyspą.' },
+  't1-p085-005': { en: 'My colleague is British.', pl: 'Moja koleżanka jest Brytyjką.' },
+  't1-p085-006': { en: 'China has a huge population.', pl: 'Chiny mają ogromną populację.' },
+  't1-p085-007': { en: 'My neighbor is Chinese.', pl: 'Moja sąsiadka jest Chinką.' },
+  't1-p085-008': { en: "We're flying to France in June.", pl: 'Lecimy do Francji w czerwcu.' },
+  't1-p085-009': { en: 'My friend is French.', pl: 'Moja przyjaciółka jest Francuzką.' },
+  't1-p085-010': { en: 'Which country are you from?', pl: 'Z jakiego kraju jesteś?' },
+
+  // t1-p086 Kierunek I miejsce
+  't1-p086-001': { en: "I'm going to the store.", pl: 'Idę do sklepu.' },
+  't1-p086-002': { en: 'The keys are on the table.', pl: 'Klucze są na stole.' },
+  't1-p086-003': { en: "We're heading to the party.", pl: 'Idziemy na imprezę.' },
+  't1-p086-004': { en: 'Sit next to me.', pl: 'Usiądź przy mnie.' },
+  't1-p086-005': { en: 'Meet me at the entrance.', pl: 'Spotkaj się ze mną przy wejściu.' },
+  't1-p086-006': { en: "It's in the drawer.", pl: 'Jest w szufladzie.' },
+  't1-p086-007': { en: 'We flew to Rome via Paris.', pl: 'Lecieliśmy do Rzymu przez Paryż.' },
+  't1-p086-009': { en: 'Take it off the shelf.', pl: 'Zdejmij to z półki.' },
+  't1-p086-010': { en: 'We stopped mid-way.', pl: 'Zatrzymaliśmy się w połowie drogi.' },
+
+  // t1-p087 Kraje
+  't1-p087-001': { en: 'Poland is in central Europe.', pl: 'Polska leży w środkowej Europie.' },
+  't1-p087-002': { en: "She's a proud Pole.", pl: 'Ona jest dumną Polką.' },
+  't1-p087-003': { en: 'Spices from India are amazing.', pl: 'Przyprawy z Indii są niesamowite.' },
+  't1-p087-004': { en: 'My colleague is Indian.', pl: 'Moja koleżanka jest Hinduską.' },
+  't1-p087-005': { en: 'His wife is German.', pl: 'Jego żona jest Niemką.' },
+  't1-p087-006': { en: 'We drove through Germany.', pl: 'Przejechaliśmy przez Niemcy.' },
+  't1-p087-007': { en: 'The United States has fifty states.', pl: 'Stany Zjednoczone mają pięćdziesiąt stanów.' },
+  't1-p087-008': { en: 'My roommate is American.', pl: 'Moja współlokatorka jest Amerykanką.' },
+  't1-p087-009': { en: "What's your nationality?", pl: 'Jaka jest twoja narodowość?' },
+  't1-p087-010': { en: 'The whole nation celebrated.', pl: 'Cały naród świętował.' },
+
+  // t1-p088 Transport
+  't1-p088-001': { en: 'This car runs on diesel.', pl: 'Ten samochód jeździ na olej napędowy.' },
+  't1-p088-002': { en: "There's one passenger left.", pl: 'Zostaje jeden pasażer.' },
+  't1-p088-003': { en: 'Is this seat taken?', pl: 'Czy to miejsce jest zajęte?' },
+  't1-p088-004': { en: "Let's just call a taxi.", pl: 'Po prostu wezwijmy taksówkę.' },
+  't1-p088-005': { en: 'Grab a cab outside.', pl: 'Złap taryfę na zewnątrz.' },
+  't1-p088-006': { en: 'We took the highway instead.', pl: 'Pojechaliśmy zamiast tego autostradą.' },
+  't1-p088-007': { en: "We're low on petrol.", pl: 'Mamy mało benzyny.' },
+  't1-p088-008': { en: 'Fill up the tank with gas.', pl: 'Zatankuj gaz do baku.' },
+  't1-p088-009': { en: "I can't find my car keys.", pl: 'Nie mogę znaleźć kluczyków do samochodu.' },
+  't1-p088-010': { en: 'He rides a motorcycle to work.', pl: 'On jeździ motocyklem do pracy.' },
+
+  // t1-p089 Czasowniki 7
+  't1-p089-004': { en: "We're moving next month.", pl: 'Przeprowadzamy się w przyszłym miesiącu.' },
+  't1-p089-005': { en: 'Please pass the salt.', pl: 'Proszę, podaj sól.' },
+  't1-p089-009': { en: 'Come visit us sometime.', pl: 'Odwiedź nas kiedyś.' },
+  't1-p089-010': { en: 'What time do we arrive?', pl: 'O której godzinie przyjeżdżamy?' },
+
+  // t1-p090 Wulgaryzmy 3
+  't1-p090-001': { en: 'This traffic really blows.', pl: 'Ten korek naprawdę jest do dupy.' },
+  't1-p090-002': { en: "He doesn't give a fuck about rules.", pl: 'On ma wyjebane na zasady.' },
+  't1-p090-003': { en: "I don't give a fuck anymore!", pl: 'Mam już wszystko wyjebane!' },
+  't1-p090-004': { en: "Honestly, I don't give a shit!", pl: 'Szczerze, mam to w dupie!' },
+  't1-p090-005': { en: 'Bloody hell, that hurt!', pl: 'Jasna cholera, to zabolało!' },
+  't1-p090-006': { en: 'Stop being such a jerk.', pl: 'Przestań być takim chamem.' },
+  't1-p090-007': { en: 'He called her a cunt.', pl: 'Nazwał ją pizdą.' },
+  't1-p090-008': { en: "Don't call her a slut.", pl: 'Nie nazywaj jej dziwką.' },
+  't1-p090-009': { en: 'Stop acting like a ho.', pl: 'Przestań się zachowywać jak dziwka.' },
+  't1-p090-010': { en: 'He called her a whore.', pl: 'Nazwał ją kurwą.' },
+
+  // t1-p091 Ubrania
+  't1-p091-001': { en: 'He wore a baseball cap.', pl: 'Nosił czapkę z daszkiem.' },
+  't1-p091-002': { en: 'He looked sharp in his suit.', pl: 'Wyglądał elegancko w garniturze.' },
+  't1-p091-003': { en: 'Loosen your tie a bit.', pl: 'Poluzuj trochę krawat.' },
+  't1-p091-004': { en: 'She works in fashion.', pl: 'Ona pracuje w modzie.' },
+  't1-p091-005': { en: 'Where are my sunglasses?', pl: 'Gdzie są moje okulary przeciwsłoneczne?' },
+  't1-p091-006': { en: 'I left my wallet at home.', pl: 'Zostawiłem portfel w domu.' },
+  't1-p091-007': { en: "It's hot, wear shorts.", pl: 'Jest gorąco, załóż spodenki.' },
+  't1-p091-008': { en: 'She bought a new skirt.', pl: 'Kupiła nową spódnicę.' },
+  't1-p091-009': { en: 'That dress suits you.', pl: 'Ta sukienka do ciebie pasuje.' },
+
+  // t1-p092 Przymiotniki 5
+  't1-p092-001': { en: 'Anything is possible.', pl: 'Wszystko jest możliwe.' },
+  't1-p092-002': { en: 'This task feels impossible.', pl: 'To zadanie wydaje się niemożliwe.' },
+  't1-p092-003': { en: 'Is this diamond real?', pl: 'Czy ten diament jest prawdziwy?' },
+  't1-p092-004': { en: 'Is that story true?', pl: 'Czy ta historia jest prawdziwa?' },
+  't1-p092-006': { en: 'Please be quiet.', pl: 'Proszę, bądź cicho.' },
+  't1-p092-007': { en: 'The music is too loud.', pl: 'Muzyka jest za głośna.' },
+  't1-p092-008': { en: "That's a really interesting point.", pl: 'To naprawdę interesująca uwaga.' },
+  't1-p092-009': { en: 'This is completely normal.', pl: 'To jest zupełnie normalne.' },
+  't1-p092-010': { en: 'This traffic is crazy today.', pl: 'Ten korek jest dziś szalony.' },
+
+  // t1-p093 Części ciała
+  't1-p093-001': { en: 'My belly hurts a bit.', pl: 'Boli mnie trochę brzuch.' },
+  't1-p093-002': { en: 'Listen to your body.', pl: 'Słuchaj swojego ciała.' },
+  't1-p093-003': { en: 'I burned my tongue.', pl: 'Poparzyłem sobie język.' },
+  't1-p093-004': { en: 'I saw a drop of blood.', pl: 'Zobaczyłem kroplę krwi.' },
+  't1-p093-005': { en: 'The doctor examined his penis.', pl: 'Lekarz zbadał jego penisa.' },
+  't1-p093-007': { en: 'The doctor examined her vagina.', pl: 'Lekarz zbadał jej pochwę.' },
+  't1-p093-008': { en: 'Her skin is very soft.', pl: 'Jej skóra jest bardzo miękka.' },
+  't1-p093-009': { en: 'I hurt my foot yesterday.', pl: 'Zraniłem sobie stopę wczoraj.' },
+  't1-p093-010': { en: 'I have a loose tooth.', pl: 'Mam ruszający się ząb.' },
+
+  // t1-p094 Człowiekiem jestem
+  't1-p094-001': { en: 'I was born in Warsaw.', pl: 'Urodziłem się w Warszawie.' },
+  't1-p094-002': { en: 'Please behave yourself.', pl: 'Proszę, zachowuj się.' },
+  't1-p094-003': { en: 'I need to change clothes.', pl: 'Muszę się przebrać.' },
+  't1-p094-004': { en: 'I dream about traveling.', pl: 'Marzę o podróżowaniu.' },
+  't1-p094-005': { en: 'He gave her a kiss.', pl: 'Pocałował ją.' },
+  't1-p094-006': { en: 'That joke made me laugh.', pl: 'Ten żart mnie rozśmieszył.' },
+  't1-p094-007': { en: "I'll send it right away.", pl: 'Wyślę to od razu.' },
+  't1-p094-008': { en: 'I want to surprise her.', pl: 'Chcę zrobić jej niespodziankę.' },
+  't1-p094-009': { en: 'I trust you completely.', pl: 'Ufam ci całkowicie.' },
+  't1-p094-010': { en: 'What should I wear tonight?', pl: 'Co powinienem dziś ubrać?' },
+
+  // t1-p095 Higiena I wygląd
+  't1-p095-001': { en: "Don't forget your deodorant.", pl: 'Nie zapomnij dezodorantu.' },
+  't1-p095-002': { en: 'She has a great figure.', pl: 'Ona ma świetną figurę.' },
+  't1-p095-003': { en: 'Good hygiene matters.', pl: 'Dobra higiena ma znaczenie.' },
+  't1-p095-004': { en: 'What color do you prefer?', pl: 'Jaki kolor wolisz?' },
+  't1-p095-005': { en: 'Apply this cream daily.', pl: 'Nakładaj ten krem codziennie.' },
+  't1-p095-006': { en: "She doesn't wear much make-up.", pl: 'Ona nie nosi dużo makijażu.' },
+  't1-p095-007': { en: 'That perfume smells amazing.', pl: 'Te perfumy pachną niesamowicie.' },
+  't1-p095-008': { en: 'Beauty comes in many forms.', pl: 'Piękno przybiera wiele form.' },
+  't1-p095-009': { en: 'He got a new tattoo.', pl: 'Zrobił sobie nowy tatuaż.' },
+  't1-p095-010': { en: 'Use less gel this time.', pl: 'Użyj mniej żelu tym razem.' },
+
+  // t1-p096 Przymiotniki 6
+  't1-p096-001': { en: 'This place feels different now.', pl: 'To miejsce teraz wydaje się inne.' },
+  't1-p096-005': { en: 'We are very close friends.', pl: 'Jesteśmy bardzo bliskimi przyjaciółmi.' },
+  't1-p096-006': { en: "I'm so sorry for your loss.", pl: 'Bardzo mi przykro z powodu twojej straty.' },
+  't1-p096-007': { en: 'The poor guy lost everything.', pl: 'Biedak stracił wszystko.' },
+
+  // t1-p097 Podróże
+  't1-p097-001': { en: "What's the main attraction here?", pl: 'Jaka jest tu główna atrakcja?' },
+  't1-p097-002': { en: 'We took a short trip.', pl: 'Zrobiliśmy krótką podróż.' },
+  't1-p097-003': { en: 'I need some rest after this.', pl: 'Potrzebuję odpoczynku po tym.' },
+  't1-p097-004': { en: 'I bought a souvenir for you.', pl: 'Kupiłem ci pamiątkę.' },
+  't1-p097-005': { en: "Let's have a picnic in the park.", pl: 'Zróbmy piknik w parku.' },
+  't1-p097-006': { en: 'Pack light, just a backpack.', pl: 'Spakuj się lekko, tylko plecak.' },
+  't1-p097-007': { en: 'It was a long journey.', pl: 'To była długa podróż.' },
+  't1-p097-008': { en: 'Ask at the reception desk.', pl: 'Zapytaj przy recepcji.' },
+  't1-p097-009': { en: 'Do I need a visa?', pl: 'Czy potrzebuję wizy?' },
+  't1-p097-010': { en: 'We joined a city tour.', pl: 'Dołączyliśmy do wycieczki po mieście.' },
+
+  // t1-p098 Kultura
+  't1-p098-001': { en: "Who's the author of this book?", pl: 'Kto jest autorem tej książki?' },
+  't1-p098-002': { en: 'He plays the guitar well.', pl: 'On dobrze gra na gitarze.' },
+  't1-p098-003': { en: "Let's go to the cinema.", pl: 'Chodźmy do kina.' },
+  't1-p098-004': { en: 'The concert starts at eight.', pl: 'Koncert zaczyna się o ósmej.' },
+  't1-p098-005': { en: 'I need music to focus.', pl: 'Potrzebuję muzyki, żeby się skupić.' },
+  't1-p098-006': { en: 'Draw me a picture.', pl: 'Narysuj mi obrazek.' },
+  't1-p098-007': { en: 'This song reminds me of you.', pl: 'Ta piosenka przypomina mi ciebie.' },
+  't1-p098-008': { en: 'Modern art confuses me.', pl: 'Sztuka nowoczesna mnie myli.' },
+  't1-p098-010': { en: 'Can you take our photo?', pl: 'Możesz zrobić nam zdjęcie?' },
+
+  // t1-p099 Emocje I uczucia
+  't1-p099-001': { en: 'I lost my appetite.', pl: 'Straciłem apetyt.' },
+  't1-p099-002': { en: 'She hid her emotion well.', pl: 'Dobrze ukryła swoje emocje.' },
+  't1-p099-003': { en: "It's always been my dream.", pl: 'To zawsze było moje marzenie.' },
+  't1-p099-004': { en: 'What a nice surprise!', pl: 'Co za miła niespodzianka!' },
+  't1-p099-005': { en: 'There\'s no need to worry.', pl: 'Nie ma potrzeby się martwić.' },
+  't1-p099-006': { en: 'I could hear their laughter.', pl: 'Słyszałem ich śmiech.' },
+  't1-p099-007': { en: 'I have a strange feeling.', pl: 'Mam dziwne uczucie.' },
+  't1-p099-008': { en: 'I love the smell of coffee.', pl: 'Uwielbiam zapach kawy.' },
+  't1-p099-009': { en: 'This has an odd taste.', pl: 'To ma dziwny smak.' },
+  't1-p099-010': { en: 'Make a wish!', pl: 'Pomyśl życzenie!' },
+
+  // t1-p100 Ręką
+  't1-p100-001': { en: 'Bring your ID with you.', pl: 'Weź ze sobą dowód.' },
+  't1-p100-003': { en: "Close the window, it's cold.", pl: 'Zamknij okno, jest zimno.' },
+  't1-p100-005': { en: 'Open your eyes.', pl: 'Otwórz oczy.' },
+  't1-p100-008': { en: 'Put it back where it was.', pl: 'Odłóż to tam, gdzie było.' },
+
+  // t1-p101 Życie
+  't1-p101-001': { en: 'Marriage takes real work.', pl: 'Małżeństwo wymaga prawdziwej pracy.' },
+  't1-p101-002': { en: 'This town is my birthplace.', pl: 'To miasto jest moim miejscem urodzenia.' },
+  't1-p101-003': { en: 'They make a lovely couple.', pl: 'Tworzą uroczą parę.' },
+  't1-p101-004': { en: "We're throwing a party Saturday.", pl: 'Robimy imprezę w sobotę.' },
+  't1-p101-005': { en: 'I love your style.', pl: 'Uwielbiam twój styl.' },
+  't1-p101-006': { en: 'I changed my whole lifestyle.', pl: 'Zmieniłem cały mój styl życia.' },
+  't1-p101-007': { en: 'Happy birthday to you!', pl: 'Wszystkiego najlepszego z okazji urodzin!' },
+  't1-p101-008': { en: 'It was a memorable event.', pl: 'To było pamiętne wydarzenie.' },
+  't1-p101-009': { en: 'Life is full of surprises.', pl: 'Życie jest pełne niespodzianek.' },
+  't1-p101-010': { en: 'This city has great nightlife.', pl: 'To miasto ma świetne życie nocne.' },
+
+  // t1-p103 Biznes
+  't1-p103-001': { en: 'I started my own company.', pl: 'Założyłem własną firmę.' },
+  't1-p103-002': { en: 'The client called this morning.', pl: 'Klient dzwonił dziś rano.' },
+  't1-p103-003': { en: "What's the plan for today?", pl: 'Jaki jest plan na dziś?' },
+  't1-p103-004': { en: 'This product sells really well.', pl: 'Ten produkt bardzo dobrze się sprzedaje.' },
+  't1-p103-005': { en: 'Can we get the bill?', pl: 'Możemy prosić o rachunek?' },
+  't1-p103-006': { en: 'Give me one more chance.', pl: 'Daj mi jeszcze jedną szansę.' },
+  't1-p103-007': { en: 'We made a good deal.', pl: 'Zrobiliśmy dobry interes.' },
+  't1-p103-008': { en: 'The results were surprising.', pl: 'Wyniki były zaskakujące.' },
+  't1-p103-009': { en: "Everything's on sale today.", pl: 'Wszystko jest dziś na wyprzedaży.' },
+  't1-p103-010': { en: 'Can I get a discount?', pl: 'Mogę dostać zniżkę?' },
+
+  // t1-p104 Biznes zaczyna się w głowie
+  't1-p104-001': { en: 'How does the story end?', pl: 'Jak kończy się ta historia?' },
+  't1-p104-002': { en: 'What happened here?', pl: 'Co się tutaj wydarzyło?' },
+  't1-p104-003': { en: 'What do you mean by that?', pl: 'Co masz na myśli?' },
+  't1-p104-004': { en: 'You must try this cake.', pl: 'Musisz spróbować tego ciasta.' },
+  't1-p104-005': { en: 'They offered me the job.', pl: 'Zaoferowali mi tę pracę.' },
+  't1-p104-008': { en: 'I spend too much on coffee.', pl: 'Wydaję za dużo na kawę.' },
+  't1-p104-009': { en: 'Our team is going to win.', pl: 'Nasza drużyna wygra.' },
+  't1-p104-010': { en: 'I would love some tea.', pl: 'Chętnie napiłbym się herbaty.' },
+
+  // t1-p105 Kalendarz I czas
+  't1-p105-001': { en: 'December feels magical.', pl: 'Grudzień wydaje się magiczny.' },
+  't1-p105-002': { en: 'I love the colors of autumn.', pl: 'Uwielbiam kolory jesieni.' },
+  't1-p105-003': { en: 'Check the calendar for that date.', pl: 'Sprawdź w kalendarzu tę datę.' },
+  't1-p105-004': { en: 'Summer is finally here.', pl: 'Lato wreszcie nadeszło.' },
+  't1-p105-005': { en: 'November is grey and cold.', pl: 'Listopad jest szary i zimny.' },
+  't1-p105-006': { en: 'February is the shortest month.', pl: 'Luty jest najkrótszym miesiącem.' },
+  't1-p105-007': { en: 'Spring starts in March.', pl: 'Wiosna zaczyna się w marcu.' },
+  't1-p105-008': { en: "We're on vacation in August.", pl: 'Jesteśmy na wakacjach w sierpniu.' },
+  't1-p105-009': { en: 'January feels so long.', pl: 'Styczeń wydaje się taki długi.' },
+  't1-p105-010': { en: "I don't like winter much.", pl: 'Nie lubię za bardzo zimy.' },
+
+  // t1-p106 Języki
+  't1-p106-001': { en: 'I love Italian food.', pl: 'Uwielbiam włoskie jedzenie.' },
+  't1-p106-002': { en: "She's learning Hindi.", pl: 'Ona uczy się hindi.' },
+  't1-p106-003': { en: 'He speaks fluent Spanish.', pl: 'On mówi płynnie po hiszpańsku.' },
+  't1-p106-004': { en: 'Japanese food is so delicate.', pl: 'Japońskie jedzenie jest takie delikatne.' },
+  't1-p106-005': { en: 'We drank Turkish coffee.', pl: 'Piliśmy turecką kawę.' },
+  't1-p106-006': { en: 'My English is improving.', pl: 'Mój angielski się poprawia.' },
+  't1-p106-007': { en: 'Chinese characters are fascinating.', pl: 'Chińskie znaki są fascynujące.' },
+  't1-p106-008': { en: 'The French bread was amazing.', pl: 'Francuski chleb był niesamowity.' },
+  't1-p106-009': { en: 'Polish grammar is tricky.', pl: 'Polska gramatyka jest trudna.' },
+  't1-p106-010': { en: 'German engineering is precise.', pl: 'Niemiecka inżynieria jest precyzyjna.' },
+
+  // t1-p107 Kalendarz I czas
+  't1-p107-001': { en: "We're getting married in June.", pl: 'Bierzemy ślub w czerwcu.' },
+  't1-p107-002': { en: "What's today's date?", pl: 'Jaka jest dzisiaj data?' },
+  't1-p107-003': { en: 'Monday is a public holiday.', pl: 'Poniedziałek jest dniem świątecznym.' },
+  't1-p107-004': { en: 'April showers bring May flowers.', pl: 'Kwietniowe deszcze przynoszą majowe kwiaty.' },
+  't1-p107-005': { en: "We're traveling in July.", pl: 'Podróżujemy w lipcu.' },
+  't1-p107-006': { en: 'May is my favorite month.', pl: 'Maj to mój ulubiony miesiąc.' },
+  't1-p107-007': { en: 'Wait just a moment.', pl: 'Poczekaj chwilę.' },
+  't1-p107-008': { en: 'October brings falling leaves.', pl: 'Październik przynosi opadające liście.' },
+  't1-p107-009': { en: 'Spring makes everything bloom.', pl: 'Wiosna sprawia, że wszystko kwitnie.' },
+  't1-p107-010': { en: 'School starts in September.', pl: 'Szkoła zaczyna się we wrześniu.' },
+
+  // t1-p108 Sprzęt elektroniczny
+  't1-p108-001': { en: "There's a new software update.", pl: 'Jest nowa aktualizacja oprogramowania.' },
+  't1-p108-002': { en: 'Turn on the air conditioning.', pl: 'Włącz klimatyzację.' },
+  't1-p108-003': { en: 'Enter the security code.', pl: 'Wpisz kod bezpieczeństwa.' },
+  't1-p108-004': { en: 'Leave a comment below.', pl: 'Zostaw komentarz poniżej.' },
+  't1-p108-006': { en: 'Can I get your phone number?', pl: 'Mogę dostać twój numer telefonu?' },
+  't1-p108-007': { en: 'I forgot my headphones again.', pl: 'Znowu zapomniałem słuchawek.' },
+  't1-p108-008': { en: 'Check your order status.', pl: 'Sprawdź status swojego zamówienia.' },
+  't1-p108-009': { en: "There's no signal here.", pl: 'Nie ma tu zasięgu.' },
+  't1-p108-010': { en: 'Each user needs a password.', pl: 'Każdy użytkownik potrzebuje hasła.' },
+
+  // t1-p109 Zawody
+  't1-p109-001': { en: "He's a famous actor.", pl: 'On jest znanym aktorem.' },
+  't1-p109-002': { en: "She's my favorite actress.", pl: 'Ona jest moją ulubioną aktorką.' },
+  't1-p109-004': { en: 'My uncle is an architect.', pl: 'Mój wujek jest architektem.' },
+  't1-p109-005': { en: 'I hired a new assistant.', pl: 'Zatrudniłem nowego asystenta.' },
+  't1-p109-006': { en: 'I have a dentist appointment.', pl: 'Mam wizytę u dentysty.' },
+  't1-p109-007': { en: 'The detective solved the case.', pl: 'Detektyw rozwiązał sprawę.' },
+  't1-p109-008': { en: "She's the director of this film.", pl: 'Ona jest reżyserką tego filmu.' },
+  't1-p109-009': { en: 'He works as a journalist.', pl: 'On pracuje jako dziennikarz.' },
+  't1-p109-010': { en: 'We hired a wedding photographer.', pl: 'Wynajęliśmy fotografa ślubnego.' },
+
+  // t1-p110 Rzeczowniki 6
+  't1-p110-001': { en: "I don't drink alcohol.", pl: 'Nie piję alkoholu.' },
+  't1-p110-002': { en: 'She loves fine jewelry.', pl: 'Ona uwielbia piękną biżuterię.' },
+  't1-p110-003': { en: 'The ring has a diamond.', pl: 'Pierścionek ma diament.' },
+  't1-p110-004': { en: 'She lost one earring.', pl: 'Zgubiła jeden kolczyk.' },
+  't1-p110-005': { en: 'He quit smoking cigarettes.', pl: 'Rzucił palenie papierosów.' },
+  't1-p110-006': { en: 'He proposed with a ring.', pl: 'Oświadczył się z pierścionkiem.' },
+  't1-p110-007': { en: "Let's grab a cold beer.", pl: 'Chodźmy na zimne piwo.' },
+  't1-p110-008': { en: 'He drinks whisky on ice.', pl: 'On pije whisky z lodem.' },
+  't1-p110-009': { en: 'Vodka is popular in Poland.', pl: 'Wódka jest popularna w Polsce.' },
+};
