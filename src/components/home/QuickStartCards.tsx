@@ -114,7 +114,7 @@ export function QuickStartCards() {
             <span className="quickstart__icon">🎧</span>
             <span className="quickstart__label-group">
               <span className="quickstart__label-eyebrow">Kontynuuj</span>
-              <span className="quickstart__label">Słuchaj</span>
+              <span className="quickstart__label">Słuchanie</span>
             </span>
           </div>
           <span className="quickstart__title">{autoplayCard.pack.name}</span>
