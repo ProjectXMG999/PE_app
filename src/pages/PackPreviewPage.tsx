@@ -4,6 +4,7 @@ import { Pack, PackMeta } from '../types/vocabulary'
 import { PackageProgress } from '../types/progress'
 import { loadProgressSnapshot, ProgressSnapshot } from '../hooks/useProgressData'
 import { getAudioUrl } from '../services/audioService'
+import { TopBar } from '../components/layout/TopBar'
 import {
   LEVEL_COLORS,
   getPackIcon,
@@ -101,14 +102,15 @@ export function PackPreviewPage() {
 
   const currentMeta = allPacks.find(p => p.id === packageId)
   const seriesBase = currentMeta ? getSeriesBase(currentMeta.name) : null
-  // Related packs: same topic base, ordered by level then pack number so the
-  // list reads as an easy → hard progression.
-  const relatedPacks = useMemo(() => {
+  // Full series (incl. current), ordered by level then id. The order is
+  // deterministic and independent of which pack is open, so a pack's position
+  // number (1, 2, 3…) stays the same no matter where you navigate from.
+  const seriesAll = useMemo(() => {
     if (!seriesBase) return []
     return allPacks
-      .filter(p => getSeriesBase(p.name) === seriesBase && p.id !== packageId)
+      .filter(p => getSeriesBase(p.name) === seriesBase)
       .sort((a, b) => (a.level - b.level) || a.id.localeCompare(b.id))
-  }, [seriesBase, packageId])
+  }, [seriesBase])
 
   if (loading) {
     return (
@@ -142,20 +144,19 @@ export function PackPreviewPage() {
 
   return (
     <div className="packpreview" ref={scrollRef}>
-      {/* Sticky top bar */}
-      <header className="packpreview__topbar">
-        <button
-          className="packpreview__back"
-          onClick={() => navigate('/')}
-          aria-label="Wróć do listy"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-        </button>
-        <h1 className="packpreview__topbar-title">{pack.name}</h1>
-        <span className="packpreview__topbar-count">{pack.wordCount} {plWords(pack.wordCount)}</span>
-      </header>
+      {/* App header with logo — scrolls away with the content */}
+      <TopBar />
+
+      {/* Floating back button — stays put while scrolling, always reachable */}
+      <button
+        className="packpreview__back"
+        onClick={() => navigate('/')}
+        aria-label="Wróć do listy"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
 
       {/* Hero */}
       <section className="packpreview__hero">
@@ -242,58 +243,66 @@ export function PackPreviewPage() {
           ))}
         </ul>
 
-        {/* Related packs (same topic across levels) */}
-        {relatedPacks.length > 0 && (
+        {/* Related packs (same topic across levels), numbered by stable position */}
+        {seriesAll.length > 1 && (
           <section className="packpreview__related">
             <h3 className="packpreview__related-title">Powiązane pakiety</h3>
             <p className="packpreview__related-hint">Ten sam temat na innych poziomach</p>
             <div className="packpreview__related-list">
-              {/* Current pack — non-interactive "you are here" marker */}
-              <div className="packpreview__related-row packpreview__related-row--current">
-                <span className="packpreview__related-icon">{icon}</span>
-                <div className="packpreview__related-body">
-                  <span className="packpreview__related-name">{pack.name}</span>
-                  <span className="packpreview__related-meta">
-                    Poziom {pack.level} · {pack.volume} · {pack.wordCount} {plWords(pack.wordCount)}
-                  </span>
-                </div>
-                <span className="packpreview__related-here">Tu jesteś</span>
-              </div>
+              {seriesAll.map((sib, i) => {
+                const num = i + 1
+                const isCurrent = sib.id === pack.id
+                const sibProg = snapshot?.progressMap.get(sib.id)
+                const st = relatedStatus(getStatus(sibProg))
+                const sibColor = sib.level ? LEVEL_COLORS[sib.level] : undefined
 
-              {relatedPacks.map(sibling => {
-                const sibProg = snapshot?.progressMap.get(sibling.id)
-                const sib = relatedStatus(getStatus(sibProg))
-                const sibColor = sibling.level ? LEVEL_COLORS[sibling.level] : undefined
-                return (
-                  <button
-                    key={sibling.id}
-                    className="packpreview__related-row"
-                    onClick={() => navigate(`/pakiet/${sibling.id}`)}
-                  >
+                const inner = (
+                  <>
+                    <span className="packpreview__related-num">{num}</span>
                     <span
                       className="packpreview__related-icon"
-                      style={sibColor ? { background: `${sibColor}22`, color: sibColor } : undefined}
+                      style={!isCurrent && sibColor ? { background: `${sibColor}22`, color: sibColor } : undefined}
                     >
-                      {getPackIcon(sibling)}
+                      {getPackIcon(sib)}
                     </span>
                     <div className="packpreview__related-body">
-                      <span className="packpreview__related-name">{sibling.name}</span>
+                      <span className="packpreview__related-name">{sib.name} {num}</span>
                       <span className="packpreview__related-meta">
-                        Poziom {sibling.level} · {sibling.volume} · {sibling.wordCount} {plWords(sibling.wordCount)}
+                        Poziom {sib.level} · {sib.volume} · {sib.wordCount} {plWords(sib.wordCount)}
                       </span>
                     </div>
-                    {sib && (
-                      <span className={`packpreview__related-status packpreview__related-status--${sib.tone}`}>
-                        {sib.label}
-                      </span>
+                    {isCurrent ? (
+                      <span className="packpreview__related-here">Tu jesteś</span>
+                    ) : (
+                      <>
+                        {st && (
+                          <span className={`packpreview__related-status packpreview__related-status--${st.tone}`}>
+                            {st.label}
+                          </span>
+                        )}
+                        <svg
+                          className="packpreview__related-chevron"
+                          width="18" height="18" viewBox="0 0 24 24"
+                          fill="none" stroke="currentColor" strokeWidth="2"
+                        >
+                          <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                      </>
                     )}
-                    <svg
-                      className="packpreview__related-chevron"
-                      width="18" height="18" viewBox="0 0 24 24"
-                      fill="none" stroke="currentColor" strokeWidth="2"
-                    >
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
+                  </>
+                )
+
+                return isCurrent ? (
+                  <div key={sib.id} className="packpreview__related-row packpreview__related-row--current">
+                    {inner}
+                  </div>
+                ) : (
+                  <button
+                    key={sib.id}
+                    className="packpreview__related-row"
+                    onClick={() => navigate(`/pakiet/${sib.id}`)}
+                  >
+                    {inner}
                   </button>
                 )
               })}

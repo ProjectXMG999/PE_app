@@ -33,64 +33,45 @@
   font-size: var(--text-base);
 }
 
-/* ── Sticky top bar ───────────────────────────────────────── */
-.packpreview__topbar {
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  height: calc(var(--topbar-height) + env(safe-area-inset-top, 0px));
-  padding: env(safe-area-inset-top, 0px) var(--spacing-md) 0;
-  background: color-mix(in srgb, var(--bg-primary) 82%, transparent);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
+/* ── App header (global TopBar) — scrolls away with content ─── */
+.packpreview .topbar {
+  position: static;
 }
 
+/* The floating back button owns the top-left slot; hide the logo's PE icon
+   so they don't overlap. */
+.packpreview .topbar__pe-icon {
+  visibility: hidden;
+}
+
+/* ── Floating back button — fixed, always reachable ─────────── */
 .packpreview__back {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 10px);
+  left: 14px;
+  z-index: 110;
   width: 40px;
   height: 40px;
-  flex-shrink: 0;
   border-radius: var(--radius-full);
-  background: var(--bg-card);
+  background: color-mix(in srgb, var(--bg-card) 88%, transparent);
   border: 1px solid var(--border);
-  color: var(--text-secondary);
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
 }
 
 .packpreview__back:hover {
   border-color: var(--border-accent);
-  color: var(--text-primary);
   background: var(--bg-card-hover);
 }
 
-.packpreview__topbar-title {
-  flex: 1;
-  min-width: 0;
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  font-weight: 700;
-  color: var(--text-primary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.packpreview__topbar-count {
-  flex-shrink: 0;
-  font-family: var(--font-heading);
-  font-size: var(--text-xs);
-  font-weight: 600;
-  color: var(--text-muted);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
+.packpreview__back:active {
+  transform: scale(0.94);
 }
 
 /* ── Hero ─────────────────────────────────────────────────── */
@@ -341,6 +322,21 @@
 .packpreview__related-row--current:hover {
   transform: none;
   background: color-mix(in srgb, var(--accent) 12%, var(--bg-card));
+}
+
+.packpreview__related-num {
+  flex-shrink: 0;
+  width: 22px;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--text-muted);
+  letter-spacing: -0.02em;
+}
+
+.packpreview__related-row--current .packpreview__related-num {
+  color: var(--accent-bright);
 }
 
 .packpreview__related-icon {
