@@ -26,6 +26,28 @@ const INFO_SVG = (
   </svg>
 )
 
+const WAVEFORM = (
+  <span className="quickstart__wave" aria-hidden="true">
+    <span /><span /><span /><span /><span />
+  </span>
+)
+
+const GO_ARROW = (
+  <span className="quickstart__go" aria-hidden="true">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="9 6 15 12 9 18" />
+    </svg>
+  </span>
+)
+
+function slowaForm(n: number): string {
+  if (n === 1) return 'słowo'
+  const d = n % 10
+  const h = n % 100
+  if (d >= 2 && d <= 4 && (h < 12 || h > 14)) return 'słowa'
+  return 'słów'
+}
+
 const packs = packagesIndex as PackMeta[]
 
 interface QuickCard {
@@ -52,6 +74,7 @@ export function QuickStartCards() {
 
   let autoplayCard: QuickCard = { pack: packs[0], startIndex: 0 }
   let fiszkiCard: QuickCard = { pack: packs[0], startIndex: 0 }
+  let fiszkiKnown = 0
 
   if (snapshot) {
     const { progressMap, knownMap } = snapshot
@@ -70,6 +93,7 @@ export function QuickStartCards() {
       const knownCount = knownMap.get(pack.id) ?? 0
       if (knownCount < pack.wordCount) {
         fiszkiCard = { pack, startIndex: 0 }
+        fiszkiKnown = knownCount
         break
       }
     }
@@ -84,6 +108,10 @@ export function QuickStartCards() {
     )
   }
 
+  const listenStarted = autoplayCard.startIndex > 0
+  const listenPct = Math.round((autoplayCard.startIndex / autoplayCard.pack.wordCount) * 100)
+  const trainRemaining = fiszkiCard.pack.wordCount - fiszkiKnown
+
   return (
     <div className="quickstart" ref={wrapRef}>
       <div className="quickstart__wrap">
@@ -92,14 +120,27 @@ export function QuickStartCards() {
           onClick={() => navigate(`/pakiet/${autoplayCard.pack.id}/start`)}
         >
           <div className="quickstart__card-top">
-            <span className="quickstart__label">SŁUCHAJ</span>
             <span className="quickstart__icon">🎧</span>
+            <span className="quickstart__label">SŁUCHAJ</span>
           </div>
           <span className="quickstart__title">{autoplayCard.pack.name}</span>
-          <span className="quickstart__sub--main">Kontynuuj kurs</span>
-          <span className="quickstart__sub">
-            od słowa {autoplayCard.startIndex + 1} / {autoplayCard.pack.wordCount}
-          </span>
+          <div className="quickstart__bottom">
+            {WAVEFORM}
+            <span className="quickstart__bottom-text">
+              <span className="quickstart__sub--main">{listenStarted ? 'Kontynuuj kurs' : 'Zacznij kurs'}</span>
+              <span className="quickstart__sub">
+                {listenStarted
+                  ? `Słowo ${autoplayCard.startIndex + 1} z ${autoplayCard.pack.wordCount} • ${listenPct}%`
+                  : `${autoplayCard.pack.wordCount} ${slowaForm(autoplayCard.pack.wordCount)} • od początku`}
+              </span>
+              {listenStarted && (
+                <span className="quickstart__bar">
+                  <span style={{ width: `${listenPct}%` }} />
+                </span>
+              )}
+            </span>
+            {GO_ARROW}
+          </div>
         </button>
         <button
           className={`quickstart__info-btn${activeInfo === 'sluchaj' ? ' quickstart__info-btn--active' : ''}`}
@@ -116,12 +157,22 @@ export function QuickStartCards() {
           onClick={() => navigate(`/pakiet/${fiszkiCard.pack.id}/fiszki-start`)}
         >
           <div className="quickstart__card-top">
-            <span className="quickstart__label">TRENUJ</span>
             <span className="quickstart__icon">⚡</span>
+            <span className="quickstart__label">TRENUJ</span>
           </div>
           <span className="quickstart__title">{fiszkiCard.pack.name}</span>
-          <span className="quickstart__sub--main">Ucz się głęboko</span>
-          <span className="quickstart__sub">{fiszkiCard.pack.wordCount} słów do nauki</span>
+          <div className="quickstart__bottom">
+            {WAVEFORM}
+            <span className="quickstart__bottom-text">
+              <span className="quickstart__sub--main">Ucz się głęboko</span>
+              <span className="quickstart__sub">
+                {fiszkiKnown > 0
+                  ? `Zostało ${trainRemaining} z ${fiszkiCard.pack.wordCount} ${slowaForm(fiszkiCard.pack.wordCount)}`
+                  : `${fiszkiCard.pack.wordCount} ${slowaForm(fiszkiCard.pack.wordCount)} do nauki`}
+              </span>
+            </span>
+            {GO_ARROW}
+          </div>
         </button>
         <button
           className={`quickstart__info-btn${activeInfo === 'aktywuj' ? ' quickstart__info-btn--active' : ''}`}
