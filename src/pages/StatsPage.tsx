@@ -12,6 +12,10 @@ import './StatsPage.css'
 
 const allPacks = packagesIndex as PackMeta[]
 
+function levelLabel(level: number | 'MASTER'): string {
+  return level === 'MASTER' ? 'MASTER' : `Level ${level}`
+}
+
 export function StatsPage() {
   const { streak, knownWords, sessionCount, masteredPacks, totalWordsHeard, estimatedMinutes, activity, levelStats, loading, tick } = useStats()
   const snapshot = useProgressData()
@@ -55,9 +59,9 @@ export function StatsPage() {
                   <div className="statspage__level-meta">
                     <span className="statspage__level-pct">{levelPct}%</span>
                     {wordsToNext != null && levelStats.nextLevel ? (
-                      <span className="statspage__level-hint">{wordsToNext} słów do Level {levelStats.nextLevel}</span>
+                      <span className="statspage__level-hint">{wordsToNext} słów do {levelLabel(levelStats.nextLevel)}</span>
                     ) : (
-                      <span className="statspage__level-hint">Maks. poziom osiągnięty ★</span>
+                      <span className="statspage__level-hint">MASTER osiągnięty ★</span>
                     )}
                   </div>
                 </div>
@@ -87,13 +91,13 @@ export function StatsPage() {
               {levelStats?.nextLevel ? (
                 <StatCard
                   value={levelStats.daysToNextLevel ?? '—'}
-                  label={`dni do Level ${levelStats.nextLevel}`}
+                  label={`dni do ${levelLabel(levelStats.nextLevel)}`}
                   icon="🎯"
                   accentColor="var(--accent)"
                 />
               ) : (
                 <StatCard
-                  value="MAX"
+                  value="MASTER"
                   label="poziom słownictwa"
                   icon="🎯"
                   accentColor="var(--accent)"

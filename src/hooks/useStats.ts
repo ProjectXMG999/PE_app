@@ -5,7 +5,7 @@ import { loadProgressSnapshot, avgWordsPerDay } from './useProgressData'
 
 export interface LevelStats {
   avgWordsPerDay: number
-  nextLevel: number | null
+  nextLevel: number | 'MASTER' | null
   nextLevelWords: number | null
   levelPct: number
   daysToNextLevel: number | null

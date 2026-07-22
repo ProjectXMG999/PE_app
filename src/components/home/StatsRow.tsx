@@ -44,7 +44,7 @@ export function StatsRow() {
           {daysTo ?? (next ? '—' : '✓')}
         </span>
         <span className="statsrow__label--solo">
-          {next ? `dni do Level ${next.level}` : 'maks.'}
+          {next ? `dni do ${next.level === 'MASTER' ? 'MASTER' : `Level ${next.level}`}` : 'MASTER'}
         </span>
       </div>
     </div>
