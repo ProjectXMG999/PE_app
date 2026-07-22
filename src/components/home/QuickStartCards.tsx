@@ -40,14 +40,6 @@ const GO_ARROW = (
   </span>
 )
 
-function slowaForm(n: number): string {
-  if (n === 1) return 'słowo'
-  const d = n % 10
-  const h = n % 100
-  if (d >= 2 && d <= 4 && (h < 12 || h > 14)) return 'słowa'
-  return 'słów'
-}
-
 const packs = packagesIndex as PackMeta[]
 
 interface QuickCard {
@@ -108,9 +100,8 @@ export function QuickStartCards() {
     )
   }
 
-  const listenStarted = autoplayCard.startIndex > 0
   const listenPct = Math.round((autoplayCard.startIndex / autoplayCard.pack.wordCount) * 100)
-  const trainRemaining = fiszkiCard.pack.wordCount - fiszkiKnown
+  const trainPct = fiszkiCard.pack.wordCount > 0 ? Math.round((fiszkiKnown / fiszkiCard.pack.wordCount) * 100) : 0
 
   return (
     <div className="quickstart" ref={wrapRef}>
@@ -121,22 +112,16 @@ export function QuickStartCards() {
         >
           <div className="quickstart__card-top">
             <span className="quickstart__icon">🎧</span>
-            <span className="quickstart__label">SŁUCHAJ</span>
+            <span className="quickstart__label-group">
+              <span className="quickstart__label-eyebrow">Kontynuuj</span>
+              <span className="quickstart__label">Słuchaj</span>
+            </span>
           </div>
           <span className="quickstart__title">{autoplayCard.pack.name}</span>
           <div className="quickstart__bottom">
             {WAVEFORM}
-            <span className="quickstart__bottom-text">
-              <span className="quickstart__sub--main">
-                {listenStarted
-                  ? `Słowo ${autoplayCard.startIndex + 1} z ${autoplayCard.pack.wordCount} • ${listenPct}%`
-                  : `${autoplayCard.pack.wordCount} ${slowaForm(autoplayCard.pack.wordCount)} • od początku`}
-              </span>
-              {listenStarted && (
-                <span className="quickstart__bar">
-                  <span style={{ width: `${listenPct}%` }} />
-                </span>
-              )}
+            <span className="quickstart__bar">
+              <span style={{ width: `${listenPct}%` }} />
             </span>
             {GO_ARROW}
           </div>
@@ -157,17 +142,16 @@ export function QuickStartCards() {
         >
           <div className="quickstart__card-top">
             <span className="quickstart__icon">⚡</span>
-            <span className="quickstart__label">TRENUJ</span>
+            <span className="quickstart__label-group">
+              <span className="quickstart__label-eyebrow">Kontynuuj</span>
+              <span className="quickstart__label">Trening</span>
+            </span>
           </div>
           <span className="quickstart__title">{fiszkiCard.pack.name}</span>
           <div className="quickstart__bottom">
             {WAVEFORM}
-            <span className="quickstart__bottom-text">
-              <span className="quickstart__sub--main">
-                {fiszkiKnown > 0
-                  ? `Zostało ${trainRemaining} z ${fiszkiCard.pack.wordCount} ${slowaForm(fiszkiCard.pack.wordCount)}`
-                  : `${fiszkiCard.pack.wordCount} ${slowaForm(fiszkiCard.pack.wordCount)} do nauki`}
-              </span>
+            <span className="quickstart__bar">
+              <span style={{ width: `${trainPct}%` }} />
             </span>
             {GO_ARROW}
           </div>
