@@ -14,7 +14,8 @@
       "sentencePl": "Zadzwoń na policję!",
       "audioWord": "t1-p052-001-word.mp3",
       "audioWordPl": "t1-p052-001-word-pl.mp3",
-      "audioSentence": "t1-p052-001-sentence.mp3"
+      "audioSentence": "t1-p052-001-sentence.mp3",
+      "audioSentencePl": "t1-p052-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p052-002",
@@ -24,7 +25,8 @@
       "sentencePl": "O mój Boże!",
       "audioWord": "t1-p052-002-word.mp3",
       "audioWordPl": "t1-p052-002-word-pl.mp3",
-      "audioSentence": "t1-p052-002-sentence.mp3"
+      "audioSentence": "t1-p052-002-sentence.mp3",
+      "audioSentencePl": "t1-p052-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p052-003",
@@ -34,7 +36,8 @@
       "sentencePl": "Pokaż dowód osobisty.",
       "audioWord": "t1-p052-003-word.mp3",
       "audioWordPl": "t1-p052-003-word-pl.mp3",
-      "audioSentence": "t1-p052-003-sentence.mp3"
+      "audioSentence": "t1-p052-003-sentence.mp3",
+      "audioSentencePl": "t1-p052-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p052-004",
@@ -44,7 +47,8 @@
       "sentencePl": "Posadziliśmy drzewo.",
       "audioWord": "t1-p052-004-word.mp3",
       "audioWordPl": "t1-p052-004-word-pl.mp3",
-      "audioSentence": "t1-p052-004-sentence.mp3"
+      "audioSentence": "t1-p052-004-sentence.mp3",
+      "audioSentencePl": "t1-p052-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p052-005",
@@ -54,7 +58,8 @@
       "sentencePl": "Maszyna się zepsuła.",
       "audioWord": "t1-p052-005-word.mp3",
       "audioWordPl": "t1-p052-005-word-pl.mp3",
-      "audioSentence": "t1-p052-005-sentence.mp3"
+      "audioSentence": "t1-p052-005-sentence.mp3",
+      "audioSentencePl": "t1-p052-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p052-006",
@@ -64,7 +69,8 @@
       "sentencePl": "Jestem w dobrym nastroju.",
       "audioWord": "t1-p052-006-word.mp3",
       "audioWordPl": "t1-p052-006-word-pl.mp3",
-      "audioSentence": "t1-p052-006-sentence.mp3"
+      "audioSentence": "t1-p052-006-sentence.mp3",
+      "audioSentencePl": "t1-p052-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p052-007",
@@ -74,17 +80,19 @@
       "sentencePl": "To dobry start.",
       "audioWord": "t1-p052-007-word.mp3",
       "audioWordPl": "t1-p052-007-word-pl.mp3",
-      "audioSentence": "t1-p052-007-sentence.mp3"
+      "audioSentence": "t1-p052-007-sentence.mp3",
+      "audioSentencePl": "t1-p052-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p052-008",
       "english": "Weight",
       "polish": "Waga",
       "sentenceEn": "I want to lose weight.",
-      "sentencePl": "Chcę zrzucić wagę.",
+      "sentencePl": "Chcę schudnąć.",
       "audioWord": "t1-p052-008-word.mp3",
       "audioWordPl": "t1-p052-008-word-pl.mp3",
-      "audioSentence": "t1-p052-008-sentence.mp3"
+      "audioSentence": "t1-p052-008-sentence.mp3",
+      "audioSentencePl": "t1-p052-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p052-009",
@@ -94,7 +102,8 @@
       "sentencePl": "Spotykamy się w Wigilię.",
       "audioWord": "t1-p052-009-word.mp3",
       "audioWordPl": "t1-p052-009-word-pl.mp3",
-      "audioSentence": "t1-p052-009-sentence.mp3"
+      "audioSentence": "t1-p052-009-sentence.mp3",
+      "audioSentencePl": "t1-p052-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p052-010",
@@ -104,7 +113,8 @@
       "sentencePl": "Jaki jest twój wzrost?",
       "audioWord": "t1-p052-010-word.mp3",
       "audioWordPl": "t1-p052-010-word-pl.mp3",
-      "audioSentence": "t1-p052-010-sentence.mp3"
+      "audioSentence": "t1-p052-010-sentence.mp3",
+      "audioSentencePl": "t1-p052-010-sentence-pl.mp3"
     }
   ]
 }

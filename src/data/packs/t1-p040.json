@@ -14,7 +14,8 @@
       "sentencePl": "Jestem zmęczony, ale szczęśliwy.",
       "audioWord": "t1-p040-001-word.mp3",
       "audioWordPl": "t1-p040-001-word-pl.mp3",
-      "audioSentence": "t1-p040-001-sentence.mp3"
+      "audioSentence": "t1-p040-001-sentence.mp3",
+      "audioSentencePl": "t1-p040-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p040-002",
@@ -24,7 +25,8 @@
       "sentencePl": "Cóż, zacznijmy.",
       "audioWord": "t1-p040-002-word.mp3",
       "audioWordPl": "t1-p040-002-word-pl.mp3",
-      "audioSentence": "t1-p040-002-sentence.mp3"
+      "audioSentence": "t1-p040-002-sentence.mp3",
+      "audioSentencePl": "t1-p040-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p040-003",
@@ -34,7 +36,8 @@
       "sentencePl": "Ten prezent jest dla ciebie.",
       "audioWord": "t1-p040-003-word.mp3",
       "audioWordPl": "t1-p040-003-word-pl.mp3",
-      "audioSentence": "t1-p040-003-sentence.mp3"
+      "audioSentence": "t1-p040-003-sentence.mp3",
+      "audioSentencePl": "t1-p040-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p040-004",
@@ -44,7 +47,8 @@
       "sentencePl": "Sól i pieprz, proszę.",
       "audioWord": "t1-p040-004-word.mp3",
       "audioWordPl": "t1-p040-004-word-pl.mp3",
-      "audioSentence": "t1-p040-004-sentence.mp3"
+      "audioSentence": "t1-p040-004-sentence.mp3",
+      "audioSentencePl": "t1-p040-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p040-005",
@@ -54,7 +58,8 @@
       "sentencePl": "Jeśli potrzebujesz pomocy, poproś.",
       "audioWord": "t1-p040-005-word.mp3",
       "audioWordPl": "t1-p040-005-word-pl.mp3",
-      "audioSentence": "t1-p040-005-sentence.mp3"
+      "audioSentence": "t1-p040-005-sentence.mp3",
+      "audioSentencePl": "t1-p040-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p040-006",
@@ -64,17 +69,19 @@
       "sentencePl": "Nie, dziękuję.",
       "audioWord": "t1-p040-006-word.mp3",
       "audioWordPl": "t1-p040-006-word-pl.mp3",
-      "audioSentence": "t1-p040-006-sentence.mp3"
+      "audioSentence": "t1-p040-006-sentence.mp3",
+      "audioSentencePl": "t1-p040-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p040-007",
       "english": "Yes",
       "polish": "Tak",
       "sentenceEn": "Yes, I agree.",
-      "sentencePl": "Tak, się zgadzam.",
+      "sentencePl": "Tak, zgadzam się.",
       "audioWord": "t1-p040-007-word.mp3",
       "audioWordPl": "t1-p040-007-word-pl.mp3",
-      "audioSentence": "t1-p040-007-sentence.mp3"
+      "audioSentence": "t1-p040-007-sentence.mp3",
+      "audioSentencePl": "t1-p040-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p040-008",
@@ -84,7 +91,8 @@
       "sentencePl": "Więc jaki jest plan?",
       "audioWord": "t1-p040-008-word.mp3",
       "audioWordPl": "t1-p040-008-word-pl.mp3",
-      "audioSentence": "t1-p040-008-sentence.mp3"
+      "audioSentence": "t1-p040-008-sentence.mp3",
+      "audioSentencePl": "t1-p040-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p040-009",
@@ -94,7 +102,8 @@
       "sentencePl": "Wszyscy się zgodziliśmy.",
       "audioWord": "t1-p040-009-word.mp3",
       "audioWordPl": "t1-p040-009-word-pl.mp3",
-      "audioSentence": "t1-p040-009-sentence.mp3"
+      "audioSentence": "t1-p040-009-sentence.mp3",
+      "audioSentencePl": "t1-p040-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p040-010",
@@ -104,7 +113,8 @@
       "sentencePl": "Oszczędzałem pieniądze, żeby podróżować.",
       "audioWord": "t1-p040-010-word.mp3",
       "audioWordPl": "t1-p040-010-word-pl.mp3",
-      "audioSentence": "t1-p040-010-sentence.mp3"
+      "audioSentence": "t1-p040-010-sentence.mp3",
+      "audioSentencePl": "t1-p040-010-sentence-pl.mp3"
     }
   ]
 }

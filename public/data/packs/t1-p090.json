@@ -14,7 +14,8 @@
       "sentencePl": "Ten korek naprawdę jest do dupy.",
       "audioWord": "t1-p090-001-word.mp3",
       "audioWordPl": "t1-p090-001-word-pl.mp3",
-      "audioSentence": "t1-p090-001-sentence.mp3"
+      "audioSentence": "t1-p090-001-sentence.mp3",
+      "audioSentencePl": "t1-p090-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p090-002",
@@ -24,7 +25,8 @@
       "sentencePl": "On ma wyjebane na zasady.",
       "audioWord": "t1-p090-002-word.mp3",
       "audioWordPl": "t1-p090-002-word-pl.mp3",
-      "audioSentence": "t1-p090-002-sentence.mp3"
+      "audioSentence": "t1-p090-002-sentence.mp3",
+      "audioSentencePl": "t1-p090-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p090-003",
@@ -34,7 +36,8 @@
       "sentencePl": "Mam już wszystko wyjebane!",
       "audioWord": "t1-p090-003-word.mp3",
       "audioWordPl": "t1-p090-003-word-pl.mp3",
-      "audioSentence": "t1-p090-003-sentence.mp3"
+      "audioSentence": "t1-p090-003-sentence.mp3",
+      "audioSentencePl": "t1-p090-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p090-004",
@@ -44,7 +47,8 @@
       "sentencePl": "Szczerze, mam to w dupie!",
       "audioWord": "t1-p090-004-word.mp3",
       "audioWordPl": "t1-p090-004-word-pl.mp3",
-      "audioSentence": "t1-p090-004-sentence.mp3"
+      "audioSentence": "t1-p090-004-sentence.mp3",
+      "audioSentencePl": "t1-p090-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p090-005",
@@ -54,7 +58,8 @@
       "sentencePl": "Jasna cholera, to zabolało!",
       "audioWord": "t1-p090-005-word.mp3",
       "audioWordPl": "t1-p090-005-word-pl.mp3",
-      "audioSentence": "t1-p090-005-sentence.mp3"
+      "audioSentence": "t1-p090-005-sentence.mp3",
+      "audioSentencePl": "t1-p090-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p090-006",
@@ -64,7 +69,8 @@
       "sentencePl": "Przestań być takim chamem.",
       "audioWord": "t1-p090-006-word.mp3",
       "audioWordPl": "t1-p090-006-word-pl.mp3",
-      "audioSentence": "t1-p090-006-sentence.mp3"
+      "audioSentence": "t1-p090-006-sentence.mp3",
+      "audioSentencePl": "t1-p090-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p090-007",
@@ -74,7 +80,8 @@
       "sentencePl": "Nazwał ją pizdą.",
       "audioWord": "t1-p090-007-word.mp3",
       "audioWordPl": "t1-p090-007-word-pl.mp3",
-      "audioSentence": "t1-p090-007-sentence.mp3"
+      "audioSentence": "t1-p090-007-sentence.mp3",
+      "audioSentencePl": "t1-p090-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p090-008",
@@ -84,17 +91,19 @@
       "sentencePl": "Nie nazywaj jej dziwką.",
       "audioWord": "t1-p090-008-word.mp3",
       "audioWordPl": "t1-p090-008-word-pl.mp3",
-      "audioSentence": "t1-p090-008-sentence.mp3"
+      "audioSentence": "t1-p090-008-sentence.mp3",
+      "audioSentencePl": "t1-p090-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p090-009",
       "english": "Ho",
-      "polish": "Dzieweczka",
+      "polish": "Dziwka",
       "sentenceEn": "Stop acting like a ho.",
       "sentencePl": "Przestań się zachowywać jak dziwka.",
       "audioWord": "t1-p090-009-word.mp3",
       "audioWordPl": "t1-p090-009-word-pl.mp3",
-      "audioSentence": "t1-p090-009-sentence.mp3"
+      "audioSentence": "t1-p090-009-sentence.mp3",
+      "audioSentencePl": "t1-p090-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p090-010",
@@ -104,7 +113,8 @@
       "sentencePl": "Nazwał ją kurwą.",
       "audioWord": "t1-p090-010-word.mp3",
       "audioWordPl": "t1-p090-010-word-pl.mp3",
-      "audioSentence": "t1-p090-010-sentence.mp3"
+      "audioSentence": "t1-p090-010-sentence.mp3",
+      "audioSentencePl": "t1-p090-010-sentence-pl.mp3"
     }
   ]
 }

@@ -14,7 +14,8 @@
       "sentencePl": "Spakuj zapasową bieliznę.",
       "audioWord": "t1-p006-001-word.mp3",
       "audioWordPl": "t1-p006-001-word-pl.mp3",
-      "audioSentence": "t1-p006-001-sentence.mp3"
+      "audioSentence": "t1-p006-001-sentence.mp3",
+      "audioSentencePl": "t1-p006-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p006-002",
@@ -24,7 +25,8 @@
       "sentencePl": "Zdejmij buty.",
       "audioWord": "t1-p006-002-word.mp3",
       "audioWordPl": "t1-p006-002-word-pl.mp3",
-      "audioSentence": "t1-p006-002-sentence.mp3"
+      "audioSentence": "t1-p006-002-sentence.mp3",
+      "audioSentencePl": "t1-p006-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p006-003",
@@ -34,7 +36,8 @@
       "sentencePl": "Te dżinsy pasują idealnie.",
       "audioWord": "t1-p006-003-word.mp3",
       "audioWordPl": "t1-p006-003-word-pl.mp3",
-      "audioSentence": "t1-p006-003-sentence.mp3"
+      "audioSentence": "t1-p006-003-sentence.mp3",
+      "audioSentencePl": "t1-p006-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p006-004",
@@ -44,7 +47,8 @@
       "sentencePl": "Wpuść koszulę w spodnie.",
       "audioWord": "t1-p006-004-word.mp3",
       "audioWordPl": "t1-p006-004-word-pl.mp3",
-      "audioSentence": "t1-p006-004-sentence.mp3"
+      "audioSentence": "t1-p006-004-sentence.mp3",
+      "audioSentencePl": "t1-p006-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p006-005",
@@ -54,7 +58,8 @@
       "sentencePl": "Potrzebuję moich okularów.",
       "audioWord": "t1-p006-005-word.mp3",
       "audioWordPl": "t1-p006-005-word-pl.mp3",
-      "audioSentence": "t1-p006-005-sentence.mp3"
+      "audioSentence": "t1-p006-005-sentence.mp3",
+      "audioSentencePl": "t1-p006-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p006-006",
@@ -64,7 +69,8 @@
       "sentencePl": "Załóż ciepłe skarpetki.",
       "audioWord": "t1-p006-006-word.mp3",
       "audioWordPl": "t1-p006-006-word-pl.mp3",
-      "audioSentence": "t1-p006-006-sentence.mp3"
+      "audioSentence": "t1-p006-006-sentence.mp3",
+      "audioSentencePl": "t1-p006-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p006-007",
@@ -74,7 +80,8 @@
       "sentencePl": "Te spodnie są za ciasne.",
       "audioWord": "t1-p006-007-word.mp3",
       "audioWordPl": "t1-p006-007-word-pl.mp3",
-      "audioSentence": "t1-p006-007-sentence.mp3"
+      "audioSentence": "t1-p006-007-sentence.mp3",
+      "audioSentencePl": "t1-p006-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p006-008",
@@ -84,17 +91,19 @@
       "sentencePl": "Kupiłem zwykły t-shirt.",
       "audioWord": "t1-p006-008-word.mp3",
       "audioWordPl": "t1-p006-008-word-pl.mp3",
-      "audioSentence": "t1-p006-008-sentence.mp3"
+      "audioSentence": "t1-p006-008-sentence.mp3",
+      "audioSentencePl": "t1-p006-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p006-009",
       "english": "Bag",
-      "polish": "Torebka",
+      "polish": "Torba",
       "sentenceEn": "Grab your bag, let's go.",
       "sentencePl": "Weź swoją torbę, chodźmy.",
       "audioWord": "t1-p006-009-word.mp3",
       "audioWordPl": "t1-p006-009-word-pl.mp3",
-      "audioSentence": "t1-p006-009-sentence.mp3"
+      "audioSentence": "t1-p006-009-sentence.mp3",
+      "audioSentencePl": "t1-p006-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p006-010",
@@ -104,7 +113,8 @@
       "sentencePl": "Poskładaj czyste ubrania.",
       "audioWord": "t1-p006-010-word.mp3",
       "audioWordPl": "t1-p006-010-word-pl.mp3",
-      "audioSentence": "t1-p006-010-sentence.mp3"
+      "audioSentence": "t1-p006-010-sentence.mp3",
+      "audioSentencePl": "t1-p006-010-sentence-pl.mp3"
     }
   ]
 }

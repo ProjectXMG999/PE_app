@@ -14,7 +14,8 @@
       "sentencePl": "Jesteś gotowy do wyjścia?",
       "audioWord": "t1-p019-001-word.mp3",
       "audioWordPl": "t1-p019-001-word-pl.mp3",
-      "audioSentence": "t1-p019-001-sentence.mp3"
+      "audioSentence": "t1-p019-001-sentence.mp3",
+      "audioSentencePl": "t1-p019-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p019-002",
@@ -24,17 +25,19 @@
       "sentencePl": "Wszystko jest w porządku.",
       "audioWord": "t1-p019-002-word.mp3",
       "audioWordPl": "t1-p019-002-word-pl.mp3",
-      "audioSentence": "t1-p019-002-sentence.mp3"
+      "audioSentence": "t1-p019-002-sentence.mp3",
+      "audioSentencePl": "t1-p019-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p019-003",
       "english": "Happy",
-      "polish": "Wesoły",
+      "polish": "Szczęśliwy",
       "sentenceEn": "I'm really happy today.",
       "sentencePl": "Jestem dziś naprawdę szczęśliwy.",
       "audioWord": "t1-p019-003-word.mp3",
       "audioWordPl": "t1-p019-003-word-pl.mp3",
-      "audioSentence": "t1-p019-003-sentence.mp3"
+      "audioSentence": "t1-p019-003-sentence.mp3",
+      "audioSentencePl": "t1-p019-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p019-004",
@@ -44,7 +47,8 @@
       "sentencePl": "Jedź bezpiecznie, proszę.",
       "audioWord": "t1-p019-004-word.mp3",
       "audioWordPl": "t1-p019-004-word-pl.mp3",
-      "audioSentence": "t1-p019-004-sentence.mp3"
+      "audioSentence": "t1-p019-004-sentence.mp3",
+      "audioSentencePl": "t1-p019-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p019-005",
@@ -54,7 +58,8 @@
       "sentencePl": "Ten egzamin był trudny.",
       "audioWord": "t1-p019-005-word.mp3",
       "audioWordPl": "t1-p019-005-word-pl.mp3",
-      "audioSentence": "t1-p019-005-sentence.mp3"
+      "audioSentence": "t1-p019-005-sentence.mp3",
+      "audioSentencePl": "t1-p019-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p019-006",
@@ -64,7 +69,8 @@
       "sentencePl": "Ta decyzja jest ważna.",
       "audioWord": "t1-p019-006-word.mp3",
       "audioWordPl": "t1-p019-006-word-pl.mp3",
-      "audioSentence": "t1-p019-006-sentence.mp3"
+      "audioSentence": "t1-p019-006-sentence.mp3",
+      "audioSentencePl": "t1-p019-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p019-007",
@@ -74,7 +80,8 @@
       "sentencePl": "Ta kawa jest naprawdę dobra.",
       "audioWord": "t1-p019-007-word.mp3",
       "audioWordPl": "t1-p019-007-word-pl.mp3",
-      "audioSentence": "t1-p019-007-sentence.mp3"
+      "audioSentence": "t1-p019-007-sentence.mp3",
+      "audioSentencePl": "t1-p019-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p019-008",
@@ -84,7 +91,8 @@
       "sentencePl": "To zadanie wygląda łatwo.",
       "audioWord": "t1-p019-008-word.mp3",
       "audioWordPl": "t1-p019-008-word-pl.mp3",
-      "audioSentence": "t1-p019-008-sentence.mp3"
+      "audioSentence": "t1-p019-008-sentence.mp3",
+      "audioSentencePl": "t1-p019-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p019-009",
@@ -94,7 +102,8 @@
       "sentencePl": "Jaki jest twój ulubiony kolor?",
       "audioWord": "t1-p019-009-word.mp3",
       "audioWordPl": "t1-p019-009-word-pl.mp3",
-      "audioSentence": "t1-p019-009-sentence.mp3"
+      "audioSentence": "t1-p019-009-sentence.mp3",
+      "audioSentencePl": "t1-p019-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p019-010",
@@ -104,7 +113,8 @@
       "sentencePl": "To był zły pomysł.",
       "audioWord": "t1-p019-010-word.mp3",
       "audioWordPl": "t1-p019-010-word-pl.mp3",
-      "audioSentence": "t1-p019-010-sentence.mp3"
+      "audioSentence": "t1-p019-010-sentence.mp3",
+      "audioSentencePl": "t1-p019-010-sentence-pl.mp3"
     }
   ]
 }

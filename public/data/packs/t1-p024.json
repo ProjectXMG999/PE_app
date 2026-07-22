@@ -11,10 +11,11 @@
       "english": "For real",
       "polish": "Serio, serio",
       "sentenceEn": "Are you serious? For real?",
-      "sentencePl": "Mówisz poważnie? Serio, serio?",
+      "sentencePl": "Mówisz poważnie? Serio?",
       "audioWord": "t1-p024-001-word.mp3",
       "audioWordPl": "t1-p024-001-word-pl.mp3",
-      "audioSentence": "t1-p024-001-sentence.mp3"
+      "audioSentence": "t1-p024-001-sentence.mp3",
+      "audioSentencePl": "t1-p024-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p024-002",
@@ -24,7 +25,8 @@
       "sentencePl": "Ta wymówka jest taka słaba.",
       "audioWord": "t1-p024-002-word.mp3",
       "audioWordPl": "t1-p024-002-word-pl.mp3",
-      "audioSentence": "t1-p024-002-sentence.mp3"
+      "audioSentence": "t1-p024-002-sentence.mp3",
+      "audioSentencePl": "t1-p024-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p024-003",
@@ -34,17 +36,19 @@
       "sentencePl": "Dzięki, kumplu!",
       "audioWord": "t1-p024-003-word.mp3",
       "audioWordPl": "t1-p024-003-word-pl.mp3",
-      "audioSentence": "t1-p024-003-sentence.mp3"
+      "audioSentence": "t1-p024-003-sentence.mp3",
+      "audioSentencePl": "t1-p024-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p024-004",
       "english": "Y'all",
-      "polish": "Siema wszyscy",
+      "polish": "Wy wszyscy",
       "sentenceEn": "Y'all should come over.",
       "sentencePl": "Powinniście wpaść, wszyscy.",
       "audioWord": "t1-p024-004-word.mp3",
       "audioWordPl": "t1-p024-004-word-pl.mp3",
-      "audioSentence": "t1-p024-004-sentence.mp3"
+      "audioSentence": "t1-p024-004-sentence.mp3",
+      "audioSentencePl": "t1-p024-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p024-005",
@@ -54,7 +58,8 @@
       "sentencePl": "Nie bądź mądralą.",
       "audioWord": "t1-p024-005-word.mp3",
       "audioWordPl": "t1-p024-005-word-pl.mp3",
-      "audioSentence": "t1-p024-005-sentence.mp3"
+      "audioSentence": "t1-p024-005-sentence.mp3",
+      "audioSentencePl": "t1-p024-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p024-006",
@@ -64,17 +69,19 @@
       "sentencePl": "Przestań nazywać go przegrywem.",
       "audioWord": "t1-p024-006-word.mp3",
       "audioWordPl": "t1-p024-006-word-pl.mp3",
-      "audioSentence": "t1-p024-006-sentence.mp3"
+      "audioSentence": "t1-p024-006-sentence.mp3",
+      "audioSentencePl": "t1-p024-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p024-007",
       "english": "Player",
-      "polish": "Ostry zawodnik",
+      "polish": "Podrywacz",
       "sentenceEn": "He's known as a player.",
       "sentencePl": "Jest znany jako ostry zawodnik.",
       "audioWord": "t1-p024-007-word.mp3",
       "audioWordPl": "t1-p024-007-word-pl.mp3",
-      "audioSentence": "t1-p024-007-sentence.mp3"
+      "audioSentence": "t1-p024-007-sentence.mp3",
+      "audioSentencePl": "t1-p024-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p024-008",
@@ -84,7 +91,8 @@
       "sentencePl": "Gliniarz zatrzymał mój samochód.",
       "audioWord": "t1-p024-008-word.mp3",
       "audioWordPl": "t1-p024-008-word-pl.mp3",
-      "audioSentence": "t1-p024-008-sentence.mp3"
+      "audioSentence": "t1-p024-008-sentence.mp3",
+      "audioSentencePl": "t1-p024-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p024-009",
@@ -94,7 +102,8 @@
       "sentencePl": "Ona jest moim nowym zauroczeniem.",
       "audioWord": "t1-p024-009-word.mp3",
       "audioWordPl": "t1-p024-009-word-pl.mp3",
-      "audioSentence": "t1-p024-009-sentence.mp3"
+      "audioSentence": "t1-p024-009-sentence.mp3",
+      "audioSentencePl": "t1-p024-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p024-010",
@@ -104,7 +113,8 @@
       "sentencePl": "Po prostu zawsze bądź sobą.",
       "audioWord": "t1-p024-010-word.mp3",
       "audioWordPl": "t1-p024-010-word-pl.mp3",
-      "audioSentence": "t1-p024-010-sentence.mp3"
+      "audioSentence": "t1-p024-010-sentence.mp3",
+      "audioSentencePl": "t1-p024-010-sentence-pl.mp3"
     }
   ]
 }

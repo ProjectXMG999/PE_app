@@ -14,7 +14,8 @@
       "sentencePl": "On jest znanym aktorem.",
       "audioWord": "t1-p109-001-word.mp3",
       "audioWordPl": "t1-p109-001-word-pl.mp3",
-      "audioSentence": "t1-p109-001-sentence.mp3"
+      "audioSentence": "t1-p109-001-sentence.mp3",
+      "audioSentencePl": "t1-p109-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p109-002",
@@ -24,7 +25,8 @@
       "sentencePl": "Ona jest moją ulubioną aktorką.",
       "audioWord": "t1-p109-002-word.mp3",
       "audioWordPl": "t1-p109-002-word-pl.mp3",
-      "audioSentence": "t1-p109-002-sentence.mp3"
+      "audioSentence": "t1-p109-002-sentence.mp3",
+      "audioSentencePl": "t1-p109-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p109-003",
@@ -34,7 +36,8 @@
       "sentencePl": "Strażak pomaga.",
       "audioWord": "t1-p109-003-word.mp3",
       "audioWordPl": "t1-p109-003-word-pl.mp3",
-      "audioSentence": "t1-p109-003-sentence.mp3"
+      "audioSentence": "t1-p109-003-sentence.mp3",
+      "audioSentencePl": "t1-p109-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p109-004",
@@ -44,7 +47,8 @@
       "sentencePl": "Mój wujek jest architektem.",
       "audioWord": "t1-p109-004-word.mp3",
       "audioWordPl": "t1-p109-004-word-pl.mp3",
-      "audioSentence": "t1-p109-004-sentence.mp3"
+      "audioSentence": "t1-p109-004-sentence.mp3",
+      "audioSentencePl": "t1-p109-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p109-005",
@@ -54,7 +58,8 @@
       "sentencePl": "Zatrudniłem nowego asystenta.",
       "audioWord": "t1-p109-005-word.mp3",
       "audioWordPl": "t1-p109-005-word-pl.mp3",
-      "audioSentence": "t1-p109-005-sentence.mp3"
+      "audioSentence": "t1-p109-005-sentence.mp3",
+      "audioSentencePl": "t1-p109-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p109-006",
@@ -64,7 +69,8 @@
       "sentencePl": "Mam wizytę u dentysty.",
       "audioWord": "t1-p109-006-word.mp3",
       "audioWordPl": "t1-p109-006-word-pl.mp3",
-      "audioSentence": "t1-p109-006-sentence.mp3"
+      "audioSentence": "t1-p109-006-sentence.mp3",
+      "audioSentencePl": "t1-p109-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p109-007",
@@ -74,17 +80,19 @@
       "sentencePl": "Detektyw rozwiązał sprawę.",
       "audioWord": "t1-p109-007-word.mp3",
       "audioWordPl": "t1-p109-007-word-pl.mp3",
-      "audioSentence": "t1-p109-007-sentence.mp3"
+      "audioSentence": "t1-p109-007-sentence.mp3",
+      "audioSentencePl": "t1-p109-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p109-008",
       "english": "Director",
       "polish": "Dyrektor",
-      "sentenceEn": "She's the director of this film.",
-      "sentencePl": "Ona jest reżyserką tego filmu.",
+      "sentenceEn": "He is the director of the company.",
+      "sentencePl": "On jest dyrektorem firmy.",
       "audioWord": "t1-p109-008-word.mp3",
       "audioWordPl": "t1-p109-008-word-pl.mp3",
-      "audioSentence": "t1-p109-008-sentence.mp3"
+      "audioSentence": "t1-p109-008-sentence.mp3",
+      "audioSentencePl": "t1-p109-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p109-009",
@@ -94,7 +102,8 @@
       "sentencePl": "On pracuje jako dziennikarz.",
       "audioWord": "t1-p109-009-word.mp3",
       "audioWordPl": "t1-p109-009-word-pl.mp3",
-      "audioSentence": "t1-p109-009-sentence.mp3"
+      "audioSentence": "t1-p109-009-sentence.mp3",
+      "audioSentencePl": "t1-p109-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p109-010",
@@ -104,7 +113,8 @@
       "sentencePl": "Wynajęliśmy fotografa ślubnego.",
       "audioWord": "t1-p109-010-word.mp3",
       "audioWordPl": "t1-p109-010-word-pl.mp3",
-      "audioSentence": "t1-p109-010-sentence.mp3"
+      "audioSentence": "t1-p109-010-sentence.mp3",
+      "audioSentencePl": "t1-p109-010-sentence-pl.mp3"
     }
   ]
 }

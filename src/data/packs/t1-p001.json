@@ -14,7 +14,8 @@
       "sentencePl": "Jestem szczęśliwy.",
       "audioWord": "t1-p001-001-word.mp3",
       "audioWordPl": "t1-p001-001-word-pl.mp3",
-      "audioSentence": "t1-p001-001-sentence.mp3"
+      "audioSentence": "t1-p001-001-sentence.mp3",
+      "audioSentencePl": "t1-p001-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p001-002",
@@ -24,7 +25,8 @@
       "sentencePl": "Możesz to zrobić.",
       "audioWord": "t1-p001-002-word.mp3",
       "audioWordPl": "t1-p001-002-word-pl.mp3",
-      "audioSentence": "t1-p001-002-sentence.mp3"
+      "audioSentence": "t1-p001-002-sentence.mp3",
+      "audioSentencePl": "t1-p001-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p001-003",
@@ -34,7 +36,8 @@
       "sentencePl": "Co robisz?",
       "audioWord": "t1-p001-003-word.mp3",
       "audioWordPl": "t1-p001-003-word-pl.mp3",
-      "audioSentence": "t1-p001-003-sentence.mp3"
+      "audioSentence": "t1-p001-003-sentence.mp3",
+      "audioSentencePl": "t1-p001-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p001-004",
@@ -44,27 +47,30 @@
       "sentencePl": "Znalazłem moje klucze.",
       "audioWord": "t1-p001-004-word.mp3",
       "audioWordPl": "t1-p001-004-word-pl.mp3",
-      "audioSentence": "t1-p001-004-sentence.mp3"
+      "audioSentence": "t1-p001-004-sentence.mp3",
+      "audioSentencePl": "t1-p001-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p001-005",
       "english": "Get",
       "polish": "Dostawać",
-      "sentenceEn": "I get up at 7.",
-      "sentencePl": "Wstaję o 7.",
+      "sentenceEn": "I get a lot of emails.",
+      "sentencePl": "Dostaję dużo maili.",
       "audioWord": "t1-p001-005-word.mp3",
       "audioWordPl": "t1-p001-005-word-pl.mp3",
-      "audioSentence": "t1-p001-005-sentence.mp3"
+      "audioSentence": "t1-p001-005-sentence.mp3",
+      "audioSentencePl": "t1-p001-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p001-006",
       "english": "Have to",
-      "polish": "Musisz",
+      "polish": "Musieć",
       "sentenceEn": "I have to go.",
       "sentencePl": "Muszę iść.",
       "audioWord": "t1-p001-006-word.mp3",
       "audioWordPl": "t1-p001-006-word-pl.mp3",
-      "audioSentence": "t1-p001-006-sentence.mp3"
+      "audioSentence": "t1-p001-006-sentence.mp3",
+      "audioSentencePl": "t1-p001-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p001-007",
@@ -74,7 +80,8 @@
       "sentencePl": "Robię kawę.",
       "audioWord": "t1-p001-007-word.mp3",
       "audioWordPl": "t1-p001-007-word-pl.mp3",
-      "audioSentence": "t1-p001-007-sentence.mp3"
+      "audioSentence": "t1-p001-007-sentence.mp3",
+      "audioSentencePl": "t1-p001-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p001-008",
@@ -84,7 +91,8 @@
       "sentencePl": "Potrzebuję wody.",
       "audioWord": "t1-p001-008-word.mp3",
       "audioWordPl": "t1-p001-008-word-pl.mp3",
-      "audioSentence": "t1-p001-008-sentence.mp3"
+      "audioSentence": "t1-p001-008-sentence.mp3",
+      "audioSentencePl": "t1-p001-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p001-009",
@@ -94,7 +102,8 @@
       "sentencePl": "Powinieneś spróbować.",
       "audioWord": "t1-p001-009-word.mp3",
       "audioWordPl": "t1-p001-009-word-pl.mp3",
-      "audioSentence": "t1-p001-009-sentence.mp3"
+      "audioSentence": "t1-p001-009-sentence.mp3",
+      "audioSentencePl": "t1-p001-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p001-010",
@@ -104,7 +113,8 @@
       "sentencePl": "Spróbuj jutro jeszcze raz.",
       "audioWord": "t1-p001-010-word.mp3",
       "audioWordPl": "t1-p001-010-word-pl.mp3",
-      "audioSentence": "t1-p001-010-sentence.mp3"
+      "audioSentence": "t1-p001-010-sentence.mp3",
+      "audioSentencePl": "t1-p001-010-sentence-pl.mp3"
     }
   ]
 }

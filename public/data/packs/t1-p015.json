@@ -14,7 +14,8 @@
       "sentencePl": "Dzień dobry, aniołku.",
       "audioWord": "t1-p015-001-word.mp3",
       "audioWordPl": "t1-p015-001-word-pl.mp3",
-      "audioSentence": "t1-p015-001-sentence.mp3"
+      "audioSentence": "t1-p015-001-sentence.mp3",
+      "audioSentencePl": "t1-p015-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p015-002",
@@ -24,7 +25,8 @@
       "sentencePl": "Poznaj moją lepszą połowę.",
       "audioWord": "t1-p015-002-word.mp3",
       "audioWordPl": "t1-p015-002-word-pl.mp3",
-      "audioSentence": "t1-p015-002-sentence.mp3"
+      "audioSentence": "t1-p015-002-sentence.mp3",
+      "audioSentencePl": "t1-p015-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p015-003",
@@ -34,7 +36,8 @@
       "sentencePl": "Chodź tu, robaczku.",
       "audioWord": "t1-p015-003-word.mp3",
       "audioWordPl": "t1-p015-003-word-pl.mp3",
-      "audioSentence": "t1-p015-003-sentence.mp3"
+      "audioSentence": "t1-p015-003-sentence.mp3",
+      "audioSentencePl": "t1-p015-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p015-004",
@@ -44,7 +47,8 @@
       "sentencePl": "Tęskniłem za tobą, króliczku.",
       "audioWord": "t1-p015-004-word.mp3",
       "audioWordPl": "t1-p015-004-word-pl.mp3",
-      "audioSentence": "t1-p015-004-sentence.mp3"
+      "audioSentence": "t1-p015-004-sentence.mp3",
+      "audioSentencePl": "t1-p015-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p015-005",
@@ -54,17 +58,19 @@
       "sentencePl": "Dobranoc, moje kotku.",
       "audioWord": "t1-p015-005-word.mp3",
       "audioWordPl": "t1-p015-005-word-pl.mp3",
-      "audioSentence": "t1-p015-005-sentence.mp3"
+      "audioSentence": "t1-p015-005-sentence.mp3",
+      "audioSentencePl": "t1-p015-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p015-006",
       "english": "Lover girl",
-      "polish": "Misiaczek",
+      "polish": "Ukochana",
       "sentenceEn": "You're my lover girl.",
-      "sentencePl": "Jesteś moim misiaczkiem.",
+      "sentencePl": "Jesteś moją ukochaną.",
       "audioWord": "t1-p015-006-word.mp3",
       "audioWordPl": "t1-p015-006-word-pl.mp3",
-      "audioSentence": "t1-p015-006-sentence.mp3"
+      "audioSentence": "t1-p015-006-sentence.mp3",
+      "audioSentencePl": "t1-p015-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p015-007",
@@ -74,7 +80,8 @@
       "sentencePl": "Jesteś moim szczęściem.",
       "audioWord": "t1-p015-007-word.mp3",
       "audioWordPl": "t1-p015-007-word-pl.mp3",
-      "audioSentence": "t1-p015-007-sentence.mp3"
+      "audioSentence": "t1-p015-007-sentence.mp3",
+      "audioSentencePl": "t1-p015-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p015-008",
@@ -84,7 +91,8 @@
       "sentencePl": "Dzień dobry, królowo moja.",
       "audioWord": "t1-p015-008-word.mp3",
       "audioWordPl": "t1-p015-008-word-pl.mp3",
-      "audioSentence": "t1-p015-008-sentence.mp3"
+      "audioSentence": "t1-p015-008-sentence.mp3",
+      "audioSentencePl": "t1-p015-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p015-009",
@@ -94,7 +102,8 @@
       "sentencePl": "Tyle znaczysz, skarbeńku.",
       "audioWord": "t1-p015-009-word.mp3",
       "audioWordPl": "t1-p015-009-word-pl.mp3",
-      "audioSentence": "t1-p015-009-sentence.mp3"
+      "audioSentence": "t1-p015-009-sentence.mp3",
+      "audioSentencePl": "t1-p015-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p015-010",
@@ -104,7 +113,8 @@
       "sentencePl": "Oto moje słoneczko.",
       "audioWord": "t1-p015-010-word.mp3",
       "audioWordPl": "t1-p015-010-word-pl.mp3",
-      "audioSentence": "t1-p015-010-sentence.mp3"
+      "audioSentence": "t1-p015-010-sentence.mp3",
+      "audioSentencePl": "t1-p015-010-sentence-pl.mp3"
     }
   ]
 }

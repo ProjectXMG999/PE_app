@@ -12,19 +12,20 @@
     "match-sentences": "tsx scripts/match-sentences.ts && node scripts/sync-packs.mjs",
     "sync-packs": "node scripts/sync-packs.mjs",
     "generate-icons": "node scripts/generate-icons.mjs",
-    "generate-audio": "tsx scripts/generate-audio.ts",
-    "generate-audio-demo": "tsx scripts/generate-audio-demo.ts",
-    "generate-audio-polish": "tsx scripts/generate-audio-polish.ts",
-    "generate-audio-packs": "tsx scripts/generate-audio-packs.ts",
-    "generate-intro-audio": "tsx scripts/generate-intro-audio.ts",
-    "delete-blobs": "tsx scripts/delete-audio-blobs.ts",
-    "upload-blobs": "tsx scripts/upload-audio-blobs.ts"
+    "generate-audio": "tsx --env-file=.env scripts/generate-audio.ts",
+    "generate-audio-demo": "tsx --env-file=.env scripts/generate-audio-demo.ts",
+    "generate-audio-polish": "tsx --env-file=.env scripts/generate-audio-polish.ts",
+    "generate-audio-packs": "tsx --env-file=.env scripts/generate-audio-packs.ts",
+    "generate-intro-audio": "tsx --env-file=.env scripts/generate-intro-audio.ts",
+    "delete-blobs": "tsx --env-file=.env scripts/delete-audio-blobs.ts",
+    "upload-blobs": "tsx --env-file=.env scripts/upload-audio-blobs.ts"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.0.0",
     "@fontsource/roboto": "^5.0.0",
     "@netlify/blobs": "^8.0.0",
     "idb": "^8.0.0",
+    "playwright-core": "^1.61.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
@@ -50,5 +51,18 @@
     "workbox-routing": "^7.3.0",
     "workbox-strategies": "^7.3.0",
     "xlsx": "^0.18.5"
-  }
+  },
+  "description": "A web application deployed on Netlify.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProjectXMG999/PE_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProjectXMG999/PE_app/issues"
+  },
+  "homepage": "https://github.com/ProjectXMG999/PE_app#readme"
 }

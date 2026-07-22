@@ -14,17 +14,19 @@
       "sentencePl": "Mój akumulator jest słaby.",
       "audioWord": "t1-p041-001-word.mp3",
       "audioWordPl": "t1-p041-001-word-pl.mp3",
-      "audioSentence": "t1-p041-001-sentence.mp3"
+      "audioSentence": "t1-p041-001-sentence.mp3",
+      "audioSentencePl": "t1-p041-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p041-002",
       "english": "Camera",
       "polish": "Aparat",
       "sentenceEn": "My camera is broken.",
-      "sentencePl": "Moja kamera jest zepsuta.",
+      "sentencePl": "Mój aparat jest zepsuty.",
       "audioWord": "t1-p041-002-word.mp3",
       "audioWordPl": "t1-p041-002-word-pl.mp3",
-      "audioSentence": "t1-p041-002-sentence.mp3"
+      "audioSentence": "t1-p041-002-sentence.mp3",
+      "audioSentencePl": "t1-p041-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p041-003",
@@ -34,7 +36,8 @@
       "sentencePl": "Mój komputer znowu się zawiesił.",
       "audioWord": "t1-p041-003-word.mp3",
       "audioWordPl": "t1-p041-003-word-pl.mp3",
-      "audioSentence": "t1-p041-003-sentence.mp3"
+      "audioSentence": "t1-p041-003-sentence.mp3",
+      "audioSentencePl": "t1-p041-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p041-004",
@@ -44,7 +47,8 @@
       "sentencePl": "Zapomniałem laptopa w domu.",
       "audioWord": "t1-p041-004-word.mp3",
       "audioWordPl": "t1-p041-004-word-pl.mp3",
-      "audioSentence": "t1-p041-004-sentence.mp3"
+      "audioSentence": "t1-p041-004-sentence.mp3",
+      "audioSentencePl": "t1-p041-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p041-005",
@@ -54,7 +58,8 @@
       "sentencePl": "Mogę pożyczyć twoją ładowarkę?",
       "audioWord": "t1-p041-005-word.mp3",
       "audioWordPl": "t1-p041-005-word-pl.mp3",
-      "audioSentence": "t1-p041-005-sentence.mp3"
+      "audioSentence": "t1-p041-005-sentence.mp3",
+      "audioSentencePl": "t1-p041-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p041-006",
@@ -64,7 +69,8 @@
       "sentencePl": "Nie odebrałem twojego telefonu.",
       "audioWord": "t1-p041-006-word.mp3",
       "audioWordPl": "t1-p041-006-word-pl.mp3",
-      "audioSentence": "t1-p041-006-sentence.mp3"
+      "audioSentence": "t1-p041-006-sentence.mp3",
+      "audioSentencePl": "t1-p041-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p041-007",
@@ -74,7 +80,8 @@
       "sentencePl": "Suszarka do włosów jest za głośna.",
       "audioWord": "t1-p041-007-word.mp3",
       "audioWordPl": "t1-p041-007-word-pl.mp3",
-      "audioSentence": "t1-p041-007-sentence.mp3"
+      "audioSentence": "t1-p041-007-sentence.mp3",
+      "audioSentencePl": "t1-p041-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p041-008",
@@ -84,7 +91,8 @@
       "sentencePl": "Odbierz telefon, proszę.",
       "audioWord": "t1-p041-008-word.mp3",
       "audioWordPl": "t1-p041-008-word-pl.mp3",
-      "audioSentence": "t1-p041-008-sentence.mp3"
+      "audioSentence": "t1-p041-008-sentence.mp3",
+      "audioSentencePl": "t1-p041-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p041-009",
@@ -94,7 +102,8 @@
       "sentencePl": "Zgubiłem telefon komórkowy.",
       "audioWord": "t1-p041-009-word.mp3",
       "audioWordPl": "t1-p041-009-word-pl.mp3",
-      "audioSentence": "t1-p041-009-sentence.mp3"
+      "audioSentence": "t1-p041-009-sentence.mp3",
+      "audioSentencePl": "t1-p041-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p041-010",
@@ -104,7 +113,8 @@
       "sentencePl": "Masz nową wiadomość.",
       "audioWord": "t1-p041-010-word.mp3",
       "audioWordPl": "t1-p041-010-word-pl.mp3",
-      "audioSentence": "t1-p041-010-sentence.mp3"
+      "audioSentence": "t1-p041-010-sentence.mp3",
+      "audioSentencePl": "t1-p041-010-sentence-pl.mp3"
     }
   ]
 }

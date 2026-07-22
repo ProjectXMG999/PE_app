@@ -14,8 +14,22 @@ const API_KEY = process.env.ELEVENLABS_API_KEY || ''
 const MODEL_ID = 'eleven_multilingual_v2'
 
 // Packs to generate — change this list to target different packs
-const TARGET_PACKS = ['t1-p001','t1-p002','t1-p003','t1-p004','t1-p005','t1-p006',
-                      't1-p007','t1-p008','t1-p009','t1-p010','t1-p011','t1-p012']
+const TARGET_PACKS_FULL_LEVEL1 = [
+  't1-p001','t1-p002','t1-p003','t1-p004','t1-p005','t1-p006','t1-p007','t1-p008','t1-p009','t1-p010',
+  't1-p011','t1-p012','t1-p013','t1-p014','t1-p015','t1-p016','t1-p017','t1-p018','t1-p019','t1-p020',
+  't1-p021','t1-p022','t1-p023','t1-p024','t1-p025','t1-p026','t1-p027','t1-p028','t1-p029','t1-p030',
+  't1-p031','t1-p032','t1-p033','t1-p034','t1-p035','t1-p036','t1-p037','t1-p038','t1-p039','t1-p040',
+  't1-p041','t1-p042','t1-p043','t1-p044','t1-p045','t1-p046','t1-p047','t1-p048','t1-p049','t1-p050',
+  't1-p051','t1-p052','t1-p053','t1-p054','t1-p055','t1-p056','t1-p057','t1-p058','t1-p059','t1-p060',
+  't1-p061','t1-p062','t1-p063','t1-p064','t1-p065','t1-p066','t1-p067','t1-p068','t1-p069','t1-p070',
+  't1-p071','t1-p072','t1-p073','t1-p074','t1-p075','t1-p076','t1-p077','t1-p078','t1-p079','t1-p080',
+  't1-p081','t1-p082','t1-p083','t1-p084','t1-p085','t1-p086','t1-p087','t1-p088','t1-p089','t1-p090',
+  't1-p091','t1-p092','t1-p093','t1-p094','t1-p095','t1-p096','t1-p097','t1-p098','t1-p099','t1-p100',
+  't1-p101','t1-p103','t1-p104','t1-p105','t1-p106','t1-p107','t1-p108','t1-p109','t1-p110',
+  't1-p678','t1-p694',
+]
+
+const TARGET_PACKS = TARGET_PACKS_FULL_LEVEL1
 
 const PL_VOICES = [
   { id: 'o2xdfKUpc1Bwq7RchZuW', name: 'Piotr',    gender: 'M' },

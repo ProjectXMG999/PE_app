@@ -14,7 +14,8 @@
       "sentencePl": "Nie piję alkoholu.",
       "audioWord": "t1-p110-001-word.mp3",
       "audioWordPl": "t1-p110-001-word-pl.mp3",
-      "audioSentence": "t1-p110-001-sentence.mp3"
+      "audioSentence": "t1-p110-001-sentence.mp3",
+      "audioSentencePl": "t1-p110-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p110-002",
@@ -24,7 +25,8 @@
       "sentencePl": "Ona uwielbia piękną biżuterię.",
       "audioWord": "t1-p110-002-word.mp3",
       "audioWordPl": "t1-p110-002-word-pl.mp3",
-      "audioSentence": "t1-p110-002-sentence.mp3"
+      "audioSentence": "t1-p110-002-sentence.mp3",
+      "audioSentencePl": "t1-p110-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p110-003",
@@ -34,7 +36,8 @@
       "sentencePl": "Pierścionek ma diament.",
       "audioWord": "t1-p110-003-word.mp3",
       "audioWordPl": "t1-p110-003-word-pl.mp3",
-      "audioSentence": "t1-p110-003-sentence.mp3"
+      "audioSentence": "t1-p110-003-sentence.mp3",
+      "audioSentencePl": "t1-p110-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p110-004",
@@ -44,7 +47,8 @@
       "sentencePl": "Zgubiła jeden kolczyk.",
       "audioWord": "t1-p110-004-word.mp3",
       "audioWordPl": "t1-p110-004-word-pl.mp3",
-      "audioSentence": "t1-p110-004-sentence.mp3"
+      "audioSentence": "t1-p110-004-sentence.mp3",
+      "audioSentencePl": "t1-p110-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p110-005",
@@ -54,7 +58,8 @@
       "sentencePl": "Rzucił palenie papierosów.",
       "audioWord": "t1-p110-005-word.mp3",
       "audioWordPl": "t1-p110-005-word-pl.mp3",
-      "audioSentence": "t1-p110-005-sentence.mp3"
+      "audioSentence": "t1-p110-005-sentence.mp3",
+      "audioSentencePl": "t1-p110-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p110-006",
@@ -64,7 +69,8 @@
       "sentencePl": "Oświadczył się z pierścionkiem.",
       "audioWord": "t1-p110-006-word.mp3",
       "audioWordPl": "t1-p110-006-word-pl.mp3",
-      "audioSentence": "t1-p110-006-sentence.mp3"
+      "audioSentence": "t1-p110-006-sentence.mp3",
+      "audioSentencePl": "t1-p110-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p110-007",
@@ -74,7 +80,8 @@
       "sentencePl": "Chodźmy na zimne piwo.",
       "audioWord": "t1-p110-007-word.mp3",
       "audioWordPl": "t1-p110-007-word-pl.mp3",
-      "audioSentence": "t1-p110-007-sentence.mp3"
+      "audioSentence": "t1-p110-007-sentence.mp3",
+      "audioSentencePl": "t1-p110-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p110-008",
@@ -84,7 +91,8 @@
       "sentencePl": "On pije whisky z lodem.",
       "audioWord": "t1-p110-008-word.mp3",
       "audioWordPl": "t1-p110-008-word-pl.mp3",
-      "audioSentence": "t1-p110-008-sentence.mp3"
+      "audioSentence": "t1-p110-008-sentence.mp3",
+      "audioSentencePl": "t1-p110-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p110-009",
@@ -94,17 +102,19 @@
       "sentencePl": "Wódka jest popularna w Polsce.",
       "audioWord": "t1-p110-009-word.mp3",
       "audioWordPl": "t1-p110-009-word-pl.mp3",
-      "audioSentence": "t1-p110-009-sentence.mp3"
+      "audioSentence": "t1-p110-009-sentence.mp3",
+      "audioSentencePl": "t1-p110-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p110-010",
       "english": "Watch",
-      "polish": "Zegarek",
+      "polish": "Oglądać",
       "sentenceEn": "Watch the movie.",
       "sentencePl": "Oglądaj film.",
       "audioWord": "t1-p110-010-word.mp3",
       "audioWordPl": "t1-p110-010-word-pl.mp3",
-      "audioSentence": "t1-p110-010-sentence.mp3"
+      "audioSentence": "t1-p110-010-sentence.mp3",
+      "audioSentencePl": "t1-p110-010-sentence-pl.mp3"
     }
   ]
 }

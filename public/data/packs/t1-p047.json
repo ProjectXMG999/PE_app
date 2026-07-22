@@ -14,7 +14,8 @@
       "sentencePl": "Daj mi sekundę.",
       "audioWord": "t1-p047-001-word.mp3",
       "audioWordPl": "t1-p047-001-word-pl.mp3",
-      "audioSentence": "t1-p047-001-sentence.mp3"
+      "audioSentence": "t1-p047-001-sentence.mp3",
+      "audioSentencePl": "t1-p047-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p047-002",
@@ -24,7 +25,8 @@
       "sentencePl": "Spójrz tam!",
       "audioWord": "t1-p047-002-word.mp3",
       "audioWordPl": "t1-p047-002-word-pl.mp3",
-      "audioSentence": "t1-p047-002-sentence.mp3"
+      "audioSentence": "t1-p047-002-sentence.mp3",
+      "audioSentencePl": "t1-p047-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p047-003",
@@ -34,17 +36,19 @@
       "sentencePl": "Nie spiesz się.",
       "audioWord": "t1-p047-003-word.mp3",
       "audioWordPl": "t1-p047-003-word-pl.mp3",
-      "audioSentence": "t1-p047-003-sentence.mp3"
+      "audioSentence": "t1-p047-003-sentence.mp3",
+      "audioSentencePl": "t1-p047-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p047-004",
       "english": "Watch",
-      "polish": "Oglądać",
+      "polish": "Zegarek",
       "sentenceEn": "My watch is slow.",
       "sentencePl": "Mój zegarek się spóźnia.",
       "audioWord": "t1-p047-004-word.mp3",
       "audioWordPl": "t1-p047-004-word-pl.mp3",
-      "audioSentence": "t1-p047-004-sentence.mp3"
+      "audioSentence": "t1-p047-004-sentence.mp3",
+      "audioSentencePl": "t1-p047-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p047-005",
@@ -54,7 +58,8 @@
       "sentencePl": "Zbudowaliśmy to razem.",
       "audioWord": "t1-p047-005-word.mp3",
       "audioWordPl": "t1-p047-005-word-pl.mp3",
-      "audioSentence": "t1-p047-005-sentence.mp3"
+      "audioSentence": "t1-p047-005-sentence.mp3",
+      "audioSentencePl": "t1-p047-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p047-006",
@@ -64,7 +69,8 @@
       "sentencePl": "Bateria padła.",
       "audioWord": "t1-p047-006-word.mp3",
       "audioWordPl": "t1-p047-006-word-pl.mp3",
-      "audioSentence": "t1-p047-006-sentence.mp3"
+      "audioSentence": "t1-p047-006-sentence.mp3",
+      "audioSentencePl": "t1-p047-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p047-007",
@@ -74,7 +80,8 @@
       "sentencePl": "Nienawidzę czekania.",
       "audioWord": "t1-p047-007-word.mp3",
       "audioWordPl": "t1-p047-007-word-pl.mp3",
-      "audioSentence": "t1-p047-007-sentence.mp3"
+      "audioSentence": "t1-p047-007-sentence.mp3",
+      "audioSentencePl": "t1-p047-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p047-008",
@@ -84,7 +91,8 @@
       "sentencePl": "Nie zgub kluczy.",
       "audioWord": "t1-p047-008-word.mp3",
       "audioWordPl": "t1-p047-008-word-pl.mp3",
-      "audioSentence": "t1-p047-008-sentence.mp3"
+      "audioSentence": "t1-p047-008-sentence.mp3",
+      "audioSentencePl": "t1-p047-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p047-009",
@@ -94,7 +102,8 @@
       "sentencePl": "Tęsknię za rodziną.",
       "audioWord": "t1-p047-009-word.mp3",
       "audioWordPl": "t1-p047-009-word-pl.mp3",
-      "audioSentence": "t1-p047-009-sentence.mp3"
+      "audioSentence": "t1-p047-009-sentence.mp3",
+      "audioSentencePl": "t1-p047-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p047-010",
@@ -104,7 +113,8 @@
       "sentencePl": "Możesz mówić głośniej?",
       "audioWord": "t1-p047-010-word.mp3",
       "audioWordPl": "t1-p047-010-word-pl.mp3",
-      "audioSentence": "t1-p047-010-sentence.mp3"
+      "audioSentence": "t1-p047-010-sentence.mp3",
+      "audioSentencePl": "t1-p047-010-sentence-pl.mp3"
     }
   ]
 }

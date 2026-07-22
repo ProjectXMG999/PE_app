@@ -14,17 +14,19 @@
       "sentencePl": "Posprzątaj dom.",
       "audioWord": "t1-p089-001-word.mp3",
       "audioWordPl": "t1-p089-001-word-pl.mp3",
-      "audioSentence": "t1-p089-001-sentence.mp3"
+      "audioSentence": "t1-p089-001-sentence.mp3",
+      "audioSentencePl": "t1-p089-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p089-002",
       "english": "Cook",
       "polish": "Gotować",
-      "sentenceEn": "The cook is skilled.",
-      "sentencePl": "Kucharz jest biegły.",
+      "sentenceEn": "I cook every day.",
+      "sentencePl": "Gotuję codziennie.",
       "audioWord": "t1-p089-002-word.mp3",
       "audioWordPl": "t1-p089-002-word-pl.mp3",
-      "audioSentence": "t1-p089-002-sentence.mp3"
+      "audioSentence": "t1-p089-002-sentence.mp3",
+      "audioSentencePl": "t1-p089-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p089-003",
@@ -34,7 +36,8 @@
       "sentencePl": "Puszczaj latawiec.",
       "audioWord": "t1-p089-003-word.mp3",
       "audioWordPl": "t1-p089-003-word-pl.mp3",
-      "audioSentence": "t1-p089-003-sentence.mp3"
+      "audioSentence": "t1-p089-003-sentence.mp3",
+      "audioSentencePl": "t1-p089-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p089-004",
@@ -44,7 +47,8 @@
       "sentencePl": "Przeprowadzamy się w przyszłym miesiącu.",
       "audioWord": "t1-p089-004-word.mp3",
       "audioWordPl": "t1-p089-004-word-pl.mp3",
-      "audioSentence": "t1-p089-004-sentence.mp3"
+      "audioSentence": "t1-p089-004-sentence.mp3",
+      "audioSentencePl": "t1-p089-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p089-005",
@@ -54,7 +58,8 @@
       "sentencePl": "Proszę, podaj sól.",
       "audioWord": "t1-p089-005-word.mp3",
       "audioWordPl": "t1-p089-005-word-pl.mp3",
-      "audioSentence": "t1-p089-005-sentence.mp3"
+      "audioSentence": "t1-p089-005-sentence.mp3",
+      "audioSentencePl": "t1-p089-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p089-006",
@@ -64,7 +69,8 @@
       "sentencePl": "Widzę.",
       "audioWord": "t1-p089-006-word.mp3",
       "audioWordPl": "t1-p089-006-word-pl.mp3",
-      "audioSentence": "t1-p089-006-sentence.mp3"
+      "audioSentence": "t1-p089-006-sentence.mp3",
+      "audioSentencePl": "t1-p089-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p089-007",
@@ -74,7 +80,8 @@
       "sentencePl": "Wstań.",
       "audioWord": "t1-p089-007-word.mp3",
       "audioWordPl": "t1-p089-007-word-pl.mp3",
-      "audioSentence": "t1-p089-007-sentence.mp3"
+      "audioSentence": "t1-p089-007-sentence.mp3",
+      "audioSentencePl": "t1-p089-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p089-008",
@@ -84,7 +91,8 @@
       "sentencePl": "Pływaj w basenie.",
       "audioWord": "t1-p089-008-word.mp3",
       "audioWordPl": "t1-p089-008-word-pl.mp3",
-      "audioSentence": "t1-p089-008-sentence.mp3"
+      "audioSentence": "t1-p089-008-sentence.mp3",
+      "audioSentencePl": "t1-p089-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p089-009",
@@ -94,7 +102,8 @@
       "sentencePl": "Odwiedź nas kiedyś.",
       "audioWord": "t1-p089-009-word.mp3",
       "audioWordPl": "t1-p089-009-word-pl.mp3",
-      "audioSentence": "t1-p089-009-sentence.mp3"
+      "audioSentence": "t1-p089-009-sentence.mp3",
+      "audioSentencePl": "t1-p089-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p089-010",
@@ -104,7 +113,8 @@
       "sentencePl": "O której godzinie przyjeżdżamy?",
       "audioWord": "t1-p089-010-word.mp3",
       "audioWordPl": "t1-p089-010-word-pl.mp3",
-      "audioSentence": "t1-p089-010-sentence.mp3"
+      "audioSentence": "t1-p089-010-sentence.mp3",
+      "audioSentencePl": "t1-p089-010-sentence-pl.mp3"
     }
   ]
 }

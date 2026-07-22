@@ -14,17 +14,19 @@
       "sentencePl": "Moja babcia gotuje.",
       "audioWord": "t1-p074-001-word.mp3",
       "audioWordPl": "t1-p074-001-word-pl.mp3",
-      "audioSentence": "t1-p074-001-sentence.mp3"
+      "audioSentence": "t1-p074-001-sentence.mp3",
+      "audioSentencePl": "t1-p074-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p074-002",
       "english": "Grandmother",
       "polish": "Babka",
       "sentenceEn": "My grandmother bakes bread.",
-      "sentencePl": "Moja babcia piecze chleb.",
+      "sentencePl": "Moja babka piecze chleb.",
       "audioWord": "t1-p074-002-word.mp3",
       "audioWordPl": "t1-p074-002-word-pl.mp3",
-      "audioSentence": "t1-p074-002-sentence.mp3"
+      "audioSentence": "t1-p074-002-sentence.mp3",
+      "audioSentencePl": "t1-p074-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p074-003",
@@ -34,7 +36,8 @@
       "sentencePl": "Moja ciotka jest tutaj.",
       "audioWord": "t1-p074-003-word.mp3",
       "audioWordPl": "t1-p074-003-word-pl.mp3",
-      "audioSentence": "t1-p074-003-sentence.mp3"
+      "audioSentence": "t1-p074-003-sentence.mp3",
+      "audioSentencePl": "t1-p074-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p074-004",
@@ -44,17 +47,19 @@
       "sentencePl": "Mój dziadek opowiada świetne historie.",
       "audioWord": "t1-p074-004-word.mp3",
       "audioWordPl": "t1-p074-004-word-pl.mp3",
-      "audioSentence": "t1-p074-004-sentence.mp3"
+      "audioSentence": "t1-p074-004-sentence.mp3",
+      "audioSentencePl": "t1-p074-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p074-005",
       "english": "Grandpa",
       "polish": "Dziadzio",
       "sentenceEn": "My grandpa is 80.",
-      "sentencePl": "Mój dziadek ma 80 lat.",
+      "sentencePl": "Mój dziadzio ma 80 lat.",
       "audioWord": "t1-p074-005-word.mp3",
       "audioWordPl": "t1-p074-005-word-pl.mp3",
-      "audioSentence": "t1-p074-005-sentence.mp3"
+      "audioSentence": "t1-p074-005-sentence.mp3",
+      "audioSentencePl": "t1-p074-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p074-006",
@@ -64,17 +69,19 @@
       "sentencePl": "Mój kuzyn ma mój wiek.",
       "audioWord": "t1-p074-006-word.mp3",
       "audioWordPl": "t1-p074-006-word-pl.mp3",
-      "audioSentence": "t1-p074-006-sentence.mp3"
+      "audioSentence": "t1-p074-006-sentence.mp3",
+      "audioSentencePl": "t1-p074-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p074-007",
       "english": "Baby",
       "polish": "Niemowlę",
       "sentenceEn": "The baby sleeps.",
-      "sentencePl": "Dziecko śpi.",
+      "sentencePl": "Niemowlę śpi.",
       "audioWord": "t1-p074-007-word.mp3",
       "audioWordPl": "t1-p074-007-word-pl.mp3",
-      "audioSentence": "t1-p074-007-sentence.mp3"
+      "audioSentence": "t1-p074-007-sentence.mp3",
+      "audioSentencePl": "t1-p074-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p074-008",
@@ -84,7 +91,8 @@
       "sentencePl": "Bycie rodzicem jest trudne.",
       "audioWord": "t1-p074-008-word.mp3",
       "audioWordPl": "t1-p074-008-word-pl.mp3",
-      "audioSentence": "t1-p074-008-sentence.mp3"
+      "audioSentence": "t1-p074-008-sentence.mp3",
+      "audioSentencePl": "t1-p074-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p074-009",
@@ -94,7 +102,8 @@
       "sentencePl": "Moja siostra jest tutaj.",
       "audioWord": "t1-p074-009-word.mp3",
       "audioWordPl": "t1-p074-009-word-pl.mp3",
-      "audioSentence": "t1-p074-009-sentence.mp3"
+      "audioSentence": "t1-p074-009-sentence.mp3",
+      "audioSentencePl": "t1-p074-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p074-010",
@@ -104,7 +113,8 @@
       "sentencePl": "Mój wujek jest tutaj.",
       "audioWord": "t1-p074-010-word.mp3",
       "audioWordPl": "t1-p074-010-word-pl.mp3",
-      "audioSentence": "t1-p074-010-sentence.mp3"
+      "audioSentence": "t1-p074-010-sentence.mp3",
+      "audioSentencePl": "t1-p074-010-sentence-pl.mp3"
     }
   ]
 }
