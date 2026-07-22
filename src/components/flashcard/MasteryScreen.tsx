@@ -34,9 +34,10 @@ const COLORS = [
 ]
 
 function createParticle(canvas: HTMLCanvasElement): Particle {
+  const dpr = window.devicePixelRatio || 1
   const shapes: Particle['shape'][] = ['rect', 'rect', 'circle', 'star']
   return {
-    x: Math.random() * canvas.width,
+    x: Math.random() * (canvas.width / dpr),
     y: -10,
     vx: (Math.random() - 0.5) * 4,
     vy: Math.random() * 3 + 2,
@@ -73,9 +74,12 @@ export function MasteryScreen({ packName, wordCount, onRepeat, onNext, nextPackN
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
+    const dpr = window.devicePixelRatio || 1
+
     const resize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      canvas.width = canvas.offsetWidth * dpr
+      canvas.height = canvas.offsetHeight * dpr
+      ctx.scale(dpr, dpr)
     }
     resize()
     window.addEventListener('resize', resize)
@@ -92,7 +96,10 @@ export function MasteryScreen({ packName, wordCount, onRepeat, onNext, nextPackN
     burst(40, 1600)
 
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      const dpr = window.devicePixelRatio || 1
+      const w = canvas.width / dpr
+      const h = canvas.height / dpr
+      ctx.clearRect(0, 0, w, h)
 
       particles.current = particles.current.filter(p => p.opacity > 0.02)
 
