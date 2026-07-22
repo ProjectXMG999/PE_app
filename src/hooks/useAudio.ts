@@ -3,8 +3,9 @@ import { getAudioUrl, preloadAudio } from '../services/audioService'
 import { getAudioElement } from '../audio/audioElement'
 import { Word } from '../types/vocabulary'
 
-// EN audio generated at ElevenLabs speed=0.75 — compensate so playbackRate 1.0 = natural tempo
-const EN_BASE = 1 / 0.75  // ≈ 1.333
+// EN audio was generated at ElevenLabs speed=0.75 (slower, for learner clarity) and PL at
+// its default speed=1.0 — no compensation here, so 100% plays each language at its recorded tempo.
+const EN_BASE = 1.0
 const PL_BASE = 1.0
 
 // enRate/plRate are multipliers: 1.0 = default speed (natural pace), 0.5 = half, 1.5 = faster
