@@ -242,6 +242,7 @@
 .am__transcript {
   flex: 1;
   overflow-y: auto;
+  overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
   padding: 12px 16px 16px;
   display: flex;

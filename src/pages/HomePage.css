@@ -9,6 +9,14 @@
   padding: 0 var(--spacing-md) var(--spacing-md);
 }
 
+/* ~232 cards render at once — let the browser skip layout/paint of
+   off-screen ones. Intrinsic size must approximate real card height,
+   otherwise the scrollbar jumps. */
+.homepage__list > * {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 148px;
+}
+
 .homepage__empty {
   text-align: center;
   color: var(--text-muted);

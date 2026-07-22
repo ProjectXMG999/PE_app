@@ -57,6 +57,25 @@
   animation: slideInLeft 300ms ease forwards;
 }
 
+/* Respect users who ask the OS for less motion: collapse all CSS
+   animation/transition to a single imperceptible frame. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-med: 0ms;
+    --transition-slow: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Skeleton loading shimmer */
 .skeleton {
   background: linear-gradient(

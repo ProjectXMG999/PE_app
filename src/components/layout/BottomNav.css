@@ -27,6 +27,8 @@
   background: none;
   border: none;
   cursor: pointer;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .bottomnav__item:hover {

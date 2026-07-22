@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import './BottomNav.css'
 
 const NAV_ITEMS = [
@@ -51,7 +51,6 @@ const NAV_ITEMS = [
 
 export function BottomNav() {
   const location = useLocation()
-  const navigate = useNavigate()
 
   const getActiveItem = () => {
     let path: string
@@ -75,10 +74,10 @@ export function BottomNav() {
       {NAV_ITEMS.map(item => {
         const active = activeItem === item.path
         return (
-          <button
+          <Link
             key={item.path}
+            to={item.path}
             className={`bottomnav__item ${active ? 'bottomnav__item--active' : ''}`}
-            onClick={() => navigate(item.path)}
             aria-current={active ? 'page' : undefined}
           >
             <span className="bottomnav__icon-wrap">
@@ -86,7 +85,7 @@ export function BottomNav() {
               {active && <span className="bottomnav__dot" aria-hidden="true"/>}
             </span>
             <span className="bottomnav__label">{item.label}</span>
-          </button>
+          </Link>
         )
       })}
     </nav>

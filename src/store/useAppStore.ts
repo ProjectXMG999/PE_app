@@ -57,6 +57,11 @@ interface AppStore {
   setShowDebug: (v: boolean) => void
 }
 
+type PersistedState = Pick<
+  AppStore,
+  'theme' | 'isInstalled' | 'iosBannerDismissed' | 'autoplayMode' | 'enRate' | 'plRate' | 'showDebug'
+>
+
 export const useAppStore = create<AppStore>()(
   persist(
     (set) => ({
@@ -108,6 +113,18 @@ export const useAppStore = create<AppStore>()(
     }),
     {
       name: 'pe-store',
+      version: 1,
+      migrate: (persisted) => {
+        // v0 stored absolute audio rates (e.g. 0.60); v1 uses multipliers
+        // from a fixed scale — snap anything off-scale back to 1.0.
+        const VALID_RATES = new Set([0.5, 0.75, 1.0, 1.25, 1.5])
+        const s = (persisted ?? {}) as PersistedState
+        return {
+          ...s,
+          enRate: s.enRate != null && VALID_RATES.has(s.enRate) ? s.enRate : 1.0,
+          plRate: s.plRate != null && VALID_RATES.has(s.plRate) ? s.plRate : 1.0,
+        }
+      },
       partialize: (s) => ({
         theme: s.theme,
         isInstalled: s.isInstalled,

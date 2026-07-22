@@ -17,6 +17,7 @@
   font-weight: 700;
   margin: 0 0 var(--spacing-sm);
   color: var(--text-primary);
+  text-wrap: balance;
 }
 
 .training-header p {
@@ -51,6 +52,9 @@
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
   text-align: left;
   font-family: var(--font-body);
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .training-card:active {
@@ -124,7 +128,17 @@
 .training-card__footer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
   margin-top: var(--spacing-sm);
+}
+
+.training-card__done {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--success);
+  white-space: nowrap;
 }
 
 .training-card__duration {
@@ -239,6 +253,8 @@
   font-family: var(--font-body);
   line-height: 1.8;
   color: var(--text-primary);
+  max-inline-size: 65ch;
+  margin-inline: auto;
 }
 
 .training-detail__content h2 {
@@ -259,6 +275,7 @@
   font-weight: 700;
   margin: var(--spacing-lg) 0 var(--spacing-md);
   color: var(--accent);
+  text-wrap: balance;
 }
 
 .training-detail__h3:first-of-type {
@@ -271,6 +288,7 @@
   margin: 0 0 var(--spacing-md);
   color: var(--text-secondary);
   line-height: 1.8;
+  text-wrap: pretty;
 }
 
 .training-detail__p strong {
@@ -278,12 +296,18 @@
   font-weight: 600;
 }
 
+.training-detail__ul {
+  margin: 0 0 var(--spacing-md);
+  padding-left: var(--spacing-lg);
+}
+
 .training-detail__li {
   font-family: var(--font-body);
   font-size: 14px;
-  margin: var(--spacing-sm) 0 var(--spacing-sm) var(--spacing-lg);
+  margin: var(--spacing-sm) 0;
   color: var(--text-secondary);
   line-height: 1.8;
+  text-wrap: pretty;
 }
 
 .training-detail__li strong {

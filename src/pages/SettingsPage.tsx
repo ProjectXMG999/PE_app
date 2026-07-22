@@ -13,16 +13,8 @@ const RATES: { value: number; label: string }[] = [
   { value: 1.50, label: '150%' },
 ]
 
-const VALID = new Set(RATES.map(r => r.value))
-
 export function SettingsPage() {
   const { enRate, plRate, setEnRate, setPlRate, showDebug, setShowDebug } = useAppStore()
-
-  // Migrate legacy absolute values (e.g. 0.60) that don't match current multiplier scale
-  const safeEnRate = VALID.has(enRate) ? enRate : 1.0
-  const safePlRate = VALID.has(plRate) ? plRate : 1.0
-  if (safeEnRate !== enRate) setEnRate(safeEnRate)
-  if (safePlRate !== plRate) setPlRate(safePlRate)
 
   return (
     <AppShell>
@@ -43,11 +35,13 @@ export function SettingsPage() {
               <span className="settings__row-name">Angielski</span>
               <span className="settings__row-hint">słowa i zdania EN</span>
             </div>
-            <div className="settings__pills">
+            <div className="settings__pills" role="radiogroup" aria-label="Tempo audio angielskiego">
               {RATES.map(({ value, label }) => (
                 <button
                   key={value}
-                  className={`settings__pill ${safeEnRate === value ? 'settings__pill--active' : ''}`}
+                  role="radio"
+                  aria-checked={enRate === value}
+                  className={`settings__pill ${enRate === value ? 'settings__pill--active' : ''}`}
                   onClick={() => setEnRate(value)}
                 >
                   {label}
@@ -61,11 +55,13 @@ export function SettingsPage() {
               <span className="settings__row-name">Polski</span>
               <span className="settings__row-hint">słowa i zdania PL</span>
             </div>
-            <div className="settings__pills">
+            <div className="settings__pills" role="radiogroup" aria-label="Tempo audio polskiego">
               {RATES.map(({ value, label }) => (
                 <button
                   key={value}
-                  className={`settings__pill ${safePlRate === value ? 'settings__pill--active' : ''}`}
+                  role="radio"
+                  aria-checked={plRate === value}
+                  className={`settings__pill ${plRate === value ? 'settings__pill--active' : ''}`}
                   onClick={() => setPlRate(value)}
                 >
                   {label}
@@ -85,7 +81,9 @@ export function SettingsPage() {
             <button
               className={`settings__toggle ${showDebug ? 'settings__toggle--on' : ''}`}
               onClick={() => setShowDebug(!showDebug)}
-              aria-label="Toggle debug"
+              role="switch"
+              aria-checked={showDebug}
+              aria-label="Logi debugowania"
             >
               <span className="settings__toggle-thumb" />
             </button>
