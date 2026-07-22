@@ -177,7 +177,7 @@ function main() {
 function processRows(rows: WizardRow[]) {
   // Normalizuj kategorie przed grupowaniem
   for (const row of rows) {
-    if (row.category === 'Zabronione') row.category = 'Slang'
+    if (row.category === 'Zabronione') row.category = 'Wulgaryzmy'
     if (!row.category) row.category = 'Inne'
   }
 

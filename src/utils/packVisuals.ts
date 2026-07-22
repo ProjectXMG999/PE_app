@@ -205,6 +205,7 @@ export const CATEGORY_COLORS: Record<string, string> = {
   'Przysłówki': '#3B82F6',
   'Phrasale': '#EC4899',
   'Slang': '#EF4444',
+  'Wulgaryzmy': '#DC2626',
   'default': '#6B7280',
 }
 
