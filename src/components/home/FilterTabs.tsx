@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import { useAppStore } from '../../store/useAppStore'
 import packagesIndex from '../../data/packages-index.json'
 import { PackMeta } from '../../types/vocabulary'
@@ -62,7 +62,12 @@ const CATEGORIES: string[] = CATEGORY_ORDER.filter(cat => allCategories.includes
   allCategories.filter(cat => !CATEGORY_ORDER.includes(cat))
 )
 
-export function FilterTabs() {
+interface FilterTabsProps {
+  /** Rendered directly under the Level row (e.g. per-level progress bars). */
+  afterLevelRow?: ReactNode
+}
+
+export function FilterTabs({ afterLevelRow }: FilterTabsProps) {
   const { activeFilter, setFilter, activeLevel, setLevel, activeCategory, setCategory } = useAppStore()
   const [expandedLevel, setExpandedLevel] = useState<number | null>(null)
 
@@ -90,6 +95,8 @@ export function FilterTabs() {
           </button>
         ))}
       </div>
+
+      {afterLevelRow}
 
       {/* Level description */}
       {selectedLevelData && (

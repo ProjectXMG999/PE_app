@@ -3,8 +3,8 @@ import { AppShell } from '../components/layout/AppShell'
 import { InstallBanner } from '../components/home/InstallBanner'
 import { QuickStartCards } from '../components/home/QuickStartCards'
 import { StatsRow } from '../components/home/StatsRow'
-import { SearchBar } from '../components/home/SearchBar'
 import { FilterTabs } from '../components/home/FilterTabs'
+import { LevelProgressBars } from '../components/home/LevelProgressBars'
 import { SectionHeader } from '../components/home/SectionHeader'
 import { PackageCard } from '../components/home/PackageCard'
 import { OnboardingCard } from '../components/home/OnboardingCard'
@@ -78,11 +78,12 @@ export function HomePage() {
       <OnboardingModal />
       <div className="homepage">
         <InstallBanner />
+        <StatsRow />
         <OnboardingCard />
         <QuickStartCards />
-        <StatsRow />
-        <SearchBar />
-        <FilterTabs />
+        <FilterTabs
+          afterLevelRow={snapshot && <LevelProgressBars allPacks={allPacks} knownMap={knownMap} />}
+        />
         <SectionHeader label="Pakiety" count={filtered.length} />
         <div className="homepage__list" ref={listRef}>
           {!snapshot ? (
