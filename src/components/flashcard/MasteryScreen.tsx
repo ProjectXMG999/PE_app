@@ -1,6 +1,14 @@
 import { useEffect, useRef } from 'react'
 import './MasteryScreen.css'
 
+function slowaForm(n: number): string {
+  if (n === 1) return 'słowo'
+  const d = n % 10
+  const h = n % 100
+  if (d >= 2 && d <= 4 && (h < 12 || h > 14)) return 'słowa'
+  return 'słów'
+}
+
 interface Props {
   packName: string
   wordCount: number
@@ -177,7 +185,7 @@ export function MasteryScreen({ packName, wordCount, onRepeat, onNext, nextPackN
               <path d="M20 6 9 17l-5-5" />
             </svg>
           </span>
-          Wszystkie {wordCount} słów opanowane
+          Wszystkie {wordCount} {slowaForm(wordCount)} opanowane
         </div>
 
         <div className="mastery__actions">
