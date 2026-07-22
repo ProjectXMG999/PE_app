@@ -229,23 +229,23 @@
 }
 
 .packcard__btn--autoplay {
-  background: var(--accent);
+  background: linear-gradient(135deg, #7B2FBE 0%, #4C1D95 100%);
   color: white;
-  box-shadow: 0 4px 14px rgba(123, 47, 190, 0.4);
+  box-shadow: 0 4px 14px rgba(123, 47, 190, 0.45);
 }
 
 .packcard__btn--autoplay:hover {
-  background: var(--accent-bright);
+  box-shadow: 0 4px 18px rgba(123, 47, 190, 0.6);
 }
 
 .packcard__btn--fiszki {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  color: var(--text-primary);
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25);
+  background: linear-gradient(135deg, #1E5C3A 0%, #0F3624 100%);
+  border: 1px solid transparent;
+  color: white;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
 }
 
 .packcard__btn--fiszki:hover {
-  border-color: var(--border-accent);
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.5);
 }
 
