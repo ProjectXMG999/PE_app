@@ -20,6 +20,8 @@ const TRAINING_EXERCISES = [
     description: 'Zrób pierwsze frazy ze słowem.',
     duration: '2 min',
     audioDuration: '2 min',
+    icon: '🎯',
+    color: '#f97316',
     fullDescription: `
 Od lęku do ciekawości
 
@@ -61,6 +63,8 @@ Tu nie chodzi o perfekcję. Chodzi o **pierwszy bezpieczny kontakt ze słowem w 
     description: 'Zamień słowo w zdanie z Twojego życia.',
     duration: '3 min',
     audioDuration: '2 min',
+    icon: '💬',
+    color: '#ec4899',
     fullDescription: `
 Język, który dotyka Twojego świata
 
@@ -112,6 +116,8 @@ Rezultat
     description: 'Użyj słowa w domu, pracy i codzienności.',
     duration: '3 min',
     audioDuration: '2 min',
+    icon: '🌐',
+    color: '#3b82f6',
     fullDescription: `
 Słowo, które pracuje wszędzie
 
@@ -159,6 +165,8 @@ Słowo, które działa tylko w jednym zdaniu, jest jeszcze kruche. Słowo, któr
     description: 'Rozwiń krótkie zdanie w prawdziwą wypowiedź.',
     duration: '4 min',
     audioDuration: '2 min',
+    icon: '🪜',
+    color: '#22c55e',
     fullDescription: `
 Od małego zdania do pełnej wypowiedzi
 
@@ -233,8 +241,18 @@ export function TrainingPage() {
           </button>
 
           <div className="training-detail__header">
-            <h1>{selectedExercise.titlePL}</h1>
-            <p className="training-detail__subtitle">{selectedExercise.titleEN}</p>
+            <div className="training-detail__title-row">
+              <div
+                className="training-detail__icon"
+                style={{ background: `${selectedExercise.color}22`, color: selectedExercise.color }}
+              >
+                {selectedExercise.icon}
+              </div>
+              <div>
+                <h1>{selectedExercise.titlePL}</h1>
+                <p className="training-detail__subtitle">{selectedExercise.titleEN}</p>
+              </div>
+            </div>
             <button
               className="training-detail__audio-btn"
               onClick={() => setIsPlayingAudio(true)}
@@ -308,12 +326,22 @@ export function TrainingPage() {
         </div>
 
         <div className="training-grid">
-          {TRAINING_EXERCISES.map(exercise => (
+          {TRAINING_EXERCISES.map((exercise, idx) => (
             <button
               key={exercise.id}
               className="training-card"
+              style={{ borderTopColor: exercise.color }}
               onClick={() => setSelectedExerciseId(exercise.id)}
             >
+              <div className="training-card__top">
+                <div
+                  className="training-card__icon"
+                  style={{ background: `${exercise.color}22`, color: exercise.color }}
+                >
+                  {exercise.icon}
+                </div>
+                <span className="training-card__num">{String(idx + 1).padStart(2, '0')}</span>
+              </div>
               <div className="training-card__content">
                 <h3 className="training-card__title">{exercise.titlePL}</h3>
                 <p className="training-card__subtitle">{exercise.titleEN}</p>
