@@ -92,6 +92,36 @@
   .packcard--mastered::before { animation: none; }
 }
 
+/* Etched "PE" monogram — frosted-glass watermark, bleeds off the right edge
+   and sits behind the content (and behind the foil glint, so the sweep
+   catches the letters). */
+.packcard--mastered::after {
+  content: "PE";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -2;
+  pointer-events: none;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 128px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: rgba(255, 255, 255, 0.06);
+  /* sandblasted relief: bright top edge + dark lower edge */
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.10),
+    0 -1px 0 rgba(0, 0, 0, 0.22);
+}
+
+[data-theme="light"] .packcard--mastered::after {
+  color: rgba(120, 90, 25, 0.08);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.55),
+    0 -1px 0 rgba(120, 90, 25, 0.10);
+}
+
 /* Gold-gradient number — filled metal, not a solid yellow */
 .packcard--mastered .packcard__num-text {
   background: linear-gradient(160deg, #fff7d6 0%, #f3ce74 48%, #c79320 100%);
