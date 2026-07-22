@@ -177,7 +177,7 @@ export function MasteryScreen({ packName, wordCount, onRepeat, onNext, nextPackN
               <path d="M20 6 9 17l-5-5" />
             </svg>
           </span>
-          Wszystkie {wordCount} słów w pamięci
+          Wszystkie {wordCount} słów opanowane
         </div>
 
         <div className="mastery__actions">
