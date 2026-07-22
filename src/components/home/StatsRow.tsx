@@ -42,32 +42,33 @@ export function StatsRow() {
 
   return (
     <div className="statsrow">
-      <div className="statsrow__chip">
+      <div className={`statsrow__chip${streak > 0 ? ' statsrow__chip--streak-active' : ''}`}>
+        <span className="statsrow__icon">🔥</span>
         <span className="statsrow__value">{streak}</span>
-        <div className="statsrow__right">
-          <span className="statsrow__label">dni z rzędu</span>
-          <div className="statsrow__dots">
-            {Array.from({ length: 7 }).map((_, i) => (
-              <div key={i} className={`statsrow__dot ${i < streak ? 'statsrow__dot--filled' : ''}`} />
-            ))}
-          </div>
+        <span className="statsrow__label--solo">dni z rzędu</span>
+        <div className="statsrow__dots">
+          {Array.from({ length: 7 }).map((_, i) => (
+            <div key={i} className={`statsrow__dot ${i < streak ? 'statsrow__dot--filled' : ''}`} />
+          ))}
         </div>
       </div>
       <div className="statsrow__chip">
+        <span className="statsrow__icon">📚</span>
         <span className="statsrow__value">{known}</span>
-        <span className="statsrow__label statsrow__label--solo">słów poznanych</span>
+        <span className="statsrow__label--solo">słów poznanych</span>
       </div>
-
       <div className="statsrow__chip statsrow__chip--sm">
+        <span className="statsrow__icon">⚡</span>
         <span className="statsrow__value statsrow__value--sm">{avg ?? '—'}</span>
-        <span className="statsrow__label statsrow__label--solo">słów / dzień</span>
+        <span className="statsrow__label--solo">słów / dzień</span>
       </div>
       <div className="statsrow__chip statsrow__chip--sm">
+        <span className="statsrow__icon">🎯</span>
         <span className="statsrow__value statsrow__value--sm">
           {daysTo.days ?? (daysTo.level ? '—' : '✓')}
         </span>
-        <span className="statsrow__label statsrow__label--solo">
-          {daysTo.level ? `dni do Level ${daysTo.level}` : 'maks. poziom'}
+        <span className="statsrow__label--solo">
+          {daysTo.level ? `dni do L${daysTo.level}` : 'maks.'}
         </span>
       </div>
     </div>

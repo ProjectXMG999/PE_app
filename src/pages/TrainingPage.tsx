@@ -303,8 +303,8 @@ export function TrainingPage() {
       <div className="training-page">
         <TrainingOnboardingCard />
         <div className="training-header">
-          <h1>Trening</h1>
-          <p>Wybierz ćwiczenie i zacznij trenować</p>
+          <h1>Language Performance Training</h1>
+          <p>Poznaj 4 ćwiczenia, dzięki którym zaczniesz naprawdę mówić po angielsku.</p>
         </div>
 
         <div className="training-grid">

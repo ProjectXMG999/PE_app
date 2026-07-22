@@ -66,10 +66,10 @@ export function HomePage() {
       <div className="homepage">
         <InstallBanner />
         <OnboardingCard />
-        <QuickStartCards />
         <StatsRow />
-        <FilterTabs />
+        <QuickStartCards />
         <LevelProgressBars allPacks={allPacks} knownMap={knownMap} />
+        <FilterTabs />
         <SectionHeader label="Pakiety" count={filtered.length} />
         <div className="homepage__list">
           {filtered.map(pack => (

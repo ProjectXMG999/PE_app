@@ -24,14 +24,14 @@ export function LevelProgressBars({ allPacks, knownMap }: Props) {
   return (
     <div className="level-progress">
       {rows.map(({ lvl, total, known, pct }) => (
-        <div key={lvl} className="level-progress__row">
+        <div key={lvl} className={`level-progress__row level-progress__row--${lvl}`}>
           <span className="level-progress__label" style={{ color: LEVEL_COLORS[lvl] }}>
             Level {lvl}
           </span>
           <div className="level-progress__bar">
             <div
               className="level-progress__fill"
-              style={{ width: `${pct}%`, background: LEVEL_COLORS[lvl] }}
+              style={{ width: `${pct}%` }}
             />
           </div>
           <span className="level-progress__count">{known} / {total}</span>

@@ -1,7 +1,7 @@
 .statsrow {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-sm);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-xs);
   padding: 0 var(--spacing-md);
   margin-bottom: var(--spacing-md);
 }
@@ -10,39 +10,50 @@
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-md);
+  padding: 10px 4px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: 2px;
+  text-align: center;
 }
 
 [data-theme="light"] .statsrow__chip {
   box-shadow: var(--shadow-sm);
 }
 
+.statsrow__icon {
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 1px;
+}
+
 .statsrow__value {
   font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--accent);
   line-height: 1;
 }
 
-.statsrow__right {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
 .statsrow__label {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--text-muted);
   font-family: var(--font-body);
+  line-height: 1.2;
 }
 
 .statsrow__label--solo {
-  font-size: 13px;
-  color: var(--text-secondary);
+  font-size: 10px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.statsrow__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .statsrow__dots {
@@ -51,8 +62,8 @@
 }
 
 .statsrow__dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--border);
   transition: background var(--transition-fast);
@@ -62,18 +73,21 @@
   background: var(--accent);
 }
 
-/* Small secondary chips */
+/* streak chip active glow */
+.statsrow__chip--streak-active {
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+/* sm chips same style as main now */
 .statsrow__chip--sm {
-  padding: var(--spacing-sm) var(--spacing-md);
-  background: var(--bg-card);
-  border-color: transparent;
-  gap: var(--spacing-xs);
+  background: var(--bg-surface);
+  border-color: var(--border);
 }
 
 .statsrow__value--sm {
-  font-size: 20px;
+  font-size: 22px;
   font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--accent-bright);
+  color: var(--accent);
   line-height: 1;
 }

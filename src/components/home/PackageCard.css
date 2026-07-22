@@ -231,6 +231,7 @@
 .packcard__btn--autoplay {
   background: var(--accent);
   color: white;
+  box-shadow: 0 4px 14px rgba(123, 47, 190, 0.4);
 }
 
 .packcard__btn--autoplay:hover {
@@ -241,6 +242,7 @@
   background: var(--bg-surface);
   border: 1px solid var(--border);
   color: var(--text-primary);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25);
 }
 
 .packcard__btn--fiszki:hover {
