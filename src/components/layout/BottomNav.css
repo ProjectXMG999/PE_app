@@ -3,6 +3,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  margin: 0 auto;
   z-index: 1000;
   height: calc(var(--bottomnav-height) + var(--safe-bottom));
   padding-bottom: var(--safe-bottom);
@@ -77,4 +78,11 @@
 
 .bottomnav__item--active .bottomnav__label {
   color: var(--accent);
+}
+
+@media (min-width: 640px) {
+  .bottomnav {
+    max-width: 560px;
+    border-inline: 1px solid var(--border);
+  }
 }

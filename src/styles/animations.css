@@ -57,6 +57,15 @@
   animation: slideInLeft 300ms ease forwards;
 }
 
+/* View Transitions API — tab switches (BottomNav) and the Training
+   card→detail icon morph opt in via the <Link viewTransition> prop.
+   Browsers without support just navigate normally (progressive
+   enhancement, no fallback code needed). */
+::view-transition-group(*) {
+  animation-duration: 220ms;
+  animation-timing-function: ease;
+}
+
 /* Respect users who ask the OS for less motion: collapse all CSS
    animation/transition to a single imperceptible frame. */
 @media (prefers-reduced-motion: reduce) {
@@ -73,6 +82,12 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
   }
 }
 

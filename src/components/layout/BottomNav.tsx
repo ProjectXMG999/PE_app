@@ -77,6 +77,7 @@ export function BottomNav() {
           <Link
             key={item.path}
             to={item.path}
+            viewTransition
             className={`bottomnav__item ${active ? 'bottomnav__item--active' : ''}`}
             aria-current={active ? 'page' : undefined}
           >

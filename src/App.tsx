@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { useRegisterSW } from 'virtual:pwa-register/react'
 import { useAppStore, resolveTheme } from './store/useAppStore'
 import { initInstallService } from './services/installService'
+import { loadProgressSnapshot } from './hooks/useProgressData'
 import { DebugOverlay } from './components/debug/DebugOverlay'
 import { VersionBadge } from './components/debug/VersionBadge'
 import { HomePage } from './pages/HomePage'
@@ -71,6 +72,15 @@ export function App() {
       (e) => setInstallPrompt(e as Parameters<typeof setInstallPrompt>[0]),
       () => setInstalled()
     )
+  }, [])
+
+  // Badging API: show the learning streak on the installed PWA icon
+  useEffect(() => {
+    if (!('setAppBadge' in navigator)) return
+    loadProgressSnapshot().then(s => {
+      if (s.streak > 0) navigator.setAppBadge(s.streak).catch(() => {})
+      else navigator.clearAppBadge?.().catch(() => {})
+    })
   }, [])
 
   return (

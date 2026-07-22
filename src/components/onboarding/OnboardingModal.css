@@ -1,11 +1,5 @@
-.onboarding-modal__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+dialog.onboarding-modal::backdrop {
   background: rgba(0, 0, 0, 0.6);
-  z-index: 500;
   animation: fadeIn 300ms ease-out forwards;
   backdrop-filter: blur(2px);
 }
@@ -15,7 +9,7 @@
   to { opacity: 1; }
 }
 
-.onboarding-modal {
+dialog.onboarding-modal {
   position: fixed;
   top: calc(50% - var(--bottomnav-height) / 2);
   left: 16px;
@@ -31,7 +25,6 @@
   max-height: 85vh;
   overflow-y: auto;
   overscroll-behavior: contain;
-  z-index: 510;
   animation: slideUp 300ms ease-out forwards;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
@@ -143,7 +136,7 @@
 }
 
 @media (min-width: 600px) {
-  .onboarding-modal {
+  dialog.onboarding-modal {
     max-width: 420px;
     padding: 24px 28px;
   }

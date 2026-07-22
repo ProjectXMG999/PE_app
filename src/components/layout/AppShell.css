@@ -17,3 +17,14 @@
   padding-bottom: 0;
   overflow: hidden;
 }
+
+/* Desktop/tablet: the app is designed portrait-mobile — instead of a
+   stretched phone layout, present it as a centered app frame. */
+@media (min-width: 640px) {
+  .appshell {
+    max-width: 560px;
+    margin: 0 auto;
+    border-inline: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
+  }
+}

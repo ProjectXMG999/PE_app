@@ -41,22 +41,22 @@ export function ResetProgressModal({ onClose, onReset }: Props) {
   const [confirmText, setConfirmText] = useState('')
   const [busy, setBusy] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
-  const backdropRef = useRef<HTMLDivElement>(null)
+  const dialogRef = useRef<HTMLDialogElement>(null)
 
   const CONFIRM_WORD = 'RESETUJ'
   const canConfirm = confirmText === CONFIRM_WORD && !busy
 
+  // Native <dialog> supplies the focus trap and ESC-to-close (as a 'cancel'
+  // then 'close' event); we just funnel 'close' back to the onClose prop.
   useEffect(() => {
+    const dialog = dialogRef.current
+    if (!dialog) return
+    dialog.showModal()
     inputRef.current?.focus()
+    dialog.addEventListener('close', onClose)
+    return () => dialog.removeEventListener('close', onClose)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
-  useEffect(() => {
-    function onKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') onClose()
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
 
   async function handleReset() {
     if (!canConfirm) return
@@ -78,15 +78,12 @@ export function ResetProgressModal({ onClose, onReset }: Props) {
   }
 
   return (
-    <div
-      className="reset-modal__backdrop"
-      ref={backdropRef}
-      onClick={e => { if (e.target === backdropRef.current) onClose() }}
-      role="dialog"
-      aria-modal="true"
+    <dialog
+      ref={dialogRef}
+      className="reset-modal"
       aria-labelledby="reset-modal-title"
+      onClick={e => { if (e.target === dialogRef.current) dialogRef.current?.close() }}
     >
-      <div className="reset-modal">
         <div className="reset-modal__icon" aria-hidden="true">⚠️</div>
         <h2 className="reset-modal__title" id="reset-modal-title">Resetuj progres</h2>
         <p className="reset-modal__desc">
@@ -139,7 +136,7 @@ export function ResetProgressModal({ onClose, onReset }: Props) {
         </div>
 
         <div className="reset-modal__actions">
-          <button className="reset-modal__btn reset-modal__btn--cancel" onClick={onClose} disabled={busy}>
+          <button className="reset-modal__btn reset-modal__btn--cancel" onClick={() => dialogRef.current?.close()} disabled={busy}>
             Anuluj
           </button>
           <button
@@ -150,7 +147,6 @@ export function ResetProgressModal({ onClose, onReset }: Props) {
             {busy ? 'Resetowanie…' : 'Resetuj'}
           </button>
         </div>
-      </div>
-    </div>
+    </dialog>
   )
 }

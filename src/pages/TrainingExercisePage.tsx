@@ -27,7 +27,7 @@ export function TrainingExercisePage() {
   return (
     <AppShell>
       <div className="training-detail">
-        <Link className="training-detail__back" to="/trening">
+        <Link className="training-detail__back" to="/trening" viewTransition>
           ← Wróć
         </Link>
 
@@ -38,6 +38,7 @@ export function TrainingExercisePage() {
               style={{
                 background: `color-mix(in srgb, ${exercise.color} 13%, transparent)`,
                 color: exercise.color,
+                viewTransitionName: `exercise-icon-${exercise.id}`,
               }}
             >
               {exercise.icon}

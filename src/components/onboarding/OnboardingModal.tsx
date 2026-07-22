@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react'
-import { createPortal } from 'react-dom'
+import { useEffect, useRef, useState } from 'react'
 import { AudioModal } from '../shared/AudioModal'
 import audioTimings from '../../data/audioTimings.json'
 import './OnboardingModal.css'
@@ -22,6 +21,7 @@ const WELCOME_PARAGRAPHS = [
 export function OnboardingModal() {
   const [isOpen, setIsOpen] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
+  const dialogRef = useRef<HTMLDialogElement>(null)
 
   useEffect(() => {
     const seen = localStorage.getItem(ONBOARDING_SEEN_KEY)
@@ -29,6 +29,18 @@ export function OnboardingModal() {
       setIsOpen(true)
     }
   }, [])
+
+  // showModal() after the conditional <dialog> mounts; ESC funnels through
+  // the native 'close' event so the seen-flag is always persisted.
+  useEffect(() => {
+    const dialog = dialogRef.current
+    if (!isOpen || !dialog) return
+    dialog.showModal()
+    const onNativeClose = () => handleClose()
+    dialog.addEventListener('close', onNativeClose)
+    return () => dialog.removeEventListener('close', onNativeClose)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen])
 
   const handleClose = () => {
     setIsOpen(false)
@@ -43,11 +55,13 @@ export function OnboardingModal() {
 
   return (
     <>
-      {isOpen && createPortal(
-        <>
-          <div className="onboarding-modal__overlay" onClick={handleClose} />
-          <div className="onboarding-modal">
-            <button className="onboarding-modal__close" onClick={handleClose} aria-label="Close">
+      {isOpen && (
+          <dialog
+            ref={dialogRef}
+            className="onboarding-modal"
+            onClick={e => { if (e.target === dialogRef.current) dialogRef.current?.close() }}
+          >
+            <button className="onboarding-modal__close" onClick={() => dialogRef.current?.close()} aria-label="Zamknij">
               ✕
             </button>
 
@@ -76,9 +90,7 @@ export function OnboardingModal() {
                 Możesz wrócić do tej informacji w dowolnym momencie
               </p>
             </div>
-          </div>
-        </>,
-        document.body
+          </dialog>
       )}
 
       {isPlaying && (

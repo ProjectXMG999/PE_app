@@ -21,6 +21,7 @@ export function TrainingPage() {
             <Link
               key={exercise.id}
               to={`/trening/${exercise.id}`}
+              viewTransition
               className="training-card"
               style={{ borderTopColor: exercise.color }}
             >
@@ -30,6 +31,7 @@ export function TrainingPage() {
                   style={{
                     background: `color-mix(in srgb, ${exercise.color} 13%, transparent)`,
                     color: exercise.color,
+                    viewTransitionName: `exercise-icon-${exercise.id}`,
                   }}
                 >
                   {exercise.icon}
