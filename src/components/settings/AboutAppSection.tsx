@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { AudioModal } from '../shared/AudioModal'
+import audioTimings from '../../data/audioTimings.json'
 import './AboutAppSection.css'
 
 const WELCOME_PARAGRAPHS = [
@@ -158,6 +159,7 @@ export function AboutAppSection() {
           duration="2 min"
           src="/audio/intro-welcome.mp3"
           paragraphs={WELCOME_PARAGRAPHS}
+          timings={audioTimings['intro-welcome.mp3'].timings}
           onClose={() => setIsPlayingWelcome(false)}
         />
       )}
@@ -169,6 +171,7 @@ export function AboutAppSection() {
           duration="5 min"
           src="/audio/intro-story.mp3"
           paragraphs={STORY_PARAGRAPHS}
+          timings={audioTimings['intro-story.mp3'].timings}
           onClose={() => setIsPlayingStory(false)}
         />
       )}

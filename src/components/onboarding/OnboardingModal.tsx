@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { AudioModal } from '../shared/AudioModal'
+import audioTimings from '../../data/audioTimings.json'
 import './OnboardingModal.css'
 
 const ONBOARDING_SEEN_KEY = 'lp_onboarding_seen'
@@ -87,6 +88,7 @@ export function OnboardingModal() {
           duration="2 min"
           src="/audio/intro-welcome.mp3"
           paragraphs={WELCOME_PARAGRAPHS}
+          timings={audioTimings['intro-welcome.mp3'].timings}
           onClose={() => setIsPlaying(false)}
         />
       )}

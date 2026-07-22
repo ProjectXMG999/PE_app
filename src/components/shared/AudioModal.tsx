@@ -2,12 +2,19 @@ import { createPortal } from 'react-dom'
 import { useRef, useState, useEffect } from 'react'
 import './AudioModal.css'
 
+export interface Timing {
+  index: number
+  startTime: number
+  endTime: number
+}
+
 interface AudioModalProps {
   title: string
   label: string
   duration: string
   src: string
   paragraphs: string[]
+  timings?: Timing[]
   onClose: () => void
 }
 
@@ -18,13 +25,20 @@ function fmt(s: number) {
   return `${m}:${sec.toString().padStart(2, '0')}`
 }
 
-export function AudioModal({ title, label, duration, src, paragraphs, onClose }: AudioModalProps) {
+export function AudioModal({ title, label, duration, src, paragraphs, timings, onClose }: AudioModalProps) {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [playing, setPlaying] = useState(false)
   const [current, setCurrent] = useState(0)
   const [total, setTotal] = useState(0)
   const [buffered, setBuffered] = useState(0)
   const [dragging, setDragging] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(-1)
+
+  const getCurrentIndex = (time: number) => {
+    if (!timings) return -1
+    const timing = timings.find(t => time >= t.startTime && time < t.endTime)
+    return timing ? timing.index : -1
+  }
 
   useEffect(() => {
     const a = audioRef.current
@@ -37,7 +51,13 @@ export function AudioModal({ title, label, duration, src, paragraphs, onClose }:
 
     const onPlay    = () => setPlaying(true)
     const onPause   = () => setPlaying(false)
-    const onTime    = () => { if (!dragging) { setCurrent(a.currentTime); updateDuration() } }
+    const onTime    = () => {
+      if (!dragging) {
+        setCurrent(a.currentTime)
+        setActiveIndex(getCurrentIndex(a.currentTime))
+        updateDuration()
+      }
+    }
     const onBuf     = () => { if (a.buffered.length) setBuffered(a.buffered.end(a.buffered.length - 1)) }
     const onEnded   = () => { setPlaying(false); onClose() }
 
@@ -179,7 +199,12 @@ export function AudioModal({ title, label, duration, src, paragraphs, onClose }:
           </div>
           <div className="am__transcript-body">
             {paragraphs.map((p, i) => (
-              <p key={i} className="am__paragraph">{p}</p>
+              <p
+                key={i}
+                className={`am__paragraph ${activeIndex === i ? 'am__paragraph--active' : ''}`}
+              >
+                {p}
+              </p>
             ))}
           </div>
         </div>

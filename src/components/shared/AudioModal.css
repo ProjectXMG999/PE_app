@@ -289,3 +289,10 @@
   border-left-color: var(--accent);
   background: rgba(139, 92, 246, 0.05);
 }
+
+.am__paragraph--active {
+  color: var(--text-primary);
+  border-left-color: var(--accent);
+  background: rgba(139, 92, 246, 0.12);
+  font-weight: 500;
+}

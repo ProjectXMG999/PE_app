@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AudioModal } from '../shared/AudioModal'
+import audioTimings from '../../data/audioTimings.json'
 import './OnboardingCard.css'
 
 const ONBOARDING_CARD_HIDDEN_KEY = 'lp_onboarding_card_hidden'
@@ -71,6 +72,7 @@ export function OnboardingCard() {
           duration="2 min"
           src="/audio/intro-welcome.mp3"
           paragraphs={WELCOME_PARAGRAPHS}
+          timings={audioTimings['intro-welcome.mp3'].timings}
           onClose={() => setIsPlaying(false)}
         />
       )}
