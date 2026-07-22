@@ -600,7 +600,6 @@ export function FlashcardPage() {
       return (
         <MasteryScreen
           packName={pack.name}
-          wordCount={sessionTotal}
           onRepeat={handleRepeat}
           onNext={nextPack ? handleNextPack : null}
           nextPackName={nextPack?.name}

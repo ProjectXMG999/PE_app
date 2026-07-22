@@ -1,17 +1,8 @@
 import { useEffect, useRef } from 'react'
 import './MasteryScreen.css'
 
-function slowaForm(n: number): string {
-  if (n === 1) return 'słowo'
-  const d = n % 10
-  const h = n % 100
-  if (d >= 2 && d <= 4 && (h < 12 || h > 14)) return 'słowa'
-  return 'słów'
-}
-
 interface Props {
   packName: string
-  wordCount: number
   onRepeat: () => void
   onNext: (() => void) | null
   nextPackName?: string
@@ -75,7 +66,7 @@ function drawStar(ctx: CanvasRenderingContext2D, cx: number, cy: number, r: numb
   ctx.closePath()
 }
 
-export function MasteryScreen({ packName, wordCount, onRepeat, onNext, nextPackName, onExit }: Props) {
+export function MasteryScreen({ packName, onRepeat, onNext, nextPackName, onExit }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const rafRef = useRef<number>(0)
   const particles = useRef<Particle[]>([])
@@ -177,15 +168,6 @@ export function MasteryScreen({ packName, wordCount, onRepeat, onNext, nextPackN
           <p className="mastery__eyebrow">Paczka opanowana</p>
           <h1 className="mastery__title">Brawo!</h1>
           <p className="mastery__sub">{packName}</p>
-        </div>
-
-        <div className="mastery__chip">
-          <span className="mastery__chip-check" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M20 6 9 17l-5-5" />
-            </svg>
-          </span>
-          Wszystkie {wordCount} {slowaForm(wordCount)} opanowane
         </div>
 
         <div className="mastery__actions">

@@ -150,7 +150,6 @@ export function ActiveSentencePage() {
     return (
       <MasteryScreen
         packName={pack.name}
-        wordCount={pack.wordCount}
         onRepeat={handleRepeat}
         onNext={nextPack ? () => navigate(`/pakiet/${nextPack.id}/fiszki-start`) : null}
         nextPackName={nextPack?.name}
