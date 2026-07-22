@@ -57,6 +57,68 @@
   animation: slideInLeft 300ms ease forwards;
 }
 
+/* ── Study-card flip choreography ─────────────────────────────────────
+   Shared by WordFlashPage + ActiveSentencePage (half-flip technique:
+   one face in the DOM, swapped at the fold/unfold midpoint). The
+   keyframe NAMES are part of the contract — useCardFlip() advances its
+   state machine on animationend by matching e.animationName. perspective()
+   lives inside the transform so no parent element needs 3D context. */
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: perspective(1100px) translateX(48px) rotateY(-8deg) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(1100px) translateX(0) rotateY(0deg) scale(1);
+  }
+}
+
+@keyframes card-flip-fold {
+  from {
+    transform: perspective(1100px) rotateY(0deg) scale(1);
+    filter: brightness(1);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(1100px) rotateY(90deg) scale(1.04);
+    filter: brightness(1.06);
+    opacity: 0.85;
+  }
+}
+
+@keyframes card-flip-unfold {
+  0% {
+    transform: perspective(1100px) rotateY(-90deg) scale(1.04);
+    filter: brightness(1.06);
+    opacity: 0.85;
+  }
+  60% {
+    transform: perspective(1100px) rotateY(5deg) scale(1.01);
+    filter: brightness(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(1100px) rotateY(0deg) scale(1);
+    filter: brightness(1);
+    opacity: 1;
+  }
+}
+
+/* Diagonal light sweep across the freshly revealed face */
+@keyframes card-sheen {
+  from { background-position: 130% 0; }
+  to   { background-position: -80% 0; }
+}
+
+@keyframes card-advance-out {
+  to {
+    opacity: 0;
+    transform: perspective(1100px) translateX(-48px) rotateY(6deg) scale(0.96);
+  }
+}
+
 /* View Transitions API — tab switches (BottomNav) and the Training
    card→detail icon morph opt in via the <Link viewTransition> prop.
    Browsers without support just navigate normally (progressive

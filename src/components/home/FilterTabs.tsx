@@ -120,7 +120,7 @@ export function FilterTabs() {
           <button
             key={tab.id}
             className={`filtertabs__tab ${activeFilter === tab.id ? 'filtertabs__tab--active' : ''}`}
-            onClick={() => setFilter(tab.id as StatusTabId)}
+            onClick={() => setFilter(activeFilter === tab.id ? null : (tab.id as StatusTabId))}
           >
             {tab.label}
           </button>

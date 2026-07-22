@@ -91,7 +91,8 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
   }, [packId, play, enRate])
 
   const playSentence = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
-    if (!packId) return Promise.resolve('ok' as const)
+    // Audio zdań istnieje tylko dla słów z sentenceEn — baza "bez zdań" ma same nulle
+    if (!packId || !word.sentenceEn) return Promise.resolve('ok' as const)
     return play(getAudioUrl(packId, word.audioSentence), EN_BASE * enRate)
   }, [packId, play, enRate])
 
@@ -132,7 +133,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
         if (i < words.length) {
           const w = words[i]
           preloadAudio(getAudioUrl(packId, w.audioWord))
-          preloadAudio(getAudioUrl(packId, w.audioSentence))
+          if (w.sentenceEn) preloadAudio(getAudioUrl(packId, w.audioSentence))
           if (w.audioWordPl) preloadAudio(getAudioUrl(packId, w.audioWordPl))
           if (w.audioSentencePl) preloadAudio(getAudioUrl(packId, w.audioSentencePl))
         }

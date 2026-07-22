@@ -77,7 +77,10 @@
   min-height: 0;
 }
 
-/* ── Card — half-flip technique ── */
+/* ── Card — half-flip technique ──
+   Keyframes live in src/styles/animations.css (card-enter / card-flip-fold /
+   card-flip-unfold / card-advance-out / card-sheen) — their names are the
+   animationend contract with useCardFlip(). */
 .wf__card {
   width: 100%;
   max-width: 400px;
@@ -87,33 +90,42 @@
   transform-origin: center center;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
-@keyframes wf-enter {
-  from { opacity: 0; transform: translateX(44px) scale(0.97); }
-  to   { opacity: 1; transform: translateX(0) scale(1); }
+.wf__card--fold,
+.wf__card--unfold,
+.wf__card--advance {
+  will-change: transform, opacity;
 }
 
-@keyframes wf-fold {
-  from { transform: rotateY(0deg); opacity: 1; }
-  to   { transform: rotateY(90deg); opacity: 0.2; }
+.wf__card--fold    { animation: card-flip-fold   0.19s var(--ease-in-sharp) forwards; }
+.wf__card--unfold  { animation: card-flip-unfold 0.34s ease-out forwards; }
+.wf__card--advance { animation: card-advance-out 0.26s var(--ease-in-sharp) forwards; }
+
+/* Lifted shadow while the card is mid-air */
+.wf__card--fold .wf__face,
+.wf__card--unfold .wf__face {
+  box-shadow: var(--shadow-lg);
 }
 
-@keyframes wf-unfold {
-  from { transform: rotateY(-90deg); opacity: 0.2; }
-  to   { transform: rotateY(0deg); opacity: 1; }
+/* Light sweep across the freshly revealed face */
+.wf__card--unfold::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 42%, rgba(255, 255, 255, 0.07) 50%, transparent 58%);
+  background-size: 240% 100%;
+  background-repeat: no-repeat;
+  animation: card-sheen 0.55s ease-out forwards;
 }
 
-@keyframes wf-advance {
-  to { opacity: 0; transform: translateX(-40px) scale(0.97); }
-}
-
-.wf__card--fold    { animation: wf-fold    0.22s ease-in  forwards; }
-.wf__card--unfold  { animation: wf-unfold  0.22s ease-out forwards; }
-.wf__card--advance { animation: wf-advance 0.3s  ease-in  forwards; }
-
-.wf__card:not(.wf__card--fold):not(.wf__card--unfold):not(.wf__card--advance) {
-  animation: wf-enter 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+/* Explicit enter class (not a :not() catch-all) — otherwise the enter
+   animation would restart every time the flip classes come off. */
+.wf__card--enter {
+  animation: card-enter 0.34s var(--ease-out-expo) both;
 }
 
 /* ── Face ── */
@@ -261,16 +273,27 @@
   gap: 10px;
   padding: 10px var(--spacing-md) calc(20px + env(safe-area-inset-bottom, 0px));
   flex-shrink: 0;
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
   pointer-events: none;
 }
 
+.wf__actions .wf__btn {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.28s var(--ease-out-expo), transform 0.28s var(--ease-out-expo);
+}
+
+/* Staggered rise once the answer is revealed */
 .wf__actions--visible {
+  pointer-events: auto;
+}
+
+.wf__actions--visible .wf__btn {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto;
+}
+
+.wf__actions--visible .wf__btn:nth-child(2) {
+  transition-delay: 50ms;
 }
 
 .wf__btn {

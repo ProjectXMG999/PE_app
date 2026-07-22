@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { usePackageData } from '../hooks/usePackageData'
 import { useAudio } from '../hooks/useAudio'
+import { useCardFlip } from '../hooks/useCardFlip'
 import { useAppStore } from '../store/useAppStore'
 import { MasteryScreen } from '../components/flashcard/MasteryScreen'
 import { Word } from '../types/vocabulary'
@@ -13,22 +14,17 @@ import './WordFlashPage.css'
 
 const allPacks = packagesIndex as PackMeta[]
 
-type CardSide = 'front' | 'back'
-
 export function WordFlashPage() {
   const { packageId } = useParams<{ packageId: string }>()
   const navigate = useNavigate()
   const { pack, loading } = usePackageData(packageId ?? null)
   const { enRate, plRate } = useAppStore()
   const { playWord, stop } = useAudio(packageId ?? null, enRate, plRate)
+  const { side, isAdvancing, flip, advance: animateOut, resetToFront, handleAnimationEnd, cardClass } = useCardFlip()
 
   const [studyWords, setStudyWords] = useState<Word[]>([])
   const [progressMap, setProgressMap] = useState<Map<string, WordProgress>>(new Map())
   const [cardIndex, setCardIndex] = useState(0)
-  const [side, setSide] = useState<CardSide>('front')
-  const [halfwayDone, setHalfwayDone] = useState(false)
-  const [flipping, setFlipping] = useState(false)
-  const [advancing, setAdvancing] = useState(false)
   const [knownCount, setKnownCount] = useState(0)
   const [showMastery, setShowMastery] = useState(false)
   const [sessionKnown, setSessionKnown] = useState(0)
@@ -47,8 +43,7 @@ export function WordFlashPage() {
       setStudyWords(words)
       setKnownCount(known)
       setCardIndex(0)
-      setSide('front')
-      setHalfwayDone(false)
+      resetToFront()
       const existing = await getPackageProgress(packageId)
       if (!existing) {
         const now = new Date().toISOString()
@@ -64,24 +59,16 @@ export function WordFlashPage() {
   const nextPack = packIdx >= 0 && packIdx < allPacks.length - 1 ? allPacks[packIdx + 1] : null
 
   const flipCard = useCallback(() => {
-    if (flipping || advancing) return
-    const targetSide: CardSide = side === 'front' ? 'back' : 'front'
-    setFlipping(true)
-    setTimeout(() => {
-      setSide(targetSide)
-      setHalfwayDone(true)
-      if (targetSide === 'back' && currentWord) playWord(currentWord)
-      if (targetSide === 'front') stop()
-      setTimeout(() => {
-        setFlipping(false)
-        setHalfwayDone(false)
-      }, 220)
-    }, 220)
-  }, [flipping, advancing, side, currentWord, playWord, stop])
+    const revealing = side === 'front'
+    flip(() => {
+      // Fires exactly when the visible face swaps at the fold midpoint
+      if (revealing && currentWord) playWord(currentWord)
+      if (!revealing) stop()
+    })
+  }, [side, flip, currentWord, playWord, stop])
 
   const advance = useCallback(async (markKnown: boolean) => {
-    if (!currentWord || !packageId || advancing) return
-    setAdvancing(true)
+    if (!currentWord || !packageId || isAdvancing) return
     stop()
 
     if (markKnown) {
@@ -100,11 +87,7 @@ export function WordFlashPage() {
       setSessionKnown(c => c + 1)
     }
 
-    setTimeout(async () => {
-      setSide('front')
-      setHalfwayDone(false)
-      setAdvancing(false)
-
+    animateOut(async () => {
       if (isLast) {
         if (!sessionStartRef.current) {
           sessionStartRef.current = true
@@ -131,8 +114,8 @@ export function WordFlashPage() {
       } else {
         setCardIndex(i => i + 1)
       }
-    }, 320)
-  }, [currentWord, packageId, advancing, isLast, progressMap, total, pack, stop])
+    })
+  }, [currentWord, packageId, isAdvancing, isLast, progressMap, total, pack, stop, animateOut])
 
   const handleRepeat = useCallback(() => {
     if (!pack || !packageId) return
@@ -143,8 +126,7 @@ export function WordFlashPage() {
       const words = unknown.length > 0 ? unknown : pack.words
       setStudyWords(words)
       setCardIndex(0)
-      setSide('front')
-      setHalfwayDone(false)
+      resetToFront()
       setKnownCount(wpList.filter(wp => wp.status === 'known').length)
       setShowMastery(false)
       setDone(false)
@@ -209,8 +191,9 @@ export function WordFlashPage() {
       <div className="wf__scene">
         <div
           key={cardIndex}
-          className={`wf__card${flipping && !halfwayDone ? ' wf__card--fold' : ''}${flipping && halfwayDone ? ' wf__card--unfold' : ''}${advancing ? ' wf__card--advance' : ''}`}
+          className={`wf__card${cardClass('wf__card')}`}
           onClick={flipCard}
+          onAnimationEnd={handleAnimationEnd}
           role="button"
           tabIndex={0}
           onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && flipCard()}
@@ -249,15 +232,15 @@ export function WordFlashPage() {
         </div>
       </div>
 
-      <div className={`wf__actions${flipped && !advancing ? ' wf__actions--visible' : ''}`}>
-        <button className="wf__btn wf__btn--unknown" onClick={() => advance(false)} disabled={advancing}>
+      <div className={`wf__actions${flipped && !isAdvancing ? ' wf__actions--visible' : ''}`}>
+        <button className="wf__btn wf__btn--unknown" onClick={() => advance(false)} disabled={isAdvancing}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <line x1="18" y1="6" x2="6" y2="18"/>
             <line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
           Nie znam
         </button>
-        <button className="wf__btn wf__btn--known" onClick={() => advance(true)} disabled={advancing}>
+        <button className="wf__btn wf__btn--known" onClick={() => advance(true)} disabled={isAdvancing}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <polyline points="20 6 9 17 4 12"/>
           </svg>

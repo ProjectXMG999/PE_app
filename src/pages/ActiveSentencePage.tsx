@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { usePackageData } from '../hooks/usePackageData'
 import { useAudio } from '../hooks/useAudio'
+import { useCardFlip } from '../hooks/useCardFlip'
 import { useAppStore } from '../store/useAppStore'
 import { MasteryScreen } from '../components/flashcard/MasteryScreen'
 import { Word } from '../types/vocabulary'
@@ -13,23 +14,18 @@ import './ActiveSentencePage.css'
 
 const allPacks = packagesIndex as PackMeta[]
 
-type CardSide = 'front' | 'back'
-
 export function ActiveSentencePage() {
   const { packageId } = useParams<{ packageId: string }>()
   const navigate = useNavigate()
   const { pack, loading } = usePackageData(packageId ?? null)
   const { enRate, plRate } = useAppStore()
   const { playWord, playSentence, playWordPl, playSentencePl, stop } = useAudio(packageId ?? null, enRate, plRate)
+  const { side, isAdvancing, flip, advance: animateOut, resetToFront, handleAnimationEnd, cardClass } = useCardFlip()
 
   const [studyWords, setStudyWords] = useState<Word[]>([])
   const [progressMap, setProgressMap] = useState<Map<string, WordProgress>>(new Map())
   const [cardIndex, setCardIndex] = useState(0)
-  const [side, setSide] = useState<CardSide>('front')
-  const [halfwayDone, setHalfwayDone] = useState(false)
-  const [flipping, setFlipping] = useState(false)
   const [revealed, setRevealed] = useState(false)
-  const [advancing, setAdvancing] = useState(false)
   const [knownCount, setKnownCount] = useState(0)
   const [showMastery, setShowMastery] = useState(false)
   const [sessionKnown, setSessionKnown] = useState(0)
@@ -48,9 +44,8 @@ export function ActiveSentencePage() {
       setStudyWords(words)
       setKnownCount(known)
       setCardIndex(0)
-      setSide('front')
+      resetToFront()
       setRevealed(false)
-      setHalfwayDone(false)
       const existing = await getPackageProgress(packageId)
       if (!existing) {
         const now = new Date().toISOString()
@@ -66,29 +61,18 @@ export function ActiveSentencePage() {
   const nextPack = packIdx >= 0 && packIdx < allPacks.length - 1 ? allPacks[packIdx + 1] : null
 
   const flipCard = useCallback(() => {
-    if (flipping || advancing) return
-    const targetSide = side === 'front' ? 'back' : 'front'
-
-    setFlipping(true)
-    // Phase 1: rotate to 90deg (card folds away)
-    setTimeout(() => {
-      setSide(targetSide)
-      setHalfwayDone(true)
-      if (targetSide === 'back') {
+    const revealing = side === 'front'
+    flip(() => {
+      // Fires exactly when the visible face swaps at the fold midpoint
+      if (revealing) {
         setRevealed(true)
         if (currentWord) playWord(currentWord)
       }
-      // Phase 2: rotate from 90deg back to 0deg (card unfolds with new content)
-      setTimeout(() => {
-        setFlipping(false)
-        setHalfwayDone(false)
-      }, 220)
-    }, 220)
-  }, [flipping, advancing, side, currentWord, playWord])
+    })
+  }, [side, flip, currentWord, playWord])
 
   const advance = useCallback(async (markKnown: boolean) => {
-    if (!currentWord || !packageId || advancing) return
-    setAdvancing(true)
+    if (!currentWord || !packageId || isAdvancing) return
     stop()
 
     if (markKnown) {
@@ -107,11 +91,8 @@ export function ActiveSentencePage() {
       setSessionKnown(c => c + 1)
     }
 
-    setTimeout(async () => {
-      setSide('front')
+    animateOut(async () => {
       setRevealed(false)
-      setHalfwayDone(false)
-      setAdvancing(false)
 
       if (isLast) {
         if (!sessionStartRef.current) {
@@ -139,8 +120,8 @@ export function ActiveSentencePage() {
       } else {
         setCardIndex(i => i + 1)
       }
-    }, 320)
-  }, [currentWord, packageId, advancing, isLast, progressMap, total, pack, stop])
+    })
+  }, [currentWord, packageId, isAdvancing, isLast, progressMap, total, pack, stop, animateOut])
 
   const handleRepeat = useCallback(() => {
     if (!pack || !packageId) return
@@ -151,9 +132,8 @@ export function ActiveSentencePage() {
       const words = unknown.length > 0 ? unknown : pack.words
       setStudyWords(words)
       setCardIndex(0)
-      setSide('front')
+      resetToFront()
       setRevealed(false)
-      setHalfwayDone(false)
       setKnownCount(wpList.filter(wp => wp.status === 'known').length)
       setShowMastery(false)
       setDone(false)
@@ -219,8 +199,9 @@ export function ActiveSentencePage() {
       <div className="asc__scene">
         <div
           key={cardIndex}
-          className={`asc__card${flipping && !halfwayDone ? ' asc__card--fold' : ''}${flipping && halfwayDone ? ' asc__card--unfold' : ''}${advancing ? ' asc__card--advance' : ''}`}
+          className={`asc__card${cardClass('asc__card')}`}
           onClick={flipCard}
+          onAnimationEnd={handleAnimationEnd}
           role="button"
           tabIndex={0}
           onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && flipCard()}
@@ -307,15 +288,15 @@ export function ActiveSentencePage() {
         </div>
       </div>
 
-      <div className={`asc__actions${revealed && !advancing ? ' asc__actions--visible' : ''}`}>
-        <button className="asc__btn asc__btn--unknown" onClick={() => advance(false)} disabled={advancing}>
+      <div className={`asc__actions${revealed && !isAdvancing ? ' asc__actions--visible' : ''}`}>
+        <button className="asc__btn asc__btn--unknown" onClick={() => advance(false)} disabled={isAdvancing}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <line x1="18" y1="6" x2="6" y2="18"/>
             <line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
           Nie znam
         </button>
-        <button className="asc__btn asc__btn--known" onClick={() => advance(true)} disabled={advancing}>
+        <button className="asc__btn asc__btn--known" onClick={() => advance(true)} disabled={isAdvancing}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <polyline points="20 6 9 17 4 12"/>
           </svg>

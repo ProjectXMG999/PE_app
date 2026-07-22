@@ -55,6 +55,7 @@ export function HomePage() {
       activeFilter === 'started'   ? (hasProgress && !hasCompleted && !allKnown) :
       activeFilter === 'completed' ? (hasCompleted && !allKnown) :
       activeFilter === 'mastered'  ? allKnown :
+      activeFilter === null ? true :
       true
 
     const matchesLevel = activeLevel == null || pack.level === activeLevel
@@ -65,12 +66,12 @@ export function HomePage() {
 
   function clearFilters() {
     setSearch('')
-    setFilter('all')
+    setFilter(null)
     setLevel(null)
     setCategory(null)
   }
 
-  const hasActiveFilters = !!searchQuery || activeFilter !== 'all' || activeLevel != null || activeCategory != null
+  const hasActiveFilters = !!searchQuery || activeFilter !== null || activeLevel != null || activeCategory != null
 
   return (
     <AppShell>

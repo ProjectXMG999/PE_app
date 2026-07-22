@@ -193,6 +193,29 @@ function processRows(rows: WizardRow[]) {
     fs.mkdirSync(OUT_DIR, { recursive: true })
   }
 
+  // STABILNE ID: istniejące paczki zachowują swoje id z packages-index.json.
+  // Klucz nazwa+kategoria się powtarza (np. "Miasto|Rzeczowniki" ×9), więc mapujemy
+  // po kolejności wystąpień: n-ty blok o danym kluczu -> n-te istniejące id z tym kluczem.
+  // Nowe paczki dostają numery powyżej najwyższego użytego. Bez tego regeneracja
+  // przenumerowałaby paczki i zerwała nazwy plików audio, klucze blobów i postęp userów.
+  const idQueues = new Map<string, string[]>()
+  let maxPackNum = 0
+  if (fs.existsSync(INDEX_PATH)) {
+    const existingIndex = JSON.parse(fs.readFileSync(INDEX_PATH, 'utf-8')) as {
+      id: string
+      name: string
+      category: string
+    }[]
+    for (const entry of existingIndex) {
+      const key = `${entry.name}|||${entry.category}`
+      if (!idQueues.has(key)) idQueues.set(key, [])
+      idQueues.get(key)!.push(entry.id)
+      const num = Number(entry.id.replace(/^t1-p/, ''))
+      if (num > maxPackNum) maxPackNum = num
+    }
+    console.log(`Loaded ${existingIndex.length} existing pack ids (max number: ${maxPackNum})`)
+  }
+
   const packIndex: {
     id: string
     name: string
@@ -204,6 +227,7 @@ function processRows(rows: WizardRow[]) {
   }[] = []
 
   let packNum = 0
+  let newPacks = 0
   const stats = {
     totalWords: 0,
     audioNormalizedEN: 0,
@@ -213,7 +237,16 @@ function processRows(rows: WizardRow[]) {
   for (const words of packs) {
     const packName = words[0].packName!
     packNum++
-    const id = `t1-p${String(packNum).padStart(3, '0')}`
+    const idKey = `${packName}|||${words[0].category || 'Inne'}`
+    const queue = idQueues.get(idKey)
+    let id: string
+    if (queue && queue.length > 0) {
+      id = queue.shift()!
+    } else {
+      maxPackNum++
+      newPacks++
+      id = `t1-p${String(maxPackNum).padStart(3, '0')}`
+    }
     const firstWord = words[0]
     const level = firstWord?.level || 1
     const category = firstWord?.category || 'Inne'
@@ -243,6 +276,7 @@ function processRows(rows: WizardRow[]) {
           sentenceEn: null as string | null,
           sentencePl: null as string | null,
           audioWord: `${id}-${String(i + 1).padStart(3, '0')}-word.mp3`,
+          audioWordPl: `${id}-${String(i + 1).padStart(3, '0')}-word-pl.mp3`,
           audioSentence: `${id}-${String(i + 1).padStart(3, '0')}-sentence.mp3`,
         }
       }),
@@ -266,6 +300,16 @@ function processRows(rows: WizardRow[]) {
   }
 
   fs.writeFileSync(INDEX_PATH, JSON.stringify(packIndex, null, 2), 'utf-8')
+
+  // Id-ki z indeksu, których nie skonsumowała żadna paczka = paczki usunięte z CSV.
+  // Ich pliki JSON zostają na dysku — trzeba je usunąć ręcznie (i audio/bloby/postęp).
+  const orphanIds = [...idQueues.values()].flat()
+  if (orphanIds.length > 0) {
+    console.warn(`\n⚠ ${orphanIds.length} pack id(s) from the old index were not matched (packs removed from CSV?):`)
+    console.warn(`  ${orphanIds.join(', ')}`)
+    console.warn(`  Their JSON files in ${OUT_DIR} were NOT deleted — remove them manually if intended.`)
+  }
+  if (newPacks > 0) console.log(`\n＋ ${newPacks} new pack(s) got fresh ids (numbers above ${maxPackNum - newPacks})`)
 
   console.log(`\n✓ Wrote ${packNum} packs to ${OUT_DIR}`)
   console.log(`✓ Wrote index to ${INDEX_PATH}`)

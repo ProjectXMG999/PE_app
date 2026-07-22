@@ -8,30 +8,103 @@
   "words": [
     {
       "id": "t1-p819-001",
-      "english": "Shake up",
-      "polish": "Wstrząsnąć",
+      "english": "Get along with",
+      "polish": "Dogadywać się z kimś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p819-001-word.mp3",
+      "audioWordPl": "t1-p819-001-word-pl.mp3",
       "audioSentence": "t1-p819-001-sentence.mp3"
     },
     {
       "id": "t1-p819-002",
-      "english": "Stand by",
-      "polish": "Trwać przy",
+      "english": "Hand sth down",
+      "polish": "Przekazywać komuś coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p819-002-word.mp3",
+      "audioWordPl": "t1-p819-002-word-pl.mp3",
       "audioSentence": "t1-p819-002-sentence.mp3"
     },
     {
       "id": "t1-p819-003",
+      "english": "Bring round",
+      "polish": "Przywracać do przytomności",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p819-003-word.mp3",
+      "audioWordPl": "t1-p819-003-word-pl.mp3",
+      "audioSentence": "t1-p819-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p819-004",
+      "english": "Come under",
+      "polish": "Podlegać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p819-004-word.mp3",
+      "audioWordPl": "t1-p819-004-word-pl.mp3",
+      "audioSentence": "t1-p819-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p819-005",
+      "english": "Cut sb off",
+      "polish": "Odseparować się od kogoś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p819-005-word.mp3",
+      "audioWordPl": "t1-p819-005-word-pl.mp3",
+      "audioSentence": "t1-p819-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p819-006",
+      "english": "Draw sb into sth",
+      "polish": "Zaangażować kogoś w coś",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p819-006-word.mp3",
+      "audioWordPl": "t1-p819-006-word-pl.mp3",
+      "audioSentence": "t1-p819-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p819-007",
+      "english": "Look to sb to do sth",
+      "polish": "Liczyć na to, że ktoś coś zrobi",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p819-007-word.mp3",
+      "audioWordPl": "t1-p819-007-word-pl.mp3",
+      "audioSentence": "t1-p819-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p819-008",
+      "english": "Shake up",
+      "polish": "Wstrząsnąć",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p819-008-word.mp3",
+      "audioWordPl": "t1-p819-008-word-pl.mp3",
+      "audioSentence": "t1-p819-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p819-009",
+      "english": "Stand by",
+      "polish": "Trwać przy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p819-009-word.mp3",
+      "audioWordPl": "t1-p819-009-word-pl.mp3",
+      "audioSentence": "t1-p819-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p819-010",
       "english": "Stand up to",
       "polish": "Postawić się",
       "sentenceEn": null,
       "sentencePl": null,
-      "audioWord": "t1-p819-003-word.mp3",
-      "audioSentence": "t1-p819-003-sentence.mp3"
+      "audioWord": "t1-p819-010-word.mp3",
+      "audioWordPl": "t1-p819-010-word-pl.mp3",
+      "audioSentence": "t1-p819-010-sentence.mp3"
     }
   ]
 }

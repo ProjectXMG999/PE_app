@@ -42,12 +42,12 @@ interface AppStore {
   setAutoPlaying: (v: boolean) => void
 
   searchQuery: string
-  activeFilter: FilterType
+  activeFilter: FilterType | null
   activeCategoryFilter: string | null
   activeLevel: number | null
   activeCategory: string | null
   setSearch: (q: string) => void
-  setFilter: (f: FilterType) => void
+  setFilter: (f: FilterType | null) => void
   setCategoryFilter: (cat: string | null) => void
   setLevel: (level: number | null) => void
   setCategory: (cat: string | null) => void
@@ -101,7 +101,7 @@ export const useAppStore = create<AppStore>()(
       setAutoPlaying: (v) => set({ isAutoPlaying: v }),
 
       searchQuery: '',
-      activeFilter: 'all',
+      activeFilter: null,
       activeCategoryFilter: null,
       activeLevel: null,
       activeCategory: null,

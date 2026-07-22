@@ -7326,12 +7326,21 @@
     "chapter": "Rozdział LXXXI"
   },
   {
+    "id": "t1-p866",
+    "name": "Społeczeństwo",
+    "volume": "Tom IX",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXXI"
+  },
+  {
     "id": "t1-p819",
     "name": "Phrasale 7",
     "volume": "Tom IX",
     "level": 4,
     "category": "Phrasale",
-    "wordCount": 3,
+    "wordCount": 10,
     "chapter": "Rozdział LXXXI"
   },
   {
@@ -7601,8 +7610,44 @@
     "volume": "Tom IX",
     "level": 4,
     "category": "Slang",
-    "wordCount": 2,
+    "wordCount": 10,
     "chapter": "Rozdział LXXXIV"
+  },
+  {
+    "id": "t1-p867",
+    "name": "Umysłowe",
+    "volume": "Tom IX",
+    "level": 4,
+    "category": "Phrasale",
+    "wordCount": 10,
+    "chapter": "Rozdział LXXXV"
+  },
+  {
+    "id": "t1-p868",
+    "name": "Czasowniki 28",
+    "volume": "Tom IX",
+    "level": 4,
+    "category": "Czasowniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXXV"
+  },
+  {
+    "id": "t1-p869",
+    "name": "Przymiotniki 42",
+    "volume": "Tom IX",
+    "level": 4,
+    "category": "Przymiotniki",
+    "wordCount": 15,
+    "chapter": "Rozdział LXXXV"
+  },
+  {
+    "id": "t1-p855",
+    "name": "Niefajne",
+    "volume": "Tom IX",
+    "level": 4,
+    "category": "Phrasale",
+    "wordCount": 10,
+    "chapter": "Rozdział LXXXV"
   },
   {
     "id": "t1-p850",
@@ -7610,7 +7655,7 @@
     "volume": "Tom IX",
     "level": 4,
     "category": "Phrasale",
-    "wordCount": 9,
+    "wordCount": 10,
     "chapter": "Rozdział LXXXV"
   },
   {
@@ -7650,7 +7695,7 @@
     "chapter": "Rozdział LXXXV"
   },
   {
-    "id": "t1-p855",
+    "id": "t1-p859",
     "name": "Niefajne",
     "volume": "Tom IX",
     "level": 4,
@@ -7686,7 +7731,7 @@
     "chapter": "Rozdział LXXXVI"
   },
   {
-    "id": "t1-p859",
+    "id": "t1-p870",
     "name": "Niefajne",
     "volume": "Tom IX",
     "level": 4,

@@ -80,7 +80,9 @@
 /* ── Card — half-flip technique ──
    No CSS 3D + absolute faces (broken pointer-events on iOS Safari).
    Instead: conditionally render front/back, animate with rotateY fold/unfold.
-*/
+   Keyframes live in src/styles/animations.css (card-enter / card-flip-fold /
+   card-flip-unfold / card-advance-out / card-sheen) — their names are the
+   animationend contract with useCardFlip(). */
 .asc__card {
   width: 100%;
   max-width: 400px;
@@ -90,33 +92,42 @@
   transform-origin: center center;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
-@keyframes asc-enter {
-  from { opacity: 0; transform: translateX(44px) scale(0.97); }
-  to   { opacity: 1; transform: translateX(0) scale(1); }
+.asc__card--fold,
+.asc__card--unfold,
+.asc__card--advance {
+  will-change: transform, opacity;
 }
 
-@keyframes asc-fold {
-  from { transform: rotateY(0deg); opacity: 1; }
-  to   { transform: rotateY(90deg); opacity: 0.2; }
+.asc__card--fold    { animation: card-flip-fold   0.19s var(--ease-in-sharp) forwards; }
+.asc__card--unfold  { animation: card-flip-unfold 0.34s ease-out forwards; }
+.asc__card--advance { animation: card-advance-out 0.26s var(--ease-in-sharp) forwards; }
+
+/* Lifted shadow while the card is mid-air */
+.asc__card--fold .asc__face,
+.asc__card--unfold .asc__face {
+  box-shadow: var(--shadow-lg);
 }
 
-@keyframes asc-unfold {
-  from { transform: rotateY(-90deg); opacity: 0.2; }
-  to   { transform: rotateY(0deg); opacity: 1; }
+/* Light sweep across the freshly revealed face */
+.asc__card--unfold::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 42%, rgba(255, 255, 255, 0.07) 50%, transparent 58%);
+  background-size: 240% 100%;
+  background-repeat: no-repeat;
+  animation: card-sheen 0.55s ease-out forwards;
 }
 
-@keyframes asc-advance {
-  to { opacity: 0; transform: translateX(-40px) scale(0.97); }
-}
-
-.asc__card--fold   { animation: asc-fold    0.22s ease-in  forwards; }
-.asc__card--unfold { animation: asc-unfold  0.22s ease-out forwards; }
-.asc__card--advance { animation: asc-advance 0.3s  ease-in  forwards; }
-
-.asc__card:not(.asc__card--fold):not(.asc__card--unfold):not(.asc__card--advance) {
-  animation: asc-enter 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+/* Explicit enter class (not a :not() catch-all) — otherwise the enter
+   animation would restart every time the flip classes come off. */
+.asc__card--enter {
+  animation: card-enter 0.34s var(--ease-out-expo) both;
 }
 
 /* ── Face ── */
@@ -282,16 +293,27 @@
   gap: 10px;
   padding: 10px var(--spacing-md) calc(20px + env(safe-area-inset-bottom, 0px));
   flex-shrink: 0;
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
   pointer-events: none;
 }
 
+.asc__actions .asc__btn {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.28s var(--ease-out-expo), transform 0.28s var(--ease-out-expo);
+}
+
+/* Staggered rise once the answer is revealed */
 .asc__actions--visible {
+  pointer-events: auto;
+}
+
+.asc__actions--visible .asc__btn {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto;
+}
+
+.asc__actions--visible .asc__btn:nth-child(2) {
+  transition-delay: 50ms;
 }
 
 .asc__btn {
