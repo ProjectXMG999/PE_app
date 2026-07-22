@@ -246,6 +246,8 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
   const status = getStatus(progress)
   const { label: statusLabel, className: statusClass } = STATUS_META[status]
   const packNum = getPackNumber(pack.id)
+  // Mastered = VIP gold treatment; CSS owns all colors, so skip the inline overrides
+  const isMastered = status === 'mastered'
 
   return (
     <div
@@ -253,21 +255,21 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
       onClick={() => navigate(`/pakiet/${pack.id}`)}
       style={{ cursor: 'pointer' }}
     >
-      {/* Status stripe — visible left border accent */}
-      {status !== 'new' && <div className="packcard__stripe" />}
+      {/* Status stripe — visible left border accent (gold border replaces it when mastered) */}
+      {status !== 'new' && !isMastered && <div className="packcard__stripe" />}
 
       <div className="packcard__header">
         {packNum && (
           <div className="packcard__num">
             <span
               className="packcard__num-text"
-              style={{ color: pack.level ? LEVEL_COLORS[pack.level] : undefined }}
+              style={{ color: !isMastered && pack.level ? LEVEL_COLORS[pack.level] : undefined }}
             >
               #{packNum}
             </span>
           </div>
         )}
-        <div className="packcard__icon" style={{ background: `${color}22`, color }}>
+        <div className="packcard__icon" style={isMastered ? undefined : { background: `${color}22`, color }}>
           {icon}
         </div>
         <div className="packcard__info">

@@ -222,9 +222,6 @@ export function WordFlashPage() {
                     </svg>
                   </button>
                 </div>
-                {currentWord?.sentenceEn && (
-                  <p className="wf__sentence">{currentWord.sentenceEn}</p>
-                )}
               </div>
               <p className="wf__tap-hint">dotknij, aby zobaczyć przód</p>
             </div>

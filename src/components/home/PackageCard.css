@@ -26,8 +26,57 @@
   border-color: rgba(16, 185, 129, 0.35);
 }
 
+/* ── Mastered: VIP gold treatment ─────────────────────────────────── */
+
 .packcard--mastered {
-  border-color: rgba(139, 92, 246, 0.45);
+  border: 1.5px solid rgba(251, 191, 36, 0.8);
+  background:
+    linear-gradient(115deg,
+      rgba(251, 191, 36, 0.18) 0%,
+      rgba(180, 83, 9, 0.12) 32%,
+      rgba(251, 191, 36, 0.06) 55%,
+      rgba(120, 53, 15, 0.16) 100%),
+    var(--bg-card);
+  box-shadow:
+    0 0 20px rgba(251, 191, 36, 0.28),
+    inset 0 0 34px rgba(251, 191, 36, 0.07);
+}
+
+/* Diagonal shine streaks over the gold surface */
+.packcard--mastered::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(65deg,
+    transparent 18%,
+    rgba(253, 230, 138, 0.08) 26%,
+    transparent 33%,
+    transparent 46%,
+    rgba(253, 230, 138, 0.05) 55%,
+    transparent 61%,
+    transparent 76%,
+    rgba(253, 230, 138, 0.07) 85%,
+    transparent 92%);
+}
+
+.packcard--mastered .packcard__num-text {
+  color: #FBBF24;
+  text-shadow: 0 0 12px rgba(251, 191, 36, 0.55);
+}
+
+.packcard--mastered .packcard__icon {
+  background: rgba(251, 191, 36, 0.14);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+.packcard--mastered .packcard__right {
+  color: rgba(253, 230, 138, 0.75);
+}
+
+.packcard--mastered .packcard__level {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
 }
 
 [data-theme="light"] .packcard--completed {
@@ -35,7 +84,14 @@
 }
 
 [data-theme="light"] .packcard--mastered {
-  border-color: rgba(139, 92, 246, 0.5);
+  border-color: #F59E0B;
+  background:
+    linear-gradient(115deg,
+      rgba(251, 191, 36, 0.22) 0%,
+      rgba(253, 230, 138, 0.14) 45%,
+      rgba(245, 158, 11, 0.18) 100%),
+    var(--bg-card);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.25);
 }
 
 /* Left stripe accent */
@@ -146,9 +202,10 @@
 }
 
 .packcard__status-pill--mastered {
-  background: var(--accent);
+  background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);
   color: white;
-  box-shadow: 0 0 8px var(--accent-glow);
+  border: 1px solid rgba(253, 230, 138, 0.5);
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.45);
 }
 
 [data-theme="light"] .packcard__status-pill--started {
@@ -247,5 +304,27 @@
 
 .packcard__btn--fiszki:hover {
   box-shadow: 0 4px 18px rgba(16, 185, 129, 0.5);
+}
+
+/* Mastered: Trenuj becomes the VIP gold-outline action */
+.packcard--mastered .packcard__btn--fiszki {
+  background: rgba(120, 53, 15, 0.22);
+  border: 1.5px solid #F59E0B;
+  color: #FDE68A;
+  box-shadow:
+    0 0 14px rgba(251, 191, 36, 0.35),
+    inset 0 0 12px rgba(251, 191, 36, 0.12);
+}
+
+.packcard--mastered .packcard__btn--fiszki:hover {
+  box-shadow:
+    0 0 20px rgba(251, 191, 36, 0.5),
+    inset 0 0 14px rgba(251, 191, 36, 0.18);
+}
+
+[data-theme="light"] .packcard--mastered .packcard__btn--fiszki {
+  background: rgba(251, 191, 36, 0.14);
+  color: #92400E;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
 }
 
