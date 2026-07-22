@@ -158,7 +158,7 @@ export function WordFlashPage() {
         packName={pack?.name ?? ''}
         sessionKnown={sessionKnown}
         packKnown={knownCount}
-        packTotal={pack?.wordCount ?? 0}
+        packTotal={pack?.words.length ?? 0}
         onRepeat={handleRepeat}
         onNext={nextPack ? () => navigate(`/pakiet/${nextPack.id}/fiszki-start`) : null}
         nextPackName={nextPack?.name}
