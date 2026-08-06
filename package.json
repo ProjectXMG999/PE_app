@@ -10,6 +10,7 @@
     "parse-data": "tsx scripts/parse-wizard-xlsx.ts && node scripts/sync-packs.mjs",
     "parse-data-csv": "tsx scripts/parse-wizard-csv.ts && node scripts/sync-packs.mjs",
     "match-sentences": "tsx scripts/match-sentences.ts && node scripts/sync-packs.mjs",
+    "export-words-sentences": "tsx scripts/export-words-with-sentences.ts",
     "sync-packs": "node scripts/sync-packs.mjs",
     "generate-icons": "node scripts/generate-icons.mjs",
     "generate-audio": "tsx --env-file=.env scripts/generate-audio.ts",
