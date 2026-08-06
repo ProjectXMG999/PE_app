@@ -1,4 +1,5 @@
 import Papa from 'papaparse'
+import XLSX from 'xlsx'
 import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
@@ -9,7 +10,8 @@ const ROOT = path.join(__dirname, '..')
 const CSV_PATH = path.join(ROOT, 'database/database/Baza Wizard (prawdopodobnie najnowsza baza, bez zdań) KOPIA  - Cała baza.csv')
 const PACK_DIR = path.join(ROOT, 'src/data/packs')
 const INDEX_PATH = path.join(ROOT, 'src/data/packages-index.json')
-const OUT_PATH = path.join(ROOT, 'database/database/Baza Wizard + Zdania - Cała baza.csv')
+const OUT_CSV_PATH = path.join(ROOT, 'database/database/Baza Wizard + Zdania - Cała baza.csv')
+const OUT_XLSX_PATH = path.join(ROOT, 'database/database/Baza Wizard + Zdania - Cała baza.xlsx')
 
 interface DerivedRow {
   packName: string
@@ -132,25 +134,40 @@ function main() {
   console.log(`Matched blocks: ${matchedBlocks}, unmatched blocks: ${unmatchedBlocks}`)
   console.log(`Sentences attached: ${sentencesAttached}`)
 
-  // Zapisz kopię: wszystkie oryginalne kolumny, wszystkie oryginalne wiersze,
-  // plus dwie nowe kolumny na końcu.
-  const outHeader = [...fields, 'Zdanie ENG', 'Zdanie PL']
-  const outLines = [outHeader.map(csvEscape).join(',')]
+  // Zbuduj surowe wiersze (bez CSV-escapingu) — wszystkie oryginalne kolumny,
+  // wszystkie oryginalne wiersze, plus dwie nowe kolumny na końcu. Ta sama
+  // macierz zasila zarówno CSV, jak i XLSX, więc oba pliki są zawsze spójne.
+  const header = [...fields, 'Zdanie ENG', 'Zdanie PL']
+  const sheetRows: string[][] = [header]
 
   for (let i = 0; i < rawRows.length; i++) {
     const raw = rawRows[i]
-    const original = fields.map((f) => csvEscape(raw[f]))
     const sentence = sentenceByRow.get(i)
-    original.push(csvEscape(sentence?.sentenceEn ?? ''))
-    original.push(csvEscape(sentence?.sentencePl ?? ''))
-    outLines.push(original.join(','))
+    const row = fields.map((f) => raw[f] ?? '')
+    row.push(sentence?.sentenceEn ?? '')
+    row.push(sentence?.sentencePl ?? '')
+    sheetRows.push(row)
   }
 
-  const csv = outLines.join('\r\n')
+  const csv = sheetRows.map((row) => row.map(csvEscape).join(',')).join('\r\n')
   // BOM dla poprawnego wyświetlania polskich znaków w Excelu
-  fs.writeFileSync(OUT_PATH, '﻿' + csv, 'utf-8')
+  fs.writeFileSync(OUT_CSV_PATH, '﻿' + csv, 'utf-8')
+  console.log(`\n✓ Wrote ${rawRows.length} data rows to ${OUT_CSV_PATH}`)
 
-  console.log(`\n✓ Wrote ${rawRows.length} data rows to ${OUT_PATH}`)
+  const worksheet = XLSX.utils.aoa_to_sheet(sheetRows)
+  worksheet['!cols'] = header.map((h) => {
+    const maxLen = sheetRows.reduce((max, row) => {
+      const cell = row[header.indexOf(h)]
+      return Math.max(max, String(cell ?? '').length)
+    }, h.length)
+    return { wch: Math.min(Math.max(maxLen + 2, 10), 60) }
+  })
+  worksheet['!autofilter'] = { ref: XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: 0, c: header.length - 1 } }) }
+
+  const workbook = XLSX.utils.book_new()
+  XLSX.utils.book_append_sheet(workbook, worksheet, 'Baza słówek + zdania')
+  XLSX.writeFile(workbook, OUT_XLSX_PATH)
+  console.log(`✓ Wrote ${rawRows.length} data rows to ${OUT_XLSX_PATH}`)
 }
 
 main()
