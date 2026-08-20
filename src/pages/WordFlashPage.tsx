@@ -82,7 +82,13 @@ export function WordFlashPage() {
         lastSeen: now,
         status: 'known',
       }
-      await saveWordProgress(updated)
+      console.log('[syncDebug] calling saveWordProgress', updated)
+      try {
+        await saveWordProgress(updated)
+        console.log('[syncDebug] saveWordProgress resolved')
+      } catch (e) {
+        console.error('[syncDebug] saveWordProgress THREW', e)
+      }
       setProgressMap(prev => new Map(prev).set(currentWord.id, updated))
       setKnownCount(c => c + 1)
       setSessionKnown(c => c + 1)
