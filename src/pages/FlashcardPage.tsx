@@ -35,7 +35,7 @@ export function FlashcardPage() {
   const navigate = useNavigate()
   const studyMode = (mode === 'autoplay' ? 'autoplay' : 'fiszki') as StudyMode
 
-  const { setPackage, autoplayMode, setAutoplayMode, enRate, plRate, showDebug } = useAppStore()
+  const { setPackage, autoplayMode, setAutoplayMode, enRate, plRate, keepScreenAudioAlive } = useAppStore()
   const { pack, loading, error } = usePackageData(packageId ?? null)
   const allWords = pack?.words ?? []
   // In fiszki mode: only show words not yet marked 'known'. Autoplay always shows all.
@@ -416,9 +416,10 @@ export function FlashcardPage() {
   // Keep screen awake while autoplay is actively running (paused → dim normally)
   useWakeLock(studyMode === 'autoplay' && !isPaused && !showCompletion && !loading)
 
-  // Experimental (showDebug-gated): silent loop keeps timers + media session
-  // alive during gaps with the screen off — see audio/keepAlive.ts
-  const keepAliveActive = showDebug && studyMode === 'autoplay' && !isPaused && !showCompletion && !loading
+  // Experimental (opt-in via Settings): silent loop keeps timers + media session
+  // alive during gaps with the screen off — see audio/keepAlive.ts. Off by default
+  // pending device testing (battery cost, iOS Now Playing owner conflicts).
+  const keepAliveActive = keepScreenAudioAlive && studyMode === 'autoplay' && !isPaused && !showCompletion && !loading
   useEffect(() => {
     if (keepAliveActive) startKeepAlive()
     else stopKeepAlive()
@@ -438,6 +439,7 @@ export function FlashcardPage() {
     onPause: handlePause,
     onNext: handleSkip,
     onPrev: handlePrev,
+    onStop: handlePause,
   })
 
   // Auto-play sequence
@@ -544,7 +546,10 @@ export function FlashcardPage() {
       skipStepRef.current = null
       if (pauseTimer) clearTimeout(pauseTimer)
       clearAutoplay()
-      stop()
+      // Soft stop: pause only, keep src intact — a new play() is about to load the next
+      // clip right after this (next card or next audio step). Clearing src here would
+      // tear down the iOS Now Playing session on every single card change.
+      stop({ hard: false })
       setAudioLoading(false)
       setAudioError(null)
       setSpeakCountdown(null)

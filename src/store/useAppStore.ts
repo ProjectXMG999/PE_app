@@ -69,11 +69,16 @@ interface AppStore {
 
   devUnlocked: boolean
   setDevUnlocked: (v: boolean) => void
+
+  // Experimental: silent looping audio to help the autoplay sequence + Media
+  // Session survive a locked screen. Off by default pending device testing.
+  keepScreenAudioAlive: boolean
+  setKeepScreenAudioAlive: (v: boolean) => void
 }
 
 type PersistedState = Pick<
   AppStore,
-  'theme' | 'isInstalled' | 'iosBannerDismissed' | 'autoplayMode' | 'enRate' | 'plRate' | 'showDebug' | 'devUnlocked'
+  'theme' | 'isInstalled' | 'iosBannerDismissed' | 'autoplayMode' | 'enRate' | 'plRate' | 'showDebug' | 'devUnlocked' | 'keepScreenAudioAlive'
 >
 
 export const useAppStore = create<AppStore>()(
@@ -128,6 +133,9 @@ export const useAppStore = create<AppStore>()(
 
       devUnlocked: false,
       setDevUnlocked: (v) => set(v ? { devUnlocked: true } : { devUnlocked: false, showDebug: false }),
+
+      keepScreenAudioAlive: false,
+      setKeepScreenAudioAlive: (v) => set({ keepScreenAudioAlive: v }),
     }),
     {
       name: 'pe-store',
@@ -152,6 +160,7 @@ export const useAppStore = create<AppStore>()(
         plRate: s.plRate,
         showDebug: s.showDebug,
         devUnlocked: s.devUnlocked,
+        keepScreenAudioAlive: s.keepScreenAudioAlive,
       }),
     }
   )

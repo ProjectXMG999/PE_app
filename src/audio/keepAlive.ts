@@ -4,7 +4,8 @@
 //
 // Android: reliable. iOS: usually helps for short gaps, but may confuse the
 // Now Playing owner (the keep-alive element has no metadata). Gated behind the
-// showDebug dev flag until device testing promotes it.
+// keepScreenAudioAlive store flag (off by default) until device testing confirms
+// it's a net win — see the app settings toggle and useAppStore.ts.
 
 const SILENT_WAV = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA'
 

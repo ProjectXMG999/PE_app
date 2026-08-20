@@ -47,7 +47,7 @@ export function AutoplayModePage() {
     // Using AudioContext.resume() which permanently unlocks audio for the session
     unlockAudioGlobally()
     // Also unlock the keep-alive element within the same gesture (used only
-    // when the experimental keep-alive is enabled via showDebug)
+    // when the experimental keep-alive is enabled via keepScreenAudioAlive)
     unlockKeepAlive()
     console.log('[action] autoplay mode selected, audio unlock called')
     setAutoplayMode(mode)

@@ -112,8 +112,14 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
     return play(getAudioUrl(packId, word.audioSentencePl), PL_BASE * ratesRef.current.plRate)
   }, [packId, play])
 
-  const stop = useCallback(() => {
-    console.log('[audio] stop() called')
+  // hard=true (default): full reset — pause, rewind, clear src, reload. Required to
+  // reliably silence iOS between real stop/skip/pause actions.
+  // hard=false: pause only, no src/load reset — used solely by the autoplay sequence's
+  // per-card cleanup, where a new play() is about to load the next clip anyway. Clearing
+  // src there was tearing down the iOS Now Playing session on every single card change.
+  const stop = useCallback((opts?: { hard?: boolean }) => {
+    const hard = opts?.hard ?? true
+    console.log('[audio] stop() called, hard=', hard)
     if (resolveCurrentRef.current) {
       resolveCurrentRef.current()
       resolveCurrentRef.current = null
@@ -122,9 +128,11 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
     if (el) {
       console.log('[audio] stop() pausing audio')
       el.pause()
-      el.currentTime = 0
-      el.src = ''
-      el.load()
+      if (hard) {
+        el.currentTime = 0
+        el.src = ''
+        el.load()
+      }
     }
   }, [])
 
