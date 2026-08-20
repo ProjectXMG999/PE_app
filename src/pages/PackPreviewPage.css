@@ -1,13 +1,15 @@
 .packpreview {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
   background: var(--bg-primary);
-  /* bottom padding to clear the fixed action bar */
-  padding-bottom: calc(80px + var(--safe-bottom));
+  /* bottom padding to clear both the fixed action bar and BottomNav (mobile) */
+  padding-bottom: calc(80px + var(--bottomnav-height) + var(--safe-bottom));
+}
+
+@media (min-width: 1024px) {
+  .packpreview {
+    padding-bottom: 0;
+  }
 }
 
 /* Loading / error states */
@@ -33,18 +35,7 @@
   font-size: var(--text-base);
 }
 
-/* ── App header (global TopBar) — scrolls away with content ─── */
-.packpreview .topbar {
-  position: static;
-}
-
-/* The floating back button owns the top-left slot; hide the logo's PE icon
-   so they don't overlap. */
-.packpreview .topbar__pe-icon {
-  visibility: hidden;
-}
-
-/* ── Floating back button — fixed, always reachable ─────────── */
+/* ── Back button — floating circle (mobile) → inline link (desktop) ── */
 .packpreview__back {
   position: fixed;
   top: calc(env(safe-area-inset-top, 0px) + 10px);
@@ -74,12 +65,47 @@
   transform: scale(0.94);
 }
 
+.packpreview__back-label {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .packpreview__back {
+    position: static;
+    width: auto;
+    height: 36px;
+    padding: 0 var(--spacing-md) 0 var(--spacing-sm);
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  .packpreview__back-label {
+    display: inline;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+
 /* ── Hero ─────────────────────────────────────────────────── */
 .packpreview__hero {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
   padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
+}
+
+@media (min-width: 1024px) {
+  .packpreview__hero {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .packpreview__hero-icon {
@@ -193,6 +219,16 @@
   padding: 0 var(--spacing-md) var(--spacing-md);
 }
 
+@media (min-width: 1024px) {
+  .packpreview__main {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .packpreview__wordlist {
   list-style: none;
   margin: 0;
@@ -200,6 +236,14 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+}
+
+@media (min-width: 1024px) {
+  .packpreview__wordlist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
 }
 
 .packpreview__wordrow {
@@ -288,6 +332,14 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+}
+
+@media (min-width: 1024px) {
+  .packpreview__related-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
 }
 
 .packpreview__related-row {
@@ -419,10 +471,10 @@
   color: var(--text-muted);
 }
 
-/* ── Sticky bottom action bar ─────────────────────────────── */
+/* ── Action bar — sticky at bottom (mobile) → inline row (desktop) ── */
 .packpreview__actions {
   position: fixed;
-  bottom: 0;
+  bottom: var(--bottomnav-height);
   left: 0;
   right: 0;
   display: flex;
@@ -433,6 +485,17 @@
   background: var(--bg-surface);
   border-top: 1px solid var(--border);
   z-index: 20;
+}
+
+@media (min-width: 1024px) {
+  .packpreview__actions {
+    position: static;
+    max-width: 900px;
+    margin: var(--spacing-lg) auto 0;
+    padding: 0;
+    background: none;
+    border-top: none;
+  }
 }
 
 /* Mode info strip */
@@ -479,6 +542,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-sm);
+}
+
+@media (min-width: 1024px) {
+  .packpreview__btns {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .packpreview__btn {
+    height: 48px;
+  }
 }
 
 .packpreview__btn-wrap {
