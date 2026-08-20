@@ -100,6 +100,7 @@ export function ActiveSentencePage() {
           await saveSession({
             packageId,
             date: new Date().toISOString().split('T')[0],
+            startedAt: new Date().toISOString(),
             wordsCompleted: total,
             mode: 'fiszki',
           })
@@ -244,7 +245,7 @@ export function ActiveSentencePage() {
               </div>
 
               <p className="asc__tap-hint">
-                {hasSentencePl ? 'powiedz po angielsku · obróć kartę' : 'dotknij, aby odsłonić'}
+                {hasSentencePl ? 'powiedz po angielsku · obróć kartę' : 'Powiedz po angielsku. Potem odsłoń.'}
               </p>
             </div>
           ) : (

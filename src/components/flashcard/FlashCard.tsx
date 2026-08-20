@@ -40,7 +40,7 @@ export function FlashCard({ word, revealStep, mode, onClick, activeLine = null }
         <>
           <div className="flashcard__divider flashcard__divider--hint" />
           <div className="flashcard__hint">
-            Dotknij, aby odsłonić
+            Powiedz po angielsku. Potem odsłoń.
           </div>
         </>
       )}

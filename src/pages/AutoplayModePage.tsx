@@ -5,33 +5,32 @@ import { unlockAudioGlobally } from '../audio/audioUnlock'
 import { unlockKeepAlive } from '../audio/keepAlive'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
+import { AutoplayMode } from '../types/progress'
 import './AutoplayModePage.css'
 
 const allPacks = packagesIndex as PackMeta[]
 
-type AutoplayMode = 'fast' | 'standard' | 'speaking'
-
 const MODES: { id: AutoplayMode; icon: string; name: string; sequence: string; desc: string }[] = [
   {
     id: 'fast',
-    icon: '🚀',
-    name: 'Szybko',
+    icon: '⚡',
+    name: 'Słowa',
     sequence: 'PL → EN',
-    desc: 'Błyskawiczna powtórka słów. Idealne na rozgrzewkę, utrwalenie i szybkie sprawdzenie pamięci.',
+    desc: 'Szybka powtórka. Usłysz polskie słowo, przypomnij sobie angielskie i powtórz.',
   },
   {
     id: 'standard',
-    icon: '★',
+    icon: '⭐',
     name: 'Standard',
     sequence: 'Słowo + zdanie',
-    desc: 'Główny tryb nauki. Słyszysz słowo, tłumaczenie i przykład w zdaniu, żeby od razu poczuć kontekst.',
+    desc: 'Słowo i zdanie w kontekście. Najlepszy tryb do regularnej nauki.',
   },
   {
     id: 'speaking',
-    icon: '🎙',
-    name: 'Speaking',
+    icon: '🎙️',
+    name: 'Mówienie',
     sequence: 'PL słowo → pauza → EN słowo → pauza → zdania',
-    desc: 'Tryb z dłuższymi pauzami. Powtarzasz na głos, zanim usłyszysz odpowiedź. Najbliżej prawdziwego mówienia.',
+    desc: 'Powiedz, zanim usłyszysz. Przypomnij sobie słowo, zbuduj zdanie i mów na głos.',
   },
 ]
 

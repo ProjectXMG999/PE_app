@@ -18,7 +18,7 @@ export function ModeToggle({ mode }: Props) {
       >
         <div className="modetoggle__content">
           <div className="modetoggle__label">⚡ Trenuj</div>
-          <div className="modetoggle__sublabel">Flashcards</div>
+          <div className="modetoggle__sublabel">Z ekranem</div>
         </div>
       </button>
       <button
@@ -27,7 +27,7 @@ export function ModeToggle({ mode }: Props) {
       >
         <div className="modetoggle__content">
           <div className="modetoggle__label">🎧 Słuchaj</div>
-          <div className="modetoggle__sublabel">Autoplay</div>
+          <div className="modetoggle__sublabel">Bez ekranu</div>
         </div>
       </button>
     </div>

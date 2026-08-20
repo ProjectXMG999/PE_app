@@ -9,12 +9,12 @@ const MODE_INFO = {
   sluchaj: {
     icon: '🎧',
     title: 'Słuchaj',
-    desc: 'Tryb audio do osłuchania, powtórki i nauki w tle. Uczysz się słów bez patrzenia w ekran. Idealne w aucie, na spacerze, na siłowni, w poczekalni albo w metrze.',
+    desc: 'Trening audio bez patrzenia w ekran. Słuchasz, przypominasz sobie i powtarzasz słowa oraz zdania. Idealny na spacer, trening, sprzątanie lub podróż.',
   },
   aktywuj: {
     icon: '⚡',
     title: 'Trenuj',
-    desc: 'Tryb głębokiego treningu słowa. Przypominasz sobie znaczenie, mówisz na głos i budujesz własne frazy lub zdania. Tutaj słowo przestaje być tylko znane — zaczynasz czuć, że potrafisz go użyć w prawdziwej rozmowie.',
+    desc: 'Aktywny trening z ekranem. Przypominasz sobie angielskie słowa, mówisz je na głos i budujesz z nimi zdania. Dzięki temu przechodzisz od rozpoznawania słów do ich aktywnego używania.',
   },
 }
 
@@ -114,7 +114,7 @@ export function QuickStartCards() {
             <span className="quickstart__icon">🎧</span>
             <span className="quickstart__label-group">
               <span className="quickstart__label-eyebrow">Kontynuuj</span>
-              <span className="quickstart__label">Słuchanie</span>
+              <span className="quickstart__label">Słuchaj · bez ekranu</span>
             </span>
           </div>
           <span className="quickstart__title">{autoplayCard.pack.name}</span>
@@ -144,7 +144,7 @@ export function QuickStartCards() {
             <span className="quickstart__icon">⚡</span>
             <span className="quickstart__label-group">
               <span className="quickstart__label-eyebrow">Kontynuuj</span>
-              <span className="quickstart__label">Trening</span>
+              <span className="quickstart__label">Trenuj · z ekranem</span>
             </span>
           </div>
           <span className="quickstart__title">{fiszkiCard.pack.name}</span>

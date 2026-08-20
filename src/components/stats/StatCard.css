@@ -16,11 +16,31 @@
   margin-bottom: 2px;
 }
 
+.statcard__value-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-xs);
+}
+
 .statcard__value {
   font-family: var(--font-heading);
   font-size: 32px;
   font-weight: 700;
   line-height: 1;
+}
+
+.statcard__trend {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-body);
+}
+
+.statcard__trend--up {
+  color: var(--success);
+}
+
+.statcard__trend--down {
+  color: var(--danger);
 }
 
 .statcard__label {

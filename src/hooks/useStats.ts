@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback } from 'react'
 import { DayActivity } from '../types/progress'
 import { nextLevelFromTotalKnown } from '../data/levels'
-import { loadProgressSnapshot, avgWordsPerDay } from './useProgressData'
+import { loadProgressSnapshot, avgWordsPerDay, avgWordsPerDayTrend, PaceTrend } from './useProgressData'
+import { getLongestStreak, getBestDayWordCount } from '../services/db'
 
 export interface LevelStats {
   avgWordsPerDay: number
@@ -13,6 +14,8 @@ export interface LevelStats {
 
 export function useStats() {
   const [streak, setStreak] = useState(0)
+  const [longestStreak, setLongestStreak] = useState(0)
+  const [bestDayCount, setBestDayCount] = useState(0)
   const [knownWords, setKnownWords] = useState(0)
   const [sessionCount, setSessionCount] = useState(0)
   const [startedPacks, setStartedPacks] = useState(0)
@@ -21,6 +24,7 @@ export function useStats() {
   const [estimatedMinutes, setEstimatedMinutes] = useState(0)
   const [activity, setActivity] = useState<DayActivity[]>([])
   const [levelStats, setLevelStats] = useState<LevelStats | null>(null)
+  const [paceTrend, setPaceTrend] = useState<PaceTrend | null>(null)
   const [loading, setLoading] = useState(true)
   const [tick, setTick] = useState(0)
   const reload = useCallback(() => setTick(t => t + 1), [])
@@ -32,6 +36,9 @@ export function useStats() {
         const { sessions, packageProgress, knownTotal } = snap
 
         setStreak(snap.streak)
+        const [longest, bestDay] = await Promise.all([getLongestStreak(), getBestDayWordCount()])
+        setLongestStreak(longest)
+        setBestDayCount(bestDay)
         setKnownWords(knownTotal)
         setSessionCount(sessions.length)
         setStartedPacks(packageProgress.length)
@@ -55,6 +62,7 @@ export function useStats() {
         setActivity(days)
 
         const avg = avgWordsPerDay(snap)
+        setPaceTrend(avgWordsPerDayTrend(snap))
         const next = nextLevelFromTotalKnown(knownTotal)
         setLevelStats({
           avgWordsPerDay: avg,
@@ -72,5 +80,5 @@ export function useStats() {
     load()
   }, [tick])
 
-  return { streak, knownWords, sessionCount, startedPacks, masteredPacks, totalWordsHeard, estimatedMinutes, activity, levelStats, loading, reload, tick }
+  return { streak, longestStreak, bestDayCount, knownWords, sessionCount, startedPacks, masteredPacks, totalWordsHeard, estimatedMinutes, activity, levelStats, paceTrend, loading, reload, tick }
 }

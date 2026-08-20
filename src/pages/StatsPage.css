@@ -23,8 +23,18 @@
   margin: 0;
 }
 
+/* Readiness score banner */
+.statspage__readiness-wrap {
+  margin-bottom: var(--spacing-md);
+}
+
 /* Hero card + level bar */
 .statspage__hero-wrap {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Personal best card */
+.statspage__personal-best-wrap {
   margin-bottom: var(--spacing-md);
 }
 

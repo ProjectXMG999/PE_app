@@ -238,9 +238,16 @@ export function FlashcardPage() {
     })
     if (completed) {
       completedAtRef.current = completedAt
-      await saveSession({ packageId, date: sessionStartRef.current, wordsCompleted: total, mode: studyMode })
+      await saveSession({
+        packageId,
+        date: sessionStartRef.current,
+        startedAt: new Date().toISOString(),
+        wordsCompleted: total,
+        mode: studyMode,
+        autoplayMode: studyMode === 'autoplay' ? autoplayMode : undefined,
+      })
     }
-  }, [packageId, total, studyMode, allWords.length])
+  }, [packageId, total, studyMode, allWords.length, autoplayMode])
 
   // Fiszki: rate card → auto-detect mastery on last card
   const handleNext = useCallback(async (status?: 'known' | 'learning') => {

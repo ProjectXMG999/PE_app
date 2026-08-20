@@ -1,0 +1,37 @@
+.personal-best {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+@media (min-width: 1024px) {
+  .personal-best {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+}
+
+.personal-best__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.personal-best__icon {
+  font-size: 16px;
+}
+
+.personal-best__text {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.personal-best__text strong {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+}

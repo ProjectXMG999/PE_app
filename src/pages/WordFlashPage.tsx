@@ -82,13 +82,7 @@ export function WordFlashPage() {
         lastSeen: now,
         status: 'known',
       }
-      console.log('[syncDebug] calling saveWordProgress', updated)
-      try {
-        await saveWordProgress(updated)
-        console.log('[syncDebug] saveWordProgress resolved')
-      } catch (e) {
-        console.error('[syncDebug] saveWordProgress THREW', e)
-      }
+      await saveWordProgress(updated)
       setProgressMap(prev => new Map(prev).set(currentWord.id, updated))
       setKnownCount(c => c + 1)
       setSessionKnown(c => c + 1)
@@ -101,6 +95,7 @@ export function WordFlashPage() {
           await saveSession({
             packageId,
             date: new Date().toISOString().split('T')[0],
+            startedAt: new Date().toISOString(),
             wordsCompleted: total,
             mode: 'fiszki',
           })
@@ -208,7 +203,7 @@ export function WordFlashPage() {
               <div className="wf__content">
                 <p className="wf__word wf__word--pl">{currentWord?.polish}</p>
               </div>
-              <p className="wf__tap-hint">dotknij, aby odsłonić</p>
+              <p className="wf__tap-hint">Powiedz po angielsku. Potem odsłoń.</p>
             </div>
           ) : (
             <div className="wf__face wf__face--back">

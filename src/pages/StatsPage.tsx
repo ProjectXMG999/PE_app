@@ -1,11 +1,17 @@
+import { useEffect, useState } from 'react'
 import { AppShell } from '../components/layout/AppShell'
 import { StatCard } from '../components/stats/StatCard'
 import { ActivityChart } from '../components/stats/ActivityChart'
 import { PackageProgressList } from '../components/stats/PackageProgressList'
 import { LevelProgressBars } from '../components/home/LevelProgressBars'
+import { CategoryProgressBars } from '../components/stats/CategoryProgressBars'
+import { PersonalBestCard } from '../components/stats/PersonalBestCard'
+import { ReadinessScoreBanner } from '../components/stats/ReadinessScoreBanner'
+import { TimeOfDayChart } from '../components/stats/TimeOfDayChart'
 import { useStats } from '../hooks/useStats'
 import { useProgressData } from '../hooks/useProgressData'
 import { useCountUp } from '../hooks/useCountUp'
+import { getEffectivenessByTimeOfDay, TimeOfDayStats } from '../services/db'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import './StatsPage.css'
@@ -17,9 +23,14 @@ function levelLabel(level: number | 'MASTER'): string {
 }
 
 export function StatsPage() {
-  const { streak, knownWords, sessionCount, masteredPacks, totalWordsHeard, estimatedMinutes, activity, levelStats, loading, tick } = useStats()
+  const { streak, longestStreak, bestDayCount, knownWords, sessionCount, masteredPacks, totalWordsHeard, estimatedMinutes, activity, levelStats, paceTrend, loading, tick } = useStats()
   const snapshot = useProgressData()
   const animatedKnown = useCountUp(loading ? 0 : knownWords)
+  const [timeOfDay, setTimeOfDay] = useState<TimeOfDayStats[] | null | undefined>(undefined)
+
+  useEffect(() => {
+    getEffectivenessByTimeOfDay().then(setTimeOfDay)
+  }, [tick])
 
   // Progress bar to next level — sourced from the same per-pack level totals as LevelProgressBars
   const levelPct = levelStats?.levelPct ?? 0
@@ -31,6 +42,10 @@ export function StatsPage() {
         <div className="statspage__header">
           <h1 className="statspage__title">Postęp</h1>
           <p className="statspage__sub">Twoja nauka w liczbach</p>
+        </div>
+
+        <div className="statspage__readiness-wrap">
+          <ReadinessScoreBanner />
         </div>
 
         {loading ? (
@@ -68,6 +83,10 @@ export function StatsPage() {
               )}
             </div>
 
+            <div className="statspage__personal-best-wrap">
+              <PersonalBestCard bestDayCount={bestDayCount} longestStreak={longestStreak} />
+            </div>
+
             {/* 2×2 core stats */}
             <div className="statspage__grid">
               <StatCard
@@ -83,10 +102,11 @@ export function StatsPage() {
                 accentColor="var(--accent-green)"
               />
               <StatCard
-                value={sessionCount}
-                label="sesji ukończono"
+                value={paceTrend?.current ?? sessionCount}
+                label={paceTrend ? 'słów/dzień' : 'sesji ukończono'}
                 icon="⚡"
                 accentColor="var(--accent-blue)"
+                trend={paceTrend?.deltaPct != null ? { deltaPct: paceTrend.deltaPct } : undefined}
               />
               {levelStats?.nextLevel ? (
                 <StatCard
@@ -136,6 +156,15 @@ export function StatsPage() {
           )}
         </section>
 
+        <section className="statspage__section">
+          <h2 className="statspage__section-title">Słowa wg kategorii</h2>
+          {snapshot == null ? (
+            <div className="statspage__skeleton skeleton" style={{ height: 200 }} />
+          ) : (
+            <CategoryProgressBars allPacks={allPacks} knownMap={snapshot.knownMap} />
+          )}
+        </section>
+
         <section className="statspage__section statspage__section--chart">
           <h2 className="statspage__section-title">Aktywność — ostatnie 7 dni</h2>
           {loading ? (
@@ -144,6 +173,13 @@ export function StatsPage() {
             <ActivityChart data={activity} />
           )}
         </section>
+
+        {timeOfDay && timeOfDay.length > 0 && (
+          <section className="statspage__section">
+            <h2 className="statspage__section-title">Skuteczność wg pory dnia</h2>
+            <TimeOfDayChart data={timeOfDay} />
+          </section>
+        )}
 
         <section className="statspage__section">
           <h2 className="statspage__section-title">Postęp paczek</h2>

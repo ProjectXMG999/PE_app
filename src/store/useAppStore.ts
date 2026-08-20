@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { StudyMode } from '../types/progress'
+import { AutoplayMode, StudyMode } from '../types/progress'
 
 type FilterType = 'all' | 'new' | 'started' | 'completed' | 'mastered'
 
@@ -29,8 +29,8 @@ interface AppStore {
   currentCardIndex: number
   revealStep: number
   isAutoPlaying: boolean
-  autoplayMode: 'fast' | 'standard' | 'speaking'
-  setAutoplayMode: (m: 'fast' | 'standard' | 'speaking') => void
+  autoplayMode: AutoplayMode
+  setAutoplayMode: (m: AutoplayMode) => void
   enRate: number
   plRate: number
   setEnRate: (r: number) => void

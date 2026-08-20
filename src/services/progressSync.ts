@@ -41,7 +41,8 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
   ])
 
   const remoteSessions = (remoteSessionsRes.data ?? []).map(r => ({
-    packageId: r.package_id, date: r.date, wordsCompleted: r.words_completed, mode: r.mode,
+    packageId: r.package_id, date: r.date, startedAt: r.started_at ?? undefined,
+    wordsCompleted: r.words_completed, mode: r.mode, autoplayMode: r.autoplay_mode ?? undefined,
   })) as Omit<Session, 'id'>[]
   const remoteWords = (remoteWordsRes.data ?? []).map(r => ({
     wordId: r.word_id, packageId: r.package_id, seenCount: r.seen_count, lastSeen: r.last_seen, status: r.status,
@@ -94,8 +95,8 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
     ),
     localOnlySessions.length && supabase.from('sessions').insert(
       localOnlySessions.map(s => ({
-        user_id: userId, package_id: s.packageId, date: s.date,
-        words_completed: s.wordsCompleted, mode: s.mode,
+        user_id: userId, package_id: s.packageId, date: s.date, started_at: s.startedAt,
+        words_completed: s.wordsCompleted, mode: s.mode, autoplay_mode: s.autoplayMode,
       }))
     ),
   ])

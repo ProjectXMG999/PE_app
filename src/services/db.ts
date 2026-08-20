@@ -10,21 +10,17 @@ import { useAuthStore } from '../store/useAuthStore'
 // inserts a new row each time; word/package progress upsert on their natural keys.
 function syncInsert(table: 'sessions', row: Record<string, unknown>) {
   const userId = useAuthStore.getState().user?.id
-  console.log('[syncDebug] syncInsert', table, 'supabase=', !!supabase, 'userId=', userId)
   if (!supabase || !userId) return
   supabase.from(table).insert({ ...row, user_id: userId }).then(({ error }) => {
     if (error) console.error(`[progressSync] insert into ${table} failed:`, error.message)
-    else console.log(`[syncDebug] insert into ${table} OK`)
   })
 }
 
 function syncUpsert(table: 'word_progress' | 'package_progress', row: Record<string, unknown>) {
   const userId = useAuthStore.getState().user?.id
-  console.log('[syncDebug] syncUpsert', table, 'supabase=', !!supabase, 'userId=', userId)
   if (!supabase || !userId) return
   supabase.from(table).upsert({ ...row, user_id: userId }).then(({ error }) => {
     if (error) console.error(`[progressSync] upsert into ${table} failed:`, error.message)
-    else console.log(`[syncDebug] upsert into ${table} OK`)
   })
 }
 
@@ -49,7 +45,7 @@ let dbPromise: Promise<IDBPDatabase<PEDB>> | null = null
 
 export function getDB() {
   if (!dbPromise) {
-    dbPromise = openDB<PEDB>('PE_DB', 2, {
+    dbPromise = openDB<PEDB>('PE_DB', 3, {
       upgrade(db, oldVersion) {
         if (oldVersion < 1) {
           const sessions = db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true })
@@ -62,6 +58,7 @@ export function getDB() {
           db.createObjectStore('packageProgress', { keyPath: 'packageId' })
         }
         // v2: masteredAt field — no store changes needed, field is optional and added at write time
+        // v3: startedAt/autoplayMode fields on sessions — no store changes needed, both optional
       },
     })
   }
@@ -74,8 +71,10 @@ export async function saveSession(session: Omit<Session, 'id'>): Promise<void> {
   syncInsert('sessions', {
     package_id: session.packageId,
     date: session.date,
+    started_at: session.startedAt,
     words_completed: session.wordsCompleted,
     mode: session.mode,
+    autoplay_mode: session.autoplayMode,
   })
 }
 
@@ -198,4 +197,87 @@ export async function getStreak(): Promise<number> {
     }
   }
   return streak
+}
+
+/** Longest run of consecutive study days across all of history, not just the current run. */
+export async function getLongestStreak(): Promise<number> {
+  const db = await getDB()
+  const all = await db.getAll('sessions')
+  if (all.length === 0) return 0
+
+  const dates = [...new Set(all.map(s => s.date))].sort()
+
+  let longest = 1
+  let current = 1
+  for (let i = 1; i < dates.length; i++) {
+    const prev = new Date(dates[i - 1] + 'T12:00:00Z')
+    prev.setUTCDate(prev.getUTCDate() + 1)
+    const expected = prev.toISOString().split('T')[0]
+    current = dates[i] === expected ? current + 1 : 1
+    longest = Math.max(longest, current)
+  }
+  return longest
+}
+
+/** Most words completed across all sessions saved on a single day. */
+export async function getBestDayWordCount(): Promise<number> {
+  const db = await getDB()
+  const all = await db.getAll('sessions')
+  if (all.length === 0) return 0
+
+  const byDate = new Map<string, number>()
+  for (const s of all) {
+    byDate.set(s.date, (byDate.get(s.date) ?? 0) + s.wordsCompleted)
+  }
+  return Math.max(...byDate.values())
+}
+
+export type TimeOfDayBand = 'rano' | 'popołudnie' | 'wieczór' | 'noc'
+
+export interface TimeOfDayStats {
+  band: TimeOfDayBand
+  sessionCount: number
+  avgWordsPerSession: number
+  /** 0-100, normalized against the best-performing band. */
+  effectivenessPct: number
+}
+
+function bandForHour(hour: number): TimeOfDayBand {
+  if (hour >= 5 && hour < 12) return 'rano'
+  if (hour >= 12 && hour < 18) return 'popołudnie'
+  if (hour >= 18 && hour < 24) return 'wieczór'
+  return 'noc'
+}
+
+/**
+ * Average words-per-session by time of day, only over sessions that have a
+ * startedAt timestamp (older sessions predate this field and are skipped).
+ * Returns null if there isn't enough timestamped history yet (min 5 sessions).
+ */
+export async function getEffectivenessByTimeOfDay(): Promise<TimeOfDayStats[] | null> {
+  const db = await getDB()
+  const all = await db.getAll('sessions')
+  const timestamped = all.filter(s => s.startedAt)
+  if (timestamped.length < 5) return null
+
+  const byBand = new Map<TimeOfDayBand, { words: number; sessions: number }>()
+  for (const s of timestamped) {
+    const hour = new Date(s.startedAt!).getHours()
+    const band = bandForHour(hour)
+    const entry = byBand.get(band) ?? { words: 0, sessions: 0 }
+    entry.words += s.wordsCompleted
+    entry.sessions += 1
+    byBand.set(band, entry)
+  }
+
+  const avgByBand = [...byBand.entries()].map(([band, { words, sessions }]) => ({
+    band,
+    sessionCount: sessions,
+    avgWordsPerSession: words / sessions,
+  }))
+  const best = Math.max(...avgByBand.map(b => b.avgWordsPerSession), 1)
+
+  return avgByBand
+    .map(b => ({ ...b, effectivenessPct: Math.round((b.avgWordsPerSession / best) * 100) }))
+    .sort((a, b) => b.effectivenessPct - a.effectivenessPct)
 }
