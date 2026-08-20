@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Pack } from '../types/vocabulary'
+import { supabase } from '../services/supabaseClient'
 
 const cache = new Map<string, Pack>()
 
@@ -24,7 +25,14 @@ export function usePackageData(packId: string | null) {
     setLoading(true)
     setError(null)
 
-    fetch(`/data/packs/${packId}.json`, { signal: ctrl.signal })
+    supabase!.auth.getSession()
+      .then(({ data }) => {
+        const token = data.session?.access_token
+        return fetch(`/.netlify/functions/pack-content?pack=${encodeURIComponent(packId)}`, {
+          signal: ctrl.signal,
+          headers: token ? { Authorization: `Bearer ${token}` } : {},
+        })
+      })
       .then(r => {
         if (!r.ok) throw new Error(`Pack ${packId} not found`)
         return r.json() as Promise<Pack>
