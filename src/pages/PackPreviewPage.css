@@ -546,13 +546,9 @@
 }
 
 @media (min-width: 1024px) {
-  .packpreview__btns {
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
   .packpreview__btn {
-    height: 48px;
+    height: 56px;
+    font-size: var(--text-xl);
   }
 }
 

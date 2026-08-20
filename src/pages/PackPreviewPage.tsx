@@ -41,6 +41,14 @@ function getSeriesBase(name: string): string {
   return name.replace(/\s+\d+$/, '').trim()
 }
 
+/** Trailing number in a pack name (e.g. "Czasowniki 28" -> 28), used to order
+ * a series by its intended position rather than by pack id — ids are assigned
+ * by creation order, which doesn't always match the number in the name. */
+function getSeriesNumber(name: string): number {
+  const match = name.match(/(\d+)$/)
+  return match ? parseInt(match[1], 10) : 0
+}
+
 /** Compact status shown on a related-pack row: label + modifier class. */
 function relatedStatus(
   status: PackStatus
@@ -115,7 +123,7 @@ export function PackPreviewPage() {
     if (!seriesBase) return []
     return allPacks
       .filter(p => getSeriesBase(p.name) === seriesBase)
-      .sort((a, b) => (a.level - b.level) || a.id.localeCompare(b.id))
+      .sort((a, b) => getSeriesNumber(a.name) - getSeriesNumber(b.name))
   }, [seriesBase])
 
   if (loading) {
@@ -275,7 +283,7 @@ export function PackPreviewPage() {
                       {getPackIcon(sib)}
                     </span>
                     <div className="packpreview__related-body">
-                      <span className="packpreview__related-name">{sib.name} {num}</span>
+                      <span className="packpreview__related-name">{sib.name}</span>
                       <span className="packpreview__related-meta">
                         Poziom {sib.level} · {sib.volume} · {sib.wordCount} {plWords(sib.wordCount)}
                       </span>
