@@ -75,7 +75,9 @@
      inside @media conditions): 640px = tablet, 1024px = desktop sidebar
      cutoff. Copy these values verbatim in new responsive rules. */
   --sidebar-width: 240px;
-  --content-max-width: 1160px;
+  /* Scales with viewport instead of a fixed cap, so ultra-wide monitors
+     don't end up with a narrow content column and a huge dead void. */
+  --content-max-width: clamp(1160px, 85vw, 2040px);
 
   /* Desktop content-column widths — reuse these, don't invent new numbers. */
   --reading-max-width: 640px;   /* prose / page-intro headers / settings-style columns */

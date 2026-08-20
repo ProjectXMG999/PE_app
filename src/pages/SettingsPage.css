@@ -46,11 +46,11 @@
 
 @media (min-width: 1024px) {
   .settings__header {
-    max-width: var(--reading-max-width);
+    max-width: 900px;
     margin: 0 auto;
   }
   .settings__section {
-    max-width: var(--reading-max-width);
+    max-width: 900px;
     margin: 0 auto;
   }
 }

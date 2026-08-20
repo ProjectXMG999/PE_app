@@ -7,7 +7,7 @@
 
 @media (min-width: 1024px) {
   .level-progress {
-    max-width: var(--reading-max-width);
+    max-width: 70%;
     gap: 8px;
   }
   .level-progress__bar {

@@ -92,15 +92,7 @@
 
   .statspage__grid--secondary {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 480px;
-  }
-
-  .statspage__hero-wrap {
-    max-width: var(--reading-max-width);
-  }
-
-  .statspage__section--chart {
-    max-width: var(--reading-max-width);
+    max-width: 640px;
   }
 }
 

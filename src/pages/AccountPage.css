@@ -31,11 +31,11 @@
 
 @media (min-width: 1024px) {
   .account__header {
-    max-width: var(--reading-max-width);
+    max-width: 900px;
     margin: 0 auto;
   }
   .account__section {
-    max-width: var(--reading-max-width);
+    max-width: 900px;
     margin: 0 auto;
   }
 }
