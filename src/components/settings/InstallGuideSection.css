@@ -6,6 +6,13 @@
   overflow: hidden;
 }
 
+@media (min-width: 1024px) {
+  .install-guide {
+    max-width: 900px;
+    margin: 0 auto var(--spacing-md);
+  }
+}
+
 .install-guide__header {
   display: flex;
   align-items: center;

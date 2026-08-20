@@ -3,6 +3,13 @@
   padding: 0;
 }
 
+@media (min-width: 1024px) {
+  .about-app {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
 .about-app__summary {
   display: flex;
   align-items: center;
