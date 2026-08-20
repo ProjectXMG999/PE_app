@@ -33,6 +33,7 @@ export function AccountPage() {
   const navigate = useNavigate()
   const { user, authLoading, entitlementStatus } = useAuthStore()
   const [busyPlan, setBusyPlan] = useState<EntitlementPlan | 'portal' | null>(null)
+  const [waiverAccepted, setWaiverAccepted] = useState(false)
 
   async function handleSignOut() {
     await supabase?.auth.signOut()
@@ -97,22 +98,36 @@ export function AccountPage() {
                   {busyPlan === 'portal' ? 'Chwileczkę…' : 'Zarządzaj płatnościami'}
                 </button>
               ) : (
-                <div className="account__plan-buttons">
-                  <button
-                    className="account__primary-btn"
-                    onClick={() => handleCheckout('subscription')}
-                    disabled={busyPlan !== null}
-                  >
-                    {busyPlan === 'subscription' ? 'Chwileczkę…' : 'Subskrybuj miesięcznie'}
-                  </button>
-                  <button
-                    className="account__primary-btn account__primary-btn--outline"
-                    onClick={() => handleCheckout('lifetime')}
-                    disabled={busyPlan !== null}
-                  >
-                    {busyPlan === 'lifetime' ? 'Chwileczkę…' : 'Kup dostęp Lifetime'}
-                  </button>
-                </div>
+                <>
+                  <label className="account__waiver">
+                    <input
+                      type="checkbox"
+                      checked={waiverAccepted}
+                      onChange={e => setWaiverAccepted(e.target.checked)}
+                    />
+                    <span>
+                      Zgadzam się na natychmiastowe udostępnienie treści cyfrowych po dokonaniu płatności
+                      i przyjmuję do wiadomości, że w związku z tym tracę prawo do odstąpienia od umowy
+                      w terminie 14 dni.
+                    </span>
+                  </label>
+                  <div className="account__plan-buttons">
+                    <button
+                      className="account__primary-btn"
+                      onClick={() => handleCheckout('subscription')}
+                      disabled={busyPlan !== null || !waiverAccepted}
+                    >
+                      {busyPlan === 'subscription' ? 'Chwileczkę…' : 'Subskrybuj miesięcznie'}
+                    </button>
+                    <button
+                      className="account__primary-btn account__primary-btn--outline"
+                      onClick={() => handleCheckout('lifetime')}
+                      disabled={busyPlan !== null || !waiverAccepted}
+                    >
+                      {busyPlan === 'lifetime' ? 'Chwileczkę…' : 'Kup dostęp Lifetime'}
+                    </button>
+                  </div>
+                </>
               )}
             </div>
 

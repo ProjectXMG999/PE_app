@@ -148,6 +148,22 @@
   color: #fff;
 }
 
+.account__waiver {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.account__waiver input {
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+
 .account__plan-buttons {
   display: flex;
   flex-wrap: wrap;
