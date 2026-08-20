@@ -24,7 +24,8 @@
     "generate-audio-packs": "tsx --env-file=.env scripts/generate-audio-packs.ts",
     "generate-intro-audio": "tsx --env-file=.env scripts/generate-intro-audio.ts",
     "delete-blobs": "tsx --env-file=.env scripts/delete-audio-blobs.ts",
-    "upload-blobs": "tsx --env-file=.env scripts/upload-audio-blobs.ts"
+    "upload-blobs": "tsx --env-file=.env scripts/upload-audio-blobs.ts",
+    "upload-pack-blobs": "tsx --env-file=.env scripts/upload-pack-blobs.ts"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.0.0",

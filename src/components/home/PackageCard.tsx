@@ -1,6 +1,8 @@
+import { MouseEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { PackMeta } from '../../types/vocabulary'
 import { PackageProgress } from '../../types/progress'
+import { useAuthStore } from '../../store/useAuthStore'
 import {
   LEVEL_COLORS,
   getPackIcon,
@@ -19,6 +21,8 @@ interface Props {
 
 export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
   const navigate = useNavigate()
+  const hasAccess = useAuthStore(s => s.hasAccess())
+  const goToAccount = (e: MouseEvent) => { e.stopPropagation(); navigate('/konto') }
   const icon = getPackIcon(pack)
   const color = getCategoryColor(pack.category)
   const heardPct = progress ? Math.min((progress.currentIndex / pack.wordCount) * 100, 100) : 0
@@ -32,11 +36,20 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
   return (
     <div
       className={`packcard ${statusClass}`}
-      onClick={() => navigate(`/pakiet/${pack.id}`)}
+      onClick={hasAccess ? () => navigate(`/pakiet/${pack.id}`) : goToAccount}
       style={{ cursor: 'pointer' }}
     >
       {/* Status stripe — visible left border accent (gold border replaces it when mastered) */}
       {status !== 'new' && !isMastered && <div className="packcard__stripe" />}
+
+      {!hasAccess && (
+        <div className="packcard__lock" aria-label="Wymaga subskrypcji" title="Wymaga subskrypcji">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <rect x="4" y="11" width="16" height="10" rx="2"/>
+            <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+          </svg>
+        </div>
+      )}
 
       <div className="packcard__header">
         {packNum && (
@@ -91,13 +104,13 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
       <div className="packcard__actions">
         <button
           className="packcard__btn packcard__btn--autoplay"
-          onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/start`) }}
+          onClick={hasAccess ? (e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/start`) } : goToAccount}
         >
           <span>🎧</span> Słuchaj
         </button>
         <button
           className="packcard__btn packcard__btn--fiszki"
-          onClick={(e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/fiszki-start`) }}
+          onClick={hasAccess ? (e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/fiszki-start`) } : goToAccount}
         >
           <span>⚡</span> Trenuj
         </button>

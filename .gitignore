@@ -12,3 +12,4 @@ Thumbs.db
 # Local Netlify folder
 .netlify
 deno.lock
+public/data/packs/

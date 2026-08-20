@@ -12,6 +12,22 @@
   box-shadow: var(--shadow-sm);
 }
 
+.packcard__lock {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  color: var(--warning);
+  border: 1px solid var(--border);
+  z-index: 1;
+}
+
 [data-theme="light"] .packcard:hover {
   box-shadow: var(--shadow-md);
   border-color: var(--border-accent);

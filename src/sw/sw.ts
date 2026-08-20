@@ -1,7 +1,7 @@
 import { clientsClaim } from 'workbox-core'
 import { precacheAndRoute, cleanupOutdatedCaches } from 'workbox-precaching'
 import { registerRoute } from 'workbox-routing'
-import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies'
+import { CacheFirst } from 'workbox-strategies'
 import { ExpirationPlugin } from 'workbox-expiration'
 import { RangeRequestsPlugin } from 'workbox-range-requests'
 
@@ -12,16 +12,10 @@ clientsClaim()
 precacheAndRoute(self.__WB_MANIFEST)
 cleanupOutdatedCaches()
 
-// Pack JSON files: serve from cache, refresh in background
-registerRoute(
-  ({ url }) => url.pathname.startsWith('/data/packs/'),
-  new StaleWhileRevalidate({
-    cacheName: 'pe-packs-v1',
-    plugins: [
-      new ExpirationPlugin({ maxEntries: 200, maxAgeSeconds: 7 * 24 * 60 * 60 }),
-    ],
-  })
-)
+// Pack content is now paywalled (served via the authenticated pack-content
+// function, Cache-Control: private, max-age=0) — deliberately NOT cached here,
+// so access re-locks immediately on cancellation instead of serving stale
+// cached content to a lapsed subscriber.
 
 // Audio via Netlify Function: CacheFirst with Range request support (iOS Safari)
 registerRoute(

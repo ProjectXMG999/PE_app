@@ -7,6 +7,7 @@ import { initInstallService } from './services/installService'
 import { loadProgressSnapshot } from './hooks/useProgressData'
 import { DebugOverlay } from './components/debug/DebugOverlay'
 import { VersionBadge } from './components/debug/VersionBadge'
+import { RequireEntitlement } from './components/auth/RequireEntitlement'
 import { HomePage } from './pages/HomePage'
 import './App.css'
 
@@ -99,14 +100,14 @@ export function App() {
       <Suspense fallback={<LoadingFallback />}>
         <Routes>
           <Route path="/" element={<HomePage key={location.pathname} />} />
-          <Route path="/pakiet/:packageId" element={<PackPreviewPage />} />
-          <Route path="/pakiet/:packageId/start" element={<AutoplayModePage />} />
-          <Route path="/pakiet/:packageId/fiszki-start" element={<FlashcardModePage />} />
-          <Route path="/pakiet/:packageId/word-flash" element={<WordFlashPage />} />
-          <Route path="/pakiet/:packageId/active-sentence" element={<ActiveSentencePage />} />
-          <Route path="/pakiet/:packageId/:mode" element={<FlashcardPage key={location.pathname} />} />
-          <Route path="/trening" element={<TrainingPage />} />
-          <Route path="/trening/:exerciseId" element={<TrainingExercisePage />} />
+          <Route path="/pakiet/:packageId" element={<RequireEntitlement><PackPreviewPage /></RequireEntitlement>} />
+          <Route path="/pakiet/:packageId/start" element={<RequireEntitlement><AutoplayModePage /></RequireEntitlement>} />
+          <Route path="/pakiet/:packageId/fiszki-start" element={<RequireEntitlement><FlashcardModePage /></RequireEntitlement>} />
+          <Route path="/pakiet/:packageId/word-flash" element={<RequireEntitlement><WordFlashPage /></RequireEntitlement>} />
+          <Route path="/pakiet/:packageId/active-sentence" element={<RequireEntitlement><ActiveSentencePage /></RequireEntitlement>} />
+          <Route path="/pakiet/:packageId/:mode" element={<RequireEntitlement><FlashcardPage key={location.pathname} /></RequireEntitlement>} />
+          <Route path="/trening" element={<RequireEntitlement><TrainingPage /></RequireEntitlement>} />
+          <Route path="/trening/:exerciseId" element={<RequireEntitlement><TrainingExercisePage /></RequireEntitlement>} />
           <Route path="/postęp" element={<StatsPage />} />
           <Route path="/ustawienia" element={<SettingsPage />} />
           <Route path="/logowanie" element={<LoginPage />} />

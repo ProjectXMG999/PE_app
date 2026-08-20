@@ -4,6 +4,7 @@ import { Pack, PackMeta } from '../types/vocabulary'
 import { PackageProgress } from '../types/progress'
 import { loadProgressSnapshot, ProgressSnapshot } from '../hooks/useProgressData'
 import { getAudioUrl } from '../services/audioService'
+import { supabase } from '../services/supabaseClient'
 import { AppShell } from '../components/layout/AppShell'
 import {
   LEVEL_COLORS,
@@ -82,7 +83,13 @@ export function PackPreviewPage() {
     // container would otherwise keep the previous pack's scroll position.
     document.querySelector('.appshell__main')?.scrollTo({ top: 0 })
     Promise.all([
-      fetch(`/data/packs/${packageId}.json`).then(r => {
+      supabase!.auth.getSession().then(({ data }) => {
+        const token = data.session?.access_token
+        return fetch(`/.netlify/functions/pack-content?pack=${encodeURIComponent(packageId)}`, {
+          headers: token ? { Authorization: `Bearer ${token}` } : {},
+        })
+      }).then(r => {
+        if (r.status === 402) { navigate('/konto'); throw new Error('Wymagana subskrypcja') }
         if (!r.ok) throw new Error('Nie znaleziono pakietu')
         return r.json() as Promise<Pack>
       }),

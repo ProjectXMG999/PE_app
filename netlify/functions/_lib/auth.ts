@@ -3,10 +3,13 @@ import { createClient, User } from '@supabase/supabase-js'
 // Service-role client — bypasses RLS. Used only server-side, never exposed to the client.
 const admin = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!)
 
+// Prefers the Authorization header; falls back to a ?token= query param for
+// callers that can't set headers (e.g. <audio> elements loading via .src).
 function bearerToken(request: Request): string | null {
   const header = request.headers.get('authorization') ?? ''
   const match = header.match(/^Bearer\s+(.+)$/i)
-  return match ? match[1] : null
+  if (match) return match[1]
+  return new URL(request.url).searchParams.get('token')
 }
 
 export async function requireUser(request: Request): Promise<{ user: User } | { error: Response }> {

@@ -1,6 +1,10 @@
 import { getStore } from '@netlify/blobs'
+import { requireEntitledUser } from './_lib/auth'
 
 export default async (request: Request): Promise<Response> => {
+  const auth = await requireEntitledUser(request)
+  if ('error' in auth) return auth.error
+
   const url = new URL(request.url)
   const pack = url.searchParams.get('pack')
   const file = url.searchParams.get('file')
