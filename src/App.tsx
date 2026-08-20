@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useRegisterSW } from 'virtual:pwa-register/react'
 import { useAppStore, resolveTheme } from './store/useAppStore'
+import { initAuthListener } from './store/useAuthStore'
 import { initInstallService } from './services/installService'
 import { loadProgressSnapshot } from './hooks/useProgressData'
 import { DebugOverlay } from './components/debug/DebugOverlay'
@@ -19,6 +20,8 @@ const FlashcardModePage = lazy(() => import('./pages/FlashcardModePage').then(m 
 const WordFlashPage = lazy(() => import('./pages/WordFlashPage').then(m => ({ default: m.WordFlashPage })))
 const ActiveSentencePage = lazy(() => import('./pages/ActiveSentencePage').then(m => ({ default: m.ActiveSentencePage })))
 const SettingsPage = lazy(() => import('./pages/SettingsPage').then(m => ({ default: m.SettingsPage })))
+const LoginPage = lazy(() => import('./pages/LoginPage').then(m => ({ default: m.LoginPage })))
+const AccountPage = lazy(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage })))
 
 function LoadingFallback() {
   return (
@@ -74,6 +77,8 @@ export function App() {
     )
   }, [])
 
+  useEffect(() => initAuthListener(), [])
+
   // Badging API: show the learning streak on the installed PWA icon
   useEffect(() => {
     if (!('setAppBadge' in navigator)) return
@@ -104,6 +109,8 @@ export function App() {
           <Route path="/trening/:exerciseId" element={<TrainingExercisePage />} />
           <Route path="/postęp" element={<StatsPage />} />
           <Route path="/ustawienia" element={<SettingsPage />} />
+          <Route path="/logowanie" element={<LoginPage />} />
+          <Route path="/konto" element={<AccountPage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
       </Suspense>

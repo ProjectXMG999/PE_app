@@ -152,3 +152,53 @@
     font-size: 11px;
   }
 }
+
+/* Desktop: the card sat at mobile scale (max-width 600px) inside a much
+   wider column, reading as a small popup floating in empty space. Scale
+   it up to fill the content column and lay header/text/actions out in one
+   row instead of a narrow vertical stack. */
+@media (min-width: 1024px) {
+  .onboarding-card {
+    max-width: none;
+    padding: var(--spacing-lg) var(--spacing-xl);
+  }
+
+  .onboarding-card__content {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-xl);
+  }
+
+  .onboarding-card__header {
+    flex: 0 0 auto;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .onboarding-card__title {
+    font-size: 19px;
+    white-space: nowrap;
+  }
+
+  .onboarding-card__close {
+    order: 2;
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+
+  .onboarding-card__text {
+    flex: 1;
+    font-size: 15px;
+  }
+
+  .onboarding-card__actions {
+    flex: 0 0 auto;
+    margin-top: 0;
+  }
+
+  .onboarding-card__btn {
+    font-size: 14px;
+    padding: 11px 22px;
+  }
+}

@@ -75,3 +75,31 @@
   background: var(--border);
   color: var(--text-primary);
 }
+
+.topbar__account-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.topbar__account-btn:hover {
+  background: var(--border);
+  color: var(--text-primary);
+}
+
+.topbar__account-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--warning);
+  border: 1.5px solid var(--bg-primary);
+}

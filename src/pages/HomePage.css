@@ -3,10 +3,23 @@
 }
 
 .homepage__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--spacing-sm);
   padding: 0 var(--spacing-md) var(--spacing-md);
+}
+
+@media (min-width: 640px) {
+  .homepage__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .homepage__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+  }
 }
 
 /* ~232 cards render at once — let the browser skip layout/paint of

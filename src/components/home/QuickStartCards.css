@@ -5,6 +5,22 @@
   padding: 0 var(--spacing-md) 12px;
 }
 
+@media (min-width: 1024px) {
+  .quickstart {
+    max-width: 520px;
+  }
+  .quickstart__card {
+    min-height: 140px;
+    padding: var(--spacing-lg);
+  }
+  .quickstart__icon {
+    font-size: 30px;
+  }
+  .quickstart__label {
+    font-size: 20px;
+  }
+}
+
 /* full-width info panel spans both columns */
 .quickstart__mode-info {
   grid-column: 1 / -1;

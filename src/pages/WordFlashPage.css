@@ -336,3 +336,20 @@
   justify-content: center;
   min-height: 100dvh;
 }
+
+/* ── Desktop: frame header/card/actions as one aligned column instead of
+   only capping the card while the header and actions stretch full-bleed ── */
+@media (min-width: 1024px) {
+  .wf__header,
+  .wf__scene,
+  .wf__actions {
+    width: 100%;
+    max-width: var(--focus-max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wf__card {
+    max-width: 480px;
+  }
+}

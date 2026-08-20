@@ -4,7 +4,7 @@ import { Pack, PackMeta } from '../types/vocabulary'
 import { PackageProgress } from '../types/progress'
 import { loadProgressSnapshot, ProgressSnapshot } from '../hooks/useProgressData'
 import { getAudioUrl } from '../services/audioService'
-import { TopBar } from '../components/layout/TopBar'
+import { AppShell } from '../components/layout/AppShell'
 import {
   LEVEL_COLORS,
   getPackIcon,
@@ -61,7 +61,6 @@ export function PackPreviewPage() {
   const [error, setError] = useState<string | null>(null)
   const [activeInfo, setActiveInfo] = useState<'sluchaj' | 'aktywuj' | null>(null)
   const infoRef = useRef<HTMLDivElement>(null)
-  const scrollRef = useRef<HTMLDivElement>(null)
 
   // Close the mode-info popover on any outside click.
   useEffect(() => {
@@ -81,7 +80,7 @@ export function PackPreviewPage() {
     setError(null)
     // Reset scroll — navigating between related packs reuses this page, so the
     // container would otherwise keep the previous pack's scroll position.
-    scrollRef.current?.scrollTo({ top: 0 })
+    document.querySelector('.appshell__main')?.scrollTo({ top: 0 })
     Promise.all([
       fetch(`/data/packs/${packageId}.json`).then(r => {
         if (!r.ok) throw new Error('Nie znaleziono pakietu')
@@ -114,18 +113,22 @@ export function PackPreviewPage() {
 
   if (loading) {
     return (
-      <div className="packpreview__loading">
-        <div className="spinner" />
-      </div>
+      <AppShell>
+        <div className="packpreview__loading">
+          <div className="spinner" />
+        </div>
+      </AppShell>
     )
   }
 
   if (error || !pack) {
     return (
-      <div className="packpreview__error">
-        <p>{error ?? 'Nie znaleziono pakietu'}</p>
-        <button onClick={() => navigate('/')}>Wróć do listy</button>
-      </div>
+      <AppShell>
+        <div className="packpreview__error">
+          <p>{error ?? 'Nie znaleziono pakietu'}</p>
+          <button onClick={() => navigate('/')}>Wróć do listy</button>
+        </div>
+      </AppShell>
     )
   }
 

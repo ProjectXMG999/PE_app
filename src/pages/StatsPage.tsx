@@ -136,7 +136,7 @@ export function StatsPage() {
           )}
         </section>
 
-        <section className="statspage__section">
+        <section className="statspage__section statspage__section--chart">
           <h2 className="statspage__section-title">Aktywność — ostatnie 7 dni</h2>
           {loading ? (
             <div className="statspage__skeleton skeleton" style={{ height: 140 }} />

@@ -84,6 +84,26 @@
   gap: var(--spacing-xs);
 }
 
+@media (min-width: 1024px) {
+  .statspage__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .statspage__grid--secondary {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 480px;
+  }
+
+  .statspage__hero-wrap {
+    max-width: var(--reading-max-width);
+  }
+
+  .statspage__section--chart {
+    max-width: var(--reading-max-width);
+  }
+}
+
 /* Section titles */
 .statspage__section {
   margin-bottom: var(--spacing-lg);

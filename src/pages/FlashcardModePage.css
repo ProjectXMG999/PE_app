@@ -65,6 +65,23 @@
   flex: 1;
 }
 
+@media (min-width: 1024px) {
+  .fc-mode {
+    height: 100%;
+    overflow: visible;
+    padding: var(--spacing-xl) 0 var(--spacing-2xl);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .fc-mode__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    align-items: stretch;
+  }
+}
+
 .fc-mode__card {
   display: flex;
   flex-direction: column;

@@ -44,6 +44,14 @@
   /* gap comes from .flashcard-page parent */
 }
 
+@media (min-width: 1024px) {
+  .flashcard-page__actions {
+    max-width: var(--flashcard-max-width);
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 .flashcard-page__reveal-btn {
   width: 100%;
   height: 50px;

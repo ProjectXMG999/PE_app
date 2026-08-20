@@ -39,6 +39,22 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .training-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .training-header {
+    max-width: var(--reading-max-width);
+    margin: 0 auto;
+  }
+
+  .training-detail__header {
+    max-inline-size: 65ch;
+    margin-inline: auto;
+  }
+}
+
 .training-card {
   display: flex;
   flex-direction: column;

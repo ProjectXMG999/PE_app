@@ -55,7 +55,7 @@ export function AutoplayModePage() {
   }
 
   return (
-    <AppShell hideBottomNav>
+    <AppShell hideBottomNav hideSidebar={false}>
       <div className="autoplay-mode">
         <div className="autoplay-mode__header">
           <button

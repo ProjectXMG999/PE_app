@@ -71,6 +71,17 @@
   --bottomnav-height: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
 
+  /* Breakpoints (magic numbers — CSS custom properties can't be used
+     inside @media conditions): 640px = tablet, 1024px = desktop sidebar
+     cutoff. Copy these values verbatim in new responsive rules. */
+  --sidebar-width: 240px;
+  --content-max-width: 1160px;
+
+  /* Desktop content-column widths — reuse these, don't invent new numbers. */
+  --reading-max-width: 640px;   /* prose / page-intro headers / settings-style columns */
+  --focus-max-width: 720px;     /* wf/asc shared header+card+actions column */
+  --flashcard-max-width: 560px; /* FlashcardPage card + actions + autoplay controls */
+
   --transition-fast: 150ms ease;
   --transition-med: 250ms ease;
   --transition-slow: 400ms ease;

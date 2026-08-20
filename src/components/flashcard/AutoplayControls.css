@@ -5,6 +5,14 @@
   padding: 0 var(--spacing-md) calc(var(--spacing-md) + var(--safe-bottom));
 }
 
+@media (min-width: 1024px) {
+  .apc {
+    max-width: var(--flashcard-max-width);
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 /* ── Mode pills ─────────────────────────────────────────────────────── */
 
 .apc__mode-pills {

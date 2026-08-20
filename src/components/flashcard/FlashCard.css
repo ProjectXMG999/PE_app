@@ -17,6 +17,13 @@
   box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
+@media (min-width: 1024px) {
+  .flashcard {
+    max-width: var(--flashcard-max-width);
+    margin: 0 auto;
+  }
+}
+
 .flashcard:active {
   box-shadow: var(--shadow-sm);
 }

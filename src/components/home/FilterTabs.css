@@ -34,6 +34,14 @@
   transition: all var(--transition-fast);
 }
 
+@media (min-width: 1024px) {
+  .filtertabs__tab {
+    height: 34px;
+    font-size: 14px;
+    padding: 0 var(--spacing-lg);
+  }
+}
+
 .filtertabs__tab--active {
   background: var(--accent);
   border-color: var(--accent);

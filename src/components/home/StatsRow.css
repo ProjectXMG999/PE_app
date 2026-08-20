@@ -6,6 +6,17 @@
   margin-bottom: 12px;
 }
 
+@media (min-width: 1024px) {
+  .statsrow {
+    max-width: var(--reading-max-width);
+    gap: var(--spacing-sm);
+  }
+  .statsrow__value,
+  .statsrow__value--sm {
+    font-size: 22px;
+  }
+}
+
 .statsrow__chip {
   background: var(--bg-surface);
   border: 1px solid var(--border);

@@ -1,10 +1,12 @@
 import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAppStore, resolveTheme } from '../../store/useAppStore'
+import { useAuthStore } from '../../store/useAuthStore'
 import './TopBar.css'
 
 export function TopBar() {
   const { theme, toggleTheme, devUnlocked, setDevUnlocked } = useAppStore()
+  const { user, hasAccess } = useAuthStore()
   const navigate = useNavigate()
   const tapsRef = useRef<number[]>([])
 
@@ -51,13 +53,25 @@ export function TopBar() {
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px' }}>
-        <button
-          className="topbar__theme-btn"
-          onClick={toggleTheme}
-          aria-label={resolved === 'dark' ? 'Włącz jasny motyw' : 'Włącz ciemny motyw'}
-          title={resolved === 'dark' ? 'Jasny motyw' : 'Ciemny motyw'}
-          style={{ marginBottom: '0px' }}
-        >
+        <div style={{ display: 'flex', gap: '4px' }}>
+          <button
+            className="topbar__account-btn"
+            onClick={() => navigate('/konto')}
+            aria-label="Konto"
+            title="Konto"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+            </svg>
+            {(!user || !hasAccess()) && <span className="topbar__account-dot" aria-hidden="true" />}
+          </button>
+          <button
+            className="topbar__theme-btn"
+            onClick={toggleTheme}
+            aria-label={resolved === 'dark' ? 'Włącz jasny motyw' : 'Włącz ciemny motyw'}
+            title={resolved === 'dark' ? 'Jasny motyw' : 'Ciemny motyw'}
+          >
           {resolved === 'dark' ? (
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="12" r="5"/>
@@ -75,7 +89,8 @@ export function TopBar() {
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
             </svg>
           )}
-        </button>
+          </button>
+        </div>
         <span
           style={{
             fontSize: '7px',

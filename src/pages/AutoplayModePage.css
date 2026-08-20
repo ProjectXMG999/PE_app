@@ -65,6 +65,28 @@
   flex: 1;
 }
 
+@media (min-width: 1024px) {
+  .autoplay-mode {
+    height: 100%;
+    overflow: visible;
+    padding: var(--spacing-xl) 0 var(--spacing-2xl);
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .autoplay-mode__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    align-items: stretch;
+  }
+
+  .autoplay-mode__card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .autoplay-mode__card {
   display: flex;
   align-items: center;

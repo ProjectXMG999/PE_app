@@ -5,6 +5,20 @@
   padding: 0 var(--spacing-md) 10px;
 }
 
+@media (min-width: 1024px) {
+  .level-progress {
+    max-width: var(--reading-max-width);
+    gap: 8px;
+  }
+  .level-progress__bar {
+    height: 8px;
+  }
+  .level-progress__label {
+    width: 64px;
+    font-size: 12px;
+  }
+}
+
 .level-progress__row {
   display: flex;
   align-items: center;

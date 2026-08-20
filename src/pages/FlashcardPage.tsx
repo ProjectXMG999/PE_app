@@ -558,7 +558,7 @@ export function FlashcardPage() {
 
   if (error) {
     return (
-      <AppShell hideBottomNav>
+      <AppShell hideBottomNav hideSidebar={false}>
         <div className="flashcard-page__error">
           <p>Nie udało się załadować paczki</p>
           <button onClick={() => navigate('/')}>Wróć</button>
@@ -569,7 +569,7 @@ export function FlashcardPage() {
 
   if (loading || !dbLoaded) {
     return (
-      <AppShell hideBottomNav>
+      <AppShell hideBottomNav hideSidebar={false}>
         <div className="flashcard-page__loading">
           <div className="spinner" />
           <p>Ładowanie paczki...</p>
@@ -580,7 +580,7 @@ export function FlashcardPage() {
 
   if (!pack) {
     return (
-      <AppShell hideBottomNav>
+      <AppShell hideBottomNav hideSidebar={false}>
         <div className="flashcard-page__error">
           <p>Nie udało się załadować paczki</p>
           <button onClick={() => navigate('/')}>Wróć</button>
@@ -609,7 +609,7 @@ export function FlashcardPage() {
     }
 
     return (
-      <AppShell hideBottomNav>
+      <AppShell hideBottomNav hideSidebar={false}>
         <div className="completion">
           <div className="completion__top">
             <div className="completion__emoji">✅</div>
@@ -694,7 +694,7 @@ export function FlashcardPage() {
   // ─── Study view ────────────────────────────────────────────────────────────
 
   return (
-    <AppShell hideBottomNav>
+    <AppShell hideBottomNav hideSidebar={false}>
       <ProgressBar current={currentCardIndex} total={total} knownCount={knownCount} />
       <div className="flashcard-page">
       <FlashcardHeader title={pack.name} current={currentCardIndex} total={total} packageId={packageId} />

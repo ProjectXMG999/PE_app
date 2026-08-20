@@ -452,3 +452,20 @@
   color: white;
   box-shadow: 0 4px 14px var(--accent-glow);
 }
+
+/* ── Desktop: frame header/card/actions as one aligned column instead of
+   only capping the card while the header and actions stretch full-bleed ── */
+@media (min-width: 1024px) {
+  .asc__header,
+  .asc__scene,
+  .asc__actions {
+    width: 100%;
+    max-width: var(--focus-max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .asc__card {
+    max-width: 480px;
+  }
+}

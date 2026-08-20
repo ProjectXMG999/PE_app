@@ -32,7 +32,7 @@ export function FlashcardModePage() {
   const pack = allPacks.find(p => p.id === packageId)
 
   return (
-    <AppShell hideBottomNav>
+    <AppShell hideBottomNav hideSidebar={false}>
       <div className="fc-mode">
         <div className="fc-mode__header">
           <button
