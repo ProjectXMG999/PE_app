@@ -146,11 +146,9 @@ export function PackPreviewPage() {
   const dash = (knownPct / 100) * C
 
   return (
-    <div className="packpreview" ref={scrollRef}>
-      {/* App header with logo — scrolls away with the content */}
-      <TopBar />
-
-      {/* Floating back button — stays put while scrolling, always reachable */}
+    <AppShell>
+    <div className="packpreview">
+      {/* Back button — floating circle on mobile, inline link on desktop */}
       <button
         className="packpreview__back"
         onClick={() => navigate('/')}
@@ -159,6 +157,7 @@ export function PackPreviewPage() {
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
           <polyline points="15 18 9 12 15 6" />
         </svg>
+        <span className="packpreview__back-label">Wróć</span>
       </button>
 
       {/* Hero */}
@@ -363,5 +362,6 @@ export function PackPreviewPage() {
         </div>
       </div>
     </div>
+    </AppShell>
   )
 }
