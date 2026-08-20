@@ -1,6 +1,7 @@
 .packpreview {
   display: flex;
   flex-direction: column;
+  width: 100%;
   background: var(--bg-primary);
   /* bottom padding to clear both the fixed action bar and BottomNav (mobile) */
   padding-bottom: calc(80px + var(--bottomnav-height) + var(--safe-bottom));
@@ -490,6 +491,7 @@
 @media (min-width: 1024px) {
   .packpreview__actions {
     position: static;
+    width: 100%;
     max-width: 900px;
     margin: var(--spacing-lg) auto 0;
     padding: 0;
@@ -543,6 +545,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-sm);
+  width: 100%;
 }
 
 @media (min-width: 1024px) {
