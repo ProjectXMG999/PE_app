@@ -10,17 +10,21 @@ import { useAuthStore } from '../store/useAuthStore'
 // inserts a new row each time; word/package progress upsert on their natural keys.
 function syncInsert(table: 'sessions', row: Record<string, unknown>) {
   const userId = useAuthStore.getState().user?.id
+  console.log('[syncDebug] syncInsert', table, 'supabase=', !!supabase, 'userId=', userId)
   if (!supabase || !userId) return
   supabase.from(table).insert({ ...row, user_id: userId }).then(({ error }) => {
     if (error) console.error(`[progressSync] insert into ${table} failed:`, error.message)
+    else console.log(`[syncDebug] insert into ${table} OK`)
   })
 }
 
 function syncUpsert(table: 'word_progress' | 'package_progress', row: Record<string, unknown>) {
   const userId = useAuthStore.getState().user?.id
+  console.log('[syncDebug] syncUpsert', table, 'supabase=', !!supabase, 'userId=', userId)
   if (!supabase || !userId) return
   supabase.from(table).upsert({ ...row, user_id: userId }).then(({ error }) => {
     if (error) console.error(`[progressSync] upsert into ${table} failed:`, error.message)
+    else console.log(`[syncDebug] upsert into ${table} OK`)
   })
 }
 
