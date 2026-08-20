@@ -9,7 +9,9 @@
 
 @media (min-width: 1024px) {
   .packpreview {
-    padding-bottom: 0;
+    /* clear the fixed action bar, which floats at the bottom of the
+       content area on desktop just like the mobile sticky bar does */
+    padding-bottom: 96px;
   }
 }
 
@@ -490,13 +492,16 @@
 
 @media (min-width: 1024px) {
   .packpreview__actions {
-    position: static;
-    width: 100%;
-    max-width: 900px;
-    margin: var(--spacing-lg) auto 0;
-    padding: 0;
-    background: none;
-    border-top: none;
+    /* Stay fixed like the mobile bar, but pinned to the bottom of the
+       content area (right of the sidebar) instead of the full viewport
+       width, and centered within that area at the page's content width. */
+    bottom: 0;
+    left: var(--sidebar-width);
+    max-width: calc(900px + 2 * var(--spacing-xl));
+    margin: 0 auto;
+    padding: var(--spacing-md) var(--spacing-xl);
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border);
   }
 }
 
