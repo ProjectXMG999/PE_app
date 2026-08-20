@@ -1,5 +1,28 @@
 import { openDB, DBSchema, IDBPDatabase } from 'idb'
 import { Session, WordProgress, PackageProgress } from '../types/progress'
+import { supabase } from './supabaseClient'
+import { useAuthStore } from '../store/useAuthStore'
+
+// Best-effort push to the user's Supabase account — silent no-op when signed
+// out or Supabase isn't configured. Local IndexedDB stays the source of truth
+// for the app itself; this just mirrors writes out for cross-device sync.
+// sessions is append-only (no stable natural key to upsert on locally), so it
+// inserts a new row each time; word/package progress upsert on their natural keys.
+function syncInsert(table: 'sessions', row: Record<string, unknown>) {
+  const userId = useAuthStore.getState().user?.id
+  if (!supabase || !userId) return
+  supabase.from(table).insert({ ...row, user_id: userId }).then(({ error }) => {
+    if (error) console.error(`[progressSync] insert into ${table} failed:`, error.message)
+  })
+}
+
+function syncUpsert(table: 'word_progress' | 'package_progress', row: Record<string, unknown>) {
+  const userId = useAuthStore.getState().user?.id
+  if (!supabase || !userId) return
+  supabase.from(table).upsert({ ...row, user_id: userId }).then(({ error }) => {
+    if (error) console.error(`[progressSync] upsert into ${table} failed:`, error.message)
+  })
+}
 
 interface PEDB extends DBSchema {
   sessions: {
@@ -20,7 +43,7 @@ interface PEDB extends DBSchema {
 
 let dbPromise: Promise<IDBPDatabase<PEDB>> | null = null
 
-function getDB() {
+export function getDB() {
   if (!dbPromise) {
     dbPromise = openDB<PEDB>('PE_DB', 2, {
       upgrade(db, oldVersion) {
@@ -44,6 +67,12 @@ function getDB() {
 export async function saveSession(session: Omit<Session, 'id'>): Promise<void> {
   const db = await getDB()
   await db.add('sessions', session as Session)
+  syncInsert('sessions', {
+    package_id: session.packageId,
+    date: session.date,
+    words_completed: session.wordsCompleted,
+    mode: session.mode,
+  })
 }
 
 export async function getSessions(days = 7): Promise<Session[]> {
@@ -63,6 +92,13 @@ export async function getAllSessions(): Promise<Session[]> {
 export async function saveWordProgress(wp: WordProgress): Promise<void> {
   const db = await getDB()
   await db.put('wordProgress', wp)
+  syncUpsert('word_progress', {
+    word_id: wp.wordId,
+    package_id: wp.packageId,
+    seen_count: wp.seenCount,
+    last_seen: wp.lastSeen,
+    status: wp.status,
+  })
 }
 
 export async function getPackageWordProgress(packageId: string): Promise<WordProgress[]> {
@@ -84,6 +120,13 @@ export async function getTotalKnownWords(): Promise<number> {
 export async function savePackageProgress(pp: PackageProgress): Promise<void> {
   const db = await getDB()
   await db.put('packageProgress', pp)
+  syncUpsert('package_progress', {
+    package_id: pp.packageId,
+    started_at: pp.startedAt,
+    completed_at: pp.completedAt,
+    mastered_at: pp.masteredAt,
+    current_index: pp.currentIndex,
+  })
 }
 
 export async function getPackageProgress(packageId: string): Promise<PackageProgress | undefined> {

@@ -2,6 +2,7 @@ import { create } from 'zustand'
 import type { Session, User } from '@supabase/supabase-js'
 import { supabase } from '../services/supabaseClient'
 import { EntitlementStatus } from '../types/entitlement'
+import { pullAndMergeProgress } from '../services/progressSync'
 
 interface AuthStore {
   user: User | null
@@ -33,10 +34,24 @@ async function refreshEntitlement(userId: string) {
   useAuthStore.getState().setEntitlementStatus((data?.status as EntitlementStatus) ?? 'none')
 }
 
+// Only merge progress once per distinct user becoming known (boot restore or
+// a real sign-in) — not on every TOKEN_REFRESHED event for the same user.
+let lastSyncedUserId: string | null = null
+
 function handleSession(session: Session | null) {
   useAuthStore.getState().setSession(session)
-  if (session?.user) refreshEntitlement(session.user.id)
-  else useAuthStore.getState().setEntitlementStatus('none')
+  const userId = session?.user?.id ?? null
+
+  if (userId) {
+    refreshEntitlement(userId)
+    if (userId !== lastSyncedUserId) {
+      lastSyncedUserId = userId
+      pullAndMergeProgress(userId).catch(err => console.error('[progressSync] merge failed:', err))
+    }
+  } else {
+    useAuthStore.getState().setEntitlementStatus('none')
+    lastSyncedUserId = null
+  }
 }
 
 /** Rehydrates auth/entitlement state on boot and keeps it in sync. Call once from App.tsx. */
