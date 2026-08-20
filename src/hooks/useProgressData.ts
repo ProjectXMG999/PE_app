@@ -83,11 +83,17 @@ export function useProgressData(): ProgressSnapshot | null {
 export function avgWordsPerDay(snapshot: ProgressSnapshot): number {
   const { sessions, knownTotal } = snapshot
   if (sessions.length === 0) return 0
-  const first = sessions[sessions.length - 1]
-  const last = sessions[0]
+  // getAllSessions() returns insertion order, not date order — find the
+  // earliest/latest dates directly rather than assuming array position.
+  let earliest = sessions[0].date
+  let latest = sessions[0].date
+  for (const s of sessions) {
+    if (s.date < earliest) earliest = s.date
+    if (s.date > latest) latest = s.date
+  }
   const daysElapsed = Math.max(
     1,
-    Math.floor((new Date(last.date).getTime() - new Date(first.date).getTime()) / 86400000) + 1
+    Math.floor((new Date(latest).getTime() - new Date(earliest).getTime()) / 86400000) + 1
   )
   return Math.round(knownTotal / daysElapsed)
 }
@@ -104,15 +110,19 @@ export interface PaceTrend {
  */
 export function avgWordsPerDayTrend(snapshot: ProgressSnapshot): PaceTrend {
   const { sessions } = snapshot
-  const today = new Date()
-  today.setHours(0, 0, 0, 0)
+  // session.date is a UTC-day string (new Date().toISOString().split('T')[0]),
+  // so "today" and all day arithmetic below must stay in UTC too — using local
+  // setDate()/toISOString() here would shift the window by a day for any
+  // timezone not exactly at UTC.
+  const todayStr = new Date().toISOString().split('T')[0]
+  const today = new Date(todayStr + 'T00:00:00Z')
 
   function windowSum(startDaysAgo: number, endDaysAgo: number): number {
     const start = new Date(today)
-    start.setDate(start.getDate() - startDaysAgo)
+    start.setUTCDate(start.getUTCDate() - startDaysAgo)
     const startStr = start.toISOString().split('T')[0]
     const end = new Date(today)
-    end.setDate(end.getDate() - endDaysAgo)
+    end.setUTCDate(end.getUTCDate() - endDaysAgo)
     const endStr = end.toISOString().split('T')[0]
     return sessions
       .filter(s => s.date >= startStr && s.date <= endStr)
@@ -125,7 +135,9 @@ export function avgWordsPerDayTrend(snapshot: ProgressSnapshot): PaceTrend {
 
   if (sessions.length === 0) return { current: 0, deltaPct: null }
 
-  const earliestDate = sessions[sessions.length - 1].date
+  // getAllSessions() returns insertion order, not date order — find the
+  // earliest date directly rather than assuming array position.
+  const earliestDate = sessions.reduce((min, s) => (s.date < min ? s.date : min), sessions[0].date)
   const daysOfHistory = Math.floor((today.getTime() - new Date(earliestDate).getTime()) / 86400000) + 1
   if (daysOfHistory < 14 || priorWindow === 0) return { current, deltaPct: null }
 

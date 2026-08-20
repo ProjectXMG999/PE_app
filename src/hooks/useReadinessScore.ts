@@ -62,15 +62,18 @@ function speakingScore(sessions: ProgressSnapshot['sessions']): number {
 }
 
 function effectivenessScore(sessions: ProgressSnapshot['sessions']): number {
-  const today = new Date()
-  today.setHours(0, 0, 0, 0)
+  // session.date is a UTC-day string, so day arithmetic here must stay in UTC
+  // too — local setDate()/toISOString() would shift the window by a day for
+  // any timezone not exactly at UTC.
+  const todayStr = new Date().toISOString().split('T')[0]
+  const today = new Date(todayStr + 'T00:00:00Z')
 
   function windowAvg(startDaysAgo: number, endDaysAgo: number): number {
     const start = new Date(today)
-    start.setDate(start.getDate() - startDaysAgo)
+    start.setUTCDate(start.getUTCDate() - startDaysAgo)
     const startStr = start.toISOString().split('T')[0]
     const end = new Date(today)
-    end.setDate(end.getDate() - endDaysAgo)
+    end.setUTCDate(end.getUTCDate() - endDaysAgo)
     const endStr = end.toISOString().split('T')[0]
     const windowSessions = sessions.filter(s => s.date >= startStr && s.date <= endStr)
     if (windowSessions.length === 0) return 0
