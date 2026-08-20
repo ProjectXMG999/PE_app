@@ -21,8 +21,11 @@ interface Props {
 
 export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
   const navigate = useNavigate()
-  const hasAccess = useAuthStore(s => s.hasAccess())
-  const goToAccount = (e: MouseEvent) => { e.stopPropagation(); navigate('/konto') }
+  const { user, hasAccess: hasAccessFn } = useAuthStore()
+  const hasAccess = hasAccessFn()
+  // Mirror RequireEntitlement's redirect logic: logged-out visitors go to
+  // login first, logged-in-but-unentitled users go straight to the account page.
+  const goToAccount = (e: MouseEvent) => { e.stopPropagation(); navigate(user ? '/konto' : '/logowanie') }
   const icon = getPackIcon(pack)
   const color = getCategoryColor(pack.category)
   const heardPct = progress ? Math.min((progress.currentIndex / pack.wordCount) * 100, 100) : 0
