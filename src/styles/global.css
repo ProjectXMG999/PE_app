@@ -29,20 +29,28 @@ html {
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
   overscroll-behavior: none;
+  background-color: var(--bg-primary);
+  height: 100%;
 }
 
 body {
   font-family: var(--font-body);
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  height: 100dvh;
+  /* 100dvh under-reports in some standalone-PWA WebViews (notably Android),
+     leaving a sliver of unstyled html background below the fixed bottom
+     nav. 100% of the html chain above matches the real screen there; svh
+     covers the dynamic-toolbar browser case 100dvh was added for. */
+  height: 100%;
+  min-height: 100svh;
   overflow: hidden;
   transition: background-color var(--transition-med), color var(--transition-med);
   -webkit-font-smoothing: antialiased;
 }
 
 #root {
-  height: 100dvh;
+  height: 100%;
+  min-height: 100svh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
