@@ -507,6 +507,7 @@
   background: var(--bg-card);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-md);
+  width: 100%;
   animation: fadeSlideDown 200ms ease-out forwards;
 }
 

@@ -6,9 +6,6 @@
 }
 
 @media (min-width: 1024px) {
-  .quickstart {
-    max-width: 520px;
-  }
   .quickstart__card {
     min-height: 140px;
     padding: var(--spacing-lg);

@@ -8,7 +8,6 @@
 
 @media (min-width: 1024px) {
   .statsrow {
-    max-width: 70%;
     gap: var(--spacing-sm);
   }
   .statsrow__value,

@@ -33,6 +33,21 @@
   border: 1px solid var(--border);
 }
 
+@media (min-width: 1024px) {
+  .login__header,
+  .login__form {
+    width: 100%;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .login {
+    justify-content: center;
+    flex: 1;
+  }
+}
+
 .login__field {
   display: flex;
   flex-direction: column;
