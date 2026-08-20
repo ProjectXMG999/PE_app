@@ -8,9 +8,12 @@ interface Props {
 
 /** Route guard for paid content — redirects to login or the account/upgrade page. */
 export function RequireEntitlement({ children }: Props) {
-  const { user, authLoading, hasAccess } = useAuthStore()
+  const { user, authLoading, entitlementStatus, hasAccess } = useAuthStore()
 
-  if (authLoading) return null
+  // entitlementStatus starts 'loading' and only resolves after authLoading
+  // flips false (refreshEntitlement fires once the session is known) — wait
+  // for both, or a logged-in user briefly reads as unentitled and gets bounced.
+  if (authLoading || entitlementStatus === 'loading') return null
   if (!user) return <Navigate to="/logowanie" replace />
   if (!hasAccess()) return <Navigate to="/konto" replace />
 
