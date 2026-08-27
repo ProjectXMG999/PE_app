@@ -99,7 +99,7 @@ export default defineConfig({
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#0D0B1E',
-        theme_color: '#8B5CF6',
+        theme_color: '#0D0B1E',
         lang: 'pl',
         categories: ['education'],
         icons: [

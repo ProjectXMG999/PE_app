@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="theme-color" content="#8B5CF6" />
+    <!-- Dark = app base colour. Also the opaque status-bar background in an
+         installed iOS PWA now that black-translucent is gone (see below). -->
+    <meta name="theme-color" content="#0D0B1E" />
     <script>
       try {
         var s = JSON.parse(localStorage.getItem('pe-store') || '{}')
@@ -18,7 +20,14 @@
     </script>
     <meta name="description" content="Project English — nauka angielskiego offline" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- NOT black-translucent: on Dynamic Island iPhones that legacy mode left
+         the standalone viewport ~59px short of the physical bottom (content
+         drew under the status bar but height stayed screen − statusbar), so a
+         black band sat below everything fixed. `default` gives a normal
+         full-height viewport; viewport-fit=cover still lets content into the
+         home-indicator area. -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="PE" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-192.png" />
