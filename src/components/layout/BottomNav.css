@@ -7,15 +7,17 @@
   /* Docked to the physical bottom edge rather than floating with a margin.
      A floating pill left a cramped sliver above Safari's toolbar in-browser,
      and a dead gap above the home indicator once installed. Docked + the
-     safe-area inset pulled INSIDE as padding reads correctly in both: the
-     bar's background always runs to the edge, its buttons always sit above
-     the home indicator. */
-  height: calc(var(--bottomnav-height) + var(--safe-bottom));
-  padding-bottom: var(--safe-bottom);
+     safe-area "chin" pulled INSIDE as padding-bottom (height = --bottomnav-
+     height + --bottomnav-chin) reads correctly everywhere: the solid bar
+     background runs all the way to the edge so the chin is part of the bar,
+     not unstyled void, and the buttons always clear the home indicator —
+     with a 10px floor so they never touch the edge when the inset is 0. */
+  height: calc(var(--bottomnav-height) + var(--bottomnav-chin));
+  padding-bottom: var(--bottomnav-chin);
   display: flex;
-  background: color-mix(in srgb, var(--bg-surface) 92%, transparent);
+  background: var(--bg-surface);
   border-top: 1px solid var(--border);
-  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.04), 0 -8px 28px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.04), 0 -8px 28px rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
