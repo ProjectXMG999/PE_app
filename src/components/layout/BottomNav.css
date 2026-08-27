@@ -2,16 +2,17 @@
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
+  /* Overshoot the bottom edge. In an installed iOS PWA `bottom: 0` on a fixed
+     element sometimes sits ~90px ABOVE the physical edge (the layout viewport
+     is short there), leaving a dark band under a "docked" bar. Anchoring the
+     bar 120px below the edge and adding that 120px to both height and
+     padding-bottom keeps the labels in exactly the same place while the bar's
+     own background covers whatever gap iOS leaves. Where there is no gap the
+     overshoot is simply clipped off-screen — harmless. */
+  bottom: -120px;
   z-index: 1000;
-  /* Docked to the edge. A floating island ALWAYS has flat --bg-primary below and
-     around it, and on an iPhone the home-indicator inset makes that a ~1cm band
-     that reads as a mismatched black rectangle. There is no "round bottom + no
-     gap" — a rounded bottom edge IS the gap. So: full width, flush bottom, only
-     the TOP corners rounded (generously, --radius-xl, so it still has shape),
-     and the safe-area inset pulled INSIDE as the bar's own painted chin. */
-  height: calc(var(--bottomnav-height) + var(--safe-bottom));
-  padding-bottom: var(--safe-bottom);
+  height: calc(var(--bottomnav-height) + var(--safe-bottom) + 120px);
+  padding-bottom: calc(var(--safe-bottom) + 120px);
   display: flex;
   background: var(--bg-surface);
   border-top: 1px solid var(--border);
