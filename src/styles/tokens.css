@@ -87,14 +87,13 @@
   --topbar-height: 60px;
   --bottomnav-height: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  /* Browser tab: the bottom nav is a floating pill lifted --bottomnav-gap off
-     the edge, clear of the browser's own toolbar / the home indicator.
-     Installed (html.pwa-standalone, set in index.html): there is no toolbar, so
-     that lift is just a dead black strip under the pill. There the pill instead
-     docks to the edge (gap 0) and the safe-area inset moves INSIDE it as a
-     chin — see BottomNav.css. --bottomnav-reserve is the total bottom space to
-     keep clear for scrolled content, which differs between the two. */
-  --bottomnav-gap: calc(var(--spacing-sm) + var(--safe-bottom));
+  /* The bottom nav is a floating pill lifted --bottomnav-gap off the screen
+     edge. It adapts to the home-indicator inset, but only takes HALF of it: a
+     floating element doesn't need the full inset the way edge-to-edge content
+     does, and the full value floated the pill uncomfortably high. In a plain
+     browser tab (no inset) it's just --spacing-sm.
+     --bottomnav-reserve is the total bottom space scrolled content must clear. */
+  --bottomnav-gap: calc(var(--spacing-sm) + var(--safe-bottom) * 0.5);
   --bottomnav-reserve: calc(var(--bottomnav-height) + var(--bottomnav-gap) + var(--spacing-sm));
 
   /* Breakpoints (magic numbers — CSS custom properties can't be used
@@ -118,21 +117,6 @@
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-sharp: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-/* Installed as a home-screen app: dock the nav to the edge (see BottomNav.css)
-   so there's no dark strip beneath a floating pill. The class is set pre-paint
-   in index.html; the media query is a fallback if that ever doesn't run. */
-:root.pwa-standalone {
-  --bottomnav-gap: 0px;
-  --bottomnav-reserve: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-sm));
-}
-
-@media (display-mode: standalone), (display-mode: fullscreen), (display-mode: minimal-ui) {
-  :root {
-    --bottomnav-gap: 0px;
-    --bottomnav-reserve: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-sm));
-  }
 }
 
 [data-theme="light"] {
