@@ -104,3 +104,46 @@
     transition: none;
   }
 }
+
+/* ── Installed (home-screen) app ────────────────────────────────────────────
+   No browser toolbar under the bar, so a floating pill just leaves a dark
+   strip beneath it and the safe-area inset makes that strip tall. Dock the
+   bar to the edge: full width, square-bottomed, rounded only on top, with the
+   safe-area inset pulled inside as a chin so the labels still clear the home
+   indicator. Set both from the pre-paint class (index.html) and, as a
+   fallback, the display-mode media query. */
+:root.pwa-standalone .bottomnav {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: none;
+  width: auto;
+  max-width: none;
+  height: calc(var(--bottomnav-height) + var(--safe-bottom));
+  padding-bottom: var(--safe-bottom);
+  background: var(--bg-surface);
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.04), 0 -8px 28px rgba(0, 0, 0, 0.32);
+}
+
+@media (display-mode: standalone), (display-mode: fullscreen), (display-mode: minimal-ui) {
+  .bottomnav {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    width: auto;
+    max-width: none;
+    height: calc(var(--bottomnav-height) + var(--safe-bottom));
+    padding-bottom: var(--safe-bottom);
+    background: var(--bg-surface);
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.04), 0 -8px 28px rgba(0, 0, 0, 0.32);
+  }
+}

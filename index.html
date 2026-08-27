@@ -15,6 +15,16 @@
           document.documentElement.setAttribute('data-theme', 'light')
         }
       } catch(e) {}
+      // Runs before first paint: flag standalone launch so the bottom nav can
+      // dock to the edge instead of floating (no dark strip beneath it).
+      // navigator.standalone is the iOS signal; display-mode covers the rest.
+      try {
+        if (navigator.standalone || window.matchMedia('(display-mode: standalone)').matches
+            || window.matchMedia('(display-mode: fullscreen)').matches
+            || window.matchMedia('(display-mode: minimal-ui)').matches) {
+          document.documentElement.classList.add('pwa-standalone')
+        }
+      } catch(e) {}
     </script>
     <meta name="description" content="Project English — nauka angielskiego offline" />
     <meta name="apple-mobile-web-app-capable" content="yes" />

@@ -87,14 +87,15 @@
   --topbar-height: 60px;
   --bottomnav-height: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  /* Distance the floating bottom-nav pill is lifted off the screen edge.
-     Browser tab: lift it clear of the browser's own bottom toolbar / the
-     home indicator — spacing plus the safe-area inset.
-     Installed (standalone): there is no toolbar, so that same inset just
-     leaves a dead black strip under the pill that looks like leftover browser
-     chrome. Collapse it to a hair and let the pill tuck down to the edge —
-     see the display-mode media query further down this file. */
+  /* Browser tab: the bottom nav is a floating pill lifted --bottomnav-gap off
+     the edge, clear of the browser's own toolbar / the home indicator.
+     Installed (html.pwa-standalone, set in index.html): there is no toolbar, so
+     that lift is just a dead black strip under the pill. There the pill instead
+     docks to the edge (gap 0) and the safe-area inset moves INSIDE it as a
+     chin — see BottomNav.css. --bottomnav-reserve is the total bottom space to
+     keep clear for scrolled content, which differs between the two. */
   --bottomnav-gap: calc(var(--spacing-sm) + var(--safe-bottom));
+  --bottomnav-reserve: calc(var(--bottomnav-height) + var(--bottomnav-gap) + var(--spacing-sm));
 
   /* Breakpoints (magic numbers — CSS custom properties can't be used
      inside @media conditions): 640px = tablet, 1024px = desktop sidebar
@@ -119,13 +120,18 @@
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* Installed as a home-screen app: no browser toolbar under the nav, so the
-   safe-area inset would only add a dead black strip. Tuck the pill down to a
-   fixed hair off the edge instead. (Covers iOS "standalone" and the Android
-   PWA display modes.) */
+/* Installed as a home-screen app: dock the nav to the edge (see BottomNav.css)
+   so there's no dark strip beneath a floating pill. The class is set pre-paint
+   in index.html; the media query is a fallback if that ever doesn't run. */
+:root.pwa-standalone {
+  --bottomnav-gap: 0px;
+  --bottomnav-reserve: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-sm));
+}
+
 @media (display-mode: standalone), (display-mode: fullscreen), (display-mode: minimal-ui) {
   :root {
-    --bottomnav-gap: var(--spacing-sm);
+    --bottomnav-gap: 0px;
+    --bottomnav-reserve: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-sm));
   }
 }
 

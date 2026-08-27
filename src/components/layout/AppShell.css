@@ -11,10 +11,9 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  /* BottomNav floats with --bottomnav-gap below it (see BottomNav.css); clear
-     its full footprint plus breathing room so the last row of scrollable
-     content isn't hidden behind it. */
-  padding-bottom: calc(var(--bottomnav-height) + var(--bottomnav-gap) + var(--spacing-md));
+  /* Space the bottom nav occupies (floating pill or docked bar — see tokens.css
+     / BottomNav.css) so the last row of scrollable content isn't hidden. */
+  padding-bottom: var(--bottomnav-reserve);
   -webkit-overflow-scrolling: touch;
 }
 
