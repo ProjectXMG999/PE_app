@@ -87,9 +87,12 @@
   --topbar-height: 60px;
   --bottomnav-height: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  /* Floating island: 64px tall, lifted 14px off the edge. Scroll clearance
-     covers the island, its lift, the home-indicator inset, and a little air. */
-  --bottomnav-reserve: calc(var(--bottomnav-height) + 14px + var(--safe-bottom) + var(--spacing-sm));
+  /* Floating island: 64px tall, lifted 14px off the edge. Scroll clearance is
+     EXACTLY that — island height + its lift. It was previously overshooting by
+     `+ safe-bottom + spacing-sm` (~42px), which parked the last scrolled item
+     that far above the island and left a big slab of page background between
+     them: the "black strip the size of the bottom bar". */
+  --bottomnav-reserve: calc(var(--bottomnav-height) + 14px + var(--spacing-xs));
 
   /* Breakpoints (magic numbers — CSS custom properties can't be used
      inside @media conditions): 640px = tablet, 1024px = desktop sidebar
