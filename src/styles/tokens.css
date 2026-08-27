@@ -87,14 +87,11 @@
   --topbar-height: 60px;
   --bottomnav-height: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  /* The bottom nav is a floating pill lifted --bottomnav-gap off the screen
-     edge. It adapts to the home-indicator inset, but only takes HALF of it: a
-     floating element doesn't need the full inset the way edge-to-edge content
-     does, and the full value floated the pill uncomfortably high. In a plain
-     browser tab (no inset) it's just --spacing-sm.
-     --bottomnav-reserve is the total bottom space scrolled content must clear. */
-  --bottomnav-gap: calc(var(--spacing-sm) + var(--safe-bottom) * 0.5);
-  --bottomnav-reserve: calc(var(--bottomnav-height) + var(--bottomnav-gap) + var(--spacing-sm));
+  /* The bottom nav is docked flush to the edge (see BottomNav.css) and absorbs
+     the safe-area inset as its own painted chin. --bottomnav-reserve is the
+     total bottom space scrolled content must clear: bar height + chin + a bit
+     of breathing room. */
+  --bottomnav-reserve: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-sm));
 
   /* Breakpoints (magic numbers — CSS custom properties can't be used
      inside @media conditions): 640px = tablet, 1024px = desktop sidebar
