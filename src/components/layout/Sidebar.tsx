@@ -1,8 +1,11 @@
 import { useRef } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import { useAppStore, resolveTheme } from '../../store/useAppStore'
 import { useAuthStore } from '../../store/useAuthStore'
 import { NAV_ITEMS, getActiveNavItem } from './navItems'
+import { NavIndicator } from './NavIndicator'
+import { SidebarPulse } from './SidebarPulse'
 import './Sidebar.css'
 
 export function Sidebar() {
@@ -57,6 +60,7 @@ export function Sidebar() {
               className={`sidebar__nav-item ${active ? 'sidebar__nav-item--active' : ''}`}
               aria-current={active ? 'page' : undefined}
             >
+              {active && <NavIndicator layoutId="sidebar-active-indicator" className="sidebar__nav-indicator" />}
               <span className="sidebar__nav-icon">{item.icon(active)}</span>
               <span className="sidebar__nav-label">{item.label}</span>
             </Link>
@@ -64,25 +68,29 @@ export function Sidebar() {
         })}
       </nav>
 
+      <SidebarPulse />
+
       <div className="sidebar__footer">
         <div className="sidebar__footer-actions">
-          <button
+          <motion.button
             className="sidebar__account-btn"
             onClick={() => navigate('/konto')}
             aria-label="Konto"
             title="Konto"
+            whileTap={{ scale: 0.9 }}
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="8" r="4"/>
               <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
             </svg>
             {(!user || !hasAccess()) && <span className="sidebar__account-dot" aria-hidden="true" />}
-          </button>
-          <button
+          </motion.button>
+          <motion.button
             className="sidebar__theme-btn"
             onClick={toggleTheme}
             aria-label={resolved === 'dark' ? 'Włącz jasny motyw' : 'Włącz ciemny motyw'}
             title={resolved === 'dark' ? 'Jasny motyw' : 'Ciemny motyw'}
+            whileTap={{ scale: 0.9 }}
           >
             {resolved === 'dark' ? (
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -101,7 +109,7 @@ export function Sidebar() {
                 <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
               </svg>
             )}
-          </button>
+          </motion.button>
         </div>
         <span className="sidebar__version" title={`Version ${version}`} onClick={handleVersionTap}>
           {version}

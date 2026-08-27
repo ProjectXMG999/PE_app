@@ -20,6 +20,20 @@
   display: none;
 }
 
+/* Level row — always exactly 4 items, so they stretch to fill the row
+   evenly instead of scrolling like the (open-ended) category/status rows. */
+.filtertabs__row--level {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.filtertabs__row--level .filtertabs__tab {
+  flex-shrink: initial;
+  width: 100%;
+  text-align: center;
+}
+
 .filtertabs__tab {
   flex-shrink: 0;
   height: 30px;

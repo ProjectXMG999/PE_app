@@ -5,9 +5,15 @@ import { useAppStore, resolveTheme } from './store/useAppStore'
 import { initAuthListener } from './store/useAuthStore'
 import { initInstallService } from './services/installService'
 import { loadProgressSnapshot } from './hooks/useProgressData'
+import { runStreakFreezeUpkeep } from './services/streakFreeze'
+// Dev-only: exposes window.__seed / window.__clearProgress. The module body is
+// guarded by import.meta.env.DEV, so the bundler drops it from production.
+import './debug/seedProgress'
+// Dev-only: auto signs into the local test account on boot. Also DEV-guarded.
+import './debug/devAutoLogin'
 import { DebugOverlay } from './components/debug/DebugOverlay'
-import { VersionBadge } from './components/debug/VersionBadge'
 import { RequireEntitlement } from './components/auth/RequireEntitlement'
+import { ToastHost } from './components/shared/ToastHost'
 import { HomePage } from './pages/HomePage'
 import './App.css'
 
@@ -23,6 +29,8 @@ const ActiveSentencePage = lazy(() => import('./pages/ActiveSentencePage').then(
 const SettingsPage = lazy(() => import('./pages/SettingsPage').then(m => ({ default: m.SettingsPage })))
 const LoginPage = lazy(() => import('./pages/LoginPage').then(m => ({ default: m.LoginPage })))
 const AccountPage = lazy(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage })))
+const TodayPage = lazy(() => import('./pages/TodayPage').then(m => ({ default: m.TodayPage })))
+const ReviewPage = lazy(() => import('./pages/ReviewPage').then(m => ({ default: m.ReviewPage })))
 
 function LoadingFallback() {
   return (
@@ -80,13 +88,19 @@ export function App() {
 
   useEffect(() => initAuthListener(), [])
 
-  // Badging API: show the learning streak on the installed PWA icon
+  // Streak upkeep runs before anything reads the streak, so a run rescued by a
+  // freeze is already intact by the time the badge and the widget render it.
   useEffect(() => {
-    if (!('setAppBadge' in navigator)) return
-    loadProgressSnapshot().then(s => {
-      if (s.streak > 0) navigator.setAppBadge(s.streak).catch(() => {})
-      else navigator.clearAppBadge?.().catch(() => {})
-    })
+    runStreakFreezeUpkeep()
+      .catch(err => console.error('[streak] upkeep failed:', err))
+      .finally(() => {
+        // Badging API: show the learning streak on the installed PWA icon
+        if (!('setAppBadge' in navigator)) return
+        loadProgressSnapshot(true).then(s => {
+          if (s.streak > 0) navigator.setAppBadge(s.streak).catch(() => {})
+          else navigator.clearAppBadge?.().catch(() => {})
+        })
+      })
   }, [])
 
   return (
@@ -108,6 +122,8 @@ export function App() {
           <Route path="/pakiet/:packageId/:mode" element={<RequireEntitlement><FlashcardPage key={location.pathname} /></RequireEntitlement>} />
           <Route path="/trening" element={<RequireEntitlement><TrainingPage /></RequireEntitlement>} />
           <Route path="/trening/:exerciseId" element={<RequireEntitlement><TrainingExercisePage /></RequireEntitlement>} />
+          <Route path="/dzis" element={<TodayPage />} />
+          <Route path="/powtorka" element={<RequireEntitlement><ReviewPage /></RequireEntitlement>} />
           <Route path="/postęp" element={<StatsPage />} />
           <Route path="/ustawienia" element={<SettingsPage />} />
           <Route path="/logowanie" element={<LoginPage />} />
@@ -115,8 +131,8 @@ export function App() {
           <Route path="*" element={<HomePage />} />
         </Routes>
       </Suspense>
+      <ToastHost />
       <DebugOverlay />
-      <VersionBadge />
     </>
   )
 }

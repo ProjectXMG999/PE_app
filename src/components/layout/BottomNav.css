@@ -1,21 +1,21 @@
 .bottomnav {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  left: var(--spacing-md);
+  right: var(--spacing-md);
+  bottom: calc(var(--spacing-sm) + var(--safe-bottom));
   z-index: 1000;
-  height: calc(var(--bottomnav-height) + var(--safe-bottom));
-  padding-bottom: var(--safe-bottom);
+  height: var(--bottomnav-height);
   display: flex;
-  background: var(--bg-surface);
-  border-top: 1px solid var(--border);
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--bg-surface) 90%, transparent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 28px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .bottomnav__item {
+  position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -48,6 +48,15 @@
   transform: scale(0.92);
 }
 
+.bottomnav__indicator {
+  position: absolute;
+  inset: 2px 6px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(165deg, color-mix(in srgb, var(--accent) 16%, var(--bg-card-hover)) 0%, var(--bg-card-hover) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 14px var(--accent-glow);
+  pointer-events: none;
+}
+
 .bottomnav__icon-wrap {
   position: relative;
   display: flex;
@@ -57,18 +66,8 @@
   height: 32px;
 }
 
-.bottomnav__dot {
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
 .bottomnav__label {
+  position: relative;
   font-family: var(--font-heading);
   font-size: 10px;
   font-weight: 600;
@@ -80,9 +79,28 @@
   color: var(--accent);
 }
 
+/* With five tabs, the longest label ("Personalizacja") runs to the very edge on
+   a 320px screen. Shrink the type slightly there rather than letting it wrap,
+   which would knock the icons out of alignment. */
+@media (max-width: 359px) {
+  .bottomnav__label {
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+}
+
 @media (min-width: 640px) {
   .bottomnav {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: calc(100% - 2 * var(--spacing-md));
     max-width: 560px;
-    border-inline: 1px solid var(--border);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bottomnav__item {
+    transition: none;
   }
 }

@@ -1,154 +1,232 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { AppShell } from '../components/layout/AppShell'
-import { StatCard } from '../components/stats/StatCard'
-import { ActivityChart } from '../components/stats/ActivityChart'
+import { CompassHero } from '../components/progress/CompassHero'
+import { RouteMap } from '../components/progress/RouteMap'
+import { PaceSimulator } from '../components/progress/PaceSimulator'
+import { AchievementGrid } from '../components/progress/AchievementGrid'
+import { ActivityHeatmap } from '../components/progress/ActivityHeatmap'
+import { ReadinessBreakdown } from '../components/progress/ReadinessBreakdown'
+import { WeeklyRecapCard } from '../components/progress/WeeklyRecapCard'
 import { PackageProgressList } from '../components/stats/PackageProgressList'
 import { LevelProgressBars } from '../components/home/LevelProgressBars'
 import { CategoryProgressBars } from '../components/stats/CategoryProgressBars'
-import { PersonalBestCard } from '../components/stats/PersonalBestCard'
-import { ReadinessScoreBanner } from '../components/stats/ReadinessScoreBanner'
 import { TimeOfDayChart } from '../components/stats/TimeOfDayChart'
 import { useStats } from '../hooks/useStats'
 import { useProgressData } from '../hooks/useProgressData'
-import { useCountUp } from '../hooks/useCountUp'
-import { getEffectivenessByTimeOfDay, TimeOfDayStats } from '../services/db'
+import { useAchievements } from '../hooks/useAchievements'
+import { useReadinessScore } from '../hooks/useReadinessScore'
+import { useAppStore } from '../store/useAppStore'
+import { getAllDailyTime, getEffectivenessByTimeOfDay, TimeOfDayStats } from '../services/db'
+import { computeWeeklyRecap, recapWorthShowing } from '../services/weeklyRecap'
+import { DailyTime } from '../types/progress'
+import { LEVEL_META, stationForThreshold } from '../data/levels'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import './StatsPage.css'
 
 const allPacks = packagesIndex as PackMeta[]
 
-function levelLabel(level: number | 'MASTER'): string {
-  return level === 'MASTER' ? 'MASTER' : `Level ${level}`
+/**
+ * Name of the station the user is heading for.
+ *
+ * Resolved from the threshold rather than the tier number: `nextLevelFromTotal-
+ * Known` returns the tier you *become* (level 3 once past 3 000 words), whereas
+ * LEVEL_META numbers the stations themselves (level 2 = Everyday at 3 000).
+ * Matching on the number showed someone at 1 221 words that they were heading
+ * for Freedom English, two stations too far.
+ */
+function stationName(knownWords: number, wordsToNext: number | null): string {
+  if (wordsToNext == null) return 'końca trasy'
+  return stationForThreshold(knownWords + wordsToNext)?.name ?? 'następnego etapu'
+}
+
+/**
+ * The single sentence under the compass. Deliberately phrased as navigation —
+ * what this means for what's next — rather than as another statistic.
+ */
+function buildGuidance(
+  sessionCount: number,
+  knownWords: number,
+  levelStats: ReturnType<typeof useStats>['levelStats'],
+  dueCount: number
+): string {
+  if (sessionCount === 0) {
+    return 'Trasa czeka. Pierwszy trening to około 10 minut.'
+  }
+  if (dueCount > 0) {
+    return `${dueCount} ${dueCount === 1 ? 'słowo czeka' : 'słów czeka'} na powtórkę — to najszybszy sposób, żeby nic nie uciekło.`
+  }
+  if (levelStats?.nextLevel == null) {
+    return `${knownWords.toLocaleString('pl-PL')} słów. Cała trasa za Tobą.`
+  }
+  const target = stationName(knownWords, levelStats.nextLevelWords)
+  const days = levelStats.daysToNextLevel
+  if (days == null || days <= 0) {
+    return `Jeszcze ${levelStats.nextLevelWords?.toLocaleString('pl-PL')} słów do ${target}.`
+  }
+  return `Przy tym tempie jesteś ${days} ${days === 1 ? 'dzień' : 'dni'} od ${target}.`
 }
 
 export function StatsPage() {
-  const { streak, longestStreak, bestDayCount, knownWords, sessionCount, masteredPacks, totalWordsHeard, estimatedMinutes, activity, levelStats, paceTrend, loading, tick } = useStats()
+  const {
+    streak, knownWords, sessionCount, masteredPacks, totalWordsHeard,
+    estimatedMinutes, dueCount, freshnessPct, activity, levelStats, paceTrend,
+    loading, tick,
+  } = useStats()
   const snapshot = useProgressData()
-  const animatedKnown = useCountUp(loading ? 0 : knownWords)
+  const achievements = useAchievements()
+  const readiness = useReadinessScore()
+  const markUnlocksSeen = useAppStore(s => s.markUnlocksSeen)
+  const achievementUnlocks = useAppStore(s => s.achievementUnlocks)
+  const frozenDays = useAppStore(s => s.streakFreeze.usedOn)
+
   const [timeOfDay, setTimeOfDay] = useState<TimeOfDayStats[] | null | undefined>(undefined)
 
   useEffect(() => {
     getEffectivenessByTimeOfDay().then(setTimeOfDay)
   }, [tick])
 
-  // Progress bar to next level — sourced from the same per-pack level totals as LevelProgressBars
-  const levelPct = levelStats?.levelPct ?? 0
-  const wordsToNext = levelStats?.nextLevelWords ?? null
+  // Level badges share the route's thresholds exactly, so their unlock stamps
+  // double as the date each station was reached — no separate bookkeeping, and
+  // no drifting estimate derived from lastSeen (which reviews keep moving).
+  const reachedAt = useMemo(() => {
+    const out: Record<number, string | undefined> = {}
+    for (const l of LEVEL_META) out[l.level] = achievementUnlocks[`level-${l.level}`]?.at
+    return out
+  }, [achievementUnlocks])
+
+  // Words learned per minute of study, the basis for the projection below.
+  // Clamped because the raw ratio is easy to distort: "oznacz wszystkie jako
+  // znam" can add a pack's worth of words in seconds, and one such tap would
+  // otherwise promise the user 10 000 words by the weekend. The ceiling is a
+  // sustained rate no learner beats over a whole history.
+  const MAX_WORDS_PER_MINUTE = 5
+  const wordsPerMinute = estimatedMinutes > 0
+    ? Math.min(knownWords / estimatedMinutes, MAX_WORDS_PER_MINUTE)
+    : 0
+
+  const guidance = buildGuidance(sessionCount, knownWords, levelStats, dueCount)
+
+  // Weekly recap needs the daily-time ledger, which isn't part of the progress
+  // snapshot, so it's loaded alongside rather than derived from it.
+  const [dailyTime, setDailyTime] = useState<DailyTime[]>([])
+  useEffect(() => {
+    getAllDailyTime().then(setDailyTime)
+  }, [tick])
+
+  const recap = useMemo(() => {
+    if (snapshot == null || achievements == null) return null
+    const next = levelStats?.nextLevel != null && levelStats.nextLevelWords != null
+      ? { words: levelStats.nextLevelWords, name: stationName(knownWords, levelStats.nextLevelWords) }
+      : null
+    const r = computeWeeklyRecap(snapshot, dailyTime, achievements.states, next)
+    return recapWorthShowing(r) ? r : null
+  }, [snapshot, achievements, dailyTime, levelStats, knownWords])
 
   return (
     <AppShell>
       <div className="statspage">
-        <div className="statspage__header">
+        <header className="statspage__header">
           <h1 className="statspage__title">Postęp</h1>
-          <p className="statspage__sub">Twoja nauka w liczbach</p>
-        </div>
-
-        <div className="statspage__readiness-wrap">
-          <ReadinessScoreBanner />
-        </div>
+          <p className="statspage__sub">Gdzie jesteś na trasie do 10 000 słów</p>
+        </header>
 
         {loading ? (
-          <>
-            <div className="statspage__skeleton skeleton" style={{ height: 148 }} />
-            <div className="statspage__grid">
-              {Array.from({ length: 4 }).map((_, i) => (
-                <div key={i} className="statspage__skeleton skeleton" style={{ height: 104 }} />
-              ))}
-            </div>
-          </>
+          <div className="statspage__skeleton skeleton" style={{ height: 320 }} />
         ) : (
-          <>
-            {/* Hero card */}
-            <div className="statspage__hero-wrap">
-              <StatCard
-                hero
-                value={animatedKnown}
-                label="słów poznanych"
-              />
-              {levelStats && (
-                <div className="statspage__level-bar-wrap">
-                  <div className="statspage__level-bar-track">
-                    <div className="statspage__level-bar-fill" style={{ width: `${levelPct}%` }} />
-                  </div>
-                  <div className="statspage__level-meta">
-                    <span className="statspage__level-pct">{levelPct}%</span>
-                    {wordsToNext != null && levelStats.nextLevel ? (
-                      <span className="statspage__level-hint">{wordsToNext} słów do {levelLabel(levelStats.nextLevel)}</span>
-                    ) : (
-                      <span className="statspage__level-hint">MASTER osiągnięty ★</span>
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <div className="statspage__personal-best-wrap">
-              <PersonalBestCard bestDayCount={bestDayCount} longestStreak={longestStreak} />
-            </div>
-
-            {/* 2×2 core stats */}
-            <div className="statspage__grid">
-              <StatCard
-                value={streak}
-                label="dni z rzędu"
-                icon="🔥"
-                accentColor="var(--accent-orange)"
-              />
-              <StatCard
-                value={masteredPacks}
-                label="paczek opanowanych"
-                icon="📦"
-                accentColor="var(--accent-green)"
-              />
-              <StatCard
-                value={paceTrend?.current ?? sessionCount}
-                label={paceTrend ? 'słów/dzień' : 'sesji ukończono'}
-                icon="⚡"
-                accentColor="var(--accent-blue)"
-                trend={paceTrend?.deltaPct != null ? { deltaPct: paceTrend.deltaPct } : undefined}
-              />
-              {levelStats?.nextLevel ? (
-                <StatCard
-                  value={levelStats.daysToNextLevel ?? '—'}
-                  label={`dni do ${levelLabel(levelStats.nextLevel)}`}
-                  icon="🎯"
-                  accentColor="var(--accent)"
-                />
-              ) : (
-                <StatCard
-                  value="MASTER"
-                  label="poziom słownictwa"
-                  icon="🎯"
-                  accentColor="var(--accent)"
-                />
-              )}
-            </div>
-
-            {/* 2 new stats */}
-            <div className="statspage__grid statspage__grid--secondary">
-              <StatCard
-                small
-                value={`~${estimatedMinutes}`}
-                label="minut nauki"
-                icon="⏱"
-                unit="szacunkowo"
-                accentColor="var(--accent-teal)"
-              />
-              <StatCard
-                small
-                value={totalWordsHeard}
-                label="słów odsłuchanych"
-                icon="👂"
-                unit="łącznie"
-                accentColor="var(--accent-indigo)"
-              />
-            </div>
-          </>
+          <CompassHero
+            knownWords={knownWords}
+            streak={streak}
+            points={achievements?.points.total ?? 0}
+            pace={paceTrend}
+            guidance={guidance}
+            loading={loading}
+          />
         )}
 
         <section className="statspage__section">
-          <h2 className="statspage__section-title">Poziomy słownictwa</h2>
+          <h2 className="statspage__section-title">Trasa</h2>
+          {loading ? (
+            <div className="statspage__skeleton skeleton" style={{ height: 360 }} />
+          ) : (
+            <RouteMap knownWords={knownWords} reachedAt={reachedAt} />
+          )}
+        </section>
+
+        {!loading && wordsPerMinute > 0 && (
+          <section className="statspage__section">
+            <h2 className="statspage__section-title">Co gdybyś dał więcej czasu</h2>
+            <PaceSimulator
+              knownWords={knownWords}
+              wordsPerMinute={wordsPerMinute}
+              currentWordsPerDay={paceTrend?.current ?? 0}
+            />
+          </section>
+        )}
+
+        <section className="statspage__section">
+          {achievements == null ? (
+            <div className="statspage__skeleton skeleton" style={{ height: 260 }} />
+          ) : (
+            <AchievementGrid states={achievements.states} onSeen={markUnlocksSeen} />
+          )}
+        </section>
+
+        {recap && (
+          <section className="statspage__section">
+            <WeeklyRecapCard recap={recap} />
+          </section>
+        )}
+
+        <section className="statspage__section">
+          <h2 className="statspage__section-title">Rytm — ostatnie 4 tygodnie</h2>
+          {loading ? (
+            <div className="statspage__skeleton skeleton" style={{ height: 200 }} />
+          ) : (
+            <ActivityHeatmap data={activity} frozenDays={frozenDays} />
+          )}
+        </section>
+
+        {readiness != null && readiness !== undefined && (
+          <section className="statspage__section">
+            <ReadinessBreakdown result={readiness} />
+          </section>
+        )}
+
+        {timeOfDay && timeOfDay.length > 0 && (
+          <section className="statspage__section">
+            <h2 className="statspage__section-title">
+              Twoja najlepsza pora: {timeOfDay[0].band}
+            </h2>
+            <TimeOfDayChart data={timeOfDay} />
+          </section>
+        )}
+
+        {/* Numbers that don't belong on the route itself, but are worth having. */}
+        <section className="statspage__section">
+          <h2 className="statspage__section-title">W liczbach</h2>
+          <dl className="statspage__facts">
+            <div className="statspage__fact statspage__fact--listen">
+              <dt>🎧 Odsłuchane</dt>
+              <dd>{totalWordsHeard.toLocaleString('pl-PL')}<span>słów</span></dd>
+            </div>
+            <div className="statspage__fact">
+              <dt>Czas nauki</dt>
+              <dd>{estimatedMinutes.toLocaleString('pl-PL')}<span>min</span></dd>
+            </div>
+            <div className="statspage__fact statspage__fact--train">
+              <dt>⚡ Opanowane</dt>
+              <dd>{masteredPacks}<span>paczek</span></dd>
+            </div>
+            <div className="statspage__fact">
+              <dt>Bez zaległości</dt>
+              <dd>{freshnessPct}<span>%</span></dd>
+            </div>
+          </dl>
+        </section>
+
+        <section className="statspage__section">
+          <h2 className="statspage__section-title">Terytoria — poziomy</h2>
           {snapshot == null ? (
             <div className="statspage__skeleton skeleton" style={{ height: 120 }} />
           ) : (
@@ -157,7 +235,7 @@ export function StatsPage() {
         </section>
 
         <section className="statspage__section">
-          <h2 className="statspage__section-title">Słowa wg kategorii</h2>
+          <h2 className="statspage__section-title">Terytoria — kategorie</h2>
           {snapshot == null ? (
             <div className="statspage__skeleton skeleton" style={{ height: 200 }} />
           ) : (
@@ -165,28 +243,12 @@ export function StatsPage() {
           )}
         </section>
 
-        <section className="statspage__section statspage__section--chart">
-          <h2 className="statspage__section-title">Aktywność — ostatnie 7 dni</h2>
-          {loading ? (
-            <div className="statspage__skeleton skeleton" style={{ height: 140 }} />
-          ) : (
-            <ActivityChart data={activity} />
-          )}
-        </section>
-
-        {timeOfDay && timeOfDay.length > 0 && (
-          <section className="statspage__section">
-            <h2 className="statspage__section-title">Skuteczność wg pory dnia</h2>
-            <TimeOfDayChart data={timeOfDay} />
-          </section>
-        )}
-
         <section className="statspage__section">
-          <h2 className="statspage__section-title">Postęp paczek</h2>
+          <h2 className="statspage__section-title">Ostatnio odwiedzone</h2>
           {loading ? (
             <div className="statspage__skeleton skeleton" style={{ height: 80 }} />
           ) : (
-            <PackageProgressList key={tick} />
+            <PackageProgressList key={tick} limit={5} />
           )}
         </section>
       </div>

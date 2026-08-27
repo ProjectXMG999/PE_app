@@ -36,10 +36,27 @@
   --accent-teal: #14b8a6;
   --accent-indigo: #6366f1;
 
+  /* Progress / route map. Milestone stations reuse LEVEL_COLORS above, so the
+     only new hues here are the points currency and the far-end gold. */
+  --points-gold: #F5C451;
+  --milestone-gold: #F0B429;
+  --review-teal: var(--accent-teal);
+  /* Słuchaj's color, everywhere the two study paths need telling apart —
+     Trenuj already reads as --accent (the app's primary color) by convention. */
+  --listen-blue: var(--accent-blue);
+  /* The road ahead: visible but clearly untravelled. */
+  --route-line: rgba(255, 255, 255, 0.14);
+  /* Aurora bloom behind the "you are here" marker. */
+  --route-glow: rgba(139, 92, 246, 0.38);
+
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.6);
   --shadow-glow: 0 0 24px rgba(139, 92, 246, 0.4);
+  /* Layered card depth: a tight contact shadow plus a soft ambient one, plus a
+     hairline inset highlight on the top edge — reads as a raised surface
+     instead of a bordered rectangle. */
+  --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.35);
 
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -116,8 +133,17 @@
 
   --overlay: rgba(17, 24, 39, 0.35);
 
+  --points-gold: #B7791F;
+  --milestone-gold: #B7791F;
+  /* On a light ground the road ahead reads as a soft grey rather than a
+     washed-out white, and the aurora is dialled right down — a glow that works
+     against #0D0B1E turns into haze against #F5F4F8. */
+  --route-line: rgba(17, 24, 39, 0.16);
+  --route-glow: rgba(124, 58, 237, 0.16);
+
   --shadow-sm: 0 1px 4px rgba(17, 24, 39, 0.08), 0 0 0 1px rgba(17, 24, 39, 0.04);
   --shadow-md: 0 4px 16px rgba(17, 24, 39, 0.1);
   --shadow-lg: 0 8px 32px rgba(17, 24, 39, 0.12);
   --shadow-glow: 0 0 24px rgba(124, 58, 237, 0.25);
+  --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 1px 2px rgba(17, 24, 39, 0.06), 0 12px 28px rgba(17, 24, 39, 0.1);
 }

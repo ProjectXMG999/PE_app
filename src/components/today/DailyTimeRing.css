@@ -1,0 +1,154 @@
+.timering {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px var(--spacing-md);
+  background: linear-gradient(165deg, color-mix(in srgb, var(--accent) 12%, var(--bg-card)) 0%, var(--bg-card) 60%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.timering--met {
+  background: linear-gradient(165deg, color-mix(in srgb, var(--success) 14%, var(--bg-card)) 0%, var(--bg-card) 60%);
+  border-color: color-mix(in srgb, var(--success) 45%, transparent);
+}
+
+.timering__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timering__eyebrow {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.timering__edit {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin: -2px -2px -2px 0;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.timering__edit:hover {
+  color: var(--text-primary);
+  background: var(--bg-surface);
+}
+
+.timering__edit:active {
+  transform: scale(0.9);
+}
+
+.timering__figure {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-family: var(--font-heading);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Gradient-clipped figure — the "one number that matters" treatment, not
+   another flat digit in a flat card. */
+.timering__value {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--text-primary) 20%, var(--accent-bright));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.timering--met .timering__value {
+  background: linear-gradient(135deg, var(--text-primary) 20%, var(--success));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.timering__unit {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.timering__of {
+  margin-left: 2px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+}
+
+.timering__status {
+  margin-left: auto;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.timering--met .timering__status {
+  color: var(--success);
+  font-weight: 700;
+}
+
+.timering__track {
+  position: relative;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--route-line);
+  overflow: hidden;
+}
+
+.timering__fill {
+  position: relative;
+  height: 100%;
+  min-width: 7px;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-bright) 100%);
+}
+
+.timering--met .timering__fill {
+  background: linear-gradient(90deg, var(--success) 0%, color-mix(in srgb, var(--success) 70%, white) 100%);
+}
+
+.timering__shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  background-size: 60% 100%;
+  animation: timering-shimmer 3.4s ease-in-out infinite;
+}
+
+@keyframes timering-shimmer {
+  0%   { background-position: -60% 0; }
+  100% { background-position: 160% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timering__shine {
+    animation: none;
+    background: none;
+  }
+}

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell'
 import { useAuthStore } from '../store/useAuthStore'
@@ -35,9 +35,43 @@ export function AccountPage() {
   const [busyPlan, setBusyPlan] = useState<EntitlementPlan | 'portal' | null>(null)
   const [waiverAccepted, setWaiverAccepted] = useState(false)
 
+  const [newPassword, setNewPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+  const [pwBusy, setPwBusy] = useState(false)
+  const [pwError, setPwError] = useState<string | null>(null)
+  const [pwMessage, setPwMessage] = useState<string | null>(null)
+
   async function handleSignOut() {
     await supabase?.auth.signOut()
     navigate('/')
+  }
+
+  async function handlePasswordChange(e: FormEvent) {
+    e.preventDefault()
+    setPwError(null)
+    setPwMessage(null)
+
+    if (newPassword.length < 6) {
+      setPwError('Hasło musi mieć co najmniej 6 znaków.')
+      return
+    }
+    if (newPassword !== confirmPassword) {
+      setPwError('Hasła nie są takie same.')
+      return
+    }
+
+    setPwBusy(true)
+    try {
+      const { error } = await supabase!.auth.updateUser({ password: newPassword })
+      if (error) throw error
+      setPwMessage('Hasło zostało zmienione.')
+      setNewPassword('')
+      setConfirmPassword('')
+    } catch (err) {
+      setPwError(err instanceof Error ? err.message : 'Coś poszło nie tak.')
+    } finally {
+      setPwBusy(false)
+    }
   }
 
   async function handleCheckout(plan: EntitlementPlan) {
@@ -80,6 +114,43 @@ export function AccountPage() {
                 </div>
                 <span className="account__row-value">{user.email}</span>
               </div>
+            </div>
+
+            <div className="account__section">
+              <h2 className="account__section-title">Hasło</h2>
+              <form className="account__form" onSubmit={handlePasswordChange}>
+                <label className="account__field">
+                  <span className="account__label">Nowe hasło</span>
+                  <input
+                    type="password"
+                    className="account__input"
+                    value={newPassword}
+                    onChange={e => setNewPassword(e.target.value)}
+                    autoComplete="new-password"
+                    minLength={6}
+                    required
+                  />
+                </label>
+                <label className="account__field">
+                  <span className="account__label">Powtórz nowe hasło</span>
+                  <input
+                    type="password"
+                    className="account__input"
+                    value={confirmPassword}
+                    onChange={e => setConfirmPassword(e.target.value)}
+                    autoComplete="new-password"
+                    minLength={6}
+                    required
+                  />
+                </label>
+
+                {pwError && <p className="account__form-error">{pwError}</p>}
+                {pwMessage && <p className="account__form-message">{pwMessage}</p>}
+
+                <button className="account__primary-btn" type="submit" disabled={pwBusy}>
+                  {pwBusy ? 'Chwileczkę…' : 'Zmień hasło'}
+                </button>
+              </form>
             </div>
 
             <div className="account__section">

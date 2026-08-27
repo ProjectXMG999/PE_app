@@ -1,0 +1,86 @@
+.progresspill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.progresspill__stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  padding: 5px 10px;
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  transition: border-color var(--transition-fast);
+}
+
+.progresspill__stat:hover {
+  border-color: var(--border-accent);
+}
+
+.progresspill__stat:active {
+  transform: scale(0.95);
+}
+
+.progresspill__icon {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.progresspill__stat--points {
+  color: var(--points-gold);
+}
+
+.progresspill__stat--freeze {
+  color: var(--review-teal);
+  cursor: default;
+}
+
+.progresspill__stat--flame .progresspill__icon {
+  display: inline-block;
+  animation: progresspill-flicker 2.6s ease-in-out infinite;
+}
+
+.progresspill__stat--points .progresspill__icon {
+  display: inline-block;
+  animation: progresspill-sparkle-once 900ms ease-out 600ms both;
+}
+
+@keyframes progresspill-flicker {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.12); opacity: 0.85; }
+}
+
+@keyframes progresspill-sparkle-once {
+  0% { transform: scale(1); filter: brightness(1); }
+  40% { transform: scale(1.35); filter: brightness(1.6); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+/* The top bar shares its width between this, the logo and the icon buttons —
+   narrow phones drop points (and, failing that, the "dni" word) so the logo
+   keeps a readable size. */
+@media (max-width: 400px) {
+  .progresspill__stat--points {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progresspill__stat--flame .progresspill__icon,
+  .progresspill__stat--points .progresspill__icon {
+    animation: none;
+  }
+}

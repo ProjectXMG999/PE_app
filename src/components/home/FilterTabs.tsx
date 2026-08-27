@@ -2,6 +2,7 @@ import { ReactNode, useState } from 'react'
 import { useAppStore } from '../../store/useAppStore'
 import packagesIndex from '../../data/packages-index.json'
 import { PackMeta } from '../../types/vocabulary'
+import { LEVEL_META } from '../../data/levels'
 import './FilterTabs.css'
 
 const allPacks = packagesIndex as PackMeta[]
@@ -15,29 +16,6 @@ const STATUS_TABS = [
 ] as const
 
 type StatusTabId = typeof STATUS_TABS[number]['id']
-
-const LEVELS = [
-  {
-    level: 1,
-    name: 'Survival English',
-    description: 'Znasz około 1000 najważniejszych słów. To jeszcze nie jest pełna swoboda, ale to już jest moment, w którym przestajesz być bezbronny. Zamówisz jedzenie, zapytasz o drogę, ogarniesz hotel, lotnisko, podstawową rozmowę i powiesz, czego potrzebujesz. To jest Twój językowy ekwipunek przetrwania.',
-  },
-  {
-    level: 2,
-    name: 'Everyday English',
-    description: 'Znasz około 3000 słów. To jest moment, w którym zaczynasz naprawdę funkcjonować po angielsku. Porozmawiasz o pracy, podróżach, planach, rodzinie, problemach, emocjach i codziennych sprawach. Jeszcze czasem szukasz słów, ale już nie jesteś turystą językowym. Jesteś człowiekiem, który potrafi się dogadać.',
-  },
-  {
-    level: 3,
-    name: 'Freedom English',
-    description: 'Znasz około 6000 słów. To jest poziom wolności. Nie musisz już ciągle upraszczać siebie. Możesz wyrazić opinię, opowiedzieć historię, zażartować, doprecyzować myśl, wytłumaczyć problem i być bardziej sobą po angielsku. Tu angielski przestaje być przeszkodą, a zaczyna być narzędziem.',
-  },
-  {
-    level: 4,
-    name: 'World-Class English',
-    description: 'Znasz około 10 000 słów. To jest poziom, na którym nie tylko się komunikujesz. Ty brzmisz dobrze. Mówisz precyzyjnie, lekko, ciekawie i z klasą. Możesz prowadzić głębsze rozmowy, budować relacje, robić biznes, występować, pisać, uczyć się z anglojęzycznego świata i naprawdę czuć się obywatelem świata. To jest angielski, przy którym ludzie pytają: „gdzie Ty się tak nauczyłeś mówić?"',
-  },
-]
 
 // Fixed category order
 const CATEGORY_ORDER = [
@@ -71,13 +49,14 @@ export function FilterTabs({ afterLevelRow }: FilterTabsProps) {
   const { activeFilter, setFilter, activeLevel, setLevel, activeCategory, setCategory } = useAppStore()
   const [expandedLevel, setExpandedLevel] = useState<number | null>(null)
 
-  const selectedLevelData = activeLevel ? LEVELS.find(l => l.level === activeLevel) : null
+  const selectedLevelData = activeLevel ? LEVEL_META.find(l => l.level === activeLevel) : null
 
   return (
     <div className="filtertabs">
-      {/* Row 1: Level */}
-      <div className="filtertabs__row filtertabs__row--scroll">
-        {LEVELS.map(lvlData => (
+      {/* Row 1: Level — evenly stretched across the full row, unlike the
+          scrollable category/status rows, since there are always exactly 4. */}
+      <div className="filtertabs__row filtertabs__row--level">
+        {LEVEL_META.map(lvlData => (
           <button
             key={lvlData.level}
             className={`filtertabs__tab filtertabs__tab--level${lvlData.level} ${activeLevel === lvlData.level ? 'filtertabs__tab--active' : ''}`}

@@ -24,6 +24,15 @@ import type { CheckpointRecord } from './types.js'
 // "cat"/"dog" as a default filler character for words that have nothing to
 // do with pets (e.g. word="Twenty-three" -> "My cat hid twenty-three
 // socks.").
+//
+// Revision 2: candidate1 is now a dedicated "modern/2026 brand grounding"
+// slot for EVERY word (see lib/prompt.ts), not an occasional aside. With
+// only ~20 safe, globally-recognizable, neutral brand names to rotate
+// through thousands of words, each one will legitimately recur far more
+// than this tracker's 2%-of-run threshold — that recurrence is now by
+// design, not the same failure mode as "coffee." Brand/app names are
+// tracked separately (brandCounts) purely for reporting and are excluded
+// from overusedWords() entirely.
 
 // Deliberately broad: function words, pronouns, articles, modal/aux verbs,
 // and common general-purpose verbs/adverbs that are structurally frequent
@@ -48,6 +57,18 @@ const STOPWORDS = new Set(
     .filter(Boolean)
 )
 
+// Recognizable modern brands/apps/tech the prompt explicitly tells the
+// model to reach for in candidate1. Keep in sync with the illustrative list
+// in lib/prompt.ts's "WSPÓŁCZESNOŚĆ / 2026" slot description — this doesn't
+// need to be exhaustive, just cover the common ones so they don't pollute
+// the "unintentional prop repetition" signal.
+const BRAND_WORDS = new Set(
+  `netflix spotify uber instagram whatsapp tiktok zoom google maps amazon iphone macbook samsung youtube
+   starbucks ikea nike airbnb toyota porsche paypal venmo android tesla facebook twitter linkedin pinterest`
+    .split(/\s+/)
+    .filter(Boolean)
+)
+
 function extractContentWords(text: string): Set<string> {
   const tokens = text.toLowerCase().match(/[a-z']+/g) ?? []
   return new Set(tokens.filter((t) => t.length > 2 && !STOPWORDS.has(t.replace(/'.*$/, ''))))
@@ -55,6 +76,7 @@ function extractContentWords(text: string): Set<string> {
 
 export class RepetitionTracker {
   private counts = new Map<string, number>()
+  private brandCounts = new Map<string, number>()
   private totalWords = 0
 
   seed(records: CheckpointRecord[]): void {
@@ -72,8 +94,18 @@ export class RepetitionTracker {
     const ownTokens = new Set((r.english.toLowerCase().match(/[a-z']+/g) ?? []).filter((t) => t.length > 2))
     for (const word of extractContentWords(text)) {
       if (ownTokens.has(word)) continue
+      if (BRAND_WORDS.has(word)) {
+        this.brandCounts.set(word, (this.brandCounts.get(word) ?? 0) + 1)
+        continue
+      }
       this.counts.set(word, (this.counts.get(word) ?? 0) + 1)
     }
+  }
+
+  // For reporting only (e.g. a run summary) — brand frequency is expected
+  // and intentionally excluded from overusedWords()/the "avoid" prompt line.
+  brandFrequency(): Map<string, number> {
+    return new Map(this.brandCounts)
   }
 
   // A word only counts as "overused" once there's enough data to trust the

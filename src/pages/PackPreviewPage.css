@@ -3,8 +3,10 @@
   flex-direction: column;
   width: 100%;
   background: var(--bg-primary);
-  /* bottom padding to clear both the fixed action bar and BottomNav (mobile) */
-  padding-bottom: calc(80px + var(--bottomnav-height) + var(--safe-bottom));
+  /* BottomNav is hidden on this route (AppShell hideBottomNav) — the action
+     bar sits where it used to, so this only needs to clear the action bar
+     itself, not both. */
+  padding-bottom: calc(80px + var(--safe-bottom));
 }
 
 @media (min-width: 1024px) {
@@ -38,7 +40,19 @@
   font-size: var(--text-base);
 }
 
-/* ── Back button — floating circle (mobile) → inline link (desktop) ── */
+/* ── Back / next-pack nav — floating circles (mobile) → inline row (desktop) ── */
+.packpreview__nav-row {
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .packpreview__nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 .packpreview__back {
   position: fixed;
   top: calc(env(safe-area-inset-top, 0px) + 10px);
@@ -73,13 +87,16 @@
 }
 
 @media (min-width: 1024px) {
+  .packpreview__nav-row {
+    margin-bottom: var(--spacing-md);
+  }
+
   .packpreview__back {
     position: static;
     width: auto;
     height: 36px;
     padding: 0 var(--spacing-md) 0 var(--spacing-sm);
     gap: var(--spacing-xs);
-    margin-bottom: var(--spacing-md);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     box-shadow: none;
@@ -93,25 +110,115 @@
   }
 }
 
-/* ── Hero ─────────────────────────────────────────────────── */
+/* Mirrors .packpreview__back, flipped to the right side. */
+.packpreview__next {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 10px);
+  right: 14px;
+  z-index: 110;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--bg-card) 88%, transparent);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+}
+
+.packpreview__next:hover {
+  border-color: var(--border-accent);
+  background: var(--bg-card-hover);
+}
+
+.packpreview__next:active {
+  transform: scale(0.94);
+}
+
+.packpreview__next-label {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .packpreview__next {
+    position: static;
+    width: auto;
+    height: 36px;
+    flex-direction: row-reverse;
+    padding: 0 var(--spacing-sm) 0 var(--spacing-md);
+    gap: var(--spacing-xs);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  .packpreview__next-label {
+    display: inline;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+
+/* ── Hero — a real card, tinted by the pack's level color ────
+   Same recipe as .today__hero on Dzisiaj: gradient shell + glowing top
+   accent bar + a whisper of grain. --hero-accent is set inline per pack
+   (level color, or --accent for level-less packs). */
 .packpreview__hero {
+  position: relative;
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
-  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
+  margin: 0 var(--spacing-md) var(--spacing-md);
+  padding: calc(var(--spacing-lg) + 3px) var(--spacing-md) var(--spacing-md);
+  background: linear-gradient(165deg, color-mix(in srgb, var(--hero-accent) 14%, var(--bg-card)) 0%, var(--bg-card) 45%);
+  border: 1px solid color-mix(in srgb, var(--hero-accent) 45%, transparent);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.packpreview__hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--spacing-lg);
+  right: var(--spacing-lg);
+  height: 3px;
+  border-radius: 0 0 var(--radius-full) var(--radius-full);
+  background: linear-gradient(90deg, var(--hero-accent), color-mix(in srgb, var(--hero-accent) 70%, white));
+  box-shadow: 0 0 16px 1px color-mix(in srgb, var(--hero-accent) 55%, transparent);
+  pointer-events: none;
+}
+
+.packpreview__hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 @media (min-width: 1024px) {
   .packpreview__hero {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 auto var(--spacing-md);
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    padding: calc(var(--spacing-lg) + 3px) var(--spacing-lg) var(--spacing-md);
   }
 }
 
 .packpreview__hero-icon {
+  position: relative;
+  z-index: 1;
   width: 56px;
   height: 56px;
   flex-shrink: 0;
@@ -120,8 +227,9 @@
   align-items: center;
   justify-content: center;
   font-size: 28px;
-  background: var(--bg-card);
-  color: var(--accent-bright);
+  background: linear-gradient(165deg, color-mix(in srgb, var(--hero-accent) 32%, var(--bg-card)) 0%, color-mix(in srgb, var(--hero-accent) 12%, var(--bg-card)) 100%);
+  color: var(--hero-accent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 2px 8px color-mix(in srgb, var(--hero-accent) 30%, transparent);
 }
 
 .packpreview__hero-body {
@@ -151,6 +259,50 @@
   flex-wrap: wrap;
 }
 
+/* Deliberately NOT pill-shaped and NOT the same ✓-glyph as the status badges
+   above it (--pill--mastered/--completed) — those are read-only state, this
+   is a clickable action, and sharing their shape/icon made it read as one
+   more badge ("this is already known") instead of a button you press. A
+   rectangular, filled, icon-in-a-circle button plus a real gap from the
+   pill row is the same "this is an action" language as .packpreview__btn
+   below it. */
+.packpreview__mark-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: var(--spacing-md);
+  padding: 8px 14px 8px 8px;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--success) 0%, color-mix(in srgb, var(--success) 60%, black) 100%);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--success) 35%, transparent);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.packpreview__mark-all-btn:hover {
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--success) 45%, transparent);
+}
+
+.packpreview__mark-all-btn:active {
+  transform: scale(0.97);
+}
+
+.packpreview__mark-all-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .packpreview__pill {
   font-size: var(--text-xs);
   font-family: var(--font-heading);
@@ -167,18 +319,22 @@
 }
 
 .packpreview__pill--mastered {
-  background: var(--warning);
-  border-color: var(--warning);
+  background: linear-gradient(135deg, var(--warning) 0%, color-mix(in srgb, var(--warning) 65%, black) 100%);
+  border-color: transparent;
   color: #3d2c00;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--warning) 40%, transparent);
 }
 
 .packpreview__pill--completed {
-  background: var(--success);
-  border-color: var(--success);
+  background: linear-gradient(135deg, var(--success) 0%, color-mix(in srgb, var(--success) 65%, black) 100%);
+  border-color: transparent;
   color: #04321f;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--success) 40%, transparent);
 }
 
-/* Progress ring */
+/* Progress ring — a soft glow sits behind the SVG, same idea as CompassHero's
+   aurora glow behind its marker, just static since there's no position to
+   travel to here, only a percentage. */
 .packpreview__ring {
   position: relative;
   width: 64px;
@@ -186,20 +342,37 @@
   flex-shrink: 0;
 }
 
+.packpreview__ring::before {
+  content: '';
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--hero-accent) 40%, transparent) 0%, transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.packpreview__ring svg {
+  position: relative;
+  z-index: 1;
+}
+
 .packpreview__ring-track {
   stroke: var(--border);
 }
 
 .packpreview__ring-fill {
-  stroke: var(--accent);
+  stroke: var(--hero-accent);
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--hero-accent) 55%, transparent));
   transition: stroke-dasharray var(--transition-slow) var(--ease-out-expo);
 }
 
 .packpreview__ring-label {
   position: absolute;
+  z-index: 1;
   inset: 0;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   font-family: var(--font-heading);
 }
@@ -238,7 +411,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 6px;
 }
 
 @media (min-width: 1024px) {
@@ -253,21 +426,31 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  padding: 10px var(--spacing-sm);
-  border-radius: var(--radius-sm);
+  padding: 12px var(--spacing-md);
+  border-radius: var(--radius-md);
   border: 1px solid var(--border);
   background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
 }
 
 .packpreview__wordrow:nth-child(even) {
   background: var(--bg-surface);
 }
 
+/* flex-basis 0 (not just flex:1) so the two columns split evenly from a
+   zero base rather than from their content width first — a long Polish
+   phrase no longer pushes the English column (or the audio button) around,
+   and both get the same truncate-with-ellipsis treatment so a long word
+   never wraps to a second line and throws the row's height off. */
 .packpreview__polish {
-  flex: 1;
+  flex: 1 1 0;
   font-size: var(--text-base);
   color: var(--text-primary);
   font-family: var(--font-body);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .packpreview__sep {
@@ -277,7 +460,7 @@
 }
 
 .packpreview__english {
-  flex: 1;
+  flex: 1 1 0;
   font-size: var(--text-base);
   color: var(--accent-bright);
   font-family: var(--font-body);
@@ -288,25 +471,33 @@
   white-space: nowrap;
 }
 
+/* Visible at rest, not just on press — the old transparent-until-tapped
+   button gave no indication it was interactive at all. */
 .packpreview__audio-btn {
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: none;
-  background: transparent;
-  color: var(--text-muted);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--text-secondary);
   cursor: pointer;
   padding: 0;
-  transition: color 0.15s, background 0.15s;
+  transition: color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.packpreview__audio-btn:hover {
+  color: var(--accent-bright);
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
 .packpreview__audio-btn:active {
   color: var(--accent-bright);
-  background: var(--bg-elevated, var(--bg-card-hover));
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+  transform: scale(0.92);
 }
 
 /* ── Related packs ────────────────────────────────────────── */
@@ -355,13 +546,15 @@
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
   cursor: pointer;
-  transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+  transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .packpreview__related-row:hover {
   border-color: var(--border-accent);
   background: var(--bg-card-hover);
+  box-shadow: var(--shadow-md);
 }
 
 .packpreview__related-row:active {
@@ -403,7 +596,7 @@
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  background: var(--bg-surface);
+  background: linear-gradient(165deg, var(--bg-card-hover) 0%, var(--bg-surface) 100%);
 }
 
 .packpreview__related-body {
@@ -436,7 +629,8 @@
   font-size: var(--text-xs);
   font-weight: 700;
   color: white;
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 60%, black) 100%);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--accent) 35%, transparent);
   padding: 4px 10px;
   border-radius: var(--radius-full);
 }
@@ -455,12 +649,14 @@
   color: var(--warning);
   border-color: color-mix(in srgb, var(--warning) 40%, transparent);
   background: color-mix(in srgb, var(--warning) 14%, transparent);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--warning) 25%, transparent);
 }
 
 .packpreview__related-status--completed {
   color: var(--success);
   border-color: color-mix(in srgb, var(--success) 40%, transparent);
   background: color-mix(in srgb, var(--success) 14%, transparent);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--success) 25%, transparent);
 }
 
 .packpreview__related-status--started {
@@ -469,15 +665,34 @@
   background: var(--bg-surface);
 }
 
+/* Circular badge, matching the arrow-in-a-circle language used everywhere
+   else on this page (bottom-bar CTAs, the "Następny" nav button) — a bare
+   stroked chevron here was the odd one out. */
 .packpreview__related-chevron {
   flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
   color: var(--text-muted);
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 
-/* ── Action bar — sticky at bottom (mobile) → inline row (desktop) ── */
+.packpreview__related-row:hover .packpreview__related-chevron {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent);
+}
+
+/* ── Action bar — sticky at bottom (mobile) → inline row (desktop) ──
+   No panel background/border — BottomNav is hidden on this route and the
+   buttons sit directly in the space it vacated, so a flat bar behind them
+   would just read as a second, redundant bottom bar. */
 .packpreview__actions {
   position: fixed;
-  bottom: var(--bottomnav-height);
+  bottom: 0;
   left: 0;
   right: 0;
   display: flex;
@@ -485,8 +700,6 @@
   gap: var(--spacing-sm);
   padding: var(--spacing-md);
   padding-bottom: calc(var(--spacing-md) + var(--safe-bottom));
-  background: var(--bg-surface);
-  border-top: 1px solid var(--border);
   z-index: 20;
 }
 
@@ -500,8 +713,6 @@
     max-width: calc(900px + 2 * var(--spacing-xl));
     margin: 0 auto;
     padding: var(--spacing-md) var(--spacing-xl);
-    background: var(--bg-surface);
-    border-top: 1px solid var(--border);
   }
 }
 
@@ -514,6 +725,7 @@
   background: var(--bg-card);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
   width: 100%;
   animation: fadeSlideDown 200ms ease-out forwards;
 }
@@ -524,9 +736,15 @@
 }
 
 .packpreview__mode-info-icon {
-  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
   flex-shrink: 0;
-  margin-top: 1px;
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  font-size: 16px;
 }
 
 .packpreview__mode-info-title {
@@ -565,37 +783,207 @@
 }
 
 .packpreview__btn {
+  position: relative;
   width: 100%;
   height: 52px;
   border-radius: var(--radius-full);
+  border: 1px solid transparent;
   font-family: var(--font-heading);
   font-size: var(--text-lg);
   font-weight: 700;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: all var(--transition-fast);
+  transition: transform var(--transition-fast);
+}
+
+.packpreview__btn:active {
+  transform: scale(0.97);
+}
+
+/* Diagonal shine sweep — same signature as .today__cta on Dzisiaj, so the
+   two "start studying" affordances in the app read as one visual language.
+   A background layer is always clipped to its own border-radius, so this
+   needs no overflow:hidden on the button (which would otherwise clip the
+   button's own drop shadow). */
+.packpreview__btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(105deg, transparent 25%, rgba(255, 255, 255, 0.18) 45%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.18) 55%, transparent 75%);
+  background-size: 300% 100%;
+  background-position: -150% 0;
+  animation: packpreview-btn-shine 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes packpreview-btn-shine {
+  0%   { background-position: -150% 0; opacity: 0; }
+  8%   { opacity: 1; }
+  45%  { background-position: 250% 0; opacity: 1; }
+  55%  { opacity: 0; }
+  100% { background-position: 250% 0; opacity: 0; }
 }
 
 .packpreview__btn--fiszki {
+  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 55%, black) 100%);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 40%, transparent), 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.packpreview__btn--autoplay {
+  background: linear-gradient(135deg, var(--listen-blue) 0%, color-mix(in srgb, var(--listen-blue) 55%, black) 100%);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--listen-blue) 40%, transparent), 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.packpreview__btn-icon,
+.packpreview__btn-label {
+  position: relative;
+  z-index: 1;
+}
+
+.packpreview__btn-arrow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-left: 2px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.16);
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.packpreview__btn:active .packpreview__btn-arrow {
+  transform: translateX(2px);
+  background: rgba(255, 255, 255, 0.26);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .packpreview__btn::before {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+/* ── "Znam wszystko" confirm dialog ─────────────────────────── */
+dialog.packpreview__mark-modal::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+dialog.packpreview__mark-modal {
+  position: fixed;
+  inset: auto 0 0 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  box-shadow: var(--shadow-card);
+  padding: var(--spacing-xl) var(--spacing-lg) calc(var(--spacing-xl) + var(--safe-bottom));
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  animation: packpreview-modal-in 220ms var(--ease-out-expo) forwards;
+}
+
+@keyframes packpreview-modal-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  dialog.packpreview__mark-modal {
+    animation: none;
+  }
+}
+
+@media (min-height: 600px) {
+  dialog.packpreview__mark-modal {
+    inset: 0;
+    margin: auto;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    border-radius: var(--radius-xl);
+  }
+}
+
+.packpreview__mark-modal-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 22px;
+  color: var(--success);
+  background: color-mix(in srgb, var(--success) 16%, transparent);
+  border-radius: var(--radius-full);
+}
+
+.packpreview__mark-modal-title {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.packpreview__mark-modal-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.packpreview__mark-modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.packpreview__mark-modal-btn {
+  height: 48px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+.packpreview__mark-modal-btn--cancel {
   background: var(--bg-card);
   border: 1px solid var(--border);
   color: var(--text-primary);
 }
 
-.packpreview__btn--fiszki:hover {
+.packpreview__mark-modal-btn--cancel:hover:not(:disabled) {
   border-color: var(--border-accent);
 }
 
-.packpreview__btn--autoplay {
-  background: var(--accent);
+.packpreview__mark-modal-btn--confirm {
+  background: linear-gradient(135deg, var(--success) 0%, color-mix(in srgb, var(--success) 60%, black) 100%);
   color: white;
   border: 1px solid transparent;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--success) 35%, transparent);
 }
 
-.packpreview__btn--autoplay:hover {
-  background: var(--accent-bright);
+.packpreview__mark-modal-btn--confirm:hover:not(:disabled) {
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--success) 45%, transparent);
+}
+
+.packpreview__mark-modal-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* Info button */

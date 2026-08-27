@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
 import { InstallBanner } from '../components/home/InstallBanner'
 import { QuickStartCards } from '../components/home/QuickStartCards'
@@ -9,6 +10,7 @@ import { SectionHeader } from '../components/home/SectionHeader'
 import { PackageCard } from '../components/home/PackageCard'
 import { OnboardingCard } from '../components/home/OnboardingCard'
 import { OnboardingModal } from '../components/onboarding/OnboardingModal'
+import { fadeUp, fadeUpReduced, staggerContainer } from '../components/today/motion'
 import { useAppStore } from '../store/useAppStore'
 import { useProgressData } from '../hooks/useProgressData'
 import packagesIndex from '../data/packages-index.json'
@@ -22,6 +24,8 @@ export function HomePage() {
   const { searchQuery, setSearch, activeFilter, setFilter, activeLevel, setLevel, activeCategory, setCategory } = useAppStore()
   const snapshot = useProgressData()
   const listRef = useRef<HTMLDivElement>(null)
+  const reduced = useReducedMotion()
+  const variants = reduced ? fadeUpReduced : fadeUp
 
   // Restore scroll position lost when the route (and this component) unmounts
   // while navigating into a pack, so returning to Home doesn't dump the user
@@ -76,16 +80,20 @@ export function HomePage() {
   return (
     <AppShell>
       <OnboardingModal />
-      <div className="homepage">
-        <InstallBanner />
-        <StatsRow />
-        <OnboardingCard />
-        <QuickStartCards />
-        <FilterTabs
-          afterLevelRow={snapshot && <LevelProgressBars allPacks={allPacks} knownMap={knownMap} />}
-        />
-        <SectionHeader label="Pakiety" count={filtered.length} />
-        <div className="homepage__list" ref={listRef}>
+      <motion.div className="homepage" variants={staggerContainer} initial="hidden" animate="show">
+        <motion.div variants={variants}><InstallBanner /></motion.div>
+        <motion.div variants={variants}><StatsRow /></motion.div>
+        <motion.div variants={variants}><OnboardingCard /></motion.div>
+        <motion.div variants={variants}><QuickStartCards /></motion.div>
+        <motion.div variants={variants}>
+          <FilterTabs
+            afterLevelRow={snapshot && <LevelProgressBars allPacks={allPacks} knownMap={knownMap} />}
+          />
+        </motion.div>
+        <motion.div variants={variants}>
+          <SectionHeader label="Pakiety" count={filtered.length} />
+        </motion.div>
+        <motion.div className="homepage__list" ref={listRef} variants={variants}>
           {!snapshot ? (
             Array.from({ length: 6 }).map((_, i) => (
               <div key={i} className="homepage__card-skeleton skeleton" />
@@ -112,8 +120,8 @@ export function HomePage() {
               )}
             </>
           )}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </AppShell>
   )
 }

@@ -1,4 +1,6 @@
 .appshell {
+  position: relative;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -9,12 +11,19 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-bottom: calc(var(--bottomnav-height) + var(--safe-bottom));
+  /* BottomNav now floats with a gap below it (see BottomNav.css) instead of
+     sitting flush against the viewport edge — clearance has to cover that
+     gap twice (below the bar, and as breathing room above it) or the last
+     bit of scrollable content ends up hidden behind it. */
+  padding-bottom: calc(var(--bottomnav-height) + (2 * var(--spacing-sm)) + var(--safe-bottom));
   -webkit-overflow-scrolling: touch;
 }
 
-.appshell__main--no-nav {
+.appshell__main--no-pad {
   padding-bottom: 0;
+}
+
+.appshell__main--no-scroll {
   overflow: hidden;
 }
 

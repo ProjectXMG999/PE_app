@@ -1,0 +1,173 @@
+.readiness {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+}
+
+[data-theme="light"] .readiness {
+  box-shadow: var(--shadow-sm);
+}
+
+.readiness__info-btn {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.readiness__info-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-accent);
+}
+
+.readiness__info-btn:active {
+  transform: scale(0.92);
+}
+
+.readiness__head {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Conic-gradient donut, same technique as the old banner. */
+.readiness__ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: conic-gradient(
+    var(--accent) var(--readiness-pct, 0%),
+    var(--route-line) 0
+  );
+}
+
+.readiness__ring::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+}
+
+.readiness__ring-value {
+  position: relative;
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.readiness__head-text {
+  min-width: 0;
+  /* Reserves room so the title/subtitle wrap before reaching the info button
+     sitting absolutely in the top-right corner, instead of running under it. */
+  padding-right: 36px;
+}
+
+.readiness__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.readiness__sub {
+  margin: 4px 0 0;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.readiness__sub strong {
+  color: var(--text-secondary);
+}
+
+.readiness__parts {
+  margin: 0;
+  padding-top: var(--spacing-sm);
+}
+
+.readiness__part {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 6px 0;
+}
+
+.readiness__part-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.readiness__part-icon {
+  font-size: var(--text-base);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.readiness__part-value {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin: 0;
+}
+
+.readiness__bar {
+  flex: 1;
+  height: 6px;
+  background: var(--route-line);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.readiness__bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 700ms var(--ease-out-expo);
+}
+
+.readiness__bar-fill--good { background: var(--success); }
+.readiness__bar-fill--mid  { background: var(--warning); }
+.readiness__bar-fill--low  { background: var(--danger); }
+
+.readiness__pct {
+  min-width: 34px;
+  text-align: right;
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .readiness__bar-fill { transition: none; }
+}

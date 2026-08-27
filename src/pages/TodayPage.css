@@ -1,0 +1,354 @@
+.today {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
+  max-width: var(--reading-max-width);
+  margin: 0 auto;
+}
+
+.today__context {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.today__action {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.today__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.today__header-text {
+  min-width: 0;
+}
+
+.today__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.today__header-level {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.today__browse-level {
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.today__skeleton {
+  border-radius: var(--radius-lg);
+}
+
+/* Matches RouteStrip/ListenStrip's own card shell (neutral, since we don't
+   know which mode's tint applies yet) so swapping in the real component once
+   it loads doesn't visibly jump in size. */
+.today__strip-loading {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+/* ── Hero — the one decision ───────────────────────────────────────────── */
+
+.today__hero {
+  position: relative;
+  padding: 10px var(--spacing-md) 10px;
+  background: linear-gradient(165deg, color-mix(in srgb, var(--accent) 14%, var(--bg-card)) 0%, var(--bg-card) 45%);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+/* A bright accent bar along the top edge — the "this card matters" signature. */
+.today__hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--spacing-lg);
+  right: var(--spacing-lg);
+  height: 3px;
+  border-radius: 0 0 var(--radius-full) var(--radius-full);
+  background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+  box-shadow: 0 0 16px 1px var(--accent-glow);
+  pointer-events: none;
+}
+
+/* A whisper of grain so the card reads as material, not a flat fill. */
+.today__hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.today__hero--review {
+  background: linear-gradient(165deg, color-mix(in srgb, var(--review-teal) 16%, var(--bg-card)) 0%, var(--bg-card) 45%);
+  border-color: color-mix(in srgb, var(--review-teal) 45%, transparent);
+}
+
+.today__hero--review::before {
+  background: linear-gradient(90deg, var(--review-teal), color-mix(in srgb, var(--review-teal) 70%, white));
+  box-shadow: 0 0 16px 1px color-mix(in srgb, var(--review-teal) 45%, transparent);
+}
+
+/* Słuchaj gets its own tint, distinct from Trenuj's default violet — the two
+   study paths shouldn't look identical just because they share one layout. */
+.today__hero--listen {
+  background: linear-gradient(165deg, color-mix(in srgb, var(--listen-blue) 14%, var(--bg-card)) 0%, var(--bg-card) 45%);
+  border-color: color-mix(in srgb, var(--listen-blue) 45%, transparent);
+}
+
+.today__hero--listen::before {
+  background: linear-gradient(90deg, var(--listen-blue), color-mix(in srgb, var(--listen-blue) 70%, white));
+  box-shadow: 0 0 16px 1px color-mix(in srgb, var(--listen-blue) 45%, transparent);
+}
+
+.today__hero-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.today__hero-eyebrow {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.today__hero-count {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--review-teal);
+  font-variant-numeric: tabular-nums;
+}
+
+.today__hero-pace {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--success);
+}
+
+.today__hero-name {
+  margin: 6px 0 2px;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+.today__hero-detail {
+  margin: 0 0 var(--spacing-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.today__hero-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.today__cta {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px var(--spacing-md);
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: #fff;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+/* Diagonal shine sweep — the same "this is a premium affordance" signature
+   used on QuickStartCards' Pakiety cards, lifted onto the CTA itself rather
+   than copied onto the tab row above it. A background layer is always
+   clipped to its own border-radius, so this needs no overflow:hidden on the
+   button (which would otherwise clip the button's own drop shadow — the bug
+   fixed earlier on the hero cards). */
+.today__cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(105deg, transparent 25%, rgba(255, 255, 255, 0.18) 45%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.18) 55%, transparent 75%);
+  background-size: 300% 100%;
+  background-position: -150% 0;
+  animation: today-cta-shine 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes today-cta-shine {
+  0%   { background-position: -150% 0; opacity: 0; }
+  8%   { opacity: 1; }
+  45%  { background-position: 250% 0; opacity: 1; }
+  55%  { opacity: 0; }
+  100% { background-position: 250% 0; opacity: 0; }
+}
+
+.today__cta--train {
+  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 55%, black) 100%);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 40%, transparent), 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.today__cta--listen {
+  background: linear-gradient(135deg, var(--listen-blue) 0%, color-mix(in srgb, var(--listen-blue) 55%, black) 100%);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--listen-blue) 40%, transparent), 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.today__cta--review {
+  background: linear-gradient(135deg, var(--review-teal) 0%, color-mix(in srgb, var(--review-teal) 55%, black) 100%);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--review-teal) 40%, transparent), 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.today__cta-icon,
+.today__cta-label {
+  position: relative;
+  z-index: 1;
+}
+
+.today__cta-icon {
+  font-size: 17px;
+}
+
+.today__cta-arrow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-left: 2px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.16);
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.today__cta:active .today__cta-arrow {
+  transform: translateX(2px);
+  background: rgba(255, 255, 255, 0.26);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .today__cta::before {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+.today__path-empty {
+  margin: 0;
+  padding: var(--spacing-lg) var(--spacing-md);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+/* ── Nothing left today ─────────────────────────────────────────────────── */
+
+.today__done {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+  background: linear-gradient(165deg, color-mix(in srgb, var(--success) 16%, var(--bg-card)) 0%, var(--bg-card) 55%);
+  border: 1px solid color-mix(in srgb, var(--success) 45%, transparent);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.today__done::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--spacing-lg);
+  right: var(--spacing-lg);
+  height: 3px;
+  border-radius: 0 0 var(--radius-full) var(--radius-full);
+  background: linear-gradient(90deg, var(--success), color-mix(in srgb, var(--success) 70%, white));
+  box-shadow: 0 0 16px 1px color-mix(in srgb, var(--success) 45%, transparent);
+  pointer-events: none;
+}
+
+.today__done-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  color: var(--success);
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--success) 14%, transparent);
+}
+
+.today__done-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.today__done-text {
+  margin: 0;
+  max-width: 36ch;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Streak/points/freeze used to live in a footer here — moved to the top bar
+   (ProgressPill) so they're visible on every screen, not just Dzisiaj. */

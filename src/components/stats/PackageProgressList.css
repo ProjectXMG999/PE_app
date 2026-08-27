@@ -45,7 +45,7 @@
 }
 
 .packprogress__badge--completed {
-  background: var(--success);
+  background: var(--listen-blue);
   color: white;
 }
 

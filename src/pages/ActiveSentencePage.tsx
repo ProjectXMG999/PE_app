@@ -8,6 +8,9 @@ import { MasteryScreen } from '../components/flashcard/MasteryScreen'
 import { Word } from '../types/vocabulary'
 import { WordProgress } from '../types/progress'
 import { getPackageWordProgress, saveWordProgress, saveSession, savePackageProgress, getPackageProgress } from '../services/db'
+import { applyKnown, applyUnknown } from '../services/review'
+import { useStudyClock } from '../hooks/useStudyClock'
+import { dayKey } from '../utils/day'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import './ActiveSentencePage.css'
@@ -21,6 +24,7 @@ export function ActiveSentencePage() {
   const { enRate, plRate } = useAppStore()
   const { playWord, playSentence, playWordPl, playSentencePl, stop } = useAudio(packageId ?? null, enRate, plRate)
   const { side, isAdvancing, flip, advance: animateOut, resetToFront, handleAnimationEnd, cardClass } = useCardFlip()
+  const { elapsedSec } = useStudyClock()
 
   const [studyWords, setStudyWords] = useState<Word[]>([])
   const [progressMap, setProgressMap] = useState<Map<string, WordProgress>>(new Map())
@@ -75,18 +79,17 @@ export function ActiveSentencePage() {
     if (!currentWord || !packageId || isAdvancing) return
     stop()
 
-    if (markKnown) {
-      const now = new Date().toISOString()
-      const existing = progressMap.get(currentWord.id)
-      const updated: WordProgress = {
-        wordId: currentWord.id,
-        packageId,
-        seenCount: (existing?.seenCount ?? 0) + 1,
-        lastSeen: now,
-        status: 'known',
-      }
-      await saveWordProgress(updated)
-      setProgressMap(prev => new Map(prev).set(currentWord.id, updated))
+    // Both answers are recorded — see the note in WordFlashPage. "Nie znam"
+    // never demotes a mastered word; it reschedules it for review instead.
+    const existing = progressMap.get(currentWord.id)
+    const wasKnown = existing?.status === 'known'
+    const updated: WordProgress = markKnown
+      ? applyKnown(existing, currentWord.id, packageId)
+      : applyUnknown(existing, currentWord.id, packageId)
+
+    await saveWordProgress(updated)
+    setProgressMap(prev => new Map(prev).set(currentWord.id, updated))
+    if (markKnown && !wasKnown) {
       setKnownCount(c => c + 1)
       setSessionKnown(c => c + 1)
     }
@@ -99,10 +102,12 @@ export function ActiveSentencePage() {
           sessionStartRef.current = true
           await saveSession({
             packageId,
-            date: new Date().toISOString().split('T')[0],
+            date: dayKey(),
             startedAt: new Date().toISOString(),
             wordsCompleted: total,
             mode: 'fiszki',
+            trainMode: 'active-sentence',
+            durationSec: elapsedSec(),
           })
         }
         const allProgress = await getPackageWordProgress(packageId)
@@ -114,7 +119,13 @@ export function ActiveSentencePage() {
           startedAt: existing?.startedAt ?? now,
           completedAt: now,
           masteredAt: allKnown ? now : (existing?.masteredAt ?? null),
-          currentIndex: total,
+          // Session only drills the still-unknown subset (`total`), which can
+          // be far smaller than the pack — writing that into currentIndex
+          // would shrink the pack's actual listen/heard position. The full
+          // word count is what "played through" should mean here. `pack`
+          // comes from usePackageData (the pack-content blob), which never
+          // carries a wordCount field — pack.words.length is always correct.
+          currentIndex: pack!.words.length,
         })
         if (allKnown) setShowMastery(true)
         else setDone(true)
@@ -176,7 +187,7 @@ export function ActiveSentencePage() {
     )
   }
 
-  const knownPct = pack ? (knownCount / pack.wordCount) * 100 : 0
+  const knownPct = pack ? (knownCount / pack.words.length) * 100 : 0
   const progressPct = total > 0 ? (cardIndex / total) * 100 : 0
   const hasSentencePl = !!currentWord?.sentencePl
   const hasSentenceEn = !!currentWord?.sentenceEn

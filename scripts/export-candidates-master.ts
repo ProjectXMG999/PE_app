@@ -56,6 +56,40 @@ function loadExistingChoices(xlsxPath: string): Map<string, string> {
   return choices
 }
 
+// Anything a human added to a previously-exported file beyond the columns
+// this script itself writes (e.g. extra candidate columns pasted in during
+// manual review) is preserved and carried forward by column name, keyed by
+// wordId — never silently dropped on the next export.
+function loadExistingExtraColumns(
+  xlsxPath: string,
+  knownColumns: Set<string>
+): { byWordId: Map<string, Record<string, string>>; extraColumns: string[] } {
+  const byWordId = new Map<string, Record<string, string>>()
+  const extraColumns: string[] = []
+  const seen = new Set<string>()
+  if (!fs.existsSync(xlsxPath)) return { byWordId, extraColumns }
+  const workbook = XLSX.readFile(xlsxPath)
+  const sheet = workbook.Sheets[SHEET_NAME]
+  if (!sheet) return { byWordId, extraColumns }
+  const rows = XLSX.utils.sheet_to_json<Record<string, unknown>>(sheet, { defval: '' })
+  for (const row of rows) {
+    const wordId = String(row['wordId'] ?? '').trim()
+    if (!wordId) continue
+    const extras: Record<string, string> = {}
+    for (const [col, val] of Object.entries(row)) {
+      if (knownColumns.has(col)) continue
+      if (!seen.has(col)) {
+        seen.add(col)
+        extraColumns.push(col)
+      }
+      const s = String(val ?? '').trim()
+      if (s) extras[col] = s
+    }
+    if (Object.keys(extras).length > 0) byWordId.set(wordId, extras)
+  }
+  return { byWordId, extraColumns }
+}
+
 interface DerivedRow {
   packName: string
   category: string
@@ -176,8 +210,7 @@ function main() {
     console.log(`Carrying forward ${existingChoices.size} existing "Wybrane" picks from a previous export`)
   }
 
-  let rowsWithCandidates = 0
-  const header = [
+  const baseHeader = [
     ...fields,
     'wordId',
     'Wybrane',
@@ -188,6 +221,13 @@ function main() {
     'Zdanie ENG 3',
     'Zdanie PL 3',
   ]
+  const { byWordId: existingExtras, extraColumns } = loadExistingExtraColumns(OUT_XLSX_PATH, new Set(baseHeader))
+  if (extraColumns.length > 0) {
+    console.log(`Carrying forward ${extraColumns.length} extra column(s) added manually: ${extraColumns.join(', ')}`)
+  }
+
+  const header = [...baseHeader, ...extraColumns]
+  let rowsWithCandidates = 0
   const sheetRows: string[][] = [header]
 
   for (let i = 0; i < rawRows.length; i++) {
@@ -205,6 +245,8 @@ function main() {
     row.push(record?.candidate2Pl ?? '')
     row.push(record?.candidate3En ?? '')
     row.push(record?.candidate3Pl ?? '')
+    const extras = wordId ? existingExtras.get(wordId) : undefined
+    for (const col of extraColumns) row.push(extras?.[col] ?? '')
     sheetRows.push(row)
   }
   console.log(`Rows with generated candidates: ${rowsWithCandidates} / ${rawRows.length}`)

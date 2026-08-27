@@ -1,8 +1,32 @@
 import { useState, useEffect, useCallback } from 'react'
-import { DayActivity } from '../types/progress'
+import { DayActivity, Session } from '../types/progress'
 import { nextLevelFromTotalKnown } from '../data/levels'
 import { loadProgressSnapshot, avgWordsPerDay, avgWordsPerDayTrend, PaceTrend } from './useProgressData'
 import { getLongestStreak, getBestDayWordCount } from '../services/db'
+import { dayKey, shiftDay } from '../utils/day'
+
+/** Fallback for sessions written before durationSec existed. */
+const ESTIMATED_SECONDS_PER_WORD = 8
+
+/**
+ * Days of activity history built for the Postęp page. Four weeks, so the
+ * heatmap can show a rhythm rather than a single week's worth of bars.
+ * Consumers that only want a week take `activity.slice(-7)`.
+ */
+export const ACTIVITY_DAYS = 28
+
+/**
+ * Minutes studied. Sessions recorded since the daily-time work carry a measured
+ * `durationSec`; older ones fall back to the words × 8 s estimate they were
+ * always displayed with, so history doesn't visibly jump when this ships.
+ */
+export function studiedMinutes(sessions: Session[]): number {
+  const seconds = sessions.reduce(
+    (sum, s) => sum + (s.durationSec ?? s.wordsCompleted * ESTIMATED_SECONDS_PER_WORD),
+    0
+  )
+  return Math.round(seconds / 60)
+}
 
 export interface LevelStats {
   avgWordsPerDay: number
@@ -22,6 +46,8 @@ export function useStats() {
   const [masteredPacks, setMasteredPacks] = useState(0)
   const [totalWordsHeard, setTotalWordsHeard] = useState(0)
   const [estimatedMinutes, setEstimatedMinutes] = useState(0)
+  const [dueCount, setDueCount] = useState(0)
+  const [reviewTotal, setReviewTotal] = useState(0)
   const [activity, setActivity] = useState<DayActivity[]>([])
   const [levelStats, setLevelStats] = useState<LevelStats | null>(null)
   const [paceTrend, setPaceTrend] = useState<PaceTrend | null>(null)
@@ -40,20 +66,29 @@ export function useStats() {
         setLongestStreak(longest)
         setBestDayCount(bestDay)
         setKnownWords(knownTotal)
+        setDueCount(snap.dueCount)
+        setReviewTotal(snap.reviewTotal)
         setSessionCount(sessions.length)
         setStartedPacks(packageProgress.length)
         setMasteredPacks(packageProgress.filter(p => p.masteredAt != null).length)
 
-        const heard = sessions.reduce((sum, s) => sum + s.wordsCompleted, 0)
+        // "Odsłuchane" means words heard via Słuchaj — sessions run in the
+        // other mode (fiszki/Trenuj) don't count, even though they also
+        // complete words.
+        const heard = sessions
+          .filter(s => s.mode === 'autoplay')
+          .reduce((sum, s) => sum + s.wordsCompleted, 0)
         setTotalWordsHeard(heard)
-        setEstimatedMinutes(Math.round(heard * 8 / 60))
+        setEstimatedMinutes(studiedMinutes(sessions))
 
-        // Build 7-day activity
+        // Build activity for the last ACTIVITY_DAYS local-calendar days. Both
+        // the keys here and session.date come from dayKey(), so they compare
+        // directly — mixing UTC and local day math is what used to shift this
+        // window by a day outside UTC.
+        const today = dayKey()
         const days: DayActivity[] = []
-        for (let i = 6; i >= 0; i--) {
-          const d = new Date()
-          d.setDate(d.getDate() - i)
-          const dateStr = d.toISOString().split('T')[0]
+        for (let i = ACTIVITY_DAYS - 1; i >= 0; i--) {
+          const dateStr = shiftDay(-i, today)
           const count = sessions
             .filter(s => s.date === dateStr)
             .reduce((sum, s) => sum + s.wordsCompleted, 0)
@@ -80,5 +115,11 @@ export function useStats() {
     load()
   }, [tick])
 
-  return { streak, longestStreak, bestDayCount, knownWords, sessionCount, startedPacks, masteredPacks, totalWordsHeard, estimatedMinutes, activity, levelStats, paceTrend, loading, reload, tick }
+  // Share of the route that isn't overdue for review. 100 % when nothing has
+  // been scheduled yet, so a new user isn't told their empty route is stale.
+  const freshnessPct = knownWords > 0
+    ? Math.round(((knownWords - Math.min(dueCount, knownWords)) / knownWords) * 100)
+    : 100
+
+  return { streak, longestStreak, bestDayCount, knownWords, sessionCount, startedPacks, masteredPacks, totalWordsHeard, estimatedMinutes, dueCount, reviewTotal, freshnessPct, activity, levelStats, paceTrend, loading, reload, tick }
 }

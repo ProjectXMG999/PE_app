@@ -3,7 +3,7 @@ import { AppShell } from '../components/layout/AppShell'
 import { AboutAppSection } from '../components/settings/AboutAppSection'
 import { InstallGuideSection } from '../components/settings/InstallGuideSection'
 import { ResetProgressModal } from '../components/stats/ResetProgressModal'
-import { useAppStore, ThemePreference } from '../store/useAppStore'
+import { useAppStore, ThemePreference, DAILY_GOAL_OPTIONS } from '../store/useAppStore'
 import { RATES } from '../constants/audioRates'
 import './SettingsPage.css'
 
@@ -19,6 +19,8 @@ export function SettingsPage() {
     theme, setTheme,
     showDebug, setShowDebug,
     devUnlocked,
+    dailyGoalSec, setDailyGoalSec,
+    soundEnabled, setSoundEnabled,
   } = useAppStore()
   const [showReset, setShowReset] = useState(false)
 
@@ -27,6 +29,29 @@ export function SettingsPage() {
       <div className="settings">
         <div className="settings__header">
           <span className="settings__title">Personalizacja</span>
+        </div>
+
+        <div className="settings__section">
+          <h2 className="settings__section-title">Nauka</h2>
+          <div className="settings__row">
+            <div className="settings__row-label">
+              <span className="settings__row-name">Cel na dzień</span>
+              <span className="settings__row-hint">Lepszy mniejszy cel, który utrzymasz</span>
+            </div>
+            <div className="settings__pills" role="radiogroup" aria-label="Cel na dzień">
+              {DAILY_GOAL_OPTIONS.map(min => (
+                <button
+                  key={min}
+                  role="radio"
+                  aria-checked={dailyGoalSec === min * 60}
+                  className={`settings__pill ${dailyGoalSec === min * 60 ? 'settings__pill--active' : ''}`}
+                  onClick={() => setDailyGoalSec(min * 60)}
+                >
+                  {min}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="settings__section">
@@ -49,6 +74,25 @@ export function SettingsPage() {
                 </button>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div className="settings__section">
+          <h2 className="settings__section-title">Dźwięk i wibracje</h2>
+          <div className="settings__row settings__row--toggle">
+            <div className="settings__row-label">
+              <span className="settings__row-name">Dźwięki interfejsu</span>
+              <span className="settings__row-hint">Krótkie dźwięki i wibracje przy kluczowych akcjach</span>
+            </div>
+            <button
+              className={`settings__toggle ${soundEnabled ? 'settings__toggle--on' : ''}`}
+              onClick={() => setSoundEnabled(!soundEnabled)}
+              role="switch"
+              aria-checked={soundEnabled}
+              aria-label="Dźwięki interfejsu"
+            >
+              <span className="settings__toggle-thumb" />
+            </button>
           </div>
         </div>
 

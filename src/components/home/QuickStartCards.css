@@ -91,10 +91,12 @@
   transform: scale(0.97);
 }
 
+/* Same Słuchaj/Trenuj colors as Dzisiaj's hero CTAs and the pack cards below
+   — blue for listening, violet accent for active training. */
 .quickstart__card--autoplay {
-  background: linear-gradient(135deg, #7B2FBE 0%, #4C1D95 100%);
+  background: linear-gradient(135deg, var(--listen-blue) 0%, color-mix(in srgb, var(--listen-blue) 60%, black) 100%);
   border-color: transparent;
-  box-shadow: 0 8px 32px rgba(123, 47, 190, 0.55), 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--listen-blue) 45%, transparent), 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .quickstart__card--autoplay::before,
@@ -120,9 +122,9 @@
 }
 
 .quickstart__card--fiszki {
-  background: linear-gradient(135deg, #1E5C3A 0%, #0F3624 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 60%, black) 100%);
   border-color: transparent;
-  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.35), 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--accent) 40%, transparent), 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* green card shines on the off-beat of the purple one */
@@ -216,13 +218,13 @@
 .quickstart__wave span {
   width: 3px;
   border-radius: 2px;
-  background: rgba(196, 181, 253, 0.9);
+  background: rgba(147, 197, 253, 0.9);
   transform-origin: bottom;
   animation: qs-eq 1.6s ease-in-out infinite;
 }
 
 .quickstart__card--fiszki .quickstart__wave span {
-  background: rgba(52, 211, 153, 0.9);
+  background: rgba(196, 181, 253, 0.9);
 }
 
 .quickstart__wave span:nth-child(1) { height: 7px;  animation-delay: 0s; }

@@ -4,6 +4,28 @@ import { supabase } from '../services/supabaseClient'
 
 const cache = new Map<string, Pack>()
 
+/**
+ * Fetches one pack's content, sharing the in-memory cache with the hook below.
+ * Exported because the review queue pulls words from several packs at once and
+ * can't go through a per-pack hook.
+ */
+export async function fetchPack(packId: string, signal?: AbortSignal): Promise<Pack> {
+  const cached = cache.get(packId)
+  if (cached) return cached
+
+  const { data } = await supabase!.auth.getSession()
+  const token = data.session?.access_token
+  const res = await fetch(`/.netlify/functions/pack-content?pack=${encodeURIComponent(packId)}`, {
+    signal,
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+  })
+  if (!res.ok) throw new Error(`Pack ${packId} not found`)
+
+  const pack = (await res.json()) as Pack
+  cache.set(packId, pack)
+  return pack
+}
+
 export function usePackageData(packId: string | null) {
   const [pack, setPack] = useState<Pack | null>(null)
   const [loading, setLoading] = useState(false)

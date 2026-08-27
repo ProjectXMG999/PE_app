@@ -17,8 +17,11 @@ import { useWakeLock } from '../hooks/useWakeLock'
 import { useMediaSession } from '../hooks/useMediaSession'
 import { startKeepAlive, stopKeepAlive } from '../audio/keepAlive'
 import { useAppStore } from '../store/useAppStore'
-import { saveSession, savePackageProgress, getPackageProgress, saveWordProgress, getPackageWordProgress } from '../services/db'
+import { saveSession, savePackageProgress, getPackageProgress, saveWordProgress, getPackageWordProgress, getWordProgress } from '../services/db'
 import { StudyMode } from '../types/progress'
+import { applyKnown, applyUnknown } from '../services/review'
+import { useStudyClock } from '../hooks/useStudyClock'
+import { dayKey } from '../utils/day'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import './FlashcardPage.css'
@@ -55,8 +58,12 @@ export function FlashcardPage() {
   } = useFlashcard(studyWords)
 
   const { playWord, playSentence, playWordPl, playSentencePl, stop, preloadNext } = useAudio(packageId ?? null, enRate, plRate)
+  // Autoplay is designed to run with the screen off — on a walk, in the car —
+  // so this clock keeps counting while the tab is hidden, unlike the tap-driven
+  // Trenuj pages where a hidden tab means the user has genuinely stopped.
+  const { elapsedSec } = useStudyClock({ countWhileHidden: studyMode === 'autoplay' })
   const autoPlayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const sessionStartRef = useRef<string>(new Date().toISOString().split('T')[0])
+  const sessionStartRef = useRef<string>(dayKey())
   const startedAtRef = useRef<string | null>(null)
   const masteredAtRef = useRef<string | null>(null)
   const completedAtRef = useRef<string | null>(null)
@@ -164,7 +171,7 @@ export function FlashcardPage() {
     masteredAtRef.current = null
     completedAtRef.current = null
     savedIndexRef.current = 0
-    sessionStartRef.current = new Date().toISOString().split('T')[0]
+    sessionStartRef.current = dayKey()
     return () => {
       stop()
       clearAutoplay()
@@ -245,24 +252,29 @@ export function FlashcardPage() {
         wordsCompleted: total,
         mode: studyMode,
         autoplayMode: studyMode === 'autoplay' ? autoplayMode : undefined,
+        durationSec: elapsedSec(),
       })
     }
-  }, [packageId, total, studyMode, allWords.length, autoplayMode])
+  }, [packageId, total, studyMode, allWords.length, autoplayMode, elapsedSec])
 
   // Fiszki: rate card → auto-detect mastery on last card
   const handleNext = useCallback(async (status?: 'known' | 'learning') => {
     if (currentWord && status) {
-      await saveWordProgress({
-        wordId: currentWord.id,
-        packageId: packageId ?? '',
-        seenCount: 1,
-        lastSeen: new Date().toISOString(),
-        status,
-      })
-      if (status === 'known') {
+      // Reads the existing row first: this used to write seenCount: 1 flat,
+      // wiping however many times the word had actually been seen.
+      const existing = await getWordProgress(currentWord.id)
+      const wasKnown = existing?.status === 'known'
+      const updated = status === 'known'
+        ? applyKnown(existing, currentWord.id, packageId ?? '')
+        : applyUnknown(existing, currentWord.id, packageId ?? '')
+      await saveWordProgress(updated)
+
+      if (status === 'known' && !wasKnown) {
         setKnownCount(c => c + 1)
-      } else if (status === 'learning' && masteredAtRef.current) {
-        // Word demoted — pack is no longer fully mastered
+      } else if (updated.status !== 'known' && masteredAtRef.current) {
+        // A word that was never mastered can still un-master the pack. One the
+        // user had already mastered cannot — it stays 'known' and is merely
+        // rescheduled for review.
         masteredAtRef.current = null
       }
     }
@@ -376,8 +388,13 @@ export function FlashcardPage() {
     if (!packageId) return
     const now = new Date().toISOString()
     masteredAtRef.current = now
+    // Read existing rows first so this doesn't reset seenCount, and so every
+    // word enters the review schedule instead of being marked known forever
+    // with no follow-up.
+    const existingList = await getPackageWordProgress(packageId)
+    const byId = new Map(existingList.map(w => [w.wordId, w]))
     await Promise.all(allWords.map(w =>
-      saveWordProgress({ wordId: w.id, packageId, seenCount: 1, lastSeen: now, status: 'known' })
+      saveWordProgress(applyKnown(byId.get(w.id), w.id, packageId))
     ))
     await savePackageProgress({
       packageId,
@@ -399,7 +416,7 @@ export function FlashcardPage() {
     // Repeat always shows all words from scratch, ignoring previous known status
     setStudyWords(allWords)
     reset()
-    sessionStartRef.current = new Date().toISOString().split('T')[0]
+    sessionStartRef.current = dayKey()
   }, [reset, stop, allWords])
 
   const handleNextPack = useCallback(() => {

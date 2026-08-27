@@ -54,3 +54,12 @@ export function unlockAudioGlobally() {
 export function isAudioUnlocked() {
   return ctx !== null && ctx.state === 'running'
 }
+
+/**
+ * The shared, already-iOS-unlocked AudioContext, for anything that wants to
+ * play a short synthesized tone (see services/sfx.ts) without creating a
+ * second context that would need its own gesture-triggered unlock.
+ */
+export function getAudioContext(): AudioContext | null {
+  return ctx
+}

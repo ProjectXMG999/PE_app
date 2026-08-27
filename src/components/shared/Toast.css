@@ -1,0 +1,70 @@
+.toast {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Clears the bottom nav on mobile; the nav is hidden on desktop but the extra
+     inset is harmless there. */
+  bottom: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-md));
+  z-index: 200;
+
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  max-width: min(92vw, 420px);
+  padding: 12px var(--spacing-md);
+
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  /* Not a pill: these messages routinely wrap to two or three lines, and a
+     fully-rounded block reads as a lozenge with the text crammed inside. */
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+
+  animation: toast-in 320ms var(--ease-spring);
+}
+
+.toast--leaving {
+  animation: toast-out 300ms ease forwards;
+}
+
+.toast--celebrate {
+  border-color: var(--points-gold);
+  box-shadow: var(--shadow-lg), 0 0 24px color-mix(in srgb, var(--points-gold) 35%, transparent);
+}
+
+.toast__icon {
+  font-size: 18px;
+  line-height: 1.35;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.toast__text {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translate(-50%, 20px) scale(0.94); }
+  to   { opacity: 1; transform: translate(-50%, 0) scale(1); }
+}
+
+@keyframes toast-out {
+  from { opacity: 1; transform: translate(-50%, 0); }
+  to   { opacity: 0; transform: translate(-50%, 12px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast,
+  .toast--leaving {
+    animation: none;
+  }
+
+  .toast--leaving {
+    opacity: 0;
+  }
+}

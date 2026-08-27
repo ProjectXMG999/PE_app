@@ -5,7 +5,10 @@ import {
   getAllWordProgress,
   getStreak,
 } from '../services/db'
+import { subscribeProgress } from '../services/progressEvents'
+import { useAppStore } from '../store/useAppStore'
 import { PackageProgress, Session, WordProgress } from '../types/progress'
+import { dayKey, daysBetween, shiftDay } from '../utils/day'
 
 export interface ProgressSnapshot {
   packageProgress: PackageProgress[]
@@ -14,31 +17,49 @@ export interface ProgressSnapshot {
   /** packageId → count of words with status 'known' */
   knownMap: Map<string, number>
   knownTotal: number
+  /** Mastered words whose scheduled review date has arrived. */
+  dueCount: number
+  /** Sum of every word's reviewCount — how much has been actively maintained. */
+  reviewTotal: number
   sessions: Session[]
   streak: number
 }
 
 async function fetchSnapshot(): Promise<ProgressSnapshot> {
+  // Freezes live in the persisted UI store rather than IndexedDB — they're a
+  // small entitlement, not study history — so the streak has to be told about
+  // them here rather than being derivable from sessions alone.
+  const frozenDays = useAppStore.getState().streakFreeze.usedOn
+
   const [packageProgress, wordProgress, sessions, streak] = await Promise.all([
     getAllPackageProgress(),
     getAllWordProgress(),
     getAllSessions(),
-    getStreak(),
+    getStreak(frozenDays),
   ])
+
+  const today = dayKey()
   const knownMap = new Map<string, number>()
   let knownTotal = 0
+  let dueCount = 0
+  let reviewTotal = 0
   for (const wp of wordProgress) {
     if (wp.status === 'known') {
       knownMap.set(wp.packageId, (knownMap.get(wp.packageId) ?? 0) + 1)
       knownTotal++
     }
+    if (wp.nextReviewAt != null && wp.nextReviewAt <= today) dueCount++
+    reviewTotal += wp.reviewCount ?? 0
   }
+
   return {
     packageProgress,
     progressMap: new Map(packageProgress.map(p => [p.packageId, p])),
     wordProgress,
     knownMap,
     knownTotal,
+    dueCount,
+    reviewTotal,
     sessions,
     streak,
   }
@@ -47,7 +68,9 @@ async function fetchSnapshot(): Promise<ProgressSnapshot> {
 // Deduplicates the burst of identical IndexedDB reads fired by the several
 // components that mount together on a tab (Home renders 4 independent
 // consumers). Long-lived caching is deliberately avoided: study pages write
-// progress outside this module, so each fresh mount re-reads.
+// progress outside this module, so each fresh mount re-reads. Writes now also
+// invalidate explicitly via progressEvents, which is what lets the always-
+// mounted streak/points widget cache for much longer than this window.
 let inflight: Promise<ProgressSnapshot> | null = null
 let inflightAt = 0
 const DEDUPE_MS = 2000
@@ -63,6 +86,8 @@ export function loadProgressSnapshot(force = false): Promise<ProgressSnapshot> {
 export function invalidateProgressSnapshot() {
   inflight = null
 }
+
+subscribeProgress(invalidateProgressSnapshot)
 
 /** Returns null while loading. */
 export function useProgressData(): ProgressSnapshot | null {
@@ -91,10 +116,7 @@ export function avgWordsPerDay(snapshot: ProgressSnapshot): number {
     if (s.date < earliest) earliest = s.date
     if (s.date > latest) latest = s.date
   }
-  const daysElapsed = Math.max(
-    1,
-    Math.floor((new Date(latest).getTime() - new Date(earliest).getTime()) / 86400000) + 1
-  )
+  const daysElapsed = Math.max(1, daysBetween(earliest, latest) + 1)
   return Math.round(knownTotal / daysElapsed)
 }
 
@@ -110,20 +132,11 @@ export interface PaceTrend {
  */
 export function avgWordsPerDayTrend(snapshot: ProgressSnapshot): PaceTrend {
   const { sessions } = snapshot
-  // session.date is a UTC-day string (new Date().toISOString().split('T')[0]),
-  // so "today" and all day arithmetic below must stay in UTC too — using local
-  // setDate()/toISOString() here would shift the window by a day for any
-  // timezone not exactly at UTC.
-  const todayStr = new Date().toISOString().split('T')[0]
-  const today = new Date(todayStr + 'T00:00:00Z')
+  const today = dayKey()
 
   function windowSum(startDaysAgo: number, endDaysAgo: number): number {
-    const start = new Date(today)
-    start.setUTCDate(start.getUTCDate() - startDaysAgo)
-    const startStr = start.toISOString().split('T')[0]
-    const end = new Date(today)
-    end.setUTCDate(end.getUTCDate() - endDaysAgo)
-    const endStr = end.toISOString().split('T')[0]
+    const startStr = shiftDay(-startDaysAgo, today)
+    const endStr = shiftDay(-endDaysAgo, today)
     return sessions
       .filter(s => s.date >= startStr && s.date <= endStr)
       .reduce((sum, s) => sum + s.wordsCompleted, 0)
@@ -138,7 +151,7 @@ export function avgWordsPerDayTrend(snapshot: ProgressSnapshot): PaceTrend {
   // getAllSessions() returns insertion order, not date order — find the
   // earliest date directly rather than assuming array position.
   const earliestDate = sessions.reduce((min, s) => (s.date < min ? s.date : min), sessions[0].date)
-  const daysOfHistory = Math.floor((today.getTime() - new Date(earliestDate).getTime()) / 86400000) + 1
+  const daysOfHistory = daysBetween(earliestDate, today) + 1
   if (daysOfHistory < 14 || priorWindow === 0) return { current, deltaPct: null }
 
   const deltaPct = Math.round(((currentWindow - priorWindow) / priorWindow) * 100)

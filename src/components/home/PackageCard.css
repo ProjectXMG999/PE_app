@@ -407,25 +407,28 @@
   transition: all var(--transition-fast);
 }
 
+/* Same Słuchaj/Trenuj colors as the Dzisiaj hero CTAs (today__cta--listen /
+   today__cta--train in TodayPage.css) — blue for listening, violet accent
+   for active training — so the two screens read as one system. */
 .packcard__btn--autoplay {
-  background: linear-gradient(135deg, #7B2FBE 0%, #4C1D95 100%);
+  background: linear-gradient(135deg, var(--listen-blue) 0%, color-mix(in srgb, var(--listen-blue) 55%, black) 100%);
   color: white;
-  box-shadow: 0 4px 14px rgba(123, 47, 190, 0.45);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--listen-blue) 45%, transparent);
 }
 
 .packcard__btn--autoplay:hover {
-  box-shadow: 0 4px 18px rgba(123, 47, 190, 0.6);
+  box-shadow: 0 4px 18px color-mix(in srgb, var(--listen-blue) 60%, transparent);
 }
 
 .packcard__btn--fiszki {
-  background: linear-gradient(135deg, #1E5C3A 0%, #0F3624 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 55%, black) 100%);
   border: 1px solid transparent;
   color: white;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
 .packcard__btn--fiszki:hover {
-  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.5);
+  box-shadow: 0 4px 18px color-mix(in srgb, var(--accent) 55%, transparent);
 }
 
 /* Mastered VIP actions: solid gold primary (Słuchaj) + gold-outline secondary (Trenuj) */

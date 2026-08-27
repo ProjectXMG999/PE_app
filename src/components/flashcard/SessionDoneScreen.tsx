@@ -44,7 +44,12 @@ export function SessionDoneScreen({
 
         <div className="sessiondone__text">
           <p className="sessiondone__eyebrow">Sesja zakończona</p>
-          <h1 className="sessiondone__title">Dobra robota!</h1>
+          {/* "Dobra robota!" only when something actually got mastered this
+              round — otherwise it reads as a hollow compliment next to a
+              literal "0 opanowanych" a few lines below. */}
+          <h1 className="sessiondone__title">
+            {sessionKnown > 0 ? 'Dobra robota!' : 'Trening zaliczony!'}
+          </h1>
           <p className="sessiondone__sub">{packName}</p>
         </div>
 

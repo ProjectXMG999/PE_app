@@ -1,11 +1,15 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import { motion, useReducedMotion } from 'framer-motion'
 import { Pack, PackMeta } from '../types/vocabulary'
 import { PackageProgress } from '../types/progress'
 import { loadProgressSnapshot, ProgressSnapshot } from '../hooks/useProgressData'
 import { getAudioUrl } from '../services/audioService'
 import { supabase } from '../services/supabaseClient'
+import { getPackageWordProgress, getPackageProgress, saveWordProgress, savePackageProgress } from '../services/db'
+import { applyKnown } from '../services/review'
 import { AppShell } from '../components/layout/AppShell'
+import { EASE_OUT_EXPO } from '../components/today/motion'
 import {
   LEVEL_COLORS,
   getPackIcon,
@@ -49,6 +53,22 @@ function getSeriesNumber(name: string): number {
   return match ? parseInt(match[1], 10) : 0
 }
 
+/** Next pack in plain catalog order — same pattern as FlashcardPage's
+ * getNextPack, used for the autoplay "keep going" flow. Duplicated locally
+ * rather than shared, since FlashcardPage's version isn't exported. */
+function getNextPack(currentId: string): PackMeta | null {
+  const idx = allPacks.findIndex(p => p.id === currentId)
+  return idx >= 0 && idx < allPacks.length - 1 ? allPacks[idx + 1] : null
+}
+
+/** Previous pack in plain catalog order — wraps to the last pack when
+ * already at the first one, so this control always has somewhere to go. */
+function getPrevPack(currentId: string): PackMeta | null {
+  const idx = allPacks.findIndex(p => p.id === currentId)
+  if (idx === -1) return null
+  return idx > 0 ? allPacks[idx - 1] : allPacks[allPacks.length - 1]
+}
+
 /** Compact status shown on a related-pack row: label + modifier class. */
 function relatedStatus(
   status: PackStatus
@@ -64,12 +84,16 @@ function relatedStatus(
 export function PackPreviewPage() {
   const { packageId } = useParams<{ packageId: string }>()
   const navigate = useNavigate()
+  const reduced = useReducedMotion()
   const [pack, setPack] = useState<Pack | null>(null)
   const [snapshot, setSnapshot] = useState<ProgressSnapshot | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [activeInfo, setActiveInfo] = useState<'sluchaj' | 'aktywuj' | null>(null)
+  const [markAllOpen, setMarkAllOpen] = useState(false)
+  const [markingAll, setMarkingAll] = useState(false)
   const infoRef = useRef<HTMLDivElement>(null)
+  const markDialogRef = useRef<HTMLDialogElement>(null)
 
   // Close the mode-info popover on any outside click.
   useEffect(() => {
@@ -82,6 +106,23 @@ export function PackPreviewPage() {
     document.addEventListener('mousedown', handleClick)
     return () => document.removeEventListener('mousedown', handleClick)
   }, [activeInfo])
+
+  // "Znam wszystko" confirm dialog — mirrors ResetProgressModal: only mounted
+  // while markAllOpen is true, and calls showModal() on that mount. A dialog
+  // element left permanently in the DOM stays visible regardless of its
+  // `open` attribute once any CSS on it sets `display`, since an author rule
+  // and the UA's `dialog:not([open]) { display: none }` tie on specificity
+  // and the author rule wins — so "always mounted, toggle imperatively" was
+  // the bug, not a viable alternative.
+  useEffect(() => {
+    if (!markAllOpen) return
+    const dialog = markDialogRef.current
+    if (!dialog) return
+    if (!dialog.open) dialog.showModal()
+    function handleClose() { setMarkAllOpen(false) }
+    dialog.addEventListener('close', handleClose)
+    return () => dialog.removeEventListener('close', handleClose)
+  }, [markAllOpen])
 
   useEffect(() => {
     if (!packageId) return
@@ -115,6 +156,8 @@ export function PackPreviewPage() {
   }, [packageId])
 
   const currentMeta = allPacks.find(p => p.id === packageId)
+  const nextPack = packageId ? getNextPack(packageId) : null
+  const prevPack = packageId ? getPrevPack(packageId) : null
   const seriesBase = currentMeta ? getSeriesBase(currentMeta.name) : null
   // Full series (incl. current), ordered by level then id. The order is
   // deterministic and independent of which pack is open, so a pack's position
@@ -128,7 +171,7 @@ export function PackPreviewPage() {
 
   if (loading) {
     return (
-      <AppShell>
+      <AppShell hideBottomNav hideSidebar={false} hideAmbient={false} lockScroll={false}>
         <div className="packpreview__loading">
           <div className="spinner" />
         </div>
@@ -138,7 +181,7 @@ export function PackPreviewPage() {
 
   if (error || !pack) {
     return (
-      <AppShell>
+      <AppShell hideBottomNav hideSidebar={false} hideAmbient={false} lockScroll={false}>
         <div className="packpreview__error">
           <p>{error ?? 'Nie znaleziono pakietu'}</p>
           <button onClick={() => navigate('/')}>Wróć do listy</button>
@@ -153,34 +196,100 @@ export function PackPreviewPage() {
   const packNum = packageId ? getPackNumber(packageId) : null
   const icon = getPackIcon(pack)
   const levelColor = pack.level ? LEVEL_COLORS[pack.level] : undefined
+  // The pack blob from /.netlify/functions/pack-content never carries a
+  // wordCount field (only packages-index.json's PackMeta does) — pack.words
+  // is always present and always accurate, so it's the source of truth here.
+  const wordCount = pack.words.length
 
   // Progress ring geometry
-  const knownPct = pack.wordCount > 0 ? Math.min((knownCount / pack.wordCount) * 100, 100) : 0
+  const knownPct = wordCount > 0 ? Math.min((knownCount / wordCount) * 100, 100) : 0
   const R = 26
   const C = 2 * Math.PI * R
   const dash = (knownPct / 100) * C
 
-  return (
-    <AppShell>
-    <div className="packpreview">
-      {/* Back button — floating circle on mobile, inline link on desktop */}
-      <button
-        className="packpreview__back"
-        onClick={() => navigate('/')}
-        aria-label="Wróć do listy"
-      >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-          <polyline points="15 18 9 12 15 6" />
-        </svg>
-        <span className="packpreview__back-label">Wróć</span>
-      </button>
+  // Marks every word in the pack 'known' in one go — same underlying write as
+  // rating each flashcard "Znam" one by one (applyKnown), just applied to the
+  // whole word list at once, for someone who already knows this vocabulary
+  // and doesn't want to click through it card by card.
+  async function handleMarkAllKnown() {
+    if (!packageId) return
+    setMarkingAll(true)
+    try {
+      const now = new Date()
+      const existingList = await getPackageWordProgress(packageId)
+      const byId = new Map(existingList.map(w => [w.wordId, w]))
+      await Promise.all(pack!.words.map(w =>
+        saveWordProgress(applyKnown(byId.get(w.id), w.id, packageId, now))
+      ))
+      const existingPkg = await getPackageProgress(packageId)
+      const nowIso = now.toISOString()
+      await savePackageProgress({
+        packageId,
+        startedAt: existingPkg?.startedAt ?? nowIso,
+        completedAt: nowIso,
+        masteredAt: nowIso,
+        currentIndex: wordCount,
+      })
+      setSnapshot(await loadProgressSnapshot(true))
+      markDialogRef.current?.close()
+    } finally {
+      setMarkingAll(false)
+    }
+  }
 
-      {/* Hero */}
-      <section className="packpreview__hero">
-        <div
-          className="packpreview__hero-icon"
-          style={levelColor ? { background: `${levelColor}22`, color: levelColor } : undefined}
+  return (
+    <AppShell
+      hideBottomNav hideSidebar={false} hideAmbient={false} lockScroll={false}
+      topBarAccountOverride={prevPack ? {
+        icon: (
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 6 9 12 15 18" />
+          </svg>
+        ),
+        label: `Poprzedni pakiet: ${prevPack.name}`,
+        onClick: () => navigate(`/pakiet/${prevPack.id}`),
+      } : undefined}
+    >
+    <div className="packpreview">
+      {/* Back (→ home icon, since the chevron pair below is for stepping
+          through the catalog — a matching chevron here read as "previous
+          pack" but actually exited the page entirely) + next-pack nav */}
+      <div className="packpreview__nav-row">
+        <button
+          className="packpreview__back"
+          onClick={() => navigate('/')}
+          aria-label="Wróć do listy pakietów"
         >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M3 11.5 12 4l9 7.5" />
+            <path d="M5.5 10v9a1 1 0 0 0 1 1H9v-6h6v6h2.5a1 1 0 0 0 1-1v-9" />
+          </svg>
+          <span className="packpreview__back-label">Wróć</span>
+        </button>
+
+        {nextPack && (
+          <button
+            className="packpreview__next"
+            onClick={() => navigate(`/pakiet/${nextPack.id}`)}
+            aria-label={`Następny pakiet: ${nextPack.name}`}
+            title={nextPack.name}
+          >
+            <span className="packpreview__next-label">Następny</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        )}
+      </div>
+
+      {/* Hero — tinted by the pack's level color (falls back to the app
+          accent for level-less packs), same "mood follows context" idea as
+          Dzisiaj's Trenuj/Słuchaj hero cards. */}
+      <section
+        className="packpreview__hero"
+        style={{ '--hero-accent': levelColor ?? 'var(--accent)' } as CSSProperties}
+      >
+        <div className="packpreview__hero-icon">
           {icon}
         </div>
 
@@ -214,10 +323,24 @@ export function PackPreviewPage() {
               </span>
             )}
           </div>
+          {knownCount < wordCount && (
+            <button
+              type="button"
+              className="packpreview__mark-all-btn"
+              onClick={() => setMarkAllOpen(true)}
+            >
+              <span className="packpreview__mark-all-icon" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              Znam wszystko
+            </button>
+          )}
         </div>
 
         {/* Mastery progress ring */}
-        <div className="packpreview__ring" role="img" aria-label={`${knownCount} z ${pack.wordCount} opanowanych`}>
+        <div className="packpreview__ring" role="img" aria-label={`${knownCount} z ${wordCount} opanowanych`}>
           <svg width="64" height="64" viewBox="0 0 64 64">
             <circle className="packpreview__ring-track" cx="32" cy="32" r={R} strokeWidth="6" fill="none" />
             <circle
@@ -230,7 +353,7 @@ export function PackPreviewPage() {
           </svg>
           <div className="packpreview__ring-label">
             <span className="packpreview__ring-num">{knownCount}</span>
-            <span className="packpreview__ring-total">/{pack.wordCount}</span>
+            <span className="packpreview__ring-total">/{wordCount}</span>
           </div>
         </div>
       </section>
@@ -278,7 +401,9 @@ export function PackPreviewPage() {
                     <span className="packpreview__related-num">{num}</span>
                     <span
                       className="packpreview__related-icon"
-                      style={!isCurrent && sibColor ? { background: `${sibColor}22`, color: sibColor } : undefined}
+                      style={!isCurrent && sibColor
+                        ? { background: `linear-gradient(165deg, ${sibColor}33 0%, ${sibColor}11 100%)`, color: sibColor }
+                        : undefined}
                     >
                       {getPackIcon(sib)}
                     </span>
@@ -297,13 +422,11 @@ export function PackPreviewPage() {
                             {st.label}
                           </span>
                         )}
-                        <svg
-                          className="packpreview__related-chevron"
-                          width="18" height="18" viewBox="0 0 24 24"
-                          fill="none" stroke="currentColor" strokeWidth="2"
-                        >
-                          <polyline points="9 18 15 12 9 6" />
-                        </svg>
+                        <span className="packpreview__related-chevron" aria-hidden="true">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <polyline points="9 18 15 12 9 6" />
+                          </svg>
+                        </span>
                       </>
                     )}
                   </>
@@ -328,8 +451,17 @@ export function PackPreviewPage() {
         )}
       </main>
 
-      {/* Sticky bottom action bar */}
-      <div className="packpreview__actions" ref={infoRef}>
+      {/* Sticky bottom action bar — takes over the exact screen region
+          BottomNav just vacated (AppShell hides it on this route), so this
+          slides in from the same place the tab bar slides out to, rather
+          than just appearing underneath it. */}
+      <motion.div
+        className="packpreview__actions"
+        ref={infoRef}
+        initial={{ y: '120%', opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: reduced ? 0 : 0.32, ease: EASE_OUT_EXPO, delay: reduced ? 0 : 0.05 }}
+      >
         {activeInfo && (
           <div className="packpreview__mode-info">
             <span className="packpreview__mode-info-icon">{MODE_INFO[activeInfo].icon}</span>
@@ -345,10 +477,16 @@ export function PackPreviewPage() {
               className="packpreview__btn packpreview__btn--fiszki"
               onClick={() => navigate(`/pakiet/${packageId}/fiszki-start`)}
             >
-              <span>⚡</span> Trenuj
+              <span className="packpreview__btn-icon" aria-hidden="true">⚡</span>
+              <span className="packpreview__btn-label">Trenuj</span>
+              <span className="packpreview__btn-arrow" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </span>
             </button>
             <button
-              className={`packpreview__info-btn${activeInfo === 'aktywuj' ? ' packpreview__info-btn--active' : ''}`}
+              className={`packpreview__info-btn packpreview__info-btn--light${activeInfo === 'aktywuj' ? ' packpreview__info-btn--active' : ''}`}
               onClick={e => { e.stopPropagation(); setActiveInfo(v => v === 'aktywuj' ? null : 'aktywuj') }}
               aria-label="Informacje o trybie Trenuj"
             >
@@ -362,7 +500,13 @@ export function PackPreviewPage() {
               className="packpreview__btn packpreview__btn--autoplay"
               onClick={() => navigate(`/pakiet/${packageId}/start`)}
             >
-              <span>🎧</span> Słuchaj
+              <span className="packpreview__btn-icon" aria-hidden="true">🎧</span>
+              <span className="packpreview__btn-label">Słuchaj</span>
+              <span className="packpreview__btn-arrow" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </span>
             </button>
             <button
               className={`packpreview__info-btn packpreview__info-btn--light${activeInfo === 'sluchaj' ? ' packpreview__info-btn--active' : ''}`}
@@ -375,7 +519,38 @@ export function PackPreviewPage() {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
+
+      {markAllOpen && (
+        <dialog
+          ref={markDialogRef}
+          className="packpreview__mark-modal"
+          aria-labelledby="mark-all-title"
+          onClick={e => { if (e.target === markDialogRef.current) markDialogRef.current?.close() }}
+        >
+          <div className="packpreview__mark-modal-icon" aria-hidden="true">✓</div>
+          <h2 className="packpreview__mark-modal-title" id="mark-all-title">Oznaczyć wszystko jako znane?</h2>
+          <p className="packpreview__mark-modal-desc">
+            Wszystkie {wordCount} {plWords(wordCount)} w tej paczce zostaną oznaczone jako opanowane, a paczka jako w pełni opanowana. Nadal będą wracać w powtórkach jak każde inne opanowane słowo.
+          </p>
+          <div className="packpreview__mark-modal-actions">
+            <button
+              className="packpreview__mark-modal-btn packpreview__mark-modal-btn--cancel"
+              onClick={() => markDialogRef.current?.close()}
+              disabled={markingAll}
+            >
+              Anuluj
+            </button>
+            <button
+              className="packpreview__mark-modal-btn packpreview__mark-modal-btn--confirm"
+              onClick={handleMarkAllKnown}
+              disabled={markingAll}
+            >
+              {markingAll ? 'Oznaczanie…' : 'Tak, oznacz wszystkie'}
+            </button>
+          </div>
+        </dialog>
+      )}
     </div>
     </AppShell>
   )

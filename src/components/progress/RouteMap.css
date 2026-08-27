@@ -1,0 +1,268 @@
+.routemap {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.routemap__item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: var(--spacing-sm);
+  opacity: 0;
+  animation: slideUp 420ms var(--ease-out-expo) forwards;
+}
+
+/* ── The rail ───────────────────────────────────────────────────────────── */
+
+.routemap__rail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.routemap__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--route-line);
+  background: var(--bg-primary);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.routemap__item--passed .routemap__dot {
+  border-color: var(--station-color);
+  background: var(--station-color);
+  /* Struck-gold treatment for stations already earned. */
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--station-color) 22%, transparent);
+}
+
+.routemap__item--current .routemap__dot {
+  border-color: var(--station-color);
+  background: var(--bg-primary);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--station-color) 18%, transparent);
+}
+
+.routemap__line {
+  flex: 1;
+  width: 3px;
+  margin-top: -2px;
+  border-radius: var(--radius-full);
+  /* Default is the road ahead: present, but clearly untravelled. */
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--route-line) 0 6px,
+    transparent 6px 12px
+  );
+}
+
+.routemap__item--passed .routemap__line {
+  background: linear-gradient(
+    to bottom,
+    var(--station-color),
+    color-mix(in srgb, var(--station-color) 45%, var(--route-line))
+  );
+}
+
+/* The segment you're on flows, so the road reads as alive rather than stalled. */
+.routemap__item--current .routemap__line {
+  background: linear-gradient(
+    to bottom,
+    var(--station-color) 0%,
+    color-mix(in srgb, var(--station-color) 30%, var(--route-line)) 45%,
+    var(--route-line) 100%
+  );
+  background-size: 100% 220%;
+  animation: route-flow 2.5s linear infinite;
+}
+
+@keyframes route-flow {
+  from { background-position: 0 -120%; }
+  to   { background-position: 0 100%; }
+}
+
+/* ── Station body ───────────────────────────────────────────────────────── */
+
+.routemap__body {
+  padding-bottom: var(--spacing-lg);
+  min-width: 0;
+}
+
+.routemap__item--ahead .routemap__body {
+  opacity: 0.55;
+}
+
+.routemap__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.routemap__name {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.routemap__item--passed .routemap__name {
+  color: var(--station-color);
+}
+
+.routemap__threshold {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.routemap__promise {
+  margin: 2px 0 0;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.routemap__status {
+  margin: var(--spacing-xs) 0 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.routemap__status--passed {
+  color: var(--station-color);
+}
+
+/* ── "You are here" ─────────────────────────────────────────────────────── */
+
+.routemap__you {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+[data-theme="light"] .routemap__you {
+  box-shadow: var(--shadow-sm);
+}
+
+.routemap__segment {
+  position: relative;
+  height: 6px;
+  margin: var(--spacing-sm) 4px var(--spacing-md);
+  background: var(--route-line);
+  border-radius: var(--radius-full);
+}
+
+.routemap__segment-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--station-color);
+  transition: width 900ms var(--ease-out-expo);
+  min-width: 3px;
+}
+
+.routemap__segment-marker {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  transform: translateY(-50%);
+  border-radius: var(--radius-full);
+  background: var(--text-primary);
+  box-shadow: 0 0 0 3px var(--bg-card), 0 0 12px 2px var(--route-glow);
+  transition: left 900ms var(--ease-out-expo);
+}
+
+.routemap__you-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.routemap__you-remaining {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* ── The 100-word marker — the nearest small win ────────────────────────── */
+
+.routemap__marker-hint {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: var(--spacing-sm) 0 0;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.routemap__marker-hint strong {
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.routemap__marker-dots {
+  display: flex;
+  gap: 3px;
+  margin-right: 2px;
+}
+
+.routemap__marker-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: var(--route-line);
+}
+
+.routemap__marker-dot--on {
+  background: var(--station-color);
+}
+
+@media (min-width: 640px) {
+  .routemap__item {
+    grid-template-columns: 36px 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .routemap__name {
+    font-size: var(--text-xl);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .routemap__item {
+    opacity: 1;
+    animation: none;
+  }
+
+  .routemap__item--current .routemap__line {
+    animation: none;
+  }
+
+  .routemap__segment-fill,
+  .routemap__segment-marker {
+    transition: none;
+  }
+}

@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { AutoplayMode, StudyMode } from '../types/progress'
+import { emitProgress } from '../services/progressEvents'
 
 type FilterType = 'all' | 'new' | 'started' | 'completed' | 'mastered'
 
@@ -10,6 +11,38 @@ type BeforeInstallPromptEvent = Event & {
 }
 
 export type ThemePreference = 'dark' | 'light' | 'system'
+
+/** Selectable daily study goals, in minutes. A short list, not a slider —
+ *  picking a goal should take one tap, not aim. */
+export const DAILY_GOAL_OPTIONS = [10, 15, 20, 30, 45, 60] as const
+
+/** The landing promises "your first session takes about 10 minutes", so 15 is
+ *  the natural second step rather than an intimidating default. */
+export const DEFAULT_DAILY_GOAL_SEC = 15 * 60
+
+/**
+ * When a badge was first earned, and whether its celebration has been shown.
+ * Achievements themselves are DERIVED from progress data on every read, so this
+ * is presentation metadata only — losing it costs a date and an animation, not
+ * the badge. That's why it lives here rather than in a synced table.
+ */
+export interface AchievementUnlock {
+  at: string
+  seen: boolean
+}
+
+/**
+ * One streak freeze, replenished every 14 days, spent automatically on a missed
+ * day that would otherwise break a streak. `usedOn` holds local day keys and is
+ * read by getStreak() — see services/db.ts.
+ */
+export interface StreakFreeze {
+  available: number
+  lastGrantedAt: string | null
+  usedOn: string[]
+}
+
+export const STREAK_FREEZE_INTERVAL_DAYS = 14
 
 /** Resolves the stored preference to the theme actually applied. */
 export function resolveTheme(pref: ThemePreference): 'dark' | 'light' {
@@ -52,6 +85,11 @@ interface AppStore {
   setLevel: (level: number | null) => void
   setCategory: (cat: string | null) => void
 
+  /** Persisted starting level for the Dziś recommendation engine — distinct
+   *  from `activeLevel` above, which is a transient Home browse filter. */
+  todayLevel: number | null
+  setTodayLevel: (level: number | null) => void
+
   installPromptEvent: BeforeInstallPromptEvent | null
   isInstalled: boolean
   iosBannerDismissed: boolean
@@ -74,11 +112,34 @@ interface AppStore {
   // Session survive a locked screen. Off by default pending device testing.
   keepScreenAudioAlive: boolean
   setKeepScreenAudioAlive: (v: boolean) => void
+
+  /** UI sound effects (ticks/chimes) — separate from vocabulary audio, which
+   *  has its own rate controls and is never muted by this. */
+  soundEnabled: boolean
+  setSoundEnabled: (v: boolean) => void
+
+  /** Daily study-time goal, in seconds. */
+  dailyGoalSec: number
+  setDailyGoalSec: (sec: number) => void
+
+  /** Opt-in reminder at the user's most effective time of day. */
+  reminderEnabled: boolean
+  reminderHour: number | null
+  setReminder: (enabled: boolean, hour: number | null) => void
+
+  streakFreeze: StreakFreeze
+  grantStreakFreeze: (today: string) => void
+  spendStreakFreeze: (day: string) => void
+
+  achievementUnlocks: Record<string, AchievementUnlock>
+  recordUnlocks: (ids: string[], at: string) => void
+  markUnlocksSeen: (ids: string[]) => void
 }
 
 type PersistedState = Pick<
   AppStore,
   'theme' | 'isInstalled' | 'iosBannerDismissed' | 'autoplayMode' | 'enRate' | 'plRate' | 'showDebug' | 'devUnlocked' | 'keepScreenAudioAlive'
+  | 'dailyGoalSec' | 'reminderEnabled' | 'reminderHour' | 'streakFreeze' | 'achievementUnlocks' | 'todayLevel' | 'soundEnabled'
 >
 
 export const useAppStore = create<AppStore>()(
@@ -116,6 +177,9 @@ export const useAppStore = create<AppStore>()(
       setLevel: (level) => set({ activeLevel: level }),
       setCategory: (cat) => set({ activeCategory: cat }),
 
+      todayLevel: null,
+      setTodayLevel: (level) => set({ todayLevel: level }),
+
       installPromptEvent: null,
       isInstalled: false,
       iosBannerDismissed: false,
@@ -136,6 +200,68 @@ export const useAppStore = create<AppStore>()(
 
       keepScreenAudioAlive: false,
       setKeepScreenAudioAlive: (v) => set({ keepScreenAudioAlive: v }),
+
+      soundEnabled: true,
+      setSoundEnabled: (v) => set({ soundEnabled: v }),
+
+      dailyGoalSec: DEFAULT_DAILY_GOAL_SEC,
+      // The Dziś ring reads its goal from useProgressPulse, which caches for
+      // up to 60s and only refreshes on a progressEvents write — changing the
+      // goal here never touched IndexedDB, so without this the ring kept
+      // showing the old minutes for up to a minute after picking a new one.
+      setDailyGoalSec: (sec) => {
+        set({ dailyGoalSec: sec })
+        emitProgress('dailyTime')
+      },
+
+      reminderEnabled: false,
+      reminderHour: null,
+      setReminder: (enabled, hour) => set({ reminderEnabled: enabled, reminderHour: hour }),
+
+      streakFreeze: { available: 1, lastGrantedAt: null, usedOn: [] },
+      grantStreakFreeze: (today) =>
+        set(s => ({ streakFreeze: { ...s.streakFreeze, available: 1, lastGrantedAt: today } })),
+      spendStreakFreeze: (day) =>
+        set(s =>
+          s.streakFreeze.available < 1 || s.streakFreeze.usedOn.includes(day)
+            ? s
+            : {
+                streakFreeze: {
+                  ...s.streakFreeze,
+                  available: s.streakFreeze.available - 1,
+                  usedOn: [...s.streakFreeze.usedOn, day],
+                },
+              }
+        ),
+
+      achievementUnlocks: {},
+      // Only ever adds — a badge already recorded keeps its original date, so
+      // re-deriving achievements on every load can't rewrite history.
+      recordUnlocks: (ids, at) =>
+        set(s => {
+          const next = { ...s.achievementUnlocks }
+          let changed = false
+          for (const id of ids) {
+            if (next[id] == null) {
+              next[id] = { at, seen: false }
+              changed = true
+            }
+          }
+          return changed ? { achievementUnlocks: next } : s
+        }),
+      markUnlocksSeen: (ids) =>
+        set(s => {
+          const next = { ...s.achievementUnlocks }
+          let changed = false
+          for (const id of ids) {
+            const entry = next[id]
+            if (entry && !entry.seen) {
+              next[id] = { ...entry, seen: true }
+              changed = true
+            }
+          }
+          return changed ? { achievementUnlocks: next } : s
+        }),
     }),
     {
       name: 'pe-store',
@@ -161,6 +287,13 @@ export const useAppStore = create<AppStore>()(
         showDebug: s.showDebug,
         devUnlocked: s.devUnlocked,
         keepScreenAudioAlive: s.keepScreenAudioAlive,
+        dailyGoalSec: s.dailyGoalSec,
+        reminderEnabled: s.reminderEnabled,
+        reminderHour: s.reminderHour,
+        streakFreeze: s.streakFreeze,
+        achievementUnlocks: s.achievementUnlocks,
+        todayLevel: s.todayLevel,
+        soundEnabled: s.soundEnabled,
       }),
     }
   )

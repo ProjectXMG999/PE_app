@@ -250,3 +250,13 @@ export function plWords(n: number): string {
   if (last >= 2 && last <= 4 && (last2 < 12 || last2 > 14)) return 'słowa'
   return 'słów'
 }
+
+/** Polish plural for "paczka": 1 → paczka, 2–4 → paczki, else → paczek. */
+export function plPacks(n: number): string {
+  const abs = Math.abs(n)
+  const last = abs % 10
+  const last2 = abs % 100
+  if (abs === 1) return 'paczka'
+  if (last >= 2 && last <= 4 && (last2 < 12 || last2 > 14)) return 'paczki'
+  return 'paczek'
+}

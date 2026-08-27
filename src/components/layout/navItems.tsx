@@ -1,6 +1,30 @@
 import { ReactNode } from 'react'
 
+/**
+ * Calendar-with-today's-dot mark for Dziś.
+ *
+ * Deliberately not a sun: the theme toggle renders a sun in dark mode, and two
+ * near-identical glyphs in the same chrome made this entry effectively
+ * invisible — which is exactly how it was first reported.
+ */
+export function todayIcon(active = false) {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="5" width="18" height="16" rx="2" />
+      <path d="M8 3v4M16 3v4M3 10h18" />
+      <circle cx="12" cy="15.5" r="2" fill={active ? 'currentColor' : 'none'} />
+    </svg>
+  )
+}
+
 export const NAV_ITEMS = [
+  {
+    // First position, ahead of the library: this is the answer to "what do I do
+    // today", which is the question the method is built around.
+    path: '/dzis',
+    label: 'Dzisiaj',
+    icon: (active: boolean): ReactNode => todayIcon(active),
+  },
   {
     path: '/',
     label: 'Pakiety',
@@ -56,6 +80,10 @@ export function getActiveNavItem(pathname: string): string {
     path = pathname
   }
   if (path === '/') return '/'
+  if (path === '/dzis') return '/dzis'
+  // The review session runs from Dziś, so keep that tab lit while it's open
+  // rather than falling through to the '/' default and highlighting Pakiety.
+  if (path === '/powtorka') return '/dzis'
   if (path === '/trening' || path.startsWith('/trening/')) return '/trening'
   if (path === '/postęp' || path.startsWith('/postęp/')) return '/postęp'
   if (path === '/ustawienia' || path.startsWith('/ustawienia/')) return '/ustawienia'

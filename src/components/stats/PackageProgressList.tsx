@@ -5,9 +5,25 @@ import './PackageProgressList.css'
 
 const packs = packagesIndex as PackMeta[]
 
-export function PackageProgressList() {
+interface Props {
+  /** Cap the list. Without one, a committed learner renders hundreds of rows
+   *  and the page grows to several screens of identical bars. */
+  limit?: number
+}
+
+export function PackageProgressList({ limit }: Props = {}) {
   const snapshot = useProgressData()
-  const progress = snapshot?.packageProgress ?? []
+  const all = snapshot?.packageProgress ?? []
+
+  // Most recently touched first, so a capped list shows what's actually current
+  // rather than whatever the store happened to return first.
+  const progress = limit == null
+    ? all
+    : [...all]
+        .sort((a, b) =>
+          (b.completedAt ?? b.startedAt).localeCompare(a.completedAt ?? a.startedAt)
+        )
+        .slice(0, limit)
 
   if (progress.length === 0) {
     return (

@@ -34,6 +34,35 @@ function localAudioPlugin() {
   }
 }
 
+// Dev-only plugin: serve pack content from src/data/packs/ instead of the
+// authenticated Netlify Function (backed by Blobs) — `pack-content` doesn't
+// exist under plain `vite`, so requests to it fell through to the SPA's
+// index.html fallback and broke `res.json()` with "Unexpected token '<'".
+function localPackContentPlugin() {
+  return {
+    name: 'local-pack-content',
+    configureServer(server: ViteDevServer) {
+      server.middlewares.use((req, res, next) => {
+        if (!req.url?.startsWith('/.netlify/functions/pack-content')) return next()
+        const urlObj = new URL(req.url, 'http://localhost')
+        const pack = urlObj.searchParams.get('pack')?.replace(/[^a-zA-Z0-9_-]/g, '')
+        if (!pack) {
+          res.writeHead(400); res.end(); return
+        }
+        const filePath = path.resolve('src/data/packs', `${pack}.json`)
+        if (!fs.existsSync(filePath)) {
+          res.writeHead(404); res.end(); return
+        }
+        const data = fs.readFileSync(filePath, 'utf-8')
+        res.setHeader('Content-Type', 'application/json')
+        res.setHeader('Cache-Control', 'no-cache')
+        res.writeHead(200)
+        res.end(data)
+      })
+    },
+  }
+}
+
 // Capture build metadata for version badge
 const getGitHash = () => {
   try {
@@ -52,6 +81,7 @@ export default defineConfig({
   },
   plugins: [
     localAudioPlugin(),
+    localPackContentPlugin(),
     react(),
     VitePWA({
       strategies: 'injectManifest',

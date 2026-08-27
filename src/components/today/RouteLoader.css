@@ -1,0 +1,24 @@
+.routeloader {
+  border-radius: var(--radius-sm);
+}
+
+.routeloader__track {
+  opacity: 0.5;
+}
+
+.routeloader__sweep {
+  stroke-dasharray: 18 100;
+  animation: routeloader-sweep 1.6s linear infinite;
+}
+
+@keyframes routeloader-sweep {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -118; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .routeloader__sweep {
+    animation: none;
+    stroke-dasharray: none;
+  }
+}
