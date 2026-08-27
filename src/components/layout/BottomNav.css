@@ -1,15 +1,23 @@
 .bottomnav {
   position: fixed;
-  left: var(--spacing-md);
-  right: var(--spacing-md);
-  bottom: var(--bottomnav-gap);
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1000;
-  height: var(--bottomnav-height);
+  /* Docked to the edge, claiming the whole bottom band. Modern phones have no
+     on-screen nav bar there — just a thin home indicator — so the safe-area
+     inset is mostly free space. Instead of floating above it (a dark gap) or
+     leaving it as an empty chin, the bar FILLS it: its height includes the
+     inset, the icons sit centred in the taller box, and padding-bottom keeps
+     them ~18px clear of the very edge so the home indicator never overlaps a
+     label. Only the top corners are rounded (it meets the edge). */
+  height: calc(var(--bottomnav-height) + var(--safe-bottom));
+  padding-bottom: max(var(--spacing-sm), calc(var(--safe-bottom) - 18px));
   display: flex;
-  background: color-mix(in srgb, var(--bg-surface) 92%, transparent);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 2px 12px rgba(0, 0, 0, 0.18);
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
@@ -89,15 +97,6 @@
   }
 }
 
-@media (min-width: 640px) {
-  .bottomnav {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    width: calc(100% - 2 * var(--spacing-md));
-    max-width: 560px;
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   .bottomnav__item {

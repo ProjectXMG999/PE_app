@@ -87,14 +87,10 @@
   --topbar-height: 60px;
   --bottomnav-height: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  /* Floating-island lift off the screen edge. A FLAT 14px — not the safe-area
-     inset. Measured: env(safe-area-inset-bottom) is 34px on an iPhone, which
-     floated the island a full home-indicator's height up and left an obvious
-     band of page background beneath it. 14px is the least that still keeps the
-     island clear of the home indicator's touch strip. */
-  --bottomnav-gap: 14px;
-  /* Bottom space scrolled content must clear: island + its lift + a little air. */
-  --bottomnav-reserve: calc(var(--bottomnav-height) + var(--bottomnav-gap) + var(--spacing-sm));
+  /* The bottom nav is docked to the edge and its height already includes the
+     safe-area inset (see BottomNav.css). Scroll clearance = that full height
+     plus a little air. */
+  --bottomnav-reserve: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-sm));
 
   /* Breakpoints (magic numbers — CSS custom properties can't be used
      inside @media conditions): 640px = tablet, 1024px = desktop sidebar
