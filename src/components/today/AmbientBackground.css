@@ -16,6 +16,12 @@
   overflow: hidden;
   z-index: -1;
   pointer-events: none;
+  /* Insurance: paint the app's base colour here too. `html`/`body` also set it,
+     but in an installed iOS PWA the root background does not always propagate to
+     the region below a short layout viewport — that area rendered pure black.
+     This fixed, full-screen (100lvh) layer guarantees it is at least
+     --bg-primary everywhere. */
+  background: var(--bg-primary);
 }
 
 .ambient__bloom {

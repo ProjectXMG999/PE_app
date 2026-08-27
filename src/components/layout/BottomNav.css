@@ -1,19 +1,22 @@
 .bottomnav {
   position: fixed;
-  left: var(--spacing-md);
-  right: var(--spacing-md);
-  bottom: var(--bottomnav-gap);
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1000;
-  height: var(--bottomnav-height);
+  /* Docked to the edge. A floating island ALWAYS has flat --bg-primary below and
+     around it, and on an iPhone the home-indicator inset makes that a ~1cm band
+     that reads as a mismatched black rectangle. There is no "round bottom + no
+     gap" — a rounded bottom edge IS the gap. So: full width, flush bottom, only
+     the TOP corners rounded (generously, --radius-xl, so it still has shape),
+     and the safe-area inset pulled INSIDE as the bar's own painted chin. */
+  height: calc(var(--bottomnav-height) + var(--safe-bottom));
+  padding-bottom: var(--safe-bottom);
   display: flex;
-  background: color-mix(in srgb, var(--bg-surface) 90%, transparent);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  /* Deliberately NO downward drop shadow. A `0 8px 28px rgba(0,0,0,.35)` pooled
-     darkness into the gap below the floating island and made that gap read as a
-     separate "divider bar". Just a hairline top highlight + a soft, even ambient
-     halo instead — the island reads as floating, the gap reads as nothing. */
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 20px rgba(0, 0, 0, 0.18);
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 -4px 20px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
@@ -93,15 +96,9 @@
   }
 }
 
-@media (min-width: 640px) {
-  .bottomnav {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    width: calc(100% - 2 * var(--spacing-md));
-    max-width: 560px;
-  }
-}
+/* Full-width docked at every width below the desktop breakpoint (>=1024px the
+   sidebar replaces this bar entirely). Centering it to a max-width would put
+   the page background back at the bottom corners. */
 
 @media (prefers-reduced-motion: reduce) {
   .bottomnav__item {
