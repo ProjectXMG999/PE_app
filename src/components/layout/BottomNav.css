@@ -2,7 +2,7 @@
   position: fixed;
   left: var(--spacing-md);
   right: var(--spacing-md);
-  bottom: calc(var(--spacing-sm) + var(--safe-bottom));
+  bottom: var(--bottomnav-gap);
   z-index: 1000;
   height: var(--bottomnav-height);
   display: flex;

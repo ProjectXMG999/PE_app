@@ -87,6 +87,12 @@
   --topbar-height: 60px;
   --bottomnav-height: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+  /* Gap between the floating bottom nav and the screen edge. In a browser tab
+     (no home indicator) that's just --spacing-sm. Installed on an iPhone the
+     raw inset is ~34px, which floated the pill uncomfortably high with a big
+     dark void under it — so on those devices we only lift it by (inset − 16px),
+     enough to clear the home indicator without the bar looking detached. */
+  --bottomnav-gap: max(var(--spacing-sm), calc(var(--safe-bottom) - var(--spacing-md)));
 
   /* Breakpoints (magic numbers — CSS custom properties can't be used
      inside @media conditions): 640px = tablet, 1024px = desktop sidebar

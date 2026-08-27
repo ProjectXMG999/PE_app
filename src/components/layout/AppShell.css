@@ -11,11 +11,10 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  /* BottomNav now floats with a gap below it (see BottomNav.css) instead of
-     sitting flush against the viewport edge — clearance has to cover that
-     gap twice (below the bar, and as breathing room above it) or the last
-     bit of scrollable content ends up hidden behind it. */
-  padding-bottom: calc(var(--bottomnav-height) + (2 * var(--spacing-sm)) + var(--safe-bottom));
+  /* BottomNav floats with --bottomnav-gap below it (see BottomNav.css); clear
+     its full footprint plus breathing room so the last row of scrollable
+     content isn't hidden behind it. */
+  padding-bottom: calc(var(--bottomnav-height) + var(--bottomnav-gap) + var(--spacing-md));
   -webkit-overflow-scrolling: touch;
 }
 
