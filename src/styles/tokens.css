@@ -87,9 +87,12 @@
   --topbar-height: 60px;
   --bottomnav-height: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  /* Floating-island lift off the screen edge: enough to clear the iPhone home
-     indicator, minimal in a plain browser tab. */
-  --bottomnav-gap: max(var(--spacing-sm), var(--safe-bottom));
+  /* Floating-island lift off the screen edge. A FLAT 14px — not the safe-area
+     inset. Measured: env(safe-area-inset-bottom) is 34px on an iPhone, which
+     floated the island a full home-indicator's height up and left an obvious
+     band of page background beneath it. 14px is the least that still keeps the
+     island clear of the home indicator's touch strip. */
+  --bottomnav-gap: 14px;
   /* Bottom space scrolled content must clear: island + its lift + a little air. */
   --bottomnav-reserve: calc(var(--bottomnav-height) + var(--bottomnav-gap) + var(--spacing-sm));
 

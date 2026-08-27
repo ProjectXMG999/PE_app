@@ -13,7 +13,6 @@ import './debug/seedProgress'
 // Dev-only: auto signs into the local test account on boot. Also DEV-guarded.
 import './debug/devAutoLogin'
 import { DebugOverlay } from './components/debug/DebugOverlay'
-import { ViewportProbe } from './components/debug/ViewportProbe' // TEMP: remove after iOS bottom-gap diagnosis
 import { RequireEntitlement } from './components/auth/RequireEntitlement'
 import { ToastHost } from './components/shared/ToastHost'
 import { HomePage } from './pages/HomePage'
@@ -137,7 +136,6 @@ export function App() {
       </Suspense>
       <ToastHost />
       <DebugOverlay />
-      <ViewportProbe />{/* TEMP: remove after iOS bottom-gap diagnosis */}
     </>
   )
 }
