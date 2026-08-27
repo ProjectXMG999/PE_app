@@ -87,10 +87,9 @@
   --topbar-height: 60px;
   --bottomnav-height: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  /* The bottom nav is docked to the edge and its height already includes the
-     safe-area inset (see BottomNav.css). Scroll clearance = that full height
-     plus a little air. */
-  --bottomnav-reserve: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-sm));
+  /* Floating island: 64px tall, lifted 14px off the edge. Scroll clearance
+     covers the island, its lift, the home-indicator inset, and a little air. */
+  --bottomnav-reserve: calc(var(--bottomnav-height) + 14px + var(--safe-bottom) + var(--spacing-sm));
 
   /* Breakpoints (magic numbers — CSS custom properties can't be used
      inside @media conditions): 640px = tablet, 1024px = desktop sidebar
