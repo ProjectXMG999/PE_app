@@ -1,27 +1,9 @@
 .ambient {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  /* Must cover the WHOLE physical screen, not just the layout viewport. With
-     `inset: 0` the bottom edge tracked the small (toolbar-expanded) viewport,
-     so when the browser toolbar collapsed — and always in an installed PWA —
-     a strip at the bottom fell outside this layer and showed flat --bg-primary
-     with none of the ambient tint the rest of the page has: the "mismatched
-     dark rectangle". 100lvh is the large viewport (full screen); the 100vh
-     line is the fallback for engines without lvh. */
-  height: 100vh;
-  height: 100lvh;
-  min-height: 100%;
+  inset: 0;
   overflow: hidden;
   z-index: -1;
   pointer-events: none;
-  /* Insurance: paint the app's base colour here too. `html`/`body` also set it,
-     but in an installed iOS PWA the root background does not always propagate to
-     the region below a short layout viewport — that area rendered pure black.
-     This fixed, full-screen (100lvh) layer guarantees it is at least
-     --bg-primary everywhere. */
-  background: var(--bg-primary);
 }
 
 .ambient__bloom {

@@ -87,10 +87,11 @@
   --topbar-height: 60px;
   --bottomnav-height: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  /* The bottom nav is docked flush to the edge (BottomNav.css) and absorbs the
-     safe-area inset as its own painted chin. Scroll clearance = bar + chin +
-     a little air. */
-  --bottomnav-reserve: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-sm));
+  /* Floating-island lift off the screen edge: enough to clear the iPhone home
+     indicator, minimal in a plain browser tab. */
+  --bottomnav-gap: max(var(--spacing-sm), var(--safe-bottom));
+  /* Bottom space scrolled content must clear: island + its lift + a little air. */
+  --bottomnav-reserve: calc(var(--bottomnav-height) + var(--bottomnav-gap) + var(--spacing-sm));
 
   /* Breakpoints (magic numbers — CSS custom properties can't be used
      inside @media conditions): 640px = tablet, 1024px = desktop sidebar

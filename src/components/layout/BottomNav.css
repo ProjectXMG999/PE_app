@@ -1,23 +1,15 @@
 .bottomnav {
   position: fixed;
-  left: 0;
-  right: 0;
-  /* Overshoot the bottom edge. In an installed iOS PWA `bottom: 0` on a fixed
-     element sometimes sits ~90px ABOVE the physical edge (the layout viewport
-     is short there), leaving a dark band under a "docked" bar. Anchoring the
-     bar 120px below the edge and adding that 120px to both height and
-     padding-bottom keeps the labels in exactly the same place while the bar's
-     own background covers whatever gap iOS leaves. Where there is no gap the
-     overshoot is simply clipped off-screen — harmless. */
-  bottom: -120px;
+  left: var(--spacing-md);
+  right: var(--spacing-md);
+  bottom: var(--bottomnav-gap);
   z-index: 1000;
-  height: calc(var(--bottomnav-height) + var(--safe-bottom) + 120px);
-  padding-bottom: calc(var(--safe-bottom) + 120px);
+  height: var(--bottomnav-height);
   display: flex;
-  background: var(--bg-surface);
-  border-top: 1px solid var(--border);
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 -4px 20px rgba(0, 0, 0, 0.22);
+  background: color-mix(in srgb, var(--bg-surface) 92%, transparent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 2px 12px rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
@@ -97,9 +89,15 @@
   }
 }
 
-/* Full-width docked at every width below the desktop breakpoint (>=1024px the
-   sidebar replaces this bar entirely). Centering it to a max-width would put
-   the page background back at the bottom corners. */
+@media (min-width: 640px) {
+  .bottomnav {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: calc(100% - 2 * var(--spacing-md));
+    max-width: 560px;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .bottomnav__item {
