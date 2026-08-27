@@ -60,8 +60,10 @@ export const NAV_ITEMS = [
     ),
   },
   {
+    // "Personalizacja" (the page's own title) overflows the bottom-bar cell —
+    // every other tab label is 6–7 chars. The short label lives only in the nav.
     path: '/ustawienia',
-    label: 'Personalizacja',
+    label: 'Ustawienia',
     icon: (active: boolean): ReactNode => (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="3"/>
