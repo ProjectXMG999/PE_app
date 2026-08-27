@@ -4,7 +4,7 @@
   transform: translateX(-50%);
   /* Clears the bottom nav on mobile; the nav is hidden on desktop but the extra
      inset is harmless there. */
-  bottom: calc(var(--bottomnav-height) + var(--bottomnav-chin) + var(--spacing-md));
+  bottom: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-md));
   z-index: 200;
 
   display: flex;

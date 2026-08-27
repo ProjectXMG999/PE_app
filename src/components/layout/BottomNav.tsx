@@ -1,30 +1,20 @@
 import { Link, useLocation } from 'react-router-dom'
-import { motion, useReducedMotion } from 'framer-motion'
 import { NAV_ITEMS, getActiveNavItem } from './navItems'
 import { NavIndicator } from './NavIndicator'
-import { EASE_OUT_EXPO } from '../today/motion'
 import './BottomNav.css'
 
 /**
- * Mounted/unmounted by AppShell's `hideBottomNav` (via AnimatePresence), not
- * just shown/hidden with CSS — pages like PackPreviewPage replace this bar
- * with their own fixed action buttons in the exact same screen region, and
- * the two need to visually hand off rather than one abruptly popping under
- * the other.
+ * Rendered once per page (each page mounts its own AppShell), so it must NOT
+ * have a mount transition — an `initial`/`animate` slide would replay on every
+ * single navigation. The bar just stays put; only the active-tab indicator
+ * moves.
  */
 export function BottomNav() {
   const location = useLocation()
   const activeItem = getActiveNavItem(location.pathname)
-  const reduced = useReducedMotion()
 
   return (
-    <motion.nav
-      className="bottomnav"
-      initial={{ y: '120%', opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: '120%', opacity: 0 }}
-      transition={{ duration: reduced ? 0 : 0.32, ease: EASE_OUT_EXPO }}
-    >
+    <nav className="bottomnav">
       {NAV_ITEMS.map(item => {
         const active = activeItem === item.path
         return (
@@ -43,6 +33,6 @@ export function BottomNav() {
           </Link>
         )
       })}
-    </motion.nav>
+    </nav>
   )
 }

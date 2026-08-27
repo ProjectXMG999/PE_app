@@ -699,9 +699,7 @@
   flex-direction: column;
   gap: var(--spacing-sm);
   padding: var(--spacing-md);
-  /* Same chin as BottomNav (this bar takes over the space it vacates on this
-     route), so the hand-off between them lines up. */
-  padding-bottom: calc(var(--spacing-sm) + var(--bottomnav-chin));
+  padding-bottom: calc(var(--spacing-md) + var(--safe-bottom));
   z-index: 20;
 }
 

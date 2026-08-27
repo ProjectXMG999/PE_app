@@ -87,10 +87,6 @@
   --topbar-height: 60px;
   --bottomnav-height: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  /* Bottom nav "chin": the safe-area inset when there is one (home indicator),
-     otherwise a real minimum so a docked bar never jams its labels against the
-     physical edge — in a browser tab or on a device that reports 0. */
-  --bottomnav-chin: max(env(safe-area-inset-bottom, 0px), 10px);
 
   /* Breakpoints (magic numbers — CSS custom properties can't be used
      inside @media conditions): 640px = tablet, 1024px = desktop sidebar

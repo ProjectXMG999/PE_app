@@ -11,10 +11,11 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  /* BottomNav is docked flush to the bottom edge and absorbs the safe-area
-     chin itself (see BottomNav.css). Clear its full footprint plus a little
-     breathing room so the last row of scrollable content isn't hidden. */
-  padding-bottom: calc(var(--bottomnav-height) + var(--bottomnav-chin) + var(--spacing-md));
+  /* BottomNav now floats with a gap below it (see BottomNav.css) instead of
+     sitting flush against the viewport edge — clearance has to cover that
+     gap twice (below the bar, and as breathing room above it) or the last
+     bit of scrollable content ends up hidden behind it. */
+  padding-bottom: calc(var(--bottomnav-height) + (2 * var(--spacing-sm)) + var(--safe-bottom));
   -webkit-overflow-scrolling: touch;
 }
 

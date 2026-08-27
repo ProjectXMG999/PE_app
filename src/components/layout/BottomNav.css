@@ -1,23 +1,15 @@
 .bottomnav {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: var(--spacing-md);
+  right: var(--spacing-md);
+  bottom: calc(var(--spacing-sm) + var(--safe-bottom));
   z-index: 1000;
-  /* Docked to the physical bottom edge rather than floating with a margin.
-     A floating pill left a cramped sliver above Safari's toolbar in-browser,
-     and a dead gap above the home indicator once installed. Docked + the
-     safe-area "chin" pulled INSIDE as padding-bottom (height = --bottomnav-
-     height + --bottomnav-chin) reads correctly everywhere: the solid bar
-     background runs all the way to the edge so the chin is part of the bar,
-     not unstyled void, and the buttons always clear the home indicator —
-     with a 10px floor so they never touch the edge when the inset is 0. */
-  height: calc(var(--bottomnav-height) + var(--bottomnav-chin));
-  padding-bottom: var(--bottomnav-chin);
+  height: var(--bottomnav-height);
   display: flex;
-  background: var(--bg-surface);
-  border-top: 1px solid var(--border);
-  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.04), 0 -8px 28px rgba(0, 0, 0, 0.32);
+  background: color-mix(in srgb, var(--bg-surface) 90%, transparent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 28px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
@@ -58,7 +50,7 @@
 
 .bottomnav__indicator {
   position: absolute;
-  inset: 4px 8px;
+  inset: 2px 6px;
   border-radius: var(--radius-md);
   background: linear-gradient(165deg, color-mix(in srgb, var(--accent) 16%, var(--bg-card-hover)) 0%, var(--bg-card-hover) 100%);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 14px var(--accent-glow);
@@ -97,14 +89,13 @@
   }
 }
 
-/* Tablet: keep the background full-bleed, but stop the five items from
-   stretching apart across the whole width — pad them back to a phone-ish
-   cluster in the centre. (≥1024px the sidebar takes over and this bar is
-   hidden entirely.) */
 @media (min-width: 640px) {
   .bottomnav {
-    padding-left: max(0px, calc((100% - 520px) / 2));
-    padding-right: max(0px, calc((100% - 520px) / 2));
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: calc(100% - 2 * var(--spacing-md));
+    max-width: 560px;
   }
 }
 

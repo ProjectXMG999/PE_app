@@ -1,6 +1,6 @@
 .sw-update-toast {
   position: fixed;
-  bottom: calc(var(--bottomnav-height) + var(--bottomnav-chin) + var(--spacing-md));
+  bottom: calc(var(--bottomnav-height) + var(--safe-bottom) + var(--spacing-md));
   left: var(--spacing-md);
   right: var(--spacing-md);
   background: var(--bg-surface);

@@ -1,5 +1,4 @@
 import { ReactNode } from 'react'
-import { AnimatePresence } from 'framer-motion'
 import { TopBar, TopBarAccountOverride } from './TopBar'
 import { BottomNav } from './BottomNav'
 import { Sidebar } from './Sidebar'
@@ -42,9 +41,7 @@ export function AppShell({
       >
         <div className="appshell__main-inner">{children}</div>
       </main>
-      <AnimatePresence>
-        {!hideBottomNav && <BottomNav key="bottomnav" />}
-      </AnimatePresence>
+      {!hideBottomNav && <BottomNav />}
     </div>
   )
 }
