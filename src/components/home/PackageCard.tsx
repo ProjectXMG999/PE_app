@@ -30,7 +30,14 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
   const color = getCategoryColor(pack.category)
   const heardPct = progress ? Math.min((progress.currentIndex / pack.wordCount) * 100, 100) : 0
   const knownPct = pack.wordCount > 0 ? Math.min((knownCount / pack.wordCount) * 100, 100) : 0
-  const status = getStatus(progress)
+  // A pack can carry a stale masteredAt with its words not actually all known
+  // (see services/masteryRepair.ts, which heals it on boot). Don't show the
+  // gold "★ Opanowana" treatment until the known count really reaches the total
+  // — otherwise the badge contradicts the "0 / 10 opanowanych" line right below.
+  const rawStatus = getStatus(progress)
+  const status = rawStatus === 'mastered' && knownCount < pack.wordCount
+    ? (progress?.completedAt ? 'completed' : 'started')
+    : rawStatus
   const { label: statusLabel, className: statusClass } = STATUS_META[status]
   const packNum = getPackNumber(pack.id)
   // Mastered = VIP gold treatment; CSS owns all colors, so skip the inline overrides

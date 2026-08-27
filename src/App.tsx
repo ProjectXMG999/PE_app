@@ -6,6 +6,7 @@ import { initAuthListener } from './store/useAuthStore'
 import { initInstallService } from './services/installService'
 import { loadProgressSnapshot } from './hooks/useProgressData'
 import { runStreakFreezeUpkeep } from './services/streakFreeze'
+import { repairMasteryFlags } from './services/masteryRepair'
 // Dev-only: exposes window.__seed / window.__clearProgress. The module body is
 // guarded by import.meta.env.DEV, so the bundler drops it from production.
 import './debug/seedProgress'
@@ -88,19 +89,21 @@ export function App() {
 
   useEffect(() => initAuthListener(), [])
 
-  // Streak upkeep runs before anything reads the streak, so a run rescued by a
-  // freeze is already intact by the time the badge and the widget render it.
+  // One-time data upkeep, before the streak / points / progress widgets read
+  // it: heal packs stuck "mastered" with no known words, then run streak-freeze
+  // upkeep so a rescued run is intact by the time the badge renders.
   useEffect(() => {
-    runStreakFreezeUpkeep()
-      .catch(err => console.error('[streak] upkeep failed:', err))
-      .finally(() => {
-        // Badging API: show the learning streak on the installed PWA icon
-        if (!('setAppBadge' in navigator)) return
-        loadProgressSnapshot(true).then(s => {
-          if (s.streak > 0) navigator.setAppBadge(s.streak).catch(() => {})
-          else navigator.clearAppBadge?.().catch(() => {})
-        })
-      })
+    ;(async () => {
+      try { await repairMasteryFlags() } catch (err) { console.error('[mastery] repair failed:', err) }
+      try { await runStreakFreezeUpkeep() } catch (err) { console.error('[streak] upkeep failed:', err) }
+      // Badging API: show the learning streak on the installed PWA icon
+      if (!('setAppBadge' in navigator)) return
+      try {
+        const s = await loadProgressSnapshot(true)
+        if (s.streak > 0) navigator.setAppBadge(s.streak).catch(() => {})
+        else navigator.clearAppBadge?.().catch(() => {})
+      } catch { /* badge is best-effort */ }
+    })()
   }, [])
 
   return (
