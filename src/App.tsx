@@ -12,6 +12,7 @@ import './debug/seedProgress'
 // Dev-only: auto signs into the local test account on boot. Also DEV-guarded.
 import './debug/devAutoLogin'
 import { DebugOverlay } from './components/debug/DebugOverlay'
+import { VersionBadge } from './components/debug/VersionBadge' // TEMP: remove after bottom-nav fix confirmed
 import { RequireEntitlement } from './components/auth/RequireEntitlement'
 import { ToastHost } from './components/shared/ToastHost'
 import { HomePage } from './pages/HomePage'
@@ -133,6 +134,7 @@ export function App() {
       </Suspense>
       <ToastHost />
       <DebugOverlay />
+      <VersionBadge />{/* TEMP: remove after bottom-nav fix confirmed */}
     </>
   )
 }
