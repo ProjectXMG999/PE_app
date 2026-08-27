@@ -190,9 +190,10 @@ export function TodayPage() {
       >
         <div className="today__context">
           <motion.header className="today__header" variants={variants}>
-            <div className="today__header-text">
-              <h1 className="today__title">Dzisiaj</h1>
-            </div>
+            {/* Page heading kept for the document outline / screen readers only —
+                the bottom-nav tab already labels this screen "Dzisiaj", and the
+                visible word crowded the level row on narrow phones. */}
+            <h1 className="today__title-sr">Dzisiaj</h1>
             <div className="today__header-level">
               <LevelPill level={todayLevel} onPress={() => setLevelPickerOpen(true)} />
               {todayLevel != null && (
@@ -201,6 +202,9 @@ export function TodayPage() {
                   onClick={() => { homeSetLevel(todayLevel); navigate('/') }}
                 >
                   Przeglądaj ten poziom
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <polyline points="9 6 15 12 9 18" />
+                  </svg>
                 </button>
               )}
             </div>

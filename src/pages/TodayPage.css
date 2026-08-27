@@ -22,32 +22,33 @@
 
 .today__header {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--spacing-sm);
-  flex-wrap: wrap;
 }
 
-.today__header-text {
-  min-width: 0;
-}
-
-.today__title {
-  margin: 0;
-  font-family: var(--font-heading);
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--text-primary);
+/* Visually hidden — present only for the document outline / screen readers. */
+.today__title-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .today__header-level {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-sm) var(--spacing-md);
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .today__browse-level {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
   padding: 0;
   font-family: var(--font-body);
   font-size: var(--text-sm);
@@ -57,6 +58,10 @@
   border: none;
   cursor: pointer;
   white-space: nowrap;
+}
+
+.today__browse-level svg {
+  margin-top: 1px;
 }
 
 .today__skeleton {
