@@ -16,11 +16,11 @@ interface Props {
  * point of a score that claims to be diagnostic.
  */
 const PARTS: { key: keyof ReadinessResult['breakdown']; label: string; icon: string; hint: string }[] = [
-  { key: 'swiezosc',    label: 'Świeżość',    icon: '🌿', hint: 'jak dawno był ostatni trening' },
-  { key: 'retencja',    label: 'Retencja',    icon: '🧠', hint: 'ile z widzianych słów zostaje' },
-  { key: 'regularnosc', label: 'Regularność', icon: '🔥', hint: 'seria dni z rzędu' },
-  { key: 'mowienie',    label: 'Mówienie',    icon: '🗣️', hint: 'udział trybu mówienia' },
-  { key: 'skutecznosc', label: 'Skuteczność', icon: '⚡', hint: 'tempo vs Twój rekord' },
+  { key: 'swiezosc',    label: 'Świeżość',    icon: '🌿', hint: 'ile dni od ostatniej nauki' },
+  { key: 'retencja',    label: 'Pamięć',      icon: '🧠', hint: 'ile poznanych słów zostaje w głowie' },
+  { key: 'regularnosc', label: 'Regularność', icon: '🔥', hint: 'seria dni nauki pod rząd' },
+  { key: 'mowienie',    label: 'Mówienie',    icon: '🗣️', hint: 'jak często ćwiczysz na głos' },
+  { key: 'skutecznosc', label: 'Forma',       icon: '⚡', hint: 'obecne tempo względem Twojego rekordu' },
 ]
 
 function toneFor(v: number): string {
@@ -41,7 +41,7 @@ export function ReadinessBreakdown({ result }: Props) {
     <div className="readiness">
       {/* Explains what each of the five parts (and the blended score) actually
           measures — a learner has no way to reverse-engineer, say, why
-          Mówienie can read 0% while Skuteczność reads 100% without this. */}
+          Mówienie can read 0% while Forma reads 100% without this. */}
       <button
         type="button"
         className="readiness__info-btn"

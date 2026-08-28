@@ -1,0 +1,12 @@
+-- Phase 7: review graduation.
+--
+-- A word re-confirmed RETIRE_AT_REVIEW_COUNT times over ~6 months of growing
+-- intervals leaves the active fiszki queue for good: next_review_at is cleared
+-- and this stamp is set. `status` stays 'known' — the route count never goes
+-- backwards. The word is still heard passively as a listening interlude, and any
+-- lapse clears retired_at (it re-enters the queue).
+--
+-- Nullable and `text` (an ISO timestamp string), same pattern as 0004: rows from
+-- an older client have no value, and an older client keeps working against this
+-- schema. camelCase translation lives in src/services/progressSync.ts.
+alter table word_progress add column retired_at text;

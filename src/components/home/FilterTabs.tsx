@@ -8,10 +8,10 @@ import './FilterTabs.css'
 const allPacks = packagesIndex as PackMeta[]
 
 const STATUS_TABS = [
+  { id: 'new',       label: 'Nowe' },
   { id: 'mastered',  label: '★ Opanowane' },
   { id: 'completed', label: '✓ Odsłuchane' },
   { id: 'started',   label: 'W toku' },
-  { id: 'new',       label: 'Nowe' },
   { id: 'all',       label: 'Wszystkie' },
 ] as const
 

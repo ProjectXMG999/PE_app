@@ -1,7 +1,15 @@
 import { supabase } from './supabaseClient'
-import { getAllSessions, getAllWordProgress, getAllPackageProgress, getAllDailyTime, getDB } from './db'
-import { Session, WordProgress, PackageProgress, WordStatus, DailyTime } from '../types/progress'
+import {
+  getAllSessions, getAllWordProgress, getAllPackageProgress, getAllDailyTime,
+  getAllReviewLedger, getDB,
+} from './db'
+import {
+  Session, WordProgress, PackageProgress, WordStatus, DailyTime, ReviewLedgerEntry,
+} from '../types/progress'
 import { emitProgress } from './progressEvents'
+import { RETIRE_STABILITY_DAYS } from './reviewConfig'
+import { nextInterval } from './fsrs'
+import { dayKey, shiftDay } from '../utils/day'
 
 const STATUS_RANK: Record<WordStatus, number> = { new: 0, learning: 1, known: 2 }
 
@@ -16,13 +24,30 @@ function betterWordProgress(a: WordProgress, b: WordProgress): WordProgress {
   // holding, so take the high-water mark of each counter rather than letting the
   // winning row's (possibly staler) numbers erase the other side's history. The
   // schedule itself follows the winner, since that's the most recent answer.
-  return {
+  //
+  // `retiredAt` deliberately rides along with `...winner` and is NOT merged: a
+  // `laterDefined`/`maxDefined` there would resurrect a graduation that the more
+  // recent lapse on the other device just cleared. Same for `stability` /
+  // `difficulty` — they're a coherent pair from the winner's last review, not
+  // a per-field max. All three stay consistent with `nextReviewAt`.
+  const merged: WordProgress = {
     ...winner,
     seenCount: Math.max(winner.seenCount, other.seenCount),
     reviewCount: maxDefined(winner.reviewCount, other.reviewCount),
     lapseCount: maxDefined(winner.lapseCount, other.lapseCount),
     lastLapseAt: laterDefined(winner.lastLapseAt, other.lastLapseAt),
   }
+
+  // Normalise: keep retiredAt / nextReviewAt consistent with the merged FSRS
+  // stability (in case the two sides disagreed on retirement).
+  if (merged.stability != null) {
+    const durable = merged.stability >= RETIRE_STABILITY_DAYS
+    if (!durable) merged.retiredAt = undefined
+    if (merged.nextReviewAt == null) {
+      merged.nextReviewAt = shiftDay(nextInterval(merged.stability), dayKey())
+    }
+  }
+  return merged
 }
 
 function maxDefined(a: number | undefined, b: number | undefined): number | undefined {
@@ -92,17 +117,19 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
   if (!supabase) return
 
   const [
-    localSessions, localWords, localPackages, localDaily,
-    remoteSessionsRes, remoteWordsRes, remotePackagesRes, remoteDailyRes,
+    localSessions, localWords, localPackages, localDaily, localLedger,
+    remoteSessionsRes, remoteWordsRes, remotePackagesRes, remoteDailyRes, remoteLedgerRes,
   ] = await Promise.all([
     getAllSessions(),
     getAllWordProgress(),
     getAllPackageProgress(),
     getAllDailyTime(),
+    getAllReviewLedger(),
     supabase.from('sessions').select('*').eq('user_id', userId),
     supabase.from('word_progress').select('*').eq('user_id', userId),
     supabase.from('package_progress').select('*').eq('user_id', userId),
     supabase.from('daily_time').select('*').eq('user_id', userId),
+    supabase.from('review_ledger').select('*').eq('user_id', userId),
   ])
 
   const remoteSessions = (remoteSessionsRes.data ?? []).map(r => ({
@@ -114,6 +141,8 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
     wordId: r.word_id, packageId: r.package_id, seenCount: r.seen_count, lastSeen: r.last_seen, status: r.status,
     reviewCount: r.review_count ?? undefined, lapseCount: r.lapse_count ?? undefined,
     lastLapseAt: r.last_lapse_at ?? undefined, nextReviewAt: r.next_review_at ?? undefined,
+    retiredAt: r.retired_at ?? undefined,
+    stability: r.stability ?? undefined, difficulty: r.difficulty ?? undefined,
   })) as WordProgress[]
   const remotePackages = (remotePackagesRes.data ?? []).map(r => ({
     packageId: r.package_id, startedAt: r.started_at, completedAt: r.completed_at, masteredAt: r.mastered_at, currentIndex: r.current_index,
@@ -121,6 +150,9 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
   const remoteDaily = (remoteDailyRes.data ?? []).map(r => ({
     date: r.date, secondsStudied: r.seconds_studied, goalSec: r.goal_sec, goalMetAt: r.goal_met_at ?? null,
   })) as DailyTime[]
+  const remoteLedger = (remoteLedgerRes.data ?? []).map(r => ({
+    date: r.date, cleared: !!r.cleared, clearedAt: r.cleared_at ?? null,
+  })) as ReviewLedgerEntry[]
 
   // --- word_progress / package_progress: merge by natural key, more-advanced side wins ---
   const wordMap = new Map<string, WordProgress>()
@@ -138,6 +170,16 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
     const existing = dailyMap.get(d.date)
     dailyMap.set(d.date, existing ? betterDailyTime(existing, d) : d)
   }
+  // Review ledger: OR the flag — if either device cleared the day, it's cleared.
+  const ledgerMap = new Map<string, ReviewLedgerEntry>()
+  for (const e of [...localLedger, ...remoteLedger]) {
+    const prev = ledgerMap.get(e.date)
+    ledgerMap.set(e.date, {
+      date: e.date,
+      cleared: (prev?.cleared ?? false) || e.cleared,
+      clearedAt: earlierDefined(prev?.clearedAt ?? null, e.clearedAt),
+    })
+  }
 
   // --- sessions: append-only log, union by a loose natural-key match ---
   const remoteSessionKeys = new Set(remoteSessions.map(sessionKey))
@@ -148,6 +190,7 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
   const mergedWords = [...wordMap.values()]
   const mergedPackages = [...packageMap.values()]
   const mergedDaily = [...dailyMap.values()]
+  const mergedLedger = [...ledgerMap.values()]
 
   const db = await getDB()
 
@@ -155,6 +198,7 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
     ...mergedWords.map(w => db.put('wordProgress', w)),
     ...mergedPackages.map(p => db.put('packageProgress', p)),
     ...mergedDaily.map(d => db.put('dailyTime', d)),
+    ...mergedLedger.map(e => db.put('reviewLedger', e)),
     ...remoteOnlySessions.map(s => db.add('sessions', s as Session)),
   ])
 
@@ -165,6 +209,8 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
         seen_count: w.seenCount, last_seen: w.lastSeen, status: w.status,
         review_count: w.reviewCount, lapse_count: w.lapseCount,
         last_lapse_at: w.lastLapseAt, next_review_at: w.nextReviewAt,
+        retired_at: w.retiredAt,
+        stability: w.stability, difficulty: w.difficulty,
       }))
     ),
     mergedPackages.length && supabase.from('package_progress').upsert(
@@ -177,6 +223,11 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
       mergedDaily.map(d => ({
         user_id: userId, date: d.date, seconds_studied: d.secondsStudied,
         goal_sec: d.goalSec, goal_met_at: d.goalMetAt,
+      }))
+    ),
+    mergedLedger.length && supabase.from('review_ledger').upsert(
+      mergedLedger.map(e => ({
+        user_id: userId, date: e.date, cleared: e.cleared, cleared_at: e.clearedAt,
       }))
     ),
     localOnlySessions.length && supabase.from('sessions').insert(

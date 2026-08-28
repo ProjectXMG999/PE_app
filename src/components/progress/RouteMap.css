@@ -78,9 +78,12 @@
   animation: route-flow 2.5s linear infinite;
 }
 
+/* Flows downward — from the station you're on toward the next one. Because
+   background-size is taller than the element, a larger position percentage
+   shifts the gradient up, so the "forward" direction runs 100% → -120%. */
 @keyframes route-flow {
-  from { background-position: 0 -120%; }
-  to   { background-position: 0 100%; }
+  from { background-position: 0 100%; }
+  to   { background-position: 0 -120%; }
 }
 
 /* ── Station body ───────────────────────────────────────────────────────── */

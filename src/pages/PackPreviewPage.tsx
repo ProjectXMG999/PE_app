@@ -207,10 +207,10 @@ export function PackPreviewPage() {
   const C = 2 * Math.PI * R
   const dash = (knownPct / 100) * C
 
-  // Marks every word in the pack 'known' in one go — same underlying write as
-  // rating each flashcard "Znam" one by one (applyKnown), just applied to the
-  // whole word list at once, for someone who already knows this vocabulary
-  // and doesn't want to click through it card by card.
+  // Marks every word in the pack 'known' in one go, for someone who already
+  // knows this vocabulary and doesn't want to click through it card by card.
+  // `bulk: true` → words with no history are seeded a couple of review levels in
+  // (they're asserting prior knowledge, not learning now — see review.ts).
   async function handleMarkAllKnown() {
     if (!packageId) return
     setMarkingAll(true)
@@ -219,7 +219,7 @@ export function PackPreviewPage() {
       const existingList = await getPackageWordProgress(packageId)
       const byId = new Map(existingList.map(w => [w.wordId, w]))
       await Promise.all(pack!.words.map(w =>
-        saveWordProgress(applyKnown(byId.get(w.id), w.id, packageId, now))
+        saveWordProgress(applyKnown(byId.get(w.id), w.id, packageId, now, { bulk: true }))
       ))
       const existingPkg = await getPackageProgress(packageId)
       const nowIso = now.toISOString()

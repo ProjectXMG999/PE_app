@@ -16,7 +16,7 @@ interface Metric {
 /**
  * Plain-language explanations for the five parts behind "Gotowość do mówienia"
  * plus the blended score itself — a learner seeing five unexplained percentages
- * (and Mówienie 0% next to Skuteczność 100%, which look contradictory unless
+ * (and Mówienie 0% next to Forma 100%, which look contradictory unless
  * you know they measure completely different things) has no way to reverse-
  * engineer any of this from the bars alone.
  */
@@ -24,43 +24,43 @@ const METRICS: Metric[] = [
   {
     icon: '🌿',
     title: 'Świeżość',
-    lead: 'Jak dawno był Twój ostatni trening.',
-    detail: 'Dziś = 100%. Każdy dzień przerwy obniża wynik, a po tygodniu bez nauki spada do 0%.',
+    lead: 'Ile dni minęło od ostatniej nauki.',
+    detail: 'Nauka dzisiaj = 100%. Każdy dzień przerwy obniża wynik, a po tygodniu bez nauki spada do 0%.',
     accent: 'swiezosc',
   },
   {
     icon: '🧠',
-    title: 'Retencja',
-    lead: 'Ile z poznanych słów naprawdę zostaje.',
-    detail: 'Odsetek widzianych słów, które oznaczyłeś jako opanowane — a nie tylko przerobione raz.',
+    title: 'Pamięć',
+    lead: 'Ile poznanych słów naprawdę zostaje w głowie.',
+    detail: 'Odsetek widzianych słów, które udało Ci się opanować — a nie tylko raz przerobić.',
     accent: 'retencja',
   },
   {
     icon: '🔥',
     title: 'Regularność',
-    lead: 'Twoja seria dni z rzędu.',
-    detail: '7 dni nauki pod rząd daje 100% — najprostszy sposób na wysoki wynik.',
+    lead: 'Twoja seria dni nauki pod rząd.',
+    detail: '7 dni nauki z rzędu daje 100% — najprostszy sposób na wysoki wynik.',
     accent: 'regularnosc',
   },
   {
     icon: '🗣️',
     title: 'Mówienie',
-    lead: 'Ile ostatnio trenujesz na głos.',
-    detail: 'Udział trybu mówienia w sesjach z ostatnich 14 dni. 0% nie znaczy „nie uczysz się" — znaczy „rzadko mówisz na głos".',
+    lead: 'Jak często ostatnio ćwiczysz na głos.',
+    detail: 'Udział ćwiczeń na głos w sesjach z ostatnich 14 dni. 0% nie znaczy „nie uczysz się" — znaczy „rzadko mówisz na głos".',
     accent: 'mowienie',
   },
   {
     icon: '⚡',
-    title: 'Skuteczność',
-    lead: 'Twoje tempo względem własnego rekordu.',
-    detail: 'Porównuje ostatni tydzień z Twoim najlepszym dotychczasowym tygodniem.',
+    title: 'Forma',
+    lead: 'Twoje obecne tempo względem Twojego rekordu.',
+    detail: 'Porównuje ostatni tydzień z Twoim najlepszym tygodniem w historii. 100% = jesteś na poziomie życiówki.',
     accent: 'skutecznosc',
   },
   {
     icon: '🎙️',
     title: 'Gotowość do mówienia',
     lead: 'Średnia ważona powyższych pięciu.',
-    detail: 'Świeżość i Retencja liczą się najbardziej — bo bez nich nie ma czego użyć w rozmowie. Regularność trochę mniej, Mówienie i Skuteczność najmniej.',
+    detail: 'Świeżość i Pamięć liczą się najbardziej — bez nich nie ma czego użyć w rozmowie. Regularność trochę mniej, Mówienie i Forma najmniej.',
     accent: 'score',
   },
 ]

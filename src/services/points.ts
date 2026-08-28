@@ -16,8 +16,11 @@ import { ProgressSnapshot } from '../hooks/useProgressData'
  * an orphaned balance behind. The trade is that changing the weights below
  * retroactively changes everyone's total — so treat RULES_VERSION as a contract
  * and bump it whenever the numbers move.
+ *
+ * v3: FSRS scheduler (reviewCount accrues at a different rate long-term;
+ * retirement is now a stability threshold, not a rep count).
  */
-export const RULES_VERSION = 1
+export const RULES_VERSION = 3
 
 /**
  * Per-word multiplier by how the session was run. Speaking and active training
@@ -37,6 +40,8 @@ export const POINTS = {
   perKnownWord: 5,
   /** A word held onto through a successful review. */
   perReview: 3,
+  /** A word graduated out of the review queue for good (~5 reviews over 6 months). */
+  perRetiredWord: 30,
   /** A pack with every word mastered. */
   perMasteredPack: 50,
   /** A pack listened through end to end. */
@@ -60,6 +65,7 @@ export interface PointsBreakdown {
   sessions: number
   known: number
   reviews: number
+  retired: number
   packs: number
   streak: number
   goals: number
@@ -71,6 +77,14 @@ export interface PointsResult {
 }
 
 /**
+ * ── RULES_VERSION 2 ─────────────────────────────────────────────────────────
+ * Two changes ship together: a one-time `perRetiredWord` bonus, and — via
+ * review.ts — `reviewCount` now caps at RETIRE_AT_REVIEW_COUNT instead of
+ * climbing forever. For almost everyone that's a net gain (the bonus); a
+ * handful of multi-year users may see `reviewTotal` and thus points dip a
+ * little. RULES_VERSION exists precisely for this; nothing is stored, so the
+ * total simply re-derives.
+ *
  * @param goalDays how many days the daily time goal was met — comes from the
  *        dailyTime store, which isn't part of the progress snapshot.
  */
@@ -85,6 +99,7 @@ export function computePoints(
   )
   const known = snapshot.knownTotal * POINTS.perKnownWord
   const reviews = snapshot.reviewTotal * POINTS.perReview
+  const retired = snapshot.retiredCount * POINTS.perRetiredWord
 
   let mastered = 0
   let completed = 0
@@ -97,8 +112,8 @@ export function computePoints(
   const streak = longestStreak * POINTS.perLongestStreakDay
   const goals = goalDays * POINTS.perGoalDay
 
-  const breakdown: PointsBreakdown = { sessions, known, reviews, packs, streak, goals }
-  const total = sessions + known + reviews + packs + streak + goals
+  const breakdown: PointsBreakdown = { sessions, known, reviews, retired, packs, streak, goals }
+  const total = sessions + known + reviews + retired + packs + streak + goals
 
   return { total, breakdown }
 }

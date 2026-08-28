@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell'
 import packagesIndex from '../data/packages-index.json'
@@ -28,6 +29,7 @@ const MODES: { id: FlashcardMode; icon: string; name: string; tag: string; desc:
 export function FlashcardModePage() {
   const { packageId } = useParams<{ packageId: string }>()
   const navigate = useNavigate()
+  const [infoOpen, setInfoOpen] = useState(false)
 
   const pack = allPacks.find(p => p.id === packageId)
 
@@ -70,6 +72,28 @@ export function FlashcardModePage() {
               <p className="fc-mode__card-desc">{m.desc}</p>
             </button>
           ))}
+        </div>
+
+        <div className="fc-mode__info">
+          <button
+            type="button"
+            className="fc-mode__info-toggle"
+            onClick={() => setInfoOpen(o => !o)}
+            aria-expanded={infoOpen}
+          >
+            <span>Jak działa tryb Trening?</span>
+            <svg
+              className={`fc-mode__info-chevron${infoOpen ? ' fc-mode__info-chevron--open' : ''}`}
+              width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          {infoOpen && (
+            <p className="fc-mode__info-desc">
+              Aktywny trening z ekranem. Przypominasz sobie angielskie słowa, mówisz je na głos i budujesz z nimi zdania. Dzięki temu przechodzisz od rozpoznawania słów do ich aktywnego używania.
+            </p>
+          )}
         </div>
       </div>
     </AppShell>

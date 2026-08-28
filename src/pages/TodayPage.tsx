@@ -7,6 +7,7 @@ import { DailyGoalPicker } from '../components/today/DailyGoalPicker'
 import { LevelPill } from '../components/today/LevelPill'
 import { LevelPicker } from '../components/today/LevelPicker'
 import { NextStepInfoSheet } from '../components/today/NextStepInfoSheet'
+import { ReviewPriorityInfoSheet } from '../components/today/ReviewPriorityInfoSheet'
 import { RouteStrip } from '../components/today/RouteStrip'
 import { ListenStrip } from '../components/today/ListenStrip'
 import { RouteLoader } from '../components/today/RouteLoader'
@@ -15,10 +16,10 @@ import { EASE_SPRING, fadeUp, fadeUpReduced, staggerContainer } from '../compone
 import { useProgressData, avgWordsPerDayTrend } from '../hooks/useProgressData'
 import { useProgressPulse } from '../hooks/useProgressPulse'
 import { useHaptics } from '../hooks/useHaptics'
+import { unlockAudioGlobally } from '../audio/audioUnlock'
 import { playTick, playSuccess } from '../services/sfx'
 import { nextListenPack, nextTrainPack, listenedPacksCount, estimateMinutes } from '../data/nextPack'
 import { LEVEL_META } from '../data/levels'
-import { REVIEW_MAX_WORDS } from '../hooks/useReviewSet'
 import { useAppStore } from '../store/useAppStore'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
@@ -55,6 +56,7 @@ export function TodayPage() {
   const [goalOpen, setGoalOpen] = useState(false)
   const [levelPickerOpen, setLevelPickerOpen] = useState(false)
   const [nextStepInfoOpen, setNextStepInfoOpen] = useState(false)
+  const [reviewInfoOpen, setReviewInfoOpen] = useState(false)
   const celebratedRef = useRef(false)
 
   const scopedPacks = todayLevel == null ? allPacks : allPacks.filter(p => p.level >= todayLevel)
@@ -63,12 +65,15 @@ export function TodayPage() {
 
   const [activeMode, setActiveMode] = useState<StudyPath>(() => (train ? 'train' : 'listen'))
 
-  const due = pulse?.dueCount ?? 0
-  const reviewBatch = Math.min(due, REVIEW_MAX_WORDS)
+  // backlog = every due word; serving = how many of them to show today.
+  const backlog = pulse?.dueCount ?? 0
+  const serving = pulse?.servingLeft ?? 0
+  const urgency = pulse?.reviewUrgency ?? 'calm'
+  const reviewDone = backlog > 0 && serving === 0
   const pace = snapshot ? avgWordsPerDayTrend(snapshot) : null
   const showPace = pace?.deltaPct != null && pace.deltaPct > 0
 
-  const nothingLeft = listen == null && train == null && due === 0
+  const nothingLeft = listen == null && train == null && serving === 0
   const goalMet = pulse?.goalMet ?? false
 
   // The "day complete" chime/haptic fires once per visit, the first time the
@@ -241,40 +246,72 @@ export function TodayPage() {
               </motion.span>
               <h2 className="today__done-title">Zrobione</h2>
               <p className="today__done-text">
-                {goalMet
-                  ? 'Cel osiągnięty i nic nie czeka na powtórkę. Jutro Progress pokaże Ci następne.'
-                  : 'Nic nie czeka. Jutro Progress pokaże Ci następne.'}
+                {reviewDone
+                  ? `Na dziś wszystko. Jeszcze ${backlog} w kolejce powtórek wróci jutro.`
+                  : goalMet
+                    ? 'Cel osiągnięty i nic nie czeka na powtórkę. Jutro Progress pokaże Ci następne.'
+                    : 'Nic nie czeka. Jutro Progress pokaże Ci następne.'}
               </p>
             </motion.div>
           ) : (
             <>
-              {due > 0 && (
+              {serving > 0 && (
                 <motion.section
-                  className="today__hero today__hero--review"
+                  className={`today__hero today__hero--review today__hero--review-${urgency}`}
                   variants={variants}
                 >
                   <div className="today__hero-head">
-                    <span className="today__hero-eyebrow">Zanim zaczniesz coś nowego</span>
-                    <span className="today__hero-count">{reviewBatch} słów</span>
+                    <span className="today__hero-eyebrow">
+                      <span className={`today__hero-dot today__hero-dot--${urgency}`} aria-hidden="true" />
+                      {urgency === 'urgent'
+                        ? 'Sporo zaległych powtórek'
+                        : urgency === 'building'
+                          ? 'Powtórki się zbierają'
+                          : 'Zanim zaczniesz coś nowego'}
+                    </span>
+                    <span className="today__hero-count">{serving} słów</span>
                   </div>
                   <p className="today__hero-name">Powtórka</p>
                   <p className="today__hero-detail">
-                    {due > REVIEW_MAX_WORDS
-                      ? `${due} zaległych — zaczniemy od ${reviewBatch}`
+                    {backlog > serving
+                      ? `${serving} na dziś · jeszcze ${backlog - serving} w kolejce`
                       : 'Słowa, które zaczynają uciekać'}{' '}
-                    · ~{estimateMinutes(reviewBatch)} min
+                    · ~{estimateMinutes(serving)} min
+                  </p>
+                  <p className="today__hero-note">
+                    Na dziś tylko najpilniejsze słowa, dobrane pod Twój cel — reszta poczeka.
+                    <button
+                      type="button"
+                      className="today__hero-info"
+                      onClick={() => setReviewInfoOpen(true)}
+                      aria-label="Jak działają powtórki"
+                    >
+                      ⓘ
+                    </button>
                   </p>
                   <div className="today__hero-actions">
                     <motion.button
                       className="today__cta today__cta--review"
                       whileTap={{ scale: 0.96 }}
                       whileHover={{ scale: 1.015 }}
-                      onClick={() => pressCta(() => navigate('/powtorka'))}
+                      onClick={() => pressCta(() => {
+                        // Unlock audio inside the tap gesture so listening
+                        // interludes on /powtorka can play on iOS.
+                        unlockAudioGlobally()
+                        navigate('/powtorka')
+                      })}
                     >
                       Powtórz
                     </motion.button>
                   </div>
                 </motion.section>
+              )}
+
+              {reviewDone && (
+                <motion.div className="today__review-done" variants={variants}>
+                  ✓ Powtórki na dziś zrobione
+                  {backlog > 0 && ` · jeszcze ${backlog} w kolejce, wrócą jutro`}
+                </motion.div>
               )}
 
               <motion.div variants={variants}>
@@ -293,6 +330,7 @@ export function TodayPage() {
 
         {goalOpen && <DailyGoalPicker onClose={() => setGoalOpen(false)} />}
         {nextStepInfoOpen && <NextStepInfoSheet onClose={() => setNextStepInfoOpen(false)} />}
+        {reviewInfoOpen && <ReviewPriorityInfoSheet onClose={() => setReviewInfoOpen(false)} />}
         {levelPickerOpen && (
           <LevelPicker
             current={todayLevel}

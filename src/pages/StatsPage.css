@@ -23,6 +23,15 @@
   margin: 0;
 }
 
+/* Caveat under the compass — e.g. bulk-marked words excluded from pace. */
+.statspage__note {
+  margin: var(--spacing-md) 0 0;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
 /* Sections */
 .statspage__section {
   margin-top: var(--spacing-xl);

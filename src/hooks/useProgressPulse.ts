@@ -3,6 +3,7 @@ import { loadProgressSnapshot } from './useProgressData'
 import { getAllDailyTime, getLongestStreak } from '../services/db'
 import { subscribeProgress } from '../services/progressEvents'
 import { computePoints } from '../services/points'
+import { ReviewUrgency } from '../services/reviewQueue'
 import { todayProgress } from '../services/dailyTime'
 
 /**
@@ -18,7 +19,14 @@ export interface ProgressPulse {
   streak: number
   points: number
   knownWords: number
+  /** Raw review backlog (every due, non-retired word). */
   dueCount: number
+  /** How many of today's review budget are still unshown. */
+  servingLeft: number
+  /** Today's review budget. */
+  reviewBudget: number
+  /** calm / building / urgent. */
+  reviewUrgency: ReviewUrgency
   /** Seconds studied today. */
   secondsToday: number
   goalSec: number
@@ -66,6 +74,9 @@ async function load(): Promise<ProgressPulse> {
       points: total,
       knownWords: snapshot.knownTotal,
       dueCount: snapshot.dueCount,
+      servingLeft: snapshot.servingLeft,
+      reviewBudget: snapshot.reviewBudget,
+      reviewUrgency: snapshot.reviewUrgency,
       secondsToday: today.secondsStudied,
       goalSec: today.goalSec,
       goalPct: today.pct,

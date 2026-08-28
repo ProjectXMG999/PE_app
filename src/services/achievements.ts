@@ -70,28 +70,41 @@ function weekendRun(sessions: Session[]): number {
   return run
 }
 
-/** Longest run of days ending today in which nothing was overdue for review. */
+/**
+ * Consecutive days, ending today, on which the review serving was cleared.
+ *
+ * Read straight from the per-day `reviewLedger` (written live by fetchSnapshot
+ * when the serving hits 0), so it's monotonic and honest — no more jumping from
+ * 0 to 90 the way the old lastSeen estimate did. A day with no ledger row breaks
+ * the run. Today not being cleared yet doesn't break it (the run is counted from
+ * the most recent cleared day back).
+ *
+ * Returns 0 for a user who has never scheduled anything — no meaningful streak yet.
+ */
 function cleanDays(snapshot: ProgressSnapshot): number {
-  const scheduled = snapshot.wordProgress.filter(w => w.nextReviewAt != null)
-  if (scheduled.length === 0) return 0
+  if (!snapshot.wordProgress.some(w => w.nextReviewAt != null)) return 0
 
-  // The earliest still-unmet due date bounds the clean run: everything before it
-  // was handled, everything from it onward is (or was) outstanding.
-  const today = dayKey()
-  const overdue = scheduled
-    .map(w => w.nextReviewAt!)
-    .filter(d => d <= today)
-    .sort()
-
-  if (overdue.length > 0) return 0
-
-  // Nothing is due. The run started when the oldest still-pending item was last
-  // answered, approximated by the earliest lastSeen among scheduled words.
-  const earliest = scheduled.reduce(
-    (min, w) => (w.lastSeen < min ? w.lastSeen : min),
-    scheduled[0].lastSeen
+  const cleared = new Set(
+    snapshot.reviewLedger.filter(e => e.cleared).map(e => e.date)
   )
-  return Math.max(0, daysBetween(dayKey(new Date(earliest)), today))
+  if (cleared.size === 0) return 0
+
+  const today = dayKey()
+  // Start from today if it's already cleared, else from yesterday (today may
+  // still be in progress).
+  let cursor = cleared.has(today) ? today : parseDayKey(today, -1)
+  let run = 0
+  while (cleared.has(cursor)) {
+    run++
+    cursor = parseDayKey(cursor, -1)
+  }
+  return run
+}
+
+function parseDayKey(key: string, offsetDays: number): string {
+  const d = parseDay(key)
+  d.setDate(d.getDate() + offsetDays)
+  return dayKey(d)
 }
 
 /** Counts groups (volumes / chapters) in which every pack is mastered. */

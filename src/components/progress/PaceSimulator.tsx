@@ -98,7 +98,7 @@ export function PaceSimulator({ knownWords, wordsPerMinute, currentWordsPerDay }
       </ul>
 
       <p className="pacesim__foot">
-        Liczone z Twojego tempa: {projected.toFixed(0)} słów dziennie przy {minutes} min.
+        Twoje tempo: ok. {projected.toFixed(0)} opanowanych słów dziennie przy {minutes} min nauki.
       </p>
     </div>
   )

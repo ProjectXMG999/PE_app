@@ -68,9 +68,10 @@ export function SidebarPulse() {
         </span>
       </div>
 
-      {pulse.dueCount > 0 && (
+      {pulse.servingLeft > 0 && (
         <span className="sidebarpulse__due">
-          🔁 {pulse.dueCount} do powtórki
+          🔁 {pulse.servingLeft} na dziś
+          {pulse.dueCount > pulse.servingLeft && ` · ${pulse.dueCount - pulse.servingLeft} w kolejce`}
         </span>
       )}
     </Link>

@@ -97,3 +97,58 @@
 @media (prefers-reduced-motion: reduce) {
   .review__state-icon { animation: none; }
 }
+
+/* ── Listening interlude (passive break between review cards) ── */
+
+.review__interlude {
+  gap: var(--spacing-lg);
+}
+
+.review__interlude-eyebrow {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--listen-blue);
+}
+
+.review__interlude-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.review__interlude-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px var(--spacing-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  opacity: 0.55;
+  transition: opacity 150ms ease, border-color 150ms ease;
+}
+
+.review__interlude-item--active {
+  opacity: 1;
+  border-color: color-mix(in srgb, var(--listen-blue) 55%, transparent);
+}
+
+.review__interlude-pl {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.review__interlude-en {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}

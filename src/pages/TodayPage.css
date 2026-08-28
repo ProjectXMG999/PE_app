@@ -357,3 +357,69 @@
 
 /* Streak/points/freeze used to live in a footer here — moved to the top bar
    (ProgressPill) so they're visible on every screen, not just Dzisiaj. */
+
+/* ── Powtórka: urgency indicator, "how it works" microcopy, done-for-today ── */
+
+.today__hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.today__hero-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  background: var(--success);
+}
+
+.today__hero-dot--building { background: var(--warning); }
+.today__hero-dot--urgent { background: var(--danger); }
+
+/* Border/tint nudge as the queue grows — subtle, the CTA stays the focus. */
+.today__hero--review-building {
+  border-color: color-mix(in srgb, var(--warning) 40%, transparent);
+}
+
+.today__hero--review-urgent {
+  border-color: color-mix(in srgb, var(--danger) 45%, transparent);
+}
+
+.today__hero-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 0 0 var(--spacing-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.today__hero-info {
+  flex-shrink: 0;
+  padding: 0;
+  margin-top: 1px;
+  font-size: var(--text-sm);
+  line-height: 1;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.today__hero-info:active {
+  transform: scale(0.9);
+}
+
+.today__review-done {
+  margin-bottom: var(--spacing-md);
+  padding: 10px var(--spacing-md);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  background: color-mix(in srgb, var(--success) 8%, var(--bg-card));
+  border: 1px solid color-mix(in srgb, var(--success) 25%, transparent);
+  border-radius: var(--radius-lg);
+}

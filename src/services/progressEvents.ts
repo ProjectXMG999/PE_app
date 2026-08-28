@@ -11,7 +11,7 @@
  * each navigation. These events are what let it do that without going stale.
  */
 
-export type ProgressEventKind = 'session' | 'word' | 'package' | 'dailyTime' | 'reset'
+export type ProgressEventKind = 'session' | 'word' | 'package' | 'dailyTime' | 'reviewLedger' | 'reset'
 
 type Listener = (kind: ProgressEventKind) => void
 

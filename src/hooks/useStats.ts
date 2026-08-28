@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { DayActivity, Session } from '../types/progress'
+import { DailyTime, DayActivity, Session } from '../types/progress'
 import { nextLevelFromTotalKnown } from '../data/levels'
 import { loadProgressSnapshot, avgWordsPerDay, avgWordsPerDayTrend, PaceTrend } from './useProgressData'
 import { getLongestStreak, getBestDayWordCount } from '../services/db'
@@ -28,6 +28,25 @@ export function studiedMinutes(sessions: Session[]): number {
   return Math.round(seconds / 60)
 }
 
+/**
+ * Total study time in minutes for the "Czas nauki" figure.
+ *
+ * Prefers the daily-time ledger, which is ticked live every 30 s — so it counts
+ * time spent in sessions the user never finished, and it matches the daily ring
+ * on Dzisiaj (which reads the same ledger). `studiedMinutes()` alone only sees
+ * completed sessions, so it undercounts anyone who studies without finishing a
+ * pack. Days from before the ledger existed (DB < v4) have no entry and fall
+ * back to that day's session estimate.
+ */
+export function measuredStudyMinutes(dailyTime: DailyTime[], sessions: Session[]): number {
+  const ledgerDays = new Set(dailyTime.map(d => d.date))
+  const ledgerSec = dailyTime.reduce((sum, d) => sum + d.secondsStudied, 0)
+  const preLedgerSec = sessions
+    .filter(s => !ledgerDays.has(s.date))
+    .reduce((sum, s) => sum + (s.durationSec ?? s.wordsCompleted * ESTIMATED_SECONDS_PER_WORD), 0)
+  return Math.round((ledgerSec + preLedgerSec) / 60)
+}
+
 export interface LevelStats {
   avgWordsPerDay: number
   nextLevel: number | 'MASTER' | null
@@ -47,6 +66,8 @@ export function useStats() {
   const [totalWordsHeard, setTotalWordsHeard] = useState(0)
   const [estimatedMinutes, setEstimatedMinutes] = useState(0)
   const [dueCount, setDueCount] = useState(0)
+  const [servingLeft, setServingLeft] = useState(0)
+  const [staleCount, setStaleCount] = useState(0)
   const [reviewTotal, setReviewTotal] = useState(0)
   const [activity, setActivity] = useState<DayActivity[]>([])
   const [levelStats, setLevelStats] = useState<LevelStats | null>(null)
@@ -67,6 +88,8 @@ export function useStats() {
         setBestDayCount(bestDay)
         setKnownWords(knownTotal)
         setDueCount(snap.dueCount)
+        setServingLeft(snap.servingLeft)
+        setStaleCount(snap.staleCount)
         setReviewTotal(snap.reviewTotal)
         setSessionCount(sessions.length)
         setStartedPacks(packageProgress.length)
@@ -115,11 +138,13 @@ export function useStats() {
     load()
   }, [tick])
 
-  // Share of the route that isn't overdue for review. 100 % when nothing has
-  // been scheduled yet, so a new user isn't told their empty route is stale.
+  // Share of the route that isn't *neglected* — only words overdue past the
+  // grace window (and never ones below the user's starting level) count against
+  // it, so a big but freshly-scheduled backlog doesn't read as a stale route.
+  // 100 % when nothing has been scheduled yet.
   const freshnessPct = knownWords > 0
-    ? Math.round(((knownWords - Math.min(dueCount, knownWords)) / knownWords) * 100)
+    ? Math.round(((knownWords - Math.min(staleCount, knownWords)) / knownWords) * 100)
     : 100
 
-  return { streak, longestStreak, bestDayCount, knownWords, sessionCount, startedPacks, masteredPacks, totalWordsHeard, estimatedMinutes, dueCount, reviewTotal, freshnessPct, activity, levelStats, paceTrend, loading, reload, tick }
+  return { streak, longestStreak, bestDayCount, knownWords, sessionCount, startedPacks, masteredPacks, totalWordsHeard, estimatedMinutes, dueCount, servingLeft, staleCount, reviewTotal, freshnessPct, activity, levelStats, paceTrend, loading, reload, tick }
 }

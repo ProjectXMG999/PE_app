@@ -167,7 +167,11 @@ export const useAppStore = create<AppStore>()(
       setAutoPlaying: (v) => set({ isAutoPlaying: v }),
 
       searchQuery: '',
-      activeFilter: null,
+      // "Nowe" is the default status filter when Pakiety opens — the page's job
+      // is "what haven't I done yet". Not persisted (see partialize), so it
+      // resets to this on every app load; a filter chosen mid-session still
+      // survives navigating in and out of a pack.
+      activeFilter: 'new',
       activeCategoryFilter: null,
       activeLevel: null,
       activeCategory: null,

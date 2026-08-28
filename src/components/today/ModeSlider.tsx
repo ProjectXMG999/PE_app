@@ -14,13 +14,6 @@ interface Props {
   onInfoClick: () => void
 }
 
-// Same copy as QuickStartCards' MODE_INFO on Pakiety — one description per
-// mode, kept identical across both places rather than reworded twice.
-const MODE_DESCRIPTION: Record<StudyPath, string> = {
-  listen: 'Trening audio bez patrzenia w ekran. Słuchasz, przypominasz sobie i powtarzasz słowa oraz zdania. Idealny na spacer, trening, sprzątanie lub podróż.',
-  train: 'Aktywny trening z ekranem. Przypominasz sobie angielskie słowa, mówisz je na głos i budujesz z nimi zdania. Dzięki temu przechodzisz od rozpoznawania słów do ich aktywnego używania.',
-}
-
 const WAVE = (
   <span className="modeslider__tab-wave" aria-hidden="true">
     <span /><span /><span />
@@ -88,19 +81,6 @@ export function ModeSlider({ active, onChange, listenContent, trainContent, onIn
           </svg>
         </button>
       </div>
-
-      <AnimatePresence mode="wait" initial={false}>
-        <motion.p
-          key={active}
-          className={`modeslider__desc modeslider__desc--${active}`}
-          initial={{ opacity: 0, y: reduced ? 0 : 4 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: reduced ? 0 : -4 }}
-          transition={{ duration: reduced ? 0 : 0.2, ease: EASE_OUT_EXPO }}
-        >
-          {MODE_DESCRIPTION[active]}
-        </motion.p>
-      </AnimatePresence>
 
       <div className="modeslider__viewport">
         <AnimatePresence mode="wait" custom={directionRef.current} initial={false}>

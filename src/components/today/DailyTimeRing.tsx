@@ -23,19 +23,11 @@ export function DailyTimeRing({ secondsStudied, goalSec, onEditGoal }: Props) {
   const met = pct >= 100
   const left = Math.max(0, goalMins - mins)
 
-  return (
-    <div className={`timering${met ? ' timering--met' : ''}`}>
-      <div className="timering__top">
-        <p className="timering__eyebrow">Cel dnia</p>
-        {onEditGoal && (
-          <button className="timering__edit" onClick={onEditGoal} aria-label="Zmień cel dnia">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 20h9" />
-              <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z" />
-            </svg>
-          </button>
-        )}
-      </div>
+  const className = `timering${met ? ' timering--met' : ''}${onEditGoal ? ' timering--tappable' : ''}`
+
+  const body = (
+    <>
+      <p className="timering__eyebrow">Cel dnia</p>
 
       <div className="timering__figure">
         <span className="timering__value">{mins}</span>
@@ -60,6 +52,21 @@ export function DailyTimeRing({ secondsStudied, goalSec, onEditGoal }: Props) {
           <span className="timering__shine" aria-hidden="true" />
         </motion.div>
       </div>
-    </div>
+    </>
   )
+
+  if (onEditGoal) {
+    return (
+      <button
+        type="button"
+        className={className}
+        onClick={onEditGoal}
+        aria-label={`Cel dnia: ${mins} z ${goalMins} min. Dotknij, aby zmienić.`}
+      >
+        {body}
+      </button>
+    )
+  }
+
+  return <div className={className}>{body}</div>
 }

@@ -42,6 +42,16 @@ export interface WordProgress {
   lastLapseAt?: string
   /** Day key from which the word is due for review. Undefined = not scheduled. */
   nextReviewAt?: string
+  /** ISO timestamp when the word left the active daily review grind. Pre-FSRS:
+   *  reviewCount reached RETIRE_AT_REVIEW_COUNT (and nextReviewAt was cleared).
+   *  FSRS: `stability` crossed RETIRE_STABILITY_DAYS — `nextReviewAt` stays set
+   *  (deep maintenance, ~yearly). `status` stays 'known'. Cleared on any lapse. */
+  retiredAt?: string
+  /** FSRS memory strength in days (see src/services/fsrs.ts). undefined = word
+   *  not yet migrated to FSRS; scheduler falls back to the interval ladder. */
+  stability?: number
+  /** FSRS intrinsic difficulty, 1..10. Paired with `stability`. */
+  difficulty?: number
 }
 
 export interface PackageProgress {
@@ -70,4 +80,18 @@ export interface DailyTime {
   goalSec: number
   /** ISO timestamp of the moment the goal was reached, or null. */
   goalMetAt: string | null
+}
+
+/**
+ * One row per local-calendar day: was that day's review serving cleared?
+ * Written live when `servingLeft` hits 0 (backlog empty or budget spent). A day
+ * with no row = not cleared. `cleanDays` counts the consecutive run back from
+ * today — a faithful, monotonic streak (unlike the old lastSeen estimate).
+ */
+export interface ReviewLedgerEntry {
+  /** Local-calendar day key — the store's primary key. */
+  date: string
+  cleared: boolean
+  /** ISO timestamp of the moment it was marked cleared. */
+  clearedAt: string | null
 }

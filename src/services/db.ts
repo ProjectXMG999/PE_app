@@ -1,5 +1,5 @@
 import { openDB, DBSchema, IDBPDatabase } from 'idb'
-import { Session, WordProgress, PackageProgress, DailyTime } from '../types/progress'
+import { Session, WordProgress, PackageProgress, DailyTime, ReviewLedgerEntry } from '../types/progress'
 import { supabase } from './supabaseClient'
 import { useAuthStore } from '../store/useAuthStore'
 import { emitProgress } from './progressEvents'
@@ -18,7 +18,7 @@ function syncInsert(table: 'sessions', row: Record<string, unknown>) {
   })
 }
 
-function syncUpsert(table: 'word_progress' | 'package_progress' | 'daily_time', row: Record<string, unknown>) {
+function syncUpsert(table: 'word_progress' | 'package_progress' | 'daily_time' | 'review_ledger', row: Record<string, unknown>) {
   const userId = useAuthStore.getState().user?.id
   if (!supabase || !userId) return
   supabase.from(table).upsert({ ...row, user_id: userId }).then(({ error }) => {
@@ -45,13 +45,17 @@ interface PEDB extends DBSchema {
     key: string
     value: DailyTime
   }
+  reviewLedger: {
+    key: string
+    value: ReviewLedgerEntry
+  }
 }
 
 let dbPromise: Promise<IDBPDatabase<PEDB>> | null = null
 
 export function getDB() {
   if (!dbPromise) {
-    dbPromise = openDB<PEDB>('PE_DB', 4, {
+    dbPromise = openDB<PEDB>('PE_DB', 6, {
       upgrade(db, oldVersion) {
         if (oldVersion < 1) {
           const sessions = db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true })
@@ -70,6 +74,14 @@ export function getDB() {
         //     a new store.
         if (oldVersion < 4) {
           db.createObjectStore('dailyTime', { keyPath: 'date' })
+        }
+        // v5: retiredAt on wordProgress — optional, written at put() time. The
+        //     value store is schemaless, so no migration; the bump only forces
+        //     the upgrade callback to run for the record.
+        // v6: stability/difficulty on wordProgress are likewise optional (no
+        //     store change); the per-day review ledger is a new store.
+        if (oldVersion < 6) {
+          db.createObjectStore('reviewLedger', { keyPath: 'date' })
         }
       },
     })
@@ -118,16 +130,17 @@ export async function saveWordProgress(wp: WordProgress): Promise<void> {
     lapse_count: wp.lapseCount,
     last_lapse_at: wp.lastLapseAt,
     next_review_at: wp.nextReviewAt,
+    retired_at: wp.retiredAt,
+    stability: wp.stability,
+    difficulty: wp.difficulty,
   })
   emitProgress('word')
 }
 
-/** Words whose scheduled review date has arrived (or passed). */
-export async function getDueWordProgress(on: string = dayKey()): Promise<WordProgress[]> {
-  const db = await getDB()
-  const all = await db.getAll('wordProgress')
-  return all.filter(w => w.nextReviewAt != null && w.nextReviewAt <= on)
-}
+// The canonical "due" list is snapshot.dueWords, computed in one pass in
+// fetchSnapshot (src/hooks/useProgressData.ts) alongside knownMap etc. A separate
+// getDueWordProgress() query used to exist here — removed to keep a single
+// definition of the predicate.
 
 export async function getWordProgress(wordId: string): Promise<WordProgress | undefined> {
   const db = await getDB()
@@ -351,4 +364,29 @@ export async function saveDailyTime(dt: DailyTime): Promise<void> {
 export async function getGoalMetDays(): Promise<string[]> {
   const all = await getAllDailyTime()
   return all.filter(d => d.goalMetAt != null).map(d => d.date).sort()
+}
+
+// ── Review ledger ───────────────────────────────────────────────────────────
+// One row per day recording whether that day's review serving was cleared.
+// Powers the "czysta trasa" (cleanDays) achievement — see services/achievements.ts.
+
+export async function getAllReviewLedger(): Promise<ReviewLedgerEntry[]> {
+  const db = await getDB()
+  return db.getAll('reviewLedger')
+}
+
+export async function getReviewLedgerEntry(date: string): Promise<ReviewLedgerEntry | undefined> {
+  const db = await getDB()
+  return db.get('reviewLedger', date)
+}
+
+export async function saveReviewLedger(entry: ReviewLedgerEntry): Promise<void> {
+  const db = await getDB()
+  await db.put('reviewLedger', entry)
+  syncUpsert('review_ledger', {
+    date: entry.date,
+    cleared: entry.cleared,
+    cleared_at: entry.clearedAt,
+  })
+  emitProgress('reviewLedger')
 }

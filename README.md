@@ -29,6 +29,18 @@ npm run dev
 npm run build
 ```
 
+### Test
+
+```bash
+npm test
+```
+
+## Documentation
+
+- [`docs/system-powtorek.md`](docs/system-powtorek.md) — technical reference for the
+  spaced-repetition / review system (scheduler, daily budget, priority, urgency,
+  the `/powtorka` runtime, feature flags).
+
 ### Deploy
 
 This project is deployed automatically via [Netlify](https://www.netlify.com).

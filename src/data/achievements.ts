@@ -163,9 +163,9 @@ export const ACHIEVEMENTS: Achievement[] = [
 
   // ── Czysta trasa ─────────────────────────────────────────────────────────
   ...ladder('clean', 'cleanDays', '🧊', [
-    { threshold: 7,  title: 'Czysty tydzień',  desc: '7 dni bez zaległych powtórek.' },
-    { threshold: 30, title: 'Czysty miesiąc',  desc: '30 dni bez zaległych powtórek.' },
-    { threshold: 90, title: 'Czysty kwartał',  desc: '90 dni bez zaległych powtórek.' },
+    { threshold: 7,  title: 'Czysty tydzień',  desc: '7 dni z porcją powtórek na czas.' },
+    { threshold: 30, title: 'Czysty miesiąc',  desc: '30 dni z porcją powtórek na czas.' },
+    { threshold: 90, title: 'Czysty kwartał',  desc: '90 dni z porcją powtórek na czas.' },
   ]),
 
   // ── Paczki ───────────────────────────────────────────────────────────────

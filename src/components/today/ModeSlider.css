@@ -91,50 +91,6 @@
   50%      { transform: scale(1.18); opacity: 0.75; }
 }
 
-/* A quoted, tinted card rather than a bare caption — reads as a considered
-   explanation of the mode, not an afterthought under the tabs. */
-.modeslider__desc {
-  position: relative;
-  margin: 0;
-  padding: 10px 14px 10px 18px;
-  border-radius: var(--radius-md);
-  font-family: var(--font-body);
-  font-size: 12.5px;
-  line-height: 1.5;
-  text-align: left;
-  color: var(--text-secondary);
-}
-
-.modeslider__desc::before {
-  content: '';
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  left: 6px;
-  width: 3px;
-  border-radius: var(--radius-full);
-}
-
-.modeslider__desc--listen {
-  background: color-mix(in srgb, var(--listen-blue) 10%, var(--bg-surface));
-  border: 1px solid color-mix(in srgb, var(--listen-blue) 30%, transparent);
-}
-
-.modeslider__desc--listen::before {
-  background: var(--listen-blue);
-  box-shadow: 0 0 8px color-mix(in srgb, var(--listen-blue) 60%, transparent);
-}
-
-.modeslider__desc--train {
-  background: color-mix(in srgb, var(--accent) 10%, var(--bg-surface));
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
-}
-
-.modeslider__desc--train::before {
-  background: var(--accent);
-  box-shadow: 0 0 8px var(--accent-glow);
-}
-
 .modeslider__info-btn {
   display: grid;
   place-items: center;
@@ -170,12 +126,17 @@
   overflow: hidden;
   margin: -40px;
   padding: 40px;
+  /* The 40px transparent padding (shadow-bleed room) would otherwise sit on top
+     of the tabs row above — the negative margin pulls it up over it — and eat
+     clicks on the ⓘ button. Only the sliding page itself needs to be hit. */
+  pointer-events: none;
 }
 
 .modeslider__page {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+  pointer-events: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -3,22 +3,36 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 100%;
   padding: 8px var(--spacing-md);
   background: linear-gradient(165deg, color-mix(in srgb, var(--accent) 12%, var(--bg-card)) 0%, var(--bg-card) 60%);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
+  /* Resets for when the root renders as <button> (tappable variant). */
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.timering--tappable {
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.timering--tappable:hover {
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.14);
+}
+
+.timering--tappable:active {
+  transform: scale(0.99);
 }
 
 .timering--met {
   background: linear-gradient(165deg, color-mix(in srgb, var(--success) 14%, var(--bg-card)) 0%, var(--bg-card) 60%);
   border-color: color-mix(in srgb, var(--success) 45%, transparent);
-}
-
-.timering__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .timering__eyebrow {
@@ -29,29 +43,6 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-muted);
-}
-
-.timering__edit {
-  display: grid;
-  place-items: center;
-  width: 18px;
-  height: 18px;
-  margin: -2px -2px -2px 0;
-  color: var(--text-muted);
-  background: none;
-  border: none;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: color var(--transition-fast), background var(--transition-fast);
-}
-
-.timering__edit:hover {
-  color: var(--text-primary);
-  background: var(--bg-surface);
-}
-
-.timering__edit:active {
-  transform: scale(0.9);
 }
 
 .timering__figure {
