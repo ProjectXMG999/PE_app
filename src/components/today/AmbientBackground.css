@@ -8,27 +8,27 @@
 
 .ambient__bloom {
   position: absolute;
-  width: 65vw;
-  height: 65vw;
-  max-width: 620px;
-  max-height: 620px;
+  width: 72vw;
+  height: 72vw;
+  max-width: 680px;
+  max-height: 680px;
   border-radius: 50%;
-  filter: blur(50px);
-  animation: ambient-drift 26s ease-in-out infinite;
+  filter: blur(48px);
+  animation: ambient-drift 19s ease-in-out infinite;
 }
 
 .ambient__bloom--a {
   top: -180px;
   right: -180px;
-  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 75%, transparent) 0%, transparent 70%);
-  animation-duration: 26s;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 82%, transparent) 0%, transparent 70%);
+  animation-duration: 19s;
 }
 
 .ambient__bloom--b {
   bottom: -220px;
   left: -180px;
-  background: radial-gradient(circle, color-mix(in srgb, var(--accent-teal) 65%, transparent) 0%, transparent 70%);
-  animation-duration: 32s;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent-teal) 72%, transparent) 0%, transparent 70%);
+  animation-duration: 24s;
   /* animation-delay is set inline (AmbientBackground.tsx), anchored to
      wall-clock time so a remount on route change doesn't restart the loop. */
 }
@@ -66,8 +66,9 @@
 }
 
 @keyframes ambient-drift {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-6%, 4%) scale(1.06); }
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  33% { transform: translate(-9%, 5%) scale(1.12) rotate(6deg); }
+  66% { transform: translate(4%, -6%) scale(1.05) rotate(-4deg); }
 }
 
 @keyframes ambient-route-shine {

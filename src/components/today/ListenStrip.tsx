@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { packLevelThresholds } from '../../data/nextPack'
+import { useCountUp } from '../../hooks/useCountUp'
 import { EASE_OUT_EXPO } from './motion'
 import { PackMeta } from '../../types/vocabulary'
 import './ListenStrip.css'
@@ -19,6 +20,8 @@ interface Props {
 export function ListenStrip({ listenedPacks, totalPacks, packs }: Props) {
   const reduced = useReducedMotion()
   const pct = totalPacks > 0 ? Math.min(100, (listenedPacks / totalPacks) * 100) : 0
+  const shownPacks = useCountUp(listenedPacks, 1500, 150)
+  const shownPct = useCountUp(Math.round(pct), 1500, 150)
   const thresholds = packLevelThresholds(packs)
   const ticks = thresholds.slice(0, 3) // drop the final one — the strip's own end is the finish line
 
@@ -27,10 +30,10 @@ export function ListenStrip({ listenedPacks, totalPacks, packs }: Props) {
       <p className="listenstrip__eyebrow">🎧 Twój <span className="listenstrip__eyebrow-highlight">progress</span> słuchania</p>
 
       <div className="listenstrip__figure">
-        <span className="listenstrip__value">{listenedPacks.toLocaleString('pl-PL')}</span>
+        <span key={listenedPacks} className="listenstrip__value">{shownPacks.toLocaleString('pl-PL')}</span>
         <span className="listenstrip__unit">paczek</span>
         <span className="listenstrip__of">/ {totalPacks.toLocaleString('pl-PL')}</span>
-        <span className="listenstrip__pct">{Math.round(pct)}%</span>
+        <span className="listenstrip__pct">{shownPct}%</span>
       </div>
 
       <div className="listenstrip__track">
@@ -38,7 +41,7 @@ export function ListenStrip({ listenedPacks, totalPacks, packs }: Props) {
           className="listenstrip__fill"
           initial={{ width: 0 }}
           animate={{ width: `${pct}%` }}
-          transition={{ duration: reduced ? 0 : 0.8, ease: EASE_OUT_EXPO }}
+          transition={{ duration: reduced ? 0 : 1.5, ease: EASE_OUT_EXPO, delay: reduced ? 0 : 0.15 }}
         />
         {ticks.map((t, i) => (
           <span
@@ -48,9 +51,11 @@ export function ListenStrip({ listenedPacks, totalPacks, packs }: Props) {
             aria-hidden="true"
           />
         ))}
-        <span
+        <motion.span
           className="listenstrip__marker"
-          style={{ left: `${pct}%` }}
+          initial={{ left: 0 }}
+          animate={{ left: `${pct}%` }}
+          transition={{ duration: reduced ? 0 : 1.5, ease: EASE_OUT_EXPO, delay: reduced ? 0 : 0.15 }}
           aria-hidden="true"
         />
       </div>

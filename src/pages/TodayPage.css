@@ -235,6 +235,35 @@
   100% { background-position: 250% 0; opacity: 0; }
 }
 
+/* A slow outward "breathe" glow so the recommended action reads as alive even
+   when nothing is happening. Pure box-shadow — casts outside the button, never
+   covers the label. */
+.today__cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  animation: today-cta-breathe 3.6s ease-in-out infinite;
+}
+
+.today__cta--train::after  { animation-name: today-cta-breathe-accent; }
+.today__cta--listen::after { animation-name: today-cta-breathe-listen; }
+.today__cta--review::after { animation-name: today-cta-breathe-review; }
+
+@keyframes today-cta-breathe-accent {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent); }
+  50%      { box-shadow: 0 0 22px 4px color-mix(in srgb, var(--accent) 45%, transparent); }
+}
+@keyframes today-cta-breathe-listen {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--listen-blue) 0%, transparent); }
+  50%      { box-shadow: 0 0 22px 4px color-mix(in srgb, var(--listen-blue) 45%, transparent); }
+}
+@keyframes today-cta-breathe-review {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--review-teal) 0%, transparent); }
+  50%      { box-shadow: 0 0 22px 4px color-mix(in srgb, var(--review-teal) 45%, transparent); }
+}
+
 .today__cta--train {
   background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 55%, black) 100%);
   box-shadow: 0 8px 24px color-mix(in srgb, var(--accent) 40%, transparent), 0 2px 6px rgba(0, 0, 0, 0.25);
@@ -280,9 +309,21 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .today__cta::before {
+  .today__cta::before,
+  .today__cta::after {
     animation: none;
     opacity: 0;
+  }
+
+  .today__hero-dot--building,
+  .today__hero-dot--urgent,
+  .today__hero--review-urgent {
+    animation: none;
+  }
+
+  .today__hero-dot--building::after,
+  .today__hero-dot--urgent::after {
+    display: none;
   }
 }
 
@@ -367,15 +408,59 @@
 }
 
 .today__hero-dot {
-  width: 7px;
-  height: 7px;
+  position: relative;
+  width: 8px;
+  height: 8px;
   border-radius: var(--radius-full);
   flex-shrink: 0;
   background: var(--success);
 }
 
-.today__hero-dot--building { background: var(--warning); }
-.today__hero-dot--urgent { background: var(--danger); }
+.today__hero-dot--building {
+  background: var(--warning);
+  animation: today-dot-beat 2.6s ease-in-out infinite;
+  --today-dot-glow: color-mix(in srgb, var(--warning) 60%, transparent);
+}
+
+.today__hero-dot--urgent {
+  background: var(--danger);
+  animation: today-dot-beat 1.4s ease-in-out infinite;
+  --today-dot-glow: color-mix(in srgb, var(--danger) 65%, transparent);
+}
+
+/* A radar ping — a ring that expands well past the dot and fades, on every
+   beat. Much more visible than a box-shadow at this size. */
+.today__hero-dot--building::after,
+.today__hero-dot--urgent::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid currentColor;
+  color: inherit;
+  background: currentColor;
+  animation: today-dot-ping 2.6s ease-out infinite;
+}
+
+.today__hero-dot--urgent::after {
+  animation-duration: 1.4s;
+}
+
+/* A double-thump on the dot itself, in time with the ping. */
+@keyframes today-dot-beat {
+  0%   { transform: scale(1);    box-shadow: 0 0 0 0 var(--today-dot-glow); }
+  12%  { transform: scale(1.45); box-shadow: 0 0 8px 2px var(--today-dot-glow); }
+  24%  { transform: scale(1);    box-shadow: 0 0 0 0 var(--today-dot-glow); }
+  36%  { transform: scale(1.25); box-shadow: 0 0 6px 1px var(--today-dot-glow); }
+  50%  { transform: scale(1);    box-shadow: 0 0 0 0 var(--today-dot-glow); }
+  100% { transform: scale(1);    box-shadow: 0 0 0 0 var(--today-dot-glow); }
+}
+
+@keyframes today-dot-ping {
+  0%   { transform: scale(0.6); opacity: 0.7; }
+  70%  { transform: scale(3.4); opacity: 0; }
+  100% { transform: scale(3.4); opacity: 0; }
+}
 
 /* Border/tint nudge as the queue grows — subtle, the CTA stays the focus. */
 .today__hero--review-building {
@@ -384,6 +469,19 @@
 
 .today__hero--review-urgent {
   border-color: color-mix(in srgb, var(--danger) 45%, transparent);
+  animation: today-urgent-glow 3s ease-in-out infinite;
+}
+
+/* Slow breathing halo on the whole card when the backlog is urgent. */
+@keyframes today-urgent-glow {
+  0%, 100% {
+    border-color: color-mix(in srgb, var(--danger) 40%, transparent);
+    box-shadow: var(--shadow-card);
+  }
+  50% {
+    border-color: color-mix(in srgb, var(--danger) 70%, transparent);
+    box-shadow: var(--shadow-card), 0 0 18px 1px color-mix(in srgb, var(--danger) 30%, transparent);
+  }
 }
 
 .today__hero-note {

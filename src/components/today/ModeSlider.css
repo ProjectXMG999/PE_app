@@ -139,6 +139,14 @@
   pointer-events: auto;
 }
 
+/* Inner wrapper that runs the per-switch stagger; carries the same column
+   layout so the strip and hero keep their gap. */
+.modeslider__stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .modeslider__tab-label {
     transition: none;

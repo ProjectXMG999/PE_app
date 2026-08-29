@@ -56,6 +56,7 @@
 /* Gradient-clipped figure — the "one number that matters" treatment, not
    another flat digit in a flat card. */
 .timering__value {
+  display: inline-block;
   font-size: 24px;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -64,6 +65,13 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  animation: today-num-pop 1.9s var(--ease-out-expo) 1 both;
+}
+
+@keyframes today-num-pop {
+  0%, 72%  { transform: scale(1); }
+  85%      { transform: scale(1.14); }
+  100%     { transform: scale(1); }
 }
 
 .timering--met .timering__value {
@@ -103,6 +111,11 @@
   font-weight: 700;
 }
 
+.timering__status--met {
+  display: inline-block;
+  animation: bounceIn 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1 both;
+}
+
 .timering__track {
   position: relative;
   height: 7px;
@@ -118,6 +131,47 @@
   overflow: hidden;
   border-radius: var(--radius-full);
   background: linear-gradient(90deg, var(--accent) 0%, var(--accent-bright) 100%);
+}
+
+/* A bright cap at the leading edge so the bar has a "head" travelling with the
+   fill rather than a flat cut-off. */
+.timering__fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--accent-bright) 85%, white);
+  box-shadow: 0 0 8px 1px var(--accent-bright), 0 0 3px 0 #fff;
+  animation: timering-head-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes timering-head-pulse {
+  0%, 100% { opacity: 0.75; box-shadow: 0 0 6px 1px var(--accent-bright), 0 0 3px 0 #fff; }
+  50%      { opacity: 1;    box-shadow: 0 0 12px 3px var(--accent-bright), 0 0 4px 0 #fff; }
+}
+
+.timering--met .timering__fill::after {
+  background: color-mix(in srgb, var(--success) 70%, white);
+  box-shadow: 0 0 8px 1px var(--success), 0 0 3px 0 #fff;
+  animation: none;
+}
+
+/* One-shot light sweep the moment the goal is met. */
+.timering__met-sweep {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 20%, rgba(255, 255, 255, 0.85) 50%, transparent 80%);
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  animation: timering-met-sweep 900ms var(--ease-out-expo) 1 both;
+}
+
+@keyframes timering-met-sweep {
+  from { background-position: -70% 0; opacity: 1; }
+  to   { background-position: 170% 0; opacity: 0; }
 }
 
 .timering--met .timering__fill {
@@ -141,5 +195,19 @@
   .timering__shine {
     animation: none;
     background: none;
+  }
+
+  .timering__fill::after {
+    animation: none;
+    opacity: 1;
+  }
+
+  .timering__met-sweep {
+    display: none;
+  }
+
+  .timering__status--met,
+  .timering__value {
+    animation: none;
   }
 }

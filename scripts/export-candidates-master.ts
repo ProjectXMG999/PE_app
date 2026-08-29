@@ -6,19 +6,26 @@
 // row is traceable back to its pack word id even though the master CSV
 // itself has no id column.
 //
-// Review workflow: in candidates-master.xlsx, fill the "Wybrane" column
+// Review workflow: in candidates-master-v2.xlsx, fill the "Wybrane" column
 // with 1, 2, or 3 for whichever candidate is best for that word (you may
 // also edit the sentence text in the chosen cell directly — the apply step
 // reads the live cell content, not the original generation). Leave "Wybrane"
 // blank for words you haven't decided on yet. Then run gen-sentences:apply-chosen.
 //
-// Re-running this export (e.g. after generating more words) preserves
-// whatever you already typed into "Wybrane" in the existing file — it's
-// read back and merged in before the new file is written, so scaling up
-// generation never wipes out review progress you've already done.
+// "Ocena audio" is a separate, independent review pass for the generated
+// audio's pacing/naturalness once it exists — one of: dobrze, za wolno,
+// nienaturalnie, za szybko, inne. Free text (Excel data validation/dropdowns
+// aren't supported by the xlsx library this script uses), but stick to
+// those five values for consistency. Not read by any other script yet.
 //
-// Output (gitignored, working data): sentence-output/candidates-master.csv
-// and .xlsx.
+// Re-running this export (e.g. after generating more words) preserves
+// whatever you already typed into "Wybrane"/"Ocena audio", plus any other
+// columns you add by hand, in the existing file — they're read back and
+// merged in before the new file is written, so scaling up generation never
+// wipes out review progress you've already done.
+//
+// Output: database/database/candidates-master-v2.xlsx (+ .csv) — this is
+// the single working file, tracked in git like the rest of database/.
 //
 // Usage: npm run gen-sentences:master-export
 
@@ -36,24 +43,24 @@ const CSV_PATH = path.join(
 )
 const PACK_DIR = path.join(ROOT, 'src/data/packs')
 const INDEX_PATH = path.join(ROOT, 'src/data/packages-index.json')
-const OUT_DIR = path.join(ROOT, 'sentence-output')
-const OUT_CSV_PATH = path.join(OUT_DIR, 'candidates-master.csv')
-const OUT_XLSX_PATH = path.join(OUT_DIR, 'candidates-master.xlsx')
+const OUT_DIR = path.join(ROOT, 'database/database')
+const OUT_CSV_PATH = path.join(OUT_DIR, 'candidates-master-v2.csv')
+const OUT_XLSX_PATH = path.join(OUT_DIR, 'candidates-master-v2.xlsx')
 const SHEET_NAME = 'Kandydaci zdań'
 
-function loadExistingChoices(xlsxPath: string): Map<string, string> {
-  const choices = new Map<string, string>()
-  if (!fs.existsSync(xlsxPath)) return choices
+function loadExistingColumn(xlsxPath: string, columnName: string): Map<string, string> {
+  const values = new Map<string, string>()
+  if (!fs.existsSync(xlsxPath)) return values
   const workbook = XLSX.readFile(xlsxPath)
   const sheet = workbook.Sheets[SHEET_NAME]
-  if (!sheet) return choices
+  if (!sheet) return values
   const rows = XLSX.utils.sheet_to_json<Record<string, unknown>>(sheet, { defval: '' })
   for (const row of rows) {
     const wordId = String(row['wordId'] ?? '').trim()
-    const chosen = String(row['Wybrane'] ?? '').trim()
-    if (wordId && chosen) choices.set(wordId, chosen)
+    const value = String(row[columnName] ?? '').trim()
+    if (wordId && value) values.set(wordId, value)
   }
-  return choices
+  return values
 }
 
 // Anything a human added to a previously-exported file beyond the columns
@@ -205,15 +212,20 @@ function main() {
   }
   console.log(`Matched blocks: ${matchedBlocks}, unmatched blocks: ${unmatchedBlocks}`)
 
-  const existingChoices = loadExistingChoices(OUT_XLSX_PATH)
+  const existingChoices = loadExistingColumn(OUT_XLSX_PATH, 'Wybrane')
   if (existingChoices.size > 0) {
     console.log(`Carrying forward ${existingChoices.size} existing "Wybrane" picks from a previous export`)
+  }
+  const existingAudioReviews = loadExistingColumn(OUT_XLSX_PATH, 'Ocena audio')
+  if (existingAudioReviews.size > 0) {
+    console.log(`Carrying forward ${existingAudioReviews.size} existing "Ocena audio" reviews from a previous export`)
   }
 
   const baseHeader = [
     ...fields,
     'wordId',
     'Wybrane',
+    'Ocena audio',
     'Zdanie ENG 1',
     'Zdanie PL 1',
     'Zdanie ENG 2',
@@ -239,6 +251,7 @@ function main() {
     const row = fields.map((f) => raw[f] ?? '')
     row.push(wordId ?? '')
     row.push((wordId && existingChoices.get(wordId)) ?? '')
+    row.push((wordId && existingAudioReviews.get(wordId)) ?? '')
     row.push(record?.candidate1En ?? '')
     row.push(record?.candidate1Pl ?? '')
     row.push(record?.candidate2En ?? '')

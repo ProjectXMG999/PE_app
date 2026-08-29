@@ -13,6 +13,7 @@ import { AutoplaySettingsSheet } from '../components/flashcard/AutoplaySettingsS
 import { usePackageData } from '../hooks/usePackageData'
 import { useFlashcard } from '../hooks/useFlashcard'
 import { useAudio } from '../hooks/useAudio'
+import { useAutoplaySequence } from '../hooks/useAutoplaySequence'
 import { useWakeLock } from '../hooks/useWakeLock'
 import { useMediaSession } from '../hooks/useMediaSession'
 import { startKeepAlive, stopKeepAlive } from '../audio/keepAlive'
@@ -62,86 +63,65 @@ export function FlashcardPage() {
   // so this clock keeps counting while the tab is hidden, unlike the tap-driven
   // Trenuj pages where a hidden tab means the user has genuinely stopped.
   const { elapsedSec } = useStudyClock({ countWhileHidden: studyMode === 'autoplay' })
-  const autoPlayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const sessionStartRef = useRef<string>(dayKey())
   const startedAtRef = useRef<string | null>(null)
   const masteredAtRef = useRef<string | null>(null)
   const completedAtRef = useRef<string | null>(null)
   const savedIndexRef = useRef<number>(0)
   const prevRevealStepRef = useRef<number>(0)
-  const resumeFromStepRef = useRef<0 | 1 | 2 | 3 | null>(null)
-  const abortSequenceRef = useRef<AbortController | null>(null)
-  const skipStepRef = useRef<(() => void) | null>(null)
-  const [playStep, setPlayStep] = useState<0 | 1 | 2 | 3 | null>(null)
-  const [audioLoading, setAudioLoading] = useState(false)
-  const [audioError, setAudioError] = useState<'timeout' | 'error' | null>(null)
   const [isPaused, setIsPaused] = useState(false)
-  const [restartKey, setRestartKey] = useState(0)
   const [showCompletion, setShowCompletion] = useState(false)
   const [allAlreadyKnown, setAllAlreadyKnown] = useState(false)
   const [knownCount, setKnownCount] = useState(0)
   const [autoContinue, setAutoContinue] = useState(true)
   const [countdown, setCountdown] = useState(6)
   const [sheetOpen, setSheetOpen] = useState(false)
-  // Speaking-mode "repeat aloud" countdown — {ms, key} drives a pure-CSS ring
-  const [speakCountdown, setSpeakCountdown] = useState<{ ms: number; key: number } | null>(null)
-  const countdownKeyRef = useRef(0)
+  // Assigned once handleNext / handleAutoplayEnd exist below — the autoplay
+  // sequence calls the latest version through these.
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
+  const handleAutoplayEndRef = useRef<() => void>(() => {})
 
   const nextPack = packageId ? getNextPack(packageId) : null
 
-  const clearAutoplay = () => {
-    if (autoPlayTimerRef.current) clearTimeout(autoPlayTimerRef.current)
-  }
-
-  const abortSequence = () => {
-    abortSequenceRef.current?.abort()
-    abortSequenceRef.current = null
-  }
+  // Autoplay timeline — play/gap steps per mode. See hooks/useAutoplaySequence.ts
+  // and config/autoplayModes.ts. Inert in fiszki mode (`enabled` false).
+  const { playStep, audioLoading, audioError, speakCountdown, skipStep, restart } =
+    useAutoplaySequence({
+      word: currentWord,
+      mode: autoplayMode,
+      enabled: studyMode === 'autoplay' && studyWords.length > 0 && !showCompletion,
+      isPaused,
+      isLastCard,
+      cardIndex: currentCardIndex,
+      play: {
+        word: () => playWord(currentWord!),
+        sentence: () => playSentence(currentWord!),
+        wordPl: () => playWordPl(currentWord!),
+        sentencePl: () => playSentencePl(currentWord!),
+      },
+      stop,
+      onCardDone: () => handleNextRef.current(),
+      onLastDone: () => handleAutoplayEndRef.current(),
+    })
 
   const restartCurrentWord = useCallback(() => {
-    console.log('[action] restartCurrentWord, playStep=', playStep)
-    abortSequence()
-    clearAutoplay()
-    // Do NOT call skipStepRef.current?.() here — that would advance the sequence
-    // to the next audio step. Cleanup (via controller.abort) will clearTimeout the pause.
-    skipStepRef.current = null
     stop()
-    resumeFromStepRef.current = null
     setIsPaused(false)
-    setPlayStep(null)
-    setAudioLoading(false)
-    setAudioError(null)
-    setRestartKey(k => k + 1)
-  }, [stop])
+    restart()
+  }, [stop, restart])
 
   // Split into pause/resume so Media Session 'play' while playing is a no-op
   // (a toggle would flip to paused when the OS re-sends 'play')
   const handleResume = useCallback(() => {
     if (!isPaused) return
-    console.log('[action] handleResume, resumeFrom=', resumeFromStepRef.current)
-    // Resume from the step we paused on — don't reset playStep so pill stays lit
-    setIsPaused(false)
-    setAudioLoading(false)
-    setAudioError(null)
-    setRestartKey(k => k + 1)
+    setIsPaused(false) // sequence effect re-fires and resumes from the paused step
   }, [isPaused])
 
   const handlePause = useCallback(() => {
     if (isPaused) return
-    console.log('[action] handlePause, playStep=', playStep)
-    abortSequence()
-    clearAutoplay()
-    // Do NOT call skipStepRef.current?.() — that advances the sequence to next audio.
-    // Cleanup (controller.abort + clearTimeout) kills the pause timer instead.
-    skipStepRef.current = null
-    stop()
-    // Remember which step was active so resume can skip back to it
-    resumeFromStepRef.current = playStep
-    setAudioLoading(false)
-    setAudioError(null)
-    setIsPaused(true)
-  }, [isPaused, playStep, stop])
+    stop() // hard stop — no clip follows; iOS needs the src reset to go silent
+    setIsPaused(true) // sequence effect snapshots the current step, then bails
+  }, [isPaused, stop])
 
   const handlePauseResume = useCallback(() => {
     if (isPaused) handleResume()
@@ -149,21 +129,16 @@ export function FlashcardPage() {
   }, [isPaused, handleResume, handlePause])
 
   const handleModeChange = useCallback((m: 'fast' | 'standard' | 'speaking') => {
-    abortSequence()
     stop()
-    clearAutoplay()
-    resumeFromStepRef.current = null
     setAutoplayMode(m)
-    setPlayStep(null)
     setIsPaused(false)
-    setRestartKey(k => k + 1)
-  }, [stop, setAutoplayMode])
+    restart()
+  }, [stop, setAutoplayMode, restart])
 
   useEffect(() => {
     if (packageId && studyMode) setPackage(packageId, studyMode)
     setShowCompletion(false)
     setAllAlreadyKnown(false)
-    setPlayStep(null)
     setKnownCount(0)
     setDbLoaded(false)
     setStudyWords([])
@@ -174,7 +149,6 @@ export function FlashcardPage() {
     sessionStartRef.current = dayKey()
     return () => {
       stop()
-      clearAutoplay()
     }
   }, [packageId, studyMode])
 
@@ -319,33 +293,10 @@ export function FlashcardPage() {
     else if (revealStep === 3) playSentence(currentWord)
   }, [revealStep, studyMode, currentWord, playWord, playSentencePl, playSentence])
 
-  // Skip to next audio step within current card (card tap in autoplay)
-  // Does NOT advance to next card — that's handleSkip (Pomiń button only)
-  const handleSkipStep = useCallback(() => {
-    console.log('[action] handleSkipStep, skipStepRef=', !!skipStepRef.current, 'playStep=', playStep)
-    if (skipStepRef.current) {
-      console.log('[action] handleSkipStep — skipping pause')
-      skipStepRef.current()
-    } else {
-      // Set no-op so rapid subsequent taps don't call stop() again before next pause registers
-      console.log('[action] handleSkipStep — stopping audio mid-play, setting no-op guard')
-      skipStepRef.current = () => {}
-      stop()
-    }
-  }, [stop, playStep])
-
-  // Skip current card in autoplay
+  // Skip current card in autoplay. advance()/goBack() changes currentCardIndex,
+  // which tears the running sequence down via the hook's effect cleanup.
   const handleSkip = useCallback(() => {
-    console.log('[action] handleSkip (Pomij), playStep=', playStep)
-    // Kill audio and abort sequence FIRST — before advance() triggers new useEffect
-    abortSequence()
-    clearAutoplay()
-    // Do NOT call skipStepRef.current?.() — abort signal already kills the pause timer.
-    // Calling it here would advance the sequence to the next audio step before stop() runs.
-    skipStepRef.current = null
     stop()
-    resumeFromStepRef.current = null
-    setPlayStep(null)
     setIsPaused(false)
     if (isLastCard) {
       saveProgress(total, true).then(() => setShowCompletion(true))
@@ -356,23 +307,14 @@ export function FlashcardPage() {
     }
   }, [isLastCard, advance, preloadNext, studyWords, currentCardIndex, saveProgress, total, stop])
 
-  // Previous card in autoplay (Media Session previoustrack) — teardown mirrors
-  // handleSkip exactly; on the first card it restarts the current word instead
+  // Previous card in autoplay (Media Session previoustrack); on the first card it
+  // restarts the current word instead.
   const handlePrev = useCallback(() => {
-    console.log('[action] handlePrev, currentCardIndex=', currentCardIndex)
-    abortSequence()
-    clearAutoplay()
-    skipStepRef.current = null
     stop()
-    resumeFromStepRef.current = null
-    setPlayStep(null)
     setIsPaused(false)
-    if (currentCardIndex > 0) {
-      goBack()
-    } else {
-      setRestartKey(k => k + 1)
-    }
-  }, [currentCardIndex, goBack, stop])
+    if (currentCardIndex > 0) goBack()
+    else restart()
+  }, [currentCardIndex, goBack, stop, restart])
 
   // Autoplay end → always show completion screen; countdown handles auto-continue
   const handleAutoplayEnd = useCallback(async () => {
@@ -380,7 +322,6 @@ export function FlashcardPage() {
     setShowCompletion(true)
   }, [saveProgress, total])
 
-  const handleAutoplayEndRef = useRef(handleAutoplayEnd)
   useEffect(() => { handleAutoplayEndRef.current = handleAutoplayEnd }, [handleAutoplayEnd])
 
   // Completion actions
@@ -407,17 +348,16 @@ export function FlashcardPage() {
   }, [packageId, allWords, navigate])
 
   const handleRepeat = useCallback(() => {
-    clearAutoplay()
     stop()
     setShowCompletion(false)
     setAllAlreadyKnown(false)
-    setPlayStep(null)
     setKnownCount(0)
     // Repeat always shows all words from scratch, ignoring previous known status
     setStudyWords(allWords)
     reset()
+    restart()
     sessionStartRef.current = dayKey()
-  }, [reset, stop, allWords])
+  }, [reset, stop, allWords, restart])
 
   const handleNextPack = useCallback(() => {
     if (nextPack) navigate(`/pakiet/${nextPack.id}/${studyMode}`)
@@ -465,123 +405,6 @@ export function FlashcardPage() {
     onPrev: handlePrev,
     onStop: handlePause,
   })
-
-  // Auto-play sequence
-  useEffect(() => {
-    if (studyMode !== 'autoplay' || !currentWord || studyWords.length === 0 || showCompletion || isPaused) return
-
-    const word = currentWord
-    const controller = new AbortController()
-    abortSequenceRef.current = controller
-    const isCancelled = () => controller.signal.aborted
-    let pauseTimer: ReturnType<typeof setTimeout> | null = null
-
-    const pause = (ms: number, opts?: { countdown?: boolean }) => new Promise<void>(r => {
-      console.log('[seq] pause START ms=', ms)
-      if (opts?.countdown) setSpeakCountdown({ ms, key: ++countdownKeyRef.current })
-      const end = (reason: string) => {
-        clearTimeout(pauseTimer!)
-        pauseTimer = null
-        skipStepRef.current = null
-        controller.signal.removeEventListener('abort', onAbort)
-        if (opts?.countdown) setSpeakCountdown(null)
-        console.log('[seq] pause END', reason)
-        r()
-      }
-      const onAbort = () => end('aborted')
-      controller.signal.addEventListener('abort', onAbort)
-      pauseTimer = setTimeout(() => end('natural'), ms)
-      skipStepRef.current = () => end('skipped')
-    })
-
-    const playWithStatus = async (fn: () => Promise<'ok' | 'timeout' | 'error'>) => {
-      if (isCancelled()) return
-      setAudioLoading(true)
-      setAudioError(null)
-      const result = await fn()
-      console.log('[seq] playWithStatus done, result=', result, 'cancelled=', isCancelled())
-      setAudioLoading(false)
-      if (isCancelled()) return
-      if (result !== 'ok') {
-        setAudioError(result)
-        await pause(1500)
-        setAudioError(null)
-      }
-    }
-
-    const runSequence = async () => {
-      console.log('[seq] runSequence START, cancelled=', isCancelled(), 'mode=', autoplayMode, 'word=', word.english)
-      if (isCancelled()) return
-
-      // resumeFrom: skip steps before the paused step, replay from it
-      const resumeFrom = resumeFromStepRef.current
-      resumeFromStepRef.current = null
-      console.log('[seq] resumeFrom=', resumeFrom)
-
-      const shouldSkip = (step: 0 | 1 | 2 | 3) => resumeFrom !== null && step < resumeFrom
-
-      if (autoplayMode === 'fast') {
-        if (!shouldSkip(0)) { setPlayStep(0); await playWithStatus(() => playWordPl(word)); if (isCancelled()) return }
-        await pause(500); if (isCancelled()) return
-        if (!shouldSkip(1)) { setPlayStep(1); await playWithStatus(() => playWord(word)); if (isCancelled()) return }
-        await pause(900); if (isCancelled()) return
-      }
-
-      if (autoplayMode === 'standard') {
-        if (!shouldSkip(0)) { setPlayStep(0); await playWithStatus(() => playWordPl(word)); if (isCancelled()) return }
-        await pause(1500); if (isCancelled()) return
-        if (!shouldSkip(1)) {
-          setPlayStep(1); await playWithStatus(() => playWord(word)); if (isCancelled()) return
-          await pause(1400); if (isCancelled()) return
-          await playWithStatus(() => playWord(word)); if (isCancelled()) return
-          await pause(1500); if (isCancelled()) return
-        }
-        if (word.sentencePl && !shouldSkip(2)) { setPlayStep(2); await playWithStatus(() => playSentencePl(word)); if (isCancelled()) return; await pause(2500); if (isCancelled()) return }
-        if (word.sentenceEn && !shouldSkip(3)) { setPlayStep(3); await playWithStatus(() => playSentence(word)); if (isCancelled()) return; await pause(1000); if (isCancelled()) return }
-      }
-
-      if (autoplayMode === 'speaking') {
-        // countdown: true marks the "repeat aloud" gaps — drives the ring around Pauza
-        if (!shouldSkip(0)) { setPlayStep(0); await playWithStatus(() => playWordPl(word)); if (isCancelled()) return }
-        await pause(3000, { countdown: true }); if (isCancelled()) return
-        if (!shouldSkip(1)) {
-          setPlayStep(1); await playWithStatus(() => playWord(word)); if (isCancelled()) return
-          await pause(1400); if (isCancelled()) return
-          await playWithStatus(() => playWord(word)); if (isCancelled()) return
-          await pause(3000, { countdown: true }); if (isCancelled()) return
-        }
-        if (word.sentencePl && !shouldSkip(2)) { setPlayStep(2); await playWithStatus(() => playSentencePl(word)); if (isCancelled()) return; await pause(8000, { countdown: true }); if (isCancelled()) return }
-        if (word.sentenceEn && !shouldSkip(3)) { setPlayStep(3); await playWithStatus(() => playSentence(word)); if (isCancelled()) return; await pause(3000, { countdown: true }); if (isCancelled()) return }
-      }
-
-      if (isCancelled()) return
-      setPlayStep(null)
-      console.log('[seq] DONE, scheduling next, isLastCard=', isLastCard)
-      const onDone = isLastCard ? () => handleAutoplayEndRef.current() : () => handleNextRef.current()
-      autoPlayTimerRef.current = setTimeout(onDone, 600)
-    }
-
-    autoPlayTimerRef.current = setTimeout(runSequence, 800)
-
-    return () => {
-      console.log('[seq] useEffect CLEANUP, aborting controller')
-      controller.abort()
-      if (abortSequenceRef.current === controller) abortSequenceRef.current = null
-      skipStepRef.current = null
-      if (pauseTimer) clearTimeout(pauseTimer)
-      clearAutoplay()
-      // Soft stop: pause only, keep src intact — a new play() is about to load the next
-      // clip right after this (next card or next audio step). Clearing src here would
-      // tear down the iOS Now Playing session on every single card change.
-      stop({ hard: false })
-      setAudioLoading(false)
-      setAudioError(null)
-      setSpeakCountdown(null)
-    }
-  // studyWords.length triggers re-run when DB finishes loading (studyWords: [] → pack.words)
-  // isPaused gates the sequence; autoplayMode change re-fires with new timing
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentCardIndex, restartKey, studyMode, isLastCard, showCompletion, studyWords.length, isPaused, autoplayMode])
 
   // ─── Loading / error ───────────────────────────────────────────────────────
 
@@ -732,7 +555,7 @@ export function FlashcardPage() {
         word={currentWord}
         revealStep={revealStep}
         mode={studyMode}
-        onClick={studyMode === 'autoplay' ? handleSkipStep : reveal}
+        onClick={studyMode === 'autoplay' ? skipStep : reveal}
         activeLine={studyMode === 'autoplay' ? playStep : null}
       />
 

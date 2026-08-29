@@ -1,7 +1,7 @@
 import { ReactNode, useRef } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { NavIndicator } from '../layout/NavIndicator'
-import { EASE_OUT_EXPO } from './motion'
+import { EASE_OUT_EXPO, staggerContainerWide } from './motion'
 import './ModeSlider.css'
 
 export type StudyPath = 'listen' | 'train'
@@ -94,7 +94,17 @@ export function ModeSlider({ active, onChange, listenContent, trainContent, onIn
             transition={{ duration: reduced ? 0 : 0.28, ease: EASE_OUT_EXPO }}
             className="modeslider__page"
           >
-            {active === 'listen' ? listenContent : trainContent}
+            {/* Own initial/animate — independent of the outer page slide — so
+                the card's inner lines cascade on every tab switch, not just on
+                first mount. The parent remounts this via key={active}. */}
+            <motion.div
+              className="modeslider__stack"
+              variants={staggerContainerWide}
+              initial="hidden"
+              animate="show"
+            >
+              {active === 'listen' ? listenContent : trainContent}
+            </motion.div>
           </motion.div>
         </AnimatePresence>
       </div>

@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { LEVEL_META, ROUTE_TOTAL } from '../../data/levels'
+import { useCountUp } from '../../hooks/useCountUp'
 import { EASE_OUT_EXPO } from './motion'
 import './RouteStrip.css'
 
@@ -18,6 +19,11 @@ export function RouteStrip({ knownWords }: Props) {
   const reduced = useReducedMotion()
   const pct = Math.min(100, (knownWords / ROUTE_TOTAL) * 100)
 
+  // Figure + percentage roll up in step with the fill bar (all 1.5s, after a
+  // short hold so the roll isn't spent behind the route/data load).
+  const shownWords = useCountUp(knownWords, 1500, 150)
+  const shownPct = useCountUp(Math.round(pct), 1500, 150)
+
   // Level thresholds as marks along the strip, excluding the final one (the
   // strip's own end already reads as the finish line).
   const ticks = LEVEL_META.filter(l => l.threshold < ROUTE_TOTAL)
@@ -27,10 +33,10 @@ export function RouteStrip({ knownWords }: Props) {
       <p className="routestrip__eyebrow">⚡ Twój <span className="routestrip__eyebrow-highlight">progress</span> treningu</p>
 
       <div className="routestrip__figure">
-        <span className="routestrip__value">{knownWords.toLocaleString('pl-PL')}</span>
+        <span key={knownWords} className="routestrip__value">{shownWords.toLocaleString('pl-PL')}</span>
         <span className="routestrip__unit">słów</span>
         <span className="routestrip__of">/ {ROUTE_TOTAL.toLocaleString('pl-PL')}</span>
-        <span className="routestrip__pct">{Math.round(pct)}%</span>
+        <span className="routestrip__pct">{shownPct}%</span>
       </div>
 
       <div className="routestrip__track">
@@ -38,7 +44,7 @@ export function RouteStrip({ knownWords }: Props) {
           className="routestrip__fill"
           initial={{ width: 0 }}
           animate={{ width: `${pct}%` }}
-          transition={{ duration: reduced ? 0 : 0.8, ease: EASE_OUT_EXPO }}
+          transition={{ duration: reduced ? 0 : 1.5, ease: EASE_OUT_EXPO, delay: reduced ? 0 : 0.15 }}
         />
         {ticks.map(l => (
           <span
@@ -48,9 +54,14 @@ export function RouteStrip({ knownWords }: Props) {
             aria-hidden="true"
           />
         ))}
-        <span
+        {/* Rides the growing fill (same timing/ease) instead of teleporting to
+            the end; a comet trail sits behind it and a glow ring on ::after
+            fires as it settles. */}
+        <motion.span
           className="routestrip__marker"
-          style={{ left: `${pct}%` }}
+          initial={{ left: 0 }}
+          animate={{ left: `${pct}%` }}
+          transition={{ duration: reduced ? 0 : 1.5, ease: EASE_OUT_EXPO, delay: reduced ? 0 : 0.15 }}
           aria-hidden="true"
         />
       </div>

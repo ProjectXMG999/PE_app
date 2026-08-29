@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
+import { useCountUp } from '../../hooks/useCountUp'
 import { EASE_OUT_EXPO } from './motion'
 import './DailyTimeRing.css'
 
@@ -23,17 +24,23 @@ export function DailyTimeRing({ secondsStudied, goalSec, onEditGoal }: Props) {
   const met = pct >= 100
   const left = Math.max(0, goalMins - mins)
 
+  // The figure rolls up from 0 in step with the fill bar below it (both 1.5s,
+  // after a short hold). Status text stays on the true `mins` so it doesn't
+  // flicker mid-roll.
+  const shownMins = useCountUp(mins, 1500, 150)
+
   const className = `timering${met ? ' timering--met' : ''}${onEditGoal ? ' timering--tappable' : ''}`
+  const statusClass = `timering__status${met ? ' timering__status--met' : ''}`
 
   const body = (
     <>
       <p className="timering__eyebrow">Cel dnia</p>
 
       <div className="timering__figure">
-        <span className="timering__value">{mins}</span>
+        <span key={mins} className="timering__value">{shownMins}</span>
         <span className="timering__unit">min</span>
         <span className="timering__of">/ {goalMins} min</span>
-        <span className="timering__status">
+        <span key={met ? 'met' : 'todo'} className={statusClass}>
           {met ? '✓ zrobione' : mins === 0 ? 'start dnia' : `jeszcze ${left} min`}
         </span>
       </div>
@@ -47,9 +54,10 @@ export function DailyTimeRing({ secondsStudied, goalSec, onEditGoal }: Props) {
           className="timering__fill"
           initial={{ width: 0 }}
           animate={{ width: `${pct}%` }}
-          transition={{ duration: reduced ? 0 : 0.8, ease: EASE_OUT_EXPO }}
+          transition={{ duration: reduced ? 0 : 1.5, ease: EASE_OUT_EXPO, delay: reduced ? 0 : 0.15 }}
         >
           <span className="timering__shine" aria-hidden="true" />
+          {met && <span className="timering__met-sweep" aria-hidden="true" />}
         </motion.div>
       </div>
     </>

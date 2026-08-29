@@ -12,9 +12,10 @@ import { RouteStrip } from '../components/today/RouteStrip'
 import { ListenStrip } from '../components/today/ListenStrip'
 import { RouteLoader } from '../components/today/RouteLoader'
 import { ModeSlider, StudyPath } from '../components/today/ModeSlider'
-import { EASE_SPRING, fadeUp, fadeUpReduced, staggerContainer } from '../components/today/motion'
+import { EASE_SPRING, fadeUpReduced, heroCard, heroReveal, staggerContainerWide } from '../components/today/motion'
 import { useProgressData, avgWordsPerDayTrend } from '../hooks/useProgressData'
 import { useProgressPulse } from '../hooks/useProgressPulse'
+import { useCountUp } from '../hooks/useCountUp'
 import { useHaptics } from '../hooks/useHaptics'
 import { unlockAudioGlobally } from '../audio/audioUnlock'
 import { playTick, playSuccess } from '../services/sfx'
@@ -58,6 +59,8 @@ export function TodayPage() {
   const [nextStepInfoOpen, setNextStepInfoOpen] = useState(false)
   const [reviewInfoOpen, setReviewInfoOpen] = useState(false)
   const celebratedRef = useRef(false)
+  const goalCelebratedRef = useRef(false)
+  const goalWasMetRef = useRef<boolean | null>(null)
 
   const scopedPacks = todayLevel == null ? allPacks : allPacks.filter(p => p.level >= todayLevel)
   const listen = nextListenPack(scopedPacks, snapshot)
@@ -75,6 +78,7 @@ export function TodayPage() {
 
   const nothingLeft = listen == null && train == null && serving === 0
   const goalMet = pulse?.goalMet ?? false
+  const shownServing = useCountUp(serving, 800)
 
   // The "day complete" chime/haptic fires once per visit, the first time the
   // page actually lands on the done state — not on every render while it stays there.
@@ -86,37 +90,54 @@ export function TodayPage() {
     }
   }, [nothingLeft, haptics])
 
+  // Goal-met moment: only on the false→true transition seen during this visit,
+  // never on a page that opens already-met (which would chime every visit).
+  // Gated on !nothingLeft so it can't double up with the "day complete" chime.
+  useEffect(() => {
+    if (pulse == null) return
+    const prev = goalWasMetRef.current
+    goalWasMetRef.current = goalMet
+    if (prev === false && goalMet && !goalCelebratedRef.current && !nothingLeft) {
+      goalCelebratedRef.current = true
+      playSuccess()
+      haptics.success()
+    }
+  }, [goalMet, nothingLeft, pulse, haptics])
+
   function pressCta(action: () => void) {
     playTick()
     haptics.tap()
     action()
   }
 
-  const variants = reduced ? fadeUpReduced : fadeUp
+  const variants = reduced ? fadeUpReduced : heroReveal
+  const cardVariants = reduced ? fadeUpReduced : heroCard
 
   const trainContent = (
     <>
-      {snapshot ? (
-        <RouteStrip knownWords={snapshot.knownTotal} />
-      ) : (
-        <div className="today__strip-loading">
-          <RouteLoader height={20} />
-        </div>
-      )}
+      <motion.div variants={variants}>
+        {snapshot ? (
+          <RouteStrip knownWords={snapshot.knownTotal} />
+        ) : (
+          <div className="today__strip-loading">
+            <RouteLoader height={20} />
+          </div>
+        )}
+      </motion.div>
       {train ? (
-        <section className="today__hero">
-          <div className="today__hero-head">
+        <motion.section className="today__hero" variants={cardVariants}>
+          <motion.div className="today__hero-head" variants={variants}>
             <span className="today__hero-eyebrow">⚡ Trenuj</span>
             {showPace && (
               <span className="today__hero-pace">+{pace!.deltaPct}% szybciej niż w zeszłym tygodniu</span>
             )}
-          </div>
-          <p className="today__hero-name">{train.pack.name}</p>
-          <p className="today__hero-detail">
+          </motion.div>
+          <motion.p className="today__hero-name" variants={variants}>{train.pack.name}</motion.p>
+          <motion.p className="today__hero-detail" variants={variants}>
             {LEVEL_META.find(l => l.level === train.pack.level)?.name ?? `Poziom ${train.pack.level}`} ·{' '}
             ~{estimateMinutes(train.pack.wordCount - train.known)} min
-          </p>
-          <div className="today__hero-actions">
+          </motion.p>
+          <motion.div className="today__hero-actions" variants={variants}>
             <motion.button
               className="today__cta today__cta--train"
               whileTap={{ scale: 0.96 }}
@@ -131,38 +152,40 @@ export function TodayPage() {
                 </svg>
               </span>
             </motion.button>
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
       ) : (
-        <p className="today__path-empty">Nic do trenowania na tym poziomie — sprawdź Słuchaj albo zmień poziom.</p>
+        <motion.p className="today__path-empty" variants={variants}>Nic do trenowania na tym poziomie — sprawdź Słuchaj albo zmień poziom.</motion.p>
       )}
     </>
   )
 
   const listenContent = (
     <>
-      {snapshot ? (
-        <ListenStrip
-          listenedPacks={listenedPacksCount(allPacks, snapshot)}
-          totalPacks={allPacks.length}
-          packs={allPacks}
-        />
-      ) : (
-        <div className="today__strip-loading">
-          <RouteLoader height={20} />
-        </div>
-      )}
-      {listen ? (
-        <section className="today__hero today__hero--listen">
-          <div className="today__hero-head">
-            <span className="today__hero-eyebrow">🎧 Słuchaj</span>
+      <motion.div variants={variants}>
+        {snapshot ? (
+          <ListenStrip
+            listenedPacks={listenedPacksCount(allPacks, snapshot)}
+            totalPacks={allPacks.length}
+            packs={allPacks}
+          />
+        ) : (
+          <div className="today__strip-loading">
+            <RouteLoader height={20} />
           </div>
-          <p className="today__hero-name">{listen.pack.name}</p>
-          <p className="today__hero-detail">
+        )}
+      </motion.div>
+      {listen ? (
+        <motion.section className="today__hero today__hero--listen" variants={cardVariants}>
+          <motion.div className="today__hero-head" variants={variants}>
+            <span className="today__hero-eyebrow">🎧 Słuchaj</span>
+          </motion.div>
+          <motion.p className="today__hero-name" variants={variants}>{listen.pack.name}</motion.p>
+          <motion.p className="today__hero-detail" variants={variants}>
             {LEVEL_META.find(l => l.level === listen.pack.level)?.name ?? `Poziom ${listen.pack.level}`} ·{' '}
             ~{estimateMinutes(listen.pack.wordCount - listen.startIndex)} min
-          </p>
-          <div className="today__hero-actions">
+          </motion.p>
+          <motion.div className="today__hero-actions" variants={variants}>
             <motion.button
               className="today__cta today__cta--listen"
               whileTap={{ scale: 0.96 }}
@@ -177,10 +200,10 @@ export function TodayPage() {
                 </svg>
               </span>
             </motion.button>
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
       ) : (
-        <p className="today__path-empty">Nic do słuchania na tym poziomie — sprawdź Trenuj albo zmień poziom.</p>
+        <motion.p className="today__path-empty" variants={variants}>Nic do słuchania na tym poziomie — sprawdź Trenuj albo zmień poziom.</motion.p>
       )}
     </>
   )
@@ -189,7 +212,7 @@ export function TodayPage() {
     <AppShell>
       <motion.div
         className="today"
-        variants={staggerContainer}
+        variants={staggerContainerWide}
         initial="hidden"
         animate="show"
       >
@@ -269,7 +292,7 @@ export function TodayPage() {
                           ? 'Powtórki się zbierają'
                           : 'Zanim zaczniesz coś nowego'}
                     </span>
-                    <span className="today__hero-count">{serving} słów</span>
+                    <span className="today__hero-count">{shownServing} słów</span>
                   </div>
                   <p className="today__hero-name">Powtórka</p>
                   <p className="today__hero-detail">

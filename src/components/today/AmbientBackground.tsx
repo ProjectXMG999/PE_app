@@ -2,8 +2,8 @@ import { useRef } from 'react'
 import './AmbientBackground.css'
 
 // Durations must match the @keyframes in AmbientBackground.css.
-const BLOOM_A_MS = 26000
-const BLOOM_B_MS = 32000
+const BLOOM_A_MS = 19000
+const BLOOM_B_MS = 24000
 const BLOOM_B_OFFSET_MS = 8000 // the visual stagger the two blooms used to get from a CSS animation-delay: -8s
 const SHINE_MS = 7000
 
