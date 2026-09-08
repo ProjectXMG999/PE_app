@@ -47,7 +47,7 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
     <div
       className={`packcard ${statusClass}`}
       onClick={hasAccess ? () => navigate(`/pakiet/${pack.id}`) : goToAccount}
-      style={{ cursor: 'pointer' }}
+      style={{ cursor: 'pointer', ['--cat' as string]: color }}
     >
       {/* Status stripe — visible left border accent (gold border replaces it when mastered) */}
       {status !== 'new' && !isMastered && <div className="packcard__stripe" />}
@@ -72,8 +72,16 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
             </span>
           </div>
         )}
-        <div className="packcard__icon" style={isMastered ? undefined : { background: `${color}22`, color }}>
-          {icon}
+        <div
+          className="packcard__icon-ring"
+          style={{
+            ['--known-pct' as string]: isMastered ? 100 : Math.round(knownPct),
+            ['--ring' as string]: isMastered ? '#f2b619' : '#10B981',
+          }}
+        >
+          <div className="packcard__icon" style={isMastered ? undefined : { background: `${color}22`, color }}>
+            {icon}
+          </div>
         </div>
         <div className="packcard__info">
           <h3 className="packcard__name">{pack.name}</h3>
@@ -97,13 +105,10 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
         )}
       </div>
 
-      {(heardPct > 0 || knownPct > 0) && (
+      {heardPct > 0 && (
         <div className="packcard__bars">
           <div className="packcard__bar packcard__bar--heard">
             <div className="packcard__bar-fill" style={{ width: `${heardPct}%` }} />
-          </div>
-          <div className="packcard__bar packcard__bar--known">
-            <div className="packcard__bar-fill" style={{ width: `${knownPct}%` }} />
           </div>
         </div>
       )}

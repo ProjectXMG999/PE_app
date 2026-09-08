@@ -1,8 +1,10 @@
-import { ReactNode, useState } from 'react'
+import { ReactNode, useEffect, useRef, useState } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
 import { useAppStore } from '../../store/useAppStore'
 import packagesIndex from '../../data/packages-index.json'
 import { PackMeta } from '../../types/vocabulary'
 import { LEVEL_META } from '../../data/levels'
+import { EASE_SPRING } from '../today/motion'
 import './FilterTabs.css'
 
 const allPacks = packagesIndex as PackMeta[]
@@ -16,6 +18,13 @@ const STATUS_TABS = [
 ] as const
 
 type StatusTabId = typeof STATUS_TABS[number]['id']
+
+// Per-level fill + glow for the sliding indicator — mirrors the hardcoded
+// active colours in FilterTabs.css.
+const LEVEL_FILL: Record<number, string> = { 1: '#eab308', 2: '#f97316', 3: '#22c55e', 4: '#3b82f6' }
+const LEVEL_GLOW: Record<number, string> = {
+  1: 'rgba(234,179,8,0.45)', 2: 'rgba(249,115,22,0.45)', 3: 'rgba(34,197,94,0.45)', 4: 'rgba(59,130,246,0.45)',
+}
 
 // Fixed category order
 const CATEGORY_ORDER = [
@@ -48,6 +57,18 @@ interface FilterTabsProps {
 export function FilterTabs({ afterLevelRow }: FilterTabsProps) {
   const { activeFilter, setFilter, activeLevel, setLevel, activeCategory, setCategory } = useAppStore()
   const [expandedLevel, setExpandedLevel] = useState<number | null>(null)
+  const reduced = useReducedMotion()
+
+  const catActiveRef = useRef<HTMLButtonElement>(null)
+  const statusActiveRef = useRef<HTMLButtonElement>(null)
+
+  // Keep the active pill of each horizontal-scroll row in view.
+  useEffect(() => {
+    catActiveRef.current?.scrollIntoView({ inline: 'center', block: 'nearest', behavior: reduced ? 'auto' : 'smooth' })
+  }, [activeCategory, reduced])
+  useEffect(() => {
+    statusActiveRef.current?.scrollIntoView({ inline: 'center', block: 'nearest', behavior: reduced ? 'auto' : 'smooth' })
+  }, [activeFilter, reduced])
 
   const selectedLevelData = activeLevel ? LEVEL_META.find(l => l.level === activeLevel) : null
 
@@ -56,23 +77,37 @@ export function FilterTabs({ afterLevelRow }: FilterTabsProps) {
       {/* Row 1: Level — evenly stretched across the full row, unlike the
           scrollable category/status rows, since there are always exactly 4. */}
       <div className="filtertabs__row filtertabs__row--level">
-        {LEVEL_META.map(lvlData => (
-          <button
-            key={lvlData.level}
-            className={`filtertabs__tab filtertabs__tab--level${lvlData.level} ${activeLevel === lvlData.level ? 'filtertabs__tab--active' : ''}`}
-            onClick={() => {
-              if (activeLevel === lvlData.level) {
-                setLevel(null)
-                setExpandedLevel(null)
-              } else {
-                setLevel(lvlData.level)
-                setExpandedLevel(lvlData.level)
-              }
-            }}
-          >
-            Level {lvlData.level}
-          </button>
-        ))}
+        {LEVEL_META.map(lvlData => {
+          const active = activeLevel === lvlData.level
+          return (
+            <button
+              key={lvlData.level}
+              className={`filtertabs__tab filtertabs__tab--level${lvlData.level} ${active ? 'filtertabs__tab--active' : ''}`}
+              onClick={() => {
+                if (active) {
+                  setLevel(null)
+                  setExpandedLevel(null)
+                } else {
+                  setLevel(lvlData.level)
+                  setExpandedLevel(lvlData.level)
+                }
+              }}
+            >
+              {active && (
+                <motion.span
+                  className="filtertabs__level-ind"
+                  layoutId="filter-level-indicator"
+                  transition={reduced ? { duration: 0 } : EASE_SPRING}
+                  style={{
+                    background: LEVEL_FILL[lvlData.level],
+                    boxShadow: `0 0 12px ${LEVEL_GLOW[lvlData.level]}`,
+                  }}
+                />
+              )}
+              <span className="filtertabs__tab-label">Level {lvlData.level}</span>
+            </button>
+          )
+        })}
       </div>
 
       {afterLevelRow}
@@ -89,28 +124,36 @@ export function FilterTabs({ afterLevelRow }: FilterTabsProps) {
 
       {/* Row 2: Category — horizontal scroll */}
       <div className="filtertabs__row filtertabs__row--scroll">
-        {CATEGORIES.map(cat => (
-          <button
-            key={cat}
-            className={`filtertabs__tab ${activeCategory === cat ? 'filtertabs__tab--active' : ''}`}
-            onClick={() => setCategory(activeCategory === cat ? null : cat)}
-          >
-            {cat}
-          </button>
-        ))}
+        {CATEGORIES.map(cat => {
+          const active = activeCategory === cat
+          return (
+            <button
+              key={cat}
+              ref={active ? catActiveRef : undefined}
+              className={`filtertabs__tab ${active ? 'filtertabs__tab--active' : ''}`}
+              onClick={() => setCategory(active ? null : cat)}
+            >
+              {cat}
+            </button>
+          )
+        })}
       </div>
 
       {/* Row 3: Status */}
       <div className="filtertabs__row filtertabs__row--scroll">
-        {STATUS_TABS.map(tab => (
-          <button
-            key={tab.id}
-            className={`filtertabs__tab ${activeFilter === tab.id ? 'filtertabs__tab--active' : ''}`}
-            onClick={() => setFilter(activeFilter === tab.id ? null : (tab.id as StatusTabId))}
-          >
-            {tab.label}
-          </button>
-        ))}
+        {STATUS_TABS.map(tab => {
+          const active = activeFilter === tab.id
+          return (
+            <button
+              key={tab.id}
+              ref={active ? statusActiveRef : undefined}
+              className={`filtertabs__tab ${active ? 'filtertabs__tab--active' : ''}`}
+              onClick={() => setFilter(active ? null : (tab.id as StatusTabId))}
+            >
+              {tab.label}
+            </button>
+          )
+        })}
       </div>
     </div>
   )

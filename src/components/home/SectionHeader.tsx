@@ -1,36 +1,18 @@
+import { useCountUp } from '../../hooks/useCountUp'
+import './SectionHeader.css'
+
 interface Props {
   label: string
   count?: number
 }
 
 export function SectionHeader({ label, count }: Props) {
+  const shown = useCountUp(count ?? 0, 700, 80)
   return (
-    <div style={{
-      display: 'flex',
-      alignItems: 'center',
-      gap: 'var(--spacing-sm)',
-      padding: '0 var(--spacing-md)',
-      marginBottom: '6px',
-    }}>
-      <span style={{
-        fontFamily: 'var(--font-heading)',
-        fontSize: '11px',
-        fontWeight: 700,
-        letterSpacing: '0.1em',
-        color: 'var(--text-muted)',
-        textTransform: 'uppercase',
-      }}>
-        {label}
-      </span>
+    <div className="sectionheader">
+      <span className="sectionheader__label">{label}</span>
       {count !== undefined && (
-        <span style={{
-          fontFamily: 'var(--font-heading)',
-          fontSize: '11px',
-          fontWeight: 700,
-          color: 'var(--accent)',
-        }}>
-          · {count}
-        </span>
+        <span key={count} className="sectionheader__count">· {shown.toLocaleString('pl-PL')}</span>
       )}
     </div>
   )

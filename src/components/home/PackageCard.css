@@ -1,6 +1,17 @@
+/* Registered so the icon progress ring can transition its fill (a custom
+   property is only animatable once declared with @property). */
+@property --known-pct {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
 .packcard {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  /* Category-tinted edge — turns a wall of grey cards into a colour-coded
+     shelf. `--cat` is set inline from getCategoryColor(); status variants
+     below redeclare border-color and win by source order. */
+  border: 1px solid color-mix(in srgb, var(--cat, var(--border)) 32%, var(--border));
   border-radius: var(--radius-lg);
   padding: var(--spacing-md);
   transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
@@ -10,6 +21,27 @@
 
 [data-theme="light"] .packcard {
   box-shadow: var(--shadow-sm);
+}
+
+@media (hover: hover) {
+  .packcard:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-accent);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  }
+
+  [data-theme="light"] .packcard:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .packcard:hover .packcard__icon {
+    transform: scale(1.06);
+    box-shadow: 0 0 14px color-mix(in srgb, var(--cat, var(--accent)) 55%, transparent);
+  }
+
+  .packcard:active {
+    transform: translateY(0) scale(0.985);
+  }
 }
 
 .packcard__lock {
@@ -231,11 +263,29 @@
 }
 
 .packcard--started .packcard__stripe {
-  background: var(--accent);
+  background: linear-gradient(
+    180deg,
+    var(--accent),
+    color-mix(in srgb, var(--accent) 35%, transparent),
+    var(--accent)
+  );
+  background-size: 100% 250%;
+  animation: packcard-stripe-flow 2.8s ease-in-out infinite;
+}
+
+@keyframes packcard-stripe-flow {
+  0%, 100% { background-position: 0 0; }
+  50%      { background-position: 0 100%; }
 }
 
 .packcard--completed .packcard__stripe {
   background: #10B981;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .packcard--started .packcard__stripe {
+    animation: none;
+  }
 }
 
 /* Number — left column in header flow */
@@ -263,6 +313,39 @@
   margin-bottom: var(--spacing-sm);
 }
 
+.packcard__icon-ring {
+  position: relative;
+  flex-shrink: 0;
+  --ring-track: color-mix(in srgb, var(--ring, #10b981) 15%, transparent);
+  transition: --known-pct var(--transition-slow) var(--ease-out-expo);
+}
+
+/* Conic progress ring hugging the icon's rounded-square shape (mask-composite
+   punches out the centre, leaving only the 3px band). */
+.packcard__icon-ring::before {
+  content: '';
+  position: absolute;
+  inset: -3.5px;
+  border-radius: calc(var(--radius-md) + 3.5px);
+  padding: 3px;
+  background: conic-gradient(
+    from -90deg,
+    var(--ring, #10b981) calc(var(--known-pct, 0) * 1%),
+    var(--ring-track) 0
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+@starting-style {
+  .packcard__icon-ring {
+    --known-pct: 0 !important;
+  }
+}
+
 .packcard__icon {
   width: 44px;
   height: 44px;
@@ -272,6 +355,7 @@
   justify-content: center;
   font-size: 20px;
   flex-shrink: 0;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .packcard__info {
@@ -377,7 +461,14 @@
 .packcard__bar-fill {
   height: 100%;
   border-radius: var(--radius-full);
-  transition: width var(--transition-slow);
+  transition: width var(--transition-slow) var(--ease-out-expo);
+}
+
+/* Grow from 0 the first time the card paints (scrolls into view). */
+@starting-style {
+  .packcard__bar-fill {
+    width: 0 !important;
+  }
 }
 
 .packcard__bar--heard .packcard__bar-fill {

@@ -44,6 +44,8 @@
   font-weight: 700;
   color: var(--accent);
   line-height: 1;
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
 }
 
 .statsrow__label {
@@ -76,11 +78,20 @@
   height: 5px;
   border-radius: 50%;
   background: var(--border);
-  transition: background var(--transition-fast);
+  transition: background var(--transition-med), box-shadow var(--transition-med);
 }
 
 .statsrow__dot--filled {
   background: var(--accent);
+  box-shadow: 0 0 6px var(--accent-glow);
+}
+
+/* Staggered left-to-right fill on first paint (transition-delay set inline). */
+@starting-style {
+  .statsrow__dot--filled {
+    background: var(--border);
+    box-shadow: 0 0 0 transparent;
+  }
 }
 
 .statsrow__chip--skeleton {
@@ -104,4 +115,12 @@
   font-weight: 700;
   color: var(--accent);
   line-height: 1;
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .statsrow__dot {
+    transition: none;
+  }
 }
