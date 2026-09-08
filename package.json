@@ -17,6 +17,7 @@
     "gen-sentences:master-export": "tsx scripts/export-candidates-master.ts",
     "gen-sentences:apply": "tsx scripts/apply-generated-sentences.ts",
     "gen-sentences:apply-chosen": "tsx scripts/apply-chosen-candidates.ts",
+    "gen-sentences:extra-round": "tsx --env-file=.env scripts/generate-extra-round.ts",
     "sync-packs": "node scripts/sync-packs.mjs",
     "generate-icons": "node scripts/generate-icons.mjs",
     "generate-audio": "tsx --env-file=.env scripts/generate-audio.ts",

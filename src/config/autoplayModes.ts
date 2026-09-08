@@ -75,14 +75,24 @@ export function planSequence(mode: AutoplayMode, word: Word): AutoplayStep[] {
   return AUTOPLAY_MODES[mode].steps.filter(s => !s.needs || word[s.needs] != null)
 }
 
-/** Rough seconds for one word in a mode: gaps (exact) + a flat guess per clip
- *  play (clip length isn't known until it loads). Used for the picker's "~N min". */
+/** Rough ms for a step list: gaps (exact) + a flat guess per clip play (clip
+ *  length isn't known until it loads). Used for the picker's "~N min". */
 const CLIP_GUESS_MS = 1500
 
-export function estimateWordMs(mode: AutoplayMode, word: Word): number {
-  return planSequence(mode, word).reduce((sum, s) => {
+export function estimateStepsMs(steps: AutoplayStep[]): number {
+  return steps.reduce((sum, s) => {
     const plays = s.repeat ?? 1
     const repeatGaps = plays > 1 ? (plays - 1) * (s.repeatGapMs ?? 0) : 0
     return sum + plays * CLIP_GUESS_MS + repeatGaps + s.gapMs
   }, 0)
+}
+
+export function estimateWordMs(mode: AutoplayMode, word: Word): number {
+  return estimateStepsMs(planSequence(mode, word))
+}
+
+/** The step list a mode will actually run, when only "does the pack have
+ *  sentences" is known (the picker, before pack words are loaded). */
+export function modeStepsForContent(mode: AutoplayMode, hasSentences: boolean): AutoplayStep[] {
+  return AUTOPLAY_MODES[mode].steps.filter(s => !s.needs || hasSentences)
 }

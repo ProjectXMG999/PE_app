@@ -1,5 +1,5 @@
 import { useEffect, useRef, useCallback, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell'
 import { FlashcardHeader } from '../components/flashcard/FlashcardHeader'
 import { ModeToggle } from '../components/flashcard/ModeToggle'
@@ -21,6 +21,8 @@ import { useAppStore } from '../store/useAppStore'
 import { saveSession, savePackageProgress, getPackageProgress, saveWordProgress, getPackageWordProgress, getWordProgress } from '../services/db'
 import { StudyMode } from '../types/progress'
 import { applyKnown, applyUnknown } from '../services/review'
+import { planSequence, estimateWordMs } from '../config/autoplayModes'
+import { RATES } from '../constants/audioRates'
 import { useStudyClock } from '../hooks/useStudyClock'
 import { dayKey } from '../utils/day'
 import packagesIndex from '../data/packages-index.json'
@@ -37,9 +39,10 @@ function getNextPack(currentId: string): PackMeta | null {
 export function FlashcardPage() {
   const { packageId, mode } = useParams<{ packageId: string; mode: string }>()
   const navigate = useNavigate()
+  const location = useLocation()
   const studyMode = (mode === 'autoplay' ? 'autoplay' : 'fiszki') as StudyMode
 
-  const { setPackage, autoplayMode, setAutoplayMode, enRate, plRate, keepScreenAudioAlive } = useAppStore()
+  const { setPackage, setCardIndex, autoplayMode, setAutoplayMode, enRate, setEnRate, plRate, keepScreenAudioAlive } = useAppStore()
   const { pack, loading, error } = usePackageData(packageId ?? null)
   const allWords = pack?.words ?? []
   // In fiszki mode: only show words not yet marked 'known'. Autoplay always shows all.
@@ -85,7 +88,7 @@ export function FlashcardPage() {
 
   // Autoplay timeline — play/gap steps per mode. See hooks/useAutoplaySequence.ts
   // and config/autoplayModes.ts. Inert in fiszki mode (`enabled` false).
-  const { playStep, audioLoading, audioError, speakCountdown, skipStep, restart } =
+  const { playStep, audioLoading, audioError, speakCountdown, repeatLine, restart } =
     useAutoplaySequence({
       word: currentWord,
       mode: autoplayMode,
@@ -127,6 +130,12 @@ export function FlashcardPage() {
     if (isPaused) handleResume()
     else handlePause()
   }, [isPaused, handleResume, handlePause])
+
+  // "Wolniej" quick control — one English-tempo preset down, bottoms out.
+  const handleSlower = useCallback(() => {
+    const i = RATES.findIndex(r => r.value === enRate)
+    if (i > 0) setEnRate(RATES[i - 1].value)
+  }, [enRate, setEnRate])
 
   const handleModeChange = useCallback((m: 'fast' | 'standard' | 'speaking') => {
     stop()
@@ -186,6 +195,13 @@ export function FlashcardPage() {
       } else {
         setStudyWords(pack.words)
       }
+      // Autoplay only: honour "Wznów" from the mode picker. setPackage already
+      // put the index at 0 on mount; move it forward only when explicitly asked
+      // and the saved spot is genuinely mid-pack.
+      const wantResume = studyMode === 'autoplay'
+        && (location.state as { resume?: string } | null)?.resume === 'from'
+      const savedIdx = existing?.currentIndex ?? 0
+      setCardIndex(wantResume && savedIdx > 0 && savedIdx < pack.words.length ? savedIdx : 0)
       setDbLoaded(true)
     }).catch(() => {
       // DB error — show words anyway so user isn't stuck on spinner
@@ -393,6 +409,8 @@ export function FlashcardPage() {
   // Lock-screen / notification transport controls + metadata.
   // Full support on Android Chrome; best-effort on iOS (stop() clears src between
   // cards, which tears down Now Playing — accepted, see useMediaSession docs).
+  const perWordMs = currentWord && studyMode === 'autoplay'
+    ? estimateWordMs(autoplayMode, currentWord) : 0
   useMediaSession({
     enabled: studyMode === 'autoplay' && !showCompletion && !!currentWord,
     title: currentWord?.english ?? '',
@@ -404,6 +422,8 @@ export function FlashcardPage() {
     onNext: handleSkip,
     onPrev: handlePrev,
     onStop: handlePause,
+    durationSec: perWordMs ? (perWordMs * total) / 1000 : undefined,
+    positionSec: perWordMs ? (perWordMs * currentCardIndex) / 1000 : undefined,
   })
 
   // ─── Loading / error ───────────────────────────────────────────────────────
@@ -528,6 +548,7 @@ export function FlashcardPage() {
       <AutoplayDoneScreen
         packName={pack.name}
         wordCount={total}
+        newCount={Math.max(0, total - knownCount)}
         autoContinue={autoContinue}
         countdown={countdown}
         totalSecs={TOTAL_SECS}
@@ -535,6 +556,7 @@ export function FlashcardPage() {
         onToggleAutoContinue={() => { setAutoContinue(v => !v); setCountdown(TOTAL_SECS) }}
         onRepeat={handleRepeat}
         onNext={nextPack ? handleNextPack : null}
+        onPractice={() => navigate(`/pakiet/${packageId}/word-flash`)}
         onMastered={handleMastered}
         onExit={() => navigate('/')}
       />
@@ -555,8 +577,13 @@ export function FlashcardPage() {
         word={currentWord}
         revealStep={revealStep}
         mode={studyMode}
-        onClick={studyMode === 'autoplay' ? skipStep : reveal}
+        onClick={studyMode === 'autoplay' ? repeatLine : reveal}
         activeLine={studyMode === 'autoplay' ? playStep : null}
+        footer={
+          studyMode === 'autoplay'
+            ? `≈ ${Math.max(1, Math.round(estimateWordMs(autoplayMode, currentWord) * (total - currentCardIndex) / 60000))} min do końca`
+            : undefined
+        }
       />
 
       {studyMode === 'fiszki' && (
@@ -604,6 +631,7 @@ export function FlashcardPage() {
         <AutoplayControls
           autoplayMode={autoplayMode}
           onModeChange={handleModeChange}
+          stepLines={planSequence(autoplayMode, currentWord).map(s => s.line)}
           playStep={playStep}
           audioLoading={audioLoading}
           audioError={audioError}
@@ -612,6 +640,9 @@ export function FlashcardPage() {
           onRestart={restartCurrentWord}
           onSkip={handleSkip}
           onOpenSettings={() => setSheetOpen(true)}
+          enRate={enRate}
+          onSlower={handleSlower}
+          canSlower={enRate > RATES[0].value}
           countdown={speakCountdown}
         />
       )}

@@ -9,9 +9,11 @@ interface Props {
   onClick: () => void
   // Autoplay: which line is currently being spoken (0=PL, 1=EN, 2=PL sentence, 3=EN sentence)
   activeLine?: 0 | 1 | 2 | 3 | null
+  // Autoplay: small status line under the card (e.g. "≈ 4 min do końca")
+  footer?: string
 }
 
-export function FlashCard({ word, revealStep, mode, onClick, activeLine = null }: Props) {
+export function FlashCard({ word, revealStep, mode, onClick, activeLine = null, footer }: Props) {
   const isAutoplay = mode === 'autoplay'
   // Reveal order: Polish(0) → English(1) → sentence PL(2) → sentence EN(3)
   const showEnglish = revealStep >= 1 || isAutoplay
@@ -22,38 +24,60 @@ export function FlashCard({ word, revealStep, mode, onClick, activeLine = null }
     activeLine === line ? ' flashcard__line--active' : ''
 
   return (
-    <div className={`flashcard animate-card`} onClick={onClick}>
-      <div className={`flashcard__polish${lineClass(0)}`}>
-        {word.polish}
+    <div className="flashcard-wrap">
+      <div
+        className="flashcard animate-card"
+        onClick={onClick}
+        {...(isAutoplay
+          ? {
+              role: 'button',
+              tabIndex: 0,
+              'aria-label': 'Dotknij, aby powtórzyć fragment',
+              onKeyDown: (e: React.KeyboardEvent) => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick() }
+              },
+            }
+          : {})}
+      >
+        <div className={`flashcard__polish${lineClass(0)}`}>
+          {word.polish}
+        </div>
+
+        {showEnglish && (
+          <>
+            <div className="flashcard__divider" />
+            <div className={`flashcard__english animate-slide-up${lineClass(1)}`}>
+              {word.english}
+            </div>
+          </>
+        )}
+
+        {!showEnglish && (
+          <>
+            <div className="flashcard__divider flashcard__divider--hint" />
+            <div className="flashcard__hint">
+              Powiedz po angielsku. Potem odsłoń.
+            </div>
+          </>
+        )}
+
+        {word.sentencePl && showSentencePl && (
+          <div className={`flashcard__sentence-pl animate-slide-up${lineClass(2)}`}>
+            {word.sentencePl}
+          </div>
+        )}
+
+        {word.sentenceEn && showSentenceEn && (
+          <div className={`flashcard__sentence-en animate-slide-up${lineClass(3)}`}>
+            {word.sentenceEn}
+          </div>
+        )}
       </div>
 
-      {showEnglish && (
-        <>
-          <div className="flashcard__divider" />
-          <div className={`flashcard__english animate-slide-up${lineClass(1)}`}>
-            {word.english}
-          </div>
-        </>
-      )}
-
-      {!showEnglish && (
-        <>
-          <div className="flashcard__divider flashcard__divider--hint" />
-          <div className="flashcard__hint">
-            Powiedz po angielsku. Potem odsłoń.
-          </div>
-        </>
-      )}
-
-      {word.sentencePl && showSentencePl && (
-        <div className={`flashcard__sentence-pl animate-slide-up${lineClass(2)}`}>
-          {word.sentencePl}
-        </div>
-      )}
-
-      {word.sentenceEn && showSentenceEn && (
-        <div className={`flashcard__sentence-en animate-slide-up${lineClass(3)}`}>
-          {word.sentenceEn}
+      {isAutoplay && (
+        <div className="flashcard__autoplay-foot">
+          {footer && <span className="flashcard__autoplay-remaining">{footer}</span>}
+          <span className="flashcard__autoplay-hint">Dotknij karty, aby powtórzyć</span>
         </div>
       )}
     </div>

@@ -134,56 +134,78 @@
   font-family: var(--font-heading);
   font-size: var(--text-sm);
   font-weight: 700;
-  color: #EF4444;
+  color: var(--danger);
   letter-spacing: 0.02em;
 }
 
-/* ── Buttons: gear | Powtórz | Pauza (primary) | Pomiń ──────────────── */
+/* ── Utility row: tempo-down · more ─────────────────────────────────── */
 
-.apc__btns {
+.apc__utility {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.apc__util-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 14px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.apc__util-btn:hover:not(:disabled) {
+  border-color: var(--border-accent);
+  color: var(--text-primary);
+}
+
+.apc__util-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.apc__util-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.apc__util-label {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Transport: Powtórz · Pauza (primary) · Pomiń ───────────────────── */
+
+.apc__transport {
   display: grid;
-  grid-template-columns: 56px 1fr 84px 1fr;
+  grid-template-columns: 1fr 84px 1fr;
   gap: var(--spacing-sm);
   align-items: center;
   width: 100%;
 }
 
-.apc__gear-btn {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-lg);
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  color: var(--text-secondary);
+.apc__side-btn {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.apc__gear-btn:hover {
-  border-color: var(--border-accent);
-  color: var(--text-primary);
-}
-
-.apc__gear-btn:active {
-  transform: scale(0.97);
-}
-
-.apc__side-btn {
-  height: 56px;
+  gap: 4px;
+  height: 64px;
   border-radius: var(--radius-lg);
   font-family: var(--font-heading);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: 700;
   color: var(--text-secondary);
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
   transition: all var(--transition-fast);
   cursor: pointer;
 }

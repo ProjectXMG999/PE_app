@@ -32,6 +32,8 @@ export interface AutoplaySequenceState {
   speakCountdown: SpeakCountdown | null
   /** Card tap — end the current gap early, or cut a clip short, to jump a step. */
   skipStep: () => void
+  /** Replay from the current step (re-hear the line, then carry on). */
+  repeatLine: () => void
   /** Replay the current word from step 0 (mode switch, "Powtórz" button). */
   restart: () => void
 }
@@ -92,6 +94,13 @@ export function useAutoplaySequence({
   const restart = useCallback(() => {
     resumeFromRef.current = null
     setPlayStep(null)
+    setRestartKey(k => k + 1)
+  }, [])
+
+  const repeatLine = useCallback(() => {
+    // Re-enter the sequence resuming from the current step — replays that clip,
+    // then continues normally. Between steps (playStep null) it's a full replay.
+    resumeFromRef.current = playStepRef.current
     setRestartKey(k => k + 1)
   }, [])
 
@@ -203,5 +212,5 @@ export function useAutoplaySequence({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cardIndex, restartKey, enabled, isPaused, mode, isLastCard])
 
-  return { playStep, audioLoading, audioError, speakCountdown, skipStep, restart }
+  return { playStep, audioLoading, audioError, speakCountdown, skipStep, repeatLine, restart }
 }

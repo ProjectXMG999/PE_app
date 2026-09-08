@@ -4,6 +4,8 @@ import './AutoplayDoneScreen.css'
 interface Props {
   packName: string
   wordCount: number
+  /** Pack words not yet marked 'known' — surfaced as the "practise these" nudge. */
+  newCount: number
   autoContinue: boolean
   countdown: number
   totalSecs: number
@@ -11,13 +13,22 @@ interface Props {
   onToggleAutoContinue: () => void
   onRepeat: () => void
   onNext: (() => void) | null
+  onPractice: () => void
   onMastered: () => void
   onExit: () => void
 }
 
+function newWordsLabel(n: number): string {
+  const rem10 = n % 10
+  const rem100 = n % 100
+  if (n === 1) return '1 nowe słowo'
+  if (rem10 >= 2 && rem10 <= 4 && !(rem100 >= 12 && rem100 <= 14)) return `${n} nowe słowa`
+  return `${n} nowych słów`
+}
+
 export function AutoplayDoneScreen({
-  packName, wordCount, autoContinue, countdown, totalSecs,
-  nextPackName, onToggleAutoContinue, onRepeat, onNext, onMastered, onExit,
+  packName, wordCount, newCount, autoContinue, countdown, totalSecs,
+  nextPackName, onToggleAutoContinue, onRepeat, onNext, onPractice, onMastered, onExit,
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const rafRef = useRef<number>(0)
@@ -98,7 +109,10 @@ export function AutoplayDoneScreen({
 
         <div className="apdone__text">
           <h2 className="apdone__title">Paczka odsłuchana!</h2>
-          <p className="apdone__sub">{packName} · {wordCount} słów</p>
+          <p className="apdone__sub">
+            {packName} · {wordCount} słów
+            {newCount > 0 && <> · <strong>{newWordsLabel(newCount)}</strong> do przećwiczenia</>}
+          </p>
         </div>
 
         <div className="apdone__actions">
@@ -109,6 +123,16 @@ export function AutoplayDoneScreen({
               <span className="apdone__btn-sub">Oznacz wszystkie słowa jako znam</span>
             </span>
           </button>
+
+          {newCount > 0 && (
+            <button className="apdone__btn apdone__btn--practice" onClick={onPractice}>
+              <span className="apdone__btn-icon">✍️</span>
+              <span className="apdone__btn-body">
+                <span className="apdone__btn-label">Przećwicz słabsze</span>
+                <span className="apdone__btn-sub">Fiszki z tych, których jeszcze nie znasz</span>
+              </span>
+            </button>
+          )}
 
           <div className="apdone__row">
             <button className="apdone__btn apdone__btn--secondary" onClick={onRepeat}>

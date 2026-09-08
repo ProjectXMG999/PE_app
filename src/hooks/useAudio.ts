@@ -8,6 +8,10 @@ import { Word } from '../types/vocabulary'
 const EN_BASE = 1.0
 const PL_BASE = 1.0
 
+// Verbose play()/load() tracing — useful when chasing an iOS audio regression,
+// pure noise in production.
+const AUDIO_DEBUG = import.meta.env.DEV
+
 // enRate/plRate are multipliers: 1.0 = default speed (natural pace), 0.5 = half, 1.5 = faster
 export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
   // Resolver for the currently pending play() promise — lets stop() unblock awaits
@@ -34,7 +38,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
         return
       }
 
-      console.log('[audio] play() filename=', filename, 'rate=', rate)
+      AUDIO_DEBUG && console.log('[audio] play() filename=', filename, 'rate=', rate)
 
       let resolved = false
       const done = (result: 'ok' | 'timeout' | 'error' = 'ok') => {
@@ -50,26 +54,25 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
 
       let playStarted = false
       const tryPlay = (evt?: string) => {
-        console.log('[audio] tryPlay via', evt, 'rs=', audio.readyState, 'started=', playStarted, 'filename=', filename)
+        AUDIO_DEBUG && console.log('[audio] tryPlay via', evt, 'rs=', audio.readyState, 'started=', playStarted, 'filename=', filename)
         if (playStarted) return
         playStarted = true
         audio.oncanplaythrough = null
         audio.onloadedmetadata = null
         audio.onloadeddata = null
-        console.log('[audio] calling play() from', evt)
+        AUDIO_DEBUG && console.log('[audio] calling play() from', evt)
         audio.play()
           .then(() => {
-            console.log('[audio] play() SUCCEEDED from', evt)
+            AUDIO_DEBUG && console.log('[audio] play() SUCCEEDED from', evt)
           })
           .catch(e => {
             console.error('[audio] play() rejected from', evt, '— error:', e.name, e.message, 'filename:', filename)
-            console.error('[audio] play() stack:', new Error().stack)
             done('error')
           })
       }
 
       audio.onended = () => {
-        console.log('[audio] onended')
+        AUDIO_DEBUG && console.log('[audio] onended')
         done('ok')
       }
       audio.onerror = () => {
@@ -82,7 +85,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
         tryPlay('loadedmetadata')
       }
       audio.onloadeddata = () => {
-        console.log('[audio] loadeddata rs=', audio.readyState, 'filename=', filename)
+        AUDIO_DEBUG && console.log('[audio] loadeddata rs=', audio.readyState, 'filename=', filename)
         if (audio.readyState >= 2) tryPlay('loadeddata')
       }
 
@@ -119,14 +122,14 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
   // src there was tearing down the iOS Now Playing session on every single card change.
   const stop = useCallback((opts?: { hard?: boolean }) => {
     const hard = opts?.hard ?? true
-    console.log('[audio] stop() called, hard=', hard)
+    AUDIO_DEBUG && console.log('[audio] stop() called, hard=', hard)
     if (resolveCurrentRef.current) {
       resolveCurrentRef.current()
       resolveCurrentRef.current = null
     }
     const el = getAudioElement()
     if (el) {
-      console.log('[audio] stop() pausing audio')
+      AUDIO_DEBUG && console.log('[audio] stop() pausing audio')
       el.pause()
       if (hard) {
         el.currentTime = 0

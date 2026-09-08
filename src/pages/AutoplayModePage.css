@@ -64,6 +64,109 @@
   gap: var(--spacing-sm);
 }
 
+/* ── Resume banner ─────────────────────────────────────────────────── */
+
+.autoplay-mode__resume {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding: 10px var(--spacing-md);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-accent);
+}
+
+.autoplay-mode__resume-text {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.autoplay-mode__resume-text strong {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+}
+
+.autoplay-mode__resume-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.autoplay-mode__resume-btn {
+  height: 34px;
+  padding: 0 16px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.autoplay-mode__resume-btn:hover {
+  border-color: var(--border-accent);
+  color: var(--text-primary);
+}
+
+.autoplay-mode__resume-btn--primary {
+  color: white;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.autoplay-mode__resume-btn--primary:hover {
+  background: var(--accent-bright);
+  color: white;
+}
+
+/* ── Tempo pre-set ─────────────────────────────────────────────────── */
+
+.autoplay-mode__tempo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-xs);
+}
+
+.autoplay-mode__tempo-label {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.autoplay-mode__tempo-pills {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+
+.autoplay-mode__tempo-pill {
+  flex: 1;
+  height: 32px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.autoplay-mode__tempo-pill--active {
+  color: white;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
 .autoplay-mode__info {
   display: flex;
   flex-direction: column;
@@ -157,6 +260,11 @@
   transform: scale(0.98);
 }
 
+.autoplay-mode__card--selected {
+  border-color: var(--accent);
+  background: var(--bg-card);
+}
+
 .autoplay-mode__card-icon {
   font-size: 26px;
   line-height: 1;
@@ -172,6 +280,9 @@
 }
 
 .autoplay-mode__card-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-heading);
   font-size: 17px;
   font-weight: 700;
@@ -179,19 +290,55 @@
   line-height: 1.2;
 }
 
-.autoplay-mode__card-sequence {
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--text-muted);
-  line-height: 1.4;
+.autoplay-mode__card-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+  background: var(--accent-glow);
+  border-radius: var(--radius-full);
+  padding: 2px 7px;
 }
+
+/* Step preview — one chip per clip the mode will actually play for this pack. */
+.autoplay-mode__card-seq {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 1px 0;
+}
+
+.autoplay-mode__seq-dot {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1px 6px;
+  white-space: nowrap;
+}
+
+.autoplay-mode__seq-dot[data-line="0"] { color: var(--text-muted); }
+.autoplay-mode__seq-dot[data-line="1"] { color: var(--accent-bright); border-color: var(--border-accent); }
+.autoplay-mode__seq-dot[data-line="2"],
+.autoplay-mode__seq-dot[data-line="3"] { color: var(--text-secondary); font-style: italic; }
 
 .autoplay-mode__card-desc {
   font-family: var(--font-body);
   font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.4;
+  margin-top: 2px;
+}
+
+.autoplay-mode__card-dur {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
   margin-top: 2px;
 }
 

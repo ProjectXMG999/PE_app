@@ -11,6 +11,10 @@ interface MediaSessionOpts {
   onNext: () => void
   onPrev: () => void
   onStop?: () => void
+  /** Rough whole-pack length / current spot, in seconds — lock screen shows a
+   *  progress bar. Both must be finite with 0 <= position <= duration. */
+  durationSec?: number
+  positionSec?: number
 }
 
 // Lock-screen / notification transport for the autoplay sequence.
@@ -34,7 +38,7 @@ export function useMediaSession(opts: MediaSessionOpts): void {
   const handlersRef = useRef({ onPlay: opts.onPlay, onPause: opts.onPause, onNext: opts.onNext, onPrev: opts.onPrev, onStop: opts.onStop })
   handlersRef.current = { onPlay: opts.onPlay, onPause: opts.onPause, onNext: opts.onNext, onPrev: opts.onPrev, onStop: opts.onStop }
 
-  const { enabled, title, artist, album, playing } = opts
+  const { enabled, title, artist, album, playing, durationSec, positionSec } = opts
 
   // Action handlers — registered once per enable
   useEffect(() => {
@@ -95,4 +99,17 @@ export function useMediaSession(opts: MediaSessionOpts): void {
       try { navigator.mediaSession.playbackState = 'none' } catch { /* noop */ }
     }
   }, [supported, enabled, playing])
+
+  // Pack-level progress bar on the lock screen. Estimated (clip lengths aren't
+  // known ahead of time), so it moves in word-sized steps, not smoothly.
+  useEffect(() => {
+    if (!supported || !enabled) return
+    if (durationSec == null || positionSec == null) return
+    const duration = Math.max(0, durationSec)
+    const position = Math.min(Math.max(0, positionSec), duration)
+    if (!Number.isFinite(duration) || !Number.isFinite(position) || duration === 0) return
+    try {
+      navigator.mediaSession.setPositionState({ duration, position, playbackRate: 1 })
+    } catch { /* Safari throws on some shapes — skip */ }
+  }, [supported, enabled, durationSec, positionSec])
 }
