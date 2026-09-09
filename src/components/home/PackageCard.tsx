@@ -1,13 +1,12 @@
-import { MouseEvent } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { PackMeta } from '../../types/vocabulary'
 import { PackageProgress } from '../../types/progress'
 import { useAuthStore } from '../../store/useAuthStore'
+import { usePrefetchOnHover, loadPackPreview } from '../../hooks/usePrefetchOnHover'
+import { routeNumber } from '../../utils/packRoute'
 import {
-  LEVEL_COLORS,
   getPackIcon,
   getCategoryColor,
-  getPackNumber,
   getStatus,
   STATUS_META,
 } from '../../utils/packVisuals'
@@ -17,61 +16,66 @@ interface Props {
   pack: PackMeta
   progress?: PackageProgress
   knownCount?: number
+  /** The earliest not-yet-mastered pack on the route — gets the "Kontynuuj" cue. */
+  isFrontier?: boolean
 }
 
-export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
-  const navigate = useNavigate()
+/** One glyph standing in for the status pill — quieter on a long scroll. */
+const STATUS_GLYPH: Record<string, { glyph: string; aria: string }> = {
+  started:   { glyph: '◐', aria: 'W toku' },
+  completed: { glyph: '✓', aria: 'Odsłuchana' },
+  mastered:  { glyph: '★', aria: 'Opanowana' },
+}
+
+export function PackageCard({ pack, progress, knownCount = 0, isFrontier = false }: Props) {
   const { user, hasAccess: hasAccessFn } = useAuthStore()
   const hasAccess = hasAccessFn()
-  // Mirror RequireEntitlement's redirect logic: logged-out visitors go to
-  // login first, logged-in-but-unentitled users go straight to the account page.
-  const goToAccount = (e: MouseEvent) => { e.stopPropagation(); navigate(user ? '/konto' : '/logowanie') }
+  const prefetch = usePrefetchOnHover(loadPackPreview)
+
   const icon = getPackIcon(pack)
   const color = getCategoryColor(pack.category)
+  const num = routeNumber(pack.id)
   const heardPct = progress ? Math.min((progress.currentIndex / pack.wordCount) * 100, 100) : 0
   const knownPct = pack.wordCount > 0 ? Math.min((knownCount / pack.wordCount) * 100, 100) : 0
-  // A pack can carry a stale masteredAt with its words not actually all known
-  // (see services/masteryRepair.ts, which heals it on boot). Don't show the
-  // gold "★ Opanowana" treatment until the known count really reaches the total
-  // — otherwise the badge contradicts the "0 / 10 opanowanych" line right below.
+
+  // A stale masteredAt can outlive its known words (services/masteryRepair heals
+  // it on boot) — don't show gold until the count really reaches the total.
   const rawStatus = getStatus(progress)
   const status = rawStatus === 'mastered' && knownCount < pack.wordCount
     ? (progress?.completedAt ? 'completed' : 'started')
     : rawStatus
-  const { label: statusLabel, className: statusClass } = STATUS_META[status]
-  const packNum = getPackNumber(pack.id)
-  // Mastered = VIP gold treatment; CSS owns all colors, so skip the inline overrides
   const isMastered = status === 'mastered'
+  const glyph = STATUS_GLYPH[status]
+
+  // Mirror RequireEntitlement: logged-out → login, entitled-less → account.
+  const to = hasAccess ? `/pakiet/${pack.id}` : (user ? '/konto' : '/logowanie')
+  const ariaLabel = `Pakiet #${num}: ${pack.name}. ${pack.category}. `
+    + `${knownCount} z ${pack.wordCount} słów opanowanych`
+    + (glyph ? `, ${glyph.aria.toLowerCase()}` : '')
 
   return (
-    <div
-      className={`packcard ${statusClass}`}
-      onClick={hasAccess ? () => navigate(`/pakiet/${pack.id}`) : goToAccount}
-      style={{ cursor: 'pointer', ['--cat' as string]: color }}
+    <Link
+      to={to}
+      viewTransition
+      {...prefetch}
+      className={`packcard ${STATUS_META[status].className} ${isFrontier ? 'packcard--frontier' : ''}`}
+      style={{ ['--cat' as string]: color }}
+      aria-label={ariaLabel}
+      id={`pack-${pack.id}`}
     >
-      {/* Status stripe — visible left border accent (gold border replaces it when mastered) */}
-      {status !== 'new' && !isMastered && <div className="packcard__stripe" />}
+      {status === 'started' && !isMastered && <span className="packcard__stripe" aria-hidden="true" />}
 
       {!hasAccess && (
-        <div className="packcard__lock" aria-label="Wymaga subskrypcji" title="Wymaga subskrypcji">
+        <span className="packcard__lock" aria-hidden="true">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <rect x="4" y="11" width="16" height="10" rx="2"/>
-            <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+            <rect x="4" y="11" width="16" height="10" rx="2" />
+            <path d="M8 11V7a4 4 0 0 1 8 0v4" />
           </svg>
-        </div>
+        </span>
       )}
 
       <div className="packcard__header">
-        {packNum && (
-          <div className="packcard__num">
-            <span
-              className="packcard__num-text"
-              style={{ color: !isMastered && pack.level ? LEVEL_COLORS[pack.level] : undefined }}
-            >
-              #{packNum}
-            </span>
-          </div>
-        )}
+        <span className="packcard__num">#{num}</span>
         <div
           className="packcard__icon-ring"
           style={{
@@ -79,54 +83,39 @@ export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
             ['--ring' as string]: isMastered ? '#f2b619' : '#10B981',
           }}
         >
-          <div className="packcard__icon" style={isMastered ? undefined : { background: `${color}22`, color }}>
+          {/* Paired with PackPreviewPage's hero icon/name so the card morphs
+              into the preview instead of cutting to it — same recipe as the
+              training card → detail transition (TrainingPage.tsx). */}
+          <div
+            className="packcard__icon"
+            style={{
+              ...(isMastered ? {} : { background: `${color}22`, color }),
+              viewTransitionName: `pack-icon-${pack.id}`,
+            }}
+          >
             {icon}
           </div>
         </div>
         <div className="packcard__info">
-          <h3 className="packcard__name">{pack.name}</h3>
+          <h3 className="packcard__name" style={{ viewTransitionName: `pack-name-${pack.id}` }}>{pack.name}</h3>
           <span className="packcard__meta">{pack.category}</span>
         </div>
         <div className="packcard__right">
-          {statusLabel && (
-            <span className={`packcard__status-pill packcard__status-pill--${status}`}>
-              {statusLabel}
+          {isFrontier && hasAccess && <span className="packcard__frontier-tag">Kontynuuj →</span>}
+          {glyph && (
+            <span className={`packcard__glyph packcard__glyph--${status}`} title={glyph.aria} aria-hidden="true">
+              {glyph.glyph}
             </span>
           )}
+          <span className="packcard__count">{knownCount}/{pack.wordCount}</span>
         </div>
       </div>
 
-      <div className="packcard__progress-row">
-        <span className="packcard__count">
-          {knownCount} / {pack.wordCount} opanowanych
+      {heardPct > 0 && !isMastered && (
+        <span className="packcard__heard" aria-hidden="true">
+          <span className="packcard__heard-fill" style={{ width: `${heardPct}%` }} />
         </span>
-        {pack.level && (
-          <span className="packcard__level">Level {pack.level}</span>
-        )}
-      </div>
-
-      {heardPct > 0 && (
-        <div className="packcard__bars">
-          <div className="packcard__bar packcard__bar--heard">
-            <div className="packcard__bar-fill" style={{ width: `${heardPct}%` }} />
-          </div>
-        </div>
       )}
-
-      <div className="packcard__actions">
-        <button
-          className="packcard__btn packcard__btn--autoplay"
-          onClick={hasAccess ? (e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/start`) } : goToAccount}
-        >
-          <span>🎧</span> Słuchaj
-        </button>
-        <button
-          className="packcard__btn packcard__btn--fiszki"
-          onClick={hasAccess ? (e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/fiszki-start`) } : goToAccount}
-        >
-          <span>⚡</span> Trenuj
-        </button>
-      </div>
-    </div>
+    </Link>
   )
 }

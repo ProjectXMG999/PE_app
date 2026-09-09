@@ -3,8 +3,6 @@ import { persist } from 'zustand/middleware'
 import { AutoplayMode, StudyMode } from '../types/progress'
 import { emitProgress } from '../services/progressEvents'
 
-type FilterType = 'all' | 'new' | 'started' | 'completed' | 'mastered'
-
 type BeforeInstallPromptEvent = Event & {
   prompt: () => Promise<void>
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
@@ -74,19 +72,8 @@ interface AppStore {
   resetReveal: () => void
   setAutoPlaying: (v: boolean) => void
 
-  searchQuery: string
-  activeFilter: FilterType | null
-  activeCategoryFilter: string | null
-  activeLevel: number | null
-  activeCategory: string | null
-  setSearch: (q: string) => void
-  setFilter: (f: FilterType | null) => void
-  setCategoryFilter: (cat: string | null) => void
-  setLevel: (level: number | null) => void
-  setCategory: (cat: string | null) => void
-
-  /** Persisted starting level for the Dziś recommendation engine — distinct
-   *  from `activeLevel` above, which is a transient Home browse filter. */
+  /** Persisted starting level for the Dziś recommendation engine. The Pakiety
+   *  browse filters live in the URL (?level/?cat/?status/?q), not here. */
   todayLevel: number | null
   setTodayLevel: (level: number | null) => void
 
@@ -165,21 +152,6 @@ export const useAppStore = create<AppStore>()(
       advanceReveal: () => set(s => ({ revealStep: s.revealStep + 1 })),
       resetReveal: () => set({ revealStep: 0 }),
       setAutoPlaying: (v) => set({ isAutoPlaying: v }),
-
-      searchQuery: '',
-      // "Nowe" is the default status filter when Pakiety opens — the page's job
-      // is "what haven't I done yet". Not persisted (see partialize), so it
-      // resets to this on every app load; a filter chosen mid-session still
-      // survives navigating in and out of a pack.
-      activeFilter: 'new',
-      activeCategoryFilter: null,
-      activeLevel: null,
-      activeCategory: null,
-      setSearch: (q) => set({ searchQuery: q }),
-      setFilter: (f) => set({ activeFilter: f }),
-      setCategoryFilter: (cat) => set({ activeCategoryFilter: cat }),
-      setLevel: (level) => set({ activeLevel: level }),
-      setCategory: (cat) => set({ activeCategory: cat }),
 
       todayLevel: null,
       setTodayLevel: (level) => set({ todayLevel: level }),

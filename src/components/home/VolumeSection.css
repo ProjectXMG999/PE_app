@@ -1,0 +1,142 @@
+.volsec {
+  --band: var(--text-muted);
+}
+
+.volsec + .volsec {
+  margin-top: var(--spacing-xs);
+}
+
+/* Sticks *below* the filter bar (which is sticky at top: 0) — --pfbar-h is
+   published on .homepage by a ResizeObserver in PackFilterBar. */
+.volsec__head {
+  position: sticky;
+  top: var(--pfbar-h, 0px);
+  z-index: 2;
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    var(--bg-primary) 0%,
+    var(--bg-primary) 64%,
+    color-mix(in srgb, var(--bg-primary) 0%, transparent) 100%
+  );
+  backdrop-filter: blur(6px);
+}
+
+.volsec__toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 10px var(--spacing-md) 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-primary);
+}
+
+.volsec__toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Mini completion ring (same conic recipe as the pack icon ring). */
+.volsec__ring {
+  position: relative;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(
+    from -90deg,
+    var(--band) calc(var(--known-pct, 0) * 1%),
+    color-mix(in srgb, var(--band) 16%, transparent) 0
+  );
+}
+
+.volsec__ring::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: var(--radius-full);
+  background: var(--bg-primary);
+}
+
+.volsec__ring-label {
+  position: relative;
+  font-family: var(--font-heading);
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--band);
+  font-variant-numeric: tabular-nums;
+}
+
+.volsec__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+  flex: 1;
+}
+
+.volsec__title {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--band);
+}
+
+.volsec__levels {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.volsec__sub {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.volsec__chevron {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: transform var(--transition-fast);
+}
+
+.volsec__chevron.is-collapsed {
+  transform: rotate(-90deg);
+}
+
+.volsec__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-md) var(--spacing-md);
+}
+
+@media (min-width: 640px) {
+  .volsec__cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .volsec__cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .volsec__chevron { transition: none; }
+}

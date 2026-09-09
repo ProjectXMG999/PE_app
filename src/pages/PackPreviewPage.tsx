@@ -257,7 +257,7 @@ export function PackPreviewPage() {
       <div className="packpreview__nav-row">
         <button
           className="packpreview__back"
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/', { viewTransition: true })}
           aria-label="Wróć do listy pakietów"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -289,12 +289,14 @@ export function PackPreviewPage() {
         className="packpreview__hero"
         style={{ '--hero-accent': levelColor ?? 'var(--accent)' } as CSSProperties}
       >
-        <div className="packpreview__hero-icon">
+        {/* Receiving end of the pack card's morph — the names must match the
+            ones PackageCard sets, or the elements cross-fade instead. */}
+        <div className="packpreview__hero-icon" style={{ viewTransitionName: `pack-icon-${pack.id}` }}>
           {icon}
         </div>
 
         <div className="packpreview__hero-body">
-          <h2 className="packpreview__hero-name">{pack.name}</h2>
+          <h2 className="packpreview__hero-name" style={{ viewTransitionName: `pack-name-${pack.id}` }}>{pack.name}</h2>
           <p className="packpreview__hero-sub">{pack.category} · {pack.volume}</p>
           <div className="packpreview__hero-pills">
             {pack.level > 0 && (

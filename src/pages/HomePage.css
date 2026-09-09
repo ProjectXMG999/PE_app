@@ -1,7 +1,43 @@
 .homepage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
   padding-top: var(--spacing-sm);
 }
 
+/* Collapse the wrappers of components that render nothing (InstallBanner). */
+.homepage > *:empty {
+  display: none;
+}
+
+.homepage__routelink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.homepage__routelink:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-lg);
+}
+
+/* Sticky filter bar. It lives here rather than on .pfbar because a sticky
+   element only travels within its own parent's box, and .pfbar's wrapper is
+   exactly its own height. Volume headers stick below it via --pfbar-h, which
+   PackFilterBar publishes from a ResizeObserver (the bar grows when the search
+   field opens). */
+.homepage__bar {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.homepage__body {
+  min-height: 40vh;
+}
+
+/* ── Flat (filtered) list ──────────────────────────────────────────── */
 .homepage__list {
   display: grid;
   grid-template-columns: 1fr;
@@ -10,9 +46,7 @@
 }
 
 @media (min-width: 640px) {
-  .homepage__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .homepage__list { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (min-width: 1024px) {
@@ -22,52 +56,45 @@
   }
 }
 
-/* The window renders a page at a time (see HomePage.tsx), but even ~60 cards
-   benefit from skipping layout/paint of off-screen ones. Intrinsic size must
-   approximate real card height, otherwise the scrollbar jumps. Band headers
-   are sticky, so they must always render — excluded here. */
-.homepage__list > *:not(.homepage__band) {
+/* Even ~60 flat cards benefit from skipping paint of the off-screen ones. */
+.homepage__list > .packcard {
   content-visibility: auto;
-  contain-intrinsic-size: auto 150px;
+  contain-intrinsic-size: auto 120px;
 }
 
-/* Entrance cascade — each card rises in; the first dozen are staggered, the
-   rest (and any lazily-loaded batch) just reveal. Re-runs whenever the list
-   re-keys on a filter change. Collapsed by the global reduced-motion block. */
-.homepage__list > *:not(.homepage__band):not(.homepage__sentinel) {
-  animation: cardReveal 380ms var(--ease-out-expo) both;
-}
-.homepage__list > *:nth-child(1)  { animation-delay: 0ms; }
-.homepage__list > *:nth-child(2)  { animation-delay: 35ms; }
-.homepage__list > *:nth-child(3)  { animation-delay: 70ms; }
-.homepage__list > *:nth-child(4)  { animation-delay: 105ms; }
-.homepage__list > *:nth-child(5)  { animation-delay: 140ms; }
-.homepage__list > *:nth-child(6)  { animation-delay: 175ms; }
-.homepage__list > *:nth-child(7)  { animation-delay: 210ms; }
-.homepage__list > *:nth-child(8)  { animation-delay: 245ms; }
-.homepage__list > *:nth-child(9)  { animation-delay: 280ms; }
-.homepage__list > *:nth-child(10) { animation-delay: 315ms; }
-.homepage__list > *:nth-child(11) { animation-delay: 350ms; }
-.homepage__list > *:nth-child(12) { animation-delay: 385ms; }
-.homepage__list > *:nth-child(n+13) { animation-delay: 0ms; }
-
-.homepage__sentinel {
-  height: 1px;
-  width: 100%;
+.homepage__volumes {
+  padding-bottom: var(--spacing-md);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .homepage__list > * {
-    animation: none !important;
-  }
+.homepage__more {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: var(--spacing-sm);
+  height: 36px;
+  padding: 0 var(--spacing-lg);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.homepage__more:hover {
+  border-color: var(--border-accent);
+  color: var(--text-primary);
 }
 
 .homepage__card-skeleton {
-  height: 148px;
+  height: 96px;
   border-radius: var(--radius-lg);
 }
 
 .homepage__empty {
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   align-items: center;
