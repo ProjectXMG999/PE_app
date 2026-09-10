@@ -1,0 +1,27 @@
+.footer {
+  padding: 40px 24px;
+  border-top: 1px solid var(--border);
+}
+
+.footer__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.footer__brand {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.footer__copy {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}

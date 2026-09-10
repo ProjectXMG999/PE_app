@@ -1,0 +1,85 @@
+.seeprogress {
+  padding: 96px 24px 0;
+}
+
+.seeprogress__grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.seeprogress__counter-wrap {
+  /* GSAP pin always snaps to the literal viewport top — this padding is
+     what actually pushes the card down to a comfortable distance from the
+     navbar while pinned, without stretching the card itself (see the same
+     pattern in MapSection.css's .mapsection__visual). */
+  padding-top: 100px;
+}
+
+.seeprogress__counter-pin {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 40px 24px;
+  border-radius: var(--radius-xl);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.seeprogress__counter {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.seeprogress__num {
+  font-family: var(--font-heading);
+  font-size: clamp(48px, 9vw, 72px);
+  font-weight: 800;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.seeprogress__total {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--text-muted);
+}
+
+.seeprogress__hint {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 4px 0 0;
+}
+
+.seeprogress__text {
+  padding-top: 8px;
+}
+
+.seeprogress__punch {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.seeprogress__proof {
+  max-width: 480px;
+  margin: 48px auto 0;
+}
+
+.seeprogress__proof--route {
+  max-width: 640px;
+}
+
+@media (min-width: 900px) {
+  .seeprogress__grid {
+    grid-template-columns: 0.8fr 1fr;
+    align-items: center;
+  }
+}

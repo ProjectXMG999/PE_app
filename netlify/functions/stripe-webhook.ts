@@ -1,5 +1,6 @@
 import Stripe from 'stripe'
 import { admin } from './_lib/auth'
+import { findOrCreateUserByEmail } from './_lib/reconcile'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
 
@@ -23,6 +24,14 @@ function mapSubscriptionStatus(stripeStatus: Stripe.Subscription.Status): 'activ
 
 async function upsertByUserId(userId: string, fields: Record<string, unknown>) {
   await admin.from('entitlements').upsert({ user_id: userId, updated_at: new Date().toISOString(), ...fields })
+}
+
+// Unix seconds `months` from now, same day-of-month (clamped by JS Date
+// for shorter months — e.g. Jan 31 + 1mo lands on Mar 3, not Feb 31).
+function monthsFromNowUnix(months: number): number {
+  const d = new Date()
+  d.setMonth(d.getMonth() + months)
+  return Math.floor(d.getTime() / 1000)
 }
 
 async function updateByCustomerId(customerId: string, fields: Record<string, unknown>) {
@@ -50,8 +59,29 @@ export default async (request: Request): Promise<Response> => {
   switch (event.type) {
     case 'checkout.session.completed': {
       const session = event.data.object as Stripe.Checkout.Session
-      const userId = session.client_reference_id
-      if (!userId) break
+      let userId = session.client_reference_id
+
+      // Anonymous landing-page checkout: no Supabase user existed at
+      // session-creation time, so reconcile by the email Stripe collected.
+      if (!userId) {
+        const email = session.customer_details?.email ?? session.customer_email
+        if (!email) {
+          console.error('Anonymous checkout completed with no email to reconcile:', session.id)
+          break
+        }
+        try {
+          userId = await findOrCreateUserByEmail(email)
+        } catch (err) {
+          console.error('findOrCreateUserByEmail failed for anonymous checkout:', session.id, err)
+          return new Response('Reconciliation failed', { status: 500 })
+        }
+      }
+
+      // entitlements.plan only ever stores 'subscription' | 'lifetime'
+      // (DB check constraint) — the landing page's fixed-term plans are a
+      // pricing detail, not a distinct entitlement type. Which one (if
+      // any) is tracked via metadata.landingPlan below, for the cancel_at
+      // step, not persisted to entitlements.
       const plan = session.mode === 'payment' ? 'lifetime' : 'subscription'
       await upsertByUserId(userId, {
         status: 'active',
@@ -60,6 +90,24 @@ export default async (request: Request): Promise<Response> => {
         stripe_subscription_id: session.mode === 'subscription' ? (session.subscription as string) : null,
         current_period_end: null,
       })
+
+      // Landing-only fixed-term plans (6 or 12 monthly payments, no
+      // auto-renewal): Checkout Session has no "stop after N cycles"
+      // field, so apply it here, once, right after the subscription
+      // exists.
+      const landingPlan = session.metadata?.landingPlan
+      if (landingPlan && session.subscription) {
+        const months = landingPlan === 'landing_6mo' ? 6 : landingPlan === 'landing_12mo' ? 12 : null
+        if (months) {
+          try {
+            await stripe.subscriptions.update(session.subscription as string, {
+              cancel_at: monthsFromNowUnix(months),
+            })
+          } catch (err) {
+            console.error('Failed to set fixed-term cancel_at for landing subscription:', session.id, err)
+          }
+        }
+      }
       break
     }
 

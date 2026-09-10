@@ -1,0 +1,69 @@
+.mapsection {
+  padding: 40px 24px 0;
+}
+
+.mapsection__grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+.mapsection__text {
+  padding-top: 24px;
+}
+
+.mapsection__punch {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 8px 0 32px;
+}
+
+.mapsection__visual {
+  position: relative;
+  /* Matches .mapsection__text's sticky top (120px) — when GSAP pins this
+     element it snaps to the viewport's literal top edge (pin always does
+     that; there's no offset option), so the pinned content needs its own
+     padding-top to land at the same comfortable distance from the navbar
+     instead of butting right up against it. */
+  padding: 120px 0 60px;
+}
+
+.mapsection__line {
+  position: absolute;
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  height: 100%;
+  display: none;
+}
+
+.mapsection__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 900px) {
+  .mapsection__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .mapsection__text {
+    position: sticky;
+    top: 120px;
+  }
+
+  .mapsection__line {
+    display: block;
+  }
+
+  .mapsection__cards {
+    padding-left: 48px;
+  }
+}

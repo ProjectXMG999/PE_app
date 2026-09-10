@@ -1,0 +1,16 @@
+.whystill__proverb {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--accent-bright);
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+  margin: 28px 0 !important;
+}
+
+.whystill__punch {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text-primary);
+}

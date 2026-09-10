@@ -1,0 +1,155 @@
+:root {
+  /* Dark theme (default) */
+  --bg-primary: #0D0B1E;
+  --bg-surface: #1A1040;
+  --bg-card: #241B5C;
+  --bg-card-hover: #2E2470;
+  --bg-input: #1A1040;
+
+  --accent: #8B5CF6;
+  --accent-dim: #7B5EA7;
+  --accent-bright: #A78BFA;
+  --accent-glow: rgba(139, 92, 246, 0.3);
+
+  --brand-purple: #6B2BFF;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.75);
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --text-accent: #C4B5FD;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-accent: rgba(139, 92, 246, 0.4);
+
+  --overlay: rgba(0, 0, 0, 0.55);
+
+  --success: #34D399;
+  --warning: #FBBF24;
+  --danger: #F87171;
+
+  /* Categorical accents — shared by Training cards and Stats tiles */
+  --accent-yellow: #eab308;
+  --accent-orange: #f97316;
+  --accent-pink: #ec4899;
+  --accent-blue: #3b82f6;
+  --accent-green: #22c55e;
+  --accent-teal: #14b8a6;
+  --accent-indigo: #6366f1;
+
+  /* Progress / route map. Milestone stations reuse LEVEL_COLORS above, so the
+     only new hues here are the points currency and the far-end gold. */
+  --points-gold: #F5C451;
+  --milestone-gold: #F0B429;
+  --review-teal: var(--accent-teal);
+  /* Słuchaj's color, everywhere the two study paths need telling apart —
+     Trenuj already reads as --accent (the app's primary color) by convention. */
+  --listen-blue: var(--accent-blue);
+  /* The road ahead: visible but clearly untravelled. */
+  --route-line: rgba(255, 255, 255, 0.14);
+  /* Aurora bloom behind the "you are here" marker. */
+  --route-glow: rgba(139, 92, 246, 0.38);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 24px rgba(139, 92, 246, 0.4);
+  /* Layered card depth: a tight contact shadow plus a soft ambient one, plus a
+     hairline inset highlight on the top edge — reads as a raised surface
+     instead of a bordered rectangle. */
+  --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.35);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+
+  /* Type scale — use for new/edited styles instead of raw px */
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 14px;
+  --text-md: 15px;
+  --text-lg: 16px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 28px;
+
+  --topbar-height: 60px;
+  --bottomnav-height: 64px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  /* Floating island: 64px tall, lifted 14px off the edge. Scroll clearance is
+     EXACTLY that — island height + its lift. It was previously overshooting by
+     `+ safe-bottom + spacing-sm` (~42px), which parked the last scrolled item
+     that far above the island and left a big slab of page background between
+     them: the "black strip the size of the bottom bar". */
+  --bottomnav-reserve: calc(var(--bottomnav-height) + 14px + var(--spacing-xs));
+
+  /* Breakpoints (magic numbers — CSS custom properties can't be used
+     inside @media conditions): 640px = tablet, 1024px = desktop sidebar
+     cutoff. Copy these values verbatim in new responsive rules. */
+  --sidebar-width: 240px;
+  /* Scales with viewport instead of a fixed cap, so ultra-wide monitors
+     don't end up with a narrow content column and a huge dead void. */
+  --content-max-width: clamp(1160px, 85vw, 2040px);
+
+  /* Desktop content-column widths — reuse these, don't invent new numbers. */
+  --reading-max-width: 640px;   /* prose / page-intro headers / settings-style columns */
+  --focus-max-width: 720px;     /* wf/asc shared header+card+actions column */
+  --flashcard-max-width: 560px; /* FlashcardPage card + actions + autoplay controls */
+
+  --transition-fast: 150ms ease;
+  --transition-med: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* Motion curves for card/flip choreography */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-sharp: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-theme="light"] {
+  --bg-primary: #F5F4F8;
+  --bg-surface: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F0EDFC;
+  --bg-input: #FFFFFF;
+
+  --accent: #7C3AED;
+  --accent-dim: #6D28D9;
+  --accent-bright: #8B5CF6;
+  --accent-glow: rgba(124, 58, 237, 0.18);
+
+  --text-primary: #111827;
+  --text-secondary: rgba(17, 24, 39, 0.75);
+  --text-muted: rgba(17, 24, 39, 0.45);
+  --text-accent: #6D28D9;
+
+  --border: rgba(17, 24, 39, 0.1);
+  --border-accent: rgba(124, 58, 237, 0.35);
+
+  --overlay: rgba(17, 24, 39, 0.35);
+
+  --points-gold: #B7791F;
+  --milestone-gold: #B7791F;
+  /* On a light ground the road ahead reads as a soft grey rather than a
+     washed-out white, and the aurora is dialled right down — a glow that works
+     against #0D0B1E turns into haze against #F5F4F8. */
+  --route-line: rgba(17, 24, 39, 0.16);
+  --route-glow: rgba(124, 58, 237, 0.16);
+
+  --shadow-sm: 0 1px 4px rgba(17, 24, 39, 0.08), 0 0 0 1px rgba(17, 24, 39, 0.04);
+  --shadow-md: 0 4px 16px rgba(17, 24, 39, 0.1);
+  --shadow-lg: 0 8px 32px rgba(17, 24, 39, 0.12);
+  --shadow-glow: 0 0 24px rgba(124, 58, 237, 0.25);
+  --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 1px 2px rgba(17, 24, 39, 0.06), 0 12px 28px rgba(17, 24, 39, 0.1);
+}

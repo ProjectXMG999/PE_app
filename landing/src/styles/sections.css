@@ -1,0 +1,76 @@
+/* Shared layout primitives every section file reuses. */
+
+.section {
+  padding: 96px 24px;
+  max-width: 780px;
+  margin: 0 auto;
+  /* Clears the sticky navbar (~60px) so an anchor-scrolled or
+     programmatically-scrolled section's heading isn't hidden under it. */
+  scroll-margin-top: 76px;
+}
+
+.section--wide {
+  max-width: 1080px;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 64px 20px;
+  }
+}
+
+.section__eyebrow {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+  margin: 0 0 16px;
+}
+
+.section__title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 24px;
+  color: var(--text-primary);
+}
+
+.section__lead {
+  max-width: var(--reading-max-width);
+  font-size: 19px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0 auto 20px;
+}
+
+.section__lead strong {
+  color: var(--text-primary);
+}
+
+.section__body {
+  max-width: var(--reading-max-width);
+  /* Horizontal centering only — a bare `margin: 0 auto` here would zero out
+     margin-bottom, silently overriding whatever vertical margin a section's
+     own local class (e.g. .howweknow__narrative) sets on this same element. */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section__body p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0 0 24px;
+}
+
+.section__body p:last-child {
+  margin-bottom: 0;
+}
+
+.section__cta-wrap {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}

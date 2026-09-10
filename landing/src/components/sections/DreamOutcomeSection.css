@@ -1,0 +1,38 @@
+.dreamoutcome {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.dreamoutcome__title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin: 0 0 40px;
+}
+
+.dreamoutcome__body {
+  margin: 0 auto 32px;
+}
+
+.dreamoutcome__body p {
+  text-align: left;
+}
+
+p.dreamoutcome__punch {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(18px, 2.6vw, 22px);
+  color: var(--text-primary);
+  line-height: 1.4;
+  text-align: center;
+}
+
+p.dreamoutcome__tagline {
+  font-style: italic;
+  color: var(--accent-bright);
+  font-size: 16px;
+  text-align: center;
+}
