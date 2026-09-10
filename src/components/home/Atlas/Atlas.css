@@ -63,7 +63,38 @@
   width: 100%;
   touch-action: pan-y;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
+
+.atlas__foot {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  min-height: 22px;
+}
+
+.atlas__window-label {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.atlas__recenter {
+  margin-left: auto;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-bright);
+  cursor: pointer;
+}
+
+.atlas__recenter:hover { text-decoration: underline; }
 
 .atlas__canvas {
   display: block;
@@ -81,14 +112,16 @@
    Deliberately a DOM element: its pulse is a transform/opacity animation the
    compositor owns, which is what lets the canvas rAF loop stop entirely once
    the entrance has played. */
+/* A ring, not a dot: the frontier is the one node whose number matters most, so
+   the marker must not cover it. */
 .atlas__pin {
   position: absolute;
-  width: 7px;
-  height: 7px;
-  margin: -3.5px 0 0 -3.5px;
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
   border-radius: var(--radius-full);
-  background: #fff;
-  box-shadow: 0 0 0 2px var(--bg-card), 0 0 14px 2px var(--accent-glow);
+  border: 2px solid #fff;
+  box-shadow: 0 0 14px 2px var(--accent-glow);
   pointer-events: none;
 }
 

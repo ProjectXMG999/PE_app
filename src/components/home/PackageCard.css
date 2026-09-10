@@ -1,4 +1,4 @@
-/* Registered so the icon progress ring can transition its fill (a custom
+/* Registered so the mark's progress ring can transition its fill (a custom
    property is only animatable once declared with @property). */
 @property --known-pct {
   syntax: '<number>';
@@ -6,16 +6,26 @@
   initial-value: 0;
 }
 
+/* ── The row ───────────────────────────────────────────────────────────────
+   A grid, not a flex pile: the mark column is fixed, the body takes the slack,
+   the tail is intrinsic. That's what keeps 864 rows optically aligned — the
+   previous flex layout let long names shove the counts around. */
 .packcard {
-  display: block;
   position: relative;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: 11px var(--spacing-md) 11px 13px;
   border-radius: var(--radius-lg);
-  padding: var(--spacing-md);
-  overflow: hidden;
+  border: 1px solid var(--border);
+  background: linear-gradient(168deg,
+    color-mix(in srgb, var(--lvl, var(--accent)) 5%, var(--bg-card)) 0%,
+    var(--bg-card) 60%);
+  box-shadow: var(--shadow-card);
   color: inherit;
   text-decoration: none;
+  overflow: hidden;
   transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
@@ -30,125 +40,66 @@
 
 @media (hover: hover) {
   .packcard:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     border-color: var(--border-accent);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.24);
   }
-
-  [data-theme="light"] .packcard:hover {
-    box-shadow: var(--shadow-md);
-  }
-
-  .packcard:hover .packcard__icon {
-    transform: scale(1.05);
-  }
+  [data-theme="light"] .packcard:hover { box-shadow: var(--shadow-md); }
 }
 
-.packcard:active {
-  transform: translateY(0) scale(0.99);
-}
+.packcard:active { transform: translateY(0) scale(0.995); }
 
-/* ── Frontier: the one pack the map is pointing at ─────────────────── */
-.packcard--frontier {
-  border-color: var(--border-accent);
-  box-shadow: 0 0 0 1px var(--accent-glow), 0 8px 24px rgba(0, 0, 0, 0.22);
-}
-
-.packcard--frontier .packcard__num {
-  color: var(--accent-bright);
-}
-
-.packcard__frontier-tag {
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: var(--radius-full);
-  background: var(--accent);
-  color: #fff;
-  white-space: nowrap;
-}
-
-/* Pulse when the FrontierBar scrolls you here. */
-.packcard--pulse {
-  animation: packcard-pulse 1.1s var(--ease-out-expo) 2;
-}
-
-@keyframes packcard-pulse {
-  0%, 100% { box-shadow: 0 0 0 1px var(--accent-glow), 0 8px 24px rgba(0, 0, 0, 0.22); }
-  50%      { box-shadow: 0 0 0 4px var(--accent-glow), 0 8px 30px rgba(0, 0, 0, 0.3); }
-}
-
-.packcard__lock {
-  position: absolute;
-  top: var(--spacing-sm);
-  right: var(--spacing-sm);
-  width: 22px;
-  height: 22px;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-primary);
-  color: var(--warning);
-  border: 1px solid var(--border);
-}
-
-/* Left stripe accent — only while a pack is mid-listen. */
-.packcard__stripe {
+/* ── State edge ────────────────────────────────────────────────────────────
+   Full-height, so a row's state is readable in peripheral vision while
+   scrolling. `new` deliberately has none — most of the catalogue is new, and a
+   marker on everything marks nothing. */
+.packcard__edge {
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   width: 3px;
-  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
-  background: linear-gradient(
-    180deg,
-    var(--accent),
-    color-mix(in srgb, var(--accent) 35%, transparent),
-    var(--accent)
-  );
+  background: transparent;
+}
+
+.packcard--started .packcard__edge {
+  background: linear-gradient(180deg,
+    var(--accent), color-mix(in srgb, var(--accent) 30%, transparent), var(--accent));
   background-size: 100% 250%;
   animation: packcard-stripe-flow 2.8s ease-in-out infinite;
 }
+
+.packcard--completed .packcard__edge { background: #10B981; }
+.packcard--mastered  .packcard__edge { background: linear-gradient(180deg, #FDE08A, #f2b619 45%, #C8860C); }
+.packcard--fading    .packcard__edge { background: linear-gradient(180deg, #FBBF24, #F59E0B); }
 
 @keyframes packcard-stripe-flow {
   0%, 100% { background-position: 0 0; }
   50%      { background-position: 0 100%; }
 }
 
-.packcard__header {
+/* ── The mark: route number + mastery ring ────────────────────────────────── */
+.packcard__mark {
+  position: relative;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-}
-
-.packcard__num {
-  flex-shrink: 0;
-  min-width: 34px;
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 800;
-  color: var(--text-muted);
-  letter-spacing: -0.02em;
-  font-variant-numeric: tabular-nums;
-}
-
-.packcard__icon-ring {
-  position: relative;
-  flex-shrink: 0;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--lvl, var(--accent)) 14%, transparent);
   --ring-track: color-mix(in srgb, var(--ring, #10b981) 15%, transparent);
   transition: --known-pct var(--transition-slow) var(--ease-out-expo);
 }
 
-/* Conic progress ring hugging the icon's rounded-square shape (mask-composite
-   punches out the centre, leaving only the 3px band). */
-.packcard__icon-ring::before {
+/* Conic progress ring hugging the mark's rounded square (mask-composite punches
+   out the centre, leaving only the band). */
+.packcard__mark::before {
   content: '';
   position: absolute;
   inset: -3.5px;
   border-radius: calc(var(--radius-md) + 3.5px);
-  padding: 3px;
+  padding: 2.5px;
   background: conic-gradient(
     from -90deg,
     var(--ring, #10b981) calc(var(--known-pct, 0) * 1%),
@@ -162,25 +113,34 @@
 }
 
 @starting-style {
-  .packcard__icon-ring {
-    --known-pct: 0 !important;
-  }
+  .packcard__mark { --known-pct: 0 !important; }
 }
 
-.packcard__icon {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-md);
+.packcard__mark-num {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--lvl, var(--accent));
+  font-variant-numeric: tabular-nums;
+}
+
+/* Three digits need to shed a little size to stay inside the tile. */
+.packcard__mark-num.is-wide { font-size: 15px; }
+
+.packcard--mastered .packcard__mark {
+  background: color-mix(in srgb, #f2b619 16%, transparent);
+}
+.packcard--mastered .packcard__mark-num { color: #F5C451; }
+
+[data-theme="light"] .packcard--mastered .packcard__mark-num { color: #92610F; }
+
+/* ── Body ─────────────────────────────────────────────────────────────────── */
+.packcard__body {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
-  transition: transform var(--transition-fast);
-}
-
-.packcard__info {
-  flex: 1;
+  flex-direction: column;
+  gap: 3px;
   min-width: 0;
 }
 
@@ -188,39 +148,87 @@
   font-family: var(--font-heading);
   font-size: 15px;
   font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
   color: var(--text-primary);
-  margin-bottom: 2px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.packcard__meta {
-  font-size: 12px;
-  color: var(--text-muted);
-}
-
-/* The words themselves — what this pack actually teaches. */
-.packcard__words {
-  margin: 0;
+.packcard__sub {
   font-family: var(--font-body);
   font-size: 12px;
-  color: var(--text-secondary);
+  line-height: 1.25;
+  color: var(--text-muted);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 /* Locked visitors get the same sample, out of focus: an invitation instead of
-   a padlock. Not access control — see scripts/build-pack-previews.mjs. */
-.packcard__words--locked {
-  filter: blur(3.5px);
-  opacity: 0.75;
+   a padlock. Only the words blur — the lock stays sharp, which is what makes
+   the blur legible as intent rather than as a broken render.
+   Not access control — see scripts/build-pack-previews.mjs. */
+.packcard__sub--locked {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-muted);
+}
+
+.packcard__sub--locked svg {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.packcard__sub--locked em {
+  font-style: normal;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  filter: blur(3px);
+  opacity: 0.85;
   user-select: none;
 }
 
-/* Conquered, but coming back around. Sits next to — never instead of — the
-   status glyph, because the reward is never taken away. */
+/* ── Tail ─────────────────────────────────────────────────────────────────── */
+.packcard__tail {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.packcard__count {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.packcard__count b {
+  font-weight: 800;
+  color: var(--text-secondary);
+}
+
+.packcard--mastered .packcard__count b { color: #F5C451; }
+
+.packcard__state {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 14px;
+  justify-content: flex-end;
+}
+
+.packcard__glyph { font-size: 13px; line-height: 1; }
+.packcard__glyph--started   { color: var(--accent-bright); }
+.packcard__glyph--completed { color: #10B981; }
+.packcard__glyph--mastered  { color: #f2b619; }
+
 .packcard__fade-dot {
   width: 6px;
   height: 6px;
@@ -230,81 +238,53 @@
   flex-shrink: 0;
 }
 
-.packcard--fading {
-  border-color: color-mix(in srgb, #F59E0B 26%, var(--border));
-}
-
-.packcard__right {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  flex-shrink: 0;
-}
-
-.packcard__glyph {
-  font-size: 13px;
-  line-height: 1;
-}
-
-.packcard__glyph--started   { color: var(--accent-bright); }
-.packcard__glyph--completed { color: #10B981; }
-.packcard__glyph--mastered  { color: #f2b619; }
-
-.packcard__count {
-  font-size: 12px;
-  font-variant-numeric: tabular-nums;
-  color: var(--text-muted);
-}
-
-/* Thin "heard" progress hairline under the header. */
-.packcard__heard {
-  display: block;
-  height: 2px;
-  margin-top: var(--spacing-sm);
+.packcard__go {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 9px;
   border-radius: var(--radius-full);
-  background: var(--bg-surface);
-  overflow: hidden;
+  background: var(--accent);
+  color: #fff;
+  white-space: nowrap;
 }
 
-.packcard__heard-fill {
-  display: block;
-  height: 100%;
-  border-radius: var(--radius-full);
-  background: #f97316;
-  transition: width var(--transition-slow) var(--ease-out-expo);
+/* ── Frontier ─────────────────────────────────────────────────────────────── */
+.packcard--frontier {
+  border-color: var(--border-accent);
+  background: linear-gradient(168deg,
+    color-mix(in srgb, var(--accent) 15%, var(--bg-card)) 0%,
+    var(--bg-card) 62%);
+  box-shadow: 0 0 0 1px var(--accent-glow), 0 10px 28px rgba(0, 0, 0, 0.26);
 }
 
-@starting-style {
-  .packcard__heard-fill { width: 0 !important; }
+.packcard--frontier .packcard__edge { background: var(--accent-bright); }
+
+/* Pulse when the FrontierBar or the Atlas scrolls you here. */
+.packcard--pulse { animation: packcard-pulse 1.1s var(--ease-out-expo) 2; }
+
+@keyframes packcard-pulse {
+  0%, 100% { box-shadow: 0 0 0 1px var(--accent-glow), 0 10px 28px rgba(0, 0, 0, 0.26); }
+  50%      { box-shadow: 0 0 0 4px var(--accent-glow), 0 10px 34px rgba(0, 0, 0, 0.34); }
 }
 
-/* ── Completed / mastered: restrained, static ─────────────────────────
-   Mastery gets one gold rim + a single sheen the first time the card paints —
-   the real celebration lives in AchievementSheet, not on N list rows. */
-.packcard--completed {
-  border-color: rgba(16, 185, 129, 0.35);
-}
-
+/* ── Mastered / fading ───────────────────────────────────────────────────── */
 .packcard--mastered {
-  border: 1px solid color-mix(in srgb, #f2b619 45%, var(--border));
-  background:
-    linear-gradient(158deg, color-mix(in srgb, #f2b619 6%, var(--bg-card)) 0%, var(--bg-card) 60%);
+  border-color: color-mix(in srgb, #f2b619 40%, var(--border));
+  background: linear-gradient(168deg,
+    color-mix(in srgb, #f2b619 7%, var(--bg-card)) 0%,
+    var(--bg-card) 62%);
 }
 
 [data-theme="light"] .packcard--mastered {
-  border-color: color-mix(in srgb, #d99b0d 55%, var(--border));
+  border-color: color-mix(in srgb, #d99b0d 50%, var(--border));
 }
 
-.packcard--mastered .packcard__name {
-  color: color-mix(in srgb, #f2b619 30%, var(--text-primary));
-}
+.packcard--completed { border-color: rgba(16, 185, 129, 0.3); }
+.packcard--fading    { border-color: color-mix(in srgb, #F59E0B 30%, var(--border)); }
 
-.packcard--mastered .packcard__icon {
-  background: color-mix(in srgb, #f2b619 16%, transparent);
-  color: #f2b619;
-}
-
-/* One-shot foil sweep on first paint — no infinite animation. */
+/* One-shot foil sweep the first time a mastered row paints — no infinite
+   animation, because a wall of them was a permanent compositor load. */
 .packcard--mastered::after {
   content: '';
   position: absolute;
@@ -313,11 +293,12 @@
   background: linear-gradient(102deg,
     transparent 42%,
     rgba(255, 250, 224, 0.14) 47%,
-    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0.4) 50%,
     rgba(255, 250, 224, 0.14) 53%,
     transparent 58%);
   transform: translateX(130%) skewX(-16deg);
   opacity: 0;
+  transition: transform 1s var(--ease-out-expo), opacity 1s var(--ease-out-expo);
 }
 
 @starting-style {
@@ -327,12 +308,29 @@
   }
 }
 
-.packcard--mastered::after {
-  transition: transform 1s var(--ease-out-expo), opacity 1s var(--ease-out-expo);
+/* ── "Heard" hairline ─────────────────────────────────────────────────────── */
+.packcard__heard {
+  position: absolute;
+  left: 3px;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--bg-surface);
+}
+
+.packcard__heard-fill {
+  display: block;
+  height: 100%;
+  background: #f97316;
+  transition: width var(--transition-slow) var(--ease-out-expo);
+}
+
+@starting-style {
+  .packcard__heard-fill { width: 0 !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .packcard__stripe,
+  .packcard--started .packcard__edge,
   .packcard--pulse { animation: none; }
   .packcard--mastered::after { display: none; }
 }

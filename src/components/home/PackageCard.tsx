@@ -6,19 +6,14 @@ import { usePrefetchOnHover, loadPackPreview } from '../../hooks/usePrefetchOnHo
 import { routeNumber } from '../../utils/packRoute'
 import { PackMemory } from '../../utils/packMemory'
 import { usePackWords } from '../../hooks/usePackWords'
-import {
-  getPackIcon,
-  getCategoryColor,
-  getStatus,
-  STATUS_META,
-} from '../../utils/packVisuals'
+import { LEVEL_COLORS, getStatus, STATUS_META } from '../../utils/packVisuals'
 import './PackageCard.css'
 
 interface Props {
   pack: PackMeta
   progress?: PackageProgress
   knownCount?: number
-  /** The earliest not-yet-mastered pack on the route — gets the "Kontynuuj" cue. */
+  /** The earliest not-yet-mastered pack on the route — gets the "Dalej" cue. */
   isFrontier?: boolean
   /** Your relationship with this pack (held / fading / active / ahead). */
   memory?: PackMemory
@@ -37,9 +32,8 @@ export function PackageCard({ pack, progress, knownCount = 0, isFrontier = false
   const prefetch = usePrefetchOnHover(loadPackPreview)
   const words = usePackWords(pack.id)
 
-  const icon = getPackIcon(pack)
-  const color = getCategoryColor(pack.category)
   const num = routeNumber(pack.id)
+  const levelColor = LEVEL_COLORS[pack.level] ?? 'var(--accent)'
   const heardPct = progress ? Math.min((progress.currentIndex / pack.wordCount) * 100, 100) : 0
   const knownPct = pack.wordCount > 0 ? Math.min((knownCount / pack.wordCount) * 100, 100) : 0
 
@@ -66,61 +60,63 @@ export function PackageCard({ pack, progress, knownCount = 0, isFrontier = false
       viewTransition
       {...prefetch}
       className={`packcard ${STATUS_META[status].className} ${isFrontier ? 'packcard--frontier' : ''}${fading ? ' packcard--fading' : ''}`}
-      style={{ ['--cat' as string]: color }}
+      style={{ ['--lvl' as string]: levelColor }}
       aria-label={ariaLabel}
       id={`pack-${pack.id}`}
     >
-      {status === 'started' && !isMastered && <span className="packcard__stripe" aria-hidden="true" />}
+      {/* State as a full-height edge, not a 12px glyph. Reading a long list
+          should not require inspecting each row. */}
+      <span className="packcard__edge" aria-hidden="true" />
 
-      <div className="packcard__header">
-        <span className="packcard__num">#{num}</span>
-        <div
-          className="packcard__icon-ring"
-          style={{
-            ['--known-pct' as string]: isMastered ? 100 : Math.round(knownPct),
-            ['--ring' as string]: isMastered ? '#f2b619' : '#10B981',
-          }}
-        >
-          <div
-            className="packcard__icon"
-            style={{
-              ...(isMastered ? {} : { background: `${color}22`, color }),
-              viewTransitionName: `pack-icon-${pack.id}`,
-            }}
-          >
-            {icon}
-          </div>
-        </div>
+      {/* The route number IS the pack's identity — the whole product thesis is
+          that position in the order is what matters. An emoji said nothing about
+          which of 864 packs this is; #317 says exactly that. */}
+      <span
+        className="packcard__mark"
+        style={{
+          ['--known-pct' as string]: isMastered ? 100 : Math.round(knownPct),
+          ['--ring' as string]: isMastered ? '#f2b619' : '#10B981',
+        }}
+      >
+        <span className={`packcard__mark-num${num >= 100 ? ' is-wide' : ''}`}>{num}</span>
+      </span>
 
-        <div className="packcard__info">
-          <h3 className="packcard__name" style={{ viewTransitionName: `pack-name-${pack.id}` }}>
-            {pack.name}
-          </h3>
-          {/* A vocabulary app that shows no vocabulary was the biggest information
-              loss on this page. Locked visitors see the same words blurred —
-              a sample of what they're buying rather than a padlock. */}
-          {words ? (
-            <p className={`packcard__words${hasAccess ? '' : ' packcard__words--locked'}`}>
-              {words.join(' · ')}
-            </p>
-          ) : (
-            <span className="packcard__meta">{pack.category}</span>
-          )}
-        </div>
+      <span className="packcard__body">
+        <span className="packcard__name">{pack.name}</span>
+        {/* A vocabulary app that shows no vocabulary was the biggest information
+            loss on this page. Locked visitors see the same words out of focus —
+            a sample of what they're buying rather than a padlock over the pack.
+            The small lock sits on the *content* line so the blur reads as a
+            deliberate teaser; without it 864 blurred lines look like a
+            rendering fault. */}
+        {words && !hasAccess ? (
+          <span className="packcard__sub packcard__sub--locked">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+              <rect x="4" y="11" width="16" height="10" rx="2" />
+              <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+            </svg>
+            <em>{words.join(' · ')}</em>
+          </span>
+        ) : (
+          <span className="packcard__sub">{words ? words.join(' · ') : pack.category}</span>
+        )}
+      </span>
 
-        <div className="packcard__right">
-          {isFrontier && hasAccess && <span className="packcard__frontier-tag">Dalej →</span>}
+      <span className="packcard__tail">
+        {isFrontier && hasAccess && <span className="packcard__go">Dalej →</span>}
+        <span className="packcard__count">
+          <b>{knownCount}</b>/{pack.wordCount}
+        </span>
+        <span className="packcard__state">
+          {/* Fading sits next to — never instead of — the earned glyph. */}
+          {fading && <span className="packcard__fade-dot" title="Wraca do powtórki" aria-hidden="true" />}
           {glyph && (
             <span className={`packcard__glyph packcard__glyph--${status}`} title={glyph.aria} aria-hidden="true">
               {glyph.glyph}
             </span>
           )}
-          {/* Memory dot: this pack is conquered but coming back around. The gold
-              status glyph above stays — the reward is never taken away. */}
-          {fading && <span className="packcard__fade-dot" title="Wraca do powtórki" aria-hidden="true" />}
-          <span className="packcard__count">{knownCount}/{pack.wordCount}</span>
-        </div>
-      </div>
+        </span>
+      </span>
 
       {heardPct > 0 && !isMastered && (
         <span className="packcard__heard" aria-hidden="true">

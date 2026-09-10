@@ -2,19 +2,19 @@ import { PackMeta } from '../../../types/vocabulary'
 import { routeNumber } from '../../../utils/packRoute'
 
 /**
- * Where every one of the 864 packs sits on the Atlas.
+ * Where the packs sit on the Atlas.
  *
- * The route is a boustrophedon serpentine: it runs left→right, drops a row, runs
- * right→left, and so on. That shape is chosen over a spiral or a free-form path
- * for three reasons that matter on a phone:
+ * ── Why a neighbourhood and not the whole route ──────────────────────────────
+ * The first version drew all 864 packs at once. At ~13 px pitch that is a
+ * texture: nothing is legible, nothing is tappable, and since most of the
+ * catalogue is unvisited it mostly renders emptiness. A real map does not show
+ * you the world — it shows your surroundings, and offers a minimap for scale.
  *
- *  1. reading order is unambiguous — the eye always knows which node is "next";
- *  2. it fills a portrait rectangle at uniform density, so 864 nodes fit in
- *     ~46vh without any node landing closer to another than `minGap`;
- *  3. it is O(1) to invert — hit-testing a tap is arithmetic, not a search
- *     through 864 rects (see `hitTest`).
+ * So this lays out a WINDOW of packs (`NEIGHBOURHOOD` of them, centred on where
+ * you are) at a size you can actually read and hit with a thumb, and
+ * `Minimap.tsx` carries the full 864 as a slim strip.
  *
- * Pure geometry, no canvas and no DOM, so the whole thing is unit-testable.
+ * Pure geometry, no canvas and no DOM, so it stays unit-testable.
  */
 
 export interface AtlasNode {
@@ -25,8 +25,10 @@ export interface AtlasNode {
   level: number
   x: number
   y: number
-  /** Index in the ordered pack array. */
+  /** Index within the laid-out window. */
   i: number
+  /** Index in the full catalogue — what callers map back to a pack. */
+  globalIndex: number
 }
 
 export interface AtlasLayout {
@@ -35,66 +37,63 @@ export interface AtlasLayout {
   height: number
   cols: number
   rows: number
-  /** Distance between adjacent node centres along a row. */
   stepX: number
-  /** Distance between rows. */
   stepY: number
   radius: number
   padding: number
   /** Row index → true when that row runs right-to-left. */
   reversed: (row: number) => boolean
+  /** Slice of the catalogue this layout covers. */
+  from: number
+  to: number
 }
+
+/** How many packs the neighbourhood shows. Six rows of eight reads as a route. */
+export const NEIGHBOURHOOD = 48
+const COLS = 8
 
 export interface LayoutOptions {
   width: number
-  /** The canvas must not exceed this; columns are solved to fit it. */
   maxHeight: number
-  /** Horizontal breathing room; also the left/right inset of the route. */
   padding?: number
-  radius?: number
+  /** Centre the window on this catalogue index. */
+  center?: number
+  /** How many packs to show; defaults to NEIGHBOURHOOD. */
+  count?: number
 }
 
-const DEFAULTS = { padding: 20, radius: 2.6 }
-/** Rows sit this much further apart than columns, so lanes stay legible. */
-const ROW_RATIO = 1.55
+const DEFAULTS = { padding: 26 }
 /** How far a row bows from its baseline, as a share of the row pitch. */
-export const WAVE = 0.26
+export const WAVE = 0.34
 
 /**
- * Lay out packs along the serpentine.
+ * Lay out a window of the route as a winding path.
  *
- * Columns are **solved from the height budget**, not from a fixed gap: at 864
- * packs in ~46vh the map is inevitably a texture, and the only question is
- * whether it fits without scrolling. Fewer columns would mean more rows and a
- * canvas taller than the viewport, which is what turned the first attempt into
- * a page-long ledger.
- *
- * Each row also **bows** (see `WAVE` and `rowOffset`). A perfectly straight row
- * of evenly-spaced dots reads as ruled paper; a shallow arc reads as a road.
- * That single change is what makes this a map rather than a grid.
+ * Nodes come out ~20 px across at phone width — big enough to carry a label and
+ * to be tapped, which the all-864 version never was.
  */
 export function layoutAtlas(packs: PackMeta[], opts: LayoutOptions): AtlasLayout {
   const padding = opts.padding ?? DEFAULTS.padding
-  const radius = opts.radius ?? DEFAULTS.radius
+  const count = Math.min(opts.count ?? NEIGHBOURHOOD, packs.length)
   const usable = Math.max(1, opts.width - padding * 2)
-  const budget = Math.max(80, opts.maxHeight - padding * 2)
-  const n = packs.length
 
-  // Smallest column count whose resulting height fits the budget. Monotonic in
-  // `cols`, so a linear walk is fine and runs once per resize.
-  let cols = 2
-  let stepX = usable
-  let stepY = usable * ROW_RATIO
-  let rows = n
-  for (let c = 2; c <= Math.max(2, Math.ceil(usable)); c++) {
-    const sx = usable / (c - 1)
-    const sy = sx * ROW_RATIO
-    const r = Math.max(1, Math.ceil(n / c))
-    cols = c; stepX = sx; stepY = sy; rows = r
-    if ((r - 1) * sy <= budget) break
-  }
+  // Window placement: centred on `center`, clamped to the catalogue's ends so
+  // the first and last packs are still reachable.
+  const half = Math.floor(count / 2)
+  const from = Math.max(0, Math.min(Math.max(0, packs.length - count), (opts.center ?? 0) - half))
+  const to = Math.min(packs.length, from + count)
+  const window = packs.slice(from, to)
 
-  const nodes: AtlasNode[] = packs.map((pack, i) => {
+  const cols = Math.min(COLS, Math.max(2, window.length))
+  const stepX = cols > 1 ? usable / (cols - 1) : 0
+  const rows = Math.max(1, Math.ceil(window.length / cols))
+  // Rows share the height budget rather than deriving from stepX, so the path
+  // fills the canvas at any window size.
+  const stepY = rows > 1
+    ? Math.max(28, (opts.maxHeight - padding * 2) / (rows - 1))
+    : 0
+
+  const nodes: AtlasNode[] = window.map((pack, i) => {
     const row = Math.floor(i / cols)
     const col = i % cols
     // Odd rows run backwards, so the path is continuous at the turns.
@@ -108,6 +107,7 @@ export function layoutAtlas(packs: PackMeta[], opts: LayoutOptions): AtlasLayout
       x: padding + drawnCol * stepX,
       y: padding + row * stepY + rowOffset(t, stepY),
       i,
+      globalIndex: from + i,
     }
   })
 
@@ -119,9 +119,12 @@ export function layoutAtlas(packs: PackMeta[], opts: LayoutOptions): AtlasLayout
     rows,
     stepX,
     stepY,
-    radius,
+    // Big enough to read a number on and to hit with a thumb.
+    radius: Math.max(9, Math.min(13, stepX * 0.28)),
     padding,
     reversed: (row: number) => row % 2 === 1,
+    from,
+    to,
   }
 }
 
@@ -133,51 +136,30 @@ export function rowOffset(t: number, stepY: number): number {
 /**
  * Nearest node to a point, or null if the tap landed further than `tolerance`.
  *
- * Inverts the serpentine arithmetically instead of scanning: row from `y`, column
- * from `x` (un-reversed on odd rows), then one distance check. Constant time no
- * matter how many packs there are.
+ * Inverts the serpentine arithmetically instead of scanning: column from `x`,
+ * then row from `y` with the bow subtracted (the bow depends only on the
+ * column, so this is exact).
  */
 export function hitTest(
   layout: AtlasLayout,
   x: number,
   y: number,
-  tolerance = 14,
+  tolerance?: number,
 ): AtlasNode | null {
   const { padding, stepX, stepY, cols, nodes } = layout
-  if (stepX <= 0 || stepY <= 0) return null
+  if (stepX <= 0) return null
+  const reach = tolerance ?? layout.radius + 10
 
   const drawnCol = Math.round((x - padding) / stepX)
   if (drawnCol < 0 || drawnCol >= cols) return null
 
-  // The row bow means y no longer maps to a row by division alone — subtract
-  // the bow at this column first, which is exact because the bow depends only
-  // on the horizontal position.
   const t = cols > 1 ? drawnCol / (cols - 1) : 0
-  const row = Math.round((y - padding - rowOffset(t, stepY)) / stepY)
+  const row = stepY > 0 ? Math.round((y - padding - rowOffset(t, stepY)) / stepY) : 0
   if (row < 0 || row >= layout.rows) return null
 
   const col = layout.reversed(row) ? cols - 1 - drawnCol : drawnCol
-  const index = row * cols + col
-  const node = nodes[index]
+  const node = nodes[row * cols + col]
   if (!node) return null
 
-  return Math.hypot(node.x - x, node.y - y) <= tolerance ? node : null
-}
-
-/** Contiguous run of rows a volume occupies — used to tint the terrain bands. */
-export interface VolumeBand {
-  volume: string
-  level: number
-  startIndex: number
-  endIndex: number
-}
-
-export function volumeBands(layout: AtlasLayout): VolumeBand[] {
-  const bands: VolumeBand[] = []
-  for (const node of layout.nodes) {
-    const last = bands[bands.length - 1]
-    if (last && last.volume === node.volume) last.endIndex = node.i
-    else bands.push({ volume: node.volume, level: node.level, startIndex: node.i, endIndex: node.i })
-  }
-  return bands
+  return Math.hypot(node.x - x, node.y - y) <= reach ? node : null
 }

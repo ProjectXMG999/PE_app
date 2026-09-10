@@ -34,7 +34,10 @@ export function VolumeSection({ group, stats, collapsed, onToggle, headRef, chil
   const region = `volume-${group.short}`
 
   return (
-    <section className="volsec" style={{ ['--band' as string]: bandColor }}>
+    <section
+      className={`volsec${allDone ? ' is-done' : ''}`}
+      style={{ ['--band' as string]: bandColor }}
+    >
       <h2 className="volsec__head" ref={headRef} data-volume={group.volume}>
         <button
           type="button"
@@ -43,24 +46,26 @@ export function VolumeSection({ group, stats, collapsed, onToggle, headRef, chil
           aria-controls={region}
           onClick={onToggle}
         >
-          <span
-            className="volsec__ring"
-            style={{ ['--known-pct' as string]: Math.round(stats.pct) }}
-          >
-            <span className="volsec__ring-label">{allDone ? '✓' : `${Math.round(stats.pct)}%`}</span>
-          </span>
-
           <span className="volsec__titles">
-            <span className="volsec__title">
-              Tom {group.short}
+            {/* "Tom VI" stays one horizontal unit. Stacking the roman numeral
+                under a kicker made I/II/III read as tally marks or a progress
+                bar rather than as digits. */}
+            <span className="volsec__label">Tom {group.short}</span>
+            <span className="volsec__meta">
+              <span className="volsec__range">#{group.firstNum}–#{group.lastNum}</span>
+              <span className="volsec__done">
+                {allDone ? 'ukończony' : `${stats.done}/${stats.packs} ukończonych`}
+              </span>
               <span className="volsec__levels">
-                {group.levels.map(l => `L${l}`).join(' · ')}
+                {group.levels.map(l => `L${l}`).join('·')}
               </span>
             </span>
-            <span className="volsec__sub">
-              #{group.firstNum}–#{group.lastNum} · {stats.done}/{stats.packs} ukończonych
+            <span className="volsec__meter">
+              <span className="volsec__meter-fill" style={{ width: `${stats.pct}%` }} />
             </span>
           </span>
+
+          <span className="volsec__pct">{allDone ? '✓' : `${Math.round(stats.pct)}%`}</span>
 
           <svg
             className={`volsec__chevron ${collapsed ? 'is-collapsed' : ''}`}

@@ -289,9 +289,10 @@ export function PackPreviewPage() {
         className="packpreview__hero"
         style={{ '--hero-accent': levelColor ?? 'var(--accent)' } as CSSProperties}
       >
-        {/* Receiving end of the pack card's morph — the names must match the
-            ones PackageCard sets, or the elements cross-fade instead. */}
-        <div className="packpreview__hero-icon" style={{ viewTransitionName: `pack-icon-${pack.id}` }}>
+        {/* No `pack-icon-*` transition name here: the list row's mark is the
+            route number now, not this emoji, so there is nothing to morph from.
+            The name below still pairs with the row's name. */}
+        <div className="packpreview__hero-icon">
           {icon}
         </div>
 

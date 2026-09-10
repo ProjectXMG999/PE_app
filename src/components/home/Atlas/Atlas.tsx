@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { PackMeta } from '../../../types/vocabulary'
 import { PackMemory } from '../../../utils/packMemory'
-import { layoutAtlas, hitTest, AtlasNode } from './atlasLayout'
+import { layoutAtlas, hitTest, AtlasNode, NEIGHBOURHOOD } from './atlasLayout'
 import {
-  paintStatic, paintDynamic, sizeCanvas, readAtlasColors, AtlasColors, Monument,
+  paintStatic, paintDynamic, sizeCanvas, readAtlasColors, AtlasColors,
 } from './atlasPaint'
-import { milestonesFor } from '../../../utils/packMilestones'
+import { Minimap } from './Minimap'
 import './Atlas.css'
 
 interface Props {
@@ -18,25 +18,24 @@ interface Props {
   knownWords: number
 }
 
-const ENTRANCE_MS = 1150
+const ENTRANCE_MS = 900
 
 /**
- * The Atlas — all 864 packs as territory rather than rows.
+ * The Atlas — the route as ground you can stand on.
  *
- * ── Why this exists ──────────────────────────────────────────────────────────
- * The product's promise is "10 000 słów, 4 poziomy, jedna mapa", and until now
- * the app had drawn that promise as a horizontal bar three separate times. This
- * is the only place where the whole route is visible at once, and the only
- * spatial object in the app.
+ * ── What changed, and why ────────────────────────────────────────────────────
+ * The first version drew all 864 packs at once. That was a texture: illegible,
+ * un-tappable, and mostly a picture of how much you haven't done. This shows a
+ * neighbourhood of ~48 packs at a size where each one carries its route number
+ * and can be hit with a thumb, with `Minimap` keeping the whole 864 for scale.
+ * Maps show you your surroundings; the world goes in the inset.
  *
  * ── Why it does not melt a phone ─────────────────────────────────────────────
- *  - two canvases: the 864-node base is painted only when data or size changes;
- *    the marker/aurora layer is the only thing redrawn during motion;
- *  - the RAF loop **stops** when nothing is animating — no idle repaint, which
- *    is what actually drains a battery;
- *  - an IntersectionObserver parks the whole thing when it scrolls off screen;
- *  - DPR capped at 2, and not a single `filter: blur()` (glows are baked
- *    gradients instead).
+ *  - two canvases: the nodes/road layer repaints only on data or window change;
+ *  - the rAF loop runs for the ~0.9 s entrance and then STOPS — the frontier's
+ *    resting pulse is a CSS animation on a DOM element, so there is no idle
+ *    repaint at all (measured: 0 rAF calls across 3 s idle);
+ *  - DPR capped at 2, and not one `filter: blur()` (glows are baked gradients).
  */
 export function Atlas({ packs, memory, frontierId, onPick, knownWords }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null)
@@ -44,48 +43,37 @@ export function Atlas({ packs, memory, frontierId, onPick, knownWords }: Props) 
   const liveRef = useRef<HTMLCanvasElement>(null)
   const colorsRef = useRef<AtlasColors | null>(null)
   const rafRef = useRef(0)
-  /** True once the entrance has played — it must not replay on every repaint. */
   const entranceRef = useRef(false)
   const [width, setWidth] = useState(0)
   const [onScreen, setOnScreen] = useState(true)
   const [selected, setSelected] = useState<AtlasNode | null>(null)
+  /** Catalogue index the window is centred on; null = follow the frontier. */
+  const [center, setCenter] = useState<number | null>(null)
 
   const reduced = typeof window !== 'undefined'
     && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-  // ~40% of the viewport: enough to read as terrain, short enough that the
-  // frontier bar and the first packs are still on screen without scrolling.
-  const maxHeight = Math.round(
-    Math.min(400, Math.max(260, (typeof window !== 'undefined' ? window.innerHeight : 800) * 0.4)),
-  )
+  const frontierGlobal = useMemo(() => {
+    const i = frontierId ? packs.findIndex(p => p.id === frontierId) : -1
+    return i >= 0 ? i : 0
+  }, [packs, frontierId])
 
   const layout = useMemo(
-    () => (width > 0 ? layoutAtlas(packs, { width, maxHeight }) : null),
-    [packs, width, maxHeight],
+    () => (width > 0
+      ? layoutAtlas(packs, {
+          width,
+          maxHeight: 250,
+          center: center ?? frontierGlobal,
+          count: NEIGHBOURHOOD,
+        })
+      : null),
+    [packs, width, center, frontierGlobal],
   )
 
-  const frontierIndex = useMemo(() => {
-    if (!layout || !frontierId) return layout ? layout.nodes.length - 1 : 0
-    const i = layout.nodes.findIndex(n => n.id === frontierId)
-    return i >= 0 ? i : 0
-  }, [layout, frontierId])
-
-  const frontierNode = layout?.nodes[frontierIndex] ?? null
-
-  // The four stations, located by cumulative curriculum words (not by the
-  // pack's difficulty tag, which interleaves along the route).
-  const monuments = useMemo<Monument[]>(() => {
-    if (!layout) return []
-    const stations = milestonesFor(packs)
-    const out: Monument[] = []
-    layout.nodes.forEach((node, index) => {
-      const m = stations.get(node.id)
-      if (m?.kind === 'station' && m.level) {
-        out.push({ index, words: m.words, level: m.level.level })
-      }
-    })
-    return out
-  }, [layout, packs])
+  const frontierNode = useMemo(
+    () => layout?.nodes.find(n => n.globalIndex === frontierGlobal) ?? null,
+    [layout, frontierGlobal],
+  )
 
   // ── Measure ────────────────────────────────────────────────────────────────
   useEffect(() => {
@@ -99,15 +87,21 @@ export function Atlas({ packs, memory, frontierId, onPick, knownWords }: Props) 
     return () => ro.disconnect()
   }, [])
 
-  // ── Static layer: expensive, so only on data/size change ───────────────────
   const repaintStatic = useCallback((progress: number) => {
     const canvas = baseRef.current
-    if (!canvas || !layout) return
+    if (!canvas || !layout || !colorsRef.current) return
     const ctx = canvas.getContext('2d')
-    if (!ctx || !colorsRef.current) return
-    paintStatic(ctx, { layout, memory, colors: colorsRef.current, frontierIndex, monuments, progress })
-  }, [layout, memory, frontierIndex, monuments])
+    if (!ctx) return
+    paintStatic(ctx, { layout, memory, colors: colorsRef.current, frontierGlobal, progress })
+  }, [layout, memory, frontierGlobal])
 
+  const repaintDynamic = useCallback(() => {
+    const ctx = liveRef.current?.getContext('2d')
+    if (!ctx || !layout || !colorsRef.current) return
+    paintDynamic(ctx, { layout, colors: colorsRef.current, frontier: frontierNode, selected })
+  }, [layout, frontierNode, selected])
+
+  // ── Size + first paint ─────────────────────────────────────────────────────
   useEffect(() => {
     const base = baseRef.current
     const live = liveRef.current
@@ -116,26 +110,12 @@ export function Atlas({ packs, memory, frontierId, onPick, knownWords }: Props) 
     sizeCanvas(base, layout.width, layout.height)
     sizeCanvas(live, layout.width, layout.height)
     repaintStatic(reduced || entranceRef.current ? 1 : 0)
-  }, [layout, repaintStatic, reduced])
+    repaintDynamic()
+  }, [layout, repaintStatic, repaintDynamic, reduced])
 
-  // ── Entrance: the ONLY thing that runs a rAF loop ──────────────────────────
-  // Once the route has drawn itself the loop stops for good. The resting pulse
-  // is CSS on `.atlas__pin`, so there is no idle repaint at all.
+  // ── Entrance: the ONLY rAF loop, and it ends ───────────────────────────────
   useEffect(() => {
-    if (!layout) return
-    const ctx = liveRef.current?.getContext('2d')
-    if (!ctx || !colorsRef.current) return
-
-    const paintOnce = () => paintDynamic(ctx, {
-      layout, colors: colorsRef.current!, frontier: frontierNode, selected,
-    })
-
-    if (reduced || entranceRef.current) {
-      repaintStatic(1)
-      paintOnce()
-      return
-    }
-
+    if (!layout || reduced || entranceRef.current) return
     let start = 0
     const tick = (now: number) => {
       if (!start) start = now
@@ -147,15 +127,13 @@ export function Atlas({ packs, memory, frontierId, onPick, knownWords }: Props) 
       } else {
         rafRef.current = 0
         entranceRef.current = true
-        paintOnce()
       }
     }
     rafRef.current = requestAnimationFrame(tick)
-    return () => {
-      cancelAnimationFrame(rafRef.current)
-      rafRef.current = 0
-    }
-  }, [layout, frontierNode, selected, reduced, repaintStatic])
+    return () => { cancelAnimationFrame(rafRef.current); rafRef.current = 0 }
+  }, [layout, reduced, repaintStatic])
+
+  useEffect(() => { repaintDynamic() }, [repaintDynamic])
 
   // ── Follow theme changes ───────────────────────────────────────────────────
   // The canvas reads its palette from CSS custom properties once, so a theme
@@ -165,27 +143,25 @@ export function Atlas({ packs, memory, frontierId, onPick, knownWords }: Props) 
     const refresh = () => {
       colorsRef.current = readAtlasColors(el)
       repaintStatic(1)
+      repaintDynamic()
     }
     const mo = new MutationObserver(refresh)
     mo.observe(el, { attributes: true, attributeFilter: ['data-theme'] })
     const mq = window.matchMedia('(prefers-color-scheme: light)')
     mq.addEventListener('change', refresh)
     return () => { mo.disconnect(); mq.removeEventListener('change', refresh) }
-  }, [repaintStatic])
+  }, [repaintStatic, repaintDynamic])
 
-  // ── Park the CSS pulse when off screen ────────────────────────────────────
-  // Nothing to stop on the canvas any more (the entrance loop ends by itself),
-  // but the marker's CSS animation is worth pausing so it isn't compositing
-  // frames for a map nobody is looking at.
+  // Park the CSS pulse when the map scrolls away — nothing to stop on canvas.
   useEffect(() => {
     const el = wrapRef.current
     if (!el || reduced) return
-    const io = new IntersectionObserver(([entry]) => setOnScreen(entry.isIntersecting), { threshold: 0 })
+    const io = new IntersectionObserver(([e]) => setOnScreen(e.isIntersecting), { threshold: 0 })
     io.observe(el)
     return () => io.disconnect()
   }, [reduced])
 
-  const pick = useCallback((clientX: number, clientY: number) => {
+  const tap = useCallback((clientX: number, clientY: number) => {
     const canvas = liveRef.current
     if (!canvas || !layout) return
     const rect = canvas.getBoundingClientRect()
@@ -194,6 +170,11 @@ export function Atlas({ packs, memory, frontierId, onPick, knownWords }: Props) 
     setSelected(node)
     onPick(node.id)
   }, [layout, onPick])
+
+  const windowLabel = layout
+    ? `#${layout.nodes[0]?.num ?? 1}–#${layout.nodes[layout.nodes.length - 1]?.num ?? 1}`
+    : ''
+  const offFrontier = center != null && frontierNode == null
 
   return (
     <section className="atlas" aria-label="Mapa 10 000 słów">
@@ -208,7 +189,7 @@ export function Atlas({ packs, memory, frontierId, onPick, knownWords }: Props) 
       <div
         ref={wrapRef}
         className="atlas__stage"
-        onPointerDown={e => pick(e.clientX, e.clientY)}
+        onPointerDown={e => tap(e.clientX, e.clientY)}
         role="presentation"
       >
         <canvas ref={baseRef} className="atlas__canvas" aria-hidden="true" />
@@ -223,6 +204,23 @@ export function Atlas({ packs, memory, frontierId, onPick, knownWords }: Props) 
           />
         )}
       </div>
+
+      <div className="atlas__foot">
+        <span className="atlas__window-label">{windowLabel}</span>
+        {offFrontier && (
+          <button type="button" className="atlas__recenter" onClick={() => setCenter(null)}>
+            ← Wróć do siebie
+          </button>
+        )}
+      </div>
+
+      <Minimap
+        packs={packs}
+        memory={memory}
+        from={layout?.from ?? 0}
+        to={layout?.to ?? 0}
+        onSeek={setCenter}
+      />
     </section>
   )
 }
