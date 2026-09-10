@@ -4,6 +4,8 @@ import { PackageProgress } from '../../types/progress'
 import { useAuthStore } from '../../store/useAuthStore'
 import { usePrefetchOnHover, loadPackPreview } from '../../hooks/usePrefetchOnHover'
 import { routeNumber } from '../../utils/packRoute'
+import { PackMemory } from '../../utils/packMemory'
+import { usePackWords } from '../../hooks/usePackWords'
 import {
   getPackIcon,
   getCategoryColor,
@@ -18,6 +20,8 @@ interface Props {
   knownCount?: number
   /** The earliest not-yet-mastered pack on the route — gets the "Kontynuuj" cue. */
   isFrontier?: boolean
+  /** Your relationship with this pack (held / fading / active / ahead). */
+  memory?: PackMemory
 }
 
 /** One glyph standing in for the status pill — quieter on a long scroll. */
@@ -27,10 +31,11 @@ const STATUS_GLYPH: Record<string, { glyph: string; aria: string }> = {
   mastered:  { glyph: '★', aria: 'Opanowana' },
 }
 
-export function PackageCard({ pack, progress, knownCount = 0, isFrontier = false }: Props) {
+export function PackageCard({ pack, progress, knownCount = 0, isFrontier = false, memory }: Props) {
   const { user, hasAccess: hasAccessFn } = useAuthStore()
   const hasAccess = hasAccessFn()
   const prefetch = usePrefetchOnHover(loadPackPreview)
+  const words = usePackWords(pack.id)
 
   const icon = getPackIcon(pack)
   const color = getCategoryColor(pack.category)
@@ -46,33 +51,26 @@ export function PackageCard({ pack, progress, knownCount = 0, isFrontier = false
     : rawStatus
   const isMastered = status === 'mastered'
   const glyph = STATUS_GLYPH[status]
+  const fading = memory?.relation === 'fading'
 
   // Mirror RequireEntitlement: logged-out → login, entitled-less → account.
   const to = hasAccess ? `/pakiet/${pack.id}` : (user ? '/konto' : '/logowanie')
   const ariaLabel = `Pakiet #${num}: ${pack.name}. ${pack.category}. `
     + `${knownCount} z ${pack.wordCount} słów opanowanych`
     + (glyph ? `, ${glyph.aria.toLowerCase()}` : '')
+    + (fading ? ', wraca do powtórki' : '')
 
   return (
     <Link
       to={to}
       viewTransition
       {...prefetch}
-      className={`packcard ${STATUS_META[status].className} ${isFrontier ? 'packcard--frontier' : ''}`}
+      className={`packcard ${STATUS_META[status].className} ${isFrontier ? 'packcard--frontier' : ''}${fading ? ' packcard--fading' : ''}`}
       style={{ ['--cat' as string]: color }}
       aria-label={ariaLabel}
       id={`pack-${pack.id}`}
     >
       {status === 'started' && !isMastered && <span className="packcard__stripe" aria-hidden="true" />}
-
-      {!hasAccess && (
-        <span className="packcard__lock" aria-hidden="true">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <rect x="4" y="11" width="16" height="10" rx="2" />
-            <path d="M8 11V7a4 4 0 0 1 8 0v4" />
-          </svg>
-        </span>
-      )}
 
       <div className="packcard__header">
         <span className="packcard__num">#{num}</span>
@@ -83,9 +81,6 @@ export function PackageCard({ pack, progress, knownCount = 0, isFrontier = false
             ['--ring' as string]: isMastered ? '#f2b619' : '#10B981',
           }}
         >
-          {/* Paired with PackPreviewPage's hero icon/name so the card morphs
-              into the preview instead of cutting to it — same recipe as the
-              training card → detail transition (TrainingPage.tsx). */}
           <div
             className="packcard__icon"
             style={{
@@ -96,17 +91,33 @@ export function PackageCard({ pack, progress, knownCount = 0, isFrontier = false
             {icon}
           </div>
         </div>
+
         <div className="packcard__info">
-          <h3 className="packcard__name" style={{ viewTransitionName: `pack-name-${pack.id}` }}>{pack.name}</h3>
-          <span className="packcard__meta">{pack.category}</span>
+          <h3 className="packcard__name" style={{ viewTransitionName: `pack-name-${pack.id}` }}>
+            {pack.name}
+          </h3>
+          {/* A vocabulary app that shows no vocabulary was the biggest information
+              loss on this page. Locked visitors see the same words blurred —
+              a sample of what they're buying rather than a padlock. */}
+          {words ? (
+            <p className={`packcard__words${hasAccess ? '' : ' packcard__words--locked'}`}>
+              {words.join(' · ')}
+            </p>
+          ) : (
+            <span className="packcard__meta">{pack.category}</span>
+          )}
         </div>
+
         <div className="packcard__right">
-          {isFrontier && hasAccess && <span className="packcard__frontier-tag">Kontynuuj →</span>}
+          {isFrontier && hasAccess && <span className="packcard__frontier-tag">Dalej →</span>}
           {glyph && (
             <span className={`packcard__glyph packcard__glyph--${status}`} title={glyph.aria} aria-hidden="true">
               {glyph.glyph}
             </span>
           )}
+          {/* Memory dot: this pack is conquered but coming back around. The gold
+              status glyph above stays — the reward is never taken away. */}
+          {fading && <span className="packcard__fade-dot" title="Wraca do powtórki" aria-hidden="true" />}
           <span className="packcard__count">{knownCount}/{pack.wordCount}</span>
         </div>
       </div>

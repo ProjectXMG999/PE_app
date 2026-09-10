@@ -200,6 +200,40 @@
   color: var(--text-muted);
 }
 
+/* The words themselves — what this pack actually teaches. */
+.packcard__words {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Locked visitors get the same sample, out of focus: an invitation instead of
+   a padlock. Not access control — see scripts/build-pack-previews.mjs. */
+.packcard__words--locked {
+  filter: blur(3.5px);
+  opacity: 0.75;
+  user-select: none;
+}
+
+/* Conquered, but coming back around. Sits next to — never instead of — the
+   status glyph, because the reward is never taken away. */
+.packcard__fade-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: #F59E0B;
+  box-shadow: 0 0 8px 1px color-mix(in srgb, #F59E0B 55%, transparent);
+  flex-shrink: 0;
+}
+
+.packcard--fading {
+  border-color: color-mix(in srgb, #F59E0B 26%, var(--border));
+}
+
 .packcard__right {
   display: flex;
   align-items: center;

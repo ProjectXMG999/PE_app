@@ -1,18 +1,24 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
 import { InstallBanner } from '../components/home/InstallBanner'
-import { RouteStrip } from '../components/today/RouteStrip'
+import { Atlas } from '../components/home/Atlas/Atlas'
+import { MemoryStrip } from '../components/home/MemoryStrip'
 import { FrontierBar } from '../components/home/FrontierBar'
 import { PackFilterBar } from '../components/home/PackFilterBar'
 import { VolumeSection } from '../components/home/VolumeSection'
 import { PackageCard } from '../components/home/PackageCard'
+import { MilestoneBand } from '../components/home/MilestoneBand'
 import { OnboardingModal } from '../components/onboarding/OnboardingModal'
 import { fadeUp, fadeUpReduced, staggerContainerWide } from '../components/today/motion'
 import { useProgressData } from '../hooks/useProgressData'
+import { useAppStore } from '../store/useAppStore'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
+import { buildPackMemory, fadingPacks } from '../utils/packMemory'
+import { milestonesFor } from '../utils/packMilestones'
+import { LEVEL_META } from '../data/levels'
 import {
   PackFilters,
   PackStatusFilter,
@@ -36,6 +42,14 @@ const FLAT_PAGE = 60
 let introPlayed = false
 
 const VALID_STATUS: PackStatusFilter[] = ['new', 'started', 'completed', 'mastered']
+
+// Station word-count → the `level-N` badge that stamps its date. LEVEL_META
+// numbers stations (level 1 = Survival at 1 000), and the badge ids follow that
+// same numbering, so this is a direct lookup rather than the off-by-one the
+// tier scheme would introduce.
+const LEVEL_INDEX_BY_WORDS: Record<number, number> = Object.fromEntries(
+  LEVEL_META.map(l => [l.threshold, l.level]),
+)
 
 function readFilters(p: URLSearchParams): PackFilters {
   const lvl = parseInt(p.get('level') ?? '', 10)
@@ -72,6 +86,22 @@ export function HomePage() {
   const clearFilters = useCallback(() => setParams({}, { replace: true }), [setParams])
 
   const frontier = useMemo(() => frontierPack(allPacks, snapshot), [snapshot])
+
+  // ── Memory layer: your relationship with every pack ─────────────────
+  const memory = useMemo(() => buildPackMemory(allPacks, snapshot), [snapshot])
+  const fadingCount = useMemo(() => fadingPacks(memory).length, [memory])
+  const knownWords = snapshot?.knownTotal ?? 0
+
+  // Landmarks depend only on the static catalogue, so they're computed once.
+  const milestones = useMemo(() => milestonesFor(allPacks), [])
+
+  // Dates the level badges were earned double as station dates — the same
+  // trick StatsPage uses rather than keeping separate bookkeeping.
+  const unlocks = useAppStore(s => s.achievementUnlocks)
+  const stationDate = useCallback(
+    (words: number) => unlocks[`level-${LEVEL_INDEX_BY_WORDS[words] ?? ''}`]?.at,
+    [unlocks],
+  )
 
   // ── Flat (filtered) view ────────────────────────────────────────────
   const flatList = useMemo(() => {
@@ -236,8 +266,47 @@ export function HomePage() {
       progress={snapshot?.progressMap.get(pack.id)}
       knownCount={snapshot?.knownMap.get(pack.id) ?? 0}
       isFrontier={frontier?.id === pack.id}
+      memory={memory.get(pack.id)}
     />
   )
+
+  /** A card plus whatever landmark the route passes just before it. */
+  const renderRow = (pack: PackMeta) => {
+    const milestone = milestones.get(pack.id)
+    if (!milestone) return renderCard(pack)
+    return (
+      <Fragment key={pack.id}>
+        <MilestoneBand
+          milestone={milestone}
+          knownWords={knownWords}
+          reachedAt={milestone.kind === 'station' ? stationDate(milestone.words) : undefined}
+        />
+        {renderCard(pack)}
+      </Fragment>
+    )
+  }
+
+  /** Tapping a node on the Atlas brings the list to that pack. */
+  const jumpToPack = useCallback((packId: string) => {
+    const pack = allPacks.find(p => p.id === packId)
+    if (!pack) return
+    if (active) clearFilters()
+    setCollapsed(prev => {
+      const next = new Set(prev ?? [])
+      next.delete(pack.volume)
+      persistCollapsed(next)
+      return next
+    })
+    // Two frames: one for the filter/collapse state to commit, one for the
+    // expanding volume to have laid out the target row.
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const el = document.getElementById(`pack-${packId}`)
+      if (!el) return
+      el.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' })
+      el.classList.add('packcard--pulse')
+      window.setTimeout(() => el.classList.remove('packcard--pulse'), 2400)
+    }))
+  }, [active, clearFilters, reduced])
 
   return (
     <AppShell>
@@ -251,14 +320,24 @@ export function HomePage() {
         <motion.div variants={variants}><InstallBanner /></motion.div>
 
         <motion.div variants={variants}>
-          <Link to="/postęp" className="homepage__routelink" viewTransition>
-            <RouteStrip knownWords={snapshot?.knownTotal ?? 0} eyebrow={<>🗺️ Mapa · 10 000 słów</>} />
-          </Link>
+          <Atlas
+            packs={allPacks}
+            memory={memory}
+            frontierId={frontier?.id ?? null}
+            onPick={jumpToPack}
+            knownWords={knownWords}
+          />
         </motion.div>
 
         {frontier && !active && (
           <motion.div variants={variants}>
             <FrontierBar frontier={frontier} onJump={jumpToFrontier} />
+          </motion.div>
+        )}
+
+        {fadingCount > 0 && (
+          <motion.div variants={variants}>
+            <MemoryStrip count={fadingCount} />
           </motion.div>
         )}
 
@@ -309,7 +388,7 @@ export function HomePage() {
                     onToggle={() => toggleVolume(group.volume)}
                     headRef={headRefFor(group.volume)}
                   >
-                    {!isCollapsed && group.packs.map(renderCard)}
+                    {!isCollapsed && group.packs.map(renderRow)}
                   </VolumeSection>
                 )
               })}
