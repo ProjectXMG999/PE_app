@@ -124,13 +124,6 @@ export default defineConfig({
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'store-vendor': ['zustand', 'idb'],
-          // The 864-pack catalogue (~152 kB raw) is imported synchronously by 17
-          // modules, several of which run at boot (masteryRepair, achievements,
-          // the review queue), so it cannot simply be deferred without an async
-          // refactor across the app. Splitting it out at least stops it from
-          // being re-downloaded on every app-code deploy — the catalogue changes
-          // on a completely different cadence from the UI.
-          'pack-index': ['./src/data/packages-index.json'],
         },
       },
     },

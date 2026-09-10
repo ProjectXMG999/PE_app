@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/build-pack-previews.mjs && tsc -b && vite build",
+    "build": "tsc -b && vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "parse-data": "tsx scripts/parse-wizard-xlsx.ts && node scripts/sync-packs.mjs",
@@ -27,8 +27,7 @@
     "generate-intro-audio": "tsx --env-file=.env scripts/generate-intro-audio.ts",
     "delete-blobs": "tsx --env-file=.env scripts/delete-audio-blobs.ts",
     "upload-blobs": "tsx --env-file=.env scripts/upload-audio-blobs.ts",
-    "upload-pack-blobs": "tsx --env-file=.env scripts/upload-pack-blobs.ts",
-    "build-previews": "node scripts/build-pack-previews.mjs"
+    "upload-pack-blobs": "tsx --env-file=.env scripts/upload-pack-blobs.ts"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.0.0",

@@ -1,4 +1,3 @@
-import { ReactNode } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { LEVEL_META, ROUTE_TOTAL } from '../../data/levels'
 import { useCountUp } from '../../hooks/useCountUp'
@@ -7,8 +6,6 @@ import './RouteStrip.css'
 
 interface Props {
   knownWords: number
-  /** Overrides the default "⚡ Twój progress treningu" eyebrow. */
-  eyebrow?: ReactNode
 }
 
 /**
@@ -18,7 +15,7 @@ interface Props {
  * "what do I do now". Reuses CompassHero's fill/marker recipe rather than a
  * flatter one-off, so the two screens read as the same route, not two.
  */
-export function RouteStrip({ knownWords, eyebrow }: Props) {
+export function RouteStrip({ knownWords }: Props) {
   const reduced = useReducedMotion()
   const pct = Math.min(100, (knownWords / ROUTE_TOTAL) * 100)
 
@@ -33,9 +30,7 @@ export function RouteStrip({ knownWords, eyebrow }: Props) {
 
   return (
     <div className="routestrip">
-      <p className="routestrip__eyebrow">
-        {eyebrow ?? <>⚡ Twój <span className="routestrip__eyebrow-highlight">progress</span> treningu</>}
-      </p>
+      <p className="routestrip__eyebrow">⚡ Twój <span className="routestrip__eyebrow-highlight">progress</span> treningu</p>
 
       <div className="routestrip__figure">
         <span key={knownWords} className="routestrip__value">{shownWords.toLocaleString('pl-PL')}</span>

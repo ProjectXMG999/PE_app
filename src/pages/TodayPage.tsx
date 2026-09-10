@@ -52,6 +52,7 @@ export function TodayPage() {
   const pulse = useProgressPulse()
   const todayLevel = useAppStore(s => s.todayLevel)
   const setTodayLevel = useAppStore(s => s.setTodayLevel)
+  const homeSetLevel = useAppStore(s => s.setLevel)
 
   const [goalOpen, setGoalOpen] = useState(false)
   const [levelPickerOpen, setLevelPickerOpen] = useState(false)
@@ -226,7 +227,7 @@ export function TodayPage() {
               {todayLevel != null && (
                 <button
                   className="today__browse-level"
-                  onClick={() => navigate(`/?level=${todayLevel}`)}
+                  onClick={() => { homeSetLevel(todayLevel); navigate('/') }}
                 >
                   Przeglądaj ten poziom
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

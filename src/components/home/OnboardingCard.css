@@ -1,0 +1,204 @@
+.onboarding-card {
+  margin: 0 auto var(--spacing-md);
+  padding: var(--spacing-lg);
+  max-width: 600px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-accent);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(139, 92, 246, 0.04) 100%);
+  animation: slideDown 400ms ease-out forwards;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.onboarding-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.onboarding-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.onboarding-card__title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--accent);
+  flex: 1;
+}
+
+.onboarding-card__close {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+  padding: 0;
+}
+
+.onboarding-card__close:hover {
+  color: var(--text-primary);
+}
+
+.onboarding-card__text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.onboarding-card__actions {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.onboarding-card__btn {
+  padding: 8px var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+  width: fit-content;
+}
+
+.onboarding-card__btn:hover {
+  background: var(--accent-bright);
+}
+
+.onboarding-card__btn--secondary {
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  box-shadow: none;
+  border: 1px solid var(--border);
+}
+
+.onboarding-card__btn--secondary:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.onboarding-card__link {
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  text-align: left;
+  width: fit-content;
+}
+
+.onboarding-card__link:hover {
+  color: var(--accent-bright);
+}
+
+
+@media (max-width: 768px) {
+  .onboarding-card {
+    margin: 0 var(--spacing-md) 12px;
+    padding: 12px;
+    max-width: none;
+  }
+
+  .onboarding-card__title {
+    font-size: 15px;
+  }
+
+  .onboarding-card__text {
+    font-size: 13px;
+  }
+
+  .onboarding-card__btn {
+    font-size: 12px;
+    padding: 8px var(--spacing-md);
+  }
+
+  .onboarding-card__link {
+    font-size: 11px;
+  }
+}
+
+/* Desktop: the card sat at mobile scale (max-width 600px) inside a much
+   wider column, reading as a small popup floating in empty space. Scale
+   it up to fill the content column and lay header/text/actions out in one
+   row instead of a narrow vertical stack. */
+@media (min-width: 1024px) {
+  .onboarding-card {
+    max-width: none;
+    padding: var(--spacing-lg) var(--spacing-xl);
+  }
+
+  .onboarding-card__content {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-xl);
+  }
+
+  .onboarding-card__header {
+    flex: 0 0 auto;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+
+  .onboarding-card__title {
+    font-size: 19px;
+    white-space: nowrap;
+  }
+
+  .onboarding-card__close {
+    order: 2;
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+  }
+
+  .onboarding-card__text {
+    flex: 1;
+    font-size: 15px;
+  }
+
+  .onboarding-card__actions {
+    flex: 0 0 auto;
+    margin-top: 0;
+  }
+
+  .onboarding-card__btn {
+    font-size: 14px;
+    padding: 11px 22px;
+  }
+}

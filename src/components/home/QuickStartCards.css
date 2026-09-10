@@ -1,0 +1,301 @@
+.quickstart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-md) 12px;
+}
+
+@media (min-width: 1024px) {
+  .quickstart__card {
+    min-height: 140px;
+    padding: var(--spacing-lg);
+  }
+  .quickstart__icon {
+    font-size: 30px;
+  }
+  .quickstart__label {
+    font-size: 20px;
+  }
+}
+
+/* full-width info panel spans both columns */
+.quickstart__mode-info {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-md);
+  animation: qs-slide 180ms ease-out forwards;
+}
+
+@keyframes qs-slide {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.quickstart__mode-info-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.quickstart__mode-info-title {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 3px;
+}
+
+.quickstart__mode-info-desc {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* wrapper holds card + absolute info button — stretches to the grid row's
+   height so both cards share one height regardless of text wrapping */
+.quickstart__wrap {
+  position: relative;
+  display: flex;
+}
+
+.quickstart__card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.quickstart__card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 12px var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  text-align: left;
+  transition: all var(--transition-fast);
+  min-height: 104px;
+}
+
+.quickstart__card:active {
+  transform: scale(0.97);
+}
+
+/* Same Słuchaj/Trenuj colors as Dzisiaj's hero CTAs and the pack cards below
+   — blue for listening, violet accent for active training. */
+.quickstart__card--autoplay {
+  background: linear-gradient(135deg, var(--listen-blue) 0%, color-mix(in srgb, var(--listen-blue) 60%, black) 100%);
+  border-color: transparent;
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--listen-blue) 45%, transparent), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.quickstart__card--autoplay::before,
+.quickstart__card--fiszki::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 25%, rgba(255,255,255,0.07) 45%, rgba(255,255,255,0.13) 50%, rgba(255,255,255,0.07) 55%, transparent 75%);
+  background-size: 300% 100%;
+  background-position: -150% 0;
+  animation: qs-shine 7s ease-in-out infinite;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes qs-shine {
+  0%   { background-position: -150% 0; opacity: 0; }
+  8%   { opacity: 1; }
+  45%  { background-position: 250% 0; opacity: 1; }
+  55%  { opacity: 0; }
+  100% { background-position: 250% 0; opacity: 0; }
+}
+
+.quickstart__card--fiszki {
+  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 60%, black) 100%);
+  border-color: transparent;
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--accent) 40%, transparent), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* green card shines on the off-beat of the purple one */
+.quickstart__card--fiszki::before {
+  animation-delay: 3.5s;
+}
+
+.quickstart__card--skeleton {
+  background: var(--bg-card);
+  animation: skeleton-pulse 1.4s ease-in-out infinite;
+  pointer-events: none;
+  min-height: 104px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.quickstart__card-top {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.quickstart__label-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1.1;
+}
+
+.quickstart__label-eyebrow {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.quickstart__label {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #fff;
+}
+
+.quickstart__icon {
+  font-size: 24px;
+}
+
+/* Pack name — subtle, smaller */
+.quickstart__title {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+}
+
+/* bottom row: waveform + progress bar + go arrow */
+.quickstart__bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* animated equalizer bars */
+.quickstart__wave {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.quickstart__wave span {
+  width: 3px;
+  border-radius: 2px;
+  background: rgba(147, 197, 253, 0.9);
+  transform-origin: bottom;
+  animation: qs-eq 1.6s ease-in-out infinite;
+}
+
+.quickstart__card--fiszki .quickstart__wave span {
+  background: rgba(196, 181, 253, 0.9);
+}
+
+.quickstart__wave span:nth-child(1) { height: 7px;  animation-delay: 0s; }
+.quickstart__wave span:nth-child(2) { height: 13px; animation-delay: 0.25s; }
+.quickstart__wave span:nth-child(3) { height: 18px; animation-delay: 0.5s; }
+.quickstart__wave span:nth-child(4) { height: 10px; animation-delay: 0.15s; }
+.quickstart__wave span:nth-child(5) { height: 14px; animation-delay: 0.35s; }
+
+@keyframes qs-eq {
+  0%, 100% { transform: scaleY(0.55); }
+  50%      { transform: scaleY(1); }
+}
+
+/* circular go affordance (visual only — whole card is the button) */
+.quickstart__go {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.quickstart__card:active .quickstart__go {
+  transform: translateX(2px);
+  background: rgba(255, 255, 255, 0.24);
+}
+
+/* slim progress bar — pack completion, sits between waveform and go-arrow */
+.quickstart__bar {
+  flex: 1;
+  min-width: 0;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+}
+
+.quickstart__bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #fff;
+}
+
+/* Info button — top-right corner of card */
+.quickstart__info-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: rgba(0, 0, 0, 0.22);
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  z-index: 3;
+  padding: 0;
+}
+
+.quickstart__info-btn:hover,
+.quickstart__info-btn--active {
+  background: rgba(139, 92, 246, 0.5);
+  color: white;
+}

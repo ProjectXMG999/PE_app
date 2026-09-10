@@ -26,10 +26,8 @@ export const NAV_ITEMS = [
     icon: (active: boolean): ReactNode => todayIcon(active),
   },
   {
-    // "Mapa", not "Pakiety": the screen is the route through the 10 000 words
-    // (volumes as milestones, "you are here"), and a pack is a stop on it.
     path: '/',
-    label: 'Mapa',
+    label: 'Pakiety',
     icon: (active: boolean): ReactNode => (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="7" width="20" height="14" rx="2"/>
