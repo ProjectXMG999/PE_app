@@ -107,30 +107,30 @@ export function TodayPage() {
         )}
       </motion.div>
       {train ? (
-        <motion.section className="today__pick" variants={cardVariants}>
-          <motion.div className="today__pick-head" variants={variants}>
+        <motion.button
+          type="button"
+          className="today__pick"
+          variants={cardVariants}
+          onClick={() => pressCta(() => navigate(`/pakiet/${train.pack.id}/fiszki-start`))}
+        >
+          <span className="today__pick-head">
             <span className="u-kicker">⚡ Trenuj</span>
             {showPace && (
               <span className="today__pick-pace">+{pace!.deltaPct}% szybciej niż w zeszłym tygodniu</span>
             )}
-          </motion.div>
-          <motion.p className="today__pick-name" variants={variants}>{train.pack.name}</motion.p>
-          <motion.p className="today__pick-detail" variants={variants}>
+          </span>
+          <span className="today__pick-name">{train.pack.name}</span>
+          <span className="today__pick-detail">
             {LEVEL_META.find(l => l.level === train.pack.level)?.name ?? `Poziom ${train.pack.level}`} ·{' '}
             ~{estimateMinutes(train.pack.wordCount - train.known)} min
-          </motion.p>
-          <motion.div className="today__pick-actions" variants={variants}>
-            <button
-              className="today__pick-btn"
-              onClick={() => pressCta(() => navigate(`/pakiet/${train.pack.id}/fiszki-start`))}
-            >
-              Trenuj
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <polyline points="9 6 15 12 9 18" />
-              </svg>
-            </button>
-          </motion.div>
-        </motion.section>
+          </span>
+          <span className="today__pick-cta">
+            Trenuj
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+            </svg>
+          </span>
+        </motion.button>
       ) : (
         <motion.p className="today__path-empty" variants={variants}>Nic do trenowania na tym poziomie — sprawdź Słuchaj albo zmień poziom.</motion.p>
       )}
@@ -151,27 +151,27 @@ export function TodayPage() {
         )}
       </motion.div>
       {listen ? (
-        <motion.section className="today__pick today__pick--listen" variants={cardVariants}>
-          <motion.div className="today__pick-head" variants={variants}>
+        <motion.button
+          type="button"
+          className="today__pick today__pick--listen"
+          variants={cardVariants}
+          onClick={() => pressCta(() => navigate(`/pakiet/${listen.pack.id}/start`))}
+        >
+          <span className="today__pick-head">
             <span className="u-kicker">🎧 Słuchaj</span>
-          </motion.div>
-          <motion.p className="today__pick-name" variants={variants}>{listen.pack.name}</motion.p>
-          <motion.p className="today__pick-detail" variants={variants}>
+          </span>
+          <span className="today__pick-name">{listen.pack.name}</span>
+          <span className="today__pick-detail">
             {LEVEL_META.find(l => l.level === listen.pack.level)?.name ?? `Poziom ${listen.pack.level}`} ·{' '}
             ~{estimateMinutes(listen.pack.wordCount - listen.startIndex)} min
-          </motion.p>
-          <motion.div className="today__pick-actions" variants={variants}>
-            <button
-              className="today__pick-btn today__pick-btn--listen"
-              onClick={() => pressCta(() => navigate(`/pakiet/${listen.pack.id}/start`))}
-            >
-              Słuchaj
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <polyline points="9 6 15 12 9 18" />
-              </svg>
-            </button>
-          </motion.div>
-        </motion.section>
+          </span>
+          <span className="today__pick-cta today__pick-cta--listen">
+            Słuchaj
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+            </svg>
+          </span>
+        </motion.button>
       ) : (
         <motion.p className="today__path-empty" variants={variants}>Nic do słuchania na tym poziomie — sprawdź Trenuj albo zmień poziom.</motion.p>
       )}

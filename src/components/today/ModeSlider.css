@@ -17,7 +17,7 @@
 .modeslider__tab {
   position: relative;
   flex: 1;
-  height: 34px;
+  height: 46px;
   border: none;
   background: none;
   border-radius: var(--radius-full);

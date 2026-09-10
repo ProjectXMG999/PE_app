@@ -6,83 +6,53 @@
   pointer-events: none;
 }
 
-.ambient__bloom {
-  position: absolute;
-  width: 72vw;
-  height: 72vw;
-  max-width: 680px;
-  max-height: 680px;
-  border-radius: 50%;
-  filter: blur(48px);
-  animation: ambient-drift 19s ease-in-out infinite;
-}
-
-.ambient__bloom--a {
-  top: -180px;
-  right: -180px;
-  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 82%, transparent) 0%, transparent 70%);
-  animation-duration: 19s;
-}
-
-.ambient__bloom--b {
-  bottom: -220px;
-  left: -180px;
-  background: radial-gradient(circle, color-mix(in srgb, var(--accent-teal) 72%, transparent) 0%, transparent 70%);
-  animation-duration: 24s;
-  /* animation-delay is set inline (AmbientBackground.tsx), anchored to
-     wall-clock time so a remount on route change doesn't restart the loop. */
-}
-
-.ambient__route {
+/* Light from the top edge — a whisper, not a spotlight. Static. */
+.ambient__wash {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  background:
+    radial-gradient(150% 72% at 50% -24%,
+      color-mix(in oklch, var(--accent) 12%, transparent) 0%,
+      transparent 55%),
+    radial-gradient(120% 50% at 100% 0%,
+      color-mix(in oklch, var(--live) 6%, transparent) 0%,
+      transparent 45%);
 }
 
-.ambient__route-line {
-  opacity: 0.12;
+/* Fine film grain. The single most effective "this is designed" texture —
+   keeps flat surfaces from looking like plastic. */
+.ambient__grain {
+  position: absolute;
+  inset: -50%;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* The travelling gleam — a short bright dash sliding the length of the path
-   on a loop, like light catching a curved road. */
-.ambient__route-shine {
-  opacity: 0.55;
-  stroke-dasharray: 6 130;
-  filter: drop-shadow(0 0 5px var(--accent-bright));
-  animation: ambient-route-shine 7s linear infinite;
+/* Floor vignette — content sits above a soft shadow, not on a hard edge. */
+.ambient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(130% 46% at 50% 118%,
+    oklch(0 0 0 / 0.32) 0%,
+    transparent 62%);
 }
 
-[data-theme="light"] .ambient__bloom {
-  opacity: 0.5;
+[data-theme="light"] .ambient__wash {
+  background:
+    radial-gradient(150% 72% at 50% -24%,
+      color-mix(in oklch, var(--accent) 7%, transparent) 0%,
+      transparent 55%);
 }
 
-[data-theme="light"] .ambient__route-line {
-  opacity: 0.08;
+[data-theme="light"] .ambient__grain {
+  opacity: 0.02;
+  mix-blend-mode: soft-light;
 }
 
-[data-theme="light"] .ambient__route-shine {
-  opacity: 0.4;
-}
-
-@keyframes ambient-drift {
-  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
-  33% { transform: translate(-9%, 5%) scale(1.12) rotate(6deg); }
-  66% { transform: translate(4%, -6%) scale(1.05) rotate(-4deg); }
-}
-
-@keyframes ambient-route-shine {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: -136; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ambient__bloom {
-    animation: none;
-  }
-
-  .ambient__route-shine {
-    animation: none;
-    opacity: 0;
-  }
+[data-theme="light"] .ambient::after {
+  background: radial-gradient(130% 46% at 50% 118%,
+    oklch(0.2 0.02 275 / 0.06) 0%,
+    transparent 62%);
 }

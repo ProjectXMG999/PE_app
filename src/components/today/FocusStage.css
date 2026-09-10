@@ -8,20 +8,24 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   width: 100%;
-  padding: 12px 14px;
+  min-height: 76px;
+  padding: 14px 16px;
   border-radius: var(--radius-lg);
   text-align: left;
   cursor: pointer;
+  transition: transform var(--transition-fast);
 }
+
+.focusstage:active { transform: scale(0.985); }
 
 .focusstage__ring {
   position: relative;
   display: grid;
   place-items: center;
-  width: 60px;
-  height: 60px;
+  width: 66px;
+  height: 66px;
   border-radius: var(--radius-full);
   background: conic-gradient(
     from -90deg,

@@ -59,11 +59,15 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 4px 12px;
-  padding: 12px 14px 12px var(--spacing-md);
+  min-height: 66px;
+  padding: 14px 14px 14px var(--spacing-md);
   text-align: left;
   color: inherit;
   cursor: pointer;
+  transition: transform var(--transition-fast);
 }
+
+.today__rail:active { transform: scale(0.985); }
 
 .today__rail--building { border-left-color: var(--warning); }
 .today__rail--urgent {
@@ -114,12 +118,16 @@
   grid-row: 1 / span 2;
   display: grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-full);
-  color: var(--accent);
-  background: var(--surface-translucent-strong);
+  color: #fff;
+  background: var(--accent);
+  box-shadow: 0 6px 18px var(--accent-glow);
 }
+
+.today__rail--urgent .today__rail-go { background: var(--danger); box-shadow: 0 6px 18px color-mix(in oklch, var(--danger) 45%, transparent); }
+.today__rail--building .today__rail-go { background: var(--warning); box-shadow: 0 6px 18px color-mix(in oklch, var(--warning) 45%, transparent); }
 
 .today__rail-info {
   position: absolute;
@@ -144,27 +152,44 @@
   border-radius: var(--radius-md);
 }
 
-/* ── Path pick (inside ModeSlider) ───────────────────────────────────────── */
+/* ── Path pick (inside ModeSlider) — the whole card is the tap target ─────── */
 .today__pick {
   position: relative;
-  padding: 14px var(--spacing-md);
-  background: var(--surface-translucent);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px var(--spacing-md) 0;
+  text-align: left;
+  overflow: hidden;
+  background: var(--gradient-hero);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-float);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
 }
+
+.today__pick:active { transform: scale(0.985); }
 
 .today__pick::before {
   content: '';
   position: absolute;
-  left: 18px;
-  right: 18px;
+  left: 20px;
+  right: 20px;
   top: 0;
   height: 3px;
   border-radius: 0 0 4px 4px;
   background: var(--accent);
+  box-shadow: 0 0 16px 1px var(--accent-glow);
 }
 
-.today__pick--listen::before { background: var(--listen-blue); }
+.today__pick--listen {
+  border-color: color-mix(in oklch, var(--listen-blue) 42%, transparent);
+}
+.today__pick--listen::before {
+  background: var(--listen-blue);
+  box-shadow: 0 0 16px 1px color-mix(in oklch, var(--listen-blue) 45%, transparent);
+}
 
 .today__pick-head {
   display: flex;
@@ -182,9 +207,9 @@
 }
 
 .today__pick-name {
-  margin: 8px 0 2px;
+  margin: 10px 0 3px;
   font-family: var(--font-heading);
-  font-size: var(--text-2xl);
+  font-size: clamp(22px, 6vw, 27px);
   font-weight: var(--weight-display);
   letter-spacing: var(--tracking-tight);
   line-height: 1.1;
@@ -192,33 +217,27 @@
 }
 
 .today__pick-detail {
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   font-family: var(--font-body);
   font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
-.today__pick-actions { display: flex; }
-
-.today__pick-btn {
-  display: inline-flex;
+/* Full-width action bar — the affordance; the card is the actual button. */
+.today__pick-cta {
+  display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 11px 18px;
-  border-radius: var(--radius-md);
+  justify-content: center;
+  gap: 8px;
+  margin: 0 calc(-1 * var(--spacing-md));
+  padding: 16px;
   font-family: var(--font-heading);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: 800;
   color: #fff;
   background: var(--accent);
-  box-shadow: 0 8px 22px var(--accent-glow);
-  transition: transform var(--transition-fast);
 }
-.today__pick-btn--listen {
-  background: var(--listen-blue);
-  box-shadow: 0 8px 22px color-mix(in oklch, var(--listen-blue) 45%, transparent);
-}
-.today__pick-btn:active { transform: scale(0.97); }
+.today__pick-cta--listen { background: var(--listen-blue); }
 
 .today__path-empty {
   margin: 0;
