@@ -11,14 +11,17 @@ import { ReviewPriorityInfoSheet } from '../components/today/ReviewPriorityInfoS
 import { RouteStrip } from '../components/today/RouteStrip'
 import { ListenStrip } from '../components/today/ListenStrip'
 import { ModeSlider, StudyPath } from '../components/today/ModeSlider'
+import { LevelUpPrompt } from '../components/today/LevelUpPrompt'
+import { SmartStartCard } from '../components/smart/SmartStartCard'
 import { EASE_SPRING, fadeUpReduced, heroCard, heroReveal, staggerContainerWide } from '../components/today/motion'
-import { useProgressData, avgWordsPerDayTrend } from '../hooks/useProgressData'
+import { useProgressData, avgWordsPerDayTrend, packLevelOf } from '../hooks/useProgressData'
 import { useProgressPulse } from '../hooks/useProgressPulse'
 import { useCountUp } from '../hooks/useCountUp'
 import { useHaptics } from '../hooks/useHaptics'
 import { unlockAudioGlobally } from '../audio/audioUnlock'
 import { playTick, playSuccess } from '../services/sfx'
 import { nextListenPack, nextTrainPack, listenedPacksCount, estimateMinutes } from '../data/nextPack'
+import { shouldPromptLevelUp } from '../services/comfort'
 import { LEVEL_META } from '../data/levels'
 import { useAppStore } from '../store/useAppStore'
 import packagesIndex from '../data/packages-index.json'
@@ -44,13 +47,33 @@ export function TodayPage() {
   const setTodayLevel = useAppStore(s => s.setTodayLevel)
   const homeSetLevel = useAppStore(s => s.setLevel)
 
+  const comfortLevel = useAppStore(s => s.comfortLevel)
+  const strongStreak = useAppStore(s => s.strongStreak)
+  const levelUpPromptState = useAppStore(s => s.levelUpPrompt)
+  const dismissLevelUp = useAppStore(s => s.dismissLevelUp)
+
   const [goalOpen, setGoalOpen] = useState(false)
   const [levelPickerOpen, setLevelPickerOpen] = useState(false)
   const [nextStepInfoOpen, setNextStepInfoOpen] = useState(false)
   const [reviewInfoOpen, setReviewInfoOpen] = useState(false)
+  const [levelUpTarget, setLevelUpTarget] = useState<number | null>(null)
   const celebratedRef = useRef(false)
   const goalCelebratedRef = useRef(false)
   const goalWasMetRef = useRef<boolean | null>(null)
+
+  // Offer the level-up prompt here too (not just after an Inteligentny
+  // session) — someone who trains via plain Trenuj still moves comfortLevel.
+  useEffect(() => {
+    if (!snapshot) return
+    const floor = todayLevel ?? 1
+    const masteredPacksAtFloor = snapshot.packageProgress.filter(
+      p => p.masteredAt != null && packLevelOf(p.packageId) === floor
+    ).length
+    const prompt = shouldPromptLevelUp({
+      comfortLevel, strongStreak, todayLevel, levelUpPrompt: levelUpPromptState, masteredPacksAtFloor,
+    })
+    setLevelUpTarget(prompt?.target ?? null)
+  }, [snapshot, comfortLevel, strongStreak, todayLevel, levelUpPromptState])
 
   const scopedPacks = todayLevel == null ? allPacks : allPacks.filter(p => p.level >= todayLevel)
   const listen = nextListenPack(scopedPacks, snapshot)
@@ -111,7 +134,7 @@ export function TodayPage() {
           type="button"
           className="today__pick"
           variants={cardVariants}
-          onClick={() => pressCta(() => navigate(`/pakiet/${train.pack.id}/fiszki-start`))}
+          onClick={() => pressCta(() => navigate(`/pakiet/${train.pack.id}/fiszki-start`, { viewTransition: true }))}
         >
           <span className="today__pick-head">
             <span className="u-kicker">⚡ Trenuj</span>
@@ -124,7 +147,7 @@ export function TodayPage() {
             {LEVEL_META.find(l => l.level === train.pack.level)?.name ?? `Poziom ${train.pack.level}`} ·{' '}
             ~{estimateMinutes(train.pack.wordCount - train.known)} min
           </span>
-          <span className="today__pick-cta">
+          <span className="today__pick-cta u-cta fx-shine">
             Trenuj
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
@@ -155,7 +178,7 @@ export function TodayPage() {
           type="button"
           className="today__pick today__pick--listen"
           variants={cardVariants}
-          onClick={() => pressCta(() => navigate(`/pakiet/${listen.pack.id}/start`))}
+          onClick={() => pressCta(() => navigate(`/pakiet/${listen.pack.id}/start`, { viewTransition: true }))}
         >
           <span className="today__pick-head">
             <span className="u-kicker">🎧 Słuchaj</span>
@@ -165,7 +188,7 @@ export function TodayPage() {
             {LEVEL_META.find(l => l.level === listen.pack.level)?.name ?? `Poziom ${listen.pack.level}`} ·{' '}
             ~{estimateMinutes(listen.pack.wordCount - listen.startIndex)} min
           </span>
-          <span className="today__pick-cta today__pick-cta--listen">
+          <span className="today__pick-cta today__pick-cta--listen u-cta fx-shine">
             Słuchaj
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
@@ -191,7 +214,7 @@ export function TodayPage() {
           {todayLevel != null && (
             <button
               className="today__browse-level"
-              onClick={() => { homeSetLevel(todayLevel); navigate('/') }}
+              onClick={() => { homeSetLevel(todayLevel); navigate('/', { viewTransition: true }) }}
             >
               Przeglądaj poziom
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -238,12 +261,22 @@ export function TodayPage() {
           </motion.section>
         ) : (
           <>
+            {/* Inteligentny is the new, recommended one-tap action — it sits
+                above everything else, but Trenuj/Słuchaj/Powtórka below stay
+                exactly as they were for anyone who wants to pick by hand. */}
+            <motion.div variants={cardVariants}>
+              <SmartStartCard
+                snapshot={snapshot}
+                onStart={() => pressCta(() => { unlockAudioGlobally(); navigate('/inteligentny') })}
+              />
+            </motion.div>
+
             {serving > 0 && (
               <motion.button
                 type="button"
                 className={`today__rail u-rail today__rail--${urgency}`}
                 variants={variants}
-                onClick={() => pressCta(() => { unlockAudioGlobally(); navigate('/powtorka') })}
+                onClick={() => pressCta(() => { unlockAudioGlobally(); navigate('/powtorka', { viewTransition: true }) })}
               >
                 <span className="today__rail-head">
                   <span
@@ -304,6 +337,13 @@ export function TodayPage() {
             current={todayLevel}
             onSelect={l => { setTodayLevel(l); setLevelPickerOpen(false); playTick(); haptics.tap() }}
             onClose={() => setLevelPickerOpen(false)}
+          />
+        )}
+        {levelUpTarget != null && (
+          <LevelUpPrompt
+            target={levelUpTarget}
+            onAccept={() => { setTodayLevel(levelUpTarget); dismissLevelUp(levelUpTarget) }}
+            onDecline={() => dismissLevelUp(levelUpTarget)}
           />
         )}
       </motion.div>

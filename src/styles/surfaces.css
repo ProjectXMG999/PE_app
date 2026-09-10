@@ -97,3 +97,70 @@
   background: var(--u-hairline-color, var(--accent));
   box-shadow: 0 0 16px 1px color-mix(in oklch, var(--u-hairline-color, var(--accent)) 45%, transparent);
 }
+
+/* ── Primary CTA ──────────────────────────────────────────────────────────
+   The one button per screen that actually matters. A flat colour fill reads
+   as a UI-kit default; this reads as something you'd press — a soft top-to-
+   bottom gloss, an inset highlight/shade for real depth, a coloured drop
+   shadow that ties it to the surface it sits on, and (paired with `.fx-shine`
+   from animations.css — not a local keyframe) an occasional light sweep.
+   Recolour via --u-cta-color; shape (radius, padding, width) stays local. */
+.u-cta {
+  --u-cta-color: var(--accent);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(180deg,
+    color-mix(in oklch, white 18%, var(--u-cta-color)) 0%,
+    var(--u-cta-color) 48%,
+    color-mix(in oklch, black 14%, var(--u-cta-color)) 100%);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklch, white 38%, transparent),
+    inset 0 -2px 5px color-mix(in oklch, black 20%, transparent),
+    0 10px 22px color-mix(in oklch, var(--u-cta-color) 42%, transparent);
+  color: #fff;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  --fx-shine-tint: white;
+  --fx-shine-duration: 7s;
+}
+
+.u-cta:active {
+  transform: scale(0.97);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklch, white 22%, transparent),
+    inset 0 2px 6px color-mix(in oklch, black 26%, transparent),
+    0 4px 10px color-mix(in oklch, var(--u-cta-color) 32%, transparent);
+}
+
+.u-cta--gold { --u-cta-color: var(--gold); }
+.u-cta--live { --u-cta-color: var(--live); }
+
+@media (prefers-reduced-motion: reduce) {
+  .u-cta { --fx-shine-duration: 0s; }
+}
+
+/* ── Glass ────────────────────────────────────────────────────────────────
+   For chrome that sticks or floats above content only — never for cards.
+   Values come from the single --glass-* scale in tokens.css. */
+.u-glass {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+          backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+}
+
+.u-glass--strong { background: var(--glass-bg-strong); }
+
+/* ── Tile ─────────────────────────────────────────────────────────────────
+   The material for repeated rows (pack cards, sheet rows, memory chips).
+   Unlike .u-surface it is meant to read as an object you can press, so it
+   carries a gradient and a top highlight — see the note in tokens.css. */
+.u-tile {
+  background: var(--surface-tile);
+  border: 1px solid var(--tile-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--tile-hi);
+}
+
+@media (hover: hover) {
+  .u-tile:hover { background: var(--surface-tile-hover); }
+}

@@ -8,11 +8,11 @@
   justify-content: space-between;
   padding: 0 var(--spacing-md) 8px;
   padding-top: calc(8px + env(safe-area-inset-top, 0px));
-  background: color-mix(in srgb, var(--bg-primary) 85%, transparent);
+  background: color-mix(in srgb, var(--bg-primary) 62%, transparent);
   border-bottom: 1px solid var(--border);
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.04), 0 8px 24px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(16px) saturate(1.4);
-  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
 }
 
 /* Left cluster: app icon + the streak/points pill. The centre logo is
@@ -26,12 +26,24 @@
   z-index: 1;
 }
 
-.topbar__pe-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  object-fit: contain;
+/* The Progress mark doubles as the home button. */
+.topbar__brand {
+  display: grid;
+  place-items: center;
   flex-shrink: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.topbar__brand:active { transform: scale(0.94); }
+
+.topbar__brand:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 /* The logo used to be absolutely positioned and centred on the viewport, which

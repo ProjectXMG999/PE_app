@@ -56,6 +56,34 @@
   --surface-translucent: oklch(1 0 0 / 0.032);
   --surface-translucent-strong: oklch(1 0 0 / 0.06);
 
+  /* ── Tile — the material for repeated list rows ──────────────────────────
+     A flat 3% wash puts a card at ~0.16 lightness against a 0.13 ground: a 0.03
+     difference, which is why a list of them read as "nothing is there". A tile
+     is instead three things at once — a stronger fill, a vertical gradient (lit
+     from above) and a hairline of light on the top edge. That reads as a
+     physical object without costing an outer shadow, which this design system
+     deliberately doesn't use. */
+  --surface-tile: linear-gradient(180deg, oklch(1 0 0 / 0.085), oklch(1 0 0 / 0.045));
+  --surface-tile-hover: linear-gradient(180deg, oklch(1 0 0 / 0.13), oklch(1 0 0 / 0.075));
+  --tile-border: oklch(1 0 0 / 0.13);
+  --tile-hi: inset 0 1px 0 oklch(1 0 0 / 0.09);
+
+  /* ── Glass ───────────────────────────────────────────────────────────────
+     ONE scale for the whole app. Before this there were four unrelated blur
+     values (3 / 14 / 16 / 22px) invented per component, which is why the
+     chrome never read as one material.
+
+     The rule: glass is only for things that STICK or FLOAT above content —
+     TopBar, BottomNav, sticky bars, floating pills, sheet scrims. Cards stay
+     opaque. A list of 864 translucent rows is how a screen ends up looking
+     like nothing is on it. */
+  --glass-blur: 20px;
+  --glass-saturate: 1.6;
+  --glass-bg: color-mix(in oklch, var(--bg-primary) 86%, transparent);
+  --glass-bg-strong: color-mix(in oklch, var(--bg-card) 92%, transparent);
+  /* Modal/sheet backdrops only — deliberately far weaker than chrome glass. */
+  --scrim-blur: 4px;
+
   /* ── Directional glows — pair each with a matching border tint ─────────── */
   --glow-primary: 0 0 24px oklch(0.72 0.17 292 / 0.45);
   --glow-gold: 0 0 20px oklch(0.82 0.13 85 / 0.3);
@@ -119,8 +147,10 @@
   --spacing-2xl: 48px;
 
   /* ── Type ─────────────────────────────────────────────────────────────── */
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Roboto', sans-serif;
+  /* Faces are self-hosted in global.css. The stacks name real system faces as
+     fallbacks so a font that hasn't painted yet doesn't drop to Times. */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --text-xs: 11px;
   --text-sm: 13px;
@@ -132,10 +162,11 @@
   --text-3xl: 28px;
 
   /* Display — big page headings. Tight optical tracking is what makes a
-     heading read as "designed". Montserrat tops out at 700, so the lighter
-     display look is approximated at 600, not the 650 of a variable face. */
+     heading read as "designed". Plus Jakarta Sans carries a real 800, so the
+     display weight is the face's own extra-bold rather than Montserrat's
+     approximation at 600. */
   --text-display: clamp(28px, 8vw, 38px);
-  --weight-display: 600;
+  --weight-display: 800;
   --tracking-display: -0.05em;
   --tracking-tight: -0.03em;
   /* Kickers: small, ALL-CAPS, wide-tracked eyebrow labels above a heading. */
@@ -200,6 +231,13 @@
 
   --surface-translucent: oklch(0.22 0.02 275 / 0.03);
   --surface-translucent-strong: oklch(0.22 0.02 275 / 0.05);
+
+  /* On a light ground the same idea inverts: the tile is a touch darker than
+     the page and the highlight sits on white, not on a white wash. */
+  --surface-tile: linear-gradient(180deg, oklch(1 0 0), oklch(0.985 0.004 275));
+  --surface-tile-hover: linear-gradient(180deg, oklch(1 0 0), oklch(0.965 0.008 285));
+  --tile-border: oklch(0.22 0.02 275 / 0.12);
+  --tile-hi: inset 0 1px 0 oklch(1 0 0 / 0.9);
 
   --glow-primary: 0 0 24px oklch(0.55 0.22 292 / 0.22);
   --glow-gold: 0 0 18px oklch(0.58 0.1 75 / 0.22);

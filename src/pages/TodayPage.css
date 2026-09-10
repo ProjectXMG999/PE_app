@@ -223,7 +223,8 @@
   color: var(--text-muted);
 }
 
-/* Full-width action bar — the affordance; the card is the actual button. */
+/* Full-width action bar — the affordance; the card is the actual button.
+   Colour/depth/shine come from .u-cta (surfaces.css); this just sets shape. */
 .today__pick-cta {
   display: flex;
   align-items: center;
@@ -234,10 +235,8 @@
   font-family: var(--font-heading);
   font-size: var(--text-base);
   font-weight: 800;
-  color: #fff;
-  background: var(--accent);
 }
-.today__pick-cta--listen { background: var(--listen-blue); }
+.today__pick-cta--listen { --u-cta-color: var(--listen-blue); }
 
 .today__path-empty {
   margin: 0;
