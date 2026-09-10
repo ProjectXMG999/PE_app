@@ -3,11 +3,10 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 6px var(--spacing-md);
-  background: linear-gradient(165deg, color-mix(in srgb, var(--accent) 14%, var(--bg-card)) 0%, var(--bg-card) 45%);
-  border: 1px solid var(--border-accent);
+  padding: 10px var(--spacing-md);
+  background: var(--surface-translucent);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
 }
 
 .routestrip__eyebrow {
