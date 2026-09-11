@@ -6,7 +6,7 @@
 // row is traceable back to its pack word id even though the master CSV
 // itself has no id column.
 //
-// Review workflow: in candidates-master-v2.xlsx, fill the "Wybrane" column
+// Review workflow: in candidates-master-v4.xlsx, fill the "Wybrane" column
 // with 1, 2, or 3 for whichever candidate is best for that word (you may
 // also edit the sentence text in the chosen cell directly — the apply step
 // reads the live cell content, not the original generation). Leave "Wybrane"
@@ -24,7 +24,7 @@
 // merged in before the new file is written, so scaling up generation never
 // wipes out review progress you've already done.
 //
-// Output: database/database/candidates-master-v2.xlsx (+ .csv) — this is
+// Output: database/database/candidates-master-v4.xlsx (+ .csv) — this is
 // the single working file, tracked in git like the rest of database/.
 //
 // Usage: npm run gen-sentences:master-export
@@ -44,8 +44,8 @@ const CSV_PATH = path.join(
 const PACK_DIR = path.join(ROOT, 'src/data/packs')
 const INDEX_PATH = path.join(ROOT, 'src/data/packages-index.json')
 const OUT_DIR = path.join(ROOT, 'database/database')
-const OUT_CSV_PATH = path.join(OUT_DIR, 'candidates-master-v2.csv')
-const OUT_XLSX_PATH = path.join(OUT_DIR, 'candidates-master-v2.xlsx')
+const OUT_CSV_PATH = path.join(OUT_DIR, 'candidates-master-v4.csv')
+const OUT_XLSX_PATH = path.join(OUT_DIR, 'candidates-master-v4.xlsx')
 const SHEET_NAME = 'Kandydaci zdań'
 
 function loadExistingColumn(xlsxPath: string, columnName: string): Map<string, string> {
@@ -216,16 +216,23 @@ function main() {
   if (existingChoices.size > 0) {
     console.log(`Carrying forward ${existingChoices.size} existing "Wybrane" picks from a previous export`)
   }
-  const existingAudioReviews = loadExistingColumn(OUT_XLSX_PATH, 'Ocena audio')
+  // Renamed from "Ocena audio" to "audio" (shorter) directly in the review
+  // file at some point — read whichever is present so older exports still
+  // carry forward correctly, but always write the current name.
+  const existingAudioReviews = loadExistingColumn(OUT_XLSX_PATH, 'audio')
+  const existingAudioReviewsLegacy = loadExistingColumn(OUT_XLSX_PATH, 'Ocena audio')
+  for (const [wordId, value] of existingAudioReviewsLegacy) {
+    if (!existingAudioReviews.has(wordId)) existingAudioReviews.set(wordId, value)
+  }
   if (existingAudioReviews.size > 0) {
-    console.log(`Carrying forward ${existingAudioReviews.size} existing "Ocena audio" reviews from a previous export`)
+    console.log(`Carrying forward ${existingAudioReviews.size} existing "audio" reviews from a previous export`)
   }
 
   const baseHeader = [
     ...fields,
     'wordId',
     'Wybrane',
-    'Ocena audio',
+    'audio',
     'Zdanie ENG 1',
     'Zdanie PL 1',
     'Zdanie ENG 2',

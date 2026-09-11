@@ -98,8 +98,8 @@ export default defineConfig({
         start_url: '/',
         display: 'standalone',
         orientation: 'portrait',
-        background_color: '#0D0B1E',
-        theme_color: '#0D0B1E',
+        background_color: '#010102',
+        theme_color: '#010102',
         lang: 'pl',
         categories: ['education'],
         icons: [

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "node scripts/build-pack-previews.mjs && tsc -b && vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "parse-data": "tsx scripts/parse-wizard-xlsx.ts && node scripts/sync-packs.mjs",
@@ -27,12 +27,16 @@
     "generate-intro-audio": "tsx --env-file=.env scripts/generate-intro-audio.ts",
     "delete-blobs": "tsx --env-file=.env scripts/delete-audio-blobs.ts",
     "upload-blobs": "tsx --env-file=.env scripts/upload-audio-blobs.ts",
-    "upload-pack-blobs": "tsx --env-file=.env scripts/upload-pack-blobs.ts"
+    "upload-pack-blobs": "tsx --env-file=.env scripts/upload-pack-blobs.ts",
+    "build-previews": "node scripts/build-pack-previews.mjs"
   },
   "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
     "@fontsource/montserrat": "^5.0.0",
     "@fontsource/roboto": "^5.0.0",
     "@netlify/blobs": "^8.0.0",
+    "@paper-design/shaders-react": "^0.0.80",
     "@supabase/supabase-js": "^2.112.3",
     "framer-motion": "^13.1.1",
     "idb": "^8.0.0",

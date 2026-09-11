@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <!-- Dark = app base colour. Also the opaque status-bar background in an
          installed iOS PWA now that black-translucent is gone (see below). -->
-    <meta name="theme-color" content="#0D0B1E" />
+    <meta name="theme-color" content="#010102" />
     <script>
       try {
         var s = JSON.parse(localStorage.getItem('pe-store') || '{}')
@@ -30,6 +30,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="PE" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <!-- Progress mark first; the PE PNG stays as the fallback for browsers
+         without SVG favicon support (and for the installed-app icons, which
+         are still generated from the old artwork). -->
+    <link rel="icon" type="image/svg+xml" href="/icons/progress-mark.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-192.png" />
     <title>Project English</title>
   </head>
