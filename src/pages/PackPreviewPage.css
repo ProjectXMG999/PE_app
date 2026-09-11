@@ -151,7 +151,7 @@
   flex-shrink: 0;
   width: 46px;
   height: 46px;
-  font-size: 24px;
+  font-size: var(--text-2xl);
   border-radius: var(--radius-lg);
   background: color-mix(in oklch, var(--pp-accent) 16%, transparent);
   border: 1px solid color-mix(in oklch, var(--pp-accent) 22%, transparent);
@@ -611,7 +611,7 @@
   width: 30px;
   height: 30px;
   flex-shrink: 0;
-  font-size: 16px;
+  font-size: var(--text-lg);
   border-radius: var(--radius-full);
   background: color-mix(in oklch, var(--accent) 14%, transparent);
 }
@@ -661,7 +661,7 @@
 
 .packpreview__btn--listen.u-cta { --u-cta-color: var(--listen-blue); }
 
-.packpreview__btn-icon { font-size: 15px; }
+.packpreview__btn-icon { font-size: var(--text-md); }
 
 @media (min-width: 1024px) {
   .packpreview__btn { height: 56px; }

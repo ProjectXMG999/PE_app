@@ -1,9 +1,10 @@
 /* =============================================================================
  * DESIGN TOKENS — the single source of truth for colour, type, spacing, motion.
  * -----------------------------------------------------------------------------
- * Colour is OKLCH: perceptually even lightness, predictable chroma, and clean
- * `color-mix(in oklch, …)` blends. Existing `color-mix(in srgb, …)` in
- * component CSS keeps working — the browser resolves both colours first.
+ * Colour is OKLCH end to end: perceptually even lightness, predictable chroma,
+ * and clean `color-mix(in oklch, …)` blends. The last `in srgb` mixes are gone —
+ * the two spaces interpolate differently, so a card that mixed in sRGB and the
+ * token it mixed toward drifted apart at the midpoint. Mix in oklch, always.
  *
  * Rules of the road:
  *   • Never hard-code a colour/shadow/radius in a component — reference a token.
@@ -12,12 +13,26 @@
  * ========================================================================== */
 
 :root {
-  /* ── Ground ─────────────────────────────────────────────────────────────── */
-  --bg-primary: oklch(0.13 0.028 278);
-  --bg-surface: oklch(0.17 0.035 277);
-  --bg-card: oklch(0.185 0.038 277);
-  --bg-card-hover: oklch(0.23 0.045 278);
-  --bg-input: oklch(0.17 0.035 277);
+  /* ── Ground ───────────────────────────────────────────────────────────────
+     Ink, not aubergine. These used to carry chroma 0.028–0.045 at the violet
+     hue, so every surface in the app — page, card, input, nav — was tinted
+     purple, and the accent had nothing to stand out against. Chroma is now
+     ~0.01: enough for the black to read cool rather than dead, not enough to
+     name a colour.
+
+     Colour belongs to the moving mesh behind the page (--mesh-* below) and to
+     the accent. A ground that is itself violet is what made the whole screen
+     read as one purple wash.
+
+     Obsidian: the ground goes almost to black and the cards stay where they
+     are, which widens the step between them from ~0.055 to ~0.09 of lightness.
+     That gap is the contrast — a card now sits ON something instead of being
+     the same colour as it, and the mesh behind has black to glow against. */
+  --bg-primary: oklch(0.07 0.008 275);
+  --bg-surface: oklch(0.145 0.013 275);
+  --bg-card: oklch(0.16 0.014 275);
+  --bg-card-hover: oklch(0.205 0.018 275);
+  --bg-input: oklch(0.145 0.013 275);
 
   /* ── Accent (violet) — the interactive colour ──────────────────────────── */
   --accent: oklch(0.72 0.17 292);
@@ -39,6 +54,45 @@
 
   --overlay: oklch(0 0 0 / 0.58);
 
+  /* ── Ambient — the mesh-gradient ground behind every page ─────────────────
+     The five stops of the Paper Shaders mesh, read at runtime by
+     components/ambient/AmbientBackground.tsx and handed to the shader. They
+     live here, in the one palette file, so the background can't drift away
+     from the rest of the app — and so light theme is a real palette rather
+     than the dark one turned down.
+
+     HEX, deliberately, not oklch(): these are passed through getComputedStyle
+     straight into a WebGL uniform, and the shader library parses the string
+     itself. Keep them as plain 6-digit hex.
+
+     Calibration rule, inherited from the previous background and still binding:
+     the mesh is felt at the edge of vision, never looked at. If a screenshot of
+     an empty page reads as "purple", --ambient-strength is too high.
+
+     The shape of this palette matters as much as the colours: ink and colour
+     ALTERNATE. Five chromatic stops give a uniform purple film; ink between
+     them gives separated pools of coloured light drifting across black, which
+     is the whole effect. The three chromatic stops are the app's own accent
+     hues — violet 292 (--accent), teal 200 (--live), indigo 275
+     (--accent-indigo) — so the background is lit by the same palette the UI
+     is drawn in, rather than by a decorative purple of its own.
+
+     Lava on obsidian: the ink stops go nearly to black and the chromatic ones
+     get brighter and more saturated, so the difference between them — not the
+     average of them — is what you see. Muted stops on a dark ground average out
+     to a flat purple film; this is the same total amount of colour spent on
+     contrast instead. */
+  --mesh-1: #000001;  /* ink */
+  --mesh-2: #4d2e92;  /* violet — --accent hue */
+  --mesh-3: #010103;  /* ink */
+  --mesh-4: #00454b;  /* teal — --live hue */
+  --mesh-5: #1f206d;  /* indigo — --accent-indigo hue */
+  /* How far the shader canvas is allowed to come up over the flat ground. The
+     stops alternate ink and colour, so raising this deepens the blacks at the
+     same rate it brightens the currents — it buys contrast, not tint. */
+  --ambient-strength: 0.5;
+  --ambient-grain: 0.05;
+
   /* ── Reward accents ───────────────────────────────────────────────────────
      --gold  = "earned" (mastered packs, milestones, points).
      --live  = time-sensitive signal (review priority, "in progress now").
@@ -57,8 +111,8 @@
   --surface-translucent-strong: oklch(1 0 0 / 0.06);
 
   /* ── Tile — the material for repeated list rows ──────────────────────────
-     A flat 3% wash puts a card at ~0.16 lightness against a 0.13 ground: a 0.03
-     difference, which is why a list of them read as "nothing is there". A tile
+     A flat 3% wash puts a card a few hundredths of lightness above the ground,
+     which is why a list of them read as "nothing is there". A tile
      is instead three things at once — a stronger fill, a vertical gradient (lit
      from above) and a hairline of light on the top edge. That reads as a
      physical object without costing an outer shadow, which this design system
@@ -149,10 +203,25 @@
   /* ── Type ─────────────────────────────────────────────────────────────── */
   /* Faces are self-hosted in global.css. The stacks name real system faces as
      fallbacks so a font that hasn't painted yet doesn't drop to Times. */
-  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Bricolage Grotesque Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
+  /* The three steps below --text-sm exist because the app actually uses them —
+     12px is the single most-used size in the whole UI (32 declarations), 10px
+     the second (22). They had no token, so every component that needed them
+     typed a number, and the next one typed a slightly different number: 34
+     distinct font sizes had grown against a scale of 8.
+
+     Naming these honestly rather than pretending the t-shirt scale covers them
+     is the point. --text-xs-plus is deliberately awkward: it marks a half-step
+     that shouldn't exist. 11px and 12px are not two design decisions, they're
+     one decision made twice — collapsing them (and 9/10) into single steps is
+     the follow-up, and it changes how things look, so it needs a separate pass
+     rather than being smuggled in here. */
+  --text-3xs: 9px;
+  --text-2xs: 10px;
   --text-xs: 11px;
+  --text-xs-plus: 12px;
   --text-sm: 13px;
   --text-base: 14px;
   --text-md: 15px;
@@ -162,9 +231,9 @@
   --text-3xl: 28px;
 
   /* Display — big page headings. Tight optical tracking is what makes a
-     heading read as "designed". Plus Jakarta Sans carries a real 800, so the
-     display weight is the face's own extra-bold rather than Montserrat's
-     approximation at 600. */
+     heading read as "designed". Bricolage Grotesque runs a continuous 200–800
+     weight axis, so the display weight is a real extra-bold the face draws
+     rather than a synthesised one. */
   --text-display: clamp(28px, 8vw, 38px);
   --weight-display: 800;
   --tracking-display: -0.05em;
@@ -222,6 +291,19 @@
   --border-accent: oklch(0.55 0.22 292 / 0.35);
 
   --overlay: oklch(0.22 0.02 275 / 0.35);
+
+  /* Ambient, light: its own palette, not the dark mesh dimmed. Near-white with
+     a cool blue drift and one warm stop, so it reads as paper under studio
+     light rather than as a washed-out nebula. Strength and grain both drop —
+     on near-white every tone lands about twice as loud as it does on
+     near-black. */
+  --mesh-1: #f4f2fb;
+  --mesh-2: #e6e3f7;
+  --mesh-3: #dcd9f4;
+  --mesh-4: #e8eef7;
+  --mesh-5: #f6f4fa;
+  --ambient-strength: 0.55;
+  --ambient-grain: 0.022;
 
   --gold: oklch(0.58 0.1 75);
   --gold-dim: oklch(0.48 0.08 75);

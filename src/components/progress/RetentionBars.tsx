@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import type { WordProgress } from '../../types/progress'
 import { retentionBreakdown, type RetentionTier } from '../../services/reviewQueue'
 import { RetentionInfoSheet } from './RetentionInfoSheet'
+import { plural } from '../../utils/plural'
 import './RetentionBars.css'
 
 interface Props {
@@ -49,7 +50,7 @@ export function RetentionBars({ wordProgress }: Props) {
         <p className="retention__total">
           {total === 0
             ? 'Poziom zapamiętania'
-            : `${total.toLocaleString('pl-PL')} ${total === 1 ? 'opanowane słowo' : 'opanowanych słów'}`}
+            : `${total.toLocaleString('pl-PL')} ${plural(total, 'opanowane słowo', 'opanowane słowa', 'opanowanych słów')}`}
         </p>
         <button
           type="button"

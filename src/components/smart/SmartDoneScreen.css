@@ -4,6 +4,10 @@
    violet/teal theme (learn + review + stretch all touched it).
    ============================================================ */
 
+/* Ground and accents come from tokens now. These three screens were written
+   before the OKLCH migration and kept their own palette — including the literal
+   #0D0B1E, the app background from two redesigns ago, which meant a finished
+   session painted the OLD background over the new obsidian ground. */
 .smartdone {
   position: fixed;
   inset: 0;
@@ -12,8 +16,11 @@
   justify-content: center;
   padding: env(safe-area-inset-top, 0px) 20px env(safe-area-inset-bottom, 0px);
   background:
-    radial-gradient(ellipse 80% 55% at 50% 22%, rgba(139, 92, 246, 0.18) 0%, transparent 60%),
-    radial-gradient(ellipse at 50% 30%, #101235 0%, #0D0B1E 72%);
+    radial-gradient(ellipse 80% 55% at 50% 22%,
+      color-mix(in oklch, var(--accent) 18%, transparent) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 30%,
+      color-mix(in oklch, var(--accent-indigo) 18%, var(--bg-primary)) 0%,
+      var(--bg-primary) 72%);
   z-index: 200;
   overflow: hidden;
 }
@@ -30,11 +37,11 @@
   padding: 40px 26px 26px;
   text-align: center;
   border-radius: var(--radius-xl);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, oklch(1 0 0 / 0.07) 0%, oklch(1 0 0 / 0.02) 100%);
+  border: 1px solid oklch(1 0 0 / 0.1);
   box-shadow:
-    0 24px 70px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    0 24px 70px oklch(0 0 0 / 0.5),
+    inset 0 1px 0 oklch(1 0 0 / 0.12);
   backdrop-filter: blur(var(--glass-blur));
 }
 
@@ -47,7 +54,7 @@
   border-radius: 50%;
   font-size: 22px;
   color: #fff;
-  background: linear-gradient(135deg, #8B5CF6, #34D399);
+  background: linear-gradient(135deg, var(--accent), var(--success));
 }
 
 .smartdone__title {
@@ -83,14 +90,14 @@
 .smartdone__stat-label {
   font-family: var(--font-body);
   font-size: var(--text-xs);
-  color: rgba(255, 255, 255, 0.65);
+  color: oklch(1 0 0 / 0.65);
 }
 
 .smartdone__comfort {
   margin: 0;
   font-family: var(--font-body);
   font-size: var(--text-sm);
-  color: rgba(255, 255, 255, 0.75);
+  color: oklch(1 0 0 / 0.75);
 }
 
 .smartdone__comfort strong {
@@ -110,9 +117,9 @@
   font-family: var(--font-heading);
   font-size: var(--text-base);
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.85);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: oklch(1 0 0 / 0.85);
+  background: oklch(1 0 0 / 0.08);
+  border: 1px solid oklch(1 0 0 / 0.14);
   border-radius: var(--radius-full);
   cursor: pointer;
 }

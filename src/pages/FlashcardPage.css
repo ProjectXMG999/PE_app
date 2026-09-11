@@ -59,7 +59,7 @@
   border: 1.5px solid var(--border-accent);
   color: var(--accent);
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: var(--text-md);
   font-weight: 600;
   background: transparent;
   transition: all var(--transition-fast);
@@ -76,7 +76,7 @@
   background: var(--accent);
   color: white;
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: var(--text-md);
   font-weight: 700;
   transition: all var(--transition-fast);
   box-shadow: 0 4px 12px var(--accent-glow);
@@ -92,7 +92,7 @@
   width: 100%;
   padding: 8px;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--text-muted);
   background: none;
@@ -116,7 +116,7 @@
   height: 50px;
   border-radius: var(--radius-full);
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: var(--text-md);
   font-weight: 700;
   transition: all var(--transition-fast);
 }
@@ -177,7 +177,7 @@
 }
 
 .completion__meta {
-  font-size: 14px;
+  font-size: var(--text-base);
   color: var(--text-muted);
 }
 
@@ -222,13 +222,13 @@
 }
 
 .completion__btn-label {
-  font-size: 16px;
+  font-size: var(--text-lg);
   font-weight: 700;
   line-height: 1.2;
 }
 
 .completion__btn-sub {
-  font-size: 11px;
+  font-size: var(--text-xs);
   font-weight: 500;
   opacity: 0.7;
   white-space: nowrap;
@@ -252,7 +252,7 @@
 }
 
 .completion__btn--mastered .completion__btn-icon {
-  font-size: 28px;
+  font-size: var(--text-3xl);
 }
 
 /* Repeat & Next — side by side, smaller */
@@ -274,12 +274,12 @@
 
 .completion__btn--repeat .completion__btn-label,
 .completion__btn--next .completion__btn-label {
-  font-size: 14px;
+  font-size: var(--text-base);
 }
 
 .completion__btn--repeat .completion__btn-icon,
 .completion__btn--next .completion__btn-icon {
-  font-size: 16px;
+  font-size: var(--text-lg);
   color: var(--text-muted);
 }
 
@@ -300,7 +300,7 @@
   width: 100%;
   padding: var(--spacing-sm) 0;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--text-muted);
   background: none;
@@ -359,14 +359,14 @@
 
 .completion__autocontinue-label {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: var(--text-base);
   font-weight: 700;
   line-height: 1.2;
 }
 
 .completion__autocontinue-sub {
   font-family: var(--font-heading);
-  font-size: 11px;
+  font-size: var(--text-xs);
   font-weight: 500;
   opacity: 0.65;
 }

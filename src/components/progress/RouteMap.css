@@ -36,13 +36,13 @@
   border-color: var(--station-color);
   background: var(--station-color);
   /* Struck-gold treatment for stations already earned. */
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--station-color) 22%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--station-color) 22%, transparent);
 }
 
 .routemap__item--current .routemap__dot {
   border-color: var(--station-color);
   background: var(--bg-primary);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--station-color) 18%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in oklch, var(--station-color) 18%, transparent);
 }
 
 .routemap__line {
@@ -62,7 +62,7 @@
   background: linear-gradient(
     to bottom,
     var(--station-color),
-    color-mix(in srgb, var(--station-color) 45%, var(--route-line))
+    color-mix(in oklch, var(--station-color) 45%, var(--route-line))
   );
 }
 
@@ -71,7 +71,7 @@
   background: linear-gradient(
     to bottom,
     var(--station-color) 0%,
-    color-mix(in srgb, var(--station-color) 30%, var(--route-line)) 45%,
+    color-mix(in oklch, var(--station-color) 30%, var(--route-line)) 45%,
     var(--route-line) 100%
   );
   background-size: 100% 220%;

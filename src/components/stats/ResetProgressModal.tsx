@@ -3,6 +3,7 @@ import { PackMeta } from '../../types/vocabulary'
 import packagesIndex from '../../data/packages-index.json'
 import { resetAllProgress, resetProgressForPackages } from '../../services/db'
 import { invalidateProgressSnapshot } from '../../hooks/useProgressData'
+import { plPacks } from '../../utils/plural'
 import './ResetProgressModal.css'
 
 const allPacks = packagesIndex as PackMeta[]
@@ -132,7 +133,7 @@ export function ResetProgressModal({ onClose, onReset }: Props) {
 
         <div className="reset-modal__summary">
           Zresetujesz progres {scopeLabel(scope)} —{' '}
-          <strong>{getPackageIds(scope).length}</strong> paczek
+          <strong>{getPackageIds(scope).length}</strong> {plPacks(getPackageIds(scope).length)}
         </div>
 
         <div className="reset-modal__actions">

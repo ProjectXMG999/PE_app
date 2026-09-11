@@ -32,19 +32,6 @@
   padding: 0;
 }
 
-.login__brand-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 9px;
-  object-fit: contain;
-}
-
-.login__brand-logo {
-  height: 26px;
-  width: auto;
-  object-fit: contain;
-}
-
 .login__theme-btn {
   position: relative;
   width: 40px;
@@ -71,7 +58,7 @@
   position: relative;
   padding: var(--spacing-xl) var(--spacing-lg);
   border-radius: var(--radius-xl);
-  background: linear-gradient(165deg, color-mix(in srgb, var(--accent) 10%, var(--bg-card)) 0%, var(--bg-card) 55%);
+  background: linear-gradient(165deg, color-mix(in oklch, var(--accent) 10%, var(--bg-card)) 0%, var(--bg-card) 55%);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-card);
 }
@@ -124,7 +111,7 @@
 
 .login__label {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--text-secondary);
 }
@@ -164,7 +151,7 @@
   margin-top: 4px;
   border-radius: var(--radius-full);
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: var(--text-base);
   font-weight: 700;
   background: var(--accent);
   color: #fff;

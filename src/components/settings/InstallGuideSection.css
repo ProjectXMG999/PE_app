@@ -1,16 +1,10 @@
+/* Same glass card as every other section; SettingsPage owns the page rhythm,
+   so this carries no margins or max-width of its own. */
 .install-guide {
-  margin: 0 var(--spacing-md) var(--spacing-md);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  background: var(--surface-translucent);
   overflow: hidden;
-}
-
-@media (min-width: 1024px) {
-  .install-guide {
-    max-width: 900px;
-    margin: 0 auto var(--spacing-md);
-  }
 }
 
 .install-guide__header {
@@ -25,8 +19,8 @@
   width: 36px;
   height: 36px;
   border-radius: var(--radius-sm);
-  background: rgba(139, 92, 246, 0.1);
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  background: color-mix(in oklch, var(--accent) 13%, transparent);
+  border: 1px solid color-mix(in oklch, var(--accent) 26%, transparent);
   color: var(--accent);
   display: flex;
   align-items: center;
@@ -36,15 +30,16 @@
 
 .install-guide__title {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: var(--text-md);
   font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
   margin: 0 0 2px;
 }
 
 .install-guide__subtitle {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   color: var(--text-muted);
   margin: 0;
 }
@@ -64,7 +59,7 @@
   gap: 5px;
   padding: 10px var(--spacing-sm);
   font-family: var(--font-heading);
-  font-size: 11px;
+  font-size: var(--text-xs);
   font-weight: 600;
   color: var(--text-muted);
   background: none;
@@ -81,13 +76,13 @@
 
 .install-guide__tab:hover {
   color: var(--text-secondary);
-  background: var(--bg-card-hover);
+  background: var(--surface-translucent-strong);
 }
 
 .install-guide__tab--active {
   color: var(--accent);
   border-bottom-color: var(--accent);
-  background: rgba(139, 92, 246, 0.04);
+  background: color-mix(in oklch, var(--accent) 8%, transparent);
 }
 
 /* Steps */
@@ -121,11 +116,11 @@
   width: 22px;
   height: 22px;
   border-radius: var(--radius-full);
-  background: rgba(139, 92, 246, 0.12);
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  background: color-mix(in oklch, var(--accent) 14%, transparent);
+  border: 1px solid color-mix(in oklch, var(--accent) 28%, transparent);
   color: var(--accent);
   font-family: var(--font-heading);
-  font-size: 11px;
+  font-size: var(--text-xs);
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -135,7 +130,7 @@
 
 .install-guide__step-body {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: var(--text-sm);
   color: var(--text-secondary);
   line-height: 1.6;
   display: flex;
@@ -173,7 +168,7 @@
 
 .install-guide__cta-text {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: var(--text-sm);
   color: var(--text-secondary);
   margin: 0;
   line-height: 1.6;
@@ -184,17 +179,18 @@
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 9px var(--spacing-md);
-  border-radius: var(--radius-sm);
+  min-height: 40px;
+  padding: 0 var(--spacing-md);
+  border-radius: var(--radius-md);
   background: var(--accent);
-  color: white;
+  color: #fff;
   font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 600;
+  font-size: var(--text-sm);
+  font-weight: 700;
   border: none;
   cursor: pointer;
   transition: background var(--transition-fast), opacity var(--transition-fast);
-  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.35);
+  box-shadow: 0 4px 14px var(--accent-glow);
 }
 
 .install-guide__cta-btn:hover {

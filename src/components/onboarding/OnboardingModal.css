@@ -1,7 +1,7 @@
 dialog.onboarding-modal::backdrop {
   background: rgba(0, 0, 0, 0.6);
   animation: fadeIn 300ms ease-out forwards;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(var(--scrim-blur));
 }
 
 @keyframes fadeIn {
@@ -81,7 +81,7 @@ dialog.onboarding-modal {
 
 .onboarding-modal__subtitle {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: var(--text-base);
   color: var(--text-secondary);
   margin: 0;
   line-height: 1.6;
@@ -98,7 +98,7 @@ dialog.onboarding-modal {
   padding: 11px 16px;
   border-radius: var(--radius-md);
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: var(--text-base);
   font-weight: 600;
   border: none;
   cursor: pointer;
@@ -131,7 +131,7 @@ dialog.onboarding-modal {
 
 .onboarding-modal__hint {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: var(--text-xs);
   color: var(--text-muted);
   margin: 0;
 }
@@ -147,7 +147,7 @@ dialog.onboarding-modal {
   }
 
   .onboarding-modal__subtitle {
-    font-size: 15px;
+    font-size: var(--text-md);
   }
 }
 

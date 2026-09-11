@@ -10,7 +10,7 @@
 
 .levelpicker::backdrop {
   background: var(--overlay);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(var(--scrim-blur));
 }
 
 .levelpicker__inner {
@@ -77,7 +77,7 @@
 
 .levelpicker__option--active {
   border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 12%, var(--bg-card));
+  background: color-mix(in oklch, var(--accent) 12%, var(--bg-card));
 }
 
 .levelpicker__option-dot {

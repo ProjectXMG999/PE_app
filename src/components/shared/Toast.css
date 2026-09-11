@@ -30,7 +30,7 @@
 
 .toast--celebrate {
   border-color: var(--points-gold);
-  box-shadow: var(--shadow-lg), 0 0 24px color-mix(in srgb, var(--points-gold) 35%, transparent);
+  box-shadow: var(--shadow-lg), 0 0 24px color-mix(in oklch, var(--points-gold) 35%, transparent);
 }
 
 .toast__icon {

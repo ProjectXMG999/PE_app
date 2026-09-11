@@ -24,7 +24,7 @@ const METRICS: Metric[] = [
   {
     icon: '🔥',
     title: 'Seria',
-    lead: 'Dni z rzędu, w których się uczyłeś — choćby jedną paczkę.',
+    lead: 'Dni z rzędu, w których się uczyłeś — liczy się każda minuta, nie tylko domknięta paczka.',
     detail: 'Ominięcie jednego dnia nie musi jej zepsuć: raz na 14 dni dostajesz zamrożenie ❄, które automatycznie ratuje serię za Ciebie.',
     accent: 'streak',
   },
@@ -38,8 +38,8 @@ const METRICS: Metric[] = [
   {
     icon: '⚡',
     title: 'Tempo',
-    lead: 'Średnia nowych słów dziennie z ostatnich 7 dni.',
-    detail: 'Strzałka obok porównuje to z tygodniem wcześniej — pokazuje, czy ostatnio przyspieszasz, czy zwalniasz.',
+    lead: 'Średnia liczba nowo opanowanych słów na dzień, od pierwszego dnia nauki.',
+    detail: 'Słowa oznaczone jako znane bez nauki w aplikacji się tu nie liczą — tempo ma pokazywać, ile faktycznie przerabiasz. Strzałka obok porównuje ostatni tydzień z poprzednim: mówi, czy przyspieszasz, czy zwalniasz.',
     accent: 'pace',
   },
 ]

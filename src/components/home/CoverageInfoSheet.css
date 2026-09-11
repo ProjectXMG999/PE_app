@@ -70,7 +70,7 @@
 .covinfo__sub {
   margin: var(--spacing-sm) 0 var(--spacing-sm);
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -106,7 +106,7 @@
   flex-shrink: 0;
   min-width: 48px;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 800;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
@@ -117,7 +117,7 @@
   flex-direction: column;
   gap: 2px;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--text-secondary);
 }
@@ -127,7 +127,7 @@
 .covinfo__list-b em {
   font-family: var(--font-body);
   font-style: normal;
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   color: var(--text-muted);
 }
 

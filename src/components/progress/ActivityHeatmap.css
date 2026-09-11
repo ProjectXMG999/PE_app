@@ -23,7 +23,7 @@
 
 .heatmap__weekday {
   font-family: var(--font-heading);
-  font-size: 10px;
+  font-size: var(--text-2xs);
   font-weight: 600;
   color: var(--text-muted);
   text-align: center;
@@ -43,9 +43,9 @@
 /* Intensity ramp. Steps in opacity of the brand accent rather than separate
    hues, so it reads as one scale in both themes. */
 .heatmap__cell--l0 { background: var(--route-line); }
-.heatmap__cell--l1 { background: color-mix(in srgb, var(--accent) 30%, transparent); }
-.heatmap__cell--l2 { background: color-mix(in srgb, var(--accent) 52%, transparent); }
-.heatmap__cell--l3 { background: color-mix(in srgb, var(--accent) 74%, transparent); }
+.heatmap__cell--l1 { background: color-mix(in oklch, var(--accent) 30%, transparent); }
+.heatmap__cell--l2 { background: color-mix(in oklch, var(--accent) 52%, transparent); }
+.heatmap__cell--l3 { background: color-mix(in oklch, var(--accent) 74%, transparent); }
 .heatmap__cell--l4 { background: var(--accent); }
 
 .heatmap__cell--today {
@@ -53,13 +53,13 @@
 }
 
 .heatmap__cell--frozen {
-  background: color-mix(in srgb, var(--review-teal) 26%, transparent);
+  background: color-mix(in oklch, var(--review-teal) 26%, transparent);
   display: grid;
   place-items: center;
 }
 
 .heatmap__snow {
-  font-size: 9px;
+  font-size: var(--text-3xs);
   line-height: 1;
   color: var(--review-teal);
 }
@@ -73,7 +73,7 @@
   width: 6px;
   height: 2px;
   transform: translateY(-50%);
-  background: color-mix(in srgb, var(--accent) 55%, transparent);
+  background: color-mix(in oklch, var(--accent) 55%, transparent);
 }
 
 .heatmap__legend {
@@ -99,7 +99,7 @@
   align-items: center;
   gap: 4px;
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: var(--text-2xs);
   color: var(--text-muted);
 }
 

@@ -73,7 +73,7 @@
   align-items: center;
   gap: 2px;
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   font-weight: 800;
   color: var(--live);
   white-space: nowrap;
@@ -120,21 +120,21 @@
 
 .memstrip__chip-nr {
   margin-right: 2px;
-  font-size: 9px;
+  font-size: var(--text-3xs);
   font-weight: 700;
   text-transform: uppercase;
   color: var(--text-muted);
 }
 
 .memstrip__chip-num {
-  font-size: 10px;
+  font-size: var(--text-2xs);
   font-weight: 800;
   color: var(--live);
   font-variant-numeric: tabular-nums;
 }
 
 .memstrip__chip-name {
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
@@ -147,7 +147,7 @@
   height: 100%;
   padding: 5px 8px;
   font-family: var(--font-heading);
-  font-size: 11px;
+  font-size: var(--text-xs);
   font-weight: 800;
   color: var(--text-muted);
 }

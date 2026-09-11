@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { LEVEL_META, ROUTE_TOTAL } from '../../data/levels'
+import { LEVEL_COLORS, LEVEL_META, ROUTE_TOTAL } from '../../data/levels'
 import { useCountUp } from '../../hooks/useCountUp'
 import { EASE_OUT_EXPO } from './motion'
 import './RouteStrip.css'
@@ -28,15 +28,24 @@ export function RouteStrip({ knownWords }: Props) {
   // strip's own end already reads as the finish line).
   const ticks = LEVEL_META.filter(l => l.threshold < ROUTE_TOTAL)
 
+  // The level you're standing in — the ticks below mark the thresholds, so
+  // naming the current band turns them from decoration into a scale.
+  const level = [...LEVEL_META].reverse().find(l => knownWords >= l.threshold)
+  const next = LEVEL_META.find(l => l.threshold > knownWords)
+
   return (
-    <div className="routestrip">
-      <p className="routestrip__eyebrow">⚡ Twój <span className="routestrip__eyebrow-highlight">progress</span> treningu</p>
+    <div className="routestrip u-surface">
+      <div className="routestrip__head">
+        <p className="routestrip__eyebrow u-kicker">
+          ⚡ Twój <span className="routestrip__eyebrow-highlight">progress</span> treningu
+        </p>
+        <span className="routestrip__pct">{shownPct}%</span>
+      </div>
 
       <div className="routestrip__figure">
         <span key={knownWords} className="routestrip__value">{shownWords.toLocaleString('pl-PL')}</span>
         <span className="routestrip__unit">słów</span>
-        <span className="routestrip__of">/ {ROUTE_TOTAL.toLocaleString('pl-PL')}</span>
-        <span className="routestrip__pct">{shownPct}%</span>
+        <span className="routestrip__of">z {ROUTE_TOTAL.toLocaleString('pl-PL')}</span>
       </div>
 
       <div className="routestrip__track">
@@ -65,6 +74,21 @@ export function RouteStrip({ knownWords }: Props) {
           aria-hidden="true"
         />
       </div>
+
+      <p className="routestrip__scale">
+        {level ? (
+          <span className="routestrip__band" style={{ ['--band' as string]: LEVEL_COLORS[level.level] }}>
+            {level.name}
+          </span>
+        ) : (
+          <span className="routestrip__band routestrip__band--start">Start trasy</span>
+        )}
+        {next && (
+          <span className="routestrip__next">
+            do {next.name}: {(next.threshold - knownWords).toLocaleString('pl-PL')} słów
+          </span>
+        )}
+      </p>
     </div>
   )
 }

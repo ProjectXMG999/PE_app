@@ -20,12 +20,17 @@ import { useAppStore } from '../store/useAppStore'
 import { getAllDailyTime, getEffectivenessByTimeOfDay, TimeOfDayStats } from '../services/db'
 import { computeWeeklyRecap, recapWorthShowing } from '../services/weeklyRecap'
 import { DailyTime } from '../types/progress'
-import { LEVEL_META, stationForThreshold } from '../data/levels'
+import { LEVEL_META, ROUTE_TOTAL, stationForThreshold } from '../data/levels'
+import { plWords, plDays, plPacks } from '../utils/plural'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import './StatsPage.css'
 
 const allPacks = packagesIndex as PackMeta[]
+
+/** Words available across all 864 packs. Larger than ROUTE_TOTAL — the route is
+ *  a goal, the corpus is the supply. */
+const corpusWords = allPacks.reduce((sum, p) => sum + p.wordCount, 0)
 
 /**
  * Name of the station the user is heading for.
@@ -55,17 +60,18 @@ function buildGuidance(
     return 'Trasa czeka. Pierwszy trening to około 10 minut.'
   }
   if (servingLeft > 0) {
-    return `${servingLeft} ${servingLeft === 1 ? 'słowo w dzisiejszej porcji' : 'słów w dzisiejszej porcji'} powtórek — najszybszy sposób, żeby nic nie uciekło.`
+    return `${servingLeft} ${plWords(servingLeft)} w dzisiejszej porcji powtórek — najszybszy sposób, żeby nic nie uciekło.`
   }
   if (levelStats?.nextLevel == null) {
-    return `${knownWords.toLocaleString('pl-PL')} słów. Cała trasa za Tobą.`
+    return `${knownWords.toLocaleString('pl-PL')} ${plWords(knownWords)}. Cała trasa za Tobą.`
   }
   const target = stationName(knownWords, levelStats.nextLevelWords)
   const days = levelStats.daysToNextLevel
   if (days == null || days <= 0) {
-    return `Jeszcze ${levelStats.nextLevelWords?.toLocaleString('pl-PL')} słów do ${target}.`
+    const left = levelStats.nextLevelWords ?? 0
+    return `Jeszcze ${left.toLocaleString('pl-PL')} ${plWords(left)} do ${target}.`
   }
-  return `Przy tym tempie jesteś ${days} ${days === 1 ? 'dzień' : 'dni'} od ${target}.`
+  return `Przy tym tempie jesteś ${days} ${plDays(days)} od ${target}.`
 }
 
 export function StatsPage() {
@@ -155,8 +161,9 @@ export function StatsPage() {
           <p className="statspage__note">
             {snapshot!.bulkKnownTotal === 1
               ? 'Jedno słowo oznaczyłeś'
-              : `${snapshot!.bulkKnownTotal.toLocaleString('pl-PL')} słów oznaczyłeś`}{' '}
-            jako znane bez nauki w aplikacji — liczą się do „słów poznanych", ale nie do tempa.
+              : `${snapshot!.bulkKnownTotal.toLocaleString('pl-PL')} ${plWords(snapshot!.bulkKnownTotal)} oznaczyłeś`}{' '}
+            jako znane bez nauki w aplikacji — {snapshot!.bulkKnownTotal === 1 ? 'liczy' : 'liczą'} się
+            do „słów poznanych", ale nie do tempa.
           </p>
         )}
 
@@ -224,7 +231,7 @@ export function StatsPage() {
           <dl className="statspage__facts">
             <div className="statspage__fact statspage__fact--listen">
               <dt>🎧 Odsłuchane</dt>
-              <dd>{totalWordsHeard.toLocaleString('pl-PL')}<span>słów</span></dd>
+              <dd>{totalWordsHeard.toLocaleString('pl-PL')}<span>{plWords(totalWordsHeard)}</span></dd>
             </div>
             <div className="statspage__fact">
               <dt>Czas nauki</dt>
@@ -232,7 +239,7 @@ export function StatsPage() {
             </div>
             <div className="statspage__fact statspage__fact--train">
               <dt>⚡ Opanowane</dt>
-              <dd>{masteredPacks}<span>paczek</span></dd>
+              <dd>{masteredPacks}<span>{plPacks(masteredPacks)}</span></dd>
             </div>
             <div className="statspage__fact">
               <dt>Na bieżąco</dt>
@@ -252,6 +259,15 @@ export function StatsPage() {
 
         <section className="statspage__section">
           <h2 className="statspage__section-title">Terytoria — poziomy</h2>
+          {/* Without this line the two halves of the page contradict each other:
+              the route counts to 10 000, while these bars add up to the size of
+              the actual corpus, which is larger. Both numbers are true; only
+              the relationship between them was missing. */}
+          <p className="statspage__note statspage__note--tight">
+            Trasa mierzy do {ROUTE_TOTAL.toLocaleString('pl-PL')} {plWords(ROUTE_TOTAL)} —
+            to cel. W paczkach czeka ich {corpusWords.toLocaleString('pl-PL')}, więc po
+            drodze jest z czego wybierać.
+          </p>
           {snapshot == null ? (
             <div className="statspage__skeleton skeleton" style={{ height: 120 }} />
           ) : (

@@ -119,13 +119,43 @@
   }
 }
 
-/* View Transitions API — tab switches (BottomNav) and the Training
-   card→detail icon morph opt in via the <Link viewTransition> prop.
-   Browsers without support just navigate normally (progressive
-   enhancement, no fallback code needed). */
+/* View Transitions API — tab switches (BottomNav/Sidebar), the Training
+   card→detail icon morph, and any `navigate(to, { viewTransition: true })`
+   call opt in via react-router. Browsers without support just navigate
+   normally (progressive enhancement, no fallback code needed).
+
+   Named/shared elements (nav indicators, the training icon morph) keep the
+   plain cross-fade at .group(*); the whole-page swap on `root` gets its own
+   pair so it can settle with a touch of scale instead of a flat fade — reads
+   as one surface easing into the next, not a slide-show cut. Only safe now
+   that AmbientBackground lives outside the per-page tree (App.tsx) and stays
+   put across the transition instead of flashing back in underneath it. */
 ::view-transition-group(*) {
   animation-duration: 220ms;
   animation-timing-function: ease;
+}
+
+::view-transition-group(root) {
+  animation-duration: 280ms;
+  animation-timing-function: var(--ease-out-expo);
+}
+
+::view-transition-old(root) {
+  animation-name: pe-page-out;
+}
+
+::view-transition-new(root) {
+  animation-name: pe-page-in;
+}
+
+@keyframes pe-page-out {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(1.012); }
+}
+
+@keyframes pe-page-in {
+  from { opacity: 0; transform: scale(0.988); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
 /* Respect users who ask the OS for less motion: collapse all CSS

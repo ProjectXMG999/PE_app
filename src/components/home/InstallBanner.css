@@ -35,12 +35,12 @@
 .install-banner__title {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 14px;
+  font-size: var(--text-base);
   color: white;
 }
 
 .install-banner__sub {
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   color: rgba(255,255,255,0.8);
 }
 
@@ -49,7 +49,7 @@
   color: var(--accent);
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 14px;
+  font-size: var(--text-base);
   padding: 8px 18px;
   border-radius: var(--radius-full);
   flex-shrink: 0;
@@ -78,7 +78,7 @@
   gap: var(--spacing-sm);
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 14px;
+  font-size: var(--text-base);
   color: white;
 }
 
@@ -86,7 +86,7 @@
   background: none;
   border: none;
   color: rgba(255,255,255,0.7);
-  font-size: 20px;
+  font-size: var(--text-xl);
   padding: 8px 12px;
   cursor: pointer;
   transition: color var(--transition-fast);
@@ -113,7 +113,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  font-size: 13px;
+  font-size: var(--text-sm);
   color: rgba(255,255,255,0.9);
 }
 
@@ -127,7 +127,7 @@
   justify-content: center;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   color: white;
   flex-shrink: 0;
 }

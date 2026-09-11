@@ -137,7 +137,7 @@
 }
 
 .sidebar__version {
-  font-size: 9px;
+  font-size: var(--text-3xs);
   color: var(--text-muted);
   font-family: monospace;
   opacity: 0.6;

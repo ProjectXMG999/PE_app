@@ -20,7 +20,7 @@
   align-items: center;
   gap: 6px;
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   font-weight: 700;
   width: 96px;
   flex-shrink: 0;
@@ -28,7 +28,7 @@
 }
 
 .tod-chart__icon {
-  font-size: 13px;
+  font-size: var(--text-sm);
 }
 
 .tod-chart__bar {
@@ -51,7 +51,7 @@
 
 .tod-chart__pct {
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   color: var(--text-secondary);
   min-width: 36px;
   text-align: right;

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { AchievementState } from '../../services/achievements'
-import { ACHIEVEMENT_GROUPS } from '../../data/achievements'
+import { ACHIEVEMENT_GROUPS, unitLabel } from '../../data/achievements'
 import './AchievementSheet.css'
 
 interface Props {
@@ -71,7 +71,7 @@ export function AchievementSheet({ state, onClose }: Props) {
             </div>
             <p className="achsheet__status">
               {value.toLocaleString('pl-PL')} / {a.threshold.toLocaleString('pl-PL')}
-              {a.unit ? ` ${a.unit}` : ''}
+              {' '}{unitLabel(a.unit, a.threshold)}
               <span className="achsheet__remaining">
                 jeszcze {(a.threshold - value).toLocaleString('pl-PL')}
               </span>

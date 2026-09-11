@@ -74,7 +74,7 @@
 .bottomnav__label {
   position: relative;
   font-family: var(--font-heading);
-  font-size: 10px;
+  font-size: var(--text-2xs);
   font-weight: 600;
   letter-spacing: 0.03em;
   line-height: 1;
@@ -89,7 +89,7 @@
    which would knock the icons out of alignment. */
 @media (max-width: 359px) {
   .bottomnav__label {
-    font-size: 9px;
+    font-size: var(--text-3xs);
     letter-spacing: 0;
   }
 }

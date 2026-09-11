@@ -1,63 +1,117 @@
+/* =============================================================================
+ * CEL DNIA — the daily-goal readout on Dzisiaj.
+ * -----------------------------------------------------------------------------
+ * The one number the screen is organised around, so it wears the raised-card
+ * recipe from surfaces.css rather than the flat glass every secondary row uses.
+ *
+ * State lives in --goal-accent, NOT in --accent: the "met" variant used to
+ * redefine the global accent token on this subtree, which silently recoloured
+ * anything inside that read it.
+ * ========================================================================== */
+
 @property --focus-fill {
   syntax: '<number>';
   inherits: true;
   initial-value: 0;
 }
 
-.focusstage {
+/* Doubled with .u-surface--raised so the state tint wins over the primitive's
+   own accent regardless of stylesheet order in the bundle. */
+.focusstage.u-surface--raised {
+  --goal-accent: var(--accent);
+
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 16px;
   width: 100%;
-  min-height: 76px;
+  min-height: 86px;
   padding: 14px 16px;
-  border-radius: var(--radius-lg);
   text-align: left;
   cursor: pointer;
-  transition: transform var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+  border-color: color-mix(in oklch, var(--goal-accent) 34%, transparent);
+  --u-hairline-color: var(--goal-accent);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
 }
 
 .focusstage:active { transform: scale(0.985); }
 
+.focusstage:focus-visible {
+  outline: 2px solid var(--goal-accent);
+  outline-offset: 3px;
+}
+
+/* ── Ring ─────────────────────────────────────────────────────────────────
+   A conic fill with a soft halo behind it. The halo is what stops the ring
+   reading as a flat pie chart — and it strengthens as the goal fills, so the
+   card visibly gains weight over the day. */
 .focusstage__ring {
   position: relative;
   display: grid;
   place-items: center;
-  width: 66px;
-  height: 66px;
+  width: 70px;
+  height: 70px;
   border-radius: var(--radius-full);
-  background: conic-gradient(
-    from -90deg,
-    var(--accent) 0 calc(var(--focus-fill, 0) * 1%),
-    var(--surface-translucent-strong) 0
-  );
-  transition: --focus-fill 1s var(--ease-out-expo) 0.1s;
+  /* Glow only. The conic lives on ::before so this shadow stays outside the
+     mask that cuts the ring's hole. */
+  box-shadow: 0 0 calc(6px + var(--focus-fill, 0) * 0.12px)
+              color-mix(in oklch, var(--goal-accent) 36%, transparent);
+  transition: --focus-fill 1s var(--ease-out-expo) 0.1s,
+              box-shadow var(--transition-slow);
 }
 
 @starting-style {
   .focusstage__ring { --focus-fill: 0; }
 }
 
+/* A real ring, cut with a mask rather than covered by a solid disc. The disc
+   had to guess a background colour, and the card's ground is a gradient — so
+   at the ring's position the "hole" never quite matched what surrounded it. */
 .focusstage__ring::before {
   content: '';
   position: absolute;
-  inset: 5px;
-  border-radius: var(--radius-full);
-  background: var(--bg-primary);
+  inset: 0;
+  border-radius: inherit;
+  background: conic-gradient(
+    from -90deg,
+    var(--goal-accent) 0 calc(var(--focus-fill, 0) * 1%),
+    var(--surface-translucent-strong) 0
+  );
+  -webkit-mask: radial-gradient(closest-side, transparent 78%, #000 78.5%);
+          mask: radial-gradient(closest-side, transparent 78%, #000 78.5%);
 }
 
 .focusstage__core {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  line-height: 1;
+}
+
+.focusstage__num {
   font-family: var(--font-heading);
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
   font-weight: var(--weight-display);
-  letter-spacing: -0.04em;
+  letter-spacing: var(--tracking-display);
   line-height: 1;
   color: var(--text-primary);
   font-variant-numeric: tabular-nums;
 }
 
+.focusstage__unit {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xs);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── Meta ─────────────────────────────────────────────────────────────────── */
 .focusstage__meta {
   display: flex;
   flex-direction: column;
@@ -65,35 +119,48 @@
   min-width: 0;
 }
 
-.focusstage__meta strong {
+.focusstage__kicker {
+  color: color-mix(in oklch, var(--goal-accent) 72%, var(--text-secondary));
+}
+
+.focusstage__headline {
   font-family: var(--font-heading);
   font-size: var(--text-lg);
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.15;
   color: var(--text-primary);
-  font-variant-numeric: tabular-nums;
 }
 
-.focusstage__meta strong small {
-  font-size: var(--text-xs);
-  font-weight: 500;
-  color: var(--text-muted);
-}
-
-.focusstage__status {
+.focusstage__sub {
   font-family: var(--font-body);
   font-size: var(--text-xs);
   color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
 }
 
+/* Affordance, not a nested control — the whole card is the button. */
 .focusstage__edit {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
   font-family: var(--font-heading);
   font-size: var(--text-xs);
   font-weight: 700;
   letter-spacing: var(--tracking-kicker);
   text-transform: uppercase;
-  color: var(--accent);
+  color: color-mix(in oklch, var(--goal-accent) 80%, var(--text-secondary));
 }
 
-.focusstage--met .focusstage__ring { --accent: var(--gold); }
-.focusstage--met .focusstage__status { color: var(--gold); font-weight: 600; }
-.focusstage--met .focusstage__edit { color: var(--gold); }
+.focusstage__edit svg { flex-shrink: 0; }
+
+/* ── Met ──────────────────────────────────────────────────────────────────
+   Gold is "earned" everywhere in this app, so the whole card turns over to it
+   the moment the goal is hit — hairline, border, ring, eyebrow and all. */
+.focusstage--met.u-surface--raised { --goal-accent: var(--gold); }
+
+.focusstage--met .focusstage__headline { color: var(--gold); }
+
+@media (prefers-reduced-motion: reduce) {
+  .focusstage__ring { transition: none; }
+}

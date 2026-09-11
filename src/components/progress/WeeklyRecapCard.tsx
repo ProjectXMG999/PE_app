@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { WeeklyRecap, shareRecap } from '../../services/weeklyRecap'
 import { showToast } from '../../services/toast'
+import { plWords, plMinutes, plTimes, plPractised } from '../../utils/plural'
 import './WeeklyRecapCard.css'
 
 interface Props {
@@ -31,8 +32,9 @@ export function WeeklyRecapCard({ recap }: Props) {
       </header>
 
       <p className="recap__lead">
-        <strong>{recap.wordsPractised.toLocaleString('pl-PL')}</strong> słów przerobionych
-        przez <strong>{recap.minutes}</strong> minut.
+        <strong>{recap.wordsPractised.toLocaleString('pl-PL')}</strong>{' '}
+        {plWords(recap.wordsPractised)} {plPractised(recap.wordsPractised)} przez{' '}
+        <strong>{recap.minutes}</strong> {plMinutes(recap.minutes)}.
       </p>
 
       <dl className="recap__grid">
@@ -42,7 +44,7 @@ export function WeeklyRecapCard({ recap }: Props) {
         </div>
         <div className="recap__stat">
           <dt>Cel osiągnięty</dt>
-          <dd>{recap.goalDays}<span>razy</span></dd>
+          <dd>{recap.goalDays}<span>{plTimes(recap.goalDays)}</span></dd>
         </div>
         <div className="recap__stat">
           <dt>Sesji</dt>
@@ -50,7 +52,7 @@ export function WeeklyRecapCard({ recap }: Props) {
         </div>
         <div className="recap__stat">
           <dt>Najlepszy dzień</dt>
-          <dd>{recap.bestDay?.count ?? 0}<span>słów</span></dd>
+          <dd>{recap.bestDay?.count ?? 0}<span>{plWords(recap.bestDay?.count ?? 0)}</span></dd>
         </div>
       </dl>
 
@@ -67,8 +69,8 @@ export function WeeklyRecapCard({ recap }: Props) {
 
       {recap.nextStationName && recap.toNextStation != null && (
         <p className="recap__next">
-          Jeszcze <strong>{recap.toNextStation.toLocaleString('pl-PL')}</strong> słów
-          do {recap.nextStationName}.
+          Jeszcze <strong>{recap.toNextStation.toLocaleString('pl-PL')}</strong>{' '}
+          {plWords(recap.toNextStation)} do {recap.nextStationName}.
         </p>
       )}
 

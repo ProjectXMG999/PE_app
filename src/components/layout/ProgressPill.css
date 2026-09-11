@@ -41,7 +41,7 @@
 }
 
 .progresspill__icon {
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   line-height: 1;
 }
 

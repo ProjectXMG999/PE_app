@@ -2,8 +2,8 @@ import { FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
-import { AmbientBackground } from '../components/today/AmbientBackground'
 import { fadeUp, fadeUpReduced, staggerContainer } from '../components/today/motion'
+import { ProgressLogo } from '../components/brand/ProgressLogo'
 import { useAppStore, resolveTheme } from '../store/useAppStore'
 import { supabase } from '../services/supabaseClient'
 import './LoginPage.css'
@@ -63,11 +63,13 @@ export function LoginPage() {
 
   const variants = reduced ? fadeUpReduced : fadeUp
 
+  // hideAmbient is opted out of explicitly: hideBottomNav would otherwise fade
+  // the background away, and the login screen is the one focus-mode page that
+  // wants it. It used to mount a second <AmbientBackground/> of its own to win
+  // it back — which now would mean a second WebGL context for the same picture.
   return (
-    <AppShell hideBottomNav hideSidebar hideTopBar>
+    <AppShell hideBottomNav hideSidebar hideTopBar hideAmbient={false}>
       <div className="login">
-        <AmbientBackground />
-
         <motion.div
           className="login__inner"
           variants={staggerContainer}
@@ -75,14 +77,8 @@ export function LoginPage() {
           animate="show"
         >
           <motion.div className="login__brand" variants={variants}>
-            <button className="login__brand-mark" onClick={() => navigate('/')} aria-label="Strona główna">
-              <img src="/icons/icon-192.png" alt="" className="login__brand-icon" />
-              <img
-                src={resolved === 'dark' ? '/icons/logo-white.svg' : '/icons/logo-dark.svg'}
-                alt="Project English"
-                className="login__brand-logo"
-                onError={e => { e.currentTarget.style.display = 'none' }}
-              />
+            <button className="login__brand-mark" onClick={() => navigate('/')} aria-label="Progress — strona główna">
+              <ProgressLogo size={30} />
             </button>
             <motion.button
               className="login__theme-btn"

@@ -127,7 +127,7 @@
   border: 1px solid var(--border);
   background: var(--surface-translucent-strong);
   font-family: var(--font-heading);
-  font-size: 10px;
+  font-size: var(--text-2xs);
   font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--text-muted);
@@ -149,7 +149,7 @@
 
 .seqstrip__bead em {
   font-style: normal;
-  font-size: 9px;
+  font-size: var(--text-3xs);
   opacity: 0.75;
 }
 

@@ -33,6 +33,12 @@
   color: var(--text-muted);
 }
 
+/* Sits directly under a section heading rather than after a block, so it needs
+   the top margin off and a little air before the content it introduces. */
+.statspage__note--tight {
+  margin: 0 0 var(--spacing-md);
+}
+
 /* Sections */
 .statspage__section {
   margin-top: var(--spacing-xl);

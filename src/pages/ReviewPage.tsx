@@ -1,14 +1,15 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAudio } from '../hooks/useAudio'
 import { useCardFlip } from '../hooks/useCardFlip'
 import { useStudyClock } from '../hooks/useStudyClock'
 import { useReviewSet, ReviewInterludeStep } from '../hooks/useReviewSet'
-import { useAppStore } from '../store/useAppStore'
+import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { applyKnown, applyUnknown } from '../services/review'
 import { saveSession, saveWordProgress } from '../services/db'
 import { dayKey } from '../utils/day'
-import './WordFlashPage.css'
+import { plPackets } from '../utils/packVisuals'
+import { StudyStage, StageTrack } from '../components/flashcard/StudyStage'
 import './ReviewPage.css'
 
 /**
@@ -38,6 +39,11 @@ export function ReviewPage() {
 
   const [stepIndex, setStepIndex] = useState(0)
   const [kept, setKept] = useState(0)
+  // Scheduled re-checks in this batch — the reviewHealth signal. Narrower than
+  // `kept`: the due queue also carries words that were never mastered (a
+  // "Nie znam" reschedules a learning word too), and those say nothing about
+  // retention. `status: 'known'` is permanent, so it's the honest test.
+  const retentionRef = useRef({ rated: 0, known: 0 })
   const [batchDone, setBatchDone] = useState(false)
   const [noAudio, setNoAudio] = useState(false)
   // Cumulative across every batch of this visit.
@@ -64,7 +70,13 @@ export function ReviewPage() {
       mode: 'fiszki',
       trainMode: 'review',
       durationSec: elapsedSec(),
+      // Recorded for stats. The adaptive difficulty signal ignores review
+      // sessions (it only reads trainMode word-flash / active-sentence).
+      ratedCount: cardCount,
+      knownHitCount: kept,
     })
+    useAppStore.getState().applyReviewOutcome(retentionRef.current)
+    retentionRef.current = { rated: 0, known: 0 }
     setSessionSeen(n => n + cardCount)
     setSessionKept(k => k + kept)
     setBatchDone(true)
@@ -97,11 +109,16 @@ export function ReviewPage() {
     if (!card || isAdvancing) return
     stop()
 
+    const opts = { requestRetention: currentRequestRetention() }
     const updated = recalled
-      ? applyKnown(card.progress, card.word.id, card.packageId)
-      : applyUnknown(card.progress, card.word.id, card.packageId)
+      ? applyKnown(card.progress, card.word.id, card.packageId, new Date(), opts)
+      : applyUnknown(card.progress, card.word.id, card.packageId, new Date(), opts)
     await saveWordProgress(updated)
     if (recalled) setKept(k => k + 1)
+    if (card.progress?.status === 'known') {
+      retentionRef.current.rated += 1
+      if (recalled) retentionRef.current.known += 1
+    }
 
     animateOut(async () => { await goNext() })
   }, [card, isAdvancing, stop, animateOut, goNext])
@@ -144,7 +161,7 @@ export function ReviewPage() {
         <div className="review__state-actions">
           {exhausted && dueTotal > 0 && (
             <button
-              className="review__state-btn review__state-btn--primary"
+              className="review__state-btn review__state-btn--primary u-cta"
               onClick={continueBatch}
             >
               Kontynuuj mimo to
@@ -167,7 +184,7 @@ export function ReviewPage() {
     const portionDone = reviewBudget > 0 && sessionSeen >= reviewBudget
     const continueBtn = (
       <button
-        className={`review__state-btn${portionDone ? '' : ' review__state-btn--primary'}`}
+        className={`review__state-btn${portionDone ? '' : ' review__state-btn--primary u-cta'}`}
         onClick={continueBatch}
       >
         Kontynuuj powtórkę
@@ -175,7 +192,7 @@ export function ReviewPage() {
     )
     const stopBtn = (
       <button
-        className={`review__state-btn${portionDone ? ' review__state-btn--primary' : ''}`}
+        className={`review__state-btn${portionDone ? ' review__state-btn--primary u-cta' : ''}`}
         onClick={() => navigate('/dzis')}
       >
         {queueLeft > 0 ? 'Na dziś wystarczy' : 'Wróć do Dzisiaj'}
@@ -219,81 +236,31 @@ export function ReviewPage() {
   const flipped = side === 'back'
 
   return (
-    <div className="wf">
-      <div className="wf__header">
-        <button className="wf__back" onClick={() => { stop(); navigate('/dzis') }} aria-label="Wróć">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="15 18 9 12 15 6"/>
-          </svg>
-        </button>
-        <div className="wf__progress-bar">
-          <div className="wf__progress-current" style={{ width: `${progressPct}%` }} />
-        </div>
-        <span className="wf__counter">{cardsBefore + 1} / {cardCount}</span>
-      </div>
-
-      <p className="review__badge">
-        🔁 Powtórka · {packCount} {packCount === 1 ? 'paczka' : 'paczek'}
-        {dueTotal > cardCount && ` · ${dueTotal - cardCount} w kolejce`}
-      </p>
-
-      <div className="wf__scene">
-        <div
-          key={stepIndex}
-          className={`wf__card${cardClass('wf__card')}`}
-          onClick={flipCard}
-          onAnimationEnd={handleAnimationEnd}
-          role="button"
-          tabIndex={0}
-          onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && flipCard()}
-        >
-          {side === 'front' ? (
-            <div className="wf__face wf__face--front">
-              <span className="wf__lang-badge wf__lang-badge--pl">PL</span>
-              <div className="wf__content">
-                <p className="wf__word wf__word--pl">{card?.word.polish}</p>
-              </div>
-              <p className="wf__tap-hint">Powiedz po angielsku. Potem odsłoń.</p>
-            </div>
-          ) : (
-            <div className="wf__face wf__face--back">
-              <span className="wf__lang-badge wf__lang-badge--en">EN</span>
-              <div className="wf__content">
-                <div className="wf__word-row">
-                  <p className="wf__word wf__word--en">{card?.word.english}</p>
-                  <button
-                    className="wf__play wf__play--accent"
-                    onClick={e => { e.stopPropagation(); stop(); if (card) playWord(card.word) }}
-                    aria-label="Wymowa EN"
-                  >
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                      <polygon points="5,3 19,12 5,21"/>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <p className="wf__tap-hint">dotknij, aby zobaczyć przód</p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className={`wf__actions${flipped && !isAdvancing ? ' wf__actions--visible' : ''}`}>
-        <button className="wf__btn wf__btn--unknown" onClick={() => answer(false)} disabled={isAdvancing}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <line x1="18" y1="6" x2="6" y2="18"/>
-            <line x1="6" y1="6" x2="18" y2="18"/>
-          </svg>
-          Nie pamiętam
-        </button>
-        <button className="wf__btn wf__btn--known" onClick={() => answer(true)} disabled={isAdvancing}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="20 6 9 17 4 12"/>
-          </svg>
-          Pamiętam
-        </button>
-      </div>
-    </div>
+    <StudyStage
+      tone="review"
+      kicker={
+        <>
+          Powtórka · {packCount} {plPackets(packCount)}
+          {dueTotal > cardCount && ` · ${dueTotal - cardCount} w kolejce`}
+        </>
+      }
+      packageId={card?.packageId}
+      counter={`${cardsBefore + 1} / ${cardCount}`}
+      rail={<StageTrack current={progressPct} />}
+      onExit={() => { stop(); navigate('/dzis') }}
+      exitLabel="Wróć do Dzisiaj"
+      cardKey={stepIndex}
+      polish={card?.word.polish ?? ''}
+      english={card?.word.english ?? ''}
+      side={side}
+      cardClass={cardClass}
+      onFlip={flipCard}
+      onAnimationEnd={handleAnimationEnd}
+      onPlay={() => { stop(); if (card) playWord(card.word) }}
+      answersVisible={flipped && !isAdvancing}
+      answersDisabled={isAdvancing}
+      onAnswer={answer}
+    />
   )
 }
 
@@ -357,7 +324,7 @@ function ReviewInterlude({
         ))}
       </ol>
       <div className="review__state-actions">
-        <button className="review__state-btn review__state-btn--primary" onClick={() => { stop(); onDone() }}>
+        <button className="review__state-btn review__state-btn--primary u-cta" onClick={() => { stop(); onDone() }}>
           Pomiń
         </button>
         <button className="review__state-btn" onClick={() => { stop(); onDisableAudio() }}>

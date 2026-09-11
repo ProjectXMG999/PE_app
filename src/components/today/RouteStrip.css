@@ -1,46 +1,66 @@
+/* =============================================================================
+ * TWÓJ PROGRESS TRENINGU — where you stand on the whole 10 000-word route.
+ * -----------------------------------------------------------------------------
+ * The rainbow fill is not decoration: it runs the four level colours in route
+ * order, and the ticks are the level thresholds, so the bar is a scale you can
+ * read. The band line under it names the mark you're standing on — without it
+ * the ticks were four unlabelled scratches.
+ *
+ * Everything that used to run forever now plays once. This widget is looked at
+ * for three seconds, and an infinite box-shadow animation on the marker is the
+ * kind of thing that keeps a phone's compositor awake for no one's benefit.
+ * ========================================================================== */
+
 .routestrip {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 10px var(--spacing-md);
-  background: var(--surface-translucent);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  gap: 6px;
+  padding: 12px var(--spacing-md) 11px;
+}
+
+/* ── Head ─────────────────────────────────────────────────────────────────── */
+.routestrip__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
 }
 
 .routestrip__eyebrow {
-  margin: 0 0 2px;
-  font-family: var(--font-heading);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  margin: 0;
   color: var(--text-muted);
 }
 
-.routestrip__eyebrow-highlight {
-  color: var(--accent);
+.routestrip__eyebrow-highlight { color: var(--accent); }
+
+.routestrip__pct {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
 }
 
+/* ── Figure ───────────────────────────────────────────────────────────────── */
 .routestrip__figure {
   display: flex;
   align-items: baseline;
-  gap: 4px;
+  gap: 5px;
   font-family: var(--font-heading);
   font-variant-numeric: tabular-nums;
 }
 
+/* Plain --text-primary, not a gradient clip. The bar below carries the route's
+   colour; a second coloured thing next to it was two answers to one question. */
 .routestrip__value {
   display: inline-block;
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-display);
   line-height: 1;
-  background: linear-gradient(135deg, var(--text-primary) 20%, var(--accent-orange));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--text-primary);
   animation: today-num-pop 1.9s var(--ease-out-expo) 1 both;
 }
 
@@ -55,33 +75,23 @@
 .routestrip__unit {
   font-size: var(--text-sm);
   font-weight: 700;
-  color: var(--text-muted);
-}
-
-.routestrip__of {
-  margin-left: 2px;
-  padding: 2px 8px;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--text-muted);
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-full);
-}
-
-.routestrip__pct {
-  margin-left: auto;
-  font-size: var(--text-sm);
-  font-weight: 700;
   color: var(--text-secondary);
 }
 
+.routestrip__of {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* ── Track ────────────────────────────────────────────────────────────────── */
 .routestrip__track {
   position: relative;
-  height: 7px;
-  margin: 2px 6px;
+  height: 8px;
+  margin: 3px 7px 2px;
   border-radius: var(--radius-full);
   background: var(--route-line);
+  box-shadow: inset 0 1px 2px oklch(0 0 0 / 0.22);
 }
 
 .routestrip__fill {
@@ -89,9 +99,10 @@
   top: 0;
   left: 0;
   height: 100%;
-  min-width: 3px;
+  min-width: 4px;
   overflow: hidden;
   border-radius: var(--radius-full);
+  /* The four level colours in route order, ending on the gold of the finish. */
   background: linear-gradient(
     90deg,
     var(--accent-yellow),
@@ -102,34 +113,37 @@
   );
 }
 
+/* One sweep as the bar lands, then done — it was a permanent loop. */
 .routestrip__fill::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
-  background-size: 60% 100%;
-  animation: routestrip-shimmer 3.4s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.5), transparent);
+  background-size: 55% 100%;
+  background-repeat: no-repeat;
+  animation: routestrip-shimmer 1.5s var(--ease-out-expo) 0.25s 1 both;
 }
 
 @keyframes routestrip-shimmer {
-  0% { background-position: -60% 0; }
-  100% { background-position: 160% 0; }
+  from { background-position: -60% 0; }
+  to   { background-position: 170% 0; }
 }
 
 .routestrip__tick {
   position: absolute;
   top: 50%;
   width: 2px;
-  height: 12px;
+  height: 13px;
   margin-left: -1px;
   transform: translateY(-50%);
+  border-radius: 1px;
   background: var(--bg-primary);
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
 .routestrip__tick--passed {
   background: var(--text-primary);
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 .routestrip__marker {
@@ -141,14 +155,13 @@
   transform: translateY(-50%);
   border-radius: var(--radius-full);
   background: var(--text-primary);
-  box-shadow: 0 0 0 3px var(--bg-card), 0 0 16px 2px var(--accent-glow);
-  /* `left` is animated by framer-motion (mount 0→pct and on later data
-     changes), so no CSS transition on it — the two would fight per frame. */
-  animation: routestrip-pulse 3s ease-in-out infinite;
+  /* Static. `left` is animated by framer-motion, so nothing here may transition
+     it — the two would fight per frame. */
+  box-shadow: 0 0 0 3px var(--bg-card), 0 0 18px 3px var(--accent-glow);
 }
 
 /* Comet trail behind the travelling marker — a short bright tail that reads as
-   speed while it rides the fill, settling to almost nothing at rest. */
+   speed while it rides the fill, gone by the time it settles. */
 .routestrip__marker::before {
   content: '';
   position: absolute;
@@ -173,11 +186,6 @@
   animation: today-marker-arrive 900ms var(--ease-out-expo) 1500ms 1 both;
 }
 
-@keyframes routestrip-pulse {
-  0%, 100% { box-shadow: 0 0 0 3px var(--bg-card), 0 0 16px 2px var(--accent-glow); }
-  50%      { box-shadow: 0 0 0 3px var(--bg-card), 0 0 24px 6px var(--accent-glow); }
-}
-
 @keyframes today-marker-arrive {
   from { opacity: 0.95; transform: scale(0.35); }
   to   { opacity: 0;    transform: scale(3);    }
@@ -190,22 +198,48 @@
   100% { opacity: 0;    width: 8px;  }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .routestrip__fill::after {
-    animation: none;
-    background: none;
-  }
+/* ── Scale line — what the ticks actually mean ────────────────────────────── */
+.routestrip__scale {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin: 0;
+  min-width: 0;
+}
 
-  .routestrip__marker {
-    animation: none;
-  }
+.routestrip__band {
+  flex-shrink: 0;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-2xs);
+  font-weight: 800;
+  white-space: nowrap;
+  color: var(--band, var(--text-muted));
+  border: 1px solid color-mix(in oklch, var(--band, var(--text-muted)) 40%, transparent);
+  background: color-mix(in oklch, var(--band, var(--text-muted)) 13%, transparent);
+}
+
+.routestrip__band--start {
+  color: var(--text-muted);
+  border-color: var(--border);
+  background: var(--surface-translucent);
+}
+
+.routestrip__next {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .routestrip__fill::after { animation: none; background: none; }
+  .routestrip__value { animation: none; }
 
   .routestrip__marker::before,
-  .routestrip__marker::after {
-    display: none;
-  }
-
-  .routestrip__value {
-    animation: none;
-  }
+  .routestrip__marker::after { display: none; }
 }

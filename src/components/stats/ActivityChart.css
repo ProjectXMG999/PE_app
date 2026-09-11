@@ -23,7 +23,7 @@
 
 .activity-chart__count {
   font-family: var(--font-heading);
-  font-size: 11px;
+  font-size: var(--text-xs);
   font-weight: 600;
   color: var(--text-secondary);
   line-height: 1;
@@ -59,7 +59,7 @@
 
 .activity-chart__label {
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   color: var(--text-muted);
   line-height: 1;
 }

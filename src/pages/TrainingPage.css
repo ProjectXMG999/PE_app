@@ -152,7 +152,7 @@
 
 .training-card__subtitle {
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   font-weight: 600;
   color: var(--accent);
   margin: 0 0 var(--spacing-sm);

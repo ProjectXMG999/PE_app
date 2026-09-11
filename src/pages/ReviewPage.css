@@ -1,17 +1,6 @@
-/* Extras on top of WordFlashPage.css, which supplies the card itself. */
-
-.review__badge {
-  margin: 0 auto var(--spacing-sm);
-  padding: 4px 12px;
-  width: fit-content;
-  font-family: var(--font-heading);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--review-teal);
-  background: color-mix(in srgb, var(--review-teal) 14%, transparent);
-  border-radius: var(--radius-full);
-}
+/* The session's non-card screens — loading, empty, batch-done, and the
+   listening interlude. The card itself is StudyStage (components/flashcard).
+   Shared with SmartSessionPage, which has the same three states. */
 
 /* Loading / empty / done — one centred column for all three. */
 .review__state {
@@ -39,8 +28,9 @@
   height: 72px;
   font-size: 32px;
   border-radius: var(--radius-full);
-  background: var(--bg-card);
+  background: var(--surface-translucent);
   border: 1px solid var(--border);
+  box-shadow: var(--tile-hi);
   animation: bounceIn 400ms var(--ease-spring);
 }
 
@@ -48,8 +38,10 @@
   margin: 0;
   font-family: var(--font-heading);
   font-size: var(--text-2xl);
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-primary);
+  text-wrap: balance;
 }
 
 .review__state-text {
@@ -72,22 +64,32 @@
   justify-content: center;
 }
 
+/* Secondary by default (outlined pill); the primary one adopts .u-cta in the
+   markup, so it carries the same gloss and press as every other CTA. */
 .review__state-btn {
+  min-height: 48px;
   padding: 12px var(--spacing-xl);
   font-family: var(--font-heading);
-  font-size: var(--text-base);
-  font-weight: 600;
+  font-size: var(--text-md);
+  font-weight: 700;
   color: var(--text-secondary);
-  background: var(--bg-card);
+  background: var(--surface-translucent);
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
   cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast),
+              background var(--transition-fast), transform var(--transition-fast);
 }
 
-.review__state-btn--primary {
+.review__state-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  background: var(--surface-translucent-strong);
+}
+
+.review__state-btn--primary.u-cta {
   color: #fff;
-  background: var(--accent);
-  border-color: var(--accent);
+  border: none;
 }
 
 .review__state-btn:active {
@@ -104,12 +106,17 @@
   gap: var(--spacing-lg);
 }
 
+/* Already carries its own 🎧 in the copy, so no accent rule in front of it —
+   one signal before the words is enough. */
 .review__interlude-eyebrow {
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
   font-family: var(--font-heading);
   font-size: var(--text-sm);
   font-weight: 700;
-  letter-spacing: 0.02em;
   color: var(--listen-blue);
+  border: 1px solid color-mix(in oklch, var(--listen-blue) 40%, transparent);
+  background: color-mix(in oklch, var(--listen-blue) 13%, transparent);
 }
 
 .review__interlude-list {
@@ -128,8 +135,9 @@
   flex-direction: column;
   gap: 2px;
   padding: 10px var(--spacing-md);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--surface-tile);
+  border: 1px solid var(--tile-border);
+  box-shadow: var(--tile-hi);
   border-radius: var(--radius-lg);
   opacity: 0.55;
   transition: opacity 150ms ease, border-color 150ms ease;
@@ -137,7 +145,7 @@
 
 .review__interlude-item--active {
   opacity: 1;
-  border-color: color-mix(in srgb, var(--listen-blue) 55%, transparent);
+  border-color: color-mix(in oklch, var(--listen-blue) 55%, transparent);
 }
 
 .review__interlude-pl {

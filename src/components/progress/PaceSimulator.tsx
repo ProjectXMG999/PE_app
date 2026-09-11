@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { LEVEL_META } from '../../data/levels'
 import { DAILY_GOAL_OPTIONS } from '../../store/useAppStore'
+import { plWords } from '../../utils/plural'
 import './PaceSimulator.css'
 
 interface Props {
@@ -98,7 +99,7 @@ export function PaceSimulator({ knownWords, wordsPerMinute, currentWordsPerDay }
       </ul>
 
       <p className="pacesim__foot">
-        Twoje tempo: ok. {projected.toFixed(0)} opanowanych słów dziennie przy {minutes} min nauki.
+        Twoje tempo: ok. {projected.toFixed(0)} {plWords(Math.round(projected))} dziennie przy {minutes} min nauki.
       </p>
     </div>
   )

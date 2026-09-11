@@ -1,13 +1,8 @@
+/* Sits in the SettingsPage flow — the page owns width and rhythm now, so
+   this no longer carries its own max-width or margins. */
 .about-app {
   display: block;
   padding: 0;
-}
-
-@media (min-width: 1024px) {
-  .about-app {
-    max-width: 900px;
-    margin: 0 auto;
-  }
 }
 
 .about-app__summary {
@@ -15,13 +10,18 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-sm);
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: 14px var(--spacing-md);
   border-radius: var(--radius-lg);
-  background: var(--bg-surface);
+  background: var(--surface-translucent);
   border: 1px solid var(--border);
+  font-family: var(--font-heading);
+  font-size: var(--text-md);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
   cursor: pointer;
   list-style: none;
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
   width: 100%;
 }
 
@@ -30,7 +30,8 @@
 }
 
 .about-app__summary:hover {
-  border-color: var(--border-accent);
+  border-color: var(--border-strong);
+  background: var(--surface-translucent-strong);
 }
 
 .about-app__chevron {
@@ -46,14 +47,14 @@
 .about-app__content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
-  padding-top: var(--spacing-md);
+  gap: 10px;
+  padding-top: 10px;
   width: 100%;
 }
 
 .about-app__title {
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: var(--text-lg);
   font-weight: 700;
   margin: 0;
   color: var(--text-primary);
@@ -64,20 +65,22 @@
   flex-direction: column;
   gap: var(--spacing-sm);
   padding: var(--spacing-md);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  background: var(--surface-translucent);
   width: 100%;
 }
 
 .about-app__section--last {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
+  background: linear-gradient(150deg,
+    color-mix(in oklch, var(--accent) 14%, transparent) 0%,
+    var(--surface-translucent) 60%);
   border-color: var(--border-accent);
 }
 
 .about-app__subtitle {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: var(--text-base);
   font-weight: 700;
   margin: 0;
   color: var(--accent);
@@ -85,7 +88,7 @@
 
 .about-app__description {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: var(--text-sm);
   color: var(--text-secondary);
   margin: 0;
   line-height: 1.6;
@@ -96,17 +99,18 @@
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 8px var(--spacing-md);
-  border-radius: var(--radius-sm);
+  min-height: 38px;
+  padding: 0 var(--spacing-md);
+  border-radius: var(--radius-md);
   font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 600;
+  font-size: var(--text-sm);
+  font-weight: 700;
   background: var(--accent);
   color: white;
   border: none;
   cursor: pointer;
   transition: all var(--transition-fast);
-  box-shadow: 0 0 8px var(--accent-glow);
+  box-shadow: 0 4px 14px var(--accent-glow);
   margin-top: var(--spacing-xs);
 }
 
@@ -137,13 +141,13 @@
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   color: white;
 }
 
 .about-app__level h5 {
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   font-weight: 700;
   margin: 0 0 2px;
   color: var(--text-primary);
@@ -151,7 +155,7 @@
 
 .about-app__level p {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: var(--text-xs);
   color: var(--text-muted);
   margin: 0;
 }
@@ -172,7 +176,7 @@
 
 .about-app__exercise span {
   flex-shrink: 0;
-  font-size: 20px;
+  font-size: var(--text-xl);
   width: 32px;
   height: 32px;
   display: flex;
@@ -182,7 +186,7 @@
 
 .about-app__exercise h5 {
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   font-weight: 700;
   margin: 0 0 2px;
   color: var(--text-primary);
@@ -190,14 +194,14 @@
 
 .about-app__exercise p {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: var(--text-xs);
   color: var(--text-muted);
   margin: 0;
 }
 
 .about-app__highlight {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--accent);
   margin: 0;
@@ -206,10 +210,10 @@
 
 .about-app__btn-duration {
   margin-left: 2px;
-  font-size: 10px;
+  font-size: var(--text-2xs);
   font-weight: 500;
   opacity: 0.7;
-  background: rgba(255, 255, 255, 0.15);
+  background: oklch(1 0 0 / 0.18);
   border-radius: var(--radius-full);
   padding: 2px 7px;
 }

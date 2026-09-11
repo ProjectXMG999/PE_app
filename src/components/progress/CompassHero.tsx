@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useCountUp } from '../../hooks/useCountUp'
 import { LEVEL_META, ROUTE_TOTAL } from '../../data/levels'
+import { plWords, plDays } from '../../utils/plural'
 import { formatPoints } from '../../services/points'
 import { MetricsInfoSheet } from './MetricsInfoSheet'
 import './CompassHero.css'
@@ -9,7 +10,9 @@ interface Props {
   knownWords: number
   streak: number
   points: number
-  /** Words per day, with an optional week-over-week delta. */
+  /** Words LEARNED per day (avgWordsPerDay — the same figure the "przy tym
+   *  tempie…" sentence divides by), with an optional week-over-week delta in
+   *  throughput. */
   pace: { current: number; deltaPct: number | null } | null
   /** Sentence in the navigation voice: what this means for what's next. */
   guidance: string
@@ -61,7 +64,7 @@ export function CompassHero({ knownWords, streak, points, pace, guidance, loadin
       </p>
       <p className="compass__unit">słów poznanych</p>
 
-      <div className="compass__track" role="img" aria-label={`${knownWords} z ${ROUTE_TOTAL} słów`}>
+      <div className="compass__track" role="img" aria-label={`${knownWords} z ${ROUTE_TOTAL} ${plWords(ROUTE_TOTAL)}`}>
         <div className="compass__fill" style={{ width: `${pct}%` }} />
         {LEVEL_META.map(l => (
           <span
@@ -80,7 +83,7 @@ export function CompassHero({ knownWords, streak, points, pace, guidance, loadin
           <dd className="compass__gauge-value">
             <span className="compass__gauge-icon" aria-hidden="true">🔥</span>
             {streak}
-            <span className="compass__gauge-suffix">dni</span>
+            <span className="compass__gauge-suffix">{plDays(streak)}</span>
           </dd>
         </div>
         <div className="compass__gauge">

@@ -210,7 +210,7 @@
 .pfsheet__chip.is-active {
   border-color: var(--accent);
   color: var(--text-primary);
-  background: color-mix(in srgb, var(--accent) 12%, var(--bg-card));
+  background: color-mix(in oklch, var(--accent) 12%, var(--bg-card));
 }
 
 .pfsheet__chip:focus-visible {

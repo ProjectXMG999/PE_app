@@ -14,7 +14,7 @@
 
 .account__title {
   font-family: var(--font-heading);
-  font-size: 20px;
+  font-size: var(--text-xl);
   font-weight: 700;
   color: var(--text-primary);
 }
@@ -44,7 +44,7 @@
 
 .account__section-title {
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   font-weight: 700;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -72,13 +72,13 @@
 
 .account__row-name {
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: var(--text-md);
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .account__row-hint {
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   color: var(--text-muted);
   font-family: var(--font-body);
 }
@@ -95,7 +95,7 @@
   display: flex;
   align-items: center;
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   font-weight: 700;
   background: var(--bg-card);
   color: var(--text-muted);
@@ -119,7 +119,7 @@
   padding: 0 var(--spacing-lg);
   border-radius: var(--radius-full);
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 700;
   background: var(--accent);
   color: #fff;
@@ -163,7 +163,7 @@
 
 .account__label {
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--text-secondary);
 }
@@ -202,7 +202,7 @@
   display: flex;
   align-items: flex-start;
   gap: var(--spacing-sm);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   line-height: 1.4;
   color: var(--text-muted);
   cursor: pointer;
@@ -230,7 +230,7 @@
   padding: 0 var(--spacing-md);
   border-radius: var(--radius-full);
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 600;
   background: transparent;
   color: var(--danger);

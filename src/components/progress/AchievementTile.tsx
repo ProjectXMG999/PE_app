@@ -1,4 +1,5 @@
 import { AchievementState } from '../../services/achievements'
+import { unitLabel } from '../../data/achievements'
 import './AchievementTile.css'
 
 interface Props {
@@ -11,6 +12,7 @@ interface Props {
 function formatValue(n: number): string {
   return n.toLocaleString('pl-PL')
 }
+
 
 /**
  * One badge.
@@ -32,7 +34,9 @@ export function AchievementTile({ state, onClick, showProgress }: Props) {
         isNew ? 'achtile--new' : '',
       ].filter(Boolean).join(' ')}
       onClick={onClick ? () => onClick(state) : undefined}
-      aria-label={`${a.title} — ${unlocked ? 'zdobyte' : `${formatValue(value)} z ${formatValue(a.threshold)}`}`}
+      aria-label={`${a.title} — ${unlocked
+        ? 'zdobyte'
+        : `${formatValue(value)} z ${formatValue(a.threshold)} ${unitLabel(a.unit, a.threshold)}`}`}
     >
       {isNew && <span className="achtile__new-dot" aria-hidden="true" />}
 
@@ -46,12 +50,12 @@ export function AchievementTile({ state, onClick, showProgress }: Props) {
           </span>
           <span className="achtile__count">
             {formatValue(Math.min(value, a.threshold))} / {formatValue(a.threshold)}
-            {a.unit ? ` ${a.unit}` : ''}
+            {' '}{unitLabel(a.unit, a.threshold)}
           </span>
         </span>
       ) : (
         <span className="achtile__threshold">
-          {formatValue(a.threshold)}{a.unit ? ` ${a.unit}` : ''}
+          {formatValue(a.threshold)} {unitLabel(a.unit, a.threshold)}
         </span>
       )}
     </Tag>

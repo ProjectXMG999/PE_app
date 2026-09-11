@@ -57,27 +57,27 @@ dialog.am {
 
 .am__label {
   font-family: var(--font-heading);
-  font-size: 10px;
+  font-size: var(--text-2xs);
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
   background: rgba(139, 92, 246, 0.1);
   border: 1px solid rgba(139, 92, 246, 0.25);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   padding: 3px 9px;
 }
 
 .am__dur-badge {
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: var(--text-xs);
   color: var(--text-muted);
 }
 
 .am__close {
   width: 30px;
   height: 30px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--bg-card);
   border: 1px solid var(--border);
   color: var(--text-muted);
@@ -125,7 +125,7 @@ dialog.am {
 .am__bar-track {
   position: relative;
   height: 4px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--border);
   overflow: visible;
 }
@@ -135,7 +135,7 @@ dialog.am {
   left: 0;
   top: 0;
   height: 100%;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: rgba(139, 92, 246, 0.2);
   pointer-events: none;
 }
@@ -145,7 +145,7 @@ dialog.am {
   left: 0;
   top: 0;
   height: 100%;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--accent);
   display: flex;
   align-items: center;
@@ -157,7 +157,7 @@ dialog.am {
 .am__bar-thumb {
   width: 14px;
   height: 14px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: white;
   box-shadow: 0 1px 4px rgba(0,0,0,0.35);
   flex-shrink: 0;
@@ -175,7 +175,7 @@ dialog.am {
   display: flex;
   justify-content: space-between;
   font-family: var(--font-body);
-  font-size: 11px;
+  font-size: var(--text-xs);
   color: var(--text-muted);
   padding: 0 2px;
 }
@@ -192,7 +192,7 @@ dialog.am {
 .am__play-btn {
   width: 56px;
   height: 56px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--accent);
   color: white;
   border: none;
@@ -217,7 +217,7 @@ dialog.am {
 .am__skip-btn {
   width: 48px;
   height: 48px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--bg-card);
   border: 1px solid var(--border);
   color: var(--text-secondary);
@@ -238,7 +238,7 @@ dialog.am {
 
 .am__skip-btn span {
   font-family: var(--font-heading);
-  font-size: 9px;
+  font-size: var(--text-3xs);
   font-weight: 700;
   line-height: 1;
 }
@@ -262,7 +262,7 @@ dialog.am {
   align-items: center;
   gap: 5px;
   font-family: var(--font-heading);
-  font-size: 10px;
+  font-size: var(--text-2xs);
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -279,7 +279,7 @@ dialog.am {
 
 .am__paragraph {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: var(--text-sm);
   line-height: 1.7;
   color: var(--text-secondary);
   margin: 0;
@@ -290,7 +290,7 @@ dialog.am {
 
 .am__paragraph:first-child {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: var(--text-base);
   font-weight: 600;
   color: var(--text-primary);
   border-left-color: var(--accent);

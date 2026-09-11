@@ -22,12 +22,12 @@
 }
 
 .personal-best__icon {
-  font-size: 16px;
+  font-size: var(--text-lg);
 }
 
 .personal-best__text {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: var(--text-sm);
   color: var(--text-secondary);
 }
 

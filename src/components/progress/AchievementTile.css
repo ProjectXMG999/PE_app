@@ -48,7 +48,7 @@ button.achtile:active {
 .achtile__threshold,
 .achtile__count {
   font-family: var(--font-heading);
-  font-size: 10px;
+  font-size: var(--text-2xs);
   font-weight: 600;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;

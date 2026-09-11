@@ -19,7 +19,7 @@
 .mstone-tick__label {
   flex-shrink: 0;
   font-family: var(--font-heading);
-  font-size: 10px;
+  font-size: var(--text-2xs);
   font-weight: 700;
   letter-spacing: 0.08em;
   font-variant-numeric: tabular-nums;
@@ -32,7 +32,7 @@
 
 .mstone-tick.is-passed::before,
 .mstone-tick.is-passed::after {
-  background: color-mix(in srgb, var(--accent) 35%, transparent);
+  background: color-mix(in oklch, var(--accent) 35%, transparent);
 }
 
 /* ── Station: a level threshold. The moment worth stopping for. ────────── */
@@ -48,11 +48,11 @@
 .mstone__rule {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--station) 55%, transparent));
+  background: linear-gradient(90deg, transparent, color-mix(in oklch, var(--station) 55%, transparent));
 }
 
 .mstone__rule:last-child {
-  background: linear-gradient(90deg, color-mix(in srgb, var(--station) 55%, transparent), transparent);
+  background: linear-gradient(90deg, color-mix(in oklch, var(--station) 55%, transparent), transparent);
 }
 
 .mstone__body {
@@ -61,16 +61,16 @@
   text-align: center;
   padding: 10px var(--spacing-md);
   border-radius: var(--radius-lg);
-  border: 1px solid color-mix(in srgb, var(--station) 34%, var(--border));
+  border: 1px solid color-mix(in oklch, var(--station) 34%, var(--border));
   background: linear-gradient(160deg,
-    color-mix(in srgb, var(--station) 10%, var(--bg-card)) 0%,
+    color-mix(in oklch, var(--station) 10%, var(--bg-card)) 0%,
     var(--bg-card) 62%);
 }
 
 .mstone__words {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: 20px;
+  font-size: var(--text-xl);
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -79,7 +79,7 @@
 }
 
 .mstone__words span {
-  font-size: 11px;
+  font-size: var(--text-xs);
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -89,7 +89,7 @@
 .mstone__name {
   margin: 4px 0 0;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 700;
   color: var(--text-primary);
 }
@@ -97,7 +97,7 @@
 .mstone__promise {
   margin: 2px 0 0;
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: var(--text-xs-plus);
   line-height: 1.4;
   color: var(--text-secondary);
 }
@@ -105,7 +105,7 @@
 .mstone__state {
   margin: 6px 0 0;
   font-family: var(--font-heading);
-  font-size: 11px;
+  font-size: var(--text-xs);
   font-weight: 700;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;

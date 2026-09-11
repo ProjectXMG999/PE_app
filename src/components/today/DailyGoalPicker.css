@@ -10,7 +10,7 @@
 
 .goalpicker::backdrop {
   background: var(--overlay);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(var(--scrim-blur));
 }
 
 .goalpicker__inner {
