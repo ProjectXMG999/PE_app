@@ -1,354 +1,208 @@
-.autoplay-mode {
-  display: flex;
-  flex-direction: column;
-  height: 100dvh;
-  overflow-y: auto;
-  padding: var(--spacing-md) var(--spacing-md) var(--spacing-xl);
-  gap: var(--spacing-lg);
+/* =============================================================================
+ * SŁUCHAJ — mode chooser. Layout, header and cards come from ModeScreen.css;
+ * everything here is specific to listening: the interrupted-session rail, the
+ * tempo control and the per-mode step strip.
+ * ========================================================================== */
+
+/* ── Interrupted session ──────────────────────────────────────────────────── */
+
+/* A session left mid-way is time-sensitive, not "earned" — the one place on
+   this screen that wears --live rather than a mode colour. */
+.resume {
+  padding: 13px var(--spacing-md) 14px;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(110% 90% at 0% 0%,
+      color-mix(in oklch, var(--live) 22%, transparent) 0%, transparent 60%),
+    var(--bg-card);
+  border: 1px solid color-mix(in oklch, var(--live) 32%, transparent);
+  box-shadow: var(--shadow-card);
 }
 
-.autoplay-mode__header {
+.resume__top {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: var(--spacing-sm);
 }
 
-.autoplay-mode__back {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 0 10px 0 6px;
-  height: 36px;
-  border-radius: var(--radius-full);
-  background: transparent;
-  border: none;
+.resume__kicker {
+  color: var(--live);
+}
+
+.resume__count {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
   color: var(--text-secondary);
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: background var(--transition-fast), color var(--transition-fast);
+  font-variant-numeric: tabular-nums;
 }
 
-.autoplay-mode__back:hover {
-  background: var(--bg-card);
-  color: var(--text-primary);
-}
-
-.autoplay-mode__back-label {
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.autoplay-mode__pack-name {
-  font-family: var(--font-heading);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text-muted);
-  white-space: nowrap;
+.resume__bar {
+  position: relative;
+  height: 4px;
+  margin: 10px 0 11px;
+  border-radius: var(--radius-full);
+  background: var(--surface-translucent-strong);
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-.autoplay-mode__title {
-  font-family: var(--font-heading);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text-primary);
-  padding: 0 var(--spacing-xs);
+.resume__bar i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--live);
+  box-shadow: 0 0 12px color-mix(in oklch, var(--live) 55%, transparent);
 }
 
-.autoplay-mode__cards {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-}
-
-/* ── Resume banner ─────────────────────────────────────────────────── */
-
-.autoplay-mode__resume {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-sm);
-  padding: 10px var(--spacing-md);
-  border-radius: var(--radius-lg);
-  background: var(--bg-surface);
-  border: 1px solid var(--border-accent);
-}
-
-.autoplay-mode__resume-text {
+.resume__text {
+  display: block;
+  margin-bottom: 11px;
   font-family: var(--font-body);
-  font-size: 13px;
-  color: var(--text-secondary);
-}
-
-.autoplay-mode__resume-text strong {
-  color: var(--text-primary);
-  font-family: var(--font-heading);
-}
-
-.autoplay-mode__resume-actions {
-  display: flex;
-  gap: var(--spacing-sm);
-}
-
-.autoplay-mode__resume-btn {
-  height: 34px;
-  padding: 0 16px;
-  border-radius: var(--radius-full);
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text-secondary);
-  background: transparent;
-  border: 1px solid var(--border);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.autoplay-mode__resume-btn:hover {
-  border-color: var(--border-accent);
-  color: var(--text-primary);
-}
-
-.autoplay-mode__resume-btn--primary {
-  color: white;
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-.autoplay-mode__resume-btn--primary:hover {
-  background: var(--accent-bright);
-  color: white;
-}
-
-/* ── Tempo pre-set ─────────────────────────────────────────────────── */
-
-.autoplay-mode__tempo {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  padding: 0 var(--spacing-xs);
-}
-
-.autoplay-mode__tempo-label {
-  font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 700;
+  font-size: var(--text-sm);
   color: var(--text-muted);
-  flex-shrink: 0;
 }
 
-.autoplay-mode__tempo-pills {
-  display: flex;
-  gap: 4px;
-  flex: 1;
-}
-
-.autoplay-mode__tempo-pill {
-  flex: 1;
-  height: 32px;
-  border-radius: var(--radius-full);
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--text-muted);
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.autoplay-mode__tempo-pill--active {
-  color: white;
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-.autoplay-mode__info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  padding: 0 var(--spacing-xs);
-}
-
-.autoplay-mode__info-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-sm);
-  width: 100%;
-  padding: 10px 0;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-family: var(--font-heading);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-secondary);
-  transition: color var(--transition-fast);
-}
-
-.autoplay-mode__info-toggle:hover {
-  color: var(--text-primary);
-}
-
-.autoplay-mode__info-chevron {
-  flex-shrink: 0;
-  color: var(--text-muted);
-  transition: transform var(--transition-fast);
-}
-
-.autoplay-mode__info-chevron--open {
-  transform: rotate(180deg);
-}
-
-.autoplay-mode__info-desc {
-  font-family: var(--font-body);
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-  padding-bottom: 10px;
-}
-
-@media (min-width: 1024px) {
-  .autoplay-mode {
-    height: 100%;
-    overflow: visible;
-    padding: var(--spacing-xl) 0 var(--spacing-2xl);
-    max-width: 1080px;
-    margin: 0 auto;
-  }
-
-  .autoplay-mode__cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
-    align-items: stretch;
-  }
-
-  .autoplay-mode__card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.autoplay-mode__card {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md) var(--spacing-lg);
-  border-radius: var(--radius-lg);
-  background: var(--bg-surface);
-  border: 2px solid var(--border);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  text-align: left;
-  width: 100%;
-}
-
-.autoplay-mode__card:hover {
-  border-color: var(--accent);
-  background: var(--bg-card);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(139, 92, 246, 0.12);
-}
-
-.autoplay-mode__card:active {
-  transform: scale(0.98);
-}
-
-.autoplay-mode__card--selected {
-  border-color: var(--accent);
-  background: var(--bg-card);
-}
-
-.autoplay-mode__card-icon {
-  font-size: 26px;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.autoplay-mode__card-body {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex: 1;
-}
-
-.autoplay-mode__card-name {
-  display: flex;
-  align-items: center;
+/* Two real thumb targets, side by side and full width — these are the only
+   buttons on the screen that aren't a whole card. */
+.resume__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
+}
+
+.resume__btn {
+  min-height: 46px;
+  padding: 0 12px;
+  border-radius: var(--radius-md);
   font-family: var(--font-heading);
-  font-size: 17px;
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.2;
-}
-
-.autoplay-mode__card-badge {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--accent-bright);
-  background: var(--accent-glow);
-  border-radius: var(--radius-full);
-  padding: 2px 7px;
-}
-
-/* Step preview — one chip per clip the mode will actually play for this pack. */
-.autoplay-mode__card-seq {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin: 1px 0;
-}
-
-.autoplay-mode__seq-dot {
-  font-family: var(--font-heading);
-  font-size: 10px;
+  font-size: var(--text-base);
   font-weight: 700;
   color: var(--text-secondary);
-  background: var(--bg-primary);
+  background: var(--surface-translucent-strong);
   border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 1px 6px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast),
+              background var(--transition-fast), transform var(--transition-fast);
+}
+
+.resume__btn:active { transform: scale(0.985); }
+
+.resume__btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  background: var(--surface-translucent-strong);
+}
+
+.resume__btn--primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--live) 0%,
+    color-mix(in oklch, var(--live) 58%, black) 100%);
+  border-color: transparent;
+  box-shadow: 0 6px 18px color-mix(in oklch, var(--live) 32%, transparent);
+}
+
+.resume__btn--primary:hover {
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 22px color-mix(in oklch, var(--live) 42%, transparent);
+}
+
+/* ── Step strip ───────────────────────────────────────────────────────────── */
+
+.seqstrip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.seqstrip__bead {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: var(--surface-translucent-strong);
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
   white-space: nowrap;
 }
 
-.autoplay-mode__seq-dot[data-line="0"] { color: var(--text-muted); }
-.autoplay-mode__seq-dot[data-line="1"] { color: var(--accent-bright); border-color: var(--border-accent); }
-.autoplay-mode__seq-dot[data-line="2"],
-.autoplay-mode__seq-dot[data-line="3"] { color: var(--text-secondary); font-style: italic; }
+/* The English clip is the payload of every sequence — it carries the card's
+   colour, so the strip is also a second read of which mode you're looking at. */
+.seqstrip__bead[data-line="1"] {
+  color: color-mix(in oklch, var(--card-accent, var(--mode-accent)) 80%, var(--text-primary));
+  border-color: color-mix(in oklch, var(--card-accent, var(--mode-accent)) 48%, transparent);
+  background: color-mix(in oklch, var(--card-accent, var(--mode-accent)) 18%, transparent);
+}
 
-.autoplay-mode__card-desc {
-  font-family: var(--font-body);
-  font-size: 13px;
+.seqstrip__bead[data-line="2"],
+.seqstrip__bead[data-line="3"] {
   color: var(--text-secondary);
-  line-height: 1.4;
-  margin-top: 2px;
 }
 
-.autoplay-mode__card-dur {
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--text-muted);
-  margin-top: 2px;
+.seqstrip__bead em {
+  font-style: normal;
+  font-size: 9px;
+  opacity: 0.75;
 }
 
-.autoplay-mode__card-arrow {
-  color: var(--text-muted);
+.seqstrip__link {
+  width: 8px;
+  height: 1px;
   flex-shrink: 0;
-  transition: transform var(--transition-fast), color var(--transition-fast);
+  background: var(--border-strong);
 }
 
-.autoplay-mode__card:hover .autoplay-mode__card-arrow {
-  color: var(--accent);
-  transform: translateX(3px);
+/* ── Tempo ────────────────────────────────────────────────────────────────── */
+
+.tempo__track {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.tempo__pill {
+  flex: 1;
+  min-height: 40px;
+  border-radius: var(--radius-full);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.tempo__pill:hover {
+  color: var(--text-primary);
+  background: var(--surface-translucent-strong);
+}
+
+.tempo__pill--active,
+.tempo__pill--active:hover {
+  color: #fff;
+  background: linear-gradient(135deg, var(--mode-accent) 0%,
+    color-mix(in oklch, var(--mode-accent) 58%, black) 100%);
+  box-shadow: 0 4px 14px color-mix(in oklch, var(--mode-accent) 38%, transparent);
+}
+
+.tempo__hint {
+  margin: 9px 0 0;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
 }

@@ -36,7 +36,8 @@ export function TrainingExercisePage() {
             <div
               className="training-detail__icon"
               style={{
-                background: `color-mix(in srgb, ${exercise.color} 13%, transparent)`,
+                background: `color-mix(in oklch, ${exercise.color} 16%, transparent)`,
+                borderColor: `color-mix(in oklch, ${exercise.color} 26%, transparent)`,
                 color: exercise.color,
                 viewTransitionName: `exercise-icon-${exercise.id}`,
               }}

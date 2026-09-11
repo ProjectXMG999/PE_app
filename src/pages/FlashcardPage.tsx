@@ -2,9 +2,9 @@ import { useEffect, useRef, useCallback, useState } from 'react'
 import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell'
 import { FlashcardHeader } from '../components/flashcard/FlashcardHeader'
-import { ModeToggle } from '../components/flashcard/ModeToggle'
 import { FlashCard } from '../components/flashcard/FlashCard'
 import { AudioButton } from '../components/flashcard/AudioButton'
+import { StageHeader, StageTrack, useStageAmbient } from '../components/flashcard/StudyStage'
 import { ProgressBar } from '../components/flashcard/ProgressBar'
 import { MasteryScreen } from '../components/flashcard/MasteryScreen'
 import { AutoplayDoneScreen } from '../components/flashcard/AutoplayDoneScreen'
@@ -17,11 +17,11 @@ import { useAutoplaySequence } from '../hooks/useAutoplaySequence'
 import { useWakeLock } from '../hooks/useWakeLock'
 import { useMediaSession } from '../hooks/useMediaSession'
 import { startKeepAlive, stopKeepAlive } from '../audio/keepAlive'
-import { useAppStore } from '../store/useAppStore'
+import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { saveSession, savePackageProgress, getPackageProgress, saveWordProgress, getPackageWordProgress, getWordProgress } from '../services/db'
 import { StudyMode } from '../types/progress'
 import { applyKnown, applyUnknown } from '../services/review'
-import { planSequence, estimateWordMs } from '../config/autoplayModes'
+import { AUTOPLAY_MODES, planSequence, estimateWordMs } from '../config/autoplayModes'
 import { RATES } from '../constants/audioRates'
 import { useStudyClock } from '../hooks/useStudyClock'
 import { dayKey } from '../utils/day'
@@ -67,6 +67,9 @@ export function FlashcardPage() {
   // Trenuj pages where a hidden tab means the user has genuinely stopped.
   const { elapsedSec } = useStudyClock({ countWhileHidden: studyMode === 'autoplay' })
   const sessionStartRef = useRef<string>(dayKey())
+  // Raw signal for adaptive difficulty — fiszki only (autoplay has no verdicts).
+  const ratedRef = useRef(0)
+  const knownHitRef = useRef(0)
   const startedAtRef = useRef<string | null>(null)
   const masteredAtRef = useRef<string | null>(null)
   const completedAtRef = useRef<string | null>(null)
@@ -156,6 +159,8 @@ export function FlashcardPage() {
     completedAtRef.current = null
     savedIndexRef.current = 0
     sessionStartRef.current = dayKey()
+    ratedRef.current = 0
+    knownHitRef.current = 0
     return () => {
       stop()
     }
@@ -243,7 +248,15 @@ export function FlashcardPage() {
         mode: studyMode,
         autoplayMode: studyMode === 'autoplay' ? autoplayMode : undefined,
         durationSec: elapsedSec(),
+        ratedCount: studyMode === 'fiszki' ? ratedRef.current : undefined,
+        knownHitCount: studyMode === 'fiszki' ? knownHitRef.current : undefined,
       })
+      if (studyMode === 'fiszki') {
+        useAppStore.getState().applyTrainingOutcome({
+          ratedCount: ratedRef.current,
+          knownHitCount: knownHitRef.current,
+        })
+      }
     }
   }, [packageId, total, studyMode, allWords.length, autoplayMode, elapsedSec])
 
@@ -254,10 +267,13 @@ export function FlashcardPage() {
       // wiping however many times the word had actually been seen.
       const existing = await getWordProgress(currentWord.id)
       const wasKnown = existing?.status === 'known'
+      const rrOpts = { requestRetention: currentRequestRetention() }
       const updated = status === 'known'
-        ? applyKnown(existing, currentWord.id, packageId ?? '')
-        : applyUnknown(existing, currentWord.id, packageId ?? '')
+        ? applyKnown(existing, currentWord.id, packageId ?? '', new Date(), rrOpts)
+        : applyUnknown(existing, currentWord.id, packageId ?? '', new Date(), rrOpts)
       await saveWordProgress(updated)
+      ratedRef.current += 1
+      if (status === 'known') knownHitRef.current += 1
 
       if (status === 'known' && !wasKnown) {
         setKnownCount(c => c + 1)
@@ -350,8 +366,9 @@ export function FlashcardPage() {
     // with no follow-up.
     const existingList = await getPackageWordProgress(packageId)
     const byId = new Map(existingList.map(w => [w.wordId, w]))
+    const rrOpts = { requestRetention: currentRequestRetention() }
     await Promise.all(allWords.map(w =>
-      saveWordProgress(applyKnown(byId.get(w.id), w.id, packageId))
+      saveWordProgress(applyKnown(byId.get(w.id), w.id, packageId, new Date(), rrOpts))
     ))
     await savePackageProgress({
       packageId,
@@ -373,6 +390,8 @@ export function FlashcardPage() {
     reset()
     restart()
     sessionStartRef.current = dayKey()
+    ratedRef.current = 0
+    knownHitRef.current = 0
   }, [reset, stop, allWords, restart])
 
   const handleNextPack = useCallback(() => {
@@ -395,6 +414,11 @@ export function FlashcardPage() {
 
   // Keep screen awake while autoplay is actively running (paused → dim normally)
   useWakeLock(studyMode === 'autoplay' && !isPaused && !showCompletion && !loading)
+
+  // The player owns the whole screen, so the ambient shader has nothing to do
+  // but burn battery behind it — and this is the one session that deliberately
+  // holds the screen awake. See the hook's note.
+  useStageAmbient()
 
   // Experimental (opt-in via Settings): silent loop keeps timers + media session
   // alive during gaps with the screen off — see audio/keepAlive.ts. Off by default
@@ -546,6 +570,7 @@ export function FlashcardPage() {
     const TOTAL_SECS = 6
     return (
       <AutoplayDoneScreen
+        accent={AUTOPLAY_MODES[autoplayMode].color}
         packName={pack.name}
         wordCount={total}
         newCount={Math.max(0, total - knownCount)}
@@ -565,8 +590,70 @@ export function FlashcardPage() {
 
   if (!currentWord) return null
 
-  // ─── Study view ────────────────────────────────────────────────────────────
+  // ─── Listening player ──────────────────────────────────────────────────────
+  // Its own screen, like every other study mode: no AppShell chrome above the
+  // session's own header, and the whole thing tinted by the mode you picked on
+  // the chooser — so landing here never changes colour under you.
+  if (studyMode === 'autoplay') {
+    const heardPct = total > 0 ? Math.min((currentCardIndex / total) * 100, 100) : 0
+    const knownPct = total > 0 ? Math.min((knownCount / total) * 100, 100) : 0
+    const minsLeft = Math.max(1, Math.round(
+      estimateWordMs(autoplayMode, currentWord) * (total - currentCardIndex) / 60000
+    ))
 
+    return (
+      <div
+        className="stage stage--listen"
+        style={{ ['--stage-accent' as string]: AUTOPLAY_MODES[autoplayMode].color }}
+      >
+        <StageHeader
+          kicker={<>Słuchaj · {AUTOPLAY_MODES[autoplayMode].label}</>}
+          packageId={packageId}
+          counter={`${currentCardIndex + 1} / ${total}`}
+          onExit={() => navigate(packageId ? `/pakiet/${packageId}` : '/')}
+          exitLabel="Wróć do pakietu"
+        />
+
+        <div className="stage__rail">
+          <StageTrack current={heardPct} known={knownPct} />
+        </div>
+
+        <div className="stage__scene">
+          <FlashCard
+            key={currentCardIndex}
+            word={currentWord}
+            revealStep={revealStep}
+            mode={studyMode}
+            onClick={repeatLine}
+            activeLine={playStep}
+            footer={`≈ ${minsLeft} min do końca`}
+          />
+        </div>
+
+        <AutoplayControls
+          autoplayMode={autoplayMode}
+          onModeChange={handleModeChange}
+          stepLines={planSequence(autoplayMode, currentWord).map(s => s.line)}
+          playStep={playStep}
+          audioLoading={audioLoading}
+          audioError={audioError}
+          isPaused={isPaused}
+          onPauseResume={handlePauseResume}
+          onRestart={restartCurrentWord}
+          onSkip={handleSkip}
+          onOpenSettings={() => setSheetOpen(true)}
+          enRate={enRate}
+          onSlower={handleSlower}
+          canSlower={enRate > RATES[0].value}
+          countdown={speakCountdown}
+        />
+
+        {sheetOpen && <AutoplaySettingsSheet onClose={() => setSheetOpen(false)} />}
+      </div>
+    )
+  }
+
+  // ─── Legacy staged-reveal flashcards (/pakiet/:id/fiszki) ──────────────────
   return (
     <AppShell hideBottomNav hideSidebar={false}>
       <ProgressBar current={currentCardIndex} total={total} knownCount={knownCount} />
@@ -577,13 +664,8 @@ export function FlashcardPage() {
         word={currentWord}
         revealStep={revealStep}
         mode={studyMode}
-        onClick={studyMode === 'autoplay' ? repeatLine : reveal}
-        activeLine={studyMode === 'autoplay' ? playStep : null}
-        footer={
-          studyMode === 'autoplay'
-            ? `≈ ${Math.max(1, Math.round(estimateWordMs(autoplayMode, currentWord) * (total - currentCardIndex) / 60000))} min do końca`
-            : undefined
-        }
+        onClick={reveal}
+        activeLine={null}
       />
 
       {studyMode === 'fiszki' && (
@@ -627,27 +709,7 @@ export function FlashcardPage() {
         </>
       )}
 
-      {studyMode === 'autoplay' && (
-        <AutoplayControls
-          autoplayMode={autoplayMode}
-          onModeChange={handleModeChange}
-          stepLines={planSequence(autoplayMode, currentWord).map(s => s.line)}
-          playStep={playStep}
-          audioLoading={audioLoading}
-          audioError={audioError}
-          isPaused={isPaused}
-          onPauseResume={handlePauseResume}
-          onRestart={restartCurrentWord}
-          onSkip={handleSkip}
-          onOpenSettings={() => setSheetOpen(true)}
-          enRate={enRate}
-          onSlower={handleSlower}
-          canSlower={enRate > RATES[0].value}
-          countdown={speakCountdown}
-        />
-      )}
       </div>
-      {sheetOpen && <AutoplaySettingsSheet onClose={() => setSheetOpen(false)} />}
     </AppShell>
   )
 }

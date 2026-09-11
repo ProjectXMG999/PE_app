@@ -1,9 +1,20 @@
+import { ReactNode, CSSProperties } from 'react'
 import { AUTOPLAY_MODES, AutoplayLine } from '../../config/autoplayModes'
 import { AutoplayMode } from '../../types/progress'
+import { BoltGlyph, LevelsGlyph, MicGlyph } from '../mode/glyphs'
 import './AutoplayControls.css'
 
 const LINE_LABEL: Record<AutoplayLine, string> = { 0: 'PL', 1: 'EN', 2: 'PL zd.', 3: 'EN zd.' }
-const MODE_ICON: Record<AutoplayMode, string> = { fast: '⚡', standard: '⭐', speaking: '🎙️' }
+
+/** The same three glyphs the chooser uses for these modes — not emoji, which
+ *  render differently everywhere and can't take the mode's colour. */
+const MODE_GLYPH: Record<AutoplayMode, ReactNode> = {
+  fast: <BoltGlyph size={15} />,
+  standard: <LevelsGlyph size={15} />,
+  speaking: <MicGlyph size={15} />,
+}
+
+const MODE_ORDER: AutoplayMode[] = ['fast', 'standard', 'speaking']
 
 export interface AutoplayCountdown {
   ms: number
@@ -43,16 +54,21 @@ export function AutoplayControls({
 }: Props) {
   return (
     <div className="apc">
+      {/* Each mode keeps its own colour from the chooser, so switching mid-run
+          recolours the whole player and you can see which one you're in without
+          reading the pills. */}
       <div className="apc__mode-pills" role="radiogroup" aria-label="Tryb słuchania">
-        {(['fast', 'standard', 'speaking'] as const).map(m => (
+        {MODE_ORDER.map(m => (
           <button
             key={m}
             role="radio"
             aria-checked={autoplayMode === m}
-            className={`apc__mode-pill ${autoplayMode === m ? 'active' : ''}`}
+            className={`apc__mode-pill${autoplayMode === m ? ' is-active' : ''}`}
+            style={{ ['--mode-color' as string]: AUTOPLAY_MODES[m].color } as CSSProperties}
             onClick={() => onModeChange(m)}
           >
-            {MODE_ICON[m]} {AUTOPLAY_MODES[m].label}
+            <span className="apc__mode-glyph" aria-hidden="true">{MODE_GLYPH[m]}</span>
+            {AUTOPLAY_MODES[m].label}
           </button>
         ))}
       </div>
@@ -126,7 +142,7 @@ export function AutoplayControls({
             </svg>
           )}
           <button
-            className={`apc__pause-btn ${isPaused ? 'apc__pause-btn--paused' : ''}`}
+            className={`apc__pause-btn${isPaused ? ' apc__pause-btn--paused' : ' u-cta'}`}
             onClick={onPauseResume}
             aria-label={isPaused ? 'Wznów' : 'Pauza'}
           >

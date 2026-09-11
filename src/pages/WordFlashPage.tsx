@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { usePackageData } from '../hooks/usePackageData'
 import { useAudio } from '../hooks/useAudio'
 import { useCardFlip } from '../hooks/useCardFlip'
-import { useAppStore } from '../store/useAppStore'
+import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { MasteryScreen } from '../components/flashcard/MasteryScreen'
 import { SessionDoneScreen } from '../components/flashcard/SessionDoneScreen'
 import { Word } from '../types/vocabulary'
@@ -14,7 +14,7 @@ import { useStudyClock } from '../hooks/useStudyClock'
 import { dayKey } from '../utils/day'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
-import './WordFlashPage.css'
+import { StudyStage, StageTrack } from '../components/flashcard/StudyStage'
 
 const allPacks = packagesIndex as PackMeta[]
 
@@ -36,6 +36,11 @@ export function WordFlashPage() {
   const [done, setDone] = useState(false)
 
   const sessionStartRef = useRef(false)
+  // Raw signal for adaptive difficulty: how many cards got a verdict this
+  // session and how many were "Znam". Refs, not state — read once at session end
+  // inside the `advance` callback, never rendered.
+  const ratedRef = useRef(0)
+  const knownHitRef = useRef(0)
 
   useEffect(() => {
     if (!pack || !packageId) return
@@ -82,12 +87,15 @@ export function WordFlashPage() {
     // applyUnknown reschedules it instead, so the route count never drops.
     const existing = progressMap.get(currentWord.id)
     const wasKnown = existing?.status === 'known'
+    const rrOpts = { requestRetention: currentRequestRetention() }
     const updated: WordProgress = markKnown
-      ? applyKnown(existing, currentWord.id, packageId)
-      : applyUnknown(existing, currentWord.id, packageId)
+      ? applyKnown(existing, currentWord.id, packageId, new Date(), rrOpts)
+      : applyUnknown(existing, currentWord.id, packageId, new Date(), rrOpts)
 
     await saveWordProgress(updated)
     setProgressMap(prev => new Map(prev).set(currentWord.id, updated))
+    ratedRef.current += 1
+    if (markKnown) knownHitRef.current += 1
     if (markKnown && !wasKnown) {
       setKnownCount(c => c + 1)
       setSessionKnown(c => c + 1)
@@ -105,6 +113,12 @@ export function WordFlashPage() {
             mode: 'fiszki',
             trainMode: 'word-flash',
             durationSec: elapsedSec(),
+            ratedCount: ratedRef.current,
+            knownHitCount: knownHitRef.current,
+          })
+          useAppStore.getState().applyTrainingOutcome({
+            ratedCount: ratedRef.current,
+            knownHitCount: knownHitRef.current,
           })
         }
         const allProgress = await getPackageWordProgress(packageId)
@@ -147,11 +161,13 @@ export function WordFlashPage() {
       setDone(false)
       setSessionKnown(0)
       sessionStartRef.current = false
+      ratedRef.current = 0
+      knownHitRef.current = 0
     })
   }, [pack, packageId])
 
   if (loading || studyWords.length === 0) {
-    return <div className="wf-loading"><div className="spinner" /></div>
+    return <div className="stage-loading"><div className="spinner" /></div>
   }
 
   if (showMastery && pack) {
@@ -186,76 +202,25 @@ export function WordFlashPage() {
   const flipped = side === 'back'
 
   return (
-    <div className="wf">
-      <div className="wf__header">
-        <button className="wf__back" onClick={() => { stop(); navigate(-1) }} aria-label="Wróć">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="15 18 9 12 15 6"/>
-          </svg>
-        </button>
-        <div className="wf__progress-bar">
-          <div className="wf__progress-known" style={{ width: `${knownPct}%` }} />
-          <div className="wf__progress-current" style={{ width: `${progressPct}%` }} />
-        </div>
-        <span className="wf__counter">{cardIndex + 1} / {total}</span>
-      </div>
-
-      <div className="wf__scene">
-        <div
-          key={cardIndex}
-          className={`wf__card${cardClass('wf__card')}`}
-          onClick={flipCard}
-          onAnimationEnd={handleAnimationEnd}
-          role="button"
-          tabIndex={0}
-          onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && flipCard()}
-        >
-          {side === 'front' ? (
-            <div className="wf__face wf__face--front">
-              <span className="wf__lang-badge wf__lang-badge--pl">PL</span>
-              <div className="wf__content">
-                <p className="wf__word wf__word--pl">{currentWord?.polish}</p>
-              </div>
-              <p className="wf__tap-hint">Powiedz po angielsku. Potem odsłoń.</p>
-            </div>
-          ) : (
-            <div className="wf__face wf__face--back">
-              <span className="wf__lang-badge wf__lang-badge--en">EN</span>
-              <div className="wf__content">
-                <div className="wf__word-row">
-                  <p className="wf__word wf__word--en">{currentWord?.english}</p>
-                  <button
-                    className="wf__play wf__play--accent"
-                    onClick={e => { e.stopPropagation(); stop(); if (currentWord) playWord(currentWord) }}
-                    aria-label="Wymowa EN"
-                  >
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                      <polygon points="5,3 19,12 5,21"/>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <p className="wf__tap-hint">dotknij, aby zobaczyć przód</p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className={`wf__actions${flipped && !isAdvancing ? ' wf__actions--visible' : ''}`}>
-        <button className="wf__btn wf__btn--unknown" onClick={() => advance(false)} disabled={isAdvancing}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <line x1="18" y1="6" x2="6" y2="18"/>
-            <line x1="6" y1="6" x2="18" y2="18"/>
-          </svg>
-          Nie znam
-        </button>
-        <button className="wf__btn wf__btn--known" onClick={() => advance(true)} disabled={isAdvancing}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="20 6 9 17 4 12"/>
-          </svg>
-          Znam
-        </button>
-      </div>
-    </div>
+    <StudyStage
+      tone="train"
+      kicker="Word Flash"
+      packageId={packageId}
+      counter={`${cardIndex + 1} / ${total}`}
+      rail={<StageTrack current={progressPct} known={knownPct} />}
+      onExit={() => { stop(); navigate(-1) }}
+      exitLabel="Wróć do pakietu"
+      cardKey={cardIndex}
+      polish={currentWord?.polish ?? ''}
+      english={currentWord?.english ?? ''}
+      side={side}
+      cardClass={cardClass}
+      onFlip={flipCard}
+      onAnimationEnd={handleAnimationEnd}
+      onPlay={() => { stop(); if (currentWord) playWord(currentWord) }}
+      answersVisible={flipped && !isAdvancing}
+      answersDisabled={isAdvancing}
+      onAnswer={advance}
+    />
   )
 }

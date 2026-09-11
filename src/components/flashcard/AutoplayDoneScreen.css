@@ -1,4 +1,12 @@
+/* =============================================================================
+ * AUTOPLAY DONE — the end of a listening run.
+ * -----------------------------------------------------------------------------
+ * Inherits --stage-accent from the player, so the wave, the glow and the
+ * primary action all stay in the mode's colour you just listened in.
+ * ========================================================================== */
+
 .apdone {
+  --stage-accent: var(--accent);
   position: fixed;
   inset: 0;
   display: flex;
@@ -34,12 +42,14 @@
   justify-content: center;
 }
 
+/* `color` is what the canvas paints with — see the note in the component. */
 .apdone__canvas {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   border-radius: var(--radius-xl);
+  color: var(--stage-accent);
 }
 
 .apdone__icon {
@@ -47,7 +57,7 @@
   font-size: 52px;
   line-height: 1;
   animation: icon-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s both;
-  filter: drop-shadow(0 0 24px rgba(139, 92, 246, 0.5));
+  filter: drop-shadow(0 0 24px color-mix(in oklch, var(--stage-accent) 50%, transparent));
   z-index: 1;
 }
 
@@ -72,10 +82,12 @@
 }
 
 .apdone__sub {
-  font-size: 14px;
-  color: var(--text-muted);
   font-family: var(--font-heading);
+  font-size: var(--text-base);
+  color: var(--text-muted);
 }
+
+.apdone__sub strong { color: var(--text-secondary); }
 
 .apdone__actions {
   display: flex;
@@ -95,16 +107,21 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
+  min-height: 56px;
   padding: var(--spacing-md) var(--spacing-lg);
   border-radius: var(--radius-lg);
   font-family: var(--font-heading);
-  transition: all var(--transition-fast);
   cursor: pointer;
   text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast),
+              background var(--transition-fast), transform var(--transition-fast);
 }
 
+.apdone__btn:active { transform: scale(0.985); }
+
 .apdone__btn-icon {
-  font-size: 20px;
+  font-size: var(--text-xl);
   flex-shrink: 0;
 }
 
@@ -116,13 +133,13 @@
 }
 
 .apdone__btn-label {
-  font-size: 15px;
+  font-size: var(--text-md);
   font-weight: 700;
   line-height: 1.2;
 }
 
 .apdone__btn-sub {
-  font-size: 11px;
+  font-size: var(--text-xs);
   font-weight: 500;
   opacity: 0.65;
   white-space: nowrap;
@@ -130,50 +147,44 @@
   text-overflow: ellipsis;
 }
 
+/* The one primary action, on the shared CTA primitive in the mode's colour. */
 .apdone__btn--mastered {
-  background: var(--accent);
-  color: white;
-  box-shadow: 0 4px 20px var(--accent-glow);
-  border: 1px solid transparent;
-}
-
-.apdone__btn--mastered:hover {
-  background: var(--accent-bright);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 24px var(--accent-glow);
+  --u-cta-color: var(--stage-accent);
+  border: none;
 }
 
 .apdone__btn--practice {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-accent);
   color: var(--text-primary);
+  background: color-mix(in oklch, var(--stage-accent) 12%, transparent);
+  border: 1px solid color-mix(in oklch, var(--stage-accent) 40%, transparent);
 }
 
 .apdone__btn--practice:hover {
-  background: var(--bg-card);
-  border-color: var(--accent);
+  background: color-mix(in oklch, var(--stage-accent) 20%, transparent);
+  border-color: color-mix(in oklch, var(--stage-accent) 60%, transparent);
 }
 
 .apdone__btn--secondary {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  color: var(--text-primary);
-  padding: var(--spacing-md);
-  gap: var(--spacing-sm);
   justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  color: var(--text-primary);
+  background: var(--surface-tile);
+  border: 1px solid var(--tile-border);
+  box-shadow: var(--tile-hi);
 }
 
 .apdone__btn--secondary:hover {
-  border-color: var(--border-accent);
-  background: var(--bg-card);
+  border-color: var(--border-strong);
+  background: var(--surface-tile-hover);
 }
 
 .apdone__btn--secondary .apdone__btn-label {
-  font-size: 14px;
+  font-size: var(--text-base);
 }
 
 .apdone__btn--secondary .apdone__btn-icon {
-  font-size: 15px;
+  font-size: var(--text-md);
   color: var(--text-muted);
 }
 
@@ -186,9 +197,10 @@
 
 .apdone__exit {
   width: 100%;
+  min-height: 44px;
   padding: var(--spacing-sm) 0;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--text-muted);
   background: none;
@@ -206,18 +218,22 @@
   width: 100%;
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-lg);
-  background: var(--bg-surface);
+  background: var(--surface-translucent);
   border: 1px solid var(--border);
   color: var(--text-muted);
   cursor: pointer;
-  transition: all var(--transition-fast);
   text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast),
+              background var(--transition-fast);
 }
 
+.apdone__autocontinue:hover { border-color: var(--border-strong); }
+
 .apdone__autocontinue--on {
-  border-color: var(--accent);
-  color: var(--accent-bright);
-  background: rgba(139, 92, 246, 0.08);
+  color: var(--stage-accent);
+  border-color: color-mix(in oklch, var(--stage-accent) 55%, transparent);
+  background: color-mix(in oklch, var(--stage-accent) 10%, transparent);
 }
 
 .apdone__ring { flex-shrink: 0; }
@@ -230,14 +246,14 @@
 
 .apdone__autocontinue-label {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: var(--text-base);
   font-weight: 700;
   line-height: 1.2;
 }
 
 .apdone__autocontinue-sub {
   font-family: var(--font-heading);
-  font-size: 11px;
+  font-size: var(--text-xs);
   font-weight: 500;
   opacity: 0.65;
 }

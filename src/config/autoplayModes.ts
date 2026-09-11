@@ -33,6 +33,16 @@ export interface AutoplayModeDef {
   label: string
   /** One-liner for the picker; sentence-aware copy lives in the picker itself. */
   blurb: string
+  /**
+   * This mode's colour, from the categorical accents in tokens.css. It runs the
+   * app's listening ramp (--listen-blue → --accent-indigo → --accent, the same
+   * ramp ListenStrip uses), so the ordering also reads as "how active is this
+   * mode": pure listening at one end, speaking at the other.
+   *
+   * Lives here, not in the picker, because the player wears it too — pick
+   * "Mówienie" on the chooser and the session you land in stays that colour.
+   */
+  color: string
   steps: AutoplayStep[]
 }
 
@@ -40,6 +50,7 @@ export const AUTOPLAY_MODES: Record<AutoplayMode, AutoplayModeDef> = {
   fast: {
     label: 'Słowa',
     blurb: 'Sam rytm słów: polskie → angielskie, szybko.',
+    color: 'var(--listen-blue)',
     steps: [
       { line: 0, clip: 'wordPl', gapMs: 500 },
       { line: 1, clip: 'word', gapMs: 900 },
@@ -48,6 +59,7 @@ export const AUTOPLAY_MODES: Record<AutoplayMode, AutoplayModeDef> = {
   standard: {
     label: 'Standard',
     blurb: 'Słowo z przerwą na przypomnienie i powtórką angielskiego.',
+    color: 'var(--accent-indigo)',
     steps: [
       { line: 0, clip: 'wordPl', gapMs: 1500 },
       { line: 1, clip: 'word', repeat: 2, repeatGapMs: 1400, gapMs: 1500 },
@@ -58,6 +70,7 @@ export const AUTOPLAY_MODES: Record<AutoplayMode, AutoplayModeDef> = {
   speaking: {
     label: 'Mówienie',
     blurb: 'Najpierw przypomnij i powiedz na głos, potem usłysz.',
+    color: 'var(--accent)',
     steps: [
       { line: 0, clip: 'wordPl', gapMs: 3000, speak: true },
       { line: 1, clip: 'word', repeat: 2, repeatGapMs: 1400, gapMs: 3000, speak: true },

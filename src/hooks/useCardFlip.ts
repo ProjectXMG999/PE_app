@@ -13,7 +13,7 @@ const ANIM_ADVANCE = 'card-advance-out'
 const PHASE_SAFETY_MS = 800
 
 /**
- * State machine for the half-flip study card (WordFlash / ActiveSentence).
+ * State machine for the half-flip study card (StudyStage / ActiveSentence).
  * One face is in the DOM at a time; the flip folds the card edge-on,
  * swaps the face at the midpoint, then unfolds. Phases advance on
  * animationend, so reduced-motion (0.01ms animations) flips instantly
@@ -105,7 +105,7 @@ export function useCardFlip() {
     }
   }, [armSafety, atFoldMidpoint, atUnfoldEnd, atAdvanceEnd, setPhase])
 
-  /** Modifier suffix for the card element, e.g. `wf__card${cardClass('wf__card')}`. */
+  /** Modifier suffix for the card element, e.g. `stage__card${cardClass('stage__card')}`. */
   const cardClass = useCallback((base: string) => {
     if (phase === 'enter') return ` ${base}--enter`
     if (phase === 'fold') return ` ${base}--fold`

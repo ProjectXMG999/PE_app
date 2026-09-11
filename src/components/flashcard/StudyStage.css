@@ -1,0 +1,456 @@
+/* =============================================================================
+ * STUDY STAGE — the flashcard session screen, shared by WordFlash, Powtórka
+ * and Inteligentny.
+ * -----------------------------------------------------------------------------
+ * One accent per session (--stage-accent) and the same primitives the rest of
+ * the app uses: the card wears the raised-hero recipe from surfaces.css
+ * (gradient ground, float shadow, glowing hairline), "Znam" is a .u-cta, and
+ * every colour is a token — the stylesheet this replaced had #10B981, #F59E0B,
+ * #F87171 and seven separate rgba(139, 92, 246, …) literals hardcoded in it.
+ *
+ * Card animation keyframes still live in styles/animations.css: their names
+ * (card-enter / card-flip-fold / card-flip-unfold / card-advance-out) are the
+ * animationend contract with useCardFlip().
+ * ========================================================================== */
+
+.stage {
+  --stage-accent: var(--accent);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.stage--review { --stage-accent: var(--live); }
+.stage--smart  { --stage-accent: var(--accent); }
+.stage--train  { --stage-accent: var(--accent); }
+/* Listening sets --stage-accent inline, per mode (see autoplayModes.ts); this
+   is only the fallback for a mode without one. */
+.stage--listen { --stage-accent: var(--listen-blue); }
+
+/* ── Header ───────────────────────────────────────────────────────────────
+   Exit · what this session is and where this card comes from · position.
+   The old header had the session badge floating as a centred pill *under* it,
+   which left the top row saying nothing but "back" and "3 / 20". */
+.stage__top {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+  padding: calc(10px + env(safe-area-inset-top, 0px)) var(--spacing-md) 10px;
+}
+
+.stage__exit {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--surface-translucent);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast),
+              background var(--transition-fast);
+}
+
+.stage__exit:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  background: var(--surface-translucent-strong);
+}
+
+.stage__exit:active { transform: scale(0.94); }
+
+.stage__id {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.stage__kicker {
+  color: color-mix(in oklch, var(--stage-accent) 78%, var(--text-secondary));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Where the current card comes from. Smaller than the eyebrow above it on
+   purpose — it's orientation, not a heading. */
+.stage__source {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.stage__source-name {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stage__source-level {
+  flex-shrink: 0;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+  color: var(--lvl, var(--text-muted));
+  border: 1px solid color-mix(in oklch, var(--lvl, var(--text-muted)) 40%, transparent);
+  background: color-mix(in oklch, var(--lvl, var(--text-muted)) 13%, transparent);
+}
+
+.stage__counter {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* ── Progress rail ────────────────────────────────────────────────────────── */
+.stage__rail {
+  flex-shrink: 0;
+  padding: 0 var(--spacing-md);
+}
+
+.stage__track {
+  position: relative;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: var(--surface-translucent-strong);
+  overflow: hidden;
+}
+
+.stage__track-known,
+.stage__track-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow) var(--ease-out-expo);
+}
+
+/* Already mastered before this run began — a standing fact, so it sits behind
+   and stays calm. */
+.stage__track-known { background: color-mix(in oklch, var(--success) 55%, transparent); }
+
+.stage__track-fill {
+  background: var(--stage-accent);
+  box-shadow: 0 0 10px color-mix(in oklch, var(--stage-accent) 55%, transparent);
+}
+
+/* ── Scene ────────────────────────────────────────────────────────────────── */
+.stage__scene {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 0;
+  padding: var(--spacing-md);
+}
+
+.stage__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius-2xl);
+  transform-origin: center center;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.stage__card--fold,
+.stage__card--unfold,
+.stage__card--advance { will-change: transform, opacity; }
+
+.stage__card--fold    { animation: card-flip-fold   0.19s var(--ease-in-sharp) forwards; }
+.stage__card--unfold  { animation: card-flip-unfold 0.34s ease-out forwards; }
+.stage__card--advance { animation: card-advance-out 0.26s var(--ease-in-sharp) forwards; }
+
+/* Explicit enter class (not a :not() catch-all) — otherwise the enter
+   animation would restart every time the flip classes come off. */
+.stage__card--enter { animation: card-enter 0.34s var(--ease-out-expo) both; }
+
+.stage__card:focus-visible .stage__face {
+  outline: 2px solid var(--stage-accent);
+  outline-offset: 3px;
+}
+
+/* ── Face — the raised-hero recipe, one hairline per language ─────────────── */
+.stage__face {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-md);
+  overflow: hidden;
+  padding: 30px var(--spacing-lg) 18px;
+  border-radius: var(--radius-2xl);
+  background: var(--gradient-hero);
+  border: 1px solid color-mix(in oklch, var(--face-accent) 32%, var(--border));
+  box-shadow: var(--shadow-float);
+  transition: border-color var(--transition-fast);
+}
+
+.stage__face::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: var(--face-accent);
+  box-shadow: 0 0 16px 1px color-mix(in oklch, var(--face-accent) 45%, transparent);
+  pointer-events: none;
+}
+
+/* The prompt wears the session's colour; the answer wears gold, so the reveal
+   is a visible change of state and not just different letters. */
+.stage__face--front { --face-accent: var(--stage-accent); }
+.stage__face--back  { --face-accent: var(--gold); }
+
+@media (hover: hover) {
+  .stage__card:hover .stage__face {
+    border-color: color-mix(in oklch, var(--face-accent) 55%, transparent);
+  }
+}
+
+/* Light sweep across the freshly revealed face */
+.stage__card--unfold::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 42%, oklch(1 0 0 / 0.07) 50%, transparent 58%);
+  background-size: 240% 100%;
+  background-repeat: no-repeat;
+  animation: card-sheen 0.55s ease-out forwards;
+}
+
+/* ── Language mark ────────────────────────────────────────────────────────── */
+.stage__lang {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: var(--tracking-kicker);
+  color: var(--face-accent);
+  border: 1px solid color-mix(in oklch, var(--face-accent) 40%, transparent);
+  background: color-mix(in oklch, var(--face-accent) 14%, transparent);
+}
+
+/* ── Body ─────────────────────────────────────────────────────────────────── */
+.stage__body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+/* ── Word ─────────────────────────────────────────────────────────────────
+   Both sides in --text-primary: the language is already carried by the mark
+   and the hairline, and tinting only the Polish side made the prompt read as
+   a link while the answer read as text. */
+.stage__word {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(30px, 7.5vw, 46px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: var(--tracking-display);
+  color: var(--text-primary);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.stage__word-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.stage__word-row .stage__word { min-width: 0; }
+
+/* ── Reading layout (Zdania) ──────────────────────────────────────────────
+   A sentence under a centred 46px word has no left edge to return to, so the
+   card switches to a ragged-right column and the word drops a size. */
+.stage--rich .stage__word {
+  font-size: clamp(27px, 6.4vw, 38px);
+  text-align: left;
+}
+
+.stage--rich .stage__word-row { justify-content: flex-start; }
+.stage--rich .stage__hint { text-align: left; }
+.stage--rich .stage__face { padding-inline: var(--spacing-lg); }
+
+.stage__sentence {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.stage__sentence-text {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.55;
+  color: var(--text-secondary);
+  text-wrap: pretty;
+}
+
+.stage__play {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-full);
+  color: var(--face-accent);
+  border: 1px solid color-mix(in oklch, var(--face-accent) 35%, transparent);
+  background: color-mix(in oklch, var(--face-accent) 14%, transparent);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.stage__play:hover { background: color-mix(in oklch, var(--face-accent) 24%, transparent); }
+.stage__play:active { transform: scale(0.9); }
+
+/* The sentence's own play button — smaller, and pinned to the first line of
+   text rather than centred against a paragraph that may run three lines. */
+.stage__play--sm {
+  width: 28px;
+  height: 28px;
+  margin-top: 1px;
+}
+
+.stage__hint {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-align: center;
+  user-select: none;
+}
+
+/* ── Answers ──────────────────────────────────────────────────────────────
+   Hidden until the answer is revealed — rating a card you haven't seen is not
+   a thing anyone means to do. */
+.stage__actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 10px var(--spacing-md) calc(18px + var(--safe-bottom));
+  pointer-events: none;
+}
+
+.stage__actions .stage__btn {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.28s var(--ease-out-expo), transform 0.28s var(--ease-out-expo);
+}
+
+.stage__actions--visible { pointer-events: auto; }
+
+.stage__actions--visible .stage__btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stage__actions--visible .stage__btn:nth-child(2) { transition-delay: 50ms; }
+
+.stage__btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 54px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-md);
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.stage__btn:disabled { opacity: 0.45; pointer-events: none; }
+
+.stage__btn--no {
+  color: var(--text-secondary);
+  background: var(--surface-translucent);
+  border: 1px solid var(--border);
+  transition: color var(--transition-fast), border-color var(--transition-fast),
+              background var(--transition-fast), transform var(--transition-fast);
+}
+
+.stage__btn--no:hover {
+  color: var(--danger);
+  border-color: color-mix(in oklch, var(--danger) 45%, transparent);
+  background: color-mix(in oklch, var(--danger) 10%, transparent);
+}
+
+.stage__btn--no:active { transform: scale(0.97); }
+
+/* The one button that matters on this screen, on the shared CTA primitive. */
+.stage__btn--yes.u-cta {
+  --u-cta-color: var(--stage-accent);
+  border: none;
+}
+
+/* ── Loading ──────────────────────────────────────────────────────────────── */
+.stage-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+/* ── Desktop: header, rail, card and answers as one aligned column ────────── */
+@media (min-width: 1024px) {
+  .stage__top,
+  .stage__rail,
+  .stage__scene,
+  .stage__actions {
+    width: 100%;
+    max-width: var(--focus-max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stage__card { max-width: 480px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage__card--unfold::after { animation: none; opacity: 0; }
+  .stage__actions .stage__btn { transition: opacity 0.01s; transform: none; }
+}

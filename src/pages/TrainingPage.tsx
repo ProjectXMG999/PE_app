@@ -12,8 +12,9 @@ export function TrainingPage() {
       <div className="training-page">
         <TrainingOnboardingCard />
         <div className="training-header">
-          <h1>Language Performance Training</h1>
-          <p>Poznaj 4 ćwiczenia, dzięki którym zaczniesz naprawdę mówić po angielsku.</p>
+          <p className="training-header__kicker u-kicker">Trening</p>
+          <h1 className="training-header__title u-display">Language Performance Training</h1>
+          <p className="training-header__subtitle">Poznaj 4 ćwiczenia, dzięki którym zaczniesz naprawdę mówić po angielsku.</p>
         </div>
 
         <div className="training-grid">
@@ -29,7 +30,8 @@ export function TrainingPage() {
                 <div
                   className="training-card__icon"
                   style={{
-                    background: `color-mix(in srgb, ${exercise.color} 13%, transparent)`,
+                    background: `color-mix(in oklch, ${exercise.color} 16%, transparent)`,
+                    borderColor: `color-mix(in oklch, ${exercise.color} 26%, transparent)`,
                     color: exercise.color,
                     viewTransitionName: `exercise-icon-${exercise.id}`,
                   }}

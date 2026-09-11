@@ -1,7 +1,10 @@
-import { useEffect, useRef } from 'react'
+import { CSSProperties, useEffect, useRef } from 'react'
 import './AutoplayDoneScreen.css'
 
 interface Props {
+  /** The listening mode's colour, so the finish screen stays in the colour you
+   *  just listened in. Everything here reads it through --stage-accent. */
+  accent: string
   packName: string
   wordCount: number
   /** Pack words not yet marked 'known' — surfaced as the "practise these" nudge. */
@@ -27,7 +30,7 @@ function newWordsLabel(n: number): string {
 }
 
 export function AutoplayDoneScreen({
-  packName, wordCount, newCount, autoContinue, countdown, totalSecs,
+  accent, packName, wordCount, newCount, autoContinue, countdown, totalSecs,
   nextPackName, onToggleAutoContinue, onRepeat, onNext, onPractice, onMastered, onExit,
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -65,6 +68,12 @@ export function AutoplayDoneScreen({
       const barW = (w - (BAR_COUNT - 1) * 3) / BAR_COUNT
       const maxH = h * 0.72
 
+      // The bars take the listening mode's colour straight off the element —
+      // CSS paints `color` from --stage-accent, so the wave follows both the
+      // theme and the mode instead of the two hardcoded sRGB stops it used to
+      // interpolate (which were the dark theme's violet, in every theme).
+      ctx.fillStyle = getComputedStyle(canvas).color
+
       for (let i = 0; i < BAR_COUNT; i++) {
         const phase = elapsed * 3.5 + i * 0.45
         const wave = Math.sin(phase) * 0.28 + Math.sin(phase * 1.7 + 1) * 0.12
@@ -73,15 +82,12 @@ export function AutoplayDoneScreen({
         const x = i * (barW + 3)
         const y = (h - bh) / 2
 
-        // Fade in during first 0.6s
+        // Fade in during first 0.6s. Depth across the row comes from alpha
+        // rather than a second hue, so there is still one colour on screen.
         const alpha = Math.min(1, elapsed / 0.6)
-        const progress = i / (BAR_COUNT - 1)
-        const r = Math.round(139 + (59 - 139) * progress)
-        const g = Math.round(92 + (130 - 92) * progress)
-        const b = Math.round(246 + (246 - 246) * progress)
+        const depth = 0.45 + 0.55 * BASE_HEIGHTS[i]
 
-        ctx.globalAlpha = alpha * (0.6 + 0.4 * BASE_HEIGHTS[i])
-        ctx.fillStyle = `rgb(${r},${g},${b})`
+        ctx.globalAlpha = alpha * depth
         ctx.beginPath()
         ctx.roundRect(x, y, barW, bh, barW / 2)
         ctx.fill()
@@ -100,7 +106,7 @@ export function AutoplayDoneScreen({
     : circumference
 
   return (
-    <div className="apdone">
+    <div className="apdone" style={{ ['--stage-accent' as string]: accent } as CSSProperties}>
       <div className="apdone__content">
         <div className="apdone__wave-wrap">
           <canvas ref={canvasRef} className="apdone__canvas" />
@@ -116,7 +122,7 @@ export function AutoplayDoneScreen({
         </div>
 
         <div className="apdone__actions">
-          <button className="apdone__btn apdone__btn--mastered" onClick={onMastered}>
+          <button className="apdone__btn apdone__btn--mastered u-cta" onClick={onMastered}>
             <span className="apdone__btn-icon">★</span>
             <span className="apdone__btn-body">
               <span className="apdone__btn-label">Opanowana</span>

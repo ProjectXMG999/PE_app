@@ -1,6 +1,10 @@
-import { useState } from 'react'
+import { type ReactNode } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { AppShell } from '../components/layout/AppShell'
+import { usePackageData } from '../hooks/usePackageData'
+import { ModeScreen, ModeBlock, ModeCard, ModeFact, ModeLabel, ModeNote } from '../components/mode/ModeScreen'
+import { CardsGlyph, SpeechGlyph } from '../components/mode/glyphs'
+import { getPackNumber, plWords } from '../utils/packVisuals'
+import { LEVEL_COLORS } from '../data/levels'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import './FlashcardModePage.css'
@@ -9,93 +13,132 @@ const allPacks = packagesIndex as PackMeta[]
 
 type FlashcardMode = 'word-flash' | 'active-sentence'
 
-const MODES: { id: FlashcardMode; icon: string; name: string; tag: string; desc: string }[] = [
+interface ModeDef {
+  id: FlashcardMode
+  glyph: ReactNode
+  /** The mode's own colour — the two trainings must not read as one block. */
+  color: string
+  name: string
+  tagline: string
+  desc: string
+  cta: string
+}
+
+const MODES: ModeDef[] = [
   {
     id: 'word-flash',
-    icon: '📝',
+    glyph: <CardsGlyph />,
+    color: 'var(--accent)',
     name: 'Word Flash',
-    tag: 'Szybki przegląd słów',
-    desc: 'Widzisz polskie słowo, próbujesz przypomnieć sobie angielski odpowiednik i dopiero potem odsłaniasz odpowiedź. Szybka rozgrzewka dla pamięci.',
+    tagline: 'Szybki przegląd słów',
+    desc: 'Widzisz polskie słowo, próbujesz przypomnieć sobie angielskie i dopiero potem odsłaniasz odpowiedź. Rozgrzewka dla pamięci.',
+    cta: 'Zacznij fiszki',
   },
   {
     id: 'active-sentence',
-    icon: '🧠',
+    glyph: <SpeechGlyph />,
+    color: 'var(--accent-pink)',
     name: 'Active Sentence',
-    tag: 'Aktywacja zdań',
-    desc: 'Widzisz polskie zdanie i budujesz angielską odpowiedź, zanim ją odsłonisz. Trudniejsze, ale tutaj zaczyna się prawdziwe mówienie.',
+    tagline: 'Całe zdania na głos',
+    desc: 'Widzisz polskie zdanie i budujesz angielską odpowiedź, zanim ją odsłonisz. Trudniej — i tu zaczyna się prawdziwe mówienie.',
+    cta: 'Zacznij mówić',
   },
 ]
+
+/** Polish plural for "zdanie": 1 → zdanie, 2–4 → zdania, else → zdań. */
+function plSentences(n: number): string {
+  const last = n % 10
+  const last2 = n % 100
+  if (n === 1) return 'zdanie'
+  if (last >= 2 && last <= 4 && (last2 < 12 || last2 > 14)) return 'zdania'
+  return 'zdań'
+}
 
 export function FlashcardModePage() {
   const { packageId } = useParams<{ packageId: string }>()
   const navigate = useNavigate()
-  const [infoOpen, setInfoOpen] = useState(false)
 
-  const pack = allPacks.find(p => p.id === packageId)
+  const meta = allPacks.find(p => p.id === packageId)
+  const { pack } = usePackageData(packageId ?? null)
+
+  const wordCount = pack?.words.length ?? meta?.wordCount ?? 0
+  // Only counted once the pack body is loaded — until then the card says
+  // nothing rather than guessing at a number it doesn't have.
+  const sentenceCount = pack?.words.filter(w => w.sentencePl || w.sentenceEn).length ?? null
+  const packNum = packageId ? getPackNumber(packageId) : null
+
+  const cardMeta = (id: FlashcardMode): ReactNode => {
+    if (id === 'word-flash') {
+      return (
+        <>
+          {wordCount > 0 && <span><em>{wordCount}</em> {plWords(wordCount)}</span>}
+          <span>we własnym tempie</span>
+        </>
+      )
+    }
+    if (sentenceCount === null) return <span>we własnym tempie</span>
+    // The session still runs on a sentence-less pack — it just shows the words
+    // themselves, so say that instead of promising sentences that aren't there.
+    if (sentenceCount === 0) return <span>Ten pakiet nie ma jeszcze zdań — zobaczysz same słowa</span>
+    return (
+      <>
+        <span><em>{sentenceCount}</em> {plSentences(sentenceCount)}</span>
+        <span>mówisz na głos</span>
+      </>
+    )
+  }
 
   return (
-    <AppShell hideBottomNav hideSidebar={false}>
-      <div className="fc-mode">
-        <div className="fc-mode__header">
-          <button
-            className="fc-mode__back"
-            onClick={() => navigate(packageId ? `/pakiet/${packageId}` : '/')}
-            aria-label="Wróć do pakietu"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <polyline points="15 18 9 12 15 6"/>
-            </svg>
-            <span className="fc-mode__back-label">Pakiet</span>
-          </button>
-          <span className="fc-mode__pack-name">{pack?.name ?? packageId}</span>
-        </div>
-
-        <h1 className="fc-mode__title">Wybierz tryb nauki</h1>
-
-        <div className="fc-mode__cards">
-          {MODES.map(m => (
-            <button
+    <ModeScreen
+      tone="train"
+      kicker={<>Trenuj{packNum ? ` · pakiet #${packNum}` : ''}</>}
+      title={meta?.name ?? packageId ?? 'Pakiet'}
+      facts={
+        <>
+          {meta?.level ? (
+            <ModeFact color={LEVEL_COLORS[meta.level]}>Poziom {meta.level}</ModeFact>
+          ) : null}
+          {meta?.volume ? <ModeFact>{meta.volume}</ModeFact> : null}
+          {wordCount > 0 && <ModeFact>{wordCount} {plWords(wordCount)}</ModeFact>}
+        </>
+      }
+      lead="W obu trybach ćwiczysz te same słowa. Różnica jest w tym, ile musisz powiedzieć z głowy, zanim odsłonisz odpowiedź."
+      onBack={() => navigate(packageId ? `/pakiet/${packageId}` : '/')}
+    >
+      <ModeBlock>
+        <ModeLabel aside="Od łatwiejszego">Tryb treningu</ModeLabel>
+        <div className="modescreen__cards">
+          {MODES.map((m, i) => (
+            <ModeCard
               key={m.id}
-              className="fc-mode__card"
+              glyph={m.glyph}
+              color={m.color}
+              cta={m.cta}
+              name={m.name}
+              tagline={m.tagline}
+              desc={m.desc}
+              meta={cardMeta(m.id)}
+              detail={
+                <span className="fc-mode__effort" aria-label={i === 0 ? 'Wysiłek: 1 z 2' : 'Wysiłek: 2 z 2'}>
+                  <span className="fc-mode__effort-label">Wysiłek</span>
+                  <span className="fc-mode__effort-dots" aria-hidden="true">
+                    <i className="is-on" />
+                    <i className={i === 1 ? 'is-on' : ''} />
+                  </span>
+                </span>
+              }
               onClick={() => navigate(`/pakiet/${packageId}/${m.id}`)}
-            >
-              <div className="fc-mode__card-header">
-                <span className="fc-mode__card-icon">{m.icon}</span>
-                <div className="fc-mode__card-titles">
-                  <span className="fc-mode__card-name">{m.name}</span>
-                  <span className="fc-mode__card-tag">{m.tag}</span>
-                </div>
-                <svg className="fc-mode__card-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <polyline points="9 18 15 12 9 6"/>
-                </svg>
-              </div>
-              <p className="fc-mode__card-desc">{m.desc}</p>
-            </button>
+            />
           ))}
         </div>
+      </ModeBlock>
 
-        <div className="fc-mode__info">
-          <button
-            type="button"
-            className="fc-mode__info-toggle"
-            onClick={() => setInfoOpen(o => !o)}
-            aria-expanded={infoOpen}
-          >
-            <span>Jak działa tryb Trening?</span>
-            <svg
-              className={`fc-mode__info-chevron${infoOpen ? ' fc-mode__info-chevron--open' : ''}`}
-              width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
-            >
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </button>
-          {infoOpen && (
-            <p className="fc-mode__info-desc">
-              Aktywny trening z ekranem. Przypominasz sobie angielskie słowa, mówisz je na głos i budujesz z nimi zdania. Dzięki temu przechodzisz od rozpoznawania słów do ich aktywnego używania.
-            </p>
-          )}
-        </div>
-      </div>
-    </AppShell>
+      <ModeBlock>
+        <ModeNote label="Jak działa tryb Trenuj?">
+          Aktywny trening z ekranem. Przypominasz sobie angielskie słowa, mówisz je na głos
+          i budujesz z nimi zdania — tak przechodzisz od rozpoznawania słów do ich używania.
+        </ModeNote>
+      </ModeBlock>
+    </ModeScreen>
   )
 }

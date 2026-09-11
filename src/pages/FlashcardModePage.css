@@ -1,210 +1,39 @@
-.fc-mode {
-  display: flex;
-  flex-direction: column;
-  height: 100dvh;
-  overflow-y: auto;
-  padding: var(--spacing-md) var(--spacing-md) var(--spacing-xl);
-  gap: var(--spacing-lg);
-}
+/* =============================================================================
+ * TRENUJ — mode chooser. Layout, header and cards come from ModeScreen.css;
+ * the only thing specific to this screen is the effort meter, which is what
+ * actually separates the two training modes.
+ * ========================================================================== */
 
-.fc-mode__header {
-  display: flex;
+.fc-mode__effort {
+  display: inline-flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: 9px;
 }
 
-.fc-mode__back {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 0 10px 0 6px;
-  height: 36px;
-  border-radius: var(--radius-full);
-  background: transparent;
-  border: none;
-  color: var(--text-secondary);
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: background var(--transition-fast), color var(--transition-fast);
-}
-
-.fc-mode__back:hover {
-  background: var(--bg-card);
-  color: var(--text-primary);
-}
-
-.fc-mode__back-label {
+.fc-mode__effort-label {
   font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.fc-mode__pack-name {
-  font-family: var(--font-heading);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.fc-mode__title {
-  font-family: var(--font-heading);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text-primary);
-  padding: 0 var(--spacing-xs);
-}
-
-.fc-mode__cards {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-}
-
-.fc-mode__info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  padding: 0 var(--spacing-xs);
-}
-
-.fc-mode__info-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-sm);
-  width: 100%;
-  padding: 10px 0;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-family: var(--font-heading);
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-secondary);
-  transition: color var(--transition-fast);
-}
-
-.fc-mode__info-toggle:hover {
-  color: var(--text-primary);
-}
-
-.fc-mode__info-chevron {
-  flex-shrink: 0;
-  color: var(--text-muted);
-  transition: transform var(--transition-fast);
-}
-
-.fc-mode__info-chevron--open {
-  transform: rotate(180deg);
-}
-
-.fc-mode__info-desc {
-  font-family: var(--font-body);
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-  padding-bottom: 10px;
-}
-
-@media (min-width: 1024px) {
-  .fc-mode {
-    height: 100%;
-    overflow: visible;
-    padding: var(--spacing-xl) 0 var(--spacing-2xl);
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .fc-mode__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
-    align-items: stretch;
-  }
-}
-
-.fc-mode__card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
-  background: var(--bg-surface);
-  border: 1.5px solid var(--border);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  text-align: left;
-  width: 100%;
-}
-
-.fc-mode__card:hover {
-  border-color: var(--accent);
-  background: var(--bg-card);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(139, 92, 246, 0.12);
-}
-
-.fc-mode__card:active {
-  transform: scale(0.98);
-}
-
-.fc-mode__card-header {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-}
-
-.fc-mode__card-icon {
-  font-size: 28px;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.fc-mode__card-titles {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  flex: 1;
-}
-
-.fc-mode__card-name {
-  font-family: var(--font-heading);
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: var(--tracking-kicker);
   text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--accent);
-  line-height: 1.2;
-  order: 2;
-}
-
-.fc-mode__card-tag {
-  font-family: var(--font-heading);
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.2;
-  order: 1;
-}
-
-.fc-mode__card-arrow {
   color: var(--text-muted);
-  flex-shrink: 0;
-  transition: transform var(--transition-fast), color var(--transition-fast);
 }
 
-.fc-mode__card:hover .fc-mode__card-arrow {
-  color: var(--accent);
-  transform: translateX(3px);
+.fc-mode__effort-dots {
+  display: inline-flex;
+  gap: 5px;
 }
 
-.fc-mode__card-desc {
-  font-family: var(--font-body);
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.55;
+.fc-mode__effort-dots i {
+  width: 22px;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: var(--surface-translucent-strong);
+  border: 1px solid var(--border);
+}
+
+.fc-mode__effort-dots i.is-on {
+  background: var(--card-accent, var(--mode-accent));
+  border-color: transparent;
+  box-shadow: 0 0 10px color-mix(in oklch, var(--card-accent, var(--mode-accent)) 45%, transparent);
 }

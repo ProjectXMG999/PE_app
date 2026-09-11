@@ -3,8 +3,10 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { usePackageData } from '../hooks/usePackageData'
 import { useAudio } from '../hooks/useAudio'
 import { useCardFlip } from '../hooks/useCardFlip'
-import { useAppStore } from '../store/useAppStore'
+import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { MasteryScreen } from '../components/flashcard/MasteryScreen'
+import { SessionDoneScreen } from '../components/flashcard/SessionDoneScreen'
+import { StudyStage, StageTrack, StageSentence } from '../components/flashcard/StudyStage'
 import { Word } from '../types/vocabulary'
 import { WordProgress } from '../types/progress'
 import { getPackageWordProgress, saveWordProgress, saveSession, savePackageProgress, getPackageProgress } from '../services/db'
@@ -13,7 +15,6 @@ import { useStudyClock } from '../hooks/useStudyClock'
 import { dayKey } from '../utils/day'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
-import './ActiveSentencePage.css'
 
 const allPacks = packagesIndex as PackMeta[]
 
@@ -36,6 +37,9 @@ export function ActiveSentencePage() {
   const [done, setDone] = useState(false)
 
   const sessionStartRef = useRef(false)
+  // Raw signal for adaptive difficulty — see the note in WordFlashPage.
+  const ratedRef = useRef(0)
+  const knownHitRef = useRef(0)
 
   useEffect(() => {
     if (!pack || !packageId) return
@@ -83,12 +87,15 @@ export function ActiveSentencePage() {
     // never demotes a mastered word; it reschedules it for review instead.
     const existing = progressMap.get(currentWord.id)
     const wasKnown = existing?.status === 'known'
+    const rrOpts = { requestRetention: currentRequestRetention() }
     const updated: WordProgress = markKnown
-      ? applyKnown(existing, currentWord.id, packageId)
-      : applyUnknown(existing, currentWord.id, packageId)
+      ? applyKnown(existing, currentWord.id, packageId, new Date(), rrOpts)
+      : applyUnknown(existing, currentWord.id, packageId, new Date(), rrOpts)
 
     await saveWordProgress(updated)
     setProgressMap(prev => new Map(prev).set(currentWord.id, updated))
+    ratedRef.current += 1
+    if (markKnown) knownHitRef.current += 1
     if (markKnown && !wasKnown) {
       setKnownCount(c => c + 1)
       setSessionKnown(c => c + 1)
@@ -108,6 +115,12 @@ export function ActiveSentencePage() {
             mode: 'fiszki',
             trainMode: 'active-sentence',
             durationSec: elapsedSec(),
+            ratedCount: ratedRef.current,
+            knownHitCount: knownHitRef.current,
+          })
+          useAppStore.getState().applyTrainingOutcome({
+            ratedCount: ratedRef.current,
+            knownHitCount: knownHitRef.current,
           })
         }
         const allProgress = await getPackageWordProgress(packageId)
@@ -151,11 +164,13 @@ export function ActiveSentencePage() {
       setDone(false)
       setSessionKnown(0)
       sessionStartRef.current = false
+      ratedRef.current = 0
+      knownHitRef.current = 0
     })
   }, [pack, packageId])
 
   if (loading || studyWords.length === 0) {
-    return <div className="asc-loading"><div className="spinner" /></div>
+    return <div className="stage-loading"><div className="spinner" /></div>
   }
 
   if (showMastery && pack) {
@@ -170,20 +185,21 @@ export function ActiveSentencePage() {
     )
   }
 
+  // The same finish screen Word-Flash shows. This page used to carry its own
+  // (asc-done): a different icon, different copy, no "next pack" — for the
+  // same event in the sibling mode.
   if (done) {
     return (
-      <div className="asc-done">
-        <div className="asc-done__content">
-          <div className="asc-done__icon">✓</div>
-          <h1 className="asc-done__title">Sesja zakończona</h1>
-          <p className="asc-done__sub">{pack?.name}</p>
-          <p className="asc-done__count">Opanowano: <strong>{sessionKnown}</strong></p>
-          <div className="asc-done__actions">
-            <button className="asc-done__btn asc-done__btn--repeat" onClick={handleRepeat}>↺ Powtórz</button>
-            <button className="asc-done__btn asc-done__btn--exit" onClick={() => navigate('/')}>⌂ Menu</button>
-          </div>
-        </div>
-      </div>
+      <SessionDoneScreen
+        packName={pack?.name ?? ''}
+        sessionKnown={sessionKnown}
+        packKnown={knownCount}
+        packTotal={pack?.words.length ?? 0}
+        onRepeat={handleRepeat}
+        onNext={nextPack ? () => navigate(`/pakiet/${nextPack.id}/fiszki-start`) : null}
+        nextPackName={nextPack?.name}
+        onExit={() => navigate('/')}
+      />
     )
   }
 
@@ -193,127 +209,43 @@ export function ActiveSentencePage() {
   const hasSentenceEn = !!currentWord?.sentenceEn
 
   return (
-    <div className="asc">
-      <div className="asc__header">
-        <button className="asc__back" onClick={() => { stop(); navigate(-1) }} aria-label="Wróć">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="15 18 9 12 15 6"/>
-          </svg>
-        </button>
-        <div className="asc__progress-bar">
-          <div className="asc__progress-known" style={{ width: `${knownPct}%` }} />
-          <div className="asc__progress-current" style={{ width: `${progressPct}%` }} />
-        </div>
-        <span className="asc__counter">{cardIndex + 1} / {total}</span>
-      </div>
-
-      <div className="asc__scene">
-        <div
-          key={cardIndex}
-          className={`asc__card${cardClass('asc__card')}`}
-          onClick={flipCard}
-          onAnimationEnd={handleAnimationEnd}
-          role="button"
-          tabIndex={0}
-          onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && flipCard()}
-        >
-          {side === 'front' ? (
-            <div className="asc__face asc__face--front">
-              <span className="asc__lang-badge asc__lang-badge--pl">PL</span>
-
-              <div className="asc__content">
-                <div className="asc__word-line">
-                  <p className="asc__word asc__word--pl">{currentWord?.polish}</p>
-                  {currentWord && (
-                    <button
-                      className="asc__play"
-                      onClick={e => { e.stopPropagation(); stop(); playWordPl(currentWord) }}
-                      aria-label="Wymowa PL słowo"
-                    >
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                        <polygon points="5,3 19,12 5,21"/>
-                      </svg>
-                    </button>
-                  )}
-                </div>
-
-                {hasSentencePl && (
-                  <div className="asc__sentence-line">
-                    <p className="asc__sentence asc__sentence--pl">{currentWord?.sentencePl}</p>
-                    {currentWord && (
-                      <button
-                        className="asc__play asc__play--sm"
-                        onClick={e => { e.stopPropagation(); stop(); playSentencePl(currentWord) }}
-                        aria-label="Wymowa PL zdanie"
-                      >
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                          <polygon points="5,3 19,12 5,21"/>
-                        </svg>
-                      </button>
-                    )}
-                  </div>
-                )}
-              </div>
-
-              <p className="asc__tap-hint">
-                {hasSentencePl ? 'powiedz po angielsku · obróć kartę' : 'Powiedz po angielsku. Potem odsłoń.'}
-              </p>
-            </div>
-          ) : (
-            <div className="asc__face asc__face--back">
-              <span className="asc__lang-badge asc__lang-badge--en">EN</span>
-
-              <div className="asc__content">
-                <div className="asc__word-line">
-                  <p className="asc__word asc__word--en">{currentWord?.english}</p>
-                  <button
-                    className="asc__play asc__play--accent"
-                    onClick={e => { e.stopPropagation(); stop(); if (currentWord) playWord(currentWord) }}
-                    aria-label="Wymowa EN słowo"
-                  >
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                      <polygon points="5,3 19,12 5,21"/>
-                    </svg>
-                  </button>
-                </div>
-
-                {hasSentenceEn && currentWord && (
-                  <div className="asc__sentence-line asc__sentence-line--divider">
-                    <p className="asc__sentence asc__sentence--en">{currentWord.sentenceEn}</p>
-                    <button
-                      className="asc__play asc__play--sm asc__play--accent"
-                      onClick={e => { e.stopPropagation(); stop(); playSentence(currentWord) }}
-                      aria-label="Wymowa EN zdanie"
-                    >
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                        <polygon points="5,3 19,12 5,21"/>
-                      </svg>
-                    </button>
-                  </div>
-                )}
-              </div>
-
-              <p className="asc__tap-hint">dotknij, aby zobaczyć przód</p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className={`asc__actions${revealed && !isAdvancing ? ' asc__actions--visible' : ''}`}>
-        <button className="asc__btn asc__btn--unknown" onClick={() => advance(false)} disabled={isAdvancing}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <line x1="18" y1="6" x2="6" y2="18"/>
-            <line x1="6" y1="6" x2="18" y2="18"/>
-          </svg>
-          Nie znam
-        </button>
-        <button className="asc__btn asc__btn--known" onClick={() => advance(true)} disabled={isAdvancing}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <polyline points="20 6 9 17 4 12"/>
-          </svg>
-          Znam
-        </button>
-      </div>
-    </div>
+    <StudyStage
+      tone="train"
+      kicker="Active Sentence"
+      packageId={packageId}
+      counter={`${cardIndex + 1} / ${total}`}
+      rail={<StageTrack current={progressPct} known={knownPct} />}
+      onExit={() => { stop(); navigate(-1) }}
+      exitLabel="Wróć do pakietu"
+      cardKey={cardIndex}
+      polish={currentWord?.polish ?? ''}
+      english={currentWord?.english ?? ''}
+      side={side}
+      cardClass={cardClass}
+      onFlip={flipCard}
+      onAnimationEnd={handleAnimationEnd}
+      onPlay={() => { stop(); if (currentWord) playWord(currentWord) }}
+      onPlayPolish={() => { stop(); if (currentWord) playWordPl(currentWord) }}
+      frontExtra={hasSentencePl && currentWord ? (
+        <StageSentence
+          text={currentWord.sentencePl!}
+          onPlay={() => { stop(); playSentencePl(currentWord) }}
+          label="Wymowa zdania po polsku"
+        />
+      ) : undefined}
+      backExtra={hasSentenceEn && currentWord ? (
+        <StageSentence
+          text={currentWord.sentenceEn!}
+          onPlay={() => { stop(); playSentence(currentWord) }}
+          label="Wymowa zdania po angielsku"
+        />
+      ) : undefined}
+      frontHint={hasSentencePl
+        ? 'Powiedz po angielsku całe zdanie. Potem odsłoń.'
+        : 'Powiedz po angielsku. Potem odsłoń.'}
+      answersVisible={revealed && !isAdvancing}
+      answersDisabled={isAdvancing}
+      onAnswer={advance}
+    />
   )
 }
