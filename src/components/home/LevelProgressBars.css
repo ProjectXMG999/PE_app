@@ -36,7 +36,7 @@
 .level-progress__bar {
   flex: 1;
   height: 6px;
-  background: var(--bg-surface);
+  background: var(--surface-translucent);
   border-radius: var(--radius-full);
   overflow: hidden;
   border: 1px solid var(--border);

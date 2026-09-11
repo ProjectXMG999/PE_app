@@ -52,12 +52,9 @@ export function VolumeSection({ group, stats, collapsed, onToggle, headRef, chil
                 bar rather than as digits. */}
             <span className="volsec__label">Tom {group.short}</span>
             <span className="volsec__meta">
-              <span className="volsec__range">#{group.firstNum}–#{group.lastNum}</span>
+              <span className="volsec__range">{group.firstNum}–{group.lastNum}</span>
               <span className="volsec__done">
                 {allDone ? 'ukończony' : `${stats.done}/${stats.packs} ukończonych`}
-              </span>
-              <span className="volsec__levels">
-                {group.levels.map(l => `L${l}`).join('·')}
               </span>
             </span>
             <span className="volsec__meter">
@@ -65,16 +62,14 @@ export function VolumeSection({ group, stats, collapsed, onToggle, headRef, chil
             </span>
           </span>
 
-          <span className="volsec__pct">{allDone ? '✓' : `${Math.round(stats.pct)}%`}</span>
-
-          <svg
-            className={`volsec__chevron ${collapsed ? 'is-collapsed' : ''}`}
-            width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
+          <span className={`volsec__chevron ${collapsed ? 'is-collapsed' : ''}`} aria-hidden="true">
+            <svg
+              width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </span>
         </button>
       </h2>
 

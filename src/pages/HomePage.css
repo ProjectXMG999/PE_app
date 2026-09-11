@@ -1,97 +1,157 @@
+/* =============================================================================
+ * PAKIETY — the territory screen.
+ * -----------------------------------------------------------------------------
+ * Two sticky layers, no magic numbers: RouteControls publishes --rc-h via a
+ * ResizeObserver, and the volume headers derive their own `top` from it. That
+ * is what keeps them from overlapping when the bar grows (jump hint, result
+ * line).
+ *
+ * Same visual language as Dzisiaj: one surface, one radius, no shadows, one
+ * accent, and glass only on things that stick or float.
+ * ========================================================================== */
+
 .homepage {
+  --rc-h: 64px;
+  --chrome-h: var(--rc-h);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-md) var(--spacing-2xl);
+  max-width: var(--reading-max-width);
+  margin: 0 auto;
+  scroll-padding-top: var(--chrome-h);
+}
+
+.homepage__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  min-width: 0;
+}
+
+/* The bar scrolls with the page until it reaches the top, then stays. It is
+   chrome floating over content, so it is the one thing here wearing glass. */
+.homepage__chrome {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  margin: 0 calc(var(--spacing-md) * -1);
+  padding: 0 var(--spacing-md);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+          backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+}
+
+/* Rendered only when packs are actually fading, so it never costs space for
+   someone with nothing slipping. */
+.homepage__aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  min-width: 0;
+}
+
+/* ── Lists ────────────────────────────────────────────────────────────────── */
+.homepage__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
   padding-top: var(--spacing-sm);
 }
 
-.homepage__list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-sm);
-  padding: 0 var(--spacing-md) var(--spacing-md);
-}
-
-@media (min-width: 640px) {
-  .homepage__list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .homepage__list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
-  }
-}
-
-/* The window renders a page at a time (see HomePage.tsx), but even ~60 cards
-   benefit from skipping layout/paint of off-screen ones. Intrinsic size must
-   approximate real card height, otherwise the scrollbar jumps. Band headers
-   are sticky, so they must always render — excluded here. */
-.homepage__list > *:not(.homepage__band) {
+/* Off-screen rows skip layout and paint. The intrinsic size must match the real
+   row height (--row-h in PackageCard.css) or the scrollbar jumps. */
+.homepage__list > .packcard,
+.volsec__cards > .packcard {
   content-visibility: auto;
-  contain-intrinsic-size: auto 150px;
+  contain-intrinsic-size: auto 92px;
 }
 
-/* Entrance cascade — each card rises in; the first dozen are staggered, the
-   rest (and any lazily-loaded batch) just reveal. Re-runs whenever the list
-   re-keys on a filter change. Collapsed by the global reduced-motion block. */
-.homepage__list > *:not(.homepage__band):not(.homepage__sentinel) {
-  animation: cardReveal 380ms var(--ease-out-expo) both;
-}
-.homepage__list > *:nth-child(1)  { animation-delay: 0ms; }
-.homepage__list > *:nth-child(2)  { animation-delay: 35ms; }
-.homepage__list > *:nth-child(3)  { animation-delay: 70ms; }
-.homepage__list > *:nth-child(4)  { animation-delay: 105ms; }
-.homepage__list > *:nth-child(5)  { animation-delay: 140ms; }
-.homepage__list > *:nth-child(6)  { animation-delay: 175ms; }
-.homepage__list > *:nth-child(7)  { animation-delay: 210ms; }
-.homepage__list > *:nth-child(8)  { animation-delay: 245ms; }
-.homepage__list > *:nth-child(9)  { animation-delay: 280ms; }
-.homepage__list > *:nth-child(10) { animation-delay: 315ms; }
-.homepage__list > *:nth-child(11) { animation-delay: 350ms; }
-.homepage__list > *:nth-child(12) { animation-delay: 385ms; }
-.homepage__list > *:nth-child(n+13) { animation-delay: 0ms; }
-
-.homepage__sentinel {
-  height: 1px;
-  width: 100%;
+/* Entrance cascade. Scroll-driven where supported — compositor-only, no JS and
+   no observer for 864 rows; the delay-staggered fallback is above it. */
+.homepage__list > .packcard,
+.volsec__cards > .packcard {
+  animation: fx-rise 420ms var(--ease-out-expo) both;
+  animation-delay: calc(min(var(--i, 0), 10) * 32ms);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .homepage__list > * {
-    animation: none !important;
+@supports (animation-timeline: view()) {
+  .homepage__list > .packcard,
+  .volsec__cards > .packcard {
+    animation: fx-rise 1ms linear both;
+    animation-delay: 0s;
+    animation-timeline: view();
+    animation-range: entry 0% entry 42%;
   }
 }
 
-.homepage__card-skeleton {
-  height: 148px;
+.homepage__skeleton {
+  height: 92px;
   border-radius: var(--radius-lg);
 }
+
+.homepage__more {
+  align-self: center;
+  margin-top: var(--spacing-sm);
+  height: 44px;
+  padding: 0 var(--spacing-lg);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: var(--surface-translucent);
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.homepage__more:hover { border-color: var(--border-strong); color: var(--text-primary); }
 
 .homepage__empty {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-md);
+  padding: var(--spacing-2xl) 0;
   text-align: center;
   color: var(--text-muted);
-  font-size: 14px;
-  padding: var(--spacing-2xl) 0;
+  font-size: var(--text-base);
 }
 
 .homepage__empty-cta {
-  height: 36px;
+  height: 44px;
   padding: 0 var(--spacing-lg);
   border-radius: var(--radius-full);
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 600;
+  border: 0;
   background: var(--accent);
-  color: #fff;
-  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
   cursor: pointer;
-  transition: background var(--transition-fast);
 }
 
-.homepage__empty-cta:hover {
-  background: var(--accent-bright);
+/* ── Desktop ──────────────────────────────────────────────────────────────
+   Deliberately one column, wider — not a 3-column card grid. A route read in a
+   boustrophedon zig-zag stops reading as an order, and the order is the
+   product. Wide screens buy breathing room, not more columns. */
+@media (min-width: 1024px) {
+  .homepage {
+    max-width: var(--focus-max-width);
+    padding-inline: var(--spacing-lg);
+  }
+
+  .homepage__chrome {
+    margin-inline: calc(var(--spacing-lg) * -1);
+    padding-inline: var(--spacing-lg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage__list > .packcard,
+  .volsec__cards > .packcard {
+    animation: none;
+  }
 }

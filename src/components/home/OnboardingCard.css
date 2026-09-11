@@ -2,7 +2,7 @@
   margin: 0 auto var(--spacing-md);
   padding: var(--spacing-lg);
   max-width: 600px;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--border-accent);
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(139, 92, 246, 0.04) 100%);
   animation: slideDown 400ms ease-out forwards;

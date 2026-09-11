@@ -1,7 +1,7 @@
 import { PackMeta } from '../types/vocabulary'
 import { WordProgress } from '../types/progress'
 import { ProgressSnapshot } from '../hooks/useProgressData'
-import { retrievabilityOf } from '../services/reviewQueue'
+import { retrievabilityOf, retentionTierOf } from '../services/reviewQueue'
 import { dayKey } from './day'
 
 /**
@@ -23,7 +23,14 @@ import { dayKey } from './day'
  * achievement.
  */
 
-export type PackRelation = 'held' | 'fading' | 'active' | 'ahead'
+/**
+ * `sealed` sits above `held`: every word in the pack has left the active review
+ * queue (FSRS stability past RETIRE_STABILITY_DAYS — `retentionTierOf` calls
+ * this tier `locked`, "kontrolnie raz w roku"). It is the highest thing a pack
+ * can be, and the only state the user cannot reach by grinding — only by
+ * remembering over months.
+ */
+export type PackRelation = 'sealed' | 'held' | 'fading' | 'active' | 'ahead'
 
 /**
  * Below this recall probability a conquered pack reads as "coming back to you".
@@ -41,6 +48,14 @@ export interface PackMemory {
   total: number
   /** True once every word was known, even if it has since decayed. */
   everHeld: boolean
+  /** Known words that have graduated out of the daily queue (tier `locked`). */
+  retired: number
+  /**
+   * Known words carrying an asserted stability from "Znam wszystko" rather than
+   * an actual review. They ARE scheduled (first check ~2 weeks out) — the bulk
+   * mark is a claim the scheduler still intends to verify, not a graduation.
+   */
+  claimed: number
 }
 
 /**
@@ -74,7 +89,10 @@ export function buildPackMemory(
   const out = new Map<string, PackMemory>()
   if (!snapshot) {
     for (const p of packs) {
-      out.set(p.id, { relation: 'ahead', strength: 1, known: 0, total: p.wordCount, everHeld: false })
+      out.set(p.id, {
+        relation: 'ahead', strength: 1, known: 0, total: p.wordCount,
+        everHeld: false, retired: 0, claimed: 0,
+      })
     }
     return out
   }
@@ -94,14 +112,31 @@ export function buildPackMemory(
     const everHeld = pack.wordCount > 0 && known >= pack.wordCount
     const strength = packStrength(words, today)
 
+    let retired = 0
+    let claimed = 0
+    for (const wp of words) {
+      if (wp.status !== 'known') continue
+      if (retentionTierOf(wp) === 'locked') retired++
+      // The bulk mark asserts a stability without ever running a review, so
+      // reviewCount stays 0 while stability is set. Nothing else produces that
+      // combination.
+      else if ((wp.reviewCount ?? 0) === 0 && wp.stability != null) claimed++
+    }
+    const allRetired = everHeld && retired >= known && known > 0
+
     const relation: PackRelation =
       everHeld
-        ? (strength < FADING_RETRIEVABILITY ? 'fading' : 'held')
+        ? (allRetired ? 'sealed' : strength < FADING_RETRIEVABILITY ? 'fading' : 'held')
         : (progress != null || known > 0 ? 'active' : 'ahead')
 
-    out.set(pack.id, { relation, strength, known, total: pack.wordCount, everHeld })
+    out.set(pack.id, { relation, strength, known, total: pack.wordCount, everHeld, retired, claimed })
   }
   return out
+}
+
+/** Packs that have left the review queue entirely — the top of the ladder. */
+export function sealedPacks(memory: Map<string, PackMemory>): string[] {
+  return [...memory.entries()].filter(([, m]) => m.relation === 'sealed').map(([id]) => id)
 }
 
 /** Packs that were conquered and are now slipping — newest decay first. */

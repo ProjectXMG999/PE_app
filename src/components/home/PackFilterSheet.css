@@ -11,7 +11,7 @@
 
 .pfsheet::backdrop {
   background: var(--overlay);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(var(--scrim-blur));
 }
 
 .pfsheet__inner {
@@ -24,7 +24,7 @@
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-bottom: none;
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
   animation: slideUp 280ms var(--ease-out-expo);
 }
 
@@ -36,6 +36,72 @@
   border-radius: var(--radius-full);
   background: var(--border);
   flex-shrink: 0;
+}
+
+.pfsheet__tabs {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--radius-full);
+  background: var(--surface-tile);
+  box-shadow: var(--tile-hi);
+  border: 1px solid var(--border);
+}
+
+.pfsheet__tab {
+  position: relative;
+  flex: 1;
+  height: 34px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pfsheet__tab.is-active {
+  background: color-mix(in oklch, var(--accent) 18%, transparent);
+  color: var(--text-primary);
+}
+
+/* A dot means "this axis is filtering", so an unopened tab still tells you it
+   is doing something. */
+.pfsheet__tab-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-left: 6px;
+  border-radius: var(--radius-full);
+  background: var(--accent-bright);
+  vertical-align: middle;
+}
+
+/* Your success rate per category, drawn behind the row — the filter as a
+   diagnosis rather than a list of nouns. */
+.pfsheet__gauge {
+  flex: 0 0 54px;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: var(--border);
+  overflow: hidden;
+}
+
+.pfsheet__gauge-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+
+.pfsheet__note {
+  margin: var(--spacing-sm) 0 0;
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--text-muted);
 }
 
 .pfsheet__title {
@@ -63,7 +129,8 @@
   gap: var(--spacing-sm);
   width: 100%;
   padding: var(--spacing-md);
-  background: var(--bg-card);
+  background: var(--surface-tile);
+  box-shadow: var(--tile-hi);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   cursor: pointer;
@@ -129,7 +196,8 @@
 .pfsheet__chip {
   padding: 8px var(--spacing-md);
   border-radius: var(--radius-full);
-  background: var(--bg-card);
+  background: var(--surface-tile);
+  box-shadow: var(--tile-hi);
   border: 1px solid var(--border);
   font-family: var(--font-heading);
   font-size: var(--text-sm);
@@ -162,7 +230,8 @@
   font-size: var(--text-base);
   font-weight: 600;
   color: var(--text-secondary);
-  background: var(--bg-card);
+  background: var(--surface-tile);
+  box-shadow: var(--tile-hi);
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
   cursor: pointer;
@@ -176,10 +245,84 @@
   .pfsheet { margin: auto; }
   .pfsheet__inner {
     border-bottom: 1px solid var(--border);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-2xl);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .pfsheet__inner { animation: none; }
 }
+
+/* ── Coverage headline (Stan tab) ────────────────────────────────────────────
+   Capability rather than a fraction: those known words are not a random slice
+   of English, they are the most useful ones. Always an estimate — hence the
+   tilde and the sheet behind it. */
+.pfsheet__coverage {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface-tile);
+  box-shadow: var(--tile-hi);
+  text-align: left;
+  cursor: pointer;
+}
+
+.pfsheet__coverage-num {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-display);
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  color: var(--accent-bright);
+  font-variant-numeric: tabular-nums;
+}
+
+.pfsheet__coverage-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.pfsheet__coverage-text em {
+  font-style: normal;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--accent-bright);
+}
+
+/* ── Lens dots — the same colours the card edges use ─────────────────────── */
+.pfsheet__lens-dot {
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius-full);
+  background: var(--text-muted);
+}
+
+.pfsheet__lens-dot--fading { background: var(--live); }
+.pfsheet__lens-dot--sealing,
+.pfsheet__lens-dot--mastered { background: var(--gold); }
+.pfsheet__lens-dot--started { background: var(--accent); }
+.pfsheet__lens-dot--new { background: var(--border-strong); }
+.pfsheet__lens-dot--all { background: var(--text-secondary); }
+
+/* ── Volume rows ─────────────────────────────────────────────────────────── */
+.pfsheet__vol {
+  flex: 0 0 34px;
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.pfsheet__row.is-done .pfsheet__vol { color: var(--gold); }
+.pfsheet__row.is-done .pfsheet__gauge-fill { background: var(--gold); }

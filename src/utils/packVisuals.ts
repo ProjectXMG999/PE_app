@@ -241,22 +241,19 @@ export const STATUS_META: Record<PackStatus, { label: string; className: string 
   mastered:  { label: '★ Opanowana',   className: 'packcard--mastered' },
 }
 
-/** Polish plural for "słowo": 1 → słowo, 2–4 → słowa, else → słów. */
-export function plWords(n: number): string {
-  const abs = Math.abs(n)
-  const last = abs % 10
-  const last2 = abs % 100
-  if (abs === 1) return 'słowo'
-  if (last >= 2 && last <= 4 && (last2 < 12 || last2 > 14)) return 'słowa'
-  return 'słów'
-}
+/* Polish plurals moved to utils/plural.ts — one implementation for the whole
+   app, because three copies of the 2–4 rule is how two of them end up wrong.
+   Re-exported here so existing call sites keep working. */
+export { plWords, plPacks } from './plural'
 
-/** Polish plural for "paczka": 1 → paczka, 2–4 → paczki, else → paczek. */
-export function plPacks(n: number): string {
+/** Polish plural for "pakiet": 1 → pakiet, 2–4 → pakiety, else → pakietów.
+ *  The masculine form the rest of the UI uses — plPacks() above is the older
+ *  "paczka" wording, still live in the memory strip. */
+export function plPackets(n: number): string {
   const abs = Math.abs(n)
   const last = abs % 10
   const last2 = abs % 100
-  if (abs === 1) return 'paczka'
-  if (last >= 2 && last <= 4 && (last2 < 12 || last2 > 14)) return 'paczki'
-  return 'paczek'
+  if (abs === 1) return 'pakiet'
+  if (last >= 2 && last <= 4 && (last2 < 12 || last2 > 14)) return 'pakiety'
+  return 'pakietów'
 }

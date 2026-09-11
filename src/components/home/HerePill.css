@@ -1,0 +1,86 @@
+/* =============================================================================
+ * HERE PILL — the one control that always returns you to your own position.
+ * Floats above the tab bar, appears only once the frontier row has scrolled out.
+ * ========================================================================== */
+
+/* Entrance baked in as its own keyframes rather than the shared `fx-rise` +
+   a static `translateX(-50%)`: a CSS animation's keyframe values REPLACE the
+   property for as long as it's running (and after, with `fill-mode: both`) —
+   they don't merge with a separately-declared `transform` on the same element.
+   `fx-rise`'s `to { transform: translateY(0) }` was winning outright and
+   erasing the centering, so the pill sat with its LEFT edge (not its centre)
+   pinned to the middle of the screen — consistently offset right by half its
+   own width. Both translations now live in the one animation. */
+@keyframes herepill-rise {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.herepill {
+  position: fixed;
+  left: 50%;
+  /* Clear of the tab island by a full row, so it never lands on top of a card
+     the way a tighter offset did. */
+  bottom: calc(var(--bottomnav-reserve) + var(--safe-bottom) + var(--spacing-lg));
+  z-index: 30;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-accent);
+  background: var(--glass-bg-strong);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+          backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  box-shadow: var(--shadow-float);
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  animation: herepill-rise 300ms var(--ease-out-expo) both;
+}
+
+.herepill__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--accent-bright);
+  box-shadow: var(--glow-primary);
+}
+
+.herepill__text { white-space: nowrap; color: var(--text-secondary); }
+
+/* "nr" as a tiny, muted word instead of a "#" glyph — reads as language, not
+   a symbol dropped in from source code. */
+.herepill__nr {
+  margin: 0 3px 0 6px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.herepill__text strong {
+  color: var(--accent-bright);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: var(--tracking-tight);
+}
+
+@media (min-width: 1024px) {
+  /* No tab island on desktop, so the reserve above doesn't apply — and the
+     sidebar shifts the content column, so centre on the column, not the
+     viewport. */
+  .herepill {
+    left: calc(50% + (var(--sidebar-width) / 2));
+    bottom: var(--spacing-lg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .herepill { animation: none; }
+}

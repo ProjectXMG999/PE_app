@@ -1,6 +1,7 @@
 import { PackMeta } from '../types/vocabulary'
 import { ProgressSnapshot } from '../hooks/useProgressData'
-import { getStatus, PackStatus } from './packVisuals'
+import { PackStatus } from './packVisuals'
+import { PackMemory } from './packMemory'
 
 /**
  * The Pakiety page is the *map* of the 10 000-word route. `packages-index.json`
@@ -71,7 +72,72 @@ export function groupByVolume(packs: PackMeta[]): VolumeGroup[] {
   })
 }
 
-/** Known-word / done-pack totals for a volume, for the section header ring. */
+export interface LevelGroup {
+  level: number
+  volumes: VolumeGroup[]
+  packs: PackMeta[]
+  firstNum: number
+  lastNum: number
+}
+
+/**
+ * The volume's level: whichever level most of its packs carry.
+ *
+ * Volumes are not level-pure — Tom III is 61 packs of level 2 and 38 of level 3
+ * — so something has to decide. Taking the majority is what keeps the route
+ * intact: volumes are contiguous in curriculum order, so grouping *volumes*
+ * under levels never reorders a single pack. Grouping the packs themselves by
+ * level would, because `level` dips backwards 8 times along the route (e.g. two
+ * level-1 packs sit inside Tom VII), and those stragglers would be yanked
+ * hundreds of positions out of place.
+ */
+export function volumeLevel(group: VolumeGroup): number {
+  const counts = new Map<number, number>()
+  for (const p of group.packs) counts.set(p.level, (counts.get(p.level) ?? 0) + 1)
+  let best = group.packs[0]?.level ?? 1
+  let bestN = -1
+  for (const [level, n] of counts) {
+    if (n > bestN) { best = level; bestN = n }
+  }
+  return best
+}
+
+/**
+ * Level → its volumes → its packs, all still in route order.
+ *
+ * On this catalogue it comes out clean: L1 = Tom I, L2 = Tom II–III,
+ * L3 = Tom IV–V, L4 = Tom VI–IX. Four chapters, nine volumes, nothing moved.
+ */
+export function groupByLevel(packs: PackMeta[]): LevelGroup[] {
+  const out: LevelGroup[] = []
+  for (const vol of groupByVolume(packs)) {
+    const level = volumeLevel(vol)
+    const last = out[out.length - 1]
+    if (last && last.level === level) {
+      last.volumes.push(vol)
+      last.packs = last.packs.concat(vol.packs)
+      last.lastNum = vol.lastNum
+    } else {
+      out.push({ level, volumes: [vol], packs: [...vol.packs], firstNum: vol.firstNum, lastNum: vol.lastNum })
+    }
+  }
+  return out
+}
+
+/**
+ * Known-word / done-pack totals for a volume, for the section header ring.
+ *
+ * `done` used to come from `getStatus()`, which trusts `PackageProgress`'s
+ * `completedAt`/`masteredAt` flags — and those flags are documented elsewhere
+ * in this codebase (`masteryRepair.ts`, `PackageCard`'s old defensive check)
+ * as going stale: a pack can carry `masteredAt` from before a lapse, or a
+ * `completedAt` from Słuchaj that says nothing about whether the words are
+ * actually known. That mismatch is exactly what let a volume header say
+ * "ukończony" while its own knowledge meter sat at 41% two rows down — one
+ * number came from the honest `knownMap` count, the other from a flag that
+ * doesn't track it. `done` now uses the same real count `pct` already does
+ * (mirrors `everHeld` in packMemory.ts), so the two numbers can't disagree.
+ */
 export function volumeStats(group: VolumeGroup, snapshot: ProgressSnapshot | null): VolumeStats {
   let total = 0
   let known = 0
@@ -79,12 +145,20 @@ export function volumeStats(group: VolumeGroup, snapshot: ProgressSnapshot | nul
   for (const p of group.packs) {
     total += p.wordCount
     if (snapshot) {
-      known += snapshot.knownMap.get(p.id) ?? 0
-      const st = getStatus(snapshot.progressMap.get(p.id))
-      if (st === 'completed' || st === 'mastered') done++
+      const packKnown = snapshot.knownMap.get(p.id) ?? 0
+      known += packKnown
+      if (p.wordCount > 0 && packKnown >= p.wordCount) done++
     }
   }
   return { total, known, done, packs: group.packs.length, pct: total > 0 ? (known / total) * 100 : 0 }
+}
+
+/** Same totals for a whole level — `VolumeStats` shape, so headers share code. */
+export function levelStats(group: LevelGroup, snapshot: ProgressSnapshot | null): VolumeStats {
+  return volumeStats(
+    { volume: '', short: '', packs: group.packs, firstNum: group.firstNum, lastNum: group.lastNum, levels: [group.level] },
+    snapshot,
+  )
 }
 
 /**
@@ -104,19 +178,62 @@ export function frontierPack(packs: PackMeta[], snapshot: ProgressSnapshot | nul
 
 export type PackStatusFilter = PackStatus | 'all'
 
+/**
+ * The lenses the route can be looked at through.
+ *
+ * Deliberately *diagnoses*, not sort orders (goal E3). Two of them —
+ * `fading` and `sealing` — are facts about your memory rather than about your
+ * progress bar, and neither existed as a filter before: `fadingPacks()` was
+ * computed and reduced to a count, and the retirement threshold was only ever
+ * a state, never something you could go and look at.
+ *
+ * Note what is NOT here: nothing that turns into "do this now". A lens shows
+ * you territory; acting on it is Dzisiaj's job.
+ */
+export type PackLens = 'all' | 'fading' | 'sealing' | 'started' | 'mastered' | 'new'
+
+export const PACK_LENSES: PackLens[] = ['all', 'fading', 'sealing', 'started', 'mastered', 'new']
+
+export const LENS_LABEL: Record<PackLens, string> = {
+  all: 'Wszystkie',
+  fading: 'Wraca do Ciebie',
+  sealing: 'Blisko „Na stałe"',
+  started: 'W toku',
+  mastered: 'Opanowane',
+  new: 'Nowe',
+}
+
 /** The four lenses the map can be viewed through. All-null = the full route. */
 export interface PackFilters {
   query: string
   level: number | null
   cat: string | null
-  status: PackStatusFilter
+  lens: PackLens
 }
 
-export const EMPTY_FILTERS: PackFilters = { query: '', level: null, cat: null, status: 'all' }
+export const EMPTY_FILTERS: PackFilters = { query: '', level: null, cat: null, lens: 'all' }
 
-/** True when any lens is engaged — the list then drops to a flat filtered view. */
+/** A bare number (optionally `#`-prefixed) in the search box addresses a pack
+ *  directly rather than filtering by text — see `isJumpQuery`. */
+const JUMP_QUERY_RE = /^#?\s*(\d{1,4})$/
+
+/** True when the query is a "go to pack N" shortcut rather than a text search. */
+export function isJumpQuery(query: string): boolean {
+  return JUMP_QUERY_RE.test(query.trim())
+}
+
+/**
+ * True when any lens is engaged — the list then drops to a flat filtered view.
+ *
+ * A query that's purely a route number is excluded: it means "take me there",
+ * not "filter the route down to this". Counting it as a text filter used to
+ * drop the whole list into result mode and then find nothing (numbers don't
+ * fuzzy-match names), so typing "317" showed the jump hint sitting above an
+ * empty "no packs match" screen instead of the full route underneath it.
+ */
 export function filtersActive(f: PackFilters): boolean {
-  return f.query.trim() !== '' || f.level != null || f.cat != null || f.status !== 'all'
+  const hasTextQuery = f.query.trim() !== '' && !isJumpQuery(f.query)
+  return hasTextQuery || f.level != null || f.cat != null || f.lens !== 'all'
 }
 
 /** Per-pack status filter shared by the flat (filtered) list view. */
@@ -136,6 +253,92 @@ export function packMatchesStatus(
     case 'mastered':  return allKnown
     default:          return true
   }
+}
+
+/** Everything a lens needs to judge one pack, gathered once by the caller. */
+export interface LensContext {
+  snapshot: ProgressSnapshot | null
+  memory: Map<string, PackMemory>
+  /** packId → words one review from retiring (`nearlySealedByPack`). */
+  sealing: Map<string, number>
+}
+
+/**
+ * Does this pack show through that lens?
+ *
+ * `mastered` deliberately includes `sealed`: a pack that has left the review
+ * queue is still mastered, and the reward rule is that nothing ever un-earns.
+ * `sealing` deliberately excludes packs already sealed — an opportunity you
+ * have taken is no longer an opportunity.
+ */
+export function packMatchesLens(pack: PackMeta, lens: PackLens, ctx: LensContext): boolean {
+  if (lens === 'all') return true
+  const mem = ctx.memory.get(pack.id)
+  switch (lens) {
+    case 'fading':   return mem?.relation === 'fading'
+    case 'sealing':  return mem?.relation !== 'sealed' && (ctx.sealing.get(pack.id) ?? 0) > 0
+    case 'mastered': return mem?.relation === 'held' || mem?.relation === 'sealed'
+    case 'started':  return mem?.relation === 'active'
+    case 'new':      return mem?.relation === 'ahead'
+    default:         return true
+  }
+}
+
+/** How many packs each lens would show — the numbers on the lens chips. */
+export function lensCounts(packs: PackMeta[], ctx: LensContext): Record<PackLens, number> {
+  const out = { all: packs.length, fading: 0, sealing: 0, started: 0, mastered: 0, new: 0 }
+  for (const pack of packs) {
+    for (const lens of PACK_LENSES) {
+      if (lens !== 'all' && packMatchesLens(pack, lens, ctx)) out[lens]++
+    }
+  }
+  return out
+}
+
+export interface FacetCounts {
+  lens: Record<PackLens, number>
+  level: Record<number, number>
+  category: Record<string, number>
+}
+
+/**
+ * Counts for each tab of the filter sheet, each computed with the *other* two
+ * facets already applied — standard faceted search, and the fix for a real
+ * bug: the sheet used to tally every tab against the full 864-pack catalogue
+ * no matter what else was selected. Filter to Level 1 (111 packs total) and
+ * the Kategoria tab still claimed "Czasowniki · 113" — more packs than exist
+ * in the level you'd already chosen, because it never looked at the level
+ * filter at all. Numbers a user can prove wrong at a glance are the fastest
+ * way to make a filter feel broken, even when the packs it returns are
+ * actually correct.
+ *
+ * The free-text query applies to all three, since it isn't a tab of its own.
+ * A jump query ("317") is excluded, same reasoning as `filtersActive`.
+ */
+export function facetCounts(packs: PackMeta[], filters: PackFilters, ctx: LensContext): FacetCounts {
+  const useQuery = filters.query.trim() !== '' && !isJumpQuery(filters.query)
+  const queryIds = useQuery ? new Set(filterPacksByQuery(packs, filters.query).map(p => p.id)) : null
+
+  const matches = (p: PackMeta, skip: 'level' | 'cat' | 'lens'): boolean =>
+    (skip === 'level' || filters.level == null || p.level === filters.level) &&
+    (skip === 'cat' || filters.cat == null || p.category === filters.cat) &&
+    (skip === 'lens' || packMatchesLens(p, filters.lens, ctx)) &&
+    (queryIds == null || queryIds.has(p.id))
+
+  const lens = { all: 0, fading: 0, sealing: 0, started: 0, mastered: 0, new: 0 }
+  const level: Record<number, number> = {}
+  const category: Record<string, number> = {}
+
+  for (const p of packs) {
+    if (matches(p, 'lens')) {
+      lens.all++
+      for (const l of PACK_LENSES) if (l !== 'all' && packMatchesLens(p, l, ctx)) lens[l]++
+    }
+    if (matches(p, 'level')) level[p.level] = (level[p.level] ?? 0) + 1
+    if (matches(p, 'cat')) category[p.category] = (category[p.category] ?? 0) + 1
+  }
+
+  return { lens, level, category }
 }
 
 /**

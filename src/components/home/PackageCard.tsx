@@ -1,132 +1,157 @@
-import { MouseEvent } from 'react'
+import { MouseEvent, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { PackMeta } from '../../types/vocabulary'
-import { PackageProgress } from '../../types/progress'
 import { useAuthStore } from '../../store/useAuthStore'
-import {
-  LEVEL_COLORS,
-  getPackIcon,
-  getCategoryColor,
-  getPackNumber,
-  getStatus,
-  STATUS_META,
-} from '../../utils/packVisuals'
+import { usePackWords } from '../../hooks/usePackWords'
+import { routeNumber } from '../../utils/packRoute'
+import { PackMemory } from '../../utils/packMemory'
+import { getCategoryColor, getPackIcon } from '../../utils/packVisuals'
 import './PackageCard.css'
 
 interface Props {
   pack: PackMeta
-  progress?: PackageProgress
-  knownCount?: number
+  memory?: PackMemory
+  /** How far Słuchaj has played through this pack, 0–100. */
+  heardPct?: number
+  /** The earliest pack on the route that isn't fully mastered. */
+  isFrontier?: boolean
+  /** Route number of the pack immediately before this one — for the "why now". */
+  prevNum?: number
+  /** Position in the rendered run, for the entrance stagger. */
+  index?: number
 }
 
-export function PackageCard({ pack, progress, knownCount = 0 }: Props) {
+/** relation → the word shown on the card and the class that colours it. */
+const RELATION_META: Record<PackMemory['relation'], { label: string; cls: string }> = {
+  sealed: { label: 'Na stałe',        cls: 'is-sealed' },
+  held:   { label: 'Opanowane',       cls: 'is-held' },
+  fading: { label: 'Wraca do Ciebie', cls: 'is-fading' },
+  active: { label: 'W toku',          cls: 'is-active' },
+  ahead:  { label: '',                cls: 'is-ahead' },
+}
+
+/**
+ * One pack, as a row on the route.
+ *
+ * ── The mark carries two facts, not one ─────────────────────────────────────
+ * The hand-picked emoji from `PACK_NAME_ICONS` answers "what is this pack
+ * about" instantly; the route number answers "which of 864 is it", which is the
+ * product's central claim. Picking one over the other loses real information,
+ * so the mark stacks both — emoji in the tile, number underneath.
+ *
+ * ── Three axes of state, two rings around the tile ──────────────────────────
+ * A pack is not one bar's worth of progress, and burying that in a line of
+ * text per axis would make 864 rows unreadable. So it reads as two concentric
+ * rings around the emoji, the same pattern Apple's Activity rings made
+ * universally legible — a proven answer to exactly this problem, "several
+ * independent measures, glanceable on one small dial":
+ *
+ *   outer ring   → Trenuj: mastery %, filled clockwise, coloured by memory
+ *                  state (violet mid-route, gold once held or sealed, amber
+ *                  while fading) — one ring, two facts at once.
+ *   inner ring   → Słuchaj: how far playback has gotten through the pack.
+ *
+ * Both rings keep a dim, always-visible track under the filled arc — an
+ * earlier pass drew the *remainder* as fully transparent, so an untouched
+ * pack (most of the catalogue) showed no ring at all. A ring you can't see
+ * on 90% of rows isn't legible; it's absent.
+ *
+ * Recall probability (the third memory fact) surfaces as text only while a
+ * pack is actually slipping — `PackMemory.strength` was computed for all 864
+ * packs on every render before this and reduced to a single boolean.
+ *
+ * ── Why one action ──────────────────────────────────────────────────────────
+ * Two buttons on 864 rows is the Dzisiaj screen smeared across the catalogue.
+ * The card opens the pack; both modes live there.
+ */
+export function PackageCard({ pack, memory, heardPct = 0, isFrontier, prevNum, index = 0 }: Props) {
   const navigate = useNavigate()
   const { user, hasAccess: hasAccessFn } = useAuthStore()
   const hasAccess = hasAccessFn()
-  // Mirror RequireEntitlement's redirect logic: logged-out visitors go to
-  // login first, logged-in-but-unentitled users go straight to the account page.
-  const goToAccount = (e: MouseEvent) => { e.stopPropagation(); navigate(user ? '/konto' : '/logowanie') }
+  const numRef = useRef<HTMLSpanElement>(null)
+
+  const words = usePackWords(pack.id)
+  const relation = memory?.relation ?? 'ahead'
+  const meta = RELATION_META[relation]
+  const known = memory?.known ?? 0
+  const total = memory?.total ?? pack.wordCount
+  const knownPct = total > 0 ? Math.min(100, Math.round((known / total) * 100)) : 0
+  const num = routeNumber(pack.id)
   const icon = getPackIcon(pack)
-  const color = getCategoryColor(pack.category)
-  const heardPct = progress ? Math.min((progress.currentIndex / pack.wordCount) * 100, 100) : 0
-  const knownPct = pack.wordCount > 0 ? Math.min((knownCount / pack.wordCount) * 100, 100) : 0
-  // A pack can carry a stale masteredAt with its words not actually all known
-  // (see services/masteryRepair.ts, which heals it on boot). Don't show the
-  // gold "★ Opanowana" treatment until the known count really reaches the total
-  // — otherwise the badge contradicts the "0 / 10 opanowanych" line right below.
-  const rawStatus = getStatus(progress)
-  const status = rawStatus === 'mastered' && knownCount < pack.wordCount
-    ? (progress?.completedAt ? 'completed' : 'started')
-    : rawStatus
-  const { label: statusLabel, className: statusClass } = STATUS_META[status]
-  const packNum = getPackNumber(pack.id)
-  // Mastered = VIP gold treatment; CSS owns all colors, so skip the inline overrides
-  const isMastered = status === 'mastered'
+  // Only shown while slipping: at full strength it is noise, and on an untouched
+  // pack it would be a claim about memory that doesn't exist yet.
+  const recall = relation === 'fading' && memory ? Math.round(memory.strength * 100) : null
+
+  // Mirror RequireEntitlement: logged-out visitors go to login, logged-in but
+  // unentitled ones go to the account page.
+  function open(e: MouseEvent) {
+    e.preventDefault()
+    if (!hasAccess) { navigate(user ? '/konto' : '/logowanie'); return }
+    // Name the mark only for the click that's actually navigating — 864
+    // permanently-named elements would make every view transition expensive.
+    const el = numRef.current
+    if (el) {
+      el.style.viewTransitionName = 'pack-mark'
+      window.setTimeout(() => { el.style.viewTransitionName = '' }, 600)
+    }
+    navigate(`/pakiet/${pack.id}`)
+  }
 
   return (
-    <div
-      className={`packcard ${statusClass}`}
-      onClick={hasAccess ? () => navigate(`/pakiet/${pack.id}`) : goToAccount}
-      style={{ cursor: 'pointer', ['--cat' as string]: color }}
+    <article
+      id={`pack-${pack.id}`}
+      className={`packcard ${meta.cls}${isFrontier ? ' is-frontier' : ''}`}
+      style={{
+        // The category palette has existed in packVisuals since forever and was
+        // wired to nothing. It rides on the emoji tile only — never on the state
+        // edge, so violet keeps meaning "your next step" and gold "earned".
+        ['--cat' as string]: getCategoryColor(pack.category),
+        ['--i' as string]: index,
+        ['--known-pct' as string]: knownPct,
+        ['--heard-pct' as string]: Math.round(heardPct),
+      }}
+      data-num={num}
     >
-      {/* Status stripe — visible left border accent (gold border replaces it when mastered) */}
-      {status !== 'new' && !isMastered && <div className="packcard__stripe" />}
-
-      {!hasAccess && (
-        <div className="packcard__lock" aria-label="Wymaga subskrypcji" title="Wymaga subskrypcji">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <rect x="4" y="11" width="16" height="10" rx="2"/>
-            <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
-          </svg>
-        </div>
-      )}
-
-      <div className="packcard__header">
-        {packNum && (
-          <div className="packcard__num">
-            <span
-              className="packcard__num-text"
-              style={{ color: !isMastered && pack.level ? LEVEL_COLORS[pack.level] : undefined }}
-            >
-              #{packNum}
-            </span>
-          </div>
-        )}
-        <div
-          className="packcard__icon-ring"
-          style={{
-            ['--known-pct' as string]: isMastered ? 100 : Math.round(knownPct),
-            ['--ring' as string]: isMastered ? '#f2b619' : '#10B981',
-          }}
-        >
-          <div className="packcard__icon" style={isMastered ? undefined : { background: `${color}22`, color }}>
-            {icon}
-          </div>
-        </div>
-        <div className="packcard__info">
-          <h3 className="packcard__name">{pack.name}</h3>
-          <span className="packcard__meta">{pack.category}</span>
-        </div>
-        <div className="packcard__right">
-          {statusLabel && (
-            <span className={`packcard__status-pill packcard__status-pill--${status}`}>
-              {statusLabel}
-            </span>
-          )}
-        </div>
-      </div>
-
-      <div className="packcard__progress-row">
-        <span className="packcard__count">
-          {knownCount} / {pack.wordCount} opanowanych
+      <a className="packcard__hit" href={`/pakiet/${pack.id}`} onClick={open}>
+        <span className="packcard__sr">
+          {pack.name}, pakiet numer {num}, opanowane {known} z {total}
         </span>
-        {pack.level && (
-          <span className="packcard__level">Level {pack.level}</span>
+      </a>
+
+      <span className="packcard__mark" aria-hidden="true">
+        <span className="packcard__tile">
+          <span className="packcard__ring packcard__ring--known" />
+          <span className="packcard__ring packcard__ring--heard" />
+          <span className="packcard__icon">{icon}</span>
+        </span>
+        <span className="packcard__num" ref={numRef}>{num}</span>
+      </span>
+
+      <span className="packcard__body">
+        <span className="packcard__name">{pack.name}</span>
+        <span className="packcard__words">
+          {words?.length ? words.join(' · ') : pack.category}
+        </span>
+        {isFrontier && (
+          <span className="packcard__why">
+            {prevNum ? `następny na trasie · zaraz po nr ${prevNum}` : 'początek trasy'}
+          </span>
         )}
-      </div>
+      </span>
 
-      {heardPct > 0 && (
-        <div className="packcard__bars">
-          <div className="packcard__bar packcard__bar--heard">
-            <div className="packcard__bar-fill" style={{ width: `${heardPct}%` }} />
-          </div>
-        </div>
-      )}
-
-      <div className="packcard__actions">
-        <button
-          className="packcard__btn packcard__btn--autoplay"
-          onClick={hasAccess ? (e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/start`) } : goToAccount}
-        >
-          <span>🎧</span> Słuchaj
-        </button>
-        <button
-          className="packcard__btn packcard__btn--fiszki"
-          onClick={hasAccess ? (e) => { e.stopPropagation(); navigate(`/pakiet/${pack.id}/fiszki-start`) } : goToAccount}
-        >
-          <span>⚡</span> Trenuj
-        </button>
-      </div>
-    </div>
+      <span className="packcard__tail">
+        {known > 0 && <span className="packcard__count"><b>{known}</b>/{total}</span>}
+        {recall != null && <span className="packcard__recall">{recall}%</span>}
+        {known === 0 && meta.label && <span className="packcard__state">{meta.label}</span>}
+        {isFrontier && <span className="packcard__go">Dalej</span>}
+        {!isFrontier && (
+          <span className="packcard__chev" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 6 15 12 9 18" />
+            </svg>
+          </span>
+        )}
+      </span>
+    </article>
   )
 }

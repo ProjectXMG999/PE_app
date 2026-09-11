@@ -1,0 +1,202 @@
+/* =============================================================================
+ * ROUTE CONTROLS — one row: search, and a button for everything else.
+ * Five permanent strips of chrome collapsed into ~56px, so the first pack is
+ * above the fold on the screen whose entire job is showing packs.
+ * ========================================================================== */
+
+.rc {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+}
+
+.rc__row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* ── Search ───────────────────────────────────────────────────────────────── */
+/* Two earlier passes kept inventing a bespoke "lit tile" recipe (a gradient,
+   an inset highlight, a stacked shadow) for this bar, none of which exist
+   anywhere on Dzisiaj. Dzisiaj's own controls — LevelPill, the FocusStage
+   card (`u-surface`) — are plain: one flat fill, one hairline border, no
+   shadow, no gradient, no blur. This is that recipe, copied outright rather
+   than re-derived: `background: var(--bg-card); border: 1px solid var(--border);`
+   is LevelPill's exact declaration. */
+.rc__search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  height: 48px;
+  padding: 0 14px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* The one addition Dzisiaj's plain pills don't need: a focus ring, because
+   this is an actual text input. Same treatment LoginPage's `.login__input`
+   already uses elsewhere in the app. */
+.rc__search:focus-within {
+  border-color: var(--border-accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.rc__search-icon {
+  flex: 0 0 auto;
+  color: var(--text-muted);
+}
+
+.rc__search-input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0 10px;
+  border: 0;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+}
+
+.rc__search-input::placeholder { color: var(--text-muted); }
+.rc__search-input:focus { outline: none; }
+.rc__search-input::-webkit-search-cancel-button { display: none; }
+
+.rc__search-clear {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.rc__search-clear:hover { color: var(--text-primary); }
+
+/* ── Filters ──────────────────────────────────────────────────────────────── */
+/* Same LevelPill recipe as the search field beside it — flat fill, hairline
+   border, no shadow. */
+.rc__filters {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+}
+
+@media (hover: hover) {
+  .rc__filters:hover { border-color: var(--border-strong); color: var(--text-primary); }
+}
+
+.rc__filters.is-active {
+  border-color: var(--border-accent);
+  color: var(--accent-bright);
+}
+
+.rc__filters-dot {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--accent-bright);
+}
+
+/* ── Jump-to-number hint ──────────────────────────────────────────────────
+   Route numbers are the pack's identity, so typing one should address it
+   directly. The numbering has gaps (#102 doesn't exist), so this only appears
+   when the lookup found a real pack. */
+.rc__jump {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 16px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-accent);
+  background: var(--gradient-hero);
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: left;
+  animation: fx-rise 240ms var(--ease-out-expo) both;
+}
+
+.rc__jump-nr {
+  margin-right: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.rc__jump-num {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: var(--text-md);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: var(--tracking-tight);
+  color: var(--accent-bright);
+}
+
+.rc__jump-name {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--text-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rc__jump-go {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--accent-bright);
+  white-space: nowrap;
+}
+
+/* ── Result line — the only thing allowed to join the bar, and only while a
+   filter is on. Without it there is no sign you're on a subset. ──────────── */
+.rc__result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.rc__clear {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--accent-bright);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rc__jump { animation: none; }
+}

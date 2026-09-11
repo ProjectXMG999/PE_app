@@ -1,25 +1,43 @@
 .memstrip {
+  margin: 0 var(--spacing-md);
+  padding: 10px var(--spacing-md) 11px;
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in oklch, var(--live) 34%, var(--border));
+  background: linear-gradient(160deg,
+    color-mix(in oklch, var(--live) 11%, var(--bg-card)) 0%,
+    var(--bg-card) 60%);
+}
+
+/* Full-bleed inside the strip: negative margins pull it out to the strip's own
+   edges, so the tap target is the whole top of the card and clears 44px. */
+.memstrip__head {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  margin: 0 var(--spacing-md);
-  padding: 9px var(--spacing-md);
-  border-radius: var(--radius-lg);
-  border: 1px solid color-mix(in srgb, #F59E0B 38%, var(--border));
-  background: linear-gradient(160deg,
-    color-mix(in srgb, #F59E0B 11%, var(--bg-card)) 0%,
-    var(--bg-card) 60%);
-  color: var(--text-primary);
-  text-decoration: none;
-  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  width: calc(100% + 2 * var(--spacing-md));
+  min-height: 44px;
+  margin: -10px calc(var(--spacing-md) * -1) 0;
+  padding: 10px var(--spacing-md);
+  border: none;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background var(--transition-fast);
 }
 
-.memstrip:hover { border-color: #F59E0B; }
-.memstrip:active { transform: scale(0.99); }
+.memstrip__head:active {
+  background: color-mix(in oklch, var(--live) 12%, transparent);
+}
 
-.memstrip:focus-visible {
+@media (hover: hover) {
+  .memstrip__head:hover { background: color-mix(in oklch, var(--live) 8%, transparent); }
+}
+
+.memstrip__head:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  outline-offset: -2px;
 }
 
 .memstrip__dot {
@@ -27,29 +45,109 @@
   width: 8px;
   height: 8px;
   border-radius: var(--radius-full);
-  background: #F59E0B;
-  box-shadow: 0 0 10px 1px color-mix(in srgb, #F59E0B 60%, transparent);
+  background: var(--live);
+  box-shadow: 0 0 10px 1px color-mix(in oklch, var(--live) 60%, transparent);
 }
 
-.memstrip__text {
+.memstrip__title {
   flex: 1;
   min-width: 0;
+  margin: 0;
   font-family: var(--font-body);
   font-size: var(--text-sm);
   color: var(--text-secondary);
 }
 
-.memstrip__text strong {
+.memstrip__title strong {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-primary);
   font-variant-numeric: tabular-nums;
 }
 
+/* A label on the row now, not a control of its own — it says what the tap does
+   and the chevron confirms the row leads somewhere. */
 .memstrip__cta {
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
   font-family: var(--font-heading);
   font-size: 12px;
+  font-weight: 800;
+  color: var(--live);
+  white-space: nowrap;
+}
+
+.memstrip__cta svg { flex-shrink: 0; }
+
+/* The named packs. Horizontally scrollable rather than wrapped, so the strip's
+   height never jumps as the fading set changes. */
+.memstrip__list {
+  display: flex;
+  gap: 6px;
+  margin: 8px 0 0;
+  padding: 0 0 2px;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.memstrip__list::-webkit-scrollbar { display: none; }
+
+.memstrip__chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  max-width: 190px;
+  padding: 5px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid color-mix(in oklch, var(--live) 26%, var(--border));
+  background: var(--surface-tile);
+  box-shadow: var(--tile-hi);
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.memstrip__chip:hover { border-color: var(--live); color: var(--text-primary); }
+
+.memstrip__chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.memstrip__chip-nr {
+  margin-right: 2px;
+  font-size: 9px;
   font-weight: 700;
-  color: #F59E0B;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.memstrip__chip-num {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--live);
+  font-variant-numeric: tabular-nums;
+}
+
+.memstrip__chip-name {
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.memstrip__more {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 5px 8px;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-muted);
 }

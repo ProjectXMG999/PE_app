@@ -1,563 +1,358 @@
-/* Registered so the icon progress ring can transition its fill (a custom
-   property is only animatable once declared with @property). */
+/* =============================================================================
+ * PACK CARD — one pack as a row on the route.
+ * -----------------------------------------------------------------------------
+ * One surface, one radius, no shadow — the same language as Dzisiaj. Colour
+ * comes from tokens.css, motion from animations.css. No literal colours.
+ *
+
+ * Two concentric rings around the tile carry mastery (Trenuj), listening
+ * progress (Słuchaj) and memory state at once — see PackageCard.tsx.
+ *
+ * The row height is fixed so `contain-intrinsic-size` can be truthful — with
+ * 864 rows that is the difference between a smooth scrollbar and a jumping one.
+ * ========================================================================== */
+
 @property --known-pct {
   syntax: '<number>';
-  inherits: true;
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --heard-pct {
+  syntax: '<number>';
+  inherits: false;
   initial-value: 0;
 }
 
 .packcard {
-  background: var(--bg-card);
-  /* Category-tinted edge — turns a wall of grey cards into a colour-coded
-     shelf. `--cat` is set inline from getCategoryColor(); status variants
-     below redeclare border-color and win by source order. */
-  border: 1px solid color-mix(in srgb, var(--cat, var(--border)) 32%, var(--border));
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-md);
-  transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  --edge: transparent;
+  --row-h: 92px;
+
+  container-type: inline-size;
   position: relative;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  min-height: var(--row-h);
+  padding: 14px 16px 14px 18px;
+  border-radius: var(--radius-lg);
+  /* Material, not a wash — see the --surface-tile note in tokens.css. */
+  background: var(--surface-tile);
+  border: 1px solid var(--tile-border);
+  box-shadow: var(--tile-hi);
   overflow: hidden;
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
 }
 
-[data-theme="light"] .packcard {
-  box-shadow: var(--shadow-sm);
+/* The whole row is the target; a real anchor keeps middle-click, "open in new
+   tab" and keyboard focus working. */
+.packcard__hit {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+}
+
+.packcard__hit:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: -2px;
+}
+
+.packcard__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 @media (hover: hover) {
   .packcard:hover {
-    transform: translateY(-2px);
-    border-color: var(--border-accent);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    background: var(--surface-tile-hover);
+    border-color: var(--border-strong);
   }
-
-  [data-theme="light"] .packcard:hover {
-    box-shadow: var(--shadow-md);
-  }
-
-  .packcard:hover .packcard__icon {
-    transform: scale(1.06);
-    box-shadow: 0 0 14px color-mix(in srgb, var(--cat, var(--accent)) 55%, transparent);
-  }
-
-  .packcard:active {
-    transform: translateY(0) scale(0.985);
-  }
+  /* Affordance only where it is free. On a phone a chevron on 864 rows is
+     clutter; with a pointer it tells you the row is pressable. */
+  .packcard:hover .packcard__chev { opacity: 1; }
 }
 
-.packcard__lock {
-  position: absolute;
-  top: var(--spacing-sm);
-  right: var(--spacing-sm);
-  width: 22px;
-  height: 22px;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-primary);
-  color: var(--warning);
-  border: 1px solid var(--border);
-  z-index: 1;
-}
+.packcard:active { transform: scale(0.99); }
 
-[data-theme="light"] .packcard:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-accent);
-}
-
-.packcard:active {
-  transform: scale(0.99);
-}
-
-/* Status variants */
-.packcard--completed {
-  border-color: rgba(16, 185, 129, 0.35);
-}
-
-/* ── Mastered: VIP "struck gold" treatment ────────────────────────────
-   The gold has to read as *metal*, not a yellow tint. Three ideas do that:
-   1. A deep obsidian base so the gold has darkness to shine against.
-   2. A multi-band metallic rim — alternating light/dark stops fake the way
-      a polished bevel catches light along its length.
-   3. A slow, single foil glint that sweeps then rests (restraint = class). */
-
-.packcard--mastered {
-  /* Own stacking context so the glint pseudo sits above the fill but under
-     the content (z-index: -1 below). */
-  isolation: isolate;
-  border: 1.5px solid transparent;
-  /* Strong smoked glass — low-alpha pane + heavy backdrop blur lets the page
-     show through frosted; gold lives only in the rim, the glint and a faint
-     suspended light. */
-  background:
-    /* diagonal glass sheen across the top-left */
-    linear-gradient(125deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 34%) padding-box,
-    /* faint gold light suspended in the glass, top-left */
-    radial-gradient(135% 100% at 14% -12%, rgba(247, 214, 130, 0.10) 0%, rgba(247, 214, 130, 0) 55%) padding-box,
-    /* translucent smoked-glass pane */
-    linear-gradient(158deg, rgba(40, 42, 54, 0.52) 0%, rgba(15, 16, 23, 0.64) 100%) padding-box,
-    /* metallic rim: champagne highlights ↔ bronze shadows repeated = sheen */
-    linear-gradient(135deg,
-      #fbf1c4 0%,
-      #d7ad46 12%,
-      #fff6d8 26%,
-      #a4741b 40%,
-      #f1d275 54%,
-      #8a6212 68%,
-      #f4db88 82%,
-      #fff6d8 100%) border-box;
-  -webkit-backdrop-filter: blur(22px) saturate(1.3) brightness(1.05);
-  backdrop-filter: blur(22px) saturate(1.3) brightness(1.05);
-  box-shadow:
-    0 14px 38px rgba(0, 0, 0, 0.5),
-    0 0 26px rgba(226, 180, 74, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.38),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-}
-
-/* Sweeping foil glint — a crisp bright core with a soft champagne halo */
-.packcard--mastered::before {
+/* ── Memory channel: the left edge ────────────────────────────────────────
+   A full-height edge rather than a glyph. "New" is most of the catalogue and
+   gets none — a marker on everything means nothing. */
+.packcard::before {
   content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: linear-gradient(102deg,
-    transparent 40%,
-    rgba(255, 250, 224, 0.10) 46%,
-    rgba(255, 255, 255, 0.5) 49.5%,
-    rgba(255, 250, 224, 0.10) 53%,
-    transparent 59%);
-  transform: translateX(-130%) skewX(-16deg);
-  animation: goldSheen 6.5s cubic-bezier(0.22, 0.61, 0.24, 1) infinite;
-}
-
-@keyframes goldSheen {
-  0%   { transform: translateX(-130%) skewX(-16deg); opacity: 0; }
-  6%   { opacity: 1; }
-  24%  { transform: translateX(130%) skewX(-16deg); opacity: 1; }
-  32%  { transform: translateX(130%) skewX(-16deg); opacity: 0; }
-  100% { transform: translateX(130%) skewX(-16deg); opacity: 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .packcard--mastered::before { animation: none; }
-}
-
-/* Gold-gradient number — filled metal, not a solid yellow */
-.packcard--mastered .packcard__num-text {
-  background: linear-gradient(160deg, #fff7d6 0%, #f3ce74 48%, #c79320 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  filter: drop-shadow(0 1px 6px rgba(243, 206, 116, 0.45));
-}
-
-/* Icon as a gold-rimmed glass chip — bright top edge, no brown fill */
-.packcard--mastered .packcard__icon {
-  background: linear-gradient(150deg, rgba(250, 222, 140, 0.24) 0%, rgba(250, 222, 140, 0.05) 100%);
-  border: 1px solid rgba(255, 246, 210, 0.5);
-  box-shadow:
-    inset 0 1px 1px rgba(255, 248, 214, 0.5),
-    inset 0 -4px 10px rgba(0, 0, 0, 0.22);
-}
-
-.packcard--mastered .packcard__name {
-  color: #FDF3D0;
-  letter-spacing: 0.01em;
-}
-
-.packcard--mastered .packcard__meta,
-.packcard--mastered .packcard__count {
-  color: rgba(240, 214, 150, 0.72);
-}
-
-.packcard--mastered .packcard__right {
-  color: rgba(245, 219, 155, 0.82);
-}
-
-.packcard--mastered .packcard__level {
-  background: rgba(0, 0, 0, 0.32);
-  color: #FBE4A0;
-  border: 1px solid rgba(240, 205, 120, 0.45);
-}
-
-[data-theme="light"] .packcard--completed {
-  border-color: rgba(16, 185, 129, 0.5);
-}
-
-/* Light theme — strong frosted glass with the same metallic gold rim */
-[data-theme="light"] .packcard--mastered {
-  border: 1.5px solid transparent;
-  background:
-    linear-gradient(125deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 34%) padding-box,
-    radial-gradient(135% 100% at 14% -12%, rgba(255, 224, 150, 0.35) 0%, rgba(255, 224, 150, 0) 55%) padding-box,
-    linear-gradient(158deg, rgba(255, 253, 247, 0.55) 0%, rgba(255, 246, 228, 0.66) 100%) padding-box,
-    linear-gradient(135deg,
-      #fdeaa0 0%,
-      #d99b0d 20%,
-      #fff2c4 34%,
-      #9a6c07 50%,
-      #e6b13a 66%,
-      #b17d12 80%,
-      #fdeaa0 100%) border-box;
-  -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  backdrop-filter: blur(20px) saturate(1.2);
-  box-shadow:
-    0 10px 26px rgba(160, 110, 8, 0.16),
-    0 0 16px rgba(245, 197, 66, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.85),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.3);
-}
-
-[data-theme="light"] .packcard--mastered::before {
-  background: linear-gradient(102deg,
-    transparent 40%,
-    rgba(255, 252, 235, 0.35) 46%,
-    rgba(255, 255, 255, 0.75) 49.5%,
-    rgba(255, 252, 235, 0.35) 53%,
-    transparent 59%);
-}
-
-[data-theme="light"] .packcard--mastered .packcard__num-text {
-  background: linear-gradient(160deg, #c98a12 0%, #9a6c07 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  filter: none;
-}
-
-[data-theme="light"] .packcard--mastered .packcard__icon {
-  background: linear-gradient(150deg, rgba(255, 240, 190, 0.9) 0%, rgba(230, 177, 58, 0.5) 100%);
-  border: 1px solid rgba(217, 155, 13, 0.5);
-  box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.9),
-    inset 0 -5px 10px rgba(160, 110, 8, 0.14);
-}
-
-[data-theme="light"] .packcard--mastered .packcard__name {
-  color: #4A2E05;
-}
-
-[data-theme="light"] .packcard--mastered .packcard__meta,
-[data-theme="light"] .packcard--mastered .packcard__count {
-  color: #8A6410;
-}
-
-[data-theme="light"] .packcard--mastered .packcard__level {
-  background: rgba(255, 255, 255, 0.7);
-  color: #92400E;
-  border: 1px solid rgba(217, 155, 13, 0.5);
-}
-
-/* Left stripe accent */
-.packcard__stripe {
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   width: 3px;
-  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+  background: var(--edge);
 }
 
-.packcard--started .packcard__stripe {
-  background: linear-gradient(
-    180deg,
-    var(--accent),
-    color-mix(in srgb, var(--accent) 35%, transparent),
-    var(--accent)
-  );
-  background-size: 100% 250%;
-  animation: packcard-stripe-flow 2.8s ease-in-out infinite;
-}
+.packcard.is-active { --edge: var(--accent); }
+.packcard.is-fading { --edge: var(--live); }
+.packcard.is-held,
+.packcard.is-sealed { --edge: var(--gold); }
 
-@keyframes packcard-stripe-flow {
-  0%, 100% { background-position: 0 0; }
-  50%      { background-position: 0 100%; }
-}
-
-.packcard--completed .packcard__stripe {
-  background: #10B981;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .packcard--started .packcard__stripe {
-    animation: none;
-  }
-}
-
-/* Number — left column in header flow */
-.packcard__num {
-  flex-shrink: 0;
-  width: 36px;
+/* ── Mark: emoji tile + route number ──────────────────────────────────────── */
+.packcard__mark {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 4px;
+  width: 52px;
 }
 
-.packcard__num-text {
-  font-family: var(--font-heading);
-  font-size: 18px;
-  font-weight: 800;
-  color: var(--text-muted);
-  letter-spacing: -0.03em;
+.packcard__tile {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklch, var(--cat, var(--accent)) 16%, transparent);
+  border: 1px solid color-mix(in oklch, var(--cat, var(--accent)) 22%, transparent);
+}
+
+/* State outranks category — what a pack *is to you* matters more than what
+   kind of words are in it. */
+.packcard.is-held .packcard__tile,
+.packcard.is-sealed .packcard__tile {
+  background: var(--gold-soft);
+  border-color: color-mix(in oklch, var(--gold) 34%, transparent);
+}
+
+.packcard.is-fading .packcard__tile {
+  background: var(--live-soft);
+  border-color: color-mix(in oklch, var(--live) 34%, transparent);
+}
+
+.packcard__icon {
+  font-size: 22px;
   line-height: 1;
 }
 
-.packcard__header {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-sm);
-}
+.packcard.is-ahead .packcard__icon { opacity: 0.75; }
 
-.packcard__icon-ring {
-  position: relative;
-  flex-shrink: 0;
-  --ring-track: color-mix(in srgb, var(--ring, #10b981) 15%, transparent);
-  transition: --known-pct var(--transition-slow) var(--ease-out-expo);
-}
-
-/* Conic progress ring hugging the icon's rounded-square shape (mask-composite
-   punches out the centre, leaving only the 3px band). */
-.packcard__icon-ring::before {
-  content: '';
+/* Two concentric rings, the Activity-rings pattern: several independent
+   measures, glanceable on one small dial without a word of text.
+   Both keep a dim, always-visible TRACK under the filled arc — drawing the
+   remainder as fully transparent (the previous version) meant an untouched
+   pack, which is most of the catalogue, showed no ring at all. A ring that
+   only appears once you've made progress isn't a progress ring. */
+.packcard__ring {
   position: absolute;
-  inset: -3.5px;
-  border-radius: calc(var(--radius-md) + 3.5px);
-  padding: 3px;
-  background: conic-gradient(
-    from -90deg,
-    var(--ring, #10b981) calc(var(--known-pct, 0) * 1%),
-    var(--ring-track) 0
-  );
+  border-radius: inherit;
+  padding: 2px;
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
           mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
           mask-composite: exclude;
-  pointer-events: none;
 }
 
-@starting-style {
-  .packcard__icon-ring {
-    --known-pct: 0 !important;
-  }
+/* Outer ring — Trenuj: mastery %, coloured by memory state (--edge). */
+.packcard__ring--known {
+  inset: 0;
+  background: conic-gradient(
+    from -90deg,
+    var(--edge, var(--accent)) calc(var(--known-pct, 0) * 1%),
+    var(--border-strong) 0
+  );
+  transition: --known-pct var(--transition-slow) var(--ease-out-expo);
 }
 
-.packcard__icon {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-md);
+/* Inner ring — Słuchaj: how far playback has gotten. Always blue, so it never
+   fights the outer ring's state colour for meaning. */
+.packcard__ring--heard {
+  inset: 5px;
+  border-radius: calc(var(--radius-lg) - 4px);
+  padding: 1.5px;
+  background: conic-gradient(
+    from -90deg,
+    var(--listen-blue) calc(var(--heard-pct, 0) * 1%),
+    var(--border) 0
+  );
+  transition: --heard-pct var(--transition-slow) var(--ease-out-expo);
+}
+
+.packcard__num {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+}
+
+
+.packcard.is-held .packcard__num,
+.packcard.is-sealed .packcard__num { color: var(--gold); }
+.packcard.is-fading .packcard__num { color: var(--live); }
+
+/* ── Body ─────────────────────────────────────────────────────────────────── */
+.packcard__body {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.packcard__info {
-  flex: 1;
+  flex-direction: column;
+  gap: 3px;
   min-width: 0;
 }
 
 .packcard__name {
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: var(--text-lg);
   font-weight: 700;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-primary);
-  margin-bottom: 2px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.packcard__meta {
-  font-size: 12px;
+/* A peek at the real words. An earlier version blurred these for logged-out
+   visitors; at 864 rows the blur read as a rendering fault, and a padlock on
+   every row carried no information (without access, everything is locked). The
+   preview file is public anyway — see scripts/build-pack-previews.mjs — and the
+   translations, sentences and audio all stay behind the paywall. */
+.packcard__words {
+  min-width: 0;
+  font-size: var(--text-sm);
   color: var(--text-muted);
-}
-
-.packcard__right {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  color: var(--text-muted);
-  flex-shrink: 0;
-}
-
-/* Status pill */
-.packcard__status-pill {
-  font-size: 11px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: var(--radius-full);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.packcard__status-pill--started {
-  background: rgba(139, 92, 246, 0.15);
+/* Why this pack is the one you're standing on — the order, made visible (B2). */
+.packcard__why {
+  font-size: var(--text-xs);
+  font-weight: 600;
   color: var(--accent-bright);
 }
 
-.packcard__status-pill--completed {
-  background: rgba(16, 185, 129, 0.15);
-  color: #10B981;
-}
-
-.packcard__status-pill--mastered {
-  background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);
-  color: white;
-  border: 1px solid rgba(253, 230, 138, 0.5);
-  box-shadow: 0 0 10px rgba(251, 191, 36, 0.45);
-}
-
-[data-theme="light"] .packcard__status-pill--started {
-  background: rgba(99, 102, 241, 0.1);
-}
-
-[data-theme="light"] .packcard__status-pill--completed {
-  background: rgba(16, 185, 129, 0.12);
-}
-
-.packcard__progress-row {
+/* ── Tail ─────────────────────────────────────────────────────────────────── */
+.packcard__tail {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--spacing-sm);
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  text-align: right;
 }
 
 .packcard__count {
-  font-size: 13px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.packcard__count b {
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* Recall probability, shown only while a pack is slipping — the number FSRS
+   always knew and the page always threw away. */
+.packcard__recall {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--live);
+  font-variant-numeric: tabular-nums;
+}
+
+.packcard__state {
+  font-size: var(--text-xs);
+  font-weight: 600;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
-.packcard__level {
-  font-size: 11px;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  color: var(--text-accent);
-  background: var(--bg-surface);
-  padding: 2px 8px;
-  border-radius: var(--radius-full);
+.packcard.is-held .packcard__state,
+.packcard.is-sealed .packcard__state { color: var(--gold); }
+
+/* ── Earned ───────────────────────────────────────────────────────────────── */
+.packcard.is-held,
+.packcard.is-sealed { border-color: color-mix(in oklch, var(--gold) 22%, transparent); }
+
+/* "Na stałe" — out of the review queue for good, the one state you cannot
+   reach by grinding. */
+.packcard.is-sealed { background: var(--gold-soft); }
+
+.packcard.is-fading { border-color: color-mix(in oklch, var(--live) 24%, transparent); }
+
+/* ── Frontier: the one accented row in the whole catalogue ────────────────── */
+.packcard.is-frontier {
+  background: linear-gradient(180deg,
+    color-mix(in oklch, var(--accent) 24%, transparent),
+    color-mix(in oklch, var(--accent) 10%, transparent));
+  border-color: var(--border-accent);
+  box-shadow: var(--tile-hi);
 }
 
-.packcard__bars {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin-bottom: var(--spacing-md);
-}
-
-.packcard__bar {
-  height: 3px;
-  background: var(--bg-surface);
-  border-radius: var(--radius-full);
-  overflow: hidden;
-}
-
-.packcard__bar-fill {
-  height: 100%;
-  border-radius: var(--radius-full);
-  transition: width var(--transition-slow) var(--ease-out-expo);
-}
-
-/* Grow from 0 the first time the card paints (scrolls into view). */
-@starting-style {
-  .packcard__bar-fill {
-    width: 0 !important;
-  }
-}
-
-.packcard__bar--heard .packcard__bar-fill {
-  background: #f97316;
-}
-
-.packcard__bar--known .packcard__bar-fill {
-  background: #10B981;
-}
-
-.packcard__actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-sm);
-}
-
-.packcard__btn {
-  height: 38px;
-  border-radius: var(--radius-full);
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 600;
-  display: flex;
+.packcard__go {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
-  transition: all var(--transition-fast);
+  height: 32px;
+  margin-top: 2px;
+  padding: 0 14px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-/* Same Słuchaj/Trenuj colors as the Dzisiaj hero CTAs (today__cta--listen /
-   today__cta--train in TodayPage.css) — blue for listening, violet accent
-   for active training — so the two screens read as one system. */
-.packcard__btn--autoplay {
-  background: linear-gradient(135deg, var(--listen-blue) 0%, color-mix(in srgb, var(--listen-blue) 55%, black) 100%);
-  color: white;
-  box-shadow: 0 4px 14px color-mix(in srgb, var(--listen-blue) 45%, transparent);
+/* Pointer-only affordance; invisible until hover (see the rule above). */
+.packcard__chev {
+  display: none;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
 }
 
-.packcard__btn--autoplay:hover {
-  box-shadow: 0 4px 18px color-mix(in srgb, var(--listen-blue) 60%, transparent);
+@media (hover: hover) {
+  .packcard__chev { display: grid; place-items: center; }
 }
 
-.packcard__btn--fiszki {
-  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 55%, black) 100%);
-  border: 1px solid transparent;
-  color: white;
-  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 40%, transparent);
+/* Jump-target acknowledgement. */
+.packcard--pulse { animation: packcard-pulse 2.2s var(--ease-out-expo) 1; }
+
+@keyframes packcard-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 transparent; }
+  18%, 70% { box-shadow: var(--glow-primary); }
 }
 
-.packcard__btn--fiszki:hover {
-  box-shadow: 0 4px 18px color-mix(in srgb, var(--accent) 55%, transparent);
+/* ── Narrow container ─────────────────────────────────────────────────────
+   NB: `inline-size` queries measure the container's *content box*, so a 358px
+   card with 34px of padding queries as 322px. An earlier 330px threshold
+   therefore fired on every phone and hid the words line on all of them.
+   The words are the only thing on the row saying what is inside the pack —
+   they shrink, they never disappear. */
+@container (max-width: 250px) {
+  .packcard { grid-template-columns: 46px minmax(0, 1fr) auto; gap: 10px; padding-inline: 12px; }
+  .packcard__mark { width: 46px; }
+  .packcard__tile { width: 42px; height: 42px; }
+  .packcard__name { font-size: var(--text-md); }
 }
 
-/* Mastered VIP actions: solid gold primary (Słuchaj) + gold-outline secondary (Trenuj) */
-.packcard--mastered .packcard__btn--autoplay {
-  background: linear-gradient(135deg, #fde08a 0%, #f2b619 45%, #c8860c 100%);
-  border: 1px solid rgba(255, 247, 204, 0.6);
-  color: #3a2600;
-  text-shadow: 0 1px 0 rgba(255, 247, 204, 0.5);
-  box-shadow:
-    0 4px 16px rgba(200, 134, 12, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+@media (prefers-reduced-motion: reduce) {
+  .packcard,
+  .packcard__ring--known,
+  .packcard__ring--heard { transition: none; }
+  .packcard--pulse { animation: none; outline: 2px solid var(--accent-bright); }
 }
 
-.packcard--mastered .packcard__btn--autoplay:hover {
-  box-shadow:
-    0 4px 22px rgba(242, 182, 25, 0.7),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+/* In forced-colors the edge tint disappears, so state has to survive as
+   geometry: keep a visible border and let the ring carry mastery. */
+@media (forced-colors: active) {
+  .packcard { border: 1px solid CanvasText; }
+  .packcard::before { forced-color-adjust: none; background: Highlight; }
+  .packcard.is-ahead::before { background: transparent; }
 }
-
-.packcard--mastered .packcard__btn--fiszki {
-  background: rgba(250, 222, 140, 0.1);
-  border: 1.5px solid #F5C542;
-  color: #FDE68A;
-  box-shadow:
-    0 0 12px rgba(245, 197, 66, 0.28),
-    inset 0 0 12px rgba(245, 197, 66, 0.08);
-}
-
-.packcard--mastered .packcard__btn--fiszki:hover {
-  box-shadow:
-    0 0 18px rgba(245, 197, 66, 0.5),
-    inset 0 0 14px rgba(245, 197, 66, 0.16);
-}
-
-[data-theme="light"] .packcard--mastered .packcard__btn--fiszki {
-  background: rgba(245, 197, 66, 0.16);
-  border-color: #D99B0D;
-  color: #92400E;
-  box-shadow: 0 0 10px rgba(217, 155, 13, 0.25);
-}
-
