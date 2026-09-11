@@ -6,6 +6,7 @@ import { useAuthStore } from '../../store/useAuthStore'
 import { NAV_ITEMS, getActiveNavItem } from './navItems'
 import { NavIndicator } from './NavIndicator'
 import { SidebarPulse } from './SidebarPulse'
+import { ProgressLogo } from '../brand/ProgressLogo'
 import './Sidebar.css'
 
 export function Sidebar() {
@@ -30,24 +31,14 @@ export function Sidebar() {
 
   return (
     <aside className="sidebar">
-      <div className="sidebar__brand" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-        <img src="/icons/icon-192.png" alt="" className="sidebar__pe-icon" />
-        <img
-          src={resolved === 'dark' ? '/icons/logo-white.svg' : '/icons/logo-dark.svg'}
-          alt="Project English"
-          className="sidebar__logo-img"
-          onError={(e) => {
-            const t = e.currentTarget
-            t.style.display = 'none'
-            const fallback = t.nextElementSibling as HTMLElement
-            if (fallback) fallback.style.display = 'flex'
-          }}
-        />
-        <div className="sidebar__logo-fallback" style={{ display: 'none' }}>
-          <span className="sidebar__logo-text">PROJECT ENGLISH</span>
-          <span className="sidebar__logo-sub">NEW EDUCATION</span>
-        </div>
-      </div>
+      <button
+        type="button"
+        className="sidebar__brand"
+        onClick={() => navigate('/')}
+        aria-label="Progress — strona główna"
+      >
+        <ProgressLogo size={30} />
+      </button>
 
       <nav className="sidebar__nav">
         {NAV_ITEMS.map(item => {

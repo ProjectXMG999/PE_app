@@ -1,0 +1,56 @@
+/* =============================================================================
+ * PROGRESS — brand lockup.
+ * The wordmark rides --plogo-size, so one number sets the whole lockup: the
+ * word is 0.72× the mark, the byline 0.3×.
+ * ========================================================================== */
+
+.plogo {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--plogo-size, 32px) * 0.3);
+  min-width: 0;
+}
+
+.plogo--stacked {
+  flex-direction: column;
+  gap: calc(var(--plogo-size, 32px) * 0.28);
+  text-align: center;
+}
+
+.plogo__mark {
+  flex-shrink: 0;
+  display: block;
+}
+
+.plogo__text {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--plogo-size, 32px) * 0.12);
+  min-width: 0;
+}
+
+.plogo--stacked .plogo__text {
+  align-items: center;
+}
+
+.plogo__word {
+  font-family: var(--font-heading);
+  font-size: calc(var(--plogo-size, 32px) * 0.72);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* Provenance, not a tagline: small, wide-tracked, deliberately quiet. */
+.plogo__byline {
+  font-family: var(--font-heading);
+  font-size: max(9px, calc(var(--plogo-size, 32px) * 0.3));
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--text-muted);
+  white-space: nowrap;
+}

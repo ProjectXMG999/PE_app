@@ -10,49 +10,25 @@
   overflow-y: auto;
 }
 
+/* Brand lockup — also the way back to the pack list. */
 .sidebar__brand {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  width: 100%;
   margin-bottom: var(--spacing-xl);
   padding: 0 var(--spacing-xs);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
 }
 
-.sidebar__pe-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 9px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
+.sidebar__brand:hover { opacity: 0.85; }
 
-.sidebar__logo-img {
-  height: 34px;
-  width: auto;
-  object-fit: contain;
-}
-
-.sidebar__logo-fallback {
-  flex-direction: column;
-  gap: 1px;
-}
-
-.sidebar__logo-text {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.07em;
-  color: var(--text-primary);
-  line-height: 1;
-}
-
-.sidebar__logo-sub {
-  font-family: var(--font-heading);
-  font-weight: 400;
-  font-size: 8px;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-  line-height: 1;
+.sidebar__brand:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
 }
 
 .sidebar__nav {
@@ -87,7 +63,7 @@
   position: absolute;
   inset: 0;
   border-radius: var(--radius-md);
-  background: linear-gradient(165deg, color-mix(in srgb, var(--accent) 16%, var(--bg-card-hover)) 0%, var(--bg-card-hover) 100%);
+  background: linear-gradient(165deg, color-mix(in oklch, var(--accent) 16%, var(--bg-card-hover)) 0%, var(--bg-card-hover) 100%);
   box-shadow: inset 3px 0 0 var(--accent), inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 14px var(--accent-glow);
   pointer-events: none;
 }
@@ -108,7 +84,7 @@
 
 .sidebar__nav-label {
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: var(--text-base);
   font-weight: 600;
 }
 

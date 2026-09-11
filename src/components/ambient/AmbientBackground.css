@@ -1,0 +1,96 @@
+/* =============================================================================
+ * AMBIENT — the app's ground.
+ * -----------------------------------------------------------------------------
+ * Ported from the landing page so the product and the page that sold it share
+ * one atmosphere. Three layers: a flat CSS approximation of the mesh, the mesh
+ * shader itself on a canvas above it, and film grain over both.
+ *
+ * Calibration rule, inherited and still binding: the colour is meant to be felt
+ * at the edge of vision, never looked at. If a screenshot of an empty page
+ * reads as "purple", --ambient-strength is too high.
+ * ========================================================================== */
+
+.ambient {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity var(--transition-slow);
+  /* The CSS approximation of the shader, painted immediately. The WebGL canvas
+     mounts on top of it later (lazily) and cross-fades in; until then — and
+     forever, on a device that can't run it — this is what the app sits on.
+
+     It draws from the CHROMATIC mesh stops only (2, 4, 5) and leaves the ink
+     ones to the ground: mixing an ink stop in here just made a slightly
+     purple black, which is what put a violet cast over the whole page before
+     the shader had even loaded. Percentages are deliberately low — this is the
+     floor, not the light. */
+  background:
+    radial-gradient(54% 40% at 20% 10%, color-mix(in oklch, var(--mesh-2) 46%, transparent) 0%, transparent 58%),
+    radial-gradient(48% 38% at 88% 4%, color-mix(in oklch, var(--mesh-5) 40%, transparent) 0%, transparent 62%),
+    radial-gradient(66% 46% at 64% 100%, color-mix(in oklch, var(--mesh-4) 34%, transparent) 0%, transparent 64%),
+    var(--bg-primary);
+}
+
+/* Focus/session pages fade it rather than unmount the whole layer — the flat
+   ground stays behind the fade, and the shader above is unmounted separately
+   (see AmbientBackground.tsx) so nothing keeps rendering underneath a session. */
+.ambient--hidden {
+  opacity: 0;
+}
+
+/* The shader canvas — Paper Shaders' MeshGradient fills its container. Fades in
+   once the lazy chunk has loaded and drawn, so the swap from the CSS gradient
+   below never lands as a visible pop. */
+.ambient__field {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 900ms var(--ease-out-expo);
+}
+
+.ambient__field--ready {
+  opacity: var(--ambient-strength);
+}
+
+/* Fine film grain over the shader — keeps the flowing gradient from reading as
+   glossy plastic and ties it to the same material language as the cards. Drawn
+   in CSS rather than by the shader so it stays at native device resolution;
+   the shader renders below 1× on purpose, and blurred grain is just haze.
+   This is the single cheapest thing in the app that reads as "expensive". */
+.ambient__grain {
+  position: absolute;
+  inset: -50%;
+  opacity: var(--ambient-grain);
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Floor vignette — content sits above a soft shadow, not a hard edge.
+   Lighter than it was: it was tuned against a ground three shades up from this
+   one, and at full strength on obsidian it does nothing except crush the teal
+   current the mesh puts along the bottom edge. */
+.ambient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(130% 46% at 50% 118%,
+    oklch(0 0 0 / 0.26) 0%,
+    transparent 62%);
+}
+
+/* ── Light theme ──────────────────────────────────────────────────────────
+   The palette already flips via the --mesh-* tokens. What has to change here is
+   the physics: overlay grain on near-white turns to dirt, and a black floor
+   vignette becomes a smudge. */
+[data-theme='light'] .ambient__grain {
+  mix-blend-mode: soft-light;
+}
+
+[data-theme='light'] .ambient::after {
+  background: radial-gradient(130% 46% at 50% 118%,
+    oklch(0.2 0.02 275 / 0.07) 0%,
+    transparent 62%);
+}

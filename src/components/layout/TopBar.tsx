@@ -1,26 +1,13 @@
-import { ReactNode, useRef } from 'react'
+import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useAppStore, resolveTheme } from '../../store/useAppStore'
 import { useAuthStore } from '../../store/useAuthStore'
 import { ProgressPill } from './ProgressPill'
+import { ProgressMark } from '../brand/ProgressLogo'
 import './TopBar.css'
 
-export interface TopBarAccountOverride {
-  icon: ReactNode
-  label: string
-  onClick: () => void
-}
-
-interface Props {
-  /** Swaps the account button for a page-specific action — PackPreviewPage
-   * uses this slot for "previous pack" instead. Account access is still one
-   * tap away from every other screen; this route just trades it for a more
-   * useful control while browsing a pack's word list. */
-  accountOverride?: TopBarAccountOverride
-}
-
-export function TopBar({ accountOverride }: Props) {
+export function TopBar() {
   const { theme, toggleTheme, devUnlocked, setDevUnlocked } = useAppStore()
   const { user, hasAccess } = useAuthStore()
   const navigate = useNavigate()
@@ -45,13 +32,14 @@ export function TopBar({ accountOverride }: Props) {
   return (
     <header className="topbar">
       <div className="topbar__left">
-        <img
-          src="/icons/icon-192.png"
-          alt="PE"
-          className="topbar__pe-icon"
+        <button
+          type="button"
+          className="topbar__brand"
           onClick={() => navigate('/')}
-          style={{ cursor: 'pointer' }}
-        />
+          aria-label="Progress — strona główna"
+        >
+          <ProgressMark size={36} />
+        </button>
         <ProgressPill />
       </div>
 
@@ -66,31 +54,19 @@ export function TopBar({ accountOverride }: Props) {
       </div>
 
       <div className="topbar__actions">
-        {accountOverride ? (
-          <motion.button
-            className="topbar__account-btn"
-            onClick={accountOverride.onClick}
-            aria-label={accountOverride.label}
-            title={accountOverride.label}
-            whileTap={{ scale: 0.9 }}
-          >
-            {accountOverride.icon}
-          </motion.button>
-        ) : (
-          <motion.button
-            className="topbar__account-btn"
-            onClick={() => navigate('/konto')}
-            aria-label="Konto"
-            title="Konto"
-            whileTap={{ scale: 0.9 }}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="8" r="4"/>
-              <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
-            </svg>
-            {(!user || !hasAccess()) && <span className="topbar__account-dot" aria-hidden="true" />}
-          </motion.button>
-        )}
+        <motion.button
+          className="topbar__account-btn"
+          onClick={() => navigate('/konto')}
+          aria-label="Konto"
+          title="Konto"
+          whileTap={{ scale: 0.9 }}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+          </svg>
+          {(!user || !hasAccess()) && <span className="topbar__account-dot" aria-hidden="true" />}
+        </motion.button>
         <motion.button
           className="topbar__theme-btn"
           onClick={toggleTheme}

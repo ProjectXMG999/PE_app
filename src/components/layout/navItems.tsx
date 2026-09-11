@@ -83,9 +83,9 @@ export function getActiveNavItem(pathname: string): string {
   }
   if (path === '/') return '/'
   if (path === '/dzis') return '/dzis'
-  // The review session runs from Dziś, so keep that tab lit while it's open
-  // rather than falling through to the '/' default and highlighting Pakiety.
-  if (path === '/powtorka') return '/dzis'
+  // The review and Inteligentny sessions both launch from Dziś, so keep that
+  // tab lit while either is open rather than falling through to '/' (Pakiety).
+  if (path === '/powtorka' || path === '/inteligentny') return '/dzis'
   if (path === '/trening' || path.startsWith('/trening/')) return '/trening'
   if (path === '/postęp' || path.startsWith('/postęp/')) return '/postęp'
   if (path === '/ustawienia' || path.startsWith('/ustawienia/')) return '/ustawienia'

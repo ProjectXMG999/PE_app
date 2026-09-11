@@ -1,8 +1,8 @@
-import { ReactNode } from 'react'
-import { TopBar, TopBarAccountOverride } from './TopBar'
+import { ReactNode, useEffect } from 'react'
+import { TopBar } from './TopBar'
 import { BottomNav } from './BottomNav'
 import { Sidebar } from './Sidebar'
-import { AmbientBackground } from '../today/AmbientBackground'
+import { useAppStore } from '../../store/useAppStore'
 import './AppShell.css'
 
 interface Props {
@@ -20,21 +20,25 @@ interface Props {
    * still having real scrollable content (word list, related packs, …) needs
    * this split out, or hiding the nav silently breaks its own scrolling. */
   lockScroll?: boolean
-  /** Passed straight through to TopBar — swaps its account button for a
-   * page-specific action. See TopBar's own doc comment. */
-  topBarAccountOverride?: TopBarAccountOverride
 }
 
 export function AppShell({
   children, hideBottomNav = false, hideTopBar = false, hideSidebar = hideBottomNav, hideAmbient = hideBottomNav,
-  lockScroll = hideBottomNav, topBarAccountOverride,
+  lockScroll = hideBottomNav,
 }: Props) {
-  const showAmbient = !hideAmbient
+  const setAmbientHidden = useAppStore(s => s.setAmbientHidden)
+
+  // The ambient WebGL background mounts once at the app root (App.tsx) so
+  // navigating between pages never tears down and rebuilds its GPU context —
+  // each AppShell just tells it whether to fade out for this screen.
+  useEffect(() => {
+    setAmbientHidden(hideAmbient)
+    return () => setAmbientHidden(false)
+  }, [hideAmbient, setAmbientHidden])
 
   return (
     <div className={`appshell ${hideSidebar ? 'appshell--no-sidebar' : ''}`}>
-      {showAmbient && <AmbientBackground />}
-      {!hideTopBar && <TopBar accountOverride={topBarAccountOverride} />}
+      {!hideTopBar && <TopBar />}
       {!hideSidebar && <Sidebar />}
       <main
         className={`appshell__main ${hideBottomNav ? 'appshell__main--no-pad' : ''} ${lockScroll ? 'appshell__main--no-scroll' : ''}`}
