@@ -1,62 +1,18 @@
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
+/* =============================================================================
+ * SYSTEM EFFECTS — ported from the app (src/styles/animations.css).
+ * -----------------------------------------------------------------------------
+ * Every "shine sweep", "breathing glow", "radar ping", "count-up pop" and
+ * "staggered rise" on the page is ONE of these, tuned via the CSS vars each
+ * reads — not a bespoke @keyframes per section.
+ *
+ * The app's flashcard-flip choreography, View Transitions block and skeleton
+ * shimmer are deliberately NOT ported: nothing on a marketing page flips a
+ * card, navigates between routes, or waits on data.
+ * ========================================================================== */
 
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(32px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-32px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50%       { transform: scale(1.05); }
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-@keyframes shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-@keyframes cardReveal {
-  from { opacity: 0; transform: translateY(8px) scale(0.98); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-@keyframes bounceIn {
-  0%   { transform: scale(0.8); opacity: 0; }
-  60%  { transform: scale(1.05); opacity: 1; }
-  100% { transform: scale(1); }
-}
-
-.animate-fade-in    { animation: fadeIn 300ms ease forwards; }
-.animate-slide-up   { animation: slideUp 350ms ease forwards; }
-.animate-card       { animation: cardReveal 300ms ease forwards; }
-.animate-bounce-in  { animation: bounceIn 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
-
-/* Page transitions */
-.page-enter {
-  animation: slideInRight 300ms ease forwards;
-}
-.page-back {
-  animation: slideInLeft 300ms ease forwards;
-}
-
+/* Respect users who ask the OS for less motion: collapse all CSS
+   animation/transition to a single imperceptible frame. GSAP-driven reveals
+   check the same media query themselves (RevealOnScroll). */
 @media (prefers-reduced-motion: reduce) {
   :root {
     --transition-fast: 0ms;
@@ -74,15 +30,96 @@
   }
 }
 
-/* Skeleton loading shimmer */
-.skeleton {
-  background: linear-gradient(
-    90deg,
-    var(--bg-surface) 25%,
-    var(--bg-card) 50%,
-    var(--bg-surface) 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-  border-radius: var(--radius-sm);
+/* Diagonal light sweep across a surface. Element needs `position: relative`.
+   Vars: --fx-shine-duration (5s), --fx-shine-delay (0s), --fx-shine-tint. */
+@keyframes fx-shine {
+  0%   { transform: translateX(-130%) skewX(-16deg); opacity: 0; }
+  8%   { opacity: 1; }
+  55%  { transform: translateX(130%) skewX(-16deg); opacity: 1; }
+  65%, 100% { transform: translateX(130%) skewX(-16deg); opacity: 0; }
+}
+
+.fx-shine::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(105deg,
+    transparent 40%,
+    color-mix(in oklch, var(--fx-shine-tint, oklch(1 0 0)) 14%, transparent) 46%,
+    color-mix(in oklch, var(--fx-shine-tint, oklch(1 0 0)) 46%, transparent) 50%,
+    color-mix(in oklch, var(--fx-shine-tint, oklch(1 0 0)) 14%, transparent) 54%,
+    transparent 60%);
+  animation: fx-shine var(--fx-shine-duration, 5s) var(--ease-out-expo)
+    var(--fx-shine-delay, 0s) infinite;
+}
+
+/* One-shot version — plays once when the element first paints, then rests. */
+.fx-shine--once::after { animation-iteration-count: 1; }
+
+/* Breathing glow. Reads --fx-glow (a full box-shadow value, e.g. var(--glow-primary)). */
+@keyframes fx-breathe {
+  0%, 100% { box-shadow: 0 0 0 0 transparent; }
+  50%      { box-shadow: var(--fx-glow, var(--glow-primary)); }
+}
+
+.fx-breathe {
+  animation: fx-breathe var(--fx-breathe-duration, 3.4s) ease-in-out infinite;
+}
+
+/* Radar ping — an expanding ring that fades. Element needs `position: relative`.
+   Reads --fx-ping-color. */
+@keyframes fx-ping {
+  from { opacity: 0.9; transform: scale(0.4); }
+  to   { opacity: 0;   transform: scale(3);   }
+}
+
+.fx-ping::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  border: 2px solid var(--fx-ping-color, var(--accent-bright));
+  pointer-events: none;
+  animation: fx-ping var(--fx-ping-duration, 1.6s) var(--ease-out-expo)
+    var(--fx-ping-delay, 0s) infinite;
+}
+
+.fx-ping--once::after { animation-iteration-count: 1; }
+
+/* Overshoot pop — for a number/badge landing on its value. Hold flat, then
+   a small scale bump near the end. Reads --fx-pop-duration. */
+@keyframes fx-pop {
+  0%, 72% { transform: scale(1); }
+  85%     { transform: scale(1.14); }
+  100%    { transform: scale(1); }
+}
+
+.fx-pop {
+  display: inline-block;
+  animation: fx-pop var(--fx-pop-duration, 900ms) var(--ease-out-expo) 1 both;
+}
+
+/* Staggered entrance. Set --fx-rise-delay per item (e.g. calc(var(--i) * 60ms)). */
+@keyframes fx-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fx-rise {
+  animation: fx-rise 500ms var(--ease-out-expo) var(--fx-rise-delay, 0s) both;
+}
+
+/* Audio-equalizer bars. Apply to each bar; vary height + --fx-eq-delay per bar.
+   Used by the Słuchaj mode card. */
+@keyframes fx-equalizer {
+  0%, 100% { transform: scaleY(0.5); }
+  50%      { transform: scaleY(1); }
+}
+
+.fx-equalizer {
+  transform-origin: bottom;
+  animation: fx-equalizer var(--fx-eq-duration, 1.3s) ease-in-out
+    var(--fx-eq-delay, 0s) infinite;
 }

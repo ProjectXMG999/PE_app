@@ -1,4 +1,20 @@
+/* Self-hosted faces — the same @fontsource packages the app uses, so the
+   landing and the product render in the identical face. Previously this came
+   from Google's CDN as Montserrat/Roboto, which meant the page a buyer sees
+   first was typeset in fonts the app doesn't own. Both families ship the full
+   latin-ext subset, so Polish diacritics come from the real face rather than a
+   fallback. 800 is loaded because it's the display weight. */
+@import '@fontsource/plus-jakarta-sans/400.css';
+@import '@fontsource/plus-jakarta-sans/500.css';
+@import '@fontsource/plus-jakarta-sans/600.css';
+@import '@fontsource/plus-jakarta-sans/700.css';
+@import '@fontsource/plus-jakarta-sans/800.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+
 @import './tokens.css';
+@import './surfaces.css';
 @import './animations.css';
 
 *, *::before, *::after {
@@ -19,12 +35,27 @@ body {
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+
+  /* Contextual alternates + real lining figures: Inter's defaults for these
+     are what separate "a webfont" from typeset text. */
+  font-feature-settings: 'cv11', 'ss01';
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+
+  /* Plus Jakarta Sans draws a narrow word space; at display sizes, and next to
+     the tight display tracking, pairs like "Tom II" read as "TomII" without
+     this nudge. Carried over from the app for the same reason. */
+  word-spacing: 0.06em;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
+  /* Optical tracking. Headings set at a display size without it read loose
+     and generic — this is most of the difference between "a heading" and
+     "a designed heading". */
+  letter-spacing: -0.02em;
 }
 
 button {
@@ -45,4 +76,21 @@ a {
 img, svg {
   display: block;
   max-width: 100%;
+}
+
+::selection {
+  background: var(--accent-glow);
+  color: var(--text-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-accent);
+  border-radius: var(--radius-full);
 }

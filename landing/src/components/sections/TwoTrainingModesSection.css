@@ -1,69 +1,77 @@
 .modes__head {
   text-align: center;
-  margin-bottom: 48px;
+  max-width: var(--reading-max-width);
+  margin: 0 auto var(--spacing-2xl);
 }
 
 .modes__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
-  margin-bottom: 48px;
+  gap: clamp(48px, 7vw, 72px);
 }
 
-.modes__card {
-  padding: 36px 32px;
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--border);
-  background: var(--bg-surface);
+@media (min-width: 780px) {
+  .modes__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Stagger the pair vertically so it reads as an arrangement rather than two
+     things that happen to be side by side. */
+  .modes__item--train {
+    transform: translateY(40px);
+  }
 }
 
-.modes__card--listen {
-  background: linear-gradient(155deg, rgba(124, 58, 237, 0.14), rgba(124, 58, 237, 0.04));
-  border-color: var(--border-accent);
+.modes__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
 }
 
-.modes__card--train {
-  background: linear-gradient(155deg, rgba(34, 197, 94, 0.12), rgba(34, 197, 94, 0.03));
-  border-color: rgba(34, 197, 94, 0.3);
+.modes__copy {
+  max-width: 380px;
+  text-align: center;
 }
 
-.modes__icon {
-  font-size: 32px;
-  display: block;
-  margin-bottom: 12px;
-}
-
+/* The two paths are told apart by colour everywhere in the app — Słuchaj is
+   blue, Trenuj is the interactive violet. The tag inherits into the icon via
+   `currentColor`, so the SVG needs no colour of its own. */
 .modes__tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
   font-family: var(--font-heading);
+  font-size: var(--text-sm);
   font-weight: 800;
-  font-size: 13px;
-  letter-spacing: 0.1em;
-  color: var(--accent-bright);
-  margin-bottom: 16px;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-md);
 }
 
-.modes__card--train .modes__tag {
-  color: #22c55e;
-}
+.modes__item--listen .modes__tag { color: var(--listen-blue); }
+.modes__item--train .modes__tag { color: var(--accent-bright); }
 
 .modes__text {
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: var(--text-body);
+  line-height: 1.7;
   color: var(--text-secondary);
   margin: 0;
 }
 
 .modes__punch {
   font-family: var(--font-heading);
+  font-size: var(--text-xl);
   font-weight: 700;
-  font-size: 17px;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-primary);
-  margin: 16px 0 0;
+  margin: var(--spacing-md) 0 0;
 }
 
+/* The offset above leaves the grid 40px shorter than it looks; give it back so
+   the CTA doesn't collide with the taller column. */
 @media (min-width: 780px) {
-  .modes__grid {
-    grid-template-columns: 1fr 1fr;
+  .modes .section__cta-wrap {
+    margin-top: calc(var(--spacing-2xl) + 40px);
   }
 }

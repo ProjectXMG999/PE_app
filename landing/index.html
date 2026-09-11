@@ -3,12 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Progress — Twoja mapa do 10 000 słów angielskiego</title>
-    <meta name="description" content="Progress to trening angielskiego zbudowany na kolejności: 10 000 najbardziej użytecznych słów, ułożonych tak, żebyś zawsze wiedział, co zrobić dalej." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="Progress to trening angielskiego zbudowany na kolejności: 10 000 najbardziej użytecznych słów, ułożonych tak, żebyś zawsze wiedział, co zrobić dalej."
+    />
+    <meta name="theme-color" content="#0d0a1c" />
+
+    <!-- ⚠️ Replace with the production domain before launch — og:url and the
+         canonical link must both be absolute, and og:image must be reachable
+         from the public internet or the card renders blank. -->
+    <link rel="canonical" href="https://progress.pl/" />
+
+    <!-- Sharing the link used to produce an empty grey card: there were no
+         social tags at all. Facebook groups are the main channel here, so a
+         blank preview was costing more than any on-page change. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Progress" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:url" content="https://progress.pl/" />
+    <meta property="og:title" content="Progress — Twoja mapa do 10 000 słów angielskiego" />
+    <meta
+      property="og:description"
+      content="10 000 słów. 4 poziomy. Jedna mapa. Zawsze wiesz, czego uczyć się teraz i co zrobić dalej."
+    />
+    <meta property="og:image" content="https://progress.pl/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Ekran aplikacji Progress z trasą pakietów i licznikiem 1221 z 10 000 słów."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Progress — Twoja mapa do 10 000 słów angielskiego" />
+    <meta
+      name="twitter:description"
+      content="10 000 słów. 4 poziomy. Jedna mapa. Zawsze wiesz, czego uczyć się teraz i co zrobić dalej."
+    />
+    <meta name="twitter:image" content="https://progress.pl/og-image.png" />
+
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Fonts are self-hosted via @fontsource (see src/styles/global.css), so
+         there is no Google Fonts <link> or preconnect any more: no third-party
+         round-trip in the critical path, and no FOUT reflow that used to force
+         a second ScrollTrigger.refresh(). -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Progress",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web, iOS, Android",
+        "inLanguage": "pl",
+        "description": "Trening angielskiego zbudowany na kolejności: 10 000 najbardziej użytecznych słów ułożonych w jedną trasę, cztery poziomy i dwa tryby treningu — Słuchaj i Trenuj.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "12 miesięcy",
+            "price": "79",
+            "priceCurrency": "PLN",
+            "description": "Cena za miesiąc przy dostępie na 12 miesięcy.",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "6 miesięcy",
+            "price": "95",
+            "priceCurrency": "PLN",
+            "description": "Cena za miesiąc przy dostępie na 6 miesięcy.",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1,77 +1,111 @@
 .hero {
   position: relative;
-  overflow: hidden;
-  padding: 90px 24px 100px;
-  text-align: center;
-}
-
-.hero__glow {
-  position: absolute;
-  inset: -20% -10% auto -10%;
-  height: 640px;
-  background:
-    radial-gradient(55% 60% at 30% 20%, rgba(139, 92, 246, 0.28), transparent 70%),
-    radial-gradient(45% 50% at 80% 10%, rgba(107, 43, 255, 0.22), transparent 70%);
-  filter: blur(10px);
-  pointer-events: none;
+  padding-block: clamp(56px, 8vw, 96px) clamp(72px, 10vw, 120px);
+  padding-inline: var(--section-pad-x);
+  /* Clears the sticky navbar. */
+  margin-top: var(--navbar-height);
 }
 
 .hero__inner {
   position: relative;
-  max-width: 760px;
+  max-width: var(--section-max-width-wide);
   margin: 0 auto;
+  display: grid;
+  gap: clamp(40px, 6vw, 72px);
+  align-items: center;
 }
 
+@media (min-width: 900px) {
+  .hero__inner {
+    /* Text carries the argument, the device carries the proof — the split is
+       weighted toward the words, not 50/50. */
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+/* The old hero centred everything under a blurred purple blob. Left-aligned
+   text against a real product shot reads as a product page; centred text
+   against nothing reads as a slide. */
+.hero__text {
+  max-width: 640px;
+}
+
+/* Entrance stagger. .fx-rise (animations.css) reads --fx-rise-delay; setting it
+   per element here is the whole timeline — no JS, so it starts painting at
+   first frame rather than after hydration. */
+.hero__eyebrow { --fx-rise-delay: 0s; }
+.hero__title { --fx-rise-delay: 0.08s; }
+.hero__lead:nth-of-type(1) { --fx-rise-delay: 0.16s; }
+.hero__lead:nth-of-type(2) { --fx-rise-delay: 0.22s; }
+.hero__punch { --fx-rise-delay: 0.3s; }
+.hero__cta-wrap { --fx-rise-delay: 0.38s; }
+/* The device lands last — it's the payoff, and the one thing on the page that
+   shows the product exists. */
+.hero__visual { --fx-rise-delay: 0.3s; }
+
 .hero__eyebrow {
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent-bright);
-  margin: 0 0 24px;
+  margin: 0 0 var(--spacing-md);
 }
 
 .hero__title {
-  font-size: clamp(28px, 5vw, 44px);
-  font-weight: 800;
-  line-height: 1.2;
-  margin: 0 0 28px;
-  color: var(--text-primary);
+  margin: 0 0 var(--spacing-lg);
+  text-wrap: balance;
 }
 
+/* The one gradient left on the page, on the one word the brand is named after.
+   Everything else that used to be gradient-filled is now flat. */
 .hero__title em {
   font-style: normal;
-  background: linear-gradient(100deg, var(--brand-purple), var(--accent-bright));
+  background: linear-gradient(100deg, var(--accent), var(--accent-bright));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .hero__lead {
-  font-size: 18px;
-  line-height: 1.65;
+  font-size: var(--text-lead);
+  line-height: 1.6;
   color: var(--text-secondary);
-  margin: 0 0 20px;
-  max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 0 var(--spacing-md);
+  max-width: 560px;
 }
 
 .hero__punch {
-  font-size: 19px;
-  line-height: 1.6;
+  font-family: var(--font-heading);
+  font-size: clamp(18px, 2vw, 21px);
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-primary);
-  margin: 32px 0 0;
-  font-weight: 500;
+  margin: var(--spacing-xl) 0 0;
+  max-width: 560px;
+  text-wrap: balance;
 }
 
 .hero__punch strong {
   color: var(--accent-bright);
+  font-weight: 800;
 }
 
 .hero__cta-wrap {
-  margin-top: 44px;
+  margin-top: var(--spacing-xl);
+  display: flex;
+}
+
+.hero__visual {
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .hero__visual {
+    justify-content: flex-end;
+  }
+
+  /* A dead-straight phone reads as a mockup template; a few degrees of tilt
+     reads as an object sitting on the page. Small enough that the screenshot
+     inside stays legible. */
+  .hero__visual .device {
+    transform: rotate(-1.5deg);
+  }
 }

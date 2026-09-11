@@ -1,0 +1,85 @@
+/* A restrained device frame: rounded rectangle, hairline, one real shadow.
+   No drawn bezel, notch or home indicator — see the note in DeviceFrame.tsx. */
+
+.device {
+  position: relative;
+  margin-inline: auto;
+  /* The screenshots are 390×844 (mobile) and 1440×900 (desktop) at 2x. Cap the
+     rendered width so a phone shot never grows past a comfortable reading size
+     on a wide desktop, where a full-height phone would tower over the copy. */
+  max-width: 100%;
+}
+
+.device__screen {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-float);
+}
+
+.device__screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* A hairline of light along the top edge, the way a real screen catches a
+   room. Without it the frame reads as a flat rectangle pasted on the page. */
+.device__screen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(160deg, oklch(1 0 0 / 0.07) 0%, transparent 34%);
+}
+
+/* ── Phone ────────────────────────────────────────────────────────────────── */
+
+.device--phone {
+  width: min(300px, 78vw);
+}
+
+.device--phone .device__screen {
+  border-radius: 40px;
+  padding: 6px;
+  background: linear-gradient(170deg,
+    color-mix(in oklch, var(--accent) 8%, var(--bg-card)) 0%,
+    var(--bg-primary) 55%);
+}
+
+.device--phone .device__screen img {
+  border-radius: 34px;
+}
+
+/* ── Plain (desktop / cropped shots, no device metaphor) ─────────────────── */
+
+.device--plain .device__screen {
+  border-radius: var(--radius-xl);
+}
+
+.device--plain .device__screen img {
+  border-radius: calc(var(--radius-xl) - 1px);
+}
+
+/* ── Two phones side by side (the Słuchaj / Trenuj pair) ─────────────────── */
+
+.device-pair {
+  display: grid;
+  gap: clamp(20px, 4vw, 40px);
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+@media (min-width: 720px) {
+  .device-pair {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Offset the second phone so the pair reads as an arrangement rather than
+     two things that happen to be next to each other. */
+  .device-pair > :last-child {
+    transform: translateY(28px);
+  }
+}

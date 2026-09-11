@@ -1,76 +1,166 @@
-/* Shared layout primitives every section file reuses. */
+/* =============================================================================
+ * SECTION RHYTHM — the shared layout primitives every section reuses.
+ * -----------------------------------------------------------------------------
+ * Structure is two elements, deliberately:
+ *
+ *   <section class="section section--tinted">   full-bleed band: padding + tint
+ *     <div class="section__inner">              the max-width reading column
+ *
+ * The old version made `.section` do both jobs, so it could never carry a
+ * full-bleed background — which is why all 13 sections sat on one flat colour
+ * with identical 96px padding and the page had no vertical rhythm at all.
+ *
+ * Tinting is load-bearing, not decoration: alternating bands tell the eye where
+ * one idea ends and the next begins. Use it on roughly every other section.
+ * ========================================================================== */
 
 .section {
-  padding: 96px 24px;
-  max-width: 780px;
+  position: relative;
+  padding-block: var(--section-gap);
+  padding-inline: var(--section-pad-x);
+  /* Clears the sticky navbar so an anchor-scrolled heading isn't hidden under it. */
+  scroll-margin-top: calc(var(--navbar-height) + 16px);
+}
+
+/* Alternating band. Translucent (not a solid colour) so the ambient gradient
+   still shows through and the two states read as one material at two depths. */
+.section--tinted {
+  background: var(--surface-translucent);
+  border-block: 1px solid var(--border);
+}
+
+.section__inner {
+  max-width: var(--section-max-width);
   margin: 0 auto;
-  /* Clears the sticky navbar (~60px) so an anchor-scrolled or
-     programmatically-scrolled section's heading isn't hidden under it. */
-  scroll-margin-top: 76px;
 }
 
-.section--wide {
-  max-width: 1080px;
+.section__inner--wide {
+  max-width: var(--section-max-width-wide);
 }
 
-@media (max-width: 640px) {
-  .section {
-    padding: 64px 20px;
-  }
+.section__inner--narrow {
+  max-width: var(--reading-max-width);
 }
+
+/* ── Header block ─────────────────────────────────────────────────────────── */
 
 .section__eyebrow {
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent-bright);
-  margin: 0 0 16px;
+  /* .u-kicker carries the type; this only handles spacing. Sections that want
+     the accent colour add .u-kicker--accent alongside. */
+  margin: 0 0 var(--spacing-md);
 }
 
 .section__title {
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 800;
-  line-height: 1.15;
-  margin: 0 0 24px;
+  font-family: var(--font-heading);
+  font-size: var(--text-display-lg);
+  font-weight: var(--weight-display);
+  line-height: 1.08;
+  letter-spacing: var(--tracking-display);
+  margin: 0 0 var(--spacing-lg);
   color: var(--text-primary);
+  /* Keeps a 2–3 line heading from leaving one orphaned word on the last line. */
+  text-wrap: balance;
+}
+
+.section__title em {
+  font-style: normal;
+  color: var(--accent-bright);
 }
 
 .section__lead {
   max-width: var(--reading-max-width);
-  font-size: 19px;
-  line-height: 1.65;
+  font-size: var(--text-lead);
+  line-height: 1.6;
   color: var(--text-secondary);
-  margin: 0 auto 20px;
+  margin: 0 0 var(--spacing-lg);
 }
 
 .section__lead strong {
   color: var(--text-primary);
+  font-weight: 600;
 }
+
+/* ── Prose ────────────────────────────────────────────────────────────────── */
 
 .section__body {
   max-width: var(--reading-max-width);
-  /* Horizontal centering only — a bare `margin: 0 auto` here would zero out
-     margin-bottom, silently overriding whatever vertical margin a section's
-     own local class (e.g. .howweknow__narrative) sets on this same element. */
-  margin-left: auto;
+  /* Left-aligned inside the column, NOT centred. The inner column is 780px and
+     the reading measure is 640px, so centring the prose pushed it 70px right of
+     the heading above it — two different left edges in the same section, which
+     is the kind of thing that reads as "unfinished" without anyone being able
+     to say why. Only the end margin is auto; a bare `margin: 0 auto` would also
+     zero margin-bottom and silently override a section's own local class. */
   margin-right: auto;
 }
 
 .section__body p {
-  font-size: 17px;
+  font-size: var(--text-body);
   line-height: 1.7;
   color: var(--text-secondary);
-  margin: 0 0 24px;
+  margin: 0 0 var(--spacing-lg);
 }
 
 .section__body p:last-child {
   margin-bottom: 0;
 }
 
+.section__body strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* The one line in a section that carries the argument. Sized between lead and
+   title, set in the heading face so it reads as a statement, not a paragraph. */
+.section__punch {
+  font-family: var(--font-heading);
+  font-size: clamp(19px, 2.2vw, 24px);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+  max-width: var(--reading-max-width);
+  margin: var(--spacing-xl) 0 0;
+  text-wrap: balance;
+}
+
+.section__punch strong,
+.section__punch em {
+  font-style: normal;
+  color: var(--accent-bright);
+}
+
+/* ── CTA ──────────────────────────────────────────────────────────────────── */
+
 .section__cta-wrap {
-  margin-top: 48px;
+  margin-top: var(--spacing-2xl);
   display: flex;
   justify-content: center;
+}
+
+/* Left-aligned variant, for sections whose column isn't centred. */
+.section__cta-wrap--start {
+  justify-content: flex-start;
+}
+
+/* ── Two-column split (text beside a device frame) ───────────────────────── */
+
+.section__split {
+  display: grid;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .section__split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Text column slightly wider than the screenshot beside it. */
+  .section__split--text-lead {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+
+  /* Screenshot first on desktop, text first on mobile — set the visual order
+     here rather than reordering the DOM, so reading order stays correct. */
+  .section__split--reverse > :first-child { order: 2; }
 }

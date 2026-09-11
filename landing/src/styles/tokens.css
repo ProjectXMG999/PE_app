@@ -1,69 +1,133 @@
+/* =============================================================================
+ * DESIGN TOKENS — ported verbatim from the app (src/styles/tokens.css).
+ * -----------------------------------------------------------------------------
+ * The landing sells the app, so it must BE the app visually. Colour is OKLCH:
+ * perceptually even lightness, predictable chroma, clean `color-mix(in oklch,…)`.
+ *
+ * Two deliberate differences from the app's copy of this file:
+ *   1. No [data-theme="light"] block — the landing is dark-only. Nothing here
+ *      ever sets data-theme, so carrying the light palette was dead weight.
+ *   2. A larger display scale (--text-display-* below). The app's --text-display
+ *      is tuned for a 390px phone screen; a marketing hero needs to go bigger.
+ *
+ * Rules of the road:
+ *   • Never hard-code a colour/shadow/radius in a section — reference a token.
+ *   • Surface/typography *looks* live in surfaces.css (`.u-*` classes).
+ *   • Reusable motion/decoration lives in animations.css (`@keyframes`, `.fx-*`).
+ *
+ * When the app's tokens change, re-port this file rather than diverging.
+ * ========================================================================== */
+
 :root {
-  /* Dark theme (default) */
-  --bg-primary: #0D0B1E;
-  --bg-surface: #1A1040;
-  --bg-card: #241B5C;
-  --bg-card-hover: #2E2470;
-  --bg-input: #1A1040;
+  /* ── Ground ─────────────────────────────────────────────────────────────── */
+  --bg-primary: oklch(0.13 0.028 278);
+  --bg-surface: oklch(0.17 0.035 277);
+  --bg-card: oklch(0.185 0.038 277);
+  --bg-card-hover: oklch(0.23 0.045 278);
+  --bg-input: oklch(0.17 0.035 277);
 
-  --accent: #8B5CF6;
-  --accent-dim: #7B5EA7;
-  --accent-bright: #A78BFA;
-  --accent-glow: rgba(139, 92, 246, 0.3);
+  /* ── Accent (violet) — the interactive colour ──────────────────────────── */
+  --accent: oklch(0.72 0.17 292);
+  --accent-dim: oklch(0.58 0.14 293);
+  --accent-bright: oklch(0.8 0.13 293);
+  --accent-glow: oklch(0.72 0.17 292 / 0.32);
+  --brand-purple: oklch(0.55 0.24 288);
 
-  --brand-purple: #6B2BFF;
+  /* ── Text ─────────────────────────────────────────────────────────────── */
+  --text-primary: oklch(0.97 0.005 270);
+  --text-secondary: oklch(0.79 0.015 275);
+  --text-muted: oklch(0.63 0.02 275);
+  --text-accent: oklch(0.85 0.09 293);
 
-  --text-primary: #FFFFFF;
-  --text-secondary: rgba(255, 255, 255, 0.75);
-  --text-muted: rgba(255, 255, 255, 0.45);
-  --text-accent: #C4B5FD;
+  /* ── Lines ────────────────────────────────────────────────────────────── */
+  --border: oklch(1 0 0 / 0.1);
+  --border-strong: oklch(1 0 0 / 0.16);
+  --border-accent: oklch(0.72 0.17 292 / 0.42);
 
-  --border: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(139, 92, 246, 0.4);
+  --overlay: oklch(0 0 0 / 0.58);
 
-  --overlay: rgba(0, 0, 0, 0.55);
+  /* ── Reward accents ───────────────────────────────────────────────────────
+     --gold  = "earned" (mastered packs, milestones, points, price/guarantee).
+     --live  = time-sensitive signal (review priority, "in progress now").
+     Everything else stays violet/neutral — use these sparingly. */
+  --gold: oklch(0.82 0.13 85);
+  --gold-dim: oklch(0.63 0.11 78);
+  --gold-soft: oklch(0.82 0.13 85 / 0.13);
+  --live: oklch(0.74 0.16 190);
+  --live-soft: oklch(0.74 0.16 190 / 0.13);
 
-  --success: #34D399;
-  --warning: #FBBF24;
-  --danger: #F87171;
+  /* ── Glass surfaces ──────────────────────────────────────────────────────
+     Translucent white over the ambient background — the default card fill in
+     the restrained/editorial style. Solid --bg-card only where opacity is
+     structurally required (e.g. over a screenshot). */
+  --surface-translucent: oklch(1 0 0 / 0.032);
+  --surface-translucent-strong: oklch(1 0 0 / 0.06);
 
-  /* Categorical accents — shared by Training cards and Stats tiles */
-  --accent-yellow: #eab308;
-  --accent-orange: #f97316;
-  --accent-pink: #ec4899;
-  --accent-blue: #3b82f6;
-  --accent-green: #22c55e;
-  --accent-teal: #14b8a6;
-  --accent-indigo: #6366f1;
+  /* ── Glass ───────────────────────────────────────────────────────────────
+     ONE scale for the whole page. Glass is only for things that STICK or
+     FLOAT above content — the navbar. Cards stay opaque/flat. */
+  --glass-blur: 18px;
+  --glass-saturate: 1.3;
+  --glass-bg: color-mix(in oklch, var(--bg-primary) 86%, transparent);
+  --glass-bg-strong: color-mix(in oklch, var(--bg-card) 92%, transparent);
+  --scrim-blur: 4px;
 
-  /* Progress / route map. Milestone stations reuse LEVEL_COLORS above, so the
-     only new hues here are the points currency and the far-end gold. */
-  --points-gold: #F5C451;
-  --milestone-gold: #F0B429;
-  --review-teal: var(--accent-teal);
-  /* Słuchaj's color, everywhere the two study paths need telling apart —
-     Trenuj already reads as --accent (the app's primary color) by convention. */
+  /* ── Directional glows — pair each with a matching border tint ─────────── */
+  --glow-primary: 0 0 24px oklch(0.72 0.17 292 / 0.45);
+  --glow-gold: 0 0 20px oklch(0.82 0.13 85 / 0.3);
+  --glow-live: 0 0 24px oklch(0.74 0.16 190 / 0.32);
+  --glow-review: var(--glow-live);
+
+  /* ── Shadows ─────────────────────────────────────────────────────────────
+     Flat by default (editorial). --shadow-card is a whisper of depth;
+     --shadow-float is the one real lift, reserved for the hero device frame
+     and the recommended pricing card. */
+  --shadow-sm: 0 2px 8px oklch(0 0 0 / 0.4);
+  --shadow-md: 0 8px 24px oklch(0 0 0 / 0.42);
+  --shadow-lg: 0 16px 44px oklch(0 0 0 / 0.5);
+  --shadow-glow: 0 0 24px oklch(0.72 0.17 292 / 0.4);
+  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.24), 0 10px 28px oklch(0 0 0 / 0.22);
+  --shadow-float: 0 22px 54px oklch(0 0 0 / 0.32), 0 4px 14px oklch(0 0 0 / 0.22);
+
+  /* Hero-card ground: a wash of accent bleeding out of the top-left corner. */
+  --gradient-hero: linear-gradient(150deg,
+    color-mix(in oklch, var(--accent) 16%, var(--bg-card)) 0%,
+    var(--bg-card) 62%);
+
+  /* ── Status ───────────────────────────────────────────────────────────── */
+  --success: oklch(0.78 0.15 165);
+  --warning: oklch(0.82 0.14 78);
+  --danger: oklch(0.68 0.19 22);
+
+  /* ── Categorical accents — level colours, mode tints ───────────────────── */
+  --accent-yellow: oklch(0.81 0.16 90);
+  --accent-orange: oklch(0.73 0.18 55);
+  --accent-pink: oklch(0.68 0.22 5);
+  --accent-blue: oklch(0.62 0.19 260);
+  --accent-green: oklch(0.77 0.19 150);
+  --accent-teal: oklch(0.74 0.13 185);
+  --accent-indigo: oklch(0.58 0.19 275);
+
+  /* ── Route / progress ────────────────────────────────────────────────── */
+  --points-gold: var(--gold);
+  --milestone-gold: oklch(0.78 0.14 80);
+  --review-teal: var(--live);
+  /* Słuchaj's colour, wherever the two study paths need telling apart —
+     Trenuj already reads as --accent by convention. */
   --listen-blue: var(--accent-blue);
   /* The road ahead: visible but clearly untravelled. */
-  --route-line: rgba(255, 255, 255, 0.14);
-  /* Aurora bloom behind the "you are here" marker. */
-  --route-glow: rgba(139, 92, 246, 0.38);
+  --route-line: oklch(1 0 0 / 0.14);
+  --route-glow: oklch(0.72 0.17 292 / 0.38);
 
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 24px rgba(139, 92, 246, 0.4);
-  /* Layered card depth: a tight contact shadow plus a soft ambient one, plus a
-     hairline inset highlight on the top edge — reads as a raised surface
-     instead of a bordered rectangle. */
-  --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.35);
-
+  /* ── Radius ───────────────────────────────────────────────────────────── */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-xl: 22px;
+  --radius-2xl: 26px;
   --radius-full: 9999px;
 
+  /* ── Spacing ──────────────────────────────────────────────────────────── */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -71,10 +135,14 @@
   --spacing-xl: 32px;
   --spacing-2xl: 48px;
 
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Roboto', sans-serif;
+  /* ── Type ─────────────────────────────────────────────────────────────── */
+  /* Faces are self-hosted via @fontsource in global.css — same packages the
+     app uses, so the landing and the product render in the identical face.
+     The stacks name real system faces as fallbacks so a font that hasn't
+     painted yet doesn't drop to Times. */
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  /* Type scale — use for new/edited styles instead of raw px */
   --text-xs: 11px;
   --text-sm: 13px;
   --text-base: 14px;
@@ -84,72 +152,44 @@
   --text-2xl: 24px;
   --text-3xl: 28px;
 
-  --topbar-height: 60px;
-  --bottomnav-height: 64px;
-  --safe-bottom: env(safe-area-inset-bottom, 0px);
-  /* Floating island: 64px tall, lifted 14px off the edge. Scroll clearance is
-     EXACTLY that — island height + its lift. It was previously overshooting by
-     `+ safe-bottom + spacing-sm` (~42px), which parked the last scrolled item
-     that far above the island and left a big slab of page background between
-     them: the "black strip the size of the bottom bar". */
-  --bottomnav-reserve: calc(var(--bottomnav-height) + 14px + var(--spacing-xs));
+  /* Landing-only reading sizes. The app tops out at 28px because it lives on
+     a phone; long-form marketing prose needs a step above the UI scale. */
+  --text-lead: clamp(17px, 1.4vw, 19px);
+  --text-body: clamp(16px, 1.2vw, 17px);
 
-  /* Breakpoints (magic numbers — CSS custom properties can't be used
-     inside @media conditions): 640px = tablet, 1024px = desktop sidebar
-     cutoff. Copy these values verbatim in new responsive rules. */
-  --sidebar-width: 240px;
-  /* Scales with viewport instead of a fixed cap, so ultra-wide monitors
-     don't end up with a narrow content column and a huge dead void. */
-  --content-max-width: clamp(1160px, 85vw, 2040px);
+  /* Display — big page headings. Tight optical tracking is what makes a
+     heading read as "designed". Plus Jakarta Sans carries a real 800, so the
+     display weight is the face's own extra-bold. --text-display matches the
+     app; the two steps above it are the landing's own. */
+  /* The two steps above --text-display are capped for the column they live in,
+     not for the viewport: the hero's text column is ~580px at 1440px wide, and
+     68px type in 580px wrapped the headline onto six lines. */
+  --text-display: clamp(28px, 8vw, 38px);
+  --text-display-lg: clamp(30px, 4.4vw, 46px);
+  --text-display-xl: clamp(34px, 5vw, 56px);
+  --weight-display: 800;
+  --tracking-display: -0.05em;
+  --tracking-tight: -0.03em;
+  /* Kickers: small, ALL-CAPS, wide-tracked eyebrow labels above a heading. */
+  --tracking-kicker: 0.13em;
 
-  /* Desktop content-column widths — reuse these, don't invent new numbers. */
-  --reading-max-width: 640px;   /* prose / page-intro headers / settings-style columns */
-  --focus-max-width: 720px;     /* wf/asc shared header+card+actions column */
-  --flashcard-max-width: 560px; /* FlashcardPage card + actions + autoplay controls */
+  /* ── Layout metrics ───────────────────────────────────────────────────── */
+  --navbar-height: 64px;
+  --reading-max-width: 640px;
+  --section-max-width: 780px;
+  --section-max-width-wide: 1120px;
+  /* Vertical rhythm. Replaces the old flat `padding: 96px 24px` — sections
+     breathe with the viewport instead of being cramped on desktop and
+     bloated on mobile. */
+  --section-gap: clamp(72px, 10vw, 128px);
+  --section-pad-x: clamp(20px, 4vw, 32px);
 
+  /* ── Motion ───────────────────────────────────────────────────────────── */
   --transition-fast: 150ms ease;
   --transition-med: 250ms ease;
   --transition-slow: 400ms ease;
 
-  /* Motion curves for card/flip choreography */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-sharp: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-[data-theme="light"] {
-  --bg-primary: #F5F4F8;
-  --bg-surface: #FFFFFF;
-  --bg-card: #FFFFFF;
-  --bg-card-hover: #F0EDFC;
-  --bg-input: #FFFFFF;
-
-  --accent: #7C3AED;
-  --accent-dim: #6D28D9;
-  --accent-bright: #8B5CF6;
-  --accent-glow: rgba(124, 58, 237, 0.18);
-
-  --text-primary: #111827;
-  --text-secondary: rgba(17, 24, 39, 0.75);
-  --text-muted: rgba(17, 24, 39, 0.45);
-  --text-accent: #6D28D9;
-
-  --border: rgba(17, 24, 39, 0.1);
-  --border-accent: rgba(124, 58, 237, 0.35);
-
-  --overlay: rgba(17, 24, 39, 0.35);
-
-  --points-gold: #B7791F;
-  --milestone-gold: #B7791F;
-  /* On a light ground the road ahead reads as a soft grey rather than a
-     washed-out white, and the aurora is dialled right down — a glow that works
-     against #0D0B1E turns into haze against #F5F4F8. */
-  --route-line: rgba(17, 24, 39, 0.16);
-  --route-glow: rgba(124, 58, 237, 0.16);
-
-  --shadow-sm: 0 1px 4px rgba(17, 24, 39, 0.08), 0 0 0 1px rgba(17, 24, 39, 0.04);
-  --shadow-md: 0 4px 16px rgba(17, 24, 39, 0.1);
-  --shadow-lg: 0 8px 32px rgba(17, 24, 39, 0.12);
-  --shadow-glow: 0 0 24px rgba(124, 58, 237, 0.25);
-  --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 1px 2px rgba(17, 24, 39, 0.06), 0 12px 28px rgba(17, 24, 39, 0.1);
 }

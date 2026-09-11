@@ -2,6 +2,19 @@
   command = "npm run build"
   publish = "dist"
 
+# The legal pages are static files in public/, not SPA routes. These have to
+# come BEFORE the catch-all below — Netlify applies the first matching rule, so
+# a catch-all listed first would serve index.html for /regulamin.html too.
+[[redirects]]
+  from = "/regulamin"
+  to   = "/regulamin.html"
+  status = 301
+
+[[redirects]]
+  from = "/polityka-prywatnosci"
+  to   = "/polityka-prywatnosci.html"
+  status = 301
+
 [[redirects]]
   from = "/*"
   to   = "/index.html"
@@ -12,3 +25,17 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Vite fingerprints everything under /assets, so it can be cached forever.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Screenshots are not fingerprinted — they're overwritten in place whenever
+# scripts/shots.mjs re-runs — so they get a day, not a year.
+[[headers]]
+  for = "/shots/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, must-revalidate"

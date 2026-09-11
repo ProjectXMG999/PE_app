@@ -1,3 +1,11 @@
+/* One CTA look for the whole page.
+   The old primary was `linear-gradient(135deg, --brand-purple, --accent-bright)`
+   under `0 12px 32px rgba(107,43,255,.4)` — a gradient pill with a coloured
+   drop shadow, which is the single most dated thing a 2019 SaaS page did. The
+   app's own primary action (.today__pick-cta) is a flat --accent fill; matching
+   it means the button a visitor clicks here is the button they'll tap in the
+   product. */
+
 .cta {
   display: flex;
   flex-direction: column;
@@ -5,52 +13,67 @@
   gap: 10px;
 }
 
+.cta--start {
+  align-items: flex-start;
+}
+
 .cta__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: var(--spacing-sm);
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 17px;
-  letter-spacing: 0.01em;
-  padding: 18px 40px;
+  font-size: var(--text-lg);
+  letter-spacing: var(--tracking-tight);
+  /* 56px tall — a real tap target, and the same height as the app's action bar. */
+  padding: 18px var(--spacing-xl);
   border-radius: var(--radius-full);
   cursor: pointer;
-  border: none;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  border: 1px solid transparent;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
   text-decoration: none;
 }
 
 .cta__btn--primary {
-  background: linear-gradient(135deg, var(--brand-purple), var(--accent-bright));
-  color: #fff;
-  box-shadow: 0 12px 32px rgba(107, 43, 255, 0.4);
+  background: var(--accent);
+  color: oklch(0.16 0.03 280);
+  box-shadow: 0 6px 18px var(--accent-glow);
 }
 
 .cta__btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(107, 43, 255, 0.5);
+  background: var(--accent-bright);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px var(--accent-glow);
+}
+
+.cta__btn--primary:active {
+  transform: translateY(0) scale(0.985);
 }
 
 .cta__btn--secondary {
-  background: var(--bg-surface);
+  background: var(--surface-translucent);
   color: var(--text-primary);
-  border: 1px solid var(--border-accent);
+  border-color: var(--border-strong);
 }
 
 .cta__btn--secondary:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
+  background: var(--surface-translucent-strong);
+  border-color: var(--border-accent);
+  transform: translateY(-1px);
 }
 
 .cta__btn--disabled {
-  opacity: 0.6;
+  opacity: 0.55;
   cursor: default;
   pointer-events: none;
 }
 
 .cta__subtext {
-  font-size: 13px;
+  font-size: var(--text-sm);
   color: var(--text-muted);
   margin: 0;
 }

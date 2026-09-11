@@ -1,85 +1,123 @@
-.seeprogress {
-  padding: 96px 24px 0;
-}
-
-.seeprogress__grid {
-  max-width: 1080px;
-  margin: 0 auto;
+/* The track is the scroll distance the counter stays pinned for. On desktop it
+   is deliberately taller than its content so there is something to scrub
+   through; the sticky child rides along inside it. */
+.seeprogress__track {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: clamp(32px, 5vw, 56px);
+  align-items: start;
 }
 
-.seeprogress__counter-wrap {
-  /* GSAP pin always snaps to the literal viewport top — this padding is
-     what actually pushes the card down to a comfortable distance from the
-     navbar while pinned, without stretching the card itself (see the same
-     pattern in MapSection.css's .mapsection__visual). */
-  padding-top: 100px;
+@media (min-width: 900px) {
+  .seeprogress__track {
+    grid-template-columns: 0.8fr 1fr;
+    /* The text column must fill the track, or the sticky card in the other
+       column has nothing to be sticky against. */
+    align-items: stretch;
+    /* Real scroll distance for the pin. Without it the track is shorter than
+       the viewport, sticky never engages, and the counter has no travel to be
+       scrubbed across — it sat on 316 for the whole page. The extra height is
+       spent on the text column's leading below, not left as dead space; keep it
+       modest, or three paragraphs end up 230px apart and read as broken. */
+    min-height: calc(100vh + 320px);
+  }
 }
 
-.seeprogress__counter-pin {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 40px 24px;
-  border-radius: var(--radius-xl);
-  background: var(--bg-surface);
-  border: 1px solid var(--border-accent);
-  box-shadow: var(--shadow-lg);
+.seeprogress__sticky {
+  display: flex;
+  flex-direction: column;
 }
 
+/* The stretched grid cell. It exists only to give .seeprogress__sticky a tall
+   containing block to travel inside — see the note in the .tsx. */
+.seeprogress__aside {
+  min-width: 0;
+}
+
+/* Sticky only where there are two columns. On a phone the card would otherwise
+   pin over the very text it's illustrating. */
+@media (min-width: 900px) {
+  .seeprogress__sticky {
+    position: sticky;
+    /* Clears the fixed navbar, then centres roughly in what's left. */
+    top: calc(var(--navbar-height) + clamp(24px, 8vh, 96px));
+  }
+}
+
+/* The one raised surface in this section — .u-surface--raised supplies the
+   gradient ground, float shadow and glowing top hairline. */
 .seeprogress__counter {
   display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  text-align: center;
 }
 
 .seeprogress__num {
   font-family: var(--font-heading);
-  font-size: clamp(48px, 9vw, 72px);
-  font-weight: 800;
+  font-size: clamp(52px, 9vw, 80px);
+  font-weight: var(--weight-display);
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
   color: var(--text-primary);
-  font-variant-numeric: tabular-nums;
 }
 
 .seeprogress__total {
   font-family: var(--font-heading);
-  font-size: 20px;
+  font-size: var(--text-xl);
+  font-weight: 600;
   color: var(--text-muted);
 }
 
 .seeprogress__hint {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin: 4px 0 0;
+  margin-top: var(--spacing-sm);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
 }
 
 .seeprogress__text {
-  padding-top: 8px;
+  min-width: 0;
 }
 
-.seeprogress__punch {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--text-primary);
+/* The track is deliberately taller than its copy so the card has something to
+   pin against. Rather than leaving that as a gap, the column stretches and the
+   paragraphs are distributed through it — which is what the extra room is for:
+   one idea at a time, arriving as the number climbs beside it. */
+@media (min-width: 900px) {
+  .seeprogress__text {
+    display: flex;
+    flex-direction: column;
+    padding-block: clamp(40px, 12vh, 120px);
+  }
+
+  .seeprogress__text .section__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .seeprogress__text .section__body p {
+    margin-bottom: 0;
+  }
 }
 
 .seeprogress__proof {
-  max-width: 480px;
-  margin: 48px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin-top: clamp(56px, 8vw, 96px);
 }
 
-.seeprogress__proof--route {
-  max-width: 640px;
-}
-
-@media (min-width: 900px) {
-  .seeprogress__grid {
-    grid-template-columns: 0.8fr 1fr;
-    align-items: center;
-  }
+.seeprogress__caption {
+  max-width: 420px;
+  margin: 0;
+  text-align: center;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--text-muted);
+  text-wrap: balance;
 }

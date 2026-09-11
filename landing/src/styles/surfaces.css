@@ -1,0 +1,140 @@
+/* =============================================================================
+ * SURFACE & TYPOGRAPHY PRIMITIVES — ported from the app (src/styles/surfaces.css).
+ * -----------------------------------------------------------------------------
+ * Sections adopt the system by adding a `.u-*` class, not by re-deriving the
+ * same gradient/border/shadow recipe in every section .css. Before this port,
+ * every card on the landing was an ad-hoc `--bg-surface` + 1px border, which is
+ * why the pricing card read with exactly the same weight as a stat tile.
+ *
+ * The discipline that makes it look premium: ONE raised surface per section.
+ * Everything else is flat glass. Depth means "this is the thing".
+ *
+ *   .u-surface           flat glass card (the default)
+ *   .u-surface--raised   hero card: gradient ground + float shadow + top hairline
+ *      + --gold / --live  recolours the hairline + border for reward / priority
+ *   .u-rail              compact info row with a left accent border
+ *   .u-kicker            small ALL-CAPS wide-tracked eyebrow label
+ *   .u-display           big heading (tight tracking, display weight)
+ *   .u-hairline          the top accent bar on its own (::before-free contexts)
+ *   .u-glass             sticky/floating chrome only — never cards
+ * ========================================================================== */
+
+/* ── Flat glass card ──────────────────────────────────────────────────────── */
+.u-surface {
+  background: var(--surface-translucent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+}
+
+.u-surface--strong {
+  background: var(--surface-translucent-strong);
+}
+
+/* ── Hero card ────────────────────────────────────────────────────────────── */
+.u-surface--raised {
+  position: relative;
+  overflow: hidden;
+  background: var(--gradient-hero);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-float);
+  --u-hairline-color: var(--accent);
+}
+
+.u-surface--raised::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 0;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: var(--u-hairline-color);
+  box-shadow: 0 0 16px 1px color-mix(in oklch, var(--u-hairline-color) 45%, transparent);
+  pointer-events: none;
+}
+
+.u-surface--raised.u-surface--gold {
+  border-color: color-mix(in oklch, var(--gold) 42%, transparent);
+  --u-hairline-color: var(--gold);
+}
+
+.u-surface--raised.u-surface--live {
+  border-color: color-mix(in oklch, var(--live) 42%, transparent);
+  --u-hairline-color: var(--live);
+}
+
+/* ── Left-rail info row ───────────────────────────────────────────────────── */
+.u-rail {
+  border-left: 2px solid var(--accent);
+  background: var(--surface-translucent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 12px var(--spacing-md);
+}
+
+.u-rail--gold { border-left-color: var(--gold); }
+.u-rail--live { border-left-color: var(--live); }
+
+/* ── Type ────────────────────────────────────────────────────────────────── */
+.u-kicker {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* On the landing the kicker sits above a section title as a wayfinding label,
+   so it carries the accent rather than the app's muted grey — it's one of the
+   few places colour is doing navigational work. */
+.u-kicker--accent { color: var(--accent-bright); }
+
+.u-display {
+  font-family: var(--font-heading);
+  font-size: var(--text-display);
+  font-weight: var(--weight-display);
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  color: var(--text-primary);
+}
+
+/* Marketing headline steps. line-height stays above 1 here (unlike the app's
+   single-line .u-display) because these wrap to 2–3 lines. */
+.u-display--lg {
+  font-size: var(--text-display-lg);
+  line-height: 1.08;
+}
+
+.u-display--xl {
+  font-size: var(--text-display-xl);
+  line-height: 1.04;
+}
+
+.u-hairline {
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: var(--u-hairline-color, var(--accent));
+  box-shadow: 0 0 16px 1px color-mix(in oklch, var(--u-hairline-color, var(--accent)) 45%, transparent);
+}
+
+/* ── Glass ────────────────────────────────────────────────────────────────
+   For chrome that sticks or floats above content only — never for cards.
+   Values come from the single --glass-* scale in tokens.css. */
+.u-glass {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+          backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+}
+
+.u-glass--strong { background: var(--glass-bg-strong); }
+
+/* ── Numerals ─────────────────────────────────────────────────────────────
+   Anywhere a number changes in place (counters, prices, stats) it must not
+   reflow as digits swap width. */
+.u-tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}

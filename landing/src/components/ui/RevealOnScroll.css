@@ -1,0 +1,26 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 32px));
+  transition:
+    opacity var(--reveal-duration, 0.7s) var(--ease-out-expo) var(--reveal-delay, 0s),
+    transform var(--reveal-duration, 0.7s) var(--ease-out-expo) var(--reveal-delay, 0s);
+  /* Only while the transition is pending — a permanent `will-change` on a dozen
+     elements keeps as many compositor layers alive for the life of the page. */
+  will-change: opacity, transform;
+}
+
+.reveal--shown {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* The global reduced-motion block already collapses the transition, but the
+   initial opacity: 0 is a style, not an animation — without this, content set
+   up to reveal would simply never appear. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

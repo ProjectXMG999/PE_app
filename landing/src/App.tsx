@@ -1,56 +1,41 @@
-import { useEffect } from 'react'
-import { ScrollTrigger } from './lib/gsap'
+import { AmbientBackground } from './components/ambient/AmbientBackground'
 import { Navbar } from './components/sections/Navbar'
 import { Hero } from './components/sections/Hero'
 import { MapSection } from './components/sections/MapSection'
 import { WhyOrderSection } from './components/sections/WhyOrderSection'
 import { RecognitionVsUseSection } from './components/sections/RecognitionVsUseSection'
-import { WhyStillNotSpeakingSection } from './components/sections/WhyStillNotSpeakingSection'
 import { TwoTrainingModesSection } from './components/sections/TwoTrainingModesSection'
 import { SeeYourProgressSection } from './components/sections/SeeYourProgressSection'
-import { HowWeKnowSection } from './components/sections/HowWeKnowSection'
-import { DreamOutcomeSection } from './components/sections/DreamOutcomeSection'
-import { ScientificFoundationSection } from './components/sections/ScientificFoundationSection'
-import { BehindProgressSection } from './components/sections/BehindProgressSection'
+import { ProofSection } from './components/sections/ProofSection'
 import { OfferSection } from './components/sections/OfferSection'
 import { Footer } from './components/sections/Footer'
-import { ToastHost } from './components/shared/ToastHost'
 
+/**
+ * Eight sections, alternating tinted / untinted so the page has a rhythm.
+ *
+ * It used to be thirteen, nine of which were the same shape — an eyebrow, a
+ * title, and a column of 17px prose — differentiated only by the colour of one
+ * punch line. Merged since: "Znasz więcej angielskiego" absorbed "Dlaczego
+ * wciąż nie mówisz" (one argument, told twice), "Skąd wiemy" absorbed the
+ * Scientific Foundation and Behind Progress walls of text as expandable detail,
+ * and "Dream outcome" became the lead-in to the offer it was already arguing for.
+ */
 export function App() {
-  // Every section creates its own ScrollTrigger in its own effect; each one
-  // caches start/end positions against the document height at that instant.
-  // Because pinned sections (MapSection, SeeYourProgressSection) grow the
-  // document as they mount, triggers created before them end up stale. One
-  // refresh after the full tree has painted recalculates every trigger
-  // against the final layout.
-  useEffect(() => {
-    const id = requestAnimationFrame(() => ScrollTrigger.refresh())
-    // Google Fonts load async (font-display: swap) and can still reflow
-    // text height after the first refresh above — refresh again once they
-    // land so trigger positions match the final, post-swap layout.
-    document.fonts?.ready.then(() => ScrollTrigger.refresh())
-    return () => cancelAnimationFrame(id)
-  }, [])
-
   return (
     <>
+      <AmbientBackground />
       <Navbar />
       <main>
         <Hero />
         <MapSection />
         <WhyOrderSection />
         <RecognitionVsUseSection />
-        <WhyStillNotSpeakingSection />
         <TwoTrainingModesSection />
         <SeeYourProgressSection />
-        <HowWeKnowSection />
-        <DreamOutcomeSection />
-        <ScientificFoundationSection />
-        <BehindProgressSection />
+        <ProofSection />
         <OfferSection />
       </main>
       <Footer />
-      <ToastHost />
     </>
   )
 }

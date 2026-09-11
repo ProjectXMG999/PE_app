@@ -1,0 +1,51 @@
+.ambient {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  /* The CSS approximation of the shader, painted immediately. The WebGL canvas
+     mounts on top of it later (lazily) and cross-fades in; until then — and
+     forever, on a device that can't run it — this is what the page sits on.
+     Colours are the shader's own palette, so the handoff is invisible. */
+  background:
+    radial-gradient(58% 44% at 22% 12%, oklch(0.28 0.13 292 / 0.5) 0%, transparent 62%),
+    radial-gradient(48% 40% at 82% 4%, oklch(0.24 0.11 272 / 0.42) 0%, transparent 66%),
+    radial-gradient(70% 50% at 60% 96%, oklch(0.22 0.08 248 / 0.34) 0%, transparent 68%),
+    var(--bg-primary);
+}
+
+/* The shader canvas — Paper Shaders' MeshGradient fills its container.
+   Fades in once the lazy chunk has loaded and drawn its first frame, so the
+   swap from the CSS gradient above never lands as a visible pop. */
+.ambient__field {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 900ms var(--ease-out-expo);
+}
+
+.ambient__field--ready {
+  opacity: 0.4;
+}
+
+/* Fine film grain over the shader — keeps the flowing gradient from reading
+   as glossy plastic; ties it to the same material language as the cards.
+   This is the single cheapest thing on the page that reads as "expensive". */
+.ambient__grain {
+  position: absolute;
+  inset: -50%;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Floor vignette — content sits above a soft shadow, not a hard edge. */
+.ambient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(130% 46% at 50% 118%,
+    oklch(0 0 0 / 0.4) 0%,
+    transparent 62%);
+}
