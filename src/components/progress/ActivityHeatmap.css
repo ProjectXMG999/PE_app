@@ -1,12 +1,13 @@
 .heatmap {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--surface-tile);
+  border: 1px solid var(--tile-border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--tile-hi);
   padding: var(--spacing-md);
 }
 
 [data-theme="light"] .heatmap {
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--tile-hi), var(--shadow-sm);
 }
 
 .heatmap__weekdays,

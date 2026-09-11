@@ -1,15 +1,16 @@
+/* The page's actual hero — was sitting on the same flat --bg-card as every
+   other tile, despite being the first thing you see. Same ground + lift as
+   .u-surface--raised elsewhere (surfaces.css); kept as tokens rather than the
+   class since .compass already owns position/overflow for its own aurora. */
 .compass {
   position: relative;
   overflow: hidden;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--gradient-hero);
+  border: 1px solid var(--border-accent);
   border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-float);
   padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
   text-align: center;
-}
-
-[data-theme="light"] .compass {
-  box-shadow: var(--shadow-sm);
 }
 
 /* The page glows where you are: --you-pct is the same percentage that positions

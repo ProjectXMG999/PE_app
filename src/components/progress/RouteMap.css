@@ -151,13 +151,14 @@
 .routemap__you {
   margin-top: var(--spacing-md);
   padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--surface-tile);
+  border: 1px solid var(--tile-border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--tile-hi);
 }
 
 [data-theme="light"] .routemap__you {
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--tile-hi), var(--shadow-sm);
 }
 
 .routemap__segment {

@@ -10,8 +10,9 @@
 
 .statspage__title {
   font-family: var(--font-heading);
-  font-size: 32px;
-  font-weight: 700;
+  font-size: var(--text-display);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-display);
   color: var(--text-primary);
   margin: 0 0 4px;
 }
@@ -37,11 +38,14 @@
   margin-top: var(--spacing-xl);
 }
 
+/* Same recipe as .u-kicker (surfaces.css) — kept local rather than adding
+   the class in ~10 call sites, but on the same tokens so it stays in step. */
 .statspage__section-title {
   font-family: var(--font-heading);
   font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: var(--tracking-kicker);
   text-transform: uppercase;
   color: var(--text-muted);
   margin: 0 0 var(--spacing-md);
@@ -60,15 +64,18 @@
   margin: 0;
 }
 
+/* Same lit-from-above material as .u-tile (surfaces.css) — a flat --bg-card
+   fill here read as four grey rectangles rather than four distinct figures. */
 .statspage__fact {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--surface-tile);
+  border: 1px solid var(--tile-border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--tile-hi);
   padding: var(--spacing-md);
 }
 
 [data-theme="light"] .statspage__fact {
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--tile-hi), var(--shadow-sm);
 }
 
 .statspage__fact dt {

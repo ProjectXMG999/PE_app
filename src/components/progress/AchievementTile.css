@@ -6,9 +6,10 @@
   gap: 5px;
   padding: var(--spacing-md) var(--spacing-sm);
   text-align: center;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--surface-tile);
+  border: 1px solid var(--tile-border);
   border-radius: var(--radius-lg);
+  box-shadow: var(--tile-hi);
   font: inherit;
   color: inherit;
   cursor: default;
@@ -62,7 +63,7 @@ button.achtile:active {
 .achtile--unlocked {
   border-color: transparent;
   background:
-    linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    var(--surface-tile) padding-box,
     var(--tier-rim, var(--border)) border-box;
   border: 1px solid transparent;
 }
