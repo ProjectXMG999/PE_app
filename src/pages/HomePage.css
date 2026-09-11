@@ -30,17 +30,30 @@
   min-width: 0;
 }
 
-/* The bar scrolls with the page until it reaches the top, then stays. It is
-   chrome floating over content, so it is the one thing here wearing glass. */
+/* Purely a sticky positioner — no paint of its own.
+ *
+ * It used to carry its own full-bleed glass background (a second, separate
+ * rectangle drawn behind the search bar, which already has a real opaque
+ * `--bg-card` fill of its own). Two things came from that, both wrong:
+ *  1. `color-mix(in oklch, var(--bg-primary) 86%, transparent)` mixes toward
+ *     transparent's implicit black, which drags the resulting LIGHTNESS down
+ *     with it — the token resolved to oklch(0.07…), noticeably darker than
+ *     `--bg-primary` (0.13) itself, not just the same colour at 86% opacity.
+ *     That's what read as a flat, near-black slab sitting behind a search
+ *     pill that was already correctly lit.
+ *  2. On desktop its `margin-inline: calc(var(--spacing-lg) * -1)` +
+ *     `padding-inline: var(--spacing-lg)` compensation was carried over from
+ *     the mobile rule without accounting for the desktop grid's own gutter,
+ *     so the rectangle measured 720px against a 672px content column —
+ *     visibly wider than the cards it sat above.
+ * Removing the background sidesteps both: there is no rectangle left to
+ * mismatch. The search pill and filter button are fully opaque on their own
+ * (the same `--bg-card` flat fill Dzisiaj's LevelPill uses), so they still
+ * read clearly while pinned during scroll. */
 .homepage__chrome {
   position: sticky;
   top: 0;
   z-index: 20;
-  margin: 0 calc(var(--spacing-md) * -1);
-  padding: 0 var(--spacing-md);
-  background: var(--glass-bg);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-          backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
 }
 
 /* Rendered only when packs are actually fading, so it never costs space for
@@ -140,11 +153,6 @@
 @media (min-width: 1024px) {
   .homepage {
     max-width: var(--focus-max-width);
-    padding-inline: var(--spacing-lg);
-  }
-
-  .homepage__chrome {
-    margin-inline: calc(var(--spacing-lg) * -1);
     padding-inline: var(--spacing-lg);
   }
 }

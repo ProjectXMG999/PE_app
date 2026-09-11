@@ -6,7 +6,11 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: var(--bg-app);
+  /* Was var(--bg-app) — a token that has never existed. An invalid var() with
+     no fallback drops the whole declaration, so this full-screen sheet was
+     rendering with no scrim at all and the page showed straight through it.
+     The same dead token was found and removed from SmartProgressRail. */
+  background: var(--overlay);
   cursor: pointer;
 }
 
