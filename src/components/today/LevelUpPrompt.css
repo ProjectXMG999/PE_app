@@ -1,0 +1,102 @@
+.levelup {
+  margin: auto auto 0;
+  padding: 0;
+  width: 100%;
+  max-width: 420px;
+  border: none;
+  background: transparent;
+  overflow: visible;
+}
+
+.levelup::backdrop {
+  background: var(--overlay);
+  backdrop-filter: blur(var(--scrim-blur));
+}
+
+.levelup__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-2xl) var(--spacing-lg) var(--spacing-xl);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  animation: slideUp 280ms var(--ease-out-expo);
+}
+
+.levelup__icon {
+  font-size: 40px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.levelup__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.levelup__sub {
+  margin: var(--spacing-sm) 0 0;
+  max-width: 34ch;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.levelup__note {
+  margin: var(--spacing-sm) 0 var(--spacing-lg);
+  max-width: 34ch;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.levelup__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.levelup__btn {
+  padding: 12px var(--spacing-2xl);
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+}
+
+.levelup__btn--primary {
+  color: var(--text-on-accent, #fff);
+  background: var(--gold);
+  border-color: transparent;
+}
+
+.levelup__btn:active {
+  transform: scale(0.97);
+}
+
+@media (min-width: 640px) {
+  .levelup {
+    margin: auto;
+  }
+
+  .levelup__inner {
+    border-bottom: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .levelup__inner { animation: none; }
+}

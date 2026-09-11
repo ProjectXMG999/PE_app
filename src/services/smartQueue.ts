@@ -1,5 +1,8 @@
 import type { ProgressSnapshot } from '../hooks/useProgressData'
 import { orderDueWords, PriorityCtx } from './reviewQueue'
+import {
+  ReviewHealth, EMPTY_REVIEW_HEALTH, reviewRatioFor, allowStretch, healthTone, HealthTone,
+} from './reviewHealth'
 import { estimateMinutes } from '../data/nextPack'
 import { dayKey } from '../utils/day'
 import { WordProgress } from '../types/progress'
@@ -17,6 +20,12 @@ import packagesIndex from '../data/packages-index.json'
  * Selection (sync, no network) is `selectSmart`; the hook then fetches pack
  * content and calls `composeSmartSteps` to turn the selection into a step list.
  * `smartPeek` is the cheap version for the "here's today's mix" start card.
+ *
+ * The learn/review split is not fixed: `reviewHealth` (services/reviewHealth.ts)
+ * measures how scheduled reviews are actually going and moves REVIEW_RATIO
+ * against it — a learner whose old words are holding gets more new material, one
+ * whose words are slipping gets more maintenance, and below STRETCH_FLOOR the
+ * stretch stream is dropped entirely.
  */
 
 export const SMART = {
@@ -25,8 +34,10 @@ export const SMART = {
   CARDS_PER_MIN: 2.2,
   MIN_CARDS: 12,
   MAX_CARDS: 28,
-  /** Share of the session spent on review / stretch; the rest is learn. */
+  /** Baseline share of the session spent on review — the value used before any
+   *  review evidence exists, and the one `reviewRatioFor` moves away from. */
   REVIEW_RATIO: 0.35,
+  /** Share of the session spent on stretch; the rest is learn. */
   STRETCH_RATIO: 0.2,
   /** A started pack with this many or fewer words left is a "leftover" pack —
    *  it's pulled from the learn stream (no more 2-card grind) and its stragglers
@@ -52,6 +63,11 @@ export type SmartStep =
 export interface SmartSelection {
   targetCount: number
   quota: Record<SmartSegment, number>
+  /** The review share this session was built with — SMART.REVIEW_RATIO unless
+   *  review health moved it. Surfaced so the start card can explain itself. */
+  reviewRatio: number
+  /** Coarse reading of review health, or null when there isn't enough evidence. */
+  tone: HealthTone | null
   /** Curriculum-order packs to draw `learn` words from. */
   learnPackIds: string[]
   /** Pack to draw `stretch` words from, or null when comfort isn't there yet. */
@@ -75,9 +91,14 @@ interface SelectArgs {
   comfortLevel: number
   todayLevel: number | null
   goalSec: number
+  /** Omitted = neutral: the baseline ratio, no stretch gate, as before the
+   *  review-health loop existed. */
+  reviewHealth?: ReviewHealth
 }
 
-export function selectSmart({ snapshot, comfortLevel, todayLevel, goalSec }: SelectArgs): SmartSelection {
+export function selectSmart({
+  snapshot, comfortLevel, todayLevel, goalSec, reviewHealth = EMPTY_REVIEW_HEALTH,
+}: SelectArgs): SmartSelection {
   const targetCount = smartTargetCount(goalSec)
   const floor = todayLevel ?? 1
   const scoped = allPacks.filter(p => p.level >= floor)
@@ -101,11 +122,31 @@ export function selectSmart({ snapshot, comfortLevel, todayLevel, goalSec }: Sel
     wp => stragglerPackIds.has(wp.packageId) && wp.status !== 'known' && !seen.has(wp.wordId)
   )
 
-  const reviewTarget = Math.round(targetCount * SMART.REVIEW_RATIO)
-  // Real due words are gated by today's serving budget; leftovers are a
+  // How much of the session is maintenance. A strong run buys more new words;
+  // a slipping one buys more review — except while the backlog is already
+  // urgent, where a good streak doesn't get to shrink the review slice at all.
+  const reviewRatio = reviewRatioFor(reviewHealth, {
+    base: SMART.REVIEW_RATIO,
+    urgent: snapshot.reviewUrgency === 'urgent',
+  })
+  const reviewTarget = Math.round(targetCount * reviewRatio)
+
+  // Real due words are normally gated by today's serving budget; leftovers are a
   // finish-the-job concern and ignore it (but the whole review slice still
   // can't take over the session).
-  const dueCap = snapshot.servingLeft === 0 ? 0 : Math.min(reviewTarget, snapshot.servingLeft)
+  //
+  // The budget exists to cap how much TIME reviews take, which is why /powtorka
+  // obeys it strictly. Here they cost none: the session is `targetCount` cards
+  // either way, so a review displaces a learn card rather than adding to the
+  // day. So when health says the learner is behind, the slice is allowed past a
+  // spent budget — without that, raising the ratio would be a no-op for exactly
+  // the person it's meant to help.
+  const behind = reviewRatio > SMART.REVIEW_RATIO
+  const dueCap = behind
+    ? reviewTarget
+    : snapshot.servingLeft === 0
+      ? 0
+      : Math.min(reviewTarget, snapshot.servingLeft)
   const reviewWords = [
     ...orderedDue.slice(0, dueCap),
     ...stragglerWords,
@@ -117,7 +158,10 @@ export function selectSmart({ snapshot, comfortLevel, todayLevel, goalSec }: Sel
   const targetLevel = Math.min(4, Math.round(comfortLevel))
   let stretchPackId: string | null = null
   let stretchTarget = 0
-  if (comfortLevel >= learnPackLevel + 0.6 && targetLevel > learnPackLevel) {
+  // Comfort says the harder material would fit; health has a veto. Stacking the
+  // hardest new words on a memory that's already leaking is the one combination
+  // the mode should never produce.
+  if (allowStretch(reviewHealth) && comfortLevel >= learnPackLevel + 0.6 && targetLevel > learnPackLevel) {
     const stretchPack = allPacks.find(
       p => p.level === targetLevel && !isFullyKnown(p) && !isStraggler(p)
     )
@@ -149,6 +193,8 @@ export function selectSmart({ snapshot, comfortLevel, todayLevel, goalSec }: Sel
   return {
     targetCount,
     quota: { learn: learnTarget, review: reviewWords.length, stretch: stretchTarget },
+    reviewRatio,
+    tone: healthTone(reviewHealth),
     learnPackIds,
     stretchPackId,
     reviewWords,
@@ -162,6 +208,10 @@ export function smartPeek(args: SelectArgs): {
   review: number
   stretch: number
   minutes: number
+  tone: HealthTone | null
+  /** True when the mix visibly departs from the baseline — the start card only
+   *  explains itself when there's actually something to explain. */
+  adapted: boolean
 } {
   const sel = selectSmart(args)
   const total = sel.quota.learn + sel.quota.review + sel.quota.stretch
@@ -169,6 +219,8 @@ export function smartPeek(args: SelectArgs): {
     learn: sel.quota.learn,
     review: sel.quota.review,
     stretch: sel.stretchPackId ? sel.quota.stretch : 0,
+    tone: sel.tone,
+    adapted: Math.abs(sel.reviewRatio - SMART.REVIEW_RATIO) > 0.01,
     // Card count here was sized from the goal using SMART.CARDS_PER_MIN (a
     // mixed learn/review/stretch session runs slower than a plain flashcard
     // flip) — estimateMinutes' *default* pace is a much faster 8s/word, meant

@@ -15,6 +15,7 @@ import './debug/devAutoLogin'
 import { DebugOverlay } from './components/debug/DebugOverlay'
 import { RequireEntitlement } from './components/auth/RequireEntitlement'
 import { ToastHost } from './components/shared/ToastHost'
+import { AmbientBackground } from './components/ambient/AmbientBackground'
 import { HomePage } from './pages/HomePage'
 import './App.css'
 
@@ -32,6 +33,7 @@ const LoginPage = lazy(() => import('./pages/LoginPage').then(m => ({ default: m
 const AccountPage = lazy(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage })))
 const TodayPage = lazy(() => import('./pages/TodayPage').then(m => ({ default: m.TodayPage })))
 const ReviewPage = lazy(() => import('./pages/ReviewPage').then(m => ({ default: m.ReviewPage })))
+const SmartSessionPage = lazy(() => import('./pages/SmartSessionPage').then(m => ({ default: m.SmartSessionPage })))
 
 function LoadingFallback() {
   return (
@@ -108,6 +110,9 @@ export function App() {
 
   return (
     <>
+      {/* Mounted once, above <Routes> — see AmbientBackground's doc comment for
+          why it must not live inside the per-page AppShell. */}
+      <AmbientBackground />
       {needRefresh[0] && import.meta.env.PROD && (
         <div className="sw-update-toast">
           <span>Dostępna aktualizacja</span>
@@ -127,6 +132,7 @@ export function App() {
           <Route path="/trening/:exerciseId" element={<RequireEntitlement><TrainingExercisePage /></RequireEntitlement>} />
           <Route path="/dzis" element={<TodayPage />} />
           <Route path="/powtorka" element={<RequireEntitlement><ReviewPage /></RequireEntitlement>} />
+          <Route path="/inteligentny" element={<RequireEntitlement><SmartSessionPage /></RequireEntitlement>} />
           <Route path="/postęp" element={<StatsPage />} />
           <Route path="/ustawienia" element={<SettingsPage />} />
           <Route path="/logowanie" element={<LoginPage />} />

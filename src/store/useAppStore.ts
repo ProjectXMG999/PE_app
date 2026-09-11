@@ -2,6 +2,11 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { AutoplayMode, StudyMode } from '../types/progress'
 import { emitProgress } from '../services/progressEvents'
+import { updateComfort, strongStreakNext, LevelUpPromptState, SessionOutcome, COMFORT } from '../services/comfort'
+import {
+  ReviewHealth, ReviewOutcome, EMPTY_REVIEW_HEALTH, updateReviewHealth, requestRetentionFor,
+} from '../services/reviewHealth'
+import { dayKey } from '../utils/day'
 
 type FilterType = 'all' | 'new' | 'started' | 'completed' | 'mastered'
 
@@ -57,6 +62,14 @@ interface AppStore {
   setTheme: (t: ThemePreference) => void
   toggleTheme: () => void
 
+  /** Whether the current page wants the ambient WebGL background hidden (focus/
+   *  session screens). AmbientBackground now mounts once at the app root — see
+   *  its doc comment — so pages fade it via this flag instead of unmounting it,
+   *  which would tear down and rebuild the WebGL context on every navigation.
+   *  Not persisted: a fresh load always starts visible. */
+  ambientHidden: boolean
+  setAmbientHidden: (hidden: boolean) => void
+
   currentPackageId: string | null
   currentMode: StudyMode | null
   currentCardIndex: number
@@ -89,6 +102,28 @@ interface AppStore {
    *  from `activeLevel` above, which is a transient Home browse filter. */
   todayLevel: number | null
   setTodayLevel: (level: number | null) => void
+
+  /** Adaptive difficulty scalar (1.0–4.9), driven by rated Trenuj sessions.
+   *  Read by the Inteligentny queue builder. See services/comfort.ts.
+   *  Fed by NEW material only (learn / stretch) — how well old words are held
+   *  is `reviewHealth`, a separate question with a separate answer. */
+  comfortLevel: number
+  comfortUpdatedAt: string | null
+  /** Consecutive "strong" rated sessions — gates the level-up prompt. */
+  strongStreak: number
+  levelUpPrompt: LevelUpPromptState
+  /** Fold a finished rated session into comfortLevel + strongStreak. */
+  applyTrainingOutcome: (s: SessionOutcome) => void
+
+  /** Recall on scheduled reviews. Drives the session's review/new split and the
+   *  learner's desired retention. See services/reviewHealth.ts. */
+  reviewHealth: ReviewHealth
+  /** Fold one batch of scheduled reviews into reviewHealth. Reviews ONLY —
+   *  never learn/stretch cards, or the signal measures session composition
+   *  instead of memory. */
+  applyReviewOutcome: (o: ReviewOutcome) => void
+  /** Record that the user was shown (and declined) the level-up prompt. */
+  dismissLevelUp: (level: number) => void
 
   installPromptEvent: BeforeInstallPromptEvent | null
   isInstalled: boolean
@@ -140,6 +175,7 @@ type PersistedState = Pick<
   AppStore,
   'theme' | 'isInstalled' | 'iosBannerDismissed' | 'autoplayMode' | 'enRate' | 'plRate' | 'showDebug' | 'devUnlocked' | 'keepScreenAudioAlive'
   | 'dailyGoalSec' | 'reminderEnabled' | 'reminderHour' | 'streakFreeze' | 'achievementUnlocks' | 'todayLevel' | 'soundEnabled'
+  | 'comfortLevel' | 'comfortUpdatedAt' | 'strongStreak' | 'levelUpPrompt' | 'reviewHealth'
 >
 
 export const useAppStore = create<AppStore>()(
@@ -147,6 +183,8 @@ export const useAppStore = create<AppStore>()(
     (set) => ({
       theme: 'dark',
       setTheme: (t) => set({ theme: t }),
+      ambientHidden: false,
+      setAmbientHidden: (hidden) => set(s => (s.ambientHidden === hidden ? s : { ambientHidden: hidden })),
       toggleTheme: () => set(s => ({ theme: resolveTheme(s.theme) === 'dark' ? 'light' : 'dark' })),
 
       currentPackageId: null,
@@ -183,6 +221,27 @@ export const useAppStore = create<AppStore>()(
 
       todayLevel: null,
       setTodayLevel: (level) => set({ todayLevel: level }),
+
+      comfortLevel: COMFORT.MIN,
+      comfortUpdatedAt: null,
+      strongStreak: 0,
+      levelUpPrompt: { dismissedForLevel: null, lastShownAt: null },
+      applyTrainingOutcome: (s) =>
+        set((state) => ({
+          comfortLevel: updateComfort(state.comfortLevel, s),
+          strongStreak: strongStreakNext(state.strongStreak, s),
+          comfortUpdatedAt: new Date().toISOString(),
+        })),
+      reviewHealth: EMPTY_REVIEW_HEALTH,
+      applyReviewOutcome: (o) =>
+        set((state) => ({ reviewHealth: updateReviewHealth(state.reviewHealth, o) })),
+
+      // lastShownAt is a day key (not a full timestamp) — shouldPromptLevelUp's
+      // cooldown check compares it with daysBetween(), which expects that format.
+      dismissLevelUp: (level) =>
+        set({
+          levelUpPrompt: { dismissedForLevel: level, lastShownAt: dayKey() },
+        }),
 
       installPromptEvent: null,
       isInstalled: false,
@@ -269,16 +328,32 @@ export const useAppStore = create<AppStore>()(
     }),
     {
       name: 'pe-store',
-      version: 1,
+      version: 4,
       migrate: (persisted) => {
-        // v0 stored absolute audio rates (e.g. 0.60); v1 uses multipliers
-        // from a fixed scale — snap anything off-scale back to 1.0.
-        const VALID_RATES = new Set([0.5, 0.75, 1.0, 1.25, 1.5])
-        const s = (persisted ?? {}) as PersistedState
+        const s = (persisted ?? {}) as Partial<PersistedState>
         return {
           ...s,
-          enRate: s.enRate != null && VALID_RATES.has(s.enRate) ? s.enRate : 1.0,
-          plRate: s.plRate != null && VALID_RATES.has(s.plRate) ? s.plRate : 1.0,
+          // v3: playback tempo is 100% everywhere by default. The code default
+          // always was 1.0, but "Wolniej" in the listening player writes a
+          // *persisted, global* preference — so one tap during one session left
+          // every later session, in every mode, permanently slowed down with no
+          // hint of why. This resets both rates once; the picker in Ustawienia
+          // and in the player still changes them deliberately.
+          // (It also subsumes the v0→v1 migration off absolute rates like 0.60,
+          // which snapped off-scale values back to 1.0.)
+          enRate: 1.0,
+          plRate: 1.0,
+          // v2: adaptive difficulty. Seed comfort from the manually chosen
+          // starting level so an existing learner doesn't start at 1.0.
+          comfortLevel: s.comfortLevel ?? (s.todayLevel ?? 1),
+          comfortUpdatedAt: s.comfortUpdatedAt ?? null,
+          strongStreak: s.strongStreak ?? 0,
+          levelUpPrompt: s.levelUpPrompt ?? { dismissedForLevel: null, lastShownAt: null },
+          // v4: review health starts empty for everyone. It could be seeded
+          // from lapseCount/reviewCount totals, but those are lifetime figures
+          // and this signal is deliberately recent — better a couple of weeks
+          // of baseline behaviour than a number fitted to two-year-old answers.
+          reviewHealth: s.reviewHealth ?? EMPTY_REVIEW_HEALTH,
         }
       },
       partialize: (s) => ({
@@ -298,7 +373,23 @@ export const useAppStore = create<AppStore>()(
         achievementUnlocks: s.achievementUnlocks,
         todayLevel: s.todayLevel,
         soundEnabled: s.soundEnabled,
+        comfortLevel: s.comfortLevel,
+        comfortUpdatedAt: s.comfortUpdatedAt,
+        strongStreak: s.strongStreak,
+        levelUpPrompt: s.levelUpPrompt,
+        reviewHealth: s.reviewHealth,
       }),
     }
   )
 )
+
+/**
+ * The desired retention to schedule with right now — the review-health loop's
+ * output, read at the moment a word is graded rather than held in a component.
+ *
+ * Lives here rather than in reviewHealth.ts (which stays pure and store-free,
+ * so it can be tested as maths) and out of review.ts (documented no-IO).
+ */
+export function currentRequestRetention(): number {
+  return requestRetentionFor(useAppStore.getState().reviewHealth)
+}

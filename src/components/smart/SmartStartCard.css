@@ -50,6 +50,17 @@
   color: var(--text-secondary);
 }
 
+/* Why today's mix looks the way it does — only rendered when it actually
+   departs from the baseline, so it stays a remark rather than a fixture. */
+.smartstart__reason {
+  margin: calc(var(--spacing-sm) * -1) 0 var(--spacing-sm);
+  max-width: 42ch;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
 .smartstart__cta {
   display: inline-flex;
   align-items: center;

@@ -1,0 +1,128 @@
+/* ============================================================
+   Inteligentny — session-done screen. Same premium glass-card
+   language as MasteryScreen / SessionDoneScreen, in a blended
+   violet/teal theme (learn + review + stretch all touched it).
+   ============================================================ */
+
+.smartdone {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: env(safe-area-inset-top, 0px) 20px env(safe-area-inset-bottom, 0px);
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 22%, rgba(139, 92, 246, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 30%, #101235 0%, #0D0B1E 72%);
+  z-index: 200;
+  overflow: hidden;
+}
+
+.smartdone__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 26px 26px;
+  text-align: center;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+.smartdone__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #fff;
+  background: linear-gradient(135deg, #8B5CF6, #34D399);
+}
+
+.smartdone__title {
+  margin: 0;
+  font-size: var(--text-2xl);
+  color: #fff;
+}
+
+.smartdone__stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px 22px;
+  margin: 4px 0;
+}
+
+.smartdone__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 76px;
+}
+
+.smartdone__stat-value {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.smartdone__stat-label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.smartdone__comfort {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.smartdone__comfort strong {
+  color: #FCD34D;
+}
+
+.smartdone__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.smartdone__btn {
+  padding: 13px var(--spacing-xl);
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+}
+
+.smartdone__btn--primary {
+  color: #1a1442;
+  background: linear-gradient(135deg, #A78BFA, #6EE7B7);
+  border-color: transparent;
+}
+
+.smartdone__btn:active {
+  transform: scale(0.97);
+}

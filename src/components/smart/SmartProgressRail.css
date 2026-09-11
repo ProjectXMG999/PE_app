@@ -1,0 +1,42 @@
+/* Sits in StudyStage's rail slot, so it matches .stage__track's geometry —
+   same height, same radius, same ground. Only the zones are its own. */
+.smartrail {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.smartrail__track {
+  position: relative;
+  flex: 1;
+  display: flex;
+  height: 5px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--surface-translucent-strong);
+}
+
+.smartrail__zone {
+  height: 100%;
+  opacity: 0.28;
+}
+
+/* --bg-app was never a token: the invalid var() dropped the whole declaration,
+   so these hairlines between segments simply never rendered. */
+.smartrail__zone + .smartrail__zone {
+  border-left: 1px solid var(--bg-primary);
+}
+
+.smartrail__zone--learn { background: var(--accent); }
+.smartrail__zone--review { background: var(--live); }
+.smartrail__zone--stretch { background: var(--accent-blue); }
+
+.smartrail__fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: var(--radius-full);
+  background: color-mix(in oklch, var(--text-primary) 55%, transparent);
+  box-shadow: 0 0 10px color-mix(in oklch, var(--text-primary) 25%, transparent);
+  transition: width 260ms var(--ease-out-expo);
+}
+
