@@ -1,49 +1,206 @@
+/* =============================================================================
+ * AMBIENT — the app's ground.
+ * -----------------------------------------------------------------------------
+ * Calibration rule: the fields live at the edges (real screens are nearly
+ * edge-to-edge cards, so that's the only canvas that's ever actually open) but
+ * they should read immediately as colour in motion, not as a rumour of it —
+ * this was tuned down to ~0.1 effective alpha at one point and the animated
+ * background effectively vanished. Confirm with a screenshot of an empty page:
+ * the corners should look unmistakably alive, not just faintly warmer.
+ * ========================================================================== */
+
 .ambient {
   position: fixed;
   inset: 0;
   overflow: hidden;
   z-index: -1;
   pointer-events: none;
+  background: var(--bg-primary);
+  opacity: 1;
+  transition: opacity var(--transition-slow);
 }
 
-/* Light from the top edge — a whisper, not a spotlight. Static. */
-.ambient__wash {
+/* Focus/session pages fade it rather than unmount it — see the doc comment
+   in AmbientBackground.tsx for why it needs to survive routing. */
+.ambient--hidden {
+  opacity: 0;
+}
+
+/* ── 1. Aurora ────────────────────────────────────────────────────────────
+   Three fields, all anchored off-screen at the edges. Nothing sits in the
+   middle of the viewport: that band is covered by cards on every real screen,
+   so colour spent there is colour wasted — and in an empty state, a glow
+   sitting behind the content is exactly what reads as amateurish. */
+.ambient__aurora {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(150% 72% at 50% -24%,
-      color-mix(in oklch, var(--accent) 12%, transparent) 0%,
-      transparent 55%),
-    radial-gradient(120% 50% at 100% 0%,
-      color-mix(in oklch, var(--live) 6%, transparent) 0%,
-      transparent 45%);
 }
 
-/* Fine film grain. The single most effective "this is designed" texture —
-   keeps flat surfaces from looking like plastic. */
+.ambient__field {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(min(14vw, 130px));
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+}
+
+/* Top-left, violet — the brand light, and the only field allowed to reach
+   anywhere near the content column. */
+.ambient__field--a {
+  top: -26vh;
+  left: -18vw;
+  width: 78vw;
+  height: 78vw;
+  max-width: 760px;
+  max-height: 760px;
+  background: radial-gradient(circle,
+    color-mix(in oklch, var(--accent) 46%, transparent) 0%,
+    transparent 66%);
+  opacity: 0.85;
+  animation: ambient-drift-a 54s ease-in-out infinite;
+}
+
+/* Bottom-right, indigo — deep and cold, keeps the foot of the page from
+   turning into a violet puddle. */
+.ambient__field--b {
+  right: -24vw;
+  bottom: -22vh;
+  width: 82vw;
+  height: 82vw;
+  max-width: 820px;
+  max-height: 820px;
+  background: radial-gradient(circle,
+    color-mix(in oklch, var(--accent-indigo) 44%, transparent) 0%,
+    transparent 68%);
+  opacity: 0.8;
+  animation: ambient-drift-b 68s ease-in-out infinite;
+}
+
+/* Right edge, teal — the smallest and coolest of the three; it exists so the
+   palette isn't one hue at two brightnesses. */
+.ambient__field--c {
+  top: 32vh;
+  right: -30vw;
+  width: 62vw;
+  height: 62vw;
+  max-width: 620px;
+  max-height: 620px;
+  background: radial-gradient(circle,
+    color-mix(in oklch, var(--live) 32%, transparent) 0%,
+    transparent 70%);
+  opacity: 0.6;
+  animation: ambient-drift-c 61s ease-in-out infinite;
+}
+
+@keyframes ambient-drift-a {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1);        opacity: 0.85; }
+  50%      { transform: translate3d(7vw, 6vh, 0) scale(1.14);  opacity: 1; }
+}
+@keyframes ambient-drift-b {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1.06);       opacity: 0.8; }
+  50%      { transform: translate3d(-8vw, -5vh, 0) scale(0.94); opacity: 0.95; }
+}
+@keyframes ambient-drift-c {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(0.96);      opacity: 0.6; }
+  50%      { transform: translate3d(-6vw, 9vh, 0) scale(1.12); opacity: 0.4; }
+}
+
+/* ── 2. Sweep ─────────────────────────────────────────────────────────────
+   One conic wedge, far larger than the viewport, turning once every 78s. It
+   never reads as a rotating object — what you notice is that the light in the
+   room is coming from somewhere slightly different than it was a minute ago.
+   Transform-only, so the whole effect costs one composited layer. */
+.ambient__sweep {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200vmax;
+  height: 200vmax;
+  margin: -100vmax 0 0 -100vmax;
+  background: conic-gradient(from 0deg,
+    transparent 0deg,
+    color-mix(in oklch, var(--accent-bright) 24%, transparent) 26deg,
+    transparent 84deg,
+    transparent 250deg,
+    color-mix(in oklch, var(--live) 18%, transparent) 300deg,
+    transparent 350deg);
+  /* Hollow centre: the wedge should graze the screen, never sit on it. */
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent 0%, #000 46%);
+  mask-image: radial-gradient(circle at 50% 50%, transparent 0%, #000 46%);
+  mix-blend-mode: screen;
+  opacity: 0.75;
+  will-change: transform;
+  animation: ambient-sweep 78s linear infinite;
+}
+
+@keyframes ambient-sweep {
+  to { transform: rotate(360deg); }
+}
+
+/* ── 3. Grid ──────────────────────────────────────────────────────────────
+   Drifts exactly one cell per cycle, so the loop is seamless. Masked to the
+   top of the viewport, where the page is usually emptiest. */
+.ambient__grid {
+  position: absolute;
+  inset: -80px;
+  background-image:
+    linear-gradient(oklch(1 0 0 / 0.026) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.026) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(126% 82% at 50% -6%, #000 0%, transparent 72%);
+  mask-image: radial-gradient(126% 82% at 50% -6%, #000 0%, transparent 72%);
+  will-change: transform;
+  animation: ambient-grid 44s linear infinite;
+}
+
+@keyframes ambient-grid {
+  to { transform: translate3d(64px, 64px, 0); }
+}
+
+/* ── 4. Grain ─────────────────────────────────────────────────────────────
+   Fine film noise — what keeps flat dark surfaces reading as material. */
 .ambient__grain {
   position: absolute;
   inset: -50%;
-  opacity: 0.035;
+  opacity: 0.045;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Floor vignette — content sits above a soft shadow, not on a hard edge. */
+/* Vignette — pulls every edge down so content sits in a pool of light rather
+   than on a flat sheet. This is also the layer that keeps the aurora honest:
+   whatever the fields do, the corners stay dark. */
 .ambient::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(130% 46% at 50% 118%,
-    oklch(0 0 0 / 0.32) 0%,
-    transparent 62%);
+  background:
+    radial-gradient(128% 44% at 50% 116%, oklch(0 0 0 / 0.36) 0%, transparent 60%),
+    radial-gradient(102% 64% at 50% 42%, transparent 42%, oklch(0 0 0 / 0.28) 100%);
 }
 
-[data-theme="light"] .ambient__wash {
-  background:
-    radial-gradient(150% 72% at 50% -24%,
-      color-mix(in oklch, var(--accent) 7%, transparent) 0%,
-      transparent 55%);
+/* ── Light theme ──────────────────────────────────────────────────────────
+   Screen-blending does nothing on near-white, so the fields multiply instead,
+   at a fraction of the strength — on a light ground any tint reads twice as
+   loud. The sweep and the grid all but disappear. */
+[data-theme="light"] .ambient__field {
+  mix-blend-mode: multiply;
+  filter: blur(min(14vw, 140px));
+}
+
+[data-theme="light"] .ambient__field--a { opacity: 0.24; }
+[data-theme="light"] .ambient__field--b { opacity: 0.2; }
+[data-theme="light"] .ambient__field--c { opacity: 0.14; }
+
+[data-theme="light"] .ambient__sweep {
+  mix-blend-mode: multiply;
+  opacity: 0.18;
+}
+
+[data-theme="light"] .ambient__grid {
+  background-image:
+    linear-gradient(oklch(0.2 0.02 275 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.2 0.02 275 / 0.045) 1px, transparent 1px);
 }
 
 [data-theme="light"] .ambient__grain {
@@ -52,7 +209,16 @@
 }
 
 [data-theme="light"] .ambient::after {
-  background: radial-gradient(130% 46% at 50% 118%,
-    oklch(0.2 0.02 275 / 0.06) 0%,
-    transparent 62%);
+  background: radial-gradient(128% 44% at 50% 116%,
+    oklch(0.2 0.02 275 / 0.06) 0%, transparent 60%);
+}
+
+/* The drift and the sweep are atmosphere, not information — when the OS asks
+   for less motion they stop where they are. */
+@media (prefers-reduced-motion: reduce) {
+  .ambient__field,
+  .ambient__sweep,
+  .ambient__grid {
+    animation: none;
+  }
 }
