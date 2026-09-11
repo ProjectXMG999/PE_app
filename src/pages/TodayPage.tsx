@@ -311,10 +311,23 @@ export function TodayPage() {
             )}
 
             {reviewDone && (
-              <motion.div className="today__review-done" variants={variants}>
-                ✓ Powtórki na dziś zrobione
-                {backlog > 0 && ` · jeszcze ${backlog} w kolejce, wrócą jutro`}
-              </motion.div>
+              <motion.button
+                type="button"
+                className="today__review-done u-rail"
+                variants={variants}
+                onClick={() => pressCta(() => { unlockAudioGlobally(); navigate('/powtorka', { viewTransition: true }) })}
+              >
+                <span className="today__review-done-icon" aria-hidden="true">✓</span>
+                <span className="today__review-done-body">
+                  <strong>Powtórki na dziś zrobione</strong>
+                  <span>Jeszcze {backlog} w kolejce, wrócą jutro — albo zrób je już teraz</span>
+                </span>
+                <span className="today__review-done-go" aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </span>
+              </motion.button>
             )}
 
             <motion.div variants={variants}>

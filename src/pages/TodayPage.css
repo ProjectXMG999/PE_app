@@ -142,14 +142,68 @@
   cursor: pointer;
 }
 
+/* Budget spent for today, but the queue isn't empty — this is still a real
+   entry point (the review page itself always offers "Kontynuuj mimo to"),
+   so it keeps the .today__rail shape/tap-target instead of degrading to a
+   plain status line once the primary rail above disappears. */
 .today__review-done {
-  padding: 10px var(--spacing-md);
-  font-family: var(--font-body);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 4px 12px;
+  min-height: 66px;
+  padding: 14px var(--spacing-md);
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+  border-left-color: var(--success);
+  background: color-mix(in oklch, var(--success) 6%, var(--surface-translucent));
+  transition: transform var(--transition-fast);
+}
+
+.today__review-done:active { transform: scale(0.985); }
+
+.today__review-done-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
   font-size: var(--text-sm);
+  color: var(--success);
+  background: color-mix(in oklch, var(--success) 16%, transparent);
+  border-radius: var(--radius-full);
+}
+
+.today__review-done-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.today__review-done-body strong {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.today__review-done-body span {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
   color: var(--text-muted);
-  background: color-mix(in oklch, var(--success) 8%, var(--surface-translucent));
-  border: 1px solid color-mix(in oklch, var(--success) 25%, transparent);
-  border-radius: var(--radius-md);
+}
+
+.today__review-done-go {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  color: var(--success);
+  background: color-mix(in oklch, var(--success) 14%, transparent);
 }
 
 /* ── Path pick (inside ModeSlider) — the whole card is the tap target ─────── */
