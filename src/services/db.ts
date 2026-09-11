@@ -4,6 +4,7 @@ import { supabase } from './supabaseClient'
 import { useAuthStore } from '../store/useAuthStore'
 import { emitProgress } from './progressEvents'
 import { dayKey, shiftDay, daysBetween } from '../utils/day'
+import { studyDayKeys, streakFrom } from '../utils/studyDays'
 
 // Best-effort push to the user's Supabase account — silent no-op when signed
 // out or Supabase isn't configured. Local IndexedDB stays the source of truth
@@ -221,32 +222,27 @@ export async function resetProgressForPackages(packageIds: string[]): Promise<vo
 /**
  * Current run of consecutive study days, counting back from today.
  *
+ * Counts a day studied if a session landed on it OR the daily-time ledger
+ * recorded real study — see utils/studyDays. Sessions alone used to decide this,
+ * which meant someone who studies every evening but never finishes a pack had a
+ * streak of zero while the app happily awarded them "cel dnia" for the same
+ * days.
+ *
  * `frozenDays` are days the user missed but spent a streak freeze on. They keep
  * the chain unbroken without being counted as study — a freeze protects the
  * streak, it doesn't fake a session.
  */
 export async function getStreak(frozenDays: string[] = []): Promise<number> {
   const db = await getDB()
-  const all = await db.getAll('sessions')
-  if (all.length === 0) return 0
+  const [sessions, dailyTime] = await Promise.all([
+    db.getAll('sessions'),
+    db.getAll('dailyTime'),
+  ])
 
-  const studied = new Set(all.map(s => s.date))
-  const frozen = new Set(frozenDays)
-  const covered = (d: string) => studied.has(d) || frozen.has(d)
+  const studied = studyDayKeys(sessions, dailyTime)
+  if (studied.size === 0) return 0
 
-  // The chain has to reach today or yesterday to still be alive; a freeze on
-  // yesterday is exactly what keeps it alive after a missed day.
-  const todayKey = dayKey()
-  const yesterdayKey = shiftDay(-1)
-  let cursor = covered(todayKey) ? todayKey : covered(yesterdayKey) ? yesterdayKey : null
-  if (cursor === null) return 0
-
-  let streak = 0
-  while (covered(cursor)) {
-    if (studied.has(cursor)) streak++
-    cursor = shiftDay(-1, cursor)
-  }
-  return streak
+  return streakFrom(studied, new Set(frozenDays), dayKey(), d => shiftDay(-1, d))
 }
 
 /**
@@ -256,10 +252,13 @@ export async function getStreak(frozenDays: string[] = []): Promise<number> {
  */
 export async function getLongestStreak(): Promise<number> {
   const db = await getDB()
-  const all = await db.getAll('sessions')
-  if (all.length === 0) return 0
+  const [sessions, dailyTime] = await Promise.all([
+    db.getAll('sessions'),
+    db.getAll('dailyTime'),
+  ])
 
-  const dates = [...new Set(all.map(s => s.date))].sort()
+  const dates = [...studyDayKeys(sessions, dailyTime)].sort()
+  if (dates.length === 0) return 0
 
   let longest = 1
   let current = 1

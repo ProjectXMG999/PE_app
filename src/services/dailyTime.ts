@@ -2,6 +2,7 @@ import { DailyTime } from '../types/progress'
 import { getDailyTime, saveDailyTime } from './db'
 import { useAppStore } from '../store/useAppStore'
 import { dayKey } from '../utils/day'
+import { plMinutes } from '../utils/plural'
 
 /**
  * The daily study-time ledger.
@@ -176,20 +177,20 @@ export function milestoneMessage(
 
   if (m === 1) {
     return {
-      text: `Cel dnia osiągnięty — ${goalMins} minut. Tak trzymaj.`,
+      text: `Cel dnia osiągnięty — ${goalMins} ${plMinutes(goalMins)}. Tak trzymaj.`,
       icon: '🎯',
       celebrate: true,
     }
   }
   if (m === 2) {
     return {
-      text: `Podwójna dawka — ${mins} minut dzisiaj.`,
+      text: `Podwójna dawka — ${mins} ${plMinutes(mins)} dzisiaj.`,
       icon: '🔥',
       celebrate: true,
     }
   }
   return {
-    text: `Dziś już ${mins} ${mins === 1 ? 'minuta' : 'minut'}. Jesteś w połowie celu.`,
+    text: `Dziś już ${mins} ${plMinutes(mins)}. Jesteś w połowie celu.`,
     icon: '⏱',
     celebrate: false,
   }

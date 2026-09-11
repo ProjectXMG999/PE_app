@@ -1,8 +1,10 @@
 import { ProgressSnapshot } from '../hooks/useProgressData'
 import { DailyTime } from '../types/progress'
 import { AchievementState } from './achievements'
-import { studiedMinutes } from '../hooks/useStats'
+import { measuredStudyMinutes } from '../hooks/useStats'
 import { dayKey, shiftDay } from '../utils/day'
+import { studyDayKeys } from '../utils/studyDays'
+import { plWords, plMinutes, plDays, plSessions, plPractised } from '../utils/plural'
 
 /**
  * The week in review.
@@ -58,9 +60,13 @@ export function computeWeeklyRecap(
     from,
     to: today,
     wordsPractised: week.reduce((sum, s) => sum + s.wordsCompleted, 0),
-    minutes: studiedMinutes(week),
+    // The ledger, not the sessions: studiedMinutes(week) only sees packs the
+    // user finished, so a week of real study with nothing closed reported
+    // "3 minuty" on a page whose total said 672. Same measure as "Czas nauki".
+    minutes: measuredStudyMinutes(weekDaily, week),
     sessions: week.length,
-    activeDays: byDate.size,
+    // Same definition of a study day as the streak and the rhythm heatmap.
+    activeDays: studyDayKeys(week, weekDaily).size,
     goalDays: weekDaily.filter(d => d.goalMetAt != null).length,
     bestDay,
     newBadges,
@@ -70,9 +76,11 @@ export function computeWeeklyRecap(
   }
 }
 
-/** True once the week has anything worth reporting. */
+/** True once the week has anything worth reporting. Keyed on days studied, not
+ *  on finished sessions — a week of real study with nothing closed is still a
+ *  week worth showing. */
 export function recapWorthShowing(r: WeeklyRecap): boolean {
-  return r.sessions > 0
+  return r.activeDays > 0
 }
 
 // ── Share image ─────────────────────────────────────────────────────────────
@@ -106,7 +114,7 @@ export async function renderRecapImage(r: WeeklyRecap): Promise<Blob | null> {
   if (!ctx) return null
 
   // Background, with the same violet bloom the app uses behind the route marker.
-  ctx.fillStyle = '#0D0B1E'
+  ctx.fillStyle = '#010102'
   ctx.fillRect(0, 0, W, H)
   const bloom = ctx.createRadialGradient(W * 0.3, H * 0.28, 0, W * 0.3, H * 0.28, W * 0.75)
   bloom.addColorStop(0, 'rgba(139, 92, 246, 0.34)')
@@ -129,14 +137,14 @@ export async function renderRecapImage(r: WeeklyRecap): Promise<Blob | null> {
 
   ctx.fillStyle = 'rgba(255,255,255,0.75)'
   ctx.font = '400 40px Roboto, sans-serif'
-  ctx.fillText('słów przerobionych', pad, 400)
+  ctx.fillText(`${plWords(r.wordsPractised)} ${plPractised(r.wordsPractised)}`, pad, 400)
 
   // Stat grid.
   const stats: [string, string][] = [
-    [`${r.minutes}`, 'minut nauki'],
+    [`${r.minutes}`, `${plMinutes(r.minutes)} nauki`],
     [`${r.activeDays}/7`, 'dni z treningiem'],
-    [`${r.sessions}`, 'sesji'],
-    [`${r.goalDays}`, 'dni z celem'],
+    [`${r.sessions}`, plSessions(r.sessions)],
+    [`${r.goalDays}`, `${plDays(r.goalDays)} z celem`],
   ]
 
   const gx = pad
@@ -192,7 +200,7 @@ export async function renderRecapImage(r: WeeklyRecap): Promise<Blob | null> {
     ctx.fillStyle = 'rgba(255,255,255,0.6)'
     ctx.font = '400 32px Roboto, sans-serif'
     ctx.fillText(
-      `jeszcze ${r.toNextStation.toLocaleString('pl-PL')} do ${r.nextStationName}`,
+      `jeszcze ${r.toNextStation.toLocaleString('pl-PL')} ${plWords(r.toNextStation)} do ${r.nextStationName}`,
       pad,
       barY + 76
     )

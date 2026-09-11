@@ -12,8 +12,9 @@ import { PackMeta } from '../types/vocabulary'
  *  - Trenuj is finished when every word is known, so it tracks knownMap and
  *    always restarts from the top.
  *
- * Extracted from QuickStartCards so the Dziś screen answers with exactly the
- * same pack the home screen would.
+ * Lives here rather than inside a component because Dziś is now the only screen
+ * that answers "what next" — Pakiety shows the whole route and prices every
+ * option instead of recommending one.
  */
 
 export interface NextPack {

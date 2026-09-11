@@ -9,6 +9,7 @@ import {
 import { emitProgress } from './progressEvents'
 import { RETIRE_STABILITY_DAYS } from './reviewConfig'
 import { nextInterval } from './fsrs'
+import { currentRequestRetention } from '../store/useAppStore'
 import { dayKey, shiftDay } from '../utils/day'
 
 const STATUS_RANK: Record<WordStatus, number> = { new: 0, learning: 1, known: 2 }
@@ -44,7 +45,11 @@ function betterWordProgress(a: WordProgress, b: WordProgress): WordProgress {
     const durable = merged.stability >= RETIRE_STABILITY_DAYS
     if (!durable) merged.retiredAt = undefined
     if (merged.nextReviewAt == null) {
-      merged.nextReviewAt = shiftDay(nextInterval(merged.stability), dayKey())
+      // Same desired retention the study screens schedule with, so a repaired
+      // date doesn't sit on a different curve from every other word.
+      merged.nextReviewAt = shiftDay(
+        nextInterval(merged.stability, currentRequestRetention()), dayKey()
+      )
     }
   }
   return merged

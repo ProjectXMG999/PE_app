@@ -27,7 +27,9 @@ export const REVIEW_LADDER = [3, 8, 20, 45, 100, 240]
 export const RETIRE_AT_REVIEW_COUNT = 5
 
 // ── FSRS scheduler (src/services/fsrs.ts) ───────────────────────────────────
-/** Target retrievability the scheduler aims for when picking the next interval. */
+/** Target retrievability the scheduler aims for when picking the next interval.
+ *  The baseline: `requestRetentionFor` (services/reviewHealth.ts) moves a given
+ *  learner off it, within tight bounds, once there's enough review evidence. */
 export const REQUEST_RETENTION = 0.9
 /** Published FSRS-4.5 population defaults. NOT optimised per user. */
 export const W = [
@@ -135,3 +137,12 @@ export const GRADUATION_ENABLED = true
 /** Gates listening-interlude splicing in useReviewSet. false → /powtorka is pure
  *  flashcards. Safe to flip once the checkpoint flow has been verified. */
 export const REVIEW_INTERLUDES_ENABLED = false
+/** Gates loop A of review health (services/reviewHealth.ts): the Inteligentny
+ *  session's review/new split, and the stretch cut-off, follow measured recall.
+ *  false → REVIEW_RATIO stays the fixed 0.35 and stretch is comfort-only. */
+export const ADAPTIVE_MIX_ENABLED = true
+/** Gates loop B of review health: per-learner desired retention in place of the
+ *  fixed REQUEST_RETENTION. false → every learner gets 0.9, as before. This is
+ *  the one that writes to the schedule, so it's the one to flip first if the
+ *  calibration turns out wrong. */
+export const ADAPTIVE_RETENTION_ENABLED = true

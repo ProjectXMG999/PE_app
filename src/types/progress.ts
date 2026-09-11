@@ -2,9 +2,10 @@ export type WordStatus = 'new' | 'learning' | 'known'
 export type StudyMode = 'fiszki' | 'autoplay'
 export type AutoplayMode = 'fast' | 'standard' | 'speaking'
 /** Which Trenuj exercise a `mode: 'fiszki'` session was. `review` is the
- *  cross-pack review queue rather than a single pack. Optional because
+ *  cross-pack review queue rather than a single pack; `smart` is the
+ *  Inteligentny mode's mixed queue (also cross-pack). Optional because
  *  sessions written before this field existed don't have it. */
-export type TrainMode = 'word-flash' | 'active-sentence' | 'review'
+export type TrainMode = 'word-flash' | 'active-sentence' | 'review' | 'smart'
 
 export interface Session {
   id?: number
@@ -23,6 +24,13 @@ export interface Session {
   /** Measured wall-clock seconds spent in this session. Optional: sessions
    *  written before this field existed fall back to the words × 8 s estimate. */
   durationSec?: number
+  /** Cards that got a Znam/Nie znam verdict in this session (autoplay has none).
+   *  Optional: sessions written before this field existed don't have it. */
+  ratedCount?: number
+  /** Of `ratedCount`, how many were answered "Znam". Together with `ratedCount`
+   *  this is the session's success ratio — the raw signal the adaptive
+   *  difficulty ("comfort level") is derived from. */
+  knownHitCount?: number
 }
 
 export interface WordProgress {
@@ -64,7 +72,16 @@ export interface PackageProgress {
 
 export interface DayActivity {
   date: string
+  /** Words completed in finished sessions that day. */
   count: number
+  /**
+   * Seconds actually studied that day, from the daily-time ledger.
+   *
+   * Carried alongside `count` because a day can have real study and no finished
+   * pack — which is how the rhythm heatmap used to show an empty month to a user
+   * the app was simultaneously awarding "cel dnia" to. See utils/studyDays.
+   */
+  seconds: number
 }
 
 /**

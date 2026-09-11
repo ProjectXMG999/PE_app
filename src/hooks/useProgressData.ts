@@ -201,14 +201,16 @@ export function avgWordsPerDay(snapshot: ProgressSnapshot): number {
   const { sessions, knownTotal, bulkKnownTotal } = snapshot
   if (sessions.length === 0) return 0
   // getAllSessions() returns insertion order, not date order — find the
-  // earliest/latest dates directly rather than assuming array position.
+  // earliest date directly rather than assuming array position.
   let earliest = sessions[0].date
-  let latest = sessions[0].date
   for (const s of sessions) {
     if (s.date < earliest) earliest = s.date
-    if (s.date > latest) latest = s.date
   }
-  const daysElapsed = Math.max(1, daysBetween(earliest, latest) + 1)
+  // Measured to TODAY, not to the last session. Ending the window at the last
+  // session froze the pace the moment someone stopped studying, so "przy tym
+  // tempie jesteś 91 dni od Survival English" stayed true however long the app
+  // went unopened. A pace that can't fall isn't a pace.
+  const daysElapsed = Math.max(1, daysBetween(earliest, dayKey()) + 1)
   const studyLearned = Math.max(0, knownTotal - bulkKnownTotal)
   return Math.round(studyLearned / daysElapsed)
 }
@@ -229,9 +231,18 @@ export function sevenDayPace(sessions: Session[], today: string = dayKey()): num
 }
 
 /**
- * Words-per-day pace for the last 7 days vs. the 7 days before that, so the
- * Stats page can show a trend arrow instead of a flat average. `deltaPct` is
- * null when there isn't a full prior window to compare against.
+ * The pace figure shown on Postęp, plus a trend arrow.
+ *
+ * `current` is `avgWordsPerDay` — words actually LEARNED per day — and not the
+ * seven-day throughput it used to be. The two are different measures (throughput
+ * counts every card completed, including repeats of words you already knew), and
+ * showing one in the "tempo" tile while the sentence right underneath it —
+ * "przy tym tempie jesteś N dni od…" — was computed from the other is how the
+ * page came to disagree with itself.
+ *
+ * `deltaPct` still compares seven-day throughput against the prior seven days:
+ * as a *direction* that's the responsive signal, and it's never rendered as a
+ * number of words. Null when there isn't a full prior window to compare against.
  */
 export function avgWordsPerDayTrend(snapshot: ProgressSnapshot): PaceTrend {
   const { sessions } = snapshot
@@ -247,7 +258,7 @@ export function avgWordsPerDayTrend(snapshot: ProgressSnapshot): PaceTrend {
 
   const currentWindow = windowSum(6, 0)
   const priorWindow = windowSum(13, 7)
-  const current = sevenDayPace(sessions, today)
+  const current = avgWordsPerDay(snapshot)
 
   if (sessions.length === 0) return { current: 0, deltaPct: null }
 

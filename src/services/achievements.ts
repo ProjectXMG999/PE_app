@@ -2,8 +2,9 @@ import { ACHIEVEMENTS, Achievement, AchievementMetric } from '../data/achievemen
 import { ProgressSnapshot } from '../hooks/useProgressData'
 import { DailyTime, Session } from '../types/progress'
 import { PackMeta } from '../types/vocabulary'
-import { studiedMinutes } from '../hooks/useStats'
+import { measuredStudyMinutes } from '../hooks/useStats'
 import { daysBetween, isWeekend, parseDay, dayKey } from '../utils/day'
+import { studyDayKeys } from '../utils/studyDays'
 
 /**
  * Achievement evaluation.
@@ -45,8 +46,8 @@ function hourOf(s: Session): number | null {
  * Consecutive weekends (counting back from the most recent one studied) in which
  * at least one session happened.
  */
-function weekendRun(sessions: Session[]): number {
-  const weekendDays = [...new Set(sessions.map(s => s.date))].filter(isWeekend).sort().reverse()
+function weekendRun(studyDays: Set<string>): number {
+  const weekendDays = [...studyDays].filter(isWeekend).sort().reverse()
   if (weekendDays.length === 0) return 0
 
   // Collapse to one entry per weekend by anchoring on the Saturday.
@@ -134,8 +135,12 @@ export function computeMetrics(input: AchievementInput): MetricValues {
   const masteredIds = new Set(packageProgress.filter(p => p.masteredAt != null).map(p => p.packageId))
   const startedIds = new Set(packageProgress.map(p => p.packageId))
 
+  // "Zaczęta" has to mean the same thing here as on the category bars, which
+  // measure KNOWN WORDS. Counting merely-opened packs instead is how the page
+  // could award "Wszędzie byłem — 11/12 kategorii" while three of the twelve
+  // bars sat at 0 %.
   const startedCategories = new Set(
-    allPacks.filter(p => startedIds.has(p.id)).map(p => p.category)
+    allPacks.filter(p => (knownMap.get(p.id) ?? 0) > 0).map(p => p.category)
   )
 
   // A category counts as complete when every word in every one of its packs is
@@ -153,8 +158,16 @@ export function computeMetrics(input: AchievementInput): MetricValues {
   return {
     knownWords: knownTotal,
     streak: Math.max(snapshot.streak, longestStreak),
-    wordsHeard: sessions.reduce((sum, s) => sum + s.wordsCompleted, 0),
-    minutes: studiedMinutes(sessions),
+    // Słuchaj only — same filter the "🎧 Odsłuchane" figure on Postęp uses.
+    // Without it this counted every mode, so the badge "100 słów odsłuchanych"
+    // unlocked while the page next to it said 75.
+    wordsHeard: sessions
+      .filter(s => s.mode === 'autoplay')
+      .reduce((sum, s) => sum + s.wordsCompleted, 0),
+    // The ledger, same as the "Czas nauki" figure. studiedMinutes(sessions)
+    // only sees finished packs, so the ⏱ badges used to lag the number the user
+    // was looking at by however long they'd spent in abandoned sessions.
+    minutes: measuredStudyMinutes(dailyTime, sessions),
     goalDays: dailyTime.filter(d => d.goalMetAt != null).length,
     reviews: reviewTotal,
     cleanDays: cleanDays(snapshot),
@@ -168,7 +181,7 @@ export function computeMetrics(input: AchievementInput): MetricValues {
       const h = hourOf(s)
       return h != null && h >= 22
     }).length,
-    weekendRun: weekendRun(sessions),
+    weekendRun: weekendRun(studyDayKeys(sessions, dailyTime)),
     bestDay: bestDayCount,
     longestSession: sessions.reduce((max, s) => Math.max(max, s.wordsCompleted), 0),
     volumesDone: fullyMasteredGroups(allPacks, masteredIds, p => p.volume),

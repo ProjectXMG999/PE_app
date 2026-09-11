@@ -10,6 +10,11 @@
  * than a question mark.
  */
 
+import {
+  plWords, plPacks, plMinutes, plDays, plSessions,
+  plReviews, plWeekends, plVolumes, plChapters, plCategories,
+} from '../utils/plural'
+
 export type AchievementTier = 'bronze' | 'silver' | 'gold' | 'legend'
 
 /** Metrics an achievement can be measured against. See services/achievements.ts. */
@@ -32,6 +37,17 @@ export type AchievementMetric =
   | 'chaptersDone'
   | 'categoriesStarted'
   | 'categoryComplete'
+
+/**
+ * What a badge's threshold is measured in. Rendered next to the number on the
+ * tile, because a list showing bare "500", "50", "1" and "49/50" side by side
+ * — known words, words in a day, speaking sessions and mastered packs — reads
+ * as one scale and makes "Pierwsze słowo · 1" look like it was earned after
+ * "Pięćdziesiątka · 50".
+ */
+export type AchievementUnit =
+  | 'word' | 'day' | 'session' | 'pack' | 'minute'
+  | 'review' | 'weekend' | 'volume' | 'chapter' | 'category'
 
 export interface AchievementGroup {
   id: string
@@ -64,8 +80,9 @@ export interface Achievement {
   tier: AchievementTier
   metric: AchievementMetric
   threshold: number
-  /** Optional unit for the progress readout, e.g. "min". Defaults to none. */
-  unit?: string
+  /** Unit for the progress readout — always set, so no tile shows a bare
+   *  number whose scale the reader has to guess. */
+  unit: AchievementUnit
 }
 
 /** Assigns a tier by position within its own ladder, so every group escalates. */
@@ -83,7 +100,7 @@ function ladder(
   metric: AchievementMetric,
   icon: string,
   steps: { threshold: number; title: string; desc: string }[],
-  unit?: string
+  unit: AchievementUnit
 ): Achievement[] {
   return steps.map((s, i) => ({
     id: `${group}-${s.threshold}`,
@@ -112,7 +129,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     { threshold: 5000,   title: 'Półmetek',          desc: 'Połowa z 10 000 słów.' },
     { threshold: 6000,   title: 'Sześć tysięcy',     desc: 'Freedom English zdobyty.' },
     { threshold: 10000,  title: 'Koniec trasy',      desc: '10 000 słów. Cała mapa.' },
-  ]),
+  ], 'word'),
 
   // ── Seria ────────────────────────────────────────────────────────────────
   ...ladder('streak', 'streak', '🔥', [
@@ -123,7 +140,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     { threshold: 60,  title: 'Dwa miesiące',   desc: '60 dni z rzędu.' },
     { threshold: 100, title: 'Setka dni',      desc: '100 dni z rzędu.' },
     { threshold: 365, title: 'Cały rok',       desc: '365 dni z rzędu.' },
-  ]),
+  ], 'day'),
 
   // ── Słuchanie ────────────────────────────────────────────────────────────
   ...ladder('listening', 'wordsHeard', '🎧', [
@@ -133,7 +150,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     { threshold: 5000,  title: 'Stały bywalec',      desc: '5 000 słów odsłuchanych.' },
     { threshold: 10000, title: 'Dziesięć tysięcy',   desc: '10 000 słów odsłuchanych.' },
     { threshold: 25000, title: 'Radio w głowie',     desc: '25 000 słów odsłuchanych.' },
-  ]),
+  ], 'word'),
 
   // ── Czas ─────────────────────────────────────────────────────────────────
   ...ladder('time', 'minutes', '⏱️', [
@@ -142,16 +159,16 @@ export const ACHIEVEMENTS: Achievement[] = [
     { threshold: 600,  title: 'Dziesięć godzin',  desc: '600 minut nauki.' },
     { threshold: 1200, title: 'Dwadzieścia godzin', desc: '1 200 minut nauki.' },
     { threshold: 3000, title: 'Pięćdziesiąt godzin', desc: '3 000 minut nauki.' },
-  ], 'min'),
+  ], 'minute'),
 
   // ── Cel dnia ─────────────────────────────────────────────────────────────
   ...ladder('goal', 'goalDays', '🎯', [
     { threshold: 1,   title: 'Pierwszy cel',   desc: 'Cel dnia osiągnięty po raz pierwszy.' },
     { threshold: 5,   title: 'Pięć celów',     desc: '5 dni z osiągniętym celem.' },
-    { threshold: 25,  title: 'Dwadzieścia pięć', desc: '25 dni z osiągniętym celem.' },
+    { threshold: 25,  title: 'Dwadzieścia pięć celów', desc: '25 dni z osiągniętym celem.' },
     { threshold: 100, title: 'Setka celów',    desc: '100 dni z osiągniętym celem.' },
     { threshold: 365, title: 'Rok na celu',    desc: '365 dni z osiągniętym celem.' },
-  ]),
+  ], 'day'),
 
   // ── Powtórki ─────────────────────────────────────────────────────────────
   ...ladder('review', 'reviews', '🔁', [
@@ -159,14 +176,14 @@ export const ACHIEVEMENTS: Achievement[] = [
     { threshold: 50,   title: 'Utrwalacz',         desc: '50 słów utrzymanych.' },
     { threshold: 200,  title: 'Nic nie ucieka',    desc: '200 słów utrzymanych.' },
     { threshold: 1000, title: 'Pamięć ze stali',   desc: '1 000 słów utrzymanych.' },
-  ]),
+  ], 'word'),
 
   // ── Czysta trasa ─────────────────────────────────────────────────────────
   ...ladder('clean', 'cleanDays', '🧊', [
     { threshold: 7,  title: 'Czysty tydzień',  desc: '7 dni z porcją powtórek na czas.' },
     { threshold: 30, title: 'Czysty miesiąc',  desc: '30 dni z porcją powtórek na czas.' },
     { threshold: 90, title: 'Czysty kwartał',  desc: '90 dni z porcją powtórek na czas.' },
-  ]),
+  ], 'day'),
 
   // ── Paczki ───────────────────────────────────────────────────────────────
   ...ladder('packs', 'masteredPacks', '📦', [
@@ -174,54 +191,54 @@ export const ACHIEVEMENTS: Achievement[] = [
     { threshold: 5,   title: 'Pięć paczek',     desc: '5 paczek opanowanych.' },
     { threshold: 10,  title: 'Dziesięć paczek', desc: '10 paczek opanowanych.' },
     { threshold: 25,  title: 'Ćwierć setki',    desc: '25 paczek opanowanych.' },
-    { threshold: 50,  title: 'Pięćdziesiąt',    desc: '50 paczek opanowanych.' },
+    { threshold: 50,  title: 'Pięćdziesiąt paczek', desc: '50 paczek opanowanych.' },
     { threshold: 100, title: 'Setka paczek',    desc: '100 paczek opanowanych.' },
     { threshold: 250, title: 'Ćwierć tysiąca',  desc: '250 paczek opanowanych.' },
-    { threshold: 500, title: 'Pół tysiąca',     desc: '500 paczek opanowanych.' },
-    { threshold: 864, title: 'Wszystkie',       desc: 'Wszystkie 864 paczki opanowane.' },
-  ]),
+    { threshold: 500, title: 'Pół tysiąca paczek', desc: '500 paczek opanowanych.' },
+    { threshold: 864, title: 'Wszystkie paczki', desc: 'Wszystkie 864 paczki opanowane.' },
+  ], 'pack'),
 
   // ── Mówienie ─────────────────────────────────────────────────────────────
   ...ladder('speaking', 'speakingSessions', '🗣️', [
-    { threshold: 1,   title: 'Pierwsze słowo',  desc: 'Pierwsza sesja w trybie mówienia.' },
+    { threshold: 1,   title: 'Pierwszy głos',   desc: 'Pierwsza sesja w trybie mówienia.' },
     { threshold: 10,  title: 'Rozgadany',       desc: '10 sesji mówienia.' },
     { threshold: 25,  title: 'Coraz śmielej',   desc: '25 sesji mówienia.' },
     { threshold: 50,  title: 'Głos w rozmowie', desc: '50 sesji mówienia.' },
     { threshold: 100, title: 'Mówca',           desc: '100 sesji mówienia.' },
-  ]),
+  ], 'session'),
 
   // ── Rytm dnia ────────────────────────────────────────────────────────────
   {
     id: 'rhythm-early', group: 'rhythm', title: 'Ranny ptaszek',
     desc: '10 sesji rozpoczętych przed 8:00.', icon: '🌅',
-    tier: 'silver', metric: 'earlySessions', threshold: 10,
+    tier: 'silver', metric: 'earlySessions', threshold: 10, unit: 'session',
   },
   {
     id: 'rhythm-night', group: 'rhythm', title: 'Nocny marek',
     desc: '10 sesji po 22:00.', icon: '🌙',
-    tier: 'silver', metric: 'nightSessions', threshold: 10,
+    tier: 'silver', metric: 'nightSessions', threshold: 10, unit: 'session',
   },
   {
     id: 'rhythm-weekend', group: 'rhythm', title: 'Weekendowiec',
     desc: '4 weekendy z rzędu z nauką.', icon: '📅',
-    tier: 'gold', metric: 'weekendRun', threshold: 4,
+    tier: 'gold', metric: 'weekendRun', threshold: 4, unit: 'weekend',
   },
 
   // ── Tempo ────────────────────────────────────────────────────────────────
   {
     id: 'pace-sprint', group: 'pace', title: 'Sprint',
     desc: '100 słów w jeden dzień.', icon: '⚡',
-    tier: 'gold', metric: 'bestDay', threshold: 100,
+    tier: 'gold', metric: 'bestDay', threshold: 100, unit: 'word',
   },
   {
     id: 'pace-marathon', group: 'pace', title: 'Maraton',
     desc: 'Jedna sesja na 60 słów.', icon: '🏃',
-    tier: 'silver', metric: 'longestSession', threshold: 60,
+    tier: 'silver', metric: 'longestSession', threshold: 60, unit: 'word',
   },
   {
     id: 'pace-halfcentury', group: 'pace', title: 'Pięćdziesiątka',
     desc: '50 słów w jeden dzień.', icon: '💨',
-    tier: 'bronze', metric: 'bestDay', threshold: 50,
+    tier: 'bronze', metric: 'bestDay', threshold: 50, unit: 'word',
   },
 
   // ── Eksploracja ──────────────────────────────────────────────────────────
@@ -230,44 +247,71 @@ export const ACHIEVEMENTS: Achievement[] = [
     { threshold: 3, title: 'Trzy Tomy',      desc: '3 Tomy opanowane.' },
     { threshold: 6, title: 'Sześć Tomów',    desc: '6 Tomów opanowanych.' },
     { threshold: 9, title: 'Wszystkie Tomy', desc: 'Wszystkie 9 Tomów opanowanych.' },
-  ]),
+  ], 'volume'),
   {
     id: 'explore-chapters', group: 'explore', title: 'Dziesięć rozdziałów',
     desc: '10 rozdziałów opanowanych.', icon: '📖',
-    tier: 'silver', metric: 'chaptersDone', threshold: 10,
+    tier: 'silver', metric: 'chaptersDone', threshold: 10, unit: 'chapter',
   },
   {
     id: 'explore-categories', group: 'explore', title: 'Wszędzie byłem',
-    desc: 'Każda z 12 kategorii zaczęta.', icon: '🌍',
-    tier: 'gold', metric: 'categoriesStarted', threshold: 12,
+    desc: 'Pierwsze słowo w każdej z 12 kategorii.', icon: '🌍',
+    tier: 'gold', metric: 'categoriesStarted', threshold: 12, unit: 'category',
   },
   {
     id: 'explore-category-complete', group: 'explore', title: 'Kompletysta',
     desc: 'Cała jedna kategoria opanowana.', icon: '🏵️',
-    tier: 'gold', metric: 'categoryComplete', threshold: 1,
+    tier: 'gold', metric: 'categoryComplete', threshold: 1, unit: 'category',
   },
 
   // ── Etapy ────────────────────────────────────────────────────────────────
   {
     id: 'level-1', group: 'levels', title: 'Survival English',
     desc: '1 000 słów — językowy ekwipunek przetrwania.', icon: '⭐',
-    tier: 'bronze', metric: 'knownWords', threshold: 1000,
+    tier: 'bronze', metric: 'knownWords', threshold: 1000, unit: 'word',
   },
   {
     id: 'level-2', group: 'levels', title: 'Everyday English',
     desc: '3 000 słów — potrafisz się dogadać.', icon: '⭐',
-    tier: 'silver', metric: 'knownWords', threshold: 3000,
+    tier: 'silver', metric: 'knownWords', threshold: 3000, unit: 'word',
   },
   {
     id: 'level-3', group: 'levels', title: 'Freedom English',
     desc: '6 000 słów — angielski staje się narzędziem.', icon: '⭐',
-    tier: 'gold', metric: 'knownWords', threshold: 6000,
+    tier: 'gold', metric: 'knownWords', threshold: 6000, unit: 'word',
   },
   {
     id: 'level-4', group: 'levels', title: 'World-Class English',
     desc: '10 000 słów — obywatel świata.', icon: '👑',
-    tier: 'legend', metric: 'knownWords', threshold: 10000,
+    tier: 'legend', metric: 'knownWords', threshold: 10000, unit: 'word',
   },
 ]
 
 export const ACHIEVEMENT_COUNT = ACHIEVEMENTS.length
+
+const UNIT_LABEL: Record<AchievementUnit, (n: number) => string> = {
+  word: plWords,
+  day: plDays,
+  session: plSessions,
+  pack: plPacks,
+  minute: plMinutes,
+  review: plReviews,
+  weekend: plWeekends,
+  volume: plVolumes,
+  chapter: plChapters,
+  category: plCategories,
+}
+
+/**
+ * "500 słów", "1 sesja", "50 paczek" — the unit that belongs next to a badge's
+ * threshold, correctly declined.
+ *
+ * Lives next to the definitions so the tile and the detail sheet can't drift
+ * apart. Before every badge carried a unit, the grid showed bare numbers on
+ * four unrelated scales at once — known words, words in a single day, speaking
+ * sessions, mastered packs — which is how "Pierwsze słowo · 1" came to look
+ * like it had been earned *after* "Pięćdziesiątka · 50".
+ */
+export function unitLabel(unit: AchievementUnit, n: number): string {
+  return UNIT_LABEL[unit](n)
+}

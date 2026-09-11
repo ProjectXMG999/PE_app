@@ -45,9 +45,16 @@ export function retrievability(t: number, stability: number): number {
   return Math.pow(1 + (FACTOR * Math.max(0, t)) / stability, DECAY)
 }
 
-/** Days until retrievability decays to REQUEST_RETENTION for a given stability. */
-export function nextInterval(stability: number): number {
-  const raw = (stability / FACTOR) * (Math.pow(REQUEST_RETENTION, 1 / DECAY) - 1)
+/**
+ * Days until retrievability decays to the desired retention for a given stability.
+ *
+ * `requestRetention` defaults to the population REQUEST_RETENTION; the review-health
+ * loop (services/reviewHealth.ts) passes a per-learner value instead. Raising it
+ * shortens every interval, lowering it stretches them: at 0.94 a word comes back
+ * in ~0.56× the days, at 0.86 in ~1.4×.
+ */
+export function nextInterval(stability: number, requestRetention: number = REQUEST_RETENTION): number {
+  const raw = (stability / FACTOR) * (Math.pow(requestRetention, 1 / DECAY) - 1)
   return clamp(Math.round(raw), FSRS_MIN_INTERVAL, FSRS_MAX_INTERVAL)
 }
 
@@ -105,10 +112,10 @@ export interface FsrsResult {
 }
 
 /** First-ever review of a word: seed S/D from the grade, return the first interval. */
-export function initCard(grade: Grade): FsrsResult {
+export function initCard(grade: Grade, requestRetention?: number): FsrsResult {
   const stability = clamp(W[grade - 1], MIN_STABILITY, MAX_STABILITY)
   const difficulty = initialDifficulty(grade)
-  return { stability, difficulty, intervalDays: nextInterval(stability) }
+  return { stability, difficulty, intervalDays: nextInterval(stability, requestRetention) }
 }
 
 /**
@@ -116,7 +123,12 @@ export function initCard(grade: Grade): FsrsResult {
  * `elapsedDays` — real days since the last review; clamped to >= 1 (same-day
  * re-reviews are treated as a 1-day gap; FSRS-4.5 has no short-term term).
  */
-export function review(card: FsrsCard, grade: Grade, elapsedDays: number): FsrsResult {
+export function review(
+  card: FsrsCard,
+  grade: Grade,
+  elapsedDays: number,
+  requestRetention?: number
+): FsrsResult {
   const t = Math.max(1, Math.round(elapsedDays))
   const r = retrievability(t, card.stability)
   const difficulty = nextDifficulty(card.difficulty, grade)
@@ -124,7 +136,7 @@ export function review(card: FsrsCard, grade: Grade, elapsedDays: number): FsrsR
     grade === AGAIN
       ? forgetStability(difficulty, card.stability, r)
       : recallStability(difficulty, card.stability, r, grade)
-  return { stability, difficulty, intervalDays: nextInterval(stability) }
+  return { stability, difficulty, intervalDays: nextInterval(stability, requestRetention) }
 }
 
 /**

@@ -42,12 +42,17 @@ export function isDue(wp: WordProgress, on: string = dayKey()): boolean {
 }
 
 /** Runs the FSRS model for one answer, seeding state if the word has none yet. */
-function fsrsApply(existing: WordProgress | undefined, grade: Grade, now: Date): FsrsResult {
+function fsrsApply(
+  existing: WordProgress | undefined,
+  grade: Grade,
+  now: Date,
+  rr?: number
+): FsrsResult {
   if (existing?.stability != null && existing?.difficulty != null) {
     const elapsed = existing.lastSeen
       ? daysBetween(dayKey(new Date(existing.lastSeen)), dayKey(now))
       : 1
-    return review({ stability: existing.stability, difficulty: existing.difficulty }, grade, elapsed)
+    return review({ stability: existing.stability, difficulty: existing.difficulty }, grade, elapsed, rr)
   }
   if (existing?.reviewCount != null || existing?.status === 'known') {
     // Existing user, ladder history only — seed from the rung, then apply.
@@ -55,9 +60,9 @@ function fsrsApply(existing: WordProgress | undefined, grade: Grade, now: Date):
     const elapsed = existing?.lastSeen
       ? daysBetween(dayKey(new Date(existing.lastSeen)), dayKey(now))
       : 1
-    return review(seeded, grade, elapsed)
+    return review(seeded, grade, elapsed, rr)
   }
-  return initCard(grade) // brand-new word, first answer
+  return initCard(grade, rr) // brand-new word, first answer
 }
 
 /**
@@ -67,13 +72,18 @@ function fsrsApply(existing: WordProgress | undefined, grade: Grade, now: Date):
  * asserting prior knowledge, not learning the word now, so a word with no real
  * history is seeded a couple of levels in (BULK_KNOWN_*) instead of at the
  * 3-day first rung. Words that already have history take the normal path.
+ *
+ * `opts.requestRetention` — the learner's desired retention, from the
+ * review-health loop (services/reviewHealth.ts, via `currentRequestRetention`).
+ * Omitted anywhere, the population REQUEST_RETENTION applies and this behaves
+ * exactly as it did before the loop existed.
  */
 export function applyKnown(
   existing: WordProgress | undefined,
   wordId: string,
   packageId: string,
   now: Date = new Date(),
-  opts: { bulk?: boolean } = {}
+  opts: { bulk?: boolean; requestRetention?: number } = {}
 ): WordProgress {
   const wasKnown = existing?.status === 'known'
   // Only seed for a word with no meaningful review history.
@@ -114,13 +124,16 @@ export function applyKnown(
       ...base,
       reviewCount: existing?.reviewCount, // keep 0 on FSRS — no reviews were actually done
       retiredAt: undefined,
-      nextReviewAt: shiftDay(applyFuzz(nextInterval(BULK_KNOWN_STABILITY)), dayKey(now)),
+      nextReviewAt: shiftDay(
+        applyFuzz(nextInterval(BULK_KNOWN_STABILITY, opts.requestRetention)),
+        dayKey(now)
+      ),
       stability: BULK_KNOWN_STABILITY,
       difficulty: BULK_KNOWN_DIFFICULTY,
     }
   }
 
-  const res = fsrsApply(existing, GOOD, now)
+  const res = fsrsApply(existing, GOOD, now, opts.requestRetention)
   const durable = GRADUATION_ENABLED && res.stability >= RETIRE_STABILITY_DAYS
   return {
     ...base,
@@ -143,7 +156,8 @@ export function applyUnknown(
   existing: WordProgress | undefined,
   wordId: string,
   packageId: string,
-  now: Date = new Date()
+  now: Date = new Date(),
+  opts: { requestRetention?: number } = {}
 ): WordProgress {
   const wasKnown = existing?.status === 'known'
   const nowIso = now.toISOString()
@@ -179,7 +193,7 @@ export function applyUnknown(
     }
   }
 
-  const res = fsrsApply(existing, AGAIN, now)
+  const res = fsrsApply(existing, AGAIN, now, opts.requestRetention)
   return {
     ...base,
     reviewCount: existing?.reviewCount, // a lapse never increments

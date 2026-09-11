@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
 import { ProgressSnapshot, loadProgressSnapshot } from './useProgressData'
+import { getAllDailyTime } from '../services/db'
+import { DailyTime } from '../types/progress'
+import { studyDayKeys } from '../utils/studyDays'
 
 export interface ReadinessBreakdown {
   swiezosc: number
@@ -22,11 +25,18 @@ const WEIGHTS = {
   skutecznosc: 0.15,
 }
 
-const MIN_SESSIONS_FOR_SCORE = 3
+const MIN_DAYS_FOR_SCORE = 3
 
-function freshnessScore(sessions: ProgressSnapshot['sessions']): number {
-  if (sessions.length === 0) return 0
-  const lastDate = sessions.map(s => s.date).sort().reverse()[0]
+/**
+ * How recently you studied — measured in study DAYS, not sessions.
+ *
+ * Reading the last session date alone meant an evening of real study that never
+ * closed a pack counted as not having studied at all, and freshness decayed
+ * while the user was in fact using the app daily.
+ */
+function freshnessScore(studyDays: Set<string>): number {
+  if (studyDays.size === 0) return 0
+  const lastDate = [...studyDays].sort().reverse()[0]
   const daysAgo = Math.floor((Date.now() - new Date(lastDate + 'T12:00:00').getTime()) / 86400000)
   if (daysAgo <= 0) return 100
   if (daysAgo === 1) return 80
@@ -93,11 +103,15 @@ function effectivenessScore(sessions: ProgressSnapshot['sessions']): number {
   return Math.min(100, Math.round((recentAvg / best) * 100))
 }
 
-export function computeReadinessScore(snapshot: ProgressSnapshot): ReadinessResult | null {
-  if (snapshot.sessions.length < MIN_SESSIONS_FOR_SCORE) return null
+export function computeReadinessScore(
+  snapshot: ProgressSnapshot,
+  dailyTime: DailyTime[] = []
+): ReadinessResult | null {
+  const studyDays = studyDayKeys(snapshot.sessions, dailyTime)
+  if (studyDays.size < MIN_DAYS_FOR_SCORE) return null
 
   const breakdown: ReadinessBreakdown = {
-    swiezosc: freshnessScore(snapshot.sessions),
+    swiezosc: freshnessScore(studyDays),
     retencja: retentionScore(snapshot.wordProgress),
     regularnosc: regularityScore(snapshot.streak),
     mowienie: speakingScore(snapshot.sessions),
@@ -121,8 +135,8 @@ export function useReadinessScore(): ReadinessResult | null | undefined {
 
   useEffect(() => {
     let alive = true
-    loadProgressSnapshot().then(snap => {
-      if (alive) setResult(computeReadinessScore(snap))
+    Promise.all([loadProgressSnapshot(), getAllDailyTime()]).then(([snap, dailyTime]) => {
+      if (alive) setResult(computeReadinessScore(snap, dailyTime))
     })
     return () => {
       alive = false

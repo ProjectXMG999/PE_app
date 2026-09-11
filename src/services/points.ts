@@ -33,6 +33,9 @@ const SESSION_WEIGHTS = {
   'autoplay:speaking': 2,
   'fiszki': 2,
   'fiszki:review': 2.5,
+  // Inteligentny mixes learn + review + stretch in one run — weighted like a
+  // review session since protecting/extending the route is most of what it does.
+  'fiszki:smart': 2.5,
 } as const
 
 export const POINTS = {
@@ -58,6 +61,7 @@ function weightFor(s: Session): number {
     return SESSION_WEIGHTS[key] ?? SESSION_WEIGHTS['autoplay:standard']
   }
   if (s.trainMode === 'review') return SESSION_WEIGHTS['fiszki:review']
+  if (s.trainMode === 'smart') return SESSION_WEIGHTS['fiszki:smart']
   return SESSION_WEIGHTS['fiszki']
 }
 

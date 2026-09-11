@@ -2,8 +2,9 @@ import { useState, useEffect, useCallback } from 'react'
 import { DailyTime, DayActivity, Session } from '../types/progress'
 import { nextLevelFromTotalKnown } from '../data/levels'
 import { loadProgressSnapshot, avgWordsPerDay, avgWordsPerDayTrend, PaceTrend } from './useProgressData'
-import { getLongestStreak, getBestDayWordCount } from '../services/db'
+import { getLongestStreak, getBestDayWordCount, getAllDailyTime } from '../services/db'
 import { dayKey, shiftDay } from '../utils/day'
+import { studySecondsByDay } from '../utils/studyDays'
 
 /** Fallback for sessions written before durationSec existed. */
 const ESTIMATED_SECONDS_PER_WORD = 8
@@ -108,6 +109,12 @@ export function useStats() {
         // the keys here and session.date come from dayKey(), so they compare
         // directly — mixing UTC and local day math is what used to shift this
         // window by a day outside UTC.
+        //
+        // Seconds come from the daily-time ledger, not from sessions: a day with
+        // twenty minutes of study and no finished pack is a day you studied, and
+        // the heatmap has to agree with the daily goal about that.
+        const dailyTime = await getAllDailyTime()
+        const secondsByDay = studySecondsByDay(sessions, dailyTime)
         const today = dayKey()
         const days: DayActivity[] = []
         for (let i = ACTIVITY_DAYS - 1; i >= 0; i--) {
@@ -115,7 +122,7 @@ export function useStats() {
           const count = sessions
             .filter(s => s.date === dateStr)
             .reduce((sum, s) => sum + s.wordsCompleted, 0)
-          days.push({ date: dateStr, count })
+          days.push({ date: dateStr, count, seconds: secondsByDay.get(dateStr) ?? 0 })
         }
         setActivity(days)
 
