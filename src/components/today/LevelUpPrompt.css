@@ -77,7 +77,7 @@
 }
 
 .levelup__btn--primary {
-  color: var(--text-on-accent, #fff);
+  color: var(--text-on-accent);
   background: var(--gold);
   border-color: transparent;
 }

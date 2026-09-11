@@ -46,6 +46,11 @@
   --text-secondary: oklch(0.79 0.015 275);
   --text-muted: oklch(0.63 0.02 275);
   --text-accent: oklch(0.85 0.09 293);
+  /* Text and icons sitting ON an accent-coloured fill (the primary CTA, a
+     filled pill). Two components were reaching for var(--text-on-accent, #fff)
+     against a token that didn't exist, so the fallback was doing all the work
+     and the "system" had a hardcoded white in it twice over. */
+  --text-on-accent: oklch(0.99 0 0);
 
   /* ── Lines ────────────────────────────────────────────────────────────── */
   --border: oklch(1 0 0 / 0.1);

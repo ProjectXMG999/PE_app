@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { LEVEL_META } from '../../data/levels'
-import { LEVEL_COLORS } from '../../utils/packVisuals'
+import { LEVEL_COLORS, getCategoryColor } from '../../utils/packVisuals'
 import {
   LENS_LABEL,
   PACK_LENSES,
@@ -223,6 +223,10 @@ export function PackFilterSheet({
                   role="radio" aria-checked={filters.cat === cat}
                   onClick={() => pick({ cat })}
                 >
+                  {/* Same dot-per-row pattern as the Poziom tab, in the exact
+                      colour PackageCard already tints this category's emoji
+                      tile with — scanning the two lists now uses the same eye. */}
+                  <span className="pfsheet__dot" style={{ background: getCategoryColor(cat) }} aria-hidden="true" />
                   <span className="pfsheet__row-text">
                     <span className="pfsheet__row-name">{cat}</span>
                     <span className="pfsheet__row-sub">

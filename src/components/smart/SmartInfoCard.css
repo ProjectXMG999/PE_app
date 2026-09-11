@@ -59,7 +59,7 @@
   font-family: var(--font-heading);
   font-size: var(--text-base);
   font-weight: 700;
-  color: var(--text-on-accent, #fff);
+  color: var(--text-on-accent);
   background: var(--u-hairline-color);
   border: none;
   border-radius: var(--radius-full);
