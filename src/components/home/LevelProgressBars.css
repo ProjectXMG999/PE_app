@@ -40,7 +40,7 @@
   border-radius: var(--radius-full);
   overflow: hidden;
   border: 1px solid var(--border);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 3px oklch(0 0 0 / 0.25);
 }
 
 .level-progress__fill {
@@ -51,18 +51,21 @@
   min-width: 4px;
 }
 
-/* Per-level gradient fills */
+/* Per-level fills — the same four accents LEVEL_COLORS already assigns to
+   these levels everywhere else (packVisuals.ts), not a separately hand-tuned
+   sRGB gradient. A subtle two-stop blend toward the token itself keeps the
+   fill from looking perfectly flat without inventing a second colour. */
 .level-progress__row--1 .level-progress__fill {
-  background: linear-gradient(90deg, #ca8a04, #eab308);
+  background: linear-gradient(90deg, color-mix(in oklch, var(--accent-yellow) 65%, black), var(--accent-yellow));
 }
 .level-progress__row--2 .level-progress__fill {
-  background: linear-gradient(90deg, #ea580c, #f97316);
+  background: linear-gradient(90deg, color-mix(in oklch, var(--accent-orange) 65%, black), var(--accent-orange));
 }
 .level-progress__row--3 .level-progress__fill {
-  background: linear-gradient(90deg, #16a34a, #22c55e);
+  background: linear-gradient(90deg, color-mix(in oklch, var(--accent-green) 65%, black), var(--accent-green));
 }
 .level-progress__row--4 .level-progress__fill {
-  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  background: linear-gradient(90deg, color-mix(in oklch, var(--accent-blue) 65%, black), var(--accent-blue));
 }
 
 .level-progress__count {

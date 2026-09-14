@@ -4,9 +4,9 @@
   max-width: 600px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-accent);
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(139, 92, 246, 0.04) 100%);
+  background: linear-gradient(135deg, color-mix(in oklch, var(--accent) 8%, transparent) 0%, color-mix(in oklch, var(--accent) 4%, transparent) 100%);
   animation: slideDown 400ms ease-out forwards;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px oklch(0 0 0 / 0.08);
 }
 
 @keyframes slideDown {
@@ -89,7 +89,7 @@
   border: none;
   cursor: pointer;
   transition: all var(--transition-fast);
-  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 2px 8px color-mix(in oklch, var(--accent) 30%, transparent);
   width: fit-content;
 }
 
