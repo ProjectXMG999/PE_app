@@ -74,16 +74,30 @@ interface LogoProps {
   stacked?: boolean
   /** "by Project English" under the wordmark — the provenance line. */
   byline?: boolean
+  /**
+   * Draw the square mark next to the word. Off in the top bar, where the
+   * wordmark alone carries the brand and the tile only competed with the
+   * streak pill for a strip 60px tall. The mark still stands on its own
+   * elsewhere (favicon, install icon) via ProgressMark.
+   */
+  mark?: boolean
   className?: string
 }
 
-export function ProgressLogo({ size = 32, stacked = false, byline = false, className }: LogoProps) {
+export function ProgressLogo({
+  size = 32, stacked = false, byline = false, mark = true, className,
+}: LogoProps) {
   return (
     <span
-      className={`plogo${stacked ? ' plogo--stacked' : ''}${className ? ` ${className}` : ''}`}
+      className={[
+        'plogo',
+        stacked ? 'plogo--stacked' : '',
+        mark ? '' : 'plogo--wordmark',
+        className ?? '',
+      ].filter(Boolean).join(' ')}
       style={{ '--plogo-size': `${size}px` } as React.CSSProperties}
     >
-      <ProgressMark size={size} />
+      {mark && <ProgressMark size={size} />}
       <span className="plogo__text">
         <span className="plogo__word">Progress</span>
         {byline && <span className="plogo__byline">by Project English</span>}

@@ -17,6 +17,12 @@
   text-align: center;
 }
 
+/* Wordmark only. Nothing to sit beside, so the gap goes — otherwise the lockup
+   carries trailing space that pushes whatever follows it out of alignment. */
+.plogo--wordmark {
+  gap: 0;
+}
+
 .plogo__mark {
   flex-shrink: 0;
   display: block;

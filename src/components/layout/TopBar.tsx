@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { useAppStore, resolveTheme } from '../../store/useAppStore'
 import { useAuthStore } from '../../store/useAuthStore'
 import { ProgressPill } from './ProgressPill'
-import { ProgressMark } from '../brand/ProgressLogo'
+import { ProgressLogo } from '../brand/ProgressLogo'
 import './TopBar.css'
 
 export function TopBar() {
@@ -38,7 +38,7 @@ export function TopBar() {
           onClick={() => navigate('/')}
           aria-label="Progress — strona główna"
         >
-          <ProgressMark size={36} />
+          <ProgressLogo size={28} mark={false} />
         </button>
         <ProgressPill />
       </div>

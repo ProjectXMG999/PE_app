@@ -26,15 +26,19 @@
   z-index: 1;
 }
 
-/* The Progress mark doubles as the home button. */
+/* The Progress wordmark, doubling as the home button. No square mark here: on
+   a 60px strip already carrying the streak pill and two icon buttons, the tile
+   was competing with them for attention and width while saying nothing the word
+   doesn't. ProgressMark still stands alone where it has to (favicon, install
+   icon), and the sidebar keeps the full lockup, where there's room for it. */
 .topbar__brand {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
   padding: 0;
   background: none;
   border: none;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   cursor: pointer;
   transition: transform var(--transition-fast);
 }
@@ -110,6 +114,16 @@
   opacity: 0.6;
   line-height: 1;
   cursor: default;
+}
+
+/* Narrow phones: the wordmark is the only brand element left, so it shrinks
+   rather than disappearing — hiding it would leave an empty home button.
+   ProgressPill drops its points column at the same breakpoint (see
+   ProgressPill.css), so the two give way together rather than fighting. */
+@media (max-width: 400px) {
+  .topbar__brand .plogo {
+    --plogo-size: 24px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
