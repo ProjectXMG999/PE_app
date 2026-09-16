@@ -2,27 +2,25 @@ import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
-import { FocusStage } from '../components/today/FocusStage'
+import { SessionHero } from '../components/today/SessionHero'
 import { DailyGoalPicker } from '../components/today/DailyGoalPicker'
 import { LevelPill } from '../components/today/LevelPill'
 import { LevelPicker } from '../components/today/LevelPicker'
 import { NextStepInfoSheet } from '../components/today/NextStepInfoSheet'
 import { ReviewPriorityInfoSheet } from '../components/today/ReviewPriorityInfoSheet'
-import { RouteStrip } from '../components/today/RouteStrip'
-import { ListenStrip } from '../components/today/ListenStrip'
+import { PathStrip, StripBand, StripTick } from '../components/today/PathStrip'
 import { ModeSlider, StudyPath } from '../components/today/ModeSlider'
 import { LevelUpPrompt } from '../components/today/LevelUpPrompt'
-import { SmartStartCard } from '../components/smart/SmartStartCard'
-import { EASE_SPRING, fadeUpReduced, heroCard, heroReveal, staggerContainerWide } from '../components/today/motion'
+import { EASE_SPRING, fadeUpReduced, heroCard, heroReveal, staggerContainer, staggerContainerWide } from '../components/today/motion'
 import { useProgressData, avgWordsPerDayTrend, packLevelOf } from '../hooks/useProgressData'
 import { useProgressPulse } from '../hooks/useProgressPulse'
 import { useCountUp } from '../hooks/useCountUp'
 import { useHaptics } from '../hooks/useHaptics'
 import { unlockAudioGlobally } from '../audio/audioUnlock'
 import { playTick, playSuccess } from '../services/sfx'
-import { nextListenPack, nextTrainPack, listenedPacksCount, estimateMinutes } from '../data/nextPack'
+import { nextListenPack, nextTrainPack, listenedPacksCount, estimateMinutes, packLevelThresholds } from '../data/nextPack'
 import { shouldPromptLevelUp } from '../services/comfort'
-import { LEVEL_META } from '../data/levels'
+import { LEVEL_COLORS, LEVEL_META, ROUTE_TOTAL } from '../data/levels'
 import { useAppStore } from '../store/useAppStore'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
@@ -30,6 +28,39 @@ import './TodayPage.css'
 
 const allPacks = packagesIndex as PackMeta[]
 
+/* ── Path strip scales ──────────────────────────────────────────────────────
+ * Both paths measure the same four levels, just in different units: Trenuj
+ * counts words against ROUTE_TOTAL, Słuchaj counts packs listened through. The
+ * final threshold is dropped from the ticks in both — the strip's own end
+ * already reads as the finish line. */
+
+const trainTicks: StripTick[] = LEVEL_META
+  .filter(l => l.threshold < ROUTE_TOTAL)
+  .map(l => ({ at: l.threshold }))
+
+/** Cumulative pack counts per level, so Słuchaj gets a named scale too — it
+ *  used to show the same four marks with nothing saying what they were. */
+const listenThresholds = packLevelThresholds(allPacks)
+const listenTicks: StripTick[] = listenThresholds.slice(0, 3).map(at => ({ at }))
+
+/** The level a value has reached, plus what's next and how far. */
+function bandFor(value: number, thresholds: number[]): StripBand | undefined {
+  const reachedIdx = thresholds.reduce((acc, t, i) => (value >= t ? i : acc), -1)
+  const nextIdx = thresholds.findIndex(t => t > value)
+  const reached = reachedIdx >= 0 ? LEVEL_META[reachedIdx] : undefined
+  const next = nextIdx >= 0 ? LEVEL_META[nextIdx] : undefined
+
+  return {
+    label: reached?.name ?? 'Start trasy',
+    color: reached ? LEVEL_COLORS[reached.level] : undefined,
+    next: next ? { label: next.name, remaining: thresholds[nextIdx] - value } : undefined,
+  }
+}
+
+const trainBand = (knownWords: number) =>
+  bandFor(knownWords, LEVEL_META.map(l => l.threshold))
+
+const listenBand = (listenedPacks: number) => bandFor(listenedPacks, listenThresholds)
 
 /**
  * Dzisiaj — the coaching screen: where am I, and the one next thing on each of
@@ -124,7 +155,15 @@ export function TodayPage() {
     <>
       <motion.div variants={variants}>
         {snapshot ? (
-          <RouteStrip knownWords={snapshot.knownTotal} />
+          <PathStrip
+            tone="train"
+            eyebrow={<>⚡ Twój <em>progress</em> treningu</>}
+            value={snapshot.knownTotal}
+            total={ROUTE_TOTAL}
+            unit="słów"
+            ticks={trainTicks}
+            band={trainBand(snapshot.knownTotal)}
+          />
         ) : (
           <div className="today__strip-loading" />
         )}
@@ -164,10 +203,14 @@ export function TodayPage() {
     <>
       <motion.div variants={variants}>
         {snapshot ? (
-          <ListenStrip
-            listenedPacks={listenedPacksCount(allPacks, snapshot)}
-            totalPacks={allPacks.length}
-            packs={allPacks}
+          <PathStrip
+            tone="listen"
+            eyebrow={<>🎧 Twój <em>progress</em> słuchania</>}
+            value={listenedPacksCount(allPacks, snapshot)}
+            total={allPacks.length}
+            unit="paczek"
+            ticks={listenTicks}
+            band={listenBand(listenedPacksCount(allPacks, snapshot))}
           />
         ) : (
           <div className="today__strip-loading" />
@@ -209,31 +252,27 @@ export function TodayPage() {
             just competed with the focus stage below it. */}
         <h1 className="today__title-sr">Dzisiaj</h1>
 
-        <motion.div className="today__level-row" variants={variants}>
-          <LevelPill level={todayLevel} onPress={() => setLevelPickerOpen(true)} />
-          {todayLevel != null && (
-            <button
-              className="today__browse-level"
-              onClick={() => { homeSetLevel(todayLevel); navigate('/', { viewTransition: true }) }}
-            >
-              Przeglądaj poziom
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-              </svg>
-            </button>
-          )}
-        </motion.div>
-
-        <motion.div variants={variants}>
-          {pulse == null ? (
-            <div className="today__skeleton skeleton" style={{ height: 84 }} />
-          ) : (
-            <FocusStage
-              secondsStudied={pulse.secondsToday}
-              goalSec={pulse.goalSec}
-              onEditGoal={() => setGoalOpen(true)}
-            />
-          )}
+        {/* Three groups, not one stack: gdzie jestem · co teraz · przeglądaj.
+            The gap between groups is twice the gap inside one, which is the
+            whole difference between a composed page and a list of widgets.
+            Each group is a motion.div with its own stagger — framer only
+            cascades to *direct* children, so a plain <div> here would silently
+            kill the entrance animation of everything it wraps. */}
+        <motion.div className="today__group" variants={staggerContainer}>
+          <motion.div className="today__level-row" variants={variants}>
+            <LevelPill level={todayLevel} onPress={() => setLevelPickerOpen(true)} />
+            {todayLevel != null && (
+              <button
+                className="today__browse-level"
+                onClick={() => { homeSetLevel(todayLevel); navigate('/', { viewTransition: true }) }}
+              >
+                Przeglądaj poziom
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+            )}
+          </motion.div>
         </motion.div>
 
         {nothingLeft ? (
@@ -261,14 +300,24 @@ export function TodayPage() {
           </motion.section>
         ) : (
           <>
-            {/* Inteligentny is the new, recommended one-tap action — it sits
-                above everything else, but Trenuj/Słuchaj/Powtórka below stay
-                exactly as they were for anyone who wants to pick by hand. */}
+            {/* Co teraz. Inteligentny is the recommended one-tap action — it
+                sits above everything else, but Trenuj/Słuchaj/Powtórka below
+                stay exactly as they were for anyone who wants to pick by hand.
+                The daily goal ring lives inside it now (see SessionHero)
+                rather than as its own card above. */}
+            <motion.div className="today__group" variants={staggerContainer}>
             <motion.div variants={cardVariants}>
-              <SmartStartCard
-                snapshot={snapshot}
-                onStart={() => pressCta(() => { unlockAudioGlobally(); navigate('/inteligentny') })}
-              />
+              {pulse == null ? (
+                <div className="today__skeleton skeleton" style={{ height: 220 }} />
+              ) : (
+                <SessionHero
+                  snapshot={snapshot}
+                  onStart={() => pressCta(() => { unlockAudioGlobally(); navigate('/inteligentny') })}
+                  secondsStudied={pulse.secondsToday}
+                  goalSec={pulse.goalSec}
+                  onEditGoal={() => setGoalOpen(true)}
+                />
+              )}
             </motion.div>
 
             {serving > 0 && (
@@ -289,10 +338,7 @@ export function TodayPage() {
                 </span>
                 <span className="today__rail-body">
                   <strong>Powtórka · {shownServing} słów</strong>
-                  <span>
-                    {backlog > serving ? `${serving} na dziś · jeszcze ${backlog - serving} w kolejce · ` : ''}
-                    ~{estimateMinutes(serving)} min
-                  </span>
+                  <span>~{estimateMinutes(serving)} min</span>
                 </span>
                 <span className="today__rail-go" aria-hidden="true">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -329,15 +375,19 @@ export function TodayPage() {
                 </span>
               </motion.button>
             )}
+            </motion.div>
 
-            <motion.div variants={variants}>
-              <ModeSlider
-                active={activeMode}
-                onChange={setActiveMode}
-                listenContent={listenContent}
-                trainContent={trainContent}
-                onInfoClick={() => setNextStepInfoOpen(true)}
-              />
+            {/* Przeglądaj ścieżkami. */}
+            <motion.div className="today__group" variants={staggerContainer}>
+              <motion.div variants={variants}>
+                <ModeSlider
+                  active={activeMode}
+                  onChange={setActiveMode}
+                  listenContent={listenContent}
+                  trainContent={trainContent}
+                  onInfoClick={() => setNextStepInfoOpen(true)}
+                />
+              </motion.div>
             </motion.div>
           </>
         )}

@@ -15,7 +15,7 @@ interface Point {
  * The sales pitch for Inteligentny, in plain language — what the mode actually
  * does for the learner and why it's worth tapping instead of picking manually.
  * Same native <dialog> / slideUp / stylesheet as NextStepInfoSheet and
- * ReviewPriorityInfoSheet, opened from the ⓘ on SmartStartCard.
+ * ReviewPriorityInfoSheet, opened from the ⓘ on SessionHero.
  */
 const POINTS: Point[] = [
   {

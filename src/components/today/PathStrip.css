@@ -1,0 +1,236 @@
+/* =============================================================================
+ * PATH STRIP — where you stand on a whole path, on Dzisiaj.
+ * -----------------------------------------------------------------------------
+ * One component for Trenuj and Słuchaj; --strip-accent is the only colour knob.
+ *
+ * The fill is not decoration. On the training path it runs the four level
+ * colours in route order and the ticks are the level thresholds, so the bar is
+ * a scale you can read; the line under it names the next mark and the distance
+ * to it, which is what turns the ticks from scratches into a scale.
+ *
+ * Everything plays once. This widget is looked at for three seconds, and the
+ * shimmer loop plus an infinite box-shadow animation on the marker — which is
+ * the most expensive kind — kept a phone's compositor awake for no one.
+ * ========================================================================== */
+
+.pathstrip {
+  --strip-accent: var(--accent);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px var(--spacing-md) 13px;
+}
+
+.pathstrip--listen { --strip-accent: var(--listen-blue); }
+
+.pathstrip__eyebrow {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.pathstrip__eyebrow em {
+  font-style: normal;
+  color: var(--strip-accent);
+}
+
+/* ── Figure ───────────────────────────────────────────────────────────────────
+   The percentage is the one number this card exists to answer, so it's the
+   hero figure now; the word/pack count is a supporting caption on the same
+   baseline rather than its own big readout — two big numbers side by side
+   were two answers competing for one question. */
+.pathstrip__figure {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-variant-numeric: tabular-nums;
+}
+
+.pathstrip__pct {
+  display: inline-block;
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+  color: var(--text-primary);
+  animation: pathstrip-num-pop 1.9s var(--ease-out-expo) 1 both;
+}
+
+/* A little overshoot as the count-up lands, so the figure "arrives" instead of
+   just stopping. Held flat for most of the roll, pops near the end. */
+@keyframes pathstrip-num-pop {
+  0%, 72%  { transform: scale(1); }
+  85%      { transform: scale(1.14); }
+  100%     { transform: scale(1); }
+}
+
+.pathstrip__caption {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* ── Track ────────────────────────────────────────────────────────────────── */
+.pathstrip__track {
+  position: relative;
+  height: 8px;
+  margin: 3px 7px 2px;
+  border-radius: var(--radius-full);
+  background: var(--route-line);
+  box-shadow: inset 0 1px 2px oklch(0 0 0 / 0.22);
+}
+
+.pathstrip__fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-width: 4px;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background: var(--strip-accent);
+}
+
+/* Trenuj: the four level colours in route order, ending on the gold of the
+   finish line — the same colours the route map and the level badges use. */
+.pathstrip--train .pathstrip__fill {
+  background: linear-gradient(
+    90deg,
+    var(--accent-yellow),
+    var(--accent-orange) 30%,
+    var(--accent-green) 60%,
+    var(--accent-blue) 85%,
+    var(--milestone-gold)
+  );
+}
+
+/* Słuchaj: one hue deepening along the way — the listening ramp ListenStrip
+   already ran, and the same one the autoplay modes use. */
+.pathstrip--listen .pathstrip__fill {
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklch, var(--listen-blue) 55%, white),
+    var(--listen-blue) 55%,
+    var(--accent-indigo) 100%
+  );
+}
+
+/* One sweep as the bar lands, then done — it used to be a permanent loop. */
+.pathstrip__fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.5), transparent);
+  background-size: 55% 100%;
+  background-repeat: no-repeat;
+  animation: pathstrip-shimmer 1.5s var(--ease-out-expo) 0.25s 1 both;
+}
+
+@keyframes pathstrip-shimmer {
+  from { background-position: -60% 0; }
+  to   { background-position: 170% 0; }
+}
+
+.pathstrip__tick {
+  position: absolute;
+  top: 50%;
+  width: 2px;
+  height: 13px;
+  margin-left: -1px;
+  transform: translateY(-50%);
+  border-radius: 1px;
+  background: var(--bg-primary);
+  opacity: 0.55;
+}
+
+.pathstrip__tick--passed {
+  background: var(--text-primary);
+  opacity: 0.45;
+}
+
+.pathstrip__marker {
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  margin-left: -7.5px;
+  transform: translateY(-50%);
+  border-radius: var(--radius-full);
+  background: var(--text-primary);
+  /* Static. `left` is animated by framer-motion, so nothing here may transition
+     it — the two would fight per frame. */
+  box-shadow: 0 0 0 3px var(--bg-card),
+              0 0 18px 3px color-mix(in oklch, var(--strip-accent) 40%, transparent);
+}
+
+/* Comet trail behind the travelling marker — a short bright tail that reads as
+   speed while it rides the fill, gone by the time it settles. */
+.pathstrip__marker::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  width: 46px;
+  height: 5px;
+  transform: translateY(-50%);
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, transparent, var(--strip-accent));
+  filter: blur(1px);
+  animation: pathstrip-trail 1.65s var(--ease-out-expo) 1 both;
+}
+
+/* Ring that expands and fades as the marker settles at its spot. */
+.pathstrip__marker::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--strip-accent);
+  animation: pathstrip-arrive 900ms var(--ease-out-expo) 1500ms 1 both;
+}
+
+@keyframes pathstrip-arrive {
+  from { opacity: 0.95; transform: scale(0.35); }
+  to   { opacity: 0;    transform: scale(3);    }
+}
+
+@keyframes pathstrip-trail {
+  0%   { opacity: 0;    width: 10px; }
+  25%  { opacity: 0.85; width: 46px; }
+  85%  { opacity: 0.55; width: 34px; }
+  100% { opacity: 0;    width: 8px;  }
+}
+
+/* ── Scale line — the one milestone worth naming ───────────────────────────
+   Used to also carry a pill repeating the current level's name — already on
+   screen in LevelPill above, so saying it twice bought nothing. */
+.pathstrip__scale {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  min-width: 0;
+}
+
+.pathstrip__next {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pathstrip__fill::after { animation: none; background: none; }
+  /* The hero figure is .pathstrip__pct — it was .pathstrip__value before the
+     percentage took over as the headline, and a stale selector here meant the
+     pop still played for anyone who had asked for less motion. */
+  .pathstrip__pct { animation: none; }
+
+  .pathstrip__marker::before,
+  .pathstrip__marker::after { display: none; }
+}

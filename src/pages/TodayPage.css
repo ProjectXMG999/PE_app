@@ -1,11 +1,21 @@
+/* Groups are separated by twice the gap used inside one. Everything used to sit
+   on a single 12px rhythm, which made the page read as a stack of equal-weight
+   widgets rather than three answers to three questions: gdzie jestem · co teraz
+   · przeglądaj. See the grouping in TodayPage.tsx. */
 .today {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 22px;
   padding: var(--spacing-md) var(--spacing-md) var(--spacing-2xl);
   max-width: var(--reading-max-width);
   margin: 0 auto;
+}
+
+.today__group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* Screen-reader-only page title (no visible "Dzisiaj" — the tab labels it). */
@@ -44,15 +54,23 @@
   white-space: nowrap;
 }
 
+/* Both placeholders match the real thing's height. They didn't, so every load
+   of this page ended with a visible jump as the data arrived and the blocks
+   grew under the cursor. */
 .today__skeleton { border-radius: var(--radius-2xl); }
+
 .today__strip-loading {
-  height: 44px;
-  border-radius: var(--radius-md);
+  height: 112px;
+  border-radius: var(--radius-xl);
   background: var(--surface-translucent);
   border: 1px solid var(--border);
 }
 
-/* ── Review rail ─────────────────────────────────────────────────────────── */
+/* ── Review rail ──────────────────────────────────────────────────────────
+   --live, not --accent. tokens.css defines --live as "time-sensitive signal
+   (review priority, in progress now)", which is exactly what this row is; it
+   was violet only because everything on this page was. The dot already used
+   --live, so the row was arguing with itself. */
 .today__rail {
   position: relative;
   display: grid;
@@ -69,8 +87,12 @@
 
 .today__rail:active { transform: scale(0.985); }
 
-.today__rail--building { border-left-color: var(--warning); }
-.today__rail--urgent {
+/* All three doubled with .u-rail so they beat the primitive's own accent edge
+   whatever order the bundle puts the stylesheets in, and so they resolve
+   against each other by source order here, which we control. */
+.today__rail.u-rail { border-left-color: var(--live); }
+.today__rail--building.u-rail { border-left-color: var(--warning); }
+.today__rail--urgent.u-rail {
   border-left-color: var(--danger);
   background: color-mix(in oklch, var(--danger) 7%, var(--surface-translucent));
 }
@@ -102,14 +124,14 @@
 
 .today__rail-body strong {
   font-family: var(--font-heading);
-  font-size: var(--text-base);
-  font-weight: 700;
+  font-size: var(--text-lg);
+  font-weight: 800;
   color: var(--text-primary);
 }
 
 .today__rail-body span {
   font-family: var(--font-body);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -122,8 +144,8 @@
   height: 44px;
   border-radius: var(--radius-full);
   color: #fff;
-  background: var(--accent);
-  box-shadow: 0 6px 18px var(--accent-glow);
+  background: var(--live);
+  box-shadow: 0 6px 18px color-mix(in oklch, var(--live) 45%, transparent);
 }
 
 .today__rail--urgent .today__rail-go { background: var(--danger); box-shadow: 0 6px 18px color-mix(in oklch, var(--danger) 45%, transparent); }
@@ -184,14 +206,14 @@
 
 .today__review-done-body strong {
   font-family: var(--font-heading);
-  font-size: var(--text-base);
-  font-weight: 700;
+  font-size: var(--text-lg);
+  font-weight: 800;
   color: var(--text-primary);
 }
 
 .today__review-done-body span {
   font-family: var(--font-body);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -225,24 +247,13 @@
 
 .today__pick:active { transform: scale(0.985); }
 
-.today__pick::before {
-  content: '';
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  top: 0;
-  height: 3px;
-  border-radius: 0 0 4px 4px;
-  background: var(--accent);
-  box-shadow: 0 0 16px 1px var(--accent-glow);
-}
-
+/* Deliberately no glowing hairline. The card used to carry one, which made it
+   the third hero-weight object on the page — and this one doesn't need it: the
+   tab indicator directly above already colours the path, and the action bar at
+   the bottom of the card repeats it. The hairline stays the Inteligentnie
+   card's signature, so exactly one thing on Dzisiaj wears it. */
 .today__pick--listen {
   border-color: color-mix(in oklch, var(--listen-blue) 42%, transparent);
-}
-.today__pick--listen::before {
-  background: var(--listen-blue);
-  box-shadow: 0 0 16px 1px color-mix(in oklch, var(--listen-blue) 45%, transparent);
 }
 
 .today__pick-head {

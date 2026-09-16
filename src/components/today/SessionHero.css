@@ -1,0 +1,181 @@
+/* =============================================================================
+ * SESSION HERO — Dzisiaj's one hero card.
+ * -----------------------------------------------------------------------------
+ * Was two stacked cards (FocusStage's goal ring, SmartStartCard's session
+ * pitch) each with their own numbers. The goal ring survives as a compact
+ * badge in the head row — still the same tap target and math — instead of a
+ * full card; the headline stat drops the learn/review/stretch breakdown to
+ * one number. See SessionHero.tsx's doc comment for the full reasoning.
+ * ========================================================================== */
+
+@property --focus-fill {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+.sessionhero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 6px;
+  padding: var(--spacing-lg) var(--spacing-lg) 0;
+  text-align: left;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.sessionhero:active {
+  transform: scale(0.985);
+}
+
+/* ── Head row: kicker, info, goal badge ──────────────────────────────────── */
+.sessionhero__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.sessionhero__kicker {
+  color: var(--accent);
+  margin-right: auto;
+}
+
+.sessionhero__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: var(--text-sm);
+  line-height: 1;
+  color: var(--text-muted);
+  background: var(--surface-translucent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+}
+
+.sessionhero__info:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+/* Compact goal-progress badge — same conic-fill/mask technique the old
+   FocusStage ring used, shrunk to a corner chip. One number inside, no
+   separate "min" unit label (that's in the aria-label, not on screen) and no
+   fraction/percentage line underneath — the ring's fill already is that. */
+.sessionhero__goal {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  box-shadow: 0 0 calc(4px + var(--focus-fill, 0) * 0.08px)
+              color-mix(in oklch, var(--accent) 36%, transparent);
+  transition: --focus-fill 1s var(--ease-out-expo) 0.1s, box-shadow var(--transition-slow);
+}
+
+@starting-style {
+  .sessionhero__goal { --focus-fill: 0; }
+}
+
+.sessionhero__goal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: conic-gradient(
+    from -90deg,
+    var(--accent) 0 calc(var(--focus-fill, 0) * 1%),
+    var(--surface-translucent-strong) 0
+  );
+  -webkit-mask: radial-gradient(closest-side, transparent 72%, #000 72.5%);
+          mask: radial-gradient(closest-side, transparent 72%, #000 72.5%);
+}
+
+.sessionhero__goal:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.sessionhero__goal-num {
+  position: relative;
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Goal met: badge and card both go gold, same as the old FocusStage's --met. */
+.sessionhero.u-surface--gold .sessionhero__goal::before {
+  background: conic-gradient(
+    from -90deg,
+    var(--gold) 0 calc(var(--focus-fill, 0) * 1%),
+    var(--surface-translucent-strong) 0
+  );
+}
+.sessionhero.u-surface--gold .sessionhero__goal {
+  box-shadow: 0 0 calc(4px + var(--focus-fill, 0) * 0.08px)
+              color-mix(in oklch, var(--gold) 40%, transparent);
+}
+
+/* ── Title / stat / reason ────────────────────────────────────────────────── */
+.sessionhero__title {
+  margin: 6px 0 0;
+  font-size: var(--text-3xl, 1.75rem);
+  color: var(--text-primary);
+}
+
+/* The one number that matters here — bumped well past the old 15px/secondary
+   treatment so it reads as the card's answer, not a footnote under the title. */
+.sessionhero__stat {
+  margin: 2px 0 var(--spacing-sm);
+  max-width: 42ch;
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.sessionhero__reason {
+  margin: calc(var(--spacing-sm) * -1) 0 var(--spacing-sm);
+  max-width: 42ch;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+/* Full-width, edge-to-edge, and tall — the one button that matters on the
+   whole page. Sits flush against the card's own bottom/side edges (negative
+   margin cancels the card's own padding); overflow:hidden (from
+   .u-surface--raised) clips it back to the card's radius. */
+.sessionhero__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  gap: 10px;
+  margin: var(--spacing-md) calc(-1 * var(--spacing-lg)) 0;
+  padding: 20px;
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sessionhero__goal { transition: none; }
+}
