@@ -33,7 +33,14 @@ export const SMART = {
    *  learner already commits to, same idea as the review budget. */
   CARDS_PER_MIN: 2.2,
   MIN_CARDS: 12,
-  MAX_CARDS: 28,
+  /** DAILY_GOAL_OPTIONS (useAppStore.ts) tops out at 60 min = 132 cards at
+   *  this pace — this used to sit at 28, which is *below* the 15-minute goal
+   *  (33 cards) and silently made every goal from 15 to 60 minutes produce
+   *  the exact same ~13-minute session. Set to the top of the actual range
+   *  rather than an arbitrary session-length guess, so the promise in the
+   *  comment above ("scales to how much the learner commits to") holds for
+   *  every goal on the picker, not just the two smallest. */
+  MAX_CARDS: 132,
   /** Baseline share of the session spent on review — the value used before any
    *  review evidence exists, and the one `reviewRatioFor` moves away from. */
   REVIEW_RATIO: 0.35,
