@@ -45,11 +45,11 @@ export function SmartStartCard({ snapshot, onStart }: Props) {
         : null
 
   return (
-    <section className="smartstart u-surface--raised">
+    <button type="button" className="smartstart u-surface--raised" onClick={onStart}>
       <button
         type="button"
         className="smartstart__info"
-        onClick={() => setInfoOpen(true)}
+        onClick={(e) => { e.stopPropagation(); setInfoOpen(true) }}
         aria-label="Jak działa tryb Inteligentny"
       >
         ⓘ
@@ -63,14 +63,14 @@ export function SmartStartCard({ snapshot, onStart }: Props) {
           : 'Sam dobiorę słowa i powtórki do tego, jak Ci dziś idzie.'}
       </p>
       {reason && <p className="smartstart__reason">{reason}</p>}
-      <button className="smartstart__cta u-cta fx-shine" onClick={onStart}>
+      <span className="smartstart__cta u-cta fx-shine">
         Zaczynamy
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <polyline points="9 6 15 12 9 18" />
         </svg>
-      </button>
+      </span>
 
       {infoOpen && <SmartModeInfoSheet onClose={() => setInfoOpen(false)} />}
-    </section>
+    </button>
   )
 }

@@ -1,10 +1,21 @@
+/* The main call to action of the whole app — the entire card is the tap
+   target (not just the button at the bottom), same as .today__pick, so the
+   hit area matches how big this reads visually. */
 .smartstart {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
   gap: 6px;
-  padding: var(--spacing-xl) var(--spacing-lg);
+  padding: var(--spacing-xl) var(--spacing-lg) 0;
+  text-align: left;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
   --u-hairline-color: var(--accent);
+}
+
+.smartstart:active {
+  transform: scale(0.985);
 }
 
 .smartstart__info {
@@ -61,15 +72,20 @@
   color: var(--text-muted);
 }
 
+/* Full-width, edge-to-edge, and tall — this is the one button that matters
+   on the whole page, not a card among equals. Sits flush against the card's
+   own bottom/side edges (negative margin cancels the card's own padding);
+   .u-surface--raised's overflow:hidden clips it back to the card's radius. */
 .smartstart__cta {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 13px var(--spacing-xl);
+  justify-content: center;
+  align-self: stretch;
+  gap: 10px;
+  margin: var(--spacing-lg) calc(-1 * var(--spacing-lg)) 0;
+  padding: 20px;
   font-family: var(--font-heading);
-  font-size: var(--text-base);
-  font-weight: 700;
-  border: none;
-  border-radius: var(--radius-full);
-  cursor: pointer;
+  font-size: var(--text-lg);
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }

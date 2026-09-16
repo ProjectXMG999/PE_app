@@ -284,7 +284,7 @@ export function TodayPage() {
                     aria-hidden="true"
                   />
                   <span className="u-kicker">
-                    {urgency === 'urgent' ? 'Sporo zaległych' : urgency === 'building' ? 'Powtórki się zbierają' : 'Priorytet na dziś'}
+                    🔁 {urgency === 'urgent' ? 'Sporo zaległych' : urgency === 'building' ? 'Powtórki się zbierają' : 'Priorytet na dziś'}
                   </span>
                 </span>
                 <span className="today__rail-body">
