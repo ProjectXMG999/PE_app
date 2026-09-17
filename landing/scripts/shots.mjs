@@ -373,7 +373,7 @@ async function main() {
     await page.evaluate(() => document.querySelector('.appshell__main')?.scrollBy(0, -150))
     await page.waitForTimeout(900)
   }
-  await shoot('pakiety-granica-mobile', MOBILE, '/', scrollToFrontier)
+  await shoot('pakiety-granica-mobile', MOBILE, '/pakiety', scrollToFrontier)
 
   // Dzisiaj — "what do I do now". This is the hero shot, so it has to show the
   // screen doing its job: the goal ring, the session card, both paths and the
