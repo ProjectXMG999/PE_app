@@ -1,0 +1,902 @@
+[
+  {
+    "id": "t1-p042-006",
+    "english": "Hungry",
+    "polish": "Głodny",
+    "category": "Przymiotniki",
+    "level": 1,
+    "packId": "t1-p042",
+    "packName": "Przymiotniki 3"
+  },
+  {
+    "id": "t1-p261-001",
+    "english": "Receptionist",
+    "polish": "Recepcjonista",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-002",
+    "english": "Supplier",
+    "polish": "Dostawca",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-003",
+    "english": "Agent",
+    "polish": "Pośrednik",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-004",
+    "english": "Graphic designer",
+    "polish": "Grafik",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-005",
+    "english": "Scientist",
+    "polish": "Naukowiec",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-006",
+    "english": "Czech",
+    "polish": "Czeski",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-007",
+    "english": "Greek",
+    "polish": "Grecki",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-008",
+    "english": "Dutch",
+    "polish": "Niderlandzki",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-009",
+    "english": "Irish",
+    "polish": "Irlandzki",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-010",
+    "english": "Norwegian",
+    "polish": "Norweski",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-011",
+    "english": "Russian",
+    "polish": "Rosyjski",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-012",
+    "english": "Hungarian",
+    "polish": "Węgierski",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-013",
+    "english": "Belarusian",
+    "polish": "Białoruski",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-014",
+    "english": "Croatian",
+    "polish": "Chorwacki",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p261-015",
+    "english": "Portuguese",
+    "polish": "Portugalski",
+    "category": "Rzeczowniki",
+    "level": 2,
+    "packId": "t1-p261",
+    "packName": "Zawody"
+  },
+  {
+    "id": "t1-p278-001",
+    "english": "Belongings",
+    "polish": "Dobytek",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-002",
+    "english": "Housekeeper",
+    "polish": "Gosposia",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-003",
+    "english": "Armchair",
+    "polish": "Fotel",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-004",
+    "english": "Fireplace",
+    "polish": "Kominek",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-005",
+    "english": "Gateway",
+    "polish": "Brama wjazdowa",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-006",
+    "english": "Intercom",
+    "polish": "Domofon",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-007",
+    "english": "Frame",
+    "polish": "Futryna, rama",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-008",
+    "english": "Heater",
+    "polish": "Grzejnik",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-009",
+    "english": "Radiator",
+    "polish": "Kaloryfer",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-010",
+    "english": "Door handle",
+    "polish": "Klamka",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-011",
+    "english": "Staircase",
+    "polish": "Klatka schodowa",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-012",
+    "english": "Chimney",
+    "polish": "Komin",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-013",
+    "english": "Chest of drawers",
+    "polish": "Komoda",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-014",
+    "english": "Tenant",
+    "polish": "Lokator",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p278-015",
+    "english": "Soap dish",
+    "polish": "Mydelniczka",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p278",
+    "packName": "Dom"
+  },
+  {
+    "id": "t1-p293-001",
+    "english": "AFAIC",
+    "polish": "Jeśli o mnie chodzi",
+    "category": "Skróty",
+    "level": 3,
+    "packId": "t1-p293",
+    "packName": "Komunikacja"
+  },
+  {
+    "id": "t1-p293-002",
+    "english": "AFAIR",
+    "polish": "Z tego, co pamiętam",
+    "category": "Skróty",
+    "level": 3,
+    "packId": "t1-p293",
+    "packName": "Komunikacja"
+  },
+  {
+    "id": "t1-p293-003",
+    "english": "FTFY",
+    "polish": "Naprawiłem to dla cb",
+    "category": "Skróty",
+    "level": 3,
+    "packId": "t1-p293",
+    "packName": "Komunikacja"
+  },
+  {
+    "id": "t1-p293-004",
+    "english": "YGTR",
+    "polish": "Dokładnie tak",
+    "category": "Skróty",
+    "level": 3,
+    "packId": "t1-p293",
+    "packName": "Komunikacja"
+  },
+  {
+    "id": "t1-p293-005",
+    "english": "BCC",
+    "polish": "Ukryte do wiadomości",
+    "category": "Skróty",
+    "level": 3,
+    "packId": "t1-p293",
+    "packName": "Komunikacja"
+  },
+  {
+    "id": "t1-p293-006",
+    "english": "CC",
+    "polish": "Do wiadomości",
+    "category": "Skróty",
+    "level": 3,
+    "packId": "t1-p293",
+    "packName": "Komunikacja"
+  },
+  {
+    "id": "t1-p293-007",
+    "english": "BYOB",
+    "polish": "Przynieś własną butelkę",
+    "category": "Skróty",
+    "level": 3,
+    "packId": "t1-p293",
+    "packName": "Komunikacja"
+  },
+  {
+    "id": "t1-p293-008",
+    "english": "GL",
+    "polish": "Powodzenia",
+    "category": "Skróty",
+    "level": 3,
+    "packId": "t1-p293",
+    "packName": "Komunikacja"
+  },
+  {
+    "id": "t1-p293-009",
+    "english": "IANAL",
+    "polish": "Nie jestem prawnikiem",
+    "category": "Skróty",
+    "level": 3,
+    "packId": "t1-p293",
+    "packName": "Komunikacja"
+  },
+  {
+    "id": "t1-p293-010",
+    "english": "Just for fun",
+    "polish": "Tylko dla jaj",
+    "category": "Skróty",
+    "level": 3,
+    "packId": "t1-p293",
+    "packName": "Komunikacja"
+  },
+  {
+    "id": "t1-p316-001",
+    "english": "Sender",
+    "polish": "Nadawca",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-002",
+    "english": "Receiver",
+    "polish": "Odbiorca",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-003",
+    "english": "Notification",
+    "polish": "Powiadomienie",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-004",
+    "english": "Feature",
+    "polish": "Cecha",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-005",
+    "english": "Compilation",
+    "polish": "Kompilacja",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-006",
+    "english": "Configuration",
+    "polish": "Konfiguracja",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-007",
+    "english": "Dot",
+    "polish": "Kropka",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-008",
+    "english": "Modification",
+    "polish": "Modyfikacja",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-009",
+    "english": "Pause",
+    "polish": "Pauza",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-010",
+    "english": "Mode",
+    "polish": "Tryb",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-011",
+    "english": "Attachment",
+    "polish": "Załącznik",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-012",
+    "english": "Background",
+    "polish": "Tło",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-013",
+    "english": "Communicator",
+    "polish": "Komunikator",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-014",
+    "english": "Administrator",
+    "polish": "Administrator",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p316-015",
+    "english": "Database",
+    "polish": "Baza danych",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p316",
+    "packName": "It"
+  },
+  {
+    "id": "t1-p337-001",
+    "english": "Loudspeaker",
+    "polish": "Głośnik w telefonie",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-002",
+    "english": "Microphone",
+    "polish": "Mikrofon",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-003",
+    "english": "Roaming",
+    "polish": "Roaming",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-004",
+    "english": "Earphones",
+    "polish": "Słuchawki",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-005",
+    "english": "Sim card",
+    "polish": "Karta sim",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-006",
+    "english": "Answering machine",
+    "polish": "Automatyczna sekretarka",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-007",
+    "english": "Hands-free set",
+    "polish": "Zestaw głośnomówiący",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-008",
+    "english": "Telephone line",
+    "polish": "Linia telefoniczna",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-009",
+    "english": "Phone book",
+    "polish": "Książka telefoniczna",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-010",
+    "english": "Long-distance call",
+    "polish": "Rozmowa międzymiastowa",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-011",
+    "english": "Touchscreen",
+    "polish": "Ekran dotykowy",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-012",
+    "english": "Reception",
+    "polish": "Zasięg",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-013",
+    "english": "Dialing",
+    "polish": "Dzwonienie",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-014",
+    "english": "Landline phone",
+    "polish": "Telefon stacjonarny",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p337-015",
+    "english": "Smartphone",
+    "polish": "Smartfon",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p337",
+    "packName": "Telefon"
+  },
+  {
+    "id": "t1-p356-001",
+    "english": "Hot chocolate",
+    "polish": "Gorąca czekolada",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-002",
+    "english": "Soft drink",
+    "polish": "Napój bezalkoholowy",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-003",
+    "english": "Green tea",
+    "polish": "Zielona herbata",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-004",
+    "english": "Energy drink",
+    "polish": "Napój energetyczny",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-005",
+    "english": "Cocoa",
+    "polish": "Kakao",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-006",
+    "english": "Lemonade",
+    "polish": "Lemoniada",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-007",
+    "english": "Smoothie",
+    "polish": "Smoothie",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-008",
+    "english": "Beverage",
+    "polish": "Napój",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-009",
+    "english": "Isotonic drink",
+    "polish": "Napój izotoniczny",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-010",
+    "english": "Orange soft drink",
+    "polish": "Oranżada",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-011",
+    "english": "Syrup",
+    "polish": "Syrop",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-012",
+    "english": "Tea bag",
+    "polish": "Torebka herbaty",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-013",
+    "english": "Tap water",
+    "polish": "Woda z kranu",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p356-014",
+    "english": "Milkshake",
+    "polish": "Koktajl mleczny",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p356",
+    "packName": "Napoje"
+  },
+  {
+    "id": "t1-p375-001",
+    "english": "Crayons",
+    "polish": "Kredki",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-002",
+    "english": "Sticker",
+    "polish": "Naklejka",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-003",
+    "english": "Draft",
+    "polish": "Brudnopis",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-004",
+    "english": "Consultation",
+    "polish": "Konsultacje",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-005",
+    "english": "Instruction",
+    "polish": "Polecenie",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-006",
+    "english": "Master",
+    "polish": "Magister",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-007",
+    "english": "Matura exam",
+    "polish": "Matura",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-008",
+    "english": "Attendance",
+    "polish": "Obecność na czymś",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-009",
+    "english": "Institute of technology",
+    "polish": "Politechnika",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-010",
+    "english": "Retake",
+    "polish": "Poprawa",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-011",
+    "english": "School subject",
+    "polish": "Przedmiot szkolny",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-012",
+    "english": "Semester",
+    "polish": "Semestr",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-013",
+    "english": "Grade",
+    "polish": "Stopień",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-014",
+    "english": "Chalkboard",
+    "polish": "Tablica kredowa",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  },
+  {
+    "id": "t1-p375-015",
+    "english": "Faculty",
+    "polish": "Wydział",
+    "category": "Rzeczowniki",
+    "level": 3,
+    "packId": "t1-p375",
+    "packName": "Szkoła"
+  }
+]
