@@ -1,8 +1,17 @@
+/* =============================================================================
+ * DAILY GOAL PICKER — the sheet behind Dzisiaj's goal ring.
+ * -----------------------------------------------------------------------------
+ * Motion is in the component (the sheet spring, the sliding thumb, the rolling
+ * numbers, the bars). This file is the material: one segmented control, and a
+ * route card whose bars all share one time scale.
+ * ========================================================================== */
+
 .goalpicker {
   margin: auto auto 0;
   padding: 0;
   width: 100%;
   max-width: 460px;
+  max-height: 100dvh;
   border: none;
   background: transparent;
   overflow: visible;
@@ -11,27 +20,45 @@
 .goalpicker::backdrop {
   background: var(--overlay);
   backdrop-filter: blur(var(--scrim-blur));
+  animation: goalpicker-scrim-in 260ms ease-out both;
+  transition: opacity 220ms ease-in;
+}
+
+.goalpicker--closing::backdrop {
+  opacity: 0;
+}
+
+@keyframes goalpicker-scrim-in {
+  from { opacity: 0; }
 }
 
 .goalpicker__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: var(--spacing-sm) var(--spacing-lg) var(--spacing-xl);
+  max-height: calc(100dvh - var(--spacing-lg));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--spacing-sm) var(--spacing-lg) calc(var(--spacing-lg) + env(safe-area-inset-bottom, 0px));
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-bottom: none;
   border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-  animation: slideUp 280ms var(--ease-out-expo);
+  box-shadow: 0 -12px 40px oklch(0 0 0 / 0.28);
+  touch-action: pan-y;
+}
+
+.goalpicker__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .goalpicker__handle {
   width: 36px;
   height: 4px;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
   border-radius: var(--radius-full);
-  background: var(--border);
+  background: var(--border-strong);
+  cursor: grab;
 }
 
 .goalpicker__title {
@@ -39,83 +66,256 @@
   font-family: var(--font-heading);
   font-size: var(--text-2xl);
   font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--text-primary);
 }
 
 .goalpicker__sub {
-  margin: var(--spacing-sm) 0 var(--spacing-lg);
+  margin: 6px 0 var(--spacing-lg);
   max-width: 34ch;
   font-family: var(--font-body);
   font-size: var(--text-md);
-  line-height: 1.5;
+  line-height: 1.45;
   color: var(--text-secondary);
+  text-wrap: balance;
 }
+
+/* ── Segmented control ───────────────────────────────────────────────────
+   One track, six cells, one thumb that slides between them (a shared
+   layoutId) — a choice between neighbours, not six unrelated buttons. */
 
 .goalpicker__options {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-sm);
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2px;
   width: 100%;
+  padding: 4px;
+  background: var(--surface-translucent-strong, var(--bg-card));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
 }
 
 .goalpicker__option {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  padding: var(--spacing-md) var(--spacing-sm);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  gap: 1px;
+  min-width: 0;
+  padding: 10px 0 9px;
+  background: none;
+  border: none;
+  border-radius: calc(var(--radius-lg) - 4px);
   cursor: pointer;
-  transition: border-color var(--transition-fast), background var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+  isolation: isolate;
 }
 
-.goalpicker__option:active {
-  transform: scale(0.96);
+.goalpicker__option:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 1px;
 }
 
-.goalpicker__option--active {
-  background: var(--accent);
-  border-color: var(--accent);
+.goalpicker__thumb {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(180deg,
+    color-mix(in oklch, white 16%, var(--accent)) 0%,
+    var(--accent) 55%,
+    color-mix(in oklch, black 10%, var(--accent)) 100%);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklch, white 32%, transparent),
+    0 6px 16px color-mix(in oklch, var(--accent) 38%, transparent);
 }
 
 .goalpicker__option-value {
   font-family: var(--font-heading);
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   font-weight: 700;
-  color: var(--text-primary);
   line-height: 1;
+  color: var(--text-primary);
   font-variant-numeric: tabular-nums;
+  transition: color 180ms ease;
 }
 
 .goalpicker__option-unit {
   font-family: var(--font-heading);
-  font-size: var(--text-xs);
+  font-size: var(--text-2xs);
   font-weight: 600;
+  color: var(--text-muted);
+  transition: color 180ms ease;
+}
+
+.goalpicker__option--active .goalpicker__option-value { color: #fff; }
+.goalpicker__option--active .goalpicker__option-unit { color: oklch(1 0 0 / 0.78); }
+
+/* ── Rolling value ───────────────────────────────────────────────────────── */
+
+.goalpicker__roll {
+  position: relative;
+  display: inline-grid;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.goalpicker__roll > span {
+  grid-area: 1 / 1;
+  white-space: nowrap;
+}
+
+/* ── Route card ──────────────────────────────────────────────────────────── */
+
+.goalpicker__plan {
+  width: 100%;
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  text-align: left;
+  background: var(--surface-tile);
+  border: 1px solid var(--tile-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--tile-hi);
+}
+
+.goalpicker__plan-loading {
+  height: 176px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(90deg, var(--surface-translucent), var(--surface-translucent-strong), var(--surface-translucent));
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.goalpicker__plan-empty {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.goalpicker__plan-lead {
+  margin: 0 0 var(--spacing-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.goalpicker__plan-lead strong {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.goalpicker__stages {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.goalpicker__stage {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.goalpicker__stage-head {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.goalpicker__stage-name {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.goalpicker__stage-eta {
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* The next stage is the one that matters this month — it gets the colour. */
+.goalpicker__stage--next .goalpicker__stage-name {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.goalpicker__stage-track {
+  display: block;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: var(--route-line, var(--border));
+  overflow: hidden;
+}
+
+.goalpicker__stage-bar {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  transform-origin: left center;
+  background: color-mix(in oklch, var(--text-muted) 55%, transparent);
+}
+
+.goalpicker__stage--next .goalpicker__stage-bar {
+  background: linear-gradient(90deg, var(--accent-dim), var(--accent-bright));
+}
+
+.goalpicker__stage-delta {
+  flex-shrink: 0;
+  padding: 1px 6px;
+  font-family: var(--font-heading);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  border-radius: var(--radius-full);
+}
+
+.goalpicker__stage-delta--sooner {
+  color: var(--success);
+  background: color-mix(in oklch, var(--success) 14%, transparent);
+}
+
+.goalpicker__stage-delta--later {
+  color: var(--text-muted);
+  background: var(--surface-translucent-strong);
+}
+
+.goalpicker__plan-foot {
+  margin: var(--spacing-md) 0 0;
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--border);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
   color: var(--text-muted);
 }
 
-.goalpicker__option--active .goalpicker__option-value,
-.goalpicker__option--active .goalpicker__option-unit {
-  color: #fff;
-}
+/* ── Done ────────────────────────────────────────────────────────────────── */
 
 .goalpicker__done {
-  margin-top: var(--spacing-xl);
-  padding: 12px var(--spacing-2xl);
+  width: 100%;
+  margin-top: var(--spacing-lg);
+  padding: 14px var(--spacing-lg);
   font-family: var(--font-heading);
   font-size: var(--text-base);
-  font-weight: 600;
-  color: var(--text-secondary);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  font-weight: 700;
+  color: #fff;
+  border: none;
   border-radius: var(--radius-full);
   cursor: pointer;
-}
-
-.goalpicker__done:active {
-  transform: scale(0.97);
 }
 
 @media (min-width: 640px) {
@@ -126,9 +326,12 @@
   .goalpicker__inner {
     border-bottom: 1px solid var(--border);
     border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    touch-action: auto;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .goalpicker__inner { animation: none; }
+  .goalpicker::backdrop { animation: none; transition: none; }
+  .goalpicker__plan-loading { animation: none; }
 }

@@ -1,179 +1,440 @@
-.account {
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
-  padding: var(--spacing-md) var(--spacing-md) var(--spacing-xl);
-  gap: var(--spacing-lg);
-}
+/* =============================================================================
+ * KONTO — built on the Ustawienia page system (components/settings/PrefsList).
+ * -----------------------------------------------------------------------------
+ * The page, header, sections, rows and danger button all come from there. This
+ * file only adds what an account page has and a settings page doesn't: the
+ * profile card, the status badge, the plan picker, the password form and the
+ * one neutral button both of those use.
+ * ========================================================================== */
 
-.account__header {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
+/* ── Profile ──────────────────────────────────────────────────────────────── */
 
-.account__title {
-  font-family: var(--font-heading);
-  font-size: var(--text-xl);
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.account__hint {
-  color: var(--text-muted);
-  font-size: var(--text-base);
-}
-
-.account__section {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  width: 100%;
-}
-
-@media (min-width: 1024px) {
-  .account__header {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .account__section {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-}
-
-.account__section-title {
-  font-family: var(--font-heading);
-  font-size: var(--text-xs-plus);
-  font-weight: 700;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0 var(--spacing-xs);
-}
-
-.account__row {
+.account__profile {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md) var(--spacing-lg);
-  border-radius: var(--radius-lg);
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  width: 100%;
+  gap: 14px;
+  padding: 14px var(--spacing-md);
 }
 
-.account__row-label {
+.account__avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(145deg,
+    color-mix(in oklch, white 14%, var(--accent)) 0%,
+    color-mix(in oklch, var(--accent) 60%, black) 100%);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklch, white 30%, transparent),
+    0 6px 18px color-mix(in oklch, var(--accent) 34%, transparent);
+}
+
+.account__identity {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  flex: 1;
+  min-width: 0;
 }
 
-.account__row-name {
+.account__email {
+  font-family: var(--font-heading);
+  font-size: var(--text-md);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account__since {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* ── Status badge ─────────────────────────────────────────────────────────── */
+
+.account__badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--badge-color);
+  background: color-mix(in oklch, var(--badge-color) 13%, transparent);
+  border: 1px solid color-mix(in oklch, var(--badge-color) 28%, transparent);
+}
+
+.account__badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.account__badge--ok { --badge-color: var(--success); }
+.account__badge--warn { --badge-color: var(--warning); }
+.account__badge--muted { --badge-color: var(--text-muted); }
+
+.account__badge--ok::before {
+  box-shadow: 0 0 8px var(--success);
+}
+
+/* ── Notices ──────────────────────────────────────────────────────────────── */
+
+.account__notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  overflow: hidden;
+  padding: 12px 10px 12px var(--spacing-md);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: var(--text-primary);
+  background: var(--surface-translucent);
+  border: 1px solid var(--border);
+}
+
+.account__notice--ok {
+  background: color-mix(in oklch, var(--success) 10%, transparent);
+  border-color: color-mix(in oklch, var(--success) 30%, transparent);
+}
+
+.account__error {
+  margin: 0;
+  padding: 0 var(--spacing-md) 14px;
+  font-size: var(--text-sm);
+  color: var(--danger);
+}
+
+.account__notice > span {
+  flex: 1;
+  padding-top: 3px;
+}
+
+.account__notice-close {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  color: var(--text-muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+.account__notice-close:hover {
+  color: var(--text-primary);
+  background: var(--surface-translucent-strong);
+}
+
+/* ── Buttons ──────────────────────────────────────────────────────────────── */
+
+/* Same shape and size as the danger button beside it on the page, in neutral. */
+.account__btn {
+  min-height: 38px;
+  padding: 0 var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--surface-translucent-strong);
+  border: 1px solid var(--border-strong);
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.account__btn:hover:not(:disabled) {
+  background: color-mix(in oklch, var(--text-primary) 10%, transparent);
+}
+
+.account__btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.account__btn--primary {
+  color: #fff;
+  background: var(--accent);
+  border-color: transparent;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+.account__btn--primary:hover:not(:disabled) {
+  background: var(--accent-bright);
+}
+
+.account__btn--block {
+  width: 100%;
+  min-height: 44px;
+}
+
+.account__btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.account__cta {
+  width: 100%;
+  min-height: 48px;
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+
+.account__cta:disabled {
+  opacity: 0.45;
+  cursor: default;
+  box-shadow: none;
+}
+
+/* ── Signed out ───────────────────────────────────────────────────────────── */
+
+.account__signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  text-align: center;
+}
+
+.account__signin-text {
+  margin: 0;
+  max-width: 36ch;
+  font-size: var(--text-md);
+  line-height: 1.5;
+  color: var(--text-secondary);
+  text-wrap: balance;
+}
+
+.account__loading {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.account__skeleton {
+  height: 150px;
+  border-radius: var(--radius-lg);
+}
+
+.account__skeleton--profile {
+  height: 76px;
+}
+
+/* ── Purchase ─────────────────────────────────────────────────────────────── */
+
+.account__purchase {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px var(--spacing-md) var(--spacing-md);
+}
+
+.account__purchase-lead {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.account__plans {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.account__plan {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  background: var(--surface-translucent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.account__plan:hover {
+  border-color: var(--border-strong);
+}
+
+.account__plan--active,
+.account__plan--active:hover {
+  border-color: var(--border-accent);
+  background: color-mix(in oklch, var(--accent) 9%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--accent) 14%, transparent);
+}
+
+.account__plan-radio {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  border-radius: 50%;
+  border: 2px solid var(--border-strong);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.account__plan--active .account__plan-radio {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 3px var(--bg-surface), inset 0 0 0 9px var(--accent);
+}
+
+.account__plan-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.account__plan-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.account__plan-name {
   font-family: var(--font-heading);
   font-size: var(--text-md);
   font-weight: 700;
   color: var(--text-primary);
 }
 
-.account__row-hint {
-  font-size: var(--text-xs-plus);
-  color: var(--text-muted);
-  font-family: var(--font-body);
-}
-
-.account__row-value {
-  font-size: var(--text-md);
-  color: var(--text-secondary);
-}
-
-.account__status-pill {
-  height: 28px;
-  padding: 0 var(--spacing-md);
+.account__plan-tag {
+  padding: 1px 7px;
   border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: color-mix(in oklch, var(--gold) 14%, transparent);
+}
+
+.account__plan-desc {
+  font-size: var(--text-xs);
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+/* The consent checkbox: a real input, visually replaced by a styled box. */
+.account__waiver {
+  position: relative;
   display: flex;
-  align-items: center;
-  font-family: var(--font-heading);
-  font-size: var(--text-xs-plus);
-  font-weight: 700;
-  background: var(--bg-card);
+  align-items: flex-start;
+  gap: 10px;
+  font-size: var(--text-xs);
+  line-height: 1.5;
   color: var(--text-muted);
-  border: 1px solid var(--border);
-}
-
-.account__status-pill--active {
-  color: var(--success);
-  border-color: var(--success);
-}
-
-.account__status-pill--past_due,
-.account__status-pill--canceled {
-  color: var(--warning);
-  border-color: var(--warning);
-}
-
-.account__primary-btn {
-  align-self: flex-start;
-  height: 40px;
-  padding: 0 var(--spacing-lg);
-  border-radius: var(--radius-full);
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  background: var(--accent);
-  color: #fff;
-  border: none;
   cursor: pointer;
-  transition: background var(--transition-fast);
 }
 
-.account__primary-btn:hover {
-  background: var(--accent-bright);
+.account__waiver input {
+  position: absolute;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0;
 }
 
-.account__primary-btn:disabled {
-  opacity: 0.6;
-  cursor: default;
+.account__check {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  border-radius: 5px;
+  color: transparent;
+  border: 2px solid var(--border-strong);
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
 }
 
-.account__primary-btn--outline {
-  background: transparent;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-}
-
-.account__primary-btn--outline:hover {
-  background: var(--accent);
+.account__waiver--on .account__check {
   color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
 }
+
+.account__waiver input:focus-visible + .account__check {
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.account__fineprint {
+  margin: -4px 0 0;
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* ── Password form ────────────────────────────────────────────────────────── */
 
 .account__form {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+}
+
+.account__form-inner {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
-  width: 100%;
+  gap: 12px;
+  padding: 14px var(--spacing-md) var(--spacing-md);
+}
+
+.account__form .account__error {
+  padding: 0;
 }
 
 .account__field {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+  gap: 6px;
 }
 
 .account__label {
   font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 600;
+  font-size: var(--text-xs);
+  font-weight: 700;
   color: var(--text-secondary);
 }
 
 .account__input {
-  height: 46px;
+  height: 44px;
   padding: 0 var(--spacing-md);
   border-radius: var(--radius-md);
   background: var(--bg-input);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   color: var(--text-primary);
   font-size: var(--text-md);
   font-family: var(--font-body);
@@ -184,62 +445,4 @@
   outline: none;
   border-color: var(--border-accent);
   box-shadow: 0 0 0 3px var(--accent-glow);
-}
-
-.account__form-error {
-  margin: 0;
-  color: var(--danger);
-  font-size: var(--text-sm);
-}
-
-.account__form-message {
-  margin: 0;
-  color: var(--success);
-  font-size: var(--text-sm);
-}
-
-.account__waiver {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--spacing-sm);
-  font-size: var(--text-xs-plus);
-  line-height: 1.4;
-  color: var(--text-muted);
-  cursor: pointer;
-}
-
-.account__waiver input {
-  margin-top: 2px;
-  flex-shrink: 0;
-  accent-color: var(--accent);
-}
-
-.account__plan-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-}
-
-.account__plan-buttons .account__primary-btn {
-  align-self: auto;
-}
-
-.account__danger-btn {
-  align-self: flex-start;
-  height: 36px;
-  padding: 0 var(--spacing-md);
-  border-radius: var(--radius-full);
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  background: transparent;
-  color: var(--danger);
-  border: 1px solid var(--danger);
-  cursor: pointer;
-  transition: background var(--transition-fast), color var(--transition-fast);
-}
-
-.account__danger-btn:hover {
-  background: var(--danger);
-  color: #fff;
 }

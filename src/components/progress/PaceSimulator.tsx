@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { LEVEL_META } from '../../data/levels'
 import { DAILY_GOAL_OPTIONS } from '../../store/useAppStore'
 import { plWords } from '../../utils/plural'
+import { formatEta } from '../../utils/pace'
 import './PaceSimulator.css'
 
 interface Props {
@@ -10,15 +11,6 @@ interface Props {
   wordsPerMinute: number
   /** Their current real pace in words/day, for the "today" comparison. */
   currentWordsPerDay: number
-}
-
-function formatDuration(days: number): string {
-  if (days <= 0) return 'osiągnięte'
-  if (days < 60) return `${days} dni`
-  const months = Math.round(days / 30)
-  if (months < 24) return `${months} mies.`
-  const years = (days / 365).toFixed(1).replace('.', ',')
-  return `${years} lat`
 }
 
 /**
@@ -87,10 +79,10 @@ export function PaceSimulator({ knownWords, wordsPerMinute, currentWordsPerDay }
           return (
             <li key={l.level} className="pacesim__row">
               <span className="pacesim__row-name">{l.name}</span>
-              <span className="pacesim__row-eta">{formatDuration(days)}</span>
+              <span className="pacesim__row-eta">{formatEta(days)}</span>
               {saved > 6 && (
                 <span className="pacesim__row-saved">
-                  {formatDuration(saved)} wcześniej
+                  {formatEta(saved)} wcześniej
                 </span>
               )}
             </li>
