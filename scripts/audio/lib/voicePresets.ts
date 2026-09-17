@@ -26,6 +26,17 @@ export const WORD_SETTINGS: VoiceSettings = {
   speed: 0.8,
 }
 
+// For the carrier-phrase approach specifically: listener feedback asked for
+// slightly slower speech ("odrobinę zwolnić") on top of the cut/fade fixes
+// in carrierPhrase.ts/ffmpegPost.ts.
+export const CARRIER_SETTINGS: VoiceSettings = {
+  stability: 0.6,
+  similarity_boost: 0.8,
+  style: 0.2,
+  use_speaker_boost: true,
+  speed: 0.75,
+}
+
 // Sentences already sound natural (they have context) — keep the settings
 // that were already in production, EN speed included. PL sentences keep no
 // explicit speed (native), matching prior behavior.

@@ -10,7 +10,13 @@ import mp3Duration from 'mp3-duration'
 
 if (ffmpegPath) ffmpeg.setFfmpegPath(ffmpegPath)
 
-const FADE_MS = 20
+// Fade-out longer than fade-in: listener feedback on the first carrier-
+// phrase round was that clips ended too abruptly ("za szybko ucięte z
+// tyłu") even after widening the cut's own end margin — a longer trailing
+// fade smooths that out without needing to bleed further into the carrier
+// phrase's next word/period.
+const FADE_IN_MS = 20
+const FADE_OUT_MS = 45
 const SILENCE_THRESHOLD_DB = '-40dB'
 const SILENCE_MIN_DURATION = 0.08 // seconds; avoid clipping soft plosive onsets
 
@@ -52,9 +58,9 @@ export async function postProcessClip(filePath: string): Promise<void> {
       await run(tmp1, tmp2, (c) => { c.audioFilters(['loudnorm=I=-16:TP=-1.5:LRA=11']) })
     }
     const durationSec = await getDuration(tmp2)
-    const fadeOutStart = Math.max(0, durationSec - FADE_MS / 1000)
+    const fadeOutStart = Math.max(0, durationSec - FADE_OUT_MS / 1000)
     await run(tmp2, filePath, (c) => {
-      c.audioFilters([`afade=t=in:d=${FADE_MS / 1000}`, `afade=t=out:st=${fadeOutStart}:d=${FADE_MS / 1000}`])
+      c.audioFilters([`afade=t=in:d=${FADE_IN_MS / 1000}`, `afade=t=out:st=${fadeOutStart}:d=${FADE_OUT_MS / 1000}`])
     })
   } finally {
     for (const t of [tmp1, tmp2]) if (fs.existsSync(t)) fs.unlinkSync(t)
