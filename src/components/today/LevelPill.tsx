@@ -11,11 +11,9 @@ interface Props {
 /**
  * The level you're studying at, in that level's own colour.
  *
- * The "no level picked yet" pulse is `.fx-breathe` from animations.css, not a
- * framer keyframe array: the old version animated `boxShadow` through
- * `['0 0 0 0 transparent', '0 0 0 6px var(--accent-glow)', …]`, and framer
- * can't interpolate a CSS variable inside a shadow string — so the "gentle"
- * pulse was actually snapping between two values.
+ * No pulse when nothing is picked — the "Wybierz poziom" label already asks,
+ * and a glow breathing forever at the top of the page was motion that meant
+ * nothing after the first second.
  */
 export function LevelPill({ level, onPress }: Props) {
   const meta = level != null ? LEVEL_META.find(l => l.level === level) : undefined
@@ -23,7 +21,7 @@ export function LevelPill({ level, onPress }: Props) {
 
   return (
     <motion.button
-      className={`levelpill${level == null ? ' levelpill--empty fx-breathe' : ''}`}
+      className={`levelpill u-liquid${level == null ? ' levelpill--empty' : ''}`}
       style={color ? ({ ['--lvl' as string]: color } as CSSProperties) : undefined}
       onClick={onPress}
       whileTap={{ scale: 0.95 }}

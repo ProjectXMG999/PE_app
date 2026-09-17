@@ -1,8 +1,7 @@
 import { ReactNode, useRef } from 'react'
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { NavIndicator } from '../layout/NavIndicator'
-import { BoltGlyph } from '../mode/glyphs'
-import { EASE_OUT_EXPO, staggerContainerWide } from './motion'
+import { AnimatePresence, motion, PanInfo, useReducedMotion } from 'framer-motion'
+import { BoltGlyph, HeadphonesGlyph } from '../mode/glyphs'
+import { EASE_OUT_EXPO, SPRING_SNAPPY, staggerContainer } from './motion'
 import './ModeSlider.css'
 
 export type StudyPath = 'listen' | 'train'
@@ -12,34 +11,32 @@ interface Props {
   onChange: (mode: StudyPath) => void
   listenContent: ReactNode
   trainContent: ReactNode
-  onInfoClick: () => void
 }
 
-/* The chevrons that used to flank these labels ("‹ … Słuchaj", "Trenuj ›") are
-   gone: the sliding indicator already says which tab is live and which way the
-   page will travel, so they were a third signal for something two already
-   covered. The glyphs animate only on the active tab — see the CSS. */
-const WAVE = (
-  <span className="modeslider__tab-wave" aria-hidden="true">
-    <span /><span /><span />
-  </span>
-)
+/** How far a horizontal drag has to travel before it switches the path. */
+const SWIPE_THRESHOLD = 60
 
 /**
- * Two tabs, one sliding "page" between them — Słuchaj (left) and Trenuj
- * (right), each carrying its own progress strip + recommendation card as one
- * unit. Switching feels like turning a page, not swapping a div: content
- * enters from the side you tapped and the old page exits the other way,
- * matching the direction of travel rather than always fading in place.
+ * An iOS segmented control over one sliding page — Słuchaj (left), Trenuj
+ * (right), each a single recommendation card. Content enters from the side
+ * you tapped; a horizontal swipe on the card does the same.
  */
-export function ModeSlider({ active, onChange, listenContent, trainContent, onInfoClick }: Props) {
+export function ModeSlider({ active, onChange, listenContent, trainContent }: Props) {
   const reduced = useReducedMotion()
   const directionRef = useRef(0)
+  // A swipe that ends over the card must not also count as a tap on it.
+  const draggedRef = useRef(false)
 
   function select(mode: StudyPath) {
     if (mode === active) return
     directionRef.current = mode === 'train' ? 1 : -1
     onChange(mode)
+  }
+
+  function onDragEnd(_: unknown, info: PanInfo) {
+    draggedRef.current = Math.abs(info.offset.x) > 6
+    if (info.offset.x < -SWIPE_THRESHOLD) select('train')
+    else if (info.offset.x > SWIPE_THRESHOLD) select('listen')
   }
 
   const variants = {
@@ -48,43 +45,36 @@ export function ModeSlider({ active, onChange, listenContent, trainContent, onIn
     exit: (dir: number) => ({ x: reduced ? 0 : dir > 0 ? -32 : 32, opacity: 0 }),
   }
 
+  const tabs: { mode: StudyPath; label: string; glyph: ReactNode }[] = [
+    { mode: 'listen', label: 'Słuchaj', glyph: <HeadphonesGlyph size={15} weight={2} /> },
+    { mode: 'train', label: 'Trenuj', glyph: <BoltGlyph size={15} weight={2} /> },
+  ]
+
   return (
     <div className="modeslider">
-      <div className="modeslider__tabs">
-        <button
-          className={`modeslider__tab modeslider__tab--listen${active === 'listen' ? ' modeslider__tab--active' : ''}`}
-          onClick={() => select('listen')}
-        >
-          {active === 'listen' && (
-            <NavIndicator layoutId="today-mode-indicator" className="modeslider__indicator" />
-          )}
-          <span className="modeslider__tab-label">
-            {WAVE} Słuchaj
-          </span>
-        </button>
-        <button
-          className={`modeslider__tab modeslider__tab--train${active === 'train' ? ' modeslider__tab--active' : ''}`}
-          onClick={() => select('train')}
-        >
-          {active === 'train' && (
-            <NavIndicator layoutId="today-mode-indicator" className="modeslider__indicator" />
-          )}
-          <span className="modeslider__tab-label">
-            <span className="modeslider__tab-bolt" aria-hidden="true"><BoltGlyph size={13} /></span> Trenuj
-          </span>
-        </button>
-        <button
-          type="button"
-          className="modeslider__info-btn"
-          onClick={onInfoClick}
-          aria-label="Jak dobieramy te propozycje"
-        >
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10" />
-            <line x1="12" y1="11" x2="12" y2="16" />
-            <circle cx="12" cy="7.5" r="0.5" fill="currentColor" stroke="none" />
-          </svg>
-        </button>
+      <div className="modeslider__tabs u-liquid" role="tablist" aria-label="Ścieżka nauki">
+        {tabs.map(tab => (
+          <button
+            key={tab.mode}
+            type="button"
+            role="tab"
+            aria-selected={active === tab.mode}
+            className={`modeslider__tab${active === tab.mode ? ' modeslider__tab--active' : ''}`}
+            onClick={() => select(tab.mode)}
+          >
+            {active === tab.mode && (
+              <motion.span
+                layoutId="today-mode-indicator"
+                className="modeslider__indicator"
+                transition={reduced ? { duration: 0 } : SPRING_SNAPPY}
+              />
+            )}
+            <span className="modeslider__tab-label">
+              <span aria-hidden="true">{tab.glyph}</span>
+              {tab.label}
+            </span>
+          </button>
+        ))}
       </div>
 
       <div className="modeslider__viewport">
@@ -96,15 +86,21 @@ export function ModeSlider({ active, onChange, listenContent, trainContent, onIn
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: reduced ? 0 : 0.28, ease: EASE_OUT_EXPO }}
+            transition={{ duration: reduced ? 0 : 0.24, ease: EASE_OUT_EXPO }}
             className="modeslider__page"
+            drag={reduced ? false : 'x'}
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.18}
+            dragDirectionLock
+            onDragEnd={onDragEnd}
+            onPointerDownCapture={() => { draggedRef.current = false }}
+            onClickCapture={e => {
+              if (draggedRef.current) { e.preventDefault(); e.stopPropagation() }
+            }}
           >
-            {/* Own initial/animate — independent of the outer page slide — so
-                the card's inner lines cascade on every tab switch, not just on
-                first mount. The parent remounts this via key={active}. */}
             <motion.div
               className="modeslider__stack"
-              variants={staggerContainerWide}
+              variants={staggerContainer}
               initial="hidden"
               animate="show"
             >

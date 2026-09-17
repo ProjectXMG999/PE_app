@@ -1,23 +1,22 @@
 .modeslider {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+  gap: 10px;
 }
 
+/* ── Segmented control ────────────────────────────────────────────────────
+   iOS proportions on a liquid-glass track; the selected segment is a brighter
+   glass pill with its own lit top edge. Labels in the text colour, not the tint. */
 .modeslider__tabs {
   display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px;
-  background: var(--surface-translucent);
-  border: 1px solid var(--border);
+  padding: 3px;
   border-radius: var(--radius-full);
 }
 
 .modeslider__tab {
   position: relative;
   flex: 1;
-  height: 46px;
+  height: 32px;
   border: none;
   background: none;
   border-radius: var(--radius-full);
@@ -29,117 +28,47 @@
   position: absolute;
   inset: 0;
   border-radius: var(--radius-full);
-  background: var(--surface-translucent-strong);
-  border: 1px solid var(--border-accent);
+  background: linear-gradient(180deg, oklch(1 0 0 / 0.22), oklch(1 0 0 / 0.1));
+  box-shadow: 0 2px 8px oklch(0 0 0 / 0.3), inset 0 1px 0 oklch(1 0 0 / 0.35), inset 0 -1px 0 oklch(1 0 0 / 0.06);
   pointer-events: none;
+}
+
+[data-theme="light"] .modeslider__indicator {
+  background: oklch(1 0 0);
+  box-shadow: 0 2px 6px oklch(0.2 0.02 275 / 0.14), inset 0 1px 0 oklch(1 0 0);
 }
 
 .modeslider__tab-label {
   position: relative;
-  display: block;
-  font-family: var(--font-heading);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: var(--text-sm);
-  font-weight: 700;
-  color: var(--text-muted);
+  font-weight: 600;
+  color: var(--text-secondary);
   white-space: nowrap;
   transition: color var(--transition-fast);
 }
 
-.modeslider__tab--active.modeslider__tab--listen .modeslider__tab-label {
-  color: var(--listen-blue);
+.modeslider__tab-label svg {
+  display: block;
 }
 
-.modeslider__tab--active.modeslider__tab--train .modeslider__tab-label {
-  color: var(--accent);
-}
-
-/* Small moving waveform in place of a static headphone icon — the tab reads
-   as "live" rather than a plain label. Both glyphs move ONLY on the active tab:
-   two idle animations looping forever on a row you aren't using is motion that
-   means nothing, and it makes the inactive tab compete with the live one. */
-.modeslider__tab-wave {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 2px;
-  height: 11px;
-  vertical-align: middle;
-  margin: 0 1px;
-}
-
-.modeslider__tab-wave span {
-  width: 2px;
-  border-radius: 1px;
-  background: currentColor;
-  opacity: 0.75;
-  transform: scaleY(0.75);
-}
-
-.modeslider__tab-wave span:nth-child(1) { height: 5px; animation-delay: 0s; }
-.modeslider__tab-wave span:nth-child(2) { height: 10px; animation-delay: 0.2s; }
-.modeslider__tab-wave span:nth-child(3) { height: 6px; animation-delay: 0.4s; }
-
-.modeslider__tab--active .modeslider__tab-wave span {
-  animation: modeslider-eq 1.3s ease-in-out infinite;
-}
-
-@keyframes modeslider-eq {
-  0%, 100% { transform: scaleY(0.5); }
-  50%      { transform: scaleY(1); }
-}
-
-.modeslider__tab-bolt {
-  display: inline-grid;
-  place-items: center;
-  vertical-align: middle;
-}
-
-.modeslider__tab--active .modeslider__tab-bolt {
-  animation: modeslider-bolt 2.2s ease-in-out infinite;
-}
-
-@keyframes modeslider-bolt {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50%      { transform: scale(1.18); opacity: 0.75; }
-}
-
-.modeslider__info-btn {
-  display: grid;
-  place-items: center;
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-  margin-right: 4px;
-  color: var(--text-muted);
-  background: none;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: color var(--transition-fast), border-color var(--transition-fast);
-}
-
-.modeslider__info-btn:hover {
+.modeslider__tab--active .modeslider__tab-label {
   color: var(--text-primary);
-  border-color: var(--border-accent);
-}
-
-.modeslider__info-btn:active {
-  transform: scale(0.9);
 }
 
 /* overflow:hidden clips the sliding page at its edges — necessary so the
    outgoing/incoming page doesn't visibly spill past the viewport mid-slide —
-   but it would also flatten each hero card's own --shadow-card bleed into a
-   hard rectangular cut (the exact bug fixed earlier on the Today hero cards).
-   The negative margin + matching padding gives the shadow room to fade out
-   before hitting the clip boundary, while netting back to zero extra space
-   in normal flow. */
+   but it would also cut each card's shadow into a hard rectangle. The negative
+   margin + matching padding gives the shadow room to fade out before the clip,
+   netting back to zero extra space in normal flow. */
 .modeslider__viewport {
   overflow: hidden;
   margin: -40px;
   padding: 40px;
-  /* The 40px transparent padding (shadow-bleed room) would otherwise sit on top
-     of the tabs row above — the negative margin pulls it up over it — and eat
-     clicks on the ⓘ button. Only the sliding page itself needs to be hit. */
+  /* The transparent padding would otherwise sit over the segmented control
+     above and eat its taps. Only the sliding page itself needs to be hit. */
   pointer-events: none;
 }
 
@@ -148,10 +77,9 @@
   flex-direction: column;
   gap: var(--spacing-sm);
   pointer-events: auto;
+  touch-action: pan-y;
 }
 
-/* Inner wrapper that runs the per-switch stagger; carries the same column
-   layout so the strip and hero keep their gap. */
 .modeslider__stack {
   display: flex;
   flex-direction: column;
@@ -161,10 +89,5 @@
 @media (prefers-reduced-motion: reduce) {
   .modeslider__tab-label {
     transition: none;
-  }
-
-  .modeslider__tab--active .modeslider__tab-wave span,
-  .modeslider__tab--active .modeslider__tab-bolt {
-    animation: none;
   }
 }

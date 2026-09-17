@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
 import { SessionHero } from '../components/today/SessionHero'
 import { DailyGoalPicker } from '../components/today/DailyGoalPicker'
 import { LevelPill } from '../components/today/LevelPill'
 import { LevelPicker } from '../components/today/LevelPicker'
-import { NextStepInfoSheet } from '../components/today/NextStepInfoSheet'
-import { ReviewPriorityInfoSheet } from '../components/today/ReviewPriorityInfoSheet'
+import { TodayGuideButton } from '../components/today/TodayGuideSheet'
 import { PathStrip, StripBand, StripTick } from '../components/today/PathStrip'
 import { ModeSlider, StudyPath } from '../components/today/ModeSlider'
 import { LevelUpPrompt } from '../components/today/LevelUpPrompt'
@@ -21,10 +19,13 @@ import { playTick, playSuccess } from '../services/sfx'
 import { nextListenPack, nextTrainPack, listenedPacksCount, estimateMinutes, packLevelThresholds } from '../data/nextPack'
 import { shouldPromptLevelUp } from '../services/comfort'
 import { LEVEL_COLORS, LEVEL_META, ROUTE_TOTAL } from '../data/levels'
+import { BoltGlyph, CheckGlyph, ChevronRightGlyph, HeadphonesGlyph, RepeatGlyph } from '../components/mode/glyphs'
+import { plWords } from '../utils/plural'
 import { useAppStore } from '../store/useAppStore'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import './TodayPage.css'
+import { useAppNavigate } from '../navigation/navigation'
 
 const allPacks = packagesIndex as PackMeta[]
 
@@ -38,8 +39,7 @@ const trainTicks: StripTick[] = LEVEL_META
   .filter(l => l.threshold < ROUTE_TOTAL)
   .map(l => ({ at: l.threshold }))
 
-/** Cumulative pack counts per level, so Słuchaj gets a named scale too — it
- *  used to show the same four marks with nothing saying what they were. */
+/** Cumulative pack counts per level, so Słuchaj gets a named scale too. */
 const listenThresholds = packLevelThresholds(allPacks)
 const listenTicks: StripTick[] = listenThresholds.slice(0, 3).map(at => ({ at }))
 
@@ -62,14 +62,18 @@ const trainBand = (knownWords: number) =>
 
 const listenBand = (listenedPacks: number) => bandFor(listenedPacks, listenThresholds)
 
+/** "środa, 17 września" — the line above the large title. */
+const todayLabel = () =>
+  new Date().toLocaleDateString('pl-PL', { weekday: 'long', day: 'numeric', month: 'long' })
+
 /**
- * Dzisiaj — the coaching screen: where am I, and the one next thing on each of
- * my two paths. The focus stage carries the daily goal; a slim rail flags the
- * review debt; the slider recommends a pack per path; a quiet strip shows the
- * long-route position. The library (Pakiety) is a different screen.
+ * Dzisiaj — the coaching screen, laid out to fit a phone without scrolling:
+ * a large title, the session hero with the daily goal ring, the review row,
+ * and one recommendation per path behind a segmented control. The library
+ * (Pakiety) is a different screen.
  */
 export function TodayPage() {
-  const navigate = useNavigate()
+  const navigate = useAppNavigate()
   const reduced = useReducedMotion()
   const haptics = useHaptics()
   const snapshot = useProgressData()
@@ -85,8 +89,6 @@ export function TodayPage() {
 
   const [goalOpen, setGoalOpen] = useState(false)
   const [levelPickerOpen, setLevelPickerOpen] = useState(false)
-  const [nextStepInfoOpen, setNextStepInfoOpen] = useState(false)
-  const [reviewInfoOpen, setReviewInfoOpen] = useState(false)
   const [levelUpTarget, setLevelUpTarget] = useState<number | null>(null)
   const celebratedRef = useRef(false)
   const goalCelebratedRef = useRef(false)
@@ -151,135 +153,99 @@ export function TodayPage() {
   const variants = reduced ? fadeUpReduced : heroReveal
   const cardVariants = reduced ? fadeUpReduced : heroCard
 
-  const trainContent = (
-    <>
-      <motion.div variants={variants}>
-        {snapshot ? (
-          <PathStrip
-            tone="train"
-            eyebrow={<>⚡ Twój <em>progress</em> treningu</>}
-            value={snapshot.knownTotal}
-            total={ROUTE_TOTAL}
-            unit="słów"
-            ticks={trainTicks}
-            band={trainBand(snapshot.knownTotal)}
-          />
-        ) : (
-          <div className="today__strip-loading" />
-        )}
-      </motion.div>
-      {train ? (
-        <motion.button
-          type="button"
-          className="today__pick"
-          variants={cardVariants}
-          onClick={() => pressCta(() => navigate(`/pakiet/${train.pack.id}/fiszki-start`, { viewTransition: true }))}
-        >
-          <span className="today__pick-head">
-            <span className="u-kicker">⚡ Trenuj</span>
-            {showPace && (
-              <span className="today__pick-pace">+{pace!.deltaPct}% szybciej niż w zeszłym tygodniu</span>
-            )}
-          </span>
-          <span className="today__pick-name">{train.pack.name}</span>
-          <span className="today__pick-detail">
-            {LEVEL_META.find(l => l.level === train.pack.level)?.name ?? `Poziom ${train.pack.level}`} ·{' '}
-            ~{estimateMinutes(train.pack.wordCount - train.known)} min
-          </span>
-          <span className="today__pick-cta u-cta fx-shine">
-            Trenuj
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-            </svg>
-          </span>
-        </motion.button>
-      ) : (
-        <motion.p className="today__path-empty" variants={variants}>Nic do trenowania na tym poziomie — sprawdź Słuchaj albo zmień poziom.</motion.p>
-      )}
-    </>
+  const levelName = (level: number) => LEVEL_META.find(l => l.level === level)?.name ?? `Poziom ${level}`
+
+  const trainStrip = snapshot && (
+    <PathStrip
+      eyebrow={<><BoltGlyph size={14} weight={2} /> Twój <em>progress</em> treningu</>}
+      value={snapshot.knownTotal}
+      total={ROUTE_TOTAL}
+      unit="słów"
+      ticks={trainTicks}
+      band={trainBand(snapshot.knownTotal)}
+    />
   )
 
-  const listenContent = (
-    <>
-      <motion.div variants={variants}>
-        {snapshot ? (
-          <PathStrip
-            tone="listen"
-            eyebrow={<>🎧 Twój <em>progress</em> słuchania</>}
-            value={listenedPacksCount(allPacks, snapshot)}
-            total={allPacks.length}
-            unit="paczek"
-            ticks={listenTicks}
-            band={listenBand(listenedPacksCount(allPacks, snapshot))}
-          />
-        ) : (
-          <div className="today__strip-loading" />
-        )}
-      </motion.div>
-      {listen ? (
-        <motion.button
-          type="button"
-          className="today__pick today__pick--listen"
-          variants={cardVariants}
-          onClick={() => pressCta(() => navigate(`/pakiet/${listen.pack.id}/start`, { viewTransition: true }))}
-        >
-          <span className="today__pick-head">
-            <span className="u-kicker">🎧 Słuchaj</span>
-          </span>
-          <span className="today__pick-name">{listen.pack.name}</span>
-          <span className="today__pick-detail">
-            {LEVEL_META.find(l => l.level === listen.pack.level)?.name ?? `Poziom ${listen.pack.level}`} ·{' '}
-            ~{estimateMinutes(listen.pack.wordCount - listen.startIndex)} min
-          </span>
-          <span className="today__pick-cta today__pick-cta--listen u-cta fx-shine">
-            Słuchaj
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-            </svg>
-          </span>
-        </motion.button>
-      ) : (
-        <motion.p className="today__path-empty" variants={variants}>Nic do słuchania na tym poziomie — sprawdź Trenuj albo zmień poziom.</motion.p>
-      )}
-    </>
+  const listenedCount = snapshot ? listenedPacksCount(allPacks, snapshot) : 0
+  const listenStrip = snapshot && (
+    <PathStrip
+      eyebrow={<><HeadphonesGlyph size={14} weight={2} /> Twój <em>progress</em> słuchania</>}
+      value={listenedCount}
+      total={allPacks.length}
+      unit="paczek"
+      ticks={listenTicks}
+      band={listenBand(listenedCount)}
+    />
   )
+
+  const trainPick = train ? (
+    <motion.button
+      type="button"
+      className="today__pick u-liquid"
+      variants={cardVariants}
+      onClick={() => pressCta(() => navigate(`/pakiet/${train.pack.id}/fiszki-start`, { viewTransition: true }))}
+    >
+      {showPace && (
+        <span className="today__pick-pace">+{pace!.deltaPct}% szybciej niż tydzień temu</span>
+      )}
+      <span className="today__pick-name">{train.pack.name}</span>
+      <span className="today__pick-detail">
+        {levelName(train.pack.level)} · ok. {estimateMinutes(train.pack.wordCount - train.known)} min
+      </span>
+      <span className="today__pick-cta">Zacznij trening</span>
+    </motion.button>
+  ) : (
+    <motion.div className="today__path-empty u-liquid" variants={variants}>
+      <p>Na tym poziomie nie ma nic do trenowania. Zajrzyj do Słuchaj albo zmień poziom.</p>
+    </motion.div>
+  )
+
+  const listenPick = listen ? (
+    <motion.button
+      type="button"
+      className="today__pick u-liquid"
+      variants={cardVariants}
+      onClick={() => pressCta(() => navigate(`/pakiet/${listen.pack.id}/start`, { viewTransition: true }))}
+    >
+      <span className="today__pick-name">{listen.pack.name}</span>
+      <span className="today__pick-detail">
+        {levelName(listen.pack.level)} · ok. {estimateMinutes(listen.pack.wordCount - listen.startIndex)} min
+      </span>
+      <span className="today__pick-cta">Zacznij słuchać</span>
+    </motion.button>
+  ) : (
+    <motion.div className="today__path-empty u-liquid" variants={variants}>
+      <p>Na tym poziomie nie ma nic do słuchania. Zajrzyj do Trenuj albo zmień poziom.</p>
+    </motion.div>
+  )
+
+  const stripSlot = (strip: typeof trainStrip) => (
+    <motion.div variants={variants}>
+      {strip || <div className="today__strip-loading" />}
+    </motion.div>
+  )
+
+  const trainContent = <>{stripSlot(trainStrip)}{trainPick}</>
+  const listenContent = <>{stripSlot(listenStrip)}{listenPick}</>
 
   return (
     <AppShell>
       <motion.div className="today" variants={staggerContainerWide} initial="hidden" animate="show">
-        {/* Heading kept for the document outline / screen readers only — the
-            bottom-nav tab already labels this screen, and a big visible word
-            just competed with the focus stage below it. */}
-        <h1 className="today__title-sr">Dzisiaj</h1>
-
-        {/* Three groups, not one stack: gdzie jestem · co teraz · przeglądaj.
-            The gap between groups is twice the gap inside one, which is the
-            whole difference between a composed page and a list of widgets.
-            Each group is a motion.div with its own stagger — framer only
-            cascades to *direct* children, so a plain <div> here would silently
-            kill the entrance animation of everything it wraps. */}
-        <motion.div className="today__group" variants={staggerContainer}>
-          <motion.div className="today__level-row" variants={variants}>
+        {/* Large title, the way an iOS tab opens: the date above, the screen's
+            name below, the level and the one info button on the right. */}
+        <motion.header className="today__header" variants={variants}>
+          <div className="today__heading">
+            <p className="today__date">{todayLabel()}</p>
+            <h1 className="today__title">Dzisiaj</h1>
+          </div>
+          <div className="today__header-actions">
             <LevelPill level={todayLevel} onPress={() => setLevelPickerOpen(true)} />
-            {todayLevel != null && (
-              <button
-                className="today__browse-level"
-                onClick={() => { homeSetLevel(todayLevel); navigate('/', { viewTransition: true }) }}
-              >
-                Przeglądaj poziom
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-                </svg>
-              </button>
-            )}
-          </motion.div>
-        </motion.div>
+            <TodayGuideButton className="today__info" />
+          </div>
+        </motion.header>
 
         {nothingLeft ? (
-          <motion.section
-            className="today__done u-surface--raised u-surface--gold"
-            variants={variants}
-          >
+          <motion.section className="today__done u-liquid u-liquid--gold" variants={variants}>
             <motion.span
               className="today__done-icon"
               aria-hidden="true"
@@ -287,97 +253,82 @@ export function TodayPage() {
               animate={{ scale: 1 }}
               transition={reduced ? { duration: 0 } : EASE_SPRING}
             >
-              ✓
+              <CheckGlyph size={30} weight={2.4} />
             </motion.span>
-            <h2 className="today__done-title u-display">Zrobione</h2>
+            <h2 className="today__done-title">Na dziś wszystko</h2>
             <p className="today__done-text">
               {reviewDone
-                ? `Na dziś wszystko. Jeszcze ${backlog} w kolejce powtórek wróci jutro.`
+                ? `Jeszcze ${backlog} ${plWords(backlog)} w kolejce powtórek wróci jutro.`
                 : goalMet
-                  ? 'Cel osiągnięty i nic nie czeka na powtórkę. Jutro Progress pokaże Ci następne.'
-                  : 'Nic nie czeka. Jutro Progress pokaże Ci następne.'}
+                  ? 'Cel osiągnięty i nic nie czeka na powtórkę. Jutro pokażemy Ci, co dalej.'
+                  : 'Nic nie czeka. Jutro pokażemy Ci, co dalej.'}
             </p>
           </motion.section>
         ) : (
           <>
-            {/* Co teraz. Inteligentny is the recommended one-tap action — it
-                sits above everything else, but Trenuj/Słuchaj/Powtórka below
-                stay exactly as they were for anyone who wants to pick by hand.
-                The daily goal ring lives inside it now (see SessionHero)
-                rather than as its own card above. */}
             <motion.div className="today__group" variants={staggerContainer}>
-            <motion.div variants={cardVariants}>
-              {pulse == null ? (
-                <div className="today__skeleton skeleton" style={{ height: 220 }} />
-              ) : (
-                <SessionHero
-                  snapshot={snapshot}
-                  onStart={() => pressCta(() => { unlockAudioGlobally(); navigate('/inteligentny') })}
-                  secondsStudied={pulse.secondsToday}
-                  goalSec={pulse.goalSec}
-                  onEditGoal={() => setGoalOpen(true)}
-                />
+              <motion.div variants={cardVariants}>
+                {pulse == null ? (
+                  <div className="today__skeleton skeleton" style={{ height: 196 }} />
+                ) : (
+                  <SessionHero
+                    snapshot={snapshot}
+                    onStart={() => pressCta(() => { unlockAudioGlobally(); navigate('/inteligentny') })}
+                    secondsStudied={pulse.secondsToday}
+                    goalSec={pulse.goalSec}
+                    onEditGoal={() => setGoalOpen(true)}
+                  />
+                )}
+              </motion.div>
+
+              {backlog > 0 && (
+                <motion.div
+                  className={`today__reviews u-liquid today__reviews--${reviewDone ? 'done' : urgency}`}
+                  variants={variants}
+                >
+                  {/* Row 1 — the action: today's portion and how long it takes. */}
+                  <button
+                    type="button"
+                    className="today__reviews-row"
+                    onClick={() => pressCta(() => { unlockAudioGlobally(); navigate('/powtorka', { viewTransition: true }) })}
+                  >
+                    <span className={`today__reviews-badge${urgency === 'urgent' && !reviewDone ? ' fx-ping' : ''}`} aria-hidden="true">
+                      {reviewDone ? <CheckGlyph size={18} weight={2.4} /> : <RepeatGlyph size={18} weight={2.2} />}
+                    </span>
+                    <span className="today__reviews-body">
+                      <strong>{reviewDone ? 'Porcja na dziś zrobiona' : 'Powtórka na dziś'}</strong>
+                      <span>
+                        {reviewDone
+                          ? 'Możesz powtórzyć więcej z kolejki'
+                          : `${shownServing} ${plWords(serving)} · ok. ${estimateMinutes(serving)} min`}
+                      </span>
+                    </span>
+                    <span className="today__reviews-chevron" aria-hidden="true"><ChevronRightGlyph size={16} weight={2.2} /></span>
+                  </button>
+
+                  {/* Row 2 — the context: the whole queue, and where it sits. */}
+                  <button
+                    type="button"
+                    className="today__reviews-row today__reviews-row--queue"
+                    onClick={() => navigate('/postęp#powtorki', { viewTransition: true })}
+                  >
+                    <span className="today__reviews-body">
+                      <span>
+                        Czeka łącznie
+                        {!reviewDone && urgency !== 'calm' && (
+                          <em> · {urgency === 'urgent' ? 'sporo zaległych' : 'rośnie'}</em>
+                        )}
+                      </span>
+                      <strong>{backlog.toLocaleString('pl-PL')} {plWords(backlog)} · ok. {estimateMinutes(backlog)} min</strong>
+                    </span>
+                    <span className="today__reviews-link">
+                      Statystyki <ChevronRightGlyph size={14} weight={2.2} />
+                    </span>
+                  </button>
+                </motion.div>
               )}
             </motion.div>
 
-            {serving > 0 && (
-              <motion.button
-                type="button"
-                className={`today__rail u-rail today__rail--${urgency}`}
-                variants={variants}
-                onClick={() => pressCta(() => { unlockAudioGlobally(); navigate('/powtorka', { viewTransition: true }) })}
-              >
-                <span className="today__rail-head">
-                  <span
-                    className={`today__rail-dot today__rail-dot--${urgency}${urgency === 'calm' ? '' : ' fx-ping'}`}
-                    aria-hidden="true"
-                  />
-                  <span className="u-kicker">
-                    🔁 {urgency === 'urgent' ? 'Sporo zaległych' : urgency === 'building' ? 'Powtórki się zbierają' : 'Priorytet na dziś'}
-                  </span>
-                </span>
-                <span className="today__rail-body">
-                  <strong>Powtórka · {shownServing} słów</strong>
-                  <span>~{estimateMinutes(serving)} min</span>
-                </span>
-                <span className="today__rail-go" aria-hidden="true">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </span>
-                <button
-                  type="button"
-                  className="today__rail-info"
-                  onClick={(e) => { e.stopPropagation(); setReviewInfoOpen(true) }}
-                  aria-label="Jak działają powtórki"
-                >
-                  ⓘ
-                </button>
-              </motion.button>
-            )}
-
-            {reviewDone && (
-              <motion.button
-                type="button"
-                className="today__review-done u-rail"
-                variants={variants}
-                onClick={() => pressCta(() => { unlockAudioGlobally(); navigate('/powtorka', { viewTransition: true }) })}
-              >
-                <span className="today__review-done-icon" aria-hidden="true">✓</span>
-                <span className="today__review-done-body">
-                  <strong>Powtórki na dziś zrobione</strong>
-                  <span>Jeszcze {backlog} w kolejce, wrócą jutro — albo zrób je już teraz</span>
-                </span>
-                <span className="today__review-done-go" aria-hidden="true">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </span>
-              </motion.button>
-            )}
-            </motion.div>
-
-            {/* Przeglądaj ścieżkami. */}
             <motion.div className="today__group" variants={staggerContainer}>
               <motion.div variants={variants}>
                 <ModeSlider
@@ -385,16 +336,24 @@ export function TodayPage() {
                   onChange={setActiveMode}
                   listenContent={listenContent}
                   trainContent={trainContent}
-                  onInfoClick={() => setNextStepInfoOpen(true)}
                 />
               </motion.div>
+              {todayLevel != null && (
+                <motion.button
+                  type="button"
+                  className="today__browse-level"
+                  variants={variants}
+                  onClick={() => { homeSetLevel(todayLevel); navigate('/pakiety', { viewTransition: true }) }}
+                >
+                  Wszystkie paczki poziomu {levelName(todayLevel)}
+                  <ChevronRightGlyph size={14} weight={2.2} />
+                </motion.button>
+              )}
             </motion.div>
           </>
         )}
 
         {goalOpen && <DailyGoalPicker onClose={() => setGoalOpen(false)} />}
-        {nextStepInfoOpen && <NextStepInfoSheet onClose={() => setNextStepInfoOpen(false)} />}
-        {reviewInfoOpen && <ReviewPriorityInfoSheet onClose={() => setReviewInfoOpen(false)} />}
         {levelPickerOpen && (
           <LevelPicker
             current={todayLevel}

@@ -6,18 +6,21 @@ export const EASE_OUT_EXPO: [number, number, number, number] = [0.16, 1, 0.3, 1]
 /** Numeric equivalent of --ease-spring, tuned to match the token's bounce. */
 export const EASE_SPRING: Transition = { type: 'spring', stiffness: 300, damping: 20 }
 
+/** Critically damped and quick — selection indicators, press feedback. No bounce. */
+export const SPRING_SNAPPY: Transition = { type: 'spring', stiffness: 600, damping: 40 }
+
 export const staggerContainer: Variants = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.07 },
+    transition: { staggerChildren: 0.05 },
   },
 }
 
-/** Wider stagger for places where the cascade itself is the effect. */
+/** Between page groups — kept short: the page should be ready, not performing. */
 export const staggerContainerWide: Variants = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.13, delayChildren: 0.05 },
+    transition: { staggerChildren: 0.05 },
   },
 }
 
@@ -27,13 +30,13 @@ export const fadeUp: Variants = {
 }
 
 /**
- * Bolder entrance — more travel + a touch of scale so each line clearly rises
- * into place rather than just fading. Used on Dzisiaj where the motion is meant
- * to be felt, not only sensed.
+ * Dzisiaj's entrance — a short settle, no scale. It used to travel 22px and
+ * scale up from 0.97, which made every visit to the page a small show; a screen
+ * you open daily should just be there.
  */
 export const heroReveal: Variants = {
-  hidden: { opacity: 0, y: 22, scale: 0.97 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.55, ease: EASE_OUT_EXPO } },
+  hidden: { opacity: 0, y: 8 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: EASE_OUT_EXPO } },
 }
 
 /**
@@ -41,12 +44,11 @@ export const heroReveal: Variants = {
  * rises in AND cascades its own inner lines (each a `heroReveal` child).
  */
 export const heroCard: Variants = {
-  hidden: { opacity: 0, y: 22, scale: 0.97 },
+  hidden: { opacity: 0, y: 8 },
   show: {
     opacity: 1,
     y: 0,
-    scale: 1,
-    transition: { duration: 0.5, ease: EASE_OUT_EXPO, staggerChildren: 0.09, delayChildren: 0.08 },
+    transition: { duration: 0.35, ease: EASE_OUT_EXPO, staggerChildren: 0.05 },
   },
 }
 

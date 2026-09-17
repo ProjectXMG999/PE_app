@@ -8,8 +8,8 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  min-height: 32px;
-  padding: 6px 13px;
+  min-height: 36px;
+  padding: 6px 14px;
   border-radius: var(--radius-full);
   font-family: var(--font-heading);
   font-size: var(--text-sm);
@@ -18,14 +18,8 @@
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   color: var(--lvl);
-  border: 1px solid color-mix(in oklch, var(--lvl) 42%, transparent);
-  background: color-mix(in oklch, var(--lvl) 14%, transparent);
-  transition: border-color var(--transition-fast), background var(--transition-fast);
-}
-
-.levelpill:hover {
-  border-color: color-mix(in oklch, var(--lvl) 60%, transparent);
-  background: color-mix(in oklch, var(--lvl) 20%, transparent);
+  /* Liquid glass (.u-liquid) washed with the level's colour. */
+  --liquid-tint: linear-gradient(color-mix(in oklch, var(--lvl) 18%, transparent), color-mix(in oklch, var(--lvl) 10%, transparent));
 }
 
 .levelpill__dot {
@@ -36,13 +30,10 @@
   background: currentColor;
 }
 
-/* Nothing picked yet: neutral pill that breathes until it's dealt with.
-   --fx-glow is read by .fx-breathe in animations.css. */
+/* Nothing picked yet: a neutral pill. */
 .levelpill--empty {
   color: var(--text-secondary);
-  border-color: var(--border);
-  background: var(--surface-translucent);
-  --fx-glow: var(--glow-primary);
+  --liquid-tint: none;
 }
 
 .levelpill--empty .levelpill__dot { background: var(--text-muted); }

@@ -1,0 +1,315 @@
+/* =============================================================================
+ * TODAY GUIDE — "Jak działa Dzisiaj" bottom sheet.
+ * -----------------------------------------------------------------------------
+ * Only transform and opacity animate. No backdrop-filter anywhere here: a blur
+ * that has to be recomputed every frame while a full-width sheet slides over
+ * the WebGL ground is exactly what made the old sheets stutter.
+ * ========================================================================== */
+
+.guide-root {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.guide-scrim {
+  position: absolute;
+  inset: 0;
+  will-change: opacity;
+  background: oklch(0 0 0 / 0.5);
+}
+
+[data-theme="light"] .guide-scrim {
+  background: oklch(0.2 0.02 275 / 0.3);
+}
+
+.guide {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 520px;
+  /* A fixed height, not max-height: topics differ in length, and a sheet that
+     resized on every tab switch jumped under the finger. */
+  height: min(84vh, 720px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  /* A violet glow falling from the top edge onto a near-black surface — the
+     same light the hero card carries, without a blur to recompute. */
+  background:
+    radial-gradient(120% 55% at 50% -8%, color-mix(in oklch, var(--accent) 22%, transparent), transparent 70%),
+    color-mix(in oklch, var(--bg-surface) 96%, var(--accent) 4%);
+  border-radius: 32px 32px 0 0;
+  /* The lit top edge is an inset shadow, not a masked pseudo-element: Safari
+     re-rasterises a mask-composite layer as its parent moves, which is one of
+     the things that made the slide stutter. */
+  box-shadow:
+    inset 0 1px 0 oklch(1 0 0 / 0.22),
+    0 -16px 40px oklch(0 0 0 / 0.4);
+  backface-visibility: hidden;
+  outline: none;
+  will-change: transform;
+}
+
+[data-theme="light"] .guide {
+  background:
+    radial-gradient(120% 55% at 50% -8%, color-mix(in oklch, var(--accent) 12%, transparent), transparent 70%),
+    var(--bg-surface);
+  box-shadow: inset 0 1px 0 oklch(1 0 0), 0 -12px 32px oklch(0.2 0.02 275 / 0.14);
+}
+
+@media (min-width: 640px) {
+  .guide-root { align-items: center; }
+  .guide { border-radius: 32px; padding-bottom: 0; }
+}
+
+/* ── Header: grabber, title, segmented control — the drag handle ──────────── */
+.guide__header {
+  flex-shrink: 0;
+  padding: 8px 20px 12px;
+  touch-action: none;
+  cursor: grab;
+}
+
+.guide__grabber {
+  display: block;
+  width: 36px;
+  height: 5px;
+  margin: 0 auto 10px;
+  border-radius: var(--radius-full);
+  background: color-mix(in oklch, var(--text-primary) 22%, transparent);
+}
+
+.guide__titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.guide__heading {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.guide__done {
+  min-height: 44px;
+  padding: 0 4px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.guide__done:active { opacity: 0.5; }
+
+.guide__tabs {
+  display: flex;
+  padding: 2px;
+  background: color-mix(in oklch, var(--text-primary) 9%, transparent);
+  border-radius: var(--radius-full);
+}
+
+.guide__tab {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 34px;
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+}
+
+.guide__tab-indicator {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-full);
+  background: linear-gradient(180deg, oklch(1 0 0 / 0.2), oklch(1 0 0 / 0.1));
+  box-shadow: 0 2px 6px oklch(0 0 0 / 0.25), inset 0 1px 0 oklch(1 0 0 / 0.3);
+}
+
+[data-theme="light"] .guide__tab-indicator {
+  background: oklch(1 0 0);
+  box-shadow: 0 2px 6px oklch(0.2 0.02 275 / 0.14);
+}
+
+.guide__tab-label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.guide__tab-label svg { display: block; flex-shrink: 0; }
+
+.guide__tab--active .guide__tab-label { color: var(--text-primary); }
+
+/* ── Body ─────────────────────────────────────────────────────────────────── */
+.guide__body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 8px 20px 28px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hero: gradient squircle badge, centred title and lead — Apple's "What's
+   New" layout. */
+.guide__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 6px 0;
+  text-align: center;
+}
+
+.guide__badge {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  margin-bottom: 14px;
+  color: oklch(1 0 0);
+  background: linear-gradient(145deg, var(--badge-from), var(--badge-to));
+  border-radius: 20px;
+  box-shadow:
+    inset 0 1px 0 oklch(1 0 0 / 0.35),
+    inset 0 -2px 6px oklch(0 0 0 / 0.18),
+    0 10px 28px color-mix(in oklch, var(--badge-from) 40%, transparent);
+}
+
+.guide__title {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: var(--tracking-display);
+  color: var(--text-primary);
+  text-wrap: balance;
+}
+
+.guide__lead {
+  margin: 0 0 24px;
+  max-width: 34ch;
+  font-size: var(--text-md);
+  line-height: 1.5;
+  color: var(--text-secondary);
+  text-wrap: pretty;
+}
+
+/* Points: one inset-grouped glass panel, symbol column on the left. */
+.guide__points {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  background: linear-gradient(180deg, oklch(1 0 0 / 0.07), oklch(1 0 0 / 0.035));
+  border-radius: 20px;
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.1), inset 0 0 0 1px oklch(1 0 0 / 0.05);
+}
+
+[data-theme="light"] .guide__points {
+  background: oklch(0.97 0.006 275);
+  box-shadow: inset 0 0 0 1px oklch(0.2 0.02 275 / 0.06);
+}
+
+.guide__point {
+  position: relative;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 14px;
+  padding: 14px 16px;
+}
+
+/* Hairline between rows, starting at the text column like an iOS list. */
+.guide__point + .guide__point::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 60px;
+  right: 0;
+  height: 1px;
+  background: var(--border);
+}
+
+.guide__point-glyph {
+  display: grid;
+  place-items: start center;
+  padding-top: 1px;
+}
+
+.guide__point-copy {
+  min-width: 0;
+}
+
+.guide__point-title {
+  margin: 0 0 3px;
+  font-size: var(--text-md);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.guide__point-text {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Colour key under the review points. */
+.guide__legend {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.guide__legend-title {
+  margin: 0 0 10px;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.guide__legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px 6px 10px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  background: color-mix(in oklch, var(--text-primary) 7%, transparent);
+  border-radius: var(--radius-full);
+}
+
+.guide__legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius-full);
+  background: var(--dot);
+  box-shadow: 0 0 8px color-mix(in oklch, var(--dot) 60%, transparent);
+}
