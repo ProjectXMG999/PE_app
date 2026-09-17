@@ -7,10 +7,8 @@
   overflow: hidden;
 }
 
-/* Same lit-from-above material as .u-tile (surfaces.css) — a flat --bg-card
-   fill sits at ~0.03 lightness above the ambient ground and reads as nothing
-   there, same problem a flat list row has. Shape stays local (pill, not
-   u-tile's default radius), so this reuses the tokens directly. */
+/* Liquid glass (.u-liquid, added in ProgressPill.tsx) — the same material as
+   the account button beside it and the cards below. Shape stays local. */
 .progresspill__stat {
   display: flex;
   align-items: center;
@@ -21,10 +19,7 @@
   font-size: var(--text-xs);
   font-weight: 700;
   color: var(--text-secondary);
-  background: var(--surface-tile);
-  border: 1px solid var(--tile-border);
   border-radius: var(--radius-full);
-  box-shadow: var(--tile-hi);
   cursor: pointer;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
@@ -32,8 +27,7 @@
 }
 
 .progresspill__stat:hover {
-  border-color: var(--border-accent);
-  background: var(--surface-tile-hover);
+  color: var(--text-primary);
 }
 
 .progresspill__stat:active {

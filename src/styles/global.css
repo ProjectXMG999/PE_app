@@ -1,14 +1,6 @@
-/* Self-hosted (the app has to work offline) — never Google's CDN.
-   Bricolage Grotesque for headings, Inter for body: both carry the full
-   latin-ext set, so Polish diacritics come from the real face rather than a
-   fallback.
-   
-   The `opsz` cut, not `wght`: Bricolage carries an optical-size axis, and this
-   app runs the heading face from 9px kickers to a 38px display. That axis is
-   exactly what keeps both ends right — it thins the strokes and opens the
-   spacing as the size drops, automatically, via `font-optical-sizing: auto`
-   below. One variable file also replaces the five static weights this used to
-   load, so the payload went down, not up. */
+/* The app is set in the system face (see --font-heading in tokens.css). These
+   self-hosted imports are no longer referenced by any token; they stay until a
+   pass over every screen confirms nothing names the faces directly. */
 @import '@fontsource-variable/bricolage-grotesque/opsz.css';
 @import '@fontsource/inter/400.css';
 @import '@fontsource/inter/500.css';
@@ -56,16 +48,8 @@ body {
   transition: background-color var(--transition-med), color var(--transition-med);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Contextual alternates + real lining figures: Inter's defaults for these
-     are what separate "a webfont" from typeset text. */
-  font-feature-settings: 'cv11', 'ss01';
   font-optical-sizing: auto;
   text-rendering: optimizeLegibility;
-  /* Both display faces this app has used draw a narrow word space; at UI
-     sizes, and next to the negative tracking headings carry, "Tom II" starts
-     reading as "TomII". This nudges the space back to where the eye expects
-     it. */
-  word-spacing: 0.06em;
 }
 
 #root {
@@ -87,9 +71,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
-  /* A hair of negative tracking is what makes a heading look set rather than
-     typed. Display-size headings tighten further via --tracking-display. */
-  letter-spacing: -0.02em;
+  /* SF sets its own tracking per size; display headings nudge it via
+     --tracking-display. */
+  letter-spacing: -0.005em;
 }
 
 button {

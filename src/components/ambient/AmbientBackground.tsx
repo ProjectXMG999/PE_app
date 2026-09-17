@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useState } from 'react'
+import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import { useReducedMotion } from 'framer-motion'
 import { useAppStore } from '../../store/useAppStore'
 import './AmbientBackground.css'
@@ -14,7 +14,8 @@ import './AmbientBackground.css'
  *
  *  1. **Theme.** The five mesh stops come from the --mesh-* tokens rather than
  *     being hard-coded, and are re-read when <html data-theme> flips. Light
- *     theme gets its own palette, not the dark one dimmed.
+ *     theme is the dark mesh with its lightness mirrored, and a flip recolours
+ *     the running shader in place — the motion carries on from the same frame.
  *  2. **Pausing.** Focus/session screens (flashcards, autoplay, review) set
  *     `ambientHidden` in the store; the element fades and the shader unmounts
  *     entirely, so a study session doesn't share the GPU with a backdrop.
@@ -42,6 +43,25 @@ function readMeshColors(): string[] {
   const cs = getComputedStyle(document.documentElement)
   const colors = MESH_TOKENS.map(t => cs.getPropertyValue(t).trim())
   return colors.every(Boolean) ? colors : FALLBACK_COLORS
+}
+
+/** The vanilla mount Paper Shaders attaches to its container element. Only the
+ *  one method we call is typed. */
+interface ShaderHost extends HTMLElement {
+  paperShaderMount?: { setUniforms: (uniforms: Record<string, unknown>) => void }
+}
+
+/** '#rrggbb' → sRGB RGBA in 0–1, the shape the shader's u_colors takes
+ *  (what the library's own getShaderColorFromString produces for 6-digit hex —
+ *  the only format the --mesh-* tokens are allowed to use). */
+function hexToShaderColor(hex: string): [number, number, number, number] {
+  const n = parseInt(hex.slice(1, 7), 16)
+  return [((n >> 16) & 255) / 255, ((n >> 8) & 255) / 255, (n & 255) / 255, 1]
+}
+
+function recolorLiveShader(field: HTMLElement | null, colors: string[]) {
+  const host = field?.querySelector<ShaderHost>('[data-paper-shader]')
+  host?.paperShaderMount?.setUniforms({ u_colors: colors.map(hexToShaderColor) })
 }
 
 export function AmbientBackground() {
@@ -74,9 +94,24 @@ export function AmbientBackground() {
   // preference only resolves to a concrete theme inside App.tsx's effect, and
   // data-theme on <html> is where that lands. This also picks up the pre-paint
   // theme written by the inline script in index.html.
+  //
+  // A theme flip must recolour the shader, never rebuild it: a remount resets
+  // the mesh to frame 0, which reads as the background jumping. Changing the
+  // `colors` prop alone already avoids that, but it arrives a render, an effect
+  // and an await later — a frame or two of dark mesh over a light page while
+  // the rest of the UI has already swapped. So the new stops are also pushed
+  // straight into the live mount from the observer callback, which runs as a
+  // microtask after setAttribute and therefore lands in the same frame as the
+  // CSS. The state update keeps React's copy in agreement, so a later render
+  // re-applies the same values instead of reverting them.
+  const fieldRef = useRef<HTMLDivElement>(null)
   const [colors, setColors] = useState<string[]>(readMeshColors)
   useEffect(() => {
-    const observer = new MutationObserver(() => setColors(readMeshColors()))
+    const observer = new MutationObserver(() => {
+      const next = readMeshColors()
+      recolorLiveShader(fieldRef.current, next)
+      setColors(next)
+    })
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
     return () => observer.disconnect()
   }, [])
@@ -86,7 +121,7 @@ export function AmbientBackground() {
 
   return (
     <div className={`ambient${ambientHidden ? ' ambient--hidden' : ''}`} aria-hidden="true">
-      <div className={`ambient__field${showShader ? ' ambient__field--ready' : ''}`}>
+      <div ref={fieldRef} className={`ambient__field${showShader ? ' ambient__field--ready' : ''}`}>
         {showShader && (
           <Suspense fallback={null}>
             <MeshField colors={colors} still={!!reduced || tabHidden} />

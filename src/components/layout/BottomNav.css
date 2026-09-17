@@ -1,17 +1,49 @@
+/* A floating liquid-glass capsule, iOS 26 style. Content does scroll under
+   this one (it's fixed over <main>), so the blur is doing real work; the fill
+   keeps a share of the ground colour so labels stay legible over a bright card
+   passing beneath. Same rim/sheen recipe as .u-liquid, written out here because
+   .u-liquid would set position: relative on a fixed element. */
 .bottomnav {
   position: fixed;
   left: var(--spacing-md);
   right: var(--spacing-md);
   bottom: 14px;
   z-index: 1000;
+  isolation: isolate;
   height: var(--bottomnav-height);
   display: flex;
-  background: color-mix(in oklch, var(--bg-primary) 60%, transparent);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  box-shadow: 0 8px 32px oklch(0 0 0 / 0.3);
-  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  padding: 0 4px;
+  background: var(--liquid-bg), color-mix(in oklch, var(--bg-primary) 45%, transparent);
+  border-radius: var(--radius-full);
+  box-shadow: var(--liquid-shadow);
+  -webkit-backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+          backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+}
+
+.bottomnav::before,
+.bottomnav::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.bottomnav::before {
+  padding: 1px;
+  background: var(--liquid-rim);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.bottomnav::after {
+  background: var(--liquid-sheen);
+}
+
+[data-theme="light"] .bottomnav {
+  background: var(--liquid-bg), color-mix(in oklch, var(--bg-primary) 40%, transparent);
 }
 
 .bottomnav__item {
@@ -40,10 +72,6 @@
   color: var(--accent);
 }
 
-.bottomnav__item--active .bottomnav__icon-wrap {
-  filter: drop-shadow(0 0 8px var(--accent-glow));
-}
-
 .bottomnav__item--active:hover {
   color: var(--accent-bright);
 }
@@ -52,14 +80,20 @@
   transform: scale(0.92);
 }
 
+/* The selected tab: a brighter glass pill with its own lit top edge — the
+   same object as the segmented control's indicator on Dzisiaj. No glow. */
 .bottomnav__indicator {
   position: absolute;
-  inset: 2px 6px;
-  border-radius: var(--radius-md);
-  background: var(--surface-translucent-strong);
-  border: 1px solid var(--border-accent);
-  box-shadow: 0 0 16px var(--accent-glow);
+  inset: 6px 2px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(180deg, oklch(1 0 0 / 0.16), oklch(1 0 0 / 0.06));
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.28), 0 2px 8px oklch(0 0 0 / 0.22);
   pointer-events: none;
+}
+
+[data-theme="light"] .bottomnav__indicator {
+  background: linear-gradient(180deg, oklch(1 0 0 / 0.95), oklch(1 0 0 / 0.7));
+  box-shadow: inset 0 1px 0 oklch(1 0 0), 0 2px 8px oklch(0.2 0.02 275 / 0.12);
 }
 
 .bottomnav__icon-wrap {
@@ -76,7 +110,7 @@
   font-family: var(--font-heading);
   font-size: var(--text-2xs);
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
   line-height: 1;
 }
 

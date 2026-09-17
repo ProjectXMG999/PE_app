@@ -82,15 +82,14 @@
 }
 
 /* ── Light theme ──────────────────────────────────────────────────────────
-   The palette already flips via the --mesh-* tokens. What has to change here is
-   the physics: overlay grain on near-white turns to dirt, and a black floor
-   vignette becomes a smudge. */
-[data-theme='light'] .ambient__grain {
-  mix-blend-mode: soft-light;
-}
-
+   The mesh stops are the dark ones with lightness mirrored (see tokens.css),
+   so the layers above them mirror too. Overlay grain is already symmetric —
+   overlay(1−a, 1−b) = 1−overlay(a, b) — so it stays as is. The floor vignette
+   is the only thing that has to flip explicitly: the dark theme sinks the
+   bottom edge into shadow, the light theme lifts it into the same amount of
+   light. */
 [data-theme='light'] .ambient::after {
   background: radial-gradient(130% 46% at 50% 118%,
-    oklch(0.2 0.02 275 / 0.07) 0%,
+    oklch(1 0 0 / 0.26) 0%,
     transparent 62%);
 }

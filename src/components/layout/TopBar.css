@@ -1,3 +1,7 @@
+/* The bar sits above AppShell's scrolling <main>, not over it, so there is no
+   content to frost: at rest it's fully transparent and the ambient ground runs
+   straight up to the status bar. Once the page scrolls it gains a hairline, so
+   the edge the content disappears under is visible. */
 .topbar {
   position: sticky;
   top: 0;
@@ -8,29 +12,32 @@
   justify-content: space-between;
   padding: 0 var(--spacing-md) 8px;
   padding-top: calc(8px + env(safe-area-inset-top, 0px));
-  background: color-mix(in oklch, var(--bg-primary) 62%, transparent);
-  border-bottom: 1px solid var(--border);
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.04), 0 8px 24px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  background: transparent;
+  box-shadow: inset 0 -1px 0 transparent;
+  transition: box-shadow var(--transition-med), background var(--transition-med);
 }
 
-/* Left cluster: app icon + the streak/points pill. The centre logo is
-   absolutely positioned and pointer-events: none, so this can sit under it
-   without stealing taps — but the pill caps its own width to stay clear. */
+.topbar--scrolled {
+  background: color-mix(in oklch, var(--bg-primary) 35%, transparent);
+  box-shadow: inset 0 -1px 0 var(--border);
+}
+
+/* Brand + streak pill. Fades out when the compact title takes the bar, so the
+   title can sit centred without colliding with them. */
 .topbar__left {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
   min-width: 0;
-  z-index: 1;
+  transition: opacity var(--transition-med), transform var(--transition-med);
 }
 
-/* The Progress wordmark, doubling as the home button. No square mark here: on
-   a 60px strip already carrying the streak pill and two icon buttons, the tile
-   was competing with them for attention and width while saying nothing the word
-   doesn't. ProgressMark still stands alone where it has to (favicon, install
-   icon), and the sidebar keeps the full lockup, where there's room for it. */
+.topbar--compact .topbar__left {
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+}
+
 .topbar__brand {
   display: flex;
   align-items: center;
@@ -50,19 +57,25 @@
   outline-offset: 3px;
 }
 
-/* The logo used to be absolutely positioned and centred on the viewport, which
-   worked while the bar held only an icon on each side. With the Dziś button and
-   the streak pill on the left it collided with them, so it now takes part in the
-   flex layout and gives up width instead of overlapping. */
-.topbar__center {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-  padding: 0 var(--spacing-sm);
+/* Compact title — iOS inline navigation title: 17px semibold, centred. */
+.topbar__title {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, 6px);
+  transition: opacity var(--transition-med), transform var(--transition-med);
+  pointer-events: none;
+}
+
+.topbar--compact .topbar__title {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .topbar__actions {
@@ -71,29 +84,15 @@
   flex-shrink: 0;
 }
 
-/* Same lit-from-above material as .u-tile/.progresspill__stat — a flat
-   --bg-card circle on the glass bar read as a cutout, not a pressable object. */
-.topbar__theme-btn,
+/* Liquid glass (.u-liquid) — only the shape and the glyph colour live here. */
 .topbar__account-btn {
-  position: relative;
   width: 40px;
   height: 40px;
-  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-secondary);
-  background: var(--surface-tile);
-  border: 1px solid var(--tile-border);
-  box-shadow: var(--tile-hi), 0 2px 8px oklch(0 0 0 / 0.28);
-  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
-}
-
-.topbar__theme-btn:hover,
-.topbar__account-btn:hover {
-  background: var(--surface-tile-hover);
-  border-color: var(--border-accent);
   color: var(--text-primary);
+  border-radius: var(--radius-full);
 }
 
 .topbar__account-dot {
@@ -104,22 +103,11 @@
   height: 8px;
   border-radius: 50%;
   background: var(--warning);
-  border: 1.5px solid var(--bg-card);
+  box-shadow: 0 0 0 1.5px var(--bg-primary);
 }
 
-.topbar__version {
-  font-size: var(--text-3xs);
-  color: var(--text-muted);
-  font-family: monospace;
-  opacity: 0.6;
-  line-height: 1;
-  cursor: default;
-}
-
-/* Narrow phones: the wordmark is the only brand element left, so it shrinks
-   rather than disappearing — hiding it would leave an empty home button.
-   ProgressPill drops its points column at the same breakpoint (see
-   ProgressPill.css), so the two give way together rather than fighting. */
+/* Narrow phones: the wordmark shrinks rather than disappearing. ProgressPill
+   drops its points column at the same breakpoint (see ProgressPill.css). */
 @media (max-width: 400px) {
   .topbar__brand .plogo {
     --plogo-size: 24px;
@@ -127,8 +115,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .topbar__theme-btn,
-  .topbar__account-btn {
+  .topbar,
+  .topbar__left,
+  .topbar__title {
     transition: none;
   }
 }

@@ -32,14 +32,14 @@ export function ProgressPill() {
 
   return (
     <div className="progresspill">
-      <button className="progresspill__stat progresspill__stat--flame" onClick={() => navigate('/postęp')}>
+      <button className="progresspill__stat progresspill__stat--flame u-liquid" onClick={() => navigate('/postęp')}>
         <span className="progresspill__icon" aria-hidden="true">🔥</span> {pulse.streak} dni
       </button>
-      <button className="progresspill__stat progresspill__stat--points" onClick={() => navigate('/postęp')}>
+      <button className="progresspill__stat progresspill__stat--points u-liquid" onClick={() => navigate('/postęp')}>
         <span className="progresspill__icon" aria-hidden="true">⬥</span> {formatPoints(pulse.points)}
       </button>
       {freeze.available > 0 && (
-        <span className="progresspill__stat progresspill__stat--freeze" title="Zamrożenie serii — zużyje się samo, gdy opuścisz dzień">
+        <span className="progresspill__stat progresspill__stat--freeze u-liquid" title="Zamrożenie serii — zużyje się samo, gdy opuścisz dzień">
           <span className="progresspill__icon" aria-hidden="true">❄</span> {freeze.available}
         </span>
       )}
