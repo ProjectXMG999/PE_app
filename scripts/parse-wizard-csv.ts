@@ -56,7 +56,7 @@ const ACRONYM_DICT: Record<string, string> = {
   'Sklasyfikowany; tajny': 'Classified',
 }
 
-function normalizeEnglishForAudio(word: string, category: string): string {
+export function normalizeEnglishForAudio(word: string, category: string): string {
   // 1. Usuń non-breaking spaces
   word = word.replace(/\xa0/g, ' ').trim()
 
@@ -90,7 +90,7 @@ function normalizeEnglishForAudio(word: string, category: string): string {
   return word
 }
 
-function fixRodzialTypo(chapter: string): string {
+export function fixRodzialTypo(chapter: string): string {
   // Literówka: "Rodział" -> "Rozdział"
   return chapter.replace(/^Rodział\s+/i, 'Rozdział ')
 }
@@ -302,4 +302,9 @@ function processRows(rows: WizardRow[]) {
   console.log(`   Packs created: ${packNum}`)
 }
 
-main()
+// Guarded so other scripts can import normalizeEnglishForAudio/fixRodzialTypo
+// without triggering a full CSV import (and overwriting src/data/packs) as a
+// side effect of the import.
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main()
+}

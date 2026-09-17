@@ -1,0 +1,65 @@
+{
+  "id": "t1-p871",
+  "name": "Zawody",
+  "volume": "Tom III",
+  "level": 2,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXVI",
+  "words": [
+    {
+      "id": "t1-p871-001",
+      "english": "Receptionist",
+      "polish": "Recepcjonista",
+      "polishAudio": "Recepcjonista",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p871-001-word.mp3",
+      "audioWordPl": "t1-p871-001-word-pl.mp3",
+      "audioSentence": "t1-p871-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p871-002",
+      "english": "Supplier",
+      "polish": "Dostawca",
+      "polishAudio": "Dostawca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p871-002-word.mp3",
+      "audioWordPl": "t1-p871-002-word-pl.mp3",
+      "audioSentence": "t1-p871-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p871-003",
+      "english": "Agent",
+      "polish": "Pośrednik; agent",
+      "polishAudio": "Pośrednik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p871-003-word.mp3",
+      "audioWordPl": "t1-p871-003-word-pl.mp3",
+      "audioSentence": "t1-p871-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p871-004",
+      "english": "Graphic designer",
+      "polish": "Grafik",
+      "polishAudio": "Grafik",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p871-004-word.mp3",
+      "audioWordPl": "t1-p871-004-word-pl.mp3",
+      "audioSentence": "t1-p871-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p871-005",
+      "english": "Scientist",
+      "polish": "Naukowiec",
+      "polishAudio": "Naukowiec",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p871-005-word.mp3",
+      "audioWordPl": "t1-p871-005-word-pl.mp3",
+      "audioSentence": "t1-p871-005-sentence.mp3"
+    }
+  ]
+}

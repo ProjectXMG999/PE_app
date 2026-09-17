@@ -1,0 +1,153 @@
+{
+  "id": "t1-p879",
+  "name": "Religia",
+  "volume": "Tom IV",
+  "level": 3,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział XXXIX",
+  "words": [
+    {
+      "id": "t1-p879-001",
+      "english": "Heaven",
+      "polish": "Niebo (raj, miejsce po śmierci)",
+      "polishAudio": "Niebo",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-001-word.mp3",
+      "audioWordPl": "t1-p879-001-word-pl.mp3",
+      "audioSentence": "t1-p879-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p879-002",
+      "english": "Hell",
+      "polish": "Piekło",
+      "polishAudio": "Piekło",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-002-word.mp3",
+      "audioWordPl": "t1-p879-002-word-pl.mp3",
+      "audioSentence": "t1-p879-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p879-003",
+      "english": "Religion",
+      "polish": "Religia",
+      "polishAudio": "Religia",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-003-word.mp3",
+      "audioWordPl": "t1-p879-003-word-pl.mp3",
+      "audioSentence": "t1-p879-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p879-004",
+      "english": "Angel",
+      "polish": "Anioł",
+      "polishAudio": "Anioł",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-004-word.mp3",
+      "audioWordPl": "t1-p879-004-word-pl.mp3",
+      "audioSentence": "t1-p879-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p879-005",
+      "english": "Atheist",
+      "polish": "Ateista",
+      "polishAudio": "Ateista",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-005-word.mp3",
+      "audioWordPl": "t1-p879-005-word-pl.mp3",
+      "audioSentence": "t1-p879-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p879-006",
+      "english": "Devil",
+      "polish": "Diabeł",
+      "polishAudio": "Diabeł",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-006-word.mp3",
+      "audioWordPl": "t1-p879-006-word-pl.mp3",
+      "audioSentence": "t1-p879-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p879-007",
+      "english": "Soul",
+      "polish": "Dusza",
+      "polishAudio": "Dusza",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-007-word.mp3",
+      "audioWordPl": "t1-p879-007-word-pl.mp3",
+      "audioSentence": "t1-p879-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p879-008",
+      "english": "Fanatic",
+      "polish": "Fanatyk",
+      "polishAudio": "Fanatyk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-008-word.mp3",
+      "audioWordPl": "t1-p879-008-word-pl.mp3",
+      "audioSentence": "t1-p879-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p879-009",
+      "english": "Sin",
+      "polish": "Grzech",
+      "polishAudio": "Grzech",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-009-word.mp3",
+      "audioWordPl": "t1-p879-009-word-pl.mp3",
+      "audioSentence": "t1-p879-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p879-010",
+      "english": "Guru",
+      "polish": "Guru",
+      "polishAudio": "Guru",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-010-word.mp3",
+      "audioWordPl": "t1-p879-010-word-pl.mp3",
+      "audioSentence": "t1-p879-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p879-011",
+      "english": "Cross",
+      "polish": "Krzyż",
+      "polishAudio": "Krzyż",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-011-word.mp3",
+      "audioWordPl": "t1-p879-011-word-pl.mp3",
+      "audioSentence": "t1-p879-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p879-012",
+      "english": "Monk",
+      "polish": "Mnich",
+      "polishAudio": "Mnich",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-012-word.mp3",
+      "audioWordPl": "t1-p879-012-word-pl.mp3",
+      "audioSentence": "t1-p879-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p879-013",
+      "english": "Prayer",
+      "polish": "Modlitwa",
+      "polishAudio": "Modlitwa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p879-013-word.mp3",
+      "audioWordPl": "t1-p879-013-word-pl.mp3",
+      "audioSentence": "t1-p879-013-sentence.mp3"
+    }
+  ]
+}

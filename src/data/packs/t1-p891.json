@@ -1,0 +1,32 @@
+{
+  "id": "t1-p891",
+  "name": "Zawody",
+  "volume": "Tom VI",
+  "level": 4,
+  "category": "Rzeczowniki",
+  "chapter": "Rozdział LIII",
+  "words": [
+    {
+      "id": "t1-p891-001",
+      "english": "Meteorologist",
+      "polish": "Meteorolog",
+      "polishAudio": "Meteorolog",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p891-001-word.mp3",
+      "audioWordPl": "t1-p891-001-word-pl.mp3",
+      "audioSentence": "t1-p891-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p891-002",
+      "english": "Entrepreneur",
+      "polish": "Przedsiębiorca",
+      "polishAudio": "Przedsiębiorca",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p891-002-word.mp3",
+      "audioWordPl": "t1-p891-002-word-pl.mp3",
+      "audioSentence": "t1-p891-002-sentence.mp3"
+    }
+  ]
+}
