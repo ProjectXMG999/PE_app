@@ -33,6 +33,7 @@
     "generate-audio-packs": "tsx --env-file=.env scripts/generate-audio-packs.ts",
     "audio:audit-blobs": "tsx --env-file=.env scripts/audio/audit-blobs.ts",
     "audio:generate": "tsx --env-file=.env scripts/audio/generate-packs.ts",
+    "audio:ab-sample": "tsx --env-file=.env scripts/audio/ab-sample.ts",
     "generate-intro-audio": "tsx --env-file=.env scripts/generate-intro-audio.ts",
     "delete-blobs": "tsx --env-file=.env scripts/delete-audio-blobs.ts",
     "upload-blobs": "tsx --env-file=.env scripts/upload-audio-blobs.ts",

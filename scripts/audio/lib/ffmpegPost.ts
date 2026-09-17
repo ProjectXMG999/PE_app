@@ -14,6 +14,15 @@ const FADE_MS = 20
 const SILENCE_THRESHOLD_DB = '-40dB'
 const SILENCE_MIN_DURATION = 0.08 // seconds; avoid clipping soft plosive onsets
 
+/** Cuts [startSec, endSec] out of `inputPath` into `outputPath` — used for the
+ * carrier-phrase approach (Etap 0/2), where the target word is a slice of a
+ * longer generated phrase. */
+export function cutClip(inputPath: string, outputPath: string, startSec: number, endSec: number): Promise<void> {
+  return run(inputPath, outputPath, (c) => {
+    c.setStartTime(startSec).duration(Math.max(0.05, endSec - startSec))
+  })
+}
+
 /** In-place post-process: trim silence, 2-pass loudness normalize, fade in/out. */
 export async function postProcessClip(filePath: string): Promise<void> {
   const tmp1 = filePath + '.trim.mp3'
