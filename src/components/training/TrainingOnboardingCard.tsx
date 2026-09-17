@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { AudioModal } from '../shared/AudioModal'
+import { PlayGlyph } from '../mode/glyphs'
 import './TrainingOnboardingCard.css'
 
 const TRAINING_PARAGRAPHS = [
@@ -18,11 +19,9 @@ export function TrainingOnboardingCard() {
 
   return (
     <>
-      <button className="training-intro-bar" onClick={() => setIsPlaying(true)}>
-        <span className="training-intro-bar__icon">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-            <polygon points="5,3 19,12 5,21"/>
-          </svg>
+      <button className="training-intro-bar u-liquid" onClick={() => setIsPlaying(true)}>
+        <span className="training-intro-bar__icon" aria-hidden="true">
+          <PlayGlyph size={16} />
         </span>
         <span className="training-intro-bar__text">Jak działa Trening?</span>
         <span className="training-intro-bar__badge">1 min</span>

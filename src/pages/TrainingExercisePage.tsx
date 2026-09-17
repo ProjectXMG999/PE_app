@@ -1,18 +1,31 @@
-import { useState } from 'react'
-import { Link, Navigate, useParams } from 'react-router-dom'
+import { useState, type CSSProperties } from 'react'
+import { Navigate, useParams } from 'react-router-dom'
+import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
 import { AudioModal } from '../components/shared/AudioModal'
 import { TrainingMarkdown } from '../components/training/TrainingMarkdown'
+import { exerciseGlyph } from '../components/training/exerciseGlyph'
+import { ChevronLeftGlyph, PlayGlyph } from '../components/mode/glyphs'
+import { fadeUpReduced, heroReveal, staggerContainer } from '../components/today/motion'
 import {
   TRAINING_EXERCISES,
   exerciseToParagraphs,
   markExerciseListened,
 } from '../data/trainingExercises'
+import { useBack } from '../navigation/navigation'
 import './TrainingPage.css'
 
+/**
+ * One exercise: a glass hero card in the exercise's colour — gradient icon
+ * tile, title, and the listen button as the card's one filled action — then
+ * the description set for reading, with headings and bullets in that colour.
+ */
 export function TrainingExercisePage() {
   const { exerciseId } = useParams()
   const [isPlayingAudio, setIsPlayingAudio] = useState(false)
+  const { goBack, backLabel } = useBack()
+  const reduced = useReducedMotion()
+  const item = reduced ? fadeUpReduced : heroReveal
 
   const exercise = TRAINING_EXERCISES.find(e => e.id === exerciseId)
   if (!exercise) {
@@ -26,37 +39,46 @@ export function TrainingExercisePage() {
 
   return (
     <AppShell>
-      <div className="training-detail">
-        <Link className="training-detail__back" to="/trening" viewTransition>
-          ← Wróć
-        </Link>
+      <motion.div
+        className="training-detail"
+        style={{ ['--ex' as string]: exercise.color } as CSSProperties}
+        variants={staggerContainer}
+        initial="hidden"
+        animate="show"
+      >
+        <motion.button
+          type="button"
+          className="training-detail__back"
+          onClick={() => goBack()}
+          aria-label={backLabel}
+          variants={item}
+        >
+          <ChevronLeftGlyph size={20} weight={2.2} />
+          Wróć
+        </motion.button>
 
-        <div className="training-detail__header">
+        <motion.div className="training-detail__header u-liquid" variants={item}>
           <div className="training-detail__title-row">
             <div
               className="training-detail__icon"
-              style={{
-                background: `color-mix(in oklch, ${exercise.color} 16%, transparent)`,
-                borderColor: `color-mix(in oklch, ${exercise.color} 26%, transparent)`,
-                color: exercise.color,
-                viewTransitionName: `exercise-icon-${exercise.id}`,
-              }}
+              aria-hidden="true"
+              style={{ viewTransitionName: `exercise-icon-${exercise.id}` }}
             >
-              {exercise.icon}
+              {exerciseGlyph(exercise.id, 30)}
             </div>
-            <div>
+            <div className="training-detail__titles">
               <h1>{exercise.titlePL}</h1>
               <p className="training-detail__subtitle">{exercise.titleEN}</p>
             </div>
           </div>
           <button className="training-detail__audio-btn" onClick={handlePlayAudio}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="5,3 19,12 5,21"/>
-            </svg>
+            <span className="training-detail__audio-play" aria-hidden="true">
+              <PlayGlyph size={15} />
+            </span>
             Słuchaj opis ćwiczenia
             <span className="training-detail__audio-duration">{exercise.audioDuration}</span>
           </button>
-        </div>
+        </motion.div>
 
         {isPlayingAudio && (
           <AudioModal
@@ -69,10 +91,10 @@ export function TrainingExercisePage() {
           />
         )}
 
-        <div className="training-detail__content">
+        <motion.div className="training-detail__content" variants={item}>
           <TrainingMarkdown text={exercise.fullDescription} />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </AppShell>
   )
 }
