@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { ReactNode, useMemo, useState } from 'react'
 import type { WordProgress } from '../../types/progress'
 import { retentionBreakdown, type RetentionTier } from '../../services/reviewQueue'
 import { RetentionInfoSheet } from './RetentionInfoSheet'
@@ -7,6 +7,9 @@ import './RetentionBars.css'
 
 interface Props {
   wordProgress: WordProgress[]
+  /** Rendered above the retention breakdown in the same card — Postęp puts the
+   *  review queue here, so "what's due" and "how well it holds" read as one. */
+  queue?: ReactNode
 }
 
 interface TierMeta {
@@ -27,16 +30,19 @@ interface TierMeta {
  * Colours run warm→cool as memory sets (amber = just learned, still slippery →
  * teal = holds for months); "Na stałe" breaks the ramp in the brand colour
  * because it's a different kind of state — out of rotation, not just strong.
+ *
+ * Tier names are plain Polish ("Nowe", "Utrwalają się", "Dobrze znane"), not
+ * the translated metaphors they started as ("Świeże", "Krzepnące", "Mocne").
  */
 const TIER_META: Record<RetentionTier, TierMeta> = {
-  fresh:   { label: 'Świeże',    color: '#F59E0B', cadence: 'wraca co kilka dni' },
-  setting: { label: 'Krzepnące', color: '#84CC16', cadence: 'wraca co 1–3 tygodnie' },
-  solid:   { label: 'Utrwalone', color: '#22C55E', cadence: 'wraca co 1–2 miesiące' },
-  strong:  { label: 'Mocne',     color: '#14B8A6', cadence: 'wraca co kilka miesięcy' },
-  locked:  { label: 'Na stałe',  color: '#8B5CF6', cadence: 'kontrolnie raz w roku' },
+  fresh:   { label: 'Nowe',          color: '#F59E0B', cadence: 'co kilka dni' },
+  setting: { label: 'Utrwalają się', color: '#84CC16', cadence: 'co 1–3 tygodnie' },
+  solid:   { label: 'Utrwalone',     color: '#22C55E', cadence: 'co 1–2 miesiące' },
+  strong:  { label: 'Dobrze znane',  color: '#14B8A6', cadence: 'co kilka miesięcy' },
+  locked:  { label: 'Na stałe',      color: '#8B5CF6', cadence: 'raz w roku' },
 }
 
-export function RetentionBars({ wordProgress }: Props) {
+export function RetentionBars({ wordProgress, queue }: Props) {
   const [infoOpen, setInfoOpen] = useState(false)
   const stats = useMemo(() => retentionBreakdown(wordProgress), [wordProgress])
   const { buckets, total, durablePct } = stats
@@ -45,18 +51,26 @@ export function RetentionBars({ wordProgress }: Props) {
   const biggest = buckets.reduce((a, b) => (b.count > a.count ? b : a), buckets[0])
 
   return (
-    <div className="retention">
+    <div className="retention u-liquid">
+      {queue && (
+        <>
+          {queue}
+          <hr className="retention__divider" />
+          <h3 className="retention__part-title">Jak dobrze pamiętasz opanowane słowa</h3>
+          <p className="retention__part-sub">Obok każdej grupy: jak często jej słowa wracają w powtórkach.</p>
+        </>
+      )}
       <div className="retention__head">
         <p className="retention__total">
           {total === 0
-            ? 'Poziom zapamiętania'
+            ? 'Opanowane słowa'
             : `${total.toLocaleString('pl-PL')} ${plural(total, 'opanowane słowo', 'opanowane słowa', 'opanowanych słów')}`}
         </p>
         <button
           type="button"
           className="retention__info-btn"
           onClick={() => setInfoOpen(true)}
-          aria-label="Jak działa poziom zapamiętania"
+          aria-label="Skąd biorą się te grupy"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="12" r="10" />
@@ -68,8 +82,7 @@ export function RetentionBars({ wordProgress }: Props) {
 
       {total === 0 ? (
         <p className="retention__empty">
-          Gdy zaczniesz oznaczać słowa jako znane, zobaczysz tu, jak mocno trzymają się
-          w pamięci — od świeżo poznanych po utrwalone na stałe.
+          Kiedy oznaczysz pierwsze słowa jako znane, zobaczysz tu, jak dobrze je pamiętasz.
         </p>
       ) : (
         <>
@@ -127,18 +140,18 @@ export function RetentionBars({ wordProgress }: Props) {
           <p className="retention__summary">
             {durablePct >= 50 ? (
               <>
-                <strong>{durablePct}%</strong> Twojego słownictwa utrzymuje się w pamięci przez
-                miesiące lub dłużej — to efekt powtórek w coraz większych odstępach.
+                <strong>{durablePct}%</strong> słów pamiętasz już na miesiące albo dłużej. To zasługa
+                powtórek robionych w coraz dłuższych odstępach.
               </>
             ) : durablePct > 0 ? (
               <>
-                <strong>{durablePct}%</strong> słów masz już mocno utrwalone. Reszta wciąż się
-                utrwala — im częściej ją poprawnie powtarzasz, tym rzadziej wraca.
+                <strong>{durablePct}%</strong> słów masz już dobrze utrwalone. Pozostałe jeszcze się
+                utrwalają. Im więcej poprawnych odpowiedzi w powtórkach, tym rzadziej będą wracać.
               </>
             ) : (
               <>
-                Najwięcej Twoich słów jest na etapie „{TIER_META[biggest.tier].label.toLowerCase()}”.
-                Rób powtórki, gdy słowa pojawią się do zrobienia — z czasem awansują wyżej.
+                Najwięcej słów jest teraz w grupie „{TIER_META[biggest.tier].label}”. Rób powtórki,
+                kiedy się pojawią, a słowa będą przechodzić do kolejnych grup.
               </>
             )}
           </p>

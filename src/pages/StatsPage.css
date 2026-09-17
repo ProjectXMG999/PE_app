@@ -133,3 +133,8 @@
     margin-top: var(--spacing-2xl);
   }
 }
+
+/* Anchor target (#powtorki) — land below the sticky top bar, not under it. */
+.statspage__section[id] {
+  scroll-margin-top: var(--spacing-md);
+}

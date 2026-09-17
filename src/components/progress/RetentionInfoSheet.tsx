@@ -12,36 +12,36 @@ interface Point {
 }
 
 /**
- * Explains the "Poziom zapamiętania" breakdown on Postęp — what memory strength
+ * Explains the retention breakdown on Postęp — what memory strength
  * means, how a word climbs the tiers, and that the user doesn't have to do
  * anything special about it. Same native <dialog> / slideUp as the other info
- * sheets; shares NextStepInfoSheet.css.
+ * sheets used to; still styled by NextStepInfoSheet.css.
  */
 const POINTS: Point[] = [
   {
     icon: '🧠',
-    title: 'Co znaczy „poziom zapamiętania"',
-    text: 'Dla każdego opanowanego słowa system szacuje, po ilu dniach szansa na przypomnienie sobie tego słowa spadnie do około 90%. Im to dłużej, tym mocniej słowo siedzi w pamięci i tym rzadziej trzeba je powtarzać.',
+    title: 'Skąd biorą się te grupy',
+    text: 'Przy każdym opanowanym słowie liczymy, po ilu dniach zaczniesz je zapominać. Im dłużej słowo zostaje w pamięci, tym rzadziej musisz je powtarzać.',
   },
   {
     icon: '📈',
-    title: 'Jak słowo awansuje',
-    text: 'Za każdym razem, gdy przypomnisz sobie słowo w powtórce, odstęp do następnej rośnie: kilka dni → tydzień → miesiąc → rok. „Nie znam" cofa słowo o poziom niżej. Nie musisz nic liczyć — wystarczy robić powtórki, gdy słowa pojawią się na „Dzisiaj".',
+    title: 'Jak słowo przechodzi wyżej',
+    text: 'Każda poprawna odpowiedź w powtórce wydłuża czas do następnej: z kilku dni do tygodnia, potem do miesiąca, a w końcu do roku. Gdy odpowiesz „Nie znam”, słowo spada o grupę niżej. Niczego nie musisz pilnować — wystarczy robić powtórki, które pojawiają się na ekranie Dzisiaj.',
   },
   {
     icon: '🌱',
-    title: 'Świeże · Krzepnące · Utrwalone · Mocne',
-    text: 'To progi trwałości pamięci: poniżej tygodnia, do 3 tygodni, do 2 miesięcy i dłużej. Nowo nauczone słowa zaczynają jako „Świeże" i awansują same, o ile regularnie je powtarzasz.',
+    title: 'Nowe · Utrwalają się · Utrwalone · Dobrze znane',
+    text: 'Grupy zależą od tego, jak długo słowo zostaje w pamięci: krócej niż tydzień, do 3 tygodni, do 2 miesięcy i dłużej. Każde słowo zaczyna w grupie „Nowe” i przechodzi wyżej, jeśli regularnie je powtarzasz.',
   },
   {
     icon: '🎓',
     title: 'Na stałe',
-    text: 'Po mniej więcej pół roku rosnących odstępów słowo wypada z codziennej rotacji. Wraca już tylko raz w roku — dla pewności, że wciąż je pamiętasz — i przestaje zajmować Ci czas w powtórkach.',
+    text: 'Po mniej więcej pół roku słowo znika z codziennych powtórek. Wraca tylko raz w roku, żeby sprawdzić, czy nadal je pamiętasz, i nie zabiera Ci już czasu.',
   },
   {
     icon: '🎯',
     title: 'Co z tym zrobić',
-    text: 'Nic specjalnego. Duży udział „Świeżych" znaczy po prostu, że sporo się ostatnio nauczyłeś — te słowa z czasem awansują wyżej. Rosnący udział „Mocnych" i „Na stałe" to znak, że Twoje słownictwo naprawdę się utrwala.',
+    text: 'Nic szczególnego. Dużo słów w grupie „Nowe” oznacza po prostu, że ostatnio sporo się nauczyłeś — z czasem przejdą wyżej. Im więcej słów w grupach „Dobrze znane” i „Na stałe”, tym trwalsze jest Twoje słownictwo.',
   },
 ]
 
@@ -64,9 +64,9 @@ export function RetentionInfoSheet({ onClose }: Props) {
       <div className="nextstepinfo__inner">
         <span className="nextstepinfo__handle" aria-hidden="true" />
 
-        <h2 className="nextstepinfo__title">Jak czytać poziom zapamiętania</h2>
+        <h2 className="nextstepinfo__title">Jak dobrze pamiętasz słowa</h2>
         <p className="nextstepinfo__sub">
-          Twoje opanowane słowa, pogrupowane według tego, jak mocno trzymają się w pamięci.
+          Opanowane słowa podzielone według tego, jak długo zostają w pamięci.
         </p>
 
         <ul className="nextstepinfo__list">

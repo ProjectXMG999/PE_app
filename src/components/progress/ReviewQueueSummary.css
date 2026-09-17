@@ -1,0 +1,138 @@
+.reviewqueue {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reviewqueue__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.reviewqueue__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.reviewqueue__stat + .reviewqueue__stat {
+  padding-left: 12px;
+  box-shadow: inset 1px 0 0 var(--border);
+}
+
+.reviewqueue__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.reviewqueue__value {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: var(--tracking-display);
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.reviewqueue__value small {
+  font-size: var(--text-md);
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--text-secondary);
+}
+
+.reviewqueue__hint {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.reviewqueue__today-track {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background: var(--route-line);
+}
+
+.reviewqueue__today-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: var(--radius-full);
+  background: var(--live);
+}
+
+.reviewqueue__note {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.reviewqueue__levels-title {
+  margin: 6px 0 0;
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.reviewqueue__levels {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reviewqueue__level {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    'name count'
+    'bar  bar';
+  gap: 5px 12px;
+  align-items: baseline;
+}
+
+.reviewqueue__level-name {
+  grid-area: name;
+  overflow: hidden;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.reviewqueue__level-count {
+  grid-area: count;
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.reviewqueue__level-count small {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.reviewqueue__level-bar {
+  grid-area: bar;
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background: var(--route-line);
+}
+
+.reviewqueue__level-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  min-width: 0;
+  border-radius: var(--radius-full);
+}

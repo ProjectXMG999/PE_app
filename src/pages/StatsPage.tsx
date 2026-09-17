@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell'
 import { CompassHero } from '../components/progress/CompassHero'
 import { RouteMap } from '../components/progress/RouteMap'
@@ -7,12 +8,14 @@ import { AchievementGrid } from '../components/progress/AchievementGrid'
 import { ActivityHeatmap } from '../components/progress/ActivityHeatmap'
 import { ReadinessBreakdown } from '../components/progress/ReadinessBreakdown'
 import { RetentionBars } from '../components/progress/RetentionBars'
+import { ReviewQueueSummary } from '../components/progress/ReviewQueueSummary'
 import { WeeklyRecapCard } from '../components/progress/WeeklyRecapCard'
 import { PackageProgressList } from '../components/stats/PackageProgressList'
 import { LevelProgressBars } from '../components/home/LevelProgressBars'
 import { CategoryProgressBars } from '../components/stats/CategoryProgressBars'
 import { TimeOfDayChart } from '../components/stats/TimeOfDayChart'
 import { useStats, measuredStudyMinutes } from '../hooks/useStats'
+import { studyWordsPerMinute } from '../utils/pace'
 import { useProgressData } from '../hooks/useProgressData'
 import { useAchievements } from '../hooks/useAchievements'
 import { useReadinessScore } from '../hooks/useReadinessScore'
@@ -86,6 +89,7 @@ export function StatsPage() {
   const markUnlocksSeen = useAppStore(s => s.markUnlocksSeen)
   const achievementUnlocks = useAppStore(s => s.achievementUnlocks)
   const frozenDays = useAppStore(s => s.streakFreeze.usedOn)
+  const { hash } = useLocation()
 
   const [timeOfDay, setTimeOfDay] = useState<TimeOfDayStats[] | null | undefined>(undefined)
 
@@ -115,15 +119,21 @@ export function StatsPage() {
     [dailyTime, snapshot]
   )
 
-  // Words learned per minute of study, the basis for the projection below.
-  // Bulk-marked words ("oznacz wszystkie jako znam") are excluded — they add a
-  // pack's worth of words in seconds against zero study minutes. The clamp is a
-  // second guard: a sustained rate no learner beats over a whole history.
-  const MAX_WORDS_PER_MINUTE = 5
-  const studyKnownWords = Math.max(0, knownWords - (snapshot?.bulkKnownTotal ?? 0))
-  const wordsPerMinute = studyMinutes > 0
-    ? Math.min(studyKnownWords / studyMinutes, MAX_WORDS_PER_MINUTE)
-    : 0
+  // Words learned per minute of study, the basis for the projection below —
+  // the same model the daily-goal picker on Dzisiaj projects with.
+  const wordsPerMinute = studyWordsPerMinute(knownWords, snapshot?.bulkKnownTotal ?? 0, studyMinutes)
+
+  // Arriving from Dzisiaj's review element (/postęp#powtorki): the page renders
+  // its sections as data lands, so wait for the snapshot, then bring the
+  // section into view.
+  const hasSnapshot = snapshot != null
+  useEffect(() => {
+    if (hash !== '#powtorki' || !hasSnapshot) return
+    const id = requestAnimationFrame(() =>
+      document.getElementById('powtorki')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    )
+    return () => cancelAnimationFrame(id)
+  }, [hash, hasSnapshot])
 
   const guidance = buildGuidance(sessionCount, knownWords, levelStats, servingLeft)
 
@@ -166,6 +176,18 @@ export function StatsPage() {
             do „słów poznanych", ale nie do tempa.
           </p>
         )}
+
+        <section className="statspage__section" id="powtorki">
+          <h2 className="statspage__section-title">Powtórki</h2>
+          {snapshot == null ? (
+            <div className="statspage__skeleton skeleton" style={{ height: 760 }} />
+          ) : (
+            <RetentionBars
+              wordProgress={snapshot.wordProgress}
+              queue={<ReviewQueueSummary snapshot={snapshot} />}
+            />
+          )}
+        </section>
 
         <section className="statspage__section">
           <h2 className="statspage__section-title">Trasa</h2>
@@ -246,15 +268,6 @@ export function StatsPage() {
               <dd>{freshnessPct}<span>%</span></dd>
             </div>
           </dl>
-        </section>
-
-        <section className="statspage__section">
-          <h2 className="statspage__section-title">Poziom zapamiętania</h2>
-          {snapshot == null ? (
-            <div className="statspage__skeleton skeleton" style={{ height: 280 }} />
-          ) : (
-            <RetentionBars wordProgress={snapshot.wordProgress} />
-          )}
         </section>
 
         <section className="statspage__section">

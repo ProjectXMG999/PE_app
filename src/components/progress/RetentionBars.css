@@ -1,13 +1,35 @@
+/* Liquid glass (.u-liquid). The shadow is the shallow one, not the material's
+   full float: this card is long and sits between sections, and a 60px-deep
+   shadow read as it spilling onto the section below. */
 .retention {
-  background: var(--surface-tile);
-  border: 1px solid var(--tile-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--tile-hi);
-  padding: var(--spacing-md);
+  padding: 18px var(--spacing-md) var(--spacing-md);
+  border-radius: var(--radius-xl);
+  --liquid-shadow: 0 8px 24px oklch(0 0 0 / 0.22);
 }
 
 [data-theme="light"] .retention {
-  box-shadow: var(--tile-hi), var(--shadow-sm);
+  --liquid-shadow: 0 6px 18px oklch(0.25 0.04 280 / 0.08);
+}
+
+.retention__part-title {
+  margin: 0 0 2px;
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.retention__part-sub {
+  margin: 0 0 12px;
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+.retention__divider {
+  height: 1px;
+  margin: 18px 0 16px;
+  border: 0;
+  background: var(--border);
 }
 
 .retention__head {

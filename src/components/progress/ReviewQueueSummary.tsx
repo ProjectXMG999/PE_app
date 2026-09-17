@@ -1,0 +1,110 @@
+import { motion, useReducedMotion } from 'framer-motion'
+import type { ProgressSnapshot } from '../../hooks/useProgressData'
+import { packLevelOf } from '../../hooks/useProgressData'
+import { estimateMinutes } from '../../data/nextPack'
+import { LEVEL_COLORS, LEVEL_META } from '../../data/levels'
+import { plural, plWords } from '../../utils/plural'
+import { EASE_OUT_EXPO } from '../today/motion'
+import './ReviewQueueSummary.css'
+
+interface Props {
+  snapshot: ProgressSnapshot
+}
+
+/**
+ * The review queue in full — the detail behind Dzisiaj's "Powtórki" element,
+ * which only has room for today's portion and the queue's size. Rendered as
+ * the top half of the RetentionBars card on Postęp, not as a card of its own:
+ * the queue (what's due) and retention (how well it holds) are one subject.
+ *
+ * Two different numbers people used to read as one: today's portion (a
+ * budget scaled to the daily goal, so it's always doable) and the whole queue
+ * (everything whose review date has arrived). Then the queue split by level,
+ * so a long queue can be traced to where it actually sits.
+ */
+export function ReviewQueueSummary({ snapshot }: Props) {
+  const reduced = useReducedMotion()
+  const { dueWords, dueCount, reviewBudget, served, servingLeft } = snapshot
+
+  const perLevel = LEVEL_META.map(meta => {
+    const count = dueWords.filter(w => packLevelOf(w.packageId) === meta.level).length
+    return { ...meta, count }
+  })
+  const maxCount = Math.max(1, ...perLevel.map(l => l.count))
+  // "Kontynuuj mimo to" on /powtorka lets a learner go past today's portion, so
+  // served can exceed the budget. Cap the figure at the portion and name the
+  // extra separately, rather than showing "266 z 8".
+  const doneToday = Math.min(served, reviewBudget)
+  const extraToday = Math.max(0, served - reviewBudget)
+  const todayPct = reviewBudget > 0 ? Math.min(100, (served / reviewBudget) * 100) : 0
+
+  return (
+    <div className="reviewqueue">
+      <div className="reviewqueue__split">
+        <div className="reviewqueue__stat">
+          <span className="reviewqueue__label">Na dziś</span>
+          <span className="reviewqueue__value">
+            {doneToday}<small> z {reviewBudget}</small>
+          </span>
+          <span className="reviewqueue__hint">
+            {servingLeft > 0
+              ? `${servingLeft} do zrobienia, ok. ${estimateMinutes(servingLeft)} min`
+              : extraToday > 0
+                ? `Zrobione, do tego ${extraToday} ${plural(extraToday, 'dodatkowa', 'dodatkowe', 'dodatkowych')}`
+                : 'Wszystko zrobione'}
+          </span>
+        </div>
+        <div className="reviewqueue__stat">
+          <span className="reviewqueue__label">Czeka łącznie</span>
+          <span className="reviewqueue__value">
+            {dueCount.toLocaleString('pl-PL')}<small> {plWords(dueCount)}</small>
+          </span>
+          <span className="reviewqueue__hint">
+            {dueCount > 0 ? `razem ok. ${estimateMinutes(dueCount)} min` : 'Nic nie czeka'}
+          </span>
+        </div>
+      </div>
+
+      <div
+        className="reviewqueue__today-track"
+        role="img"
+        aria-label={`Powtórki na dziś: ${doneToday} z ${reviewBudget}`}
+      >
+        <motion.span
+          className="reviewqueue__today-fill"
+          initial={{ width: reduced ? `${todayPct}%` : 0 }}
+          animate={{ width: `${todayPct}%` }}
+          transition={{ duration: reduced ? 0 : 0.8, ease: EASE_OUT_EXPO, delay: reduced ? 0 : 0.1 }}
+        />
+      </div>
+
+      <p className="reviewqueue__note">
+        Na dziś dostajesz tyle powtórek, ile zmieścisz w dziennym celu. Pozostałe słowa rozkładamy na kolejne dni.
+      </p>
+
+      <h3 className="reviewqueue__levels-title">Ile czeka na każdym poziomie</h3>
+      <ul className="reviewqueue__levels">
+        {perLevel.map((l, i) => (
+          <li key={l.level} className="reviewqueue__level">
+            <span className="reviewqueue__level-name" style={{ color: LEVEL_COLORS[l.level] }}>
+              {l.name}
+            </span>
+            <span className="reviewqueue__level-bar">
+              <motion.span
+                className="reviewqueue__level-fill"
+                style={{ background: LEVEL_COLORS[l.level] }}
+                initial={{ width: reduced ? `${(l.count / maxCount) * 100}%` : 0 }}
+                animate={{ width: `${(l.count / maxCount) * 100}%` }}
+                transition={{ duration: reduced ? 0 : 0.8, ease: EASE_OUT_EXPO, delay: reduced ? 0 : 0.15 + i * 0.05 }}
+              />
+            </span>
+            <span className="reviewqueue__level-count">
+              {l.count.toLocaleString('pl-PL')}
+              <small> {plWords(l.count)}{l.count > 0 && `, ok. ${estimateMinutes(l.count)} min`}</small>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}

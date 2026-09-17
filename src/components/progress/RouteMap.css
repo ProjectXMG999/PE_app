@@ -8,8 +8,14 @@
   display: grid;
   grid-template-columns: 28px 1fr;
   gap: var(--spacing-sm);
-  opacity: 0;
-  animation: slideUp 420ms var(--ease-out-expo) forwards;
+  /* `backwards`, not `forwards` + opacity: 0. A forwards fill keeps the final
+     transform applied for good, so iOS Safari keeps each station on its own
+     compositing layer — and when the review card above grows after this has
+     played (skeleton → real content), Safari leaves that layer where it was:
+     the first station drew over the card and above its own "Trasa" heading.
+     `backwards` holds the start frame only during the stagger delay; once the
+     animation ends nothing is left applied and the layer is released. */
+  animation: slideUp 420ms var(--ease-out-expo) backwards;
 }
 
 /* ── The rail ───────────────────────────────────────────────────────────── */
@@ -257,7 +263,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .routemap__item {
-    opacity: 1;
     animation: none;
   }
 
