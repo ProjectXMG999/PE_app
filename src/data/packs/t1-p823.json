@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p823-001-word.mp3",
       "audioWordPl": "t1-p823-001-word-pl.mp3",
-      "audioSentence": "t1-p823-001-sentence.mp3"
+      "audioSentence": "t1-p823-001-sentence.mp3",
+      "polishAudio": "Kategoryzować"
     },
     {
       "id": "t1-p823-002",
@@ -24,27 +25,30 @@
       "sentencePl": null,
       "audioWord": "t1-p823-002-word.mp3",
       "audioWordPl": "t1-p823-002-word-pl.mp3",
-      "audioSentence": "t1-p823-002-sentence.mp3"
+      "audioSentence": "t1-p823-002-sentence.mp3",
+      "polishAudio": "Centralizować"
     },
     {
       "id": "t1-p823-003",
       "english": "Classify",
-      "polish": "Klasyfikować",
+      "polish": "Klasyfikować (się, coś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p823-003-word.mp3",
       "audioWordPl": "t1-p823-003-word-pl.mp3",
-      "audioSentence": "t1-p823-003-sentence.mp3"
+      "audioSentence": "t1-p823-003-sentence.mp3",
+      "polishAudio": "Klasyfikować"
     },
     {
       "id": "t1-p823-004",
       "english": "Collaborate",
-      "polish": "Kolaborować",
+      "polish": "Kolaborować; współpracować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p823-004-word.mp3",
       "audioWordPl": "t1-p823-004-word-pl.mp3",
-      "audioSentence": "t1-p823-004-sentence.mp3"
+      "audioSentence": "t1-p823-004-sentence.mp3",
+      "polishAudio": "Kolaborować"
     },
     {
       "id": "t1-p823-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p823-005-word.mp3",
       "audioWordPl": "t1-p823-005-word-pl.mp3",
-      "audioSentence": "t1-p823-005-sentence.mp3"
+      "audioSentence": "t1-p823-005-sentence.mp3",
+      "polishAudio": "Kompensować"
     },
     {
       "id": "t1-p823-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p823-006-word.mp3",
       "audioWordPl": "t1-p823-006-word-pl.mp3",
-      "audioSentence": "t1-p823-006-sentence.mp3"
+      "audioSentence": "t1-p823-006-sentence.mp3",
+      "polishAudio": "Komponować"
     },
     {
       "id": "t1-p823-007",
       "english": "Conclude",
-      "polish": "Konkludować",
+      "polish": "Konkludować; kończyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p823-007-word.mp3",
       "audioWordPl": "t1-p823-007-word-pl.mp3",
-      "audioSentence": "t1-p823-007-sentence.mp3"
+      "audioSentence": "t1-p823-007-sentence.mp3",
+      "polishAudio": "Konkludować"
     },
     {
       "id": "t1-p823-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p823-008-word.mp3",
       "audioWordPl": "t1-p823-008-word-pl.mp3",
-      "audioSentence": "t1-p823-008-sentence.mp3"
+      "audioSentence": "t1-p823-008-sentence.mp3",
+      "polishAudio": "Konsolidować"
     },
     {
       "id": "t1-p823-009",
       "english": "Consume",
-      "polish": "Konsumować",
+      "polish": "Konsumować; spożywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p823-009-word.mp3",
       "audioWordPl": "t1-p823-009-word-pl.mp3",
-      "audioSentence": "t1-p823-009-sentence.mp3"
+      "audioSentence": "t1-p823-009-sentence.mp3",
+      "polishAudio": "Konsumować"
     },
     {
       "id": "t1-p823-010",
@@ -104,17 +113,19 @@
       "sentencePl": null,
       "audioWord": "t1-p823-010-word.mp3",
       "audioWordPl": "t1-p823-010-word-pl.mp3",
-      "audioSentence": "t1-p823-010-sentence.mp3"
+      "audioSentence": "t1-p823-010-sentence.mp3",
+      "polishAudio": "Kontrastować"
     },
     {
       "id": "t1-p823-011",
       "english": "Correspond",
-      "polish": "Korespondować",
+      "polish": "Korespondować; zgadzać się z czymś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p823-011-word.mp3",
       "audioWordPl": "t1-p823-011-word-pl.mp3",
-      "audioSentence": "t1-p823-011-sentence.mp3"
+      "audioSentence": "t1-p823-011-sentence.mp3",
+      "polishAudio": "Korespondować"
     },
     {
       "id": "t1-p823-012",
@@ -124,27 +135,30 @@
       "sentencePl": null,
       "audioWord": "t1-p823-012-word.mp3",
       "audioWordPl": "t1-p823-012-word-pl.mp3",
-      "audioSentence": "t1-p823-012-sentence.mp3"
+      "audioSentence": "t1-p823-012-sentence.mp3",
+      "polishAudio": "Dewastować"
     },
     {
       "id": "t1-p823-013",
       "english": "Dictate",
-      "polish": "Dyktować",
+      "polish": "Dyktować (również warunki)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p823-013-word.mp3",
       "audioWordPl": "t1-p823-013-word-pl.mp3",
-      "audioSentence": "t1-p823-013-sentence.mp3"
+      "audioSentence": "t1-p823-013-sentence.mp3",
+      "polishAudio": "Dyktować"
     },
     {
       "id": "t1-p823-014",
       "english": "Discredit",
-      "polish": "Dyskredytować",
+      "polish": "Dyskredytować; podważyć (np. teorię)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p823-014-word.mp3",
       "audioWordPl": "t1-p823-014-word-pl.mp3",
-      "audioSentence": "t1-p823-014-sentence.mp3"
+      "audioSentence": "t1-p823-014-sentence.mp3",
+      "polishAudio": "Dyskredytować"
     },
     {
       "id": "t1-p823-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p823-015-word.mp3",
       "audioWordPl": "t1-p823-015-word-pl.mp3",
-      "audioSentence": "t1-p823-015-sentence.mp3"
+      "audioSentence": "t1-p823-015-sentence.mp3",
+      "polishAudio": "Dystansować"
     }
   ]
 }

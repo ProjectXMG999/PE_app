@@ -14,37 +14,41 @@
       "sentencePl": null,
       "audioWord": "t1-p509-001-word.mp3",
       "audioWordPl": "t1-p509-001-word-pl.mp3",
-      "audioSentence": "t1-p509-001-sentence.mp3"
+      "audioSentence": "t1-p509-001-sentence.mp3",
+      "polishAudio": "W pojedynkę"
     },
     {
       "id": "t1-p509-002",
       "english": "Aloud",
-      "polish": "Na głos",
+      "polish": "Na głos; głośno",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p509-002-word.mp3",
       "audioWordPl": "t1-p509-002-word-pl.mp3",
-      "audioSentence": "t1-p509-002-sentence.mp3"
+      "audioSentence": "t1-p509-002-sentence.mp3",
+      "polishAudio": "Na głos"
     },
     {
       "id": "t1-p509-003",
       "english": "Each other",
-      "polish": "Wzajemnie",
+      "polish": "Wzajemnie (sobie nawzajem)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p509-003-word.mp3",
       "audioWordPl": "t1-p509-003-word-pl.mp3",
-      "audioSentence": "t1-p509-003-sentence.mp3"
+      "audioSentence": "t1-p509-003-sentence.mp3",
+      "polishAudio": "Wzajemnie"
     },
     {
       "id": "t1-p509-004",
       "english": "One another",
-      "polish": "Siebie nawzajem",
+      "polish": "Siebie nawzajem (więcej niż 2 osoby)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p509-004-word.mp3",
       "audioWordPl": "t1-p509-004-word-pl.mp3",
-      "audioSentence": "t1-p509-004-sentence.mp3"
+      "audioSentence": "t1-p509-004-sentence.mp3",
+      "polishAudio": "Siebie nawzajem"
     },
     {
       "id": "t1-p509-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p509-005-word.mp3",
       "audioWordPl": "t1-p509-005-word-pl.mp3",
-      "audioSentence": "t1-p509-005-sentence.mp3"
+      "audioSentence": "t1-p509-005-sentence.mp3",
+      "polishAudio": "Ktokolwiek"
     },
     {
       "id": "t1-p509-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p509-006-word.mp3",
       "audioWordPl": "t1-p509-006-word-pl.mp3",
-      "audioSentence": "t1-p509-006-sentence.mp3"
+      "audioSentence": "t1-p509-006-sentence.mp3",
+      "polishAudio": "Pieszo"
     },
     {
       "id": "t1-p509-007",
       "english": "Upright",
-      "polish": "Pionowo",
+      "polish": "Pionowo; prosto",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p509-007-word.mp3",
       "audioWordPl": "t1-p509-007-word-pl.mp3",
-      "audioSentence": "t1-p509-007-sentence.mp3"
+      "audioSentence": "t1-p509-007-sentence.mp3",
+      "polishAudio": "Pionowo"
     },
     {
       "id": "t1-p509-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p509-008-word.mp3",
       "audioWordPl": "t1-p509-008-word-pl.mp3",
-      "audioSentence": "t1-p509-008-sentence.mp3"
+      "audioSentence": "t1-p509-008-sentence.mp3",
+      "polishAudio": "Którykolwiek"
     },
     {
       "id": "t1-p509-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p509-009-word.mp3",
       "audioWordPl": "t1-p509-009-word-pl.mp3",
-      "audioSentence": "t1-p509-009-sentence.mp3"
+      "audioSentence": "t1-p509-009-sentence.mp3",
+      "polishAudio": "Kogokolwiek"
     },
     {
       "id": "t1-p509-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p509-010-word.mp3",
       "audioWordPl": "t1-p509-010-word-pl.mp3",
-      "audioSentence": "t1-p509-010-sentence.mp3"
+      "audioSentence": "t1-p509-010-sentence.mp3",
+      "polishAudio": "Ręcznie"
     },
     {
       "id": "t1-p509-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p509-011-word.mp3",
       "audioWordPl": "t1-p509-011-word-pl.mp3",
-      "audioSentence": "t1-p509-011-sentence.mp3"
+      "audioSentence": "t1-p509-011-sentence.mp3",
+      "polishAudio": "Okrakiem"
     },
     {
       "id": "t1-p509-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p509-012-word.mp3",
       "audioWordPl": "t1-p509-012-word-pl.mp3",
-      "audioSentence": "t1-p509-012-sentence.mp3"
+      "audioSentence": "t1-p509-012-sentence.mp3",
+      "polishAudio": "Konno"
     },
     {
       "id": "t1-p509-013",
       "english": "Proudly",
-      "polish": "Dumnie",
+      "polish": "Dumnie; z dumą",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p509-013-word.mp3",
       "audioWordPl": "t1-p509-013-word-pl.mp3",
-      "audioSentence": "t1-p509-013-sentence.mp3"
+      "audioSentence": "t1-p509-013-sentence.mp3",
+      "polishAudio": "Dumnie"
     },
     {
       "id": "t1-p509-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p509-014-word.mp3",
       "audioWordPl": "t1-p509-014-word-pl.mp3",
-      "audioSentence": "t1-p509-014-sentence.mp3"
+      "audioSentence": "t1-p509-014-sentence.mp3",
+      "polishAudio": "Skąpo ubrany"
     },
     {
       "id": "t1-p509-015",
       "english": "Visually",
-      "polish": "Wzrokowo",
+      "polish": "Wzrokowo; wizualnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p509-015-word.mp3",
       "audioWordPl": "t1-p509-015-word-pl.mp3",
-      "audioSentence": "t1-p509-015-sentence.mp3"
+      "audioSentence": "t1-p509-015-sentence.mp3",
+      "polishAudio": "Wzrokowo"
     }
   ]
 }

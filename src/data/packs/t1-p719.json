@@ -9,12 +9,13 @@
     {
       "id": "t1-p719-001",
       "english": "Do sth over",
-      "polish": "Powtórzyć",
+      "polish": "Powtórzyć; zrobić coś ponownie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p719-001-word.mp3",
       "audioWordPl": "t1-p719-001-word-pl.mp3",
-      "audioSentence": "t1-p719-001-sentence.mp3"
+      "audioSentence": "t1-p719-001-sentence.mp3",
+      "polishAudio": "Powtórzyć"
     },
     {
       "id": "t1-p719-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p719-002-word.mp3",
       "audioWordPl": "t1-p719-002-word-pl.mp3",
-      "audioSentence": "t1-p719-002-sentence.mp3"
+      "audioSentence": "t1-p719-002-sentence.mp3",
+      "polishAudio": "Wziąć się za coś"
     },
     {
       "id": "t1-p719-003",
@@ -34,27 +36,30 @@
       "sentencePl": null,
       "audioWord": "t1-p719-003-word.mp3",
       "audioWordPl": "t1-p719-003-word-pl.mp3",
-      "audioSentence": "t1-p719-003-sentence.mp3"
+      "audioSentence": "t1-p719-003-sentence.mp3",
+      "polishAudio": "Obijać się"
     },
     {
       "id": "t1-p719-004",
       "english": "Keep sth up",
-      "polish": "Dalej coś robić",
+      "polish": "Dalej coś robić; kontynuować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p719-004-word.mp3",
       "audioWordPl": "t1-p719-004-word-pl.mp3",
-      "audioSentence": "t1-p719-004-sentence.mp3"
+      "audioSentence": "t1-p719-004-sentence.mp3",
+      "polishAudio": "Dalej coś robić"
     },
     {
       "id": "t1-p719-005",
       "english": "Set out",
-      "polish": "Przystępować",
+      "polish": "Przystępować; zabierać się do czegoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p719-005-word.mp3",
       "audioWordPl": "t1-p719-005-word-pl.mp3",
-      "audioSentence": "t1-p719-005-sentence.mp3"
+      "audioSentence": "t1-p719-005-sentence.mp3",
+      "polishAudio": "Przystępować"
     },
     {
       "id": "t1-p719-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p719-006-word.mp3",
       "audioWordPl": "t1-p719-006-word-pl.mp3",
-      "audioSentence": "t1-p719-006-sentence.mp3"
+      "audioSentence": "t1-p719-006-sentence.mp3",
+      "polishAudio": "Oczyszczać coś"
     },
     {
       "id": "t1-p719-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p719-007-word.mp3",
       "audioWordPl": "t1-p719-007-word-pl.mp3",
-      "audioSentence": "t1-p719-007-sentence.mp3"
+      "audioSentence": "t1-p719-007-sentence.mp3",
+      "polishAudio": "Obsługiwać"
     },
     {
       "id": "t1-p719-008",
@@ -84,27 +91,30 @@
       "sentencePl": null,
       "audioWord": "t1-p719-008-word.mp3",
       "audioWordPl": "t1-p719-008-word-pl.mp3",
-      "audioSentence": "t1-p719-008-sentence.mp3"
+      "audioSentence": "t1-p719-008-sentence.mp3",
+      "polishAudio": "Przestrzegać"
     },
     {
       "id": "t1-p719-009",
       "english": "Adhere to sth",
-      "polish": "Trzymać się czegoś",
+      "polish": "Trzymać się czegoś; stosować się do czegoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p719-009-word.mp3",
       "audioWordPl": "t1-p719-009-word-pl.mp3",
-      "audioSentence": "t1-p719-009-sentence.mp3"
+      "audioSentence": "t1-p719-009-sentence.mp3",
+      "polishAudio": "Trzymać się czegoś"
     },
     {
       "id": "t1-p719-010",
       "english": "Be in",
-      "polish": "Być na miejscu",
+      "polish": "Być na miejscu (np. w pracy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p719-010-word.mp3",
       "audioWordPl": "t1-p719-010-word-pl.mp3",
-      "audioSentence": "t1-p719-010-sentence.mp3"
+      "audioSentence": "t1-p719-010-sentence.mp3",
+      "polishAudio": "Być na miejscu"
     }
   ]
 }

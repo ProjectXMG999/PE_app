@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-001-word.mp3",
       "audioWordPl": "t1-p736-001-word-pl.mp3",
-      "audioSentence": "t1-p736-001-sentence.mp3"
+      "audioSentence": "t1-p736-001-sentence.mp3",
+      "polishAudio": "Zapalenie"
     },
     {
       "id": "t1-p736-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-002-word.mp3",
       "audioWordPl": "t1-p736-002-word-pl.mp3",
-      "audioSentence": "t1-p736-002-sentence.mp3"
+      "audioSentence": "t1-p736-002-sentence.mp3",
+      "polishAudio": "Apteczka"
     },
     {
       "id": "t1-p736-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p736-003-word.mp3",
       "audioWordPl": "t1-p736-003-word-pl.mp3",
-      "audioSentence": "t1-p736-003-sentence.mp3"
+      "audioSentence": "t1-p736-003-sentence.mp3",
+      "polishAudio": "Atak serca"
     },
     {
       "id": "t1-p736-004",
       "english": "Blister",
-      "polish": "Pęcherz",
+      "polish": "Pęcherz; odcisk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p736-004-word.mp3",
       "audioWordPl": "t1-p736-004-word-pl.mp3",
-      "audioSentence": "t1-p736-004-sentence.mp3"
+      "audioSentence": "t1-p736-004-sentence.mp3",
+      "polishAudio": "Pęcherz"
     },
     {
       "id": "t1-p736-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-005-word.mp3",
       "audioWordPl": "t1-p736-005-word-pl.mp3",
-      "audioSentence": "t1-p736-005-sentence.mp3"
+      "audioSentence": "t1-p736-005-sentence.mp3",
+      "polishAudio": "Bezsenność"
     },
     {
       "id": "t1-p736-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-006-word.mp3",
       "audioWordPl": "t1-p736-006-word-pl.mp3",
-      "audioSentence": "t1-p736-006-sentence.mp3"
+      "audioSentence": "t1-p736-006-sentence.mp3",
+      "polishAudio": "Efekt uboczny"
     },
     {
       "id": "t1-p736-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-007-word.mp3",
       "audioWordPl": "t1-p736-007-word-pl.mp3",
-      "audioSentence": "t1-p736-007-sentence.mp3"
+      "audioSentence": "t1-p736-007-sentence.mp3",
+      "polishAudio": "Syndrom"
     },
     {
       "id": "t1-p736-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-008-word.mp3",
       "audioWordPl": "t1-p736-008-word-pl.mp3",
-      "audioSentence": "t1-p736-008-sentence.mp3"
+      "audioSentence": "t1-p736-008-sentence.mp3",
+      "polishAudio": "Zatrucie pokarmowe"
     },
     {
       "id": "t1-p736-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-009-word.mp3",
       "audioWordPl": "t1-p736-009-word-pl.mp3",
-      "audioSentence": "t1-p736-009-sentence.mp3"
+      "audioSentence": "t1-p736-009-sentence.mp3",
+      "polishAudio": "Choroba lokomocyjna"
     },
     {
       "id": "t1-p736-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-010-word.mp3",
       "audioWordPl": "t1-p736-010-word-pl.mp3",
-      "audioSentence": "t1-p736-010-sentence.mp3"
+      "audioSentence": "t1-p736-010-sentence.mp3",
+      "polishAudio": "Gaza"
     },
     {
       "id": "t1-p736-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-011-word.mp3",
       "audioWordPl": "t1-p736-011-word-pl.mp3",
-      "audioSentence": "t1-p736-011-sentence.mp3"
+      "audioSentence": "t1-p736-011-sentence.mp3",
+      "polishAudio": "Gruźlica"
     },
     {
       "id": "t1-p736-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-012-word.mp3",
       "audioWordPl": "t1-p736-012-word-pl.mp3",
-      "audioSentence": "t1-p736-012-sentence.mp3"
+      "audioSentence": "t1-p736-012-sentence.mp3",
+      "polishAudio": "Hospitalizacja"
     },
     {
       "id": "t1-p736-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-013-word.mp3",
       "audioWordPl": "t1-p736-013-word-pl.mp3",
-      "audioSentence": "t1-p736-013-sentence.mp3"
+      "audioSentence": "t1-p736-013-sentence.mp3",
+      "polishAudio": "Niestrawność"
     },
     {
       "id": "t1-p736-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-014-word.mp3",
       "audioWordPl": "t1-p736-014-word-pl.mp3",
-      "audioSentence": "t1-p736-014-sentence.mp3"
+      "audioSentence": "t1-p736-014-sentence.mp3",
+      "polishAudio": "Paraliż"
     },
     {
       "id": "t1-p736-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p736-015-word.mp3",
       "audioWordPl": "t1-p736-015-word-pl.mp3",
-      "audioSentence": "t1-p736-015-sentence.mp3"
+      "audioSentence": "t1-p736-015-sentence.mp3",
+      "polishAudio": "Próchnica"
     }
   ]
 }

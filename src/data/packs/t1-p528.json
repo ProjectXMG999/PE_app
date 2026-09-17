@@ -9,22 +9,24 @@
     {
       "id": "t1-p528-001",
       "english": "On point",
-      "polish": "W punkt",
+      "polish": "W punkt (dobrze zrobione)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p528-001-word.mp3",
       "audioWordPl": "t1-p528-001-word-pl.mp3",
-      "audioSentence": "t1-p528-001-sentence.mp3"
+      "audioSentence": "t1-p528-001-sentence.mp3",
+      "polishAudio": "W punkt"
     },
     {
       "id": "t1-p528-002",
       "english": "Snap out of it",
-      "polish": "Obudź się",
+      "polish": "Obudź się; ogarnij się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p528-002-word.mp3",
       "audioWordPl": "t1-p528-002-word-pl.mp3",
-      "audioSentence": "t1-p528-002-sentence.mp3"
+      "audioSentence": "t1-p528-002-sentence.mp3",
+      "polishAudio": "Obudź się"
     },
     {
       "id": "t1-p528-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p528-003-word.mp3",
       "audioWordPl": "t1-p528-003-word-pl.mp3",
-      "audioSentence": "t1-p528-003-sentence.mp3"
+      "audioSentence": "t1-p528-003-sentence.mp3",
+      "polishAudio": "Daj mi znaka"
     },
     {
       "id": "t1-p528-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p528-004-word.mp3",
       "audioWordPl": "t1-p528-004-word-pl.mp3",
-      "audioSentence": "t1-p528-004-sentence.mp3"
+      "audioSentence": "t1-p528-004-sentence.mp3",
+      "polishAudio": "Odezwij się"
     },
     {
       "id": "t1-p528-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p528-005-word.mp3",
       "audioWordPl": "t1-p528-005-word-pl.mp3",
-      "audioSentence": "t1-p528-005-sentence.mp3"
+      "audioSentence": "t1-p528-005-sentence.mp3",
+      "polishAudio": "Jak leci"
     },
     {
       "id": "t1-p528-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p528-006-word.mp3",
       "audioWordPl": "t1-p528-006-word-pl.mp3",
-      "audioSentence": "t1-p528-006-sentence.mp3"
+      "audioSentence": "t1-p528-006-sentence.mp3",
+      "polishAudio": "Jak tam chcesz"
     },
     {
       "id": "t1-p528-007",
@@ -74,27 +80,30 @@
       "sentencePl": null,
       "audioWord": "t1-p528-007-word.mp3",
       "audioWordPl": "t1-p528-007-word-pl.mp3",
-      "audioSentence": "t1-p528-007-sentence.mp3"
+      "audioSentence": "t1-p528-007-sentence.mp3",
+      "polishAudio": "Nie kłamię"
     },
     {
       "id": "t1-p528-008",
       "english": "New york minute",
-      "polish": "Chwila",
+      "polish": "Chwila (w chwilę)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p528-008-word.mp3",
       "audioWordPl": "t1-p528-008-word-pl.mp3",
-      "audioSentence": "t1-p528-008-sentence.mp3"
+      "audioSentence": "t1-p528-008-sentence.mp3",
+      "polishAudio": "Chwila"
     },
     {
       "id": "t1-p528-009",
       "english": "All square",
-      "polish": "Po równo",
+      "polish": "Po równo; sprawiedliwie; jesteśmy kwita",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p528-009-word.mp3",
       "audioWordPl": "t1-p528-009-word-pl.mp3",
-      "audioSentence": "t1-p528-009-sentence.mp3"
+      "audioSentence": "t1-p528-009-sentence.mp3",
+      "polishAudio": "Po równo"
     },
     {
       "id": "t1-p528-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p528-010-word.mp3",
       "audioWordPl": "t1-p528-010-word-pl.mp3",
-      "audioSentence": "t1-p528-010-sentence.mp3"
+      "audioSentence": "t1-p528-010-sentence.mp3",
+      "polishAudio": "Główny problem w debacie"
     }
   ]
 }

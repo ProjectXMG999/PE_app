@@ -9,12 +9,13 @@
     {
       "id": "t1-p785-001",
       "english": "Dodge",
-      "polish": "Unikać",
+      "polish": "Unikać (robić unik)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p785-001-word.mp3",
       "audioWordPl": "t1-p785-001-word-pl.mp3",
-      "audioSentence": "t1-p785-001-sentence.mp3"
+      "audioSentence": "t1-p785-001-sentence.mp3",
+      "polishAudio": "Unikać"
     },
     {
       "id": "t1-p785-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p785-002-word.mp3",
       "audioWordPl": "t1-p785-002-word-pl.mp3",
-      "audioSentence": "t1-p785-002-sentence.mp3"
+      "audioSentence": "t1-p785-002-sentence.mp3",
+      "polishAudio": "Wynurzać się"
     },
     {
       "id": "t1-p785-003",
@@ -34,27 +36,30 @@
       "sentencePl": null,
       "audioWord": "t1-p785-003-word.mp3",
       "audioWordPl": "t1-p785-003-word-pl.mp3",
-      "audioSentence": "t1-p785-003-sentence.mp3"
+      "audioSentence": "t1-p785-003-sentence.mp3",
+      "polishAudio": "Stać w bezruchu"
     },
     {
       "id": "t1-p785-004",
       "english": "Leap",
-      "polish": "Przeskakiwać",
+      "polish": "Przeskakiwać (nad czymś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p785-004-word.mp3",
       "audioWordPl": "t1-p785-004-word-pl.mp3",
-      "audioSentence": "t1-p785-004-sentence.mp3"
+      "audioSentence": "t1-p785-004-sentence.mp3",
+      "polishAudio": "Przeskakiwać"
     },
     {
       "id": "t1-p785-005",
       "english": "Pop",
-      "polish": "Wyskakiwać",
+      "polish": "Wyskakiwać; pękać; rozerwać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p785-005-word.mp3",
       "audioWordPl": "t1-p785-005-word-pl.mp3",
-      "audioSentence": "t1-p785-005-sentence.mp3"
+      "audioSentence": "t1-p785-005-sentence.mp3",
+      "polishAudio": "Wyskakiwać"
     },
     {
       "id": "t1-p785-006",
@@ -64,27 +69,30 @@
       "sentencePl": null,
       "audioWord": "t1-p785-006-word.mp3",
       "audioWordPl": "t1-p785-006-word-pl.mp3",
-      "audioSentence": "t1-p785-006-sentence.mp3"
+      "audioSentence": "t1-p785-006-sentence.mp3",
+      "polishAudio": "Spadać gwałtownie"
     },
     {
       "id": "t1-p785-007",
       "english": "Stagger",
-      "polish": "Zataczać się",
+      "polish": "Zataczać się; oszałamiać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p785-007-word.mp3",
       "audioWordPl": "t1-p785-007-word-pl.mp3",
-      "audioSentence": "t1-p785-007-sentence.mp3"
+      "audioSentence": "t1-p785-007-sentence.mp3",
+      "polishAudio": "Zataczać się"
     },
     {
       "id": "t1-p785-008",
       "english": "Track",
-      "polish": "Śledzić",
+      "polish": "Śledzić; tropić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p785-008-word.mp3",
       "audioWordPl": "t1-p785-008-word-pl.mp3",
-      "audioSentence": "t1-p785-008-sentence.mp3"
+      "audioSentence": "t1-p785-008-sentence.mp3",
+      "polishAudio": "Śledzić"
     },
     {
       "id": "t1-p785-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p785-009-word.mp3",
       "audioWordPl": "t1-p785-009-word-pl.mp3",
-      "audioSentence": "t1-p785-009-sentence.mp3"
+      "audioSentence": "t1-p785-009-sentence.mp3",
+      "polishAudio": "Wirować"
     },
     {
       "id": "t1-p785-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p785-010-word.mp3",
       "audioWordPl": "t1-p785-010-word-pl.mp3",
-      "audioSentence": "t1-p785-010-sentence.mp3"
+      "audioSentence": "t1-p785-010-sentence.mp3",
+      "polishAudio": "Krążyć"
     },
     {
       "id": "t1-p785-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p785-011-word.mp3",
       "audioWordPl": "t1-p785-011-word-pl.mp3",
-      "audioSentence": "t1-p785-011-sentence.mp3"
+      "audioSentence": "t1-p785-011-sentence.mp3",
+      "polishAudio": "Ścigać"
     },
     {
       "id": "t1-p785-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p785-012-word.mp3",
       "audioWordPl": "t1-p785-012-word-pl.mp3",
-      "audioSentence": "t1-p785-012-sentence.mp3"
+      "audioSentence": "t1-p785-012-sentence.mp3",
+      "polishAudio": "Obracać się wokół własnej osi"
     },
     {
       "id": "t1-p785-013",
       "english": "Seat",
-      "polish": "Posadzić",
+      "polish": "Posadzić; sadzać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p785-013-word.mp3",
       "audioWordPl": "t1-p785-013-word-pl.mp3",
-      "audioSentence": "t1-p785-013-sentence.mp3"
+      "audioSentence": "t1-p785-013-sentence.mp3",
+      "polishAudio": "Posadzić"
     },
     {
       "id": "t1-p785-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p785-014-word.mp3",
       "audioWordPl": "t1-p785-014-word-pl.mp3",
-      "audioSentence": "t1-p785-014-sentence.mp3"
+      "audioSentence": "t1-p785-014-sentence.mp3",
+      "polishAudio": "Siedzieć okrakiem"
     },
     {
       "id": "t1-p785-015",
       "english": "Swirl",
-      "polish": "Kręcić w koło",
+      "polish": "Kręcić (się) w koło",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p785-015-word.mp3",
       "audioWordPl": "t1-p785-015-word-pl.mp3",
-      "audioSentence": "t1-p785-015-sentence.mp3"
+      "audioSentence": "t1-p785-015-sentence.mp3",
+      "polishAudio": "Kręcić w koło"
     }
   ]
 }

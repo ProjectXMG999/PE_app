@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p670-001-word.mp3",
       "audioWordPl": "t1-p670-001-word-pl.mp3",
-      "audioSentence": "t1-p670-001-sentence.mp3"
+      "audioSentence": "t1-p670-001-sentence.mp3",
+      "polishAudio": "Kojec"
     },
     {
       "id": "t1-p670-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p670-002-word.mp3",
       "audioWordPl": "t1-p670-002-word-pl.mp3",
-      "audioSentence": "t1-p670-002-sentence.mp3"
+      "audioSentence": "t1-p670-002-sentence.mp3",
+      "polishAudio": "Odparzenie od pieluszki"
     },
     {
       "id": "t1-p670-003",
       "english": "Rompers",
-      "polish": "Pajacyk",
+      "polish": "Pajacyk (ubranie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p670-003-word.mp3",
       "audioWordPl": "t1-p670-003-word-pl.mp3",
-      "audioSentence": "t1-p670-003-sentence.mp3"
+      "audioSentence": "t1-p670-003-sentence.mp3",
+      "polishAudio": "Pajacyk"
     },
     {
       "id": "t1-p670-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p670-004-word.mp3",
       "audioWordPl": "t1-p670-004-word-pl.mp3",
-      "audioSentence": "t1-p670-004-sentence.mp3"
+      "audioSentence": "t1-p670-004-sentence.mp3",
+      "polishAudio": "Pięcioraczki"
     },
     {
       "id": "t1-p670-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p670-005-word.mp3",
       "audioWordPl": "t1-p670-005-word-pl.mp3",
-      "audioSentence": "t1-p670-005-sentence.mp3"
+      "audioSentence": "t1-p670-005-sentence.mp3",
+      "polishAudio": "Poporodowy"
     },
     {
       "id": "t1-p670-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p670-006-word.mp3",
       "audioWordPl": "t1-p670-006-word-pl.mp3",
-      "audioSentence": "t1-p670-006-sentence.mp3"
+      "audioSentence": "t1-p670-006-sentence.mp3",
+      "polishAudio": "Przyszła matka"
     },
     {
       "id": "t1-p670-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p670-007-word.mp3",
       "audioWordPl": "t1-p670-007-word-pl.mp3",
-      "audioSentence": "t1-p670-007-sentence.mp3"
+      "audioSentence": "t1-p670-007-sentence.mp3",
+      "polishAudio": "Trojaczki"
     },
     {
       "id": "t1-p670-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p670-008-word.mp3",
       "audioWordPl": "t1-p670-008-word-pl.mp3",
-      "audioSentence": "t1-p670-008-sentence.mp3"
+      "audioSentence": "t1-p670-008-sentence.mp3",
+      "polishAudio": "Wyprawka niemowlęca"
     },
     {
       "id": "t1-p670-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p670-009-word.mp3",
       "audioWordPl": "t1-p670-009-word-pl.mp3",
-      "audioSentence": "t1-p670-009-sentence.mp3"
+      "audioSentence": "t1-p670-009-sentence.mp3",
+      "polishAudio": "Cesarskie cięcie"
     },
     {
       "id": "t1-p670-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p670-010-word.mp3",
       "audioWordPl": "t1-p670-010-word-pl.mp3",
-      "audioSentence": "t1-p670-010-sentence.mp3"
+      "audioSentence": "t1-p670-010-sentence.mp3",
+      "polishAudio": "Dziecko z probówki"
     },
     {
       "id": "t1-p670-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p670-011-word.mp3",
       "audioWordPl": "t1-p670-011-word-pl.mp3",
-      "audioSentence": "t1-p670-011-sentence.mp3"
+      "audioSentence": "t1-p670-011-sentence.mp3",
+      "polishAudio": "Adopcja"
     },
     {
       "id": "t1-p670-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p670-012-word.mp3",
       "audioWordPl": "t1-p670-012-word-pl.mp3",
-      "audioSentence": "t1-p670-012-sentence.mp3"
+      "audioSentence": "t1-p670-012-sentence.mp3",
+      "polishAudio": "Latawiec"
     },
     {
       "id": "t1-p670-013",
       "english": "Snowman",
-      "polish": "Bałwan",
+      "polish": "Bałwan (śniegowy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p670-013-word.mp3",
       "audioWordPl": "t1-p670-013-word-pl.mp3",
-      "audioSentence": "t1-p670-013-sentence.mp3"
+      "audioSentence": "t1-p670-013-sentence.mp3",
+      "polishAudio": "Bałwan"
     },
     {
       "id": "t1-p670-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p670-014-word.mp3",
       "audioWordPl": "t1-p670-014-word-pl.mp3",
-      "audioSentence": "t1-p670-014-sentence.mp3"
+      "audioSentence": "t1-p670-014-sentence.mp3",
+      "polishAudio": "Zabawka"
     },
     {
       "id": "t1-p670-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p670-015-word.mp3",
       "audioWordPl": "t1-p670-015-word-pl.mp3",
-      "audioSentence": "t1-p670-015-sentence.mp3"
+      "audioSentence": "t1-p670-015-sentence.mp3",
+      "polishAudio": "Dzieciństwo"
     }
   ]
 }

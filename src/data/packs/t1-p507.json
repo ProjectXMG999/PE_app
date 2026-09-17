@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p507-001-word.mp3",
       "audioWordPl": "t1-p507-001-word-pl.mp3",
-      "audioSentence": "t1-p507-001-sentence.mp3"
+      "audioSentence": "t1-p507-001-sentence.mp3",
+      "polishAudio": "Wziąć coś za coś innego"
     },
     {
       "id": "t1-p507-002",
@@ -24,37 +25,41 @@
       "sentencePl": null,
       "audioWord": "t1-p507-002-word.mp3",
       "audioWordPl": "t1-p507-002-word-pl.mp3",
-      "audioSentence": "t1-p507-002-sentence.mp3"
+      "audioSentence": "t1-p507-002-sentence.mp3",
+      "polishAudio": "Mdleć"
     },
     {
       "id": "t1-p507-003",
       "english": "Fake",
-      "polish": "Pozorować",
+      "polish": "Pozorować; udawać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p507-003-word.mp3",
       "audioWordPl": "t1-p507-003-word-pl.mp3",
-      "audioSentence": "t1-p507-003-sentence.mp3"
+      "audioSentence": "t1-p507-003-sentence.mp3",
+      "polishAudio": "Pozorować"
     },
     {
       "id": "t1-p507-004",
       "english": "Fool",
-      "polish": "Nabrać",
+      "polish": "Nabrać (kogoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p507-004-word.mp3",
       "audioWordPl": "t1-p507-004-word-pl.mp3",
-      "audioSentence": "t1-p507-004-sentence.mp3"
+      "audioSentence": "t1-p507-004-sentence.mp3",
+      "polishAudio": "Nabrać"
     },
     {
       "id": "t1-p507-005",
       "english": "Freeze",
-      "polish": "Oniemieć",
+      "polish": "Oniemieć; zamierać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p507-005-word.mp3",
       "audioWordPl": "t1-p507-005-word-pl.mp3",
-      "audioSentence": "t1-p507-005-sentence.mp3"
+      "audioSentence": "t1-p507-005-sentence.mp3",
+      "polishAudio": "Oniemieć"
     },
     {
       "id": "t1-p507-006",
@@ -64,27 +69,30 @@
       "sentencePl": null,
       "audioWord": "t1-p507-006-word.mp3",
       "audioWordPl": "t1-p507-006-word-pl.mp3",
-      "audioSentence": "t1-p507-006-sentence.mp3"
+      "audioSentence": "t1-p507-006-sentence.mp3",
+      "polishAudio": "Jęczeć"
     },
     {
       "id": "t1-p507-007",
       "english": "Mock",
-      "polish": "Kpić",
+      "polish": "Kpić; przedrzeźniać; wyśmiewać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p507-007-word.mp3",
       "audioWordPl": "t1-p507-007-word-pl.mp3",
-      "audioSentence": "t1-p507-007-sentence.mp3"
+      "audioSentence": "t1-p507-007-sentence.mp3",
+      "polishAudio": "Kpić"
     },
     {
       "id": "t1-p507-008",
       "english": "Spoil",
-      "polish": "Zepsuć",
+      "polish": "Zepsuć (zmarnować np. jedzenie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p507-008-word.mp3",
       "audioWordPl": "t1-p507-008-word-pl.mp3",
-      "audioSentence": "t1-p507-008-sentence.mp3"
+      "audioSentence": "t1-p507-008-sentence.mp3",
+      "polishAudio": "Zepsuć"
     },
     {
       "id": "t1-p507-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p507-009-word.mp3",
       "audioWordPl": "t1-p507-009-word-pl.mp3",
-      "audioSentence": "t1-p507-009-sentence.mp3"
+      "audioSentence": "t1-p507-009-sentence.mp3",
+      "polishAudio": "Oszukać kogoś w podstępny sposób"
     },
     {
       "id": "t1-p507-010",
@@ -104,37 +113,41 @@
       "sentencePl": null,
       "audioWord": "t1-p507-010-word.mp3",
       "audioWordPl": "t1-p507-010-word-pl.mp3",
-      "audioSentence": "t1-p507-010-sentence.mp3"
+      "audioSentence": "t1-p507-010-sentence.mp3",
+      "polishAudio": "Pogarszać"
     },
     {
       "id": "t1-p507-011",
       "english": "Yell",
-      "polish": "Wrzeszczeć",
+      "polish": "Wrzeszczeć; wznosić okrzyk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p507-011-word.mp3",
       "audioWordPl": "t1-p507-011-word-pl.mp3",
-      "audioSentence": "t1-p507-011-sentence.mp3"
+      "audioSentence": "t1-p507-011-sentence.mp3",
+      "polishAudio": "Wrzeszczeć"
     },
     {
       "id": "t1-p507-012",
       "english": "Harm",
-      "polish": "Szkodzić",
+      "polish": "Szkodzić; robić krzywdę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p507-012-word.mp3",
       "audioWordPl": "t1-p507-012-word-pl.mp3",
-      "audioSentence": "t1-p507-012-sentence.mp3"
+      "audioSentence": "t1-p507-012-sentence.mp3",
+      "polishAudio": "Szkodzić"
     },
     {
       "id": "t1-p507-013",
       "english": "Underestimate",
-      "polish": "Nie doceniać",
+      "polish": "Nie doceniać; lekceważyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p507-013-word.mp3",
       "audioWordPl": "t1-p507-013-word-pl.mp3",
-      "audioSentence": "t1-p507-013-sentence.mp3"
+      "audioSentence": "t1-p507-013-sentence.mp3",
+      "polishAudio": "Nie doceniać"
     },
     {
       "id": "t1-p507-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p507-014-word.mp3",
       "audioWordPl": "t1-p507-014-word-pl.mp3",
-      "audioSentence": "t1-p507-014-sentence.mp3"
+      "audioSentence": "t1-p507-014-sentence.mp3",
+      "polishAudio": "Złapać kogoś w pułapkę"
     },
     {
       "id": "t1-p507-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p507-015-word.mp3",
       "audioWordPl": "t1-p507-015-word-pl.mp3",
-      "audioSentence": "t1-p507-015-sentence.mp3"
+      "audioSentence": "t1-p507-015-sentence.mp3",
+      "polishAudio": "Zaniedbać"
     }
   ]
 }

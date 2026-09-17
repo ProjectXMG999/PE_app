@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p617-001-word.mp3",
       "audioWordPl": "t1-p617-001-word-pl.mp3",
-      "audioSentence": "t1-p617-001-sentence.mp3"
+      "audioSentence": "t1-p617-001-sentence.mp3",
+      "polishAudio": "Nizina"
     },
     {
       "id": "t1-p617-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p617-002-word.mp3",
       "audioWordPl": "t1-p617-002-word-pl.mp3",
-      "audioSentence": "t1-p617-002-sentence.mp3"
+      "audioSentence": "t1-p617-002-sentence.mp3",
+      "polishAudio": "Polana"
     },
     {
       "id": "t1-p617-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p617-003-word.mp3",
       "audioWordPl": "t1-p617-003-word-pl.mp3",
-      "audioSentence": "t1-p617-003-sentence.mp3"
+      "audioSentence": "t1-p617-003-sentence.mp3",
+      "polishAudio": "Szczyt"
     },
     {
       "id": "t1-p617-004",
       "english": "Summit",
-      "polish": "Szczyt",
+      "polish": "Szczyt (najwyższy punkt góry)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p617-004-word.mp3",
       "audioWordPl": "t1-p617-004-word-pl.mp3",
-      "audioSentence": "t1-p617-004-sentence.mp3"
+      "audioSentence": "t1-p617-004-sentence.mp3",
+      "polishAudio": "Szczyt"
     },
     {
       "id": "t1-p617-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p617-005-word.mp3",
       "audioWordPl": "t1-p617-005-word-pl.mp3",
-      "audioSentence": "t1-p617-005-sentence.mp3"
+      "audioSentence": "t1-p617-005-sentence.mp3",
+      "polishAudio": "Szerokość geograficzna"
     },
     {
       "id": "t1-p617-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p617-006-word.mp3",
       "audioWordPl": "t1-p617-006-word-pl.mp3",
-      "audioSentence": "t1-p617-006-sentence.mp3"
+      "audioSentence": "t1-p617-006-sentence.mp3",
+      "polishAudio": "Nadbrzeże"
     },
     {
       "id": "t1-p617-007",
       "english": "Seaside",
-      "polish": "Wybrzeże",
+      "polish": "Wybrzeże (tylko nad morzem)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p617-007-word.mp3",
       "audioWordPl": "t1-p617-007-word-pl.mp3",
-      "audioSentence": "t1-p617-007-sentence.mp3"
+      "audioSentence": "t1-p617-007-sentence.mp3",
+      "polishAudio": "Wybrzeże"
     },
     {
       "id": "t1-p617-008",
@@ -84,27 +91,30 @@
       "sentencePl": null,
       "audioWord": "t1-p617-008-word.mp3",
       "audioWordPl": "t1-p617-008-word-pl.mp3",
-      "audioSentence": "t1-p617-008-sentence.mp3"
+      "audioSentence": "t1-p617-008-sentence.mp3",
+      "polishAudio": "Wyżyna"
     },
     {
       "id": "t1-p617-009",
       "english": "Gulf",
-      "polish": "Zatoka",
+      "polish": "Zatoka (duża)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p617-009-word.mp3",
       "audioWordPl": "t1-p617-009-word-pl.mp3",
-      "audioSentence": "t1-p617-009-sentence.mp3"
+      "audioSentence": "t1-p617-009-sentence.mp3",
+      "polishAudio": "Zatoka"
     },
     {
       "id": "t1-p617-010",
       "english": "Bay",
-      "polish": "Zatoka",
+      "polish": "Zatoka (mała)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p617-010-word.mp3",
       "audioWordPl": "t1-p617-010-word-pl.mp3",
-      "audioSentence": "t1-p617-010-sentence.mp3"
+      "audioSentence": "t1-p617-010-sentence.mp3",
+      "polishAudio": "Zatoka"
     },
     {
       "id": "t1-p617-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p617-011-word.mp3",
       "audioWordPl": "t1-p617-011-word-pl.mp3",
-      "audioSentence": "t1-p617-011-sentence.mp3"
+      "audioSentence": "t1-p617-011-sentence.mp3",
+      "polishAudio": "Zbocze"
     },
     {
       "id": "t1-p617-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p617-012-word.mp3",
       "audioWordPl": "t1-p617-012-word-pl.mp3",
-      "audioSentence": "t1-p617-012-sentence.mp3"
+      "audioSentence": "t1-p617-012-sentence.mp3",
+      "polishAudio": "Dzika przyroda"
     },
     {
       "id": "t1-p617-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p617-013-word.mp3",
       "audioWordPl": "t1-p617-013-word-pl.mp3",
-      "audioSentence": "t1-p617-013-sentence.mp3"
+      "audioSentence": "t1-p617-013-sentence.mp3",
+      "polishAudio": "Horyzont"
     },
     {
       "id": "t1-p617-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p617-014-word.mp3",
       "audioWordPl": "t1-p617-014-word-pl.mp3",
-      "audioSentence": "t1-p617-014-sentence.mp3"
+      "audioSentence": "t1-p617-014-sentence.mp3",
+      "polishAudio": "Krawędź"
     },
     {
       "id": "t1-p617-015",
       "english": "Crack",
-      "polish": "Szczelina",
+      "polish": "Szczelina; pęknięcie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p617-015-word.mp3",
       "audioWordPl": "t1-p617-015-word-pl.mp3",
-      "audioSentence": "t1-p617-015-sentence.mp3"
+      "audioSentence": "t1-p617-015-sentence.mp3",
+      "polishAudio": "Szczelina"
     }
   ]
 }

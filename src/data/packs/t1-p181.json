@@ -9,102 +9,112 @@
     {
       "id": "t1-p181-001",
       "english": "Plug in",
-      "polish": "Podłączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Podłączyć (się)",
+      "sentenceEn": "Where can I plug this fan in? It's so stuffy in here.",
+      "sentencePl": "Gdzie mogę podłączyć ten wentylator? Strasznie tu duszno.",
       "audioWord": "t1-p181-001-word.mp3",
       "audioWordPl": "t1-p181-001-word-pl.mp3",
-      "audioSentence": "t1-p181-001-sentence.mp3"
+      "audioSentence": "t1-p181-001-sentence.mp3",
+      "polishAudio": "Podłączyć"
     },
     {
       "id": "t1-p181-002",
       "english": "Sign out",
-      "polish": "Wypisać się",
+      "polish": "Wypisać się (np. z listy gości)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p181-002-word.mp3",
       "audioWordPl": "t1-p181-002-word-pl.mp3",
-      "audioSentence": "t1-p181-002-sentence.mp3"
+      "audioSentence": "t1-p181-002-sentence.mp3",
+      "polishAudio": "Wypisać się"
     },
     {
       "id": "t1-p181-003",
       "english": "Switch off",
-      "polish": "Wyłączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Wyłączyć (pstryczkiem)",
+      "sentenceEn": "Switch off the notifications for an hour, or I won't finish this film.",
+      "sentencePl": "Wyłącz powiadomienia na godzinę, inaczej nie skończę tego filmu.",
       "audioWord": "t1-p181-003-word.mp3",
       "audioWordPl": "t1-p181-003-word-pl.mp3",
-      "audioSentence": "t1-p181-003-sentence.mp3"
+      "audioSentence": "t1-p181-003-sentence.mp3",
+      "polishAudio": "Wyłączyć"
     },
     {
       "id": "t1-p181-004",
       "english": "Hook up",
-      "polish": "Podpiąć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Podpiąć (np. kabel)",
+      "sentenceEn": "I'll hook your tablet up to the TV, and we'll look at the photos from the trip.",
+      "sentencePl": "Podepnę ci tablet do telewizora, obejrzymy zdjęcia z wyjazdu.",
       "audioWord": "t1-p181-004-word.mp3",
       "audioWordPl": "t1-p181-004-word-pl.mp3",
-      "audioSentence": "t1-p181-004-sentence.mp3"
+      "audioSentence": "t1-p181-004-sentence.mp3",
+      "polishAudio": "Podpiąć"
     },
     {
       "id": "t1-p181-005",
       "english": "Switch on",
-      "polish": "Włączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Włączyć (pstryczkiem)",
+      "sentenceEn": "Switch on your microphone for a moment; I can't hear your question.",
+      "sentencePl": "Włącz na chwilę mikrofon, nie słyszę twojego pytania.",
       "audioWord": "t1-p181-005-word.mp3",
       "audioWordPl": "t1-p181-005-word-pl.mp3",
-      "audioSentence": "t1-p181-005-sentence.mp3"
+      "audioSentence": "t1-p181-005-sentence.mp3",
+      "polishAudio": "Włączyć"
     },
     {
       "id": "t1-p181-006",
       "english": "Pop up",
       "polish": "Wyskoczyć na ekranie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "A strange message popped up on the screen—what should I click?",
+      "sentencePl": "Na ekranie wyskoczył dziwny komunikat — co mam kliknąć?",
       "audioWord": "t1-p181-006-word.mp3",
       "audioWordPl": "t1-p181-006-word-pl.mp3",
-      "audioSentence": "t1-p181-006-sentence.mp3"
+      "audioSentence": "t1-p181-006-sentence.mp3",
+      "polishAudio": "Wyskoczyć na ekranie"
     },
     {
       "id": "t1-p181-007",
       "english": "Turn down",
       "polish": "Ściszać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Turn down your music, please—I'm on a video call.",
+      "sentencePl": "Ścisz muzykę, proszę — jestem na wideorozmowie.",
       "audioWord": "t1-p181-007-word.mp3",
       "audioWordPl": "t1-p181-007-word-pl.mp3",
-      "audioSentence": "t1-p181-007-sentence.mp3"
+      "audioSentence": "t1-p181-007-sentence.mp3",
+      "polishAudio": "Ściszać"
     },
     {
       "id": "t1-p181-008",
       "english": "Turn sth off",
       "polish": "Wyłączyć coś",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I turned the oven off twice, just to be sure.",
+      "sentencePl": "Dwa razy sprawdziłem, czy wyłączyłem piekarnik, tak dla pewności.",
       "audioWord": "t1-p181-008-word.mp3",
       "audioWordPl": "t1-p181-008-word-pl.mp3",
-      "audioSentence": "t1-p181-008-sentence.mp3"
+      "audioSentence": "t1-p181-008-sentence.mp3",
+      "polishAudio": "Wyłączyć coś"
     },
     {
       "id": "t1-p181-009",
       "english": "Turn on",
       "polish": "Włączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Turn on your iPhone hotspot—my Wi-Fi just crashed.",
+      "sentencePl": "Włącz hotspot w iPhonie — moje Wi-Fi właśnie padło.",
       "audioWord": "t1-p181-009-word.mp3",
       "audioWordPl": "t1-p181-009-word-pl.mp3",
-      "audioSentence": "t1-p181-009-sentence.mp3"
+      "audioSentence": "t1-p181-009-sentence.mp3",
+      "polishAudio": "Włączyć"
     },
     {
       "id": "t1-p181-010",
       "english": "Turn up",
       "polish": "Podgłaśniać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Turn it up; I can't hear the singer.",
+      "sentencePl": "Podgłośnij, nie słyszę wokalisty.",
       "audioWord": "t1-p181-010-word.mp3",
       "audioWordPl": "t1-p181-010-word-pl.mp3",
-      "audioSentence": "t1-p181-010-sentence.mp3"
+      "audioSentence": "t1-p181-010-sentence.mp3",
+      "polishAudio": "Podgłaśniać"
     }
   ]
 }

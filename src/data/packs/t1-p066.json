@@ -9,102 +9,112 @@
     {
       "id": "t1-p066-001",
       "english": "Goal",
-      "polish": "Cel",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Cel (moim celem jest)",
+      "sentenceEn": "What's your goal this month?",
+      "sentencePl": "Jaki masz cel w tym miesiącu?",
       "audioWord": "t1-p066-001-word.mp3",
       "audioWordPl": "t1-p066-001-word-pl.mp3",
-      "audioSentence": "t1-p066-001-sentence.mp3"
+      "audioSentence": "t1-p066-001-sentence.mp3",
+      "polishAudio": "Cel"
     },
     {
       "id": "t1-p066-002",
       "english": "Center",
       "polish": "Centrum",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "We got lost near the center.",
+      "sentencePl": "Zgubiliśmy się w pobliżu centrum.",
       "audioWord": "t1-p066-002-word.mp3",
       "audioWordPl": "t1-p066-002-word-pl.mp3",
-      "audioSentence": "t1-p066-002-sentence.mp3"
+      "audioSentence": "t1-p066-002-sentence.mp3",
+      "polishAudio": "Centrum"
     },
     {
       "id": "t1-p066-003",
       "english": "Category",
       "polish": "Kategoria",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "This belongs in a different category.",
+      "sentencePl": "To należy do innej kategorii.",
       "audioWord": "t1-p066-003-word.mp3",
       "audioWordPl": "t1-p066-003-word-pl.mp3",
-      "audioSentence": "t1-p066-003-sentence.mp3"
+      "audioSentence": "t1-p066-003-sentence.mp3",
+      "polishAudio": "Kategoria"
     },
     {
       "id": "t1-p066-004",
       "english": "Place",
       "polish": "Miejsce",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I know a quiet place nearby.",
+      "sentencePl": "Znam spokojne miejsce w pobliżu.",
       "audioWord": "t1-p066-004-word.mp3",
       "audioWordPl": "t1-p066-004-word-pl.mp3",
-      "audioSentence": "t1-p066-004-sentence.mp3"
+      "audioSentence": "t1-p066-004-sentence.mp3",
+      "polishAudio": "Miejsce"
     },
     {
       "id": "t1-p066-005",
       "english": "Problem",
       "polish": "Problem",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "No problem, I can wait.",
+      "sentencePl": "Nie ma problemu, mogę poczekać.",
       "audioWord": "t1-p066-005-word.mp3",
       "audioWordPl": "t1-p066-005-word-pl.mp3",
-      "audioSentence": "t1-p066-005-sentence.mp3"
+      "audioSentence": "t1-p066-005-sentence.mp3",
+      "polishAudio": "Problem"
     },
     {
       "id": "t1-p066-006",
       "english": "Object",
       "polish": "Przedmiot",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "What is this strange object?",
+      "sentencePl": "Co to za dziwny przedmiot?",
       "audioWord": "t1-p066-006-word.mp3",
       "audioWordPl": "t1-p066-006-word-pl.mp3",
-      "audioSentence": "t1-p066-006-sentence.mp3"
+      "audioSentence": "t1-p066-006-sentence.mp3",
+      "polishAudio": "Przedmiot"
     },
     {
       "id": "t1-p066-007",
       "english": "Thing",
       "polish": "Rzecz",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "One thing at a time, please.",
+      "sentencePl": "Proszę, po jednej rzeczy naraz.",
       "audioWord": "t1-p066-007-word.mp3",
       "audioWordPl": "t1-p066-007-word-pl.mp3",
-      "audioSentence": "t1-p066-007-sentence.mp3"
+      "audioSentence": "t1-p066-007-sentence.mp3",
+      "polishAudio": "Rzecz"
     },
     {
       "id": "t1-p066-008",
       "english": "Way",
       "polish": "Sposób",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "There must be another way.",
+      "sentencePl": "Musi być inny sposób.",
       "audioWord": "t1-p066-008-word.mp3",
       "audioWordPl": "t1-p066-008-word-pl.mp3",
-      "audioSentence": "t1-p066-008-sentence.mp3"
+      "audioSentence": "t1-p066-008-sentence.mp3",
+      "polishAudio": "Sposób"
     },
     {
       "id": "t1-p066-009",
       "english": "Detail",
       "polish": "Szczegół",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You missed one important detail.",
+      "sentencePl": "Przeoczyłeś jeden ważny szczegół.",
       "audioWord": "t1-p066-009-word.mp3",
       "audioWordPl": "t1-p066-009-word-pl.mp3",
-      "audioSentence": "t1-p066-009-sentence.mp3"
+      "audioSentence": "t1-p066-009-sentence.mp3",
+      "polishAudio": "Szczegół"
     },
     {
       "id": "t1-p066-010",
       "english": "Sign",
       "polish": "Znak",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Follow the blue sign, please.",
+      "sentencePl": "Proszę, idź za niebieskim znakiem.",
       "audioWord": "t1-p066-010-word.mp3",
       "audioWordPl": "t1-p066-010-word-pl.mp3",
-      "audioSentence": "t1-p066-010-sentence.mp3"
+      "audioSentence": "t1-p066-010-sentence.mp3",
+      "polishAudio": "Znak"
     }
   ]
 }

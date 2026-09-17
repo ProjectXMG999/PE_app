@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p641-001-word.mp3",
       "audioWordPl": "t1-p641-001-word-pl.mp3",
-      "audioSentence": "t1-p641-001-sentence.mp3"
+      "audioSentence": "t1-p641-001-sentence.mp3",
+      "polishAudio": "Drób"
     },
     {
       "id": "t1-p641-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p641-002-word.mp3",
       "audioWordPl": "t1-p641-002-word-pl.mp3",
-      "audioSentence": "t1-p641-002-sentence.mp3"
+      "audioSentence": "t1-p641-002-sentence.mp3",
+      "polishAudio": "Buda"
     },
     {
       "id": "t1-p641-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p641-003-word.mp3",
       "audioWordPl": "t1-p641-003-word-pl.mp3",
-      "audioSentence": "t1-p641-003-sentence.mp3"
+      "audioSentence": "t1-p641-003-sentence.mp3",
+      "polishAudio": "Trzcina"
     },
     {
       "id": "t1-p641-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p641-004-word.mp3",
       "audioWordPl": "t1-p641-004-word-pl.mp3",
-      "audioSentence": "t1-p641-004-sentence.mp3"
+      "audioSentence": "t1-p641-004-sentence.mp3",
+      "polishAudio": "Siekiera"
     },
     {
       "id": "t1-p641-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p641-005-word.mp3",
       "audioWordPl": "t1-p641-005-word-pl.mp3",
-      "audioSentence": "t1-p641-005-sentence.mp3"
+      "audioSentence": "t1-p641-005-sentence.mp3",
+      "polishAudio": "Stajnia"
     },
     {
       "id": "t1-p641-006",
@@ -64,27 +69,30 @@
       "sentencePl": null,
       "audioWord": "t1-p641-006-word.mp3",
       "audioWordPl": "t1-p641-006-word-pl.mp3",
-      "audioSentence": "t1-p641-006-sentence.mp3"
+      "audioSentence": "t1-p641-006-sentence.mp3",
+      "polishAudio": "Stodoła"
     },
     {
       "id": "t1-p641-007",
       "english": "Cottage",
-      "polish": "Chatka",
+      "polish": "Chatka; domek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p641-007-word.mp3",
       "audioWordPl": "t1-p641-007-word-pl.mp3",
-      "audioSentence": "t1-p641-007-sentence.mp3"
+      "audioSentence": "t1-p641-007-sentence.mp3",
+      "polishAudio": "Chatka"
     },
     {
       "id": "t1-p641-008",
       "english": "Windmill",
-      "polish": "Wiatrak",
+      "polish": "Wiatrak; młyn",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p641-008-word.mp3",
       "audioWordPl": "t1-p641-008-word-pl.mp3",
-      "audioSentence": "t1-p641-008-sentence.mp3"
+      "audioSentence": "t1-p641-008-sentence.mp3",
+      "polishAudio": "Wiatrak"
     },
     {
       "id": "t1-p641-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p641-009-word.mp3",
       "audioWordPl": "t1-p641-009-word-pl.mp3",
-      "audioSentence": "t1-p641-009-sentence.mp3"
+      "audioSentence": "t1-p641-009-sentence.mp3",
+      "polishAudio": "Rozmnażanie"
     },
     {
       "id": "t1-p641-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p641-010-word.mp3",
       "audioWordPl": "t1-p641-010-word-pl.mp3",
-      "audioSentence": "t1-p641-010-sentence.mp3"
+      "audioSentence": "t1-p641-010-sentence.mp3",
+      "polishAudio": "Bydło"
     },
     {
       "id": "t1-p641-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p641-011-word.mp3",
       "audioWordPl": "t1-p641-011-word-pl.mp3",
-      "audioSentence": "t1-p641-011-sentence.mp3"
+      "audioSentence": "t1-p641-011-sentence.mp3",
+      "polishAudio": "Chata"
     },
     {
       "id": "t1-p641-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p641-012-word.mp3",
       "audioWordPl": "t1-p641-012-word-pl.mp3",
-      "audioSentence": "t1-p641-012-sentence.mp3"
+      "audioSentence": "t1-p641-012-sentence.mp3",
+      "polishAudio": "Chlew"
     },
     {
       "id": "t1-p641-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p641-013-word.mp3",
       "audioWordPl": "t1-p641-013-word-pl.mp3",
-      "audioSentence": "t1-p641-013-sentence.mp3"
+      "audioSentence": "t1-p641-013-sentence.mp3",
+      "polishAudio": "Gołębiarz"
     },
     {
       "id": "t1-p641-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p641-014-word.mp3",
       "audioWordPl": "t1-p641-014-word-pl.mp3",
-      "audioSentence": "t1-p641-014-sentence.mp3"
+      "audioSentence": "t1-p641-014-sentence.mp3",
+      "polishAudio": "Chłop"
     },
     {
       "id": "t1-p641-015",
       "english": "Buckwheat",
-      "polish": "Gryka",
+      "polish": "Gryka (kasza gryczana)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p641-015-word.mp3",
       "audioWordPl": "t1-p641-015-word-pl.mp3",
-      "audioSentence": "t1-p641-015-sentence.mp3"
+      "audioSentence": "t1-p641-015-sentence.mp3",
+      "polishAudio": "Gryka"
     }
   ]
 }

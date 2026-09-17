@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p497-001-word.mp3",
       "audioWordPl": "t1-p497-001-word-pl.mp3",
-      "audioSentence": "t1-p497-001-sentence.mp3"
+      "audioSentence": "t1-p497-001-sentence.mp3",
+      "polishAudio": "Korporacja"
     },
     {
       "id": "t1-p497-002",
@@ -24,27 +25,30 @@
       "sentencePl": null,
       "audioWord": "t1-p497-002-word.mp3",
       "audioWordPl": "t1-p497-002-word-pl.mp3",
-      "audioSentence": "t1-p497-002-sentence.mp3"
+      "audioSentence": "t1-p497-002-sentence.mp3",
+      "polishAudio": "Magazyn"
     },
     {
       "id": "t1-p497-003",
       "english": "Assessment",
-      "polish": "Ocena",
+      "polish": "Ocena; oszacowanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p497-003-word.mp3",
       "audioWordPl": "t1-p497-003-word-pl.mp3",
-      "audioSentence": "t1-p497-003-sentence.mp3"
+      "audioSentence": "t1-p497-003-sentence.mp3",
+      "polishAudio": "Ocena"
     },
     {
       "id": "t1-p497-004",
       "english": "Receipt",
-      "polish": "Paragon",
+      "polish": "Paragon; pokwitowanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p497-004-word.mp3",
       "audioWordPl": "t1-p497-004-word-pl.mp3",
-      "audioSentence": "t1-p497-004-sentence.mp3"
+      "audioSentence": "t1-p497-004-sentence.mp3",
+      "polishAudio": "Paragon"
     },
     {
       "id": "t1-p497-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p497-005-word.mp3",
       "audioWordPl": "t1-p497-005-word-pl.mp3",
-      "audioSentence": "t1-p497-005-sentence.mp3"
+      "audioSentence": "t1-p497-005-sentence.mp3",
+      "polishAudio": "Podróbka"
     },
     {
       "id": "t1-p497-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p497-006-word.mp3",
       "audioWordPl": "t1-p497-006-word-pl.mp3",
-      "audioSentence": "t1-p497-006-sentence.mp3"
+      "audioSentence": "t1-p497-006-sentence.mp3",
+      "polishAudio": "Popyt"
     },
     {
       "id": "t1-p497-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p497-007-word.mp3",
       "audioWordPl": "t1-p497-007-word-pl.mp3",
-      "audioSentence": "t1-p497-007-sentence.mp3"
+      "audioSentence": "t1-p497-007-sentence.mp3",
+      "polishAudio": "Pozwolenie"
     },
     {
       "id": "t1-p497-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p497-008-word.mp3",
       "audioWordPl": "t1-p497-008-word-pl.mp3",
-      "audioSentence": "t1-p497-008-sentence.mp3"
+      "audioSentence": "t1-p497-008-sentence.mp3",
+      "polishAudio": "Prawo autorskie"
     },
     {
       "id": "t1-p497-009",
       "english": "Priority",
-      "polish": "Priorytet",
+      "polish": "Priorytet; pierwszeństwo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p497-009-word.mp3",
       "audioWordPl": "t1-p497-009-word-pl.mp3",
-      "audioSentence": "t1-p497-009-sentence.mp3"
+      "audioSentence": "t1-p497-009-sentence.mp3",
+      "polishAudio": "Priorytet"
     },
     {
       "id": "t1-p497-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p497-010-word.mp3",
       "audioWordPl": "t1-p497-010-word-pl.mp3",
-      "audioSentence": "t1-p497-010-sentence.mp3"
+      "audioSentence": "t1-p497-010-sentence.mp3",
+      "polishAudio": "Protokół"
     },
     {
       "id": "t1-p497-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p497-011-word.mp3",
       "audioWordPl": "t1-p497-011-word-pl.mp3",
-      "audioSentence": "t1-p497-011-sentence.mp3"
+      "audioSentence": "t1-p497-011-sentence.mp3",
+      "polishAudio": "Spółka"
     },
     {
       "id": "t1-p497-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p497-012-word.mp3",
       "audioWordPl": "t1-p497-012-word-pl.mp3",
-      "audioSentence": "t1-p497-012-sentence.mp3"
+      "audioSentence": "t1-p497-012-sentence.mp3",
+      "polishAudio": "Sprzedaż"
     },
     {
       "id": "t1-p497-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p497-013-word.mp3",
       "audioWordPl": "t1-p497-013-word-pl.mp3",
-      "audioSentence": "t1-p497-013-sentence.mp3"
+      "audioSentence": "t1-p497-013-sentence.mp3",
+      "polishAudio": "Start-up"
     },
     {
       "id": "t1-p497-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p497-014-word.mp3",
       "audioWordPl": "t1-p497-014-word-pl.mp3",
-      "audioSentence": "t1-p497-014-sentence.mp3"
+      "audioSentence": "t1-p497-014-sentence.mp3",
+      "polishAudio": "Sponsoring"
     },
     {
       "id": "t1-p497-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p497-015-word.mp3",
       "audioWordPl": "t1-p497-015-word-pl.mp3",
-      "audioSentence": "t1-p497-015-sentence.mp3"
+      "audioSentence": "t1-p497-015-sentence.mp3",
+      "polishAudio": "Sponsor"
     }
   ]
 }

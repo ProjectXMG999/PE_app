@@ -14,27 +14,30 @@
       "sentencePl": null,
       "audioWord": "t1-p327-001-word.mp3",
       "audioWordPl": "t1-p327-001-word-pl.mp3",
-      "audioSentence": "t1-p327-001-sentence.mp3"
+      "audioSentence": "t1-p327-001-sentence.mp3",
+      "polishAudio": "Wpaść do kogoś"
     },
     {
       "id": "t1-p327-002",
       "english": "Get sb back",
-      "polish": "Odprowadzić",
+      "polish": "Odprowadzić; odwieźć kogoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p327-002-word.mp3",
       "audioWordPl": "t1-p327-002-word-pl.mp3",
-      "audioSentence": "t1-p327-002-sentence.mp3"
+      "audioSentence": "t1-p327-002-sentence.mp3",
+      "polishAudio": "Odprowadzić"
     },
     {
       "id": "t1-p327-003",
       "english": "Get into",
-      "polish": "Wejść do jakiegoś miejsca",
+      "polish": "Wejść do jakiegoś miejsca (szczególnie gdy jest trudne)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p327-003-word.mp3",
       "audioWordPl": "t1-p327-003-word-pl.mp3",
-      "audioSentence": "t1-p327-003-sentence.mp3"
+      "audioSentence": "t1-p327-003-sentence.mp3",
+      "polishAudio": "Wejść do jakiegoś miejsca"
     },
     {
       "id": "t1-p327-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p327-004-word.mp3",
       "audioWordPl": "t1-p327-004-word-pl.mp3",
-      "audioSentence": "t1-p327-004-sentence.mp3"
+      "audioSentence": "t1-p327-004-sentence.mp3",
+      "polishAudio": "Schodzić"
     },
     {
       "id": "t1-p327-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p327-005-word.mp3",
       "audioWordPl": "t1-p327-005-word-pl.mp3",
-      "audioSentence": "t1-p327-005-sentence.mp3"
+      "audioSentence": "t1-p327-005-sentence.mp3",
+      "polishAudio": "Podbiec"
     },
     {
       "id": "t1-p327-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p327-006-word.mp3",
       "audioWordPl": "t1-p327-006-word-pl.mp3",
-      "audioSentence": "t1-p327-006-sentence.mp3"
+      "audioSentence": "t1-p327-006-sentence.mp3",
+      "polishAudio": "Zbiec"
     },
     {
       "id": "t1-p327-007",
       "english": "Get in",
-      "polish": "Przyjeżdżać",
+      "polish": "Przyjeżdżać; przychodzić do domu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p327-007-word.mp3",
       "audioWordPl": "t1-p327-007-word-pl.mp3",
-      "audioSentence": "t1-p327-007-sentence.mp3"
+      "audioSentence": "t1-p327-007-sentence.mp3",
+      "polishAudio": "Przyjeżdżać"
     },
     {
       "id": "t1-p327-008",
@@ -84,27 +91,30 @@
       "sentencePl": null,
       "audioWord": "t1-p327-008-word.mp3",
       "audioWordPl": "t1-p327-008-word-pl.mp3",
-      "audioSentence": "t1-p327-008-sentence.mp3"
+      "audioSentence": "t1-p327-008-sentence.mp3",
+      "polishAudio": "Odprowadzić kogoś pieszo"
     },
     {
       "id": "t1-p327-009",
       "english": "Go around",
-      "polish": "Okrążać",
+      "polish": "Okrążać; obchodzić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p327-009-word.mp3",
       "audioWordPl": "t1-p327-009-word-pl.mp3",
-      "audioSentence": "t1-p327-009-sentence.mp3"
+      "audioSentence": "t1-p327-009-sentence.mp3",
+      "polishAudio": "Okrążać"
     },
     {
       "id": "t1-p327-010",
       "english": "Walk up",
-      "polish": "Wejść na górę",
+      "polish": "Wejść na górę; podejść (do czegoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p327-010-word.mp3",
       "audioWordPl": "t1-p327-010-word-pl.mp3",
-      "audioSentence": "t1-p327-010-sentence.mp3"
+      "audioSentence": "t1-p327-010-sentence.mp3",
+      "polishAudio": "Wejść na górę"
     }
   ]
 }

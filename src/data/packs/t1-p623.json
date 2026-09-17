@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-001-word.mp3",
       "audioWordPl": "t1-p623-001-word-pl.mp3",
-      "audioSentence": "t1-p623-001-sentence.mp3"
+      "audioSentence": "t1-p623-001-sentence.mp3",
+      "polishAudio": "Adoptowany"
     },
     {
       "id": "t1-p623-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-002-word.mp3",
       "audioWordPl": "t1-p623-002-word-pl.mp3",
-      "audioSentence": "t1-p623-002-sentence.mp3"
+      "audioSentence": "t1-p623-002-sentence.mp3",
+      "polishAudio": "Alfabetyczny"
     },
     {
       "id": "t1-p623-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-003-word.mp3",
       "audioWordPl": "t1-p623-003-word-pl.mp3",
-      "audioSentence": "t1-p623-003-sentence.mp3"
+      "audioSentence": "t1-p623-003-sentence.mp3",
+      "polishAudio": "Alternatywny"
     },
     {
       "id": "t1-p623-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-004-word.mp3",
       "audioWordPl": "t1-p623-004-word-pl.mp3",
-      "audioSentence": "t1-p623-004-sentence.mp3"
+      "audioSentence": "t1-p623-004-sentence.mp3",
+      "polishAudio": "Analityczny"
     },
     {
       "id": "t1-p623-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-005-word.mp3",
       "audioWordPl": "t1-p623-005-word-pl.mp3",
-      "audioSentence": "t1-p623-005-sentence.mp3"
+      "audioSentence": "t1-p623-005-sentence.mp3",
+      "polishAudio": "Animowany"
     },
     {
       "id": "t1-p623-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-006-word.mp3",
       "audioWordPl": "t1-p623-006-word-pl.mp3",
-      "audioSentence": "t1-p623-006-sentence.mp3"
+      "audioSentence": "t1-p623-006-sentence.mp3",
+      "polishAudio": "Aromatyczny"
     },
     {
       "id": "t1-p623-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-007-word.mp3",
       "audioWordPl": "t1-p623-007-word-pl.mp3",
-      "audioSentence": "t1-p623-007-sentence.mp3"
+      "audioSentence": "t1-p623-007-sentence.mp3",
+      "polishAudio": "Biologiczny"
     },
     {
       "id": "t1-p623-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-008-word.mp3",
       "audioWordPl": "t1-p623-008-word-pl.mp3",
-      "audioSentence": "t1-p623-008-sentence.mp3"
+      "audioSentence": "t1-p623-008-sentence.mp3",
+      "polishAudio": "Charyzmatyczny"
     },
     {
       "id": "t1-p623-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-009-word.mp3",
       "audioWordPl": "t1-p623-009-word-pl.mp3",
-      "audioSentence": "t1-p623-009-sentence.mp3"
+      "audioSentence": "t1-p623-009-sentence.mp3",
+      "polishAudio": "Chemiczny"
     },
     {
       "id": "t1-p623-010",
@@ -104,17 +113,19 @@
       "sentencePl": null,
       "audioWord": "t1-p623-010-word.mp3",
       "audioWordPl": "t1-p623-010-word-pl.mp3",
-      "audioSentence": "t1-p623-010-sentence.mp3"
+      "audioSentence": "t1-p623-010-sentence.mp3",
+      "polishAudio": "Chrześcijański"
     },
     {
       "id": "t1-p623-011",
       "english": "Definitive",
-      "polish": "Definitywny",
+      "polish": "Definitywny; ostateczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p623-011-word.mp3",
       "audioWordPl": "t1-p623-011-word-pl.mp3",
-      "audioSentence": "t1-p623-011-sentence.mp3"
+      "audioSentence": "t1-p623-011-sentence.mp3",
+      "polishAudio": "Definitywny"
     },
     {
       "id": "t1-p623-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-012-word.mp3",
       "audioWordPl": "t1-p623-012-word-pl.mp3",
-      "audioSentence": "t1-p623-012-sentence.mp3"
+      "audioSentence": "t1-p623-012-sentence.mp3",
+      "polishAudio": "Drastyczny"
     },
     {
       "id": "t1-p623-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-013-word.mp3",
       "audioWordPl": "t1-p623-013-word-pl.mp3",
-      "audioSentence": "t1-p623-013-sentence.mp3"
+      "audioSentence": "t1-p623-013-sentence.mp3",
+      "polishAudio": "Dynamiczny"
     },
     {
       "id": "t1-p623-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-014-word.mp3",
       "audioWordPl": "t1-p623-014-word-pl.mp3",
-      "audioSentence": "t1-p623-014-sentence.mp3"
+      "audioSentence": "t1-p623-014-sentence.mp3",
+      "polishAudio": "Dyplomatyczny"
     },
     {
       "id": "t1-p623-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p623-015-word.mp3",
       "audioWordPl": "t1-p623-015-word-pl.mp3",
-      "audioSentence": "t1-p623-015-sentence.mp3"
+      "audioSentence": "t1-p623-015-sentence.mp3",
+      "polishAudio": "Egocentryczny"
     }
   ]
 }

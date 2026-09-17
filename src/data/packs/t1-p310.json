@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p310-001-word.mp3",
       "audioWordPl": "t1-p310-001-word-pl.mp3",
-      "audioSentence": "t1-p310-001-sentence.mp3"
+      "audioSentence": "t1-p310-001-sentence.mp3",
+      "polishAudio": "Wrażenie"
     },
     {
       "id": "t1-p310-002",
@@ -24,27 +25,30 @@
       "sentencePl": null,
       "audioWord": "t1-p310-002-word.mp3",
       "audioWordPl": "t1-p310-002-word-pl.mp3",
-      "audioSentence": "t1-p310-002-sentence.mp3"
+      "audioSentence": "t1-p310-002-sentence.mp3",
+      "polishAudio": "Aspiracja"
     },
     {
       "id": "t1-p310-003",
       "english": "Urge",
-      "polish": "Pragnienie",
+      "polish": "Pragnienie (uczucie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-003-word.mp3",
       "audioWordPl": "t1-p310-003-word-pl.mp3",
-      "audioSentence": "t1-p310-003-sentence.mp3"
+      "audioSentence": "t1-p310-003-sentence.mp3",
+      "polishAudio": "Pragnienie"
     },
     {
       "id": "t1-p310-004",
       "english": "Sense",
-      "polish": "Sens",
+      "polish": "Sens; poczucie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-004-word.mp3",
       "audioWordPl": "t1-p310-004-word-pl.mp3",
-      "audioSentence": "t1-p310-004-sentence.mp3"
+      "audioSentence": "t1-p310-004-sentence.mp3",
+      "polishAudio": "Sens"
     },
     {
       "id": "t1-p310-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p310-005-word.mp3",
       "audioWordPl": "t1-p310-005-word-pl.mp3",
-      "audioSentence": "t1-p310-005-sentence.mp3"
+      "audioSentence": "t1-p310-005-sentence.mp3",
+      "polishAudio": "Dotyk"
     },
     {
       "id": "t1-p310-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p310-006-word.mp3",
       "audioWordPl": "t1-p310-006-word-pl.mp3",
-      "audioSentence": "t1-p310-006-sentence.mp3"
+      "audioSentence": "t1-p310-006-sentence.mp3",
+      "polishAudio": "Zmysł"
     },
     {
       "id": "t1-p310-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p310-007-word.mp3",
       "audioWordPl": "t1-p310-007-word-pl.mp3",
-      "audioSentence": "t1-p310-007-sentence.mp3"
+      "audioSentence": "t1-p310-007-sentence.mp3",
+      "polishAudio": "Głód"
     },
     {
       "id": "t1-p310-008",
@@ -84,37 +91,41 @@
       "sentencePl": null,
       "audioWord": "t1-p310-008-word.mp3",
       "audioWordPl": "t1-p310-008-word-pl.mp3",
-      "audioSentence": "t1-p310-008-sentence.mp3"
+      "audioSentence": "t1-p310-008-sentence.mp3",
+      "polishAudio": "Nostalgia"
     },
     {
       "id": "t1-p310-009",
       "english": "Expectation",
-      "polish": "Oczekiwanie",
+      "polish": "Oczekiwanie; wymaganie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-009-word.mp3",
       "audioWordPl": "t1-p310-009-word-pl.mp3",
-      "audioSentence": "t1-p310-009-sentence.mp3"
+      "audioSentence": "t1-p310-009-sentence.mp3",
+      "polishAudio": "Oczekiwanie"
     },
     {
       "id": "t1-p310-010",
       "english": "Thirst",
-      "polish": "Pragnienie",
+      "polish": "Pragnienie (chęć napicia się)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-010-word.mp3",
       "audioWordPl": "t1-p310-010-word-pl.mp3",
-      "audioSentence": "t1-p310-010-sentence.mp3"
+      "audioSentence": "t1-p310-010-sentence.mp3",
+      "polishAudio": "Pragnienie"
     },
     {
       "id": "t1-p310-011",
       "english": "Sensation",
-      "polish": "Sensacja",
+      "polish": "Sensacja (uczucie wewnętrzne)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-011-word.mp3",
       "audioWordPl": "t1-p310-011-word-pl.mp3",
-      "audioSentence": "t1-p310-011-sentence.mp3"
+      "audioSentence": "t1-p310-011-sentence.mp3",
+      "polishAudio": "Sensacja"
     },
     {
       "id": "t1-p310-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p310-012-word.mp3",
       "audioWordPl": "t1-p310-012-word-pl.mp3",
-      "audioSentence": "t1-p310-012-sentence.mp3"
+      "audioSentence": "t1-p310-012-sentence.mp3",
+      "polishAudio": "Sentyment"
     },
     {
       "id": "t1-p310-013",
@@ -134,27 +146,30 @@
       "sentencePl": null,
       "audioWord": "t1-p310-013-word.mp3",
       "audioWordPl": "t1-p310-013-word-pl.mp3",
-      "audioSentence": "t1-p310-013-sentence.mp3"
+      "audioSentence": "t1-p310-013-sentence.mp3",
+      "polishAudio": "Słuch"
     },
     {
       "id": "t1-p310-014",
       "english": "Laugh",
-      "polish": "Śmiech",
+      "polish": "Śmiech (dźwięk)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-014-word.mp3",
       "audioWordPl": "t1-p310-014-word-pl.mp3",
-      "audioSentence": "t1-p310-014-sentence.mp3"
+      "audioSentence": "t1-p310-014-sentence.mp3",
+      "polishAudio": "Śmiech"
     },
     {
       "id": "t1-p310-015",
       "english": "Desire",
-      "polish": "Żądza",
+      "polish": "Żądza; pragnienie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p310-015-word.mp3",
       "audioWordPl": "t1-p310-015-word-pl.mp3",
-      "audioSentence": "t1-p310-015-sentence.mp3"
+      "audioSentence": "t1-p310-015-sentence.mp3",
+      "polishAudio": "Żądza"
     }
   ]
 }

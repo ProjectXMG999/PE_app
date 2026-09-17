@@ -9,12 +9,13 @@
     {
       "id": "t1-p754-001",
       "english": "Cut off",
-      "polish": "Wyłączyć",
+      "polish": "Wyłączyć (np. ogrzewanie); odciąć coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p754-001-word.mp3",
       "audioWordPl": "t1-p754-001-word-pl.mp3",
-      "audioSentence": "t1-p754-001-sentence.mp3"
+      "audioSentence": "t1-p754-001-sentence.mp3",
+      "polishAudio": "Wyłączyć"
     },
     {
       "id": "t1-p754-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p754-002-word.mp3",
       "audioWordPl": "t1-p754-002-word-pl.mp3",
-      "audioSentence": "t1-p754-002-sentence.mp3"
+      "audioSentence": "t1-p754-002-sentence.mp3",
+      "polishAudio": "Zdmuchnąć"
     },
     {
       "id": "t1-p754-003",
       "english": "Fall off sth",
-      "polish": "Odpaść",
+      "polish": "Odpaść; oderwać się; spaść z czegoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p754-003-word.mp3",
       "audioWordPl": "t1-p754-003-word-pl.mp3",
-      "audioSentence": "t1-p754-003-sentence.mp3"
+      "audioSentence": "t1-p754-003-sentence.mp3",
+      "polishAudio": "Odpaść"
     },
     {
       "id": "t1-p754-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p754-004-word.mp3",
       "audioWordPl": "t1-p754-004-word-pl.mp3",
-      "audioSentence": "t1-p754-004-sentence.mp3"
+      "audioSentence": "t1-p754-004-sentence.mp3",
+      "polishAudio": "Rozpadać się"
     },
     {
       "id": "t1-p754-005",
@@ -54,57 +58,63 @@
       "sentencePl": null,
       "audioWord": "t1-p754-005-word.mp3",
       "audioWordPl": "t1-p754-005-word-pl.mp3",
-      "audioSentence": "t1-p754-005-sentence.mp3"
+      "audioSentence": "t1-p754-005-sentence.mp3",
+      "polishAudio": "Zburzyć coś"
     },
     {
       "id": "t1-p754-006",
       "english": "Blow away",
-      "polish": "Rozwalać",
+      "polish": "Rozwalać; powalać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p754-006-word.mp3",
       "audioWordPl": "t1-p754-006-word-pl.mp3",
-      "audioSentence": "t1-p754-006-sentence.mp3"
+      "audioSentence": "t1-p754-006-sentence.mp3",
+      "polishAudio": "Rozwalać"
     },
     {
       "id": "t1-p754-007",
       "english": "Break off",
-      "polish": "Ułamać",
+      "polish": "Ułamać; oderwać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p754-007-word.mp3",
       "audioWordPl": "t1-p754-007-word-pl.mp3",
-      "audioSentence": "t1-p754-007-sentence.mp3"
+      "audioSentence": "t1-p754-007-sentence.mp3",
+      "polishAudio": "Ułamać"
     },
     {
       "id": "t1-p754-008",
       "english": "Blow sth up",
-      "polish": "Wysadzić",
+      "polish": "Wysadzić (w powietrze)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p754-008-word.mp3",
       "audioWordPl": "t1-p754-008-word-pl.mp3",
-      "audioSentence": "t1-p754-008-sentence.mp3"
+      "audioSentence": "t1-p754-008-sentence.mp3",
+      "polishAudio": "Wysadzić"
     },
     {
       "id": "t1-p754-009",
       "english": "Go off",
-      "polish": "Wybuchnąć",
+      "polish": "Wybuchnąć; eksplodować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p754-009-word.mp3",
       "audioWordPl": "t1-p754-009-word-pl.mp3",
-      "audioSentence": "t1-p754-009-sentence.mp3"
+      "audioSentence": "t1-p754-009-sentence.mp3",
+      "polishAudio": "Wybuchnąć"
     },
     {
       "id": "t1-p754-010",
       "english": "Pull down",
-      "polish": "Rozebrać",
+      "polish": "Rozebrać; zburzyć (budynek)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p754-010-word.mp3",
       "audioWordPl": "t1-p754-010-word-pl.mp3",
-      "audioSentence": "t1-p754-010-sentence.mp3"
+      "audioSentence": "t1-p754-010-sentence.mp3",
+      "polishAudio": "Rozebrać"
     }
   ]
 }

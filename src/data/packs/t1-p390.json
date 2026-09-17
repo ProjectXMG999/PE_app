@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p390-001-word.mp3",
       "audioWordPl": "t1-p390-001-word-pl.mp3",
-      "audioSentence": "t1-p390-001-sentence.mp3"
+      "audioSentence": "t1-p390-001-sentence.mp3",
+      "polishAudio": "Pełen relaks"
     },
     {
       "id": "t1-p390-002",
@@ -24,47 +25,52 @@
       "sentencePl": null,
       "audioWord": "t1-p390-002-word.mp3",
       "audioWordPl": "t1-p390-002-word-pl.mp3",
-      "audioSentence": "t1-p390-002-sentence.mp3"
+      "audioSentence": "t1-p390-002-sentence.mp3",
+      "polishAudio": "Przerwa w pracy"
     },
     {
       "id": "t1-p390-003",
       "english": "Have a crash",
-      "polish": "Zasnąć bardzo szybko",
+      "polish": "Zasnąć bardzo szybko; kimnąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p390-003-word.mp3",
       "audioWordPl": "t1-p390-003-word-pl.mp3",
-      "audioSentence": "t1-p390-003-sentence.mp3"
+      "audioSentence": "t1-p390-003-sentence.mp3",
+      "polishAudio": "Zasnąć bardzo szybko"
     },
     {
       "id": "t1-p390-004",
       "english": "Laid back",
-      "polish": "Ktoś kompletnie bez motywacji",
+      "polish": "Ktoś kompletnie bez motywacji; ktoś kompletnie zblazowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p390-004-word.mp3",
       "audioWordPl": "t1-p390-004-word-pl.mp3",
-      "audioSentence": "t1-p390-004-sentence.mp3"
+      "audioSentence": "t1-p390-004-sentence.mp3",
+      "polishAudio": "Ktoś kompletnie bez motywacji"
     },
     {
       "id": "t1-p390-005",
       "english": "Loafing",
-      "polish": "Obijać się",
+      "polish": "Obijać się; odpoczywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p390-005-word.mp3",
       "audioWordPl": "t1-p390-005-word-pl.mp3",
-      "audioSentence": "t1-p390-005-sentence.mp3"
+      "audioSentence": "t1-p390-005-sentence.mp3",
+      "polishAudio": "Obijać się"
     },
     {
       "id": "t1-p390-006",
       "english": "Slide",
-      "polish": "Podskoczyć",
+      "polish": "Podskoczyć (gdzieś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p390-006-word.mp3",
       "audioWordPl": "t1-p390-006-word-pl.mp3",
-      "audioSentence": "t1-p390-006-sentence.mp3"
+      "audioSentence": "t1-p390-006-sentence.mp3",
+      "polishAudio": "Podskoczyć"
     },
     {
       "id": "t1-p390-007",
@@ -74,27 +80,30 @@
       "sentencePl": null,
       "audioWord": "t1-p390-007-word.mp3",
       "audioWordPl": "t1-p390-007-word-pl.mp3",
-      "audioSentence": "t1-p390-007-sentence.mp3"
+      "audioSentence": "t1-p390-007-sentence.mp3",
+      "polishAudio": "Wrzucić na luz"
     },
     {
       "id": "t1-p390-008",
       "english": "Take five",
-      "polish": "Robić krótką przerwę w pracy",
+      "polish": "Robić krótką przerwę w pracy; w koncercie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p390-008-word.mp3",
       "audioWordPl": "t1-p390-008-word-pl.mp3",
-      "audioSentence": "t1-p390-008-sentence.mp3"
+      "audioSentence": "t1-p390-008-sentence.mp3",
+      "polishAudio": "Robić krótką przerwę w pracy"
     },
     {
       "id": "t1-p390-009",
       "english": "Roll up to",
-      "polish": "Zawinąć się",
+      "polish": "Zawinąć się (gdzieś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p390-009-word.mp3",
       "audioWordPl": "t1-p390-009-word-pl.mp3",
-      "audioSentence": "t1-p390-009-sentence.mp3"
+      "audioSentence": "t1-p390-009-sentence.mp3",
+      "polishAudio": "Zawinąć się"
     },
     {
       "id": "t1-p390-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p390-010-word.mp3",
       "audioWordPl": "t1-p390-010-word-pl.mp3",
-      "audioSentence": "t1-p390-010-sentence.mp3"
+      "audioSentence": "t1-p390-010-sentence.mp3",
+      "polishAudio": "Wyłączyć się"
     }
   ]
 }

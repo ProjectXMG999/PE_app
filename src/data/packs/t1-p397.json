@@ -9,22 +9,24 @@
     {
       "id": "t1-p397-001",
       "english": "General",
-      "polish": "Generalny",
+      "polish": "Generalny; ogólny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p397-001-word.mp3",
       "audioWordPl": "t1-p397-001-word-pl.mp3",
-      "audioSentence": "t1-p397-001-sentence.mp3"
+      "audioSentence": "t1-p397-001-sentence.mp3",
+      "polishAudio": "Generalny"
     },
     {
       "id": "t1-p397-002",
       "english": "Other",
-      "polish": "Inny",
+      "polish": "Inny; ten drugi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p397-002-word.mp3",
       "audioWordPl": "t1-p397-002-word-pl.mp3",
-      "audioSentence": "t1-p397-002-sentence.mp3"
+      "audioSentence": "t1-p397-002-sentence.mp3",
+      "polishAudio": "Inny"
     },
     {
       "id": "t1-p397-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p397-003-word.mp3",
       "audioWordPl": "t1-p397-003-word-pl.mp3",
-      "audioSentence": "t1-p397-003-sentence.mp3"
+      "audioSentence": "t1-p397-003-sentence.mp3",
+      "polishAudio": "Taki sam"
     },
     {
       "id": "t1-p397-004",
       "english": "Right",
-      "polish": "Właściwy",
+      "polish": "Właściwy; poprawny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p397-004-word.mp3",
       "audioWordPl": "t1-p397-004-word-pl.mp3",
-      "audioSentence": "t1-p397-004-sentence.mp3"
+      "audioSentence": "t1-p397-004-sentence.mp3",
+      "polishAudio": "Właściwy"
     },
     {
       "id": "t1-p397-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p397-005-word.mp3",
       "audioWordPl": "t1-p397-005-word-pl.mp3",
-      "audioSentence": "t1-p397-005-sentence.mp3"
+      "audioSentence": "t1-p397-005-sentence.mp3",
+      "polishAudio": "Podobny"
     },
     {
       "id": "t1-p397-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p397-006-word.mp3",
       "audioWordPl": "t1-p397-006-word-pl.mp3",
-      "audioSentence": "t1-p397-006-sentence.mp3"
+      "audioSentence": "t1-p397-006-sentence.mp3",
+      "polishAudio": "Nieobecny"
     },
     {
       "id": "t1-p397-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p397-007-word.mp3",
       "audioWordPl": "t1-p397-007-word-pl.mp3",
-      "audioSentence": "t1-p397-007-sentence.mp3"
+      "audioSentence": "t1-p397-007-sentence.mp3",
+      "polishAudio": "Taki owaki"
     },
     {
       "id": "t1-p397-008",
       "english": "Active",
-      "polish": "Aktywny",
+      "polish": "Aktywny; czynny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p397-008-word.mp3",
       "audioWordPl": "t1-p397-008-word-pl.mp3",
-      "audioSentence": "t1-p397-008-sentence.mp3"
+      "audioSentence": "t1-p397-008-sentence.mp3",
+      "polishAudio": "Aktywny"
     },
     {
       "id": "t1-p397-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p397-009-word.mp3",
       "audioWordPl": "t1-p397-009-word-pl.mp3",
-      "audioSentence": "t1-p397-009-sentence.mp3"
+      "audioSentence": "t1-p397-009-sentence.mp3",
+      "polishAudio": "Bezpośredni"
     },
     {
       "id": "t1-p397-010",
       "english": "Passive",
-      "polish": "Pasywny",
+      "polish": "Pasywny; bierny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p397-010-word.mp3",
       "audioWordPl": "t1-p397-010-word-pl.mp3",
-      "audioSentence": "t1-p397-010-sentence.mp3"
+      "audioSentence": "t1-p397-010-sentence.mp3",
+      "polishAudio": "Pasywny"
     },
     {
       "id": "t1-p397-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p397-011-word.mp3",
       "audioWordPl": "t1-p397-011-word-pl.mp3",
-      "audioSentence": "t1-p397-011-sentence.mp3"
+      "audioSentence": "t1-p397-011-sentence.mp3",
+      "polishAudio": "Pośredni"
     },
     {
       "id": "t1-p397-012",
@@ -124,37 +135,41 @@
       "sentencePl": null,
       "audioWord": "t1-p397-012-word.mp3",
       "audioWordPl": "t1-p397-012-word-pl.mp3",
-      "audioSentence": "t1-p397-012-sentence.mp3"
+      "audioSentence": "t1-p397-012-sentence.mp3",
+      "polishAudio": "Brakujący"
     },
     {
       "id": "t1-p397-013",
       "english": "Pure",
-      "polish": "Bezgrzeszny",
+      "polish": "Bezgrzeszny (czysty)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p397-013-word.mp3",
       "audioWordPl": "t1-p397-013-word-pl.mp3",
-      "audioSentence": "t1-p397-013-sentence.mp3"
+      "audioSentence": "t1-p397-013-sentence.mp3",
+      "polishAudio": "Bezgrzeszny"
     },
     {
       "id": "t1-p397-014",
       "english": "Equal",
-      "polish": "Równy",
+      "polish": "Równy (sprawiedliwie podzielony); równorzędny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p397-014-word.mp3",
       "audioWordPl": "t1-p397-014-word-pl.mp3",
-      "audioSentence": "t1-p397-014-sentence.mp3"
+      "audioSentence": "t1-p397-014-sentence.mp3",
+      "polishAudio": "Równy"
     },
     {
       "id": "t1-p397-015",
       "english": "Particular",
-      "polish": "Konkretny",
+      "polish": "Konkretny; szczególny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p397-015-word.mp3",
       "audioWordPl": "t1-p397-015-word-pl.mp3",
-      "audioSentence": "t1-p397-015-sentence.mp3"
+      "audioSentence": "t1-p397-015-sentence.mp3",
+      "polishAudio": "Konkretny"
     }
   ]
 }

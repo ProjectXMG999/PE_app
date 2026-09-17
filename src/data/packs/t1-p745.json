@@ -9,12 +9,13 @@
     {
       "id": "t1-p745-001",
       "english": "Glorious",
-      "polish": "Chwalebny",
+      "polish": "Chwalebny; wspaniały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p745-001-word.mp3",
       "audioWordPl": "t1-p745-001-word-pl.mp3",
-      "audioSentence": "t1-p745-001-sentence.mp3"
+      "audioSentence": "t1-p745-001-sentence.mp3",
+      "polishAudio": "Chwalebny"
     },
     {
       "id": "t1-p745-002",
@@ -24,27 +25,30 @@
       "sentencePl": null,
       "audioWord": "t1-p745-002-word.mp3",
       "audioWordPl": "t1-p745-002-word-pl.mp3",
-      "audioSentence": "t1-p745-002-sentence.mp3"
+      "audioSentence": "t1-p745-002-sentence.mp3",
+      "polishAudio": "Głodny sukcesu"
     },
     {
       "id": "t1-p745-003",
       "english": "Godlike",
-      "polish": "Niczym bóstwo",
+      "polish": "Niczym bóstwo; boski",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p745-003-word.mp3",
       "audioWordPl": "t1-p745-003-word-pl.mp3",
-      "audioSentence": "t1-p745-003-sentence.mp3"
+      "audioSentence": "t1-p745-003-sentence.mp3",
+      "polishAudio": "Niczym bóstwo"
     },
     {
       "id": "t1-p745-004",
       "english": "Unbeaten",
-      "polish": "Niepobity",
+      "polish": "Niepobity (np. wynik, gracz); niepokonany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p745-004-word.mp3",
       "audioWordPl": "t1-p745-004-word-pl.mp3",
-      "audioSentence": "t1-p745-004-sentence.mp3"
+      "audioSentence": "t1-p745-004-sentence.mp3",
+      "polishAudio": "Niepobity"
     },
     {
       "id": "t1-p745-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p745-005-word.mp3",
       "audioWordPl": "t1-p745-005-word-pl.mp3",
-      "audioSentence": "t1-p745-005-sentence.mp3"
+      "audioSentence": "t1-p745-005-sentence.mp3",
+      "polishAudio": "Niepokonany"
     },
     {
       "id": "t1-p745-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p745-006-word.mp3",
       "audioWordPl": "t1-p745-006-word-pl.mp3",
-      "audioSentence": "t1-p745-006-sentence.mp3"
+      "audioSentence": "t1-p745-006-sentence.mp3",
+      "polishAudio": "Niezwyciężony"
     },
     {
       "id": "t1-p745-007",
       "english": "Mighty",
-      "polish": "Waleczny",
+      "polish": "Waleczny; potężny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p745-007-word.mp3",
       "audioWordPl": "t1-p745-007-word-pl.mp3",
-      "audioSentence": "t1-p745-007-sentence.mp3"
+      "audioSentence": "t1-p745-007-sentence.mp3",
+      "polishAudio": "Waleczny"
     },
     {
       "id": "t1-p745-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p745-008-word.mp3",
       "audioWordPl": "t1-p745-008-word-pl.mp3",
-      "audioSentence": "t1-p745-008-sentence.mp3"
+      "audioSentence": "t1-p745-008-sentence.mp3",
+      "polishAudio": "Przełomowy"
     },
     {
       "id": "t1-p745-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p745-009-word.mp3",
       "audioWordPl": "t1-p745-009-word-pl.mp3",
-      "audioSentence": "t1-p745-009-sentence.mp3"
+      "audioSentence": "t1-p745-009-sentence.mp3",
+      "polishAudio": "Sławny na całym świecie"
     },
     {
       "id": "t1-p745-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p745-010-word.mp3",
       "audioWordPl": "t1-p745-010-word-pl.mp3",
-      "audioSentence": "t1-p745-010-sentence.mp3"
+      "audioSentence": "t1-p745-010-sentence.mp3",
+      "polishAudio": "Triumfalny"
     },
     {
       "id": "t1-p745-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p745-011-word.mp3",
       "audioWordPl": "t1-p745-011-word-pl.mp3",
-      "audioSentence": "t1-p745-011-sentence.mp3"
+      "audioSentence": "t1-p745-011-sentence.mp3",
+      "polishAudio": "Wytrwały"
     },
     {
       "id": "t1-p745-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p745-012-word.mp3",
       "audioWordPl": "t1-p745-012-word-pl.mp3",
-      "audioSentence": "t1-p745-012-sentence.mp3"
+      "audioSentence": "t1-p745-012-sentence.mp3",
+      "polishAudio": "Wyborny"
     },
     {
       "id": "t1-p745-013",
       "english": "Uncanny",
-      "polish": "Niesamowity",
+      "polish": "Niesamowity; osobliwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p745-013-word.mp3",
       "audioWordPl": "t1-p745-013-word-pl.mp3",
-      "audioSentence": "t1-p745-013-sentence.mp3"
+      "audioSentence": "t1-p745-013-sentence.mp3",
+      "polishAudio": "Niesamowity"
     },
     {
       "id": "t1-p745-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p745-014-word.mp3",
       "audioWordPl": "t1-p745-014-word-pl.mp3",
-      "audioSentence": "t1-p745-014-sentence.mp3"
+      "audioSentence": "t1-p745-014-sentence.mp3",
+      "polishAudio": "Sytuacja, w której nie ma przegranych"
     },
     {
       "id": "t1-p745-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p745-015-word.mp3",
       "audioWordPl": "t1-p745-015-word-pl.mp3",
-      "audioSentence": "t1-p745-015-sentence.mp3"
+      "audioSentence": "t1-p745-015-sentence.mp3",
+      "polishAudio": "Bez skazy"
     }
   ]
 }

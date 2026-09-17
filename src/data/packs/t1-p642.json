@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p642-001-word.mp3",
       "audioWordPl": "t1-p642-001-word-pl.mp3",
-      "audioSentence": "t1-p642-001-sentence.mp3"
+      "audioSentence": "t1-p642-001-sentence.mp3",
+      "polishAudio": "Szatkować"
     },
     {
       "id": "t1-p642-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p642-002-word.mp3",
       "audioWordPl": "t1-p642-002-word-pl.mp3",
-      "audioSentence": "t1-p642-002-sentence.mp3"
+      "audioSentence": "t1-p642-002-sentence.mp3",
+      "polishAudio": "Gotować na wolnym ogniu"
     },
     {
       "id": "t1-p642-003",
       "english": "Grease",
-      "polish": "Natłuszczać",
+      "polish": "Natłuszczać; smarować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p642-003-word.mp3",
       "audioWordPl": "t1-p642-003-word-pl.mp3",
-      "audioSentence": "t1-p642-003-sentence.mp3"
+      "audioSentence": "t1-p642-003-sentence.mp3",
+      "polishAudio": "Natłuszczać"
     },
     {
       "id": "t1-p642-004",
@@ -44,17 +47,19 @@
       "sentencePl": null,
       "audioWord": "t1-p642-004-word.mp3",
       "audioWordPl": "t1-p642-004-word-pl.mp3",
-      "audioSentence": "t1-p642-004-sentence.mp3"
+      "audioSentence": "t1-p642-004-sentence.mp3",
+      "polishAudio": "Gotować na parze"
     },
     {
       "id": "t1-p642-005",
       "english": "Relish",
-      "polish": "Delektować",
+      "polish": "Delektować; jeść ze smakiem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p642-005-word.mp3",
       "audioWordPl": "t1-p642-005-word-pl.mp3",
-      "audioSentence": "t1-p642-005-sentence.mp3"
+      "audioSentence": "t1-p642-005-sentence.mp3",
+      "polishAudio": "Delektować"
     },
     {
       "id": "t1-p642-006",
@@ -64,57 +69,63 @@
       "sentencePl": null,
       "audioWord": "t1-p642-006-word.mp3",
       "audioWordPl": "t1-p642-006-word-pl.mp3",
-      "audioSentence": "t1-p642-006-sentence.mp3"
+      "audioSentence": "t1-p642-006-sentence.mp3",
+      "polishAudio": "Popijać, sączyć"
     },
     {
       "id": "t1-p642-007",
       "english": "Stuff",
-      "polish": "Nadziewać",
+      "polish": "Nadziewać (czymś); faszerować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p642-007-word.mp3",
       "audioWordPl": "t1-p642-007-word-pl.mp3",
-      "audioSentence": "t1-p642-007-sentence.mp3"
+      "audioSentence": "t1-p642-007-sentence.mp3",
+      "polishAudio": "Nadziewać"
     },
     {
       "id": "t1-p642-008",
       "english": "Brown",
-      "polish": "Przyrumieniać",
+      "polish": "Przyrumieniać; brązowić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p642-008-word.mp3",
       "audioWordPl": "t1-p642-008-word-pl.mp3",
-      "audioSentence": "t1-p642-008-sentence.mp3"
+      "audioSentence": "t1-p642-008-sentence.mp3",
+      "polishAudio": "Przyrumieniać"
     },
     {
       "id": "t1-p642-009",
       "english": "Garnish",
-      "polish": "Zdobić",
+      "polish": "Zdobić; przystrajać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p642-009-word.mp3",
       "audioWordPl": "t1-p642-009-word-pl.mp3",
-      "audioSentence": "t1-p642-009-sentence.mp3"
+      "audioSentence": "t1-p642-009-sentence.mp3",
+      "polishAudio": "Zdobić"
     },
     {
       "id": "t1-p642-010",
       "english": "Scoop",
-      "polish": "Nabierać łyżką",
+      "polish": "Nabierać łyżką; wydłubać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p642-010-word.mp3",
       "audioWordPl": "t1-p642-010-word-pl.mp3",
-      "audioSentence": "t1-p642-010-sentence.mp3"
+      "audioSentence": "t1-p642-010-sentence.mp3",
+      "polishAudio": "Nabierać łyżką"
     },
     {
       "id": "t1-p642-011",
       "english": "Stew",
-      "polish": "Dusić",
+      "polish": "Dusić (potrawę)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p642-011-word.mp3",
       "audioWordPl": "t1-p642-011-word-pl.mp3",
-      "audioSentence": "t1-p642-011-sentence.mp3"
+      "audioSentence": "t1-p642-011-sentence.mp3",
+      "polishAudio": "Dusić"
     },
     {
       "id": "t1-p642-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p642-012-word.mp3",
       "audioWordPl": "t1-p642-012-word-pl.mp3",
-      "audioSentence": "t1-p642-012-sentence.mp3"
+      "audioSentence": "t1-p642-012-sentence.mp3",
+      "polishAudio": "Ugniatać ciasto"
     },
     {
       "id": "t1-p642-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p642-013-word.mp3",
       "audioWordPl": "t1-p642-013-word-pl.mp3",
-      "audioSentence": "t1-p642-013-sentence.mp3"
+      "audioSentence": "t1-p642-013-sentence.mp3",
+      "polishAudio": "Polewać polewą"
     },
     {
       "id": "t1-p642-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p642-014-word.mp3",
       "audioWordPl": "t1-p642-014-word-pl.mp3",
-      "audioSentence": "t1-p642-014-sentence.mp3"
+      "audioSentence": "t1-p642-014-sentence.mp3",
+      "polishAudio": "Podpiekać"
     },
     {
       "id": "t1-p642-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p642-015-word.mp3",
       "audioWordPl": "t1-p642-015-word-pl.mp3",
-      "audioSentence": "t1-p642-015-sentence.mp3"
+      "audioSentence": "t1-p642-015-sentence.mp3",
+      "polishAudio": "Karmelizować"
     }
   ]
 }

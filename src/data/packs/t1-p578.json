@@ -9,12 +9,13 @@
     {
       "id": "t1-p578-001",
       "english": "Overdone",
-      "polish": "Przesmażony",
+      "polish": "Przesmażony; przepieczony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p578-001-word.mp3",
       "audioWordPl": "t1-p578-001-word-pl.mp3",
-      "audioSentence": "t1-p578-001-sentence.mp3"
+      "audioSentence": "t1-p578-001-sentence.mp3",
+      "polishAudio": "Przesmażony"
     },
     {
       "id": "t1-p578-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p578-002-word.mp3",
       "audioWordPl": "t1-p578-002-word-pl.mp3",
-      "audioSentence": "t1-p578-002-sentence.mp3"
+      "audioSentence": "t1-p578-002-sentence.mp3",
+      "polishAudio": "Apetyczny"
     },
     {
       "id": "t1-p578-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p578-003-word.mp3",
       "audioWordPl": "t1-p578-003-word-pl.mp3",
-      "audioSentence": "t1-p578-003-sentence.mp3"
+      "audioSentence": "t1-p578-003-sentence.mp3",
+      "polishAudio": "Jadalny"
     },
     {
       "id": "t1-p578-004",
       "english": "Underdone",
-      "polish": "Niedosmażony",
+      "polish": "Niedosmażony; niedopieczony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p578-004-word.mp3",
       "audioWordPl": "t1-p578-004-word-pl.mp3",
-      "audioSentence": "t1-p578-004-sentence.mp3"
+      "audioSentence": "t1-p578-004-sentence.mp3",
+      "polishAudio": "Niedosmażony"
     },
     {
       "id": "t1-p578-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p578-005-word.mp3",
       "audioWordPl": "t1-p578-005-word-pl.mp3",
-      "audioSentence": "t1-p578-005-sentence.mp3"
+      "audioSentence": "t1-p578-005-sentence.mp3",
+      "polishAudio": "Domowej roboty"
     },
     {
       "id": "t1-p578-006",
       "english": "Mild",
-      "polish": "Łagodny",
+      "polish": "Łagodny; umiarkowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p578-006-word.mp3",
       "audioWordPl": "t1-p578-006-word-pl.mp3",
-      "audioSentence": "t1-p578-006-sentence.mp3"
+      "audioSentence": "t1-p578-006-sentence.mp3",
+      "polishAudio": "Łagodny"
     },
     {
       "id": "t1-p578-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p578-007-word.mp3",
       "audioWordPl": "t1-p578-007-word-pl.mp3",
-      "audioSentence": "t1-p578-007-sentence.mp3"
+      "audioSentence": "t1-p578-007-sentence.mp3",
+      "polishAudio": "Beztłuszczowy"
     },
     {
       "id": "t1-p578-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p578-008-word.mp3",
       "audioWordPl": "t1-p578-008-word-pl.mp3",
-      "audioSentence": "t1-p578-008-sentence.mp3"
+      "audioSentence": "t1-p578-008-sentence.mp3",
+      "polishAudio": "Ciężkostrawny"
     },
     {
       "id": "t1-p578-009",
@@ -94,37 +102,41 @@
       "sentencePl": null,
       "audioWord": "t1-p578-009-word.mp3",
       "audioWordPl": "t1-p578-009-word-pl.mp3",
-      "audioSentence": "t1-p578-009-sentence.mp3"
+      "audioSentence": "t1-p578-009-sentence.mp3",
+      "polishAudio": "Łykowaty"
     },
     {
       "id": "t1-p578-010",
       "english": "Nutritious",
-      "polish": "Odżywczy",
+      "polish": "Odżywczy; pożywny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p578-010-word.mp3",
       "audioWordPl": "t1-p578-010-word-pl.mp3",
-      "audioSentence": "t1-p578-010-sentence.mp3"
+      "audioSentence": "t1-p578-010-sentence.mp3",
+      "polishAudio": "Odżywczy"
     },
     {
       "id": "t1-p578-011",
       "english": "Palatable",
-      "polish": "Smakowity",
+      "polish": "Smakowity; smaczny (np. wino, ser)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p578-011-word.mp3",
       "audioWordPl": "t1-p578-011-word-pl.mp3",
-      "audioSentence": "t1-p578-011-sentence.mp3"
+      "audioSentence": "t1-p578-011-sentence.mp3",
+      "polishAudio": "Smakowity"
     },
     {
       "id": "t1-p578-012",
       "english": "Greasy",
-      "polish": "Tłusty",
+      "polish": "Tłusty; przetłuszczony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p578-012-word.mp3",
       "audioWordPl": "t1-p578-012-word-pl.mp3",
-      "audioSentence": "t1-p578-012-sentence.mp3"
+      "audioSentence": "t1-p578-012-sentence.mp3",
+      "polishAudio": "Tłusty"
     },
     {
       "id": "t1-p578-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p578-013-word.mp3",
       "audioWordPl": "t1-p578-013-word-pl.mp3",
-      "audioSentence": "t1-p578-013-sentence.mp3"
+      "audioSentence": "t1-p578-013-sentence.mp3",
+      "polishAudio": "Z domowego ogródka"
     },
     {
       "id": "t1-p578-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p578-014-word.mp3",
       "audioWordPl": "t1-p578-014-word-pl.mp3",
-      "audioSentence": "t1-p578-014-sentence.mp3"
+      "audioSentence": "t1-p578-014-sentence.mp3",
+      "polishAudio": "Zdatny do spożycia"
     },
     {
       "id": "t1-p578-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p578-015-word.mp3",
       "audioWordPl": "t1-p578-015-word-pl.mp3",
-      "audioSentence": "t1-p578-015-sentence.mp3"
+      "audioSentence": "t1-p578-015-sentence.mp3",
+      "polishAudio": "Cierpki"
     }
   ]
 }

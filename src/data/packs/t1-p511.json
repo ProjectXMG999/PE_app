@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p511-001-word.mp3",
       "audioWordPl": "t1-p511-001-word-pl.mp3",
-      "audioSentence": "t1-p511-001-sentence.mp3"
+      "audioSentence": "t1-p511-001-sentence.mp3",
+      "polishAudio": "Kompozytor"
     },
     {
       "id": "t1-p511-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p511-002-word.mp3",
       "audioWordPl": "t1-p511-002-word-pl.mp3",
-      "audioSentence": "t1-p511-002-sentence.mp3"
+      "audioSentence": "t1-p511-002-sentence.mp3",
+      "polishAudio": "Producent"
     },
     {
       "id": "t1-p511-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p511-003-word.mp3",
       "audioWordPl": "t1-p511-003-word-pl.mp3",
-      "audioSentence": "t1-p511-003-sentence.mp3"
+      "audioSentence": "t1-p511-003-sentence.mp3",
+      "polishAudio": "Badacz"
     },
     {
       "id": "t1-p511-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p511-004-word.mp3",
       "audioWordPl": "t1-p511-004-word-pl.mp3",
-      "audioSentence": "t1-p511-004-sentence.mp3"
+      "audioSentence": "t1-p511-004-sentence.mp3",
+      "polishAudio": "Burmistrz"
     },
     {
       "id": "t1-p511-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p511-005-word.mp3",
       "audioWordPl": "t1-p511-005-word-pl.mp3",
-      "audioSentence": "t1-p511-005-sentence.mp3"
+      "audioSentence": "t1-p511-005-sentence.mp3",
+      "polishAudio": "Psycholog"
     },
     {
       "id": "t1-p511-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p511-006-word.mp3",
       "audioWordPl": "t1-p511-006-word-pl.mp3",
-      "audioSentence": "t1-p511-006-sentence.mp3"
+      "audioSentence": "t1-p511-006-sentence.mp3",
+      "polishAudio": "Grzywna"
     },
     {
       "id": "t1-p511-007",
       "english": "Jury",
-      "polish": "Jury",
+      "polish": "Jury; ława przysięgłych",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p511-007-word.mp3",
       "audioWordPl": "t1-p511-007-word-pl.mp3",
-      "audioSentence": "t1-p511-007-sentence.mp3"
+      "audioSentence": "t1-p511-007-sentence.mp3",
+      "polishAudio": "Jury"
     },
     {
       "id": "t1-p511-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p511-008-word.mp3",
       "audioWordPl": "t1-p511-008-word-pl.mp3",
-      "audioSentence": "t1-p511-008-sentence.mp3"
+      "audioSentence": "t1-p511-008-sentence.mp3",
+      "polishAudio": "Więzień"
     },
     {
       "id": "t1-p511-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p511-009-word.mp3",
       "audioWordPl": "t1-p511-009-word-pl.mp3",
-      "audioSentence": "t1-p511-009-sentence.mp3"
+      "audioSentence": "t1-p511-009-sentence.mp3",
+      "polishAudio": "Ofiara"
     },
     {
       "id": "t1-p511-010",
       "english": "Crime",
-      "polish": "Zbrodnia",
+      "polish": "Zbrodnia; przestępstwo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p511-010-word.mp3",
       "audioWordPl": "t1-p511-010-word-pl.mp3",
-      "audioSentence": "t1-p511-010-sentence.mp3"
+      "audioSentence": "t1-p511-010-sentence.mp3",
+      "polishAudio": "Zbrodnia"
     },
     {
       "id": "t1-p511-011",
@@ -114,27 +124,30 @@
       "sentencePl": null,
       "audioWord": "t1-p511-011-word.mp3",
       "audioWordPl": "t1-p511-011-word-pl.mp3",
-      "audioSentence": "t1-p511-011-sentence.mp3"
+      "audioSentence": "t1-p511-011-sentence.mp3",
+      "polishAudio": "Samoobrona"
     },
     {
       "id": "t1-p511-012",
       "english": "Protection",
-      "polish": "Zabezpieczenie",
+      "polish": "Zabezpieczenie; ochrona",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p511-012-word.mp3",
       "audioWordPl": "t1-p511-012-word-pl.mp3",
-      "audioSentence": "t1-p511-012-sentence.mp3"
+      "audioSentence": "t1-p511-012-sentence.mp3",
+      "polishAudio": "Zabezpieczenie"
     },
     {
       "id": "t1-p511-013",
       "english": "Penalty",
-      "polish": "Kara",
+      "polish": "Kara (za złamanie prawa); rzut karny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p511-013-word.mp3",
       "audioWordPl": "t1-p511-013-word-pl.mp3",
-      "audioSentence": "t1-p511-013-sentence.mp3"
+      "audioSentence": "t1-p511-013-sentence.mp3",
+      "polishAudio": "Kara"
     },
     {
       "id": "t1-p511-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p511-014-word.mp3",
       "audioWordPl": "t1-p511-014-word-pl.mp3",
-      "audioSentence": "t1-p511-014-sentence.mp3"
+      "audioSentence": "t1-p511-014-sentence.mp3",
+      "polishAudio": "Kradzież"
     },
     {
       "id": "t1-p511-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p511-015-word.mp3",
       "audioWordPl": "t1-p511-015-word-pl.mp3",
-      "audioSentence": "t1-p511-015-sentence.mp3"
+      "audioSentence": "t1-p511-015-sentence.mp3",
+      "polishAudio": "Niewinność"
     }
   ]
 }

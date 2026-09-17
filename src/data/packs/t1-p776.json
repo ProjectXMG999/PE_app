@@ -9,42 +9,46 @@
     {
       "id": "t1-p776-001",
       "english": "Pass out",
-      "polish": "Mdleć",
+      "polish": "Mdleć; stracić przytomność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p776-001-word.mp3",
       "audioWordPl": "t1-p776-001-word-pl.mp3",
-      "audioSentence": "t1-p776-001-sentence.mp3"
+      "audioSentence": "t1-p776-001-sentence.mp3",
+      "polishAudio": "Mdleć"
     },
     {
       "id": "t1-p776-002",
       "english": "Pass away",
-      "polish": "Umrzeć",
+      "polish": "Umrzeć; przeminąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p776-002-word.mp3",
       "audioWordPl": "t1-p776-002-word-pl.mp3",
-      "audioSentence": "t1-p776-002-sentence.mp3"
+      "audioSentence": "t1-p776-002-sentence.mp3",
+      "polishAudio": "Umrzeć"
     },
     {
       "id": "t1-p776-003",
       "english": "Do sb in",
-      "polish": "Zabić",
+      "polish": "Zabić; wykończyć kogoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p776-003-word.mp3",
       "audioWordPl": "t1-p776-003-word-pl.mp3",
-      "audioSentence": "t1-p776-003-sentence.mp3"
+      "audioSentence": "t1-p776-003-sentence.mp3",
+      "polishAudio": "Zabić"
     },
     {
       "id": "t1-p776-004",
       "english": "Knock off",
-      "polish": "Sprzątnąć kogoś",
+      "polish": "Sprzątnąć kogoś; zabić kogoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p776-004-word.mp3",
       "audioWordPl": "t1-p776-004-word-pl.mp3",
-      "audioSentence": "t1-p776-004-sentence.mp3"
+      "audioSentence": "t1-p776-004-sentence.mp3",
+      "polishAudio": "Sprzątnąć kogoś"
     },
     {
       "id": "t1-p776-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p776-005-word.mp3",
       "audioWordPl": "t1-p776-005-word-pl.mp3",
-      "audioSentence": "t1-p776-005-sentence.mp3"
+      "audioSentence": "t1-p776-005-sentence.mp3",
+      "polishAudio": "Pozbawić kogoś przytomności"
     },
     {
       "id": "t1-p776-006",
       "english": "Black out",
-      "polish": "Zemdleć",
+      "polish": "Zemdleć; odpłynąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p776-006-word.mp3",
       "audioWordPl": "t1-p776-006-word-pl.mp3",
-      "audioSentence": "t1-p776-006-sentence.mp3"
+      "audioSentence": "t1-p776-006-sentence.mp3",
+      "polishAudio": "Zemdleć"
     },
     {
       "id": "t1-p776-007",
@@ -74,37 +80,41 @@
       "sentencePl": null,
       "audioWord": "t1-p776-007-word.mp3",
       "audioWordPl": "t1-p776-007-word-pl.mp3",
-      "audioSentence": "t1-p776-007-sentence.mp3"
+      "audioSentence": "t1-p776-007-sentence.mp3",
+      "polishAudio": "Wyeliminować kogoś"
     },
     {
       "id": "t1-p776-008",
       "english": "Die out",
-      "polish": "Wymierać",
+      "polish": "Wymierać; zanikać (np. dynastia)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p776-008-word.mp3",
       "audioWordPl": "t1-p776-008-word-pl.mp3",
-      "audioSentence": "t1-p776-008-sentence.mp3"
+      "audioSentence": "t1-p776-008-sentence.mp3",
+      "polishAudio": "Wymierać"
     },
     {
       "id": "t1-p776-009",
       "english": "Put down",
-      "polish": "Uśpić",
+      "polish": "Uśpić (np. zwierzę)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p776-009-word.mp3",
       "audioWordPl": "t1-p776-009-word-pl.mp3",
-      "audioSentence": "t1-p776-009-sentence.mp3"
+      "audioSentence": "t1-p776-009-sentence.mp3",
+      "polishAudio": "Uśpić"
     },
     {
       "id": "t1-p776-010",
       "english": "Keel over",
-      "polish": "Przekręcić się",
+      "polish": "Przekręcić się; umrzeć nagle",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p776-010-word.mp3",
       "audioWordPl": "t1-p776-010-word-pl.mp3",
-      "audioSentence": "t1-p776-010-sentence.mp3"
+      "audioSentence": "t1-p776-010-sentence.mp3",
+      "polishAudio": "Przekręcić się"
     }
   ]
 }

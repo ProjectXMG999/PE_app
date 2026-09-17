@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p483-001-word.mp3",
       "audioWordPl": "t1-p483-001-word-pl.mp3",
-      "audioSentence": "t1-p483-001-sentence.mp3"
+      "audioSentence": "t1-p483-001-sentence.mp3",
+      "polishAudio": "Kierować"
     },
     {
       "id": "t1-p483-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p483-002-word.mp3",
       "audioWordPl": "t1-p483-002-word-pl.mp3",
-      "audioSentence": "t1-p483-002-sentence.mp3"
+      "audioSentence": "t1-p483-002-sentence.mp3",
+      "polishAudio": "Zwolnić kogoś z pracy"
     },
     {
       "id": "t1-p483-003",
       "english": "Grant",
-      "polish": "Przyznawać",
+      "polish": "Przyznawać; udzielać (oficjalnie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p483-003-word.mp3",
       "audioWordPl": "t1-p483-003-word-pl.mp3",
-      "audioSentence": "t1-p483-003-sentence.mp3"
+      "audioSentence": "t1-p483-003-sentence.mp3",
+      "polishAudio": "Przyznawać"
     },
     {
       "id": "t1-p483-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p483-004-word.mp3",
       "audioWordPl": "t1-p483-004-word-pl.mp3",
-      "audioSentence": "t1-p483-004-sentence.mp3"
+      "audioSentence": "t1-p483-004-sentence.mp3",
+      "polishAudio": "Wykonać"
     },
     {
       "id": "t1-p483-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p483-005-word.mp3",
       "audioWordPl": "t1-p483-005-word-pl.mp3",
-      "audioSentence": "t1-p483-005-sentence.mp3"
+      "audioSentence": "t1-p483-005-sentence.mp3",
+      "polishAudio": "Rozszerzać"
     },
     {
       "id": "t1-p483-006",
       "english": "Launch",
-      "polish": "Wprowadzić na rynek",
+      "polish": "Wprowadzić na rynek; rozpocząć kampanię",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p483-006-word.mp3",
       "audioWordPl": "t1-p483-006-word-pl.mp3",
-      "audioSentence": "t1-p483-006-sentence.mp3"
+      "audioSentence": "t1-p483-006-sentence.mp3",
+      "polishAudio": "Wprowadzić na rynek"
     },
     {
       "id": "t1-p483-007",
@@ -74,27 +80,30 @@
       "sentencePl": null,
       "audioWord": "t1-p483-007-word.mp3",
       "audioWordPl": "t1-p483-007-word-pl.mp3",
-      "audioSentence": "t1-p483-007-sentence.mp3"
+      "audioSentence": "t1-p483-007-sentence.mp3",
+      "polishAudio": "Zezwolić"
     },
     {
       "id": "t1-p483-008",
       "english": "Punch",
-      "polish": "Odbić",
+      "polish": "Odbić (kartę w pracy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p483-008-word.mp3",
       "audioWordPl": "t1-p483-008-word-pl.mp3",
-      "audioSentence": "t1-p483-008-sentence.mp3"
+      "audioSentence": "t1-p483-008-sentence.mp3",
+      "polishAudio": "Odbić"
     },
     {
       "id": "t1-p483-009",
       "english": "Rate",
-      "polish": "Oceniać",
+      "polish": "Oceniać (wg jakiejś skali); wyceniać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p483-009-word.mp3",
       "audioWordPl": "t1-p483-009-word-pl.mp3",
-      "audioSentence": "t1-p483-009-sentence.mp3"
+      "audioSentence": "t1-p483-009-sentence.mp3",
+      "polishAudio": "Oceniać"
     },
     {
       "id": "t1-p483-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p483-010-word.mp3",
       "audioWordPl": "t1-p483-010-word-pl.mp3",
-      "audioSentence": "t1-p483-010-sentence.mp3"
+      "audioSentence": "t1-p483-010-sentence.mp3",
+      "polishAudio": "Wypuszczać na rynek"
     },
     {
       "id": "t1-p483-011",
@@ -114,27 +124,30 @@
       "sentencePl": null,
       "audioWord": "t1-p483-011-word.mp3",
       "audioWordPl": "t1-p483-011-word-pl.mp3",
-      "audioSentence": "t1-p483-011-sentence.mp3"
+      "audioSentence": "t1-p483-011-sentence.mp3",
+      "polishAudio": "Prowadzić badania"
     },
     {
       "id": "t1-p483-012",
       "english": "Certify",
-      "polish": "Poświadczać",
+      "polish": "Poświadczać; certyfikować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p483-012-word.mp3",
       "audioWordPl": "t1-p483-012-word-pl.mp3",
-      "audioSentence": "t1-p483-012-sentence.mp3"
+      "audioSentence": "t1-p483-012-sentence.mp3",
+      "polishAudio": "Poświadczać"
     },
     {
       "id": "t1-p483-013",
       "english": "Operate",
-      "polish": "Funkcjonować",
+      "polish": "Funkcjonować; działać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p483-013-word.mp3",
       "audioWordPl": "t1-p483-013-word-pl.mp3",
-      "audioSentence": "t1-p483-013-sentence.mp3"
+      "audioSentence": "t1-p483-013-sentence.mp3",
+      "polishAudio": "Funkcjonować"
     },
     {
       "id": "t1-p483-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p483-014-word.mp3",
       "audioWordPl": "t1-p483-014-word-pl.mp3",
-      "audioSentence": "t1-p483-014-sentence.mp3"
+      "audioSentence": "t1-p483-014-sentence.mp3",
+      "polishAudio": "Wprowadzać innowacje"
     },
     {
       "id": "t1-p483-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p483-015-word.mp3",
       "audioWordPl": "t1-p483-015-word-pl.mp3",
-      "audioSentence": "t1-p483-015-sentence.mp3"
+      "audioSentence": "t1-p483-015-sentence.mp3",
+      "polishAudio": "Otworzyć ponownie"
     }
   ]
 }

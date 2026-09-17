@@ -14,17 +14,19 @@
       "sentencePl": null,
       "audioWord": "t1-p307-001-word.mp3",
       "audioWordPl": "t1-p307-001-word-pl.mp3",
-      "audioSentence": "t1-p307-001-sentence.mp3"
+      "audioSentence": "t1-p307-001-sentence.mp3",
+      "polishAudio": "Całkowity"
     },
     {
       "id": "t1-p307-002",
       "english": "Extra",
-      "polish": "Ekstra",
+      "polish": "Ekstra; dodatkowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-002-word.mp3",
       "audioWordPl": "t1-p307-002-word-pl.mp3",
-      "audioSentence": "t1-p307-002-sentence.mp3"
+      "audioSentence": "t1-p307-002-sentence.mp3",
+      "polishAudio": "Ekstra"
     },
     {
       "id": "t1-p307-003",
@@ -34,27 +36,30 @@
       "sentencePl": null,
       "audioWord": "t1-p307-003-word.mp3",
       "audioWordPl": "t1-p307-003-word-pl.mp3",
-      "audioSentence": "t1-p307-003-sentence.mp3"
+      "audioSentence": "t1-p307-003-sentence.mp3",
+      "polishAudio": "Umiarkowany"
     },
     {
       "id": "t1-p307-004",
       "english": "Whole",
-      "polish": "Cały",
+      "polish": "Cały; pełny (nienaruszony)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-004-word.mp3",
       "audioWordPl": "t1-p307-004-word-pl.mp3",
-      "audioSentence": "t1-p307-004-sentence.mp3"
+      "audioSentence": "t1-p307-004-sentence.mp3",
+      "polishAudio": "Cały"
     },
     {
       "id": "t1-p307-005",
       "english": "Numerous",
-      "polish": "Liczny",
+      "polish": "Liczny; mnogi; wiele",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-005-word.mp3",
       "audioWordPl": "t1-p307-005-word-pl.mp3",
-      "audioSentence": "t1-p307-005-sentence.mp3"
+      "audioSentence": "t1-p307-005-sentence.mp3",
+      "polishAudio": "Liczny"
     },
     {
       "id": "t1-p307-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p307-006-word.mp3",
       "audioWordPl": "t1-p307-006-word-pl.mp3",
-      "audioSentence": "t1-p307-006-sentence.mp3"
+      "audioSentence": "t1-p307-006-sentence.mp3",
+      "polishAudio": "Maksymalny"
     },
     {
       "id": "t1-p307-007",
       "english": "Minimal",
-      "polish": "Minimalny",
+      "polish": "Minimalny; znikomy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-007-word.mp3",
       "audioWordPl": "t1-p307-007-word-pl.mp3",
-      "audioSentence": "t1-p307-007-sentence.mp3"
+      "audioSentence": "t1-p307-007-sentence.mp3",
+      "polishAudio": "Minimalny"
     },
     {
       "id": "t1-p307-008",
@@ -84,27 +91,30 @@
       "sentencePl": null,
       "audioWord": "t1-p307-008-word.mp3",
       "audioWordPl": "t1-p307-008-word-pl.mp3",
-      "audioSentence": "t1-p307-008-sentence.mp3"
+      "audioSentence": "t1-p307-008-sentence.mp3",
+      "polishAudio": "Mnogi"
     },
     {
       "id": "t1-p307-009",
       "english": "Singular",
-      "polish": "Pojedynczy",
+      "polish": "Pojedynczy; odosobniony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-009-word.mp3",
       "audioWordPl": "t1-p307-009-word-pl.mp3",
-      "audioSentence": "t1-p307-009-sentence.mp3"
+      "audioSentence": "t1-p307-009-sentence.mp3",
+      "polishAudio": "Pojedynczy"
     },
     {
       "id": "t1-p307-010",
       "english": "Entire",
-      "polish": "Cały",
+      "polish": "Cały (w komplecie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p307-010-word.mp3",
       "audioWordPl": "t1-p307-010-word-pl.mp3",
-      "audioSentence": "t1-p307-010-sentence.mp3"
+      "audioSentence": "t1-p307-010-sentence.mp3",
+      "polishAudio": "Cały"
     },
     {
       "id": "t1-p307-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p307-011-word.mp3",
       "audioWordPl": "t1-p307-011-word-pl.mp3",
-      "audioSentence": "t1-p307-011-sentence.mp3"
+      "audioSentence": "t1-p307-011-sentence.mp3",
+      "polishAudio": "Malejący"
     },
     {
       "id": "t1-p307-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p307-012-word.mp3",
       "audioWordPl": "t1-p307-012-word-pl.mp3",
-      "audioSentence": "t1-p307-012-sentence.mp3"
+      "audioSentence": "t1-p307-012-sentence.mp3",
+      "polishAudio": "Niezliczony"
     },
     {
       "id": "t1-p307-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p307-013-word.mp3",
       "audioWordPl": "t1-p307-013-word-pl.mp3",
-      "audioSentence": "t1-p307-013-sentence.mp3"
+      "audioSentence": "t1-p307-013-sentence.mp3",
+      "polishAudio": "Policzalny"
     },
     {
       "id": "t1-p307-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p307-014-word.mp3",
       "audioWordPl": "t1-p307-014-word-pl.mp3",
-      "audioSentence": "t1-p307-014-sentence.mp3"
+      "audioSentence": "t1-p307-014-sentence.mp3",
+      "polishAudio": "Wielokrotny"
     },
     {
       "id": "t1-p307-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p307-015-word.mp3",
       "audioWordPl": "t1-p307-015-word-pl.mp3",
-      "audioSentence": "t1-p307-015-sentence.mp3"
+      "audioSentence": "t1-p307-015-sentence.mp3",
+      "polishAudio": "Wzrastający"
     }
   ]
 }

@@ -9,152 +9,167 @@
     {
       "id": "t1-p245-001",
       "english": "Chore",
-      "polish": "Obowiązek",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Obowiązek (praca do wykonania)",
+      "sentenceEn": "Which chore are you avoiding while scrolling TikTok?",
+      "sentencePl": "Którego obowiązku unikasz, przewijając TikToka?",
       "audioWord": "t1-p245-001-word.mp3",
       "audioWordPl": "t1-p245-001-word-pl.mp3",
-      "audioSentence": "t1-p245-001-sentence.mp3"
+      "audioSentence": "t1-p245-001-sentence.mp3",
+      "polishAudio": "Obowiązek"
     },
     {
       "id": "t1-p245-002",
       "english": "Heating",
       "polish": "Ogrzewanie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Could you turn up the heating? I'm wearing two jumpers.",
+      "sentencePl": "Możesz podkręcić ogrzewanie? Mam na sobie dwa swetry.",
       "audioWord": "t1-p245-002-word.mp3",
       "audioWordPl": "t1-p245-002-word-pl.mp3",
-      "audioSentence": "t1-p245-002-sentence.mp3"
+      "audioSentence": "t1-p245-002-sentence.mp3",
+      "polishAudio": "Ogrzewanie"
     },
     {
       "id": "t1-p245-003",
       "english": "Lighting",
       "polish": "Oświetlenie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can you change the lighting? This makes us look haunted.",
+      "sentencePl": "Możesz zmienić oświetlenie? Wyglądamy przez nie jak nawiedzeni.",
       "audioWord": "t1-p245-003-word.mp3",
       "audioWordPl": "t1-p245-003-word-pl.mp3",
-      "audioSentence": "t1-p245-003-sentence.mp3"
+      "audioSentence": "t1-p245-003-sentence.mp3",
+      "polishAudio": "Oświetlenie"
     },
     {
       "id": "t1-p245-004",
       "english": "Move",
       "polish": "Przeprowadzka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Are you still helping me with the move on Saturday?",
+      "sentencePl": "Nadal pomożesz mi przy przeprowadzce w sobotę?",
       "audioWord": "t1-p245-004-word.mp3",
       "audioWordPl": "t1-p245-004-word-pl.mp3",
-      "audioSentence": "t1-p245-004-sentence.mp3"
+      "audioSentence": "t1-p245-004-sentence.mp3",
+      "polishAudio": "Przeprowadzka"
     },
     {
       "id": "t1-p245-005",
       "english": "Bed sheet",
       "polish": "Prześcieradło",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Why is this bed sheet always coming off at night?",
+      "sentencePl": "Dlaczego to prześcieradło ciągle zsuwa się w nocy?",
       "audioWord": "t1-p245-005-word.mp3",
       "audioWordPl": "t1-p245-005-word-pl.mp3",
-      "audioSentence": "t1-p245-005-sentence.mp3"
+      "audioSentence": "t1-p245-005-sentence.mp3",
+      "polishAudio": "Prześcieradło"
     },
     {
       "id": "t1-p245-006",
       "english": "Neighborhood",
-      "polish": "Sąsiedztwo",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Sąsiedztwo; okolica",
+      "sentenceEn": "Google Maps found us a bakery in this neighborhood—finally.",
+      "sentencePl": "Google Maps znalazło nam piekarnię w tej okolicy — nareszcie.",
       "audioWord": "t1-p245-006-word.mp3",
       "audioWordPl": "t1-p245-006-word-pl.mp3",
-      "audioSentence": "t1-p245-006-sentence.mp3"
+      "audioSentence": "t1-p245-006-sentence.mp3",
+      "polishAudio": "Sąsiedztwo"
     },
     {
       "id": "t1-p245-007",
       "english": "Drawer",
       "polish": "Szuflada",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Did you put my passport in the drawer, by any chance?",
+      "sentencePl": "Czy przypadkiem włożyłeś mój paszport do szuflady?",
       "audioWord": "t1-p245-007-word.mp3",
       "audioWordPl": "t1-p245-007-word-pl.mp3",
-      "audioSentence": "t1-p245-007-sentence.mp3"
+      "audioSentence": "t1-p245-007-sentence.mp3",
+      "polishAudio": "Szuflada"
     },
     {
       "id": "t1-p245-008",
       "english": "Handle",
       "polish": "Uchwyt",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Careful with that handle, it feels like it's about to snap.",
+      "sentencePl": "Uważaj na ten uchwyt, czuję, że zaraz pęknie.",
       "audioWord": "t1-p245-008-word.mp3",
       "audioWordPl": "t1-p245-008-word-pl.mp3",
-      "audioSentence": "t1-p245-008-sentence.mp3"
+      "audioSentence": "t1-p245-008-sentence.mp3",
+      "polishAudio": "Uchwyt"
     },
     {
       "id": "t1-p245-009",
       "english": "Fan",
       "polish": "Wentylator",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can you aim the fan my way? I'm boiling here.",
+      "sentencePl": "Możesz skierować wentylator w moją stronę? Gotuję się tutaj.",
       "audioWord": "t1-p245-009-word.mp3",
       "audioWordPl": "t1-p245-009-word-pl.mp3",
-      "audioSentence": "t1-p245-009-sentence.mp3"
+      "audioSentence": "t1-p245-009-sentence.mp3",
+      "polishAudio": "Wentylator"
     },
     {
       "id": "t1-p245-010",
       "english": "Hanger",
       "polish": "Wieszak",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Have you got a hanger? This dress keeps slipping off the chair.",
+      "sentencePl": "Masz może wieszak? Ta sukienka ciągle zsuwa się z krzesła.",
       "audioWord": "t1-p245-010-word.mp3",
       "audioWordPl": "t1-p245-010-word-pl.mp3",
-      "audioSentence": "t1-p245-010-sentence.mp3"
+      "audioSentence": "t1-p245-010-sentence.mp3",
+      "polishAudio": "Wieszak"
     },
     {
       "id": "t1-p245-011",
       "english": "Property",
-      "polish": "Własność",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Własność; posesja",
+      "sentenceEn": "I saved this property on Airbnb, but the reviews worry me.",
+      "sentencePl": "Zapisałem tę nieruchomość na Airbnb, ale opinie mnie niepokoją.",
       "audioWord": "t1-p245-011-word.mp3",
       "audioWordPl": "t1-p245-011-word-pl.mp3",
-      "audioSentence": "t1-p245-011-sentence.mp3"
+      "audioSentence": "t1-p245-011-sentence.mp3",
+      "polishAudio": "Własność"
     },
     {
       "id": "t1-p245-012",
       "english": "Landlord",
-      "polish": "Właściciel",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Właściciel (np. wynajmowanego mieszkania)",
+      "sentenceEn": "The landlord said he'd fix it, so I'm still waiting.",
+      "sentencePl": "Właściciel powiedział, że to naprawi, więc nadal czekam.",
       "audioWord": "t1-p245-012-word.mp3",
       "audioWordPl": "t1-p245-012-word-pl.mp3",
-      "audioSentence": "t1-p245-012-sentence.mp3"
+      "audioSentence": "t1-p245-012-sentence.mp3",
+      "polishAudio": "Właściciel"
     },
     {
       "id": "t1-p245-013",
       "english": "Lock",
-      "polish": "Zamek",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Zamek (w drzwiach)",
+      "sentenceEn": "I pulled the door twice just to check the lock.",
+      "sentencePl": "Pociągnąłem drzwi dwa razy, tylko żeby sprawdzić zamek.",
       "audioWord": "t1-p245-013-word.mp3",
       "audioWordPl": "t1-p245-013-word-pl.mp3",
-      "audioSentence": "t1-p245-013-sentence.mp3"
+      "audioSentence": "t1-p245-013-sentence.mp3",
+      "polishAudio": "Zamek"
     },
     {
       "id": "t1-p245-014",
       "english": "Lightbulb",
       "polish": "Żarówka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can you hold the chair while I change this lightbulb?",
+      "sentencePl": "Możesz przytrzymać krzesło, kiedy będę zmieniać tę żarówkę?",
       "audioWord": "t1-p245-014-word.mp3",
       "audioWordPl": "t1-p245-014-word-pl.mp3",
-      "audioSentence": "t1-p245-014-sentence.mp3"
+      "audioSentence": "t1-p245-014-sentence.mp3",
+      "polishAudio": "Żarówka"
     },
     {
       "id": "t1-p245-015",
       "english": "Vacuum cleaner",
       "polish": "Odkurzacz",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My robot vacuum cleaner got stuck under the sofa again.",
+      "sentencePl": "Mój robot odkurzający znowu utknął pod sofą.",
       "audioWord": "t1-p245-015-word.mp3",
       "audioWordPl": "t1-p245-015-word-pl.mp3",
-      "audioSentence": "t1-p245-015-sentence.mp3"
+      "audioSentence": "t1-p245-015-sentence.mp3",
+      "polishAudio": "Odkurzacz"
     }
   ]
 }

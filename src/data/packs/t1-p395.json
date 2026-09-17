@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p395-001-word.mp3",
       "audioWordPl": "t1-p395-001-word-pl.mp3",
-      "audioSentence": "t1-p395-001-sentence.mp3"
+      "audioSentence": "t1-p395-001-sentence.mp3",
+      "polishAudio": "Pieczeń"
     },
     {
       "id": "t1-p395-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p395-002-word.mp3",
       "audioWordPl": "t1-p395-002-word-pl.mp3",
-      "audioSentence": "t1-p395-002-sentence.mp3"
+      "audioSentence": "t1-p395-002-sentence.mp3",
+      "polishAudio": "Pierogi"
     },
     {
       "id": "t1-p395-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p395-003-word.mp3",
       "audioWordPl": "t1-p395-003-word-pl.mp3",
-      "audioSentence": "t1-p395-003-sentence.mp3"
+      "audioSentence": "t1-p395-003-sentence.mp3",
+      "polishAudio": "Pierś drobiowa"
     },
     {
       "id": "t1-p395-004",
@@ -44,17 +47,19 @@
       "sentencePl": null,
       "audioWord": "t1-p395-004-word.mp3",
       "audioWordPl": "t1-p395-004-word-pl.mp3",
-      "audioSentence": "t1-p395-004-sentence.mp3"
+      "audioSentence": "t1-p395-004-sentence.mp3",
+      "polishAudio": "Popkorn"
     },
     {
       "id": "t1-p395-005",
       "english": "Starter",
-      "polish": "Przystawka",
+      "polish": "Przystawka; zakąska",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p395-005-word.mp3",
       "audioWordPl": "t1-p395-005-word-pl.mp3",
-      "audioSentence": "t1-p395-005-sentence.mp3"
+      "audioSentence": "t1-p395-005-sentence.mp3",
+      "polishAudio": "Przystawka"
     },
     {
       "id": "t1-p395-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p395-006-word.mp3",
       "audioWordPl": "t1-p395-006-word-pl.mp3",
-      "audioSentence": "t1-p395-006-sentence.mp3"
+      "audioSentence": "t1-p395-006-sentence.mp3",
+      "polishAudio": "Pulpet"
     },
     {
       "id": "t1-p395-007",
       "english": "Mashed potatoes",
-      "polish": "Tłuczone ziemniaki",
+      "polish": "Tłuczone ziemniaki; puree",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p395-007-word.mp3",
       "audioWordPl": "t1-p395-007-word-pl.mp3",
-      "audioSentence": "t1-p395-007-sentence.mp3"
+      "audioSentence": "t1-p395-007-sentence.mp3",
+      "polishAudio": "Tłuczone ziemniaki"
     },
     {
       "id": "t1-p395-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p395-008-word.mp3",
       "audioWordPl": "t1-p395-008-word-pl.mp3",
-      "audioSentence": "t1-p395-008-sentence.mp3"
+      "audioSentence": "t1-p395-008-sentence.mp3",
+      "polishAudio": "Rodzynek"
     },
     {
       "id": "t1-p395-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p395-009-word.mp3",
       "audioWordPl": "t1-p395-009-word-pl.mp3",
-      "audioSentence": "t1-p395-009-sentence.mp3"
+      "audioSentence": "t1-p395-009-sentence.mp3",
+      "polishAudio": "Składnik"
     },
     {
       "id": "t1-p395-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p395-010-word.mp3",
       "audioWordPl": "t1-p395-010-word-pl.mp3",
-      "audioSentence": "t1-p395-010-sentence.mp3"
+      "audioSentence": "t1-p395-010-sentence.mp3",
+      "polishAudio": "Katering"
     },
     {
       "id": "t1-p395-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p395-011-word.mp3",
       "audioWordPl": "t1-p395-011-word-pl.mp3",
-      "audioSentence": "t1-p395-011-sentence.mp3"
+      "audioSentence": "t1-p395-011-sentence.mp3",
+      "polishAudio": "Oliwka"
     },
     {
       "id": "t1-p395-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p395-012-word.mp3",
       "audioWordPl": "t1-p395-012-word-pl.mp3",
-      "audioSentence": "t1-p395-012-sentence.mp3"
+      "audioSentence": "t1-p395-012-sentence.mp3",
+      "polishAudio": "Owoce morza"
     },
     {
       "id": "t1-p395-013",
       "english": "Appetizer",
-      "polish": "Przystawka",
+      "polish": "Przystawka; aperitif",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p395-013-word.mp3",
       "audioWordPl": "t1-p395-013-word-pl.mp3",
-      "audioSentence": "t1-p395-013-sentence.mp3"
+      "audioSentence": "t1-p395-013-sentence.mp3",
+      "polishAudio": "Przystawka"
     },
     {
       "id": "t1-p395-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p395-014-word.mp3",
       "audioWordPl": "t1-p395-014-word-pl.mp3",
-      "audioSentence": "t1-p395-014-sentence.mp3"
+      "audioSentence": "t1-p395-014-sentence.mp3",
+      "polishAudio": "Wieprzowina"
     },
     {
       "id": "t1-p395-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p395-015-word.mp3",
       "audioWordPl": "t1-p395-015-word-pl.mp3",
-      "audioSentence": "t1-p395-015-sentence.mp3"
+      "audioSentence": "t1-p395-015-sentence.mp3",
+      "polishAudio": "Wołowina"
     }
   ]
 }

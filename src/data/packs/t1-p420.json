@@ -9,12 +9,13 @@
     {
       "id": "t1-p420-001",
       "english": "Beat",
-      "polish": "Bić",
+      "polish": "Bić; uderzać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p420-001-word.mp3",
       "audioWordPl": "t1-p420-001-word-pl.mp3",
-      "audioSentence": "t1-p420-001-sentence.mp3"
+      "audioSentence": "t1-p420-001-sentence.mp3",
+      "polishAudio": "Bić"
     },
     {
       "id": "t1-p420-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p420-002-word.mp3",
       "audioWordPl": "t1-p420-002-word-pl.mp3",
-      "audioSentence": "t1-p420-002-sentence.mp3"
+      "audioSentence": "t1-p420-002-sentence.mp3",
+      "polishAudio": "Walczyć"
     },
     {
       "id": "t1-p420-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p420-003-word.mp3",
       "audioWordPl": "t1-p420-003-word-pl.mp3",
-      "audioSentence": "t1-p420-003-sentence.mp3"
+      "audioSentence": "t1-p420-003-sentence.mp3",
+      "polishAudio": "Zabijać"
     },
     {
       "id": "t1-p420-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p420-004-word.mp3",
       "audioWordPl": "t1-p420-004-word-pl.mp3",
-      "audioSentence": "t1-p420-004-sentence.mp3"
+      "audioSentence": "t1-p420-004-sentence.mp3",
+      "polishAudio": "Strzelać"
     },
     {
       "id": "t1-p420-005",
@@ -54,37 +58,41 @@
       "sentencePl": null,
       "audioWord": "t1-p420-005-word.mp3",
       "audioWordPl": "t1-p420-005-word-pl.mp3",
-      "audioSentence": "t1-p420-005-sentence.mp3"
+      "audioSentence": "t1-p420-005-sentence.mp3",
+      "polishAudio": "Kraść"
     },
     {
       "id": "t1-p420-006",
       "english": "Bleed",
-      "polish": "Krwawić",
+      "polish": "Krwawić; wykrwawiać (kogoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p420-006-word.mp3",
       "audioWordPl": "t1-p420-006-word-pl.mp3",
-      "audioSentence": "t1-p420-006-sentence.mp3"
+      "audioSentence": "t1-p420-006-sentence.mp3",
+      "polishAudio": "Krwawić"
     },
     {
       "id": "t1-p420-007",
       "english": "Injure",
-      "polish": "Zranić",
+      "polish": "Zranić; kontuzjować; ulec kontuzji",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p420-007-word.mp3",
       "audioWordPl": "t1-p420-007-word-pl.mp3",
-      "audioSentence": "t1-p420-007-sentence.mp3"
+      "audioSentence": "t1-p420-007-sentence.mp3",
+      "polishAudio": "Zranić"
     },
     {
       "id": "t1-p420-008",
       "english": "Choke",
-      "polish": "Dławić się",
+      "polish": "Dławić się; dusić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p420-008-word.mp3",
       "audioWordPl": "t1-p420-008-word-pl.mp3",
-      "audioSentence": "t1-p420-008-sentence.mp3"
+      "audioSentence": "t1-p420-008-sentence.mp3",
+      "polishAudio": "Dławić się"
     },
     {
       "id": "t1-p420-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p420-009-word.mp3",
       "audioWordPl": "t1-p420-009-word-pl.mp3",
-      "audioSentence": "t1-p420-009-sentence.mp3"
+      "audioSentence": "t1-p420-009-sentence.mp3",
+      "polishAudio": "Porwać kogoś"
     },
     {
       "id": "t1-p420-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p420-010-word.mp3",
       "audioWordPl": "t1-p420-010-word-pl.mp3",
-      "audioSentence": "t1-p420-010-sentence.mp3"
+      "audioSentence": "t1-p420-010-sentence.mp3",
+      "polishAudio": "Mordować"
     },
     {
       "id": "t1-p420-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p420-011-word.mp3",
       "audioWordPl": "t1-p420-011-word-pl.mp3",
-      "audioSentence": "t1-p420-011-sentence.mp3"
+      "audioSentence": "t1-p420-011-sentence.mp3",
+      "polishAudio": "Zatruwać"
     },
     {
       "id": "t1-p420-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p420-012-word.mp3",
       "audioWordPl": "t1-p420-012-word-pl.mp3",
-      "audioSentence": "t1-p420-012-sentence.mp3"
+      "audioSentence": "t1-p420-012-sentence.mp3",
+      "polishAudio": "Gwałcić"
     },
     {
       "id": "t1-p420-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p420-013-word.mp3",
       "audioWordPl": "t1-p420-013-word-pl.mp3",
-      "audioSentence": "t1-p420-013-sentence.mp3"
+      "audioSentence": "t1-p420-013-sentence.mp3",
+      "polishAudio": "Przemycać"
     },
     {
       "id": "t1-p420-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p420-014-word.mp3",
       "audioWordPl": "t1-p420-014-word-pl.mp3",
-      "audioSentence": "t1-p420-014-sentence.mp3"
+      "audioSentence": "t1-p420-014-sentence.mp3",
+      "polishAudio": "Dusić"
     },
     {
       "id": "t1-p420-015",
       "english": "Assault",
-      "polish": "Zaatakować",
+      "polish": "Zaatakować; dokonywać natarcia; napadać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p420-015-word.mp3",
       "audioWordPl": "t1-p420-015-word-pl.mp3",
-      "audioSentence": "t1-p420-015-sentence.mp3"
+      "audioSentence": "t1-p420-015-sentence.mp3",
+      "polishAudio": "Zaatakować"
     }
   ]
 }

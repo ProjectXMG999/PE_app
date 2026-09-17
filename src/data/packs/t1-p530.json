@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p530-001-word.mp3",
       "audioWordPl": "t1-p530-001-word-pl.mp3",
-      "audioSentence": "t1-p530-001-sentence.mp3"
+      "audioSentence": "t1-p530-001-sentence.mp3",
+      "polishAudio": "Sztos"
     },
     {
       "id": "t1-p530-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p530-002-word.mp3",
       "audioWordPl": "t1-p530-002-word-pl.mp3",
-      "audioSentence": "t1-p530-002-sentence.mp3"
+      "audioSentence": "t1-p530-002-sentence.mp3",
+      "polishAudio": "Rewelka"
     },
     {
       "id": "t1-p530-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p530-003-word.mp3",
       "audioWordPl": "t1-p530-003-word-pl.mp3",
-      "audioSentence": "t1-p530-003-sentence.mp3"
+      "audioSentence": "t1-p530-003-sentence.mp3",
+      "polishAudio": "Zarąbisty"
     },
     {
       "id": "t1-p530-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p530-004-word.mp3",
       "audioWordPl": "t1-p530-004-word-pl.mp3",
-      "audioSentence": "t1-p530-004-sentence.mp3"
+      "audioSentence": "t1-p530-004-sentence.mp3",
+      "polishAudio": "Po prostu świetny"
     },
     {
       "id": "t1-p530-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p530-005-word.mp3",
       "audioWordPl": "t1-p530-005-word-pl.mp3",
-      "audioSentence": "t1-p530-005-sentence.mp3"
+      "audioSentence": "t1-p530-005-sentence.mp3",
+      "polishAudio": "Superanckie"
     },
     {
       "id": "t1-p530-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p530-006-word.mp3",
       "audioWordPl": "t1-p530-006-word-pl.mp3",
-      "audioSentence": "t1-p530-006-sentence.mp3"
+      "audioSentence": "t1-p530-006-sentence.mp3",
+      "polishAudio": "Fajowskie"
     },
     {
       "id": "t1-p530-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p530-007-word.mp3",
       "audioWordPl": "t1-p530-007-word-pl.mp3",
-      "audioSentence": "t1-p530-007-sentence.mp3"
+      "audioSentence": "t1-p530-007-sentence.mp3",
+      "polishAudio": "Super fajne"
     },
     {
       "id": "t1-p530-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p530-008-word.mp3",
       "audioWordPl": "t1-p530-008-word-pl.mp3",
-      "audioSentence": "t1-p530-008-sentence.mp3"
+      "audioSentence": "t1-p530-008-sentence.mp3",
+      "polishAudio": "Na fali"
     },
     {
       "id": "t1-p530-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p530-009-word.mp3",
       "audioWordPl": "t1-p530-009-word-pl.mp3",
-      "audioSentence": "t1-p530-009-sentence.mp3"
+      "audioSentence": "t1-p530-009-sentence.mp3",
+      "polishAudio": "Czadowy"
     },
     {
       "id": "t1-p530-010",
       "english": "X-factor",
-      "polish": "Cecha, która sprawia, że jest się wyjątkowym I pożądanym",
+      "polish": "Cecha, która sprawia, że jest się wyjątkowym i pożądanym",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p530-010-word.mp3",
       "audioWordPl": "t1-p530-010-word-pl.mp3",
-      "audioSentence": "t1-p530-010-sentence.mp3"
+      "audioSentence": "t1-p530-010-sentence.mp3",
+      "polishAudio": "Cecha, która sprawia, że jest się wyjątkowym i pożądanym"
     }
   ]
 }

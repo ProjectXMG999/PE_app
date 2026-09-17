@@ -10,101 +10,111 @@
       "id": "t1-p033-001",
       "english": "Hour",
       "polish": "Godzina",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "One more hour, then I'm free.",
+      "sentencePl": "Jeszcze godzina i będę wolny.",
       "audioWord": "t1-p033-001-word.mp3",
       "audioWordPl": "t1-p033-001-word-pl.mp3",
-      "audioSentence": "t1-p033-001-sentence.mp3"
+      "audioSentence": "t1-p033-001-sentence.mp3",
+      "polishAudio": "Godzina"
     },
     {
       "id": "t1-p033-002",
       "english": "Minute",
       "polish": "Minuta",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I only need one more minute.",
+      "sentencePl": "Potrzebuję tylko jeszcze jednej minuty.",
       "audioWord": "t1-p033-002-word.mp3",
       "audioWordPl": "t1-p033-002-word-pl.mp3",
-      "audioSentence": "t1-p033-002-sentence.mp3"
+      "audioSentence": "t1-p033-002-sentence.mp3",
+      "polishAudio": "Minuta"
     },
     {
       "id": "t1-p033-003",
       "english": "Night",
       "polish": "Noc",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Good night, text me tomorrow.",
+      "sentencePl": "Dobranoc, napisz do mnie jutro.",
       "audioWord": "t1-p033-003-word.mp3",
       "audioWordPl": "t1-p033-003-word-pl.mp3",
-      "audioSentence": "t1-p033-003-sentence.mp3"
+      "audioSentence": "t1-p033-003-sentence.mp3",
+      "polishAudio": "Noc"
     },
     {
       "id": "t1-p033-004",
       "english": "Friday",
       "polish": "Piątek",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Friday is my favorite day.",
+      "sentencePl": "Piątek to mój ulubiony dzień.",
       "audioWord": "t1-p033-004-word.mp3",
       "audioWordPl": "t1-p033-004-word-pl.mp3",
-      "audioSentence": "t1-p033-004-sentence.mp3"
+      "audioSentence": "t1-p033-004-sentence.mp3",
+      "polishAudio": "Piątek"
     },
     {
       "id": "t1-p033-005",
       "english": "Afternoon",
       "polish": "Popołudnie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My afternoon disappeared so fast.",
+      "sentencePl": "Moje popołudnie minęło tak szybko.",
       "audioWord": "t1-p033-005-word.mp3",
       "audioWordPl": "t1-p033-005-word-pl.mp3",
-      "audioSentence": "t1-p033-005-sentence.mp3"
+      "audioSentence": "t1-p033-005-sentence.mp3",
+      "polishAudio": "Popołudnie"
     },
     {
       "id": "t1-p033-006",
       "english": "Year",
       "polish": "Rok",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "This year, I chose myself.",
+      "sentencePl": "W tym roku wybrałem siebie.",
       "audioWord": "t1-p033-006-word.mp3",
       "audioWordPl": "t1-p033-006-word-pl.mp3",
-      "audioSentence": "t1-p033-006-sentence.mp3"
+      "audioSentence": "t1-p033-006-sentence.mp3",
+      "polishAudio": "Rok"
     },
     {
       "id": "t1-p033-007",
       "english": "Second",
       "polish": "Sekunda",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "For a second, I believed you.",
+      "sentencePl": "Przez sekundę ci uwierzyłem.",
       "audioWord": "t1-p033-007-word.mp3",
       "audioWordPl": "t1-p033-007-word-pl.mp3",
-      "audioSentence": "t1-p033-007-sentence.mp3"
+      "audioSentence": "t1-p033-007-sentence.mp3",
+      "polishAudio": "Sekunda"
     },
     {
       "id": "t1-p033-008",
       "english": "Week",
       "polish": "Tydzień",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Spotify got me through this week.",
+      "sentencePl": "Spotify pomogło mi przetrwać ten tydzień.",
       "audioWord": "t1-p033-008-word.mp3",
       "audioWordPl": "t1-p033-008-word-pl.mp3",
-      "audioSentence": "t1-p033-008-sentence.mp3"
+      "audioSentence": "t1-p033-008-sentence.mp3",
+      "polishAudio": "Tydzień"
     },
     {
       "id": "t1-p033-009",
       "english": "Weekend",
       "polish": "Weekend",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I need the weekend to rest.",
+      "sentencePl": "Potrzebuję weekendu, żeby odpocząć.",
       "audioWord": "t1-p033-009-word.mp3",
       "audioWordPl": "t1-p033-009-word-pl.mp3",
-      "audioSentence": "t1-p033-009-sentence.mp3"
+      "audioSentence": "t1-p033-009-sentence.mp3",
+      "polishAudio": "Weekend"
     },
     {
       "id": "t1-p033-010",
       "english": "Evening",
       "polish": "Wieczór",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Are you free this evening?",
+      "sentencePl": "Masz wolny wieczór?",
       "audioWord": "t1-p033-010-word.mp3",
       "audioWordPl": "t1-p033-010-word-pl.mp3",
-      "audioSentence": "t1-p033-010-sentence.mp3"
+      "audioSentence": "t1-p033-010-sentence.mp3",
+      "polishAudio": "Wieczór"
     }
   ]
 }

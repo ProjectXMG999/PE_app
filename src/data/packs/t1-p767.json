@@ -9,22 +9,24 @@
     {
       "id": "t1-p767-001",
       "english": "Industrial",
-      "polish": "Przemysłowy",
+      "polish": "Przemysłowy; fabryczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p767-001-word.mp3",
       "audioWordPl": "t1-p767-001-word-pl.mp3",
-      "audioSentence": "t1-p767-001-sentence.mp3"
+      "audioSentence": "t1-p767-001-sentence.mp3",
+      "polishAudio": "Przemysłowy"
     },
     {
       "id": "t1-p767-002",
       "english": "Overcrowded",
-      "polish": "Przepełniony",
+      "polish": "Przepełniony (tłumem)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p767-002-word.mp3",
       "audioWordPl": "t1-p767-002-word-pl.mp3",
-      "audioSentence": "t1-p767-002-sentence.mp3"
+      "audioSentence": "t1-p767-002-sentence.mp3",
+      "polishAudio": "Przepełniony"
     },
     {
       "id": "t1-p767-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p767-003-word.mp3",
       "audioWordPl": "t1-p767-003-word-pl.mp3",
-      "audioSentence": "t1-p767-003-sentence.mp3"
+      "audioSentence": "t1-p767-003-sentence.mp3",
+      "polishAudio": "Przyjazny środowisku"
     },
     {
       "id": "t1-p767-004",
       "english": "Widespread",
-      "polish": "Rozpowszechniony",
+      "polish": "Rozpowszechniony; powszechny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p767-004-word.mp3",
       "audioWordPl": "t1-p767-004-word-pl.mp3",
-      "audioSentence": "t1-p767-004-sentence.mp3"
+      "audioSentence": "t1-p767-004-sentence.mp3",
+      "polishAudio": "Rozpowszechniony"
     },
     {
       "id": "t1-p767-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p767-005-word.mp3",
       "audioWordPl": "t1-p767-005-word-pl.mp3",
-      "audioSentence": "t1-p767-005-sentence.mp3"
+      "audioSentence": "t1-p767-005-sentence.mp3",
+      "polishAudio": "Rozwinięty"
     },
     {
       "id": "t1-p767-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p767-006-word.mp3",
       "audioWordPl": "t1-p767-006-word-pl.mp3",
-      "audioSentence": "t1-p767-006-sentence.mp3"
+      "audioSentence": "t1-p767-006-sentence.mp3",
+      "polishAudio": "Środowiskowy"
     },
     {
       "id": "t1-p767-007",
@@ -74,27 +80,30 @@
       "sentencePl": null,
       "audioWord": "t1-p767-007-word.mp3",
       "audioWordPl": "t1-p767-007-word-pl.mp3",
-      "audioSentence": "t1-p767-007-sentence.mp3"
+      "audioSentence": "t1-p767-007-sentence.mp3",
+      "polishAudio": "Światowy"
     },
     {
       "id": "t1-p767-008",
       "english": "Established",
-      "polish": "Ustanowiony",
+      "polish": "Ustanowiony; ustalony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p767-008-word.mp3",
       "audioWordPl": "t1-p767-008-word-pl.mp3",
-      "audioSentence": "t1-p767-008-sentence.mp3"
+      "audioSentence": "t1-p767-008-sentence.mp3",
+      "polishAudio": "Ustanowiony"
     },
     {
       "id": "t1-p767-009",
       "english": "Reported",
-      "polish": "Zgłoszony",
+      "polish": "Zgłoszony; odnotowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p767-009-word.mp3",
       "audioWordPl": "t1-p767-009-word-pl.mp3",
-      "audioSentence": "t1-p767-009-sentence.mp3"
+      "audioSentence": "t1-p767-009-sentence.mp3",
+      "polishAudio": "Zgłoszony"
     },
     {
       "id": "t1-p767-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p767-010-word.mp3",
       "audioWordPl": "t1-p767-010-word-pl.mp3",
-      "audioSentence": "t1-p767-010-sentence.mp3"
+      "audioSentence": "t1-p767-010-sentence.mp3",
+      "polishAudio": "Anty-wojenny"
     },
     {
       "id": "t1-p767-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p767-011-word.mp3",
       "audioWordPl": "t1-p767-011-word-pl.mp3",
-      "audioSentence": "t1-p767-011-sentence.mp3"
+      "audioSentence": "t1-p767-011-sentence.mp3",
+      "polishAudio": "Antykoncepcyjny"
     },
     {
       "id": "t1-p767-012",
@@ -124,27 +135,30 @@
       "sentencePl": null,
       "audioWord": "t1-p767-012-word.mp3",
       "audioWordPl": "t1-p767-012-word-pl.mp3",
-      "audioSentence": "t1-p767-012-sentence.mp3"
+      "audioSentence": "t1-p767-012-sentence.mp3",
+      "polishAudio": "Etniczny"
     },
     {
       "id": "t1-p767-013",
       "english": "Corporate",
-      "polish": "Korporacyjny",
+      "polish": "Korporacyjny; wspólny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p767-013-word.mp3",
       "audioWordPl": "t1-p767-013-word-pl.mp3",
-      "audioSentence": "t1-p767-013-sentence.mp3"
+      "audioSentence": "t1-p767-013-sentence.mp3",
+      "polishAudio": "Korporacyjny"
     },
     {
       "id": "t1-p767-014",
       "english": "Residential",
-      "polish": "Mieszkaniowy",
+      "polish": "Mieszkaniowy; willowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p767-014-word.mp3",
       "audioWordPl": "t1-p767-014-word-pl.mp3",
-      "audioSentence": "t1-p767-014-sentence.mp3"
+      "audioSentence": "t1-p767-014-sentence.mp3",
+      "polishAudio": "Mieszkaniowy"
     },
     {
       "id": "t1-p767-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p767-015-word.mp3",
       "audioWordPl": "t1-p767-015-word-pl.mp3",
-      "audioSentence": "t1-p767-015-sentence.mp3"
+      "audioSentence": "t1-p767-015-sentence.mp3",
+      "polishAudio": "Niebędący językiem ojczystym"
     }
   ]
 }

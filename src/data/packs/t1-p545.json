@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p545-001-word.mp3",
       "audioWordPl": "t1-p545-001-word-pl.mp3",
-      "audioSentence": "t1-p545-001-sentence.mp3"
+      "audioSentence": "t1-p545-001-sentence.mp3",
+      "polishAudio": "Wzrok"
     },
     {
       "id": "t1-p545-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p545-002-word.mp3",
       "audioWordPl": "t1-p545-002-word-pl.mp3",
-      "audioSentence": "t1-p545-002-sentence.mp3"
+      "audioSentence": "t1-p545-002-sentence.mp3",
+      "polishAudio": "Napięcie"
     },
     {
       "id": "t1-p545-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p545-003-word.mp3",
       "audioWordPl": "t1-p545-003-word-pl.mp3",
-      "audioSentence": "t1-p545-003-sentence.mp3"
+      "audioSentence": "t1-p545-003-sentence.mp3",
+      "polishAudio": "Popęd"
     },
     {
       "id": "t1-p545-004",
       "english": "Concern",
-      "polish": "Niepokój",
+      "polish": "Niepokój; troska",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p545-004-word.mp3",
       "audioWordPl": "t1-p545-004-word-pl.mp3",
-      "audioSentence": "t1-p545-004-sentence.mp3"
+      "audioSentence": "t1-p545-004-sentence.mp3",
+      "polishAudio": "Niepokój"
     },
     {
       "id": "t1-p545-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p545-005-word.mp3",
       "audioWordPl": "t1-p545-005-word-pl.mp3",
-      "audioSentence": "t1-p545-005-sentence.mp3"
+      "audioSentence": "t1-p545-005-sentence.mp3",
+      "polishAudio": "Wyrzuty sumienia"
     },
     {
       "id": "t1-p545-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p545-006-word.mp3",
       "audioWordPl": "t1-p545-006-word-pl.mp3",
-      "audioSentence": "t1-p545-006-sentence.mp3"
+      "audioSentence": "t1-p545-006-sentence.mp3",
+      "polishAudio": "Krytyka"
     },
     {
       "id": "t1-p545-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p545-007-word.mp3",
       "audioWordPl": "t1-p545-007-word-pl.mp3",
-      "audioSentence": "t1-p545-007-sentence.mp3"
+      "audioSentence": "t1-p545-007-sentence.mp3",
+      "polishAudio": "Pożądanie"
     },
     {
       "id": "t1-p545-008",
       "english": "Craving",
-      "polish": "Łaknienie",
+      "polish": "Łaknienie; ochota na coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p545-008-word.mp3",
       "audioWordPl": "t1-p545-008-word-pl.mp3",
-      "audioSentence": "t1-p545-008-sentence.mp3"
+      "audioSentence": "t1-p545-008-sentence.mp3",
+      "polishAudio": "Łaknienie"
     },
     {
       "id": "t1-p545-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p545-009-word.mp3",
       "audioWordPl": "t1-p545-009-word-pl.mp3",
-      "audioSentence": "t1-p545-009-sentence.mp3"
+      "audioSentence": "t1-p545-009-sentence.mp3",
+      "polishAudio": "Apatia"
     },
     {
       "id": "t1-p545-010",
       "english": "Manner",
-      "polish": "Sposób zachowania",
+      "polish": "Sposób zachowania; maniera",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p545-010-word.mp3",
       "audioWordPl": "t1-p545-010-word-pl.mp3",
-      "audioSentence": "t1-p545-010-sentence.mp3"
+      "audioSentence": "t1-p545-010-sentence.mp3",
+      "polishAudio": "Sposób zachowania"
     },
     {
       "id": "t1-p545-011",
@@ -114,27 +124,30 @@
       "sentencePl": null,
       "audioWord": "t1-p545-011-word.mp3",
       "audioWordPl": "t1-p545-011-word-pl.mp3",
-      "audioSentence": "t1-p545-011-sentence.mp3"
+      "audioSentence": "t1-p545-011-sentence.mp3",
+      "polishAudio": "Tęsknota"
     },
     {
       "id": "t1-p545-012",
       "english": "Affection",
-      "polish": "Przywiązanie",
+      "polish": "Przywiązanie; uczucie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p545-012-word.mp3",
       "audioWordPl": "t1-p545-012-word-pl.mp3",
-      "audioSentence": "t1-p545-012-sentence.mp3"
+      "audioSentence": "t1-p545-012-sentence.mp3",
+      "polishAudio": "Przywiązanie"
     },
     {
       "id": "t1-p545-013",
       "english": "Vehemence",
-      "polish": "Gwałtowność",
+      "polish": "Gwałtowność; pasja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p545-013-word.mp3",
       "audioWordPl": "t1-p545-013-word-pl.mp3",
-      "audioSentence": "t1-p545-013-sentence.mp3"
+      "audioSentence": "t1-p545-013-sentence.mp3",
+      "polishAudio": "Gwałtowność"
     },
     {
       "id": "t1-p545-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p545-014-word.mp3",
       "audioWordPl": "t1-p545-014-word-pl.mp3",
-      "audioSentence": "t1-p545-014-sentence.mp3"
+      "audioSentence": "t1-p545-014-sentence.mp3",
+      "polishAudio": "Gorliwość"
     },
     {
       "id": "t1-p545-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p545-015-word.mp3",
       "audioWordPl": "t1-p545-015-word-pl.mp3",
-      "audioSentence": "t1-p545-015-sentence.mp3"
+      "audioSentence": "t1-p545-015-sentence.mp3",
+      "polishAudio": "Melancholia"
     }
   ]
 }

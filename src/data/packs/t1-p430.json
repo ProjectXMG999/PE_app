@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p430-001-word.mp3",
       "audioWordPl": "t1-p430-001-word-pl.mp3",
-      "audioSentence": "t1-p430-001-sentence.mp3"
+      "audioSentence": "t1-p430-001-sentence.mp3",
+      "polishAudio": "Nieco"
     },
     {
       "id": "t1-p430-002",
@@ -24,27 +25,30 @@
       "sentencePl": null,
       "audioWord": "t1-p430-002-word.mp3",
       "audioWordPl": "t1-p430-002-word-pl.mp3",
-      "audioSentence": "t1-p430-002-sentence.mp3"
+      "audioSentence": "t1-p430-002-sentence.mp3",
+      "polishAudio": "Dodatkowo"
     },
     {
       "id": "t1-p430-003",
       "english": "Apparently",
-      "polish": "Najwyraźniej",
+      "polish": "Najwyraźniej; najwidoczniej",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p430-003-word.mp3",
       "audioWordPl": "t1-p430-003-word-pl.mp3",
-      "audioSentence": "t1-p430-003-sentence.mp3"
+      "audioSentence": "t1-p430-003-sentence.mp3",
+      "polishAudio": "Najwyraźniej"
     },
     {
       "id": "t1-p430-004",
       "english": "At most",
-      "polish": "najwyżej",
+      "polish": "(co) najwyżej",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p430-004-word.mp3",
       "audioWordPl": "t1-p430-004-word-pl.mp3",
-      "audioSentence": "t1-p430-004-sentence.mp3"
+      "audioSentence": "t1-p430-004-sentence.mp3",
+      "polishAudio": "najwyżej"
     },
     {
       "id": "t1-p430-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p430-005-word.mp3",
       "audioWordPl": "t1-p430-005-word-pl.mp3",
-      "audioSentence": "t1-p430-005-sentence.mp3"
+      "audioSentence": "t1-p430-005-sentence.mp3",
+      "polishAudio": "Pod kontrolą"
     },
     {
       "id": "t1-p430-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p430-006-word.mp3",
       "audioWordPl": "t1-p430-006-word-pl.mp3",
-      "audioSentence": "t1-p430-006-sentence.mp3"
+      "audioSentence": "t1-p430-006-sentence.mp3",
+      "polishAudio": "Kroczek po kroczku"
     },
     {
       "id": "t1-p430-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p430-007-word.mp3",
       "audioWordPl": "t1-p430-007-word-pl.mp3",
-      "audioSentence": "t1-p430-007-sentence.mp3"
+      "audioSentence": "t1-p430-007-sentence.mp3",
+      "polishAudio": "Zdecydowanie"
     },
     {
       "id": "t1-p430-008",
       "english": "Accordingly",
-      "polish": "Adekwatnie",
+      "polish": "Adekwatnie (do jakichś zasad)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p430-008-word.mp3",
       "audioWordPl": "t1-p430-008-word-pl.mp3",
-      "audioSentence": "t1-p430-008-sentence.mp3"
+      "audioSentence": "t1-p430-008-sentence.mp3",
+      "polishAudio": "Adekwatnie"
     },
     {
       "id": "t1-p430-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p430-009-word.mp3",
       "audioWordPl": "t1-p430-009-word-pl.mp3",
-      "audioSentence": "t1-p430-009-sentence.mp3"
+      "audioSentence": "t1-p430-009-sentence.mp3",
+      "polishAudio": "Niezawodnie"
     },
     {
       "id": "t1-p430-010",
       "english": "Consequently",
-      "polish": "Konsekwentnie",
+      "polish": "Konsekwentnie (w konsekwencji)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p430-010-word.mp3",
       "audioWordPl": "t1-p430-010-word-pl.mp3",
-      "audioSentence": "t1-p430-010-sentence.mp3"
+      "audioSentence": "t1-p430-010-sentence.mp3",
+      "polishAudio": "Konsekwentnie"
     },
     {
       "id": "t1-p430-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p430-011-word.mp3",
       "audioWordPl": "t1-p430-011-word-pl.mp3",
-      "audioSentence": "t1-p430-011-sentence.mp3"
+      "audioSentence": "t1-p430-011-sentence.mp3",
+      "polishAudio": "Równo"
     },
     {
       "id": "t1-p430-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p430-012-word.mp3",
       "audioWordPl": "t1-p430-012-word-pl.mp3",
-      "audioSentence": "t1-p430-012-sentence.mp3"
+      "audioSentence": "t1-p430-012-sentence.mp3",
+      "polishAudio": "Szczegółowo"
     },
     {
       "id": "t1-p430-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p430-013-word.mp3",
       "audioWordPl": "t1-p430-013-word-pl.mp3",
-      "audioSentence": "t1-p430-013-sentence.mp3"
+      "audioSentence": "t1-p430-013-sentence.mp3",
+      "polishAudio": "Ciekawie"
     },
     {
       "id": "t1-p430-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p430-014-word.mp3",
       "audioWordPl": "t1-p430-014-word-pl.mp3",
-      "audioSentence": "t1-p430-014-sentence.mp3"
+      "audioSentence": "t1-p430-014-sentence.mp3",
+      "polishAudio": "Głównie"
     },
     {
       "id": "t1-p430-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p430-015-word.mp3",
       "audioWordPl": "t1-p430-015-word-pl.mp3",
-      "audioSentence": "t1-p430-015-sentence.mp3"
+      "audioSentence": "t1-p430-015-sentence.mp3",
+      "polishAudio": "Podobnie"
     }
   ]
 }

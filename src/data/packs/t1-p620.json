@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p620-001-word.mp3",
       "audioWordPl": "t1-p620-001-word-pl.mp3",
-      "audioSentence": "t1-p620-001-sentence.mp3"
+      "audioSentence": "t1-p620-001-sentence.mp3",
+      "polishAudio": "Obiecujący"
     },
     {
       "id": "t1-p620-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p620-002-word.mp3",
       "audioWordPl": "t1-p620-002-word-pl.mp3",
-      "audioSentence": "t1-p620-002-sentence.mp3"
+      "audioSentence": "t1-p620-002-sentence.mp3",
+      "polishAudio": "Parzysty"
     },
     {
       "id": "t1-p620-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p620-003-word.mp3",
       "audioWordPl": "t1-p620-003-word-pl.mp3",
-      "audioSentence": "t1-p620-003-sentence.mp3"
+      "audioSentence": "t1-p620-003-sentence.mp3",
+      "polishAudio": "Zachęcający"
     },
     {
       "id": "t1-p620-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p620-004-word.mp3",
       "audioWordPl": "t1-p620-004-word-pl.mp3",
-      "audioSentence": "t1-p620-004-sentence.mp3"
+      "audioSentence": "t1-p620-004-sentence.mp3",
+      "polishAudio": "Uproszczony"
     },
     {
       "id": "t1-p620-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p620-005-word.mp3",
       "audioWordPl": "t1-p620-005-word-pl.mp3",
-      "audioSentence": "t1-p620-005-sentence.mp3"
+      "audioSentence": "t1-p620-005-sentence.mp3",
+      "polishAudio": "Bezgraniczny"
     },
     {
       "id": "t1-p620-006",
       "english": "Exact",
-      "polish": "Dokładny",
+      "polish": "Dokładny; konkretny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p620-006-word.mp3",
       "audioWordPl": "t1-p620-006-word-pl.mp3",
-      "audioSentence": "t1-p620-006-sentence.mp3"
+      "audioSentence": "t1-p620-006-sentence.mp3",
+      "polishAudio": "Dokładny"
     },
     {
       "id": "t1-p620-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p620-007-word.mp3",
       "audioWordPl": "t1-p620-007-word-pl.mp3",
-      "audioSentence": "t1-p620-007-sentence.mp3"
+      "audioSentence": "t1-p620-007-sentence.mp3",
+      "polishAudio": "Hipotetyczny"
     },
     {
       "id": "t1-p620-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p620-008-word.mp3",
       "audioWordPl": "t1-p620-008-word-pl.mp3",
-      "audioSentence": "t1-p620-008-sentence.mp3"
+      "audioSentence": "t1-p620-008-sentence.mp3",
+      "polishAudio": "Nadprzyrodzony"
     },
     {
       "id": "t1-p620-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p620-009-word.mp3",
       "audioWordPl": "t1-p620-009-word-pl.mp3",
-      "audioSentence": "t1-p620-009-sentence.mp3"
+      "audioSentence": "t1-p620-009-sentence.mp3",
+      "polishAudio": "Niekompletny"
     },
     {
       "id": "t1-p620-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p620-010-word.mp3",
       "audioWordPl": "t1-p620-010-word-pl.mp3",
-      "audioSentence": "t1-p620-010-sentence.mp3"
+      "audioSentence": "t1-p620-010-sentence.mp3",
+      "polishAudio": "Nieśmiertelny"
     },
     {
       "id": "t1-p620-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p620-011-word.mp3",
       "audioWordPl": "t1-p620-011-word-pl.mp3",
-      "audioSentence": "t1-p620-011-sentence.mp3"
+      "audioSentence": "t1-p620-011-sentence.mp3",
+      "polishAudio": "Odpowiadający czemuś"
     },
     {
       "id": "t1-p620-012",
       "english": "Ultimate",
-      "polish": "Ostateczny",
+      "polish": "Ostateczny (wybór)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p620-012-word.mp3",
       "audioWordPl": "t1-p620-012-word-pl.mp3",
-      "audioSentence": "t1-p620-012-sentence.mp3"
+      "audioSentence": "t1-p620-012-sentence.mp3",
+      "polishAudio": "Ostateczny"
     },
     {
       "id": "t1-p620-013",
@@ -134,27 +146,30 @@
       "sentencePl": null,
       "audioWord": "t1-p620-013-word.mp3",
       "audioWordPl": "t1-p620-013-word-pl.mp3",
-      "audioSentence": "t1-p620-013-sentence.mp3"
+      "audioSentence": "t1-p620-013-sentence.mp3",
+      "polishAudio": "Porównywalny"
     },
     {
       "id": "t1-p620-014",
       "english": "Accidental",
-      "polish": "Przygodny",
+      "polish": "Przygodny; przypadkowy (nie w planie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p620-014-word.mp3",
       "audioWordPl": "t1-p620-014-word-pl.mp3",
-      "audioSentence": "t1-p620-014-sentence.mp3"
+      "audioSentence": "t1-p620-014-sentence.mp3",
+      "polishAudio": "Przygodny"
     },
     {
       "id": "t1-p620-015",
       "english": "Coincidental",
-      "polish": "Przypadkowy",
+      "polish": "Przypadkowy (zbieg okoliczności)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p620-015-word.mp3",
       "audioWordPl": "t1-p620-015-word-pl.mp3",
-      "audioSentence": "t1-p620-015-sentence.mp3"
+      "audioSentence": "t1-p620-015-sentence.mp3",
+      "polishAudio": "Przypadkowy"
     }
   ]
 }

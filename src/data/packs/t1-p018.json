@@ -10,101 +10,111 @@
       "id": "t1-p018-001",
       "english": "Bank",
       "polish": "Bank",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Run—the bank closes in five minutes!",
+      "sentencePl": "Biegnij — bank zamyka się za pięć minut!",
       "audioWord": "t1-p018-001-word.mp3",
       "audioWordPl": "t1-p018-001-word-pl.mp3",
-      "audioSentence": "t1-p018-001-sentence.mp3"
+      "audioSentence": "t1-p018-001-sentence.mp3",
+      "polishAudio": "Bank"
     },
     {
       "id": "t1-p018-002",
       "english": "Bar",
       "polish": "Bar",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Is this bar still open?",
+      "sentencePl": "Czy ten bar jest jeszcze otwarty?",
       "audioWord": "t1-p018-002-word.mp3",
       "audioWordPl": "t1-p018-002-word-pl.mp3",
-      "audioSentence": "t1-p018-002-sentence.mp3"
+      "audioSentence": "t1-p018-002-sentence.mp3",
+      "polishAudio": "Bar"
     },
     {
       "id": "t1-p018-003",
       "english": "Downtown",
-      "polish": "Centrum miasta",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Centrum miasta; śródmieście",
+      "sentenceEn": "How far is downtown from here?",
+      "sentencePl": "Jak daleko stąd jest centrum?",
       "audioWord": "t1-p018-003-word.mp3",
       "audioWordPl": "t1-p018-003-word-pl.mp3",
-      "audioSentence": "t1-p018-003-sentence.mp3"
+      "audioSentence": "t1-p018-003-sentence.mp3",
+      "polishAudio": "Centrum miasta"
     },
     {
       "id": "t1-p018-004",
       "english": "Mall",
       "polish": "Galeria handlowa",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Why is the mall so busy today?",
+      "sentencePl": "Dlaczego galeria jest dziś tak zatłoczona?",
       "audioWord": "t1-p018-004-word.mp3",
       "audioWordPl": "t1-p018-004-word-pl.mp3",
-      "audioSentence": "t1-p018-004-sentence.mp3"
+      "audioSentence": "t1-p018-004-sentence.mp3",
+      "polishAudio": "Galeria handlowa"
     },
     {
       "id": "t1-p018-005",
       "english": "Hotel",
       "polish": "Hotel",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can the hotel call us a taxi?",
+      "sentencePl": "Czy hotel może zamówić nam taksówkę?",
       "audioWord": "t1-p018-005-word.mp3",
       "audioWordPl": "t1-p018-005-word-pl.mp3",
-      "audioSentence": "t1-p018-005-sentence.mp3"
+      "audioSentence": "t1-p018-005-sentence.mp3",
+      "polishAudio": "Hotel"
     },
     {
       "id": "t1-p018-006",
       "english": "Park",
       "polish": "Park",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Meet me by the park gate.",
+      "sentencePl": "Spotkaj się ze mną przy bramie parku.",
       "audioWord": "t1-p018-006-word.mp3",
       "audioWordPl": "t1-p018-006-word-pl.mp3",
-      "audioSentence": "t1-p018-006-sentence.mp3"
+      "audioSentence": "t1-p018-006-sentence.mp3",
+      "polishAudio": "Park"
     },
     {
       "id": "t1-p018-007",
       "english": "Police station",
       "polish": "Posterunek policji",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Your wallet is at the police station.",
+      "sentencePl": "Twój portfel jest na posterunku policji.",
       "audioWord": "t1-p018-007-word.mp3",
       "audioWordPl": "t1-p018-007-word-pl.mp3",
-      "audioSentence": "t1-p018-007-sentence.mp3"
+      "audioSentence": "t1-p018-007-sentence.mp3",
+      "polishAudio": "Posterunek policji"
     },
     {
       "id": "t1-p018-008",
       "english": "Shop",
       "polish": "Sklepik",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can we stop at that shop?",
+      "sentencePl": "Możemy zatrzymać się przy tym sklepiku?",
       "audioWord": "t1-p018-008-word.mp3",
       "audioWordPl": "t1-p018-008-word-pl.mp3",
-      "audioSentence": "t1-p018-008-sentence.mp3"
+      "audioSentence": "t1-p018-008-sentence.mp3",
+      "polishAudio": "Sklepik"
     },
     {
       "id": "t1-p018-009",
       "english": "Store",
-      "polish": "Sklep",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Sklep (duży)",
+      "sentenceEn": "Oh no, that store takes only cash.",
+      "sentencePl": "O nie, ten sklep przyjmuje tylko gotówkę.",
       "audioWord": "t1-p018-009-word.mp3",
       "audioWordPl": "t1-p018-009-word-pl.mp3",
-      "audioSentence": "t1-p018-009-sentence.mp3"
+      "audioSentence": "t1-p018-009-sentence.mp3",
+      "polishAudio": "Sklep"
     },
     {
       "id": "t1-p018-010",
       "english": "Hospital",
       "polish": "Szpital",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "We must go to the hospital now.",
+      "sentencePl": "Musimy teraz jechać do szpitala.",
       "audioWord": "t1-p018-010-word.mp3",
       "audioWordPl": "t1-p018-010-word-pl.mp3",
-      "audioSentence": "t1-p018-010-sentence.mp3"
+      "audioSentence": "t1-p018-010-sentence.mp3",
+      "polishAudio": "Szpital"
     }
   ]
 }

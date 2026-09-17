@@ -14,47 +14,52 @@
       "sentencePl": null,
       "audioWord": "t1-p603-001-word.mp3",
       "audioWordPl": "t1-p603-001-word-pl.mp3",
-      "audioSentence": "t1-p603-001-sentence.mp3"
+      "audioSentence": "t1-p603-001-sentence.mp3",
+      "polishAudio": "Gestykulować"
     },
     {
       "id": "t1-p603-002",
       "english": "Smack",
-      "polish": "Strzelić",
+      "polish": "Strzelić (kogoś, coś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p603-002-word.mp3",
       "audioWordPl": "t1-p603-002-word-pl.mp3",
-      "audioSentence": "t1-p603-002-sentence.mp3"
+      "audioSentence": "t1-p603-002-sentence.mp3",
+      "polishAudio": "Strzelić"
     },
     {
       "id": "t1-p603-003",
       "english": "Dump",
-      "polish": "Rzucić coś w jakieś miejsce",
+      "polish": "Rzucić coś w jakieś miejsce; pozbyć się czegoś; wyrzucić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p603-003-word.mp3",
       "audioWordPl": "t1-p603-003-word-pl.mp3",
-      "audioSentence": "t1-p603-003-sentence.mp3"
+      "audioSentence": "t1-p603-003-sentence.mp3",
+      "polishAudio": "Rzucić coś w jakieś miejsce"
     },
     {
       "id": "t1-p603-004",
       "english": "Grip",
-      "polish": "Chwytać",
+      "polish": "Chwytać (coś ręką i trzymać)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p603-004-word.mp3",
       "audioWordPl": "t1-p603-004-word-pl.mp3",
-      "audioSentence": "t1-p603-004-sentence.mp3"
+      "audioSentence": "t1-p603-004-sentence.mp3",
+      "polishAudio": "Chwytać"
     },
     {
       "id": "t1-p603-005",
       "english": "Jerk",
-      "polish": "Szarpać",
+      "polish": "Szarpać; targać; wykonac gwałtowny ruch",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p603-005-word.mp3",
       "audioWordPl": "t1-p603-005-word-pl.mp3",
-      "audioSentence": "t1-p603-005-sentence.mp3"
+      "audioSentence": "t1-p603-005-sentence.mp3",
+      "polishAudio": "Szarpać"
     },
     {
       "id": "t1-p603-006",
@@ -64,57 +69,63 @@
       "sentencePl": null,
       "audioWord": "t1-p603-006-word.mp3",
       "audioWordPl": "t1-p603-006-word-pl.mp3",
-      "audioSentence": "t1-p603-006-sentence.mp3"
+      "audioSentence": "t1-p603-006-sentence.mp3",
+      "polishAudio": "Trącać łokciem"
     },
     {
       "id": "t1-p603-007",
       "english": "Seize",
-      "polish": "Pochwycić",
+      "polish": "Pochwycić; korzystać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p603-007-word.mp3",
       "audioWordPl": "t1-p603-007-word-pl.mp3",
-      "audioSentence": "t1-p603-007-sentence.mp3"
+      "audioSentence": "t1-p603-007-sentence.mp3",
+      "polishAudio": "Pochwycić"
     },
     {
       "id": "t1-p603-008",
       "english": "Snatch",
-      "polish": "Wyrywać",
+      "polish": "Wyrywać (z ręki); podwędzić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p603-008-word.mp3",
       "audioWordPl": "t1-p603-008-word-pl.mp3",
-      "audioSentence": "t1-p603-008-sentence.mp3"
+      "audioSentence": "t1-p603-008-sentence.mp3",
+      "polishAudio": "Wyrywać"
     },
     {
       "id": "t1-p603-009",
       "english": "Yank",
-      "polish": "Szarpnąć",
+      "polish": "Szarpnąć (nagle)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p603-009-word.mp3",
       "audioWordPl": "t1-p603-009-word-pl.mp3",
-      "audioSentence": "t1-p603-009-sentence.mp3"
+      "audioSentence": "t1-p603-009-sentence.mp3",
+      "polishAudio": "Szarpnąć"
     },
     {
       "id": "t1-p603-010",
       "english": "Clasp",
-      "polish": "Trzymać kurczowo",
+      "polish": "Trzymać (coś, kogoś) kurczowo; ściskać (kogoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p603-010-word.mp3",
       "audioWordPl": "t1-p603-010-word-pl.mp3",
-      "audioSentence": "t1-p603-010-sentence.mp3"
+      "audioSentence": "t1-p603-010-sentence.mp3",
+      "polishAudio": "Trzymać kurczowo"
     },
     {
       "id": "t1-p603-011",
       "english": "Clench",
-      "polish": "Zaciskać",
+      "polish": "Zaciskać; ściskać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p603-011-word.mp3",
       "audioWordPl": "t1-p603-011-word-pl.mp3",
-      "audioSentence": "t1-p603-011-sentence.mp3"
+      "audioSentence": "t1-p603-011-sentence.mp3",
+      "polishAudio": "Zaciskać"
     },
     {
       "id": "t1-p603-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p603-012-word.mp3",
       "audioWordPl": "t1-p603-012-word-pl.mp3",
-      "audioSentence": "t1-p603-012-sentence.mp3"
+      "audioSentence": "t1-p603-012-sentence.mp3",
+      "polishAudio": "Pstryknąć"
     },
     {
       "id": "t1-p603-013",
@@ -134,17 +146,19 @@
       "sentencePl": null,
       "audioWord": "t1-p603-013-word.mp3",
       "audioWordPl": "t1-p603-013-word-pl.mp3",
-      "audioSentence": "t1-p603-013-sentence.mp3"
+      "audioSentence": "t1-p603-013-sentence.mp3",
+      "polishAudio": "Poklepywać"
     },
     {
       "id": "t1-p603-014",
       "english": "Toss",
-      "polish": "Podrzucać",
+      "polish": "Podrzucać; potrząsać; przewracać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p603-014-word.mp3",
       "audioWordPl": "t1-p603-014-word-pl.mp3",
-      "audioSentence": "t1-p603-014-sentence.mp3"
+      "audioSentence": "t1-p603-014-sentence.mp3",
+      "polishAudio": "Podrzucać"
     },
     {
       "id": "t1-p603-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p603-015-word.mp3",
       "audioWordPl": "t1-p603-015-word-pl.mp3",
-      "audioSentence": "t1-p603-015-sentence.mp3"
+      "audioSentence": "t1-p603-015-sentence.mp3",
+      "polishAudio": "Ściskać kurczowo"
     }
   ]
 }

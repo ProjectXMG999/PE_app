@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p849-001-word.mp3",
       "audioWordPl": "t1-p849-001-word-pl.mp3",
-      "audioSentence": "t1-p849-001-sentence.mp3"
+      "audioSentence": "t1-p849-001-sentence.mp3",
+      "polishAudio": "Zwolnione tempo"
     },
     {
       "id": "t1-p849-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p849-002-word.mp3",
       "audioWordPl": "t1-p849-002-word-pl.mp3",
-      "audioSentence": "t1-p849-002-sentence.mp3"
+      "audioSentence": "t1-p849-002-sentence.mp3",
+      "polishAudio": "Reklama, która pojawia się wciąż"
     },
     {
       "id": "t1-p849-003",
       "english": "Cold monkey",
-      "polish": "Programista 24 lub 7",
+      "polish": "Programista 24/7",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p849-003-word.mp3",
       "audioWordPl": "t1-p849-003-word-pl.mp3",
-      "audioSentence": "t1-p849-003-sentence.mp3"
+      "audioSentence": "t1-p849-003-sentence.mp3",
+      "polishAudio": "Programista 24/7"
     },
     {
       "id": "t1-p849-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p849-004-word.mp3",
       "audioWordPl": "t1-p849-004-word-pl.mp3",
-      "audioSentence": "t1-p849-004-sentence.mp3"
+      "audioSentence": "t1-p849-004-sentence.mp3",
+      "polishAudio": "Wyciąganie danych personalnych"
     },
     {
       "id": "t1-p849-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p849-005-word.mp3",
       "audioWordPl": "t1-p849-005-word-pl.mp3",
-      "audioSentence": "t1-p849-005-sentence.mp3"
+      "audioSentence": "t1-p849-005-sentence.mp3",
+      "polishAudio": "Złośliwe oprogramowanie"
     },
     {
       "id": "t1-p849-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p849-006-word.mp3",
       "audioWordPl": "t1-p849-006-word-pl.mp3",
-      "audioSentence": "t1-p849-006-sentence.mp3"
+      "audioSentence": "t1-p849-006-sentence.mp3",
+      "polishAudio": "Programista mężczyzna"
     },
     {
       "id": "t1-p849-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p849-007-word.mp3",
       "audioWordPl": "t1-p849-007-word-pl.mp3",
-      "audioSentence": "t1-p849-007-sentence.mp3"
+      "audioSentence": "t1-p849-007-sentence.mp3",
+      "polishAudio": "Deweloper w branży it"
     },
     {
       "id": "t1-p849-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p849-008-word.mp3",
       "audioWordPl": "t1-p849-008-word-pl.mp3",
-      "audioSentence": "t1-p849-008-sentence.mp3"
+      "audioSentence": "t1-p849-008-sentence.mp3",
+      "polishAudio": "Podszywanie się pod użytkownika"
     },
     {
       "id": "t1-p849-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p849-009-word.mp3",
       "audioWordPl": "t1-p849-009-word-pl.mp3",
-      "audioSentence": "t1-p849-009-sentence.mp3"
+      "audioSentence": "t1-p849-009-sentence.mp3",
+      "polishAudio": "Nieuporządkowany kod"
     },
     {
       "id": "t1-p849-010",
       "english": "Leet hacker",
-      "polish": "Świetny haker",
+      "polish": "Świetny haker (przechwałki)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p849-010-word.mp3",
       "audioWordPl": "t1-p849-010-word-pl.mp3",
-      "audioSentence": "t1-p849-010-sentence.mp3"
+      "audioSentence": "t1-p849-010-sentence.mp3",
+      "polishAudio": "Świetny haker"
     }
   ]
 }

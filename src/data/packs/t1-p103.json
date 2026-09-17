@@ -10,101 +10,111 @@
       "id": "t1-p103-001",
       "english": "Company",
       "polish": "Firma",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Which company are you calling?",
+      "sentencePl": "Do której firmy dzwonisz?",
       "audioWord": "t1-p103-001-word.mp3",
       "audioWordPl": "t1-p103-001-word-pl.mp3",
-      "audioSentence": "t1-p103-001-sentence.mp3"
+      "audioSentence": "t1-p103-001-sentence.mp3",
+      "polishAudio": "Firma"
     },
     {
       "id": "t1-p103-002",
       "english": "Client",
       "polish": "Klient",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Our client is very happy.",
+      "sentencePl": "Nasz klient jest bardzo zadowolony.",
       "audioWord": "t1-p103-002-word.mp3",
       "audioWordPl": "t1-p103-002-word-pl.mp3",
-      "audioSentence": "t1-p103-002-sentence.mp3"
+      "audioSentence": "t1-p103-002-sentence.mp3",
+      "polishAudio": "Klient"
     },
     {
       "id": "t1-p103-003",
       "english": "Plan",
       "polish": "Plan",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "What's the plan for today?",
+      "sentencePl": "Jaki jest plan na dziś?",
       "audioWord": "t1-p103-003-word.mp3",
       "audioWordPl": "t1-p103-003-word-pl.mp3",
-      "audioSentence": "t1-p103-003-sentence.mp3"
+      "audioSentence": "t1-p103-003-sentence.mp3",
+      "polishAudio": "Plan"
     },
     {
       "id": "t1-p103-004",
       "english": "Product",
       "polish": "Produkt",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "This product is out of stock.",
+      "sentencePl": "Ten produkt jest wyprzedany.",
       "audioWord": "t1-p103-004-word.mp3",
       "audioWordPl": "t1-p103-004-word-pl.mp3",
-      "audioSentence": "t1-p103-004-sentence.mp3"
+      "audioSentence": "t1-p103-004-sentence.mp3",
+      "polishAudio": "Produkt"
     },
     {
       "id": "t1-p103-005",
       "english": "Bill",
       "polish": "Rachunek",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can I pay the bill?",
+      "sentencePl": "Czy mogę zapłacić rachunek?",
       "audioWord": "t1-p103-005-word.mp3",
       "audioWordPl": "t1-p103-005-word-pl.mp3",
-      "audioSentence": "t1-p103-005-sentence.mp3"
+      "audioSentence": "t1-p103-005-sentence.mp3",
+      "polishAudio": "Rachunek"
     },
     {
       "id": "t1-p103-006",
       "english": "Chance",
       "polish": "Szansa",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Give me a chance, please.",
+      "sentencePl": "Daj mi szansę, proszę.",
       "audioWord": "t1-p103-006-word.mp3",
       "audioWordPl": "t1-p103-006-word-pl.mp3",
-      "audioSentence": "t1-p103-006-sentence.mp3"
+      "audioSentence": "t1-p103-006-sentence.mp3",
+      "polishAudio": "Szansa"
     },
     {
       "id": "t1-p103-007",
       "english": "Deal",
-      "polish": "Umowa",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Umowa (układ)",
+      "sentenceEn": "That deal sounds fair to me.",
+      "sentencePl": "Ta umowa wydaje mi się uczciwa.",
       "audioWord": "t1-p103-007-word.mp3",
       "audioWordPl": "t1-p103-007-word-pl.mp3",
-      "audioSentence": "t1-p103-007-sentence.mp3"
+      "audioSentence": "t1-p103-007-sentence.mp3",
+      "polishAudio": "Umowa"
     },
     {
       "id": "t1-p103-008",
       "english": "Result",
-      "polish": "Rezultat",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Rezultat; efekt",
+      "sentenceEn": "We will check the result tomorrow.",
+      "sentencePl": "Sprawdzimy wynik jutro.",
       "audioWord": "t1-p103-008-word.mp3",
       "audioWordPl": "t1-p103-008-word-pl.mp3",
-      "audioSentence": "t1-p103-008-sentence.mp3"
+      "audioSentence": "t1-p103-008-sentence.mp3",
+      "polishAudio": "Rezultat"
     },
     {
       "id": "t1-p103-009",
       "english": "Sale",
       "polish": "Wyprzedaż",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I bought it on sale.",
+      "sentencePl": "Kupiłem to na wyprzedaży.",
       "audioWord": "t1-p103-009-word.mp3",
       "audioWordPl": "t1-p103-009-word-pl.mp3",
-      "audioSentence": "t1-p103-009-sentence.mp3"
+      "audioSentence": "t1-p103-009-sentence.mp3",
+      "polishAudio": "Wyprzedaż"
     },
     {
       "id": "t1-p103-010",
       "english": "Discount",
       "polish": "Zniżka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Do you offer a discount?",
+      "sentencePl": "Czy oferujecie zniżkę?",
       "audioWord": "t1-p103-010-word.mp3",
       "audioWordPl": "t1-p103-010-word-pl.mp3",
-      "audioSentence": "t1-p103-010-sentence.mp3"
+      "audioSentence": "t1-p103-010-sentence.mp3",
+      "polishAudio": "Zniżka"
     }
   ]
 }

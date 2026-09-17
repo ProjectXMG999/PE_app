@@ -9,12 +9,13 @@
     {
       "id": "t1-p807-001",
       "english": "Comeback",
-      "polish": "Powrót",
+      "polish": "Powrót (na scenę, do formy, do świetności)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p807-001-word.mp3",
       "audioWordPl": "t1-p807-001-word-pl.mp3",
-      "audioSentence": "t1-p807-001-sentence.mp3"
+      "audioSentence": "t1-p807-001-sentence.mp3",
+      "polishAudio": "Powrót"
     },
     {
       "id": "t1-p807-002",
@@ -24,37 +25,41 @@
       "sentencePl": null,
       "audioWord": "t1-p807-002-word.mp3",
       "audioWordPl": "t1-p807-002-word-pl.mp3",
-      "audioSentence": "t1-p807-002-sentence.mp3"
+      "audioSentence": "t1-p807-002-sentence.mp3",
+      "polishAudio": "Premiera"
     },
     {
       "id": "t1-p807-003",
       "english": "Subscription",
-      "polish": "Prenumerata",
+      "polish": "Prenumerata; subskrypcja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p807-003-word.mp3",
       "audioWordPl": "t1-p807-003-word-pl.mp3",
-      "audioSentence": "t1-p807-003-sentence.mp3"
+      "audioSentence": "t1-p807-003-sentence.mp3",
+      "polishAudio": "Prenumerata"
     },
     {
       "id": "t1-p807-004",
       "english": "Spin-off",
-      "polish": "Produkt uboczny",
+      "polish": "Produkt uboczny; inna wersja czegoś pierwotnego (np. filmu)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p807-004-word.mp3",
       "audioWordPl": "t1-p807-004-word-pl.mp3",
-      "audioSentence": "t1-p807-004-sentence.mp3"
+      "audioSentence": "t1-p807-004-sentence.mp3",
+      "polishAudio": "Produkt uboczny"
     },
     {
       "id": "t1-p807-005",
       "english": "Blockbuster",
-      "polish": "Przebój",
+      "polish": "Przebój (kinowy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p807-005-word.mp3",
       "audioWordPl": "t1-p807-005-word-pl.mp3",
-      "audioSentence": "t1-p807-005-sentence.mp3"
+      "audioSentence": "t1-p807-005-sentence.mp3",
+      "polishAudio": "Przebój"
     },
     {
       "id": "t1-p807-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p807-006-word.mp3",
       "audioWordPl": "t1-p807-006-word-pl.mp3",
-      "audioSentence": "t1-p807-006-sentence.mp3"
+      "audioSentence": "t1-p807-006-sentence.mp3",
+      "polishAudio": "Przeróbka"
     },
     {
       "id": "t1-p807-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p807-007-word.mp3",
       "audioWordPl": "t1-p807-007-word-pl.mp3",
-      "audioSentence": "t1-p807-007-sentence.mp3"
+      "audioSentence": "t1-p807-007-sentence.mp3",
+      "polishAudio": "Recenzent"
     },
     {
       "id": "t1-p807-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p807-008-word.mp3",
       "audioWordPl": "t1-p807-008-word-pl.mp3",
-      "audioSentence": "t1-p807-008-sentence.mp3"
+      "audioSentence": "t1-p807-008-sentence.mp3",
+      "polishAudio": "Reżyseria"
     },
     {
       "id": "t1-p807-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p807-009-word.mp3",
       "audioWordPl": "t1-p807-009-word-pl.mp3",
-      "audioSentence": "t1-p807-009-sentence.mp3"
+      "audioSentence": "t1-p807-009-sentence.mp3",
+      "polishAudio": "Rzecznik prasowy"
     },
     {
       "id": "t1-p807-010",
       "english": "Scene",
-      "polish": "Scena",
+      "polish": "Scena (np. w filmie); awantura",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p807-010-word.mp3",
       "audioWordPl": "t1-p807-010-word-pl.mp3",
-      "audioSentence": "t1-p807-010-sentence.mp3"
+      "audioSentence": "t1-p807-010-sentence.mp3",
+      "polishAudio": "Scena"
     },
     {
       "id": "t1-p807-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p807-011-word.mp3",
       "audioWordPl": "t1-p807-011-word-pl.mp3",
-      "audioSentence": "t1-p807-011-sentence.mp3"
+      "audioSentence": "t1-p807-011-sentence.mp3",
+      "polishAudio": "Serial komediowy"
     },
     {
       "id": "t1-p807-012",
       "english": "Show",
-      "polish": "Widowisko",
+      "polish": "Widowisko; przedstawienie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p807-012-word.mp3",
       "audioWordPl": "t1-p807-012-word-pl.mp3",
-      "audioSentence": "t1-p807-012-sentence.mp3"
+      "audioSentence": "t1-p807-012-sentence.mp3",
+      "polishAudio": "Widowisko"
     },
     {
       "id": "t1-p807-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p807-013-word.mp3",
       "audioWordPl": "t1-p807-013-word-pl.mp3",
-      "audioSentence": "t1-p807-013-sentence.mp3"
+      "audioSentence": "t1-p807-013-sentence.mp3",
+      "polishAudio": "Słuchacz"
     },
     {
       "id": "t1-p807-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p807-014-word.mp3",
       "audioWordPl": "t1-p807-014-word-pl.mp3",
-      "audioSentence": "t1-p807-014-sentence.mp3"
+      "audioSentence": "t1-p807-014-sentence.mp3",
+      "polishAudio": "Sondaż"
     },
     {
       "id": "t1-p807-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p807-015-word.mp3",
       "audioWordPl": "t1-p807-015-word-pl.mp3",
-      "audioSentence": "t1-p807-015-sentence.mp3"
+      "audioSentence": "t1-p807-015-sentence.mp3",
+      "polishAudio": "Ankieta"
     }
   ]
 }

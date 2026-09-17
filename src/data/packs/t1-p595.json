@@ -9,22 +9,24 @@
     {
       "id": "t1-p595-001",
       "english": "Swift",
-      "polish": "Zrywny",
+      "polish": "Zrywny; szybki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p595-001-word.mp3",
       "audioWordPl": "t1-p595-001-word-pl.mp3",
-      "audioSentence": "t1-p595-001-sentence.mp3"
+      "audioSentence": "t1-p595-001-sentence.mp3",
+      "polishAudio": "Zrywny"
     },
     {
       "id": "t1-p595-002",
       "english": "Spare",
-      "polish": "Wolny",
+      "polish": "Wolny; zapasowe (koło)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p595-002-word.mp3",
       "audioWordPl": "t1-p595-002-word-pl.mp3",
-      "audioSentence": "t1-p595-002-sentence.mp3"
+      "audioSentence": "t1-p595-002-sentence.mp3",
+      "polishAudio": "Wolny"
     },
     {
       "id": "t1-p595-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p595-003-word.mp3",
       "audioWordPl": "t1-p595-003-word-pl.mp3",
-      "audioSentence": "t1-p595-003-sentence.mp3"
+      "audioSentence": "t1-p595-003-sentence.mp3",
+      "polishAudio": "Rajdowy"
     },
     {
       "id": "t1-p595-004",
@@ -44,47 +47,52 @@
       "sentencePl": null,
       "audioWord": "t1-p595-004-word.mp3",
       "audioWordPl": "t1-p595-004-word-pl.mp3",
-      "audioSentence": "t1-p595-004-sentence.mp3"
+      "audioSentence": "t1-p595-004-sentence.mp3",
+      "polishAudio": "Wyścigowy"
     },
     {
       "id": "t1-p595-005",
       "english": "Roadworthy",
-      "polish": "Na chodzie",
+      "polish": "Na chodzie; nadający się do jazdy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p595-005-word.mp3",
       "audioWordPl": "t1-p595-005-word-pl.mp3",
-      "audioSentence": "t1-p595-005-sentence.mp3"
+      "audioSentence": "t1-p595-005-sentence.mp3",
+      "polishAudio": "Na chodzie"
     },
     {
       "id": "t1-p595-006",
       "english": "Off-road",
-      "polish": "Terenowy",
+      "polish": "Terenowy (np. samochód)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p595-006-word.mp3",
       "audioWordPl": "t1-p595-006-word-pl.mp3",
-      "audioSentence": "t1-p595-006-sentence.mp3"
+      "audioSentence": "t1-p595-006-sentence.mp3",
+      "polishAudio": "Terenowy"
     },
     {
       "id": "t1-p595-007",
       "english": "Rapid",
-      "polish": "Błyskawiczny",
+      "polish": "Błyskawiczny; szybki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p595-007-word.mp3",
       "audioWordPl": "t1-p595-007-word-pl.mp3",
-      "audioSentence": "t1-p595-007-sentence.mp3"
+      "audioSentence": "t1-p595-007-sentence.mp3",
+      "polishAudio": "Błyskawiczny"
     },
     {
       "id": "t1-p595-008",
       "english": "Long-distance",
-      "polish": "Długodystansowy",
+      "polish": "Długodystansowy; międzymiastowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p595-008-word.mp3",
       "audioWordPl": "t1-p595-008-word-pl.mp3",
-      "audioSentence": "t1-p595-008-sentence.mp3"
+      "audioSentence": "t1-p595-008-sentence.mp3",
+      "polishAudio": "Długodystansowy"
     },
     {
       "id": "t1-p595-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p595-009-word.mp3",
       "audioWordPl": "t1-p595-009-word-pl.mp3",
-      "audioSentence": "t1-p595-009-sentence.mp3"
+      "audioSentence": "t1-p595-009-sentence.mp3",
+      "polishAudio": "Krótkodystansowy"
     },
     {
       "id": "t1-p595-010",
       "english": "Intense",
-      "polish": "Bardzo silny",
+      "polish": "Bardzo silny; intensywny (np. ból)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p595-010-word.mp3",
       "audioWordPl": "t1-p595-010-word-pl.mp3",
-      "audioSentence": "t1-p595-010-sentence.mp3"
+      "audioSentence": "t1-p595-010-sentence.mp3",
+      "polishAudio": "Bardzo silny"
     },
     {
       "id": "t1-p595-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p595-011-word.mp3",
       "audioWordPl": "t1-p595-011-word-pl.mp3",
-      "audioSentence": "t1-p595-011-sentence.mp3"
+      "audioSentence": "t1-p595-011-sentence.mp3",
+      "polishAudio": "Bardzo szybki"
     },
     {
       "id": "t1-p595-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p595-012-word.mp3",
       "audioWordPl": "t1-p595-012-word-pl.mp3",
-      "audioSentence": "t1-p595-012-sentence.mp3"
+      "audioSentence": "t1-p595-012-sentence.mp3",
+      "polishAudio": "Wyboisty"
     },
     {
       "id": "t1-p595-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p595-013-word.mp3",
       "audioWordPl": "t1-p595-013-word-pl.mp3",
-      "audioSentence": "t1-p595-013-sentence.mp3"
+      "audioSentence": "t1-p595-013-sentence.mp3",
+      "polishAudio": "Motoryzacyjny"
     },
     {
       "id": "t1-p595-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p595-014-word.mp3",
       "audioWordPl": "t1-p595-014-word-pl.mp3",
-      "audioSentence": "t1-p595-014-sentence.mp3"
+      "audioSentence": "t1-p595-014-sentence.mp3",
+      "polishAudio": "Spalinowy"
     },
     {
       "id": "t1-p595-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p595-015-word.mp3",
       "audioWordPl": "t1-p595-015-word-pl.mp3",
-      "audioSentence": "t1-p595-015-sentence.mp3"
+      "audioSentence": "t1-p595-015-sentence.mp3",
+      "polishAudio": "Zezłomowany"
     }
   ]
 }

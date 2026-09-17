@@ -9,22 +9,24 @@
     {
       "id": "t1-p462-001",
       "english": "Word",
-      "polish": "Słusznie",
+      "polish": "Słusznie; no ba!",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p462-001-word.mp3",
       "audioWordPl": "t1-p462-001-word-pl.mp3",
-      "audioSentence": "t1-p462-001-sentence.mp3"
+      "audioSentence": "t1-p462-001-sentence.mp3",
+      "polishAudio": "Słusznie"
     },
     {
       "id": "t1-p462-002",
       "english": "I dig it",
-      "polish": "I kręci mnie to",
+      "polish": "I kręci mnie to; i super",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p462-002-word.mp3",
       "audioWordPl": "t1-p462-002-word-pl.mp3",
-      "audioSentence": "t1-p462-002-sentence.mp3"
+      "audioSentence": "t1-p462-002-sentence.mp3",
+      "polishAudio": "I kręci mnie to"
     },
     {
       "id": "t1-p462-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p462-003-word.mp3",
       "audioWordPl": "t1-p462-003-word-pl.mp3",
-      "audioSentence": "t1-p462-003-sentence.mp3"
+      "audioSentence": "t1-p462-003-sentence.mp3",
+      "polishAudio": "Tak się czuję"
     },
     {
       "id": "t1-p462-004",
@@ -44,27 +47,30 @@
       "sentencePl": null,
       "audioWord": "t1-p462-004-word.mp3",
       "audioWordPl": "t1-p462-004-word-pl.mp3",
-      "audioSentence": "t1-p462-004-sentence.mp3"
+      "audioSentence": "t1-p462-004-sentence.mp3",
+      "polishAudio": "Drobiazg"
     },
     {
       "id": "t1-p462-005",
       "english": "Retweet",
-      "polish": "Zgadzam się",
+      "polish": "Zgadzam się (skrócone \"Yes, I agree\")",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p462-005-word.mp3",
       "audioWordPl": "t1-p462-005-word-pl.mp3",
-      "audioSentence": "t1-p462-005-sentence.mp3"
+      "audioSentence": "t1-p462-005-sentence.mp3",
+      "polishAudio": "Zgadzam się"
     },
     {
       "id": "t1-p462-006",
       "english": "Shut up and take my money!",
-      "polish": "Biorę bez gadania",
+      "polish": "Biorę bez gadania (dobra konsumenckie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p462-006-word.mp3",
       "audioWordPl": "t1-p462-006-word-pl.mp3",
-      "audioSentence": "t1-p462-006-sentence.mp3"
+      "audioSentence": "t1-p462-006-sentence.mp3",
+      "polishAudio": "Biorę bez gadania"
     },
     {
       "id": "t1-p462-007",
@@ -74,27 +80,30 @@
       "sentencePl": null,
       "audioWord": "t1-p462-007-word.mp3",
       "audioWordPl": "t1-p462-007-word-pl.mp3",
-      "audioSentence": "t1-p462-007-sentence.mp3"
+      "audioSentence": "t1-p462-007-sentence.mp3",
+      "polishAudio": "Potwierdź to"
     },
     {
       "id": "t1-p462-008",
       "english": "We are even",
-      "polish": "Co do centa",
+      "polish": "Co do centa; co do grosza; wyrównaliśmy rachunki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p462-008-word.mp3",
       "audioWordPl": "t1-p462-008-word-pl.mp3",
-      "audioSentence": "t1-p462-008-sentence.mp3"
+      "audioSentence": "t1-p462-008-sentence.mp3",
+      "polishAudio": "Co do centa"
     },
     {
       "id": "t1-p462-009",
       "english": "You can say that again",
-      "polish": "Tak jest",
+      "polish": "Tak jest (no właśnie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p462-009-word.mp3",
       "audioWordPl": "t1-p462-009-word-pl.mp3",
-      "audioSentence": "t1-p462-009-sentence.mp3"
+      "audioSentence": "t1-p462-009-sentence.mp3",
+      "polishAudio": "Tak jest"
     },
     {
       "id": "t1-p462-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p462-010-word.mp3",
       "audioWordPl": "t1-p462-010-word-pl.mp3",
-      "audioSentence": "t1-p462-010-sentence.mp3"
+      "audioSentence": "t1-p462-010-sentence.mp3",
+      "polishAudio": "Zrobione"
     }
   ]
 }

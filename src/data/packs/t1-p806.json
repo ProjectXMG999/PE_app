@@ -14,17 +14,19 @@
       "sentencePl": null,
       "audioWord": "t1-p806-001-word.mp3",
       "audioWordPl": "t1-p806-001-word-pl.mp3",
-      "audioSentence": "t1-p806-001-sentence.mp3"
+      "audioSentence": "t1-p806-001-sentence.mp3",
+      "polishAudio": "Równoważny"
     },
     {
       "id": "t1-p806-002",
       "english": "Emphasized",
-      "polish": "Uwypuklony",
+      "polish": "Uwypuklony; podkreślony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p806-002-word.mp3",
       "audioWordPl": "t1-p806-002-word-pl.mp3",
-      "audioSentence": "t1-p806-002-sentence.mp3"
+      "audioSentence": "t1-p806-002-sentence.mp3",
+      "polishAudio": "Uwypuklony"
     },
     {
       "id": "t1-p806-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p806-003-word.mp3",
       "audioWordPl": "t1-p806-003-word-pl.mp3",
-      "audioSentence": "t1-p806-003-sentence.mp3"
+      "audioSentence": "t1-p806-003-sentence.mp3",
+      "polishAudio": "Wyraźny"
     },
     {
       "id": "t1-p806-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p806-004-word.mp3",
       "audioWordPl": "t1-p806-004-word-pl.mp3",
-      "audioSentence": "t1-p806-004-sentence.mp3"
+      "audioSentence": "t1-p806-004-sentence.mp3",
+      "polishAudio": "Zapobiegawczy"
     },
     {
       "id": "t1-p806-005",
@@ -54,37 +58,41 @@
       "sentencePl": null,
       "audioWord": "t1-p806-005-word.mp3",
       "audioWordPl": "t1-p806-005-word-pl.mp3",
-      "audioSentence": "t1-p806-005-sentence.mp3"
+      "audioSentence": "t1-p806-005-sentence.mp3",
+      "polishAudio": "Zbędny"
     },
     {
       "id": "t1-p806-006",
       "english": "Infinite",
-      "polish": "Nieskończony",
+      "polish": "Nieskończony; nieograniczony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p806-006-word.mp3",
       "audioWordPl": "t1-p806-006-word-pl.mp3",
-      "audioSentence": "t1-p806-006-sentence.mp3"
+      "audioSentence": "t1-p806-006-sentence.mp3",
+      "polishAudio": "Nieskończony"
     },
     {
       "id": "t1-p806-007",
       "english": "Endless",
-      "polish": "Niewyczerpany",
+      "polish": "Niewyczerpany; niezliczony; niekończący się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p806-007-word.mp3",
       "audioWordPl": "t1-p806-007-word-pl.mp3",
-      "audioSentence": "t1-p806-007-sentence.mp3"
+      "audioSentence": "t1-p806-007-sentence.mp3",
+      "polishAudio": "Niewyczerpany"
     },
     {
       "id": "t1-p806-008",
       "english": "Inevitable",
-      "polish": "Nieunikniony",
+      "polish": "Nieunikniony; nieuchronny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p806-008-word.mp3",
       "audioWordPl": "t1-p806-008-word-pl.mp3",
-      "audioSentence": "t1-p806-008-sentence.mp3"
+      "audioSentence": "t1-p806-008-sentence.mp3",
+      "polishAudio": "Nieunikniony"
     },
     {
       "id": "t1-p806-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p806-009-word.mp3",
       "audioWordPl": "t1-p806-009-word-pl.mp3",
-      "audioSentence": "t1-p806-009-sentence.mp3"
+      "audioSentence": "t1-p806-009-sentence.mp3",
+      "polishAudio": "Stały"
     },
     {
       "id": "t1-p806-010",
       "english": "Lacking",
-      "polish": "Mający braki",
+      "polish": "Mający braki; brakujący",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p806-010-word.mp3",
       "audioWordPl": "t1-p806-010-word-pl.mp3",
-      "audioSentence": "t1-p806-010-sentence.mp3"
+      "audioSentence": "t1-p806-010-sentence.mp3",
+      "polishAudio": "Mający braki"
     },
     {
       "id": "t1-p806-011",
@@ -114,47 +124,52 @@
       "sentencePl": null,
       "audioWord": "t1-p806-011-word.mp3",
       "audioWordPl": "t1-p806-011-word-pl.mp3",
-      "audioSentence": "t1-p806-011-sentence.mp3"
+      "audioSentence": "t1-p806-011-sentence.mp3",
+      "polishAudio": "Ogólny"
     },
     {
       "id": "t1-p806-012",
       "english": "Affected",
-      "polish": "Dotknięty",
+      "polish": "Dotknięty (przez zmiany)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p806-012-word.mp3",
       "audioWordPl": "t1-p806-012-word-pl.mp3",
-      "audioSentence": "t1-p806-012-sentence.mp3"
+      "audioSentence": "t1-p806-012-sentence.mp3",
+      "polishAudio": "Dotknięty"
     },
     {
       "id": "t1-p806-013",
       "english": "Effortless",
-      "polish": "Łatwy",
+      "polish": "Łatwy; nie wymagający wysiłku",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p806-013-word.mp3",
       "audioWordPl": "t1-p806-013-word-pl.mp3",
-      "audioSentence": "t1-p806-013-sentence.mp3"
+      "audioSentence": "t1-p806-013-sentence.mp3",
+      "polishAudio": "Łatwy"
     },
     {
       "id": "t1-p806-014",
       "english": "Inconvenient",
-      "polish": "Niedogodny",
+      "polish": "Niedogodny; niewygodny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p806-014-word.mp3",
       "audioWordPl": "t1-p806-014-word-pl.mp3",
-      "audioSentence": "t1-p806-014-sentence.mp3"
+      "audioSentence": "t1-p806-014-sentence.mp3",
+      "polishAudio": "Niedogodny"
     },
     {
       "id": "t1-p806-015",
       "english": "Superficial",
-      "polish": "Powierzchowny",
+      "polish": "Powierzchowny; pobieżny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p806-015-word.mp3",
       "audioWordPl": "t1-p806-015-word-pl.mp3",
-      "audioSentence": "t1-p806-015-sentence.mp3"
+      "audioSentence": "t1-p806-015-sentence.mp3",
+      "polishAudio": "Powierzchowny"
     }
   ]
 }

@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p314-001-word.mp3",
       "audioWordPl": "t1-p314-001-word-pl.mp3",
-      "audioSentence": "t1-p314-001-sentence.mp3"
+      "audioSentence": "t1-p314-001-sentence.mp3",
+      "polishAudio": "Bajeczny"
     },
     {
       "id": "t1-p314-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p314-002-word.mp3",
       "audioWordPl": "t1-p314-002-word-pl.mp3",
-      "audioSentence": "t1-p314-002-sentence.mp3"
+      "audioSentence": "t1-p314-002-sentence.mp3",
+      "polishAudio": "Odlotowa"
     },
     {
       "id": "t1-p314-003",
       "english": "Glamorous",
-      "polish": "Przepiękna",
+      "polish": "Przepiękna; olśniewająca; pełna przepychu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p314-003-word.mp3",
       "audioWordPl": "t1-p314-003-word-pl.mp3",
-      "audioSentence": "t1-p314-003-sentence.mp3"
+      "audioSentence": "t1-p314-003-sentence.mp3",
+      "polishAudio": "Przepiękna"
     },
     {
       "id": "t1-p314-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p314-004-word.mp3",
       "audioWordPl": "t1-p314-004-word-pl.mp3",
-      "audioSentence": "t1-p314-004-sentence.mp3"
+      "audioSentence": "t1-p314-004-sentence.mp3",
+      "polishAudio": "Trafia w serce"
     },
     {
       "id": "t1-p314-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p314-005-word.mp3",
       "audioWordPl": "t1-p314-005-word-pl.mp3",
-      "audioSentence": "t1-p314-005-sentence.mp3"
+      "audioSentence": "t1-p314-005-sentence.mp3",
+      "polishAudio": "Hipnotyczna"
     },
     {
       "id": "t1-p314-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p314-006-word.mp3",
       "audioWordPl": "t1-p314-006-word-pl.mp3",
-      "audioSentence": "t1-p314-006-sentence.mp3"
+      "audioSentence": "t1-p314-006-sentence.mp3",
+      "polishAudio": "Nie można się oprzeć"
     },
     {
       "id": "t1-p314-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p314-007-word.mp3",
       "audioWordPl": "t1-p314-007-word-pl.mp3",
-      "audioSentence": "t1-p314-007-sentence.mp3"
+      "audioSentence": "t1-p314-007-sentence.mp3",
+      "polishAudio": "Przyciągająca"
     },
     {
       "id": "t1-p314-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p314-008-word.mp3",
       "audioWordPl": "t1-p314-008-word-pl.mp3",
-      "audioSentence": "t1-p314-008-sentence.mp3"
+      "audioSentence": "t1-p314-008-sentence.mp3",
+      "polishAudio": "Uwodzicielska"
     },
     {
       "id": "t1-p314-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p314-009-word.mp3",
       "audioWordPl": "t1-p314-009-word-pl.mp3",
-      "audioSentence": "t1-p314-009-sentence.mp3"
+      "audioSentence": "t1-p314-009-sentence.mp3",
+      "polishAudio": "Gorąca"
     },
     {
       "id": "t1-p314-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p314-010-word.mp3",
       "audioWordPl": "t1-p314-010-word-pl.mp3",
-      "audioSentence": "t1-p314-010-sentence.mp3"
+      "audioSentence": "t1-p314-010-sentence.mp3",
+      "polishAudio": "Odbierająca mowę"
     }
   ]
 }

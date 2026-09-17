@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p470-001-word.mp3",
       "audioWordPl": "t1-p470-001-word-pl.mp3",
-      "audioSentence": "t1-p470-001-sentence.mp3"
+      "audioSentence": "t1-p470-001-sentence.mp3",
+      "polishAudio": "Łyżwiarstwo"
     },
     {
       "id": "t1-p470-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p470-002-word.mp3",
       "audioWordPl": "t1-p470-002-word-pl.mp3",
-      "audioSentence": "t1-p470-002-sentence.mp3"
+      "audioSentence": "t1-p470-002-sentence.mp3",
+      "polishAudio": "Maraton"
     },
     {
       "id": "t1-p470-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p470-003-word.mp3",
       "audioWordPl": "t1-p470-003-word-pl.mp3",
-      "audioSentence": "t1-p470-003-sentence.mp3"
+      "audioSentence": "t1-p470-003-sentence.mp3",
+      "polishAudio": "Medal"
     },
     {
       "id": "t1-p470-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p470-004-word.mp3",
       "audioWordPl": "t1-p470-004-word-pl.mp3",
-      "audioSentence": "t1-p470-004-sentence.mp3"
+      "audioSentence": "t1-p470-004-sentence.mp3",
+      "polishAudio": "Medalista"
     },
     {
       "id": "t1-p470-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p470-005-word.mp3",
       "audioWordPl": "t1-p470-005-word-pl.mp3",
-      "audioSentence": "t1-p470-005-sentence.mp3"
+      "audioSentence": "t1-p470-005-sentence.mp3",
+      "polishAudio": "Narty"
     },
     {
       "id": "t1-p470-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p470-006-word.mp3",
       "audioWordPl": "t1-p470-006-word-pl.mp3",
-      "audioSentence": "t1-p470-006-sentence.mp3"
+      "audioSentence": "t1-p470-006-sentence.mp3",
+      "polishAudio": "Mistrzostwa"
     },
     {
       "id": "t1-p470-007",
       "english": "Nominee",
-      "polish": "Nominowany",
+      "polish": "Nominowany; kandydat",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p470-007-word.mp3",
       "audioWordPl": "t1-p470-007-word-pl.mp3",
-      "audioSentence": "t1-p470-007-sentence.mp3"
+      "audioSentence": "t1-p470-007-sentence.mp3",
+      "polishAudio": "Nominowany"
     },
     {
       "id": "t1-p470-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p470-008-word.mp3",
       "audioWordPl": "t1-p470-008-word-pl.mp3",
-      "audioSentence": "t1-p470-008-sentence.mp3"
+      "audioSentence": "t1-p470-008-sentence.mp3",
+      "polishAudio": "Nurkowanie"
     },
     {
       "id": "t1-p470-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p470-009-word.mp3",
       "audioWordPl": "t1-p470-009-word-pl.mp3",
-      "audioSentence": "t1-p470-009-sentence.mp3"
+      "audioSentence": "t1-p470-009-sentence.mp3",
+      "polishAudio": "Obrona"
     },
     {
       "id": "t1-p470-010",
@@ -104,17 +113,19 @@
       "sentencePl": null,
       "audioWord": "t1-p470-010-word.mp3",
       "audioWordPl": "t1-p470-010-word-pl.mp3",
-      "audioSentence": "t1-p470-010-sentence.mp3"
+      "audioSentence": "t1-p470-010-sentence.mp3",
+      "polishAudio": "Podciąganie się podchwytem"
     },
     {
       "id": "t1-p470-011",
       "english": "Hunting",
-      "polish": "Polowanie",
+      "polish": "Polowanie (aktywność sportowa)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p470-011-word.mp3",
       "audioWordPl": "t1-p470-011-word-pl.mp3",
-      "audioSentence": "t1-p470-011-sentence.mp3"
+      "audioSentence": "t1-p470-011-sentence.mp3",
+      "polishAudio": "Polowanie"
     },
     {
       "id": "t1-p470-012",
@@ -124,27 +135,30 @@
       "sentencePl": null,
       "audioWord": "t1-p470-012-word.mp3",
       "audioWordPl": "t1-p470-012-word-pl.mp3",
-      "audioSentence": "t1-p470-012-sentence.mp3"
+      "audioSentence": "t1-p470-012-sentence.mp3",
+      "polishAudio": "Połowa meczu"
     },
     {
       "id": "t1-p470-013",
       "english": "Push-up",
-      "polish": "Pompka",
+      "polish": "Pompka (ćwiczenie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p470-013-word.mp3",
       "audioWordPl": "t1-p470-013-word-pl.mp3",
-      "audioSentence": "t1-p470-013-sentence.mp3"
+      "audioSentence": "t1-p470-013-sentence.mp3",
+      "polishAudio": "Pompka"
     },
     {
       "id": "t1-p470-014",
       "english": "Replay",
-      "polish": "Powtórka",
+      "polish": "Powtórka (np. meczu, filmu, nagrania)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p470-014-word.mp3",
       "audioWordPl": "t1-p470-014-word-pl.mp3",
-      "audioSentence": "t1-p470-014-sentence.mp3"
+      "audioSentence": "t1-p470-014-sentence.mp3",
+      "polishAudio": "Powtórka"
     },
     {
       "id": "t1-p470-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p470-015-word.mp3",
       "audioWordPl": "t1-p470-015-word-pl.mp3",
-      "audioSentence": "t1-p470-015-sentence.mp3"
+      "audioSentence": "t1-p470-015-sentence.mp3",
+      "polishAudio": "Półfinał"
     }
   ]
 }

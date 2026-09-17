@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-001-word.mp3",
       "audioWordPl": "t1-p784-001-word-pl.mp3",
-      "audioSentence": "t1-p784-001-sentence.mp3"
+      "audioSentence": "t1-p784-001-sentence.mp3",
+      "polishAudio": "Pług"
     },
     {
       "id": "t1-p784-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-002-word.mp3",
       "audioWordPl": "t1-p784-002-word-pl.mp3",
-      "audioSentence": "t1-p784-002-sentence.mp3"
+      "audioSentence": "t1-p784-002-sentence.mp3",
+      "polishAudio": "Podwórze"
     },
     {
       "id": "t1-p784-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-003-word.mp3",
       "audioWordPl": "t1-p784-003-word-pl.mp3",
-      "audioSentence": "t1-p784-003-sentence.mp3"
+      "audioSentence": "t1-p784-003-sentence.mp3",
+      "polishAudio": "Pole uprawne"
     },
     {
       "id": "t1-p784-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-004-word.mp3",
       "audioWordPl": "t1-p784-004-word-pl.mp3",
-      "audioSentence": "t1-p784-004-sentence.mp3"
+      "audioSentence": "t1-p784-004-sentence.mp3",
+      "polishAudio": "Siano"
     },
     {
       "id": "t1-p784-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-005-word.mp3",
       "audioWordPl": "t1-p784-005-word-pl.mp3",
-      "audioSentence": "t1-p784-005-sentence.mp3"
+      "audioSentence": "t1-p784-005-sentence.mp3",
+      "polishAudio": "Słoma"
     },
     {
       "id": "t1-p784-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-006-word.mp3",
       "audioWordPl": "t1-p784-006-word-pl.mp3",
-      "audioSentence": "t1-p784-006-sentence.mp3"
+      "audioSentence": "t1-p784-006-sentence.mp3",
+      "polishAudio": "Sołtys"
     },
     {
       "id": "t1-p784-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-007-word.mp3",
       "audioWordPl": "t1-p784-007-word-pl.mp3",
-      "audioSentence": "t1-p784-007-sentence.mp3"
+      "audioSentence": "t1-p784-007-sentence.mp3",
+      "polishAudio": "Studnia"
     },
     {
       "id": "t1-p784-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-008-word.mp3",
       "audioWordPl": "t1-p784-008-word-pl.mp3",
-      "audioSentence": "t1-p784-008-sentence.mp3"
+      "audioSentence": "t1-p784-008-sentence.mp3",
+      "polishAudio": "Szopa"
     },
     {
       "id": "t1-p784-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-009-word.mp3",
       "audioWordPl": "t1-p784-009-word-pl.mp3",
-      "audioSentence": "t1-p784-009-sentence.mp3"
+      "audioSentence": "t1-p784-009-sentence.mp3",
+      "polishAudio": "Szpadel"
     },
     {
       "id": "t1-p784-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-010-word.mp3",
       "audioWordPl": "t1-p784-010-word-pl.mp3",
-      "audioSentence": "t1-p784-010-sentence.mp3"
+      "audioSentence": "t1-p784-010-sentence.mp3",
+      "polishAudio": "Sztacheta"
     },
     {
       "id": "t1-p784-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-011-word.mp3",
       "audioWordPl": "t1-p784-011-word-pl.mp3",
-      "audioSentence": "t1-p784-011-sentence.mp3"
+      "audioSentence": "t1-p784-011-sentence.mp3",
+      "polishAudio": "Trzoda chlewna"
     },
     {
       "id": "t1-p784-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-012-word.mp3",
       "audioWordPl": "t1-p784-012-word-pl.mp3",
-      "audioSentence": "t1-p784-012-sentence.mp3"
+      "audioSentence": "t1-p784-012-sentence.mp3",
+      "polishAudio": "Widły"
     },
     {
       "id": "t1-p784-013",
@@ -134,17 +146,19 @@
       "sentencePl": null,
       "audioWord": "t1-p784-013-word.mp3",
       "audioWordPl": "t1-p784-013-word-pl.mp3",
-      "audioSentence": "t1-p784-013-sentence.mp3"
+      "audioSentence": "t1-p784-013-sentence.mp3",
+      "polishAudio": "Małe gospodarstwo rolne"
     },
     {
       "id": "t1-p784-014",
       "english": "Harvest",
-      "polish": "Żniwa",
+      "polish": "Żniwa; zbiory",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p784-014-word.mp3",
       "audioWordPl": "t1-p784-014-word-pl.mp3",
-      "audioSentence": "t1-p784-014-sentence.mp3"
+      "audioSentence": "t1-p784-014-sentence.mp3",
+      "polishAudio": "Żniwa"
     },
     {
       "id": "t1-p784-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p784-015-word.mp3",
       "audioWordPl": "t1-p784-015-word-pl.mp3",
-      "audioSentence": "t1-p784-015-sentence.mp3"
+      "audioSentence": "t1-p784-015-sentence.mp3",
+      "polishAudio": "Żyto"
     }
   ]
 }

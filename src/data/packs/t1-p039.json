@@ -10,101 +10,111 @@
       "id": "t1-p039-001",
       "english": "Banknote",
       "polish": "Banknot",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Sorry, do you have a smaller banknote?",
+      "sentencePl": "Przepraszam, masz może mniejszy banknot?",
       "audioWord": "t1-p039-001-word.mp3",
       "audioWordPl": "t1-p039-001-word-pl.mp3",
-      "audioSentence": "t1-p039-001-sentence.mp3"
+      "audioSentence": "t1-p039-001-sentence.mp3",
+      "polishAudio": "Banknot"
     },
     {
       "id": "t1-p039-002",
       "english": "Budget",
       "polish": "Budżet",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My budget says no to new shoes.",
+      "sentencePl": "Mój budżet mówi „nie” nowym butom.",
       "audioWord": "t1-p039-002-word.mp3",
       "audioWordPl": "t1-p039-002-word-pl.mp3",
-      "audioSentence": "t1-p039-002-sentence.mp3"
+      "audioSentence": "t1-p039-002-sentence.mp3",
+      "polishAudio": "Budżet"
     },
     {
       "id": "t1-p039-003",
       "english": "Price",
       "polish": "Cena",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Check the price online first.",
+      "sentencePl": "Sprawdź najpierw cenę online.",
       "audioWord": "t1-p039-003-word.mp3",
       "audioWordPl": "t1-p039-003-word-pl.mp3",
-      "audioSentence": "t1-p039-003-sentence.mp3"
+      "audioSentence": "t1-p039-003-sentence.mp3",
+      "polishAudio": "Cena"
     },
     {
       "id": "t1-p039-004",
       "english": "Cash",
       "polish": "Gotówka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Do you accept cash?",
+      "sentencePl": "Czy przyjmujecie gotówkę?",
       "audioWord": "t1-p039-004-word.mp3",
       "audioWordPl": "t1-p039-004-word-pl.mp3",
-      "audioSentence": "t1-p039-004-sentence.mp3"
+      "audioSentence": "t1-p039-004-sentence.mp3",
+      "polishAudio": "Gotówka"
     },
     {
       "id": "t1-p039-005",
       "english": "Debit card",
       "polish": "Karta debetowa",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Could I pay with my debit card?",
+      "sentencePl": "Czy mogę zapłacić kartą debetową?",
       "audioWord": "t1-p039-005-word.mp3",
       "audioWordPl": "t1-p039-005-word-pl.mp3",
-      "audioSentence": "t1-p039-005-sentence.mp3"
+      "audioSentence": "t1-p039-005-sentence.mp3",
+      "polishAudio": "Karta debetowa"
     },
     {
       "id": "t1-p039-006",
       "english": "Credit card",
       "polish": "Karta kredytowa",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Call the bank to block the credit card.",
+      "sentencePl": "Zadzwoń do banku, aby zablokować kartę kredytową.",
       "audioWord": "t1-p039-006-word.mp3",
       "audioWordPl": "t1-p039-006-word-pl.mp3",
-      "audioSentence": "t1-p039-006-sentence.mp3"
+      "audioSentence": "t1-p039-006-sentence.mp3",
+      "polishAudio": "Karta kredytowa"
     },
     {
       "id": "t1-p039-007",
       "english": "Account",
       "polish": "Konto",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Finally, the money is in my account.",
+      "sentencePl": "Wreszcie pieniądze są na moim koncie.",
       "audioWord": "t1-p039-007-word.mp3",
       "audioWordPl": "t1-p039-007-word-pl.mp3",
-      "audioSentence": "t1-p039-007-sentence.mp3"
+      "audioSentence": "t1-p039-007-sentence.mp3",
+      "polishAudio": "Konto"
     },
     {
       "id": "t1-p039-008",
       "english": "Credit",
       "polish": "Kredyt",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "The bank approved my credit.",
+      "sentencePl": "Bank zatwierdził mój kredyt.",
       "audioWord": "t1-p039-008-word.mp3",
       "audioWordPl": "t1-p039-008-word-pl.mp3",
-      "audioSentence": "t1-p039-008-sentence.mp3"
+      "audioSentence": "t1-p039-008-sentence.mp3",
+      "polishAudio": "Kredyt"
     },
     {
       "id": "t1-p039-009",
       "english": "Salary",
       "polish": "Pensja",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Half my salary goes on rent.",
+      "sentencePl": "Połowa mojej pensji idzie na czynsz.",
       "audioWord": "t1-p039-009-word.mp3",
       "audioWordPl": "t1-p039-009-word-pl.mp3",
-      "audioSentence": "t1-p039-009-sentence.mp3"
+      "audioSentence": "t1-p039-009-sentence.mp3",
+      "polishAudio": "Pensja"
     },
     {
       "id": "t1-p039-010",
       "english": "Money",
       "polish": "Pieniądze",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Where did the money go?",
+      "sentencePl": "Gdzie poszły pieniądze?",
       "audioWord": "t1-p039-010-word.mp3",
       "audioWordPl": "t1-p039-010-word-pl.mp3",
-      "audioSentence": "t1-p039-010-sentence.mp3"
+      "audioSentence": "t1-p039-010-sentence.mp3",
+      "polishAudio": "Pieniądze"
     }
   ]
 }

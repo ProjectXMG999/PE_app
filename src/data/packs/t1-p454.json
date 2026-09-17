@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p454-001-word.mp3",
       "audioWordPl": "t1-p454-001-word-pl.mp3",
-      "audioSentence": "t1-p454-001-sentence.mp3"
+      "audioSentence": "t1-p454-001-sentence.mp3",
+      "polishAudio": "Bezrobotny"
     },
     {
       "id": "t1-p454-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p454-002-word.mp3",
       "audioWordPl": "t1-p454-002-word-pl.mp3",
-      "audioSentence": "t1-p454-002-sentence.mp3"
+      "audioSentence": "t1-p454-002-sentence.mp3",
+      "polishAudio": "Doświadczony"
     },
     {
       "id": "t1-p454-003",
       "english": "Effective",
-      "polish": "Skuteczny",
+      "polish": "Skuteczny; efektywny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p454-003-word.mp3",
       "audioWordPl": "t1-p454-003-word-pl.mp3",
-      "audioSentence": "t1-p454-003-sentence.mp3"
+      "audioSentence": "t1-p454-003-sentence.mp3",
+      "polishAudio": "Skuteczny"
     },
     {
       "id": "t1-p454-004",
@@ -44,17 +47,19 @@
       "sentencePl": null,
       "audioWord": "t1-p454-004-word.mp3",
       "audioWordPl": "t1-p454-004-word-pl.mp3",
-      "audioSentence": "t1-p454-004-sentence.mp3"
+      "audioSentence": "t1-p454-004-sentence.mp3",
+      "polishAudio": "Zawodowy"
     },
     {
       "id": "t1-p454-005",
       "english": "Flexible",
-      "polish": "Dyspozycyjny",
+      "polish": "Dyspozycyjny; elastyczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p454-005-word.mp3",
       "audioWordPl": "t1-p454-005-word-pl.mp3",
-      "audioSentence": "t1-p454-005-sentence.mp3"
+      "audioSentence": "t1-p454-005-sentence.mp3",
+      "polishAudio": "Dyspozycyjny"
     },
     {
       "id": "t1-p454-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p454-006-word.mp3",
       "audioWordPl": "t1-p454-006-word-pl.mp3",
-      "audioSentence": "t1-p454-006-sentence.mp3"
+      "audioSentence": "t1-p454-006-sentence.mp3",
+      "polishAudio": "Formalny"
     },
     {
       "id": "t1-p454-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p454-007-word.mp3",
       "audioWordPl": "t1-p454-007-word-pl.mp3",
-      "audioSentence": "t1-p454-007-sentence.mp3"
+      "audioSentence": "t1-p454-007-sentence.mp3",
+      "polishAudio": "Gospodarczy"
     },
     {
       "id": "t1-p454-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p454-008-word.mp3",
       "audioWordPl": "t1-p454-008-word-pl.mp3",
-      "audioSentence": "t1-p454-008-sentence.mp3"
+      "audioSentence": "t1-p454-008-sentence.mp3",
+      "polishAudio": "Kosztowny"
     },
     {
       "id": "t1-p454-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p454-009-word.mp3",
       "audioWordPl": "t1-p454-009-word-pl.mp3",
-      "audioSentence": "t1-p454-009-sentence.mp3"
+      "audioSentence": "t1-p454-009-sentence.mp3",
+      "polishAudio": "Najlepiej sprzedający się"
     },
     {
       "id": "t1-p454-010",
@@ -104,37 +113,41 @@
       "sentencePl": null,
       "audioWord": "t1-p454-010-word.mp3",
       "audioWordPl": "t1-p454-010-word-pl.mp3",
-      "audioSentence": "t1-p454-010-sentence.mp3"
+      "audioSentence": "t1-p454-010-sentence.mp3",
+      "polishAudio": "Nieformalny"
     },
     {
       "id": "t1-p454-011",
       "english": "Casual",
-      "polish": "Nieformalny",
+      "polish": "Nieformalny; codzienny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p454-011-word.mp3",
       "audioWordPl": "t1-p454-011-word-pl.mp3",
-      "audioSentence": "t1-p454-011-sentence.mp3"
+      "audioSentence": "t1-p454-011-sentence.mp3",
+      "polishAudio": "Nieformalny"
     },
     {
       "id": "t1-p454-012",
       "english": "Part-time",
-      "polish": "Niepełnoetatowy",
+      "polish": "Niepełnoetatowy; dorywczy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p454-012-word.mp3",
       "audioWordPl": "t1-p454-012-word-pl.mp3",
-      "audioSentence": "t1-p454-012-sentence.mp3"
+      "audioSentence": "t1-p454-012-sentence.mp3",
+      "polishAudio": "Niepełnoetatowy"
     },
     {
       "id": "t1-p454-013",
       "english": "Low-cost",
-      "polish": "Niskonakładowy",
+      "polish": "Niskonakładowy; tani",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p454-013-word.mp3",
       "audioWordPl": "t1-p454-013-word-pl.mp3",
-      "audioSentence": "t1-p454-013-sentence.mp3"
+      "audioSentence": "t1-p454-013-sentence.mp3",
+      "polishAudio": "Niskonakładowy"
     },
     {
       "id": "t1-p454-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p454-014-word.mp3",
       "audioWordPl": "t1-p454-014-word-pl.mp3",
-      "audioSentence": "t1-p454-014-sentence.mp3"
+      "audioSentence": "t1-p454-014-sentence.mp3",
+      "polishAudio": "Oferujący pełen zakres usług"
     },
     {
       "id": "t1-p454-015",
       "english": "Official",
-      "polish": "Oficjalny",
+      "polish": "Oficjalny; urzędowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p454-015-word.mp3",
       "audioWordPl": "t1-p454-015-word-pl.mp3",
-      "audioSentence": "t1-p454-015-sentence.mp3"
+      "audioSentence": "t1-p454-015-sentence.mp3",
+      "polishAudio": "Oficjalny"
     }
   ]
 }

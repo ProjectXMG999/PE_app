@@ -9,12 +9,13 @@
     {
       "id": "t1-p660-001",
       "english": "Fluent",
-      "polish": "Płynny",
+      "polish": "Płynny (w języku, w ruchu)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p660-001-word.mp3",
       "audioWordPl": "t1-p660-001-word-pl.mp3",
-      "audioSentence": "t1-p660-001-sentence.mp3"
+      "audioSentence": "t1-p660-001-sentence.mp3",
+      "polishAudio": "Płynny"
     },
     {
       "id": "t1-p660-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p660-002-word.mp3",
       "audioWordPl": "t1-p660-002-word-pl.mp3",
-      "audioSentence": "t1-p660-002-sentence.mp3"
+      "audioSentence": "t1-p660-002-sentence.mp3",
+      "polishAudio": "Niewidzialny"
     },
     {
       "id": "t1-p660-003",
@@ -34,27 +36,30 @@
       "sentencePl": null,
       "audioWord": "t1-p660-003-word.mp3",
       "audioWordPl": "t1-p660-003-word-pl.mp3",
-      "audioSentence": "t1-p660-003-sentence.mp3"
+      "audioSentence": "t1-p660-003-sentence.mp3",
+      "polishAudio": "Widoczny"
     },
     {
       "id": "t1-p660-004",
       "english": "Spoken",
-      "polish": "Mówiony",
+      "polish": "Mówiony (język)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p660-004-word.mp3",
       "audioWordPl": "t1-p660-004-word-pl.mp3",
-      "audioSentence": "t1-p660-004-sentence.mp3"
+      "audioSentence": "t1-p660-004-sentence.mp3",
+      "polishAudio": "Mówiony"
     },
     {
       "id": "t1-p660-005",
       "english": "Written",
-      "polish": "Pisemny",
+      "polish": "Pisemny; napisany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p660-005-word.mp3",
       "audioWordPl": "t1-p660-005-word-pl.mp3",
-      "audioSentence": "t1-p660-005-sentence.mp3"
+      "audioSentence": "t1-p660-005-sentence.mp3",
+      "polishAudio": "Pisemny"
     },
     {
       "id": "t1-p660-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p660-006-word.mp3",
       "audioWordPl": "t1-p660-006-word-pl.mp3",
-      "audioSentence": "t1-p660-006-sentence.mp3"
+      "audioSentence": "t1-p660-006-sentence.mp3",
+      "polishAudio": "Czytelny"
     },
     {
       "id": "t1-p660-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p660-007-word.mp3",
       "audioWordPl": "t1-p660-007-word-pl.mp3",
-      "audioSentence": "t1-p660-007-sentence.mp3"
+      "audioSentence": "t1-p660-007-sentence.mp3",
+      "polishAudio": "Nieczytelny"
     },
     {
       "id": "t1-p660-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p660-008-word.mp3",
       "audioWordPl": "t1-p660-008-word-pl.mp3",
-      "audioSentence": "t1-p660-008-sentence.mp3"
+      "audioSentence": "t1-p660-008-sentence.mp3",
+      "polishAudio": "Słyszalny"
     },
     {
       "id": "t1-p660-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p660-009-word.mp3",
       "audioWordPl": "t1-p660-009-word-pl.mp3",
-      "audioSentence": "t1-p660-009-sentence.mp3"
+      "audioSentence": "t1-p660-009-sentence.mp3",
+      "polishAudio": "Niesłyszalny"
     },
     {
       "id": "t1-p660-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p660-010-word.mp3",
       "audioWordPl": "t1-p660-010-word-pl.mp3",
-      "audioSentence": "t1-p660-010-sentence.mp3"
+      "audioSentence": "t1-p660-010-sentence.mp3",
+      "polishAudio": "Swędzący"
     },
     {
       "id": "t1-p660-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p660-011-word.mp3",
       "audioWordPl": "t1-p660-011-word-pl.mp3",
-      "audioSentence": "t1-p660-011-sentence.mp3"
+      "audioSentence": "t1-p660-011-sentence.mp3",
+      "polishAudio": "Przeoczony"
     },
     {
       "id": "t1-p660-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p660-012-word.mp3",
       "audioWordPl": "t1-p660-012-word-pl.mp3",
-      "audioSentence": "t1-p660-012-sentence.mp3"
+      "audioSentence": "t1-p660-012-sentence.mp3",
+      "polishAudio": "Wonny"
     },
     {
       "id": "t1-p660-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p660-013-word.mp3",
       "audioWordPl": "t1-p660-013-word-pl.mp3",
-      "audioSentence": "t1-p660-013-sentence.mp3"
+      "audioSentence": "t1-p660-013-sentence.mp3",
+      "polishAudio": "Pisany ręcznie"
     },
     {
       "id": "t1-p660-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p660-014-word.mp3",
       "audioWordPl": "t1-p660-014-word-pl.mp3",
-      "audioSentence": "t1-p660-014-sentence.mp3"
+      "audioSentence": "t1-p660-014-sentence.mp3",
+      "polishAudio": "Rytmiczny"
     },
     {
       "id": "t1-p660-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p660-015-word.mp3",
       "audioWordPl": "t1-p660-015-word-pl.mp3",
-      "audioSentence": "t1-p660-015-sentence.mp3"
+      "audioSentence": "t1-p660-015-sentence.mp3",
+      "polishAudio": "Bezwonny"
     }
   ]
 }

@@ -14,17 +14,19 @@
       "sentencePl": null,
       "audioWord": "t1-p453-001-word.mp3",
       "audioWordPl": "t1-p453-001-word-pl.mp3",
-      "audioSentence": "t1-p453-001-sentence.mp3"
+      "audioSentence": "t1-p453-001-sentence.mp3",
+      "polishAudio": "Pakować"
     },
     {
       "id": "t1-p453-002",
       "english": "Receive",
-      "polish": "Otrzymywać",
+      "polish": "Otrzymywać; przyjmować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p453-002-word.mp3",
       "audioWordPl": "t1-p453-002-word-pl.mp3",
-      "audioSentence": "t1-p453-002-sentence.mp3"
+      "audioSentence": "t1-p453-002-sentence.mp3",
+      "polishAudio": "Otrzymywać"
     },
     {
       "id": "t1-p453-003",
@@ -34,47 +36,52 @@
       "sentencePl": null,
       "audioWord": "t1-p453-003-word.mp3",
       "audioWordPl": "t1-p453-003-word-pl.mp3",
-      "audioSentence": "t1-p453-003-sentence.mp3"
+      "audioSentence": "t1-p453-003-sentence.mp3",
+      "polishAudio": "Doręczać"
     },
     {
       "id": "t1-p453-004",
       "english": "Ship",
-      "polish": "Wysyłać",
+      "polish": "Wysyłać; transportować; dostarczać (towar)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p453-004-word.mp3",
       "audioWordPl": "t1-p453-004-word-pl.mp3",
-      "audioSentence": "t1-p453-004-sentence.mp3"
+      "audioSentence": "t1-p453-004-sentence.mp3",
+      "polishAudio": "Wysyłać"
     },
     {
       "id": "t1-p453-005",
       "english": "Unfold",
-      "polish": "Rozkładać",
+      "polish": "Rozkładać; rozwijać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p453-005-word.mp3",
       "audioWordPl": "t1-p453-005-word-pl.mp3",
-      "audioSentence": "t1-p453-005-sentence.mp3"
+      "audioSentence": "t1-p453-005-sentence.mp3",
+      "polishAudio": "Rozkładać"
     },
     {
       "id": "t1-p453-006",
       "english": "Fold",
-      "polish": "Składać",
+      "polish": "Składać (coś na mniejsze części)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p453-006-word.mp3",
       "audioWordPl": "t1-p453-006-word-pl.mp3",
-      "audioSentence": "t1-p453-006-sentence.mp3"
+      "audioSentence": "t1-p453-006-sentence.mp3",
+      "polishAudio": "Składać"
     },
     {
       "id": "t1-p453-007",
       "english": "Wrap",
-      "polish": "Owijać",
+      "polish": "Owijać; zapakować (np. w papier)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p453-007-word.mp3",
       "audioWordPl": "t1-p453-007-word-pl.mp3",
-      "audioSentence": "t1-p453-007-sentence.mp3"
+      "audioSentence": "t1-p453-007-sentence.mp3",
+      "polishAudio": "Owijać"
     },
     {
       "id": "t1-p453-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p453-008-word.mp3",
       "audioWordPl": "t1-p453-008-word-pl.mp3",
-      "audioSentence": "t1-p453-008-sentence.mp3"
+      "audioSentence": "t1-p453-008-sentence.mp3",
+      "polishAudio": "Wysłać pocztą"
     },
     {
       "id": "t1-p453-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p453-009-word.mp3",
       "audioWordPl": "t1-p453-009-word-pl.mp3",
-      "audioSentence": "t1-p453-009-sentence.mp3"
+      "audioSentence": "t1-p453-009-sentence.mp3",
+      "polishAudio": "Rozładować"
     },
     {
       "id": "t1-p453-010",
@@ -104,37 +113,41 @@
       "sentencePl": null,
       "audioWord": "t1-p453-010-word.mp3",
       "audioWordPl": "t1-p453-010-word-pl.mp3",
-      "audioSentence": "t1-p453-010-sentence.mp3"
+      "audioSentence": "t1-p453-010-sentence.mp3",
+      "polishAudio": "Paczkować"
     },
     {
       "id": "t1-p453-011",
       "english": "Unwind",
-      "polish": "Odwijać",
+      "polish": "Odwijać (coś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p453-011-word.mp3",
       "audioWordPl": "t1-p453-011-word-pl.mp3",
-      "audioSentence": "t1-p453-011-sentence.mp3"
+      "audioSentence": "t1-p453-011-sentence.mp3",
+      "polishAudio": "Odwijać"
     },
     {
       "id": "t1-p453-012",
       "english": "Dispatch",
-      "polish": "Wysłać",
+      "polish": "Wysłać (kogoś lub coś); wyekspediować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p453-012-word.mp3",
       "audioWordPl": "t1-p453-012-word-pl.mp3",
-      "audioSentence": "t1-p453-012-sentence.mp3"
+      "audioSentence": "t1-p453-012-sentence.mp3",
+      "polishAudio": "Wysłać"
     },
     {
       "id": "t1-p453-013",
       "english": "Parcel",
-      "polish": "Przygotowywać przesyłkę",
+      "polish": "Przygotowywać przesyłkę; pakować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p453-013-word.mp3",
       "audioWordPl": "t1-p453-013-word-pl.mp3",
-      "audioSentence": "t1-p453-013-sentence.mp3"
+      "audioSentence": "t1-p453-013-sentence.mp3",
+      "polishAudio": "Przygotowywać przesyłkę"
     },
     {
       "id": "t1-p453-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p453-014-word.mp3",
       "audioWordPl": "t1-p453-014-word-pl.mp3",
-      "audioSentence": "t1-p453-014-sentence.mp3"
+      "audioSentence": "t1-p453-014-sentence.mp3",
+      "polishAudio": "Załączyć do wiadomości"
     },
     {
       "id": "t1-p453-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p453-015-word.mp3",
       "audioWordPl": "t1-p453-015-word-pl.mp3",
-      "audioSentence": "t1-p453-015-sentence.mp3"
+      "audioSentence": "t1-p453-015-sentence.mp3",
+      "polishAudio": "Nadać pocztą"
     }
   ]
 }

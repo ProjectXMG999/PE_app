@@ -9,22 +9,24 @@
     {
       "id": "t1-p855-001",
       "english": "Take sb in",
-      "polish": "Zatrzymać kogoś",
+      "polish": "Zatrzymać kogoś (np. policja)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p855-001-word.mp3",
       "audioWordPl": "t1-p855-001-word-pl.mp3",
-      "audioSentence": "t1-p855-001-sentence.mp3"
+      "audioSentence": "t1-p855-001-sentence.mp3",
+      "polishAudio": "Zatrzymać kogoś"
     },
     {
       "id": "t1-p855-002",
       "english": "Talk down to sb",
-      "polish": "Mówić do kogoś z góry",
+      "polish": "Mówić do kogoś z góry (arogancko)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p855-002-word.mp3",
       "audioWordPl": "t1-p855-002-word-pl.mp3",
-      "audioSentence": "t1-p855-002-sentence.mp3"
+      "audioSentence": "t1-p855-002-sentence.mp3",
+      "polishAudio": "Mówić do kogoś z góry"
     },
     {
       "id": "t1-p855-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p855-003-word.mp3",
       "audioWordPl": "t1-p855-003-word-pl.mp3",
-      "audioSentence": "t1-p855-003-sentence.mp3"
+      "audioSentence": "t1-p855-003-sentence.mp3",
+      "polishAudio": "Puścić pawia"
     },
     {
       "id": "t1-p855-004",
       "english": "Trick sb into sth",
-      "polish": "Wkręcić kogoś",
+      "polish": "Wkręcić kogoś; podstępem przekonać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p855-004-word.mp3",
       "audioWordPl": "t1-p855-004-word-pl.mp3",
-      "audioSentence": "t1-p855-004-sentence.mp3"
+      "audioSentence": "t1-p855-004-sentence.mp3",
+      "polishAudio": "Wkręcić kogoś"
     },
     {
       "id": "t1-p855-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p855-005-word.mp3",
       "audioWordPl": "t1-p855-005-word-pl.mp3",
-      "audioSentence": "t1-p855-005-sentence.mp3"
+      "audioSentence": "t1-p855-005-sentence.mp3",
+      "polishAudio": "Dać komuś kosza"
     },
     {
       "id": "t1-p855-006",
@@ -64,47 +69,52 @@
       "sentencePl": null,
       "audioWord": "t1-p855-006-word.mp3",
       "audioWordPl": "t1-p855-006-word-pl.mp3",
-      "audioSentence": "t1-p855-006-sentence.mp3"
+      "audioSentence": "t1-p855-006-sentence.mp3",
+      "polishAudio": "Naskoczyć na kogoś"
     },
     {
       "id": "t1-p855-007",
       "english": "Act out",
-      "polish": "Odgrywać scenę",
+      "polish": "Odgrywać scenę; źle się zachowywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p855-007-word.mp3",
       "audioWordPl": "t1-p855-007-word-pl.mp3",
-      "audioSentence": "t1-p855-007-sentence.mp3"
+      "audioSentence": "t1-p855-007-sentence.mp3",
+      "polishAudio": "Odgrywać scenę"
     },
     {
       "id": "t1-p855-008",
       "english": "Be taken aback",
-      "polish": "Być zaskoczonym I zdezorientowanym",
+      "polish": "Być zaskoczonym i zdezorientowanym",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p855-008-word.mp3",
       "audioWordPl": "t1-p855-008-word-pl.mp3",
-      "audioSentence": "t1-p855-008-sentence.mp3"
+      "audioSentence": "t1-p855-008-sentence.mp3",
+      "polishAudio": "Być zaskoczonym i zdezorientowanym"
     },
     {
       "id": "t1-p855-009",
       "english": "Break down",
-      "polish": "Załamać się",
+      "polish": "Załamać się (psychicznie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p855-009-word.mp3",
       "audioWordPl": "t1-p855-009-word-pl.mp3",
-      "audioSentence": "t1-p855-009-sentence.mp3"
+      "audioSentence": "t1-p855-009-sentence.mp3",
+      "polishAudio": "Załamać się"
     },
     {
       "id": "t1-p855-010",
       "english": "Break sth off",
-      "polish": "Zerwać coś",
+      "polish": "Zerwać coś (np. relacje); zakończyć coś (np. związek)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p855-010-word.mp3",
       "audioWordPl": "t1-p855-010-word-pl.mp3",
-      "audioSentence": "t1-p855-010-sentence.mp3"
+      "audioSentence": "t1-p855-010-sentence.mp3",
+      "polishAudio": "Zerwać coś"
     }
   ]
 }

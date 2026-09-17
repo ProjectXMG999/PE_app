@@ -9,42 +9,46 @@
     {
       "id": "t1-p546-001",
       "english": "Crash",
-      "polish": "Wpaść",
+      "polish": "Wpaść (bez zapowiedzi)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p546-001-word.mp3",
       "audioWordPl": "t1-p546-001-word-pl.mp3",
-      "audioSentence": "t1-p546-001-sentence.mp3"
+      "audioSentence": "t1-p546-001-sentence.mp3",
+      "polishAudio": "Wpaść"
     },
     {
       "id": "t1-p546-002",
       "english": "Get hooked",
-      "polish": "Wstąpić w związek małżeński",
+      "polish": "Wstąpić w związek małżeński (ochajtać się)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p546-002-word.mp3",
       "audioWordPl": "t1-p546-002-word-pl.mp3",
-      "audioSentence": "t1-p546-002-sentence.mp3"
+      "audioSentence": "t1-p546-002-sentence.mp3",
+      "polishAudio": "Wstąpić w związek małżeński"
     },
     {
       "id": "t1-p546-003",
       "english": "Hooked",
-      "polish": "Uzależniony od czegoś",
+      "polish": "Uzależniony od czegoś; ktoś mu coś zapewnił, dostarcza",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p546-003-word.mp3",
       "audioWordPl": "t1-p546-003-word-pl.mp3",
-      "audioSentence": "t1-p546-003-sentence.mp3"
+      "audioSentence": "t1-p546-003-sentence.mp3",
+      "polishAudio": "Uzależniony od czegoś"
     },
     {
       "id": "t1-p546-004",
       "english": "Noogie",
-      "polish": "Muka",
+      "polish": "Muka; kuksaniec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p546-004-word.mp3",
       "audioWordPl": "t1-p546-004-word-pl.mp3",
-      "audioSentence": "t1-p546-004-sentence.mp3"
+      "audioSentence": "t1-p546-004-sentence.mp3",
+      "polishAudio": "Muka"
     },
     {
       "id": "t1-p546-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p546-005-word.mp3",
       "audioWordPl": "t1-p546-005-word-pl.mp3",
-      "audioSentence": "t1-p546-005-sentence.mp3"
+      "audioSentence": "t1-p546-005-sentence.mp3",
+      "polishAudio": "Zebrać się na odwagę"
     },
     {
       "id": "t1-p546-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p546-006-word.mp3",
       "audioWordPl": "t1-p546-006-word-pl.mp3",
-      "audioSentence": "t1-p546-006-sentence.mp3"
+      "audioSentence": "t1-p546-006-sentence.mp3",
+      "polishAudio": "Popierać czyjś związek"
     },
     {
       "id": "t1-p546-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p546-007-word.mp3",
       "audioWordPl": "t1-p546-007-word-pl.mp3",
-      "audioSentence": "t1-p546-007-sentence.mp3"
+      "audioSentence": "t1-p546-007-sentence.mp3",
+      "polishAudio": "Uciekać"
     },
     {
       "id": "t1-p546-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p546-008-word.mp3",
       "audioWordPl": "t1-p546-008-word-pl.mp3",
-      "audioSentence": "t1-p546-008-sentence.mp3"
+      "audioSentence": "t1-p546-008-sentence.mp3",
+      "polishAudio": "Wiedzieć, co ktoś czuje"
     },
     {
       "id": "t1-p546-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p546-009-word.mp3",
       "audioWordPl": "t1-p546-009-word-pl.mp3",
-      "audioSentence": "t1-p546-009-sentence.mp3"
+      "audioSentence": "t1-p546-009-sentence.mp3",
+      "polishAudio": "Bycie opcją rezerwową"
     },
     {
       "id": "t1-p546-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p546-010-word.mp3",
       "audioWordPl": "t1-p546-010-word-pl.mp3",
-      "audioSentence": "t1-p546-010-sentence.mp3"
+      "audioSentence": "t1-p546-010-sentence.mp3",
+      "polishAudio": "Zaobrączkować się"
     }
   ]
 }

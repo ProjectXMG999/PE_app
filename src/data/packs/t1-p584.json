@@ -9,32 +9,35 @@
     {
       "id": "t1-p584-001",
       "english": "Glow up",
-      "polish": "Rozkwitać",
+      "polish": "Rozkwitać (zmieniać się z wiekiem)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p584-001-word.mp3",
       "audioWordPl": "t1-p584-001-word-pl.mp3",
-      "audioSentence": "t1-p584-001-sentence.mp3"
+      "audioSentence": "t1-p584-001-sentence.mp3",
+      "polishAudio": "Rozkwitać"
     },
     {
       "id": "t1-p584-002",
       "english": "Bent",
-      "polish": "Podrabiany",
+      "polish": "Podrabiany (np. ciuch)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p584-002-word.mp3",
       "audioWordPl": "t1-p584-002-word-pl.mp3",
-      "audioSentence": "t1-p584-002-sentence.mp3"
+      "audioSentence": "t1-p584-002-sentence.mp3",
+      "polishAudio": "Podrabiany"
     },
     {
       "id": "t1-p584-003",
       "english": "Blinkers",
-      "polish": "Gały",
+      "polish": "Gały (oczy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p584-003-word.mp3",
       "audioWordPl": "t1-p584-003-word-pl.mp3",
-      "audioSentence": "t1-p584-003-sentence.mp3"
+      "audioSentence": "t1-p584-003-sentence.mp3",
+      "polishAudio": "Gały"
     },
     {
       "id": "t1-p584-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p584-004-word.mp3",
       "audioWordPl": "t1-p584-004-word-pl.mp3",
-      "audioSentence": "t1-p584-004-sentence.mp3"
+      "audioSentence": "t1-p584-004-sentence.mp3",
+      "polishAudio": "Warkoczyki plecione przy głowie"
     },
     {
       "id": "t1-p584-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p584-005-word.mp3",
       "audioWordPl": "t1-p584-005-word-pl.mp3",
-      "audioSentence": "t1-p584-005-sentence.mp3"
+      "audioSentence": "t1-p584-005-sentence.mp3",
+      "polishAudio": "Bardzo atrakcyjnie ubrany"
     },
     {
       "id": "t1-p584-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p584-006-word.mp3",
       "audioWordPl": "t1-p584-006-word-pl.mp3",
-      "audioSentence": "t1-p584-006-sentence.mp3"
+      "audioSentence": "t1-p584-006-sentence.mp3",
+      "polishAudio": "Bicki"
     },
     {
       "id": "t1-p584-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p584-007-word.mp3",
       "audioWordPl": "t1-p584-007-word-pl.mp3",
-      "audioSentence": "t1-p584-007-sentence.mp3"
+      "audioSentence": "t1-p584-007-sentence.mp3",
+      "polishAudio": "Podróba"
     },
     {
       "id": "t1-p584-008",
       "english": "Pecks",
-      "polish": "Mięśnie",
+      "polish": "Mięśnie (muskuły)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p584-008-word.mp3",
       "audioWordPl": "t1-p584-008-word-pl.mp3",
-      "audioSentence": "t1-p584-008-sentence.mp3"
+      "audioSentence": "t1-p584-008-sentence.mp3",
+      "polishAudio": "Mięśnie"
     },
     {
       "id": "t1-p584-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p584-009-word.mp3",
       "audioWordPl": "t1-p584-009-word-pl.mp3",
-      "audioSentence": "t1-p584-009-sentence.mp3"
+      "audioSentence": "t1-p584-009-sentence.mp3",
+      "polishAudio": "Super modny"
     },
     {
       "id": "t1-p584-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p584-010-word.mp3",
       "audioWordPl": "t1-p584-010-word-pl.mp3",
-      "audioSentence": "t1-p584-010-sentence.mp3"
+      "audioSentence": "t1-p584-010-sentence.mp3",
+      "polishAudio": "Ciacho"
     }
   ]
 }

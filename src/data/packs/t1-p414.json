@@ -14,17 +14,19 @@
       "sentencePl": null,
       "audioWord": "t1-p414-001-word.mp3",
       "audioWordPl": "t1-p414-001-word-pl.mp3",
-      "audioSentence": "t1-p414-001-sentence.mp3"
+      "audioSentence": "t1-p414-001-sentence.mp3",
+      "polishAudio": "Bezdomny"
     },
     {
       "id": "t1-p414-002",
       "english": "Native",
-      "polish": "Ojczysty",
+      "polish": "Ojczysty (język); rdzenny (mieszkaniec)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p414-002-word.mp3",
       "audioWordPl": "t1-p414-002-word-pl.mp3",
-      "audioSentence": "t1-p414-002-sentence.mp3"
+      "audioSentence": "t1-p414-002-sentence.mp3",
+      "polishAudio": "Ojczysty"
     },
     {
       "id": "t1-p414-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p414-003-word.mp3",
       "audioWordPl": "t1-p414-003-word-pl.mp3",
-      "audioSentence": "t1-p414-003-sentence.mp3"
+      "audioSentence": "t1-p414-003-sentence.mp3",
+      "polishAudio": "Prywatny"
     },
     {
       "id": "t1-p414-004",
@@ -44,17 +47,19 @@
       "sentencePl": null,
       "audioWord": "t1-p414-004-word.mp3",
       "audioWordPl": "t1-p414-004-word-pl.mp3",
-      "audioSentence": "t1-p414-004-sentence.mp3"
+      "audioSentence": "t1-p414-004-sentence.mp3",
+      "polishAudio": "Publiczny"
     },
     {
       "id": "t1-p414-005",
       "english": "Common",
-      "polish": "Pospolity",
+      "polish": "Pospolity; powszechny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p414-005-word.mp3",
       "audioWordPl": "t1-p414-005-word-pl.mp3",
-      "audioSentence": "t1-p414-005-sentence.mp3"
+      "audioSentence": "t1-p414-005-sentence.mp3",
+      "polishAudio": "Pospolity"
     },
     {
       "id": "t1-p414-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p414-006-word.mp3",
       "audioWordPl": "t1-p414-006-word-pl.mp3",
-      "audioSentence": "t1-p414-006-sentence.mp3"
+      "audioSentence": "t1-p414-006-sentence.mp3",
+      "polishAudio": "Seksistowski"
     },
     {
       "id": "t1-p414-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p414-007-word.mp3",
       "audioWordPl": "t1-p414-007-word-pl.mp3",
-      "audioSentence": "t1-p414-007-sentence.mp3"
+      "audioSentence": "t1-p414-007-sentence.mp3",
+      "polishAudio": "Konspiracyjny"
     },
     {
       "id": "t1-p414-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p414-008-word.mp3",
       "audioWordPl": "t1-p414-008-word-pl.mp3",
-      "audioSentence": "t1-p414-008-sentence.mp3"
+      "audioSentence": "t1-p414-008-sentence.mp3",
+      "polishAudio": "Miejski"
     },
     {
       "id": "t1-p414-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p414-009-word.mp3",
       "audioWordPl": "t1-p414-009-word-pl.mp3",
-      "audioSentence": "t1-p414-009-sentence.mp3"
+      "audioSentence": "t1-p414-009-sentence.mp3",
+      "polishAudio": "Uzależniony"
     },
     {
       "id": "t1-p414-010",
       "english": "Rural",
-      "polish": "Wiejski",
+      "polish": "Wiejski; rolny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p414-010-word.mp3",
       "audioWordPl": "t1-p414-010-word-pl.mp3",
-      "audioSentence": "t1-p414-010-sentence.mp3"
+      "audioSentence": "t1-p414-010-sentence.mp3",
+      "polishAudio": "Wiejski"
     },
     {
       "id": "t1-p414-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p414-011-word.mp3",
       "audioWordPl": "t1-p414-011-word-pl.mp3",
-      "audioSentence": "t1-p414-011-sentence.mp3"
+      "audioSentence": "t1-p414-011-sentence.mp3",
+      "polishAudio": "Globalny"
     },
     {
       "id": "t1-p414-012",
       "english": "Local",
-      "polish": "Lokalny",
+      "polish": "Lokalny; miejscowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p414-012-word.mp3",
       "audioWordPl": "t1-p414-012-word-pl.mp3",
-      "audioSentence": "t1-p414-012-sentence.mp3"
+      "audioSentence": "t1-p414-012-sentence.mp3",
+      "polishAudio": "Lokalny"
     },
     {
       "id": "t1-p414-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p414-013-word.mp3",
       "audioWordPl": "t1-p414-013-word-pl.mp3",
-      "audioSentence": "t1-p414-013-sentence.mp3"
+      "audioSentence": "t1-p414-013-sentence.mp3",
+      "polishAudio": "Międzynarodowy"
     },
     {
       "id": "t1-p414-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p414-014-word.mp3",
       "audioWordPl": "t1-p414-014-word-pl.mp3",
-      "audioSentence": "t1-p414-014-sentence.mp3"
+      "audioSentence": "t1-p414-014-sentence.mp3",
+      "polishAudio": "Narodowy"
     },
     {
       "id": "t1-p414-015",
       "english": "Social",
-      "polish": "Społeczny",
+      "polish": "Społeczny; socjalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p414-015-word.mp3",
       "audioWordPl": "t1-p414-015-word-pl.mp3",
-      "audioSentence": "t1-p414-015-sentence.mp3"
+      "audioSentence": "t1-p414-015-sentence.mp3",
+      "polishAudio": "Społeczny"
     }
   ]
 }

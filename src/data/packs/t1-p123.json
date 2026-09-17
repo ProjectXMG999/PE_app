@@ -9,102 +9,112 @@
     {
       "id": "t1-p123-001",
       "english": "ATM",
-      "polish": "W tej chwili",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "W tej chwili (skrót)",
+      "sentenceEn": "ATM, I can't talk; I'm carrying three bags upstairs.",
+      "sentencePl": "W tej chwili nie mogę rozmawiać, bo niosę trzy torby na górę.",
       "audioWord": "t1-p123-001-word.mp3",
       "audioWordPl": "t1-p123-001-word-pl.mp3",
-      "audioSentence": "t1-p123-001-sentence.mp3"
+      "audioSentence": "t1-p123-001-sentence.mp3",
+      "polishAudio": "W tej chwili"
     },
     {
       "id": "t1-p123-002",
       "english": "B four",
-      "polish": "Wcześniej",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Wcześniej (skrót)",
+      "sentenceEn": "B4 we leave, I need to find my keys.",
+      "sentencePl": "Zanim wyjdziemy, muszę znaleźć klucze.",
       "audioWord": "t1-p123-002-word.mp3",
       "audioWordPl": "t1-p123-002-word-pl.mp3",
-      "audioSentence": "t1-p123-002-sentence.mp3"
+      "audioSentence": "t1-p123-002-sentence.mp3",
+      "polishAudio": "Wcześniej"
     },
     {
       "id": "t1-p123-003",
       "english": "B four N",
       "polish": "Narka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "B4N, babe—good luck with your first driving lesson.",
+      "sentencePl": "Narka, kochanie — powodzenia na pierwszej lekcji jazdy.",
       "audioWord": "t1-p123-003-word.mp3",
       "audioWordPl": "t1-p123-003-word-pl.mp3",
-      "audioSentence": "t1-p123-003-sentence.mp3"
+      "audioSentence": "t1-p123-003-sentence.mp3",
+      "polishAudio": "Narka"
     },
     {
       "id": "t1-p123-004",
       "english": "BBS",
-      "polish": "Niedługo wracam",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Niedługo wracam (skrót)",
+      "sentenceEn": "BBS, my phone's ringing and it could be Mum.",
+      "sentencePl": "Zaraz wracam, dzwoni telefon i to może być mama.",
       "audioWord": "t1-p123-004-word.mp3",
       "audioWordPl": "t1-p123-004-word-pl.mp3",
-      "audioSentence": "t1-p123-004-sentence.mp3"
+      "audioSentence": "t1-p123-004-sentence.mp3",
+      "polishAudio": "Niedługo wracam"
     },
     {
       "id": "t1-p123-005",
       "english": "CWOT",
-      "polish": "Kompletna strata czasu",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Kompletna strata czasu (skrót)",
+      "sentenceEn": "That group chat was CWOT, except for your joke.",
+      "sentencePl": "Ten czat grupowy był kompletną stratą czasu, poza twoim żartem.",
       "audioWord": "t1-p123-005-word.mp3",
       "audioWordPl": "t1-p123-005-word-pl.mp3",
-      "audioSentence": "t1-p123-005-sentence.mp3"
+      "audioSentence": "t1-p123-005-sentence.mp3",
+      "polishAudio": "Kompletna strata czasu"
     },
     {
       "id": "t1-p123-006",
       "english": "G T G",
-      "polish": "Muszę Iść",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Muszę iść (skrót)",
+      "sentenceEn": "Sorry, GTG—the taxi is waiting outside.",
+      "sentencePl": "Przepraszam, muszę iść — taksówka czeka na zewnątrz.",
       "audioWord": "t1-p123-006-word.mp3",
       "audioWordPl": "t1-p123-006-word-pl.mp3",
-      "audioSentence": "t1-p123-006-sentence.mp3"
+      "audioSentence": "t1-p123-006-sentence.mp3",
+      "polishAudio": "Muszę iść"
     },
     {
       "id": "t1-p123-007",
       "english": "Later",
-      "polish": "Później",
+      "polish": "Później; do późniejszego (skrót)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p123-007-word.mp3",
       "audioWordPl": "t1-p123-007-word-pl.mp3",
-      "audioSentence": "t1-p123-007-sentence.mp3"
+      "audioSentence": "t1-p123-007-sentence.mp3",
+      "polishAudio": "Później"
     },
     {
       "id": "t1-p123-008",
       "english": "OMW",
-      "polish": "W drodze",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "W drodze (skrót)",
+      "sentenceEn": "OMW, I grabbed your favorite snacks from the shop.",
+      "sentencePl": "Jestem w drodze, kupiłem ci w sklepie twoje ulubione przekąski.",
       "audioWord": "t1-p123-008-word.mp3",
       "audioWordPl": "t1-p123-008-word-pl.mp3",
-      "audioSentence": "t1-p123-008-sentence.mp3"
+      "audioSentence": "t1-p123-008-sentence.mp3",
+      "polishAudio": "W drodze"
     },
     {
       "id": "t1-p123-009",
       "english": "TTYL",
-      "polish": "Pogadamy później",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Pogadamy później (skrót)",
+      "sentenceEn": "TTYL, sis—I promised I'd help with dinner.",
+      "sentencePl": "Pogadamy później, siostra — obiecałem, że pomogę przy kolacji.",
       "audioWord": "t1-p123-009-word.mp3",
       "audioWordPl": "t1-p123-009-word-pl.mp3",
-      "audioSentence": "t1-p123-009-sentence.mp3"
+      "audioSentence": "t1-p123-009-sentence.mp3",
+      "polishAudio": "Pogadamy później"
     },
     {
       "id": "t1-p123-010",
       "english": "Wait",
-      "polish": "Czekaj",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Czekaj (skrót)",
+      "sentenceEn": "Wait, I left my jacket in the cinema.",
+      "sentencePl": "Czekaj, zostawiłem kurtkę w kinie.",
       "audioWord": "t1-p123-010-word.mp3",
       "audioWordPl": "t1-p123-010-word-pl.mp3",
-      "audioSentence": "t1-p123-010-sentence.mp3"
+      "audioSentence": "t1-p123-010-sentence.mp3",
+      "polishAudio": "Czekaj"
     }
   ]
 }

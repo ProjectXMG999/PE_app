@@ -9,102 +9,112 @@
     {
       "id": "t1-p251-001",
       "english": "ETA",
-      "polish": "Oczekiwany czas przyjazdu",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Oczekiwany czas przyjazdu (skrót)",
+      "sentenceEn": "Uber says the driver's ETA is six minutes—please wait downstairs.",
+      "sentencePl": "Uber podaje, że kierowca będzie za sześć minut — poczekaj proszę na dole.",
       "audioWord": "t1-p251-001-word.mp3",
       "audioWordPl": "t1-p251-001-word-pl.mp3",
-      "audioSentence": "t1-p251-001-sentence.mp3"
+      "audioSentence": "t1-p251-001-sentence.mp3",
+      "polishAudio": "Oczekiwany czas przyjazdu"
     },
     {
       "id": "t1-p251-002",
       "english": "B two B",
-      "polish": "Biznes z biznesem",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Biznes z biznesem (skrót)",
+      "sentenceEn": "That LinkedIn post brought us three B2B leads already.",
+      "sentencePl": "Ten post na LinkedInie przyniósł nam już trzy kontakty biznesowe.",
       "audioWord": "t1-p251-002-word.mp3",
       "audioWordPl": "t1-p251-002-word-pl.mp3",
-      "audioSentence": "t1-p251-002-sentence.mp3"
+      "audioSentence": "t1-p251-002-sentence.mp3",
+      "polishAudio": "Biznes z biznesem"
     },
     {
       "id": "t1-p251-003",
       "english": "B two C",
-      "polish": "Biznes z konsumentem",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Biznes z konsumentem (skrót)",
+      "sentenceEn": "You're selling socks to people, so relax—it's B2C.",
+      "sentencePl": "Sprzedajesz skarpetki ludziom, więc spokojnie — to biznes z konsumentem.",
       "audioWord": "t1-p251-003-word.mp3",
       "audioWordPl": "t1-p251-003-word-pl.mp3",
-      "audioSentence": "t1-p251-003-sentence.mp3"
+      "audioSentence": "t1-p251-003-sentence.mp3",
+      "polishAudio": "Biznes z konsumentem"
     },
     {
       "id": "t1-p251-004",
       "english": "CEO",
-      "polish": "Dyrektor generalny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Dyrektor generalny (skrót)",
+      "sentenceEn": "The CEO joined our Zoom call, so nobody joked around.",
+      "sentencePl": "CEO dołączył do naszego spotkania na Zoomie, więc nikt nie żartował.",
       "audioWord": "t1-p251-004-word.mp3",
       "audioWordPl": "t1-p251-004-word-pl.mp3",
-      "audioSentence": "t1-p251-004-sentence.mp3"
+      "audioSentence": "t1-p251-004-sentence.mp3",
+      "polishAudio": "Dyrektor generalny"
     },
     {
       "id": "t1-p251-005",
       "english": "CSO",
-      "polish": "Dyrektor ds. Sprzedaży",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Dyrektor ds. sprzedaży (skrót)",
+      "sentenceEn": "The CSO liked our sales numbers on Salesforce today.",
+      "sentencePl": "Dyrektor ds. sprzedaży polubił dziś nasze wyniki sprzedaży w Salesforce.",
       "audioWord": "t1-p251-005-word.mp3",
       "audioWordPl": "t1-p251-005-word-pl.mp3",
-      "audioSentence": "t1-p251-005-sentence.mp3"
+      "audioSentence": "t1-p251-005-sentence.mp3",
+      "polishAudio": "Dyrektor ds. sprzedaży"
     },
     {
       "id": "t1-p251-006",
       "english": "HR",
-      "polish": "Zasoby ludzkie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Zasoby ludzkie; kadry (skrót)",
+      "sentenceEn": "HR called me back, so maybe I didn't mess up.",
+      "sentencePl": "HR do mnie oddzwonił, więc może jednak niczego nie zepsułem.",
       "audioWord": "t1-p251-006-word.mp3",
       "audioWordPl": "t1-p251-006-word-pl.mp3",
-      "audioSentence": "t1-p251-006-sentence.mp3"
+      "audioSentence": "t1-p251-006-sentence.mp3",
+      "polishAudio": "Zasoby ludzkie"
     },
     {
       "id": "t1-p251-007",
       "english": "OOO",
-      "polish": "Poza biurem",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Poza biurem (skrót)",
+      "sentenceEn": "Just so you know, I'm OOO Friday—please cover the call?",
+      "sentencePl": "Tak tylko daję znać: w piątek jestem poza biurem — możesz przejąć rozmowę?",
       "audioWord": "t1-p251-007-word.mp3",
       "audioWordPl": "t1-p251-007-word-pl.mp3",
-      "audioSentence": "t1-p251-007-sentence.mp3"
+      "audioSentence": "t1-p251-007-sentence.mp3",
+      "polishAudio": "Poza biurem"
     },
     {
       "id": "t1-p251-008",
       "english": "N/A",
-      "polish": "Niedostępny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Niedostępny (skrót)",
+      "sentenceEn": "Late checkout is N/A for my booking, which is annoying.",
+      "sentencePl": "Późne wymeldowanie jest niedostępne dla mojej rezerwacji, co jest irytujące.",
       "audioWord": "t1-p251-008-word.mp3",
       "audioWordPl": "t1-p251-008-word-pl.mp3",
-      "audioSentence": "t1-p251-008-sentence.mp3"
+      "audioSentence": "t1-p251-008-sentence.mp3",
+      "polishAudio": "Niedostępny"
     },
     {
       "id": "t1-p251-009",
       "english": "PA",
-      "polish": "Asystent",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Asystent (skrót)",
+      "sentenceEn": "Ask your PA—they remember your schedule better than you.",
+      "sentencePl": "Zapytaj swojego asystenta — pamięta twój grafik lepiej niż ty.",
       "audioWord": "t1-p251-009-word.mp3",
       "audioWordPl": "t1-p251-009-word-pl.mp3",
-      "audioSentence": "t1-p251-009-sentence.mp3"
+      "audioSentence": "t1-p251-009-sentence.mp3",
+      "polishAudio": "Asystent"
     },
     {
       "id": "t1-p251-010",
       "english": "PR",
-      "polish": "Relacje publiczne",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Relacje publiczne (skrót)",
+      "sentenceEn": "We need better PR after that awkward interview.",
+      "sentencePl": "Potrzebujemy lepszego PR po tym niezręcznym wywiadzie.",
       "audioWord": "t1-p251-010-word.mp3",
       "audioWordPl": "t1-p251-010-word-pl.mp3",
-      "audioSentence": "t1-p251-010-sentence.mp3"
+      "audioSentence": "t1-p251-010-sentence.mp3",
+      "polishAudio": "Relacje publiczne"
     }
   ]
 }

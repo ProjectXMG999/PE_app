@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p551-001-word.mp3",
       "audioWordPl": "t1-p551-001-word-pl.mp3",
-      "audioSentence": "t1-p551-001-sentence.mp3"
+      "audioSentence": "t1-p551-001-sentence.mp3",
+      "polishAudio": "Poddawać się"
     },
     {
       "id": "t1-p551-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p551-002-word.mp3",
       "audioWordPl": "t1-p551-002-word-pl.mp3",
-      "audioSentence": "t1-p551-002-sentence.mp3"
+      "audioSentence": "t1-p551-002-sentence.mp3",
+      "polishAudio": "Towarzyszyć"
     },
     {
       "id": "t1-p551-003",
@@ -34,37 +36,41 @@
       "sentencePl": null,
       "audioWord": "t1-p551-003-word.mp3",
       "audioWordPl": "t1-p551-003-word-pl.mp3",
-      "audioSentence": "t1-p551-003-sentence.mp3"
+      "audioSentence": "t1-p551-003-sentence.mp3",
+      "polishAudio": "Hołubić"
     },
     {
       "id": "t1-p551-004",
       "english": "Devote",
-      "polish": "Poświęcać",
+      "polish": "Poświęcać (coś czemuś, dla kogoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p551-004-word.mp3",
       "audioWordPl": "t1-p551-004-word-pl.mp3",
-      "audioSentence": "t1-p551-004-sentence.mp3"
+      "audioSentence": "t1-p551-004-sentence.mp3",
+      "polishAudio": "Poświęcać"
     },
     {
       "id": "t1-p551-005",
       "english": "Empower",
-      "polish": "Umożliwiać",
+      "polish": "Umożliwiać; uprawniać; upoważniać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p551-005-word.mp3",
       "audioWordPl": "t1-p551-005-word-pl.mp3",
-      "audioSentence": "t1-p551-005-sentence.mp3"
+      "audioSentence": "t1-p551-005-sentence.mp3",
+      "polishAudio": "Umożliwiać"
     },
     {
       "id": "t1-p551-006",
       "english": "Encounter",
-      "polish": "Napotkać",
+      "polish": "Napotkać; zetknąć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p551-006-word.mp3",
       "audioWordPl": "t1-p551-006-word-pl.mp3",
-      "audioSentence": "t1-p551-006-sentence.mp3"
+      "audioSentence": "t1-p551-006-sentence.mp3",
+      "polishAudio": "Napotkać"
     },
     {
       "id": "t1-p551-007",
@@ -74,37 +80,41 @@
       "sentencePl": null,
       "audioWord": "t1-p551-007-word.mp3",
       "audioWordPl": "t1-p551-007-word-pl.mp3",
-      "audioSentence": "t1-p551-007-sentence.mp3"
+      "audioSentence": "t1-p551-007-sentence.mp3",
+      "polishAudio": "Faworyzować"
     },
     {
       "id": "t1-p551-008",
       "english": "Hail",
-      "polish": "Pozdrowić",
+      "polish": "Pozdrowić; okrzyknąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p551-008-word.mp3",
       "audioWordPl": "t1-p551-008-word-pl.mp3",
-      "audioSentence": "t1-p551-008-sentence.mp3"
+      "audioSentence": "t1-p551-008-sentence.mp3",
+      "polishAudio": "Pozdrowić"
     },
     {
       "id": "t1-p551-009",
       "english": "Nurse",
-      "polish": "Pielęgnować",
+      "polish": "Pielęgnować; opiekować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p551-009-word.mp3",
       "audioWordPl": "t1-p551-009-word-pl.mp3",
-      "audioSentence": "t1-p551-009-sentence.mp3"
+      "audioSentence": "t1-p551-009-sentence.mp3",
+      "polishAudio": "Pielęgnować"
     },
     {
       "id": "t1-p551-010",
       "english": "Soothe",
-      "polish": "Uspokajać",
+      "polish": "Uspokajać (np. dziecko)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p551-010-word.mp3",
       "audioWordPl": "t1-p551-010-word-pl.mp3",
-      "audioSentence": "t1-p551-010-sentence.mp3"
+      "audioSentence": "t1-p551-010-sentence.mp3",
+      "polishAudio": "Uspokajać"
     },
     {
       "id": "t1-p551-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p551-011-word.mp3",
       "audioWordPl": "t1-p551-011-word-pl.mp3",
-      "audioSentence": "t1-p551-011-sentence.mp3"
+      "audioSentence": "t1-p551-011-sentence.mp3",
+      "polishAudio": "Wstrzymywać"
     },
     {
       "id": "t1-p551-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p551-012-word.mp3",
       "audioWordPl": "t1-p551-012-word-pl.mp3",
-      "audioSentence": "t1-p551-012-sentence.mp3"
+      "audioSentence": "t1-p551-012-sentence.mp3",
+      "polishAudio": "Przeciwstawiać się"
     },
     {
       "id": "t1-p551-013",
       "english": "Dub",
-      "polish": "Nadać przydomek",
+      "polish": "Nadać przydomek; przezywać (najczęściej zabawnie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p551-013-word.mp3",
       "audioWordPl": "t1-p551-013-word-pl.mp3",
-      "audioSentence": "t1-p551-013-sentence.mp3"
+      "audioSentence": "t1-p551-013-sentence.mp3",
+      "polishAudio": "Nadać przydomek"
     },
     {
       "id": "t1-p551-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p551-014-word.mp3",
       "audioWordPl": "t1-p551-014-word-pl.mp3",
-      "audioSentence": "t1-p551-014-sentence.mp3"
+      "audioSentence": "t1-p551-014-sentence.mp3",
+      "polishAudio": "Naśladować"
     },
     {
       "id": "t1-p551-015",
       "english": "Succumb",
-      "polish": "Ulec",
+      "polish": "Ulec (czemuś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p551-015-word.mp3",
       "audioWordPl": "t1-p551-015-word-pl.mp3",
-      "audioSentence": "t1-p551-015-sentence.mp3"
+      "audioSentence": "t1-p551-015-sentence.mp3",
+      "polishAudio": "Ulec"
     }
   ]
 }

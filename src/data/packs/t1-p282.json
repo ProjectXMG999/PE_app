@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p282-001-word.mp3",
       "audioWordPl": "t1-p282-001-word-pl.mp3",
-      "audioSentence": "t1-p282-001-sentence.mp3"
+      "audioSentence": "t1-p282-001-sentence.mp3",
+      "polishAudio": "Pobierać opłatę"
     },
     {
       "id": "t1-p282-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p282-002-word.mp3",
       "audioWordPl": "t1-p282-002-word-pl.mp3",
-      "audioSentence": "t1-p282-002-sentence.mp3"
+      "audioSentence": "t1-p282-002-sentence.mp3",
+      "polishAudio": "Móc pozwolić sobie na coś"
     },
     {
       "id": "t1-p282-003",
@@ -34,67 +36,74 @@
       "sentencePl": null,
       "audioWord": "t1-p282-003-word.mp3",
       "audioWordPl": "t1-p282-003-word-pl.mp3",
-      "audioSentence": "t1-p282-003-sentence.mp3"
+      "audioSentence": "t1-p282-003-sentence.mp3",
+      "polishAudio": "Wypłacić pieniądze"
     },
     {
       "id": "t1-p282-004",
       "english": "Purchase",
-      "polish": "Nabywać",
+      "polish": "Nabywać (kupować)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p282-004-word.mp3",
       "audioWordPl": "t1-p282-004-word-pl.mp3",
-      "audioSentence": "t1-p282-004-sentence.mp3"
+      "audioSentence": "t1-p282-004-sentence.mp3",
+      "polishAudio": "Nabywać"
     },
     {
       "id": "t1-p282-005",
       "english": "Acquire",
-      "polish": "Nabywać",
+      "polish": "Nabywać; wchodzić w posiadanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p282-005-word.mp3",
       "audioWordPl": "t1-p282-005-word-pl.mp3",
-      "audioSentence": "t1-p282-005-sentence.mp3"
+      "audioSentence": "t1-p282-005-sentence.mp3",
+      "polishAudio": "Nabywać"
     },
     {
       "id": "t1-p282-006",
       "english": "Cash",
-      "polish": "Zrealizować",
+      "polish": "Zrealizować (np. czek)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p282-006-word.mp3",
       "audioWordPl": "t1-p282-006-word-pl.mp3",
-      "audioSentence": "t1-p282-006-sentence.mp3"
+      "audioSentence": "t1-p282-006-sentence.mp3",
+      "polishAudio": "Zrealizować"
     },
     {
       "id": "t1-p282-007",
       "english": "Expend",
-      "polish": "Wydatkować",
+      "polish": "Wydatkować; zużywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p282-007-word.mp3",
       "audioWordPl": "t1-p282-007-word-pl.mp3",
-      "audioSentence": "t1-p282-007-sentence.mp3"
+      "audioSentence": "t1-p282-007-sentence.mp3",
+      "polishAudio": "Wydatkować"
     },
     {
       "id": "t1-p282-008",
       "english": "Gain",
-      "polish": "Zyskiwać",
+      "polish": "Zyskiwać; uzyskiwać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p282-008-word.mp3",
       "audioWordPl": "t1-p282-008-word-pl.mp3",
-      "audioSentence": "t1-p282-008-sentence.mp3"
+      "audioSentence": "t1-p282-008-sentence.mp3",
+      "polishAudio": "Zyskiwać"
     },
     {
       "id": "t1-p282-009",
       "english": "Repay",
-      "polish": "Odpłacać",
+      "polish": "Odpłacać; rewanżować się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p282-009-word.mp3",
       "audioWordPl": "t1-p282-009-word-pl.mp3",
-      "audioSentence": "t1-p282-009-sentence.mp3"
+      "audioSentence": "t1-p282-009-sentence.mp3",
+      "polishAudio": "Odpłacać"
     },
     {
       "id": "t1-p282-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p282-010-word.mp3",
       "audioWordPl": "t1-p282-010-word-pl.mp3",
-      "audioSentence": "t1-p282-010-sentence.mp3"
+      "audioSentence": "t1-p282-010-sentence.mp3",
+      "polishAudio": "Oszczędzać"
     },
     {
       "id": "t1-p282-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p282-011-word.mp3",
       "audioWordPl": "t1-p282-011-word-pl.mp3",
-      "audioSentence": "t1-p282-011-sentence.mp3"
+      "audioSentence": "t1-p282-011-sentence.mp3",
+      "polishAudio": "Dawać napiwek"
     },
     {
       "id": "t1-p282-012",
       "english": "Tout",
-      "polish": "Nagabywać",
+      "polish": "Nagabywać; nakłaniać (do zakupu)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p282-012-word.mp3",
       "audioWordPl": "t1-p282-012-word-pl.mp3",
-      "audioSentence": "t1-p282-012-sentence.mp3"
+      "audioSentence": "t1-p282-012-sentence.mp3",
+      "polishAudio": "Nagabywać"
     },
     {
       "id": "t1-p282-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p282-013-word.mp3",
       "audioWordPl": "t1-p282-013-word-pl.mp3",
-      "audioSentence": "t1-p282-013-sentence.mp3"
+      "audioSentence": "t1-p282-013-sentence.mp3",
+      "polishAudio": "Zmonetyzować"
     },
     {
       "id": "t1-p282-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p282-014-word.mp3",
       "audioWordPl": "t1-p282-014-word-pl.mp3",
-      "audioSentence": "t1-p282-014-sentence.mp3"
+      "audioSentence": "t1-p282-014-sentence.mp3",
+      "polishAudio": "Wypłacić wynagrodzenie"
     },
     {
       "id": "t1-p282-015",
       "english": "Overpay",
-      "polish": "Przepłacić",
+      "polish": "Przepłacić; nadpłacić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p282-015-word.mp3",
       "audioWordPl": "t1-p282-015-word-pl.mp3",
-      "audioSentence": "t1-p282-015-sentence.mp3"
+      "audioSentence": "t1-p282-015-sentence.mp3",
+      "polishAudio": "Przepłacić"
     }
   ]
 }

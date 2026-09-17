@@ -10,101 +10,111 @@
       "id": "t1-p029-001",
       "english": "Bus",
       "polish": "Autobus",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Is this bus going downtown?",
+      "sentencePl": "Czy ten autobus jedzie do centrum?",
       "audioWord": "t1-p029-001-word.mp3",
       "audioWordPl": "t1-p029-001-word-pl.mp3",
-      "audioSentence": "t1-p029-001-sentence.mp3"
+      "audioSentence": "t1-p029-001-sentence.mp3",
+      "polishAudio": "Autobus"
     },
     {
       "id": "t1-p029-002",
       "english": "Road",
       "polish": "Droga",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Watch the road while driving.",
+      "sentencePl": "Uważaj na drogę podczas jazdy.",
       "audioWord": "t1-p029-002-word.mp3",
       "audioWordPl": "t1-p029-002-word-pl.mp3",
-      "audioSentence": "t1-p029-002-sentence.mp3"
+      "audioSentence": "t1-p029-002-sentence.mp3",
+      "polishAudio": "Droga"
     },
     {
       "id": "t1-p029-003",
       "english": "Flight",
       "polish": "Lot",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My flight leaves at six.",
+      "sentencePl": "Mój lot odlatuje o szóstej.",
       "audioWord": "t1-p029-003-word.mp3",
       "audioWordPl": "t1-p029-003-word-pl.mp3",
-      "audioSentence": "t1-p029-003-sentence.mp3"
+      "audioSentence": "t1-p029-003-sentence.mp3",
+      "polishAudio": "Lot"
     },
     {
       "id": "t1-p029-004",
       "english": "Airport",
       "polish": "Lotnisko",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Is the airport really this far?",
+      "sentencePl": "Czy lotnisko naprawdę jest tak daleko?",
       "audioWord": "t1-p029-004-word.mp3",
       "audioWordPl": "t1-p029-004-word-pl.mp3",
-      "audioSentence": "t1-p029-004-sentence.mp3"
+      "audioSentence": "t1-p029-004-sentence.mp3",
+      "polishAudio": "Lotnisko"
     },
     {
       "id": "t1-p029-005",
       "english": "Train",
       "polish": "Pociąg",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Buy a train ticket here.",
+      "sentencePl": "Kup tutaj bilet na pociąg.",
       "audioWord": "t1-p029-005-word.mp3",
       "audioWordPl": "t1-p029-005-word-pl.mp3",
-      "audioSentence": "t1-p029-005-sentence.mp3"
+      "audioSentence": "t1-p029-005-sentence.mp3",
+      "polishAudio": "Pociąg"
     },
     {
       "id": "t1-p029-006",
       "english": "Subway",
       "polish": "Metro",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Where is the nearest subway station?",
+      "sentencePl": "Gdzie jest najbliższa stacja metra?",
       "audioWord": "t1-p029-006-word.mp3",
       "audioWordPl": "t1-p029-006-word-pl.mp3",
-      "audioSentence": "t1-p029-006-sentence.mp3"
+      "audioSentence": "t1-p029-006-sentence.mp3",
+      "polishAudio": "Metro"
     },
     {
       "id": "t1-p029-007",
       "english": "Bike",
       "polish": "Rower",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can I borrow your bike?",
+      "sentencePl": "Mogę pożyczyć twój rower?",
       "audioWord": "t1-p029-007-word.mp3",
       "audioWordPl": "t1-p029-007-word-pl.mp3",
-      "audioSentence": "t1-p029-007-sentence.mp3"
+      "audioSentence": "t1-p029-007-sentence.mp3",
+      "polishAudio": "Rower"
     },
     {
       "id": "t1-p029-008",
       "english": "Car",
       "polish": "Samochód",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Your car smells like French fries.",
+      "sentencePl": "W twoim samochodzie pachnie frytkami.",
       "audioWord": "t1-p029-008-word.mp3",
       "audioWordPl": "t1-p029-008-word-pl.mp3",
-      "audioSentence": "t1-p029-008-sentence.mp3"
+      "audioSentence": "t1-p029-008-sentence.mp3",
+      "polishAudio": "Samochód"
     },
     {
       "id": "t1-p029-009",
       "english": "Airplane",
       "polish": "Samolot",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Did you see that airplane?",
+      "sentencePl": "Widziałeś ten samolot?",
       "audioWord": "t1-p029-009-word.mp3",
       "audioWordPl": "t1-p029-009-word-pl.mp3",
-      "audioSentence": "t1-p029-009-sentence.mp3"
+      "audioSentence": "t1-p029-009-sentence.mp3",
+      "polishAudio": "Samolot"
     },
     {
       "id": "t1-p029-010",
       "english": "Ship",
       "polish": "Statek",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Wave at the ship before it leaves.",
+      "sentencePl": "Pomachaj statkowi, zanim odpłynie.",
       "audioWord": "t1-p029-010-word.mp3",
       "audioWordPl": "t1-p029-010-word-pl.mp3",
-      "audioSentence": "t1-p029-010-sentence.mp3"
+      "audioSentence": "t1-p029-010-sentence.mp3",
+      "polishAudio": "Statek"
     }
   ]
 }

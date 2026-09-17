@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p777-001-word.mp3",
       "audioWordPl": "t1-p777-001-word-pl.mp3",
-      "audioSentence": "t1-p777-001-sentence.mp3"
+      "audioSentence": "t1-p777-001-sentence.mp3",
+      "polishAudio": "Kontrowersja"
     },
     {
       "id": "t1-p777-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p777-002-word.mp3",
       "audioWordPl": "t1-p777-002-word-pl.mp3",
-      "audioSentence": "t1-p777-002-sentence.mp3"
+      "audioSentence": "t1-p777-002-sentence.mp3",
+      "polishAudio": "Korespondent"
     },
     {
       "id": "t1-p777-003",
       "english": "Footage",
-      "polish": "Materiał",
+      "polish": "Materiał (filmowy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p777-003-word.mp3",
       "audioWordPl": "t1-p777-003-word-pl.mp3",
-      "audioSentence": "t1-p777-003-sentence.mp3"
+      "audioSentence": "t1-p777-003-sentence.mp3",
+      "polishAudio": "Materiał"
     },
     {
       "id": "t1-p777-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p777-004-word.mp3",
       "audioWordPl": "t1-p777-004-word-pl.mp3",
-      "audioSentence": "t1-p777-004-sentence.mp3"
+      "audioSentence": "t1-p777-004-sentence.mp3",
+      "polishAudio": "Nagłówek"
     },
     {
       "id": "t1-p777-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p777-005-word.mp3",
       "audioWordPl": "t1-p777-005-word-pl.mp3",
-      "audioSentence": "t1-p777-005-sentence.mp3"
+      "audioSentence": "t1-p777-005-sentence.mp3",
+      "polishAudio": "Nagranie"
     },
     {
       "id": "t1-p777-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p777-006-word.mp3",
       "audioWordPl": "t1-p777-006-word-pl.mp3",
-      "audioSentence": "t1-p777-006-sentence.mp3"
+      "audioSentence": "t1-p777-006-sentence.mp3",
+      "polishAudio": "Napisy"
     },
     {
       "id": "t1-p777-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p777-007-word.mp3",
       "audioWordPl": "t1-p777-007-word-pl.mp3",
-      "audioSentence": "t1-p777-007-sentence.mp3"
+      "audioSentence": "t1-p777-007-sentence.mp3",
+      "polishAudio": "Obsada"
     },
     {
       "id": "t1-p777-008",
       "english": "Spectator",
-      "polish": "Oglądający",
+      "polish": "Oglądający; widz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p777-008-word.mp3",
       "audioWordPl": "t1-p777-008-word-pl.mp3",
-      "audioSentence": "t1-p777-008-sentence.mp3"
+      "audioSentence": "t1-p777-008-sentence.mp3",
+      "polishAudio": "Oglądający"
     },
     {
       "id": "t1-p777-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p777-009-word.mp3",
       "audioWordPl": "t1-p777-009-word-pl.mp3",
-      "audioSentence": "t1-p777-009-sentence.mp3"
+      "audioSentence": "t1-p777-009-sentence.mp3",
+      "polishAudio": "Ogłoszenie"
     },
     {
       "id": "t1-p777-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p777-010-word.mp3",
       "audioWordPl": "t1-p777-010-word-pl.mp3",
-      "audioSentence": "t1-p777-010-sentence.mp3"
+      "audioSentence": "t1-p777-010-sentence.mp3",
+      "polishAudio": "Operator"
     },
     {
       "id": "t1-p777-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p777-011-word.mp3",
       "audioWordPl": "t1-p777-011-word-pl.mp3",
-      "audioSentence": "t1-p777-011-sentence.mp3"
+      "audioSentence": "t1-p777-011-sentence.mp3",
+      "polishAudio": "Paparazzi"
     },
     {
       "id": "t1-p777-012",
       "english": "Preview",
-      "polish": "Podgląd",
+      "polish": "Podgląd; zapowiedź (np. filmu, serialu)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p777-012-word.mp3",
       "audioWordPl": "t1-p777-012-word-pl.mp3",
-      "audioSentence": "t1-p777-012-sentence.mp3"
+      "audioSentence": "t1-p777-012-sentence.mp3",
+      "polishAudio": "Podgląd"
     },
     {
       "id": "t1-p777-013",
@@ -134,17 +146,19 @@
       "sentencePl": null,
       "audioWord": "t1-p777-013-word.mp3",
       "audioWordPl": "t1-p777-013-word-pl.mp3",
-      "audioSentence": "t1-p777-013-sentence.mp3"
+      "audioSentence": "t1-p777-013-sentence.mp3",
+      "polishAudio": "Pokaz"
     },
     {
       "id": "t1-p777-014",
       "english": "Showroom",
-      "polish": "Pokój wystawowy",
+      "polish": "Pokój wystawowy; showroom",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p777-014-word.mp3",
       "audioWordPl": "t1-p777-014-word-pl.mp3",
-      "audioSentence": "t1-p777-014-sentence.mp3"
+      "audioSentence": "t1-p777-014-sentence.mp3",
+      "polishAudio": "Pokój wystawowy"
     },
     {
       "id": "t1-p777-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p777-015-word.mp3",
       "audioWordPl": "t1-p777-015-word-pl.mp3",
-      "audioSentence": "t1-p777-015-sentence.mp3"
+      "audioSentence": "t1-p777-015-sentence.mp3",
+      "polishAudio": "Popularność"
     }
   ]
 }

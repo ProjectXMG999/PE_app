@@ -10,51 +10,56 @@
       "id": "t1-p188-001",
       "english": "Average",
       "polish": "Przeciętny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "For that price, the meal was simply average.",
+      "sentencePl": "Za tę cenę obiad był po prostu przeciętny.",
       "audioWord": "t1-p188-001-word.mp3",
       "audioWordPl": "t1-p188-001-word-pl.mp3",
-      "audioSentence": "t1-p188-001-sentence.mp3"
+      "audioSentence": "t1-p188-001-sentence.mp3",
+      "polishAudio": "Przeciętny"
     },
     {
       "id": "t1-p188-002",
       "english": "Decent",
-      "polish": "Przyzwoity",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Przyzwoity; skromny",
+      "sentenceEn": "It was a decent dessert—you actually stopped complaining.",
+      "sentencePl": "To był przyzwoity deser, aż przestałeś narzekać.",
       "audioWord": "t1-p188-002-word.mp3",
       "audioWordPl": "t1-p188-002-word-pl.mp3",
-      "audioSentence": "t1-p188-002-sentence.mp3"
+      "audioSentence": "t1-p188-002-sentence.mp3",
+      "polishAudio": "Przyzwoity"
     },
     {
       "id": "t1-p188-003",
       "english": "Known",
-      "polish": "Wiadomy",
+      "polish": "Wiadomy; znany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p188-003-word.mp3",
       "audioWordPl": "t1-p188-003-word-pl.mp3",
-      "audioSentence": "t1-p188-003-sentence.mp3"
+      "audioSentence": "t1-p188-003-sentence.mp3",
+      "polishAudio": "Wiadomy"
     },
     {
       "id": "t1-p188-004",
       "english": "Unknown",
-      "polish": "Nieznany",
+      "polish": "Nieznany; niewiadomy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p188-004-word.mp3",
       "audioWordPl": "t1-p188-004-word-pl.mp3",
-      "audioSentence": "t1-p188-004-sentence.mp3"
+      "audioSentence": "t1-p188-004-sentence.mp3",
+      "polishAudio": "Nieznany"
     },
     {
       "id": "t1-p188-005",
       "english": "Available",
       "polish": "Dostępny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Is the soup of the day still available?",
+      "sentencePl": "Czy dostępna jest jeszcze zupa dnia?",
       "audioWord": "t1-p188-005-word.mp3",
       "audioWordPl": "t1-p188-005-word-pl.mp3",
-      "audioSentence": "t1-p188-005-sentence.mp3"
+      "audioSentence": "t1-p188-005-sentence.mp3",
+      "polishAudio": "Dostępny"
     },
     {
       "id": "t1-p188-006",
@@ -64,97 +69,107 @@
       "sentencePl": null,
       "audioWord": "t1-p188-006-word.mp3",
       "audioWordPl": "t1-p188-006-word-pl.mp3",
-      "audioSentence": "t1-p188-006-sentence.mp3"
+      "audioSentence": "t1-p188-006-sentence.mp3",
+      "polishAudio": "Zwyczajny"
     },
     {
       "id": "t1-p188-007",
       "english": "Cozy",
       "polish": "Przytulny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Let’s sit there; it’s quieter and cozier.",
+      "sentencePl": "Usiądźmy tam, jest ciszej i bardziej przytulnie.",
       "audioWord": "t1-p188-007-word.mp3",
       "audioWordPl": "t1-p188-007-word-pl.mp3",
-      "audioSentence": "t1-p188-007-sentence.mp3"
+      "audioSentence": "t1-p188-007-sentence.mp3",
+      "polishAudio": "Przytulny"
     },
     {
       "id": "t1-p188-008",
       "english": "Well-known",
       "polish": "Dobrze znany",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "It’s a well-known place, and you still ask where the entrance is.",
+      "sentencePl": "Dobrze znany lokal, a ty nadal pytasz o wejście.",
       "audioWord": "t1-p188-008-word.mp3",
       "audioWordPl": "t1-p188-008-word-pl.mp3",
-      "audioSentence": "t1-p188-008-sentence.mp3"
+      "audioSentence": "t1-p188-008-sentence.mp3",
+      "polishAudio": "Dobrze znany"
     },
     {
       "id": "t1-p188-009",
       "english": "Four-star",
       "polish": "Czterogwiazdkowy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You ordered fries at a four-star restaurant too.",
+      "sentencePl": "W czterogwiazdkowej restauracji też zamówiłeś frytki.",
       "audioWord": "t1-p188-009-word.mp3",
       "audioWordPl": "t1-p188-009-word-pl.mp3",
-      "audioSentence": "t1-p188-009-sentence.mp3"
+      "audioSentence": "t1-p188-009-sentence.mp3",
+      "polishAudio": "Czterogwiazdkowy"
     },
     {
       "id": "t1-p188-010",
       "english": "Recommended",
       "polish": "Polecany",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You chose the recommended pasta and gave me half.",
+      "sentencePl": "Wybrałeś polecany makaron i oddałeś mi połowę.",
       "audioWord": "t1-p188-010-word.mp3",
       "audioWordPl": "t1-p188-010-word-pl.mp3",
-      "audioSentence": "t1-p188-010-sentence.mp3"
+      "audioSentence": "t1-p188-010-sentence.mp3",
+      "polishAudio": "Polecany"
     },
     {
       "id": "t1-p188-011",
       "english": "Booked",
       "polish": "Zarezerwowany",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I booked us a table so you wouldn’t have to wait.",
+      "sentencePl": "Zarezerwowałam nam stolik, żebyś nie musiał czekać.",
       "audioWord": "t1-p188-011-word.mp3",
       "audioWordPl": "t1-p188-011-word-pl.mp3",
-      "audioSentence": "t1-p188-011-sentence.mp3"
+      "audioSentence": "t1-p188-011-sentence.mp3",
+      "polishAudio": "Zarezerwowany"
     },
     {
       "id": "t1-p188-012",
       "english": "Top-rated",
       "polish": "Najwyżej oceniany",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Is that top-rated pizzeria really that good?",
+      "sentencePl": "Ta najwyżej oceniana pizzeria jest naprawdę tak dobra?",
       "audioWord": "t1-p188-012-word.mp3",
       "audioWordPl": "t1-p188-012-word-pl.mp3",
-      "audioSentence": "t1-p188-012-sentence.mp3"
+      "audioSentence": "t1-p188-012-sentence.mp3",
+      "polishAudio": "Najwyżej oceniany"
     },
     {
       "id": "t1-p188-013",
       "english": "High-quality",
       "polish": "Wysokiej jakości",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You can tell they use high-quality ingredients.",
+      "sentencePl": "Widać, że używają wysokiej jakości składników.",
       "audioWord": "t1-p188-013-word.mp3",
       "audioWordPl": "t1-p188-013-word-pl.mp3",
-      "audioSentence": "t1-p188-013-sentence.mp3"
+      "audioSentence": "t1-p188-013-sentence.mp3",
+      "polishAudio": "Wysokiej jakości"
     },
     {
       "id": "t1-p188-014",
       "english": "Five-star",
       "polish": "Pięciogwiazdkowy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I’ve never eaten at a five-star restaurant.",
+      "sentencePl": "Nigdy nie jadłem w pięciogwiazdkowej restauracji.",
       "audioWord": "t1-p188-014-word.mp3",
       "audioWordPl": "t1-p188-014-word-pl.mp3",
-      "audioSentence": "t1-p188-014-sentence.mp3"
+      "audioSentence": "t1-p188-014-sentence.mp3",
+      "polishAudio": "Pięciogwiazdkowy"
     },
     {
       "id": "t1-p188-015",
       "english": "Little-known",
       "polish": "Słabo znany",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "It’s a little-known place, and you already know the owner.",
+      "sentencePl": "Słabo znane miejsce, a ty już znasz właściciela.",
       "audioWord": "t1-p188-015-word.mp3",
       "audioWordPl": "t1-p188-015-word-pl.mp3",
-      "audioSentence": "t1-p188-015-sentence.mp3"
+      "audioSentence": "t1-p188-015-sentence.mp3",
+      "polishAudio": "Słabo znany"
     }
   ]
 }

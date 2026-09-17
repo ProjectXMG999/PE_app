@@ -10,101 +10,111 @@
       "id": "t1-p055-001",
       "english": "Fact",
       "polish": "Fakt",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Wait, is that really a fact?",
+      "sentencePl": "Chwila, to naprawdę fakt?",
       "audioWord": "t1-p055-001-word.mp3",
       "audioWordPl": "t1-p055-001-word-pl.mp3",
-      "audioSentence": "t1-p055-001-sentence.mp3"
+      "audioSentence": "t1-p055-001-sentence.mp3",
+      "polishAudio": "Fakt"
     },
     {
       "id": "t1-p055-002",
       "english": "Movie",
       "polish": "Film",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I cried at the end of that movie.",
+      "sentencePl": "Popłakałem/am się na końcu tego filmu.",
       "audioWord": "t1-p055-002-word.mp3",
       "audioWordPl": "t1-p055-002-word-pl.mp3",
-      "audioSentence": "t1-p055-002-sentence.mp3"
+      "audioSentence": "t1-p055-002-sentence.mp3",
+      "polishAudio": "Film"
     },
     {
       "id": "t1-p055-003",
       "english": "Newspaper",
       "polish": "Gazeta",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I saw it in the newspaper.",
+      "sentencePl": "Widziałem to w gazecie.",
       "audioWord": "t1-p055-003-word.mp3",
       "audioWordPl": "t1-p055-003-word-pl.mp3",
-      "audioSentence": "t1-p055-003-sentence.mp3"
+      "audioSentence": "t1-p055-003-sentence.mp3",
+      "polishAudio": "Gazeta"
     },
     {
       "id": "t1-p055-004",
       "english": "Information",
       "polish": "Informacja",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Where did you find that information?",
+      "sentencePl": "Gdzie znalazłeś/-aś tę informację?",
       "audioWord": "t1-p055-004-word.mp3",
       "audioWordPl": "t1-p055-004-word-pl.mp3",
-      "audioSentence": "t1-p055-004-sentence.mp3"
+      "audioSentence": "t1-p055-004-sentence.mp3",
+      "polishAudio": "Informacja"
     },
     {
       "id": "t1-p055-005",
       "english": "Internet",
       "polish": "Internet",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "No internet? I guess we're talking.",
+      "sentencePl": "Nie ma internetu? No to chyba rozmawiamy.",
       "audioWord": "t1-p055-005-word.mp3",
       "audioWordPl": "t1-p055-005-word-pl.mp3",
-      "audioSentence": "t1-p055-005-sentence.mp3"
+      "audioSentence": "t1-p055-005-sentence.mp3",
+      "polishAudio": "Internet"
     },
     {
       "id": "t1-p055-006",
       "english": "Episode",
-      "polish": "Odcinek",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Odcinek; epizod",
+      "sentenceEn": "Which episode are you watching?",
+      "sentencePl": "Który odcinek oglądasz?",
       "audioWord": "t1-p055-006-word.mp3",
       "audioWordPl": "t1-p055-006-word-pl.mp3",
-      "audioSentence": "t1-p055-006-sentence.mp3"
+      "audioSentence": "t1-p055-006-sentence.mp3",
+      "polishAudio": "Odcinek"
     },
     {
       "id": "t1-p055-007",
       "english": "Radio",
       "polish": "Radio",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Turn the radio down, please.",
+      "sentencePl": "Ścisz radio, proszę.",
       "audioWord": "t1-p055-007-word.mp3",
       "audioWordPl": "t1-p055-007-word-pl.mp3",
-      "audioSentence": "t1-p055-007-sentence.mp3"
+      "audioSentence": "t1-p055-007-sentence.mp3",
+      "polishAudio": "Radio"
     },
     {
       "id": "t1-p055-008",
       "english": "Series",
-      "polish": "Serial",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Serial; seria",
+      "sentenceEn": "I found a series for tonight.",
+      "sentencePl": "Znalazłem/am serial na wieczór.",
       "audioWord": "t1-p055-008-word.mp3",
       "audioWordPl": "t1-p055-008-word-pl.mp3",
-      "audioSentence": "t1-p055-008-sentence.mp3"
+      "audioSentence": "t1-p055-008-sentence.mp3",
+      "polishAudio": "Serial"
     },
     {
       "id": "t1-p055-009",
       "english": "Television",
       "polish": "Telewizja",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I fell asleep in front of the television.",
+      "sentencePl": "Zasnąłem/am przed telewizorem.",
       "audioWord": "t1-p055-009-word.mp3",
       "audioWordPl": "t1-p055-009-word-pl.mp3",
-      "audioSentence": "t1-p055-009-sentence.mp3"
+      "audioSentence": "t1-p055-009-sentence.mp3",
+      "polishAudio": "Telewizja"
     },
     {
       "id": "t1-p055-010",
       "english": "News",
       "polish": "Wiadomości",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Did you hear the news?",
+      "sentencePl": "Słyszałeś wiadomości?",
       "audioWord": "t1-p055-010-word.mp3",
       "audioWordPl": "t1-p055-010-word-pl.mp3",
-      "audioSentence": "t1-p055-010-sentence.mp3"
+      "audioSentence": "t1-p055-010-sentence.mp3",
+      "polishAudio": "Wiadomości"
     }
   ]
 }

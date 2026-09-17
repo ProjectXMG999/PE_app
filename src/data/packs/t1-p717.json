@@ -14,17 +14,19 @@
       "sentencePl": null,
       "audioWord": "t1-p717-001-word.mp3",
       "audioWordPl": "t1-p717-001-word-pl.mp3",
-      "audioSentence": "t1-p717-001-sentence.mp3"
+      "audioSentence": "t1-p717-001-sentence.mp3",
+      "polishAudio": "Na maksa zrelaksowany"
     },
     {
       "id": "t1-p717-002",
       "english": "Buff",
-      "polish": "Miłośnik czegoś",
+      "polish": "Miłośnik czegoś (zwłaszcza w muzyce); fan; znawca",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p717-002-word.mp3",
       "audioWordPl": "t1-p717-002-word-pl.mp3",
-      "audioSentence": "t1-p717-002-sentence.mp3"
+      "audioSentence": "t1-p717-002-sentence.mp3",
+      "polishAudio": "Miłośnik czegoś"
     },
     {
       "id": "t1-p717-003",
@@ -34,47 +36,52 @@
       "sentencePl": null,
       "audioWord": "t1-p717-003-word.mp3",
       "audioWordPl": "t1-p717-003-word-pl.mp3",
-      "audioSentence": "t1-p717-003-sentence.mp3"
+      "audioSentence": "t1-p717-003-sentence.mp3",
+      "polishAudio": "Przenośna wieża grająca"
     },
     {
       "id": "t1-p717-004",
       "english": "Craps",
-      "polish": "Kości",
+      "polish": "Kości (gra)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p717-004-word.mp3",
       "audioWordPl": "t1-p717-004-word-pl.mp3",
-      "audioSentence": "t1-p717-004-sentence.mp3"
+      "audioSentence": "t1-p717-004-sentence.mp3",
+      "polishAudio": "Kości"
     },
     {
       "id": "t1-p717-005",
       "english": "Evergreen",
-      "polish": "Stary kawałek, ale wciąż lubiany",
+      "polish": "Stary kawałek, ale wciąż lubiany (stare, ale jare)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p717-005-word.mp3",
       "audioWordPl": "t1-p717-005-word-pl.mp3",
-      "audioSentence": "t1-p717-005-sentence.mp3"
+      "audioSentence": "t1-p717-005-sentence.mp3",
+      "polishAudio": "Stary kawałek, ale wciąż lubiany"
     },
     {
       "id": "t1-p717-006",
       "english": "Fourth wall",
-      "polish": "Czwarta ściana",
+      "polish": "Czwarta ściana (w filmie i sztuce)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p717-006-word.mp3",
       "audioWordPl": "t1-p717-006-word-pl.mp3",
-      "audioSentence": "t1-p717-006-sentence.mp3"
+      "audioSentence": "t1-p717-006-sentence.mp3",
+      "polishAudio": "Czwarta ściana"
     },
     {
       "id": "t1-p717-007",
       "english": "Tube",
-      "polish": "Tiwik",
+      "polish": "Tiwik; telewizor",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p717-007-word.mp3",
       "audioWordPl": "t1-p717-007-word-pl.mp3",
-      "audioSentence": "t1-p717-007-sentence.mp3"
+      "audioSentence": "t1-p717-007-sentence.mp3",
+      "polishAudio": "Tiwik"
     },
     {
       "id": "t1-p717-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p717-008-word.mp3",
       "audioWordPl": "t1-p717-008-word-pl.mp3",
-      "audioSentence": "t1-p717-008-sentence.mp3"
+      "audioSentence": "t1-p717-008-sentence.mp3",
+      "polishAudio": "Tańczyć pogo"
     },
     {
       "id": "t1-p717-009",
       "english": "Mosh pit",
-      "polish": "Młyn",
+      "polish": "Młyn (pod barierkami na koncercie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p717-009-word.mp3",
       "audioWordPl": "t1-p717-009-word-pl.mp3",
-      "audioSentence": "t1-p717-009-sentence.mp3"
+      "audioSentence": "t1-p717-009-sentence.mp3",
+      "polishAudio": "Młyn"
     },
     {
       "id": "t1-p717-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p717-010-word.mp3",
       "audioWordPl": "t1-p717-010-word-pl.mp3",
-      "audioSentence": "t1-p717-010-sentence.mp3"
+      "audioSentence": "t1-p717-010-sentence.mp3",
+      "polishAudio": "Igraszki"
     }
   ]
 }

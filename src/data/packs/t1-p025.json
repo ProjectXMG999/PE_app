@@ -10,101 +10,111 @@
       "id": "t1-p025-001",
       "english": "Desk",
       "polish": "Biurko",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Why is my desk covered in stickers?",
+      "sentencePl": "Dlaczego moje biurko jest całe w naklejkach?",
       "audioWord": "t1-p025-001-word.mp3",
       "audioWordPl": "t1-p025-001-word-pl.mp3",
-      "audioSentence": "t1-p025-001-sentence.mp3"
+      "audioSentence": "t1-p025-001-sentence.mp3",
+      "polishAudio": "Biurko"
     },
     {
       "id": "t1-p025-002",
       "english": "Home",
-      "polish": "Dom",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Dom (miejsce zamieszkania)",
+      "sentenceEn": "Welcome home, nice to see you.",
+      "sentencePl": "Witaj w domu, miło cię widzieć.",
       "audioWord": "t1-p025-002-word.mp3",
       "audioWordPl": "t1-p025-002-word-pl.mp3",
-      "audioSentence": "t1-p025-002-sentence.mp3"
+      "audioSentence": "t1-p025-002-sentence.mp3",
+      "polishAudio": "Dom"
     },
     {
       "id": "t1-p025-003",
       "english": "Door",
       "polish": "Drzwi",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Close the door, please.",
+      "sentencePl": "Proszę zamknąć drzwi.",
       "audioWord": "t1-p025-003-word.mp3",
       "audioWordPl": "t1-p025-003-word-pl.mp3",
-      "audioSentence": "t1-p025-003-sentence.mp3"
+      "audioSentence": "t1-p025-003-sentence.mp3",
+      "polishAudio": "Drzwi"
     },
     {
       "id": "t1-p025-004",
       "english": "Key",
       "polish": "Klucz",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Leave the key on the table.",
+      "sentencePl": "Zostaw klucz na stole.",
       "audioWord": "t1-p025-004-word.mp3",
       "audioWordPl": "t1-p025-004-word-pl.mp3",
-      "audioSentence": "t1-p025-004-sentence.mp3"
+      "audioSentence": "t1-p025-004-sentence.mp3",
+      "polishAudio": "Klucz"
     },
     {
       "id": "t1-p025-005",
       "english": "Window",
       "polish": "Okno",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "The cat is on the window.",
+      "sentencePl": "Kot jest na oknie.",
       "audioWord": "t1-p025-005-word.mp3",
       "audioWordPl": "t1-p025-005-word-pl.mp3",
-      "audioSentence": "t1-p025-005-sentence.mp3"
+      "audioSentence": "t1-p025-005-sentence.mp3",
+      "polishAudio": "Okno"
     },
     {
       "id": "t1-p025-006",
       "english": "Table",
       "polish": "Stół",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "There's always room at this table.",
+      "sentencePl": "Przy tym stole zawsze znajdzie się miejsce.",
       "audioWord": "t1-p025-006-word.mp3",
       "audioWordPl": "t1-p025-006-word-pl.mp3",
-      "audioSentence": "t1-p025-006-sentence.mp3"
+      "audioSentence": "t1-p025-006-sentence.mp3",
+      "polishAudio": "Stół"
     },
     {
       "id": "t1-p025-007",
       "english": "Light",
       "polish": "Światło",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Turn on the light, please.",
+      "sentencePl": "Włącz proszę światło.",
       "audioWord": "t1-p025-007-word.mp3",
       "audioWordPl": "t1-p025-007-word-pl.mp3",
-      "audioSentence": "t1-p025-007-sentence.mp3"
+      "audioSentence": "t1-p025-007-sentence.mp3",
+      "polishAudio": "Światło"
     },
     {
       "id": "t1-p025-008",
       "english": "Tub",
       "polish": "Wanna",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I need a bath in the tub.",
+      "sentencePl": "Potrzebuję kąpieli w wannie.",
       "audioWord": "t1-p025-008-word.mp3",
       "audioWordPl": "t1-p025-008-word-pl.mp3",
-      "audioSentence": "t1-p025-008-sentence.mp3"
+      "audioSentence": "t1-p025-008-sentence.mp3",
+      "polishAudio": "Wanna"
     },
     {
       "id": "t1-p025-009",
       "english": "Lighter",
       "polish": "Zapalniczka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Do you have a lighter?",
+      "sentencePl": "Masz zapalniczkę?",
       "audioWord": "t1-p025-009-word.mp3",
       "audioWordPl": "t1-p025-009-word-pl.mp3",
-      "audioSentence": "t1-p025-009-sentence.mp3"
+      "audioSentence": "t1-p025-009-sentence.mp3",
+      "polishAudio": "Zapalniczka"
     },
     {
       "id": "t1-p025-010",
       "english": "Clock",
       "polish": "Zegar",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "That clock always makes me rush.",
+      "sentencePl": "Ten zegar zawsze sprawia, że się spieszę.",
       "audioWord": "t1-p025-010-word.mp3",
       "audioWordPl": "t1-p025-010-word-pl.mp3",
-      "audioSentence": "t1-p025-010-sentence.mp3"
+      "audioSentence": "t1-p025-010-sentence.mp3",
+      "polishAudio": "Zegar"
     }
   ]
 }

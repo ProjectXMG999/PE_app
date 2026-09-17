@@ -10,101 +10,111 @@
       "id": "t1-p068-001",
       "english": "Aspirin",
       "polish": "Aspiryna",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Where's the aspirin? My head is pounding.",
+      "sentencePl": "Gdzie jest aspiryna? Głowa mi pęka.",
       "audioWord": "t1-p068-001-word.mp3",
       "audioWordPl": "t1-p068-001-word-pl.mp3",
-      "audioSentence": "t1-p068-001-sentence.mp3"
+      "audioSentence": "t1-p068-001-sentence.mp3",
+      "polishAudio": "Aspiryna"
     },
     {
       "id": "t1-p068-002",
       "english": "Ache",
-      "polish": "Ból",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Ból (przewlekły)",
+      "sentenceEn": "The ache is worse at night.",
+      "sentencePl": "Ten ból jest gorszy w nocy.",
       "audioWord": "t1-p068-002-word.mp3",
       "audioWordPl": "t1-p068-002-word-pl.mp3",
-      "audioSentence": "t1-p068-002-sentence.mp3"
+      "audioSentence": "t1-p068-002-sentence.mp3",
+      "polishAudio": "Ból"
     },
     {
       "id": "t1-p068-003",
       "english": "Pain",
-      "polish": "Ból",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Ból (nagły, krótkotrwały)",
+      "sentenceEn": "Point to where the pain is.",
+      "sentencePl": "Pokaż, gdzie cię boli.",
       "audioWord": "t1-p068-003-word.mp3",
       "audioWordPl": "t1-p068-003-word-pl.mp3",
-      "audioSentence": "t1-p068-003-sentence.mp3"
+      "audioSentence": "t1-p068-003-sentence.mp3",
+      "polishAudio": "Ból"
     },
     {
       "id": "t1-p068-004",
       "english": "Headache",
       "polish": "Ból głowy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can we dim the lights? I have a headache.",
+      "sentencePl": "Możemy przyciemnić światła? Boli mnie głowa.",
       "audioWord": "t1-p068-004-word.mp3",
       "audioWordPl": "t1-p068-004-word-pl.mp3",
-      "audioSentence": "t1-p068-004-sentence.mp3"
+      "audioSentence": "t1-p068-004-sentence.mp3",
+      "polishAudio": "Ból głowy"
     },
     {
       "id": "t1-p068-005",
       "english": "Fever",
       "polish": "Gorączka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My fever went up last night.",
+      "sentencePl": "Moja gorączka wzrosła w nocy.",
       "audioWord": "t1-p068-005-word.mp3",
       "audioWordPl": "t1-p068-005-word-pl.mp3",
-      "audioSentence": "t1-p068-005-sentence.mp3"
+      "audioSentence": "t1-p068-005-sentence.mp3",
+      "polishAudio": "Gorączka"
     },
     {
       "id": "t1-p068-006",
       "english": "Cough",
       "polish": "Kaszel",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Please cover your mouth when you cough.",
+      "sentencePl": "Proszę, zasłaniaj usta, kiedy kaszlesz.",
       "audioWord": "t1-p068-006-word.mp3",
       "audioWordPl": "t1-p068-006-word-pl.mp3",
-      "audioSentence": "t1-p068-006-sentence.mp3"
+      "audioSentence": "t1-p068-006-sentence.mp3",
+      "polishAudio": "Kaszel"
     },
     {
       "id": "t1-p068-007",
       "english": "Runny nose",
       "polish": "Katar",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Please pass a tissue, I have a runny nose.",
+      "sentencePl": "Podaj chusteczkę, proszę, mam katar.",
       "audioWord": "t1-p068-007-word.mp3",
       "audioWordPl": "t1-p068-007-word-pl.mp3",
-      "audioSentence": "t1-p068-007-sentence.mp3"
+      "audioSentence": "t1-p068-007-sentence.mp3",
+      "polishAudio": "Katar"
     },
     {
       "id": "t1-p068-008",
       "english": "Medicine",
-      "polish": "Medycyna",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Medycyna; lekarstwo",
+      "sentenceEn": "Did you take your medicine with food?",
+      "sentencePl": "Wziąłeś/Wzięłaś lek z jedzeniem?",
       "audioWord": "t1-p068-008-word.mp3",
       "audioWordPl": "t1-p068-008-word-pl.mp3",
-      "audioSentence": "t1-p068-008-sentence.mp3"
+      "audioSentence": "t1-p068-008-sentence.mp3",
+      "polishAudio": "Medycyna"
     },
     {
       "id": "t1-p068-009",
       "english": "Stress",
       "polish": "Stres",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Too much stress from that email.",
+      "sentencePl": "Za dużo stresu przez tego maila.",
       "audioWord": "t1-p068-009-word.mp3",
       "audioWordPl": "t1-p068-009-word-pl.mp3",
-      "audioSentence": "t1-p068-009-sentence.mp3"
+      "audioSentence": "t1-p068-009-sentence.mp3",
+      "polishAudio": "Stres"
     },
     {
       "id": "t1-p068-010",
       "english": "Pill",
-      "polish": "Tabletka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Tabletka; pigułka",
+      "sentenceEn": "I always carry a pill for headaches.",
+      "sentencePl": "Zawsze noszę tabletkę na ból głowy.",
       "audioWord": "t1-p068-010-word.mp3",
       "audioWordPl": "t1-p068-010-word-pl.mp3",
-      "audioSentence": "t1-p068-010-sentence.mp3"
+      "audioSentence": "t1-p068-010-sentence.mp3",
+      "polishAudio": "Tabletka"
     }
   ]
 }

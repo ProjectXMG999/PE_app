@@ -9,32 +9,35 @@
     {
       "id": "t1-p705-001",
       "english": "Burst",
-      "polish": "Pękać",
+      "polish": "Pękać; rozerwać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p705-001-word.mp3",
       "audioWordPl": "t1-p705-001-word-pl.mp3",
-      "audioSentence": "t1-p705-001-sentence.mp3"
+      "audioSentence": "t1-p705-001-sentence.mp3",
+      "polishAudio": "Pękać"
     },
     {
       "id": "t1-p705-002",
       "english": "Collapse",
-      "polish": "Runąć",
+      "polish": "Runąć; zawalić się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p705-002-word.mp3",
       "audioWordPl": "t1-p705-002-word-pl.mp3",
-      "audioSentence": "t1-p705-002-sentence.mp3"
+      "audioSentence": "t1-p705-002-sentence.mp3",
+      "polishAudio": "Runąć"
     },
     {
       "id": "t1-p705-003",
       "english": "Crumble",
-      "polish": "Kruszyć",
+      "polish": "Kruszyć; rozpadać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p705-003-word.mp3",
       "audioWordPl": "t1-p705-003-word-pl.mp3",
-      "audioSentence": "t1-p705-003-sentence.mp3"
+      "audioSentence": "t1-p705-003-sentence.mp3",
+      "polishAudio": "Kruszyć"
     },
     {
       "id": "t1-p705-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p705-004-word.mp3",
       "audioWordPl": "t1-p705-004-word-pl.mp3",
-      "audioSentence": "t1-p705-004-sentence.mp3"
+      "audioSentence": "t1-p705-004-sentence.mp3",
+      "polishAudio": "Wyburzać"
     },
     {
       "id": "t1-p705-005",
@@ -54,87 +58,96 @@
       "sentencePl": null,
       "audioWord": "t1-p705-005-word.mp3",
       "audioWordPl": "t1-p705-005-word-pl.mp3",
-      "audioSentence": "t1-p705-005-sentence.mp3"
+      "audioSentence": "t1-p705-005-sentence.mp3",
+      "polishAudio": "Wymazywać"
     },
     {
       "id": "t1-p705-006",
       "english": "Level",
-      "polish": "Wyrównywać",
+      "polish": "Wyrównywać; niwelować; równać z ziemią",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p705-006-word.mp3",
       "audioWordPl": "t1-p705-006-word-pl.mp3",
-      "audioSentence": "t1-p705-006-sentence.mp3"
+      "audioSentence": "t1-p705-006-sentence.mp3",
+      "polishAudio": "Wyrównywać"
     },
     {
       "id": "t1-p705-007",
       "english": "Pierce",
-      "polish": "Przekłuwać",
+      "polish": "Przekłuwać; przebijać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p705-007-word.mp3",
       "audioWordPl": "t1-p705-007-word-pl.mp3",
-      "audioSentence": "t1-p705-007-sentence.mp3"
+      "audioSentence": "t1-p705-007-sentence.mp3",
+      "polishAudio": "Przekłuwać"
     },
     {
       "id": "t1-p705-008",
       "english": "Scatter",
-      "polish": "Rozsypać",
+      "polish": "Rozsypać; rozpraszać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p705-008-word.mp3",
       "audioWordPl": "t1-p705-008-word-pl.mp3",
-      "audioSentence": "t1-p705-008-sentence.mp3"
+      "audioSentence": "t1-p705-008-sentence.mp3",
+      "polishAudio": "Rozsypać"
     },
     {
       "id": "t1-p705-009",
       "english": "Slam",
-      "polish": "Trzaskać",
+      "polish": "Trzaskać (drzwiami)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p705-009-word.mp3",
       "audioWordPl": "t1-p705-009-word-pl.mp3",
-      "audioSentence": "t1-p705-009-sentence.mp3"
+      "audioSentence": "t1-p705-009-sentence.mp3",
+      "polishAudio": "Trzaskać"
     },
     {
       "id": "t1-p705-010",
       "english": "Bash",
-      "polish": "Walić",
+      "polish": "Walić; grzmotać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p705-010-word.mp3",
       "audioWordPl": "t1-p705-010-word-pl.mp3",
-      "audioSentence": "t1-p705-010-sentence.mp3"
+      "audioSentence": "t1-p705-010-sentence.mp3",
+      "polishAudio": "Walić"
     },
     {
       "id": "t1-p705-011",
       "english": "Batter",
-      "polish": "Łomotać",
+      "polish": "Łomotać; gruchotać; tłuc",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p705-011-word.mp3",
       "audioWordPl": "t1-p705-011-word-pl.mp3",
-      "audioSentence": "t1-p705-011-sentence.mp3"
+      "audioSentence": "t1-p705-011-sentence.mp3",
+      "polishAudio": "Łomotać"
     },
     {
       "id": "t1-p705-012",
       "english": "Curve",
-      "polish": "Zakrzywić",
+      "polish": "Zakrzywić; wyginać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p705-012-word.mp3",
       "audioWordPl": "t1-p705-012-word-pl.mp3",
-      "audioSentence": "t1-p705-012-sentence.mp3"
+      "audioSentence": "t1-p705-012-sentence.mp3",
+      "polishAudio": "Zakrzywić"
     },
     {
       "id": "t1-p705-013",
       "english": "Dismantle",
-      "polish": "Rozmontować",
+      "polish": "Rozmontować; rozbrajać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p705-013-word.mp3",
       "audioWordPl": "t1-p705-013-word-pl.mp3",
-      "audioSentence": "t1-p705-013-sentence.mp3"
+      "audioSentence": "t1-p705-013-sentence.mp3",
+      "polishAudio": "Rozmontować"
     },
     {
       "id": "t1-p705-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p705-014-word.mp3",
       "audioWordPl": "t1-p705-014-word-pl.mp3",
-      "audioSentence": "t1-p705-014-sentence.mp3"
+      "audioSentence": "t1-p705-014-sentence.mp3",
+      "polishAudio": "Uderzać"
     },
     {
       "id": "t1-p705-015",
       "english": "Wreck",
-      "polish": "Zniszczyć",
+      "polish": "Zniszczyć; topić (statek); skasować pojazd",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p705-015-word.mp3",
       "audioWordPl": "t1-p705-015-word-pl.mp3",
-      "audioSentence": "t1-p705-015-sentence.mp3"
+      "audioSentence": "t1-p705-015-sentence.mp3",
+      "polishAudio": "Zniszczyć"
     }
   ]
 }

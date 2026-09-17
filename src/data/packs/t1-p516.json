@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-001-word.mp3",
       "audioWordPl": "t1-p516-001-word-pl.mp3",
-      "audioSentence": "t1-p516-001-sentence.mp3"
+      "audioSentence": "t1-p516-001-sentence.mp3",
+      "polishAudio": "Aglomeracja"
     },
     {
       "id": "t1-p516-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-002-word.mp3",
       "audioWordPl": "t1-p516-002-word-pl.mp3",
-      "audioSentence": "t1-p516-002-sentence.mp3"
+      "audioSentence": "t1-p516-002-sentence.mp3",
+      "polishAudio": "Bulwar"
     },
     {
       "id": "t1-p516-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-003-word.mp3",
       "audioWordPl": "t1-p516-003-word-pl.mp3",
-      "audioSentence": "t1-p516-003-sentence.mp3"
+      "audioSentence": "t1-p516-003-sentence.mp3",
+      "polishAudio": "Metropolia"
     },
     {
       "id": "t1-p516-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-004-word.mp3",
       "audioWordPl": "t1-p516-004-word-pl.mp3",
-      "audioSentence": "t1-p516-004-sentence.mp3"
+      "audioSentence": "t1-p516-004-sentence.mp3",
+      "polishAudio": "Obrzeża miasta"
     },
     {
       "id": "t1-p516-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-005-word.mp3",
       "audioWordPl": "t1-p516-005-word-pl.mp3",
-      "audioSentence": "t1-p516-005-sentence.mp3"
+      "audioSentence": "t1-p516-005-sentence.mp3",
+      "polishAudio": "Sala koncertowa"
     },
     {
       "id": "t1-p516-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-006-word.mp3",
       "audioWordPl": "t1-p516-006-word-pl.mp3",
-      "audioSentence": "t1-p516-006-sentence.mp3"
+      "audioSentence": "t1-p516-006-sentence.mp3",
+      "polishAudio": "Ścieki"
     },
     {
       "id": "t1-p516-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-007-word.mp3",
       "audioWordPl": "t1-p516-007-word-pl.mp3",
-      "audioSentence": "t1-p516-007-sentence.mp3"
+      "audioSentence": "t1-p516-007-sentence.mp3",
+      "polishAudio": "Szkoła tańca"
     },
     {
       "id": "t1-p516-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p516-008-word.mp3",
       "audioWordPl": "t1-p516-008-word-pl.mp3",
-      "audioSentence": "t1-p516-008-sentence.mp3"
+      "audioSentence": "t1-p516-008-sentence.mp3",
+      "polishAudio": "Fontanna"
     },
     {
       "id": "t1-p516-009",
       "english": "Lot",
-      "polish": "Działka",
+      "polish": "Działka; parcela",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p516-009-word.mp3",
       "audioWordPl": "t1-p516-009-word-pl.mp3",
-      "audioSentence": "t1-p516-009-sentence.mp3"
+      "audioSentence": "t1-p516-009-sentence.mp3",
+      "polishAudio": "Działka"
     },
     {
       "id": "t1-p516-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-010-word.mp3",
       "audioWordPl": "t1-p516-010-word-pl.mp3",
-      "audioSentence": "t1-p516-010-sentence.mp3"
+      "audioSentence": "t1-p516-010-sentence.mp3",
+      "polishAudio": "Kanalizacja"
     },
     {
       "id": "t1-p516-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-011-word.mp3",
       "audioWordPl": "t1-p516-011-word-pl.mp3",
-      "audioSentence": "t1-p516-011-sentence.mp3"
+      "audioSentence": "t1-p516-011-sentence.mp3",
+      "polishAudio": "Lombard"
     },
     {
       "id": "t1-p516-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-012-word.mp3",
       "audioWordPl": "t1-p516-012-word-pl.mp3",
-      "audioSentence": "t1-p516-012-sentence.mp3"
+      "audioSentence": "t1-p516-012-sentence.mp3",
+      "polishAudio": "Wymarłe miasto"
     },
     {
       "id": "t1-p516-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-013-word.mp3",
       "audioWordPl": "t1-p516-013-word-pl.mp3",
-      "audioSentence": "t1-p516-013-sentence.mp3"
+      "audioSentence": "t1-p516-013-sentence.mp3",
+      "polishAudio": "Miasto przemysłowe"
     },
     {
       "id": "t1-p516-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-014-word.mp3",
       "audioWordPl": "t1-p516-014-word-pl.mp3",
-      "audioSentence": "t1-p516-014-sentence.mp3"
+      "audioSentence": "t1-p516-014-sentence.mp3",
+      "polishAudio": "Most wiszący"
     },
     {
       "id": "t1-p516-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p516-015-word.mp3",
       "audioWordPl": "t1-p516-015-word-pl.mp3",
-      "audioSentence": "t1-p516-015-sentence.mp3"
+      "audioSentence": "t1-p516-015-sentence.mp3",
+      "polishAudio": "Neon"
     }
   ]
 }

@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-001-word.mp3",
       "audioWordPl": "t1-p526-001-word-pl.mp3",
-      "audioSentence": "t1-p526-001-sentence.mp3"
+      "audioSentence": "t1-p526-001-sentence.mp3",
+      "polishAudio": "Narzeczona"
     },
     {
       "id": "t1-p526-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-002-word.mp3",
       "audioWordPl": "t1-p526-002-word-pl.mp3",
-      "audioSentence": "t1-p526-002-sentence.mp3"
+      "audioSentence": "t1-p526-002-sentence.mp3",
+      "polishAudio": "Nudziarz"
     },
     {
       "id": "t1-p526-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-003-word.mp3",
       "audioWordPl": "t1-p526-003-word-pl.mp3",
-      "audioSentence": "t1-p526-003-sentence.mp3"
+      "audioSentence": "t1-p526-003-sentence.mp3",
+      "polishAudio": "Szaleniec"
     },
     {
       "id": "t1-p526-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-004-word.mp3",
       "audioWordPl": "t1-p526-004-word-pl.mp3",
-      "audioSentence": "t1-p526-004-sentence.mp3"
+      "audioSentence": "t1-p526-004-sentence.mp3",
+      "polishAudio": "Tchórz"
     },
     {
       "id": "t1-p526-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-005-word.mp3",
       "audioWordPl": "t1-p526-005-word-pl.mp3",
-      "audioSentence": "t1-p526-005-sentence.mp3"
+      "audioSentence": "t1-p526-005-sentence.mp3",
+      "polishAudio": "Harcerz"
     },
     {
       "id": "t1-p526-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p526-006-word.mp3",
       "audioWordPl": "t1-p526-006-word-pl.mp3",
-      "audioSentence": "t1-p526-006-sentence.mp3"
+      "audioSentence": "t1-p526-006-sentence.mp3",
+      "polishAudio": "Bękart"
     },
     {
       "id": "t1-p526-007",
       "english": "Nerd",
-      "polish": "Dziwak",
+      "polish": "Dziwak; maniak komputerowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p526-007-word.mp3",
       "audioWordPl": "t1-p526-007-word-pl.mp3",
-      "audioSentence": "t1-p526-007-sentence.mp3"
+      "audioSentence": "t1-p526-007-sentence.mp3",
+      "polishAudio": "Dziwak"
     },
     {
       "id": "t1-p526-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-008-word.mp3",
       "audioWordPl": "t1-p526-008-word-pl.mp3",
-      "audioSentence": "t1-p526-008-sentence.mp3"
+      "audioSentence": "t1-p526-008-sentence.mp3",
+      "polishAudio": "Dziwoląg"
     },
     {
       "id": "t1-p526-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-009-word.mp3",
       "audioWordPl": "t1-p526-009-word-pl.mp3",
-      "audioSentence": "t1-p526-009-sentence.mp3"
+      "audioSentence": "t1-p526-009-sentence.mp3",
+      "polishAudio": "Gawędziarz"
     },
     {
       "id": "t1-p526-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-010-word.mp3",
       "audioWordPl": "t1-p526-010-word-pl.mp3",
-      "audioSentence": "t1-p526-010-sentence.mp3"
+      "audioSentence": "t1-p526-010-sentence.mp3",
+      "polishAudio": "Kobiecość"
     },
     {
       "id": "t1-p526-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-011-word.mp3",
       "audioWordPl": "t1-p526-011-word-pl.mp3",
-      "audioSentence": "t1-p526-011-sentence.mp3"
+      "audioSentence": "t1-p526-011-sentence.mp3",
+      "polishAudio": "Męskość"
     },
     {
       "id": "t1-p526-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-012-word.mp3",
       "audioWordPl": "t1-p526-012-word-pl.mp3",
-      "audioSentence": "t1-p526-012-sentence.mp3"
+      "audioSentence": "t1-p526-012-sentence.mp3",
+      "polishAudio": "Nieznajomy"
     },
     {
       "id": "t1-p526-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-013-word.mp3",
       "audioWordPl": "t1-p526-013-word-pl.mp3",
-      "audioSentence": "t1-p526-013-sentence.mp3"
+      "audioSentence": "t1-p526-013-sentence.mp3",
+      "polishAudio": "Głuchoniemy"
     },
     {
       "id": "t1-p526-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-014-word.mp3",
       "audioWordPl": "t1-p526-014-word-pl.mp3",
-      "audioSentence": "t1-p526-014-sentence.mp3"
+      "audioSentence": "t1-p526-014-sentence.mp3",
+      "polishAudio": "Ślepiec"
     },
     {
       "id": "t1-p526-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p526-015-word.mp3",
       "audioWordPl": "t1-p526-015-word-pl.mp3",
-      "audioSentence": "t1-p526-015-sentence.mp3"
+      "audioSentence": "t1-p526-015-sentence.mp3",
+      "polishAudio": "Erudyta"
     }
   ]
 }

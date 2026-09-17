@@ -9,152 +9,167 @@
     {
       "id": "t1-p144-001",
       "english": "Charge",
-      "polish": "Ładować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Ładować (np. baterie)",
+      "sentenceEn": "I'll charge your phone before you leave; you only have three percent left.",
+      "sentencePl": "Naładuję ci telefon, zanim wyjdziesz, masz tylko trzy procent.",
       "audioWord": "t1-p144-001-word.mp3",
       "audioWordPl": "t1-p144-001-word-pl.mp3",
-      "audioSentence": "t1-p144-001-sentence.mp3"
+      "audioSentence": "t1-p144-001-sentence.mp3",
+      "polishAudio": "Ładować"
     },
     {
       "id": "t1-p144-002",
       "english": "Click",
       "polish": "Klikać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I clicked the wrong button, and the page disappeared from my screen.",
+      "sentencePl": "Kliknąłem zły przycisk i strona zniknęła mi z ekranu.",
       "audioWord": "t1-p144-002-word.mp3",
       "audioWordPl": "t1-p144-002-word-pl.mp3",
-      "audioSentence": "t1-p144-002-sentence.mp3"
+      "audioSentence": "t1-p144-002-sentence.mp3",
+      "polishAudio": "Klikać"
     },
     {
       "id": "t1-p144-003",
       "english": "Copy",
       "polish": "Kopiować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can you copy the address and send it to the group?",
+      "sentencePl": "Możesz skopiować adres i wysłać go na grupę?",
       "audioWord": "t1-p144-003-word.mp3",
       "audioWordPl": "t1-p144-003-word-pl.mp3",
-      "audioSentence": "t1-p144-003-sentence.mp3"
+      "audioSentence": "t1-p144-003-sentence.mp3",
+      "polishAudio": "Kopiować"
     },
     {
       "id": "t1-p144-004",
       "english": "Lock",
-      "polish": "Zablokować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Zablokować (system)",
+      "sentenceEn": "I locked the tablet so nobody could read our conversation.",
+      "sentencePl": "Zablokowałam tablet, żeby nikt nie przeczytał naszej rozmowy.",
       "audioWord": "t1-p144-004-word.mp3",
       "audioWordPl": "t1-p144-004-word-pl.mp3",
-      "audioSentence": "t1-p144-004-sentence.mp3"
+      "audioSentence": "t1-p144-004-sentence.mp3",
+      "polishAudio": "Zablokować"
     },
     {
       "id": "t1-p144-005",
       "english": "E-mail",
       "polish": "Napisać e-mail",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "E-mail customer service; the payment screen has frozen again.",
+      "sentencePl": "Napisz e-mail do obsługi, ekran płatności znowu się zawiesił.",
       "audioWord": "t1-p144-005-word.mp3",
       "audioWordPl": "t1-p144-005-word-pl.mp3",
-      "audioSentence": "t1-p144-005-sentence.mp3"
+      "audioSentence": "t1-p144-005-sentence.mp3",
+      "polishAudio": "Napisać e-mail"
     },
     {
       "id": "t1-p144-006",
       "english": "Paste",
-      "polish": "Wklejać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Wklejać (dane)",
+      "sentenceEn": "Paste this text into the form, but check the date first.",
+      "sentencePl": "Wklej ten tekst w formularz, ale najpierw sprawdź datę.",
       "audioWord": "t1-p144-006-word.mp3",
       "audioWordPl": "t1-p144-006-word-pl.mp3",
-      "audioSentence": "t1-p144-006-sentence.mp3"
+      "audioSentence": "t1-p144-006-sentence.mp3",
+      "polishAudio": "Wklejać"
     },
     {
       "id": "t1-p144-007",
       "english": "Print",
       "polish": "Drukować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can we print it on both sides to save paper?",
+      "sentencePl": "Czy możemy to wydrukować dwustronnie, żeby oszczędzić papier?",
       "audioWord": "t1-p144-007-word.mp3",
       "audioWordPl": "t1-p144-007-word-pl.mp3",
-      "audioSentence": "t1-p144-007-sentence.mp3"
+      "audioSentence": "t1-p144-007-sentence.mp3",
+      "polishAudio": "Drukować"
     },
     {
       "id": "t1-p144-008",
       "english": "Sound",
       "polish": "Brzmieć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "This message sounds suspicious, especially the request for a code.",
+      "sentencePl": "Ta wiadomość brzmi podejrzanie, zwłaszcza prośba o kod.",
       "audioWord": "t1-p144-008-word.mp3",
       "audioWordPl": "t1-p144-008-word-pl.mp3",
-      "audioSentence": "t1-p144-008-sentence.mp3"
+      "audioSentence": "t1-p144-008-sentence.mp3",
+      "polishAudio": "Brzmieć"
     },
     {
       "id": "t1-p144-009",
       "english": "Attach",
-      "polish": "Załączać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Załączać; dołączać",
+      "sentenceEn": "Did you attach the right file, or the draft again?",
+      "sentencePl": "Załączyłeś właściwy plik, czy znowu wersję roboczą?",
       "audioWord": "t1-p144-009-word.mp3",
       "audioWordPl": "t1-p144-009-word-pl.mp3",
-      "audioSentence": "t1-p144-009-sentence.mp3"
+      "audioSentence": "t1-p144-009-sentence.mp3",
+      "polishAudio": "Załączać"
     },
     {
       "id": "t1-p144-010",
       "english": "Cancel",
       "polish": "Anulować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "We can cancel the order if the parcel hasn't been sent yet.",
+      "sentencePl": "Możemy anulować zamówienie, jeśli paczka jeszcze nie wyszła.",
       "audioWord": "t1-p144-010-word.mp3",
       "audioWordPl": "t1-p144-010-word-pl.mp3",
-      "audioSentence": "t1-p144-010-sentence.mp3"
+      "audioSentence": "t1-p144-010-sentence.mp3",
+      "polishAudio": "Anulować"
     },
     {
       "id": "t1-p144-011",
       "english": "Mark",
-      "polish": "Zaznaczać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Zaznaczać; wyznaczać",
+      "sentenceEn": "You marked everything as urgent, so what is actually urgent?",
+      "sentencePl": "Zaznaczyłeś wszystko jako pilne, więc co jest naprawdę pilne?",
       "audioWord": "t1-p144-011-word.mp3",
       "audioWordPl": "t1-p144-011-word-pl.mp3",
-      "audioSentence": "t1-p144-011-sentence.mp3"
+      "audioSentence": "t1-p144-011-sentence.mp3",
+      "polishAudio": "Zaznaczać"
     },
     {
       "id": "t1-p144-012",
       "english": "Save",
-      "polish": "Zapisywać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Zapisywać (dane)",
+      "sentenceEn": "I saved your voice message; it cheers me up in traffic.",
+      "sentencePl": "Zapisałem twoją wiadomość głosową, poprawia mi humor w korku.",
       "audioWord": "t1-p144-012-word.mp3",
       "audioWordPl": "t1-p144-012-word-pl.mp3",
-      "audioSentence": "t1-p144-012-sentence.mp3"
+      "audioSentence": "t1-p144-012-sentence.mp3",
+      "polishAudio": "Zapisywać"
     },
     {
       "id": "t1-p144-013",
       "english": "Search",
-      "polish": "Szukać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Szukać; przeszukiwać",
+      "sentenceEn": "I'm searching for reviews of this model before ordering it online.",
+      "sentencePl": "Szukam opinii o tym modelu, zanim zamówię go przez internet.",
       "audioWord": "t1-p144-013-word.mp3",
       "audioWordPl": "t1-p144-013-word-pl.mp3",
-      "audioSentence": "t1-p144-013-sentence.mp3"
+      "audioSentence": "t1-p144-013-sentence.mp3",
+      "polishAudio": "Szukać"
     },
     {
       "id": "t1-p144-014",
       "english": "Press",
-      "polish": "Naciskać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Naciskać (np. klawisz)",
+      "sentenceEn": "I press “send,” and I immediately feel relieved.",
+      "sentencePl": "Naciskam „wyślij” i od razu robi mi się lżej.",
       "audioWord": "t1-p144-014-word.mp3",
       "audioWordPl": "t1-p144-014-word-pl.mp3",
-      "audioSentence": "t1-p144-014-sentence.mp3"
+      "audioSentence": "t1-p144-014-sentence.mp3",
+      "polishAudio": "Naciskać"
     },
     {
       "id": "t1-p144-015",
       "english": "Disconnect",
       "polish": "Rozłączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I got disconnected halfway through the call; can you call again?",
+      "sentencePl": "Rozłączyło mnie w połowie rozmowy, możesz zadzwonić jeszcze raz?",
       "audioWord": "t1-p144-015-word.mp3",
       "audioWordPl": "t1-p144-015-word-pl.mp3",
-      "audioSentence": "t1-p144-015-sentence.mp3"
+      "audioSentence": "t1-p144-015-sentence.mp3",
+      "polishAudio": "Rozłączyć"
     }
   ]
 }

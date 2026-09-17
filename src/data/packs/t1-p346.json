@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-001-word.mp3",
       "audioWordPl": "t1-p346-001-word-pl.mp3",
-      "audioSentence": "t1-p346-001-sentence.mp3"
+      "audioSentence": "t1-p346-001-sentence.mp3",
+      "polishAudio": "Oddychać"
     },
     {
       "id": "t1-p346-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-002-word.mp3",
       "audioWordPl": "t1-p346-002-word-pl.mp3",
-      "audioSentence": "t1-p346-002-sentence.mp3"
+      "audioSentence": "t1-p346-002-sentence.mp3",
+      "polishAudio": "Kaszleć"
     },
     {
       "id": "t1-p346-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-003-word.mp3",
       "audioWordPl": "t1-p346-003-word-pl.mp3",
-      "audioSentence": "t1-p346-003-sentence.mp3"
+      "audioSentence": "t1-p346-003-sentence.mp3",
+      "polishAudio": "Lizać"
     },
     {
       "id": "t1-p346-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-004-word.mp3",
       "audioWordPl": "t1-p346-004-word-pl.mp3",
-      "audioSentence": "t1-p346-004-sentence.mp3"
+      "audioSentence": "t1-p346-004-sentence.mp3",
+      "polishAudio": "Siorbać"
     },
     {
       "id": "t1-p346-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-005-word.mp3",
       "audioWordPl": "t1-p346-005-word-pl.mp3",
-      "audioSentence": "t1-p346-005-sentence.mp3"
+      "audioSentence": "t1-p346-005-sentence.mp3",
+      "polishAudio": "Sikać"
     },
     {
       "id": "t1-p346-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-006-word.mp3",
       "audioWordPl": "t1-p346-006-word-pl.mp3",
-      "audioSentence": "t1-p346-006-sentence.mp3"
+      "audioSentence": "t1-p346-006-sentence.mp3",
+      "polishAudio": "Kichać"
     },
     {
       "id": "t1-p346-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-007-word.mp3",
       "audioWordPl": "t1-p346-007-word-pl.mp3",
-      "audioSentence": "t1-p346-007-sentence.mp3"
+      "audioSentence": "t1-p346-007-sentence.mp3",
+      "polishAudio": "Chrapać"
     },
     {
       "id": "t1-p346-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-008-word.mp3",
       "audioWordPl": "t1-p346-008-word-pl.mp3",
-      "audioSentence": "t1-p346-008-sentence.mp3"
+      "audioSentence": "t1-p346-008-sentence.mp3",
+      "polishAudio": "Ssać"
     },
     {
       "id": "t1-p346-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-009-word.mp3",
       "audioWordPl": "t1-p346-009-word-pl.mp3",
-      "audioSentence": "t1-p346-009-sentence.mp3"
+      "audioSentence": "t1-p346-009-sentence.mp3",
+      "polishAudio": "Pocić się"
     },
     {
       "id": "t1-p346-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-010-word.mp3",
       "audioWordPl": "t1-p346-010-word-pl.mp3",
-      "audioSentence": "t1-p346-010-sentence.mp3"
+      "audioSentence": "t1-p346-010-sentence.mp3",
+      "polishAudio": "Puszczać bąki"
     },
     {
       "id": "t1-p346-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-011-word.mp3",
       "audioWordPl": "t1-p346-011-word-pl.mp3",
-      "audioSentence": "t1-p346-011-sentence.mp3"
+      "audioSentence": "t1-p346-011-sentence.mp3",
+      "polishAudio": "Bekać"
     },
     {
       "id": "t1-p346-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-012-word.mp3",
       "audioWordPl": "t1-p346-012-word-pl.mp3",
-      "audioSentence": "t1-p346-012-sentence.mp3"
+      "audioSentence": "t1-p346-012-sentence.mp3",
+      "polishAudio": "Pluć"
     },
     {
       "id": "t1-p346-013",
@@ -134,17 +146,19 @@
       "sentencePl": null,
       "audioWord": "t1-p346-013-word.mp3",
       "audioWordPl": "t1-p346-013-word-pl.mp3",
-      "audioSentence": "t1-p346-013-sentence.mp3"
+      "audioSentence": "t1-p346-013-sentence.mp3",
+      "polishAudio": "Gwizdać"
     },
     {
       "id": "t1-p346-014",
       "english": "Be awake",
-      "polish": "Być obudzonym",
+      "polish": "Być obudzonym; być przytomnym; nie spać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p346-014-word.mp3",
       "audioWordPl": "t1-p346-014-word-pl.mp3",
-      "audioSentence": "t1-p346-014-sentence.mp3"
+      "audioSentence": "t1-p346-014-sentence.mp3",
+      "polishAudio": "Być obudzonym"
     },
     {
       "id": "t1-p346-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p346-015-word.mp3",
       "audioWordPl": "t1-p346-015-word-pl.mp3",
-      "audioSentence": "t1-p346-015-sentence.mp3"
+      "audioSentence": "t1-p346-015-sentence.mp3",
+      "polishAudio": "Nie lubić"
     }
   ]
 }

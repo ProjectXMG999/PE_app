@@ -9,32 +9,35 @@
     {
       "id": "t1-p268-001",
       "english": "Tell sb off",
-      "polish": "Zwrócić komuś uwagę",
+      "polish": "Zwrócić komuś uwagę; ochrzanić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p268-001-word.mp3",
       "audioWordPl": "t1-p268-001-word-pl.mp3",
-      "audioSentence": "t1-p268-001-sentence.mp3"
+      "audioSentence": "t1-p268-001-sentence.mp3",
+      "polishAudio": "Zwrócić komuś uwagę"
     },
     {
       "id": "t1-p268-002",
       "english": "Call for",
-      "polish": "Wzywać",
+      "polish": "Wzywać (np. pomoc)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p268-002-word.mp3",
       "audioWordPl": "t1-p268-002-word-pl.mp3",
-      "audioSentence": "t1-p268-002-sentence.mp3"
+      "audioSentence": "t1-p268-002-sentence.mp3",
+      "polishAudio": "Wzywać"
     },
     {
       "id": "t1-p268-003",
       "english": "Get back to sb",
-      "polish": "Odezwać się do kogoś",
+      "polish": "Odezwać się do kogoś (później)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p268-003-word.mp3",
       "audioWordPl": "t1-p268-003-word-pl.mp3",
-      "audioSentence": "t1-p268-003-sentence.mp3"
+      "audioSentence": "t1-p268-003-sentence.mp3",
+      "polishAudio": "Odezwać się do kogoś"
     },
     {
       "id": "t1-p268-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p268-004-word.mp3",
       "audioWordPl": "t1-p268-004-word-pl.mp3",
-      "audioSentence": "t1-p268-004-sentence.mp3"
+      "audioSentence": "t1-p268-004-sentence.mp3",
+      "polishAudio": "Zgadzać się z kimś"
     },
     {
       "id": "t1-p268-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p268-005-word.mp3",
       "audioWordPl": "t1-p268-005-word-pl.mp3",
-      "audioSentence": "t1-p268-005-sentence.mp3"
+      "audioSentence": "t1-p268-005-sentence.mp3",
+      "polishAudio": "Mówić głośniej"
     },
     {
       "id": "t1-p268-006",
@@ -64,27 +69,30 @@
       "sentencePl": null,
       "audioWord": "t1-p268-006-word.mp3",
       "audioWordPl": "t1-p268-006-word-pl.mp3",
-      "audioSentence": "t1-p268-006-sentence.mp3"
+      "audioSentence": "t1-p268-006-sentence.mp3",
+      "polishAudio": "Namówić kogoś"
     },
     {
       "id": "t1-p268-007",
       "english": "Speak up",
-      "polish": "Wypowiadać się",
+      "polish": "Wypowiadać się (na forum)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p268-007-word.mp3",
       "audioWordPl": "t1-p268-007-word-pl.mp3",
-      "audioSentence": "t1-p268-007-sentence.mp3"
+      "audioSentence": "t1-p268-007-sentence.mp3",
+      "polishAudio": "Wypowiadać się"
     },
     {
       "id": "t1-p268-008",
       "english": "Go into",
-      "polish": "Wejść w",
+      "polish": "Wejść w; wdawać się (w szczegóły)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p268-008-word.mp3",
       "audioWordPl": "t1-p268-008-word-pl.mp3",
-      "audioSentence": "t1-p268-008-sentence.mp3"
+      "audioSentence": "t1-p268-008-sentence.mp3",
+      "polishAudio": "Wejść w"
     },
     {
       "id": "t1-p268-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p268-009-word.mp3",
       "audioWordPl": "t1-p268-009-word-pl.mp3",
-      "audioSentence": "t1-p268-009-sentence.mp3"
+      "audioSentence": "t1-p268-009-sentence.mp3",
+      "polishAudio": "Wytknąć coś"
     },
     {
       "id": "t1-p268-010",
       "english": "Point sth out",
-      "polish": "Zwrócić uwagę",
+      "polish": "Zwrócić uwagę; wskazywać na coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p268-010-word.mp3",
       "audioWordPl": "t1-p268-010-word-pl.mp3",
-      "audioSentence": "t1-p268-010-sentence.mp3"
+      "audioSentence": "t1-p268-010-sentence.mp3",
+      "polishAudio": "Zwrócić uwagę"
     }
   ]
 }

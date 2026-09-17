@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p714-001-word.mp3",
       "audioWordPl": "t1-p714-001-word-pl.mp3",
-      "audioSentence": "t1-p714-001-sentence.mp3"
+      "audioSentence": "t1-p714-001-sentence.mp3",
+      "polishAudio": "Biegłość"
     },
     {
       "id": "t1-p714-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p714-002-word.mp3",
       "audioWordPl": "t1-p714-002-word-pl.mp3",
-      "audioSentence": "t1-p714-002-sentence.mp3"
+      "audioSentence": "t1-p714-002-sentence.mp3",
+      "polishAudio": "Dylemat"
     },
     {
       "id": "t1-p714-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p714-003-word.mp3",
       "audioWordPl": "t1-p714-003-word-pl.mp3",
-      "audioSentence": "t1-p714-003-sentence.mp3"
+      "audioSentence": "t1-p714-003-sentence.mp3",
+      "polishAudio": "Gotowość"
     },
     {
       "id": "t1-p714-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p714-004-word.mp3",
       "audioWordPl": "t1-p714-004-word-pl.mp3",
-      "audioSentence": "t1-p714-004-sentence.mp3"
+      "audioSentence": "t1-p714-004-sentence.mp3",
+      "polishAudio": "Kontemplacja"
     },
     {
       "id": "t1-p714-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p714-005-word.mp3",
       "audioWordPl": "t1-p714-005-word-pl.mp3",
-      "audioSentence": "t1-p714-005-sentence.mp3"
+      "audioSentence": "t1-p714-005-sentence.mp3",
+      "polishAudio": "Olśnienie"
     },
     {
       "id": "t1-p714-006",
       "english": "Penetration",
-      "polish": "Penetracja",
+      "polish": "Penetracja; wnikliwość",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p714-006-word.mp3",
       "audioWordPl": "t1-p714-006-word-pl.mp3",
-      "audioSentence": "t1-p714-006-sentence.mp3"
+      "audioSentence": "t1-p714-006-sentence.mp3",
+      "polishAudio": "Penetracja"
     },
     {
       "id": "t1-p714-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p714-007-word.mp3",
       "audioWordPl": "t1-p714-007-word-pl.mp3",
-      "audioSentence": "t1-p714-007-sentence.mp3"
+      "audioSentence": "t1-p714-007-sentence.mp3",
+      "polishAudio": "Pochopna decyzja"
     },
     {
       "id": "t1-p714-008",
       "english": "Acknowledgment",
-      "polish": "Przyznanie",
+      "polish": "Przyznanie (zaakceptowanie); potwierdzenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p714-008-word.mp3",
       "audioWordPl": "t1-p714-008-word-pl.mp3",
-      "audioSentence": "t1-p714-008-sentence.mp3"
+      "audioSentence": "t1-p714-008-sentence.mp3",
+      "polishAudio": "Przyznanie"
     },
     {
       "id": "t1-p714-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p714-009-word.mp3",
       "audioWordPl": "t1-p714-009-word-pl.mp3",
-      "audioSentence": "t1-p714-009-sentence.mp3"
+      "audioSentence": "t1-p714-009-sentence.mp3",
+      "polishAudio": "Powołanie"
     },
     {
       "id": "t1-p714-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p714-010-word.mp3",
       "audioWordPl": "t1-p714-010-word-pl.mp3",
-      "audioSentence": "t1-p714-010-sentence.mp3"
+      "audioSentence": "t1-p714-010-sentence.mp3",
+      "polishAudio": "Przeczucie"
     },
     {
       "id": "t1-p714-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p714-011-word.mp3",
       "audioWordPl": "t1-p714-011-word-pl.mp3",
-      "audioSentence": "t1-p714-011-sentence.mp3"
+      "audioSentence": "t1-p714-011-sentence.mp3",
+      "polishAudio": "Rozterka"
     },
     {
       "id": "t1-p714-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p714-012-word.mp3",
       "audioWordPl": "t1-p714-012-word-pl.mp3",
-      "audioSentence": "t1-p714-012-sentence.mp3"
+      "audioSentence": "t1-p714-012-sentence.mp3",
+      "polishAudio": "Sceptycyzm"
     },
     {
       "id": "t1-p714-013",
@@ -134,17 +146,19 @@
       "sentencePl": null,
       "audioWord": "t1-p714-013-word.mp3",
       "audioWordPl": "t1-p714-013-word-pl.mp3",
-      "audioSentence": "t1-p714-013-sentence.mp3"
+      "audioSentence": "t1-p714-013-sentence.mp3",
+      "polishAudio": "Mentalność"
     },
     {
       "id": "t1-p714-014",
       "english": "Temper",
-      "polish": "Usposobienie",
+      "polish": "Usposobienie; charakter",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p714-014-word.mp3",
       "audioWordPl": "t1-p714-014-word-pl.mp3",
-      "audioSentence": "t1-p714-014-sentence.mp3"
+      "audioSentence": "t1-p714-014-sentence.mp3",
+      "polishAudio": "Usposobienie"
     },
     {
       "id": "t1-p714-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p714-015-word.mp3",
       "audioWordPl": "t1-p714-015-word-pl.mp3",
-      "audioSentence": "t1-p714-015-sentence.mp3"
+      "audioSentence": "t1-p714-015-sentence.mp3",
+      "polishAudio": "Zastanowienie"
     }
   ]
 }

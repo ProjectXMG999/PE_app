@@ -9,12 +9,13 @@
     {
       "id": "t1-p475-001",
       "english": "Occur",
-      "polish": "Zdarzyc się",
+      "polish": "Zdarzyc się; wystąpić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p475-001-word.mp3",
       "audioWordPl": "t1-p475-001-word-pl.mp3",
-      "audioSentence": "t1-p475-001-sentence.mp3"
+      "audioSentence": "t1-p475-001-sentence.mp3",
+      "polishAudio": "Zdarzyc się"
     },
     {
       "id": "t1-p475-002",
@@ -24,37 +25,41 @@
       "sentencePl": null,
       "audioWord": "t1-p475-002-word.mp3",
       "audioWordPl": "t1-p475-002-word-pl.mp3",
-      "audioSentence": "t1-p475-002-sentence.mp3"
+      "audioSentence": "t1-p475-002-sentence.mp3",
+      "polishAudio": "Zapobiegać"
     },
     {
       "id": "t1-p475-003",
       "english": "Deserve",
-      "polish": "Zasługiwać",
+      "polish": "Zasługiwać (należy się, ze względu na zachowanie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p475-003-word.mp3",
       "audioWordPl": "t1-p475-003-word-pl.mp3",
-      "audioSentence": "t1-p475-003-sentence.mp3"
+      "audioSentence": "t1-p475-003-sentence.mp3",
+      "polishAudio": "Zasługiwać"
     },
     {
       "id": "t1-p475-004",
       "english": "Affect",
-      "polish": "Dotyczyć",
+      "polish": "Dotyczyć; wywierać wpływ; szkodzić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p475-004-word.mp3",
       "audioWordPl": "t1-p475-004-word-pl.mp3",
-      "audioSentence": "t1-p475-004-sentence.mp3"
+      "audioSentence": "t1-p475-004-sentence.mp3",
+      "polishAudio": "Dotyczyć"
     },
     {
       "id": "t1-p475-005",
       "english": "Appear",
-      "polish": "Ukazywać się",
+      "polish": "Ukazywać się; wydawać się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p475-005-word.mp3",
       "audioWordPl": "t1-p475-005-word-pl.mp3",
-      "audioSentence": "t1-p475-005-sentence.mp3"
+      "audioSentence": "t1-p475-005-sentence.mp3",
+      "polishAudio": "Ukazywać się"
     },
     {
       "id": "t1-p475-006",
@@ -64,37 +69,41 @@
       "sentencePl": null,
       "audioWord": "t1-p475-006-word.mp3",
       "audioWordPl": "t1-p475-006-word-pl.mp3",
-      "audioSentence": "t1-p475-006-sentence.mp3"
+      "audioSentence": "t1-p475-006-sentence.mp3",
+      "polishAudio": "Powodować"
     },
     {
       "id": "t1-p475-007",
       "english": "Compose",
-      "polish": "Składać się na",
+      "polish": "Składać się na (stanowić coś z określonych części)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p475-007-word.mp3",
       "audioWordPl": "t1-p475-007-word-pl.mp3",
-      "audioSentence": "t1-p475-007-sentence.mp3"
+      "audioSentence": "t1-p475-007-sentence.mp3",
+      "polishAudio": "Składać się na"
     },
     {
       "id": "t1-p475-008",
       "english": "Differ",
-      "polish": "Różnić się",
+      "polish": "Różnić się (od drugiej rzeczy); mieć inne zdanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p475-008-word.mp3",
       "audioWordPl": "t1-p475-008-word-pl.mp3",
-      "audioSentence": "t1-p475-008-sentence.mp3"
+      "audioSentence": "t1-p475-008-sentence.mp3",
+      "polishAudio": "Różnić się"
     },
     {
       "id": "t1-p475-009",
       "english": "Enable",
-      "polish": "Umożliwiać",
+      "polish": "Umożliwiać (czemuś coś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p475-009-word.mp3",
       "audioWordPl": "t1-p475-009-word-pl.mp3",
-      "audioSentence": "t1-p475-009-sentence.mp3"
+      "audioSentence": "t1-p475-009-sentence.mp3",
+      "polishAudio": "Umożliwiać"
     },
     {
       "id": "t1-p475-010",
@@ -104,57 +113,63 @@
       "sentencePl": null,
       "audioWord": "t1-p475-010-word.mp3",
       "audioWordPl": "t1-p475-010-word-pl.mp3",
-      "audioSentence": "t1-p475-010-sentence.mp3"
+      "audioSentence": "t1-p475-010-sentence.mp3",
+      "polishAudio": "Istnieć"
     },
     {
       "id": "t1-p475-011",
       "english": "Interact",
-      "polish": "Wchodzić w interakcje",
+      "polish": "Wchodzić w interakcje; wzajemnie oddziaływać na siebie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p475-011-word.mp3",
       "audioWordPl": "t1-p475-011-word-pl.mp3",
-      "audioSentence": "t1-p475-011-sentence.mp3"
+      "audioSentence": "t1-p475-011-sentence.mp3",
+      "polishAudio": "Wchodzić w interakcje"
     },
     {
       "id": "t1-p475-012",
       "english": "Invent",
-      "polish": "Wynajdować",
+      "polish": "Wynajdować (wynalazek)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p475-012-word.mp3",
       "audioWordPl": "t1-p475-012-word-pl.mp3",
-      "audioSentence": "t1-p475-012-sentence.mp3"
+      "audioSentence": "t1-p475-012-sentence.mp3",
+      "polishAudio": "Wynajdować"
     },
     {
       "id": "t1-p475-013",
       "english": "Separate",
-      "polish": "Odseparować",
+      "polish": "Odseparować; oddzielić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p475-013-word.mp3",
       "audioWordPl": "t1-p475-013-word-pl.mp3",
-      "audioSentence": "t1-p475-013-sentence.mp3"
+      "audioSentence": "t1-p475-013-sentence.mp3",
+      "polishAudio": "Odseparować"
     },
     {
       "id": "t1-p475-014",
       "english": "Spread",
-      "polish": "Rozprzestrzeniać się",
+      "polish": "Rozprzestrzeniać się; rozpowszechniać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p475-014-word.mp3",
       "audioWordPl": "t1-p475-014-word-pl.mp3",
-      "audioSentence": "t1-p475-014-sentence.mp3"
+      "audioSentence": "t1-p475-014-sentence.mp3",
+      "polishAudio": "Rozprzestrzeniać się"
     },
     {
       "id": "t1-p475-015",
       "english": "Bear",
-      "polish": "Nosić coś",
+      "polish": "Nosić coś; udźwignąć brzemię; znosić coś (ścierpieć)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p475-015-word.mp3",
       "audioWordPl": "t1-p475-015-word-pl.mp3",
-      "audioSentence": "t1-p475-015-sentence.mp3"
+      "audioSentence": "t1-p475-015-sentence.mp3",
+      "polishAudio": "Nosić coś"
     }
   ]
 }

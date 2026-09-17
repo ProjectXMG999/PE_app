@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-001-word.mp3",
       "audioWordPl": "t1-p447-001-word-pl.mp3",
-      "audioSentence": "t1-p447-001-sentence.mp3"
+      "audioSentence": "t1-p447-001-sentence.mp3",
+      "polishAudio": "Odrzucenie"
     },
     {
       "id": "t1-p447-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-002-word.mp3",
       "audioWordPl": "t1-p447-002-word-pl.mp3",
-      "audioSentence": "t1-p447-002-sentence.mp3"
+      "audioSentence": "t1-p447-002-sentence.mp3",
+      "polishAudio": "Panika"
     },
     {
       "id": "t1-p447-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-003-word.mp3",
       "audioWordPl": "t1-p447-003-word-pl.mp3",
-      "audioSentence": "t1-p447-003-sentence.mp3"
+      "audioSentence": "t1-p447-003-sentence.mp3",
+      "polishAudio": "Pesymizm"
     },
     {
       "id": "t1-p447-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-004-word.mp3",
       "audioWordPl": "t1-p447-004-word-pl.mp3",
-      "audioSentence": "t1-p447-004-sentence.mp3"
+      "audioSentence": "t1-p447-004-sentence.mp3",
+      "polishAudio": "Poczucie winy"
     },
     {
       "id": "t1-p447-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-005-word.mp3",
       "audioWordPl": "t1-p447-005-word-pl.mp3",
-      "audioSentence": "t1-p447-005-sentence.mp3"
+      "audioSentence": "t1-p447-005-sentence.mp3",
+      "polishAudio": "Poniżenie"
     },
     {
       "id": "t1-p447-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-006-word.mp3",
       "audioWordPl": "t1-p447-006-word-pl.mp3",
-      "audioSentence": "t1-p447-006-sentence.mp3"
+      "audioSentence": "t1-p447-006-sentence.mp3",
+      "polishAudio": "Rozczarowanie"
     },
     {
       "id": "t1-p447-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-007-word.mp3",
       "audioWordPl": "t1-p447-007-word-pl.mp3",
-      "audioSentence": "t1-p447-007-sentence.mp3"
+      "audioSentence": "t1-p447-007-sentence.mp3",
+      "polishAudio": "Samotność"
     },
     {
       "id": "t1-p447-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-008-word.mp3",
       "audioWordPl": "t1-p447-008-word-pl.mp3",
-      "audioSentence": "t1-p447-008-sentence.mp3"
+      "audioSentence": "t1-p447-008-sentence.mp3",
+      "polishAudio": "Skandal"
     },
     {
       "id": "t1-p447-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-009-word.mp3",
       "audioWordPl": "t1-p447-009-word-pl.mp3",
-      "audioSentence": "t1-p447-009-sentence.mp3"
+      "audioSentence": "t1-p447-009-sentence.mp3",
+      "polishAudio": "Smutek"
     },
     {
       "id": "t1-p447-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-010-word.mp3",
       "audioWordPl": "t1-p447-010-word-pl.mp3",
-      "audioSentence": "t1-p447-010-sentence.mp3"
+      "audioSentence": "t1-p447-010-sentence.mp3",
+      "polishAudio": "Wątpliwość"
     },
     {
       "id": "t1-p447-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p447-011-word.mp3",
       "audioWordPl": "t1-p447-011-word-pl.mp3",
-      "audioSentence": "t1-p447-011-sentence.mp3"
+      "audioSentence": "t1-p447-011-sentence.mp3",
+      "polishAudio": "Wstyd"
     },
     {
       "id": "t1-p447-012",
       "english": "Envy",
-      "polish": "Zazdrość",
+      "polish": "Zazdrość (o coś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p447-012-word.mp3",
       "audioWordPl": "t1-p447-012-word-pl.mp3",
-      "audioSentence": "t1-p447-012-sentence.mp3"
+      "audioSentence": "t1-p447-012-sentence.mp3",
+      "polishAudio": "Zazdrość"
     },
     {
       "id": "t1-p447-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-013-word.mp3",
       "audioWordPl": "t1-p447-013-word-pl.mp3",
-      "audioSentence": "t1-p447-013-sentence.mp3"
+      "audioSentence": "t1-p447-013-sentence.mp3",
+      "polishAudio": "Żal"
     },
     {
       "id": "t1-p447-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-014-word.mp3",
       "audioWordPl": "t1-p447-014-word-pl.mp3",
-      "audioSentence": "t1-p447-014-sentence.mp3"
+      "audioSentence": "t1-p447-014-sentence.mp3",
+      "polishAudio": "Lenistwo"
     },
     {
       "id": "t1-p447-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p447-015-word.mp3",
       "audioWordPl": "t1-p447-015-word-pl.mp3",
-      "audioSentence": "t1-p447-015-sentence.mp3"
+      "audioSentence": "t1-p447-015-sentence.mp3",
+      "polishAudio": "Szaleństwo"
     }
   ]
 }

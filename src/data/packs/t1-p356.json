@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p356-001-word.mp3",
       "audioWordPl": "t1-p356-001-word-pl.mp3",
-      "audioSentence": "t1-p356-001-sentence.mp3"
+      "audioSentence": "t1-p356-001-sentence.mp3",
+      "polishAudio": "Gorąca czekolada"
     },
     {
       "id": "t1-p356-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p356-002-word.mp3",
       "audioWordPl": "t1-p356-002-word-pl.mp3",
-      "audioSentence": "t1-p356-002-sentence.mp3"
+      "audioSentence": "t1-p356-002-sentence.mp3",
+      "polishAudio": "Napój bezalkoholowy"
     },
     {
       "id": "t1-p356-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p356-003-word.mp3",
       "audioWordPl": "t1-p356-003-word-pl.mp3",
-      "audioSentence": "t1-p356-003-sentence.mp3"
+      "audioSentence": "t1-p356-003-sentence.mp3",
+      "polishAudio": "Zielona herbata"
     },
     {
       "id": "t1-p356-004",
       "english": "Energy drink",
-      "polish": "Napój energetyczny",
+      "polish": "Napój energetyczny; energetyk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p356-004-word.mp3",
       "audioWordPl": "t1-p356-004-word-pl.mp3",
-      "audioSentence": "t1-p356-004-sentence.mp3"
+      "audioSentence": "t1-p356-004-sentence.mp3",
+      "polishAudio": "Napój energetyczny"
     },
     {
       "id": "t1-p356-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p356-005-word.mp3",
       "audioWordPl": "t1-p356-005-word-pl.mp3",
-      "audioSentence": "t1-p356-005-sentence.mp3"
+      "audioSentence": "t1-p356-005-sentence.mp3",
+      "polishAudio": "Kakao"
     },
     {
       "id": "t1-p356-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p356-006-word.mp3",
       "audioWordPl": "t1-p356-006-word-pl.mp3",
-      "audioSentence": "t1-p356-006-sentence.mp3"
+      "audioSentence": "t1-p356-006-sentence.mp3",
+      "polishAudio": "Lemoniada"
     },
     {
       "id": "t1-p356-007",
       "english": "Smoothie",
-      "polish": "Smoothie",
+      "polish": "Smoothie (koktajl owocowy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p356-007-word.mp3",
       "audioWordPl": "t1-p356-007-word-pl.mp3",
-      "audioSentence": "t1-p356-007-sentence.mp3"
+      "audioSentence": "t1-p356-007-sentence.mp3",
+      "polishAudio": "Smoothie"
     },
     {
       "id": "t1-p356-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p356-008-word.mp3",
       "audioWordPl": "t1-p356-008-word-pl.mp3",
-      "audioSentence": "t1-p356-008-sentence.mp3"
+      "audioSentence": "t1-p356-008-sentence.mp3",
+      "polishAudio": "Napój"
     },
     {
       "id": "t1-p356-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p356-009-word.mp3",
       "audioWordPl": "t1-p356-009-word-pl.mp3",
-      "audioSentence": "t1-p356-009-sentence.mp3"
+      "audioSentence": "t1-p356-009-sentence.mp3",
+      "polishAudio": "Napój izotoniczny"
     },
     {
       "id": "t1-p356-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p356-010-word.mp3",
       "audioWordPl": "t1-p356-010-word-pl.mp3",
-      "audioSentence": "t1-p356-010-sentence.mp3"
+      "audioSentence": "t1-p356-010-sentence.mp3",
+      "polishAudio": "Oranżada"
     },
     {
       "id": "t1-p356-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p356-011-word.mp3",
       "audioWordPl": "t1-p356-011-word-pl.mp3",
-      "audioSentence": "t1-p356-011-sentence.mp3"
+      "audioSentence": "t1-p356-011-sentence.mp3",
+      "polishAudio": "Syrop"
     },
     {
       "id": "t1-p356-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p356-012-word.mp3",
       "audioWordPl": "t1-p356-012-word-pl.mp3",
-      "audioSentence": "t1-p356-012-sentence.mp3"
+      "audioSentence": "t1-p356-012-sentence.mp3",
+      "polishAudio": "Torebka herbaty"
     },
     {
       "id": "t1-p356-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p356-013-word.mp3",
       "audioWordPl": "t1-p356-013-word-pl.mp3",
-      "audioSentence": "t1-p356-013-sentence.mp3"
+      "audioSentence": "t1-p356-013-sentence.mp3",
+      "polishAudio": "Woda z kranu"
     },
     {
       "id": "t1-p356-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p356-014-word.mp3",
       "audioWordPl": "t1-p356-014-word-pl.mp3",
-      "audioSentence": "t1-p356-014-sentence.mp3"
+      "audioSentence": "t1-p356-014-sentence.mp3",
+      "polishAudio": "Koktajl mleczny"
     }
   ]
 }

@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-001-word.mp3",
       "audioWordPl": "t1-p279-001-word-pl.mp3",
-      "audioSentence": "t1-p279-001-sentence.mp3"
+      "audioSentence": "t1-p279-001-sentence.mp3",
+      "polishAudio": "Ciąża"
     },
     {
       "id": "t1-p279-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-002-word.mp3",
       "audioWordPl": "t1-p279-002-word-pl.mp3",
-      "audioSentence": "t1-p279-002-sentence.mp3"
+      "audioSentence": "t1-p279-002-sentence.mp3",
+      "polishAudio": "Okres dojrzewania"
     },
     {
       "id": "t1-p279-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-003-word.mp3",
       "audioWordPl": "t1-p279-003-word-pl.mp3",
-      "audioSentence": "t1-p279-003-sentence.mp3"
+      "audioSentence": "t1-p279-003-sentence.mp3",
+      "polishAudio": "Pieluszka"
     },
     {
       "id": "t1-p279-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-004-word.mp3",
       "audioWordPl": "t1-p279-004-word-pl.mp3",
-      "audioSentence": "t1-p279-004-sentence.mp3"
+      "audioSentence": "t1-p279-004-sentence.mp3",
+      "polishAudio": "Poczęcie"
     },
     {
       "id": "t1-p279-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-005-word.mp3",
       "audioWordPl": "t1-p279-005-word-pl.mp3",
-      "audioSentence": "t1-p279-005-sentence.mp3"
+      "audioSentence": "t1-p279-005-sentence.mp3",
+      "polishAudio": "Poród"
     },
     {
       "id": "t1-p279-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-006-word.mp3",
       "audioWordPl": "t1-p279-006-word-pl.mp3",
-      "audioSentence": "t1-p279-006-sentence.mp3"
+      "audioSentence": "t1-p279-006-sentence.mp3",
+      "polishAudio": "Test ciążowy"
     },
     {
       "id": "t1-p279-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p279-007-word.mp3",
       "audioWordPl": "t1-p279-007-word-pl.mp3",
-      "audioSentence": "t1-p279-007-sentence.mp3"
+      "audioSentence": "t1-p279-007-sentence.mp3",
+      "polishAudio": "Latawiec"
     },
     {
       "id": "t1-p279-008",
       "english": "Snowman",
-      "polish": "Bałwan",
+      "polish": "Bałwan (śniegowy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p279-008-word.mp3",
       "audioWordPl": "t1-p279-008-word-pl.mp3",
-      "audioSentence": "t1-p279-008-sentence.mp3"
+      "audioSentence": "t1-p279-008-sentence.mp3",
+      "polishAudio": "Bałwan"
     },
     {
       "id": "t1-p279-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-009-word.mp3",
       "audioWordPl": "t1-p279-009-word-pl.mp3",
-      "audioSentence": "t1-p279-009-sentence.mp3"
+      "audioSentence": "t1-p279-009-sentence.mp3",
+      "polishAudio": "Bańka"
     },
     {
       "id": "t1-p279-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-010-word.mp3",
       "audioWordPl": "t1-p279-010-word-pl.mp3",
-      "audioSentence": "t1-p279-010-sentence.mp3"
+      "audioSentence": "t1-p279-010-sentence.mp3",
+      "polishAudio": "Balon"
     },
     {
       "id": "t1-p279-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-011-word.mp3",
       "audioWordPl": "t1-p279-011-word-pl.mp3",
-      "audioSentence": "t1-p279-011-sentence.mp3"
+      "audioSentence": "t1-p279-011-sentence.mp3",
+      "polishAudio": "Butelka dla niemowląt"
     },
     {
       "id": "t1-p279-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-012-word.mp3",
       "audioWordPl": "t1-p279-012-word-pl.mp3",
-      "audioSentence": "t1-p279-012-sentence.mp3"
+      "audioSentence": "t1-p279-012-sentence.mp3",
+      "polishAudio": "Kołysanka"
     },
     {
       "id": "t1-p279-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-013-word.mp3",
       "audioWordPl": "t1-p279-013-word-pl.mp3",
-      "audioSentence": "t1-p279-013-sentence.mp3"
+      "audioSentence": "t1-p279-013-sentence.mp3",
+      "polishAudio": "Kołyska"
     },
     {
       "id": "t1-p279-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-014-word.mp3",
       "audioWordPl": "t1-p279-014-word-pl.mp3",
-      "audioSentence": "t1-p279-014-sentence.mp3"
+      "audioSentence": "t1-p279-014-sentence.mp3",
+      "polishAudio": "Macierzyństwo"
     },
     {
       "id": "t1-p279-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p279-015-word.mp3",
       "audioWordPl": "t1-p279-015-word-pl.mp3",
-      "audioSentence": "t1-p279-015-sentence.mp3"
+      "audioSentence": "t1-p279-015-sentence.mp3",
+      "polishAudio": "Opieka nad dzieckiem"
     }
   ]
 }

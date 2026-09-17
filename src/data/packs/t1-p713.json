@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-001-word.mp3",
       "audioWordPl": "t1-p713-001-word-pl.mp3",
-      "audioSentence": "t1-p713-001-sentence.mp3"
+      "audioSentence": "t1-p713-001-sentence.mp3",
+      "polishAudio": "Blaszany"
     },
     {
       "id": "t1-p713-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-002-word.mp3",
       "audioWordPl": "t1-p713-002-word-pl.mp3",
-      "audioSentence": "t1-p713-002-sentence.mp3"
+      "audioSentence": "t1-p713-002-sentence.mp3",
+      "polishAudio": "Bursztynowy"
     },
     {
       "id": "t1-p713-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-003-word.mp3",
       "audioWordPl": "t1-p713-003-word-pl.mp3",
-      "audioSentence": "t1-p713-003-sentence.mp3"
+      "audioSentence": "t1-p713-003-sentence.mp3",
+      "polishAudio": "Gliniany"
     },
     {
       "id": "t1-p713-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-004-word.mp3",
       "audioWordPl": "t1-p713-004-word-pl.mp3",
-      "audioSentence": "t1-p713-004-sentence.mp3"
+      "audioSentence": "t1-p713-004-sentence.mp3",
+      "polishAudio": "Granitowy"
     },
     {
       "id": "t1-p713-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-005-word.mp3",
       "audioWordPl": "t1-p713-005-word-pl.mp3",
-      "audioSentence": "t1-p713-005-sentence.mp3"
+      "audioSentence": "t1-p713-005-sentence.mp3",
+      "polishAudio": "Lniany"
     },
     {
       "id": "t1-p713-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-006-word.mp3",
       "audioWordPl": "t1-p713-006-word-pl.mp3",
-      "audioSentence": "t1-p713-006-sentence.mp3"
+      "audioSentence": "t1-p713-006-sentence.mp3",
+      "polishAudio": "Marmurowy"
     },
     {
       "id": "t1-p713-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-007-word.mp3",
       "audioWordPl": "t1-p713-007-word-pl.mp3",
-      "audioSentence": "t1-p713-007-sentence.mp3"
+      "audioSentence": "t1-p713-007-sentence.mp3",
+      "polishAudio": "Miedziany"
     },
     {
       "id": "t1-p713-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-008-word.mp3",
       "audioWordPl": "t1-p713-008-word-pl.mp3",
-      "audioSentence": "t1-p713-008-sentence.mp3"
+      "audioSentence": "t1-p713-008-sentence.mp3",
+      "polishAudio": "Nierdzewny"
     },
     {
       "id": "t1-p713-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p713-009-word.mp3",
       "audioWordPl": "t1-p713-009-word-pl.mp3",
-      "audioSentence": "t1-p713-009-sentence.mp3"
+      "audioSentence": "t1-p713-009-sentence.mp3",
+      "polishAudio": "Ołowiany"
     },
     {
       "id": "t1-p713-010",
       "english": "Leathern",
-      "polish": "Skórzany",
+      "polish": "Skórzany (w literaturze i poezji)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p713-010-word.mp3",
       "audioWordPl": "t1-p713-010-word-pl.mp3",
-      "audioSentence": "t1-p713-010-sentence.mp3"
+      "audioSentence": "t1-p713-010-sentence.mp3",
+      "polishAudio": "Skórzany"
     },
     {
       "id": "t1-p713-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-011-word.mp3",
       "audioWordPl": "t1-p713-011-word-pl.mp3",
-      "audioSentence": "t1-p713-011-sentence.mp3"
+      "audioSentence": "t1-p713-011-sentence.mp3",
+      "polishAudio": "Tekturowy"
     },
     {
       "id": "t1-p713-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-012-word.mp3",
       "audioWordPl": "t1-p713-012-word-pl.mp3",
-      "audioSentence": "t1-p713-012-sentence.mp3"
+      "audioSentence": "t1-p713-012-sentence.mp3",
+      "polishAudio": "Wełniany"
     },
     {
       "id": "t1-p713-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-013-word.mp3",
       "audioWordPl": "t1-p713-013-word-pl.mp3",
-      "audioSentence": "t1-p713-013-sentence.mp3"
+      "audioSentence": "t1-p713-013-sentence.mp3",
+      "polishAudio": "Włókienniczy"
     },
     {
       "id": "t1-p713-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-014-word.mp3",
       "audioWordPl": "t1-p713-014-word-pl.mp3",
-      "audioSentence": "t1-p713-014-sentence.mp3"
+      "audioSentence": "t1-p713-014-sentence.mp3",
+      "polishAudio": "Wykonany z kości słoniowej"
     },
     {
       "id": "t1-p713-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p713-015-word.mp3",
       "audioWordPl": "t1-p713-015-word-pl.mp3",
-      "audioSentence": "t1-p713-015-sentence.mp3"
+      "audioSentence": "t1-p713-015-sentence.mp3",
+      "polishAudio": "Zardzewiały"
     }
   ]
 }

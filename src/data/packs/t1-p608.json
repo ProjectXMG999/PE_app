@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p608-001-word.mp3",
       "audioWordPl": "t1-p608-001-word-pl.mp3",
-      "audioSentence": "t1-p608-001-sentence.mp3"
+      "audioSentence": "t1-p608-001-sentence.mp3",
+      "polishAudio": "Spełnienie"
     },
     {
       "id": "t1-p608-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p608-002-word.mp3",
       "audioWordPl": "t1-p608-002-word-pl.mp3",
-      "audioSentence": "t1-p608-002-sentence.mp3"
+      "audioSentence": "t1-p608-002-sentence.mp3",
+      "polishAudio": "Osiągnięcie"
     },
     {
       "id": "t1-p608-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p608-003-word.mp3",
       "audioWordPl": "t1-p608-003-word-pl.mp3",
-      "audioSentence": "t1-p608-003-sentence.mp3"
+      "audioSentence": "t1-p608-003-sentence.mp3",
+      "polishAudio": "Potencjał"
     },
     {
       "id": "t1-p608-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p608-004-word.mp3",
       "audioWordPl": "t1-p608-004-word-pl.mp3",
-      "audioSentence": "t1-p608-004-sentence.mp3"
+      "audioSentence": "t1-p608-004-sentence.mp3",
+      "polishAudio": "Skarb"
     },
     {
       "id": "t1-p608-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p608-005-word.mp3",
       "audioWordPl": "t1-p608-005-word-pl.mp3",
-      "audioSentence": "t1-p608-005-sentence.mp3"
+      "audioSentence": "t1-p608-005-sentence.mp3",
+      "polishAudio": "Wyzwanie"
     },
     {
       "id": "t1-p608-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p608-006-word.mp3",
       "audioWordPl": "t1-p608-006-word-pl.mp3",
-      "audioSentence": "t1-p608-006-sentence.mp3"
+      "audioSentence": "t1-p608-006-sentence.mp3",
+      "polishAudio": "Chwała"
     },
     {
       "id": "t1-p608-007",
       "english": "Breakthrough",
-      "polish": "Przełom",
+      "polish": "Przełom; punkt zwrotny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p608-007-word.mp3",
       "audioWordPl": "t1-p608-007-word-pl.mp3",
-      "audioSentence": "t1-p608-007-sentence.mp3"
+      "audioSentence": "t1-p608-007-sentence.mp3",
+      "polishAudio": "Przełom"
     },
     {
       "id": "t1-p608-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p608-008-word.mp3",
       "audioWordPl": "t1-p608-008-word-pl.mp3",
-      "audioSentence": "t1-p608-008-sentence.mp3"
+      "audioSentence": "t1-p608-008-sentence.mp3",
+      "polishAudio": "Pewność siebie"
     },
     {
       "id": "t1-p608-009",
       "english": "Prime",
-      "polish": "Najlepszy okres",
+      "polish": "Najlepszy okres; najlepsze lata życia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p608-009-word.mp3",
       "audioWordPl": "t1-p608-009-word-pl.mp3",
-      "audioSentence": "t1-p608-009-sentence.mp3"
+      "audioSentence": "t1-p608-009-sentence.mp3",
+      "polishAudio": "Najlepszy okres"
     },
     {
       "id": "t1-p608-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p608-010-word.mp3",
       "audioWordPl": "t1-p608-010-word-pl.mp3",
-      "audioSentence": "t1-p608-010-sentence.mp3"
+      "audioSentence": "t1-p608-010-sentence.mp3",
+      "polishAudio": "Triumf"
     },
     {
       "id": "t1-p608-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p608-011-word.mp3",
       "audioWordPl": "t1-p608-011-word-pl.mp3",
-      "audioSentence": "t1-p608-011-sentence.mp3"
+      "audioSentence": "t1-p608-011-sentence.mp3",
+      "polishAudio": "Dokonanie czegoś"
     },
     {
       "id": "t1-p608-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p608-012-word.mp3",
       "audioWordPl": "t1-p608-012-word-pl.mp3",
-      "audioSentence": "t1-p608-012-sentence.mp3"
+      "audioSentence": "t1-p608-012-sentence.mp3",
+      "polishAudio": "Zwycięstwo"
     },
     {
       "id": "t1-p608-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p608-013-word.mp3",
       "audioWordPl": "t1-p608-013-word-pl.mp3",
-      "audioSentence": "t1-p608-013-sentence.mp3"
+      "audioSentence": "t1-p608-013-sentence.mp3",
+      "polishAudio": "Zwycięzca"
     },
     {
       "id": "t1-p608-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p608-014-word.mp3",
       "audioWordPl": "t1-p608-014-word-pl.mp3",
-      "audioSentence": "t1-p608-014-sentence.mp3"
+      "audioSentence": "t1-p608-014-sentence.mp3",
+      "polishAudio": "Zdobycie czegoś"
     },
     {
       "id": "t1-p608-015",
       "english": "Brilliance",
-      "polish": "Świetność",
+      "polish": "Świetność; geniusz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p608-015-word.mp3",
       "audioWordPl": "t1-p608-015-word-pl.mp3",
-      "audioSentence": "t1-p608-015-sentence.mp3"
+      "audioSentence": "t1-p608-015-sentence.mp3",
+      "polishAudio": "Świetność"
     }
   ]
 }

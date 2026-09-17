@@ -10,91 +10,100 @@
       "id": "t1-p076-001",
       "english": "Draw",
       "polish": "Rysować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "can’t draw to save my life.",
+      "sentencePl": "Kompletnie nie umiem rysować.",
       "audioWord": "t1-p076-001-word.mp3",
       "audioWordPl": "t1-p076-001-word-pl.mp3",
-      "audioSentence": "t1-p076-001-sentence.mp3"
+      "audioSentence": "t1-p076-001-sentence.mp3",
+      "polishAudio": "Rysować"
     },
     {
       "id": "t1-p076-002",
       "english": "Paint",
       "polish": "Malować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can you paint my fence?",
+      "sentencePl": "Czy możesz pomalować mój płot?",
       "audioWord": "t1-p076-002-word.mp3",
       "audioWordPl": "t1-p076-002-word-pl.mp3",
-      "audioSentence": "t1-p076-002-sentence.mp3"
+      "audioSentence": "t1-p076-002-sentence.mp3",
+      "polishAudio": "Malować"
     },
     {
       "id": "t1-p076-003",
       "english": "Play",
-      "polish": "Bawić się",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Bawić się; grać",
+      "sentenceEn": "Come play; we saved you a seat.",
+      "sentencePl": "Chodź się pobawić, zachowaliśmy dla ciebie miejsce.",
       "audioWord": "t1-p076-003-word.mp3",
       "audioWordPl": "t1-p076-003-word-pl.mp3",
-      "audioSentence": "t1-p076-003-sentence.mp3"
+      "audioSentence": "t1-p076-003-sentence.mp3",
+      "polishAudio": "Bawić się"
     },
     {
       "id": "t1-p076-004",
       "english": "Relax",
-      "polish": "Relaksować się",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Relaksować się; rozluźnić się",
+      "sentenceEn": "Go relax; I'll wash the cups.",
+      "sentencePl": "Idź odpocząć, ja umyję kubki.",
       "audioWord": "t1-p076-004-word.mp3",
       "audioWordPl": "t1-p076-004-word-pl.mp3",
-      "audioSentence": "t1-p076-004-sentence.mp3"
+      "audioSentence": "t1-p076-004-sentence.mp3",
+      "polishAudio": "Relaksować się"
     },
     {
       "id": "t1-p076-005",
       "english": "Rest",
       "polish": "Odpoczywać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I'll rest after this last email.",
+      "sentencePl": "Odpocznę po tym ostatnim mailu.",
       "audioWord": "t1-p076-005-word.mp3",
       "audioWordPl": "t1-p076-005-word-pl.mp3",
-      "audioSentence": "t1-p076-005-sentence.mp3"
+      "audioSentence": "t1-p076-005-sentence.mp3",
+      "polishAudio": "Odpoczywać"
     },
     {
       "id": "t1-p076-006",
       "english": "Ride",
-      "polish": "Jeździć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Jeździć (na czymś)",
+      "sentenceEn": "Do you want a ride home?",
+      "sentencePl": "Chcesz, żebym cię podwiozła do domu?",
       "audioWord": "t1-p076-006-word.mp3",
       "audioWordPl": "t1-p076-006-word-pl.mp3",
-      "audioSentence": "t1-p076-006-sentence.mp3"
+      "audioSentence": "t1-p076-006-sentence.mp3",
+      "polishAudio": "Jeździć"
     },
     {
       "id": "t1-p076-007",
       "english": "Sing",
       "polish": "Śpiewać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Will you sing at my birthday?",
+      "sentencePl": "Zaśpiewasz na moich urodzinach?",
       "audioWord": "t1-p076-007-word.mp3",
       "audioWordPl": "t1-p076-007-word-pl.mp3",
-      "audioSentence": "t1-p076-007-sentence.mp3"
+      "audioSentence": "t1-p076-007-sentence.mp3",
+      "polishAudio": "Śpiewać"
     },
     {
       "id": "t1-p076-008",
       "english": "Smoke",
-      "polish": "Palić papierosy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Palić papierosy; dymić",
+      "sentenceEn": "I used to smoke.",
+      "sentencePl": "Kiedyś paliłem.",
       "audioWord": "t1-p076-008-word.mp3",
       "audioWordPl": "t1-p076-008-word-pl.mp3",
-      "audioSentence": "t1-p076-008-sentence.mp3"
+      "audioSentence": "t1-p076-008-sentence.mp3",
+      "polishAudio": "Palić papierosy"
     },
     {
       "id": "t1-p076-009",
       "english": "Travel",
       "polish": "Podróżować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Let's travel somewhere warm in January.",
+      "sentencePl": "Podróżujmy gdzieś, gdzie jest ciepło, w styczniu.",
       "audioWord": "t1-p076-009-word.mp3",
       "audioWordPl": "t1-p076-009-word-pl.mp3",
-      "audioSentence": "t1-p076-009-sentence.mp3"
+      "audioSentence": "t1-p076-009-sentence.mp3",
+      "polishAudio": "Podróżować"
     }
   ]
 }

@@ -9,12 +9,13 @@
     {
       "id": "t1-p352-001",
       "english": "Damage",
-      "polish": "Uszkodzenie",
+      "polish": "Uszkodzenie; szkoda",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p352-001-word.mp3",
       "audioWordPl": "t1-p352-001-word-pl.mp3",
-      "audioSentence": "t1-p352-001-sentence.mp3"
+      "audioSentence": "t1-p352-001-sentence.mp3",
+      "polishAudio": "Uszkodzenie"
     },
     {
       "id": "t1-p352-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p352-002-word.mp3",
       "audioWordPl": "t1-p352-002-word-pl.mp3",
-      "audioSentence": "t1-p352-002-sentence.mp3"
+      "audioSentence": "t1-p352-002-sentence.mp3",
+      "polishAudio": "Wypadek"
     },
     {
       "id": "t1-p352-003",
       "english": "Aftermath",
-      "polish": "Pokłosie",
+      "polish": "Pokłosie; następstwo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p352-003-word.mp3",
       "audioWordPl": "t1-p352-003-word-pl.mp3",
-      "audioSentence": "t1-p352-003-sentence.mp3"
+      "audioSentence": "t1-p352-003-sentence.mp3",
+      "polishAudio": "Pokłosie"
     },
     {
       "id": "t1-p352-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p352-004-word.mp3",
       "audioWordPl": "t1-p352-004-word-pl.mp3",
-      "audioSentence": "t1-p352-004-sentence.mp3"
+      "audioSentence": "t1-p352-004-sentence.mp3",
+      "polishAudio": "Awaria"
     },
     {
       "id": "t1-p352-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p352-005-word.mp3",
       "audioWordPl": "t1-p352-005-word-pl.mp3",
-      "audioSentence": "t1-p352-005-sentence.mp3"
+      "audioSentence": "t1-p352-005-sentence.mp3",
+      "polishAudio": "Turbulencja"
     },
     {
       "id": "t1-p352-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p352-006-word.mp3",
       "audioWordPl": "t1-p352-006-word-pl.mp3",
-      "audioSentence": "t1-p352-006-sentence.mp3"
+      "audioSentence": "t1-p352-006-sentence.mp3",
+      "polishAudio": "Kolizja"
     },
     {
       "id": "t1-p352-007",
       "english": "Crash",
-      "polish": "Kraksa",
+      "polish": "Kraksa; awaria (systemu)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p352-007-word.mp3",
       "audioWordPl": "t1-p352-007-word-pl.mp3",
-      "audioSentence": "t1-p352-007-sentence.mp3"
+      "audioSentence": "t1-p352-007-sentence.mp3",
+      "polishAudio": "Kraksa"
     },
     {
       "id": "t1-p352-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p352-008-word.mp3",
       "audioWordPl": "t1-p352-008-word-pl.mp3",
-      "audioSentence": "t1-p352-008-sentence.mp3"
+      "audioSentence": "t1-p352-008-sentence.mp3",
+      "polishAudio": "Klęska"
     },
     {
       "id": "t1-p352-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p352-009-word.mp3",
       "audioWordPl": "t1-p352-009-word-pl.mp3",
-      "audioSentence": "t1-p352-009-sentence.mp3"
+      "audioSentence": "t1-p352-009-sentence.mp3",
+      "polishAudio": "Katastrofa"
     },
     {
       "id": "t1-p352-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p352-010-word.mp3",
       "audioWordPl": "t1-p352-010-word-pl.mp3",
-      "audioSentence": "t1-p352-010-sentence.mp3"
+      "audioSentence": "t1-p352-010-sentence.mp3",
+      "polishAudio": "Nagły wypadek"
     },
     {
       "id": "t1-p352-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p352-011-word.mp3",
       "audioWordPl": "t1-p352-011-word-pl.mp3",
-      "audioSentence": "t1-p352-011-sentence.mp3"
+      "audioSentence": "t1-p352-011-sentence.mp3",
+      "polishAudio": "Ocalały"
     },
     {
       "id": "t1-p352-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p352-012-word.mp3",
       "audioWordPl": "t1-p352-012-word-pl.mp3",
-      "audioSentence": "t1-p352-012-sentence.mp3"
+      "audioSentence": "t1-p352-012-sentence.mp3",
+      "polishAudio": "Zniszczenie"
     },
     {
       "id": "t1-p352-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p352-013-word.mp3",
       "audioWordPl": "t1-p352-013-word-pl.mp3",
-      "audioSentence": "t1-p352-013-sentence.mp3"
+      "audioSentence": "t1-p352-013-sentence.mp3",
+      "polishAudio": "Incydent"
     },
     {
       "id": "t1-p352-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p352-014-word.mp3",
       "audioWordPl": "t1-p352-014-word-pl.mp3",
-      "audioSentence": "t1-p352-014-sentence.mp3"
+      "audioSentence": "t1-p352-014-sentence.mp3",
+      "polishAudio": "Stłuczka"
     },
     {
       "id": "t1-p352-015",
       "english": "Casualty",
-      "polish": "Ofiara wypadku lub wojny",
+      "polish": "Ofiara wypadku lub wojny; ranny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p352-015-word.mp3",
       "audioWordPl": "t1-p352-015-word-pl.mp3",
-      "audioSentence": "t1-p352-015-sentence.mp3"
+      "audioSentence": "t1-p352-015-sentence.mp3",
+      "polishAudio": "Ofiara wypadku lub wojny"
     }
   ]
 }

@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p398-001-word.mp3",
       "audioWordPl": "t1-p398-001-word-pl.mp3",
-      "audioSentence": "t1-p398-001-sentence.mp3"
+      "audioSentence": "t1-p398-001-sentence.mp3",
+      "polishAudio": "Golić"
     },
     {
       "id": "t1-p398-002",
@@ -24,37 +25,41 @@
       "sentencePl": null,
       "audioWord": "t1-p398-002-word.mp3",
       "audioWordPl": "t1-p398-002-word-pl.mp3",
-      "audioSentence": "t1-p398-002-sentence.mp3"
+      "audioSentence": "t1-p398-002-sentence.mp3",
+      "polishAudio": "Wyglądać"
     },
     {
       "id": "t1-p398-003",
       "english": "Fit",
-      "polish": "Być właściwego rozmiaru",
+      "polish": "Być właściwego rozmiaru; pasować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p398-003-word.mp3",
       "audioWordPl": "t1-p398-003-word-pl.mp3",
-      "audioSentence": "t1-p398-003-sentence.mp3"
+      "audioSentence": "t1-p398-003-sentence.mp3",
+      "polishAudio": "Być właściwego rozmiaru"
     },
     {
       "id": "t1-p398-004",
       "english": "Match",
-      "polish": "Pasować do czegoś",
+      "polish": "Pasować do czegoś; dopasowywać do czegoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p398-004-word.mp3",
       "audioWordPl": "t1-p398-004-word-pl.mp3",
-      "audioSentence": "t1-p398-004-sentence.mp3"
+      "audioSentence": "t1-p398-004-sentence.mp3",
+      "polishAudio": "Pasować do czegoś"
     },
     {
       "id": "t1-p398-005",
       "english": "Suit",
-      "polish": "Pasować",
+      "polish": "Pasować (coś komuś pasuje)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p398-005-word.mp3",
       "audioWordPl": "t1-p398-005-word-pl.mp3",
-      "audioSentence": "t1-p398-005-sentence.mp3"
+      "audioSentence": "t1-p398-005-sentence.mp3",
+      "polishAudio": "Pasować"
     },
     {
       "id": "t1-p398-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p398-006-word.mp3",
       "audioWordPl": "t1-p398-006-word-pl.mp3",
-      "audioSentence": "t1-p398-006-sentence.mp3"
+      "audioSentence": "t1-p398-006-sentence.mp3",
+      "polishAudio": "Ubierać"
     },
     {
       "id": "t1-p398-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p398-007-word.mp3",
       "audioWordPl": "t1-p398-007-word-pl.mp3",
-      "audioSentence": "t1-p398-007-sentence.mp3"
+      "audioSentence": "t1-p398-007-sentence.mp3",
+      "polishAudio": "Tapirować"
     },
     {
       "id": "t1-p398-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p398-008-word.mp3",
       "audioWordPl": "t1-p398-008-word-pl.mp3",
-      "audioSentence": "t1-p398-008-sentence.mp3"
+      "audioSentence": "t1-p398-008-sentence.mp3",
+      "polishAudio": "Perfumować"
     },
     {
       "id": "t1-p398-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p398-009-word.mp3",
       "audioWordPl": "t1-p398-009-word-pl.mp3",
-      "audioSentence": "t1-p398-009-sentence.mp3"
+      "audioSentence": "t1-p398-009-sentence.mp3",
+      "polishAudio": "Szczotkować"
     },
     {
       "id": "t1-p398-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p398-010-word.mp3",
       "audioWordPl": "t1-p398-010-word-pl.mp3",
-      "audioSentence": "t1-p398-010-sentence.mp3"
+      "audioSentence": "t1-p398-010-sentence.mp3",
+      "polishAudio": "Sznurować"
     },
     {
       "id": "t1-p398-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p398-011-word.mp3",
       "audioWordPl": "t1-p398-011-word-pl.mp3",
-      "audioSentence": "t1-p398-011-sentence.mp3"
+      "audioSentence": "t1-p398-011-sentence.mp3",
+      "polishAudio": "Mierzyć"
     },
     {
       "id": "t1-p398-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p398-012-word.mp3",
       "audioWordPl": "t1-p398-012-word-pl.mp3",
-      "audioSentence": "t1-p398-012-sentence.mp3"
+      "audioSentence": "t1-p398-012-sentence.mp3",
+      "polishAudio": "Odświeżać"
     },
     {
       "id": "t1-p398-013",
       "english": "Strip",
-      "polish": "Zdzierać",
+      "polish": "Zdzierać (ubrania); rozbierać (się)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p398-013-word.mp3",
       "audioWordPl": "t1-p398-013-word-pl.mp3",
-      "audioSentence": "t1-p398-013-sentence.mp3"
+      "audioSentence": "t1-p398-013-sentence.mp3",
+      "polishAudio": "Zdzierać"
     },
     {
       "id": "t1-p398-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p398-014-word.mp3",
       "audioWordPl": "t1-p398-014-word-pl.mp3",
-      "audioSentence": "t1-p398-014-sentence.mp3"
+      "audioSentence": "t1-p398-014-sentence.mp3",
+      "polishAudio": "Opalać się"
     },
     {
       "id": "t1-p398-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p398-015-word.mp3",
       "audioWordPl": "t1-p398-015-word-pl.mp3",
-      "audioSentence": "t1-p398-015-sentence.mp3"
+      "audioSentence": "t1-p398-015-sentence.mp3",
+      "polishAudio": "Rozbierać się"
     }
   ]
 }

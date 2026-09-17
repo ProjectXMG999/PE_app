@@ -9,102 +9,112 @@
     {
       "id": "t1-p021-001",
       "english": "Lady",
-      "polish": "Dama",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Dama; pani",
+      "sentenceEn": "Excuse me, lady, are you okay?",
+      "sentencePl": "Przepraszam, proszę pani, wszystko w porządku?",
       "audioWord": "t1-p021-001-word.mp3",
       "audioWordPl": "t1-p021-001-word-pl.mp3",
-      "audioSentence": "t1-p021-001-sentence.mp3"
+      "audioSentence": "t1-p021-001-sentence.mp3",
+      "polishAudio": "Dama"
     },
     {
       "id": "t1-p021-002",
       "english": "Adult",
       "polish": "Dorosły",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Only adults may enter.",
+      "sentencePl": "Tylko dorośli mogą wejść.",
       "audioWord": "t1-p021-002-word.mp3",
       "audioWordPl": "t1-p021-002-word-pl.mp3",
-      "audioSentence": "t1-p021-002-sentence.mp3"
+      "audioSentence": "t1-p021-002-sentence.mp3",
+      "polishAudio": "Dorosły"
     },
     {
       "id": "t1-p021-003",
       "english": "Girl",
       "polish": "Dziewczyna",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Is that girl in your class?",
+      "sentencePl": "Czy ta dziewczyna jest w twojej klasie?",
       "audioWord": "t1-p021-003-word.mp3",
       "audioWordPl": "t1-p021-003-word-pl.mp3",
-      "audioSentence": "t1-p021-003-sentence.mp3"
+      "audioSentence": "t1-p021-003-sentence.mp3",
+      "polishAudio": "Dziewczyna"
     },
     {
       "id": "t1-p021-004",
       "english": "Gentleman",
       "polish": "Dżentelmen",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "He is a true gentleman.",
+      "sentencePl": "On jest prawdziwym dżentelmenem.",
       "audioWord": "t1-p021-004-word.mp3",
       "audioWordPl": "t1-p021-004-word-pl.mp3",
-      "audioSentence": "t1-p021-004-sentence.mp3"
+      "audioSentence": "t1-p021-004-sentence.mp3",
+      "polishAudio": "Dżentelmen"
     },
     {
       "id": "t1-p021-005",
       "english": "Guy",
-      "polish": "Facet",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Facet; koleś",
+      "sentenceEn": "Who's that guy?",
+      "sentencePl": "Kim jest ten facet?",
       "audioWord": "t1-p021-005-word.mp3",
       "audioWordPl": "t1-p021-005-word-pl.mp3",
-      "audioSentence": "t1-p021-005-sentence.mp3"
+      "audioSentence": "t1-p021-005-sentence.mp3",
+      "polishAudio": "Facet"
     },
     {
       "id": "t1-p021-006",
       "english": "Man",
-      "polish": "Mężczyzna",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Mężczyzna; człowiek",
+      "sentenceEn": "Excuse me, sir—this man was first.",
+      "sentencePl": "Przepraszam, proszę pana — ten mężczyzna był pierwszy.",
       "audioWord": "t1-p021-006-word.mp3",
       "audioWordPl": "t1-p021-006-word-pl.mp3",
-      "audioSentence": "t1-p021-006-sentence.mp3"
+      "audioSentence": "t1-p021-006-sentence.mp3",
+      "polishAudio": "Mężczyzna"
     },
     {
       "id": "t1-p021-007",
       "english": "Last name",
       "polish": "Nazwisko",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Write your last name here.",
+      "sentencePl": "Napisz tutaj swoje nazwisko.",
       "audioWord": "t1-p021-007-word.mp3",
       "audioWordPl": "t1-p021-007-word-pl.mp3",
-      "audioSentence": "t1-p021-007-sentence.mp3"
+      "audioSentence": "t1-p021-007-sentence.mp3",
+      "polishAudio": "Nazwisko"
     },
     {
       "id": "t1-p021-008",
       "english": "Friend",
       "polish": "Przyjaciel",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can my friend come too?",
+      "sentencePl": "Czy mój przyjaciel też może przyjść?",
       "audioWord": "t1-p021-008-word.mp3",
       "audioWordPl": "t1-p021-008-word-pl.mp3",
-      "audioSentence": "t1-p021-008-sentence.mp3"
+      "audioSentence": "t1-p021-008-sentence.mp3",
+      "polishAudio": "Przyjaciel"
     },
     {
       "id": "t1-p021-009",
       "english": "Age",
       "polish": "Wiek",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "What's your age?",
+      "sentencePl": "Ile masz lat?",
       "audioWord": "t1-p021-009-word.mp3",
       "audioWordPl": "t1-p021-009-word-pl.mp3",
-      "audioSentence": "t1-p021-009-sentence.mp3"
+      "audioSentence": "t1-p021-009-sentence.mp3",
+      "polishAudio": "Wiek"
     },
     {
       "id": "t1-p021-010",
       "english": "Health",
       "polish": "Zdrowie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I’m doing this for my health.",
+      "sentencePl": "Robię to dla swojego zdrowia.",
       "audioWord": "t1-p021-010-word.mp3",
       "audioWordPl": "t1-p021-010-word-pl.mp3",
-      "audioSentence": "t1-p021-010-sentence.mp3"
+      "audioSentence": "t1-p021-010-sentence.mp3",
+      "polishAudio": "Zdrowie"
     }
   ]
 }

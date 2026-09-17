@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p800-001-word.mp3",
       "audioWordPl": "t1-p800-001-word-pl.mp3",
-      "audioSentence": "t1-p800-001-sentence.mp3"
+      "audioSentence": "t1-p800-001-sentence.mp3",
+      "polishAudio": "Kinematografia"
     },
     {
       "id": "t1-p800-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p800-002-word.mp3",
       "audioWordPl": "t1-p800-002-word-pl.mp3",
-      "audioSentence": "t1-p800-002-sentence.mp3"
+      "audioSentence": "t1-p800-002-sentence.mp3",
+      "polishAudio": "Improwizacja"
     },
     {
       "id": "t1-p800-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p800-003-word.mp3",
       "audioWordPl": "t1-p800-003-word-pl.mp3",
-      "audioSentence": "t1-p800-003-sentence.mp3"
+      "audioSentence": "t1-p800-003-sentence.mp3",
+      "polishAudio": "Lekcje tańca"
     },
     {
       "id": "t1-p800-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p800-004-word.mp3",
       "audioWordPl": "t1-p800-004-word-pl.mp3",
-      "audioSentence": "t1-p800-004-sentence.mp3"
+      "audioSentence": "t1-p800-004-sentence.mp3",
+      "polishAudio": "Recenzja"
     },
     {
       "id": "t1-p800-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p800-005-word.mp3",
       "audioWordPl": "t1-p800-005-word-pl.mp3",
-      "audioSentence": "t1-p800-005-sentence.mp3"
+      "audioSentence": "t1-p800-005-sentence.mp3",
+      "polishAudio": "Refren"
     },
     {
       "id": "t1-p800-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p800-006-word.mp3",
       "audioWordPl": "t1-p800-006-word-pl.mp3",
-      "audioSentence": "t1-p800-006-sentence.mp3"
+      "audioSentence": "t1-p800-006-sentence.mp3",
+      "polishAudio": "Szafa grająca"
     },
     {
       "id": "t1-p800-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p800-007-word.mp3",
       "audioWordPl": "t1-p800-007-word-pl.mp3",
-      "audioSentence": "t1-p800-007-sentence.mp3"
+      "audioSentence": "t1-p800-007-sentence.mp3",
+      "polishAudio": "Otwarcie"
     },
     {
       "id": "t1-p800-008",
       "english": "Performance",
-      "polish": "Przedstawienie",
+      "polish": "Przedstawienie; działanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p800-008-word.mp3",
       "audioWordPl": "t1-p800-008-word-pl.mp3",
-      "audioSentence": "t1-p800-008-sentence.mp3"
+      "audioSentence": "t1-p800-008-sentence.mp3",
+      "polishAudio": "Przedstawienie"
     },
     {
       "id": "t1-p800-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p800-009-word.mp3",
       "audioWordPl": "t1-p800-009-word-pl.mp3",
-      "audioSentence": "t1-p800-009-sentence.mp3"
+      "audioSentence": "t1-p800-009-sentence.mp3",
+      "polishAudio": "Zamknięcie"
     },
     {
       "id": "t1-p800-010",
@@ -104,17 +113,19 @@
       "sentencePl": null,
       "audioWord": "t1-p800-010-word.mp3",
       "audioWordPl": "t1-p800-010-word-pl.mp3",
-      "audioSentence": "t1-p800-010-sentence.mp3"
+      "audioSentence": "t1-p800-010-sentence.mp3",
+      "polishAudio": "Wykonawca"
     },
     {
       "id": "t1-p800-011",
       "english": "Sketch",
-      "polish": "Szkic",
+      "polish": "Szkic (rysunku)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p800-011-word.mp3",
       "audioWordPl": "t1-p800-011-word-pl.mp3",
-      "audioSentence": "t1-p800-011-sentence.mp3"
+      "audioSentence": "t1-p800-011-sentence.mp3",
+      "polishAudio": "Szkic"
     },
     {
       "id": "t1-p800-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p800-012-word.mp3",
       "audioWordPl": "t1-p800-012-word-pl.mp3",
-      "audioSentence": "t1-p800-012-sentence.mp3"
+      "audioSentence": "t1-p800-012-sentence.mp3",
+      "polishAudio": "Mit"
     },
     {
       "id": "t1-p800-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p800-013-word.mp3",
       "audioWordPl": "t1-p800-013-word-pl.mp3",
-      "audioSentence": "t1-p800-013-sentence.mp3"
+      "audioSentence": "t1-p800-013-sentence.mp3",
+      "polishAudio": "Przesąd"
     },
     {
       "id": "t1-p800-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p800-014-word.mp3",
       "audioWordPl": "t1-p800-014-word-pl.mp3",
-      "audioSentence": "t1-p800-014-sentence.mp3"
+      "audioSentence": "t1-p800-014-sentence.mp3",
+      "polishAudio": "Wokalista"
     },
     {
       "id": "t1-p800-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p800-015-word.mp3",
       "audioWordPl": "t1-p800-015-word-pl.mp3",
-      "audioSentence": "t1-p800-015-sentence.mp3"
+      "audioSentence": "t1-p800-015-sentence.mp3",
+      "polishAudio": "Rzeźbiarz"
     }
   ]
 }

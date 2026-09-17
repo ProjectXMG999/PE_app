@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p396-001-word.mp3",
       "audioWordPl": "t1-p396-001-word-pl.mp3",
-      "audioSentence": "t1-p396-001-sentence.mp3"
+      "audioSentence": "t1-p396-001-sentence.mp3",
+      "polishAudio": "Zapłacić"
     },
     {
       "id": "t1-p396-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p396-002-word.mp3",
       "audioWordPl": "t1-p396-002-word-pl.mp3",
-      "audioSentence": "t1-p396-002-sentence.mp3"
+      "audioSentence": "t1-p396-002-sentence.mp3",
+      "polishAudio": "Kupić na wynos"
     },
     {
       "id": "t1-p396-003",
@@ -34,57 +36,63 @@
       "sentencePl": null,
       "audioWord": "t1-p396-003-word.mp3",
       "audioWordPl": "t1-p396-003-word-pl.mp3",
-      "audioSentence": "t1-p396-003-sentence.mp3"
+      "audioSentence": "t1-p396-003-sentence.mp3",
+      "polishAudio": "Wyprzedać"
     },
     {
       "id": "t1-p396-004",
       "english": "Cut back",
-      "polish": "Wydawać mniej",
+      "polish": "Wydawać mniej; ciąć wydatki",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p396-004-word.mp3",
       "audioWordPl": "t1-p396-004-word-pl.mp3",
-      "audioSentence": "t1-p396-004-sentence.mp3"
+      "audioSentence": "t1-p396-004-sentence.mp3",
+      "polishAudio": "Wydawać mniej"
     },
     {
       "id": "t1-p396-005",
       "english": "Get by",
-      "polish": "Przetrwać",
+      "polish": "Przetrwać; dawać sobie radę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p396-005-word.mp3",
       "audioWordPl": "t1-p396-005-word-pl.mp3",
-      "audioSentence": "t1-p396-005-sentence.mp3"
+      "audioSentence": "t1-p396-005-sentence.mp3",
+      "polishAudio": "Przetrwać"
     },
     {
       "id": "t1-p396-006",
       "english": "Go for sth",
-      "polish": "Chodzić za ileś",
+      "polish": "Chodzić za ileś (mieć określoną cenę)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p396-006-word.mp3",
       "audioWordPl": "t1-p396-006-word-pl.mp3",
-      "audioSentence": "t1-p396-006-sentence.mp3"
+      "audioSentence": "t1-p396-006-sentence.mp3",
+      "polishAudio": "Chodzić za ileś"
     },
     {
       "id": "t1-p396-007",
       "english": "Take out",
-      "polish": "Wypłacać",
+      "polish": "Wypłacać; wyjmować (pieniądze z konta lub bankomatu)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p396-007-word.mp3",
       "audioWordPl": "t1-p396-007-word-pl.mp3",
-      "audioSentence": "t1-p396-007-sentence.mp3"
+      "audioSentence": "t1-p396-007-sentence.mp3",
+      "polishAudio": "Wypłacać"
     },
     {
       "id": "t1-p396-008",
       "english": "Bail sb out",
-      "polish": "Wykupić",
+      "polish": "Wykupić (kogoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p396-008-word.mp3",
       "audioWordPl": "t1-p396-008-word-pl.mp3",
-      "audioSentence": "t1-p396-008-sentence.mp3"
+      "audioSentence": "t1-p396-008-sentence.mp3",
+      "polishAudio": "Wykupić"
     },
     {
       "id": "t1-p396-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p396-009-word.mp3",
       "audioWordPl": "t1-p396-009-word-pl.mp3",
-      "audioSentence": "t1-p396-009-sentence.mp3"
+      "audioSentence": "t1-p396-009-sentence.mp3",
+      "polishAudio": "Zwracać komuś kasę"
     },
     {
       "id": "t1-p396-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p396-010-word.mp3",
       "audioWordPl": "t1-p396-010-word-pl.mp3",
-      "audioSentence": "t1-p396-010-sentence.mp3"
+      "audioSentence": "t1-p396-010-sentence.mp3",
+      "polishAudio": "Spłacać coś"
     }
   ]
 }

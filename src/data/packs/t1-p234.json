@@ -10,151 +10,166 @@
       "id": "t1-p234-001",
       "english": "Cut",
       "polish": "Ciąć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I cut the wrapping paper too short. Oops.",
+      "sentencePl": "Za krótko uciąłem papier do pakowania. Ups.",
       "audioWord": "t1-p234-001-word.mp3",
       "audioWordPl": "t1-p234-001-word-pl.mp3",
-      "audioSentence": "t1-p234-001-sentence.mp3"
+      "audioSentence": "t1-p234-001-sentence.mp3",
+      "polishAudio": "Ciąć"
     },
     {
       "id": "t1-p234-002",
       "english": "Fix",
-      "polish": "Naprawiać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Naprawiać (również nietechnicznie)",
+      "sentenceEn": "My screen froze—can you help me fix it?",
+      "sentencePl": "Mój ekran się zawiesił — możesz mi pomóc go naprawić?",
       "audioWord": "t1-p234-002-word.mp3",
       "audioWordPl": "t1-p234-002-word-pl.mp3",
-      "audioSentence": "t1-p234-002-sentence.mp3"
+      "audioSentence": "t1-p234-002-sentence.mp3",
+      "polishAudio": "Naprawiać"
     },
     {
       "id": "t1-p234-003",
       "english": "Repair",
-      "polish": "Naprawiać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Naprawiać (tylko technicznie)",
+      "sentenceEn": "Can you repair my bike? I need it tomorrow.",
+      "sentencePl": "Możesz naprawić mój rower? Potrzebuję go jutro.",
       "audioWord": "t1-p234-003-word.mp3",
       "audioWordPl": "t1-p234-003-word-pl.mp3",
-      "audioSentence": "t1-p234-003-sentence.mp3"
+      "audioSentence": "t1-p234-003-sentence.mp3",
+      "polishAudio": "Naprawiać"
     },
     {
       "id": "t1-p234-004",
       "english": "Replace",
-      "polish": "Wymieniać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Wymieniać; zastąpić",
+      "sentenceEn": "Let's replace that old lock before it jams again.",
+      "sentencePl": "Wymieńmy ten stary zamek, zanim znowu się zatnie.",
       "audioWord": "t1-p234-004-word.mp3",
       "audioWordPl": "t1-p234-004-word-pl.mp3",
-      "audioSentence": "t1-p234-004-sentence.mp3"
+      "audioSentence": "t1-p234-004-sentence.mp3",
+      "polishAudio": "Wymieniać"
     },
     {
       "id": "t1-p234-005",
       "english": "Stick",
-      "polish": "Przyklejać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Przyklejać (się); wtykać",
+      "sentenceEn": "Stick this note by the door, so I remember.",
+      "sentencePl": "Przyklej tę notatkę przy drzwiach, żebym pamiętał.",
       "audioWord": "t1-p234-005-word.mp3",
       "audioWordPl": "t1-p234-005-word-pl.mp3",
-      "audioSentence": "t1-p234-005-sentence.mp3"
+      "audioSentence": "t1-p234-005-sentence.mp3",
+      "polishAudio": "Przyklejać"
     },
     {
       "id": "t1-p234-006",
       "english": "Glue",
-      "polish": "Przyklejać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Przyklejać (coś klejem)",
+      "sentenceEn": "Can you glue my mug handle? I love that mug.",
+      "sentencePl": "Możesz przykleić ucho mojego kubka? Uwielbiam ten kubek.",
       "audioWord": "t1-p234-006-word.mp3",
       "audioWordPl": "t1-p234-006-word-pl.mp3",
-      "audioSentence": "t1-p234-006-sentence.mp3"
+      "audioSentence": "t1-p234-006-sentence.mp3",
+      "polishAudio": "Przyklejać"
     },
     {
       "id": "t1-p234-007",
       "english": "Tie",
-      "polish": "Związać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Związać; przywiązać (kogoś)",
+      "sentenceEn": "Tie my apron, please—my hands are covered in flour.",
+      "sentencePl": "Zawiąż mi fartuch, proszę — mam ręce całe w mące.",
       "audioWord": "t1-p234-007-word.mp3",
       "audioWordPl": "t1-p234-007-word-pl.mp3",
-      "audioSentence": "t1-p234-007-sentence.mp3"
+      "audioSentence": "t1-p234-007-sentence.mp3",
+      "polishAudio": "Związać"
     },
     {
       "id": "t1-p234-008",
       "english": "Combine",
       "polish": "Połączyć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can we combine our notes in Google Docs for class?",
+      "sentencePl": "Możemy połączyć nasze notatki w Google Docs na zajęcia?",
       "audioWord": "t1-p234-008-word.mp3",
       "audioWordPl": "t1-p234-008-word-pl.mp3",
-      "audioSentence": "t1-p234-008-sentence.mp3"
+      "audioSentence": "t1-p234-008-sentence.mp3",
+      "polishAudio": "Połączyć"
     },
     {
       "id": "t1-p234-009",
       "english": "Lower",
-      "polish": "Zniżać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Zniżać; obniżać",
+      "sentenceEn": "Could you lower the blinds? The sun's in my eyes.",
+      "sentencePl": "Możesz opuścić żaluzje? Słońce świeci mi w oczy.",
       "audioWord": "t1-p234-009-word.mp3",
       "audioWordPl": "t1-p234-009-word-pl.mp3",
-      "audioSentence": "t1-p234-009-sentence.mp3"
+      "audioSentence": "t1-p234-009-sentence.mp3",
+      "polishAudio": "Zniżać"
     },
     {
       "id": "t1-p234-010",
       "english": "Renew",
-      "polish": "Odnawiać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Odnawiać; przedłużać (członkostwo)",
+      "sentenceEn": "I renewed my passport early and felt relieved.",
+      "sentencePl": "Odnowiłem paszport wcześniej i poczułem ulgę.",
       "audioWord": "t1-p234-010-word.mp3",
       "audioWordPl": "t1-p234-010-word-pl.mp3",
-      "audioSentence": "t1-p234-010-sentence.mp3"
+      "audioSentence": "t1-p234-010-sentence.mp3",
+      "polishAudio": "Odnawiać"
     },
     {
       "id": "t1-p234-011",
       "english": "Renovate",
-      "polish": "Remontować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Remontować; odnawiać (miejsce)",
+      "sentenceEn": "They renovated the flat, but kept the old tiles.",
+      "sentencePl": "Wyremontowali mieszkanie, ale zostawili stare płytki.",
       "audioWord": "t1-p234-011-word.mp3",
       "audioWordPl": "t1-p234-011-word-pl.mp3",
-      "audioSentence": "t1-p234-011-sentence.mp3"
+      "audioSentence": "t1-p234-011-sentence.mp3",
+      "polishAudio": "Remontować"
     },
     {
       "id": "t1-p234-012",
       "english": "Bend",
-      "polish": "Zagiąć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Zagiąć; wyginać",
+      "sentenceEn": "Careful, the wire bends easily near the plug.",
+      "sentencePl": "Uważaj, przewód łatwo się zgina przy wtyczce.",
       "audioWord": "t1-p234-012-word.mp3",
       "audioWordPl": "t1-p234-012-word-pl.mp3",
-      "audioSentence": "t1-p234-012-sentence.mp3"
+      "audioSentence": "t1-p234-012-sentence.mp3",
+      "polishAudio": "Zagiąć"
     },
     {
       "id": "t1-p234-013",
       "english": "Improve",
-      "polish": "Ulepszać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Ulepszać (się); poprawiać (się)",
+      "sentenceEn": "Your idea improved the plan more than you think.",
+      "sentencePl": "Twój pomysł ulepszył ten plan bardziej, niż myślisz.",
       "audioWord": "t1-p234-013-word.mp3",
       "audioWordPl": "t1-p234-013-word-pl.mp3",
-      "audioSentence": "t1-p234-013-sentence.mp3"
+      "audioSentence": "t1-p234-013-sentence.mp3",
+      "polishAudio": "Ulepszać"
     },
     {
       "id": "t1-p234-014",
       "english": "Craft",
-      "polish": "Wytwarzać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Wytwarzać (wyprodukować rzemieślniczo)",
+      "sentenceEn": "We crafted a tiny shelf from leftover wood—somehow.",
+      "sentencePl": "Zrobiliśmy małą półkę z resztek drewna — jakoś.",
       "audioWord": "t1-p234-014-word.mp3",
       "audioWordPl": "t1-p234-014-word-pl.mp3",
-      "audioSentence": "t1-p234-014-sentence.mp3"
+      "audioSentence": "t1-p234-014-sentence.mp3",
+      "polishAudio": "Wytwarzać"
     },
     {
       "id": "t1-p234-015",
       "english": "Engineer",
-      "polish": "Konstruować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Konstruować; majstrować",
+      "sentenceEn": "We engineered a quick fix after the 3D printer jammed.",
+      "sentencePl": "Skonstruowaliśmy szybkie rozwiązanie, gdy drukarka 3D się zacięła.",
       "audioWord": "t1-p234-015-word.mp3",
       "audioWordPl": "t1-p234-015-word-pl.mp3",
-      "audioSentence": "t1-p234-015-sentence.mp3"
+      "audioSentence": "t1-p234-015-sentence.mp3",
+      "polishAudio": "Konstruować"
     }
   ]
 }

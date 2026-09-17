@@ -9,12 +9,13 @@
     {
       "id": "t1-p466-001",
       "english": "Quote",
-      "polish": "Cytować",
+      "polish": "Cytować (dokładne słowa)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p466-001-word.mp3",
       "audioWordPl": "t1-p466-001-word-pl.mp3",
-      "audioSentence": "t1-p466-001-sentence.mp3"
+      "audioSentence": "t1-p466-001-sentence.mp3",
+      "polishAudio": "Cytować"
     },
     {
       "id": "t1-p466-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p466-002-word.mp3",
       "audioWordPl": "t1-p466-002-word-pl.mp3",
-      "audioSentence": "t1-p466-002-sentence.mp3"
+      "audioSentence": "t1-p466-002-sentence.mp3",
+      "polishAudio": "Wnioskować o coś"
     },
     {
       "id": "t1-p466-003",
@@ -34,87 +36,96 @@
       "sentencePl": null,
       "audioWord": "t1-p466-003-word.mp3",
       "audioWordPl": "t1-p466-003-word-pl.mp3",
-      "audioSentence": "t1-p466-003-sentence.mp3"
+      "audioSentence": "t1-p466-003-sentence.mp3",
+      "polishAudio": "Podsumowywać"
     },
     {
       "id": "t1-p466-004",
       "english": "Address",
-      "polish": "Adresować",
+      "polish": "Adresować; odnosić się do (kogoś, czegoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p466-004-word.mp3",
       "audioWordPl": "t1-p466-004-word-pl.mp3",
-      "audioSentence": "t1-p466-004-sentence.mp3"
+      "audioSentence": "t1-p466-004-sentence.mp3",
+      "polishAudio": "Adresować"
     },
     {
       "id": "t1-p466-005",
       "english": "Cite",
-      "polish": "Przytoczyć",
+      "polish": "Przytoczyć; cytować (czyjąś myśl)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p466-005-word.mp3",
       "audioWordPl": "t1-p466-005-word-pl.mp3",
-      "audioSentence": "t1-p466-005-sentence.mp3"
+      "audioSentence": "t1-p466-005-sentence.mp3",
+      "polishAudio": "Przytoczyć"
     },
     {
       "id": "t1-p466-006",
       "english": "Debate",
-      "polish": "Debatować",
+      "polish": "Debatować; dyskutować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p466-006-word.mp3",
       "audioWordPl": "t1-p466-006-word-pl.mp3",
-      "audioSentence": "t1-p466-006-sentence.mp3"
+      "audioSentence": "t1-p466-006-sentence.mp3",
+      "polishAudio": "Debatować"
     },
     {
       "id": "t1-p466-007",
       "english": "Hint",
-      "polish": "Robić aluzje",
+      "polish": "Robić aluzje; dawać do zrozumienia; pokazywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p466-007-word.mp3",
       "audioWordPl": "t1-p466-007-word-pl.mp3",
-      "audioSentence": "t1-p466-007-sentence.mp3"
+      "audioSentence": "t1-p466-007-sentence.mp3",
+      "polishAudio": "Robić aluzje"
     },
     {
       "id": "t1-p466-008",
       "english": "Interpret",
-      "polish": "Tłumaczyć",
+      "polish": "Tłumaczyć (ustnie z języka na język)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p466-008-word.mp3",
       "audioWordPl": "t1-p466-008-word-pl.mp3",
-      "audioSentence": "t1-p466-008-sentence.mp3"
+      "audioSentence": "t1-p466-008-sentence.mp3",
+      "polishAudio": "Tłumaczyć"
     },
     {
       "id": "t1-p466-009",
       "english": "List",
-      "polish": "Wymieniać",
+      "polish": "Wymieniać (w kolejności); wyliczać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p466-009-word.mp3",
       "audioWordPl": "t1-p466-009-word-pl.mp3",
-      "audioSentence": "t1-p466-009-sentence.mp3"
+      "audioSentence": "t1-p466-009-sentence.mp3",
+      "polishAudio": "Wymieniać"
     },
     {
       "id": "t1-p466-010",
       "english": "Object",
-      "polish": "Sprzeciwiać się",
+      "polish": "Sprzeciwiać się; protestować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p466-010-word.mp3",
       "audioWordPl": "t1-p466-010-word-pl.mp3",
-      "audioSentence": "t1-p466-010-sentence.mp3"
+      "audioSentence": "t1-p466-010-sentence.mp3",
+      "polishAudio": "Sprzeciwiać się"
     },
     {
       "id": "t1-p466-011",
       "english": "Pause",
-      "polish": "Robić przerwę",
+      "polish": "Robić przerwę (podczas mówienia)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p466-011-word.mp3",
       "audioWordPl": "t1-p466-011-word-pl.mp3",
-      "audioSentence": "t1-p466-011-sentence.mp3"
+      "audioSentence": "t1-p466-011-sentence.mp3",
+      "polishAudio": "Robić przerwę"
     },
     {
       "id": "t1-p466-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p466-012-word.mp3",
       "audioWordPl": "t1-p466-012-word-pl.mp3",
-      "audioSentence": "t1-p466-012-sentence.mp3"
+      "audioSentence": "t1-p466-012-sentence.mp3",
+      "polishAudio": "Kwestionować"
     },
     {
       "id": "t1-p466-013",
       "english": "Rename",
-      "polish": "Przemianować",
+      "polish": "Przemianować; zmienić imię/nazwę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p466-013-word.mp3",
       "audioWordPl": "t1-p466-013-word-pl.mp3",
-      "audioSentence": "t1-p466-013-sentence.mp3"
+      "audioSentence": "t1-p466-013-sentence.mp3",
+      "polishAudio": "Przemianować"
     },
     {
       "id": "t1-p466-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p466-014-word.mp3",
       "audioWordPl": "t1-p466-014-word-pl.mp3",
-      "audioSentence": "t1-p466-014-sentence.mp3"
+      "audioSentence": "t1-p466-014-sentence.mp3",
+      "polishAudio": "Uciszać"
     },
     {
       "id": "t1-p466-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p466-015-word.mp3",
       "audioWordPl": "t1-p466-015-word-pl.mp3",
-      "audioSentence": "t1-p466-015-sentence.mp3"
+      "audioSentence": "t1-p466-015-sentence.mp3",
+      "polishAudio": "Kłótnia"
     }
   ]
 }

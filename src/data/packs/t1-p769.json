@@ -9,12 +9,13 @@
     {
       "id": "t1-p769-001",
       "english": "Retirement",
-      "polish": "Emerytura",
+      "polish": "Emerytura (czas po zakończeniu pracy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p769-001-word.mp3",
       "audioWordPl": "t1-p769-001-word-pl.mp3",
-      "audioSentence": "t1-p769-001-sentence.mp3"
+      "audioSentence": "t1-p769-001-sentence.mp3",
+      "polishAudio": "Emerytura"
     },
     {
       "id": "t1-p769-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p769-002-word.mp3",
       "audioWordPl": "t1-p769-002-word-pl.mp3",
-      "audioSentence": "t1-p769-002-sentence.mp3"
+      "audioSentence": "t1-p769-002-sentence.mp3",
+      "polishAudio": "Flaga"
     },
     {
       "id": "t1-p769-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p769-003-word.mp3",
       "audioWordPl": "t1-p769-003-word-pl.mp3",
-      "audioSentence": "t1-p769-003-sentence.mp3"
+      "audioSentence": "t1-p769-003-sentence.mp3",
+      "polishAudio": "Kolejka"
     },
     {
       "id": "t1-p769-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p769-004-word.mp3",
       "audioWordPl": "t1-p769-004-word-pl.mp3",
-      "audioSentence": "t1-p769-004-sentence.mp3"
+      "audioSentence": "t1-p769-004-sentence.mp3",
+      "polishAudio": "Król"
     },
     {
       "id": "t1-p769-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p769-005-word.mp3",
       "audioWordPl": "t1-p769-005-word-pl.mp3",
-      "audioSentence": "t1-p769-005-sentence.mp3"
+      "audioSentence": "t1-p769-005-sentence.mp3",
+      "polishAudio": "Królowa"
     },
     {
       "id": "t1-p769-006",
       "english": "State",
-      "polish": "Państwo",
+      "polish": "Państwo; stan usa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p769-006-word.mp3",
       "audioWordPl": "t1-p769-006-word-pl.mp3",
-      "audioSentence": "t1-p769-006-sentence.mp3"
+      "audioSentence": "t1-p769-006-sentence.mp3",
+      "polishAudio": "Państwo"
     },
     {
       "id": "t1-p769-007",
@@ -74,27 +80,30 @@
       "sentencePl": null,
       "audioWord": "t1-p769-007-word.mp3",
       "audioWordPl": "t1-p769-007-word-pl.mp3",
-      "audioSentence": "t1-p769-007-sentence.mp3"
+      "audioSentence": "t1-p769-007-sentence.mp3",
+      "polishAudio": "Pokój"
     },
     {
       "id": "t1-p769-008",
       "english": "Politics",
-      "polish": "Polityka",
+      "polish": "Polityka (dziedzina)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p769-008-word.mp3",
       "audioWordPl": "t1-p769-008-word-pl.mp3",
-      "audioSentence": "t1-p769-008-sentence.mp3"
+      "audioSentence": "t1-p769-008-sentence.mp3",
+      "polishAudio": "Polityka"
     },
     {
       "id": "t1-p769-009",
       "english": "Law",
-      "polish": "Prawo",
+      "polish": "Prawo; ustawa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p769-009-word.mp3",
       "audioWordPl": "t1-p769-009-word-pl.mp3",
-      "audioSentence": "t1-p769-009-sentence.mp3"
+      "audioSentence": "t1-p769-009-sentence.mp3",
+      "polishAudio": "Prawo"
     },
     {
       "id": "t1-p769-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p769-010-word.mp3",
       "audioWordPl": "t1-p769-010-word-pl.mp3",
-      "audioSentence": "t1-p769-010-sentence.mp3"
+      "audioSentence": "t1-p769-010-sentence.mp3",
+      "polishAudio": "Premier"
     },
     {
       "id": "t1-p769-011",
@@ -114,27 +124,30 @@
       "sentencePl": null,
       "audioWord": "t1-p769-011-word.mp3",
       "audioWordPl": "t1-p769-011-word-pl.mp3",
-      "audioSentence": "t1-p769-011-sentence.mp3"
+      "audioSentence": "t1-p769-011-sentence.mp3",
+      "polishAudio": "Wolność"
     },
     {
       "id": "t1-p769-012",
       "english": "President",
-      "polish": "Prezydent",
+      "polish": "Prezydent; prezes",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p769-012-word.mp3",
       "audioWordPl": "t1-p769-012-word-pl.mp3",
-      "audioSentence": "t1-p769-012-sentence.mp3"
+      "audioSentence": "t1-p769-012-sentence.mp3",
+      "polishAudio": "Prezydent"
     },
     {
       "id": "t1-p769-013",
       "english": "Rule",
-      "polish": "Przepis",
+      "polish": "Przepis; zasada; rządy (prawa)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p769-013-word.mp3",
       "audioWordPl": "t1-p769-013-word-pl.mp3",
-      "audioSentence": "t1-p769-013-sentence.mp3"
+      "audioSentence": "t1-p769-013-sentence.mp3",
+      "polishAudio": "Przepis"
     },
     {
       "id": "t1-p769-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p769-014-word.mp3",
       "audioWordPl": "t1-p769-014-word-pl.mp3",
-      "audioSentence": "t1-p769-014-sentence.mp3"
+      "audioSentence": "t1-p769-014-sentence.mp3",
+      "polishAudio": "Rząd"
     },
     {
       "id": "t1-p769-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p769-015-word.mp3",
       "audioWordPl": "t1-p769-015-word-pl.mp3",
-      "audioSentence": "t1-p769-015-sentence.mp3"
+      "audioSentence": "t1-p769-015-sentence.mp3",
+      "polishAudio": "Społeczeństwo"
     }
   ]
 }

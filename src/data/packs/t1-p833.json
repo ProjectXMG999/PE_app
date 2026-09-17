@@ -14,37 +14,41 @@
       "sentencePl": null,
       "audioWord": "t1-p833-001-word.mp3",
       "audioWordPl": "t1-p833-001-word-pl.mp3",
-      "audioSentence": "t1-p833-001-sentence.mp3"
+      "audioSentence": "t1-p833-001-sentence.mp3",
+      "polishAudio": "Czekać z niecierpliwością"
     },
     {
       "id": "t1-p833-002",
       "english": "Look up",
-      "polish": "Poprawiać się",
+      "polish": "Poprawiać się; wyglądać coraz lepiej",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p833-002-word.mp3",
       "audioWordPl": "t1-p833-002-word-pl.mp3",
-      "audioSentence": "t1-p833-002-sentence.mp3"
+      "audioSentence": "t1-p833-002-sentence.mp3",
+      "polishAudio": "Poprawiać się"
     },
     {
       "id": "t1-p833-003",
       "english": "Pull off",
-      "polish": "Osiągnąć coś",
+      "polish": "Osiągnąć coś; dokonać czegoś (trudnego)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p833-003-word.mp3",
       "audioWordPl": "t1-p833-003-word-pl.mp3",
-      "audioSentence": "t1-p833-003-sentence.mp3"
+      "audioSentence": "t1-p833-003-sentence.mp3",
+      "polishAudio": "Osiągnąć coś"
     },
     {
       "id": "t1-p833-004",
       "english": "Take sb in",
-      "polish": "Przygarnąć kogoś",
+      "polish": "Przygarnąć kogoś (pod dach)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p833-004-word.mp3",
       "audioWordPl": "t1-p833-004-word-pl.mp3",
-      "audioSentence": "t1-p833-004-sentence.mp3"
+      "audioSentence": "t1-p833-004-sentence.mp3",
+      "polishAudio": "Przygarnąć kogoś"
     },
     {
       "id": "t1-p833-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p833-005-word.mp3",
       "audioWordPl": "t1-p833-005-word-pl.mp3",
-      "audioSentence": "t1-p833-005-sentence.mp3"
+      "audioSentence": "t1-p833-005-sentence.mp3",
+      "polishAudio": "Zmieniać się na lepsze"
     },
     {
       "id": "t1-p833-006",
       "english": "Beef up",
-      "polish": "Ulepszyć",
+      "polish": "Ulepszyć; podrasować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p833-006-word.mp3",
       "audioWordPl": "t1-p833-006-word-pl.mp3",
-      "audioSentence": "t1-p833-006-sentence.mp3"
+      "audioSentence": "t1-p833-006-sentence.mp3",
+      "polishAudio": "Ulepszyć"
     },
     {
       "id": "t1-p833-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p833-007-word.mp3",
       "audioWordPl": "t1-p833-007-word-pl.mp3",
-      "audioSentence": "t1-p833-007-sentence.mp3"
+      "audioSentence": "t1-p833-007-sentence.mp3",
+      "polishAudio": "Zyskiwać animusz"
     },
     {
       "id": "t1-p833-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p833-008-word.mp3",
       "audioWordPl": "t1-p833-008-word-pl.mp3",
-      "audioSentence": "t1-p833-008-sentence.mp3"
+      "audioSentence": "t1-p833-008-sentence.mp3",
+      "polishAudio": "Ożywiać się"
     },
     {
       "id": "t1-p833-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p833-009-word.mp3",
       "audioWordPl": "t1-p833-009-word-pl.mp3",
-      "audioSentence": "t1-p833-009-sentence.mp3"
+      "audioSentence": "t1-p833-009-sentence.mp3",
+      "polishAudio": "Zostać przyklepanym"
     },
     {
       "id": "t1-p833-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p833-010-word.mp3",
       "audioWordPl": "t1-p833-010-word-pl.mp3",
-      "audioSentence": "t1-p833-010-sentence.mp3"
+      "audioSentence": "t1-p833-010-sentence.mp3",
+      "polishAudio": "Stać się popularnym"
     }
   ]
 }

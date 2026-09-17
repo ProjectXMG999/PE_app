@@ -9,12 +9,13 @@
     {
       "id": "t1-p492-001",
       "english": "Basic",
-      "polish": "Podstawowy",
+      "polish": "Podstawowy (niezłożony)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p492-001-word.mp3",
       "audioWordPl": "t1-p492-001-word-pl.mp3",
-      "audioSentence": "t1-p492-001-sentence.mp3"
+      "audioSentence": "t1-p492-001-sentence.mp3",
+      "polishAudio": "Podstawowy"
     },
     {
       "id": "t1-p492-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p492-002-word.mp3",
       "audioWordPl": "t1-p492-002-word-pl.mp3",
-      "audioSentence": "t1-p492-002-sentence.mp3"
+      "audioSentence": "t1-p492-002-sentence.mp3",
+      "polishAudio": "Różny"
     },
     {
       "id": "t1-p492-003",
@@ -34,27 +36,30 @@
       "sentencePl": null,
       "audioWord": "t1-p492-003-word.mp3",
       "audioWordPl": "t1-p492-003-word-pl.mp3",
-      "audioSentence": "t1-p492-003-sentence.mp3"
+      "audioSentence": "t1-p492-003-sentence.mp3",
+      "polishAudio": "Rzeczywisty"
     },
     {
       "id": "t1-p492-004",
       "english": "Intermediate",
-      "polish": "Średniozaawansowany",
+      "polish": "Średniozaawansowany; średni (poziom)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p492-004-word.mp3",
       "audioWordPl": "t1-p492-004-word-pl.mp3",
-      "audioSentence": "t1-p492-004-sentence.mp3"
+      "audioSentence": "t1-p492-004-sentence.mp3",
+      "polishAudio": "Średniozaawansowany"
     },
     {
       "id": "t1-p492-005",
       "english": "So-called",
-      "polish": "Tak zwany",
+      "polish": "Tak zwany; rzekomy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p492-005-word.mp3",
       "audioWordPl": "t1-p492-005-word-pl.mp3",
-      "audioSentence": "t1-p492-005-sentence.mp3"
+      "audioSentence": "t1-p492-005-sentence.mp3",
+      "polishAudio": "Tak zwany"
     },
     {
       "id": "t1-p492-006",
@@ -64,27 +69,30 @@
       "sentencePl": null,
       "audioWord": "t1-p492-006-word.mp3",
       "audioWordPl": "t1-p492-006-word-pl.mp3",
-      "audioSentence": "t1-p492-006-sentence.mp3"
+      "audioSentence": "t1-p492-006-sentence.mp3",
+      "polishAudio": "Ukryty"
     },
     {
       "id": "t1-p492-007",
       "english": "Advanced",
-      "polish": "Zaawansowany",
+      "polish": "Zaawansowany (poziom)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p492-007-word.mp3",
       "audioWordPl": "t1-p492-007-word-pl.mp3",
-      "audioSentence": "t1-p492-007-sentence.mp3"
+      "audioSentence": "t1-p492-007-sentence.mp3",
+      "polishAudio": "Zaawansowany"
     },
     {
       "id": "t1-p492-008",
       "english": "Unlike",
-      "polish": "Niepodobny",
+      "polish": "Niepodobny; inny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p492-008-word.mp3",
       "audioWordPl": "t1-p492-008-word-pl.mp3",
-      "audioSentence": "t1-p492-008-sentence.mp3"
+      "audioSentence": "t1-p492-008-sentence.mp3",
+      "polishAudio": "Niepodobny"
     },
     {
       "id": "t1-p492-009",
@@ -94,67 +102,74 @@
       "sentencePl": null,
       "audioWord": "t1-p492-009-word.mp3",
       "audioWordPl": "t1-p492-009-word-pl.mp3",
-      "audioSentence": "t1-p492-009-sentence.mp3"
+      "audioSentence": "t1-p492-009-sentence.mp3",
+      "polishAudio": "Nieparzysty"
     },
     {
       "id": "t1-p492-010",
       "english": "Vain",
-      "polish": "Próżny",
+      "polish": "Próżny; daremny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p492-010-word.mp3",
       "audioWordPl": "t1-p492-010-word-pl.mp3",
-      "audioSentence": "t1-p492-010-sentence.mp3"
+      "audioSentence": "t1-p492-010-sentence.mp3",
+      "polishAudio": "Próżny"
     },
     {
       "id": "t1-p492-011",
       "english": "Contrary",
-      "polish": "Przeciwstawny",
+      "polish": "Przeciwstawny; przeciwny; sprzeczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p492-011-word.mp3",
       "audioWordPl": "t1-p492-011-word-pl.mp3",
-      "audioSentence": "t1-p492-011-sentence.mp3"
+      "audioSentence": "t1-p492-011-sentence.mp3",
+      "polishAudio": "Przeciwstawny"
     },
     {
       "id": "t1-p492-012",
       "english": "Favorable",
-      "polish": "Sprzyjający",
+      "polish": "Sprzyjający; korzystny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p492-012-word.mp3",
       "audioWordPl": "t1-p492-012-word-pl.mp3",
-      "audioSentence": "t1-p492-012-sentence.mp3"
+      "audioSentence": "t1-p492-012-sentence.mp3",
+      "polishAudio": "Sprzyjający"
     },
     {
       "id": "t1-p492-013",
       "english": "Secret",
-      "polish": "Tajny",
+      "polish": "Tajny; ukryty; sekretny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p492-013-word.mp3",
       "audioWordPl": "t1-p492-013-word-pl.mp3",
-      "audioSentence": "t1-p492-013-sentence.mp3"
+      "audioSentence": "t1-p492-013-sentence.mp3",
+      "polishAudio": "Tajny"
     },
     {
       "id": "t1-p492-014",
       "english": "Spiritual",
-      "polish": "Duchowy",
+      "polish": "Duchowy; duchowny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p492-014-word.mp3",
       "audioWordPl": "t1-p492-014-word-pl.mp3",
-      "audioSentence": "t1-p492-014-sentence.mp3"
+      "audioSentence": "t1-p492-014-sentence.mp3",
+      "polishAudio": "Duchowy"
     },
     {
       "id": "t1-p492-015",
       "english": "Certain",
-      "polish": "Pewien",
+      "polish": "Pewien (jakiś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p492-015-word.mp3",
       "audioWordPl": "t1-p492-015-word-pl.mp3",
-      "audioSentence": "t1-p492-015-sentence.mp3"
+      "audioSentence": "t1-p492-015-sentence.mp3",
+      "polishAudio": "Pewien"
     }
   ]
 }

@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-001-word.mp3",
       "audioWordPl": "t1-p624-001-word-pl.mp3",
-      "audioSentence": "t1-p624-001-sentence.mp3"
+      "audioSentence": "t1-p624-001-sentence.mp3",
+      "polishAudio": "Choroba morska"
     },
     {
       "id": "t1-p624-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-002-word.mp3",
       "audioWordPl": "t1-p624-002-word-pl.mp3",
-      "audioSentence": "t1-p624-002-sentence.mp3"
+      "audioSentence": "t1-p624-002-sentence.mp3",
+      "polishAudio": "Garb"
     },
     {
       "id": "t1-p624-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-003-word.mp3",
       "audioWordPl": "t1-p624-003-word-pl.mp3",
-      "audioSentence": "t1-p624-003-sentence.mp3"
+      "audioSentence": "t1-p624-003-sentence.mp3",
+      "polishAudio": "Mdłości"
     },
     {
       "id": "t1-p624-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-004-word.mp3",
       "audioWordPl": "t1-p624-004-word-pl.mp3",
-      "audioSentence": "t1-p624-004-sentence.mp3"
+      "audioSentence": "t1-p624-004-sentence.mp3",
+      "polishAudio": "Oddział szpitalny"
     },
     {
       "id": "t1-p624-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-005-word.mp3",
       "audioWordPl": "t1-p624-005-word-pl.mp3",
-      "audioSentence": "t1-p624-005-sentence.mp3"
+      "audioSentence": "t1-p624-005-sentence.mp3",
+      "polishAudio": "Omdlenie"
     },
     {
       "id": "t1-p624-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-006-word.mp3",
       "audioWordPl": "t1-p624-006-word-pl.mp3",
-      "audioSentence": "t1-p624-006-sentence.mp3"
+      "audioSentence": "t1-p624-006-sentence.mp3",
+      "polishAudio": "Opuchlizna"
     },
     {
       "id": "t1-p624-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-007-word.mp3",
       "audioWordPl": "t1-p624-007-word-pl.mp3",
-      "audioSentence": "t1-p624-007-sentence.mp3"
+      "audioSentence": "t1-p624-007-sentence.mp3",
+      "polishAudio": "Przedawkowanie"
     },
     {
       "id": "t1-p624-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-008-word.mp3",
       "audioWordPl": "t1-p624-008-word-pl.mp3",
-      "audioSentence": "t1-p624-008-sentence.mp3"
+      "audioSentence": "t1-p624-008-sentence.mp3",
+      "polishAudio": "Przeszczep"
     },
     {
       "id": "t1-p624-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p624-009-word.mp3",
       "audioWordPl": "t1-p624-009-word-pl.mp3",
-      "audioSentence": "t1-p624-009-sentence.mp3"
+      "audioSentence": "t1-p624-009-sentence.mp3",
+      "polishAudio": "Prześwietlenie"
     },
     {
       "id": "t1-p624-010",
       "english": "Sprain",
-      "polish": "Skręcenie",
+      "polish": "Skręcenie (kostki)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p624-010-word.mp3",
       "audioWordPl": "t1-p624-010-word-pl.mp3",
-      "audioSentence": "t1-p624-010-sentence.mp3"
+      "audioSentence": "t1-p624-010-sentence.mp3",
+      "polishAudio": "Skręcenie"
     },
     {
       "id": "t1-p624-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-011-word.mp3",
       "audioWordPl": "t1-p624-011-word-pl.mp3",
-      "audioSentence": "t1-p624-011-sentence.mp3"
+      "audioSentence": "t1-p624-011-sentence.mp3",
+      "polishAudio": "Strzykawka"
     },
     {
       "id": "t1-p624-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-012-word.mp3",
       "audioWordPl": "t1-p624-012-word-pl.mp3",
-      "audioSentence": "t1-p624-012-sentence.mp3"
+      "audioSentence": "t1-p624-012-sentence.mp3",
+      "polishAudio": "Transfuzja krwi"
     },
     {
       "id": "t1-p624-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-013-word.mp3",
       "audioWordPl": "t1-p624-013-word-pl.mp3",
-      "audioSentence": "t1-p624-013-sentence.mp3"
+      "audioSentence": "t1-p624-013-sentence.mp3",
+      "polishAudio": "Wstrząs mózgu"
     },
     {
       "id": "t1-p624-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-014-word.mp3",
       "audioWordPl": "t1-p624-014-word-pl.mp3",
-      "audioSentence": "t1-p624-014-sentence.mp3"
+      "audioSentence": "t1-p624-014-sentence.mp3",
+      "polishAudio": "Wymioty"
     },
     {
       "id": "t1-p624-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p624-015-word.mp3",
       "audioWordPl": "t1-p624-015-word-pl.mp3",
-      "audioSentence": "t1-p624-015-sentence.mp3"
+      "audioSentence": "t1-p624-015-sentence.mp3",
+      "polishAudio": "Wysypka"
     }
   ]
 }

@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p752-001-word.mp3",
       "audioWordPl": "t1-p752-001-word-pl.mp3",
-      "audioSentence": "t1-p752-001-sentence.mp3"
+      "audioSentence": "t1-p752-001-sentence.mp3",
+      "polishAudio": "Przesądny"
     },
     {
       "id": "t1-p752-002",
@@ -24,47 +25,52 @@
       "sentencePl": null,
       "audioWord": "t1-p752-002-word.mp3",
       "audioWordPl": "t1-p752-002-word-pl.mp3",
-      "audioSentence": "t1-p752-002-sentence.mp3"
+      "audioSentence": "t1-p752-002-sentence.mp3",
+      "polishAudio": "Przewidywalny"
     },
     {
       "id": "t1-p752-003",
       "english": "Wary",
-      "polish": "Przezorny",
+      "polish": "Przezorny; ostrożny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p752-003-word.mp3",
       "audioWordPl": "t1-p752-003-word-pl.mp3",
-      "audioSentence": "t1-p752-003-sentence.mp3"
+      "audioSentence": "t1-p752-003-sentence.mp3",
+      "polishAudio": "Przezorny"
     },
     {
       "id": "t1-p752-004",
       "english": "Accustomed",
-      "polish": "Przyzwyczajony",
+      "polish": "Przyzwyczajony; znający zwyczaje",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p752-004-word.mp3",
       "audioWordPl": "t1-p752-004-word-pl.mp3",
-      "audioSentence": "t1-p752-004-sentence.mp3"
+      "audioSentence": "t1-p752-004-sentence.mp3",
+      "polishAudio": "Przyzwyczajony"
     },
     {
       "id": "t1-p752-005",
       "english": "Cocky",
-      "polish": "Pyszałkowaty",
+      "polish": "Pyszałkowaty; pewny siebie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p752-005-word.mp3",
       "audioWordPl": "t1-p752-005-word-pl.mp3",
-      "audioSentence": "t1-p752-005-sentence.mp3"
+      "audioSentence": "t1-p752-005-sentence.mp3",
+      "polishAudio": "Pyszałkowaty"
     },
     {
       "id": "t1-p752-006",
       "english": "Puzzling",
-      "polish": "Zagadkowy",
+      "polish": "Zagadkowy; niezrozumiały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p752-006-word.mp3",
       "audioWordPl": "t1-p752-006-word-pl.mp3",
-      "audioSentence": "t1-p752-006-sentence.mp3"
+      "audioSentence": "t1-p752-006-sentence.mp3",
+      "polishAudio": "Zagadkowy"
     },
     {
       "id": "t1-p752-007",
@@ -74,37 +80,41 @@
       "sentencePl": null,
       "audioWord": "t1-p752-007-word.mp3",
       "audioWordPl": "t1-p752-007-word-pl.mp3",
-      "audioSentence": "t1-p752-007-sentence.mp3"
+      "audioSentence": "t1-p752-007-sentence.mp3",
+      "polishAudio": "Skrupulatny"
     },
     {
       "id": "t1-p752-008",
       "english": "Secretive",
-      "polish": "Skryty",
+      "polish": "Skryty; tajny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p752-008-word.mp3",
       "audioWordPl": "t1-p752-008-word-pl.mp3",
-      "audioSentence": "t1-p752-008-sentence.mp3"
+      "audioSentence": "t1-p752-008-sentence.mp3",
+      "polishAudio": "Skryty"
     },
     {
       "id": "t1-p752-009",
       "english": "Bizarre",
-      "polish": "Cudaczny",
+      "polish": "Cudaczny; osobliwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p752-009-word.mp3",
       "audioWordPl": "t1-p752-009-word-pl.mp3",
-      "audioSentence": "t1-p752-009-sentence.mp3"
+      "audioSentence": "t1-p752-009-sentence.mp3",
+      "polishAudio": "Cudaczny"
     },
     {
       "id": "t1-p752-010",
       "english": "Indifferent",
-      "polish": "Obojętny",
+      "polish": "Obojętny; neutralny (w opinii)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p752-010-word.mp3",
       "audioWordPl": "t1-p752-010-word-pl.mp3",
-      "audioSentence": "t1-p752-010-sentence.mp3"
+      "audioSentence": "t1-p752-010-sentence.mp3",
+      "polishAudio": "Obojętny"
     },
     {
       "id": "t1-p752-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p752-011-word.mp3",
       "audioWordPl": "t1-p752-011-word-pl.mp3",
-      "audioSentence": "t1-p752-011-sentence.mp3"
+      "audioSentence": "t1-p752-011-sentence.mp3",
+      "polishAudio": "Frywolny"
     },
     {
       "id": "t1-p752-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p752-012-word.mp3",
       "audioWordPl": "t1-p752-012-word-pl.mp3",
-      "audioSentence": "t1-p752-012-sentence.mp3"
+      "audioSentence": "t1-p752-012-sentence.mp3",
+      "polishAudio": "Głupkowaty"
     },
     {
       "id": "t1-p752-013",
       "english": "Obsessed",
-      "polish": "Mający obsesję na punkcie czegoś",
+      "polish": "Mający obsesję na punkcie czegoś; opętany (myślą)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p752-013-word.mp3",
       "audioWordPl": "t1-p752-013-word-pl.mp3",
-      "audioSentence": "t1-p752-013-sentence.mp3"
+      "audioSentence": "t1-p752-013-sentence.mp3",
+      "polishAudio": "Mający obsesję na punkcie czegoś"
     },
     {
       "id": "t1-p752-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p752-014-word.mp3",
       "audioWordPl": "t1-p752-014-word-pl.mp3",
-      "audioSentence": "t1-p752-014-sentence.mp3"
+      "audioSentence": "t1-p752-014-sentence.mp3",
+      "polishAudio": "Spięty"
     },
     {
       "id": "t1-p752-015",
       "english": "Freaky",
-      "polish": "Zakręcony",
+      "polish": "Zakręcony; dziwaczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p752-015-word.mp3",
       "audioWordPl": "t1-p752-015-word-pl.mp3",
-      "audioSentence": "t1-p752-015-sentence.mp3"
+      "audioSentence": "t1-p752-015-sentence.mp3",
+      "polishAudio": "Zakręcony"
     }
   ]
 }

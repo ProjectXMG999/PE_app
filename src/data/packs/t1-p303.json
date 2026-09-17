@@ -9,12 +9,13 @@
     {
       "id": "t1-p303-001",
       "english": "Slick",
-      "polish": "Gładki",
+      "polish": "Gładki (czasem nawet śliski); czaruś; dżentelmen; zimny jak lód",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p303-001-word.mp3",
       "audioWordPl": "t1-p303-001-word-pl.mp3",
-      "audioSentence": "t1-p303-001-sentence.mp3"
+      "audioSentence": "t1-p303-001-sentence.mp3",
+      "polishAudio": "Gładki"
     },
     {
       "id": "t1-p303-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p303-002-word.mp3",
       "audioWordPl": "t1-p303-002-word-pl.mp3",
-      "audioSentence": "t1-p303-002-sentence.mp3"
+      "audioSentence": "t1-p303-002-sentence.mp3",
+      "polishAudio": "Mistrz interakcji społecznych"
     },
     {
       "id": "t1-p303-003",
       "english": "Whiz",
-      "polish": "Szpenio",
+      "polish": "Szpenio (wybitny specjalista)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p303-003-word.mp3",
       "audioWordPl": "t1-p303-003-word-pl.mp3",
-      "audioSentence": "t1-p303-003-sentence.mp3"
+      "audioSentence": "t1-p303-003-sentence.mp3",
+      "polishAudio": "Szpenio"
     },
     {
       "id": "t1-p303-004",
@@ -44,37 +47,41 @@
       "sentencePl": null,
       "audioWord": "t1-p303-004-word.mp3",
       "audioWordPl": "t1-p303-004-word-pl.mp3",
-      "audioSentence": "t1-p303-004-sentence.mp3"
+      "audioSentence": "t1-p303-004-sentence.mp3",
+      "polishAudio": "Mega spec"
     },
     {
       "id": "t1-p303-005",
       "english": "Fella",
-      "polish": "Facet",
+      "polish": "Facet; gość; koleś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p303-005-word.mp3",
       "audioWordPl": "t1-p303-005-word-pl.mp3",
-      "audioSentence": "t1-p303-005-sentence.mp3"
+      "audioSentence": "t1-p303-005-sentence.mp3",
+      "polishAudio": "Facet"
     },
     {
       "id": "t1-p303-006",
       "english": "Homeboy",
-      "polish": "Ziomeczek",
+      "polish": "Ziomeczek; swój człowiek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p303-006-word.mp3",
       "audioWordPl": "t1-p303-006-word-pl.mp3",
-      "audioSentence": "t1-p303-006-sentence.mp3"
+      "audioSentence": "t1-p303-006-sentence.mp3",
+      "polishAudio": "Ziomeczek"
     },
     {
       "id": "t1-p303-007",
       "english": "Punk kid",
-      "polish": "Nastolatek",
+      "polish": "Nastolatek (małolat, szczeniak, młodziak); gówniarz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p303-007-word.mp3",
       "audioWordPl": "t1-p303-007-word-pl.mp3",
-      "audioSentence": "t1-p303-007-sentence.mp3"
+      "audioSentence": "t1-p303-007-sentence.mp3",
+      "polishAudio": "Nastolatek"
     },
     {
       "id": "t1-p303-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p303-008-word.mp3",
       "audioWordPl": "t1-p303-008-word-pl.mp3",
-      "audioSentence": "t1-p303-008-sentence.mp3"
+      "audioSentence": "t1-p303-008-sentence.mp3",
+      "polishAudio": "Porządna dziewczyna"
     },
     {
       "id": "t1-p303-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p303-009-word.mp3",
       "audioWordPl": "t1-p303-009-word-pl.mp3",
-      "audioSentence": "t1-p303-009-sentence.mp3"
+      "audioSentence": "t1-p303-009-sentence.mp3",
+      "polishAudio": "Ziomalka"
     },
     {
       "id": "t1-p303-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p303-010-word.mp3",
       "audioWordPl": "t1-p303-010-word-pl.mp3",
-      "audioSentence": "t1-p303-010-sentence.mp3"
+      "audioSentence": "t1-p303-010-sentence.mp3",
+      "polishAudio": "Chłopina"
     }
   ]
 }

@@ -14,17 +14,19 @@
       "sentencePl": null,
       "audioWord": "t1-p488-001-word.mp3",
       "audioWordPl": "t1-p488-001-word-pl.mp3",
-      "audioSentence": "t1-p488-001-sentence.mp3"
+      "audioSentence": "t1-p488-001-sentence.mp3",
+      "polishAudio": "Podatnik"
     },
     {
       "id": "t1-p488-002",
       "english": "Supply",
-      "polish": "Podaż",
+      "polish": "Podaż; dostawa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p488-002-word.mp3",
       "audioWordPl": "t1-p488-002-word-pl.mp3",
-      "audioSentence": "t1-p488-002-sentence.mp3"
+      "audioSentence": "t1-p488-002-sentence.mp3",
+      "polishAudio": "Podaż"
     },
     {
       "id": "t1-p488-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p488-003-word.mp3",
       "audioWordPl": "t1-p488-003-word-pl.mp3",
-      "audioSentence": "t1-p488-003-sentence.mp3"
+      "audioSentence": "t1-p488-003-sentence.mp3",
+      "polishAudio": "Prognoza"
     },
     {
       "id": "t1-p488-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p488-004-word.mp3",
       "audioWordPl": "t1-p488-004-word-pl.mp3",
-      "audioSentence": "t1-p488-004-sentence.mp3"
+      "audioSentence": "t1-p488-004-sentence.mp3",
+      "polishAudio": "Rokowanie"
     },
     {
       "id": "t1-p488-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p488-005-word.mp3",
       "audioWordPl": "t1-p488-005-word-pl.mp3",
-      "audioSentence": "t1-p488-005-sentence.mp3"
+      "audioSentence": "t1-p488-005-sentence.mp3",
+      "polishAudio": "Przedsiębiorstwo"
     },
     {
       "id": "t1-p488-006",
       "english": "Takeover",
-      "polish": "Przejęcie",
+      "polish": "Przejęcie (np. firmy); zajęcie (np. terenu)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p488-006-word.mp3",
       "audioWordPl": "t1-p488-006-word-pl.mp3",
-      "audioSentence": "t1-p488-006-sentence.mp3"
+      "audioSentence": "t1-p488-006-sentence.mp3",
+      "polishAudio": "Przejęcie"
     },
     {
       "id": "t1-p488-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p488-007-word.mp3",
       "audioWordPl": "t1-p488-007-word-pl.mp3",
-      "audioSentence": "t1-p488-007-sentence.mp3"
+      "audioSentence": "t1-p488-007-sentence.mp3",
+      "polishAudio": "Recesja"
     },
     {
       "id": "t1-p488-008",
@@ -84,47 +91,52 @@
       "sentencePl": null,
       "audioWord": "t1-p488-008-word.mp3",
       "audioWordPl": "t1-p488-008-word-pl.mp3",
-      "audioSentence": "t1-p488-008-sentence.mp3"
+      "audioSentence": "t1-p488-008-sentence.mp3",
+      "polishAudio": "Rejestracja"
     },
     {
       "id": "t1-p488-009",
       "english": "Complaint",
-      "polish": "Reklamacja",
+      "polish": "Reklamacja; skarga",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p488-009-word.mp3",
       "audioWordPl": "t1-p488-009-word-pl.mp3",
-      "audioSentence": "t1-p488-009-sentence.mp3"
+      "audioSentence": "t1-p488-009-sentence.mp3",
+      "polishAudio": "Reklamacja"
     },
     {
       "id": "t1-p488-010",
       "english": "Reserve",
-      "polish": "Rezerwa",
+      "polish": "Rezerwa (np. finansowa)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p488-010-word.mp3",
       "audioWordPl": "t1-p488-010-word-pl.mp3",
-      "audioSentence": "t1-p488-010-sentence.mp3"
+      "audioSentence": "t1-p488-010-sentence.mp3",
+      "polishAudio": "Rezerwa"
     },
     {
       "id": "t1-p488-011",
       "english": "Claim",
-      "polish": "Roszczenie",
+      "polish": "Roszczenie; żądanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p488-011-word.mp3",
       "audioWordPl": "t1-p488-011-word-pl.mp3",
-      "audioSentence": "t1-p488-011-sentence.mp3"
+      "audioSentence": "t1-p488-011-sentence.mp3",
+      "polishAudio": "Roszczenie"
     },
     {
       "id": "t1-p488-012",
       "english": "Inventory",
-      "polish": "Inwentaryzacja",
+      "polish": "Inwentaryzacja; spis",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p488-012-word.mp3",
       "audioWordPl": "t1-p488-012-word-pl.mp3",
-      "audioSentence": "t1-p488-012-sentence.mp3"
+      "audioSentence": "t1-p488-012-sentence.mp3",
+      "polishAudio": "Inwentaryzacja"
     },
     {
       "id": "t1-p488-013",
@@ -134,27 +146,30 @@
       "sentencePl": null,
       "audioWord": "t1-p488-013-word.mp3",
       "audioWordPl": "t1-p488-013-word-pl.mp3",
-      "audioSentence": "t1-p488-013-sentence.mp3"
+      "audioSentence": "t1-p488-013-sentence.mp3",
+      "polishAudio": "Transakcja"
     },
     {
       "id": "t1-p488-014",
       "english": "Vice-president",
-      "polish": "Wiceprezydent",
+      "polish": "Wiceprezydent; wiceprezes",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p488-014-word.mp3",
       "audioWordPl": "t1-p488-014-word-pl.mp3",
-      "audioSentence": "t1-p488-014-sentence.mp3"
+      "audioSentence": "t1-p488-014-sentence.mp3",
+      "polishAudio": "Wiceprezydent"
     },
     {
       "id": "t1-p488-015",
       "english": "Know-how",
-      "polish": "Wiedza praktyczna",
+      "polish": "Wiedza praktyczna; know-how",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p488-015-word.mp3",
       "audioWordPl": "t1-p488-015-word-pl.mp3",
-      "audioSentence": "t1-p488-015-sentence.mp3"
+      "audioSentence": "t1-p488-015-sentence.mp3",
+      "polishAudio": "Wiedza praktyczna"
     }
   ]
 }

@@ -9,22 +9,24 @@
     {
       "id": "t1-p630-001",
       "english": "Be on",
-      "polish": "Zacząć się",
+      "polish": "Zacząć się (będzie grubo)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p630-001-word.mp3",
       "audioWordPl": "t1-p630-001-word-pl.mp3",
-      "audioSentence": "t1-p630-001-sentence.mp3"
+      "audioSentence": "t1-p630-001-sentence.mp3",
+      "polishAudio": "Zacząć się"
     },
     {
       "id": "t1-p630-002",
       "english": "Get on",
-      "polish": "Kontynuować",
+      "polish": "Kontynuować (robić dalej)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p630-002-word.mp3",
       "audioWordPl": "t1-p630-002-word-pl.mp3",
-      "audioSentence": "t1-p630-002-sentence.mp3"
+      "audioSentence": "t1-p630-002-sentence.mp3",
+      "polishAudio": "Kontynuować"
     },
     {
       "id": "t1-p630-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p630-003-word.mp3",
       "audioWordPl": "t1-p630-003-word-pl.mp3",
-      "audioSentence": "t1-p630-003-sentence.mp3"
+      "audioSentence": "t1-p630-003-sentence.mp3",
+      "polishAudio": "Opóźniać coś"
     },
     {
       "id": "t1-p630-004",
       "english": "Wrap sth up",
-      "polish": "Zawijać coś",
+      "polish": "Zawijać coś (kończyć coś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p630-004-word.mp3",
       "audioWordPl": "t1-p630-004-word-pl.mp3",
-      "audioSentence": "t1-p630-004-sentence.mp3"
+      "audioSentence": "t1-p630-004-sentence.mp3",
+      "polishAudio": "Zawijać coś"
     },
     {
       "id": "t1-p630-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p630-005-word.mp3",
       "audioWordPl": "t1-p630-005-word-pl.mp3",
-      "audioSentence": "t1-p630-005-sentence.mp3"
+      "audioSentence": "t1-p630-005-sentence.mp3",
+      "polishAudio": "Przełożyć coś na później"
     },
     {
       "id": "t1-p630-006",
       "english": "Take up",
-      "polish": "Zajmować",
+      "polish": "Zajmować (czas)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p630-006-word.mp3",
       "audioWordPl": "t1-p630-006-word-pl.mp3",
-      "audioSentence": "t1-p630-006-sentence.mp3"
+      "audioSentence": "t1-p630-006-sentence.mp3",
+      "polishAudio": "Zajmować"
     },
     {
       "id": "t1-p630-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p630-007-word.mp3",
       "audioWordPl": "t1-p630-007-word-pl.mp3",
-      "audioSentence": "t1-p630-007-sentence.mp3"
+      "audioSentence": "t1-p630-007-sentence.mp3",
+      "polishAudio": "Być datowanym na"
     },
     {
       "id": "t1-p630-008",
@@ -84,27 +91,30 @@
       "sentencePl": null,
       "audioWord": "t1-p630-008-word.mp3",
       "audioWordPl": "t1-p630-008-word-pl.mp3",
-      "audioSentence": "t1-p630-008-sentence.mp3"
+      "audioSentence": "t1-p630-008-sentence.mp3",
+      "polishAudio": "Kończyć się"
     },
     {
       "id": "t1-p630-009",
       "english": "Round sth off",
-      "polish": "Zakończyć coś",
+      "polish": "Zakończyć coś; doprowadzić coś do końca",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p630-009-word.mp3",
       "audioWordPl": "t1-p630-009-word-pl.mp3",
-      "audioSentence": "t1-p630-009-sentence.mp3"
+      "audioSentence": "t1-p630-009-sentence.mp3",
+      "polishAudio": "Zakończyć coś"
     },
     {
       "id": "t1-p630-010",
       "english": "Come about",
-      "polish": "Powstawać",
+      "polish": "Powstawać; zacząć się dziać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p630-010-word.mp3",
       "audioWordPl": "t1-p630-010-word-pl.mp3",
-      "audioSentence": "t1-p630-010-sentence.mp3"
+      "audioSentence": "t1-p630-010-sentence.mp3",
+      "polishAudio": "Powstawać"
     }
   ]
 }

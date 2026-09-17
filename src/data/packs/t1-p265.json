@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p265-001-word.mp3",
       "audioWordPl": "t1-p265-001-word-pl.mp3",
-      "audioSentence": "t1-p265-001-sentence.mp3"
+      "audioSentence": "t1-p265-001-sentence.mp3",
+      "polishAudio": "Na przykład"
     },
     {
       "id": "t1-p265-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p265-002-word.mp3",
       "audioWordPl": "t1-p265-002-word-pl.mp3",
-      "audioSentence": "t1-p265-002-sentence.mp3"
+      "audioSentence": "t1-p265-002-sentence.mp3",
+      "polishAudio": "Taki jak"
     },
     {
       "id": "t1-p265-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p265-003-word.mp3",
       "audioWordPl": "t1-p265-003-word-pl.mp3",
-      "audioSentence": "t1-p265-003-sentence.mp3"
+      "audioSentence": "t1-p265-003-sentence.mp3",
+      "polishAudio": "Wraz z"
     },
     {
       "id": "t1-p265-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p265-004-word.mp3",
       "audioWordPl": "t1-p265-004-word-pl.mp3",
-      "audioSentence": "t1-p265-004-sentence.mp3"
+      "audioSentence": "t1-p265-004-sentence.mp3",
+      "polishAudio": "Wliczając"
     },
     {
       "id": "t1-p265-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p265-005-word.mp3",
       "audioWordPl": "t1-p265-005-word-pl.mp3",
-      "audioSentence": "t1-p265-005-sentence.mp3"
+      "audioSentence": "t1-p265-005-sentence.mp3",
+      "polishAudio": "Łącznie z"
     },
     {
       "id": "t1-p265-006",
       "english": "To illustrate",
-      "polish": "By zobrazować",
+      "polish": "By zobrazować (np. argument)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p265-006-word.mp3",
       "audioWordPl": "t1-p265-006-word-pl.mp3",
-      "audioSentence": "t1-p265-006-sentence.mp3"
+      "audioSentence": "t1-p265-006-sentence.mp3",
+      "polishAudio": "By zobrazować"
     },
     {
       "id": "t1-p265-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p265-007-word.mp3",
       "audioWordPl": "t1-p265-007-word-pl.mp3",
-      "audioSentence": "t1-p265-007-sentence.mp3"
+      "audioSentence": "t1-p265-007-sentence.mp3",
+      "polishAudio": "Jako przykład"
     },
     {
       "id": "t1-p265-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p265-008-word.mp3",
       "audioWordPl": "t1-p265-008-word-pl.mp3",
-      "audioSentence": "t1-p265-008-sentence.mp3"
+      "audioSentence": "t1-p265-008-sentence.mp3",
+      "polishAudio": "Dla przykładu"
     },
     {
       "id": "t1-p265-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p265-009-word.mp3",
       "audioWordPl": "t1-p265-009-word-pl.mp3",
-      "audioSentence": "t1-p265-009-sentence.mp3"
+      "audioSentence": "t1-p265-009-sentence.mp3",
+      "polishAudio": "W tym przypadku"
     },
     {
       "id": "t1-p265-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p265-010-word.mp3",
       "audioWordPl": "t1-p265-010-word-pl.mp3",
-      "audioSentence": "t1-p265-010-sentence.mp3"
+      "audioSentence": "t1-p265-010-sentence.mp3",
+      "polishAudio": "To jest"
     }
   ]
 }

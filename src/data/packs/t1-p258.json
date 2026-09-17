@@ -9,12 +9,13 @@
     {
       "id": "t1-p258-001",
       "english": "Serbian",
-      "polish": "Serbka",
+      "polish": "Serbka; serb",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p258-001-word.mp3",
       "audioWordPl": "t1-p258-001-word-pl.mp3",
-      "audioSentence": "t1-p258-001-sentence.mp3"
+      "audioSentence": "t1-p258-001-sentence.mp3",
+      "polishAudio": "Serbka"
     },
     {
       "id": "t1-p258-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p258-002-word.mp3",
       "audioWordPl": "t1-p258-002-word-pl.mp3",
-      "audioSentence": "t1-p258-002-sentence.mp3"
+      "audioSentence": "t1-p258-002-sentence.mp3",
+      "polishAudio": "Słowacja"
     },
     {
       "id": "t1-p258-003",
       "english": "Slovak",
-      "polish": "Słowaczka",
+      "polish": "Słowaczka; słowak",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p258-003-word.mp3",
       "audioWordPl": "t1-p258-003-word-pl.mp3",
-      "audioSentence": "t1-p258-003-sentence.mp3"
+      "audioSentence": "t1-p258-003-sentence.mp3",
+      "polishAudio": "Słowaczka"
     },
     {
       "id": "t1-p258-004",
@@ -44,17 +47,19 @@
       "sentencePl": null,
       "audioWord": "t1-p258-004-word.mp3",
       "audioWordPl": "t1-p258-004-word-pl.mp3",
-      "audioSentence": "t1-p258-004-sentence.mp3"
+      "audioSentence": "t1-p258-004-sentence.mp3",
+      "polishAudio": "Szkocja"
     },
     {
       "id": "t1-p258-005",
       "english": "Scottish",
-      "polish": "Szkotka",
+      "polish": "Szkotka; szkot",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p258-005-word.mp3",
       "audioWordPl": "t1-p258-005-word-pl.mp3",
-      "audioSentence": "t1-p258-005-sentence.mp3"
+      "audioSentence": "t1-p258-005-sentence.mp3",
+      "polishAudio": "Szkotka"
     },
     {
       "id": "t1-p258-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p258-006-word.mp3",
       "audioWordPl": "t1-p258-006-word-pl.mp3",
-      "audioSentence": "t1-p258-006-sentence.mp3"
+      "audioSentence": "t1-p258-006-sentence.mp3",
+      "polishAudio": "Szwecja"
     },
     {
       "id": "t1-p258-007",
       "english": "Swedish",
-      "polish": "Szwedka",
+      "polish": "Szwedka; szwed",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p258-007-word.mp3",
       "audioWordPl": "t1-p258-007-word-pl.mp3",
-      "audioSentence": "t1-p258-007-sentence.mp3"
+      "audioSentence": "t1-p258-007-sentence.mp3",
+      "polishAudio": "Szwedka"
     },
     {
       "id": "t1-p258-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p258-008-word.mp3",
       "audioWordPl": "t1-p258-008-word-pl.mp3",
-      "audioSentence": "t1-p258-008-sentence.mp3"
+      "audioSentence": "t1-p258-008-sentence.mp3",
+      "polishAudio": "Ukraina"
     },
     {
       "id": "t1-p258-009",
       "english": "Ukrainian",
-      "polish": "Ukrainka",
+      "polish": "Ukrainka; ukrainiec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p258-009-word.mp3",
       "audioWordPl": "t1-p258-009-word-pl.mp3",
-      "audioSentence": "t1-p258-009-sentence.mp3"
+      "audioSentence": "t1-p258-009-sentence.mp3",
+      "polishAudio": "Ukrainka"
     },
     {
       "id": "t1-p258-010",
@@ -104,17 +113,19 @@
       "sentencePl": null,
       "audioWord": "t1-p258-010-word.mp3",
       "audioWordPl": "t1-p258-010-word-pl.mp3",
-      "audioSentence": "t1-p258-010-sentence.mp3"
+      "audioSentence": "t1-p258-010-sentence.mp3",
+      "polishAudio": "Meksyk"
     },
     {
       "id": "t1-p258-011",
       "english": "Mexican",
-      "polish": "Meksykanka",
+      "polish": "Meksykanka; meksykanin",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p258-011-word.mp3",
       "audioWordPl": "t1-p258-011-word-pl.mp3",
-      "audioSentence": "t1-p258-011-sentence.mp3"
+      "audioSentence": "t1-p258-011-sentence.mp3",
+      "polishAudio": "Meksykanka"
     },
     {
       "id": "t1-p258-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p258-012-word.mp3",
       "audioWordPl": "t1-p258-012-word-pl.mp3",
-      "audioSentence": "t1-p258-012-sentence.mp3"
+      "audioSentence": "t1-p258-012-sentence.mp3",
+      "polishAudio": "Szwajcaria"
     },
     {
       "id": "t1-p258-013",
       "english": "Swiss",
-      "polish": "Szwajcarka",
+      "polish": "Szwajcarka; szwajcar",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p258-013-word.mp3",
       "audioWordPl": "t1-p258-013-word-pl.mp3",
-      "audioSentence": "t1-p258-013-sentence.mp3"
+      "audioSentence": "t1-p258-013-sentence.mp3",
+      "polishAudio": "Szwajcarka"
     },
     {
       "id": "t1-p258-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p258-014-word.mp3",
       "audioWordPl": "t1-p258-014-word-pl.mp3",
-      "audioSentence": "t1-p258-014-sentence.mp3"
+      "audioSentence": "t1-p258-014-sentence.mp3",
+      "polishAudio": "Rumunia"
     },
     {
       "id": "t1-p258-015",
       "english": "Romanian",
-      "polish": "Rumunka",
+      "polish": "Rumunka; rumun",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p258-015-word.mp3",
       "audioWordPl": "t1-p258-015-word-pl.mp3",
-      "audioSentence": "t1-p258-015-sentence.mp3"
+      "audioSentence": "t1-p258-015-sentence.mp3",
+      "polishAudio": "Rumunka"
     }
   ]
 }

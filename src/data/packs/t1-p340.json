@@ -9,42 +9,46 @@
     {
       "id": "t1-p340-001",
       "english": "Instant",
-      "polish": "Natychmiastowy",
+      "polish": "Natychmiastowy; błyskawiczny (np. kawa)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p340-001-word.mp3",
       "audioWordPl": "t1-p340-001-word-pl.mp3",
-      "audioSentence": "t1-p340-001-sentence.mp3"
+      "audioSentence": "t1-p340-001-sentence.mp3",
+      "polishAudio": "Natychmiastowy"
     },
     {
       "id": "t1-p340-002",
       "english": "Brief",
-      "polish": "Krótki",
+      "polish": "Krótki; zwięzły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p340-002-word.mp3",
       "audioWordPl": "t1-p340-002-word-pl.mp3",
-      "audioSentence": "t1-p340-002-sentence.mp3"
+      "audioSentence": "t1-p340-002-sentence.mp3",
+      "polishAudio": "Krótki"
     },
     {
       "id": "t1-p340-003",
       "english": "Delayed",
-      "polish": "Opóźniony",
+      "polish": "Opóźniony (pociąg)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p340-003-word.mp3",
       "audioWordPl": "t1-p340-003-word-pl.mp3",
-      "audioSentence": "t1-p340-003-sentence.mp3"
+      "audioSentence": "t1-p340-003-sentence.mp3",
+      "polishAudio": "Opóźniony"
     },
     {
       "id": "t1-p340-004",
       "english": "Urgent",
-      "polish": "Pilny",
+      "polish": "Pilny (o sprawie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p340-004-word.mp3",
       "audioWordPl": "t1-p340-004-word-pl.mp3",
-      "audioSentence": "t1-p340-004-sentence.mp3"
+      "audioSentence": "t1-p340-004-sentence.mp3",
+      "polishAudio": "Pilny"
     },
     {
       "id": "t1-p340-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p340-005-word.mp3",
       "audioWordPl": "t1-p340-005-word-pl.mp3",
-      "audioSentence": "t1-p340-005-sentence.mp3"
+      "audioSentence": "t1-p340-005-sentence.mp3",
+      "polishAudio": "Długoterminowy"
     },
     {
       "id": "t1-p340-006",
@@ -64,27 +69,30 @@
       "sentencePl": null,
       "audioWord": "t1-p340-006-word.mp3",
       "audioWordPl": "t1-p340-006-word-pl.mp3",
-      "audioSentence": "t1-p340-006-sentence.mp3"
+      "audioSentence": "t1-p340-006-sentence.mp3",
+      "polishAudio": "Krótkoterminowy"
     },
     {
       "id": "t1-p340-007",
       "english": "Sudden",
-      "polish": "Nagły",
+      "polish": "Nagły; gwałtowny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p340-007-word.mp3",
       "audioWordPl": "t1-p340-007-word-pl.mp3",
-      "audioSentence": "t1-p340-007-sentence.mp3"
+      "audioSentence": "t1-p340-007-sentence.mp3",
+      "polishAudio": "Nagły"
     },
     {
       "id": "t1-p340-008",
       "english": "Immediate",
-      "polish": "Pilny",
+      "polish": "Pilny; bezpośredni (np. niebezpieczeństwo)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p340-008-word.mp3",
       "audioWordPl": "t1-p340-008-word-pl.mp3",
-      "audioSentence": "t1-p340-008-sentence.mp3"
+      "audioSentence": "t1-p340-008-sentence.mp3",
+      "polishAudio": "Pilny"
     },
     {
       "id": "t1-p340-009",
@@ -94,27 +102,30 @@
       "sentencePl": null,
       "audioWord": "t1-p340-009-word.mp3",
       "audioWordPl": "t1-p340-009-word-pl.mp3",
-      "audioSentence": "t1-p340-009-sentence.mp3"
+      "audioSentence": "t1-p340-009-sentence.mp3",
+      "polishAudio": "W ostatniej chwili"
     },
     {
       "id": "t1-p340-010",
       "english": "Old-time",
-      "polish": "Dawny",
+      "polish": "Dawny; starodawny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p340-010-word.mp3",
       "audioWordPl": "t1-p340-010-word-pl.mp3",
-      "audioSentence": "t1-p340-010-sentence.mp3"
+      "audioSentence": "t1-p340-010-sentence.mp3",
+      "polishAudio": "Dawny"
     },
     {
       "id": "t1-p340-011",
       "english": "Coming",
-      "polish": "Zbliżający się",
+      "polish": "Zbliżający się; nadchodzący",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p340-011-word.mp3",
       "audioWordPl": "t1-p340-011-word-pl.mp3",
-      "audioSentence": "t1-p340-011-sentence.mp3"
+      "audioSentence": "t1-p340-011-sentence.mp3",
+      "polishAudio": "Zbliżający się"
     },
     {
       "id": "t1-p340-012",
@@ -124,37 +135,41 @@
       "sentencePl": null,
       "audioWord": "t1-p340-012-word.mp3",
       "audioWordPl": "t1-p340-012-word-pl.mp3",
-      "audioSentence": "t1-p340-012-sentence.mp3"
+      "audioSentence": "t1-p340-012-sentence.mp3",
+      "polishAudio": "Przychodzący"
     },
     {
       "id": "t1-p340-013",
       "english": "Upcoming",
-      "polish": "Nadchodzący",
+      "polish": "Nadchodzący (o czasie); zbliżający się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p340-013-word.mp3",
       "audioWordPl": "t1-p340-013-word-pl.mp3",
-      "audioSentence": "t1-p340-013-sentence.mp3"
+      "audioSentence": "t1-p340-013-sentence.mp3",
+      "polishAudio": "Nadchodzący"
     },
     {
       "id": "t1-p340-014",
       "english": "Following",
-      "polish": "Następujący",
+      "polish": "Następujący; kolejny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p340-014-word.mp3",
       "audioWordPl": "t1-p340-014-word-pl.mp3",
-      "audioSentence": "t1-p340-014-sentence.mp3"
+      "audioSentence": "t1-p340-014-sentence.mp3",
+      "polishAudio": "Następujący"
     },
     {
       "id": "t1-p340-015",
       "english": "Scheduled",
-      "polish": "Wpisany na konkretną datę",
+      "polish": "Wpisany na konkretną datę; zaplanowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p340-015-word.mp3",
       "audioWordPl": "t1-p340-015-word-pl.mp3",
-      "audioSentence": "t1-p340-015-sentence.mp3"
+      "audioSentence": "t1-p340-015-sentence.mp3",
+      "polishAudio": "Wpisany na konkretną datę"
     }
   ]
 }

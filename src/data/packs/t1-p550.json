@@ -9,12 +9,13 @@
     {
       "id": "t1-p550-001",
       "english": "Trade show",
-      "polish": "Targi",
+      "polish": "Targi (np. turystyczne)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p550-001-word.mp3",
       "audioWordPl": "t1-p550-001-word-pl.mp3",
-      "audioSentence": "t1-p550-001-sentence.mp3"
+      "audioSentence": "t1-p550-001-sentence.mp3",
+      "polishAudio": "Targi"
     },
     {
       "id": "t1-p550-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p550-002-word.mp3",
       "audioWordPl": "t1-p550-002-word-pl.mp3",
-      "audioSentence": "t1-p550-002-sentence.mp3"
+      "audioSentence": "t1-p550-002-sentence.mp3",
+      "polishAudio": "Towar"
     },
     {
       "id": "t1-p550-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p550-003-word.mp3",
       "audioWordPl": "t1-p550-003-word-pl.mp3",
-      "audioSentence": "t1-p550-003-sentence.mp3"
+      "audioSentence": "t1-p550-003-sentence.mp3",
+      "polishAudio": "Znak firmowy"
     },
     {
       "id": "t1-p550-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p550-004-word.mp3",
       "audioWordPl": "t1-p550-004-word-pl.mp3",
-      "audioSentence": "t1-p550-004-sentence.mp3"
+      "audioSentence": "t1-p550-004-sentence.mp3",
+      "polishAudio": "Franczyza"
     },
     {
       "id": "t1-p550-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p550-005-word.mp3",
       "audioWordPl": "t1-p550-005-word-pl.mp3",
-      "audioSentence": "t1-p550-005-sentence.mp3"
+      "audioSentence": "t1-p550-005-sentence.mp3",
+      "polishAudio": "Hipoteka"
     },
     {
       "id": "t1-p550-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p550-006-word.mp3",
       "audioWordPl": "t1-p550-006-word-pl.mp3",
-      "audioSentence": "t1-p550-006-sentence.mp3"
+      "audioSentence": "t1-p550-006-sentence.mp3",
+      "polishAudio": "Potwierdzenie"
     },
     {
       "id": "t1-p550-007",
       "english": "Speculation",
-      "polish": "Rozważanie",
+      "polish": "Rozważanie; spekulacja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p550-007-word.mp3",
       "audioWordPl": "t1-p550-007-word-pl.mp3",
-      "audioSentence": "t1-p550-007-sentence.mp3"
+      "audioSentence": "t1-p550-007-sentence.mp3",
+      "polishAudio": "Rozważanie"
     },
     {
       "id": "t1-p550-008",
@@ -84,27 +91,30 @@
       "sentencePl": null,
       "audioWord": "t1-p550-008-word.mp3",
       "audioWordPl": "t1-p550-008-word-pl.mp3",
-      "audioSentence": "t1-p550-008-sentence.mp3"
+      "audioSentence": "t1-p550-008-sentence.mp3",
+      "polishAudio": "Siedziba"
     },
     {
       "id": "t1-p550-009",
       "english": "Complaint",
-      "polish": "Skarga",
+      "polish": "Skarga; zażalenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p550-009-word.mp3",
       "audioWordPl": "t1-p550-009-word-pl.mp3",
-      "audioSentence": "t1-p550-009-sentence.mp3"
+      "audioSentence": "t1-p550-009-sentence.mp3",
+      "polishAudio": "Skarga"
     },
     {
       "id": "t1-p550-010",
       "english": "Chart",
-      "polish": "Wykres",
+      "polish": "Wykres; tabela",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p550-010-word.mp3",
       "audioWordPl": "t1-p550-010-word-pl.mp3",
-      "audioSentence": "t1-p550-010-sentence.mp3"
+      "audioSentence": "t1-p550-010-sentence.mp3",
+      "polishAudio": "Wykres"
     },
     {
       "id": "t1-p550-011",
@@ -114,37 +124,41 @@
       "sentencePl": null,
       "audioWord": "t1-p550-011-word.mp3",
       "audioWordPl": "t1-p550-011-word-pl.mp3",
-      "audioSentence": "t1-p550-011-sentence.mp3"
+      "audioSentence": "t1-p550-011-sentence.mp3",
+      "polishAudio": "Założyciel"
     },
     {
       "id": "t1-p550-012",
       "english": "Management",
-      "polish": "Zarządzanie",
+      "polish": "Zarządzanie; zarząd",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p550-012-word.mp3",
       "audioWordPl": "t1-p550-012-word-pl.mp3",
-      "audioSentence": "t1-p550-012-sentence.mp3"
+      "audioSentence": "t1-p550-012-sentence.mp3",
+      "polishAudio": "Zarządzanie"
     },
     {
       "id": "t1-p550-013",
       "english": "Provider",
-      "polish": "Dostarczyciel",
+      "polish": "Dostarczyciel; dostawca",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p550-013-word.mp3",
       "audioWordPl": "t1-p550-013-word-pl.mp3",
-      "audioSentence": "t1-p550-013-sentence.mp3"
+      "audioSentence": "t1-p550-013-sentence.mp3",
+      "polishAudio": "Dostarczyciel"
     },
     {
       "id": "t1-p550-014",
       "english": "Networking",
-      "polish": "Nawiązywanie kontaktów",
+      "polish": "Nawiązywanie kontaktów; networking",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p550-014-word.mp3",
       "audioWordPl": "t1-p550-014-word-pl.mp3",
-      "audioSentence": "t1-p550-014-sentence.mp3"
+      "audioSentence": "t1-p550-014-sentence.mp3",
+      "polishAudio": "Nawiązywanie kontaktów"
     },
     {
       "id": "t1-p550-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p550-015-word.mp3",
       "audioWordPl": "t1-p550-015-word-pl.mp3",
-      "audioSentence": "t1-p550-015-sentence.mp3"
+      "audioSentence": "t1-p550-015-sentence.mp3",
+      "polishAudio": "Aktywa"
     }
   ]
 }

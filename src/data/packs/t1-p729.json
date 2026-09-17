@@ -9,12 +9,13 @@
     {
       "id": "t1-p729-001",
       "english": "Rinse",
-      "polish": "Przemywać",
+      "polish": "Przemywać; spłukiwać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p729-001-word.mp3",
       "audioWordPl": "t1-p729-001-word-pl.mp3",
-      "audioSentence": "t1-p729-001-sentence.mp3"
+      "audioSentence": "t1-p729-001-sentence.mp3",
+      "polishAudio": "Przemywać"
     },
     {
       "id": "t1-p729-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p729-002-word.mp3",
       "audioWordPl": "t1-p729-002-word-pl.mp3",
-      "audioSentence": "t1-p729-002-sentence.mp3"
+      "audioSentence": "t1-p729-002-sentence.mp3",
+      "polishAudio": "Wytryskać"
     },
     {
       "id": "t1-p729-003",
       "english": "Squirt",
-      "polish": "Tryskać",
+      "polish": "Tryskać; spryskać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p729-003-word.mp3",
       "audioWordPl": "t1-p729-003-word-pl.mp3",
-      "audioSentence": "t1-p729-003-sentence.mp3"
+      "audioSentence": "t1-p729-003-sentence.mp3",
+      "polishAudio": "Tryskać"
     },
     {
       "id": "t1-p729-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p729-004-word.mp3",
       "audioWordPl": "t1-p729-004-word-pl.mp3",
-      "audioSentence": "t1-p729-004-sentence.mp3"
+      "audioSentence": "t1-p729-004-sentence.mp3",
+      "polishAudio": "Zanurzyć się"
     },
     {
       "id": "t1-p729-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p729-005-word.mp3",
       "audioWordPl": "t1-p729-005-word-pl.mp3",
-      "audioSentence": "t1-p729-005-sentence.mp3"
+      "audioSentence": "t1-p729-005-sentence.mp3",
+      "polishAudio": "Odsączać"
     },
     {
       "id": "t1-p729-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p729-006-word.mp3",
       "audioWordPl": "t1-p729-006-word-pl.mp3",
-      "audioSentence": "t1-p729-006-sentence.mp3"
+      "audioSentence": "t1-p729-006-sentence.mp3",
+      "polishAudio": "Namoczyć"
     },
     {
       "id": "t1-p729-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p729-007-word.mp3",
       "audioWordPl": "t1-p729-007-word-pl.mp3",
-      "audioSentence": "t1-p729-007-sentence.mp3"
+      "audioSentence": "t1-p729-007-sentence.mp3",
+      "polishAudio": "Kapać"
     },
     {
       "id": "t1-p729-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p729-008-word.mp3",
       "audioWordPl": "t1-p729-008-word-pl.mp3",
-      "audioSentence": "t1-p729-008-sentence.mp3"
+      "audioSentence": "t1-p729-008-sentence.mp3",
+      "polishAudio": "Unosić się na wodzie"
     },
     {
       "id": "t1-p729-009",
       "english": "Inflate",
-      "polish": "Wypełniać powietrzem lub gazem",
+      "polish": "Wypełniać (się) powietrzem lub gazem; napompowywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p729-009-word.mp3",
       "audioWordPl": "t1-p729-009-word-pl.mp3",
-      "audioSentence": "t1-p729-009-sentence.mp3"
+      "audioSentence": "t1-p729-009-sentence.mp3",
+      "polishAudio": "Wypełniać powietrzem lub gazem"
     },
     {
       "id": "t1-p729-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p729-010-word.mp3",
       "audioWordPl": "t1-p729-010-word-pl.mp3",
-      "audioSentence": "t1-p729-010-sentence.mp3"
+      "audioSentence": "t1-p729-010-sentence.mp3",
+      "polishAudio": "Nawilżać"
     },
     {
       "id": "t1-p729-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p729-011-word.mp3",
       "audioWordPl": "t1-p729-011-word-pl.mp3",
-      "audioSentence": "t1-p729-011-sentence.mp3"
+      "audioSentence": "t1-p729-011-sentence.mp3",
+      "polishAudio": "Brać prysznic"
     },
     {
       "id": "t1-p729-012",
@@ -124,37 +135,41 @@
       "sentencePl": null,
       "audioWord": "t1-p729-012-word.mp3",
       "audioWordPl": "t1-p729-012-word-pl.mp3",
-      "audioSentence": "t1-p729-012-sentence.mp3"
+      "audioSentence": "t1-p729-012-sentence.mp3",
+      "polishAudio": "Padać przelotnie"
     },
     {
       "id": "t1-p729-013",
       "english": "Soak",
-      "polish": "Przemoczyć",
+      "polish": "Przemoczyć; namoczyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p729-013-word.mp3",
       "audioWordPl": "t1-p729-013-word-pl.mp3",
-      "audioSentence": "t1-p729-013-sentence.mp3"
+      "audioSentence": "t1-p729-013-sentence.mp3",
+      "polishAudio": "Przemoczyć"
     },
     {
       "id": "t1-p729-014",
       "english": "Plunge",
-      "polish": "Wpaść do wody",
+      "polish": "Wpaść do wody; zanurzyć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p729-014-word.mp3",
       "audioWordPl": "t1-p729-014-word-pl.mp3",
-      "audioSentence": "t1-p729-014-sentence.mp3"
+      "audioSentence": "t1-p729-014-sentence.mp3",
+      "polishAudio": "Wpaść do wody"
     },
     {
       "id": "t1-p729-015",
       "english": "Seep",
-      "polish": "Przeciekać",
+      "polish": "Przeciekać; wyciekać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p729-015-word.mp3",
       "audioWordPl": "t1-p729-015-word-pl.mp3",
-      "audioSentence": "t1-p729-015-sentence.mp3"
+      "audioSentence": "t1-p729-015-sentence.mp3",
+      "polishAudio": "Przeciekać"
     }
   ]
 }

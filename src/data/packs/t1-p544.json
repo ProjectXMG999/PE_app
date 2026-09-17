@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-001-word.mp3",
       "audioWordPl": "t1-p544-001-word-pl.mp3",
-      "audioSentence": "t1-p544-001-sentence.mp3"
+      "audioSentence": "t1-p544-001-sentence.mp3",
+      "polishAudio": "Łasica"
     },
     {
       "id": "t1-p544-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-002-word.mp3",
       "audioWordPl": "t1-p544-002-word-pl.mp3",
-      "audioSentence": "t1-p544-002-sentence.mp3"
+      "audioSentence": "t1-p544-002-sentence.mp3",
+      "polishAudio": "Sarna"
     },
     {
       "id": "t1-p544-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p544-003-word.mp3",
       "audioWordPl": "t1-p544-003-word-pl.mp3",
-      "audioSentence": "t1-p544-003-sentence.mp3"
+      "audioSentence": "t1-p544-003-sentence.mp3",
+      "polishAudio": "Szop"
     },
     {
       "id": "t1-p544-004",
       "english": "Whiskers",
-      "polish": "Wąsy",
+      "polish": "Wąsy (kota)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p544-004-word.mp3",
       "audioWordPl": "t1-p544-004-word-pl.mp3",
-      "audioSentence": "t1-p544-004-sentence.mp3"
+      "audioSentence": "t1-p544-004-sentence.mp3",
+      "polishAudio": "Wąsy"
     },
     {
       "id": "t1-p544-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-005-word.mp3",
       "audioWordPl": "t1-p544-005-word-pl.mp3",
-      "audioSentence": "t1-p544-005-sentence.mp3"
+      "audioSentence": "t1-p544-005-sentence.mp3",
+      "polishAudio": "Karaluch"
     },
     {
       "id": "t1-p544-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-006-word.mp3",
       "audioWordPl": "t1-p544-006-word-pl.mp3",
-      "audioSentence": "t1-p544-006-sentence.mp3"
+      "audioSentence": "t1-p544-006-sentence.mp3",
+      "polishAudio": "Ośmiornica"
     },
     {
       "id": "t1-p544-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-007-word.mp3",
       "audioWordPl": "t1-p544-007-word-pl.mp3",
-      "audioSentence": "t1-p544-007-sentence.mp3"
+      "audioSentence": "t1-p544-007-sentence.mp3",
+      "polishAudio": "Borsuk"
     },
     {
       "id": "t1-p544-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-008-word.mp3",
       "audioWordPl": "t1-p544-008-word-pl.mp3",
-      "audioSentence": "t1-p544-008-sentence.mp3"
+      "audioSentence": "t1-p544-008-sentence.mp3",
+      "polishAudio": "Chrząszcz"
     },
     {
       "id": "t1-p544-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-009-word.mp3",
       "audioWordPl": "t1-p544-009-word-pl.mp3",
-      "audioSentence": "t1-p544-009-sentence.mp3"
+      "audioSentence": "t1-p544-009-sentence.mp3",
+      "polishAudio": "Drapieżnik"
     },
     {
       "id": "t1-p544-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-010-word.mp3",
       "audioWordPl": "t1-p544-010-word-pl.mp3",
-      "audioSentence": "t1-p544-010-sentence.mp3"
+      "audioSentence": "t1-p544-010-sentence.mp3",
+      "polishAudio": "Gad"
     },
     {
       "id": "t1-p544-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-011-word.mp3",
       "audioWordPl": "t1-p544-011-word-pl.mp3",
-      "audioSentence": "t1-p544-011-sentence.mp3"
+      "audioSentence": "t1-p544-011-sentence.mp3",
+      "polishAudio": "Gepard"
     },
     {
       "id": "t1-p544-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-012-word.mp3",
       "audioWordPl": "t1-p544-012-word-pl.mp3",
-      "audioSentence": "t1-p544-012-sentence.mp3"
+      "audioSentence": "t1-p544-012-sentence.mp3",
+      "polishAudio": "Gryzoń"
     },
     {
       "id": "t1-p544-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-013-word.mp3",
       "audioWordPl": "t1-p544-013-word-pl.mp3",
-      "audioSentence": "t1-p544-013-sentence.mp3"
+      "audioSentence": "t1-p544-013-sentence.mp3",
+      "polishAudio": "Jeż"
     },
     {
       "id": "t1-p544-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-014-word.mp3",
       "audioWordPl": "t1-p544-014-word-pl.mp3",
-      "audioSentence": "t1-p544-014-sentence.mp3"
+      "audioSentence": "t1-p544-014-sentence.mp3",
+      "polishAudio": "Klacz"
     },
     {
       "id": "t1-p544-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p544-015-word.mp3",
       "audioWordPl": "t1-p544-015-word-pl.mp3",
-      "audioSentence": "t1-p544-015-sentence.mp3"
+      "audioSentence": "t1-p544-015-sentence.mp3",
+      "polishAudio": "Koala"
     }
   ]
 }

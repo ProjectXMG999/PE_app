@@ -9,22 +9,24 @@
     {
       "id": "t1-p791-001",
       "english": "Put sth up",
-      "polish": "Rozwiesić coś",
+      "polish": "Rozwiesić coś; wywiesić coś (np. obraz)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p791-001-word.mp3",
       "audioWordPl": "t1-p791-001-word-pl.mp3",
-      "audioSentence": "t1-p791-001-sentence.mp3"
+      "audioSentence": "t1-p791-001-sentence.mp3",
+      "polishAudio": "Rozwiesić coś"
     },
     {
       "id": "t1-p791-002",
       "english": "Tear off",
-      "polish": "Odrywać",
+      "polish": "Odrywać; zrywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p791-002-word.mp3",
       "audioWordPl": "t1-p791-002-word-pl.mp3",
-      "audioSentence": "t1-p791-002-sentence.mp3"
+      "audioSentence": "t1-p791-002-sentence.mp3",
+      "polishAudio": "Odrywać"
     },
     {
       "id": "t1-p791-003",
@@ -34,27 +36,30 @@
       "sentencePl": null,
       "audioWord": "t1-p791-003-word.mp3",
       "audioWordPl": "t1-p791-003-word-pl.mp3",
-      "audioSentence": "t1-p791-003-sentence.mp3"
+      "audioSentence": "t1-p791-003-sentence.mp3",
+      "polishAudio": "Odhaczyć coś wykonanego"
     },
     {
       "id": "t1-p791-004",
       "english": "Hand sth in",
-      "polish": "Oddawać coś",
+      "polish": "Oddawać coś; złożyć (pracę)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p791-004-word.mp3",
       "audioWordPl": "t1-p791-004-word-pl.mp3",
-      "audioSentence": "t1-p791-004-sentence.mp3"
+      "audioSentence": "t1-p791-004-sentence.mp3",
+      "polishAudio": "Oddawać coś"
     },
     {
       "id": "t1-p791-005",
       "english": "Pass out",
-      "polish": "Rozdawać coś grupie",
+      "polish": "Rozdawać coś grupie (np. ulotki)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p791-005-word.mp3",
       "audioWordPl": "t1-p791-005-word-pl.mp3",
-      "audioSentence": "t1-p791-005-sentence.mp3"
+      "audioSentence": "t1-p791-005-sentence.mp3",
+      "polishAudio": "Rozdawać coś grupie"
     },
     {
       "id": "t1-p791-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p791-006-word.mp3",
       "audioWordPl": "t1-p791-006-word-pl.mp3",
-      "audioSentence": "t1-p791-006-sentence.mp3"
+      "audioSentence": "t1-p791-006-sentence.mp3",
+      "polishAudio": "Postawić coś niżej"
     },
     {
       "id": "t1-p791-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p791-007-word.mp3",
       "audioWordPl": "t1-p791-007-word-pl.mp3",
-      "audioSentence": "t1-p791-007-sentence.mp3"
+      "audioSentence": "t1-p791-007-sentence.mp3",
+      "polishAudio": "Przepisać coś"
     },
     {
       "id": "t1-p791-008",
       "english": "Draw sth up",
-      "polish": "Sporządzać coś",
+      "polish": "Sporządzać coś (np. pismo)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p791-008-word.mp3",
       "audioWordPl": "t1-p791-008-word-pl.mp3",
-      "audioSentence": "t1-p791-008-sentence.mp3"
+      "audioSentence": "t1-p791-008-sentence.mp3",
+      "polishAudio": "Sporządzać coś"
     },
     {
       "id": "t1-p791-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p791-009-word.mp3",
       "audioWordPl": "t1-p791-009-word-pl.mp3",
-      "audioSentence": "t1-p791-009-sentence.mp3"
+      "audioSentence": "t1-p791-009-sentence.mp3",
+      "polishAudio": "Przekazywać"
     },
     {
       "id": "t1-p791-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p791-010-word.mp3",
       "audioWordPl": "t1-p791-010-word-pl.mp3",
-      "audioSentence": "t1-p791-010-sentence.mp3"
+      "audioSentence": "t1-p791-010-sentence.mp3",
+      "polishAudio": "Wyciągnąć"
     }
   ]
 }

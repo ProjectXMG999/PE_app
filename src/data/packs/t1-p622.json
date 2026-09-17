@@ -9,12 +9,13 @@
     {
       "id": "t1-p622-001",
       "english": "Grow out of",
-      "polish": "Wyrosnąć",
+      "polish": "Wyrosnąć (z czegoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p622-001-word.mp3",
       "audioWordPl": "t1-p622-001-word-pl.mp3",
-      "audioSentence": "t1-p622-001-sentence.mp3"
+      "audioSentence": "t1-p622-001-sentence.mp3",
+      "polishAudio": "Wyrosnąć"
     },
     {
       "id": "t1-p622-002",
@@ -24,37 +25,41 @@
       "sentencePl": null,
       "audioWord": "t1-p622-002-word.mp3",
       "audioWordPl": "t1-p622-002-word-pl.mp3",
-      "audioSentence": "t1-p622-002-sentence.mp3"
+      "audioSentence": "t1-p622-002-sentence.mp3",
+      "polishAudio": "Narzucić coś"
     },
     {
       "id": "t1-p622-003",
       "english": "Do sth up",
-      "polish": "Zapiąć coś",
+      "polish": "Zapiąć coś; związać (włosy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p622-003-word.mp3",
       "audioWordPl": "t1-p622-003-word-pl.mp3",
-      "audioSentence": "t1-p622-003-sentence.mp3"
+      "audioSentence": "t1-p622-003-sentence.mp3",
+      "polishAudio": "Zapiąć coś"
     },
     {
       "id": "t1-p622-004",
       "english": "Pull sth down",
-      "polish": "Ściągnąć",
+      "polish": "Ściągnąć (coś z siebie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p622-004-word.mp3",
       "audioWordPl": "t1-p622-004-word-pl.mp3",
-      "audioSentence": "t1-p622-004-sentence.mp3"
+      "audioSentence": "t1-p622-004-sentence.mp3",
+      "polishAudio": "Ściągnąć"
     },
     {
       "id": "t1-p622-005",
       "english": "Stick out",
-      "polish": "Wystawać skądś",
+      "polish": "Wystawać skądś; odstawać; wysuwać do przodu (np. język)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p622-005-word.mp3",
       "audioWordPl": "t1-p622-005-word-pl.mp3",
-      "audioSentence": "t1-p622-005-sentence.mp3"
+      "audioSentence": "t1-p622-005-sentence.mp3",
+      "polishAudio": "Wystawać skądś"
     },
     {
       "id": "t1-p622-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p622-006-word.mp3",
       "audioWordPl": "t1-p622-006-word-pl.mp3",
-      "audioSentence": "t1-p622-006-sentence.mp3"
+      "audioSentence": "t1-p622-006-sentence.mp3",
+      "polishAudio": "Wywrócić coś na drugą stronę"
     },
     {
       "id": "t1-p622-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p622-007-word.mp3",
       "audioWordPl": "t1-p622-007-word-pl.mp3",
-      "audioSentence": "t1-p622-007-sentence.mp3"
+      "audioSentence": "t1-p622-007-sentence.mp3",
+      "polishAudio": "Zapiąć na zamek"
     },
     {
       "id": "t1-p622-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p622-008-word.mp3",
       "audioWordPl": "t1-p622-008-word-pl.mp3",
-      "audioSentence": "t1-p622-008-sentence.mp3"
+      "audioSentence": "t1-p622-008-sentence.mp3",
+      "polishAudio": "Pasować do"
     },
     {
       "id": "t1-p622-009",
       "english": "Wash up",
-      "polish": "Myć ręce I twarz",
+      "polish": "Myć ręce i twarz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p622-009-word.mp3",
       "audioWordPl": "t1-p622-009-word-pl.mp3",
-      "audioSentence": "t1-p622-009-sentence.mp3"
+      "audioSentence": "t1-p622-009-sentence.mp3",
+      "polishAudio": "Myć ręce i twarz"
     },
     {
       "id": "t1-p622-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p622-010-word.mp3",
       "audioWordPl": "t1-p622-010-word-pl.mp3",
-      "audioSentence": "t1-p622-010-sentence.mp3"
+      "audioSentence": "t1-p622-010-sentence.mp3",
+      "polishAudio": "Odświeżać się"
     }
   ]
 }

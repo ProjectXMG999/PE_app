@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p605-001-word.mp3",
       "audioWordPl": "t1-p605-001-word-pl.mp3",
-      "audioSentence": "t1-p605-001-sentence.mp3"
+      "audioSentence": "t1-p605-001-sentence.mp3",
+      "polishAudio": "Bezradny"
     },
     {
       "id": "t1-p605-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p605-002-word.mp3",
       "audioWordPl": "t1-p605-002-word-pl.mp3",
-      "audioSentence": "t1-p605-002-sentence.mp3"
+      "audioSentence": "t1-p605-002-sentence.mp3",
+      "polishAudio": "Bezsilny"
     },
     {
       "id": "t1-p605-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p605-003-word.mp3",
       "audioWordPl": "t1-p605-003-word-pl.mp3",
-      "audioSentence": "t1-p605-003-sentence.mp3"
+      "audioSentence": "t1-p605-003-sentence.mp3",
+      "polishAudio": "Niechętny"
     },
     {
       "id": "t1-p605-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p605-004-word.mp3",
       "audioWordPl": "t1-p605-004-word-pl.mp3",
-      "audioSentence": "t1-p605-004-sentence.mp3"
+      "audioSentence": "t1-p605-004-sentence.mp3",
+      "polishAudio": "Zaniepokojony"
     },
     {
       "id": "t1-p605-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p605-005-word.mp3",
       "audioWordPl": "t1-p605-005-word-pl.mp3",
-      "audioSentence": "t1-p605-005-sentence.mp3"
+      "audioSentence": "t1-p605-005-sentence.mp3",
+      "polishAudio": "Przerażony"
     },
     {
       "id": "t1-p605-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p605-006-word.mp3",
       "audioWordPl": "t1-p605-006-word-pl.mp3",
-      "audioSentence": "t1-p605-006-sentence.mp3"
+      "audioSentence": "t1-p605-006-sentence.mp3",
+      "polishAudio": "Strapiony"
     },
     {
       "id": "t1-p605-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p605-007-word.mp3",
       "audioWordPl": "t1-p605-007-word-pl.mp3",
-      "audioSentence": "t1-p605-007-sentence.mp3"
+      "audioSentence": "t1-p605-007-sentence.mp3",
+      "polishAudio": "Zatroskany"
     },
     {
       "id": "t1-p605-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p605-008-word.mp3",
       "audioWordPl": "t1-p605-008-word-pl.mp3",
-      "audioSentence": "t1-p605-008-sentence.mp3"
+      "audioSentence": "t1-p605-008-sentence.mp3",
+      "polishAudio": "Zawstydzony"
     },
     {
       "id": "t1-p605-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p605-009-word.mp3",
       "audioWordPl": "t1-p605-009-word-pl.mp3",
-      "audioSentence": "t1-p605-009-sentence.mp3"
+      "audioSentence": "t1-p605-009-sentence.mp3",
+      "polishAudio": "Wkurzony"
     },
     {
       "id": "t1-p605-010",
       "english": "Confused",
-      "polish": "Zagubiony",
+      "polish": "Zagubiony; skonfudowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p605-010-word.mp3",
       "audioWordPl": "t1-p605-010-word-pl.mp3",
-      "audioSentence": "t1-p605-010-sentence.mp3"
+      "audioSentence": "t1-p605-010-sentence.mp3",
+      "polishAudio": "Zagubiony"
     },
     {
       "id": "t1-p605-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p605-011-word.mp3",
       "audioWordPl": "t1-p605-011-word-pl.mp3",
-      "audioSentence": "t1-p605-011-sentence.mp3"
+      "audioSentence": "t1-p605-011-sentence.mp3",
+      "polishAudio": "Onieśmielony"
     },
     {
       "id": "t1-p605-012",
       "english": "Homesick",
-      "polish": "Stęskniony",
+      "polish": "Stęskniony (za domem)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p605-012-word.mp3",
       "audioWordPl": "t1-p605-012-word-pl.mp3",
-      "audioSentence": "t1-p605-012-sentence.mp3"
+      "audioSentence": "t1-p605-012-sentence.mp3",
+      "polishAudio": "Stęskniony"
     },
     {
       "id": "t1-p605-013",
@@ -134,27 +146,30 @@
       "sentencePl": null,
       "audioWord": "t1-p605-013-word.mp3",
       "audioWordPl": "t1-p605-013-word-pl.mp3",
-      "audioSentence": "t1-p605-013-sentence.mp3"
+      "audioSentence": "t1-p605-013-sentence.mp3",
+      "polishAudio": "Zażenowany"
     },
     {
       "id": "t1-p605-014",
       "english": "Hectic",
-      "polish": "Gorączkowy",
+      "polish": "Gorączkowy (nerwowy moment)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p605-014-word.mp3",
       "audioWordPl": "t1-p605-014-word-pl.mp3",
-      "audioSentence": "t1-p605-014-sentence.mp3"
+      "audioSentence": "t1-p605-014-sentence.mp3",
+      "polishAudio": "Gorączkowy"
     },
     {
       "id": "t1-p605-015",
       "english": "Vulnerable",
-      "polish": "Dający się łatwo zranić",
+      "polish": "Dający się łatwo zranić (wrażliwy); bezbronny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p605-015-word.mp3",
       "audioWordPl": "t1-p605-015-word-pl.mp3",
-      "audioSentence": "t1-p605-015-sentence.mp3"
+      "audioSentence": "t1-p605-015-sentence.mp3",
+      "polishAudio": "Dający się łatwo zranić"
     }
   ]
 }

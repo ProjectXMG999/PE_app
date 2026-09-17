@@ -9,12 +9,13 @@
     {
       "id": "t1-p801-001",
       "english": "Adverse",
-      "polish": "Niekorzystny",
+      "polish": "Niekorzystny; niepożądany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p801-001-word.mp3",
       "audioWordPl": "t1-p801-001-word-pl.mp3",
-      "audioSentence": "t1-p801-001-sentence.mp3"
+      "audioSentence": "t1-p801-001-sentence.mp3",
+      "polishAudio": "Niekorzystny"
     },
     {
       "id": "t1-p801-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p801-002-word.mp3",
       "audioWordPl": "t1-p801-002-word-pl.mp3",
-      "audioSentence": "t1-p801-002-sentence.mp3"
+      "audioSentence": "t1-p801-002-sentence.mp3",
+      "polishAudio": "Niemoralny"
     },
     {
       "id": "t1-p801-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p801-003-word.mp3",
       "audioWordPl": "t1-p801-003-word-pl.mp3",
-      "audioSentence": "t1-p801-003-sentence.mp3"
+      "audioSentence": "t1-p801-003-sentence.mp3",
+      "polishAudio": "Nietaktowny"
     },
     {
       "id": "t1-p801-004",
@@ -44,37 +47,41 @@
       "sentencePl": null,
       "audioWord": "t1-p801-004-word.mp3",
       "audioWordPl": "t1-p801-004-word-pl.mp3",
-      "audioSentence": "t1-p801-004-sentence.mp3"
+      "audioSentence": "t1-p801-004-sentence.mp3",
+      "polishAudio": "Odrażający"
     },
     {
       "id": "t1-p801-005",
       "english": "Coarse",
-      "polish": "Ordynarny",
+      "polish": "Ordynarny; grubiański",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p801-005-word.mp3",
       "audioWordPl": "t1-p801-005-word-pl.mp3",
-      "audioSentence": "t1-p801-005-sentence.mp3"
+      "audioSentence": "t1-p801-005-sentence.mp3",
+      "polishAudio": "Ordynarny"
     },
     {
       "id": "t1-p801-006",
       "english": "Deceitful",
-      "polish": "Oszukańczy",
+      "polish": "Oszukańczy; kłamliwy (o sobie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p801-006-word.mp3",
       "audioWordPl": "t1-p801-006-word-pl.mp3",
-      "audioSentence": "t1-p801-006-sentence.mp3"
+      "audioSentence": "t1-p801-006-sentence.mp3",
+      "polishAudio": "Oszukańczy"
     },
     {
       "id": "t1-p801-007",
       "english": "Numb",
-      "polish": "Otępiały",
+      "polish": "Otępiały; sztywny; drętwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p801-007-word.mp3",
       "audioWordPl": "t1-p801-007-word-pl.mp3",
-      "audioSentence": "t1-p801-007-sentence.mp3"
+      "audioSentence": "t1-p801-007-sentence.mp3",
+      "polishAudio": "Otępiały"
     },
     {
       "id": "t1-p801-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p801-008-word.mp3",
       "audioWordPl": "t1-p801-008-word-pl.mp3",
-      "audioSentence": "t1-p801-008-sentence.mp3"
+      "audioSentence": "t1-p801-008-sentence.mp3",
+      "polishAudio": "Podstępny"
     },
     {
       "id": "t1-p801-009",
@@ -94,27 +102,30 @@
       "sentencePl": null,
       "audioWord": "t1-p801-009-word.mp3",
       "audioWordPl": "t1-p801-009-word-pl.mp3",
-      "audioSentence": "t1-p801-009-sentence.mp3"
+      "audioSentence": "t1-p801-009-sentence.mp3",
+      "polishAudio": "Przygnębiający"
     },
     {
       "id": "t1-p801-010",
       "english": "Grim",
-      "polish": "Ponury",
+      "polish": "Ponury; srogi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p801-010-word.mp3",
       "audioWordPl": "t1-p801-010-word-pl.mp3",
-      "audioSentence": "t1-p801-010-sentence.mp3"
+      "audioSentence": "t1-p801-010-sentence.mp3",
+      "polishAudio": "Ponury"
     },
     {
       "id": "t1-p801-011",
       "english": "Horrendous",
-      "polish": "Potworny",
+      "polish": "Potworny; okropny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p801-011-word.mp3",
       "audioWordPl": "t1-p801-011-word-pl.mp3",
-      "audioSentence": "t1-p801-011-sentence.mp3"
+      "audioSentence": "t1-p801-011-sentence.mp3",
+      "polishAudio": "Potworny"
     },
     {
       "id": "t1-p801-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p801-012-word.mp3",
       "audioWordPl": "t1-p801-012-word-pl.mp3",
-      "audioSentence": "t1-p801-012-sentence.mp3"
+      "audioSentence": "t1-p801-012-sentence.mp3",
+      "polishAudio": "Prymitywny"
     },
     {
       "id": "t1-p801-013",
       "english": "Wasteful",
-      "polish": "Rozrzutny",
+      "polish": "Rozrzutny; nieoszczędny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p801-013-word.mp3",
       "audioWordPl": "t1-p801-013-word-pl.mp3",
-      "audioSentence": "t1-p801-013-sentence.mp3"
+      "audioSentence": "t1-p801-013-sentence.mp3",
+      "polishAudio": "Rozrzutny"
     },
     {
       "id": "t1-p801-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p801-014-word.mp3",
       "audioWordPl": "t1-p801-014-word-pl.mp3",
-      "audioSentence": "t1-p801-014-sentence.mp3"
+      "audioSentence": "t1-p801-014-sentence.mp3",
+      "polishAudio": "Roztrzepany"
     },
     {
       "id": "t1-p801-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p801-015-word.mp3",
       "audioWordPl": "t1-p801-015-word-pl.mp3",
-      "audioSentence": "t1-p801-015-sentence.mp3"
+      "audioSentence": "t1-p801-015-sentence.mp3",
+      "polishAudio": "Rozwiązły"
     }
   ]
 }

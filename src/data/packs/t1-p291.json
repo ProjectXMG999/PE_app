@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-001-word.mp3",
       "audioWordPl": "t1-p291-001-word-pl.mp3",
-      "audioSentence": "t1-p291-001-sentence.mp3"
+      "audioSentence": "t1-p291-001-sentence.mp3",
+      "polishAudio": "Bielizna damska"
     },
     {
       "id": "t1-p291-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-002-word.mp3",
       "audioWordPl": "t1-p291-002-word-pl.mp3",
-      "audioSentence": "t1-p291-002-sentence.mp3"
+      "audioSentence": "t1-p291-002-sentence.mp3",
+      "polishAudio": "Buty sportowe"
     },
     {
       "id": "t1-p291-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-003-word.mp3",
       "audioWordPl": "t1-p291-003-word-pl.mp3",
-      "audioSentence": "t1-p291-003-sentence.mp3"
+      "audioSentence": "t1-p291-003-sentence.mp3",
+      "polishAudio": "Dres"
     },
     {
       "id": "t1-p291-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-004-word.mp3",
       "audioWordPl": "t1-p291-004-word-pl.mp3",
-      "audioSentence": "t1-p291-004-sentence.mp3"
+      "audioSentence": "t1-p291-004-sentence.mp3",
+      "polishAudio": "Rajstopy"
     },
     {
       "id": "t1-p291-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-005-word.mp3",
       "audioWordPl": "t1-p291-005-word-pl.mp3",
-      "audioSentence": "t1-p291-005-sentence.mp3"
+      "audioSentence": "t1-p291-005-sentence.mp3",
+      "polishAudio": "Stringi"
     },
     {
       "id": "t1-p291-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-006-word.mp3",
       "audioWordPl": "t1-p291-006-word-pl.mp3",
-      "audioSentence": "t1-p291-006-sentence.mp3"
+      "audioSentence": "t1-p291-006-sentence.mp3",
+      "polishAudio": "Szpilki"
     },
     {
       "id": "t1-p291-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-007-word.mp3",
       "audioWordPl": "t1-p291-007-word-pl.mp3",
-      "audioSentence": "t1-p291-007-sentence.mp3"
+      "audioSentence": "t1-p291-007-sentence.mp3",
+      "polishAudio": "Torba na ramię"
     },
     {
       "id": "t1-p291-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-008-word.mp3",
       "audioWordPl": "t1-p291-008-word-pl.mp3",
-      "audioSentence": "t1-p291-008-sentence.mp3"
+      "audioSentence": "t1-p291-008-sentence.mp3",
+      "polishAudio": "Trampki"
     },
     {
       "id": "t1-p291-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-009-word.mp3",
       "audioWordPl": "t1-p291-009-word-pl.mp3",
-      "audioSentence": "t1-p291-009-sentence.mp3"
+      "audioSentence": "t1-p291-009-sentence.mp3",
+      "polishAudio": "Klapki"
     },
     {
       "id": "t1-p291-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-010-word.mp3",
       "audioWordPl": "t1-p291-010-word-pl.mp3",
-      "audioSentence": "t1-p291-010-sentence.mp3"
+      "audioSentence": "t1-p291-010-sentence.mp3",
+      "polishAudio": "Pończochy"
     },
     {
       "id": "t1-p291-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-011-word.mp3",
       "audioWordPl": "t1-p291-011-word-pl.mp3",
-      "audioSentence": "t1-p291-011-sentence.mp3"
+      "audioSentence": "t1-p291-011-sentence.mp3",
+      "polishAudio": "Przymierzalnia"
     },
     {
       "id": "t1-p291-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p291-012-word.mp3",
       "audioWordPl": "t1-p291-012-word-pl.mp3",
-      "audioSentence": "t1-p291-012-sentence.mp3"
+      "audioSentence": "t1-p291-012-sentence.mp3",
+      "polishAudio": "Rękawiczki"
     },
     {
       "id": "t1-p291-013",
       "english": "Pullover",
-      "polish": "Sweter",
+      "polish": "Sweter (nakładany przez głowę)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p291-013-word.mp3",
       "audioWordPl": "t1-p291-013-word-pl.mp3",
-      "audioSentence": "t1-p291-013-sentence.mp3"
+      "audioSentence": "t1-p291-013-sentence.mp3",
+      "polishAudio": "Sweter"
     },
     {
       "id": "t1-p291-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-014-word.mp3",
       "audioWordPl": "t1-p291-014-word-pl.mp3",
-      "audioSentence": "t1-p291-014-sentence.mp3"
+      "audioSentence": "t1-p291-014-sentence.mp3",
+      "polishAudio": "Chusteczka wielokrotnego użytku"
     },
     {
       "id": "t1-p291-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p291-015-word.mp3",
       "audioWordPl": "t1-p291-015-word-pl.mp3",
-      "audioSentence": "t1-p291-015-sentence.mp3"
+      "audioSentence": "t1-p291-015-sentence.mp3",
+      "polishAudio": "Igła"
     }
   ]
 }

@@ -14,17 +14,19 @@
       "sentencePl": null,
       "audioWord": "t1-p658-001-word.mp3",
       "audioWordPl": "t1-p658-001-word-pl.mp3",
-      "audioSentence": "t1-p658-001-sentence.mp3"
+      "audioSentence": "t1-p658-001-sentence.mp3",
+      "polishAudio": "Zatrudnić kogoś"
     },
     {
       "id": "t1-p658-002",
       "english": "Buy up",
-      "polish": "Kupować w dużych ilościach",
+      "polish": "Kupować w dużych ilościach; wykupować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p658-002-word.mp3",
       "audioWordPl": "t1-p658-002-word-pl.mp3",
-      "audioSentence": "t1-p658-002-sentence.mp3"
+      "audioSentence": "t1-p658-002-sentence.mp3",
+      "polishAudio": "Kupować w dużych ilościach"
     },
     {
       "id": "t1-p658-003",
@@ -34,37 +36,41 @@
       "sentencePl": null,
       "audioWord": "t1-p658-003-word.mp3",
       "audioWordPl": "t1-p658-003-word-pl.mp3",
-      "audioSentence": "t1-p658-003-sentence.mp3"
+      "audioSentence": "t1-p658-003-sentence.mp3",
+      "polishAudio": "Zyskać na czymś"
     },
     {
       "id": "t1-p658-004",
       "english": "Put sth up",
-      "polish": "Wystawiać coś",
+      "polish": "Wystawiać coś (na sprzedaż)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p658-004-word.mp3",
       "audioWordPl": "t1-p658-004-word-pl.mp3",
-      "audioSentence": "t1-p658-004-sentence.mp3"
+      "audioSentence": "t1-p658-004-sentence.mp3",
+      "polishAudio": "Wystawiać coś"
     },
     {
       "id": "t1-p658-005",
       "english": "Turn sth down",
-      "polish": "Odrzucać",
+      "polish": "Odrzucać (ofertę)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p658-005-word.mp3",
       "audioWordPl": "t1-p658-005-word-pl.mp3",
-      "audioSentence": "t1-p658-005-sentence.mp3"
+      "audioSentence": "t1-p658-005-sentence.mp3",
+      "polishAudio": "Odrzucać"
     },
     {
       "id": "t1-p658-006",
       "english": "Bring sb in",
-      "polish": "Sprowadzić kogoś",
+      "polish": "Sprowadzić kogoś (do pracy, zatrudnić)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p658-006-word.mp3",
       "audioWordPl": "t1-p658-006-word-pl.mp3",
-      "audioSentence": "t1-p658-006-sentence.mp3"
+      "audioSentence": "t1-p658-006-sentence.mp3",
+      "polishAudio": "Sprowadzić kogoś"
     },
     {
       "id": "t1-p658-007",
@@ -74,37 +80,41 @@
       "sentencePl": null,
       "audioWord": "t1-p658-007-word.mp3",
       "audioWordPl": "t1-p658-007-word-pl.mp3",
-      "audioSentence": "t1-p658-007-sentence.mp3"
+      "audioSentence": "t1-p658-007-sentence.mp3",
+      "polishAudio": "Być produkowanym w określonej formie"
     },
     {
       "id": "t1-p658-008",
       "english": "Come into sth",
-      "polish": "Odziedziczyć coś",
+      "polish": "Odziedziczyć coś; wejść w posiadanie czegoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p658-008-word.mp3",
       "audioWordPl": "t1-p658-008-word-pl.mp3",
-      "audioSentence": "t1-p658-008-sentence.mp3"
+      "audioSentence": "t1-p658-008-sentence.mp3",
+      "polishAudio": "Odziedziczyć coś"
     },
     {
       "id": "t1-p658-009",
       "english": "Take up",
-      "polish": "Zajmować",
+      "polish": "Zajmować (nowe stanowisko)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p658-009-word.mp3",
       "audioWordPl": "t1-p658-009-word-pl.mp3",
-      "audioSentence": "t1-p658-009-sentence.mp3"
+      "audioSentence": "t1-p658-009-sentence.mp3",
+      "polishAudio": "Zajmować"
     },
     {
       "id": "t1-p658-010",
       "english": "Trade sth in",
-      "polish": "Oddać coś w rozliczeniu",
+      "polish": "Oddać coś w rozliczeniu; wymieniać coś (za dopłatą)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p658-010-word.mp3",
       "audioWordPl": "t1-p658-010-word-pl.mp3",
-      "audioSentence": "t1-p658-010-sentence.mp3"
+      "audioSentence": "t1-p658-010-sentence.mp3",
+      "polishAudio": "Oddać coś w rozliczeniu"
     }
   ]
 }

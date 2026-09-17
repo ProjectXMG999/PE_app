@@ -9,102 +9,112 @@
     {
       "id": "t1-p200-001",
       "english": "Fill up",
-      "polish": "Nalewać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Nalewać; zatankować do pełna",
+      "sentenceEn": "I'll fill it up so you won't have to think about it tomorrow.",
+      "sentencePl": "Naleję do pełna, żebyś jutro nie musiał o tym myśleć.",
       "audioWord": "t1-p200-001-word.mp3",
       "audioWordPl": "t1-p200-001-word-pl.mp3",
-      "audioSentence": "t1-p200-001-sentence.mp3"
+      "audioSentence": "t1-p200-001-sentence.mp3",
+      "polishAudio": "Nalewać"
     },
     {
       "id": "t1-p200-002",
       "english": "Get in",
-      "polish": "Wsiadać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Wsiadać (do samochodu)",
+      "sentenceEn": "Get in, the navigation is already showing a detour through side streets.",
+      "sentencePl": "Wsiadaj, nawigacja już pokazuje objazd przez boczne ulice.",
       "audioWord": "t1-p200-002-word.mp3",
       "audioWordPl": "t1-p200-002-word-pl.mp3",
-      "audioSentence": "t1-p200-002-sentence.mp3"
+      "audioSentence": "t1-p200-002-sentence.mp3",
+      "polishAudio": "Wsiadać"
     },
     {
       "id": "t1-p200-003",
       "english": "Drive off",
       "polish": "Odjechać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You drove off so quickly, I was waving at an empty street.",
+      "sentencePl": "Odjechałeś tak szybko, że machałam już do pustej ulicy.",
       "audioWord": "t1-p200-003-word.mp3",
       "audioWordPl": "t1-p200-003-word-pl.mp3",
-      "audioSentence": "t1-p200-003-sentence.mp3"
+      "audioSentence": "t1-p200-003-sentence.mp3",
+      "polishAudio": "Odjechać"
     },
     {
       "id": "t1-p200-004",
       "english": "Get out",
-      "polish": "Wysiadać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Wysiadać (z samochodu)",
+      "sentenceEn": "I'm getting out at the roundabout; I'll walk the rest.",
+      "sentencePl": "Wysiadam przy rondzie, dalej dojdę pieszo.",
       "audioWord": "t1-p200-004-word.mp3",
       "audioWordPl": "t1-p200-004-word-pl.mp3",
-      "audioSentence": "t1-p200-004-sentence.mp3"
+      "audioSentence": "t1-p200-004-sentence.mp3",
+      "polishAudio": "Wysiadać"
     },
     {
       "id": "t1-p200-005",
       "english": "Pick up",
       "polish": "Podjechać po kogoś",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Who's picking Ola up after class?",
+      "sentencePl": "Kto podjedzie po Olę po zajęciach?",
       "audioWord": "t1-p200-005-word.mp3",
       "audioWordPl": "t1-p200-005-word-pl.mp3",
-      "audioSentence": "t1-p200-005-sentence.mp3"
+      "audioSentence": "t1-p200-005-sentence.mp3",
+      "polishAudio": "Podjechać po kogoś"
     },
     {
       "id": "t1-p200-006",
       "english": "Pull out",
-      "polish": "Wyjeżdżać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Wyjeżdżać (z miejsca postoju); wjeżdżać na drogę",
+      "sentenceEn": "Wait before pulling out; a courier is blocking the parking lot exit.",
+      "sentencePl": "Poczekaj z wyjazdem, kurier blokuje wyjazd z parkingu.",
       "audioWord": "t1-p200-006-word.mp3",
       "audioWordPl": "t1-p200-006-word-pl.mp3",
-      "audioSentence": "t1-p200-006-sentence.mp3"
+      "audioSentence": "t1-p200-006-sentence.mp3",
+      "polishAudio": "Wyjeżdżać"
     },
     {
       "id": "t1-p200-007",
       "english": "Pull up",
-      "polish": "Zatrzymać się",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Zatrzymać się (samochodem)",
+      "sentenceEn": "Pull up by the parcel locker; I'll grab the package in a minute.",
+      "sentencePl": "Zatrzymaj się przy paczkomacie, odbiorę przesyłkę w minutę.",
       "audioWord": "t1-p200-007-word.mp3",
       "audioWordPl": "t1-p200-007-word-pl.mp3",
-      "audioSentence": "t1-p200-007-sentence.mp3"
+      "audioSentence": "t1-p200-007-sentence.mp3",
+      "polishAudio": "Zatrzymać się"
     },
     {
       "id": "t1-p200-008",
       "english": "Slow down",
       "polish": "Zwolnić",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Slow down before the crosswalk; someone's already waiting to cross.",
+      "sentencePl": "Zwolnij przed pasami, ktoś już czeka przy przejściu.",
       "audioWord": "t1-p200-008-word.mp3",
       "audioWordPl": "t1-p200-008-word-pl.mp3",
-      "audioSentence": "t1-p200-008-sentence.mp3"
+      "audioSentence": "t1-p200-008-sentence.mp3",
+      "polishAudio": "Zwolnić"
     },
     {
       "id": "t1-p200-009",
       "english": "Speed up",
       "polish": "Przyspieszać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Speed up a little; we'll still catch your train.",
+      "sentencePl": "Przyspiesz trochę, zdążymy jeszcze na twój pociąg.",
       "audioWord": "t1-p200-009-word.mp3",
       "audioWordPl": "t1-p200-009-word-pl.mp3",
-      "audioSentence": "t1-p200-009-sentence.mp3"
+      "audioSentence": "t1-p200-009-sentence.mp3",
+      "polishAudio": "Przyspieszać"
     },
     {
       "id": "t1-p200-010",
       "english": "Turn off",
-      "polish": "Skręcić",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Skręcić (z drogi)",
+      "sentenceEn": "Turn off at the flower shop; that's where I always wait for you.",
+      "sentencePl": "Skręć przy kwiaciarni, tam zawsze na ciebie czekam.",
       "audioWord": "t1-p200-010-word.mp3",
       "audioWordPl": "t1-p200-010-word-pl.mp3",
-      "audioSentence": "t1-p200-010-sentence.mp3"
+      "audioSentence": "t1-p200-010-sentence.mp3",
+      "polishAudio": "Skręcić"
     }
   ]
 }

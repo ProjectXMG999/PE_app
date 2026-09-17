@@ -9,102 +9,112 @@
     {
       "id": "t1-p096-001",
       "english": "Different",
-      "polish": "Inny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Inny (nie taki sam)",
+      "sentenceEn": "My new iPhone feels different already.",
+      "sentencePl": "Mój nowy iPhone już wydaje się inny.",
       "audioWord": "t1-p096-001-word.mp3",
       "audioWordPl": "t1-p096-001-word-pl.mp3",
-      "audioSentence": "t1-p096-001-sentence.mp3"
+      "audioSentence": "t1-p096-001-sentence.mp3",
+      "polishAudio": "Inny"
     },
     {
       "id": "t1-p096-002",
       "english": "Cool",
-      "polish": "Chłodny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Chłodny (stan)",
+      "sentenceEn": "Put your jacket on, it's cool outside.",
+      "sentencePl": "Załóż kurtkę, na zewnątrz jest chłodno.",
       "audioWord": "t1-p096-002-word.mp3",
       "audioWordPl": "t1-p096-002-word-pl.mp3",
-      "audioSentence": "t1-p096-002-sentence.mp3"
+      "audioSentence": "t1-p096-002-sentence.mp3",
+      "polishAudio": "Chłodny"
     },
     {
       "id": "t1-p096-003",
       "english": "Warm",
       "polish": "Ciepły",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Your warm smile made me feel better.",
+      "sentencePl": "Twój ciepły uśmiech poprawił mi nastrój.",
       "audioWord": "t1-p096-003-word.mp3",
       "audioWordPl": "t1-p096-003-word-pl.mp3",
-      "audioSentence": "t1-p096-003-sentence.mp3"
+      "audioSentence": "t1-p096-003-sentence.mp3",
+      "polishAudio": "Ciepły"
     },
     {
       "id": "t1-p096-004",
       "english": "Wet",
       "polish": "Mokry",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My socks got wet at the bus stop.",
+      "sentencePl": "Moje skarpetki zmokły na przystanku.",
       "audioWord": "t1-p096-004-word.mp3",
       "audioWordPl": "t1-p096-004-word-pl.mp3",
-      "audioSentence": "t1-p096-004-sentence.mp3"
+      "audioSentence": "t1-p096-004-sentence.mp3",
+      "polishAudio": "Mokry"
     },
     {
       "id": "t1-p096-005",
       "english": "Close",
-      "polish": "Bliski",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Bliski (lokalizacja)",
+      "sentenceEn": "Are you close to your brother?",
+      "sentencePl": "Jesteś blisko ze swoim bratem?",
       "audioWord": "t1-p096-005-word.mp3",
       "audioWordPl": "t1-p096-005-word-pl.mp3",
-      "audioSentence": "t1-p096-005-sentence.mp3"
+      "audioSentence": "t1-p096-005-sentence.mp3",
+      "polishAudio": "Bliski"
     },
     {
       "id": "t1-p096-006",
       "english": "Sorry",
-      "polish": "Współczujący",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Współczujący (jest mi przykro)",
+      "sentenceEn": "Sorry, could you say that again?",
+      "sentencePl": "Przepraszam, możesz powiedzieć to jeszcze raz?",
       "audioWord": "t1-p096-006-word.mp3",
       "audioWordPl": "t1-p096-006-word-pl.mp3",
-      "audioSentence": "t1-p096-006-sentence.mp3"
+      "audioSentence": "t1-p096-006-sentence.mp3",
+      "polishAudio": "Współczujący"
     },
     {
       "id": "t1-p096-007",
       "english": "Poor",
-      "polish": "Biedny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Biedny; ubogi",
+      "sentenceEn": "We were poor, but never alone.",
+      "sentencePl": "Byliśmy biedni, ale nigdy samotni.",
       "audioWord": "t1-p096-007-word.mp3",
       "audioWordPl": "t1-p096-007-word-pl.mp3",
-      "audioSentence": "t1-p096-007-sentence.mp3"
+      "audioSentence": "t1-p096-007-sentence.mp3",
+      "polishAudio": "Biedny"
     },
     {
       "id": "t1-p096-008",
       "english": "Sweet",
       "polish": "Słodki",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "That was sweet of you, thanks.",
+      "sentencePl": "To było z twojej strony miłe, dzięki.",
       "audioWord": "t1-p096-008-word.mp3",
       "audioWordPl": "t1-p096-008-word-pl.mp3",
-      "audioSentence": "t1-p096-008-sentence.mp3"
+      "audioSentence": "t1-p096-008-sentence.mp3",
+      "polishAudio": "Słodki"
     },
     {
       "id": "t1-p096-009",
       "english": "Fresh",
       "polish": "Świeży",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I need some fresh air.",
+      "sentencePl": "Potrzebuję trochę świeżego powietrza.",
       "audioWord": "t1-p096-009-word.mp3",
       "audioWordPl": "t1-p096-009-word-pl.mp3",
-      "audioSentence": "t1-p096-009-sentence.mp3"
+      "audioSentence": "t1-p096-009-sentence.mp3",
+      "polishAudio": "Świeży"
     },
     {
       "id": "t1-p096-010",
       "english": "Hard",
       "polish": "Bardzo trudny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "This avocado is still too hard.",
+      "sentencePl": "To awokado jest wciąż za twarde.",
       "audioWord": "t1-p096-010-word.mp3",
       "audioWordPl": "t1-p096-010-word-pl.mp3",
-      "audioSentence": "t1-p096-010-sentence.mp3"
+      "audioSentence": "t1-p096-010-sentence.mp3",
+      "polishAudio": "Bardzo trudny"
     }
   ]
 }

@@ -9,12 +9,13 @@
     {
       "id": "t1-p264-001",
       "english": "From",
-      "polish": "Z",
+      "polish": "Z (skądś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p264-001-word.mp3",
       "audioWordPl": "t1-p264-001-word-pl.mp3",
-      "audioSentence": "t1-p264-001-sentence.mp3"
+      "audioSentence": "t1-p264-001-sentence.mp3",
+      "polishAudio": "Z"
     },
     {
       "id": "t1-p264-002",
@@ -24,27 +25,30 @@
       "sentencePl": null,
       "audioWord": "t1-p264-002-word.mp3",
       "audioWordPl": "t1-p264-002-word-pl.mp3",
-      "audioSentence": "t1-p264-002-sentence.mp3"
+      "audioSentence": "t1-p264-002-sentence.mp3",
+      "polishAudio": "Tutaj"
     },
     {
       "id": "t1-p264-003",
       "english": "Under",
-      "polish": "Poniżej",
+      "polish": "Poniżej (np. 18 lat)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p264-003-word.mp3",
       "audioWordPl": "t1-p264-003-word-pl.mp3",
-      "audioSentence": "t1-p264-003-sentence.mp3"
+      "audioSentence": "t1-p264-003-sentence.mp3",
+      "polishAudio": "Poniżej"
     },
     {
       "id": "t1-p264-004",
       "english": "In front of",
-      "polish": "Przed",
+      "polish": "Przed (kimś, czymś); naprzeciw",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p264-004-word.mp3",
       "audioWordPl": "t1-p264-004-word-pl.mp3",
-      "audioSentence": "t1-p264-004-sentence.mp3"
+      "audioSentence": "t1-p264-004-sentence.mp3",
+      "polishAudio": "Przed"
     },
     {
       "id": "t1-p264-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p264-005-word.mp3",
       "audioWordPl": "t1-p264-005-word-pl.mp3",
-      "audioSentence": "t1-p264-005-sentence.mp3"
+      "audioSentence": "t1-p264-005-sentence.mp3",
+      "polishAudio": "W środku"
     },
     {
       "id": "t1-p264-006",
       "english": "Inside",
-      "polish": "W środku",
+      "polish": "W środku (pomieszczenia); wewnątrz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p264-006-word.mp3",
       "audioWordPl": "t1-p264-006-word-pl.mp3",
-      "audioSentence": "t1-p264-006-sentence.mp3"
+      "audioSentence": "t1-p264-006-sentence.mp3",
+      "polishAudio": "W środku"
     },
     {
       "id": "t1-p264-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p264-007-word.mp3",
       "audioWordPl": "t1-p264-007-word-pl.mp3",
-      "audioSentence": "t1-p264-007-sentence.mp3"
+      "audioSentence": "t1-p264-007-sentence.mp3",
+      "polishAudio": "W pobliżu"
     },
     {
       "id": "t1-p264-008",
@@ -84,27 +91,30 @@
       "sentencePl": null,
       "audioWord": "t1-p264-008-word.mp3",
       "audioWordPl": "t1-p264-008-word-pl.mp3",
-      "audioSentence": "t1-p264-008-sentence.mp3"
+      "audioSentence": "t1-p264-008-sentence.mp3",
+      "polishAudio": "Nigdzie"
     },
     {
       "id": "t1-p264-009",
       "english": "Outside",
-      "polish": "Na dworze",
+      "polish": "Na dworze; na zewnątrz (lokalizacja)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p264-009-word.mp3",
       "audioWordPl": "t1-p264-009-word-pl.mp3",
-      "audioSentence": "t1-p264-009-sentence.mp3"
+      "audioSentence": "t1-p264-009-sentence.mp3",
+      "polishAudio": "Na dworze"
     },
     {
       "id": "t1-p264-010",
       "english": "Over",
-      "polish": "Nad",
+      "polish": "Nad (np. przeskoczyć nad czymś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p264-010-word.mp3",
       "audioWordPl": "t1-p264-010-word-pl.mp3",
-      "audioSentence": "t1-p264-010-sentence.mp3"
+      "audioSentence": "t1-p264-010-sentence.mp3",
+      "polishAudio": "Nad"
     },
     {
       "id": "t1-p264-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p264-011-word.mp3",
       "audioWordPl": "t1-p264-011-word-pl.mp3",
-      "audioSentence": "t1-p264-011-sentence.mp3"
+      "audioSentence": "t1-p264-011-sentence.mp3",
+      "polishAudio": "Gdzieś"
     },
     {
       "id": "t1-p264-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p264-012-word.mp3",
       "audioWordPl": "t1-p264-012-word-pl.mp3",
-      "audioSentence": "t1-p264-012-sentence.mp3"
+      "audioSentence": "t1-p264-012-sentence.mp3",
+      "polishAudio": "Tam"
     },
     {
       "id": "t1-p264-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p264-013-word.mp3",
       "audioWordPl": "t1-p264-013-word-pl.mp3",
-      "audioSentence": "t1-p264-013-sentence.mp3"
+      "audioSentence": "t1-p264-013-sentence.mp3",
+      "polishAudio": "Pod"
     },
     {
       "id": "t1-p264-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p264-014-word.mp3",
       "audioWordPl": "t1-p264-014-word-pl.mp3",
-      "audioSentence": "t1-p264-014-sentence.mp3"
+      "audioSentence": "t1-p264-014-sentence.mp3",
+      "polishAudio": "Za granicą"
     },
     {
       "id": "t1-p264-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p264-015-word.mp3",
       "audioWordPl": "t1-p264-015-word-pl.mp3",
-      "audioSentence": "t1-p264-015-sentence.mp3"
+      "audioSentence": "t1-p264-015-sentence.mp3",
+      "polishAudio": "Niedaleko"
     }
   ]
 }

@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p856-001-word.mp3",
       "audioWordPl": "t1-p856-001-word-pl.mp3",
-      "audioSentence": "t1-p856-001-sentence.mp3"
+      "audioSentence": "t1-p856-001-sentence.mp3",
+      "polishAudio": "Wizualizować"
     },
     {
       "id": "t1-p856-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p856-002-word.mp3",
       "audioWordPl": "t1-p856-002-word-pl.mp3",
-      "audioSentence": "t1-p856-002-sentence.mp3"
+      "audioSentence": "t1-p856-002-sentence.mp3",
+      "polishAudio": "Alokować"
     },
     {
       "id": "t1-p856-003",
@@ -34,57 +36,63 @@
       "sentencePl": null,
       "audioWord": "t1-p856-003-word.mp3",
       "audioWordPl": "t1-p856-003-word-pl.mp3",
-      "audioSentence": "t1-p856-003-sentence.mp3"
+      "audioSentence": "t1-p856-003-sentence.mp3",
+      "polishAudio": "Aspirować"
     },
     {
       "id": "t1-p856-004",
       "english": "Assimilate",
-      "polish": "Asymilować",
+      "polish": "Asymilować (się)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p856-004-word.mp3",
       "audioWordPl": "t1-p856-004-word-pl.mp3",
-      "audioSentence": "t1-p856-004-sentence.mp3"
+      "audioSentence": "t1-p856-004-sentence.mp3",
+      "polishAudio": "Asymilować"
     },
     {
       "id": "t1-p856-005",
       "english": "Capitalize",
-      "polish": "Kapitalizować",
+      "polish": "Kapitalizować; skorzystać (najczęściej finansowo) na czymś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p856-005-word.mp3",
       "audioWordPl": "t1-p856-005-word-pl.mp3",
-      "audioSentence": "t1-p856-005-sentence.mp3"
+      "audioSentence": "t1-p856-005-sentence.mp3",
+      "polishAudio": "Kapitalizować"
     },
     {
       "id": "t1-p856-006",
       "english": "Compile",
-      "polish": "Kompilować",
+      "polish": "Kompilować (przetwarzać); ujmować w zbiór",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p856-006-word.mp3",
       "audioWordPl": "t1-p856-006-word-pl.mp3",
-      "audioSentence": "t1-p856-006-sentence.mp3"
+      "audioSentence": "t1-p856-006-sentence.mp3",
+      "polishAudio": "Kompilować"
     },
     {
       "id": "t1-p856-007",
       "english": "Confront",
-      "polish": "Konfrontować",
+      "polish": "Konfrontować (coś z czymś, z kimś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p856-007-word.mp3",
       "audioWordPl": "t1-p856-007-word-pl.mp3",
-      "audioSentence": "t1-p856-007-sentence.mp3"
+      "audioSentence": "t1-p856-007-sentence.mp3",
+      "polishAudio": "Konfrontować"
     },
     {
       "id": "t1-p856-008",
       "english": "Constitute",
-      "polish": "Konstytuować",
+      "polish": "Konstytuować; stanowić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p856-008-word.mp3",
       "audioWordPl": "t1-p856-008-word-pl.mp3",
-      "audioSentence": "t1-p856-008-sentence.mp3"
+      "audioSentence": "t1-p856-008-sentence.mp3",
+      "polishAudio": "Konstytuować"
     },
     {
       "id": "t1-p856-009",
@@ -94,27 +102,30 @@
       "sentencePl": null,
       "audioWord": "t1-p856-009-word.mp3",
       "audioWordPl": "t1-p856-009-word-pl.mp3",
-      "audioSentence": "t1-p856-009-sentence.mp3"
+      "audioSentence": "t1-p856-009-sentence.mp3",
+      "polishAudio": "Kontemplować"
     },
     {
       "id": "t1-p856-010",
       "english": "Culminate",
-      "polish": "Kulminować",
+      "polish": "Kulminować; ukoronować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p856-010-word.mp3",
       "audioWordPl": "t1-p856-010-word-pl.mp3",
-      "audioSentence": "t1-p856-010-sentence.mp3"
+      "audioSentence": "t1-p856-010-sentence.mp3",
+      "polishAudio": "Kulminować"
     },
     {
       "id": "t1-p856-011",
       "english": "Degrade",
-      "polish": "Degradować",
+      "polish": "Degradować; poniżać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p856-011-word.mp3",
       "audioWordPl": "t1-p856-011-word-pl.mp3",
-      "audioSentence": "t1-p856-011-sentence.mp3"
+      "audioSentence": "t1-p856-011-sentence.mp3",
+      "polishAudio": "Degradować"
     },
     {
       "id": "t1-p856-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p856-012-word.mp3",
       "audioWordPl": "t1-p856-012-word-pl.mp3",
-      "audioSentence": "t1-p856-012-sentence.mp3"
+      "audioSentence": "t1-p856-012-sentence.mp3",
+      "polishAudio": "Dywersyfikować"
     },
     {
       "id": "t1-p856-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p856-013-word.mp3",
       "audioWordPl": "t1-p856-013-word-pl.mp3",
-      "audioSentence": "t1-p856-013-sentence.mp3"
+      "audioSentence": "t1-p856-013-sentence.mp3",
+      "polishAudio": "Dramatyzować"
     },
     {
       "id": "t1-p856-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p856-014-word.mp3",
       "audioWordPl": "t1-p856-014-word-pl.mp3",
-      "audioSentence": "t1-p856-014-sentence.mp3"
+      "audioSentence": "t1-p856-014-sentence.mp3",
+      "polishAudio": "Dubingować"
     },
     {
       "id": "t1-p856-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p856-015-word.mp3",
       "audioWordPl": "t1-p856-015-word-pl.mp3",
-      "audioSentence": "t1-p856-015-sentence.mp3"
+      "audioSentence": "t1-p856-015-sentence.mp3",
+      "polishAudio": "Emanować"
     }
   ]
 }

@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p697-001-word.mp3",
       "audioWordPl": "t1-p697-001-word-pl.mp3",
-      "audioSentence": "t1-p697-001-sentence.mp3"
+      "audioSentence": "t1-p697-001-sentence.mp3",
+      "polishAudio": "Kilka"
     },
     {
       "id": "t1-p697-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p697-002-word.mp3",
       "audioWordPl": "t1-p697-002-word-pl.mp3",
-      "audioSentence": "t1-p697-002-sentence.mp3"
+      "audioSentence": "t1-p697-002-sentence.mp3",
+      "polishAudio": "Częściowo"
     },
     {
       "id": "t1-p697-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p697-003-word.mp3",
       "audioWordPl": "t1-p697-003-word-pl.mp3",
-      "audioSentence": "t1-p697-003-sentence.mp3"
+      "audioSentence": "t1-p697-003-sentence.mp3",
+      "polishAudio": "Zaledwie"
     },
     {
       "id": "t1-p697-004",
       "english": "Approximately",
-      "polish": "Około",
+      "polish": "Około; w przybliżeniu (naukowo, formalnie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p697-004-word.mp3",
       "audioWordPl": "t1-p697-004-word-pl.mp3",
-      "audioSentence": "t1-p697-004-sentence.mp3"
+      "audioSentence": "t1-p697-004-sentence.mp3",
+      "polishAudio": "Około"
     },
     {
       "id": "t1-p697-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p697-005-word.mp3",
       "audioWordPl": "t1-p697-005-word-pl.mp3",
-      "audioSentence": "t1-p697-005-sentence.mp3"
+      "audioSentence": "t1-p697-005-sentence.mp3",
+      "polishAudio": "Trzykrotnie"
     },
     {
       "id": "t1-p697-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p697-006-word.mp3",
       "audioWordPl": "t1-p697-006-word-pl.mp3",
-      "audioSentence": "t1-p697-006-sentence.mp3"
+      "audioSentence": "t1-p697-006-sentence.mp3",
+      "polishAudio": "Suto"
     },
     {
       "id": "t1-p697-007",
       "english": "Individually",
-      "polish": "Jednostkowo",
+      "polish": "Jednostkowo; indywidualnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p697-007-word.mp3",
       "audioWordPl": "t1-p697-007-word-pl.mp3",
-      "audioSentence": "t1-p697-007-sentence.mp3"
+      "audioSentence": "t1-p697-007-sentence.mp3",
+      "polishAudio": "Jednostkowo"
     },
     {
       "id": "t1-p697-008",
@@ -84,27 +91,30 @@
       "sentencePl": null,
       "audioWord": "t1-p697-008-word.mp3",
       "audioWordPl": "t1-p697-008-word-pl.mp3",
-      "audioSentence": "t1-p697-008-sentence.mp3"
+      "audioSentence": "t1-p697-008-sentence.mp3",
+      "polishAudio": "Po części"
     },
     {
       "id": "t1-p697-009",
       "english": "Roughly",
-      "polish": "Mniej więcej",
+      "polish": "Mniej więcej; z grubsza",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p697-009-word.mp3",
       "audioWordPl": "t1-p697-009-word-pl.mp3",
-      "audioSentence": "t1-p697-009-sentence.mp3"
+      "audioSentence": "t1-p697-009-sentence.mp3",
+      "polishAudio": "Mniej więcej"
     },
     {
       "id": "t1-p697-010",
       "english": "Solely",
-      "polish": "Wyłącznie",
+      "polish": "Wyłącznie; jedynie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p697-010-word.mp3",
       "audioWordPl": "t1-p697-010-word-pl.mp3",
-      "audioSentence": "t1-p697-010-sentence.mp3"
+      "audioSentence": "t1-p697-010-sentence.mp3",
+      "polishAudio": "Wyłącznie"
     },
     {
       "id": "t1-p697-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p697-011-word.mp3",
       "audioWordPl": "t1-p697-011-word-pl.mp3",
-      "audioSentence": "t1-p697-011-sentence.mp3"
+      "audioSentence": "t1-p697-011-sentence.mp3",
+      "polishAudio": "Pojedynczo"
     },
     {
       "id": "t1-p697-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p697-012-word.mp3",
       "audioWordPl": "t1-p697-012-word-pl.mp3",
-      "audioSentence": "t1-p697-012-sentence.mp3"
+      "audioSentence": "t1-p697-012-sentence.mp3",
+      "polishAudio": "Hurtowo"
     },
     {
       "id": "t1-p697-013",
       "english": "Broadly",
-      "polish": "Z grubsza",
+      "polish": "Z grubsza; ogólnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p697-013-word.mp3",
       "audioWordPl": "t1-p697-013-word-pl.mp3",
-      "audioSentence": "t1-p697-013-sentence.mp3"
+      "audioSentence": "t1-p697-013-sentence.mp3",
+      "polishAudio": "Z grubsza"
     },
     {
       "id": "t1-p697-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p697-014-word.mp3",
       "audioWordPl": "t1-p697-014-word-pl.mp3",
-      "audioSentence": "t1-p697-014-sentence.mp3"
+      "audioSentence": "t1-p697-014-sentence.mp3",
+      "polishAudio": "Obficie"
     },
     {
       "id": "t1-p697-015",
       "english": "Profusely",
-      "polish": "Na bogato",
+      "polish": "Na bogato; hojnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p697-015-word.mp3",
       "audioWordPl": "t1-p697-015-word-pl.mp3",
-      "audioSentence": "t1-p697-015-sentence.mp3"
+      "audioSentence": "t1-p697-015-sentence.mp3",
+      "polishAudio": "Na bogato"
     }
   ]
 }

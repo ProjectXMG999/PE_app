@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p496-001-word.mp3",
       "audioWordPl": "t1-p496-001-word-pl.mp3",
-      "audioSentence": "t1-p496-001-sentence.mp3"
+      "audioSentence": "t1-p496-001-sentence.mp3",
+      "polishAudio": "Tablica wyników"
     },
     {
       "id": "t1-p496-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p496-002-word.mp3",
       "audioWordPl": "t1-p496-002-word-pl.mp3",
-      "audioSentence": "t1-p496-002-sentence.mp3"
+      "audioSentence": "t1-p496-002-sentence.mp3",
+      "polishAudio": "Technika"
     },
     {
       "id": "t1-p496-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p496-003-word.mp3",
       "audioWordPl": "t1-p496-003-word-pl.mp3",
-      "audioSentence": "t1-p496-003-sentence.mp3"
+      "audioSentence": "t1-p496-003-sentence.mp3",
+      "polishAudio": "Triatlon"
     },
     {
       "id": "t1-p496-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p496-004-word.mp3",
       "audioWordPl": "t1-p496-004-word-pl.mp3",
-      "audioSentence": "t1-p496-004-sentence.mp3"
+      "audioSentence": "t1-p496-004-sentence.mp3",
+      "polishAudio": "Turniej"
     },
     {
       "id": "t1-p496-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p496-005-word.mp3",
       "audioWordPl": "t1-p496-005-word-pl.mp3",
-      "audioSentence": "t1-p496-005-sentence.mp3"
+      "audioSentence": "t1-p496-005-sentence.mp3",
+      "polishAudio": "Wędka"
     },
     {
       "id": "t1-p496-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p496-006-word.mp3",
       "audioWordPl": "t1-p496-006-word-pl.mp3",
-      "audioSentence": "t1-p496-006-sentence.mp3"
+      "audioSentence": "t1-p496-006-sentence.mp3",
+      "polishAudio": "Wędkarstwo"
     },
     {
       "id": "t1-p496-007",
       "english": "Hiking",
-      "polish": "Wędrowanie",
+      "polish": "Wędrowanie; wędrówka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p496-007-word.mp3",
       "audioWordPl": "t1-p496-007-word-pl.mp3",
-      "audioSentence": "t1-p496-007-sentence.mp3"
+      "audioSentence": "t1-p496-007-sentence.mp3",
+      "polishAudio": "Wędrowanie"
     },
     {
       "id": "t1-p496-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p496-008-word.mp3",
       "audioWordPl": "t1-p496-008-word-pl.mp3",
-      "audioSentence": "t1-p496-008-sentence.mp3"
+      "audioSentence": "t1-p496-008-sentence.mp3",
+      "polishAudio": "Wspinaczka"
     },
     {
       "id": "t1-p496-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p496-009-word.mp3",
       "audioWordPl": "t1-p496-009-word-pl.mp3",
-      "audioSentence": "t1-p496-009-sentence.mp3"
+      "audioSentence": "t1-p496-009-sentence.mp3",
+      "polishAudio": "Wygrana"
     },
     {
       "id": "t1-p496-010",
       "english": "Equipment",
-      "polish": "Wyposażenie",
+      "polish": "Wyposażenie; sprzęt",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p496-010-word.mp3",
       "audioWordPl": "t1-p496-010-word-pl.mp3",
-      "audioSentence": "t1-p496-010-sentence.mp3"
+      "audioSentence": "t1-p496-010-sentence.mp3",
+      "polishAudio": "Wyposażenie"
     },
     {
       "id": "t1-p496-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p496-011-word.mp3",
       "audioWordPl": "t1-p496-011-word-pl.mp3",
-      "audioSentence": "t1-p496-011-sentence.mp3"
+      "audioSentence": "t1-p496-011-sentence.mp3",
+      "polishAudio": "Wyścigi"
     },
     {
       "id": "t1-p496-012",
       "english": "Bet",
-      "polish": "Zakład",
+      "polish": "Zakład (o coś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p496-012-word.mp3",
       "audioWordPl": "t1-p496-012-word-pl.mp3",
-      "audioSentence": "t1-p496-012-sentence.mp3"
+      "audioSentence": "t1-p496-012-sentence.mp3",
+      "polishAudio": "Zakład"
     },
     {
       "id": "t1-p496-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p496-013-word.mp3",
       "audioWordPl": "t1-p496-013-word-pl.mp3",
-      "audioSentence": "t1-p496-013-sentence.mp3"
+      "audioSentence": "t1-p496-013-sentence.mp3",
+      "polishAudio": "Boks"
     },
     {
       "id": "t1-p496-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p496-014-word.mp3",
       "audioWordPl": "t1-p496-014-word-pl.mp3",
-      "audioSentence": "t1-p496-014-sentence.mp3"
+      "audioSentence": "t1-p496-014-sentence.mp3",
+      "polishAudio": "Dyscyplina"
     },
     {
       "id": "t1-p496-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p496-015-word.mp3",
       "audioWordPl": "t1-p496-015-word-pl.mp3",
-      "audioSentence": "t1-p496-015-sentence.mp3"
+      "audioSentence": "t1-p496-015-sentence.mp3",
+      "polishAudio": "Golf"
     }
   ]
 }

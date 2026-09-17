@@ -9,12 +9,13 @@
     {
       "id": "t1-p832-001",
       "english": "Bracelets",
-      "polish": "Bransoletki",
+      "polish": "Bransoletki (kajdanki)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p832-001-word.mp3",
       "audioWordPl": "t1-p832-001-word-pl.mp3",
-      "audioSentence": "t1-p832-001-sentence.mp3"
+      "audioSentence": "t1-p832-001-sentence.mp3",
+      "polishAudio": "Bransoletki"
     },
     {
       "id": "t1-p832-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p832-002-word.mp3",
       "audioWordPl": "t1-p832-002-word-pl.mp3",
-      "audioSentence": "t1-p832-002-sentence.mp3"
+      "audioSentence": "t1-p832-002-sentence.mp3",
+      "polishAudio": "Frajer"
     },
     {
       "id": "t1-p832-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p832-003-word.mp3",
       "audioWordPl": "t1-p832-003-word-pl.mp3",
-      "audioSentence": "t1-p832-003-sentence.mp3"
+      "audioSentence": "t1-p832-003-sentence.mp3",
+      "polishAudio": "Stróż nocny"
     },
     {
       "id": "t1-p832-004",
       "english": "Copper",
-      "polish": "Glina",
+      "polish": "Glina (policjant)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p832-004-word.mp3",
       "audioWordPl": "t1-p832-004-word-pl.mp3",
-      "audioSentence": "t1-p832-004-sentence.mp3"
+      "audioSentence": "t1-p832-004-sentence.mp3",
+      "polishAudio": "Glina"
     },
     {
       "id": "t1-p832-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p832-005-word.mp3",
       "audioWordPl": "t1-p832-005-word-pl.mp3",
-      "audioSentence": "t1-p832-005-sentence.mp3"
+      "audioSentence": "t1-p832-005-sentence.mp3",
+      "polishAudio": "Gangus"
     },
     {
       "id": "t1-p832-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p832-006-word.mp3",
       "audioWordPl": "t1-p832-006-word-pl.mp3",
-      "audioSentence": "t1-p832-006-sentence.mp3"
+      "audioSentence": "t1-p832-006-sentence.mp3",
+      "polishAudio": "Stuknięty"
     },
     {
       "id": "t1-p832-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p832-007-word.mp3",
       "audioWordPl": "t1-p832-007-word-pl.mp3",
-      "audioSentence": "t1-p832-007-sentence.mp3"
+      "audioSentence": "t1-p832-007-sentence.mp3",
+      "polishAudio": "Wypalić ze spluwy"
     },
     {
       "id": "t1-p832-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p832-008-word.mp3",
       "audioWordPl": "t1-p832-008-word-pl.mp3",
-      "audioSentence": "t1-p832-008-sentence.mp3"
+      "audioSentence": "t1-p832-008-sentence.mp3",
+      "polishAudio": "Zwinąć"
     },
     {
       "id": "t1-p832-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p832-009-word.mp3",
       "audioWordPl": "t1-p832-009-word-pl.mp3",
-      "audioSentence": "t1-p832-009-sentence.mp3"
+      "audioSentence": "t1-p832-009-sentence.mp3",
+      "polishAudio": "Spluwa"
     },
     {
       "id": "t1-p832-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p832-010-word.mp3",
       "audioWordPl": "t1-p832-010-word-pl.mp3",
-      "audioSentence": "t1-p832-010-sentence.mp3"
+      "audioSentence": "t1-p832-010-sentence.mp3",
+      "polishAudio": "Być uzbrojonym"
     }
   ]
 }

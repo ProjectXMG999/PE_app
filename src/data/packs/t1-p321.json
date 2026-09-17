@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p321-001-word.mp3",
       "audioWordPl": "t1-p321-001-word-pl.mp3",
-      "audioSentence": "t1-p321-001-sentence.mp3"
+      "audioSentence": "t1-p321-001-sentence.mp3",
+      "polishAudio": "Funty"
     },
     {
       "id": "t1-p321-002",
@@ -24,37 +25,41 @@
       "sentencePl": null,
       "audioWord": "t1-p321-002-word.mp3",
       "audioWordPl": "t1-p321-002-word-pl.mp3",
-      "audioSentence": "t1-p321-002-sentence.mp3"
+      "audioSentence": "t1-p321-002-sentence.mp3",
+      "polishAudio": "Wywalać hajs"
     },
     {
       "id": "t1-p321-003",
       "english": "Dime",
-      "polish": "Dziesięciocentówka",
+      "polish": "Dziesięciocentówka; dyszka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-003-word.mp3",
       "audioWordPl": "t1-p321-003-word-pl.mp3",
-      "audioSentence": "t1-p321-003-sentence.mp3"
+      "audioSentence": "t1-p321-003-sentence.mp3",
+      "polishAudio": "Dziesięciocentówka"
     },
     {
       "id": "t1-p321-004",
       "english": "Fast money",
-      "polish": "Szybki szmal",
+      "polish": "Szybki szmal (często nielegalny)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-004-word.mp3",
       "audioWordPl": "t1-p321-004-word-pl.mp3",
-      "audioSentence": "t1-p321-004-sentence.mp3"
+      "audioSentence": "t1-p321-004-sentence.mp3",
+      "polishAudio": "Szybki szmal"
     },
     {
       "id": "t1-p321-005",
       "english": "Filthy rich",
-      "polish": "Bogaty",
+      "polish": "Bogaty (dziany, przy forsie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-005-word.mp3",
       "audioWordPl": "t1-p321-005-word-pl.mp3",
-      "audioSentence": "t1-p321-005-sentence.mp3"
+      "audioSentence": "t1-p321-005-sentence.mp3",
+      "polishAudio": "Bogaty"
     },
     {
       "id": "t1-p321-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p321-006-word.mp3",
       "audioWordPl": "t1-p321-006-word-pl.mp3",
-      "audioSentence": "t1-p321-006-sentence.mp3"
+      "audioSentence": "t1-p321-006-sentence.mp3",
+      "polishAudio": "Totalnie spłukany"
     },
     {
       "id": "t1-p321-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p321-007-word.mp3",
       "audioWordPl": "t1-p321-007-word-pl.mp3",
-      "audioSentence": "t1-p321-007-sentence.mp3"
+      "audioSentence": "t1-p321-007-sentence.mp3",
+      "polishAudio": "Patol"
     },
     {
       "id": "t1-p321-008",
       "english": "Jackpot",
-      "polish": "Czysty zysk",
+      "polish": "Czysty zysk; żyła złota; trafić w dziesiątkę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-008-word.mp3",
       "audioWordPl": "t1-p321-008-word-pl.mp3",
-      "audioSentence": "t1-p321-008-sentence.mp3"
+      "audioSentence": "t1-p321-008-sentence.mp3",
+      "polishAudio": "Czysty zysk"
     },
     {
       "id": "t1-p321-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p321-009-word.mp3",
       "audioWordPl": "t1-p321-009-word-pl.mp3",
-      "audioSentence": "t1-p321-009-sentence.mp3"
+      "audioSentence": "t1-p321-009-sentence.mp3",
+      "polishAudio": "Forsa"
     },
     {
       "id": "t1-p321-010",
       "english": "Broke",
-      "polish": "Spłukany",
+      "polish": "Spłukany; bez kasy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p321-010-word.mp3",
       "audioWordPl": "t1-p321-010-word-pl.mp3",
-      "audioSentence": "t1-p321-010-sentence.mp3"
+      "audioSentence": "t1-p321-010-sentence.mp3",
+      "polishAudio": "Spłukany"
     }
   ]
 }

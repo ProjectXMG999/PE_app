@@ -14,17 +14,19 @@
       "sentencePl": null,
       "audioWord": "t1-p793-001-word.mp3",
       "audioWordPl": "t1-p793-001-word-pl.mp3",
-      "audioSentence": "t1-p793-001-sentence.mp3"
+      "audioSentence": "t1-p793-001-sentence.mp3",
+      "polishAudio": "Równoległy"
     },
     {
       "id": "t1-p793-002",
       "english": "Adjacent",
-      "polish": "Sąsiedni",
+      "polish": "Sąsiedni; przyległy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p793-002-word.mp3",
       "audioWordPl": "t1-p793-002-word-pl.mp3",
-      "audioSentence": "t1-p793-002-sentence.mp3"
+      "audioSentence": "t1-p793-002-sentence.mp3",
+      "polishAudio": "Sąsiedni"
     },
     {
       "id": "t1-p793-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p793-003-word.mp3",
       "audioWordPl": "t1-p793-003-word-pl.mp3",
-      "audioSentence": "t1-p793-003-sentence.mp3"
+      "audioSentence": "t1-p793-003-sentence.mp3",
+      "polishAudio": "Umiejscowiony"
     },
     {
       "id": "t1-p793-004",
       "english": "Remote",
-      "polish": "Zdalny",
+      "polish": "Zdalny; odległy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p793-004-word.mp3",
       "audioWordPl": "t1-p793-004-word-pl.mp3",
-      "audioSentence": "t1-p793-004-sentence.mp3"
+      "audioSentence": "t1-p793-004-sentence.mp3",
+      "polishAudio": "Zdalny"
     },
     {
       "id": "t1-p793-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p793-005-word.mp3",
       "audioWordPl": "t1-p793-005-word-pl.mp3",
-      "audioSentence": "t1-p793-005-sentence.mp3"
+      "audioSentence": "t1-p793-005-sentence.mp3",
+      "polishAudio": "Prostopadły"
     },
     {
       "id": "t1-p793-006",
       "english": "Celestial",
-      "polish": "Podniebny",
+      "polish": "Podniebny; niebiański, niebieski",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p793-006-word.mp3",
       "audioWordPl": "t1-p793-006-word-pl.mp3",
-      "audioSentence": "t1-p793-006-sentence.mp3"
+      "audioSentence": "t1-p793-006-sentence.mp3",
+      "polishAudio": "Podniebny"
     },
     {
       "id": "t1-p793-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p793-007-word.mp3",
       "audioWordPl": "t1-p793-007-word-pl.mp3",
-      "audioSentence": "t1-p793-007-sentence.mp3"
+      "audioSentence": "t1-p793-007-sentence.mp3",
+      "polishAudio": "Naziemny"
     },
     {
       "id": "t1-p793-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p793-008-word.mp3",
       "audioWordPl": "t1-p793-008-word-pl.mp3",
-      "audioSentence": "t1-p793-008-sentence.mp3"
+      "audioSentence": "t1-p793-008-sentence.mp3",
+      "polishAudio": "Śródlądowy"
     },
     {
       "id": "t1-p793-009",
       "english": "Right-hand",
-      "polish": "Prawostronny",
+      "polish": "Prawostronny; praworęczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p793-009-word.mp3",
       "audioWordPl": "t1-p793-009-word-pl.mp3",
-      "audioSentence": "t1-p793-009-sentence.mp3"
+      "audioSentence": "t1-p793-009-sentence.mp3",
+      "polishAudio": "Prawostronny"
     },
     {
       "id": "t1-p793-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p793-010-word.mp3",
       "audioWordPl": "t1-p793-010-word-pl.mp3",
-      "audioSentence": "t1-p793-010-sentence.mp3"
+      "audioSentence": "t1-p793-010-sentence.mp3",
+      "polishAudio": "Lewostronny"
     },
     {
       "id": "t1-p793-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p793-011-word.mp3",
       "audioWordPl": "t1-p793-011-word-pl.mp3",
-      "audioSentence": "t1-p793-011-sentence.mp3"
+      "audioSentence": "t1-p793-011-sentence.mp3",
+      "polishAudio": "Kontynentalny"
     },
     {
       "id": "t1-p793-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p793-012-word.mp3",
       "audioWordPl": "t1-p793-012-word-pl.mp3",
-      "audioSentence": "t1-p793-012-sentence.mp3"
+      "audioSentence": "t1-p793-012-sentence.mp3",
+      "polishAudio": "Będący w pobliżu"
     },
     {
       "id": "t1-p793-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p793-013-word.mp3",
       "audioWordPl": "t1-p793-013-word-pl.mp3",
-      "audioSentence": "t1-p793-013-sentence.mp3"
+      "audioSentence": "t1-p793-013-sentence.mp3",
+      "polishAudio": "Przybrzeżny"
     },
     {
       "id": "t1-p793-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p793-014-word.mp3",
       "audioWordPl": "t1-p793-014-word-pl.mp3",
-      "audioSentence": "t1-p793-014-sentence.mp3"
+      "audioSentence": "t1-p793-014-sentence.mp3",
+      "polishAudio": "Międzykontynentalny"
     },
     {
       "id": "t1-p793-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p793-015-word.mp3",
       "audioWordPl": "t1-p793-015-word-pl.mp3",
-      "audioSentence": "t1-p793-015-sentence.mp3"
+      "audioSentence": "t1-p793-015-sentence.mp3",
+      "polishAudio": "Zamorski"
     }
   ]
 }

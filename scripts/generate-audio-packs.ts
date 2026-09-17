@@ -54,6 +54,7 @@ interface Word {
   id: string
   english: string
   polish: string
+  polishAudio?: string
   sentenceEn: string | null
   sentencePl: string | null
   audioWord: string
@@ -179,7 +180,7 @@ async function main() {
       total++
       tasks.push(limit(async () => {
         try {
-          await generateSpeech(withPeriod(word.polish), plVoice.id, path.join(packOutDir, plFile))
+          await generateSpeech(withPeriod(word.polishAudio ?? word.polish), plVoice.id, path.join(packOutDir, plFile))
           done++
           process.stdout.write(`\r[${done}/${total}] PL word: ${word.polish.slice(0,20).padEnd(20)} (${plVoice.name})`)
         } catch (e) { errors++; console.error(`\nFailed PL word: "${word.polish}" – ${(e as Error).message}`) }

@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p505-001-word.mp3",
       "audioWordPl": "t1-p505-001-word-pl.mp3",
-      "audioSentence": "t1-p505-001-sentence.mp3"
+      "audioSentence": "t1-p505-001-sentence.mp3",
+      "polishAudio": "Premium"
     },
     {
       "id": "t1-p505-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p505-002-word.mp3",
       "audioWordPl": "t1-p505-002-word-pl.mp3",
-      "audioSentence": "t1-p505-002-sentence.mp3"
+      "audioSentence": "t1-p505-002-sentence.mp3",
+      "polishAudio": "Regionalny"
     },
     {
       "id": "t1-p505-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p505-003-word.mp3",
       "audioWordPl": "t1-p505-003-word-pl.mp3",
-      "audioSentence": "t1-p505-003-sentence.mp3"
+      "audioSentence": "t1-p505-003-sentence.mp3",
+      "polishAudio": "Seksualny"
     },
     {
       "id": "t1-p505-004",
       "english": "Standard",
-      "polish": "Standardowy",
+      "polish": "Standardowy; wzorcowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p505-004-word.mp3",
       "audioWordPl": "t1-p505-004-word-pl.mp3",
-      "audioSentence": "t1-p505-004-sentence.mp3"
+      "audioSentence": "t1-p505-004-sentence.mp3",
+      "polishAudio": "Standardowy"
     },
     {
       "id": "t1-p505-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p505-005-word.mp3",
       "audioWordPl": "t1-p505-005-word-pl.mp3",
-      "audioSentence": "t1-p505-005-sentence.mp3"
+      "audioSentence": "t1-p505-005-sentence.mp3",
+      "polishAudio": "Tragiczny"
     },
     {
       "id": "t1-p505-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p505-006-word.mp3",
       "audioWordPl": "t1-p505-006-word-pl.mp3",
-      "audioSentence": "t1-p505-006-sentence.mp3"
+      "audioSentence": "t1-p505-006-sentence.mp3",
+      "polishAudio": "Wegetariański"
     },
     {
       "id": "t1-p505-007",
@@ -74,27 +80,30 @@
       "sentencePl": null,
       "audioWord": "t1-p505-007-word.mp3",
       "audioWordPl": "t1-p505-007-word-pl.mp3",
-      "audioSentence": "t1-p505-007-sentence.mp3"
+      "audioSentence": "t1-p505-007-sentence.mp3",
+      "polishAudio": "Zorganizowany"
     },
     {
       "id": "t1-p505-008",
       "english": "Final",
-      "polish": "Finalny",
+      "polish": "Finalny; ostateczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p505-008-word.mp3",
       "audioWordPl": "t1-p505-008-word-pl.mp3",
-      "audioSentence": "t1-p505-008-sentence.mp3"
+      "audioSentence": "t1-p505-008-sentence.mp3",
+      "polishAudio": "Finalny"
     },
     {
       "id": "t1-p505-009",
       "english": "Limited",
-      "polish": "Limitowany",
+      "polish": "Limitowany; ograniczony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p505-009-word.mp3",
       "audioWordPl": "t1-p505-009-word-pl.mp3",
-      "audioSentence": "t1-p505-009-sentence.mp3"
+      "audioSentence": "t1-p505-009-sentence.mp3",
+      "polishAudio": "Limitowany"
     },
     {
       "id": "t1-p505-010",
@@ -104,37 +113,41 @@
       "sentencePl": null,
       "audioWord": "t1-p505-010-word.mp3",
       "audioWordPl": "t1-p505-010-word-pl.mp3",
-      "audioSentence": "t1-p505-010-sentence.mp3"
+      "audioSentence": "t1-p505-010-sentence.mp3",
+      "polishAudio": "Praktyczny"
     },
     {
       "id": "t1-p505-011",
       "english": "Frustrating",
-      "polish": "Frustrujący",
+      "polish": "Frustrujący; denerwujący",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p505-011-word.mp3",
       "audioWordPl": "t1-p505-011-word-pl.mp3",
-      "audioSentence": "t1-p505-011-sentence.mp3"
+      "audioSentence": "t1-p505-011-sentence.mp3",
+      "polishAudio": "Frustrujący"
     },
     {
       "id": "t1-p505-012",
       "english": "Characteristic",
-      "polish": "Charakterystyczny",
+      "polish": "Charakterystyczny; typowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p505-012-word.mp3",
       "audioWordPl": "t1-p505-012-word-pl.mp3",
-      "audioSentence": "t1-p505-012-sentence.mp3"
+      "audioSentence": "t1-p505-012-sentence.mp3",
+      "polishAudio": "Charakterystyczny"
     },
     {
       "id": "t1-p505-013",
       "english": "Musical",
-      "polish": "Muzyczny",
+      "polish": "Muzyczny; muzykalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p505-013-word.mp3",
       "audioWordPl": "t1-p505-013-word-pl.mp3",
-      "audioSentence": "t1-p505-013-sentence.mp3"
+      "audioSentence": "t1-p505-013-sentence.mp3",
+      "polishAudio": "Muzyczny"
     },
     {
       "id": "t1-p505-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p505-014-word.mp3",
       "audioWordPl": "t1-p505-014-word-pl.mp3",
-      "audioSentence": "t1-p505-014-sentence.mp3"
+      "audioSentence": "t1-p505-014-sentence.mp3",
+      "polishAudio": "Motywacyjny"
     },
     {
       "id": "t1-p505-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p505-015-word.mp3",
       "audioWordPl": "t1-p505-015-word-pl.mp3",
-      "audioSentence": "t1-p505-015-sentence.mp3"
+      "audioSentence": "t1-p505-015-sentence.mp3",
+      "polishAudio": "Absurdalny"
     }
   ]
 }

@@ -10,101 +10,111 @@
       "id": "t1-p100-001",
       "english": "Bring",
       "polish": "Przynosić",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Could you bring napkins? I spilled juice.",
+      "sentencePl": "Możesz przynieść serwetki? Rozlałem sok.",
       "audioWord": "t1-p100-001-word.mp3",
       "audioWordPl": "t1-p100-001-word-pl.mp3",
-      "audioSentence": "t1-p100-001-sentence.mp3"
+      "audioSentence": "t1-p100-001-sentence.mp3",
+      "polishAudio": "Przynosić"
     },
     {
       "id": "t1-p100-002",
       "english": "Catch",
       "polish": "Łapać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I can't catch this fly.",
+      "sentencePl": "Nie mogę złapać tej muchy.",
       "audioWord": "t1-p100-002-word.mp3",
       "audioWordPl": "t1-p100-002-word-pl.mp3",
-      "audioSentence": "t1-p100-002-sentence.mp3"
+      "audioSentence": "t1-p100-002-sentence.mp3",
+      "polishAudio": "Łapać"
     },
     {
       "id": "t1-p100-003",
       "english": "Close",
       "polish": "Zamykać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can we close early? Nobody came in.",
+      "sentencePl": "Możemy zamknąć wcześniej? Nikt nie przyszedł.",
       "audioWord": "t1-p100-003-word.mp3",
       "audioWordPl": "t1-p100-003-word-pl.mp3",
-      "audioSentence": "t1-p100-003-sentence.mp3"
+      "audioSentence": "t1-p100-003-sentence.mp3",
+      "polishAudio": "Zamykać"
     },
     {
       "id": "t1-p100-004",
       "english": "Hold",
-      "polish": "Trzymać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Trzymać (w rękach, objęciach)",
+      "sentenceEn": "Could you hold my place in line?",
+      "sentencePl": "Możesz mi zająć miejsce w kolejce?",
       "audioWord": "t1-p100-004-word.mp3",
       "audioWordPl": "t1-p100-004-word-pl.mp3",
-      "audioSentence": "t1-p100-004-sentence.mp3"
+      "audioSentence": "t1-p100-004-sentence.mp3",
+      "polishAudio": "Trzymać"
     },
     {
       "id": "t1-p100-005",
       "english": "Open",
       "polish": "Otwierać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can you open this jar for me?",
+      "sentencePl": "Możesz mi otworzyć ten słoik?",
       "audioWord": "t1-p100-005-word.mp3",
       "audioWordPl": "t1-p100-005-word-pl.mp3",
-      "audioSentence": "t1-p100-005-sentence.mp3"
+      "audioSentence": "t1-p100-005-sentence.mp3",
+      "polishAudio": "Otwierać"
     },
     {
       "id": "t1-p100-006",
       "english": "Pull",
       "polish": "Ciągnąć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Pull the blanket closer; I'm freezing.",
+      "sentencePl": "Przyciągnij koc bliżej, marznę.",
       "audioWord": "t1-p100-006-word.mp3",
       "audioWordPl": "t1-p100-006-word-pl.mp3",
-      "audioSentence": "t1-p100-006-sentence.mp3"
+      "audioSentence": "t1-p100-006-sentence.mp3",
+      "polishAudio": "Ciągnąć"
     },
     {
       "id": "t1-p100-007",
       "english": "Push",
       "polish": "Pchać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Push the button to start.",
+      "sentencePl": "Naciśnij przycisk, żeby zacząć.",
       "audioWord": "t1-p100-007-word.mp3",
       "audioWordPl": "t1-p100-007-word-pl.mp3",
-      "audioSentence": "t1-p100-007-sentence.mp3"
+      "audioSentence": "t1-p100-007-sentence.mp3",
+      "polishAudio": "Pchać"
     },
     {
       "id": "t1-p100-008",
       "english": "Put",
-      "polish": "Kłaść",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Kłaść; stawiać",
+      "sentenceEn": "Where did you put it?",
+      "sentencePl": "Gdzie to położyłeś?",
       "audioWord": "t1-p100-008-word.mp3",
       "audioWordPl": "t1-p100-008-word-pl.mp3",
-      "audioSentence": "t1-p100-008-sentence.mp3"
+      "audioSentence": "t1-p100-008-sentence.mp3",
+      "polishAudio": "Kłaść"
     },
     {
       "id": "t1-p100-009",
       "english": "Touch",
       "polish": "Dotykać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Touch the screen to continue.",
+      "sentencePl": "Dotknij ekranu, aby kontynuować.",
       "audioWord": "t1-p100-009-word.mp3",
       "audioWordPl": "t1-p100-009-word-pl.mp3",
-      "audioSentence": "t1-p100-009-sentence.mp3"
+      "audioSentence": "t1-p100-009-sentence.mp3",
+      "polishAudio": "Dotykać"
     },
     {
       "id": "t1-p100-010",
       "english": "Write",
       "polish": "Pisać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Please write clearly; I can't read this.",
+      "sentencePl": "Napisz wyraźnie, nie mogę tego odczytać.",
       "audioWord": "t1-p100-010-word.mp3",
       "audioWordPl": "t1-p100-010-word-pl.mp3",
-      "audioSentence": "t1-p100-010-sentence.mp3"
+      "audioSentence": "t1-p100-010-sentence.mp3",
+      "polishAudio": "Pisać"
     }
   ]
 }

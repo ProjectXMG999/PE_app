@@ -10,151 +10,166 @@
       "id": "t1-p250-001",
       "english": "False",
       "polish": "Fałszywy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "That false excuse fooled nobody, you know.",
+      "sentencePl": "Ta fałszywa wymówka nikogo nie nabrała, wiesz.",
       "audioWord": "t1-p250-001-word.mp3",
       "audioWordPl": "t1-p250-001-word-pl.mp3",
-      "audioSentence": "t1-p250-001-sentence.mp3"
+      "audioSentence": "t1-p250-001-sentence.mp3",
+      "polishAudio": "Fałszywy"
     },
     {
       "id": "t1-p250-002",
       "english": "Wrong",
-      "polish": "Niewłaściwy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Niewłaściwy (błędny)",
+      "sentenceEn": "Google Maps took us to the wrong entrance again.",
+      "sentencePl": "Google Maps znowu zaprowadziło nas do niewłaściwego wejścia.",
       "audioWord": "t1-p250-002-word.mp3",
       "audioWordPl": "t1-p250-002-word-pl.mp3",
-      "audioSentence": "t1-p250-002-sentence.mp3"
+      "audioSentence": "t1-p250-002-sentence.mp3",
+      "polishAudio": "Niewłaściwy"
     },
     {
       "id": "t1-p250-003",
       "english": "Correct",
       "polish": "Prawidłowy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Oh, that's correct—I owe you an apology.",
+      "sentencePl": "O, to prawda — należy ci się ode mnie przeproszenie.",
       "audioWord": "t1-p250-003-word.mp3",
       "audioWordPl": "t1-p250-003-word-pl.mp3",
-      "audioSentence": "t1-p250-003-sentence.mp3"
+      "audioSentence": "t1-p250-003-sentence.mp3",
+      "polishAudio": "Prawidłowy"
     },
     {
       "id": "t1-p250-004",
       "english": "Familiar",
-      "polish": "Znany",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Znany; wyglądający znajomo",
+      "sentenceEn": "Your laugh sounds familiar somehow; did we study together?",
+      "sentencePl": "Twój śmiech brzmi jakoś znajomo — czy razem studiowaliśmy?",
       "audioWord": "t1-p250-004-word.mp3",
       "audioWordPl": "t1-p250-004-word-pl.mp3",
-      "audioSentence": "t1-p250-004-sentence.mp3"
+      "audioSentence": "t1-p250-004-sentence.mp3",
+      "polishAudio": "Znany"
     },
     {
       "id": "t1-p250-005",
       "english": "Invalid",
-      "polish": "Nieważny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Nieważny (dokument, zapis)",
+      "sentenceEn": "Your ticket is invalid, but we'll sort it out.",
+      "sentencePl": "Twój bilet jest nieważny, ale jakoś to załatwimy.",
       "audioWord": "t1-p250-005-word.mp3",
       "audioWordPl": "t1-p250-005-word-pl.mp3",
-      "audioSentence": "t1-p250-005-sentence.mp3"
+      "audioSentence": "t1-p250-005-sentence.mp3",
+      "polishAudio": "Nieważny"
     },
     {
       "id": "t1-p250-006",
       "english": "Valid",
-      "polish": "Ważny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Ważny (dokument, bilet)",
+      "sentenceEn": "Is this parking ticket still valid, or should I pay?",
+      "sentencePl": "Czy ten bilet parkingowy jest jeszcze ważny, czy mam zapłacić?",
       "audioWord": "t1-p250-006-word.mp3",
       "audioWordPl": "t1-p250-006-word-pl.mp3",
-      "audioSentence": "t1-p250-006-sentence.mp3"
+      "audioSentence": "t1-p250-006-sentence.mp3",
+      "polishAudio": "Ważny"
     },
     {
       "id": "t1-p250-007",
       "english": "Risky",
       "polish": "Ryzykowny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "That resale website feels risky—there are no reviews.",
+      "sentencePl": "Ta strona z odsprzedażą wydaje się ryzykowna — nie ma żadnych opinii.",
       "audioWord": "t1-p250-007-word.mp3",
       "audioWordPl": "t1-p250-007-word-pl.mp3",
-      "audioSentence": "t1-p250-007-sentence.mp3"
+      "audioSentence": "t1-p250-007-sentence.mp3",
+      "polishAudio": "Ryzykowny"
     },
     {
       "id": "t1-p250-008",
       "english": "Satisfying",
       "polish": "Satysfakcjonujący",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You made this drawer so satisfying to open.",
+      "sentencePl": "Tak urządziłeś tę szufladę, że aż satysfakcjonuje jej otwieranie.",
       "audioWord": "t1-p250-008-word.mp3",
       "audioWordPl": "t1-p250-008-word-pl.mp3",
-      "audioSentence": "t1-p250-008-sentence.mp3"
+      "audioSentence": "t1-p250-008-sentence.mp3",
+      "polishAudio": "Satysfakcjonujący"
     },
     {
       "id": "t1-p250-009",
       "english": "Typical",
       "polish": "Typowy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Typical you—you remember my birthday and forget your keys.",
+      "sentencePl": "Typowe dla ciebie — pamiętasz o moich urodzinach, a zapominasz kluczy.",
       "audioWord": "t1-p250-009-word.mp3",
       "audioWordPl": "t1-p250-009-word-pl.mp3",
-      "audioSentence": "t1-p250-009-sentence.mp3"
+      "audioSentence": "t1-p250-009-sentence.mp3",
+      "polishAudio": "Typowy"
     },
     {
       "id": "t1-p250-010",
       "english": "Complex",
-      "polish": "Złożony",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Złożony; kompleksowy",
+      "sentenceEn": "This Google Meet setup is more complex than it needs to be.",
+      "sentencePl": "Ta konfiguracja Google Meet jest bardziej złożona, niż powinna być.",
       "audioWord": "t1-p250-010-word.mp3",
       "audioWordPl": "t1-p250-010-word-pl.mp3",
-      "audioSentence": "t1-p250-010-sentence.mp3"
+      "audioSentence": "t1-p250-010-sentence.mp3",
+      "polishAudio": "Złożony"
     },
     {
       "id": "t1-p250-011",
       "english": "Incorrect",
       "polish": "Nieprawidłowy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "That number looks incorrect; please try again.",
+      "sentencePl": "Ten numer wygląda na nieprawidłowy; spróbuj jeszcze raz.",
       "audioWord": "t1-p250-011-word.mp3",
       "audioWordPl": "t1-p250-011-word-pl.mp3",
-      "audioSentence": "t1-p250-011-sentence.mp3"
+      "audioSentence": "t1-p250-011-sentence.mp3",
+      "polishAudio": "Nieprawidłowy"
     },
     {
       "id": "t1-p250-012",
       "english": "Complicated",
       "polish": "Skomplikowany",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Why is changing a train ticket so complicated?",
+      "sentencePl": "Dlaczego zmiana jednego biletu na pociąg jest taka skomplikowana?",
       "audioWord": "t1-p250-012-word.mp3",
       "audioWordPl": "t1-p250-012-word-pl.mp3",
-      "audioSentence": "t1-p250-012-sentence.mp3"
+      "audioSentence": "t1-p250-012-sentence.mp3",
+      "polishAudio": "Skomplikowany"
     },
     {
       "id": "t1-p250-013",
       "english": "Expected",
-      "polish": "Spodziewany",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Spodziewany; przewidywany",
+      "sentenceEn": "A YouTube ad was expected, but it still annoyed me.",
+      "sentencePl": "Reklama na YouTubie była spodziewana, ale i tak mnie zirytowała.",
       "audioWord": "t1-p250-013-word.mp3",
       "audioWordPl": "t1-p250-013-word-pl.mp3",
-      "audioSentence": "t1-p250-013-sentence.mp3"
+      "audioSentence": "t1-p250-013-sentence.mp3",
+      "polishAudio": "Spodziewany"
     },
     {
       "id": "t1-p250-014",
       "english": "Detailed",
       "polish": "Szczegółowy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Your detailed message helped—I was completely lost.",
+      "sentencePl": "Twoja szczegółowa wiadomość pomogła — kompletnie nie wiedziałem, o co chodzi.",
       "audioWord": "t1-p250-014-word.mp3",
       "audioWordPl": "t1-p250-014-word-pl.mp3",
-      "audioSentence": "t1-p250-014-sentence.mp3"
+      "audioSentence": "t1-p250-014-sentence.mp3",
+      "polishAudio": "Szczegółowy"
     },
     {
       "id": "t1-p250-015",
       "english": "Logical",
       "polish": "Logiczny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "It sounds logical, but something feels off.",
+      "sentencePl": "Brzmi logicznie, ale coś tu nie gra.",
       "audioWord": "t1-p250-015-word.mp3",
       "audioWordPl": "t1-p250-015-word-pl.mp3",
-      "audioSentence": "t1-p250-015-sentence.mp3"
+      "audioSentence": "t1-p250-015-sentence.mp3",
+      "polishAudio": "Logiczny"
     }
   ]
 }

@@ -10,61 +10,67 @@
       "id": "t1-p254-001",
       "english": "Walk",
       "polish": "Spacer",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Come on, let's take a walk before we both explode.",
+      "sentencePl": "No chodź, pójdźmy na spacer, zanim oboje wybuchniemy.",
       "audioWord": "t1-p254-001-word.mp3",
       "audioWordPl": "t1-p254-001-word-pl.mp3",
-      "audioSentence": "t1-p254-001-sentence.mp3"
+      "audioSentence": "t1-p254-001-sentence.mp3",
+      "polishAudio": "Spacer"
     },
     {
       "id": "t1-p254-002",
       "english": "Sport",
       "polish": "Sport",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You'd actually enjoy this sport—there's no running involved.",
+      "sentencePl": "Naprawdę spodobałby ci się ten sport — nie ma w nim biegania.",
       "audioWord": "t1-p254-002-word.mp3",
       "audioWordPl": "t1-p254-002-word-pl.mp3",
-      "audioSentence": "t1-p254-002-sentence.mp3"
+      "audioSentence": "t1-p254-002-sentence.mp3",
+      "polishAudio": "Sport"
     },
     {
       "id": "t1-p254-003",
       "english": "Stadium",
       "polish": "Stadion",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "The stadium went silent before the final kick.",
+      "sentencePl": "Stadion ucichł przed ostatnim kopnięciem.",
       "audioWord": "t1-p254-003-word.mp3",
       "audioWordPl": "t1-p254-003-word-pl.mp3",
-      "audioSentence": "t1-p254-003-sentence.mp3"
+      "audioSentence": "t1-p254-003-sentence.mp3",
+      "polishAudio": "Stadion"
     },
     {
       "id": "t1-p254-004",
       "english": "Chess",
       "polish": "Szachy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Are we playing chess today, or are you choosing checkers again?",
+      "sentencePl": "Gramy dziś w szachy, czy znowu wybierasz warcaby?",
       "audioWord": "t1-p254-004-word.mp3",
       "audioWordPl": "t1-p254-004-word-pl.mp3",
-      "audioSentence": "t1-p254-004-sentence.mp3"
+      "audioSentence": "t1-p254-004-sentence.mp3",
+      "polishAudio": "Szachy"
     },
     {
       "id": "t1-p254-005",
       "english": "Tennis",
       "polish": "Tenis",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Tennis sounded relaxing, then I chased balls for an hour.",
+      "sentencePl": "Tenis brzmiał relaksująco, a potem przez godzinę biegałem za piłkami.",
       "audioWord": "t1-p254-005-word.mp3",
       "audioWordPl": "t1-p254-005-word-pl.mp3",
-      "audioSentence": "t1-p254-005-sentence.mp3"
+      "audioSentence": "t1-p254-005-sentence.mp3",
+      "polishAudio": "Tenis"
     },
     {
       "id": "t1-p254-006",
       "english": "Trainer",
       "polish": "Trener",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You warned me; my trainer was tougher than I expected.",
+      "sentencePl": "Ostrzegałeś mnie — mój trener był surowszy, niż się spodziewałem.",
       "audioWord": "t1-p254-006-word.mp3",
       "audioWordPl": "t1-p254-006-word-pl.mp3",
-      "audioSentence": "t1-p254-006-sentence.mp3"
+      "audioSentence": "t1-p254-006-sentence.mp3",
+      "polishAudio": "Trener"
     },
     {
       "id": "t1-p254-007",
@@ -74,27 +80,30 @@
       "sentencePl": null,
       "audioWord": "t1-p254-007-word.mp3",
       "audioWordPl": "t1-p254-007-word-pl.mp3",
-      "audioSentence": "t1-p254-007-sentence.mp3"
+      "audioSentence": "t1-p254-007-sentence.mp3",
+      "polishAudio": "Trening"
     },
     {
       "id": "t1-p254-008",
       "english": "Score",
-      "polish": "Wynik",
+      "polish": "Wynik (liczba punktów)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p254-008-word.mp3",
       "audioWordPl": "t1-p254-008-word-pl.mp3",
-      "audioSentence": "t1-p254-008-sentence.mp3"
+      "audioSentence": "t1-p254-008-sentence.mp3",
+      "polishAudio": "Wynik"
     },
     {
       "id": "t1-p254-009",
       "english": "Player",
-      "polish": "Zawodnik",
+      "polish": "Zawodnik; gracz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p254-009-word.mp3",
       "audioWordPl": "t1-p254-009-word-pl.mp3",
-      "audioSentence": "t1-p254-009-sentence.mp3"
+      "audioSentence": "t1-p254-009-sentence.mp3",
+      "polishAudio": "Zawodnik"
     },
     {
       "id": "t1-p254-010",
@@ -104,27 +113,30 @@
       "sentencePl": null,
       "audioWord": "t1-p254-010-word.mp3",
       "audioWordPl": "t1-p254-010-word-pl.mp3",
-      "audioSentence": "t1-p254-010-sentence.mp3"
+      "audioSentence": "t1-p254-010-sentence.mp3",
+      "polishAudio": "Zawody"
     },
     {
       "id": "t1-p254-011",
       "english": "Professional",
-      "polish": "Profesjonalista",
+      "polish": "Profesjonalista; fachowiec",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p254-011-word.mp3",
       "audioWordPl": "t1-p254-011-word-pl.mp3",
-      "audioSentence": "t1-p254-011-sentence.mp3"
+      "audioSentence": "t1-p254-011-sentence.mp3",
+      "polishAudio": "Profesjonalista"
     },
     {
       "id": "t1-p254-012",
       "english": "Team",
-      "polish": "Zespół",
+      "polish": "Zespół; drużyna",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p254-012-word.mp3",
       "audioWordPl": "t1-p254-012-word-pl.mp3",
-      "audioSentence": "t1-p254-012-sentence.mp3"
+      "audioSentence": "t1-p254-012-sentence.mp3",
+      "polishAudio": "Zespół"
     },
     {
       "id": "t1-p254-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p254-013-word.mp3",
       "audioWordPl": "t1-p254-013-word-pl.mp3",
-      "audioSentence": "t1-p254-013-sentence.mp3"
+      "audioSentence": "t1-p254-013-sentence.mp3",
+      "polishAudio": "Pot"
     },
     {
       "id": "t1-p254-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p254-014-word.mp3",
       "audioWordPl": "t1-p254-014-word-pl.mp3",
-      "audioSentence": "t1-p254-014-sentence.mp3"
+      "audioSentence": "t1-p254-014-sentence.mp3",
+      "polishAudio": "Przeciwnik"
     },
     {
       "id": "t1-p254-015",
       "english": "Activity",
-      "polish": "Zajęcie",
+      "polish": "Zajęcie; działalność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p254-015-word.mp3",
       "audioWordPl": "t1-p254-015-word-pl.mp3",
-      "audioSentence": "t1-p254-015-sentence.mp3"
+      "audioSentence": "t1-p254-015-sentence.mp3",
+      "polishAudio": "Zajęcie"
     }
   ]
 }

@@ -10,101 +10,111 @@
       "id": "t1-p044-001",
       "english": "Hero",
       "polish": "Bohater",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Be a hero and hold this.",
+      "sentencePl": "Bądź bohaterem i potrzymaj to.",
       "audioWord": "t1-p044-001-word.mp3",
       "audioWordPl": "t1-p044-001-word-pl.mp3",
-      "audioSentence": "t1-p044-001-sentence.mp3"
+      "audioSentence": "t1-p044-001-sentence.mp3",
+      "polishAudio": "Bohater"
     },
     {
       "id": "t1-p044-002",
       "english": "Boyfriend",
-      "polish": "Chłopak",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Chłopak (z którym chodzisz)",
+      "sentenceEn": "Did your boyfriend get the tickets?",
+      "sentencePl": "Czy twój chłopak zdobył bilety?",
       "audioWord": "t1-p044-002-word.mp3",
       "audioWordPl": "t1-p044-002-word-pl.mp3",
-      "audioSentence": "t1-p044-002-sentence.mp3"
+      "audioSentence": "t1-p044-002-sentence.mp3",
+      "polishAudio": "Chłopak"
     },
     {
       "id": "t1-p044-003",
       "english": "Boy",
-      "polish": "Chłopak",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Chłopak (młody mężczyzna)",
+      "sentenceEn": "Give that boy the ball.",
+      "sentencePl": "Podaj temu chłopcu piłkę.",
       "audioWord": "t1-p044-003-word.mp3",
       "audioWordPl": "t1-p044-003-word-pl.mp3",
-      "audioSentence": "t1-p044-003-sentence.mp3"
+      "audioSentence": "t1-p044-003-sentence.mp3",
+      "polishAudio": "Chłopak"
     },
     {
       "id": "t1-p044-004",
       "english": "Girlfriend",
-      "polish": "Dziewczyna",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Dziewczyna (z którą chodzisz)",
+      "sentenceEn": "Introduce me to your girlfriend.",
+      "sentencePl": "Przedstaw mnie swojej dziewczynie.",
       "audioWord": "t1-p044-004-word.mp3",
       "audioWordPl": "t1-p044-004-word-pl.mp3",
-      "audioSentence": "t1-p044-004-sentence.mp3"
+      "audioSentence": "t1-p044-004-sentence.mp3",
+      "polishAudio": "Dziewczyna"
     },
     {
       "id": "t1-p044-005",
       "english": "Name",
       "polish": "Imię",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Sorry, what was your name again?",
+      "sentencePl": "Przepraszam, jak miałeś na imię?",
       "audioWord": "t1-p044-005-word.mp3",
       "audioWordPl": "t1-p044-005-word-pl.mp3",
-      "audioSentence": "t1-p044-005-sentence.mp3"
+      "audioSentence": "t1-p044-005-sentence.mp3",
+      "polishAudio": "Imię"
     },
     {
       "id": "t1-p044-006",
       "english": "Woman",
       "polish": "Kobieta",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "That woman looks really familiar. Do we know her?",
+      "sentencePl": "Ta kobieta wygląda bardzo znajomo. Znamy ją?",
       "audioWord": "t1-p044-006-word.mp3",
       "audioWordPl": "t1-p044-006-word-pl.mp3",
-      "audioSentence": "t1-p044-006-sentence.mp3"
+      "audioSentence": "t1-p044-006-sentence.mp3",
+      "polishAudio": "Kobieta"
     },
     {
       "id": "t1-p044-007",
       "english": "People",
       "polish": "Ludzie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Why are people staring at us?",
+      "sentencePl": "Dlaczego ludzie się na nas gapią?",
       "audioWord": "t1-p044-007-word.mp3",
       "audioWordPl": "t1-p044-007-word-pl.mp3",
-      "audioSentence": "t1-p044-007-sentence.mp3"
+      "audioSentence": "t1-p044-007-sentence.mp3",
+      "polishAudio": "Ludzie"
     },
     {
       "id": "t1-p044-008",
       "english": "Teenager",
       "polish": "Nastolatek",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I met my best friend as a teenager.",
+      "sentencePl": "Poznałem mojego najlepszego przyjaciela jako nastolatek.",
       "audioWord": "t1-p044-008-word.mp3",
       "audioWordPl": "t1-p044-008-word-pl.mp3",
-      "audioSentence": "t1-p044-008-sentence.mp3"
+      "audioSentence": "t1-p044-008-sentence.mp3",
+      "polishAudio": "Nastolatek"
     },
     {
       "id": "t1-p044-009",
       "english": "Person",
       "polish": "Osoba",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You're the only person I called.",
+      "sentencePl": "Jesteś jedyną osobą, do której zadzwoniłem.",
       "audioWord": "t1-p044-009-word.mp3",
       "audioWordPl": "t1-p044-009-word-pl.mp3",
-      "audioSentence": "t1-p044-009-sentence.mp3"
+      "audioSentence": "t1-p044-009-sentence.mp3",
+      "polishAudio": "Osoba"
     },
     {
       "id": "t1-p044-010",
       "english": "Partner",
-      "polish": "Partner",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Partner; wspólnik w interesach",
+      "sentenceEn": "I need to check with my partner.",
+      "sentencePl": "Muszę to sprawdzić z moim partnerem.",
       "audioWord": "t1-p044-010-word.mp3",
       "audioWordPl": "t1-p044-010-word-pl.mp3",
-      "audioSentence": "t1-p044-010-sentence.mp3"
+      "audioSentence": "t1-p044-010-sentence.mp3",
+      "polishAudio": "Partner"
     }
   ]
 }

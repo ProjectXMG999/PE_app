@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p831-001-word.mp3",
       "audioWordPl": "t1-p831-001-word-pl.mp3",
-      "audioSentence": "t1-p831-001-sentence.mp3"
+      "audioSentence": "t1-p831-001-sentence.mp3",
+      "polishAudio": "Obniżyć cenę"
     },
     {
       "id": "t1-p831-002",
@@ -24,57 +25,63 @@
       "sentencePl": null,
       "audioWord": "t1-p831-002-word.mp3",
       "audioWordPl": "t1-p831-002-word-pl.mp3",
-      "audioSentence": "t1-p831-002-sentence.mp3"
+      "audioSentence": "t1-p831-002-sentence.mp3",
+      "polishAudio": "Podwyższyć cenę"
     },
     {
       "id": "t1-p831-003",
       "english": "Pile up",
-      "polish": "Piętrzyć się",
+      "polish": "Piętrzyć się; układać na stertę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p831-003-word.mp3",
       "audioWordPl": "t1-p831-003-word-pl.mp3",
-      "audioSentence": "t1-p831-003-sentence.mp3"
+      "audioSentence": "t1-p831-003-sentence.mp3",
+      "polishAudio": "Piętrzyć się"
     },
     {
       "id": "t1-p831-004",
       "english": "Close in",
-      "polish": "Stawać się krótszym",
+      "polish": "Stawać się krótszym (o dniach)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p831-004-word.mp3",
       "audioWordPl": "t1-p831-004-word-pl.mp3",
-      "audioSentence": "t1-p831-004-sentence.mp3"
+      "audioSentence": "t1-p831-004-sentence.mp3",
+      "polishAudio": "Stawać się krótszym"
     },
     {
       "id": "t1-p831-005",
       "english": "Die down",
-      "polish": "Uspokoić się",
+      "polish": "Uspokoić się; przycichnąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p831-005-word.mp3",
       "audioWordPl": "t1-p831-005-word-pl.mp3",
-      "audioSentence": "t1-p831-005-sentence.mp3"
+      "audioSentence": "t1-p831-005-sentence.mp3",
+      "polishAudio": "Uspokoić się"
     },
     {
       "id": "t1-p831-006",
       "english": "Wear off",
-      "polish": "Mijać",
+      "polish": "Mijać; przechodzić; ustępować (np. o bólu, uczuciu)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p831-006-word.mp3",
       "audioWordPl": "t1-p831-006-word-pl.mp3",
-      "audioSentence": "t1-p831-006-sentence.mp3"
+      "audioSentence": "t1-p831-006-sentence.mp3",
+      "polishAudio": "Mijać"
     },
     {
       "id": "t1-p831-007",
       "english": "Grow up",
-      "polish": "Rosnąć",
+      "polish": "Rosnąć (o człowieku)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p831-007-word.mp3",
       "audioWordPl": "t1-p831-007-word-pl.mp3",
-      "audioSentence": "t1-p831-007-sentence.mp3"
+      "audioSentence": "t1-p831-007-sentence.mp3",
+      "polishAudio": "Rosnąć"
     },
     {
       "id": "t1-p831-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p831-008-word.mp3",
       "audioWordPl": "t1-p831-008-word-pl.mp3",
-      "audioSentence": "t1-p831-008-sentence.mp3"
+      "audioSentence": "t1-p831-008-sentence.mp3",
+      "polishAudio": "Iść ostro w górę"
     },
     {
       "id": "t1-p831-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p831-009-word.mp3",
       "audioWordPl": "t1-p831-009-word-pl.mp3",
-      "audioSentence": "t1-p831-009-sentence.mp3"
+      "audioSentence": "t1-p831-009-sentence.mp3",
+      "polishAudio": "Narastać"
     },
     {
       "id": "t1-p831-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p831-010-word.mp3",
       "audioWordPl": "t1-p831-010-word-pl.mp3",
-      "audioSentence": "t1-p831-010-sentence.mp3"
+      "audioSentence": "t1-p831-010-sentence.mp3",
+      "polishAudio": "Zwiększać się"
     }
   ]
 }

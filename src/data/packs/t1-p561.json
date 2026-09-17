@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p561-001-word.mp3",
       "audioWordPl": "t1-p561-001-word-pl.mp3",
-      "audioSentence": "t1-p561-001-sentence.mp3"
+      "audioSentence": "t1-p561-001-sentence.mp3",
+      "polishAudio": "Wciąż obecny"
     },
     {
       "id": "t1-p561-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p561-002-word.mp3",
       "audioWordPl": "t1-p561-002-word-pl.mp3",
-      "audioSentence": "t1-p561-002-sentence.mp3"
+      "audioSentence": "t1-p561-002-sentence.mp3",
+      "polishAudio": "Powtarzalny"
     },
     {
       "id": "t1-p561-003",
       "english": "Continuous",
-      "polish": "Ciągły",
+      "polish": "Ciągły; nieprzerwany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p561-003-word.mp3",
       "audioWordPl": "t1-p561-003-word-pl.mp3",
-      "audioSentence": "t1-p561-003-sentence.mp3"
+      "audioSentence": "t1-p561-003-sentence.mp3",
+      "polishAudio": "Ciągły"
     },
     {
       "id": "t1-p561-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p561-004-word.mp3",
       "audioWordPl": "t1-p561-004-word-pl.mp3",
-      "audioSentence": "t1-p561-004-sentence.mp3"
+      "audioSentence": "t1-p561-004-sentence.mp3",
+      "polishAudio": "Nieustający"
     },
     {
       "id": "t1-p561-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p561-005-word.mp3",
       "audioWordPl": "t1-p561-005-word-pl.mp3",
-      "audioSentence": "t1-p561-005-sentence.mp3"
+      "audioSentence": "t1-p561-005-sentence.mp3",
+      "polishAudio": "Sezonowy"
     },
     {
       "id": "t1-p561-006",
       "english": "Persistent",
-      "polish": "Uporczywy",
+      "polish": "Uporczywy; wytrwały",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p561-006-word.mp3",
       "audioWordPl": "t1-p561-006-word-pl.mp3",
-      "audioSentence": "t1-p561-006-sentence.mp3"
+      "audioSentence": "t1-p561-006-sentence.mp3",
+      "polishAudio": "Uporczywy"
     },
     {
       "id": "t1-p561-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p561-007-word.mp3",
       "audioWordPl": "t1-p561-007-word-pl.mp3",
-      "audioSentence": "t1-p561-007-sentence.mp3"
+      "audioSentence": "t1-p561-007-sentence.mp3",
+      "polishAudio": "Powracający"
     },
     {
       "id": "t1-p561-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p561-008-word.mp3",
       "audioWordPl": "t1-p561-008-word-pl.mp3",
-      "audioSentence": "t1-p561-008-sentence.mp3"
+      "audioSentence": "t1-p561-008-sentence.mp3",
+      "polishAudio": "Stale zmieniający się"
     },
     {
       "id": "t1-p561-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p561-009-word.mp3",
       "audioWordPl": "t1-p561-009-word-pl.mp3",
-      "audioSentence": "t1-p561-009-sentence.mp3"
+      "audioSentence": "t1-p561-009-sentence.mp3",
+      "polishAudio": "Trwający całe życie"
     },
     {
       "id": "t1-p561-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p561-010-word.mp3",
       "audioWordPl": "t1-p561-010-word-pl.mp3",
-      "audioSentence": "t1-p561-010-sentence.mp3"
+      "audioSentence": "t1-p561-010-sentence.mp3",
+      "polishAudio": "Nawracający"
     },
     {
       "id": "t1-p561-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p561-011-word.mp3",
       "audioWordPl": "t1-p561-011-word-pl.mp3",
-      "audioSentence": "t1-p561-011-sentence.mp3"
+      "audioSentence": "t1-p561-011-sentence.mp3",
+      "polishAudio": "Przerywany"
     },
     {
       "id": "t1-p561-012",
       "english": "Perennial",
-      "polish": "Nieprzemijający",
+      "polish": "Nieprzemijający; odwieczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p561-012-word.mp3",
       "audioWordPl": "t1-p561-012-word-pl.mp3",
-      "audioSentence": "t1-p561-012-sentence.mp3"
+      "audioSentence": "t1-p561-012-sentence.mp3",
+      "polishAudio": "Nieprzemijający"
     },
     {
       "id": "t1-p561-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p561-013-word.mp3",
       "audioWordPl": "t1-p561-013-word-pl.mp3",
-      "audioSentence": "t1-p561-013-sentence.mp3"
+      "audioSentence": "t1-p561-013-sentence.mp3",
+      "polishAudio": "Nieustanny"
     },
     {
       "id": "t1-p561-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p561-014-word.mp3",
       "audioWordPl": "t1-p561-014-word-pl.mp3",
-      "audioSentence": "t1-p561-014-sentence.mp3"
+      "audioSentence": "t1-p561-014-sentence.mp3",
+      "polishAudio": "Bezustanny"
     },
     {
       "id": "t1-p561-015",
       "english": "Constant",
-      "polish": "Niezmieniający się",
+      "polish": "Niezmieniający się; stały; ciągły",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p561-015-word.mp3",
       "audioWordPl": "t1-p561-015-word-pl.mp3",
-      "audioSentence": "t1-p561-015-sentence.mp3"
+      "audioSentence": "t1-p561-015-sentence.mp3",
+      "polishAudio": "Niezmieniający się"
     }
   ]
 }

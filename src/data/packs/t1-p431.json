@@ -9,22 +9,24 @@
     {
       "id": "t1-p431-001",
       "english": "Advantage",
-      "polish": "Zaleta",
+      "polish": "Zaleta; przewaga",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p431-001-word.mp3",
       "audioWordPl": "t1-p431-001-word-pl.mp3",
-      "audioSentence": "t1-p431-001-sentence.mp3"
+      "audioSentence": "t1-p431-001-sentence.mp3",
+      "polishAudio": "Zaleta"
     },
     {
       "id": "t1-p431-002",
       "english": "Presence",
-      "polish": "Obecność",
+      "polish": "Obecność (czegoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p431-002-word.mp3",
       "audioWordPl": "t1-p431-002-word-pl.mp3",
-      "audioSentence": "t1-p431-002-sentence.mp3"
+      "audioSentence": "t1-p431-002-sentence.mp3",
+      "polishAudio": "Obecność"
     },
     {
       "id": "t1-p431-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p431-003-word.mp3",
       "audioWordPl": "t1-p431-003-word-pl.mp3",
-      "audioSentence": "t1-p431-003-sentence.mp3"
+      "audioSentence": "t1-p431-003-sentence.mp3",
+      "polishAudio": "Kontynuacja"
     },
     {
       "id": "t1-p431-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p431-004-word.mp3",
       "audioWordPl": "t1-p431-004-word-pl.mp3",
-      "audioSentence": "t1-p431-004-sentence.mp3"
+      "audioSentence": "t1-p431-004-sentence.mp3",
+      "polishAudio": "Postęp"
     },
     {
       "id": "t1-p431-005",
@@ -54,27 +58,30 @@
       "sentencePl": null,
       "audioWord": "t1-p431-005-word.mp3",
       "audioWordPl": "t1-p431-005-word-pl.mp3",
-      "audioSentence": "t1-p431-005-sentence.mp3"
+      "audioSentence": "t1-p431-005-sentence.mp3",
+      "polishAudio": "Przyczyna"
     },
     {
       "id": "t1-p431-006",
       "english": "Issue",
-      "polish": "Sprawa",
+      "polish": "Sprawa; kwestia",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p431-006-word.mp3",
       "audioWordPl": "t1-p431-006-word-pl.mp3",
-      "audioSentence": "t1-p431-006-sentence.mp3"
+      "audioSentence": "t1-p431-006-sentence.mp3",
+      "polishAudio": "Sprawa"
     },
     {
       "id": "t1-p431-007",
       "english": "Case",
-      "polish": "Sprawa",
+      "polish": "Sprawa; przypadek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p431-007-word.mp3",
       "audioWordPl": "t1-p431-007-word-pl.mp3",
-      "audioSentence": "t1-p431-007-sentence.mp3"
+      "audioSentence": "t1-p431-007-sentence.mp3",
+      "polishAudio": "Sprawa"
     },
     {
       "id": "t1-p431-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p431-008-word.mp3",
       "audioWordPl": "t1-p431-008-word-pl.mp3",
-      "audioSentence": "t1-p431-008-sentence.mp3"
+      "audioSentence": "t1-p431-008-sentence.mp3",
+      "polishAudio": "Stabilność"
     },
     {
       "id": "t1-p431-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p431-009-word.mp3",
       "audioWordPl": "t1-p431-009-word-pl.mp3",
-      "audioSentence": "t1-p431-009-sentence.mp3"
+      "audioSentence": "t1-p431-009-sentence.mp3",
+      "polishAudio": "Rozległość"
     },
     {
       "id": "t1-p431-010",
       "english": "Decline",
-      "polish": "Obniżenie",
+      "polish": "Obniżenie; spadek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p431-010-word.mp3",
       "audioWordPl": "t1-p431-010-word-pl.mp3",
-      "audioSentence": "t1-p431-010-sentence.mp3"
+      "audioSentence": "t1-p431-010-sentence.mp3",
+      "polishAudio": "Obniżenie"
     },
     {
       "id": "t1-p431-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p431-011-word.mp3",
       "audioWordPl": "t1-p431-011-word-pl.mp3",
-      "audioSentence": "t1-p431-011-sentence.mp3"
+      "audioSentence": "t1-p431-011-sentence.mp3",
+      "polishAudio": "Bariera"
     },
     {
       "id": "t1-p431-012",
       "english": "Outcome",
-      "polish": "Wynik",
+      "polish": "Wynik; rezultat",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p431-012-word.mp3",
       "audioWordPl": "t1-p431-012-word-pl.mp3",
-      "audioSentence": "t1-p431-012-sentence.mp3"
+      "audioSentence": "t1-p431-012-sentence.mp3",
+      "polishAudio": "Wynik"
     },
     {
       "id": "t1-p431-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p431-013-word.mp3",
       "audioWordPl": "t1-p431-013-word-pl.mp3",
-      "audioSentence": "t1-p431-013-sentence.mp3"
+      "audioSentence": "t1-p431-013-sentence.mp3",
+      "polishAudio": "Ogólny zarys"
     },
     {
       "id": "t1-p431-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p431-014-word.mp3",
       "audioWordPl": "t1-p431-014-word-pl.mp3",
-      "audioSentence": "t1-p431-014-sentence.mp3"
+      "audioSentence": "t1-p431-014-sentence.mp3",
+      "polishAudio": "Przeznaczenie"
     },
     {
       "id": "t1-p431-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p431-015-word.mp3",
       "audioWordPl": "t1-p431-015-word-pl.mp3",
-      "audioSentence": "t1-p431-015-sentence.mp3"
+      "audioSentence": "t1-p431-015-sentence.mp3",
+      "polishAudio": "Wzorzec"
     }
   ]
 }

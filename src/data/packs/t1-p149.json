@@ -10,71 +10,78 @@
       "id": "t1-p149-001",
       "english": "Ticket office",
       "polish": "Kasa biletowa",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Check online whether the ticket office is still open.",
+      "sentencePl": "Sprawdź online, czy kasa biletowa jest jeszcze otwarta.",
       "audioWord": "t1-p149-001-word.mp3",
       "audioWordPl": "t1-p149-001-word-pl.mp3",
-      "audioSentence": "t1-p149-001-sentence.mp3"
+      "audioSentence": "t1-p149-001-sentence.mp3",
+      "polishAudio": "Kasa biletowa"
     },
     {
       "id": "t1-p149-002",
       "english": "Carry on",
       "polish": "Bagaż podręczny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My carry-on barely fits under the seat.",
+      "sentencePl": "Mój bagaż podręczny ledwo mieści się pod fotelem.",
       "audioWord": "t1-p149-002-word.mp3",
       "audioWordPl": "t1-p149-002-word-pl.mp3",
-      "audioSentence": "t1-p149-002-sentence.mp3"
+      "audioSentence": "t1-p149-002-sentence.mp3",
+      "polishAudio": "Bagaż podręczny"
     },
     {
       "id": "t1-p149-003",
       "english": "Border",
-      "polish": "Granica",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Granica (np. między państwami)",
+      "sentenceEn": "Text me when you cross the border so I don't worry.",
+      "sentencePl": "Napisz, gdy przekroczysz granicę, żebym się nie martwiła.",
       "audioWord": "t1-p149-003-word.mp3",
       "audioWordPl": "t1-p149-003-word-pl.mp3",
-      "audioSentence": "t1-p149-003-sentence.mp3"
+      "audioSentence": "t1-p149-003-sentence.mp3",
+      "polishAudio": "Granica"
     },
     {
       "id": "t1-p149-004",
       "english": "Hostel",
       "polish": "Hostel",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Have you booked a hostel near the station yet?",
+      "sentencePl": "Zarezerwowałeś już hostel blisko dworca?",
       "audioWord": "t1-p149-004-word.mp3",
       "audioWordPl": "t1-p149-004-word-pl.mp3",
-      "audioSentence": "t1-p149-004-sentence.mp3"
+      "audioSentence": "t1-p149-004-sentence.mp3",
+      "polishAudio": "Hostel"
     },
     {
       "id": "t1-p149-005",
       "english": "Motel",
       "polish": "Motel",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Does this motel have any rooms available tonight?",
+      "sentencePl": "Czy ten motel ma wolne pokoje na noc?",
       "audioWord": "t1-p149-005-word.mp3",
       "audioWordPl": "t1-p149-005-word-pl.mp3",
-      "audioSentence": "t1-p149-005-sentence.mp3"
+      "audioSentence": "t1-p149-005-sentence.mp3",
+      "polishAudio": "Motel"
     },
     {
       "id": "t1-p149-006",
       "english": "Stay",
       "polish": "Pobyt",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Your stay with me always ends too soon.",
+      "sentencePl": "Twój pobyt u mnie zawsze kończy się za szybko.",
       "audioWord": "t1-p149-006-word.mp3",
       "audioWordPl": "t1-p149-006-word-pl.mp3",
-      "audioSentence": "t1-p149-006-sentence.mp3"
+      "audioSentence": "t1-p149-006-sentence.mp3",
+      "polishAudio": "Pobyt"
     },
     {
       "id": "t1-p149-007",
       "english": "Postcard",
       "polish": "Pocztówka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Let's buy a postcard before this little shop closes.",
+      "sentencePl": "Kupmy pocztówkę, zanim zamkną ten mały sklep.",
       "audioWord": "t1-p149-007-word.mp3",
       "audioWordPl": "t1-p149-007-word-pl.mp3",
-      "audioSentence": "t1-p149-007-sentence.mp3"
+      "audioSentence": "t1-p149-007-sentence.mp3",
+      "polishAudio": "Pocztówka"
     },
     {
       "id": "t1-p149-008",
@@ -84,77 +91,85 @@
       "sentencePl": null,
       "audioWord": "t1-p149-008-word.mp3",
       "audioWordPl": "t1-p149-008-word-pl.mp3",
-      "audioSentence": "t1-p149-008-sentence.mp3"
+      "audioSentence": "t1-p149-008-sentence.mp3",
+      "polishAudio": "Podróżowanie"
     },
     {
       "id": "t1-p149-009",
       "english": "Double room",
       "polish": "Pokój dwuosobowy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Does the double room have two separate beds?",
+      "sentencePl": "Czy pokój dwuosobowy ma dwa osobne łóżka?",
       "audioWord": "t1-p149-009-word.mp3",
       "audioWordPl": "t1-p149-009-word-pl.mp3",
-      "audioSentence": "t1-p149-009-sentence.mp3"
+      "audioSentence": "t1-p149-009-sentence.mp3",
+      "polishAudio": "Pokój dwuosobowy"
     },
     {
       "id": "t1-p149-010",
       "english": "Single room",
       "polish": "Pokój jednoosobowy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I'd like a single room for two nights.",
+      "sentencePl": "Poproszę pokój jednoosobowy na dwie noce.",
       "audioWord": "t1-p149-010-word.mp3",
       "audioWordPl": "t1-p149-010-word-pl.mp3",
-      "audioSentence": "t1-p149-010-sentence.mp3"
+      "audioSentence": "t1-p149-010-sentence.mp3",
+      "polishAudio": "Pokój jednoosobowy"
     },
     {
       "id": "t1-p149-011",
       "english": "Arrival",
       "polish": "Przyjazd",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Let me know before your arrival, and I'll prepare something warm.",
+      "sentencePl": "Daj znać przed przyjazdem, przygotuję coś ciepłego.",
       "audioWord": "t1-p149-011-word.mp3",
       "audioWordPl": "t1-p149-011-word-pl.mp3",
-      "audioSentence": "t1-p149-011-sentence.mp3"
+      "audioSentence": "t1-p149-011-sentence.mp3",
+      "polishAudio": "Przyjazd"
     },
     {
       "id": "t1-p149-012",
       "english": "Tourist attraction",
       "polish": "Atrakcja turystyczna",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Which tourist attraction is closest to the old town?",
+      "sentencePl": "Która atrakcja turystyczna jest najbliżej starego miasta?",
       "audioWord": "t1-p149-012-word.mp3",
       "audioWordPl": "t1-p149-012-word-pl.mp3",
-      "audioSentence": "t1-p149-012-sentence.mp3"
+      "audioSentence": "t1-p149-012-sentence.mp3",
+      "polishAudio": "Atrakcja turystyczna"
     },
     {
       "id": "t1-p149-013",
       "english": "Travel agency",
       "polish": "Biuro podróży",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Does the travel agency arrange insurance too?",
+      "sentencePl": "Czy biuro podróży załatwia też ubezpieczenie?",
       "audioWord": "t1-p149-013-word.mp3",
       "audioWordPl": "t1-p149-013-word-pl.mp3",
-      "audioSentence": "t1-p149-013-sentence.mp3"
+      "audioSentence": "t1-p149-013-sentence.mp3",
+      "polishAudio": "Biuro podróży"
     },
     {
       "id": "t1-p149-014",
       "english": "Camping",
       "polish": "Kemping",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can you make your own campfire at the camping site?",
+      "sentencePl": "Czy na kempingu można rozpalić własne ognisko?",
       "audioWord": "t1-p149-014-word.mp3",
       "audioWordPl": "t1-p149-014-word-pl.mp3",
-      "audioSentence": "t1-p149-014-sentence.mp3"
+      "audioSentence": "t1-p149-014-sentence.mp3",
+      "polishAudio": "Kemping"
     },
     {
       "id": "t1-p149-015",
       "english": "Holiday resort",
       "polish": "Miejscowość wypoczynkowa",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Is this holiday resort far from the airport?",
+      "sentencePl": "Czy ta miejscowość wypoczynkowa jest daleko od lotniska?",
       "audioWord": "t1-p149-015-word.mp3",
       "audioWordPl": "t1-p149-015-word-pl.mp3",
-      "audioSentence": "t1-p149-015-sentence.mp3"
+      "audioSentence": "t1-p149-015-sentence.mp3",
+      "polishAudio": "Miejscowość wypoczynkowa"
     }
   ]
 }

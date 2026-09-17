@@ -10,151 +10,166 @@
       "id": "t1-p112-001",
       "english": "Twin",
       "polish": "Bliźniak",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You and your twin still finish each other's sentences.",
+      "sentencePl": "Ty i twój bliźniak nadal kończycie za siebie zdania.",
       "audioWord": "t1-p112-001-word.mp3",
       "audioWordPl": "t1-p112-001-word-pl.mp3",
-      "audioSentence": "t1-p112-001-sentence.mp3"
+      "audioSentence": "t1-p112-001-sentence.mp3",
+      "polishAudio": "Bliźniak"
     },
     {
       "id": "t1-p112-002",
       "english": "Only child",
-      "polish": "Jedynak",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Jedynak; jedynaczka",
+      "sentenceEn": "As an only child, I send Mom too many WhatsApp photos.",
+      "sentencePl": "Jako jedynak wysyłam mamie za dużo zdjęć na WhatsAppie.",
       "audioWord": "t1-p112-002-word.mp3",
       "audioWordPl": "t1-p112-002-word-pl.mp3",
-      "audioSentence": "t1-p112-002-sentence.mp3"
+      "audioSentence": "t1-p112-002-sentence.mp3",
+      "polishAudio": "Jedynak"
     },
     {
       "id": "t1-p112-003",
       "english": "Relative",
       "polish": "Krewny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Help, a relative tagged me in a Facebook photo from childhood.",
+      "sentencePl": "Ratunku, krewny oznaczył mnie na zdjęciu z dzieciństwa na Facebooku.",
       "audioWord": "t1-p112-003-word.mp3",
       "audioWordPl": "t1-p112-003-word-pl.mp3",
-      "audioSentence": "t1-p112-003-sentence.mp3"
+      "audioSentence": "t1-p112-003-sentence.mp3",
+      "polishAudio": "Krewny"
     },
     {
       "id": "t1-p112-004",
       "english": "Mom",
       "polish": "Mama",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I called Mom because I needed to hear her voice.",
+      "sentencePl": "Zadzwoniłem do mamy, bo potrzebowałem usłyszeć jej głos.",
       "audioWord": "t1-p112-004-word.mp3",
       "audioWordPl": "t1-p112-004-word-pl.mp3",
-      "audioSentence": "t1-p112-004-sentence.mp3"
+      "audioSentence": "t1-p112-004-sentence.mp3",
+      "polishAudio": "Mama"
     },
     {
       "id": "t1-p112-005",
       "english": "Siblings",
       "polish": "Rodzeństwo",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My siblings still laugh at my school haircut.",
+      "sentencePl": "Moje rodzeństwo nadal śmieje się z mojej szkolnej fryzury.",
       "audioWord": "t1-p112-005-word.mp3",
       "audioWordPl": "t1-p112-005-word-pl.mp3",
-      "audioSentence": "t1-p112-005-sentence.mp3"
+      "audioSentence": "t1-p112-005-sentence.mp3",
+      "polishAudio": "Rodzeństwo"
     },
     {
       "id": "t1-p112-006",
       "english": "Niece",
-      "polish": "Siostrzenica",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Siostrzenica; bratanica",
+      "sentenceEn": "My niece called my dancing weird, so I guess she's right.",
+      "sentencePl": "Siostrzenica nazwała mój taniec dziwnym, więc chyba ma rację.",
       "audioWord": "t1-p112-006-word.mp3",
       "audioWordPl": "t1-p112-006-word-pl.mp3",
-      "audioSentence": "t1-p112-006-sentence.mp3"
+      "audioSentence": "t1-p112-006-sentence.mp3",
+      "polishAudio": "Siostrzenica"
     },
     {
       "id": "t1-p112-007",
       "english": "Nephew",
-      "polish": "Siostrzeniec",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Siostrzeniec; bratanek",
+      "sentenceEn": "My nephew asked if adults get homework too.",
+      "sentencePl": "Mój siostrzeniec zapytał, czy dorośli też dostają pracę domową.",
       "audioWord": "t1-p112-007-word.mp3",
       "audioWordPl": "t1-p112-007-word-pl.mp3",
-      "audioSentence": "t1-p112-007-sentence.mp3"
+      "audioSentence": "t1-p112-007-sentence.mp3",
+      "polishAudio": "Siostrzeniec"
     },
     {
       "id": "t1-p112-008",
       "english": "Dad",
       "polish": "Tata",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Dad, please stop fixing things I didn't break.",
+      "sentencePl": "Tato, przestań proszę naprawiać rzeczy, których nie zepsułem.",
       "audioWord": "t1-p112-008-word.mp3",
       "audioWordPl": "t1-p112-008-word-pl.mp3",
-      "audioSentence": "t1-p112-008-sentence.mp3"
+      "audioSentence": "t1-p112-008-sentence.mp3",
+      "polishAudio": "Tata"
     },
     {
       "id": "t1-p112-009",
       "english": "Mother-in-law",
       "polish": "Teściowa",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My mother-in-law remembers that I only drink tea with lemon.",
+      "sentencePl": "Moja teściowa pamięta, że herbatę piję tylko z cytryną.",
       "audioWord": "t1-p112-009-word.mp3",
       "audioWordPl": "t1-p112-009-word-pl.mp3",
-      "audioSentence": "t1-p112-009-sentence.mp3"
+      "audioSentence": "t1-p112-009-sentence.mp3",
+      "polishAudio": "Teściowa"
     },
     {
       "id": "t1-p112-010",
       "english": "Father-in-law",
       "polish": "Teść",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My father-in-law always asks whether I got home safely.",
+      "sentencePl": "Mój teść zawsze pyta, czy bezpiecznie wróciłam do domu.",
       "audioWord": "t1-p112-010-word.mp3",
       "audioWordPl": "t1-p112-010-word-pl.mp3",
-      "audioSentence": "t1-p112-010-sentence.mp3"
+      "audioSentence": "t1-p112-010-sentence.mp3",
+      "polishAudio": "Teść"
     },
     {
       "id": "t1-p112-011",
       "english": "Grandchildren",
       "polish": "Wnuki",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "The grandchildren taught Grandma how to use Zoom.",
+      "sentencePl": "Wnuki nauczyły babci korzystać z Zooma.",
       "audioWord": "t1-p112-011-word.mp3",
       "audioWordPl": "t1-p112-011-word-pl.mp3",
-      "audioSentence": "t1-p112-011-sentence.mp3"
+      "audioSentence": "t1-p112-011-sentence.mp3",
+      "polishAudio": "Wnuki"
     },
     {
       "id": "t1-p112-012",
       "english": "Family life",
       "polish": "Życie rodzinne",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Our family life runs through a shared calendar now.",
+      "sentencePl": "Nasze życie rodzinne kręci się teraz wokół wspólnego kalendarza.",
       "audioWord": "t1-p112-012-word.mp3",
       "audioWordPl": "t1-p112-012-word-pl.mp3",
-      "audioSentence": "t1-p112-012-sentence.mp3"
+      "audioSentence": "t1-p112-012-sentence.mp3",
+      "polishAudio": "Życie rodzinne"
     },
     {
       "id": "t1-p112-013",
       "english": "Daughter-in-law",
       "polish": "Synowa",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My daughter-in-law brought me a book that I mentioned once.",
+      "sentencePl": "Synowa przyniosła mi książkę, o której kiedyś wspomniałam.",
       "audioWord": "t1-p112-013-word.mp3",
       "audioWordPl": "t1-p112-013-word-pl.mp3",
-      "audioSentence": "t1-p112-013-sentence.mp3"
+      "audioSentence": "t1-p112-013-sentence.mp3",
+      "polishAudio": "Synowa"
     },
     {
       "id": "t1-p112-014",
       "english": "Grandson",
       "polish": "Wnuk",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My grandson calls every truck a dinosaur.",
+      "sentencePl": "Mój wnuk nazywa każdą ciężarówkę dinozaurem.",
       "audioWord": "t1-p112-014-word.mp3",
       "audioWordPl": "t1-p112-014-word-pl.mp3",
-      "audioSentence": "t1-p112-014-sentence.mp3"
+      "audioSentence": "t1-p112-014-sentence.mp3",
+      "polishAudio": "Wnuk"
     },
     {
       "id": "t1-p112-015",
       "english": "Son-in-law",
       "polish": "Zięć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Your son-in-law carried my bags upstairs without asking.",
+      "sentencePl": "Twój zięć wniósł moje torby na górę, nawet nie pytając.",
       "audioWord": "t1-p112-015-word.mp3",
       "audioWordPl": "t1-p112-015-word-pl.mp3",
-      "audioSentence": "t1-p112-015-sentence.mp3"
+      "audioSentence": "t1-p112-015-sentence.mp3",
+      "polishAudio": "Zięć"
     }
   ]
 }

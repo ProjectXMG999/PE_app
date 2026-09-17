@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p579-001-word.mp3",
       "audioWordPl": "t1-p579-001-word-pl.mp3",
-      "audioSentence": "t1-p579-001-sentence.mp3"
+      "audioSentence": "t1-p579-001-sentence.mp3",
+      "polishAudio": "Chronologicznie"
     },
     {
       "id": "t1-p579-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p579-002-word.mp3",
       "audioWordPl": "t1-p579-002-word-pl.mp3",
-      "audioSentence": "t1-p579-002-sentence.mp3"
+      "audioSentence": "t1-p579-002-sentence.mp3",
+      "polishAudio": "Dawniej"
     },
     {
       "id": "t1-p579-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p579-003-word.mp3",
       "audioWordPl": "t1-p579-003-word-pl.mp3",
-      "audioSentence": "t1-p579-003-sentence.mp3"
+      "audioSentence": "t1-p579-003-sentence.mp3",
+      "polishAudio": "Na chwilę obecną"
     },
     {
       "id": "t1-p579-004",
       "english": "Meantime",
-      "polish": "Na razie",
+      "polish": "Na razie; póki co",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p579-004-word.mp3",
       "audioWordPl": "t1-p579-004-word-pl.mp3",
-      "audioSentence": "t1-p579-004-sentence.mp3"
+      "audioSentence": "t1-p579-004-sentence.mp3",
+      "polishAudio": "Na razie"
     },
     {
       "id": "t1-p579-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p579-005-word.mp3",
       "audioWordPl": "t1-p579-005-word-pl.mp3",
-      "audioSentence": "t1-p579-005-sentence.mp3"
+      "audioSentence": "t1-p579-005-sentence.mp3",
+      "polishAudio": "Tymczasem"
     },
     {
       "id": "t1-p579-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p579-006-word.mp3",
       "audioWordPl": "t1-p579-006-word-pl.mp3",
-      "audioSentence": "t1-p579-006-sentence.mp3"
+      "audioSentence": "t1-p579-006-sentence.mp3",
+      "polishAudio": "W dzisiejszych czasach"
     },
     {
       "id": "t1-p579-007",
@@ -74,57 +80,63 @@
       "sentencePl": null,
       "audioWord": "t1-p579-007-word.mp3",
       "audioWordPl": "t1-p579-007-word-pl.mp3",
-      "audioSentence": "t1-p579-007-sentence.mp3"
+      "audioSentence": "t1-p579-007-sentence.mp3",
+      "polishAudio": "Początkowo"
     },
     {
       "id": "t1-p579-008",
       "english": "Simultaneously",
-      "polish": "Jednocześnie",
+      "polish": "Jednocześnie; równocześnie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p579-008-word.mp3",
       "audioWordPl": "t1-p579-008-word-pl.mp3",
-      "audioSentence": "t1-p579-008-sentence.mp3"
+      "audioSentence": "t1-p579-008-sentence.mp3",
+      "polishAudio": "Jednocześnie"
     },
     {
       "id": "t1-p579-009",
       "english": "Within",
-      "polish": "W ciągu",
+      "polish": "W ciągu; w przeciągu (jakiegoś czasu)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p579-009-word.mp3",
       "audioWordPl": "t1-p579-009-word-pl.mp3",
-      "audioSentence": "t1-p579-009-sentence.mp3"
+      "audioSentence": "t1-p579-009-sentence.mp3",
+      "polishAudio": "W ciągu"
     },
     {
       "id": "t1-p579-010",
       "english": "Throughout",
-      "polish": "Przez cały czas",
+      "polish": "Przez cały czas (czegoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p579-010-word.mp3",
       "audioWordPl": "t1-p579-010-word-pl.mp3",
-      "audioSentence": "t1-p579-010-sentence.mp3"
+      "audioSentence": "t1-p579-010-sentence.mp3",
+      "polishAudio": "Przez cały czas"
     },
     {
       "id": "t1-p579-011",
       "english": "Annually",
-      "polish": "Rocznie",
+      "polish": "Rocznie; co roku",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p579-011-word.mp3",
       "audioWordPl": "t1-p579-011-word-pl.mp3",
-      "audioSentence": "t1-p579-011-sentence.mp3"
+      "audioSentence": "t1-p579-011-sentence.mp3",
+      "polishAudio": "Rocznie"
     },
     {
       "id": "t1-p579-012",
       "english": "Primarily",
-      "polish": "W pierwszym rzędzie",
+      "polish": "W pierwszym rzędzie; przede wszystkim",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p579-012-word.mp3",
       "audioWordPl": "t1-p579-012-word-pl.mp3",
-      "audioSentence": "t1-p579-012-sentence.mp3"
+      "audioSentence": "t1-p579-012-sentence.mp3",
+      "polishAudio": "W pierwszym rzędzie"
     },
     {
       "id": "t1-p579-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p579-013-word.mp3",
       "audioWordPl": "t1-p579-013-word-pl.mp3",
-      "audioSentence": "t1-p579-013-sentence.mp3"
+      "audioSentence": "t1-p579-013-sentence.mp3",
+      "polishAudio": "Prędzej czy później"
     },
     {
       "id": "t1-p579-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p579-014-word.mp3",
       "audioWordPl": "t1-p579-014-word-pl.mp3",
-      "audioSentence": "t1-p579-014-sentence.mp3"
+      "audioSentence": "t1-p579-014-sentence.mp3",
+      "polishAudio": "Wiecznie"
     },
     {
       "id": "t1-p579-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p579-015-word.mp3",
       "audioWordPl": "t1-p579-015-word-pl.mp3",
-      "audioSentence": "t1-p579-015-sentence.mp3"
+      "audioSentence": "t1-p579-015-sentence.mp3",
+      "polishAudio": "Obojętnie kiedy"
     }
   ]
 }

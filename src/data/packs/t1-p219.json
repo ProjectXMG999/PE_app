@@ -10,151 +10,166 @@
       "id": "t1-p219-001",
       "english": "Nut",
       "polish": "Orzech",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "This nut is stuck in my tooth again.",
+      "sentencePl": "Ten orzech znowu utknął mi w zębie.",
       "audioWord": "t1-p219-001-word.mp3",
       "audioWordPl": "t1-p219-001-word-pl.mp3",
-      "audioSentence": "t1-p219-001-sentence.mp3"
+      "audioSentence": "t1-p219-001-sentence.mp3",
+      "polishAudio": "Orzech"
     },
     {
       "id": "t1-p219-002",
       "english": "Donut",
       "polish": "Pączek",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You promised me the last donut, remember?",
+      "sentencePl": "Obiecałeś mi ostatniego pączka, pamiętasz?",
       "audioWord": "t1-p219-002-word.mp3",
       "audioWordPl": "t1-p219-002-word-pl.mp3",
-      "audioSentence": "t1-p219-002-sentence.mp3"
+      "audioSentence": "t1-p219-002-sentence.mp3",
+      "polishAudio": "Pączek"
     },
     {
       "id": "t1-p219-003",
       "english": "Pie",
-      "polish": "Placek",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Placek; ciasto",
+      "sentenceEn": "Mum, your pie fixed my terrible day.",
+      "sentencePl": "Mamo, twój placek uratował mi kiepski dzień.",
       "audioWord": "t1-p219-003-word.mp3",
       "audioWordPl": "t1-p219-003-word-pl.mp3",
-      "audioSentence": "t1-p219-003-sentence.mp3"
+      "audioSentence": "t1-p219-003-sentence.mp3",
+      "polishAudio": "Placek"
     },
     {
       "id": "t1-p219-004",
       "english": "Cereal",
       "polish": "Płatki śniadaniowe",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I ate cereal for dinner and honestly, no regrets.",
+      "sentencePl": "Zjadłem płatki na kolację i szczerze mówiąc, nie żałuję.",
       "audioWord": "t1-p219-004-word.mp3",
       "audioWordPl": "t1-p219-004-word-pl.mp3",
-      "audioSentence": "t1-p219-004-sentence.mp3"
+      "audioSentence": "t1-p219-004-sentence.mp3",
+      "polishAudio": "Płatki śniadaniowe"
     },
     {
       "id": "t1-p219-005",
       "english": "Portion",
       "polish": "Porcja",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "That portion was huge; I need a nap.",
+      "sentencePl": "Ta porcja była ogromna; potrzebuję drzemki.",
       "audioWord": "t1-p219-005-word.mp3",
       "audioWordPl": "t1-p219-005-word-pl.mp3",
-      "audioSentence": "t1-p219-005-sentence.mp3"
+      "audioSentence": "t1-p219-005-sentence.mp3",
+      "polishAudio": "Porcja"
     },
     {
       "id": "t1-p219-006",
       "english": "Dish",
       "polish": "Potrawa",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "This dish went viral on Instagram, so I tried it.",
+      "sentencePl": "Ta potrawa stała się viralem na Instagramie, więc jej spróbowałem.",
       "audioWord": "t1-p219-006-word.mp3",
       "audioWordPl": "t1-p219-006-word-pl.mp3",
-      "audioSentence": "t1-p219-006-sentence.mp3"
+      "audioSentence": "t1-p219-006-sentence.mp3",
+      "polishAudio": "Potrawa"
     },
     {
       "id": "t1-p219-007",
       "english": "Recipe",
-      "polish": "Przepis",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Przepis (na danie)",
+      "sentenceEn": "Can you share your recipe for those amazing pancakes?",
+      "sentencePl": "Możesz podać mi przepis na te świetne naleśniki?",
       "audioWord": "t1-p219-007-word.mp3",
       "audioWordPl": "t1-p219-007-word-pl.mp3",
-      "audioSentence": "t1-p219-007-sentence.mp3"
+      "audioSentence": "t1-p219-007-sentence.mp3",
+      "polishAudio": "Przepis"
     },
     {
       "id": "t1-p219-008",
       "english": "Spice",
       "polish": "Przyprawa",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I added the spice slowly, just in case.",
+      "sentencePl": "Dodawałem przyprawę powoli, tak na wszelki wypadek.",
       "audioWord": "t1-p219-008-word.mp3",
       "audioWordPl": "t1-p219-008-word-pl.mp3",
-      "audioSentence": "t1-p219-008-sentence.mp3"
+      "audioSentence": "t1-p219-008-sentence.mp3",
+      "polishAudio": "Przyprawa"
     },
     {
       "id": "t1-p219-009",
       "english": "Cheesecake",
       "polish": "Sernik",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You deserve the bigger slice of cheesecake today.",
+      "sentencePl": "Dzisiaj zasługujesz na większy kawałek sernika.",
       "audioWord": "t1-p219-009-word.mp3",
       "audioWordPl": "t1-p219-009-word-pl.mp3",
-      "audioSentence": "t1-p219-009-sentence.mp3"
+      "audioSentence": "t1-p219-009-sentence.mp3",
+      "polishAudio": "Sernik"
     },
     {
       "id": "t1-p219-010",
       "english": "Flavor",
-      "polish": "Smak",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Smak (potrawy)",
+      "sentenceEn": "That flavor takes me straight back to summer camp.",
+      "sentencePl": "Ten smak od razu przenosi mnie z powrotem na letni obóz.",
       "audioWord": "t1-p219-010-word.mp3",
       "audioWordPl": "t1-p219-010-word-pl.mp3",
-      "audioSentence": "t1-p219-010-sentence.mp3"
+      "audioSentence": "t1-p219-010-sentence.mp3",
+      "polishAudio": "Smak"
     },
     {
       "id": "t1-p219-011",
       "english": "Sauce",
       "polish": "Sos",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You made the sauce spicy again, didn't you?",
+      "sentencePl": "Znowu zrobiłeś ostry sos, prawda?",
       "audioWord": "t1-p219-011-word.mp3",
       "audioWordPl": "t1-p219-011-word-pl.mp3",
-      "audioSentence": "t1-p219-011-sentence.mp3"
+      "audioSentence": "t1-p219-011-sentence.mp3",
+      "polishAudio": "Sos"
     },
     {
       "id": "t1-p219-012",
       "english": "Spaghetti",
       "polish": "Spaghetti",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Your spaghetti beats every restaurant near my flat.",
+      "sentencePl": "Twoje spaghetti jest lepsze niż w każdej restauracji koło mojego mieszkania.",
       "audioWord": "t1-p219-012-word.mp3",
       "audioWordPl": "t1-p219-012-word-pl.mp3",
-      "audioSentence": "t1-p219-012-sentence.mp3"
+      "audioSentence": "t1-p219-012-sentence.mp3",
+      "polishAudio": "Spaghetti"
     },
     {
       "id": "t1-p219-013",
       "english": "Pepper",
       "polish": "Pieprz",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I sneezed so hard after adding pepper.",
+      "sentencePl": "Kichnąłem tak mocno po dodaniu pieprzu.",
       "audioWord": "t1-p219-013-word.mp3",
       "audioWordPl": "t1-p219-013-word-pl.mp3",
-      "audioSentence": "t1-p219-013-sentence.mp3"
+      "audioSentence": "t1-p219-013-sentence.mp3",
+      "polishAudio": "Pieprz"
     },
     {
       "id": "t1-p219-014",
       "english": "Sushi",
       "polish": "Sushi",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Do you feel like sushi, or would you rather have something warm?",
+      "sentencePl": "Masz ochotę na sushi czy wolisz coś ciepłego?",
       "audioWord": "t1-p219-014-word.mp3",
       "audioWordPl": "t1-p219-014-word-pl.mp3",
-      "audioSentence": "t1-p219-014-sentence.mp3"
+      "audioSentence": "t1-p219-014-sentence.mp3",
+      "polishAudio": "Sushi"
     },
     {
       "id": "t1-p219-015",
       "english": "Apple pie",
       "polish": "Szarlotka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Apple pie sounds perfect now that the weather turned cold.",
+      "sentencePl": "Szarlotka brzmi idealnie, teraz gdy zrobiło się chłodno.",
       "audioWord": "t1-p219-015-word.mp3",
       "audioWordPl": "t1-p219-015-word-pl.mp3",
-      "audioSentence": "t1-p219-015-sentence.mp3"
+      "audioSentence": "t1-p219-015-sentence.mp3",
+      "polishAudio": "Szarlotka"
     }
   ]
 }

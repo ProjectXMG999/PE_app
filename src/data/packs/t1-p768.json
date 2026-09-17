@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-001-word.mp3",
       "audioWordPl": "t1-p768-001-word-pl.mp3",
-      "audioSentence": "t1-p768-001-sentence.mp3"
+      "audioSentence": "t1-p768-001-sentence.mp3",
+      "polishAudio": "Rzut młotem"
     },
     {
       "id": "t1-p768-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-002-word.mp3",
       "audioWordPl": "t1-p768-002-word-pl.mp3",
-      "audioSentence": "t1-p768-002-sentence.mp3"
+      "audioSentence": "t1-p768-002-sentence.mp3",
+      "polishAudio": "Rzut oszczepem"
     },
     {
       "id": "t1-p768-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p768-003-word.mp3",
       "audioWordPl": "t1-p768-003-word-pl.mp3",
-      "audioSentence": "t1-p768-003-sentence.mp3"
+      "audioSentence": "t1-p768-003-sentence.mp3",
+      "polishAudio": "Saneczkarstwo"
     },
     {
       "id": "t1-p768-004",
       "english": "Umpire",
-      "polish": "Sędzia",
+      "polish": "Sędzia (w tenisie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p768-004-word.mp3",
       "audioWordPl": "t1-p768-004-word-pl.mp3",
-      "audioSentence": "t1-p768-004-sentence.mp3"
+      "audioSentence": "t1-p768-004-sentence.mp3",
+      "polishAudio": "Sędzia"
     },
     {
       "id": "t1-p768-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-005-word.mp3",
       "audioWordPl": "t1-p768-005-word-pl.mp3",
-      "audioSentence": "t1-p768-005-sentence.mp3"
+      "audioSentence": "t1-p768-005-sentence.mp3",
+      "polishAudio": "Skok o tyczce"
     },
     {
       "id": "t1-p768-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-006-word.mp3",
       "audioWordPl": "t1-p768-006-word-pl.mp3",
-      "audioSentence": "t1-p768-006-sentence.mp3"
+      "audioSentence": "t1-p768-006-sentence.mp3",
+      "polishAudio": "Skok w dal"
     },
     {
       "id": "t1-p768-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-007-word.mp3",
       "audioWordPl": "t1-p768-007-word-pl.mp3",
-      "audioSentence": "t1-p768-007-sentence.mp3"
+      "audioSentence": "t1-p768-007-sentence.mp3",
+      "polishAudio": "Skok wzwyż"
     },
     {
       "id": "t1-p768-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-008-word.mp3",
       "audioWordPl": "t1-p768-008-word-pl.mp3",
-      "audioSentence": "t1-p768-008-sentence.mp3"
+      "audioSentence": "t1-p768-008-sentence.mp3",
+      "polishAudio": "Strzelectwo"
     },
     {
       "id": "t1-p768-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-009-word.mp3",
       "audioWordPl": "t1-p768-009-word-pl.mp3",
-      "audioSentence": "t1-p768-009-sentence.mp3"
+      "audioSentence": "t1-p768-009-sentence.mp3",
+      "polishAudio": "Szermierka"
     },
     {
       "id": "t1-p768-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-010-word.mp3",
       "audioWordPl": "t1-p768-010-word-pl.mp3",
-      "audioSentence": "t1-p768-010-sentence.mp3"
+      "audioSentence": "t1-p768-010-sentence.mp3",
+      "polishAudio": "Sztafeta"
     },
     {
       "id": "t1-p768-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-011-word.mp3",
       "audioWordPl": "t1-p768-011-word-pl.mp3",
-      "audioSentence": "t1-p768-011-sentence.mp3"
+      "audioSentence": "t1-p768-011-sentence.mp3",
+      "polishAudio": "Szybowiec"
     },
     {
       "id": "t1-p768-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-012-word.mp3",
       "audioWordPl": "t1-p768-012-word-pl.mp3",
-      "audioSentence": "t1-p768-012-sentence.mp3"
+      "audioSentence": "t1-p768-012-sentence.mp3",
+      "polishAudio": "Trójskok"
     },
     {
       "id": "t1-p768-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-013-word.mp3",
       "audioWordPl": "t1-p768-013-word-pl.mp3",
-      "audioSentence": "t1-p768-013-sentence.mp3"
+      "audioSentence": "t1-p768-013-sentence.mp3",
+      "polishAudio": "Wioślarstwo"
     },
     {
       "id": "t1-p768-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-014-word.mp3",
       "audioWordPl": "t1-p768-014-word-pl.mp3",
-      "audioSentence": "t1-p768-014-sentence.mp3"
+      "audioSentence": "t1-p768-014-sentence.mp3",
+      "polishAudio": "Zdobywca drugiego miejsca"
     },
     {
       "id": "t1-p768-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p768-015-word.mp3",
       "audioWordPl": "t1-p768-015-word-pl.mp3",
-      "audioSentence": "t1-p768-015-sentence.mp3"
+      "audioSentence": "t1-p768-015-sentence.mp3",
+      "polishAudio": "Trafiać"
     }
   ]
 }

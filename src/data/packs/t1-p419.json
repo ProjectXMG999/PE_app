@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p419-001-word.mp3",
       "audioWordPl": "t1-p419-001-word-pl.mp3",
-      "audioSentence": "t1-p419-001-sentence.mp3"
+      "audioSentence": "t1-p419-001-sentence.mp3",
+      "polishAudio": "Drużba"
     },
     {
       "id": "t1-p419-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p419-002-word.mp3",
       "audioWordPl": "t1-p419-002-word-pl.mp3",
-      "audioSentence": "t1-p419-002-sentence.mp3"
+      "audioSentence": "t1-p419-002-sentence.mp3",
+      "polishAudio": "Nowożeńcy"
     },
     {
       "id": "t1-p419-003",
       "english": "Proposal",
-      "polish": "Oświadczyny",
+      "polish": "Oświadczyny; propozycja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p419-003-word.mp3",
       "audioWordPl": "t1-p419-003-word-pl.mp3",
-      "audioSentence": "t1-p419-003-sentence.mp3"
+      "audioSentence": "t1-p419-003-sentence.mp3",
+      "polishAudio": "Oświadczyny"
     },
     {
       "id": "t1-p419-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p419-004-word.mp3",
       "audioWordPl": "t1-p419-004-word-pl.mp3",
-      "audioSentence": "t1-p419-004-sentence.mp3"
+      "audioSentence": "t1-p419-004-sentence.mp3",
+      "polishAudio": "Ślub cywilny"
     },
     {
       "id": "t1-p419-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p419-005-word.mp3",
       "audioWordPl": "t1-p419-005-word-pl.mp3",
-      "audioSentence": "t1-p419-005-sentence.mp3"
+      "audioSentence": "t1-p419-005-sentence.mp3",
+      "polishAudio": "Ślub kościelny"
     },
     {
       "id": "t1-p419-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p419-006-word.mp3",
       "audioWordPl": "t1-p419-006-word-pl.mp3",
-      "audioSentence": "t1-p419-006-sentence.mp3"
+      "audioSentence": "t1-p419-006-sentence.mp3",
+      "polishAudio": "Wieczór kawalerski"
     },
     {
       "id": "t1-p419-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p419-007-word.mp3",
       "audioWordPl": "t1-p419-007-word-pl.mp3",
-      "audioSentence": "t1-p419-007-sentence.mp3"
+      "audioSentence": "t1-p419-007-sentence.mp3",
+      "polishAudio": "Wieczór panieński"
     },
     {
       "id": "t1-p419-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p419-008-word.mp3",
       "audioWordPl": "t1-p419-008-word-pl.mp3",
-      "audioSentence": "t1-p419-008-sentence.mp3"
+      "audioSentence": "t1-p419-008-sentence.mp3",
+      "polishAudio": "Separacja"
     },
     {
       "id": "t1-p419-009",
@@ -94,37 +102,41 @@
       "sentencePl": null,
       "audioWord": "t1-p419-009-word.mp3",
       "audioWordPl": "t1-p419-009-word-pl.mp3",
-      "audioSentence": "t1-p419-009-sentence.mp3"
+      "audioSentence": "t1-p419-009-sentence.mp3",
+      "polishAudio": "Stan cywilny"
     },
     {
       "id": "t1-p419-010",
       "english": "Spouse",
-      "polish": "Małżonek",
+      "polish": "Małżonek; małżonka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p419-010-word.mp3",
       "audioWordPl": "t1-p419-010-word-pl.mp3",
-      "audioSentence": "t1-p419-010-sentence.mp3"
+      "audioSentence": "t1-p419-010-sentence.mp3",
+      "polishAudio": "Małżonek"
     },
     {
       "id": "t1-p419-011",
       "english": "Fiancé",
-      "polish": "Narzeczony",
+      "polish": "Narzeczony; narzeczona",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p419-011-word.mp3",
       "audioWordPl": "t1-p419-011-word-pl.mp3",
-      "audioSentence": "t1-p419-011-sentence.mp3"
+      "audioSentence": "t1-p419-011-sentence.mp3",
+      "polishAudio": "Narzeczony"
     },
     {
       "id": "t1-p419-012",
       "english": "Maiden",
-      "polish": "Panna",
+      "polish": "Panna (niezamężna)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p419-012-word.mp3",
       "audioWordPl": "t1-p419-012-word-pl.mp3",
-      "audioSentence": "t1-p419-012-sentence.mp3"
+      "audioSentence": "t1-p419-012-sentence.mp3",
+      "polishAudio": "Panna"
     },
     {
       "id": "t1-p419-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p419-013-word.mp3",
       "audioWordPl": "t1-p419-013-word-pl.mp3",
-      "audioSentence": "t1-p419-013-sentence.mp3"
+      "audioSentence": "t1-p419-013-sentence.mp3",
+      "polishAudio": "Przyjęcie weselne"
     },
     {
       "id": "t1-p419-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p419-014-word.mp3",
       "audioWordPl": "t1-p419-014-word-pl.mp3",
-      "audioSentence": "t1-p419-014-sentence.mp3"
+      "audioSentence": "t1-p419-014-sentence.mp3",
+      "polishAudio": "Niewierność"
     },
     {
       "id": "t1-p419-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p419-015-word.mp3",
       "audioWordPl": "t1-p419-015-word-pl.mp3",
-      "audioSentence": "t1-p419-015-sentence.mp3"
+      "audioSentence": "t1-p419-015-sentence.mp3",
+      "polishAudio": "Związek małżeński"
     }
   ]
 }

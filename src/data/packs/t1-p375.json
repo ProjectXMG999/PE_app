@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p375-001-word.mp3",
       "audioWordPl": "t1-p375-001-word-pl.mp3",
-      "audioSentence": "t1-p375-001-sentence.mp3"
+      "audioSentence": "t1-p375-001-sentence.mp3",
+      "polishAudio": "Kredki"
     },
     {
       "id": "t1-p375-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p375-002-word.mp3",
       "audioWordPl": "t1-p375-002-word-pl.mp3",
-      "audioSentence": "t1-p375-002-sentence.mp3"
+      "audioSentence": "t1-p375-002-sentence.mp3",
+      "polishAudio": "Naklejka"
     },
     {
       "id": "t1-p375-003",
       "english": "Draft",
-      "polish": "Brudnopis",
+      "polish": "Brudnopis; szkic (coś wstępnego)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p375-003-word.mp3",
       "audioWordPl": "t1-p375-003-word-pl.mp3",
-      "audioSentence": "t1-p375-003-sentence.mp3"
+      "audioSentence": "t1-p375-003-sentence.mp3",
+      "polishAudio": "Brudnopis"
     },
     {
       "id": "t1-p375-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p375-004-word.mp3",
       "audioWordPl": "t1-p375-004-word-pl.mp3",
-      "audioSentence": "t1-p375-004-sentence.mp3"
+      "audioSentence": "t1-p375-004-sentence.mp3",
+      "polishAudio": "Konsultacje"
     },
     {
       "id": "t1-p375-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p375-005-word.mp3",
       "audioWordPl": "t1-p375-005-word-pl.mp3",
-      "audioSentence": "t1-p375-005-sentence.mp3"
+      "audioSentence": "t1-p375-005-sentence.mp3",
+      "polishAudio": "Polecenie"
     },
     {
       "id": "t1-p375-006",
       "english": "Master",
-      "polish": "Magister",
+      "polish": "Magister; mistrz",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p375-006-word.mp3",
       "audioWordPl": "t1-p375-006-word-pl.mp3",
-      "audioSentence": "t1-p375-006-sentence.mp3"
+      "audioSentence": "t1-p375-006-sentence.mp3",
+      "polishAudio": "Magister"
     },
     {
       "id": "t1-p375-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p375-007-word.mp3",
       "audioWordPl": "t1-p375-007-word-pl.mp3",
-      "audioSentence": "t1-p375-007-sentence.mp3"
+      "audioSentence": "t1-p375-007-sentence.mp3",
+      "polishAudio": "Matura"
     },
     {
       "id": "t1-p375-008",
       "english": "Attendance",
-      "polish": "Obecność na czymś",
+      "polish": "Obecność na czymś; uczęszczanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p375-008-word.mp3",
       "audioWordPl": "t1-p375-008-word-pl.mp3",
-      "audioSentence": "t1-p375-008-sentence.mp3"
+      "audioSentence": "t1-p375-008-sentence.mp3",
+      "polishAudio": "Obecność na czymś"
     },
     {
       "id": "t1-p375-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p375-009-word.mp3",
       "audioWordPl": "t1-p375-009-word-pl.mp3",
-      "audioSentence": "t1-p375-009-sentence.mp3"
+      "audioSentence": "t1-p375-009-sentence.mp3",
+      "polishAudio": "Politechnika"
     },
     {
       "id": "t1-p375-010",
       "english": "Retake",
-      "polish": "Poprawa",
+      "polish": "Poprawa (egzaminu)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p375-010-word.mp3",
       "audioWordPl": "t1-p375-010-word-pl.mp3",
-      "audioSentence": "t1-p375-010-sentence.mp3"
+      "audioSentence": "t1-p375-010-sentence.mp3",
+      "polishAudio": "Poprawa"
     },
     {
       "id": "t1-p375-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p375-011-word.mp3",
       "audioWordPl": "t1-p375-011-word-pl.mp3",
-      "audioSentence": "t1-p375-011-sentence.mp3"
+      "audioSentence": "t1-p375-011-sentence.mp3",
+      "polishAudio": "Przedmiot szkolny"
     },
     {
       "id": "t1-p375-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p375-012-word.mp3",
       "audioWordPl": "t1-p375-012-word-pl.mp3",
-      "audioSentence": "t1-p375-012-sentence.mp3"
+      "audioSentence": "t1-p375-012-sentence.mp3",
+      "polishAudio": "Semestr"
     },
     {
       "id": "t1-p375-013",
       "english": "Grade",
-      "polish": "Stopień",
+      "polish": "Stopień; ocena (w szkole)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p375-013-word.mp3",
       "audioWordPl": "t1-p375-013-word-pl.mp3",
-      "audioSentence": "t1-p375-013-sentence.mp3"
+      "audioSentence": "t1-p375-013-sentence.mp3",
+      "polishAudio": "Stopień"
     },
     {
       "id": "t1-p375-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p375-014-word.mp3",
       "audioWordPl": "t1-p375-014-word-pl.mp3",
-      "audioSentence": "t1-p375-014-sentence.mp3"
+      "audioSentence": "t1-p375-014-sentence.mp3",
+      "polishAudio": "Tablica kredowa"
     },
     {
       "id": "t1-p375-015",
       "english": "Faculty",
-      "polish": "Wydział",
+      "polish": "Wydział; kadra akademicka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p375-015-word.mp3",
       "audioWordPl": "t1-p375-015-word-pl.mp3",
-      "audioSentence": "t1-p375-015-sentence.mp3"
+      "audioSentence": "t1-p375-015-sentence.mp3",
+      "polishAudio": "Wydział"
     }
   ]
 }

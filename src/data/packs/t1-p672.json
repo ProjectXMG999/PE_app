@@ -14,37 +14,41 @@
       "sentencePl": null,
       "audioWord": "t1-p672-001-word.mp3",
       "audioWordPl": "t1-p672-001-word-pl.mp3",
-      "audioSentence": "t1-p672-001-sentence.mp3"
+      "audioSentence": "t1-p672-001-sentence.mp3",
+      "polishAudio": "Nierentowny"
     },
     {
       "id": "t1-p672-002",
       "english": "Earned",
-      "polish": "Zasłużony",
+      "polish": "Zasłużony (np. o czymś co się dostało)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p672-002-word.mp3",
       "audioWordPl": "t1-p672-002-word-pl.mp3",
-      "audioSentence": "t1-p672-002-sentence.mp3"
+      "audioSentence": "t1-p672-002-sentence.mp3",
+      "polishAudio": "Zasłużony"
     },
     {
       "id": "t1-p672-003",
       "english": "Gross",
-      "polish": "Brutto",
+      "polish": "Brutto; całkowity",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p672-003-word.mp3",
       "audioWordPl": "t1-p672-003-word-pl.mp3",
-      "audioSentence": "t1-p672-003-sentence.mp3"
+      "audioSentence": "t1-p672-003-sentence.mp3",
+      "polishAudio": "Brutto"
     },
     {
       "id": "t1-p672-004",
       "english": "Profitable",
-      "polish": "Dochodowy",
+      "polish": "Dochodowy; opłacalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p672-004-word.mp3",
       "audioWordPl": "t1-p672-004-word-pl.mp3",
-      "audioSentence": "t1-p672-004-sentence.mp3"
+      "audioSentence": "t1-p672-004-sentence.mp3",
+      "polishAudio": "Dochodowy"
     },
     {
       "id": "t1-p672-005",
@@ -54,27 +58,30 @@
       "sentencePl": null,
       "audioWord": "t1-p672-005-word.mp3",
       "audioWordPl": "t1-p672-005-word-pl.mp3",
-      "audioSentence": "t1-p672-005-sentence.mp3"
+      "audioSentence": "t1-p672-005-sentence.mp3",
+      "polishAudio": "Kierowniczy"
     },
     {
       "id": "t1-p672-006",
       "english": "On-site",
-      "polish": "Dostępny na miejscu",
+      "polish": "Dostępny na miejscu; terenowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p672-006-word.mp3",
       "audioWordPl": "t1-p672-006-word-pl.mp3",
-      "audioSentence": "t1-p672-006-sentence.mp3"
+      "audioSentence": "t1-p672-006-sentence.mp3",
+      "polishAudio": "Dostępny na miejscu"
     },
     {
       "id": "t1-p672-007",
       "english": "Subsidiary",
-      "polish": "Podległy",
+      "polish": "Podległy (o spółce)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p672-007-word.mp3",
       "audioWordPl": "t1-p672-007-word-pl.mp3",
-      "audioSentence": "t1-p672-007-sentence.mp3"
+      "audioSentence": "t1-p672-007-sentence.mp3",
+      "polishAudio": "Podległy"
     },
     {
       "id": "t1-p672-008",
@@ -84,27 +91,30 @@
       "sentencePl": null,
       "audioWord": "t1-p672-008-word.mp3",
       "audioWordPl": "t1-p672-008-word-pl.mp3",
-      "audioSentence": "t1-p672-008-sentence.mp3"
+      "audioSentence": "t1-p672-008-sentence.mp3",
+      "polishAudio": "Niestacjonarny"
     },
     {
       "id": "t1-p672-009",
       "english": "Trial",
-      "polish": "Próbny",
+      "polish": "Próbny; ćwiczebny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p672-009-word.mp3",
       "audioWordPl": "t1-p672-009-word-pl.mp3",
-      "audioSentence": "t1-p672-009-sentence.mp3"
+      "audioSentence": "t1-p672-009-sentence.mp3",
+      "polishAudio": "Próbny"
     },
     {
       "id": "t1-p672-010",
       "english": "Blank",
-      "polish": "Pusty",
+      "polish": "Pusty; niewypełniony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p672-010-word.mp3",
       "audioWordPl": "t1-p672-010-word-pl.mp3",
-      "audioSentence": "t1-p672-010-sentence.mp3"
+      "audioSentence": "t1-p672-010-sentence.mp3",
+      "polishAudio": "Pusty"
     },
     {
       "id": "t1-p672-011",
@@ -114,27 +124,30 @@
       "sentencePl": null,
       "audioWord": "t1-p672-011-word.mp3",
       "audioWordPl": "t1-p672-011-word-pl.mp3",
-      "audioSentence": "t1-p672-011-sentence.mp3"
+      "audioSentence": "t1-p672-011-sentence.mp3",
+      "polishAudio": "Stacjonarny"
     },
     {
       "id": "t1-p672-012",
       "english": "Fixed",
-      "polish": "Ustalony",
+      "polish": "Ustalony (np. o cenie); stały; naprawiony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p672-012-word.mp3",
       "audioWordPl": "t1-p672-012-word-pl.mp3",
-      "audioSentence": "t1-p672-012-sentence.mp3"
+      "audioSentence": "t1-p672-012-sentence.mp3",
+      "polishAudio": "Ustalony"
     },
     {
       "id": "t1-p672-013",
       "english": "White-collar",
-      "polish": "Biurowy",
+      "polish": "Biurowy (o pracowniku)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p672-013-word.mp3",
       "audioWordPl": "t1-p672-013-word-pl.mp3",
-      "audioSentence": "t1-p672-013-sentence.mp3"
+      "audioSentence": "t1-p672-013-sentence.mp3",
+      "polishAudio": "Biurowy"
     },
     {
       "id": "t1-p672-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p672-014-word.mp3",
       "audioWordPl": "t1-p672-014-word-pl.mp3",
-      "audioSentence": "t1-p672-014-sentence.mp3"
+      "audioSentence": "t1-p672-014-sentence.mp3",
+      "polishAudio": "Ciężko zarobiony"
     },
     {
       "id": "t1-p672-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p672-015-word.mp3",
       "audioWordPl": "t1-p672-015-word-pl.mp3",
-      "audioSentence": "t1-p672-015-sentence.mp3"
+      "audioSentence": "t1-p672-015-sentence.mp3",
+      "polishAudio": "Dobrze sytuowany"
     }
   ]
 }

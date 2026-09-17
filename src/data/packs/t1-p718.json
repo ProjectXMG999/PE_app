@@ -14,37 +14,41 @@
       "sentencePl": null,
       "audioWord": "t1-p718-001-word.mp3",
       "audioWordPl": "t1-p718-001-word-pl.mp3",
-      "audioSentence": "t1-p718-001-sentence.mp3"
+      "audioSentence": "t1-p718-001-sentence.mp3",
+      "polishAudio": "Zwiać"
     },
     {
       "id": "t1-p718-002",
       "english": "Crook",
-      "polish": "Oszust",
+      "polish": "Oszust (kanciarz); zbir; oprych",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p718-002-word.mp3",
       "audioWordPl": "t1-p718-002-word-pl.mp3",
-      "audioSentence": "t1-p718-002-sentence.mp3"
+      "audioSentence": "t1-p718-002-sentence.mp3",
+      "polishAudio": "Oszust"
     },
     {
       "id": "t1-p718-003",
       "english": "Goodfella",
-      "polish": "Mafiozo",
+      "polish": "Mafiozo (usa); chłopak z ferajny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p718-003-word.mp3",
       "audioWordPl": "t1-p718-003-word-pl.mp3",
-      "audioSentence": "t1-p718-003-sentence.mp3"
+      "audioSentence": "t1-p718-003-sentence.mp3",
+      "polishAudio": "Mafiozo"
     },
     {
       "id": "t1-p718-004",
       "english": "Goon",
-      "polish": "Pomagier",
+      "polish": "Pomagier; zbir",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p718-004-word.mp3",
       "audioWordPl": "t1-p718-004-word-pl.mp3",
-      "audioSentence": "t1-p718-004-sentence.mp3"
+      "audioSentence": "t1-p718-004-sentence.mp3",
+      "polishAudio": "Pomagier"
     },
     {
       "id": "t1-p718-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p718-005-word.mp3",
       "audioWordPl": "t1-p718-005-word-pl.mp3",
-      "audioSentence": "t1-p718-005-sentence.mp3"
+      "audioSentence": "t1-p718-005-sentence.mp3",
+      "polishAudio": "Zbir"
     },
     {
       "id": "t1-p718-006",
       "english": "Hustler",
-      "polish": "Kanciarz",
+      "polish": "Kanciarz; cwaniaczek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p718-006-word.mp3",
       "audioWordPl": "t1-p718-006-word-pl.mp3",
-      "audioSentence": "t1-p718-006-sentence.mp3"
+      "audioSentence": "t1-p718-006-sentence.mp3",
+      "polishAudio": "Kanciarz"
     },
     {
       "id": "t1-p718-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p718-007-word.mp3",
       "audioWordPl": "t1-p718-007-word-pl.mp3",
-      "audioSentence": "t1-p718-007-sentence.mp3"
+      "audioSentence": "t1-p718-007-sentence.mp3",
+      "polishAudio": "Najemnik"
     },
     {
       "id": "t1-p718-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p718-008-word.mp3",
       "audioWordPl": "t1-p718-008-word-pl.mp3",
-      "audioSentence": "t1-p718-008-sentence.mp3"
+      "audioSentence": "t1-p718-008-sentence.mp3",
+      "polishAudio": "Rabuś"
     },
     {
       "id": "t1-p718-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p718-009-word.mp3",
       "audioWordPl": "t1-p718-009-word-pl.mp3",
-      "audioSentence": "t1-p718-009-sentence.mp3"
+      "audioSentence": "t1-p718-009-sentence.mp3",
+      "polishAudio": "Maniakalny fan"
     },
     {
       "id": "t1-p718-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p718-010-word.mp3",
       "audioWordPl": "t1-p718-010-word-pl.mp3",
-      "audioSentence": "t1-p718-010-sentence.mp3"
+      "audioSentence": "t1-p718-010-sentence.mp3",
+      "polishAudio": "Oprych"
     }
   ]
 }

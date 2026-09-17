@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p573-001-word.mp3",
       "audioWordPl": "t1-p573-001-word-pl.mp3",
-      "audioSentence": "t1-p573-001-sentence.mp3"
+      "audioSentence": "t1-p573-001-sentence.mp3",
+      "polishAudio": "Pocieszać"
     },
     {
       "id": "t1-p573-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p573-002-word.mp3",
       "audioWordPl": "t1-p573-002-word-pl.mp3",
-      "audioSentence": "t1-p573-002-sentence.mp3"
+      "audioSentence": "t1-p573-002-sentence.mp3",
+      "polishAudio": "Zachwycać"
     },
     {
       "id": "t1-p573-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p573-003-word.mp3",
       "audioWordPl": "t1-p573-003-word-pl.mp3",
-      "audioSentence": "t1-p573-003-sentence.mp3"
+      "audioSentence": "t1-p573-003-sentence.mp3",
+      "polishAudio": "Uwielbiać"
     },
     {
       "id": "t1-p573-004",
@@ -44,17 +47,19 @@
       "sentencePl": null,
       "audioWord": "t1-p573-004-word.mp3",
       "audioWordPl": "t1-p573-004-word-pl.mp3",
-      "audioSentence": "t1-p573-004-sentence.mp3"
+      "audioSentence": "t1-p573-004-sentence.mp3",
+      "polishAudio": "Błogosławić"
     },
     {
       "id": "t1-p573-005",
       "english": "Comfort",
-      "polish": "Nieść ulgę",
+      "polish": "Nieść ulgę; pocieszać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p573-005-word.mp3",
       "audioWordPl": "t1-p573-005-word-pl.mp3",
-      "audioSentence": "t1-p573-005-sentence.mp3"
+      "audioSentence": "t1-p573-005-sentence.mp3",
+      "polishAudio": "Nieść ulgę"
     },
     {
       "id": "t1-p573-006",
@@ -64,27 +69,30 @@
       "sentencePl": null,
       "audioWord": "t1-p573-006-word.mp3",
       "audioWordPl": "t1-p573-006-word-pl.mp3",
-      "audioSentence": "t1-p573-006-sentence.mp3"
+      "audioSentence": "t1-p573-006-sentence.mp3",
+      "polishAudio": "Odważyć się"
     },
     {
       "id": "t1-p573-007",
       "english": "Value",
-      "polish": "Cenić",
+      "polish": "Cenić; doceniać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p573-007-word.mp3",
       "audioWordPl": "t1-p573-007-word-pl.mp3",
-      "audioSentence": "t1-p573-007-sentence.mp3"
+      "audioSentence": "t1-p573-007-sentence.mp3",
+      "polishAudio": "Cenić"
     },
     {
       "id": "t1-p573-008",
       "english": "Cherish",
-      "polish": "Miłować",
+      "polish": "Miłować; dbać, troszczyć się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p573-008-word.mp3",
       "audioWordPl": "t1-p573-008-word-pl.mp3",
-      "audioSentence": "t1-p573-008-sentence.mp3"
+      "audioSentence": "t1-p573-008-sentence.mp3",
+      "polishAudio": "Miłować"
     },
     {
       "id": "t1-p573-009",
@@ -94,57 +102,63 @@
       "sentencePl": null,
       "audioWord": "t1-p573-009-word.mp3",
       "audioWordPl": "t1-p573-009-word-pl.mp3",
-      "audioSentence": "t1-p573-009-sentence.mp3"
+      "audioSentence": "t1-p573-009-sentence.mp3",
+      "polishAudio": "Dogadzać"
     },
     {
       "id": "t1-p573-010",
       "english": "Marvel",
-      "polish": "Zachwycać się",
+      "polish": "Zachwycać się; być pełnym podziwu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p573-010-word.mp3",
       "audioWordPl": "t1-p573-010-word-pl.mp3",
-      "audioSentence": "t1-p573-010-sentence.mp3"
+      "audioSentence": "t1-p573-010-sentence.mp3",
+      "polishAudio": "Zachwycać się"
     },
     {
       "id": "t1-p573-011",
       "english": "Shield",
-      "polish": "Osłaniać",
+      "polish": "Osłaniać; ochraniać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p573-011-word.mp3",
       "audioWordPl": "t1-p573-011-word-pl.mp3",
-      "audioSentence": "t1-p573-011-sentence.mp3"
+      "audioSentence": "t1-p573-011-sentence.mp3",
+      "polishAudio": "Osłaniać"
     },
     {
       "id": "t1-p573-012",
       "english": "Worship",
-      "polish": "Wielbić",
+      "polish": "Wielbić; oddawać cześć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p573-012-word.mp3",
       "audioWordPl": "t1-p573-012-word-pl.mp3",
-      "audioSentence": "t1-p573-012-sentence.mp3"
+      "audioSentence": "t1-p573-012-sentence.mp3",
+      "polishAudio": "Wielbić"
     },
     {
       "id": "t1-p573-013",
       "english": "Amuse",
-      "polish": "Rozbawiać",
+      "polish": "Rozbawiać; bawić; śmieszyć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p573-013-word.mp3",
       "audioWordPl": "t1-p573-013-word-pl.mp3",
-      "audioSentence": "t1-p573-013-sentence.mp3"
+      "audioSentence": "t1-p573-013-sentence.mp3",
+      "polishAudio": "Rozbawiać"
     },
     {
       "id": "t1-p573-014",
       "english": "Grace",
-      "polish": "Ozdabiać",
+      "polish": "Ozdabiać; uświetniać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p573-014-word.mp3",
       "audioWordPl": "t1-p573-014-word-pl.mp3",
-      "audioSentence": "t1-p573-014-sentence.mp3"
+      "audioSentence": "t1-p573-014-sentence.mp3",
+      "polishAudio": "Ozdabiać"
     },
     {
       "id": "t1-p573-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p573-015-word.mp3",
       "audioWordPl": "t1-p573-015-word-pl.mp3",
-      "audioSentence": "t1-p573-015-sentence.mp3"
+      "audioSentence": "t1-p573-015-sentence.mp3",
+      "polishAudio": "Zasługiwać"
     }
   ]
 }

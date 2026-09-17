@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p306-001-word.mp3",
       "audioWordPl": "t1-p306-001-word-pl.mp3",
-      "audioSentence": "t1-p306-001-sentence.mp3"
+      "audioSentence": "t1-p306-001-sentence.mp3",
+      "polishAudio": "Szczur"
     },
     {
       "id": "t1-p306-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p306-002-word.mp3",
       "audioWordPl": "t1-p306-002-word-pl.mp3",
-      "audioSentence": "t1-p306-002-sentence.mp3"
+      "audioSentence": "t1-p306-002-sentence.mp3",
+      "polishAudio": "Wilk"
     },
     {
       "id": "t1-p306-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p306-003-word.mp3",
       "audioWordPl": "t1-p306-003-word-pl.mp3",
-      "audioSentence": "t1-p306-003-sentence.mp3"
+      "audioSentence": "t1-p306-003-sentence.mp3",
+      "polishAudio": "Żaba"
     },
     {
       "id": "t1-p306-004",
@@ -44,17 +47,19 @@
       "sentencePl": null,
       "audioWord": "t1-p306-004-word.mp3",
       "audioWordPl": "t1-p306-004-word-pl.mp3",
-      "audioSentence": "t1-p306-004-sentence.mp3"
+      "audioSentence": "t1-p306-004-sentence.mp3",
+      "polishAudio": "Żółw"
     },
     {
       "id": "t1-p306-005",
       "english": "Creature",
-      "polish": "Stwór",
+      "polish": "Stwór; stworzenie; istota",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p306-005-word.mp3",
       "audioWordPl": "t1-p306-005-word-pl.mp3",
-      "audioSentence": "t1-p306-005-sentence.mp3"
+      "audioSentence": "t1-p306-005-sentence.mp3",
+      "polishAudio": "Stwór"
     },
     {
       "id": "t1-p306-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p306-006-word.mp3",
       "audioWordPl": "t1-p306-006-word-pl.mp3",
-      "audioSentence": "t1-p306-006-sentence.mp3"
+      "audioSentence": "t1-p306-006-sentence.mp3",
+      "polishAudio": "Baran"
     },
     {
       "id": "t1-p306-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p306-007-word.mp3",
       "audioWordPl": "t1-p306-007-word-pl.mp3",
-      "audioSentence": "t1-p306-007-sentence.mp3"
+      "audioSentence": "t1-p306-007-sentence.mp3",
+      "polishAudio": "Biedronka"
     },
     {
       "id": "t1-p306-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p306-008-word.mp3",
       "audioWordPl": "t1-p306-008-word-pl.mp3",
-      "audioSentence": "t1-p306-008-sentence.mp3"
+      "audioSentence": "t1-p306-008-sentence.mp3",
+      "polishAudio": "Cielę"
     },
     {
       "id": "t1-p306-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p306-009-word.mp3",
       "audioWordPl": "t1-p306-009-word-pl.mp3",
-      "audioSentence": "t1-p306-009-sentence.mp3"
+      "audioSentence": "t1-p306-009-sentence.mp3",
+      "polishAudio": "Delfin"
     },
     {
       "id": "t1-p306-010",
       "english": "Worm",
-      "polish": "Robak",
+      "polish": "Robak (wijący)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p306-010-word.mp3",
       "audioWordPl": "t1-p306-010-word-pl.mp3",
-      "audioSentence": "t1-p306-010-sentence.mp3"
+      "audioSentence": "t1-p306-010-sentence.mp3",
+      "polishAudio": "Robak"
     },
     {
       "id": "t1-p306-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p306-011-word.mp3",
       "audioWordPl": "t1-p306-011-word-pl.mp3",
-      "audioSentence": "t1-p306-011-sentence.mp3"
+      "audioSentence": "t1-p306-011-sentence.mp3",
+      "polishAudio": "Goryl"
     },
     {
       "id": "t1-p306-012",
       "english": "Lamb",
-      "polish": "Jagnię",
+      "polish": "Jagnię; owieczka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p306-012-word.mp3",
       "audioWordPl": "t1-p306-012-word-pl.mp3",
-      "audioSentence": "t1-p306-012-sentence.mp3"
+      "audioSentence": "t1-p306-012-sentence.mp3",
+      "polishAudio": "Jagnię"
     },
     {
       "id": "t1-p306-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p306-013-word.mp3",
       "audioWordPl": "t1-p306-013-word-pl.mp3",
-      "audioSentence": "t1-p306-013-sentence.mp3"
+      "audioSentence": "t1-p306-013-sentence.mp3",
+      "polishAudio": "Jeleń"
     },
     {
       "id": "t1-p306-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p306-014-word.mp3",
       "audioWordPl": "t1-p306-014-word-pl.mp3",
-      "audioSentence": "t1-p306-014-sentence.mp3"
+      "audioSentence": "t1-p306-014-sentence.mp3",
+      "polishAudio": "Łapa"
     },
     {
       "id": "t1-p306-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p306-015-word.mp3",
       "audioWordPl": "t1-p306-015-word-pl.mp3",
-      "audioSentence": "t1-p306-015-sentence.mp3"
+      "audioSentence": "t1-p306-015-sentence.mp3",
+      "polishAudio": "Łoś"
     }
   ]
 }

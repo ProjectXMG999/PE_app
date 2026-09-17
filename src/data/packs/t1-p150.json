@@ -10,151 +10,166 @@
       "id": "t1-p150-001",
       "english": "Hairdresser",
       "polish": "Fryzjer",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can you recommend a hairdresser who won’t cut more than I ask?",
+      "sentencePl": "Polecisz fryzjera, który nie skraca włosów bardziej niż proszę?",
       "audioWord": "t1-p150-001-word.mp3",
       "audioWordPl": "t1-p150-001-word-pl.mp3",
-      "audioSentence": "t1-p150-001-sentence.mp3"
+      "audioSentence": "t1-p150-001-sentence.mp3",
+      "polishAudio": "Fryzjer"
     },
     {
       "id": "t1-p150-002",
       "english": "Barber",
       "polish": "Fryzjer męski",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I’m looking for a barber who handles curly hair well.",
+      "sentencePl": "Szukam fryzjera męskiego, który dobrze ogarnia kręcone włosy.",
       "audioWord": "t1-p150-002-word.mp3",
       "audioWordPl": "t1-p150-002-word-pl.mp3",
-      "audioSentence": "t1-p150-002-sentence.mp3"
+      "audioSentence": "t1-p150-002-sentence.mp3",
+      "polishAudio": "Fryzjer męski"
     },
     {
       "id": "t1-p150-003",
       "english": "Engineer",
       "polish": "Inżynier",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Our engineer called the cable “the important one,” so now we’re panicking.",
+      "sentencePl": "Nasz inżynier nazwał kabel „tym ważnym”, więc panikujemy.",
       "audioWord": "t1-p150-003-word.mp3",
       "audioWordPl": "t1-p150-003-word-pl.mp3",
-      "audioSentence": "t1-p150-003-sentence.mp3"
+      "audioSentence": "t1-p150-003-sentence.mp3",
+      "polishAudio": "Inżynier"
     },
     {
       "id": "t1-p150-004",
       "english": "Waiter",
       "polish": "Kelner",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "The waiter brought an extra plate because we were sharing dessert.",
+      "sentencePl": "Kelner przyniósł dodatkowy talerz, bo dzieliliśmy deser.",
       "audioWord": "t1-p150-004-word.mp3",
       "audioWordPl": "t1-p150-004-word-pl.mp3",
-      "audioSentence": "t1-p150-004-sentence.mp3"
+      "audioSentence": "t1-p150-004-sentence.mp3",
+      "polishAudio": "Kelner"
     },
     {
       "id": "t1-p150-005",
       "english": "Waitress",
       "polish": "Kelnerka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "The waitress remembered my sauce, and I can’t remember her name.",
+      "sentencePl": "Kelnerka zapamiętała mój sos, a ja nie pamiętam imienia.",
       "audioWord": "t1-p150-005-word.mp3",
       "audioWordPl": "t1-p150-005-word-pl.mp3",
-      "audioSentence": "t1-p150-005-sentence.mp3"
+      "audioSentence": "t1-p150-005-sentence.mp3",
+      "polishAudio": "Kelnerka"
     },
     {
       "id": "t1-p150-006",
       "english": "Driver",
       "polish": "Kierowca",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Our driver sang the chorus louder than the radio.",
+      "sentencePl": "Nasz kierowca śpiewał refren głośniej niż radio.",
       "audioWord": "t1-p150-006-word.mp3",
       "audioWordPl": "t1-p150-006-word-pl.mp3",
-      "audioSentence": "t1-p150-006-sentence.mp3"
+      "audioSentence": "t1-p150-006-sentence.mp3",
+      "polishAudio": "Kierowca"
     },
     {
       "id": "t1-p150-007",
       "english": "Manager",
-      "polish": "Kierownik",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Kierownik; kierowniczka",
+      "sentenceEn": "The manager recorded a short explanation instead of writing a long email.",
+      "sentencePl": "Kierownik nagrał krótkie wyjaśnienie zamiast pisać długi mail.",
       "audioWord": "t1-p150-007-word.mp3",
       "audioWordPl": "t1-p150-007-word-pl.mp3",
-      "audioSentence": "t1-p150-007-sentence.mp3"
+      "audioSentence": "t1-p150-007-sentence.mp3",
+      "polishAudio": "Kierownik"
     },
     {
       "id": "t1-p150-008",
       "english": "Beautician",
       "polish": "Kosmetyczka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Do you know a beautician who does natural-looking eyebrows?",
+      "sentencePl": "Znasz kosmetyczkę, która robi naturalne brwi?",
       "audioWord": "t1-p150-008-word.mp3",
       "audioWordPl": "t1-p150-008-word-pl.mp3",
-      "audioSentence": "t1-p150-008-sentence.mp3"
+      "audioSentence": "t1-p150-008-sentence.mp3",
+      "polishAudio": "Kosmetyczka"
     },
     {
       "id": "t1-p150-009",
       "english": "Accountant",
-      "polish": "Księgowy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Księgowy; księgowa",
+      "sentenceEn": "The accountant patiently explained to Mum where that amount came from.",
+      "sentencePl": "Księgowy cierpliwie wyjaśnił mamie, skąd wzięła się ta kwota.",
       "audioWord": "t1-p150-009-word.mp3",
       "audioWordPl": "t1-p150-009-word-pl.mp3",
-      "audioSentence": "t1-p150-009-sentence.mp3"
+      "audioSentence": "t1-p150-009-sentence.mp3",
+      "polishAudio": "Księgowy"
     },
     {
       "id": "t1-p150-010",
       "english": "Cook",
-      "polish": "Kucharz",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Kucharz; kucharka",
+      "sentenceEn": "The cook saved the last portion of soup for us.",
+      "sentencePl": "Kucharz odłożył dla nas ostatnią porcję zupy.",
       "audioWord": "t1-p150-010-word.mp3",
       "audioWordPl": "t1-p150-010-word-pl.mp3",
-      "audioSentence": "t1-p150-010-sentence.mp3"
+      "audioSentence": "t1-p150-010-sentence.mp3",
+      "polishAudio": "Kucharz"
     },
     {
       "id": "t1-p150-011",
       "english": "Doctor",
-      "polish": "Lekarz",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Lekarz; lekarka",
+      "sentenceEn": "The doctor said, “Please relax” — easy to say.",
+      "sentencePl": "Lekarz powiedział „proszę się rozluźnić” — łatwo powiedzieć.",
       "audioWord": "t1-p150-011-word.mp3",
       "audioWordPl": "t1-p150-011-word-pl.mp3",
-      "audioSentence": "t1-p150-011-sentence.mp3"
+      "audioSentence": "t1-p150-011-sentence.mp3",
+      "polishAudio": "Lekarz"
     },
     {
       "id": "t1-p150-012",
       "english": "Postman",
       "polish": "Listonosz",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Have you seen the postman? I’m waiting for an important letter.",
+      "sentencePl": "Widziałeś listonosza? Czekam na ważny list.",
       "audioWord": "t1-p150-012-word.mp3",
       "audioWordPl": "t1-p150-012-word-pl.mp3",
-      "audioSentence": "t1-p150-012-sentence.mp3"
+      "audioSentence": "t1-p150-012-sentence.mp3",
+      "polishAudio": "Listonosz"
     },
     {
       "id": "t1-p150-013",
       "english": "Painter",
-      "polish": "Malarz",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Malarz; malarka",
+      "sentenceEn": "The painter saved the wall that I accidentally splashed with paint.",
+      "sentencePl": "Malarz uratował ścianę, którą niechcący ochlapałam farbą.",
       "audioWord": "t1-p150-013-word.mp3",
       "audioWordPl": "t1-p150-013-word-pl.mp3",
-      "audioSentence": "t1-p150-013-sentence.mp3"
+      "audioSentence": "t1-p150-013-sentence.mp3",
+      "polishAudio": "Malarz"
     },
     {
       "id": "t1-p150-014",
       "english": "Mechanic",
       "polish": "Mechanik",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "The mechanic didn’t charge anything for the small adjustment.",
+      "sentencePl": "Mechanik nie skasował nic za drobną poprawkę.",
       "audioWord": "t1-p150-014-word.mp3",
       "audioWordPl": "t1-p150-014-word-pl.mp3",
-      "audioSentence": "t1-p150-014-sentence.mp3"
+      "audioSentence": "t1-p150-014-sentence.mp3",
+      "polishAudio": "Mechanik"
     },
     {
       "id": "t1-p150-015",
       "english": "Model",
-      "polish": "Model",
+      "polish": "Model; modelka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p150-015-word.mp3",
       "audioWordPl": "t1-p150-015-word-pl.mp3",
-      "audioSentence": "t1-p150-015-sentence.mp3"
+      "audioSentence": "t1-p150-015-sentence.mp3",
+      "polishAudio": "Model"
     }
   ]
 }

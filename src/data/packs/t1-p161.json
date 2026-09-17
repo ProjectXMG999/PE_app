@@ -10,141 +10,155 @@
       "id": "t1-p161-001",
       "english": "Chat",
       "polish": "Czat",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You left me that silly drawing in the chat, and it cheered me up.",
+      "sentencePl": "Zostawiłeś mi na czacie ten głupi rysunek, poprawił mi humor.",
       "audioWord": "t1-p161-001-word.mp3",
       "audioWordPl": "t1-p161-001-word-pl.mp3",
-      "audioSentence": "t1-p161-001-sentence.mp3"
+      "audioSentence": "t1-p161-001-sentence.mp3",
+      "polishAudio": "Czat"
     },
     {
       "id": "t1-p161-002",
       "english": "Button",
       "polish": "Klawisz",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You pressed every button except the right one.",
+      "sentencePl": "Nacisnąłeś każdy klawisz, tylko nie ten właściwy.",
       "audioWord": "t1-p161-002-word.mp3",
       "audioWordPl": "t1-p161-002-word-pl.mp3",
-      "audioSentence": "t1-p161-002-sentence.mp3"
+      "audioSentence": "t1-p161-002-sentence.mp3",
+      "polishAudio": "Klawisz"
     },
     {
       "id": "t1-p161-003",
       "english": "Printer",
       "polish": "Drukarka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "The printer is showing an error again, although it has paper.",
+      "sentencePl": "Drukarka znów pokazuje błąd, choć papier jest w środku.",
       "audioWord": "t1-p161-003-word.mp3",
       "audioWordPl": "t1-p161-003-word-pl.mp3",
-      "audioSentence": "t1-p161-003-sentence.mp3"
+      "audioSentence": "t1-p161-003-sentence.mp3",
+      "polishAudio": "Drukarka"
     },
     {
       "id": "t1-p161-004",
       "english": "Data",
       "polish": "Dane",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "The app asks for data that it does not need at all.",
+      "sentencePl": "Aplikacja prosi o dane, których wcale nie potrzebuje.",
       "audioWord": "t1-p161-004-word.mp3",
       "audioWordPl": "t1-p161-004-word-pl.mp3",
-      "audioSentence": "t1-p161-004-sentence.mp3"
+      "audioSentence": "t1-p161-004-sentence.mp3",
+      "polishAudio": "Dane"
     },
     {
       "id": "t1-p161-005",
       "english": "Screen",
       "polish": "Ekran",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My screen dims exactly when I am reading a recipe.",
+      "sentencePl": "Mój ekran przyciemnia się dokładnie, gdy czytam przepis.",
       "audioWord": "t1-p161-005-word.mp3",
       "audioWordPl": "t1-p161-005-word-pl.mp3",
-      "audioSentence": "t1-p161-005-sentence.mp3"
+      "audioSentence": "t1-p161-005-sentence.mp3",
+      "polishAudio": "Ekran"
     },
     {
       "id": "t1-p161-006",
       "english": "Folder",
       "polish": "Folder",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "This folder is empty; maybe you saved the file somewhere else?",
+      "sentencePl": "Ten folder jest pusty, może zapisałeś plik gdzie indziej?",
       "audioWord": "t1-p161-006-word.mp3",
       "audioWordPl": "t1-p161-006-word-pl.mp3",
-      "audioSentence": "t1-p161-006-sentence.mp3"
+      "audioSentence": "t1-p161-006-sentence.mp3",
+      "polishAudio": "Folder"
     },
     {
       "id": "t1-p161-007",
       "english": "Message board",
       "polish": "Forum",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Ask on the message board if anyone is giving away boxes.",
+      "sentencePl": "Zapytaj na forum, czy ktoś oddaje kartony.",
       "audioWord": "t1-p161-007-word.mp3",
       "audioWordPl": "t1-p161-007-word-pl.mp3",
-      "audioSentence": "t1-p161-007-sentence.mp3"
+      "audioSentence": "t1-p161-007-sentence.mp3",
+      "polishAudio": "Forum"
     },
     {
       "id": "t1-p161-008",
       "english": "Password",
       "polish": "Hasło",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I changed the password after a strange notification appeared.",
+      "sentencePl": "Zmieniłam hasło po tym, jak przyszło dziwne powiadomienie.",
       "audioWord": "t1-p161-008-word.mp3",
       "audioWordPl": "t1-p161-008-word-pl.mp3",
-      "audioSentence": "t1-p161-008-sentence.mp3"
+      "audioSentence": "t1-p161-008-sentence.mp3",
+      "polishAudio": "Hasło"
     },
     {
       "id": "t1-p161-009",
       "english": "Keyboard",
       "polish": "Klawiatura",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Connect the keyboard because the on-screen one covers half the text.",
+      "sentencePl": "Podłącz klawiaturę, bo ekranowa zasłania pół tekstu.",
       "audioWord": "t1-p161-009-word.mp3",
       "audioWordPl": "t1-p161-009-word-pl.mp3",
-      "audioSentence": "t1-p161-009-sentence.mp3"
+      "audioSentence": "t1-p161-009-sentence.mp3",
+      "polishAudio": "Klawiatura"
     },
     {
       "id": "t1-p161-010",
       "english": "Copy",
       "polish": "Kopia",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I need a copy of the receipt for the refund.",
+      "sentencePl": "Potrzebuję kopii rachunku do zwrotu pieniędzy.",
       "audioWord": "t1-p161-010-word.mp3",
       "audioWordPl": "t1-p161-010-word-pl.mp3",
-      "audioSentence": "t1-p161-010-sentence.mp3"
+      "audioSentence": "t1-p161-010-sentence.mp3",
+      "polishAudio": "Kopia"
     },
     {
       "id": "t1-p161-011",
       "english": "Monitor",
-      "polish": "Monitor",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Monitor (ekran komputera)",
+      "sentenceEn": "The monitor has been flickering since morning; the cable may be loose.",
+      "sentencePl": "Monitor miga od rana, chyba kabel się poluzował.",
       "audioWord": "t1-p161-011-word.mp3",
       "audioWordPl": "t1-p161-011-word-pl.mp3",
-      "audioSentence": "t1-p161-011-sentence.mp3"
+      "audioSentence": "t1-p161-011-sentence.mp3",
+      "polishAudio": "Monitor"
     },
     {
       "id": "t1-p161-012",
       "english": "Option",
       "polish": "Opcja",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "There is also an option to collect the order in person.",
+      "sentencePl": "Jest jeszcze opcja odbioru osobistego przy zamówieniu.",
       "audioWord": "t1-p161-012-word.mp3",
       "audioWordPl": "t1-p161-012-word-pl.mp3",
-      "audioSentence": "t1-p161-012-sentence.mp3"
+      "audioSentence": "t1-p161-012-sentence.mp3",
+      "polishAudio": "Opcja"
     },
     {
       "id": "t1-p161-013",
       "english": "Technology",
       "polish": "Technologia",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "New technology reduced subtitle editing to just a few clicks.",
+      "sentencePl": "Nowa technologia skróciła mi poprawianie napisów do kilku kliknięć.",
       "audioWord": "t1-p161-013-word.mp3",
       "audioWordPl": "t1-p161-013-word-pl.mp3",
-      "audioSentence": "t1-p161-013-sentence.mp3"
+      "audioSentence": "t1-p161-013-sentence.mp3",
+      "polishAudio": "Technologia"
     },
     {
       "id": "t1-p161-014",
       "english": "File",
       "polish": "Plik",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You called the file “final,” and this is already its eighth version.",
+      "sentencePl": "Nazwaliście plik „finalny”, a to już jego ósma wersja.",
       "audioWord": "t1-p161-014-word.mp3",
       "audioWordPl": "t1-p161-014-word-pl.mp3",
-      "audioSentence": "t1-p161-014-sentence.mp3"
+      "audioSentence": "t1-p161-014-sentence.mp3",
+      "polishAudio": "Plik"
     },
     {
       "id": "t1-p161-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p161-015-word.mp3",
       "audioWordPl": "t1-p161-015-word-pl.mp3",
-      "audioSentence": "t1-p161-015-sentence.mp3"
+      "audioSentence": "t1-p161-015-sentence.mp3",
+      "polishAudio": "Poczta elektroniczna"
     }
   ]
 }

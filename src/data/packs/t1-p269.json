@@ -9,12 +9,13 @@
     {
       "id": "t1-p269-001",
       "english": "Like",
-      "polish": "Jak",
+      "polish": "Jak (coś, ktoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p269-001-word.mp3",
       "audioWordPl": "t1-p269-001-word-pl.mp3",
-      "audioSentence": "t1-p269-001-sentence.mp3"
+      "audioSentence": "t1-p269-001-sentence.mp3",
+      "polishAudio": "Jak"
     },
     {
       "id": "t1-p269-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p269-002-word.mp3",
       "audioWordPl": "t1-p269-002-word-pl.mp3",
-      "audioSentence": "t1-p269-002-sentence.mp3"
+      "audioSentence": "t1-p269-002-sentence.mp3",
+      "polishAudio": "Jak gdyby"
     },
     {
       "id": "t1-p269-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p269-003-word.mp3",
       "audioWordPl": "t1-p269-003-word-pl.mp3",
-      "audioSentence": "t1-p269-003-sentence.mp3"
+      "audioSentence": "t1-p269-003-sentence.mp3",
+      "polishAudio": "Tak długo jak"
     },
     {
       "id": "t1-p269-004",
@@ -44,27 +47,30 @@
       "sentencePl": null,
       "audioWord": "t1-p269-004-word.mp3",
       "audioWordPl": "t1-p269-004-word-pl.mp3",
-      "audioSentence": "t1-p269-004-sentence.mp3"
+      "audioSentence": "t1-p269-004-sentence.mp3",
+      "polishAudio": "Tak bardzo jak"
     },
     {
       "id": "t1-p269-005",
       "english": "As soon as",
-      "polish": "Tak szybko jak",
+      "polish": "Tak szybko jak; jak tylko",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p269-005-word.mp3",
       "audioWordPl": "t1-p269-005-word-pl.mp3",
-      "audioSentence": "t1-p269-005-sentence.mp3"
+      "audioSentence": "t1-p269-005-sentence.mp3",
+      "polishAudio": "Tak szybko jak"
     },
     {
       "id": "t1-p269-006",
       "english": "As it were",
-      "polish": "Tak jakby",
+      "polish": "Tak jakby; niejako",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p269-006-word.mp3",
       "audioWordPl": "t1-p269-006-word-pl.mp3",
-      "audioSentence": "t1-p269-006-sentence.mp3"
+      "audioSentence": "t1-p269-006-sentence.mp3",
+      "polishAudio": "Tak jakby"
     },
     {
       "id": "t1-p269-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p269-007-word.mp3",
       "audioWordPl": "t1-p269-007-word-pl.mp3",
-      "audioSentence": "t1-p269-007-sentence.mp3"
+      "audioSentence": "t1-p269-007-sentence.mp3",
+      "polishAudio": "Tak samo jak"
     },
     {
       "id": "t1-p269-008",
@@ -84,27 +91,30 @@
       "sentencePl": null,
       "audioWord": "t1-p269-008-word.mp3",
       "audioWordPl": "t1-p269-008-word-pl.mp3",
-      "audioSentence": "t1-p269-008-sentence.mp3"
+      "audioSentence": "t1-p269-008-sentence.mp3",
+      "polishAudio": "Identycznie jak"
     },
     {
       "id": "t1-p269-009",
       "english": "Likewise",
-      "polish": "Podobnie",
+      "polish": "Podobnie; wzajemnie (w odpowiedzi)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p269-009-word.mp3",
       "audioWordPl": "t1-p269-009-word-pl.mp3",
-      "audioSentence": "t1-p269-009-sentence.mp3"
+      "audioSentence": "t1-p269-009-sentence.mp3",
+      "polishAudio": "Podobnie"
     },
     {
       "id": "t1-p269-010",
       "english": "Equally",
-      "polish": "Na równi",
+      "polish": "Na równi; tak samo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p269-010-word.mp3",
       "audioWordPl": "t1-p269-010-word-pl.mp3",
-      "audioSentence": "t1-p269-010-sentence.mp3"
+      "audioSentence": "t1-p269-010-sentence.mp3",
+      "polishAudio": "Na równi"
     }
   ]
 }

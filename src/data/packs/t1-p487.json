@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p487-001-word.mp3",
       "audioWordPl": "t1-p487-001-word-pl.mp3",
-      "audioSentence": "t1-p487-001-sentence.mp3"
+      "audioSentence": "t1-p487-001-sentence.mp3",
+      "polishAudio": "Migać"
     },
     {
       "id": "t1-p487-002",
@@ -24,27 +25,30 @@
       "sentencePl": null,
       "audioWord": "t1-p487-002-word.mp3",
       "audioWordPl": "t1-p487-002-word-pl.mp3",
-      "audioSentence": "t1-p487-002-sentence.mp3"
+      "audioSentence": "t1-p487-002-sentence.mp3",
+      "polishAudio": "Kasować"
     },
     {
       "id": "t1-p487-003",
       "english": "Record",
-      "polish": "Nagrać",
+      "polish": "Nagrać; utrwalać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p487-003-word.mp3",
       "audioWordPl": "t1-p487-003-word-pl.mp3",
-      "audioSentence": "t1-p487-003-sentence.mp3"
+      "audioSentence": "t1-p487-003-sentence.mp3",
+      "polishAudio": "Nagrać"
     },
     {
       "id": "t1-p487-004",
       "english": "Recover",
-      "polish": "Odzyskiwać",
+      "polish": "Odzyskiwać (coś, co zniknęło)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p487-004-word.mp3",
       "audioWordPl": "t1-p487-004-word-pl.mp3",
-      "audioSentence": "t1-p487-004-sentence.mp3"
+      "audioSentence": "t1-p487-004-sentence.mp3",
+      "polishAudio": "Odzyskiwać"
     },
     {
       "id": "t1-p487-005",
@@ -54,37 +58,41 @@
       "sentencePl": null,
       "audioWord": "t1-p487-005-word.mp3",
       "audioWordPl": "t1-p487-005-word-pl.mp3",
-      "audioSentence": "t1-p487-005-sentence.mp3"
+      "audioSentence": "t1-p487-005-sentence.mp3",
+      "polishAudio": "Rejestrować"
     },
     {
       "id": "t1-p487-006",
       "english": "Submit",
-      "polish": "Wysłać",
+      "polish": "Wysłać; składać (np. aplikację, artykuł)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p487-006-word.mp3",
       "audioWordPl": "t1-p487-006-word-pl.mp3",
-      "audioSentence": "t1-p487-006-sentence.mp3"
+      "audioSentence": "t1-p487-006-sentence.mp3",
+      "polishAudio": "Wysłać"
     },
     {
       "id": "t1-p487-007",
       "english": "Boost",
-      "polish": "Doładować",
+      "polish": "Doładować; wzmacniać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p487-007-word.mp3",
       "audioWordPl": "t1-p487-007-word-pl.mp3",
-      "audioSentence": "t1-p487-007-sentence.mp3"
+      "audioSentence": "t1-p487-007-sentence.mp3",
+      "polishAudio": "Doładować"
     },
     {
       "id": "t1-p487-008",
       "english": "Broadcast",
-      "polish": "Emitować",
+      "polish": "Emitować; nadawać (np. sygnał, audycje, program)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p487-008-word.mp3",
       "audioWordPl": "t1-p487-008-word-pl.mp3",
-      "audioSentence": "t1-p487-008-sentence.mp3"
+      "audioSentence": "t1-p487-008-sentence.mp3",
+      "polishAudio": "Emitować"
     },
     {
       "id": "t1-p487-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p487-009-word.mp3",
       "audioWordPl": "t1-p487-009-word-pl.mp3",
-      "audioSentence": "t1-p487-009-sentence.mp3"
+      "audioSentence": "t1-p487-009-sentence.mp3",
+      "polishAudio": "Przeglądać"
     },
     {
       "id": "t1-p487-010",
       "english": "Code",
-      "polish": "Kodować",
+      "polish": "Kodować; programować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p487-010-word.mp3",
       "audioWordPl": "t1-p487-010-word-pl.mp3",
-      "audioSentence": "t1-p487-010-sentence.mp3"
+      "audioSentence": "t1-p487-010-sentence.mp3",
+      "polishAudio": "Kodować"
     },
     {
       "id": "t1-p487-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p487-011-word.mp3",
       "audioWordPl": "t1-p487-011-word-pl.mp3",
-      "audioSentence": "t1-p487-011-sentence.mp3"
+      "audioSentence": "t1-p487-011-sentence.mp3",
+      "polishAudio": "Projektować"
     },
     {
       "id": "t1-p487-012",
@@ -124,27 +135,30 @@
       "sentencePl": null,
       "audioWord": "t1-p487-012-word.mp3",
       "audioWordPl": "t1-p487-012-word-pl.mp3",
-      "audioSentence": "t1-p487-012-sentence.mp3"
+      "audioSentence": "t1-p487-012-sentence.mp3",
+      "polishAudio": "Wyposażyć"
     },
     {
       "id": "t1-p487-013",
       "english": "Process",
-      "polish": "Przetwarzać",
+      "polish": "Przetwarzać; procesować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p487-013-word.mp3",
       "audioWordPl": "t1-p487-013-word-pl.mp3",
-      "audioSentence": "t1-p487-013-sentence.mp3"
+      "audioSentence": "t1-p487-013-sentence.mp3",
+      "polishAudio": "Przetwarzać"
     },
     {
       "id": "t1-p487-014",
       "english": "Scroll",
-      "polish": "Scrollować",
+      "polish": "Scrollować; przewijać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p487-014-word.mp3",
       "audioWordPl": "t1-p487-014-word-pl.mp3",
-      "audioSentence": "t1-p487-014-sentence.mp3"
+      "audioSentence": "t1-p487-014-sentence.mp3",
+      "polishAudio": "Scrollować"
     },
     {
       "id": "t1-p487-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p487-015-word.mp3",
       "audioWordPl": "t1-p487-015-word-pl.mp3",
-      "audioSentence": "t1-p487-015-sentence.mp3"
+      "audioSentence": "t1-p487-015-sentence.mp3",
+      "polishAudio": "Przechowywać"
     }
   ]
 }

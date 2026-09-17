@@ -9,12 +9,13 @@
     {
       "id": "t1-p590-001",
       "english": "Tank",
-      "polish": "Czołg",
+      "polish": "Czołg; zbiornik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p590-001-word.mp3",
       "audioWordPl": "t1-p590-001-word-pl.mp3",
-      "audioSentence": "t1-p590-001-sentence.mp3"
+      "audioSentence": "t1-p590-001-sentence.mp3",
+      "polishAudio": "Czołg"
     },
     {
       "id": "t1-p590-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p590-002-word.mp3",
       "audioWordPl": "t1-p590-002-word-pl.mp3",
-      "audioSentence": "t1-p590-002-sentence.mp3"
+      "audioSentence": "t1-p590-002-sentence.mp3",
+      "polishAudio": "Ewakuacja"
     },
     {
       "id": "t1-p590-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p590-003-word.mp3",
       "audioWordPl": "t1-p590-003-word-pl.mp3",
-      "audioSentence": "t1-p590-003-sentence.mp3"
+      "audioSentence": "t1-p590-003-sentence.mp3",
+      "polishAudio": "Karabin"
     },
     {
       "id": "t1-p590-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p590-004-word.mp3",
       "audioWordPl": "t1-p590-004-word-pl.mp3",
-      "audioSentence": "t1-p590-004-sentence.mp3"
+      "audioSentence": "t1-p590-004-sentence.mp3",
+      "polishAudio": "Siły powietrzne"
     },
     {
       "id": "t1-p590-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p590-005-word.mp3",
       "audioWordPl": "t1-p590-005-word-pl.mp3",
-      "audioSentence": "t1-p590-005-sentence.mp3"
+      "audioSentence": "t1-p590-005-sentence.mp3",
+      "polishAudio": "Ładunki wybuchowe"
     },
     {
       "id": "t1-p590-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p590-006-word.mp3",
       "audioWordPl": "t1-p590-006-word-pl.mp3",
-      "audioSentence": "t1-p590-006-sentence.mp3"
+      "audioSentence": "t1-p590-006-sentence.mp3",
+      "polishAudio": "Nabój, pocisk"
     },
     {
       "id": "t1-p590-007",
@@ -74,27 +80,30 @@
       "sentencePl": null,
       "audioWord": "t1-p590-007-word.mp3",
       "audioWordPl": "t1-p590-007-word-pl.mp3",
-      "audioSentence": "t1-p590-007-sentence.mp3"
+      "audioSentence": "t1-p590-007-sentence.mp3",
+      "polishAudio": "Oddział wojskowy"
     },
     {
       "id": "t1-p590-008",
       "english": "Ally",
-      "polish": "Sprzymierzeniec",
+      "polish": "Sprzymierzeniec; sojusznik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p590-008-word.mp3",
       "audioWordPl": "t1-p590-008-word-pl.mp3",
-      "audioSentence": "t1-p590-008-sentence.mp3"
+      "audioSentence": "t1-p590-008-sentence.mp3",
+      "polishAudio": "Sprzymierzeniec"
     },
     {
       "id": "t1-p590-009",
       "english": "Gunpowder",
-      "polish": "Proch",
+      "polish": "Proch (ładunek wybuchowy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p590-009-word.mp3",
       "audioWordPl": "t1-p590-009-word-pl.mp3",
-      "audioSentence": "t1-p590-009-sentence.mp3"
+      "audioSentence": "t1-p590-009-sentence.mp3",
+      "polishAudio": "Proch"
     },
     {
       "id": "t1-p590-010",
@@ -104,27 +113,30 @@
       "sentencePl": null,
       "audioWord": "t1-p590-010-word.mp3",
       "audioWordPl": "t1-p590-010-word-pl.mp3",
-      "audioSentence": "t1-p590-010-sentence.mp3"
+      "audioSentence": "t1-p590-010-sentence.mp3",
+      "polishAudio": "Strzał"
     },
     {
       "id": "t1-p590-011",
       "english": "Private",
-      "polish": "Szeregowy",
+      "polish": "Szeregowy (stopień wojskowy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p590-011-word.mp3",
       "audioWordPl": "t1-p590-011-word-pl.mp3",
-      "audioSentence": "t1-p590-011-sentence.mp3"
+      "audioSentence": "t1-p590-011-sentence.mp3",
+      "polishAudio": "Szeregowy"
     },
     {
       "id": "t1-p590-012",
       "english": "Outbreak",
-      "polish": "Wybuch",
+      "polish": "Wybuch (epidemii, wojny)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p590-012-word.mp3",
       "audioWordPl": "t1-p590-012-word-pl.mp3",
-      "audioSentence": "t1-p590-012-sentence.mp3"
+      "audioSentence": "t1-p590-012-sentence.mp3",
+      "polishAudio": "Wybuch"
     },
     {
       "id": "t1-p590-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p590-013-word.mp3",
       "audioWordPl": "t1-p590-013-word-pl.mp3",
-      "audioSentence": "t1-p590-013-sentence.mp3"
+      "audioSentence": "t1-p590-013-sentence.mp3",
+      "polishAudio": "Straty wśród cywilów powstałe w wyniku wojny"
     },
     {
       "id": "t1-p590-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p590-014-word.mp3",
       "audioWordPl": "t1-p590-014-word-pl.mp3",
-      "audioSentence": "t1-p590-014-sentence.mp3"
+      "audioSentence": "t1-p590-014-sentence.mp3",
+      "polishAudio": "Straty w ludziach"
     },
     {
       "id": "t1-p590-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p590-015-word.mp3",
       "audioWordPl": "t1-p590-015-word-pl.mp3",
-      "audioSentence": "t1-p590-015-sentence.mp3"
+      "audioSentence": "t1-p590-015-sentence.mp3",
+      "polishAudio": "Rekrut"
     }
   ]
 }

@@ -14,27 +14,30 @@
       "sentencePl": null,
       "audioWord": "t1-p521-001-word.mp3",
       "audioWordPl": "t1-p521-001-word-pl.mp3",
-      "audioSentence": "t1-p521-001-sentence.mp3"
+      "audioSentence": "t1-p521-001-sentence.mp3",
+      "polishAudio": "Angola"
     },
     {
       "id": "t1-p521-002",
       "english": "Angolan",
-      "polish": "Angolka",
+      "polish": "Angolka; angolczyk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p521-002-word.mp3",
       "audioWordPl": "t1-p521-002-word-pl.mp3",
-      "audioSentence": "t1-p521-002-sentence.mp3"
+      "audioSentence": "t1-p521-002-sentence.mp3",
+      "polishAudio": "Angolka"
     },
     {
       "id": "t1-p521-003",
       "english": "Bangladeshi",
-      "polish": "Bangalijka",
+      "polish": "Bangalijka; bangalijczyk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p521-003-word.mp3",
       "audioWordPl": "t1-p521-003-word-pl.mp3",
-      "audioSentence": "t1-p521-003-sentence.mp3"
+      "audioSentence": "t1-p521-003-sentence.mp3",
+      "polishAudio": "Bangalijka"
     },
     {
       "id": "t1-p521-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p521-004-word.mp3",
       "audioWordPl": "t1-p521-004-word-pl.mp3",
-      "audioSentence": "t1-p521-004-sentence.mp3"
+      "audioSentence": "t1-p521-004-sentence.mp3",
+      "polishAudio": "Madagaskar"
     },
     {
       "id": "t1-p521-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p521-005-word.mp3",
       "audioWordPl": "t1-p521-005-word-pl.mp3",
-      "audioSentence": "t1-p521-005-sentence.mp3"
+      "audioSentence": "t1-p521-005-sentence.mp3",
+      "polishAudio": "Bangladesz"
     },
     {
       "id": "t1-p521-006",
       "english": "Malagasy",
-      "polish": "Madagaskarczyk",
+      "polish": "Madagaskarczyk; madagaskarka; malgasze",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p521-006-word.mp3",
       "audioWordPl": "t1-p521-006-word-pl.mp3",
-      "audioSentence": "t1-p521-006-sentence.mp3"
+      "audioSentence": "t1-p521-006-sentence.mp3",
+      "polishAudio": "Madagaskarczyk"
     },
     {
       "id": "t1-p521-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p521-007-word.mp3",
       "audioWordPl": "t1-p521-007-word-pl.mp3",
-      "audioSentence": "t1-p521-007-sentence.mp3"
+      "audioSentence": "t1-p521-007-sentence.mp3",
+      "polishAudio": "Estonia"
     },
     {
       "id": "t1-p521-008",
@@ -84,27 +91,30 @@
       "sentencePl": null,
       "audioWord": "t1-p521-008-word.mp3",
       "audioWordPl": "t1-p521-008-word-pl.mp3",
-      "audioSentence": "t1-p521-008-sentence.mp3"
+      "audioSentence": "t1-p521-008-sentence.mp3",
+      "polishAudio": "Malezja"
     },
     {
       "id": "t1-p521-009",
       "english": "Estonian",
-      "polish": "Estonka",
+      "polish": "Estonka; estończyk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p521-009-word.mp3",
       "audioWordPl": "t1-p521-009-word-pl.mp3",
-      "audioSentence": "t1-p521-009-sentence.mp3"
+      "audioSentence": "t1-p521-009-sentence.mp3",
+      "polishAudio": "Estonka"
     },
     {
       "id": "t1-p521-010",
       "english": "Malaysian",
-      "polish": "Malezyjka",
+      "polish": "Malezyjka; malezyjczyk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p521-010-word.mp3",
       "audioWordPl": "t1-p521-010-word-pl.mp3",
-      "audioSentence": "t1-p521-010-sentence.mp3"
+      "audioSentence": "t1-p521-010-sentence.mp3",
+      "polishAudio": "Malezyjka"
     },
     {
       "id": "t1-p521-011",
@@ -114,27 +124,30 @@
       "sentencePl": null,
       "audioWord": "t1-p521-011-word.mp3",
       "audioWordPl": "t1-p521-011-word-pl.mp3",
-      "audioSentence": "t1-p521-011-sentence.mp3"
+      "audioSentence": "t1-p521-011-sentence.mp3",
+      "polishAudio": "Indonezja"
     },
     {
       "id": "t1-p521-012",
       "english": "Indonesian",
-      "polish": "Indonezyjka",
+      "polish": "Indonezyjka; indonezyjczyk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p521-012-word.mp3",
       "audioWordPl": "t1-p521-012-word-pl.mp3",
-      "audioSentence": "t1-p521-012-sentence.mp3"
+      "audioSentence": "t1-p521-012-sentence.mp3",
+      "polishAudio": "Indonezyjka"
     },
     {
       "id": "t1-p521-013",
       "english": "Icelander",
-      "polish": "Islandka",
+      "polish": "Islandka; islandczyk",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p521-013-word.mp3",
       "audioWordPl": "t1-p521-013-word-pl.mp3",
-      "audioSentence": "t1-p521-013-sentence.mp3"
+      "audioSentence": "t1-p521-013-sentence.mp3",
+      "polishAudio": "Islandka"
     },
     {
       "id": "t1-p521-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p521-014-word.mp3",
       "audioWordPl": "t1-p521-014-word-pl.mp3",
-      "audioSentence": "t1-p521-014-sentence.mp3"
+      "audioSentence": "t1-p521-014-sentence.mp3",
+      "polishAudio": "Somalia"
     },
     {
       "id": "t1-p521-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p521-015-word.mp3",
       "audioWordPl": "t1-p521-015-word-pl.mp3",
-      "audioSentence": "t1-p521-015-sentence.mp3"
+      "audioSentence": "t1-p521-015-sentence.mp3",
+      "polishAudio": "Kazachstan"
     }
   ]
 }

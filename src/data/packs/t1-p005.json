@@ -10,101 +10,111 @@
       "id": "t1-p005-001",
       "english": "Come",
       "polish": "Przychodzić",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can you come now? I'm locked out.",
+      "sentencePl": "Możesz przyjść teraz? Zatrzasnęły mi się drzwi.",
       "audioWord": "t1-p005-001-word.mp3",
       "audioWordPl": "t1-p005-001-word-pl.mp3",
-      "audioSentence": "t1-p005-001-sentence.mp3"
+      "audioSentence": "t1-p005-001-sentence.mp3",
+      "polishAudio": "Przychodzić"
     },
     {
       "id": "t1-p005-002",
       "english": "Drive",
       "polish": "Prowadzić samochód",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Can you drive me home?",
+      "sentencePl": "Czy możesz mnie odwieźć do domu?",
       "audioWord": "t1-p005-002-word.mp3",
       "audioWordPl": "t1-p005-002-word-pl.mp3",
-      "audioSentence": "t1-p005-002-sentence.mp3"
+      "audioSentence": "t1-p005-002-sentence.mp3",
+      "polishAudio": "Prowadzić samochód"
     },
     {
       "id": "t1-p005-003",
       "english": "Go",
-      "polish": "Iść",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Iść; jechać",
+      "sentenceEn": "Should we go before it rains?",
+      "sentencePl": "Może pójdziemy, zanim zacznie padać?",
       "audioWord": "t1-p005-003-word.mp3",
       "audioWordPl": "t1-p005-003-word-pl.mp3",
-      "audioSentence": "t1-p005-003-sentence.mp3"
+      "audioSentence": "t1-p005-003-sentence.mp3",
+      "polishAudio": "Iść"
     },
     {
       "id": "t1-p005-004",
       "english": "Jump",
       "polish": "Skakać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I can't jump that high anymore.",
+      "sentencePl": "Nie umiem już tak wysoko skakać.",
       "audioWord": "t1-p005-004-word.mp3",
       "audioWordPl": "t1-p005-004-word-pl.mp3",
-      "audioSentence": "t1-p005-004-sentence.mp3"
+      "audioSentence": "t1-p005-004-sentence.mp3",
+      "polishAudio": "Skakać"
     },
     {
       "id": "t1-p005-005",
       "english": "Move",
       "polish": "Ruszać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Move a little to the left.",
+      "sentencePl": "Przesuń się trochę w lewo.",
       "audioWord": "t1-p005-005-word.mp3",
       "audioWordPl": "t1-p005-005-word-pl.mp3",
-      "audioSentence": "t1-p005-005-sentence.mp3"
+      "audioSentence": "t1-p005-005-sentence.mp3",
+      "polishAudio": "Ruszać"
     },
     {
       "id": "t1-p005-006",
       "english": "Run",
       "polish": "Biegać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Run! The bus is leaving!",
+      "sentencePl": "Biegnij! Autobus odjeżdża!",
       "audioWord": "t1-p005-006-word.mp3",
       "audioWordPl": "t1-p005-006-word-pl.mp3",
-      "audioSentence": "t1-p005-006-sentence.mp3"
+      "audioSentence": "t1-p005-006-sentence.mp3",
+      "polishAudio": "Biegać"
     },
     {
       "id": "t1-p005-007",
       "english": "Sit",
       "polish": "Siedzieć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Sit down—your food is getting cold.",
+      "sentencePl": "Usiądź — twoje jedzenie stygnie.",
       "audioWord": "t1-p005-007-word.mp3",
       "audioWordPl": "t1-p005-007-word-pl.mp3",
-      "audioSentence": "t1-p005-007-sentence.mp3"
+      "audioSentence": "t1-p005-007-sentence.mp3",
+      "polishAudio": "Siedzieć"
     },
     {
       "id": "t1-p005-008",
       "english": "Stop",
-      "polish": "Zatrzymywać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Zatrzymywać; przestać",
+      "sentenceEn": "Stop here, that's my street.",
+      "sentencePl": "Zatrzymaj się tutaj, to moja ulica.",
       "audioWord": "t1-p005-008-word.mp3",
       "audioWordPl": "t1-p005-008-word-pl.mp3",
-      "audioSentence": "t1-p005-008-sentence.mp3"
+      "audioSentence": "t1-p005-008-sentence.mp3",
+      "polishAudio": "Zatrzymywać"
     },
     {
       "id": "t1-p005-009",
       "english": "Walk",
       "polish": "Iść pieszo",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Walk with me—I need to talk.",
+      "sentencePl": "Przejdź się ze mną — muszę pogadać.",
       "audioWord": "t1-p005-009-word.mp3",
       "audioWordPl": "t1-p005-009-word-pl.mp3",
-      "audioSentence": "t1-p005-009-sentence.mp3"
+      "audioSentence": "t1-p005-009-sentence.mp3",
+      "polishAudio": "Iść pieszo"
     },
     {
       "id": "t1-p005-010",
       "english": "Start",
       "polish": "Startować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Don't start without me.",
+      "sentencePl": "Nie zaczynaj beze mnie.",
       "audioWord": "t1-p005-010-word.mp3",
       "audioWordPl": "t1-p005-010-word-pl.mp3",
-      "audioSentence": "t1-p005-010-sentence.mp3"
+      "audioSentence": "t1-p005-010-sentence.mp3",
+      "polishAudio": "Startować"
     }
   ]
 }

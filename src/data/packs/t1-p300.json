@@ -9,12 +9,13 @@
     {
       "id": "t1-p300-001",
       "english": "Rely",
-      "polish": "Polegać",
+      "polish": "Polegać; opierać się; bazować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p300-001-word.mp3",
       "audioWordPl": "t1-p300-001-word-pl.mp3",
-      "audioSentence": "t1-p300-001-sentence.mp3"
+      "audioSentence": "t1-p300-001-sentence.mp3",
+      "polishAudio": "Polegać"
     },
     {
       "id": "t1-p300-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p300-002-word.mp3",
       "audioWordPl": "t1-p300-002-word-pl.mp3",
-      "audioSentence": "t1-p300-002-sentence.mp3"
+      "audioSentence": "t1-p300-002-sentence.mp3",
+      "polishAudio": "Niańczyć"
     },
     {
       "id": "t1-p300-003",
       "english": "Entertain",
-      "polish": "Zabawiać",
+      "polish": "Zabawiać (kogoś); bawić (kogoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p300-003-word.mp3",
       "audioWordPl": "t1-p300-003-word-pl.mp3",
-      "audioSentence": "t1-p300-003-sentence.mp3"
+      "audioSentence": "t1-p300-003-sentence.mp3",
+      "polishAudio": "Zabawiać"
     },
     {
       "id": "t1-p300-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p300-004-word.mp3",
       "audioWordPl": "t1-p300-004-word-pl.mp3",
-      "audioSentence": "t1-p300-004-sentence.mp3"
+      "audioSentence": "t1-p300-004-sentence.mp3",
+      "polishAudio": "Współczuć"
     },
     {
       "id": "t1-p300-005",
@@ -54,27 +58,30 @@
       "sentencePl": null,
       "audioWord": "t1-p300-005-word.mp3",
       "audioWordPl": "t1-p300-005-word-pl.mp3",
-      "audioSentence": "t1-p300-005-sentence.mp3"
+      "audioSentence": "t1-p300-005-sentence.mp3",
+      "polishAudio": "Oskarżać"
     },
     {
       "id": "t1-p300-006",
       "english": "Engage",
-      "polish": "Wciągać",
+      "polish": "Wciągać; angażować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p300-006-word.mp3",
       "audioWordPl": "t1-p300-006-word-pl.mp3",
-      "audioSentence": "t1-p300-006-sentence.mp3"
+      "audioSentence": "t1-p300-006-sentence.mp3",
+      "polishAudio": "Wciągać"
     },
     {
       "id": "t1-p300-007",
       "english": "Owe",
-      "polish": "Zawdzięczać",
+      "polish": "Zawdzięczać; być winnym",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p300-007-word.mp3",
       "audioWordPl": "t1-p300-007-word-pl.mp3",
-      "audioSentence": "t1-p300-007-sentence.mp3"
+      "audioSentence": "t1-p300-007-sentence.mp3",
+      "polishAudio": "Zawdzięczać"
     },
     {
       "id": "t1-p300-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p300-008-word.mp3",
       "audioWordPl": "t1-p300-008-word-pl.mp3",
-      "audioSentence": "t1-p300-008-sentence.mp3"
+      "audioSentence": "t1-p300-008-sentence.mp3",
+      "polishAudio": "Rzucać wyzwanie"
     },
     {
       "id": "t1-p300-009",
       "english": "Free",
-      "polish": "Uwolnić",
+      "polish": "Uwolnić; wyswobodzić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p300-009-word.mp3",
       "audioWordPl": "t1-p300-009-word-pl.mp3",
-      "audioSentence": "t1-p300-009-sentence.mp3"
+      "audioSentence": "t1-p300-009-sentence.mp3",
+      "polishAudio": "Uwolnić"
     },
     {
       "id": "t1-p300-010",
@@ -104,57 +113,63 @@
       "sentencePl": null,
       "audioWord": "t1-p300-010-word.mp3",
       "audioWordPl": "t1-p300-010-word-pl.mp3",
-      "audioSentence": "t1-p300-010-sentence.mp3"
+      "audioSentence": "t1-p300-010-sentence.mp3",
+      "polishAudio": "Iść na kompromis"
     },
     {
       "id": "t1-p300-011",
       "english": "Spoil",
-      "polish": "Rozpieszczać",
+      "polish": "Rozpieszczać (np. dziecko, dziewczynę)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p300-011-word.mp3",
       "audioWordPl": "t1-p300-011-word-pl.mp3",
-      "audioSentence": "t1-p300-011-sentence.mp3"
+      "audioSentence": "t1-p300-011-sentence.mp3",
+      "polishAudio": "Rozpieszczać"
     },
     {
       "id": "t1-p300-012",
       "english": "Release",
-      "polish": "Zwalniać z czegoś",
+      "polish": "Zwalniać z czegoś; uwalniać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p300-012-word.mp3",
       "audioWordPl": "t1-p300-012-word-pl.mp3",
-      "audioSentence": "t1-p300-012-sentence.mp3"
+      "audioSentence": "t1-p300-012-sentence.mp3",
+      "polishAudio": "Zwalniać z czegoś"
     },
     {
       "id": "t1-p300-013",
       "english": "Relate",
-      "polish": "Wiązać się z czymś",
+      "polish": "Wiązać się z czymś; być spokrewnionym",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p300-013-word.mp3",
       "audioWordPl": "t1-p300-013-word-pl.mp3",
-      "audioSentence": "t1-p300-013-sentence.mp3"
+      "audioSentence": "t1-p300-013-sentence.mp3",
+      "polishAudio": "Wiązać się z czymś"
     },
     {
       "id": "t1-p300-014",
       "english": "Guide",
-      "polish": "Pokierować",
+      "polish": "Pokierować; oprowadzać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p300-014-word.mp3",
       "audioWordPl": "t1-p300-014-word-pl.mp3",
-      "audioSentence": "t1-p300-014-sentence.mp3"
+      "audioSentence": "t1-p300-014-sentence.mp3",
+      "polishAudio": "Pokierować"
     },
     {
       "id": "t1-p300-015",
       "english": "Guard",
-      "polish": "Strzec",
+      "polish": "Strzec; chronić; pilnować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p300-015-word.mp3",
       "audioWordPl": "t1-p300-015-word-pl.mp3",
-      "audioSentence": "t1-p300-015-sentence.mp3"
+      "audioSentence": "t1-p300-015-sentence.mp3",
+      "polishAudio": "Strzec"
     }
   ]
 }

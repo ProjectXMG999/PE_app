@@ -9,152 +9,167 @@
     {
       "id": "t1-p142-001",
       "english": "Quick",
-      "polish": "Szybki",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Szybki (trwający krótko)",
+      "sentenceEn": "Thanks for the quick reply; I felt relieved straight away.",
+      "sentencePl": "Dzięki za szybką odpowiedź, od razu mi ulżyło.",
       "audioWord": "t1-p142-001-word.mp3",
       "audioWordPl": "t1-p142-001-word-pl.mp3",
-      "audioSentence": "t1-p142-001-sentence.mp3"
+      "audioSentence": "t1-p142-001-sentence.mp3",
+      "polishAudio": "Szybki"
     },
     {
       "id": "t1-p142-002",
       "english": "Current",
       "polish": "Bieżący",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My current budget is firmly saying no to those shoes.",
+      "sentencePl": "Mój bieżący budżet mówi stanowcze „nie” tym butom.",
       "audioWord": "t1-p142-002-word.mp3",
       "audioWordPl": "t1-p142-002-word-pl.mp3",
-      "audioSentence": "t1-p142-002-sentence.mp3"
+      "audioSentence": "t1-p142-002-sentence.mp3",
+      "polishAudio": "Bieżący"
     },
     {
       "id": "t1-p142-003",
       "english": "Former",
-      "polish": "Były",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Były; poprzedni",
+      "sentenceEn": "My former boss still texts as if he were assigning me tasks.",
+      "sentencePl": "Mój były szef nadal pisze jakby dawał mi zadania.",
       "audioWord": "t1-p142-003-word.mp3",
       "audioWordPl": "t1-p142-003-word-pl.mp3",
-      "audioSentence": "t1-p142-003-sentence.mp3"
+      "audioSentence": "t1-p142-003-sentence.mp3",
+      "polishAudio": "Były"
     },
     {
       "id": "t1-p142-004",
       "english": "All-day",
       "polish": "Całodniowy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Does this all-day event have a lunch break?",
+      "sentencePl": "Czy to całodniowe wydarzenie ma przerwę na obiad?",
       "audioWord": "t1-p142-004-word.mp3",
       "audioWordPl": "t1-p142-004-word-pl.mp3",
-      "audioSentence": "t1-p142-004-sentence.mp3"
+      "audioSentence": "t1-p142-004-sentence.mp3",
+      "polishAudio": "Całodniowy"
     },
     {
       "id": "t1-p142-005",
       "english": "Temporal",
-      "polish": "Doczesny",
+      "polish": "Doczesny; czasowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p142-005-word.mp3",
       "audioWordPl": "t1-p142-005-word-pl.mp3",
-      "audioSentence": "t1-p142-005-sentence.mp3"
+      "audioSentence": "t1-p142-005-sentence.mp3",
+      "polishAudio": "Doczesny"
     },
     {
       "id": "t1-p142-006",
       "english": "Today's",
       "polish": "Dzisiejszy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Today's update fixed that annoying bug on my phone.",
+      "sentencePl": "Dzisiejsza aktualizacja naprawiła ten irytujący błąd w telefonie.",
       "audioWord": "t1-p142-006-word.mp3",
       "audioWordPl": "t1-p142-006-word-pl.mp3",
-      "audioSentence": "t1-p142-006-sentence.mp3"
+      "audioSentence": "t1-p142-006-sentence.mp3",
+      "polishAudio": "Dzisiejszy"
     },
     {
       "id": "t1-p142-007",
       "english": "Tomorrow's",
       "polish": "Jutrzejszy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I saved your favourite roll for tomorrow's breakfast.",
+      "sentencePl": "Na jutrzejsze śniadanie zostawiłam ci twoją ulubioną bułkę.",
       "audioWord": "t1-p142-007-word.mp3",
       "audioWordPl": "t1-p142-007-word-pl.mp3",
-      "audioSentence": "t1-p142-007-sentence.mp3"
+      "audioSentence": "t1-p142-007-sentence.mp3",
+      "polishAudio": "Jutrzejszy"
     },
     {
       "id": "t1-p142-008",
       "english": "Recent",
-      "polish": "Niedawny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Niedawny; ostatni",
+      "sentenceEn": "After his recent success, my brother is already planning an autobiography.",
+      "sentencePl": "Po niedawnym sukcesie mój brat już planuje autobiografię.",
       "audioWord": "t1-p142-008-word.mp3",
       "audioWordPl": "t1-p142-008-word-pl.mp3",
-      "audioSentence": "t1-p142-008-sentence.mp3"
+      "audioSentence": "t1-p142-008-sentence.mp3",
+      "polishAudio": "Niedawny"
     },
     {
       "id": "t1-p142-009",
       "english": "Nonstop",
-      "polish": "Nieprzerwany",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Nieprzerwany; non stop",
+      "sentenceEn": "Your nonstop commentary during the film was better than the film.",
+      "sentencePl": "Twój nieprzerwany komentarz do filmu był lepszy niż film.",
       "audioWord": "t1-p142-009-word.mp3",
       "audioWordPl": "t1-p142-009-word-pl.mp3",
-      "audioSentence": "t1-p142-009-sentence.mp3"
+      "audioSentence": "t1-p142-009-sentence.mp3",
+      "polishAudio": "Nieprzerwany"
     },
     {
       "id": "t1-p142-010",
       "english": "Past",
-      "polish": "Przeszły",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Przeszły; z przeszłości",
+      "sentenceEn": "My past self bought it without reading reviews.",
+      "sentencePl": "Moje przeszłe ja kupiło to bez czytania opinii.",
       "audioWord": "t1-p142-010-word.mp3",
       "audioWordPl": "t1-p142-010-word-pl.mp3",
-      "audioSentence": "t1-p142-010-sentence.mp3"
+      "audioSentence": "t1-p142-010-sentence.mp3",
+      "polishAudio": "Przeszły"
     },
     {
       "id": "t1-p142-011",
       "english": "Future",
       "polish": "Przyszły",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My future self will be grateful for a clean kitchen.",
+      "sentencePl": "Moje przyszłe ja będzie wdzięczne za posprzątaną kuchnię.",
       "audioWord": "t1-p142-011-word.mp3",
       "audioWordPl": "t1-p142-011-word-pl.mp3",
-      "audioSentence": "t1-p142-011-sentence.mp3"
+      "audioSentence": "t1-p142-011-sentence.mp3",
+      "polishAudio": "Przyszły"
     },
     {
       "id": "t1-p142-012",
       "english": "Present",
-      "polish": "Teraźniejszy",
+      "polish": "Teraźniejszy; obecny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p142-012-word.mp3",
       "audioWordPl": "t1-p142-012-word-pl.mp3",
-      "audioSentence": "t1-p142-012-sentence.mp3"
+      "audioSentence": "t1-p142-012-sentence.mp3",
+      "polishAudio": "Teraźniejszy"
     },
     {
       "id": "t1-p142-013",
       "english": "Earlier",
       "polish": "Wcześniejszy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I prefer the earlier train, so we won't have to rush.",
+      "sentencePl": "Wolę wcześniejszy pociąg, wtedy nie będziemy się spieszyć.",
       "audioWord": "t1-p142-013-word.mp3",
       "audioWordPl": "t1-p142-013-word-pl.mp3",
-      "audioSentence": "t1-p142-013-sentence.mp3"
+      "audioSentence": "t1-p142-013-sentence.mp3",
+      "polishAudio": "Wcześniejszy"
     },
     {
       "id": "t1-p142-014",
       "english": "Yesterday's",
       "polish": "Wczorajszy",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Yesterday's sync deleted half of my notes from my phone.",
+      "sentencePl": "Wczorajsza synchronizacja usunęła mi połowę notatek z telefonu.",
       "audioWord": "t1-p142-014-word.mp3",
       "audioWordPl": "t1-p142-014-word-pl.mp3",
-      "audioSentence": "t1-p142-014-sentence.mp3"
+      "audioSentence": "t1-p142-014-sentence.mp3",
+      "polishAudio": "Wczorajszy"
     },
     {
       "id": "t1-p142-015",
       "english": "Time-consuming",
       "polish": "Czasochłonny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "This time-consuming form even asks about the colour of the walls.",
+      "sentencePl": "Ten czasochłonny formularz pyta nawet o kolor ścian.",
       "audioWord": "t1-p142-015-word.mp3",
       "audioWordPl": "t1-p142-015-word-pl.mp3",
-      "audioSentence": "t1-p142-015-sentence.mp3"
+      "audioSentence": "t1-p142-015-sentence.mp3",
+      "polishAudio": "Czasochłonny"
     }
   ]
 }

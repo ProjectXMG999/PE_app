@@ -10,71 +10,78 @@
       "id": "t1-p186-001",
       "english": "Bloody",
       "polish": "Cholerny",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "That bloody app logged me out just before payment.",
+      "sentencePl": "Ta cholerna aplikacja wylogowała mnie tuż przed płatnością.",
       "audioWord": "t1-p186-001-word.mp3",
       "audioWordPl": "t1-p186-001-word-pl.mp3",
-      "audioSentence": "t1-p186-001-sentence.mp3"
+      "audioSentence": "t1-p186-001-sentence.mp3",
+      "polishAudio": "Cholerny"
     },
     {
       "id": "t1-p186-002",
       "english": "Damn it",
       "polish": "Cholera",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Damn it, the pasta boiled over while I answered.",
+      "sentencePl": "Cholera, makaron wykipiał, gdy odbierałam telefon.",
       "audioWord": "t1-p186-002-word.mp3",
       "audioWordPl": "t1-p186-002-word-pl.mp3",
-      "audioSentence": "t1-p186-002-sentence.mp3"
+      "audioSentence": "t1-p186-002-sentence.mp3",
+      "polishAudio": "Cholera"
     },
     {
       "id": "t1-p186-003",
       "english": "Epic fail",
       "polish": "Totalna porażka",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Epic fail: I ordered a case for another model.",
+      "sentencePl": "Totalna porażka: zamówiłem etui do innego modelu.",
       "audioWord": "t1-p186-003-word.mp3",
       "audioWordPl": "t1-p186-003-word-pl.mp3",
-      "audioSentence": "t1-p186-003-sentence.mp3"
+      "audioSentence": "t1-p186-003-sentence.mp3",
+      "polishAudio": "Totalna porażka"
     },
     {
       "id": "t1-p186-004",
       "english": "Meh",
-      "polish": "Ble, ble",
+      "polish": "Ble, ble; takie sobie; meh",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p186-004-word.mp3",
       "audioWordPl": "t1-p186-004-word-pl.mp3",
-      "audioSentence": "t1-p186-004-sentence.mp3"
+      "audioSentence": "t1-p186-004-sentence.mp3",
+      "polishAudio": "Ble, ble"
     },
     {
       "id": "t1-p186-005",
       "english": "No dice",
       "polish": "Nie ma szans",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "No dice, I'm not entering my card details there.",
+      "sentencePl": "Nie ma szans, nie podam danych karty w tym formularzu.",
       "audioWord": "t1-p186-005-word.mp3",
       "audioWordPl": "t1-p186-005-word-pl.mp3",
-      "audioSentence": "t1-p186-005-sentence.mp3"
+      "audioSentence": "t1-p186-005-sentence.mp3",
+      "polishAudio": "Nie ma szans"
     },
     {
       "id": "t1-p186-006",
       "english": "Talk to the hand",
       "polish": "Gadaj zdrów",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Talk to the hand, I'm picking the movie tonight—you promised.",
+      "sentencePl": "Gadaj zdrów, dziś ja wybieram film, obiecałeś mi.",
       "audioWord": "t1-p186-006-word.mp3",
       "audioWordPl": "t1-p186-006-word-pl.mp3",
-      "audioSentence": "t1-p186-006-sentence.mp3"
+      "audioSentence": "t1-p186-006-sentence.mp3",
+      "polishAudio": "Gadaj zdrów"
     },
     {
       "id": "t1-p186-007",
       "english": "My bad",
       "polish": "Mój błąd",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My bad, I ate the cookies you hid for later.",
+      "sentencePl": "Mój błąd, zjadłem ciasteczka schowane na później.",
       "audioWord": "t1-p186-007-word.mp3",
       "audioWordPl": "t1-p186-007-word-pl.mp3",
-      "audioSentence": "t1-p186-007-sentence.mp3"
+      "audioSentence": "t1-p186-007-sentence.mp3",
+      "polishAudio": "Mój błąd"
     },
     {
       "id": "t1-p186-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p186-008-word.mp3",
       "audioWordPl": "t1-p186-008-word-pl.mp3",
-      "audioSentence": "t1-p186-008-sentence.mp3"
+      "audioSentence": "t1-p186-008-sentence.mp3",
+      "polishAudio": "O cholera, a niech to!"
     },
     {
       "id": "t1-p186-009",
       "english": "Or nah",
       "polish": "A może jednak nie…",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Are you staying a bit longer, or nah?",
+      "sentencePl": "Zostajesz jeszcze chwilę, a może jednak nie?",
       "audioWord": "t1-p186-009-word.mp3",
       "audioWordPl": "t1-p186-009-word-pl.mp3",
-      "audioSentence": "t1-p186-009-sentence.mp3"
+      "audioSentence": "t1-p186-009-sentence.mp3",
+      "polishAudio": "A może jednak nie…"
     },
     {
       "id": "t1-p186-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p186-010-word.mp3",
       "audioWordPl": "t1-p186-010-word-pl.mp3",
-      "audioSentence": "t1-p186-010-sentence.mp3"
+      "audioSentence": "t1-p186-010-sentence.mp3",
+      "polishAudio": "Fuj! Ohydne!"
     }
   ]
 }

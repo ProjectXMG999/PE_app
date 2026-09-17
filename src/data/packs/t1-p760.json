@@ -9,12 +9,13 @@
     {
       "id": "t1-p760-001",
       "english": "Egoistic",
-      "polish": "Egoistyczny",
+      "polish": "Egoistyczny (samolubny)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p760-001-word.mp3",
       "audioWordPl": "t1-p760-001-word-pl.mp3",
-      "audioSentence": "t1-p760-001-sentence.mp3"
+      "audioSentence": "t1-p760-001-sentence.mp3",
+      "polishAudio": "Egoistyczny"
     },
     {
       "id": "t1-p760-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p760-002-word.mp3",
       "audioWordPl": "t1-p760-002-word-pl.mp3",
-      "audioSentence": "t1-p760-002-sentence.mp3"
+      "audioSentence": "t1-p760-002-sentence.mp3",
+      "polishAudio": "Egzotyczny"
     },
     {
       "id": "t1-p760-003",
       "english": "Expert",
-      "polish": "Ekspercki",
+      "polish": "Ekspercki; biegły w jakiejś dziedzinie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p760-003-word.mp3",
       "audioWordPl": "t1-p760-003-word-pl.mp3",
-      "audioSentence": "t1-p760-003-sentence.mp3"
+      "audioSentence": "t1-p760-003-sentence.mp3",
+      "polishAudio": "Ekspercki"
     },
     {
       "id": "t1-p760-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p760-004-word.mp3",
       "audioWordPl": "t1-p760-004-word-pl.mp3",
-      "audioSentence": "t1-p760-004-sentence.mp3"
+      "audioSentence": "t1-p760-004-sentence.mp3",
+      "polishAudio": "Eksperymentalny"
     },
     {
       "id": "t1-p760-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p760-005-word.mp3",
       "audioWordPl": "t1-p760-005-word-pl.mp3",
-      "audioSentence": "t1-p760-005-sentence.mp3"
+      "audioSentence": "t1-p760-005-sentence.mp3",
+      "polishAudio": "Ekstremalny"
     },
     {
       "id": "t1-p760-006",
       "english": "Elastic",
-      "polish": "Elastyczny",
+      "polish": "Elastyczny (tylko materiał)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p760-006-word.mp3",
       "audioWordPl": "t1-p760-006-word-pl.mp3",
-      "audioSentence": "t1-p760-006-sentence.mp3"
+      "audioSentence": "t1-p760-006-sentence.mp3",
+      "polishAudio": "Elastyczny"
     },
     {
       "id": "t1-p760-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p760-007-word.mp3",
       "audioWordPl": "t1-p760-007-word-pl.mp3",
-      "audioSentence": "t1-p760-007-sentence.mp3"
+      "audioSentence": "t1-p760-007-sentence.mp3",
+      "polishAudio": "Elementarny"
     },
     {
       "id": "t1-p760-008",
       "english": "Energetic",
-      "polish": "Energiczny",
+      "polish": "Energiczny; pełen energii",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p760-008-word.mp3",
       "audioWordPl": "t1-p760-008-word-pl.mp3",
-      "audioSentence": "t1-p760-008-sentence.mp3"
+      "audioSentence": "t1-p760-008-sentence.mp3",
+      "polishAudio": "Energiczny"
     },
     {
       "id": "t1-p760-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p760-009-word.mp3",
       "audioWordPl": "t1-p760-009-word-pl.mp3",
-      "audioSentence": "t1-p760-009-sentence.mp3"
+      "audioSentence": "t1-p760-009-sentence.mp3",
+      "polishAudio": "Entuzjastyczny"
     },
     {
       "id": "t1-p760-010",
       "english": "Evident",
-      "polish": "Ewidentny",
+      "polish": "Ewidentny; oczywisty",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p760-010-word.mp3",
       "audioWordPl": "t1-p760-010-word-pl.mp3",
-      "audioSentence": "t1-p760-010-sentence.mp3"
+      "audioSentence": "t1-p760-010-sentence.mp3",
+      "polishAudio": "Ewidentny"
     },
     {
       "id": "t1-p760-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p760-011-word.mp3",
       "audioWordPl": "t1-p760-011-word-pl.mp3",
-      "audioSentence": "t1-p760-011-sentence.mp3"
+      "audioSentence": "t1-p760-011-sentence.mp3",
+      "polishAudio": "Finansowy"
     },
     {
       "id": "t1-p760-012",
       "english": "Physical",
-      "polish": "Fizyczny",
+      "polish": "Fizyczny; cielesny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p760-012-word.mp3",
       "audioWordPl": "t1-p760-012-word-pl.mp3",
-      "audioSentence": "t1-p760-012-sentence.mp3"
+      "audioSentence": "t1-p760-012-sentence.mp3",
+      "polishAudio": "Fizyczny"
     },
     {
       "id": "t1-p760-013",
@@ -134,17 +146,19 @@
       "sentencePl": null,
       "audioWord": "t1-p760-013-word.mp3",
       "audioWordPl": "t1-p760-013-word-pl.mp3",
-      "audioSentence": "t1-p760-013-sentence.mp3"
+      "audioSentence": "t1-p760-013-sentence.mp3",
+      "polishAudio": "Fotograficzny"
     },
     {
       "id": "t1-p760-014",
       "english": "Gigantic",
-      "polish": "Gigantyczny",
+      "polish": "Gigantyczny; ogromny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p760-014-word.mp3",
       "audioWordPl": "t1-p760-014-word-pl.mp3",
-      "audioSentence": "t1-p760-014-sentence.mp3"
+      "audioSentence": "t1-p760-014-sentence.mp3",
+      "polishAudio": "Gigantyczny"
     },
     {
       "id": "t1-p760-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p760-015-word.mp3",
       "audioWordPl": "t1-p760-015-word-pl.mp3",
-      "audioSentence": "t1-p760-015-sentence.mp3"
+      "audioSentence": "t1-p760-015-sentence.mp3",
+      "polishAudio": "Higieniczny"
     }
   ]
 }

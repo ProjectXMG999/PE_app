@@ -1,7 +1,12 @@
+// UWAGA: to jest import listy słów, tłumaczeń, paczek i kolejności z CSV.
+// Ponowne uruchomienie NADPISUJE src/data/packs/*.json od zera — kasuje
+// wgrane zdania (sentenceEn/sentencePl = null) i ewentualne edycje tłumaczeń.
+// Zdania trzeba potem wgrać ponownie: npm run gen-sentences:apply-master.
 import Papa from 'papaparse'
 import * as fs from 'fs'
 import * as path from 'path'
 import { fileURLToPath } from 'url'
+import { cleanPolishTranslation, normalizePolishForAudio } from './sentences/lib/polishText.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.join(__dirname, '..')
@@ -83,42 +88,6 @@ function normalizeEnglishForAudio(word: string, category: string): string {
   }
 
   return word
-}
-
-function normalizePolishForAudio(translation: string): string {
-  // 1. Usuń non-breaking spaces
-  translation = translation.replace(/\xa0/g, ' ')
-
-  // 2. Trim (usuń trailing spaces)
-  translation = translation.trim()
-
-  // 3. Usuń zawartość nawiasów PRZED splitem po średniku — średnik może być
-  //    wewnątrz nawiasu ("Oszaleć (z wściekłości; przesadzać…)") i split
-  //    zostawiłby niedomknięty nawias
-  const noParens = translation.replace(/\s*\(.*?\)/g, '').trim()
-  if (noParens) {
-    translation = noParens
-  } else {
-    // Tłumaczenie było wyłącznie nawiasem (np. "(służy do wyrażania przyszłości)")
-    // — użyj jego treści, z wielką literą jak pozostałe tłumaczenia
-    translation = translation.replace(/[()]/g, '').trim()
-    translation = translation.charAt(0).toUpperCase() + translation.slice(1)
-  }
-
-  // 4. Tylko pierwsze znaczenie (przed pierwszym średnikiem)
-  if (translation.includes(';')) {
-    translation = translation.split(';')[0].trim()
-  }
-
-  // 5. Ukośniki: "sam/sama" -> "sam lub sama"
-  translation = translation.replace(/(\w+)\/(\w+)/g, '$1 lub $2')
-
-  // 6. Napraw urwane tłumaczenia (kończące się przecinkami itp.)
-  if (translation.endsWith(',')) {
-    translation = translation.slice(0, -1).trim()
-  }
-
-  return translation
 }
 
 function fixRodzialTypo(chapter: string): string {
@@ -272,7 +241,8 @@ function processRows(rows: WizardRow[]) {
       chapter,
       words: words.map((w, i) => {
         const normalizedEn = normalizeEnglishForAudio(w.english!, w.category || '')
-        const normalizedPl = normalizePolishForAudio(w.polish!)
+        const fullPl = cleanPolishTranslation(w.polish!)
+        const normalizedPl = normalizePolishForAudio(fullPl)
 
         // Liczy normalizacje
         if (normalizedEn !== w.english!) stats.audioNormalizedEN++
@@ -282,7 +252,9 @@ function processRows(rows: WizardRow[]) {
         return {
           id: `${id}-${String(i + 1).padStart(3, '0')}`,
           english: normalizedEn,
-          polish: normalizedPl,
+          // Pełne tłumaczenie do wyświetlania, skrót tylko do nagrań audio
+          polish: fullPl,
+          polishAudio: normalizedPl,
           sentenceEn: null as string | null,
           sentencePl: null as string | null,
           audioWord: `${id}-${String(i + 1).padStart(3, '0')}-word.mp3`,

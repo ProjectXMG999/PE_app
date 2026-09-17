@@ -9,22 +9,24 @@
     {
       "id": "t1-p796-001",
       "english": "Come up",
-      "polish": "Wypływać",
+      "polish": "Wypływać; pojawiać się (kwestia, temat)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p796-001-word.mp3",
       "audioWordPl": "t1-p796-001-word-pl.mp3",
-      "audioSentence": "t1-p796-001-sentence.mp3"
+      "audioSentence": "t1-p796-001-sentence.mp3",
+      "polishAudio": "Wypływać"
     },
     {
       "id": "t1-p796-002",
       "english": "Get away with",
-      "polish": "Uniknąć kary",
+      "polish": "Uniknąć kary; ujść na sucho",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p796-002-word.mp3",
       "audioWordPl": "t1-p796-002-word-pl.mp3",
-      "audioSentence": "t1-p796-002-sentence.mp3"
+      "audioSentence": "t1-p796-002-sentence.mp3",
+      "polishAudio": "Uniknąć kary"
     },
     {
       "id": "t1-p796-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p796-003-word.mp3",
       "audioWordPl": "t1-p796-003-word-pl.mp3",
-      "audioSentence": "t1-p796-003-sentence.mp3"
+      "audioSentence": "t1-p796-003-sentence.mp3",
+      "polishAudio": "Przebrnąć przez coś"
     },
     {
       "id": "t1-p796-004",
@@ -44,37 +47,41 @@
       "sentencePl": null,
       "audioWord": "t1-p796-004-word.mp3",
       "audioWordPl": "t1-p796-004-word-pl.mp3",
-      "audioSentence": "t1-p796-004-sentence.mp3"
+      "audioSentence": "t1-p796-004-sentence.mp3",
+      "polishAudio": "Postępować wbrew czemuś"
     },
     {
       "id": "t1-p796-005",
       "english": "Go around",
-      "polish": "Krążyć po czymś",
+      "polish": "Krążyć po czymś (np. opowieści, plotki)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p796-005-word.mp3",
       "audioWordPl": "t1-p796-005-word-pl.mp3",
-      "audioSentence": "t1-p796-005-sentence.mp3"
+      "audioSentence": "t1-p796-005-sentence.mp3",
+      "polishAudio": "Krążyć po czymś"
     },
     {
       "id": "t1-p796-006",
       "english": "Go around",
-      "polish": "Rozprzestrzeniać się po czymś",
+      "polish": "Rozprzestrzeniać się po czymś (np. choroba)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p796-006-word.mp3",
       "audioWordPl": "t1-p796-006-word-pl.mp3",
-      "audioSentence": "t1-p796-006-sentence.mp3"
+      "audioSentence": "t1-p796-006-sentence.mp3",
+      "polishAudio": "Rozprzestrzeniać się po czymś"
     },
     {
       "id": "t1-p796-007",
       "english": "Go into",
-      "polish": "Pójść w coś",
+      "polish": "Pójść w coś (w jakąś branżę)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p796-007-word.mp3",
       "audioWordPl": "t1-p796-007-word-pl.mp3",
-      "audioSentence": "t1-p796-007-sentence.mp3"
+      "audioSentence": "t1-p796-007-sentence.mp3",
+      "polishAudio": "Pójść w coś"
     },
     {
       "id": "t1-p796-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p796-008-word.mp3",
       "audioWordPl": "t1-p796-008-word-pl.mp3",
-      "audioSentence": "t1-p796-008-sentence.mp3"
+      "audioSentence": "t1-p796-008-sentence.mp3",
+      "polishAudio": "Uchodzić za kogoś"
     },
     {
       "id": "t1-p796-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p796-009-word.mp3",
       "audioWordPl": "t1-p796-009-word-pl.mp3",
-      "audioSentence": "t1-p796-009-sentence.mp3"
+      "audioSentence": "t1-p796-009-sentence.mp3",
+      "polishAudio": "Obejść się bez czegoś"
     },
     {
       "id": "t1-p796-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p796-010-word.mp3",
       "audioWordPl": "t1-p796-010-word-pl.mp3",
-      "audioSentence": "t1-p796-010-sentence.mp3"
+      "audioSentence": "t1-p796-010-sentence.mp3",
+      "polishAudio": "Przejść do czegoś"
     }
   ]
 }

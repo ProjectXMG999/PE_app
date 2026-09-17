@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p525-001-word.mp3",
       "audioWordPl": "t1-p525-001-word-pl.mp3",
-      "audioSentence": "t1-p525-001-sentence.mp3"
+      "audioSentence": "t1-p525-001-sentence.mp3",
+      "polishAudio": "Włamać się, żeby coś ukraść"
     },
     {
       "id": "t1-p525-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p525-002-word.mp3",
       "audioWordPl": "t1-p525-002-word-pl.mp3",
-      "audioSentence": "t1-p525-002-sentence.mp3"
+      "audioSentence": "t1-p525-002-sentence.mp3",
+      "polishAudio": "Narazić na szwank"
     },
     {
       "id": "t1-p525-003",
       "english": "Decline",
-      "polish": "Podupadać",
+      "polish": "Podupadać; pogarszać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p525-003-word.mp3",
       "audioWordPl": "t1-p525-003-word-pl.mp3",
-      "audioSentence": "t1-p525-003-sentence.mp3"
+      "audioSentence": "t1-p525-003-sentence.mp3",
+      "polishAudio": "Podupadać"
     },
     {
       "id": "t1-p525-004",
@@ -44,37 +47,41 @@
       "sentencePl": null,
       "audioWord": "t1-p525-004-word.mp3",
       "audioWordPl": "t1-p525-004-word-pl.mp3",
-      "audioSentence": "t1-p525-004-sentence.mp3"
+      "audioSentence": "t1-p525-004-sentence.mp3",
+      "polishAudio": "Wyczerpywać zapasy"
     },
     {
       "id": "t1-p525-005",
       "english": "Overestimate",
-      "polish": "Przeceniać",
+      "polish": "Przeceniać (kogoś, coś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p525-005-word.mp3",
       "audioWordPl": "t1-p525-005-word-pl.mp3",
-      "audioSentence": "t1-p525-005-sentence.mp3"
+      "audioSentence": "t1-p525-005-sentence.mp3",
+      "polishAudio": "Przeceniać"
     },
     {
       "id": "t1-p525-006",
       "english": "Suspend",
-      "polish": "Zawieszać",
+      "polish": "Zawieszać (kogoś w obowiązkach); przerywać (negocjacje)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p525-006-word.mp3",
       "audioWordPl": "t1-p525-006-word-pl.mp3",
-      "audioSentence": "t1-p525-006-sentence.mp3"
+      "audioSentence": "t1-p525-006-sentence.mp3",
+      "polishAudio": "Zawieszać"
     },
     {
       "id": "t1-p525-007",
       "english": "Tease",
-      "polish": "Droczyć się",
+      "polish": "Droczyć się; drażnić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p525-007-word.mp3",
       "audioWordPl": "t1-p525-007-word-pl.mp3",
-      "audioSentence": "t1-p525-007-sentence.mp3"
+      "audioSentence": "t1-p525-007-sentence.mp3",
+      "polishAudio": "Droczyć się"
     },
     {
       "id": "t1-p525-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p525-008-word.mp3",
       "audioWordPl": "t1-p525-008-word-pl.mp3",
-      "audioSentence": "t1-p525-008-sentence.mp3"
+      "audioSentence": "t1-p525-008-sentence.mp3",
+      "polishAudio": "Szantażować"
     },
     {
       "id": "t1-p525-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p525-009-word.mp3",
       "audioWordPl": "t1-p525-009-word-pl.mp3",
-      "audioSentence": "t1-p525-009-sentence.mp3"
+      "audioSentence": "t1-p525-009-sentence.mp3",
+      "polishAudio": "Znęcać się nad słabszymi"
     },
     {
       "id": "t1-p525-010",
@@ -104,17 +113,19 @@
       "sentencePl": null,
       "audioWord": "t1-p525-010-word.mp3",
       "audioWordPl": "t1-p525-010-word-pl.mp3",
-      "audioSentence": "t1-p525-010-sentence.mp3"
+      "audioSentence": "t1-p525-010-sentence.mp3",
+      "polishAudio": "Spłoszyć"
     },
     {
       "id": "t1-p525-011",
       "english": "Condemn",
-      "polish": "Potępiać",
+      "polish": "Potępiać; piętnować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p525-011-word.mp3",
       "audioWordPl": "t1-p525-011-word-pl.mp3",
-      "audioSentence": "t1-p525-011-sentence.mp3"
+      "audioSentence": "t1-p525-011-sentence.mp3",
+      "polishAudio": "Potępiać"
     },
     {
       "id": "t1-p525-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p525-012-word.mp3",
       "audioWordPl": "t1-p525-012-word-pl.mp3",
-      "audioSentence": "t1-p525-012-sentence.mp3"
+      "audioSentence": "t1-p525-012-sentence.mp3",
+      "polishAudio": "Zwodzić"
     },
     {
       "id": "t1-p525-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p525-013-word.mp3",
       "audioWordPl": "t1-p525-013-word-pl.mp3",
-      "audioSentence": "t1-p525-013-sentence.mp3"
+      "audioSentence": "t1-p525-013-sentence.mp3",
+      "polishAudio": "Gardzić"
     },
     {
       "id": "t1-p525-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p525-014-word.mp3",
       "audioWordPl": "t1-p525-014-word-pl.mp3",
-      "audioSentence": "t1-p525-014-sentence.mp3"
+      "audioSentence": "t1-p525-014-sentence.mp3",
+      "polishAudio": "Lekceważyć"
     },
     {
       "id": "t1-p525-015",
       "english": "Distract",
-      "polish": "Rozpraszać kogoś",
+      "polish": "Rozpraszać kogoś; odwracać uwagę",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p525-015-word.mp3",
       "audioWordPl": "t1-p525-015-word-pl.mp3",
-      "audioSentence": "t1-p525-015-sentence.mp3"
+      "audioSentence": "t1-p525-015-sentence.mp3",
+      "polishAudio": "Rozpraszać kogoś"
     }
   ]
 }

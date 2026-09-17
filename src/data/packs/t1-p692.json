@@ -14,27 +14,30 @@
       "sentencePl": null,
       "audioWord": "t1-p692-001-word.mp3",
       "audioWordPl": "t1-p692-001-word-pl.mp3",
-      "audioSentence": "t1-p692-001-sentence.mp3"
+      "audioSentence": "t1-p692-001-sentence.mp3",
+      "polishAudio": "Bęben"
     },
     {
       "id": "t1-p692-002",
       "english": "Songwriting",
-      "polish": "Pisanie piosenek",
+      "polish": "Pisanie piosenek (tekstów i muzyki)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p692-002-word.mp3",
       "audioWordPl": "t1-p692-002-word-pl.mp3",
-      "audioSentence": "t1-p692-002-sentence.mp3"
+      "audioSentence": "t1-p692-002-sentence.mp3",
+      "polishAudio": "Pisanie piosenek"
     },
     {
       "id": "t1-p692-003",
       "english": "Portfolio",
-      "polish": "Portfolio",
+      "polish": "Portfolio; teczka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p692-003-word.mp3",
       "audioWordPl": "t1-p692-003-word-pl.mp3",
-      "audioSentence": "t1-p692-003-sentence.mp3"
+      "audioSentence": "t1-p692-003-sentence.mp3",
+      "polishAudio": "Portfolio"
     },
     {
       "id": "t1-p692-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p692-004-word.mp3",
       "audioWordPl": "t1-p692-004-word-pl.mp3",
-      "audioSentence": "t1-p692-004-sentence.mp3"
+      "audioSentence": "t1-p692-004-sentence.mp3",
+      "polishAudio": "Dzieło sztuki"
     },
     {
       "id": "t1-p692-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p692-005-word.mp3",
       "audioWordPl": "t1-p692-005-word-pl.mp3",
-      "audioSentence": "t1-p692-005-sentence.mp3"
+      "audioSentence": "t1-p692-005-sentence.mp3",
+      "polishAudio": "Publiczność"
     },
     {
       "id": "t1-p692-006",
@@ -64,37 +69,41 @@
       "sentencePl": null,
       "audioWord": "t1-p692-006-word.mp3",
       "audioWordPl": "t1-p692-006-word-pl.mp3",
-      "audioSentence": "t1-p692-006-sentence.mp3"
+      "audioSentence": "t1-p692-006-sentence.mp3",
+      "polishAudio": "Rola główna"
     },
     {
       "id": "t1-p692-007",
       "english": "Rhythm",
-      "polish": "Rytm",
+      "polish": "Rytm (ogólnie w muzyce)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p692-007-word.mp3",
       "audioWordPl": "t1-p692-007-word-pl.mp3",
-      "audioSentence": "t1-p692-007-sentence.mp3"
+      "audioSentence": "t1-p692-007-sentence.mp3",
+      "polishAudio": "Rytm"
     },
     {
       "id": "t1-p692-008",
       "english": "Groove",
-      "polish": "Rytm",
+      "polish": "Rytm (ciała w odpowiedzi na muzykę)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p692-008-word.mp3",
       "audioWordPl": "t1-p692-008-word-pl.mp3",
-      "audioSentence": "t1-p692-008-sentence.mp3"
+      "audioSentence": "t1-p692-008-sentence.mp3",
+      "polishAudio": "Rytm"
     },
     {
       "id": "t1-p692-009",
       "english": "Sculpture",
-      "polish": "Rzeźba",
+      "polish": "Rzeźba; rzeźbiarstwo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p692-009-word.mp3",
       "audioWordPl": "t1-p692-009-word-pl.mp3",
-      "audioSentence": "t1-p692-009-sentence.mp3"
+      "audioSentence": "t1-p692-009-sentence.mp3",
+      "polishAudio": "Rzeźba"
     },
     {
       "id": "t1-p692-010",
@@ -104,27 +113,30 @@
       "sentencePl": null,
       "audioWord": "t1-p692-010-word.mp3",
       "audioWordPl": "t1-p692-010-word-pl.mp3",
-      "audioSentence": "t1-p692-010-sentence.mp3"
+      "audioSentence": "t1-p692-010-sentence.mp3",
+      "polishAudio": "Rzeźbiarz"
     },
     {
       "id": "t1-p692-011",
       "english": "Stage",
-      "polish": "Scena",
+      "polish": "Scena (deski teatru)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p692-011-word.mp3",
       "audioWordPl": "t1-p692-011-word-pl.mp3",
-      "audioSentence": "t1-p692-011-sentence.mp3"
+      "audioSentence": "t1-p692-011-sentence.mp3",
+      "polishAudio": "Scena"
     },
     {
       "id": "t1-p692-012",
       "english": "Screenplay",
-      "polish": "Scenariusz",
+      "polish": "Scenariusz (np. do filmu, przedstawienia)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p692-012-word.mp3",
       "audioWordPl": "t1-p692-012-word-pl.mp3",
-      "audioSentence": "t1-p692-012-sentence.mp3"
+      "audioSentence": "t1-p692-012-sentence.mp3",
+      "polishAudio": "Scenariusz"
     },
     {
       "id": "t1-p692-013",
@@ -134,17 +146,19 @@
       "sentencePl": null,
       "audioWord": "t1-p692-013-word.mp3",
       "audioWordPl": "t1-p692-013-word-pl.mp3",
-      "audioSentence": "t1-p692-013-sentence.mp3"
+      "audioSentence": "t1-p692-013-sentence.mp3",
+      "polishAudio": "Scenografia"
     },
     {
       "id": "t1-p692-014",
       "english": "Lineup",
-      "polish": "Skład",
+      "polish": "Skład; lista wykonawców",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p692-014-word.mp3",
       "audioWordPl": "t1-p692-014-word-pl.mp3",
-      "audioSentence": "t1-p692-014-sentence.mp3"
+      "audioSentence": "t1-p692-014-sentence.mp3",
+      "polishAudio": "Skład"
     },
     {
       "id": "t1-p692-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p692-015-word.mp3",
       "audioWordPl": "t1-p692-015-word-pl.mp3",
-      "audioSentence": "t1-p692-015-sentence.mp3"
+      "audioSentence": "t1-p692-015-sentence.mp3",
+      "polishAudio": "Skrzypce"
     }
   ]
 }

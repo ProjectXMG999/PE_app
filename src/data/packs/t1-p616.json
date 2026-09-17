@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p616-001-word.mp3",
       "audioWordPl": "t1-p616-001-word-pl.mp3",
-      "audioSentence": "t1-p616-001-sentence.mp3"
+      "audioSentence": "t1-p616-001-sentence.mp3",
+      "polishAudio": "Ziewać"
     },
     {
       "id": "t1-p616-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p616-002-word.mp3",
       "audioWordPl": "t1-p616-002-word-pl.mp3",
-      "audioSentence": "t1-p616-002-sentence.mp3"
+      "audioSentence": "t1-p616-002-sentence.mp3",
+      "polishAudio": "Żuć"
     },
     {
       "id": "t1-p616-003",
@@ -34,27 +36,30 @@
       "sentencePl": null,
       "audioWord": "t1-p616-003-word.mp3",
       "audioWordPl": "t1-p616-003-word-pl.mp3",
-      "audioSentence": "t1-p616-003-sentence.mp3"
+      "audioSentence": "t1-p616-003-sentence.mp3",
+      "polishAudio": "Wzdychać"
     },
     {
       "id": "t1-p616-004",
       "english": "Sniff",
-      "polish": "Pociągać nosem",
+      "polish": "Pociągać nosem; wąchać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p616-004-word.mp3",
       "audioWordPl": "t1-p616-004-word-pl.mp3",
-      "audioSentence": "t1-p616-004-sentence.mp3"
+      "audioSentence": "t1-p616-004-sentence.mp3",
+      "polishAudio": "Pociągać nosem"
     },
     {
       "id": "t1-p616-005",
       "english": "Flex",
-      "polish": "Napinać",
+      "polish": "Napinać; spinać (mięśnie); zginać; poruszyć (np. palcami)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p616-005-word.mp3",
       "audioWordPl": "t1-p616-005-word-pl.mp3",
-      "audioSentence": "t1-p616-005-sentence.mp3"
+      "audioSentence": "t1-p616-005-sentence.mp3",
+      "polishAudio": "Napinać"
     },
     {
       "id": "t1-p616-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p616-006-word.mp3",
       "audioWordPl": "t1-p616-006-word-pl.mp3",
-      "audioSentence": "t1-p616-006-sentence.mp3"
+      "audioSentence": "t1-p616-006-sentence.mp3",
+      "polishAudio": "Zrobić wdech"
     },
     {
       "id": "t1-p616-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p616-007-word.mp3",
       "audioWordPl": "t1-p616-007-word-pl.mp3",
-      "audioSentence": "t1-p616-007-sentence.mp3"
+      "audioSentence": "t1-p616-007-sentence.mp3",
+      "polishAudio": "Wypróżniać się"
     },
     {
       "id": "t1-p616-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p616-008-word.mp3",
       "audioWordPl": "t1-p616-008-word-pl.mp3",
-      "audioSentence": "t1-p616-008-sentence.mp3"
+      "audioSentence": "t1-p616-008-sentence.mp3",
+      "polishAudio": "Oddawać mocz"
     },
     {
       "id": "t1-p616-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p616-009-word.mp3",
       "audioWordPl": "t1-p616-009-word-pl.mp3",
-      "audioSentence": "t1-p616-009-sentence.mp3"
+      "audioSentence": "t1-p616-009-sentence.mp3",
+      "polishAudio": "Połykać"
     },
     {
       "id": "t1-p616-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p616-010-word.mp3",
       "audioWordPl": "t1-p616-010-word-pl.mp3",
-      "audioSentence": "t1-p616-010-sentence.mp3"
+      "audioSentence": "t1-p616-010-sentence.mp3",
+      "polishAudio": "Zrobić wydech"
     },
     {
       "id": "t1-p616-011",
@@ -114,17 +124,19 @@
       "sentencePl": null,
       "audioWord": "t1-p616-011-word.mp3",
       "audioWordPl": "t1-p616-011-word-pl.mp3",
-      "audioSentence": "t1-p616-011-sentence.mp3"
+      "audioSentence": "t1-p616-011-sentence.mp3",
+      "polishAudio": "Wymawiać"
     },
     {
       "id": "t1-p616-012",
       "english": "Frown",
-      "polish": "Marszczyć brwi",
+      "polish": "Marszczyć brwi; grymasić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p616-012-word.mp3",
       "audioWordPl": "t1-p616-012-word-pl.mp3",
-      "audioSentence": "t1-p616-012-sentence.mp3"
+      "audioSentence": "t1-p616-012-sentence.mp3",
+      "polishAudio": "Marszczyć brwi"
     },
     {
       "id": "t1-p616-013",
@@ -134,17 +146,19 @@
       "sentencePl": null,
       "audioWord": "t1-p616-013-word.mp3",
       "audioWordPl": "t1-p616-013-word-pl.mp3",
-      "audioSentence": "t1-p616-013-sentence.mp3"
+      "audioSentence": "t1-p616-013-sentence.mp3",
+      "polishAudio": "Wzruszać ramionami"
     },
     {
       "id": "t1-p616-014",
       "english": "Awaken",
-      "polish": "Rozbudzać",
+      "polish": "Rozbudzać; obudzić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p616-014-word.mp3",
       "audioWordPl": "t1-p616-014-word-pl.mp3",
-      "audioSentence": "t1-p616-014-sentence.mp3"
+      "audioSentence": "t1-p616-014-sentence.mp3",
+      "polishAudio": "Rozbudzać"
     },
     {
       "id": "t1-p616-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p616-015-word.mp3",
       "audioWordPl": "t1-p616-015-word-pl.mp3",
-      "audioSentence": "t1-p616-015-sentence.mp3"
+      "audioSentence": "t1-p616-015-sentence.mp3",
+      "polishAudio": "Trawić"
     }
   ]
 }

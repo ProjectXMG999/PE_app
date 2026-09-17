@@ -10,151 +10,166 @@
       "id": "t1-p172-001",
       "english": "Paint",
       "polish": "Farba",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You left me some paint so I could finish the shelf.",
+      "sentencePl": "Zostawiłeś mi odrobinę farby, żebym mogła dokończyć półkę.",
       "audioWord": "t1-p172-001-word.mp3",
       "audioWordPl": "t1-p172-001-word-pl.mp3",
-      "audioSentence": "t1-p172-001-sentence.mp3"
+      "audioSentence": "t1-p172-001-sentence.mp3",
+      "polishAudio": "Farba"
     },
     {
       "id": "t1-p172-002",
       "english": "Stone",
       "polish": "Kamień",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You brought me a stone from the beach; remember where you found it?",
+      "sentencePl": "Przywiozłeś mi kamień z plaży, pamiętasz, gdzie go znalazłeś?",
       "audioWord": "t1-p172-002-word.mp3",
       "audioWordPl": "t1-p172-002-word-pl.mp3",
-      "audioSentence": "t1-p172-002-sentence.mp3"
+      "audioSentence": "t1-p172-002-sentence.mp3",
+      "polishAudio": "Kamień"
     },
     {
       "id": "t1-p172-003",
       "english": "Wood",
       "polish": "Drewno",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I like that you chose wood; it feels cosier here already.",
+      "sentencePl": "Lubię, że wybrałeś drewno, od razu jest tu przytulniej.",
       "audioWord": "t1-p172-003-word.mp3",
       "audioWordPl": "t1-p172-003-word-pl.mp3",
-      "audioSentence": "t1-p172-003-sentence.mp3"
+      "audioSentence": "t1-p172-003-sentence.mp3",
+      "polishAudio": "Drewno"
     },
     {
       "id": "t1-p172-004",
       "english": "Rubber",
-      "polish": "Guma",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Guma; gumka do ścierania",
+      "sentenceEn": "The rubber around the door came loose after winter.",
+      "sentencePl": "Guma przy drzwiach odkleiła się po zimie.",
       "audioWord": "t1-p172-004-word.mp3",
       "audioWordPl": "t1-p172-004-word-pl.mp3",
-      "audioSentence": "t1-p172-004-sentence.mp3"
+      "audioSentence": "t1-p172-004-sentence.mp3",
+      "polishAudio": "Guma"
     },
     {
       "id": "t1-p172-005",
       "english": "Glue",
       "polish": "Klej",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Have you got any glue? The sole has come off my shoe.",
+      "sentencePl": "Masz może klej? Odkleiła mi się podeszwa.",
       "audioWord": "t1-p172-005-word.mp3",
       "audioWordPl": "t1-p172-005-word-pl.mp3",
-      "audioSentence": "t1-p172-005-sentence.mp3"
+      "audioSentence": "t1-p172-005-sentence.mp3",
+      "polishAudio": "Klej"
     },
     {
       "id": "t1-p172-006",
       "english": "Material",
       "polish": "Materiał",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Check the sweater's material before putting it in the washing machine.",
+      "sentencePl": "Sprawdź materiał swetra, zanim wrzucisz go do pralki.",
       "audioWord": "t1-p172-006-word.mp3",
       "audioWordPl": "t1-p172-006-word-pl.mp3",
-      "audioSentence": "t1-p172-006-sentence.mp3"
+      "audioSentence": "t1-p172-006-sentence.mp3",
+      "polishAudio": "Materiał"
     },
     {
       "id": "t1-p172-007",
       "english": "Metal",
       "polish": "Metal",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You chose metal instead of plastic because durability mattered to you.",
+      "sentencePl": "Wybrałeś metal zamiast plastiku, bo zależało ci na trwałości.",
       "audioWord": "t1-p172-007-word.mp3",
       "audioWordPl": "t1-p172-007-word-pl.mp3",
-      "audioSentence": "t1-p172-007-sentence.mp3"
+      "audioSentence": "t1-p172-007-sentence.mp3",
+      "polishAudio": "Metal"
     },
     {
       "id": "t1-p172-008",
       "english": "Mineral",
       "polish": "Minerał",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Someone online identified this mineral from a photo as quartz.",
+      "sentencePl": "Po zdjęciu w sieci ktoś rozpoznał ten minerał jako kwarc.",
       "audioWord": "t1-p172-008-word.mp3",
       "audioWordPl": "t1-p172-008-word-pl.mp3",
-      "audioSentence": "t1-p172-008-sentence.mp3"
+      "audioSentence": "t1-p172-008-sentence.mp3",
+      "polishAudio": "Minerał"
     },
     {
       "id": "t1-p172-009",
       "english": "Plastic",
       "polish": "Plastik",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "When ordering, I selected the option without plastic cutlery.",
+      "sentencePl": "Przy odbiorze zaznaczyłam opcję bez plastikowych sztućców.",
       "audioWord": "t1-p172-009-word.mp3",
       "audioWordPl": "t1-p172-009-word-pl.mp3",
-      "audioSentence": "t1-p172-009-sentence.mp3"
+      "audioSentence": "t1-p172-009-sentence.mp3",
+      "polishAudio": "Plastik"
     },
     {
       "id": "t1-p172-010",
       "english": "Powder",
-      "polish": "Proszek",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Proszek; puder",
+      "sentenceEn": "You bought my cocoa powder; you remembered it.",
+      "sentencePl": "Kupiłeś mój proszek do kakao, pamiętałeś o nim.",
       "audioWord": "t1-p172-010-word.mp3",
       "audioWordPl": "t1-p172-010-word-pl.mp3",
-      "audioSentence": "t1-p172-010-sentence.mp3"
+      "audioSentence": "t1-p172-010-sentence.mp3",
+      "polishAudio": "Proszek"
     },
     {
       "id": "t1-p172-011",
       "english": "Silver",
       "polish": "Srebro",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You found Grandma's silver bracelet; I was so happy.",
+      "sentencePl": "Znalazłeś srebrną bransoletkę po babci, ale się ucieszyłam.",
       "audioWord": "t1-p172-011-word.mp3",
       "audioWordPl": "t1-p172-011-word-pl.mp3",
-      "audioSentence": "t1-p172-011-sentence.mp3"
+      "audioSentence": "t1-p172-011-sentence.mp3",
+      "polishAudio": "Srebro"
     },
     {
       "id": "t1-p172-012",
       "english": "Substance",
       "polish": "Substancja",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Don't mix this substance with water until you've read the label.",
+      "sentencePl": "Nie mieszaj tej substancji z wodą, dopóki nie przeczytasz etykiety.",
       "audioWord": "t1-p172-012-word.mp3",
       "audioWordPl": "t1-p172-012-word-pl.mp3",
-      "audioSentence": "t1-p172-012-sentence.mp3"
+      "audioSentence": "t1-p172-012-sentence.mp3",
+      "polishAudio": "Substancja"
     },
     {
       "id": "t1-p172-013",
       "english": "Brick",
       "polish": "Cegła",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "One brick is loose, so it needs fixing.",
+      "sentencePl": "Jedna cegła się rusza, trzeba ją poprawić.",
       "audioWord": "t1-p172-013-word.mp3",
       "audioWordPl": "t1-p172-013-word-pl.mp3",
-      "audioSentence": "t1-p172-013-sentence.mp3"
+      "audioSentence": "t1-p172-013-sentence.mp3",
+      "polishAudio": "Cegła"
     },
     {
       "id": "t1-p172-014",
       "english": "Gold",
       "polish": "Złoto",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You put on a gold ring and ask whether you look rich?",
+      "sentencePl": "Założyłeś złoty pierścionek i pytasz, czy wyglądasz bogato?",
       "audioWord": "t1-p172-014-word.mp3",
       "audioWordPl": "t1-p172-014-word-pl.mp3",
-      "audioSentence": "t1-p172-014-sentence.mp3"
+      "audioSentence": "t1-p172-014-sentence.mp3",
+      "polishAudio": "Złoto"
     },
     {
       "id": "t1-p172-015",
       "english": "Cement",
       "polish": "Cement",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "The cement is still wet, so don't step there.",
+      "sentencePl": "Cement jest jeszcze mokry, nie stawaj tam.",
       "audioWord": "t1-p172-015-word.mp3",
       "audioWordPl": "t1-p172-015-word-pl.mp3",
-      "audioSentence": "t1-p172-015-sentence.mp3"
+      "audioSentence": "t1-p172-015-sentence.mp3",
+      "polishAudio": "Cement"
     }
   ]
 }

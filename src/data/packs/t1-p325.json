@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p325-001-word.mp3",
       "audioWordPl": "t1-p325-001-word-pl.mp3",
-      "audioSentence": "t1-p325-001-sentence.mp3"
+      "audioSentence": "t1-p325-001-sentence.mp3",
+      "polishAudio": "Huk"
     },
     {
       "id": "t1-p325-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p325-002-word.mp3",
       "audioWordPl": "t1-p325-002-word-pl.mp3",
-      "audioSentence": "t1-p325-002-sentence.mp3"
+      "audioSentence": "t1-p325-002-sentence.mp3",
+      "polishAudio": "Gwizd"
     },
     {
       "id": "t1-p325-003",
       "english": "Cube",
-      "polish": "Kostka",
+      "polish": "Kostka; sześcian",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p325-003-word.mp3",
       "audioWordPl": "t1-p325-003-word-pl.mp3",
-      "audioSentence": "t1-p325-003-sentence.mp3"
+      "audioSentence": "t1-p325-003-sentence.mp3",
+      "polishAudio": "Kostka"
     },
     {
       "id": "t1-p325-004",
@@ -44,27 +47,30 @@
       "sentencePl": null,
       "audioWord": "t1-p325-004-word.mp3",
       "audioWordPl": "t1-p325-004-word-pl.mp3",
-      "audioSentence": "t1-p325-004-sentence.mp3"
+      "audioSentence": "t1-p325-004-sentence.mp3",
+      "polishAudio": "Kula"
     },
     {
       "id": "t1-p325-005",
       "english": "Melody",
-      "polish": "Melodia",
+      "polish": "Melodia (część utworu)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p325-005-word.mp3",
       "audioWordPl": "t1-p325-005-word-pl.mp3",
-      "audioSentence": "t1-p325-005-sentence.mp3"
+      "audioSentence": "t1-p325-005-sentence.mp3",
+      "polishAudio": "Melodia"
     },
     {
       "id": "t1-p325-006",
       "english": "Tune",
-      "polish": "Melodia",
+      "polish": "Melodia (cały utwór); kawałek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p325-006-word.mp3",
       "audioWordPl": "t1-p325-006-word-pl.mp3",
-      "audioSentence": "t1-p325-006-sentence.mp3"
+      "audioSentence": "t1-p325-006-sentence.mp3",
+      "polishAudio": "Melodia"
     },
     {
       "id": "t1-p325-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p325-007-word.mp3",
       "audioWordPl": "t1-p325-007-word-pl.mp3",
-      "audioSentence": "t1-p325-007-sentence.mp3"
+      "audioSentence": "t1-p325-007-sentence.mp3",
+      "polishAudio": "Okrąg"
     },
     {
       "id": "t1-p325-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p325-008-word.mp3",
       "audioWordPl": "t1-p325-008-word-pl.mp3",
-      "audioSentence": "t1-p325-008-sentence.mp3"
+      "audioSentence": "t1-p325-008-sentence.mp3",
+      "polishAudio": "Kwadrat"
     },
     {
       "id": "t1-p325-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p325-009-word.mp3",
       "audioWordPl": "t1-p325-009-word-pl.mp3",
-      "audioSentence": "t1-p325-009-sentence.mp3"
+      "audioSentence": "t1-p325-009-sentence.mp3",
+      "polishAudio": "Orientacja"
     },
     {
       "id": "t1-p325-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p325-010-word.mp3",
       "audioWordPl": "t1-p325-010-word-pl.mp3",
-      "audioSentence": "t1-p325-010-sentence.mp3"
+      "audioSentence": "t1-p325-010-sentence.mp3",
+      "polishAudio": "Prostokąt"
     },
     {
       "id": "t1-p325-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p325-011-word.mp3",
       "audioWordPl": "t1-p325-011-word-pl.mp3",
-      "audioSentence": "t1-p325-011-sentence.mp3"
+      "audioSentence": "t1-p325-011-sentence.mp3",
+      "polishAudio": "Szept"
     },
     {
       "id": "t1-p325-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p325-012-word.mp3",
       "audioWordPl": "t1-p325-012-word-pl.mp3",
-      "audioSentence": "t1-p325-012-sentence.mp3"
+      "audioSentence": "t1-p325-012-sentence.mp3",
+      "polishAudio": "Trójkąt"
     },
     {
       "id": "t1-p325-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p325-013-word.mp3",
       "audioWordPl": "t1-p325-013-word-pl.mp3",
-      "audioSentence": "t1-p325-013-sentence.mp3"
+      "audioSentence": "t1-p325-013-sentence.mp3",
+      "polishAudio": "Chrapanie"
     },
     {
       "id": "t1-p325-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p325-014-word.mp3",
       "audioWordPl": "t1-p325-014-word-pl.mp3",
-      "audioSentence": "t1-p325-014-sentence.mp3"
+      "audioSentence": "t1-p325-014-sentence.mp3",
+      "polishAudio": "Umieszczenie"
     },
     {
       "id": "t1-p325-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p325-015-word.mp3",
       "audioWordPl": "t1-p325-015-word-pl.mp3",
-      "audioSentence": "t1-p325-015-sentence.mp3"
+      "audioSentence": "t1-p325-015-sentence.mp3",
+      "polishAudio": "Lokalizacja"
     }
   ]
 }

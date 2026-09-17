@@ -9,12 +9,13 @@
     {
       "id": "t1-p538-001",
       "english": "Forecast",
-      "polish": "Prognozować",
+      "polish": "Prognozować; przewidywać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p538-001-word.mp3",
       "audioWordPl": "t1-p538-001-word-pl.mp3",
-      "audioSentence": "t1-p538-001-sentence.mp3"
+      "audioSentence": "t1-p538-001-sentence.mp3",
+      "polishAudio": "Prognozować"
     },
     {
       "id": "t1-p538-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p538-002-word.mp3",
       "audioWordPl": "t1-p538-002-word-pl.mp3",
-      "audioSentence": "t1-p538-002-sentence.mp3"
+      "audioSentence": "t1-p538-002-sentence.mp3",
+      "polishAudio": "Pospieszać"
     },
     {
       "id": "t1-p538-003",
       "english": "Issue",
-      "polish": "Wydawać oświadczenie",
+      "polish": "Wydawać oświadczenie; puszczać w obieg; publikować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p538-003-word.mp3",
       "audioWordPl": "t1-p538-003-word-pl.mp3",
-      "audioSentence": "t1-p538-003-sentence.mp3"
+      "audioSentence": "t1-p538-003-sentence.mp3",
+      "polishAudio": "Wydawać oświadczenie"
     },
     {
       "id": "t1-p538-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p538-004-word.mp3",
       "audioWordPl": "t1-p538-004-word-pl.mp3",
-      "audioSentence": "t1-p538-004-sentence.mp3"
+      "audioSentence": "t1-p538-004-sentence.mp3",
+      "polishAudio": "Dzierżawić"
     },
     {
       "id": "t1-p538-005",
@@ -54,37 +58,41 @@
       "sentencePl": null,
       "audioWord": "t1-p538-005-word.mp3",
       "audioWordPl": "t1-p538-005-word-pl.mp3",
-      "audioSentence": "t1-p538-005-sentence.mp3"
+      "audioSentence": "t1-p538-005-sentence.mp3",
+      "polishAudio": "Sprzedawać detalicznie"
     },
     {
       "id": "t1-p538-006",
       "english": "Surpass",
-      "polish": "Przekraczać",
+      "polish": "Przekraczać; przewyższać (w jakości)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p538-006-word.mp3",
       "audioWordPl": "t1-p538-006-word-pl.mp3",
-      "audioSentence": "t1-p538-006-sentence.mp3"
+      "audioSentence": "t1-p538-006-sentence.mp3",
+      "polishAudio": "Przekraczać"
     },
     {
       "id": "t1-p538-007",
       "english": "Amend",
-      "polish": "Wnieść poprawki",
+      "polish": "Wnieść poprawki; poprawiać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p538-007-word.mp3",
       "audioWordPl": "t1-p538-007-word-pl.mp3",
-      "audioSentence": "t1-p538-007-sentence.mp3"
+      "audioSentence": "t1-p538-007-sentence.mp3",
+      "polishAudio": "Wnieść poprawki"
     },
     {
       "id": "t1-p538-008",
       "english": "Appoint",
-      "polish": "Powołać",
+      "polish": "Powołać; wyznaczać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p538-008-word.mp3",
       "audioWordPl": "t1-p538-008-word-pl.mp3",
-      "audioSentence": "t1-p538-008-sentence.mp3"
+      "audioSentence": "t1-p538-008-sentence.mp3",
+      "polishAudio": "Powołać"
     },
     {
       "id": "t1-p538-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p538-009-word.mp3",
       "audioWordPl": "t1-p538-009-word-pl.mp3",
-      "audioSentence": "t1-p538-009-sentence.mp3"
+      "audioSentence": "t1-p538-009-sentence.mp3",
+      "polishAudio": "Ustalać na podstawie szacunków"
     },
     {
       "id": "t1-p538-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p538-010-word.mp3",
       "audioWordPl": "t1-p538-010-word-pl.mp3",
-      "audioSentence": "t1-p538-010-sentence.mp3"
+      "audioSentence": "t1-p538-010-sentence.mp3",
+      "polishAudio": "Zapisać się"
     },
     {
       "id": "t1-p538-011",
@@ -114,27 +124,30 @@
       "sentencePl": null,
       "audioWord": "t1-p538-011-word.mp3",
       "audioWordPl": "t1-p538-011-word-pl.mp3",
-      "audioSentence": "t1-p538-011-sentence.mp3"
+      "audioSentence": "t1-p538-011-sentence.mp3",
+      "polishAudio": "Przewodniczyć"
     },
     {
       "id": "t1-p538-012",
       "english": "Reclaim",
-      "polish": "Żądać zwrotu",
+      "polish": "Żądać zwrotu; odzyskiwać (coś od kogoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p538-012-word.mp3",
       "audioWordPl": "t1-p538-012-word-pl.mp3",
-      "audioSentence": "t1-p538-012-sentence.mp3"
+      "audioSentence": "t1-p538-012-sentence.mp3",
+      "polishAudio": "Żądać zwrotu"
     },
     {
       "id": "t1-p538-013",
       "english": "Validate",
-      "polish": "Uprawomocniać",
+      "polish": "Uprawomocniać; potwierdzać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p538-013-word.mp3",
       "audioWordPl": "t1-p538-013-word-pl.mp3",
-      "audioSentence": "t1-p538-013-sentence.mp3"
+      "audioSentence": "t1-p538-013-sentence.mp3",
+      "polishAudio": "Uprawomocniać"
     },
     {
       "id": "t1-p538-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p538-014-word.mp3",
       "audioWordPl": "t1-p538-014-word-pl.mp3",
-      "audioSentence": "t1-p538-014-sentence.mp3"
+      "audioSentence": "t1-p538-014-sentence.mp3",
+      "polishAudio": "Posiadać"
     },
     {
       "id": "t1-p538-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p538-015-word.mp3",
       "audioWordPl": "t1-p538-015-word-pl.mp3",
-      "audioSentence": "t1-p538-015-sentence.mp3"
+      "audioSentence": "t1-p538-015-sentence.mp3",
+      "polishAudio": "Dzierżawić"
     }
   ]
 }

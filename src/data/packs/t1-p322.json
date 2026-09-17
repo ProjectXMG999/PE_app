@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p322-001-word.mp3",
       "audioWordPl": "t1-p322-001-word-pl.mp3",
-      "audioSentence": "t1-p322-001-sentence.mp3"
+      "audioSentence": "t1-p322-001-sentence.mp3",
+      "polishAudio": "Wyrzucić"
     },
     {
       "id": "t1-p322-002",
@@ -24,37 +25,41 @@
       "sentencePl": null,
       "audioWord": "t1-p322-002-word.mp3",
       "audioWordPl": "t1-p322-002-word-pl.mp3",
-      "audioSentence": "t1-p322-002-sentence.mp3"
+      "audioSentence": "t1-p322-002-sentence.mp3",
+      "polishAudio": "Zapisać coś"
     },
     {
       "id": "t1-p322-003",
       "english": "Cut off",
-      "polish": "Odcinać",
+      "polish": "Odcinać; ucinać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p322-003-word.mp3",
       "audioWordPl": "t1-p322-003-word-pl.mp3",
-      "audioSentence": "t1-p322-003-sentence.mp3"
+      "audioSentence": "t1-p322-003-sentence.mp3",
+      "polishAudio": "Odcinać"
     },
     {
       "id": "t1-p322-004",
       "english": "Get sth down",
-      "polish": "Zdejmować coś",
+      "polish": "Zdejmować coś (z góry)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p322-004-word.mp3",
       "audioWordPl": "t1-p322-004-word-pl.mp3",
-      "audioSentence": "t1-p322-004-sentence.mp3"
+      "audioSentence": "t1-p322-004-sentence.mp3",
+      "polishAudio": "Zdejmować coś"
     },
     {
       "id": "t1-p322-005",
       "english": "Put sth away",
-      "polish": "Odłożyć",
+      "polish": "Odłożyć; przechować coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p322-005-word.mp3",
       "audioWordPl": "t1-p322-005-word-pl.mp3",
-      "audioSentence": "t1-p322-005-sentence.mp3"
+      "audioSentence": "t1-p322-005-sentence.mp3",
+      "polishAudio": "Odłożyć"
     },
     {
       "id": "t1-p322-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p322-006-word.mp3",
       "audioWordPl": "t1-p322-006-word-pl.mp3",
-      "audioSentence": "t1-p322-006-sentence.mp3"
+      "audioSentence": "t1-p322-006-sentence.mp3",
+      "polishAudio": "Położyć"
     },
     {
       "id": "t1-p322-007",
       "english": "Put in",
-      "polish": "Włożyć",
+      "polish": "Włożyć; wkładać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p322-007-word.mp3",
       "audioWordPl": "t1-p322-007-word-pl.mp3",
-      "audioSentence": "t1-p322-007-sentence.mp3"
+      "audioSentence": "t1-p322-007-sentence.mp3",
+      "polishAudio": "Włożyć"
     },
     {
       "id": "t1-p322-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p322-008-word.mp3",
       "audioWordPl": "t1-p322-008-word-pl.mp3",
-      "audioSentence": "t1-p322-008-sentence.mp3"
+      "audioSentence": "t1-p322-008-sentence.mp3",
+      "polishAudio": "Wpisać się"
     },
     {
       "id": "t1-p322-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p322-009-word.mp3",
       "audioWordPl": "t1-p322-009-word-pl.mp3",
-      "audioSentence": "t1-p322-009-sentence.mp3"
+      "audioSentence": "t1-p322-009-sentence.mp3",
+      "polishAudio": "Sięgać"
     },
     {
       "id": "t1-p322-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p322-010-word.mp3",
       "audioWordPl": "t1-p322-010-word-pl.mp3",
-      "audioSentence": "t1-p322-010-sentence.mp3"
+      "audioSentence": "t1-p322-010-sentence.mp3",
+      "polishAudio": "Wręczyć coś"
     }
   ]
 }

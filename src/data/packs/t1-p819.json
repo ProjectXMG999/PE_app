@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p819-001-word.mp3",
       "audioWordPl": "t1-p819-001-word-pl.mp3",
-      "audioSentence": "t1-p819-001-sentence.mp3"
+      "audioSentence": "t1-p819-001-sentence.mp3",
+      "polishAudio": "Dogadywać się z kimś"
     },
     {
       "id": "t1-p819-002",
@@ -24,27 +25,30 @@
       "sentencePl": null,
       "audioWord": "t1-p819-002-word.mp3",
       "audioWordPl": "t1-p819-002-word-pl.mp3",
-      "audioSentence": "t1-p819-002-sentence.mp3"
+      "audioSentence": "t1-p819-002-sentence.mp3",
+      "polishAudio": "Przekazywać komuś coś"
     },
     {
       "id": "t1-p819-003",
       "english": "Bring round",
-      "polish": "Przywracać do przytomności",
+      "polish": "Przywracać do przytomności; cucić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p819-003-word.mp3",
       "audioWordPl": "t1-p819-003-word-pl.mp3",
-      "audioSentence": "t1-p819-003-sentence.mp3"
+      "audioSentence": "t1-p819-003-sentence.mp3",
+      "polishAudio": "Przywracać do przytomności"
     },
     {
       "id": "t1-p819-004",
       "english": "Come under",
-      "polish": "Podlegać",
+      "polish": "Podlegać; zostać poddanym czemuś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p819-004-word.mp3",
       "audioWordPl": "t1-p819-004-word-pl.mp3",
-      "audioSentence": "t1-p819-004-sentence.mp3"
+      "audioSentence": "t1-p819-004-sentence.mp3",
+      "polishAudio": "Podlegać"
     },
     {
       "id": "t1-p819-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p819-005-word.mp3",
       "audioWordPl": "t1-p819-005-word-pl.mp3",
-      "audioSentence": "t1-p819-005-sentence.mp3"
+      "audioSentence": "t1-p819-005-sentence.mp3",
+      "polishAudio": "Odseparować się od kogoś"
     },
     {
       "id": "t1-p819-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p819-006-word.mp3",
       "audioWordPl": "t1-p819-006-word-pl.mp3",
-      "audioSentence": "t1-p819-006-sentence.mp3"
+      "audioSentence": "t1-p819-006-sentence.mp3",
+      "polishAudio": "Zaangażować kogoś w coś"
     },
     {
       "id": "t1-p819-007",
@@ -74,37 +80,41 @@
       "sentencePl": null,
       "audioWord": "t1-p819-007-word.mp3",
       "audioWordPl": "t1-p819-007-word-pl.mp3",
-      "audioSentence": "t1-p819-007-sentence.mp3"
+      "audioSentence": "t1-p819-007-sentence.mp3",
+      "polishAudio": "Liczyć na to, że ktoś coś zrobi"
     },
     {
       "id": "t1-p819-008",
       "english": "Shake up",
-      "polish": "Wstrząsnąć",
+      "polish": "Wstrząsnąć (kimś, czymś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p819-008-word.mp3",
       "audioWordPl": "t1-p819-008-word-pl.mp3",
-      "audioSentence": "t1-p819-008-sentence.mp3"
+      "audioSentence": "t1-p819-008-sentence.mp3",
+      "polishAudio": "Wstrząsnąć"
     },
     {
       "id": "t1-p819-009",
       "english": "Stand by",
-      "polish": "Trwać przy",
+      "polish": "Trwać przy (kimś, czymś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p819-009-word.mp3",
       "audioWordPl": "t1-p819-009-word-pl.mp3",
-      "audioSentence": "t1-p819-009-sentence.mp3"
+      "audioSentence": "t1-p819-009-sentence.mp3",
+      "polishAudio": "Trwać przy"
     },
     {
       "id": "t1-p819-010",
       "english": "Stand up to",
-      "polish": "Postawić się",
+      "polish": "Postawić się; przeciwstawić się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p819-010-word.mp3",
       "audioWordPl": "t1-p819-010-word-pl.mp3",
-      "audioSentence": "t1-p819-010-sentence.mp3"
+      "audioSentence": "t1-p819-010-sentence.mp3",
+      "polishAudio": "Postawić się"
     }
   ]
 }

@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-001-word.mp3",
       "audioWordPl": "t1-p562-001-word-pl.mp3",
-      "audioSentence": "t1-p562-001-sentence.mp3"
+      "audioSentence": "t1-p562-001-sentence.mp3",
+      "polishAudio": "Bawełna"
     },
     {
       "id": "t1-p562-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-002-word.mp3",
       "audioWordPl": "t1-p562-002-word-pl.mp3",
-      "audioSentence": "t1-p562-002-sentence.mp3"
+      "audioSentence": "t1-p562-002-sentence.mp3",
+      "polishAudio": "Jedwab"
     },
     {
       "id": "t1-p562-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-003-word.mp3",
       "audioWordPl": "t1-p562-003-word-pl.mp3",
-      "audioSentence": "t1-p562-003-sentence.mp3"
+      "audioSentence": "t1-p562-003-sentence.mp3",
+      "polishAudio": "Kropla"
     },
     {
       "id": "t1-p562-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-004-word.mp3",
       "audioWordPl": "t1-p562-004-word-pl.mp3",
-      "audioSentence": "t1-p562-004-sentence.mp3"
+      "audioSentence": "t1-p562-004-sentence.mp3",
+      "polishAudio": "Tkanina"
     },
     {
       "id": "t1-p562-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-005-word.mp3",
       "audioWordPl": "t1-p562-005-word-pl.mp3",
-      "audioSentence": "t1-p562-005-sentence.mp3"
+      "audioSentence": "t1-p562-005-sentence.mp3",
+      "polishAudio": "Stal"
     },
     {
       "id": "t1-p562-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-006-word.mp3",
       "audioWordPl": "t1-p562-006-word-pl.mp3",
-      "audioSentence": "t1-p562-006-sentence.mp3"
+      "audioSentence": "t1-p562-006-sentence.mp3",
+      "polishAudio": "Wełna"
     },
     {
       "id": "t1-p562-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-007-word.mp3",
       "audioWordPl": "t1-p562-007-word-pl.mp3",
-      "audioSentence": "t1-p562-007-sentence.mp3"
+      "audioSentence": "t1-p562-007-sentence.mp3",
+      "polishAudio": "Węgiel"
     },
     {
       "id": "t1-p562-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p562-008-word.mp3",
       "audioWordPl": "t1-p562-008-word-pl.mp3",
-      "audioSentence": "t1-p562-008-sentence.mp3"
+      "audioSentence": "t1-p562-008-sentence.mp3",
+      "polishAudio": "Marmur"
     },
     {
       "id": "t1-p562-009",
       "english": "Leather",
-      "polish": "Skóra",
+      "polish": "Skóra (również skórzany)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p562-009-word.mp3",
       "audioWordPl": "t1-p562-009-word-pl.mp3",
-      "audioSentence": "t1-p562-009-sentence.mp3"
+      "audioSentence": "t1-p562-009-sentence.mp3",
+      "polishAudio": "Skóra"
     },
     {
       "id": "t1-p562-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-010-word.mp3",
       "audioWordPl": "t1-p562-010-word-pl.mp3",
-      "audioSentence": "t1-p562-010-sentence.mp3"
+      "audioSentence": "t1-p562-010-sentence.mp3",
+      "polishAudio": "Aksamit"
     },
     {
       "id": "t1-p562-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-011-word.mp3",
       "audioWordPl": "t1-p562-011-word-pl.mp3",
-      "audioSentence": "t1-p562-011-sentence.mp3"
+      "audioSentence": "t1-p562-011-sentence.mp3",
+      "polishAudio": "Pianka"
     },
     {
       "id": "t1-p562-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-012-word.mp3",
       "audioWordPl": "t1-p562-012-word-pl.mp3",
-      "audioSentence": "t1-p562-012-sentence.mp3"
+      "audioSentence": "t1-p562-012-sentence.mp3",
+      "polishAudio": "Aluminum"
     },
     {
       "id": "t1-p562-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-013-word.mp3",
       "audioWordPl": "t1-p562-013-word-pl.mp3",
-      "audioSentence": "t1-p562-013-sentence.mp3"
+      "audioSentence": "t1-p562-013-sentence.mp3",
+      "polishAudio": "Bursztyn"
     },
     {
       "id": "t1-p562-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-014-word.mp3",
       "audioWordPl": "t1-p562-014-word-pl.mp3",
-      "audioSentence": "t1-p562-014-sentence.mp3"
+      "audioSentence": "t1-p562-014-sentence.mp3",
+      "polishAudio": "Maść"
     },
     {
       "id": "t1-p562-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p562-015-word.mp3",
       "audioWordPl": "t1-p562-015-word-pl.mp3",
-      "audioSentence": "t1-p562-015-sentence.mp3"
+      "audioSentence": "t1-p562-015-sentence.mp3",
+      "polishAudio": "Porcelana"
     }
   ]
 }

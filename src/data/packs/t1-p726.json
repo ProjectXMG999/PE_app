@@ -14,27 +14,30 @@
       "sentencePl": null,
       "audioWord": "t1-p726-001-word.mp3",
       "audioWordPl": "t1-p726-001-word-pl.mp3",
-      "audioSentence": "t1-p726-001-sentence.mp3"
+      "audioSentence": "t1-p726-001-sentence.mp3",
+      "polishAudio": "Ukochany"
     },
     {
       "id": "t1-p726-002",
       "english": "Grateful",
-      "polish": "Wdzięczny",
+      "polish": "Wdzięczny (że coś dobrego się wydarzyło)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p726-002-word.mp3",
       "audioWordPl": "t1-p726-002-word-pl.mp3",
-      "audioSentence": "t1-p726-002-sentence.mp3"
+      "audioSentence": "t1-p726-002-sentence.mp3",
+      "polishAudio": "Wdzięczny"
     },
     {
       "id": "t1-p726-003",
       "english": "Secure",
-      "polish": "Zabezpieczony",
+      "polish": "Zabezpieczony; bezpieczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p726-003-word.mp3",
       "audioWordPl": "t1-p726-003-word-pl.mp3",
-      "audioSentence": "t1-p726-003-sentence.mp3"
+      "audioSentence": "t1-p726-003-sentence.mp3",
+      "polishAudio": "Zabezpieczony"
     },
     {
       "id": "t1-p726-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p726-004-word.mp3",
       "audioWordPl": "t1-p726-004-word-pl.mp3",
-      "audioSentence": "t1-p726-004-sentence.mp3"
+      "audioSentence": "t1-p726-004-sentence.mp3",
+      "polishAudio": "Utalentowany"
     },
     {
       "id": "t1-p726-005",
@@ -54,57 +58,63 @@
       "sentencePl": null,
       "audioWord": "t1-p726-005-word.mp3",
       "audioWordPl": "t1-p726-005-word-pl.mp3",
-      "audioSentence": "t1-p726-005-sentence.mp3"
+      "audioSentence": "t1-p726-005-sentence.mp3",
+      "polishAudio": "Zaufany"
     },
     {
       "id": "t1-p726-006",
       "english": "Accurate",
-      "polish": "Trafny",
+      "polish": "Trafny; celny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p726-006-word.mp3",
       "audioWordPl": "t1-p726-006-word-pl.mp3",
-      "audioSentence": "t1-p726-006-sentence.mp3"
+      "audioSentence": "t1-p726-006-sentence.mp3",
+      "polishAudio": "Trafny"
     },
     {
       "id": "t1-p726-007",
       "english": "Able",
-      "polish": "Sprawny",
+      "polish": "Sprawny (o kimś); zdolny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p726-007-word.mp3",
       "audioWordPl": "t1-p726-007-word-pl.mp3",
-      "audioSentence": "t1-p726-007-sentence.mp3"
+      "audioSentence": "t1-p726-007-sentence.mp3",
+      "polishAudio": "Sprawny"
     },
     {
       "id": "t1-p726-008",
       "english": "Welcoming",
-      "polish": "Powitalny",
+      "polish": "Powitalny; gościnny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p726-008-word.mp3",
       "audioWordPl": "t1-p726-008-word-pl.mp3",
-      "audioSentence": "t1-p726-008-sentence.mp3"
+      "audioSentence": "t1-p726-008-sentence.mp3",
+      "polishAudio": "Powitalny"
     },
     {
       "id": "t1-p726-009",
       "english": "Gifted",
-      "polish": "Uzdolniony",
+      "polish": "Uzdolniony; utalentowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p726-009-word.mp3",
       "audioWordPl": "t1-p726-009-word-pl.mp3",
-      "audioSentence": "t1-p726-009-sentence.mp3"
+      "audioSentence": "t1-p726-009-sentence.mp3",
+      "polishAudio": "Uzdolniony"
     },
     {
       "id": "t1-p726-010",
       "english": "Amusing",
-      "polish": "Zabawny",
+      "polish": "Zabawny (wprawiający w rozbawienie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p726-010-word.mp3",
       "audioWordPl": "t1-p726-010-word-pl.mp3",
-      "audioSentence": "t1-p726-010-sentence.mp3"
+      "audioSentence": "t1-p726-010-sentence.mp3",
+      "polishAudio": "Zabawny"
     },
     {
       "id": "t1-p726-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p726-011-word.mp3",
       "audioWordPl": "t1-p726-011-word-pl.mp3",
-      "audioSentence": "t1-p726-011-sentence.mp3"
+      "audioSentence": "t1-p726-011-sentence.mp3",
+      "polishAudio": "Przezabawny"
     },
     {
       "id": "t1-p726-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p726-012-word.mp3",
       "audioWordPl": "t1-p726-012-word-pl.mp3",
-      "audioSentence": "t1-p726-012-sentence.mp3"
+      "audioSentence": "t1-p726-012-sentence.mp3",
+      "polishAudio": "Pełen radości"
     },
     {
       "id": "t1-p726-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p726-013-word.mp3",
       "audioWordPl": "t1-p726-013-word-pl.mp3",
-      "audioSentence": "t1-p726-013-sentence.mp3"
+      "audioSentence": "t1-p726-013-sentence.mp3",
+      "polishAudio": "Godny zaufania"
     },
     {
       "id": "t1-p726-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p726-014-word.mp3",
       "audioWordPl": "t1-p726-014-word-pl.mp3",
-      "audioSentence": "t1-p726-014-sentence.mp3"
+      "audioSentence": "t1-p726-014-sentence.mp3",
+      "polishAudio": "Korzystny"
     },
     {
       "id": "t1-p726-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p726-015-word.mp3",
       "audioWordPl": "t1-p726-015-word-pl.mp3",
-      "audioSentence": "t1-p726-015-sentence.mp3"
+      "audioSentence": "t1-p726-015-sentence.mp3",
+      "polishAudio": "Ostrożny"
     }
   ]
 }

@@ -14,17 +14,19 @@
       "sentencePl": null,
       "audioWord": "t1-p610-001-word.mp3",
       "audioWordPl": "t1-p610-001-word-pl.mp3",
-      "audioSentence": "t1-p610-001-sentence.mp3"
+      "audioSentence": "t1-p610-001-sentence.mp3",
+      "polishAudio": "Segregator"
     },
     {
       "id": "t1-p610-002",
       "english": "Worksheet",
-      "polish": "Arkusz",
+      "polish": "Arkusz; karta ćwiczeń",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p610-002-word.mp3",
       "audioWordPl": "t1-p610-002-word-pl.mp3",
-      "audioSentence": "t1-p610-002-sentence.mp3"
+      "audioSentence": "t1-p610-002-sentence.mp3",
+      "polishAudio": "Arkusz"
     },
     {
       "id": "t1-p610-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p610-003-word.mp3",
       "audioWordPl": "t1-p610-003-word-pl.mp3",
-      "audioSentence": "t1-p610-003-sentence.mp3"
+      "audioSentence": "t1-p610-003-sentence.mp3",
+      "polishAudio": "Cienkopis"
     },
     {
       "id": "t1-p610-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p610-004-word.mp3",
       "audioWordPl": "t1-p610-004-word-pl.mp3",
-      "audioSentence": "t1-p610-004-sentence.mp3"
+      "audioSentence": "t1-p610-004-sentence.mp3",
+      "polishAudio": "Koszulka na dokumenty"
     },
     {
       "id": "t1-p610-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p610-005-word.mp3",
       "audioWordPl": "t1-p610-005-word-pl.mp3",
-      "audioSentence": "t1-p610-005-sentence.mp3"
+      "audioSentence": "t1-p610-005-sentence.mp3",
+      "polishAudio": "Mazak"
     },
     {
       "id": "t1-p610-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p610-006-word.mp3",
       "audioWordPl": "t1-p610-006-word-pl.mp3",
-      "audioSentence": "t1-p610-006-sentence.mp3"
+      "audioSentence": "t1-p610-006-sentence.mp3",
+      "polishAudio": "Niszczarka"
     },
     {
       "id": "t1-p610-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p610-007-word.mp3",
       "audioWordPl": "t1-p610-007-word-pl.mp3",
-      "audioSentence": "t1-p610-007-sentence.mp3"
+      "audioSentence": "t1-p610-007-sentence.mp3",
+      "polishAudio": "Zszywka"
     },
     {
       "id": "t1-p610-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p610-008-word.mp3",
       "audioWordPl": "t1-p610-008-word-pl.mp3",
-      "audioSentence": "t1-p610-008-sentence.mp3"
+      "audioSentence": "t1-p610-008-sentence.mp3",
+      "polishAudio": "Dziurkacz"
     },
     {
       "id": "t1-p610-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p610-009-word.mp3",
       "audioWordPl": "t1-p610-009-word-pl.mp3",
-      "audioSentence": "t1-p610-009-sentence.mp3"
+      "audioSentence": "t1-p610-009-sentence.mp3",
+      "polishAudio": "Krzesło obrotowe"
     },
     {
       "id": "t1-p610-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p610-010-word.mp3",
       "audioWordPl": "t1-p610-010-word-pl.mp3",
-      "audioSentence": "t1-p610-010-sentence.mp3"
+      "audioSentence": "t1-p610-010-sentence.mp3",
+      "polishAudio": "Zszywacz"
     },
     {
       "id": "t1-p610-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p610-011-word.mp3",
       "audioWordPl": "t1-p610-011-word-pl.mp3",
-      "audioSentence": "t1-p610-011-sentence.mp3"
+      "audioSentence": "t1-p610-011-sentence.mp3",
+      "polishAudio": "Arkusz kalkulacyjny"
     },
     {
       "id": "t1-p610-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p610-012-word.mp3",
       "audioWordPl": "t1-p610-012-word-pl.mp3",
-      "audioSentence": "t1-p610-012-sentence.mp3"
+      "audioSentence": "t1-p610-012-sentence.mp3",
+      "polishAudio": "Korespondencja"
     },
     {
       "id": "t1-p610-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p610-013-word.mp3",
       "audioWordPl": "t1-p610-013-word-pl.mp3",
-      "audioSentence": "t1-p610-013-sentence.mp3"
+      "audioSentence": "t1-p610-013-sentence.mp3",
+      "polishAudio": "Kserokopiarka"
     },
     {
       "id": "t1-p610-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p610-014-word.mp3",
       "audioWordPl": "t1-p610-014-word-pl.mp3",
-      "audioSentence": "t1-p610-014-sentence.mp3"
+      "audioSentence": "t1-p610-014-sentence.mp3",
+      "polishAudio": "Szafka na dokumenty"
     },
     {
       "id": "t1-p610-015",
       "english": "Dressing case",
-      "polish": "Neseser",
+      "polish": "Neseser; aktówka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p610-015-word.mp3",
       "audioWordPl": "t1-p610-015-word-pl.mp3",
-      "audioSentence": "t1-p610-015-sentence.mp3"
+      "audioSentence": "t1-p610-015-sentence.mp3",
+      "polishAudio": "Neseser"
     }
   ]
 }

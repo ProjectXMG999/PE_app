@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p297-001-word.mp3",
       "audioWordPl": "t1-p297-001-word-pl.mp3",
-      "audioSentence": "t1-p297-001-sentence.mp3"
+      "audioSentence": "t1-p297-001-sentence.mp3",
+      "polishAudio": "No cho"
     },
     {
       "id": "t1-p297-002",
@@ -24,87 +25,96 @@
       "sentencePl": null,
       "audioWord": "t1-p297-002-word.mp3",
       "audioWordPl": "t1-p297-002-word-pl.mp3",
-      "audioSentence": "t1-p297-002-sentence.mp3"
+      "audioSentence": "t1-p297-002-sentence.mp3",
+      "polishAudio": "Bo"
     },
     {
       "id": "t1-p297-003",
       "english": "DONTCHA",
-      "polish": "C'nie",
+      "polish": "C'nie (o drugim rozmówcy w zdaniach o teraźniejszości)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-003-word.mp3",
       "audioWordPl": "t1-p297-003-word-pl.mp3",
-      "audioSentence": "t1-p297-003-sentence.mp3"
+      "audioSentence": "t1-p297-003-sentence.mp3",
+      "polishAudio": "C'nie"
     },
     {
       "id": "t1-p297-004",
       "english": "DUNNO",
-      "polish": "Nie wiem",
+      "polish": "Nie wiem (slang)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-004-word.mp3",
       "audioWordPl": "t1-p297-004-word-pl.mp3",
-      "audioSentence": "t1-p297-004-sentence.mp3"
+      "audioSentence": "t1-p297-004-sentence.mp3",
+      "polishAudio": "Nie wiem"
     },
     {
       "id": "t1-p297-005",
       "english": "GIMME",
-      "polish": "Daj mi",
+      "polish": "Daj mi (slang)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-005-word.mp3",
       "audioWordPl": "t1-p297-005-word-pl.mp3",
-      "audioSentence": "t1-p297-005-sentence.mp3"
+      "audioSentence": "t1-p297-005-sentence.mp3",
+      "polishAudio": "Daj mi"
     },
     {
       "id": "t1-p297-006",
       "english": "KINDA",
-      "polish": "Trochę",
+      "polish": "Trochę; trochę jak (slang)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-006-word.mp3",
       "audioWordPl": "t1-p297-006-word-pl.mp3",
-      "audioSentence": "t1-p297-006-sentence.mp3"
+      "audioSentence": "t1-p297-006-sentence.mp3",
+      "polishAudio": "Trochę"
     },
     {
       "id": "t1-p297-007",
       "english": "EM",
-      "polish": "Im",
+      "polish": "Im; je (slang)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-007-word.mp3",
       "audioWordPl": "t1-p297-007-word-pl.mp3",
-      "audioSentence": "t1-p297-007-sentence.mp3"
+      "audioSentence": "t1-p297-007-sentence.mp3",
+      "polishAudio": "Im"
     },
     {
       "id": "t1-p297-008",
       "english": "WANNA",
-      "polish": "Chcieć",
+      "polish": "Chcieć (slang)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-008-word.mp3",
       "audioWordPl": "t1-p297-008-word-pl.mp3",
-      "audioSentence": "t1-p297-008-sentence.mp3"
+      "audioSentence": "t1-p297-008-sentence.mp3",
+      "polishAudio": "Chcieć"
     },
     {
       "id": "t1-p297-009",
       "english": "AIN'T",
-      "polish": "Nie",
+      "polish": "Nie (slang)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-009-word.mp3",
       "audioWordPl": "t1-p297-009-word-pl.mp3",
-      "audioSentence": "t1-p297-009-sentence.mp3"
+      "audioSentence": "t1-p297-009-sentence.mp3",
+      "polishAudio": "Nie"
     },
     {
       "id": "t1-p297-010",
       "english": "GONNA",
-      "polish": "Mieć zamiar",
+      "polish": "Mieć zamiar (slang)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p297-010-word.mp3",
       "audioWordPl": "t1-p297-010-word-pl.mp3",
-      "audioSentence": "t1-p297-010-sentence.mp3"
+      "audioSentence": "t1-p297-010-sentence.mp3",
+      "polishAudio": "Mieć zamiar"
     }
   ]
 }

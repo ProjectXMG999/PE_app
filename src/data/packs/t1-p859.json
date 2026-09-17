@@ -14,17 +14,19 @@
       "sentencePl": null,
       "audioWord": "t1-p859-001-word.mp3",
       "audioWordPl": "t1-p859-001-word-pl.mp3",
-      "audioSentence": "t1-p859-001-sentence.mp3"
+      "audioSentence": "t1-p859-001-sentence.mp3",
+      "polishAudio": "Zlekceważyć"
     },
     {
       "id": "t1-p859-002",
       "english": "Come in for",
-      "polish": "Zostać skrytykowanym",
+      "polish": "Zostać skrytykowanym; być przedmiotem negatywnej reakcji",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p859-002-word.mp3",
       "audioWordPl": "t1-p859-002-word-pl.mp3",
-      "audioSentence": "t1-p859-002-sentence.mp3"
+      "audioSentence": "t1-p859-002-sentence.mp3",
+      "polishAudio": "Zostać skrytykowanym"
     },
     {
       "id": "t1-p859-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p859-003-word.mp3",
       "audioWordPl": "t1-p859-003-word-pl.mp3",
-      "audioSentence": "t1-p859-003-sentence.mp3"
+      "audioSentence": "t1-p859-003-sentence.mp3",
+      "polishAudio": "Pozostawać w tyle"
     },
     {
       "id": "t1-p859-004",
       "english": "Get behind",
-      "polish": "Spóźniać się",
+      "polish": "Spóźniać się; pozostawać w tyle",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p859-004-word.mp3",
       "audioWordPl": "t1-p859-004-word-pl.mp3",
-      "audioSentence": "t1-p859-004-sentence.mp3"
+      "audioSentence": "t1-p859-004-sentence.mp3",
+      "polishAudio": "Spóźniać się"
     },
     {
       "id": "t1-p859-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p859-005-word.mp3",
       "audioWordPl": "t1-p859-005-word-pl.mp3",
-      "audioSentence": "t1-p859-005-sentence.mp3"
+      "audioSentence": "t1-p859-005-sentence.mp3",
+      "polishAudio": "Dać się ponieść emocjom"
     },
     {
       "id": "t1-p859-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p859-006-word.mp3",
       "audioWordPl": "t1-p859-006-word-pl.mp3",
-      "audioSentence": "t1-p859-006-sentence.mp3"
+      "audioSentence": "t1-p859-006-sentence.mp3",
+      "polishAudio": "Dołować"
     },
     {
       "id": "t1-p859-007",
       "english": "Give in",
-      "polish": "Ulegać",
+      "polish": "Ulegać; ustąpić (pod naciskiem)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p859-007-word.mp3",
       "audioWordPl": "t1-p859-007-word-pl.mp3",
-      "audioSentence": "t1-p859-007-sentence.mp3"
+      "audioSentence": "t1-p859-007-sentence.mp3",
+      "polishAudio": "Ulegać"
     },
     {
       "id": "t1-p859-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p859-008-word.mp3",
       "audioWordPl": "t1-p859-008-word-pl.mp3",
-      "audioSentence": "t1-p859-008-sentence.mp3"
+      "audioSentence": "t1-p859-008-sentence.mp3",
+      "polishAudio": "Zdradzić coś"
     },
     {
       "id": "t1-p859-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p859-009-word.mp3",
       "audioWordPl": "t1-p859-009-word-pl.mp3",
-      "audioSentence": "t1-p859-009-sentence.mp3"
+      "audioSentence": "t1-p859-009-sentence.mp3",
+      "polishAudio": "Zdradzić się"
     },
     {
       "id": "t1-p859-010",
       "english": "Hold against",
-      "polish": "Mieć do kogoś żal",
+      "polish": "Mieć do kogoś żal; mieć komuś za złe",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p859-010-word.mp3",
       "audioWordPl": "t1-p859-010-word-pl.mp3",
-      "audioSentence": "t1-p859-010-sentence.mp3"
+      "audioSentence": "t1-p859-010-sentence.mp3",
+      "polishAudio": "Mieć do kogoś żal"
     }
   ]
 }

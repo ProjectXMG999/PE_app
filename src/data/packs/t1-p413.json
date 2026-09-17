@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p413-001-word.mp3",
       "audioWordPl": "t1-p413-001-word-pl.mp3",
-      "audioSentence": "t1-p413-001-sentence.mp3"
+      "audioSentence": "t1-p413-001-sentence.mp3",
+      "polishAudio": "Spojrzeć w dół"
     },
     {
       "id": "t1-p413-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p413-002-word.mp3",
       "audioWordPl": "t1-p413-002-word-pl.mp3",
-      "audioSentence": "t1-p413-002-sentence.mp3"
+      "audioSentence": "t1-p413-002-sentence.mp3",
+      "polishAudio": "Spojrzeć w górę"
     },
     {
       "id": "t1-p413-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p413-003-word.mp3",
       "audioWordPl": "t1-p413-003-word-pl.mp3",
-      "audioSentence": "t1-p413-003-sentence.mp3"
+      "audioSentence": "t1-p413-003-sentence.mp3",
+      "polishAudio": "Rozejrzeć się"
     },
     {
       "id": "t1-p413-004",
       "english": "Look at",
-      "polish": "Spojrzeć",
+      "polish": "Spojrzeć; patrzeć na",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p413-004-word.mp3",
       "audioWordPl": "t1-p413-004-word-pl.mp3",
-      "audioSentence": "t1-p413-004-sentence.mp3"
+      "audioSentence": "t1-p413-004-sentence.mp3",
+      "polishAudio": "Spojrzeć"
     },
     {
       "id": "t1-p413-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p413-005-word.mp3",
       "audioWordPl": "t1-p413-005-word-pl.mp3",
-      "audioSentence": "t1-p413-005-sentence.mp3"
+      "audioSentence": "t1-p413-005-sentence.mp3",
+      "polishAudio": "Oglądać się za siebie"
     },
     {
       "id": "t1-p413-006",
       "english": "Look back at",
-      "polish": "Oglądać się na",
+      "polish": "Oglądać się na (kogoś, coś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p413-006-word.mp3",
       "audioWordPl": "t1-p413-006-word-pl.mp3",
-      "audioSentence": "t1-p413-006-sentence.mp3"
+      "audioSentence": "t1-p413-006-sentence.mp3",
+      "polishAudio": "Oglądać się na"
     },
     {
       "id": "t1-p413-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p413-007-word.mp3",
       "audioWordPl": "t1-p413-007-word-pl.mp3",
-      "audioSentence": "t1-p413-007-sentence.mp3"
+      "audioSentence": "t1-p413-007-sentence.mp3",
+      "polishAudio": "Spoglądać za coś"
     },
     {
       "id": "t1-p413-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p413-008-word.mp3",
       "audioWordPl": "t1-p413-008-word-pl.mp3",
-      "audioSentence": "t1-p413-008-sentence.mp3"
+      "audioSentence": "t1-p413-008-sentence.mp3",
+      "polishAudio": "Odwracać wzrok"
     },
     {
       "id": "t1-p413-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p413-009-word.mp3",
       "audioWordPl": "t1-p413-009-word-pl.mp3",
-      "audioSentence": "t1-p413-009-sentence.mp3"
+      "audioSentence": "t1-p413-009-sentence.mp3",
+      "polishAudio": "Wyjrzeć"
     },
     {
       "id": "t1-p413-010",
       "english": "Look sth up",
-      "polish": "Wyszukać coś",
+      "polish": "Wyszukać coś (w książce, wyszukiwarce)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p413-010-word.mp3",
       "audioWordPl": "t1-p413-010-word-pl.mp3",
-      "audioSentence": "t1-p413-010-sentence.mp3"
+      "audioSentence": "t1-p413-010-sentence.mp3",
+      "polishAudio": "Wyszukać coś"
     }
   ]
 }

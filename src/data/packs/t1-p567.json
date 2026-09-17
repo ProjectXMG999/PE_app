@@ -9,12 +9,13 @@
     {
       "id": "t1-p567-001",
       "english": "View",
-      "polish": "Widok",
+      "polish": "Widok; pogląd",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p567-001-word.mp3",
       "audioWordPl": "t1-p567-001-word-pl.mp3",
-      "audioSentence": "t1-p567-001-sentence.mp3"
+      "audioSentence": "t1-p567-001-sentence.mp3",
+      "polishAudio": "Widok"
     },
     {
       "id": "t1-p567-002",
@@ -24,27 +25,30 @@
       "sentencePl": null,
       "audioWord": "t1-p567-002-word.mp3",
       "audioWordPl": "t1-p567-002-word-pl.mp3",
-      "audioSentence": "t1-p567-002-sentence.mp3"
+      "audioSentence": "t1-p567-002-sentence.mp3",
+      "polishAudio": "Podejście"
     },
     {
       "id": "t1-p567-003",
       "english": "Outlook",
-      "polish": "Pogląd",
+      "polish": "Pogląd; perspektywa",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p567-003-word.mp3",
       "audioWordPl": "t1-p567-003-word-pl.mp3",
-      "audioSentence": "t1-p567-003-sentence.mp3"
+      "audioSentence": "t1-p567-003-sentence.mp3",
+      "polishAudio": "Pogląd"
     },
     {
       "id": "t1-p567-004",
       "english": "Notion",
-      "polish": "Pojęcie",
+      "polish": "Pojęcie; pogląd; koncepcja",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p567-004-word.mp3",
       "audioWordPl": "t1-p567-004-word-pl.mp3",
-      "audioSentence": "t1-p567-004-sentence.mp3"
+      "audioSentence": "t1-p567-004-sentence.mp3",
+      "polishAudio": "Pojęcie"
     },
     {
       "id": "t1-p567-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p567-005-word.mp3",
       "audioWordPl": "t1-p567-005-word-pl.mp3",
-      "audioSentence": "t1-p567-005-sentence.mp3"
+      "audioSentence": "t1-p567-005-sentence.mp3",
+      "polishAudio": "Filozofia"
     },
     {
       "id": "t1-p567-006",
       "english": "Importance",
-      "polish": "Ważność",
+      "polish": "Ważność; istotność",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p567-006-word.mp3",
       "audioWordPl": "t1-p567-006-word-pl.mp3",
-      "audioSentence": "t1-p567-006-sentence.mp3"
+      "audioSentence": "t1-p567-006-sentence.mp3",
+      "polishAudio": "Ważność"
     },
     {
       "id": "t1-p567-007",
@@ -74,37 +80,41 @@
       "sentencePl": null,
       "audioWord": "t1-p567-007-word.mp3",
       "audioWordPl": "t1-p567-007-word-pl.mp3",
-      "audioSentence": "t1-p567-007-sentence.mp3"
+      "audioSentence": "t1-p567-007-sentence.mp3",
+      "polishAudio": "Rzeczywistość"
     },
     {
       "id": "t1-p567-008",
       "english": "Act",
-      "polish": "Czyn",
+      "polish": "Czyn; działanie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p567-008-word.mp3",
       "audioWordPl": "t1-p567-008-word-pl.mp3",
-      "audioSentence": "t1-p567-008-sentence.mp3"
+      "audioSentence": "t1-p567-008-sentence.mp3",
+      "polishAudio": "Czyn"
     },
     {
       "id": "t1-p567-009",
       "english": "Perspective",
-      "polish": "Perspektywa",
+      "polish": "Perspektywa (punkt widzenia)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p567-009-word.mp3",
       "audioWordPl": "t1-p567-009-word-pl.mp3",
-      "audioSentence": "t1-p567-009-sentence.mp3"
+      "audioSentence": "t1-p567-009-sentence.mp3",
+      "polishAudio": "Perspektywa"
     },
     {
       "id": "t1-p567-010",
       "english": "Remark",
-      "polish": "Spostrzeżenie",
+      "polish": "Spostrzeżenie; uwaga (np. na marginesie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p567-010-word.mp3",
       "audioWordPl": "t1-p567-010-word-pl.mp3",
-      "audioSentence": "t1-p567-010-sentence.mp3"
+      "audioSentence": "t1-p567-010-sentence.mp3",
+      "polishAudio": "Spostrzeżenie"
     },
     {
       "id": "t1-p567-011",
@@ -114,7 +124,8 @@
       "sentencePl": null,
       "audioWord": "t1-p567-011-word.mp3",
       "audioWordPl": "t1-p567-011-word-pl.mp3",
-      "audioSentence": "t1-p567-011-sentence.mp3"
+      "audioSentence": "t1-p567-011-sentence.mp3",
+      "polishAudio": "Znaczenie czegoś"
     },
     {
       "id": "t1-p567-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p567-012-word.mp3",
       "audioWordPl": "t1-p567-012-word-pl.mp3",
-      "audioSentence": "t1-p567-012-sentence.mp3"
+      "audioSentence": "t1-p567-012-sentence.mp3",
+      "polishAudio": "Ważność"
     },
     {
       "id": "t1-p567-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p567-013-word.mp3",
       "audioWordPl": "t1-p567-013-word-pl.mp3",
-      "audioSentence": "t1-p567-013-sentence.mp3"
+      "audioSentence": "t1-p567-013-sentence.mp3",
+      "polishAudio": "Idealizm"
     },
     {
       "id": "t1-p567-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p567-014-word.mp3",
       "audioWordPl": "t1-p567-014-word-pl.mp3",
-      "audioSentence": "t1-p567-014-sentence.mp3"
+      "audioSentence": "t1-p567-014-sentence.mp3",
+      "polishAudio": "Materializm"
     },
     {
       "id": "t1-p567-015",
       "english": "Emphasis",
-      "polish": "Nacisk",
+      "polish": "Nacisk; szczególna uwaga",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p567-015-word.mp3",
       "audioWordPl": "t1-p567-015-word-pl.mp3",
-      "audioSentence": "t1-p567-015-sentence.mp3"
+      "audioSentence": "t1-p567-015-sentence.mp3",
+      "polishAudio": "Nacisk"
     }
   ]
 }

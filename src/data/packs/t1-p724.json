@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p724-001-word.mp3",
       "audioWordPl": "t1-p724-001-word-pl.mp3",
-      "audioSentence": "t1-p724-001-sentence.mp3"
+      "audioSentence": "t1-p724-001-sentence.mp3",
+      "polishAudio": "Wiersz"
     },
     {
       "id": "t1-p724-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p724-002-word.mp3",
       "audioWordPl": "t1-p724-002-word-pl.mp3",
-      "audioSentence": "t1-p724-002-sentence.mp3"
+      "audioSentence": "t1-p724-002-sentence.mp3",
+      "polishAudio": "Autobiografia"
     },
     {
       "id": "t1-p724-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p724-003-word.mp3",
       "audioWordPl": "t1-p724-003-word-pl.mp3",
-      "audioSentence": "t1-p724-003-sentence.mp3"
+      "audioSentence": "t1-p724-003-sentence.mp3",
+      "polishAudio": "Bibliografia"
     },
     {
       "id": "t1-p724-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p724-004-word.mp3",
       "audioWordPl": "t1-p724-004-word-pl.mp3",
-      "audioSentence": "t1-p724-004-sentence.mp3"
+      "audioSentence": "t1-p724-004-sentence.mp3",
+      "polishAudio": "Fabuła"
     },
     {
       "id": "t1-p724-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p724-005-word.mp3",
       "audioWordPl": "t1-p724-005-word-pl.mp3",
-      "audioSentence": "t1-p724-005-sentence.mp3"
+      "audioSentence": "t1-p724-005-sentence.mp3",
+      "polishAudio": "Literatura"
     },
     {
       "id": "t1-p724-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p724-006-word.mp3",
       "audioWordPl": "t1-p724-006-word-pl.mp3",
-      "audioSentence": "t1-p724-006-sentence.mp3"
+      "audioSentence": "t1-p724-006-sentence.mp3",
+      "polishAudio": "Czarny charakter"
     },
     {
       "id": "t1-p724-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p724-007-word.mp3",
       "audioWordPl": "t1-p724-007-word-pl.mp3",
-      "audioSentence": "t1-p724-007-sentence.mp3"
+      "audioSentence": "t1-p724-007-sentence.mp3",
+      "polishAudio": "Dyktando"
     },
     {
       "id": "t1-p724-008",
       "english": "Appendix",
-      "polish": "Aneks",
+      "polish": "Aneks; załącznik",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p724-008-word.mp3",
       "audioWordPl": "t1-p724-008-word-pl.mp3",
-      "audioSentence": "t1-p724-008-sentence.mp3"
+      "audioSentence": "t1-p724-008-sentence.mp3",
+      "polishAudio": "Aneks"
     },
     {
       "id": "t1-p724-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p724-009-word.mp3",
       "audioWordPl": "t1-p724-009-word-pl.mp3",
-      "audioSentence": "t1-p724-009-sentence.mp3"
+      "audioSentence": "t1-p724-009-sentence.mp3",
+      "polishAudio": "Gra słów"
     },
     {
       "id": "t1-p724-010",
@@ -104,17 +113,19 @@
       "sentencePl": null,
       "audioWord": "t1-p724-010-word.mp3",
       "audioWordPl": "t1-p724-010-word-pl.mp3",
-      "audioSentence": "t1-p724-010-sentence.mp3"
+      "audioSentence": "t1-p724-010-sentence.mp3",
+      "polishAudio": "Odniesienie"
     },
     {
       "id": "t1-p724-011",
       "english": "Association",
-      "polish": "Skojarzenie",
+      "polish": "Skojarzenie; związek",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p724-011-word.mp3",
       "audioWordPl": "t1-p724-011-word-pl.mp3",
-      "audioSentence": "t1-p724-011-sentence.mp3"
+      "audioSentence": "t1-p724-011-sentence.mp3",
+      "polishAudio": "Skojarzenie"
     },
     {
       "id": "t1-p724-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p724-012-word.mp3",
       "audioWordPl": "t1-p724-012-word-pl.mp3",
-      "audioSentence": "t1-p724-012-sentence.mp3"
+      "audioSentence": "t1-p724-012-sentence.mp3",
+      "polishAudio": "Przypis"
     },
     {
       "id": "t1-p724-013",
@@ -134,17 +146,19 @@
       "sentencePl": null,
       "audioWord": "t1-p724-013-word.mp3",
       "audioWordPl": "t1-p724-013-word-pl.mp3",
-      "audioSentence": "t1-p724-013-sentence.mp3"
+      "audioSentence": "t1-p724-013-sentence.mp3",
+      "polishAudio": "Wers"
     },
     {
       "id": "t1-p724-014",
       "english": "Strophe",
-      "polish": "Strofa",
+      "polish": "Strofa; zwrotka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p724-014-word.mp3",
       "audioWordPl": "t1-p724-014-word-pl.mp3",
-      "audioSentence": "t1-p724-014-sentence.mp3"
+      "audioSentence": "t1-p724-014-sentence.mp3",
+      "polishAudio": "Strofa"
     },
     {
       "id": "t1-p724-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p724-015-word.mp3",
       "audioWordPl": "t1-p724-015-word-pl.mp3",
-      "audioSentence": "t1-p724-015-sentence.mp3"
+      "audioSentence": "t1-p724-015-sentence.mp3",
+      "polishAudio": "Apostrof"
     }
   ]
 }

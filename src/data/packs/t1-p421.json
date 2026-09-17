@@ -9,32 +9,35 @@
     {
       "id": "t1-p421-001",
       "english": "Real estate",
-      "polish": "Nieruchomości",
+      "polish": "Nieruchomości (branża)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p421-001-word.mp3",
       "audioWordPl": "t1-p421-001-word-pl.mp3",
-      "audioSentence": "t1-p421-001-sentence.mp3"
+      "audioSentence": "t1-p421-001-sentence.mp3",
+      "polishAudio": "Nieruchomości"
     },
     {
       "id": "t1-p421-002",
       "english": "Workforce",
-      "polish": "Siła robocza",
+      "polish": "Siła robocza; pracownicy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p421-002-word.mp3",
       "audioWordPl": "t1-p421-002-word-pl.mp3",
-      "audioSentence": "t1-p421-002-sentence.mp3"
+      "audioSentence": "t1-p421-002-sentence.mp3",
+      "polishAudio": "Siła robocza"
     },
     {
       "id": "t1-p421-003",
       "english": "Arrangement",
-      "polish": "Ustalenie",
+      "polish": "Ustalenie; porozumienie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p421-003-word.mp3",
       "audioWordPl": "t1-p421-003-word-pl.mp3",
-      "audioSentence": "t1-p421-003-sentence.mp3"
+      "audioSentence": "t1-p421-003-sentence.mp3",
+      "polishAudio": "Ustalenie"
     },
     {
       "id": "t1-p421-004",
@@ -44,17 +47,19 @@
       "sentencePl": null,
       "audioWord": "t1-p421-004-word.mp3",
       "audioWordPl": "t1-p421-004-word-pl.mp3",
-      "audioSentence": "t1-p421-004-sentence.mp3"
+      "audioSentence": "t1-p421-004-sentence.mp3",
+      "polishAudio": "Zatrudnienie"
     },
     {
       "id": "t1-p421-005",
       "english": "Visitation",
-      "polish": "Wizytacja",
+      "polish": "Wizytacja; odwiedziny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p421-005-word.mp3",
       "audioWordPl": "t1-p421-005-word-pl.mp3",
-      "audioSentence": "t1-p421-005-sentence.mp3"
+      "audioSentence": "t1-p421-005-sentence.mp3",
+      "polishAudio": "Wizytacja"
     },
     {
       "id": "t1-p421-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p421-006-word.mp3",
       "audioWordPl": "t1-p421-006-word-pl.mp3",
-      "audioSentence": "t1-p421-006-sentence.mp3"
+      "audioSentence": "t1-p421-006-sentence.mp3",
+      "polishAudio": "Adres zwrotny"
     },
     {
       "id": "t1-p421-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p421-007-word.mp3",
       "audioWordPl": "t1-p421-007-word-pl.mp3",
-      "audioSentence": "t1-p421-007-sentence.mp3"
+      "audioSentence": "t1-p421-007-sentence.mp3",
+      "polishAudio": "Marketing"
     },
     {
       "id": "t1-p421-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p421-008-word.mp3",
       "audioWordPl": "t1-p421-008-word-pl.mp3",
-      "audioSentence": "t1-p421-008-sentence.mp3"
+      "audioSentence": "t1-p421-008-sentence.mp3",
+      "polishAudio": "Udział"
     },
     {
       "id": "t1-p421-009",
@@ -94,27 +102,30 @@
       "sentencePl": null,
       "audioWord": "t1-p421-009-word.mp3",
       "audioWordPl": "t1-p421-009-word-pl.mp3",
-      "audioSentence": "t1-p421-009-sentence.mp3"
+      "audioSentence": "t1-p421-009-sentence.mp3",
+      "polishAudio": "Archiwum"
     },
     {
       "id": "t1-p421-010",
       "english": "Branch",
-      "polish": "Branża",
+      "polish": "Branża; oddział",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p421-010-word.mp3",
       "audioWordPl": "t1-p421-010-word-pl.mp3",
-      "audioSentence": "t1-p421-010-sentence.mp3"
+      "audioSentence": "t1-p421-010-sentence.mp3",
+      "polishAudio": "Branża"
     },
     {
       "id": "t1-p421-011",
       "english": "Certificate",
-      "polish": "Certyfikat",
+      "polish": "Certyfikat; zaświadczenie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p421-011-word.mp3",
       "audioWordPl": "t1-p421-011-word-pl.mp3",
-      "audioSentence": "t1-p421-011-sentence.mp3"
+      "audioSentence": "t1-p421-011-sentence.mp3",
+      "polishAudio": "Certyfikat"
     },
     {
       "id": "t1-p421-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p421-012-word.mp3",
       "audioWordPl": "t1-p421-012-word-pl.mp3",
-      "audioSentence": "t1-p421-012-sentence.mp3"
+      "audioSentence": "t1-p421-012-sentence.mp3",
+      "polishAudio": "Doradztwo"
     },
     {
       "id": "t1-p421-013",
@@ -134,17 +146,19 @@
       "sentencePl": null,
       "audioWord": "t1-p421-013-word.mp3",
       "audioWordPl": "t1-p421-013-word-pl.mp3",
-      "audioSentence": "t1-p421-013-sentence.mp3"
+      "audioSentence": "t1-p421-013-sentence.mp3",
+      "polishAudio": "Dystrybucja"
     },
     {
       "id": "t1-p421-014",
       "english": "E-commerce",
-      "polish": "E-biznes",
+      "polish": "E-biznes; e-commerce",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p421-014-word.mp3",
       "audioWordPl": "t1-p421-014-word-pl.mp3",
-      "audioSentence": "t1-p421-014-sentence.mp3"
+      "audioSentence": "t1-p421-014-sentence.mp3",
+      "polishAudio": "E-biznes"
     },
     {
       "id": "t1-p421-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p421-015-word.mp3",
       "audioWordPl": "t1-p421-015-word-pl.mp3",
-      "audioSentence": "t1-p421-015-sentence.mp3"
+      "audioSentence": "t1-p421-015-sentence.mp3",
+      "polishAudio": "Ekonomia"
     }
   ]
 }

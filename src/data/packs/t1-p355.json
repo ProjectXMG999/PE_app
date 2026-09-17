@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p355-001-word.mp3",
       "audioWordPl": "t1-p355-001-word-pl.mp3",
-      "audioSentence": "t1-p355-001-sentence.mp3"
+      "audioSentence": "t1-p355-001-sentence.mp3",
+      "polishAudio": "Przez cały czas"
     },
     {
       "id": "t1-p355-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p355-002-word.mp3",
       "audioWordPl": "t1-p355-002-word-pl.mp3",
-      "audioSentence": "t1-p355-002-sentence.mp3"
+      "audioSentence": "t1-p355-002-sentence.mp3",
+      "polishAudio": "Czasami"
     },
     {
       "id": "t1-p355-003",
@@ -34,37 +36,41 @@
       "sentencePl": null,
       "audioWord": "t1-p355-003-word.mp3",
       "audioWordPl": "t1-p355-003-word-pl.mp3",
-      "audioSentence": "t1-p355-003-sentence.mp3"
+      "audioSentence": "t1-p355-003-sentence.mp3",
+      "polishAudio": "Codziennie"
     },
     {
       "id": "t1-p355-004",
       "english": "Again",
-      "polish": "Ponownie",
+      "polish": "Ponownie; znowu",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p355-004-word.mp3",
       "audioWordPl": "t1-p355-004-word-pl.mp3",
-      "audioSentence": "t1-p355-004-sentence.mp3"
+      "audioSentence": "t1-p355-004-sentence.mp3",
+      "polishAudio": "Ponownie"
     },
     {
       "id": "t1-p355-005",
       "english": "Non-stop",
-      "polish": "Bez przerwy",
+      "polish": "Bez przerwy; nieustannie",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p355-005-word.mp3",
       "audioWordPl": "t1-p355-005-word-pl.mp3",
-      "audioSentence": "t1-p355-005-sentence.mp3"
+      "audioSentence": "t1-p355-005-sentence.mp3",
+      "polishAudio": "Bez przerwy"
     },
     {
       "id": "t1-p355-006",
       "english": "Usually",
-      "polish": "Przeważnie",
+      "polish": "Przeważnie; zazwyczaj",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p355-006-word.mp3",
       "audioWordPl": "t1-p355-006-word-pl.mp3",
-      "audioSentence": "t1-p355-006-sentence.mp3"
+      "audioSentence": "t1-p355-006-sentence.mp3",
+      "polishAudio": "Przeważnie"
     },
     {
       "id": "t1-p355-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p355-007-word.mp3",
       "audioWordPl": "t1-p355-007-word-pl.mp3",
-      "audioSentence": "t1-p355-007-sentence.mp3"
+      "audioSentence": "t1-p355-007-sentence.mp3",
+      "polishAudio": "Z dużą częstotliwością"
     },
     {
       "id": "t1-p355-008",
       "english": "Over and over again",
-      "polish": "W kółko I w kółko",
+      "polish": "W kółko i w kółko",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p355-008-word.mp3",
       "audioWordPl": "t1-p355-008-word-pl.mp3",
-      "audioSentence": "t1-p355-008-sentence.mp3"
+      "audioSentence": "t1-p355-008-sentence.mp3",
+      "polishAudio": "W kółko i w kółko"
     },
     {
       "id": "t1-p355-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p355-009-word.mp3",
       "audioWordPl": "t1-p355-009-word-pl.mp3",
-      "audioSentence": "t1-p355-009-sentence.mp3"
+      "audioSentence": "t1-p355-009-sentence.mp3",
+      "polishAudio": "Rzadko"
     },
     {
       "id": "t1-p355-010",
@@ -104,17 +113,19 @@
       "sentencePl": null,
       "audioWord": "t1-p355-010-word.mp3",
       "audioWordPl": "t1-p355-010-word-pl.mp3",
-      "audioSentence": "t1-p355-010-sentence.mp3"
+      "audioSentence": "t1-p355-010-sentence.mp3",
+      "polishAudio": "Powtarzalnie"
     },
     {
       "id": "t1-p355-011",
       "english": "Weekly",
-      "polish": "Cotygodniowo",
+      "polish": "Cotygodniowo; tygodniowo",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p355-011-word.mp3",
       "audioWordPl": "t1-p355-011-word-pl.mp3",
-      "audioSentence": "t1-p355-011-sentence.mp3"
+      "audioSentence": "t1-p355-011-sentence.mp3",
+      "polishAudio": "Cotygodniowo"
     },
     {
       "id": "t1-p355-012",
@@ -124,7 +135,8 @@
       "sentencePl": null,
       "audioWord": "t1-p355-012-word.mp3",
       "audioWordPl": "t1-p355-012-word-pl.mp3",
-      "audioSentence": "t1-p355-012-sentence.mp3"
+      "audioSentence": "t1-p355-012-sentence.mp3",
+      "polishAudio": "Choć raz"
     },
     {
       "id": "t1-p355-013",
@@ -134,7 +146,8 @@
       "sentencePl": null,
       "audioWord": "t1-p355-013-word.mp3",
       "audioWordPl": "t1-p355-013-word-pl.mp3",
-      "audioSentence": "t1-p355-013-sentence.mp3"
+      "audioSentence": "t1-p355-013-sentence.mp3",
+      "polishAudio": "Od czasu do czasu"
     },
     {
       "id": "t1-p355-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p355-014-word.mp3",
       "audioWordPl": "t1-p355-014-word-pl.mp3",
-      "audioSentence": "t1-p355-014-sentence.mp3"
+      "audioSentence": "t1-p355-014-sentence.mp3",
+      "polishAudio": "Coraz więcej"
     },
     {
       "id": "t1-p355-015",
       "english": "On occasion",
-      "polish": "Od święta",
+      "polish": "Od święta; z okazji",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p355-015-word.mp3",
       "audioWordPl": "t1-p355-015-word-pl.mp3",
-      "audioSentence": "t1-p355-015-sentence.mp3"
+      "audioSentence": "t1-p355-015-sentence.mp3",
+      "polishAudio": "Od święta"
     }
   ]
 }

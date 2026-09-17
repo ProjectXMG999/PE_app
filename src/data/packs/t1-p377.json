@@ -9,12 +9,13 @@
     {
       "id": "t1-p377-001",
       "english": "Be in saddle",
-      "polish": "Rządzić w domu",
+      "polish": "Rządzić w domu (być głową rodziny); panować nad własnym losem",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p377-001-word.mp3",
       "audioWordPl": "t1-p377-001-word-pl.mp3",
-      "audioSentence": "t1-p377-001-sentence.mp3"
+      "audioSentence": "t1-p377-001-sentence.mp3",
+      "polishAudio": "Rządzić w domu"
     },
     {
       "id": "t1-p377-002",
@@ -24,47 +25,52 @@
       "sentencePl": null,
       "audioWord": "t1-p377-002-word.mp3",
       "audioWordPl": "t1-p377-002-word-pl.mp3",
-      "audioSentence": "t1-p377-002-sentence.mp3"
+      "audioSentence": "t1-p377-002-sentence.mp3",
+      "polishAudio": "Przetyrany"
     },
     {
       "id": "t1-p377-003",
       "english": "Green",
-      "polish": "Zielony",
+      "polish": "Zielony (młokos, niedoświadczony)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p377-003-word.mp3",
       "audioWordPl": "t1-p377-003-word-pl.mp3",
-      "audioSentence": "t1-p377-003-sentence.mp3"
+      "audioSentence": "t1-p377-003-sentence.mp3",
+      "polishAudio": "Zielony"
     },
     {
       "id": "t1-p377-004",
       "english": "Hit-and-miss",
-      "polish": "Na odwal",
+      "polish": "Na odwal; po łebkach (o pracy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p377-004-word.mp3",
       "audioWordPl": "t1-p377-004-word-pl.mp3",
-      "audioSentence": "t1-p377-004-sentence.mp3"
+      "audioSentence": "t1-p377-004-sentence.mp3",
+      "polishAudio": "Na odwal"
     },
     {
       "id": "t1-p377-005",
       "english": "Take a rain-check",
-      "polish": "Zrobić coś później",
+      "polish": "Zrobić coś później; potwierdzić coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p377-005-word.mp3",
       "audioWordPl": "t1-p377-005-word-pl.mp3",
-      "audioSentence": "t1-p377-005-sentence.mp3"
+      "audioSentence": "t1-p377-005-sentence.mp3",
+      "polishAudio": "Zrobić coś później"
     },
     {
       "id": "t1-p377-006",
       "english": "Sloppy job",
-      "polish": "Niedbale wykonana praca",
+      "polish": "Niedbale wykonana praca (chałtura)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p377-006-word.mp3",
       "audioWordPl": "t1-p377-006-word-pl.mp3",
-      "audioSentence": "t1-p377-006-sentence.mp3"
+      "audioSentence": "t1-p377-006-sentence.mp3",
+      "polishAudio": "Niedbale wykonana praca"
     },
     {
       "id": "t1-p377-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p377-007-word.mp3",
       "audioWordPl": "t1-p377-007-word-pl.mp3",
-      "audioSentence": "t1-p377-007-sentence.mp3"
+      "audioSentence": "t1-p377-007-sentence.mp3",
+      "polishAudio": "Pracować na czarno"
     },
     {
       "id": "t1-p377-008",
       "english": "Buckle up",
-      "polish": "Zabierać się do roboty",
+      "polish": "Zabierać się do roboty; zapiąć pasy (początek akcji)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p377-008-word.mp3",
       "audioWordPl": "t1-p377-008-word-pl.mp3",
-      "audioSentence": "t1-p377-008-sentence.mp3"
+      "audioSentence": "t1-p377-008-sentence.mp3",
+      "polishAudio": "Zabierać się do roboty"
     },
     {
       "id": "t1-p377-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p377-009-word.mp3",
       "audioWordPl": "t1-p377-009-word-pl.mp3",
-      "audioSentence": "t1-p377-009-sentence.mp3"
+      "audioSentence": "t1-p377-009-sentence.mp3",
+      "polishAudio": "Wielka szycha"
     },
     {
       "id": "t1-p377-010",
       "english": "Head man",
-      "polish": "Szef",
+      "polish": "Szef (dyro)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p377-010-word.mp3",
       "audioWordPl": "t1-p377-010-word-pl.mp3",
-      "audioSentence": "t1-p377-010-sentence.mp3"
+      "audioSentence": "t1-p377-010-sentence.mp3",
+      "polishAudio": "Szef"
     }
   ]
 }

@@ -9,152 +9,167 @@
     {
       "id": "t1-p206-001",
       "english": "Anymore",
-      "polish": "Już",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Już (więcej, dłużej)",
+      "sentenceEn": "You don't have to pretend everything is okay anymore.",
+      "sentencePl": "Już nie musisz udawać, że wszystko jest w porządku.",
       "audioWord": "t1-p206-001-word.mp3",
       "audioWordPl": "t1-p206-001-word-pl.mp3",
-      "audioSentence": "t1-p206-001-sentence.mp3"
+      "audioSentence": "t1-p206-001-sentence.mp3",
+      "polishAudio": "Już"
     },
     {
       "id": "t1-p206-002",
       "english": "About",
-      "polish": "O",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "O (kimś, czymś)",
+      "sentenceEn": "What were you talking about for so long after dinner?",
+      "sentencePl": "O czym tak długo rozmawialiście po kolacji?",
       "audioWord": "t1-p206-002-word.mp3",
       "audioWordPl": "t1-p206-002-word-pl.mp3",
-      "audioSentence": "t1-p206-002-sentence.mp3"
+      "audioSentence": "t1-p206-002-sentence.mp3",
+      "polishAudio": "O"
     },
     {
       "id": "t1-p206-003",
       "english": "Almost",
       "polish": "Prawie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I almost sent that message to the work channel.",
+      "sentencePl": "Prawie wysłałam tę wiadomość na firmowy kanał.",
       "audioWord": "t1-p206-003-word.mp3",
       "audioWordPl": "t1-p206-003-word-pl.mp3",
-      "audioSentence": "t1-p206-003-sentence.mp3"
+      "audioSentence": "t1-p206-003-sentence.mp3",
+      "polishAudio": "Prawie"
     },
     {
       "id": "t1-p206-004",
       "english": "Also",
-      "polish": "Także",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Także; również",
+      "sentenceEn": "Take an umbrella too; the clouds look suspicious.",
+      "sentencePl": "Weź także parasol, chmury wyglądają podejrzanie.",
       "audioWord": "t1-p206-004-word.mp3",
       "audioWordPl": "t1-p206-004-word-pl.mp3",
-      "audioSentence": "t1-p206-004-sentence.mp3"
+      "audioSentence": "t1-p206-004-sentence.mp3",
+      "polishAudio": "Także"
     },
     {
       "id": "t1-p206-005",
       "english": "Apart",
       "polish": "Osobno",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I keep receipts apart from important documents.",
+      "sentencePl": "Przechowuję rachunki osobno od ważnych dokumentów.",
       "audioWord": "t1-p206-005-word.mp3",
       "audioWordPl": "t1-p206-005-word-pl.mp3",
-      "audioSentence": "t1-p206-005-sentence.mp3"
+      "audioSentence": "t1-p206-005-sentence.mp3",
+      "polishAudio": "Osobno"
     },
     {
       "id": "t1-p206-006",
       "english": "Actually",
-      "polish": "Właściwie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Właściwie; akurat",
+      "sentenceEn": "Actually, I'm not hungry; I just feel like going out.",
+      "sentencePl": "Właściwie nie jestem głodny, tylko mam ochotę wyjść.",
       "audioWord": "t1-p206-006-word.mp3",
       "audioWordPl": "t1-p206-006-word-pl.mp3",
-      "audioSentence": "t1-p206-006-sentence.mp3"
+      "audioSentence": "t1-p206-006-sentence.mp3",
+      "polishAudio": "Właściwie"
     },
     {
       "id": "t1-p206-007",
       "english": "Probably",
       "polish": "Prawdopodobnie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "It probably rained, since the pavement is completely wet.",
+      "sentencePl": "Prawdopodobnie padało, skoro chodnik jest cały mokry.",
       "audioWord": "t1-p206-007-word.mp3",
       "audioWordPl": "t1-p206-007-word-pl.mp3",
-      "audioSentence": "t1-p206-007-sentence.mp3"
+      "audioSentence": "t1-p206-007-sentence.mp3",
+      "polishAudio": "Prawdopodobnie"
     },
     {
       "id": "t1-p206-008",
       "english": "Especially",
-      "polish": "Szczególnie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Szczególnie; zwłaszcza",
+      "sentenceEn": "Be especially careful on slippery stairs after rain.",
+      "sentencePl": "Szczególnie uważaj na śliskie schody po deszczu.",
       "audioWord": "t1-p206-008-word.mp3",
       "audioWordPl": "t1-p206-008-word-pl.mp3",
-      "audioSentence": "t1-p206-008-sentence.mp3"
+      "audioSentence": "t1-p206-008-sentence.mp3",
+      "polishAudio": "Szczególnie"
     },
     {
       "id": "t1-p206-009",
       "english": "Only",
       "polish": "Zaledwie, właśnie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I only just managed to cancel the subscription before the charge.",
+      "sentencePl": "Właśnie zdążyłem anulować subskrypcję przed pobraniem opłaty.",
       "audioWord": "t1-p206-009-word.mp3",
       "audioWordPl": "t1-p206-009-word-pl.mp3",
-      "audioSentence": "t1-p206-009-sentence.mp3"
+      "audioSentence": "t1-p206-009-sentence.mp3",
+      "polishAudio": "Zaledwie, właśnie"
     },
     {
       "id": "t1-p206-010",
       "english": "Only",
       "polish": "Tylko",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Only one bus goes to our neighbourhood today.",
+      "sentencePl": "Tylko jeden autobus jedzie dziś na nasze osiedle.",
       "audioWord": "t1-p206-010-word.mp3",
       "audioWordPl": "t1-p206-010-word-pl.mp3",
-      "audioSentence": "t1-p206-010-sentence.mp3"
+      "audioSentence": "t1-p206-010-sentence.mp3",
+      "polishAudio": "Tylko"
     },
     {
       "id": "t1-p206-011",
       "english": "Possibly",
-      "polish": "Możliwie",
+      "polish": "Możliwie; być może",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p206-011-word.mp3",
       "audioWordPl": "t1-p206-011-word-pl.mp3",
-      "audioSentence": "t1-p206-011-sentence.mp3"
+      "audioSentence": "t1-p206-011-sentence.mp3",
+      "polishAudio": "Możliwie"
     },
     {
       "id": "t1-p206-012",
       "english": "Further",
       "polish": "Dalej",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Scroll further down; there's an important update there.",
+      "sentencePl": "Przewiń trochę dalej, tam jest ważna aktualizacja.",
       "audioWord": "t1-p206-012-word.mp3",
       "audioWordPl": "t1-p206-012-word-pl.mp3",
-      "audioSentence": "t1-p206-012-sentence.mp3"
+      "audioSentence": "t1-p206-012-sentence.mp3",
+      "polishAudio": "Dalej"
     },
     {
       "id": "t1-p206-013",
       "english": "Nearly",
-      "polish": "Prawie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Prawie; niemal",
+      "sentenceEn": "We've nearly run out of milk; I'll buy some tomorrow.",
+      "sentencePl": "Prawie skończyło się mleko, kupię je jutro.",
       "audioWord": "t1-p206-013-word.mp3",
       "audioWordPl": "t1-p206-013-word-pl.mp3",
-      "audioSentence": "t1-p206-013-sentence.mp3"
+      "audioSentence": "t1-p206-013-sentence.mp3",
+      "polishAudio": "Prawie"
     },
     {
       "id": "t1-p206-014",
       "english": "Normally",
-      "polish": "Normalnie",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Normalnie; standardowo",
+      "sentenceEn": "You don't normally call for no reason, so I worried.",
+      "sentencePl": "Normalnie nie dzwonisz bez powodu, więc się martwiłam.",
       "audioWord": "t1-p206-014-word.mp3",
       "audioWordPl": "t1-p206-014-word-pl.mp3",
-      "audioSentence": "t1-p206-014-sentence.mp3"
+      "audioSentence": "t1-p206-014-sentence.mp3",
+      "polishAudio": "Normalnie"
     },
     {
       "id": "t1-p206-015",
       "english": "At least",
-      "polish": "Przynajmniej",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Przynajmniej; co najmniej",
+      "sentenceEn": "At least autosave saved half of my text.",
+      "sentencePl": "Przynajmniej zapis automatyczny uratował połowę mojego tekstu.",
       "audioWord": "t1-p206-015-word.mp3",
       "audioWordPl": "t1-p206-015-word-pl.mp3",
-      "audioSentence": "t1-p206-015-sentence.mp3"
+      "audioSentence": "t1-p206-015-sentence.mp3",
+      "polishAudio": "Przynajmniej"
     }
   ]
 }

@@ -9,12 +9,13 @@
     {
       "id": "t1-p472-001",
       "english": "Fill in sth",
-      "polish": "Wypełniać coś",
+      "polish": "Wypełniać coś (np. formularz)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p472-001-word.mp3",
       "audioWordPl": "t1-p472-001-word-pl.mp3",
-      "audioSentence": "t1-p472-001-sentence.mp3"
+      "audioSentence": "t1-p472-001-sentence.mp3",
+      "polishAudio": "Wypełniać coś"
     },
     {
       "id": "t1-p472-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p472-002-word.mp3",
       "audioWordPl": "t1-p472-002-word-pl.mp3",
-      "audioSentence": "t1-p472-002-sentence.mp3"
+      "audioSentence": "t1-p472-002-sentence.mp3",
+      "polishAudio": "Pospieszyć się"
     },
     {
       "id": "t1-p472-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p472-003-word.mp3",
       "audioWordPl": "t1-p472-003-word-pl.mp3",
-      "audioSentence": "t1-p472-003-sentence.mp3"
+      "audioSentence": "t1-p472-003-sentence.mp3",
+      "polishAudio": "Być nieobecnym w pracy"
     },
     {
       "id": "t1-p472-004",
       "english": "Stand in for sb",
-      "polish": "Zastąpić kogoś",
+      "polish": "Zastąpić kogoś (w pracy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p472-004-word.mp3",
       "audioWordPl": "t1-p472-004-word-pl.mp3",
-      "audioSentence": "t1-p472-004-sentence.mp3"
+      "audioSentence": "t1-p472-004-sentence.mp3",
+      "polishAudio": "Zastąpić kogoś"
     },
     {
       "id": "t1-p472-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p472-005-word.mp3",
       "audioWordPl": "t1-p472-005-word-pl.mp3",
-      "audioSentence": "t1-p472-005-sentence.mp3"
+      "audioSentence": "t1-p472-005-sentence.mp3",
+      "polishAudio": "Nie przestawać czegoś robić"
     },
     {
       "id": "t1-p472-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p472-006-word.mp3",
       "audioWordPl": "t1-p472-006-word-pl.mp3",
-      "audioSentence": "t1-p472-006-sentence.mp3"
+      "audioSentence": "t1-p472-006-sentence.mp3",
+      "polishAudio": "Wykonać coś"
     },
     {
       "id": "t1-p472-007",
@@ -74,27 +80,30 @@
       "sentencePl": null,
       "audioWord": "t1-p472-007-word.mp3",
       "audioWordPl": "t1-p472-007-word-pl.mp3",
-      "audioSentence": "t1-p472-007-sentence.mp3"
+      "audioSentence": "t1-p472-007-sentence.mp3",
+      "polishAudio": "Zapisać się na"
     },
     {
       "id": "t1-p472-008",
       "english": "Get it on",
-      "polish": "Cisnąć z czymś",
+      "polish": "Cisnąć z czymś; lecieć (z tematem)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p472-008-word.mp3",
       "audioWordPl": "t1-p472-008-word-pl.mp3",
-      "audioSentence": "t1-p472-008-sentence.mp3"
+      "audioSentence": "t1-p472-008-sentence.mp3",
+      "polishAudio": "Cisnąć z czymś"
     },
     {
       "id": "t1-p472-009",
       "english": "Be up to",
-      "polish": "Robić coś",
+      "polish": "Robić coś; porabiać coś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p472-009-word.mp3",
       "audioWordPl": "t1-p472-009-word-pl.mp3",
-      "audioSentence": "t1-p472-009-sentence.mp3"
+      "audioSentence": "t1-p472-009-sentence.mp3",
+      "polishAudio": "Robić coś"
     },
     {
       "id": "t1-p472-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p472-010-word.mp3",
       "audioWordPl": "t1-p472-010-word-pl.mp3",
-      "audioSentence": "t1-p472-010-sentence.mp3"
+      "audioSentence": "t1-p472-010-sentence.mp3",
+      "polishAudio": "Zacząć coś robić"
     }
   ]
 }

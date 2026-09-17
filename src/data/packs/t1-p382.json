@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p382-001-word.mp3",
       "audioWordPl": "t1-p382-001-word-pl.mp3",
-      "audioSentence": "t1-p382-001-sentence.mp3"
+      "audioSentence": "t1-p382-001-sentence.mp3",
+      "polishAudio": "Słodzić coś"
     },
     {
       "id": "t1-p382-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p382-002-word.mp3",
       "audioWordPl": "t1-p382-002-word-pl.mp3",
-      "audioSentence": "t1-p382-002-sentence.mp3"
+      "audioSentence": "t1-p382-002-sentence.mp3",
+      "polishAudio": "Chrupać"
     },
     {
       "id": "t1-p382-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p382-003-word.mp3",
       "audioWordPl": "t1-p382-003-word-pl.mp3",
-      "audioSentence": "t1-p382-003-sentence.mp3"
+      "audioSentence": "t1-p382-003-sentence.mp3",
+      "polishAudio": "Obierać"
     },
     {
       "id": "t1-p382-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p382-004-word.mp3",
       "audioWordPl": "t1-p382-004-word-pl.mp3",
-      "audioSentence": "t1-p382-004-sentence.mp3"
+      "audioSentence": "t1-p382-004-sentence.mp3",
+      "polishAudio": "Piec mięso"
     },
     {
       "id": "t1-p382-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p382-005-word.mp3",
       "audioWordPl": "t1-p382-005-word-pl.mp3",
-      "audioSentence": "t1-p382-005-sentence.mp3"
+      "audioSentence": "t1-p382-005-sentence.mp3",
+      "polishAudio": "Przyprawiać"
     },
     {
       "id": "t1-p382-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p382-006-word.mp3",
       "audioWordPl": "t1-p382-006-word-pl.mp3",
-      "audioSentence": "t1-p382-006-sentence.mp3"
+      "audioSentence": "t1-p382-006-sentence.mp3",
+      "polishAudio": "Siekać"
     },
     {
       "id": "t1-p382-007",
@@ -74,47 +80,52 @@
       "sentencePl": null,
       "audioWord": "t1-p382-007-word.mp3",
       "audioWordPl": "t1-p382-007-word-pl.mp3",
-      "audioSentence": "t1-p382-007-sentence.mp3"
+      "audioSentence": "t1-p382-007-sentence.mp3",
+      "polishAudio": "Zetrzeć"
     },
     {
       "id": "t1-p382-008",
       "english": "Slash",
-      "polish": "Ciąć",
+      "polish": "Ciąć (długie cięcie czymś bardzo ostrym)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p382-008-word.mp3",
       "audioWordPl": "t1-p382-008-word-pl.mp3",
-      "audioSentence": "t1-p382-008-sentence.mp3"
+      "audioSentence": "t1-p382-008-sentence.mp3",
+      "polishAudio": "Ciąć"
     },
     {
       "id": "t1-p382-009",
       "english": "Stir",
-      "polish": "Mieszać",
+      "polish": "Mieszać (płyny, substancje, aby je ze sobą połączyć)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p382-009-word.mp3",
       "audioWordPl": "t1-p382-009-word-pl.mp3",
-      "audioSentence": "t1-p382-009-sentence.mp3"
+      "audioSentence": "t1-p382-009-sentence.mp3",
+      "polishAudio": "Mieszać"
     },
     {
       "id": "t1-p382-010",
       "english": "Whip",
-      "polish": "Ubijać",
+      "polish": "Ubijać (mocno)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p382-010-word.mp3",
       "audioWordPl": "t1-p382-010-word-pl.mp3",
-      "audioSentence": "t1-p382-010-sentence.mp3"
+      "audioSentence": "t1-p382-010-sentence.mp3",
+      "polishAudio": "Ubijać"
     },
     {
       "id": "t1-p382-011",
       "english": "Whisp",
-      "polish": "Ubijać",
+      "polish": "Ubijać (lekko)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p382-011-word.mp3",
       "audioWordPl": "t1-p382-011-word-pl.mp3",
-      "audioSentence": "t1-p382-011-sentence.mp3"
+      "audioSentence": "t1-p382-011-sentence.mp3",
+      "polishAudio": "Ubijać"
     },
     {
       "id": "t1-p382-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p382-012-word.mp3",
       "audioWordPl": "t1-p382-012-word-pl.mp3",
-      "audioSentence": "t1-p382-012-sentence.mp3"
+      "audioSentence": "t1-p382-012-sentence.mp3",
+      "polishAudio": "Smażyć na dużym ogniu, mieszając"
     },
     {
       "id": "t1-p382-013",
       "english": "Blend",
-      "polish": "Blendować",
+      "polish": "Blendować; miksować",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p382-013-word.mp3",
       "audioWordPl": "t1-p382-013-word-pl.mp3",
-      "audioSentence": "t1-p382-013-sentence.mp3"
+      "audioSentence": "t1-p382-013-sentence.mp3",
+      "polishAudio": "Blendować"
     },
     {
       "id": "t1-p382-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p382-014-word.mp3",
       "audioWordPl": "t1-p382-014-word-pl.mp3",
-      "audioSentence": "t1-p382-014-sentence.mp3"
+      "audioSentence": "t1-p382-014-sentence.mp3",
+      "polishAudio": "Stołować się"
     },
     {
       "id": "t1-p382-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p382-015-word.mp3",
       "audioWordPl": "t1-p382-015-word-pl.mp3",
-      "audioSentence": "t1-p382-015-sentence.mp3"
+      "audioSentence": "t1-p382-015-sentence.mp3",
+      "polishAudio": "Roztapiać"
     }
   ]
 }

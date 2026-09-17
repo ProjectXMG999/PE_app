@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p564-001-word.mp3",
       "audioWordPl": "t1-p564-001-word-pl.mp3",
-      "audioSentence": "t1-p564-001-sentence.mp3"
+      "audioSentence": "t1-p564-001-sentence.mp3",
+      "polishAudio": "Oklepany"
     },
     {
       "id": "t1-p564-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p564-002-word.mp3",
       "audioWordPl": "t1-p564-002-word-pl.mp3",
-      "audioSentence": "t1-p564-002-sentence.mp3"
+      "audioSentence": "t1-p564-002-sentence.mp3",
+      "polishAudio": "Oskarżenie kogoś o kłamstwo"
     },
     {
       "id": "t1-p564-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p564-003-word.mp3",
       "audioWordPl": "t1-p564-003-word-pl.mp3",
-      "audioSentence": "t1-p564-003-sentence.mp3"
+      "audioSentence": "t1-p564-003-sentence.mp3",
+      "polishAudio": "Słabizna"
     },
     {
       "id": "t1-p564-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p564-004-word.mp3",
       "audioWordPl": "t1-p564-004-word-pl.mp3",
-      "audioSentence": "t1-p564-004-sentence.mp3"
+      "audioSentence": "t1-p564-004-sentence.mp3",
+      "polishAudio": "Żyć w konkubinacie"
     },
     {
       "id": "t1-p564-005",
@@ -54,17 +58,19 @@
       "sentencePl": null,
       "audioWord": "t1-p564-005-word.mp3",
       "audioWordPl": "t1-p564-005-word-pl.mp3",
-      "audioSentence": "t1-p564-005-sentence.mp3"
+      "audioSentence": "t1-p564-005-sentence.mp3",
+      "polishAudio": "Gafa"
     },
     {
       "id": "t1-p564-006",
       "english": "Clock",
-      "polish": "Przywalić",
+      "polish": "Przywalić; dowalić (komuś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p564-006-word.mp3",
       "audioWordPl": "t1-p564-006-word-pl.mp3",
-      "audioSentence": "t1-p564-006-sentence.mp3"
+      "audioSentence": "t1-p564-006-sentence.mp3",
+      "polishAudio": "Przywalić"
     },
     {
       "id": "t1-p564-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p564-007-word.mp3",
       "audioWordPl": "t1-p564-007-word-pl.mp3",
-      "audioSentence": "t1-p564-007-sentence.mp3"
+      "audioSentence": "t1-p564-007-sentence.mp3",
+      "polishAudio": "Zrobić coś tylko dla sławy"
     },
     {
       "id": "t1-p564-008",
       "english": "Con",
-      "polish": "Oszukiwać finansowo",
+      "polish": "Oszukiwać finansowo; naciągać; zrobić, orżnąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p564-008-word.mp3",
       "audioWordPl": "t1-p564-008-word-pl.mp3",
-      "audioSentence": "t1-p564-008-sentence.mp3"
+      "audioSentence": "t1-p564-008-sentence.mp3",
+      "polishAudio": "Oszukiwać finansowo"
     },
     {
       "id": "t1-p564-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p564-009-word.mp3",
       "audioWordPl": "t1-p564-009-word-pl.mp3",
-      "audioSentence": "t1-p564-009-sentence.mp3"
+      "audioSentence": "t1-p564-009-sentence.mp3",
+      "polishAudio": "Porąbane"
     },
     {
       "id": "t1-p564-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p564-010-word.mp3",
       "audioWordPl": "t1-p564-010-word-pl.mp3",
-      "audioSentence": "t1-p564-010-sentence.mp3"
+      "audioSentence": "t1-p564-010-sentence.mp3",
+      "polishAudio": "Dać kosza"
     }
   ]
 }

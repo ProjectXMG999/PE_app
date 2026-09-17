@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p433-001-word.mp3",
       "audioWordPl": "t1-p433-001-word-pl.mp3",
-      "audioSentence": "t1-p433-001-sentence.mp3"
+      "audioSentence": "t1-p433-001-sentence.mp3",
+      "polishAudio": "Konieczny"
     },
     {
       "id": "t1-p433-002",
@@ -24,47 +25,52 @@
       "sentencePl": null,
       "audioWord": "t1-p433-002-word.mp3",
       "audioWordPl": "t1-p433-002-word-pl.mp3",
-      "audioSentence": "t1-p433-002-sentence.mp3"
+      "audioSentence": "t1-p433-002-sentence.mp3",
+      "polishAudio": "Potrzebny"
     },
     {
       "id": "t1-p433-003",
       "english": "Major",
-      "polish": "Znaczny",
+      "polish": "Znaczny; pierwszorzędny; istotny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p433-003-word.mp3",
       "audioWordPl": "t1-p433-003-word-pl.mp3",
-      "audioSentence": "t1-p433-003-sentence.mp3"
+      "audioSentence": "t1-p433-003-sentence.mp3",
+      "polishAudio": "Znaczny"
     },
     {
       "id": "t1-p433-004",
       "english": "Minor",
-      "polish": "Pomniejszy",
+      "polish": "Pomniejszy; niewielkie; drobny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p433-004-word.mp3",
       "audioWordPl": "t1-p433-004-word-pl.mp3",
-      "audioSentence": "t1-p433-004-sentence.mp3"
+      "audioSentence": "t1-p433-004-sentence.mp3",
+      "polishAudio": "Pomniejszy"
     },
     {
       "id": "t1-p433-005",
       "english": "Primary",
-      "polish": "Podstawowy",
+      "polish": "Podstawowy; pierwszorzędny (ważny)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p433-005-word.mp3",
       "audioWordPl": "t1-p433-005-word-pl.mp3",
-      "audioSentence": "t1-p433-005-sentence.mp3"
+      "audioSentence": "t1-p433-005-sentence.mp3",
+      "polishAudio": "Podstawowy"
     },
     {
       "id": "t1-p433-006",
       "english": "Unnecessary",
-      "polish": "Niekonieczny",
+      "polish": "Niekonieczny (niepotrzebny)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p433-006-word.mp3",
       "audioWordPl": "t1-p433-006-word-pl.mp3",
-      "audioSentence": "t1-p433-006-sentence.mp3"
+      "audioSentence": "t1-p433-006-sentence.mp3",
+      "polishAudio": "Niekonieczny"
     },
     {
       "id": "t1-p433-007",
@@ -74,27 +80,30 @@
       "sentencePl": null,
       "audioWord": "t1-p433-007-word.mp3",
       "audioWordPl": "t1-p433-007-word-pl.mp3",
-      "audioSentence": "t1-p433-007-sentence.mp3"
+      "audioSentence": "t1-p433-007-sentence.mp3",
+      "polishAudio": "Wymagany"
     },
     {
       "id": "t1-p433-008",
       "english": "Main",
-      "polish": "Główny",
+      "polish": "Główny (np. droga)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p433-008-word.mp3",
       "audioWordPl": "t1-p433-008-word-pl.mp3",
-      "audioSentence": "t1-p433-008-sentence.mp3"
+      "audioSentence": "t1-p433-008-sentence.mp3",
+      "polishAudio": "Główny"
     },
     {
       "id": "t1-p433-009",
       "english": "Key",
-      "polish": "Kluczowy",
+      "polish": "Kluczowy; istotny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p433-009-word.mp3",
       "audioWordPl": "t1-p433-009-word-pl.mp3",
-      "audioSentence": "t1-p433-009-sentence.mp3"
+      "audioSentence": "t1-p433-009-sentence.mp3",
+      "polishAudio": "Kluczowy"
     },
     {
       "id": "t1-p433-010",
@@ -104,27 +113,30 @@
       "sentencePl": null,
       "audioWord": "t1-p433-010-word.mp3",
       "audioWordPl": "t1-p433-010-word-pl.mp3",
-      "audioSentence": "t1-p433-010-sentence.mp3"
+      "audioSentence": "t1-p433-010-sentence.mp3",
+      "polishAudio": "Bardzo istotny"
     },
     {
       "id": "t1-p433-011",
       "english": "Significant",
-      "polish": "Znaczący",
+      "polish": "Znaczący; ważny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p433-011-word.mp3",
       "audioWordPl": "t1-p433-011-word-pl.mp3",
-      "audioSentence": "t1-p433-011-sentence.mp3"
+      "audioSentence": "t1-p433-011-sentence.mp3",
+      "polishAudio": "Znaczący"
     },
     {
       "id": "t1-p433-012",
       "english": "Insignificant",
-      "polish": "Nieznaczący",
+      "polish": "Nieznaczący; nieważny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p433-012-word.mp3",
       "audioWordPl": "t1-p433-012-word-pl.mp3",
-      "audioSentence": "t1-p433-012-sentence.mp3"
+      "audioSentence": "t1-p433-012-sentence.mp3",
+      "polishAudio": "Nieznaczący"
     },
     {
       "id": "t1-p433-013",
@@ -134,17 +146,19 @@
       "sentencePl": null,
       "audioWord": "t1-p433-013-word.mp3",
       "audioWordPl": "t1-p433-013-word-pl.mp3",
-      "audioSentence": "t1-p433-013-sentence.mp3"
+      "audioSentence": "t1-p433-013-sentence.mp3",
+      "polishAudio": "Drugorzędny"
     },
     {
       "id": "t1-p433-014",
       "english": "Weighty",
-      "polish": "Doniosły",
+      "polish": "Doniosły; ważny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p433-014-word.mp3",
       "audioWordPl": "t1-p433-014-word-pl.mp3",
-      "audioSentence": "t1-p433-014-sentence.mp3"
+      "audioSentence": "t1-p433-014-sentence.mp3",
+      "polishAudio": "Doniosły"
     },
     {
       "id": "t1-p433-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p433-015-word.mp3",
       "audioWordPl": "t1-p433-015-word-pl.mp3",
-      "audioSentence": "t1-p433-015-sentence.mp3"
+      "audioSentence": "t1-p433-015-sentence.mp3",
+      "polishAudio": "Decydujący"
     }
   ]
 }

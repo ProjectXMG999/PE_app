@@ -10,41 +10,45 @@
       "id": "t1-p139-001",
       "english": "Shoulder",
       "polish": "Bark",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Rest your head on my shoulder if you're sleepy.",
+      "sentencePl": "Oprzyj głowę o mój bark, jeśli chce ci się spać.",
       "audioWord": "t1-p139-001-word.mp3",
       "audioWordPl": "t1-p139-001-word-pl.mp3",
-      "audioSentence": "t1-p139-001-sentence.mp3"
+      "audioSentence": "t1-p139-001-sentence.mp3",
+      "polishAudio": "Bark"
     },
     {
       "id": "t1-p139-002",
       "english": "Eyebrow",
       "polish": "Brew",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Your eyebrow says “no” before you even say anything.",
+      "sentencePl": "Twoja brew mówi „nie”, zanim jeszcze cokolwiek powiesz.",
       "audioWord": "t1-p139-002-word.mp3",
       "audioWordPl": "t1-p139-002-word-pl.mp3",
-      "audioSentence": "t1-p139-002-sentence.mp3"
+      "audioSentence": "t1-p139-002-sentence.mp3",
+      "polishAudio": "Brew"
     },
     {
       "id": "t1-p139-003",
       "english": "Beard",
       "polish": "Broda",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Your beard is prickly, but somehow I don't mind.",
+      "sentencePl": "Twoja broda kłuje, ale jakoś mi to nie przeszkadza.",
       "audioWord": "t1-p139-003-word.mp3",
       "audioWordPl": "t1-p139-003-word-pl.mp3",
-      "audioSentence": "t1-p139-003-sentence.mp3"
+      "audioSentence": "t1-p139-003-sentence.mp3",
+      "polishAudio": "Broda"
     },
     {
       "id": "t1-p139-004",
       "english": "Stomach",
-      "polish": "Brzuch",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Brzuch; żołądek",
+      "sentenceEn": "Don't make me laugh right now, my stomach hurts.",
+      "sentencePl": "Nie śmiej mnie teraz, bo boli mnie brzuch.",
       "audioWord": "t1-p139-004-word.mp3",
       "audioWordPl": "t1-p139-004-word-pl.mp3",
-      "audioSentence": "t1-p139-004-sentence.mp3"
+      "audioSentence": "t1-p139-004-sentence.mp3",
+      "polishAudio": "Brzuch"
     },
     {
       "id": "t1-p139-005",
@@ -54,107 +58,118 @@
       "sentencePl": null,
       "audioWord": "t1-p139-005-word.mp3",
       "audioWordPl": "t1-p139-005-word-pl.mp3",
-      "audioSentence": "t1-p139-005-sentence.mp3"
+      "audioSentence": "t1-p139-005-sentence.mp3",
+      "polishAudio": "Część ciała"
     },
     {
       "id": "t1-p139-006",
       "english": "Palm",
       "polish": "Dłoń",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I got a splinter in my palm while cleaning.",
+      "sentencePl": "Wbiła mi się drzazga w dłoń podczas sprzątania.",
       "audioWord": "t1-p139-006-word.mp3",
       "audioWordPl": "t1-p139-006-word-pl.mp3",
-      "audioSentence": "t1-p139-006-sentence.mp3"
+      "audioSentence": "t1-p139-006-sentence.mp3",
+      "polishAudio": "Dłoń"
     },
     {
       "id": "t1-p139-007",
       "english": "Throat",
       "polish": "Gardło",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My throat is dry; can you pass me some water?",
+      "sentencePl": "Mam suche gardło, możesz podać mi wodę?",
       "audioWord": "t1-p139-007-word.mp3",
       "audioWordPl": "t1-p139-007-word-pl.mp3",
-      "audioSentence": "t1-p139-007-sentence.mp3"
+      "audioSentence": "t1-p139-007-sentence.mp3",
+      "polishAudio": "Gardło"
     },
     {
       "id": "t1-p139-008",
       "english": "Thumb",
       "polish": "Kciuk",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My thumbprint didn't work, so I'll try again.",
+      "sentencePl": "Odcisk kciuka nie przeszedł, spróbuję jeszcze raz.",
       "audioWord": "t1-p139-008-word.mp3",
       "audioWordPl": "t1-p139-008-word-pl.mp3",
-      "audioSentence": "t1-p139-008-sentence.mp3"
+      "audioSentence": "t1-p139-008-sentence.mp3",
+      "polishAudio": "Kciuk"
     },
     {
       "id": "t1-p139-009",
       "english": "Chest",
       "polish": "Klatka piersiowa",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "That bag hits you in the chest with every step.",
+      "sentencePl": "Ta torba uderza cię w klatkę piersiową przy każdym kroku.",
       "audioWord": "t1-p139-009-word.mp3",
       "audioWordPl": "t1-p139-009-word-pl.mp3",
-      "audioSentence": "t1-p139-009-sentence.mp3"
+      "audioSentence": "t1-p139-009-sentence.mp3",
+      "polishAudio": "Klatka piersiowa"
     },
     {
       "id": "t1-p139-010",
       "english": "Knee",
       "polish": "Kolano",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "My knee is wet because I was kneeling by the plants.",
+      "sentencePl": "Mam mokre kolano, bo klęczałem przy roślinach.",
       "audioWord": "t1-p139-010-word.mp3",
       "audioWordPl": "t1-p139-010-word-pl.mp3",
-      "audioSentence": "t1-p139-010-sentence.mp3"
+      "audioSentence": "t1-p139-010-sentence.mp3",
+      "polishAudio": "Kolano"
     },
     {
       "id": "t1-p139-011",
       "english": "Bone",
       "polish": "Kość",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Careful, there may be a small bone in this fish.",
+      "sentencePl": "Uważaj, w tej rybie może być mała kość.",
       "audioWord": "t1-p139-011-word.mp3",
       "audioWordPl": "t1-p139-011-word-pl.mp3",
-      "audioSentence": "t1-p139-011-sentence.mp3"
+      "audioSentence": "t1-p139-011-sentence.mp3",
+      "polishAudio": "Kość"
     },
     {
       "id": "t1-p139-012",
       "english": "Spine",
       "polish": "Kręgosłup",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "That old chair gives my spine no support at all.",
+      "sentencePl": "Ten stary fotel nie daje żadnego wsparcia kręgosłupowi.",
       "audioWord": "t1-p139-012-word.mp3",
       "audioWordPl": "t1-p139-012-word-pl.mp3",
-      "audioSentence": "t1-p139-012-sentence.mp3"
+      "audioSentence": "t1-p139-012-sentence.mp3",
+      "polishAudio": "Kręgosłup"
     },
     {
       "id": "t1-p139-013",
       "english": "Elbow",
       "polish": "Łokieć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Don't lean on your elbow, or it will go numb soon.",
+      "sentencePl": "Nie opieraj się na łokciu, bo zaraz ci zdrętwieje.",
       "audioWord": "t1-p139-013-word.mp3",
       "audioWordPl": "t1-p139-013-word-pl.mp3",
-      "audioSentence": "t1-p139-013-sentence.mp3"
+      "audioSentence": "t1-p139-013-sentence.mp3",
+      "polishAudio": "Łokieć"
     },
     {
       "id": "t1-p139-014",
       "english": "Muscle",
       "polish": "Mięsień",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Give yourself a day off; every muscle needs rest.",
+      "sentencePl": "Daj sobie dzień przerwy, każdy mięsień potrzebuje odpoczynku.",
       "audioWord": "t1-p139-014-word.mp3",
       "audioWordPl": "t1-p139-014-word-pl.mp3",
-      "audioSentence": "t1-p139-014-sentence.mp3"
+      "audioSentence": "t1-p139-014-sentence.mp3",
+      "polishAudio": "Mięsień"
     },
     {
       "id": "t1-p139-015",
       "english": "Brain",
       "polish": "Mózg",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Give me a moment; my brain hasn't switched on yet this morning.",
+      "sentencePl": "Daj mi chwilę, mózg jeszcze nie włączył się rano.",
       "audioWord": "t1-p139-015-word.mp3",
       "audioWordPl": "t1-p139-015-word-pl.mp3",
-      "audioSentence": "t1-p139-015-sentence.mp3"
+      "audioSentence": "t1-p139-015-sentence.mp3",
+      "polishAudio": "Mózg"
     }
   ]
 }

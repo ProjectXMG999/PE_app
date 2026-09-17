@@ -14,17 +14,19 @@
       "sentencePl": null,
       "audioWord": "t1-p599-001-word.mp3",
       "audioWordPl": "t1-p599-001-word-pl.mp3",
-      "audioSentence": "t1-p599-001-sentence.mp3"
+      "audioSentence": "t1-p599-001-sentence.mp3",
+      "polishAudio": "Drapacz chmur"
     },
     {
       "id": "t1-p599-002",
       "english": "Semi-detached house",
-      "polish": "Bliźniak",
+      "polish": "Bliźniak (budynek)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p599-002-word.mp3",
       "audioWordPl": "t1-p599-002-word-pl.mp3",
-      "audioSentence": "t1-p599-002-sentence.mp3"
+      "audioSentence": "t1-p599-002-sentence.mp3",
+      "polishAudio": "Bliźniak"
     },
     {
       "id": "t1-p599-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p599-003-word.mp3",
       "audioWordPl": "t1-p599-003-word-pl.mp3",
-      "audioSentence": "t1-p599-003-sentence.mp3"
+      "audioSentence": "t1-p599-003-sentence.mp3",
+      "polishAudio": "Kamienica"
     },
     {
       "id": "t1-p599-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p599-004-word.mp3",
       "audioWordPl": "t1-p599-004-word-pl.mp3",
-      "audioSentence": "t1-p599-004-sentence.mp3"
+      "audioSentence": "t1-p599-004-sentence.mp3",
+      "polishAudio": "Dom szeregowy"
     },
     {
       "id": "t1-p599-005",
@@ -54,27 +58,30 @@
       "sentencePl": null,
       "audioWord": "t1-p599-005-word.mp3",
       "audioWordPl": "t1-p599-005-word-pl.mp3",
-      "audioSentence": "t1-p599-005-sentence.mp3"
+      "audioSentence": "t1-p599-005-sentence.mp3",
+      "polishAudio": "Dom wolnostojący"
     },
     {
       "id": "t1-p599-006",
       "english": "Estate",
-      "polish": "Nieruchomość",
+      "polish": "Nieruchomość; posiadłość",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p599-006-word.mp3",
       "audioWordPl": "t1-p599-006-word-pl.mp3",
-      "audioSentence": "t1-p599-006-sentence.mp3"
+      "audioSentence": "t1-p599-006-sentence.mp3",
+      "polishAudio": "Nieruchomość"
     },
     {
       "id": "t1-p599-007",
       "english": "Facility",
-      "polish": "Obiekt",
+      "polish": "Obiekt (np. sportowy); placówka",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p599-007-word.mp3",
       "audioWordPl": "t1-p599-007-word-pl.mp3",
-      "audioSentence": "t1-p599-007-sentence.mp3"
+      "audioSentence": "t1-p599-007-sentence.mp3",
+      "polishAudio": "Obiekt"
     },
     {
       "id": "t1-p599-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p599-008-word.mp3",
       "audioWordPl": "t1-p599-008-word-pl.mp3",
-      "audioSentence": "t1-p599-008-sentence.mp3"
+      "audioSentence": "t1-p599-008-sentence.mp3",
+      "polishAudio": "Wieżowiec"
     },
     {
       "id": "t1-p599-009",
       "english": "Bungalow",
-      "polish": "Bungalow",
+      "polish": "Bungalow; dom parterowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p599-009-word.mp3",
       "audioWordPl": "t1-p599-009-word-pl.mp3",
-      "audioSentence": "t1-p599-009-sentence.mp3"
+      "audioSentence": "t1-p599-009-sentence.mp3",
+      "polishAudio": "Bungalow"
     },
     {
       "id": "t1-p599-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p599-010-word.mp3",
       "audioWordPl": "t1-p599-010-word-pl.mp3",
-      "audioSentence": "t1-p599-010-sentence.mp3"
+      "audioSentence": "t1-p599-010-sentence.mp3",
+      "polishAudio": "Dzwonnica"
     },
     {
       "id": "t1-p599-011",
@@ -114,27 +124,30 @@
       "sentencePl": null,
       "audioWord": "t1-p599-011-word.mp3",
       "audioWordPl": "t1-p599-011-word-pl.mp3",
-      "audioSentence": "t1-p599-011-sentence.mp3"
+      "audioSentence": "t1-p599-011-sentence.mp3",
+      "polishAudio": "Kawalerka"
     },
     {
       "id": "t1-p599-012",
       "english": "Lodge",
-      "polish": "Domek",
+      "polish": "Domek; chata",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p599-012-word.mp3",
       "audioWordPl": "t1-p599-012-word-pl.mp3",
-      "audioSentence": "t1-p599-012-sentence.mp3"
+      "audioSentence": "t1-p599-012-sentence.mp3",
+      "polishAudio": "Domek"
     },
     {
       "id": "t1-p599-013",
       "english": "Shack",
-      "polish": "Chałupa",
+      "polish": "Chałupa; buda (budynek)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p599-013-word.mp3",
       "audioWordPl": "t1-p599-013-word-pl.mp3",
-      "audioSentence": "t1-p599-013-sentence.mp3"
+      "audioSentence": "t1-p599-013-sentence.mp3",
+      "polishAudio": "Chałupa"
     },
     {
       "id": "t1-p599-014",
@@ -144,7 +157,8 @@
       "sentencePl": null,
       "audioWord": "t1-p599-014-word.mp3",
       "audioWordPl": "t1-p599-014-word-pl.mp3",
-      "audioSentence": "t1-p599-014-sentence.mp3"
+      "audioSentence": "t1-p599-014-sentence.mp3",
+      "polishAudio": "Posiadłość"
     },
     {
       "id": "t1-p599-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p599-015-word.mp3",
       "audioWordPl": "t1-p599-015-word-pl.mp3",
-      "audioSentence": "t1-p599-015-sentence.mp3"
+      "audioSentence": "t1-p599-015-sentence.mp3",
+      "polishAudio": "Dworek"
     }
   ]
 }

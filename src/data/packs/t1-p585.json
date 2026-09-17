@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p585-001-word.mp3",
       "audioWordPl": "t1-p585-001-word-pl.mp3",
-      "audioSentence": "t1-p585-001-sentence.mp3"
+      "audioSentence": "t1-p585-001-sentence.mp3",
+      "polishAudio": "Płytki"
     },
     {
       "id": "t1-p585-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p585-002-word.mp3",
       "audioWordPl": "t1-p585-002-word-pl.mp3",
-      "audioSentence": "t1-p585-002-sentence.mp3"
+      "audioSentence": "t1-p585-002-sentence.mp3",
+      "polishAudio": "Krzywy"
     },
     {
       "id": "t1-p585-003",
       "english": "Vast",
-      "polish": "Obszerny",
+      "polish": "Obszerny; wielki; bezkresny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p585-003-word.mp3",
       "audioWordPl": "t1-p585-003-word-pl.mp3",
-      "audioSentence": "t1-p585-003-sentence.mp3"
+      "audioSentence": "t1-p585-003-sentence.mp3",
+      "polishAudio": "Obszerny"
     },
     {
       "id": "t1-p585-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p585-004-word.mp3",
       "audioWordPl": "t1-p585-004-word-pl.mp3",
-      "audioSentence": "t1-p585-004-sentence.mp3"
+      "audioSentence": "t1-p585-004-sentence.mp3",
+      "polishAudio": "Prostokątny"
     },
     {
       "id": "t1-p585-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p585-005-word.mp3",
       "audioWordPl": "t1-p585-005-word-pl.mp3",
-      "audioSentence": "t1-p585-005-sentence.mp3"
+      "audioSentence": "t1-p585-005-sentence.mp3",
+      "polishAudio": "Trójkątny"
     },
     {
       "id": "t1-p585-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p585-006-word.mp3",
       "audioWordPl": "t1-p585-006-word-pl.mp3",
-      "audioSentence": "t1-p585-006-sentence.mp3"
+      "audioSentence": "t1-p585-006-sentence.mp3",
+      "polishAudio": "Rozległy"
     },
     {
       "id": "t1-p585-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p585-007-word.mp3",
       "audioWordPl": "t1-p585-007-word-pl.mp3",
-      "audioSentence": "t1-p585-007-sentence.mp3"
+      "audioSentence": "t1-p585-007-sentence.mp3",
+      "polishAudio": "W skali rzeczywistej"
     },
     {
       "id": "t1-p585-008",
@@ -84,17 +91,19 @@
       "sentencePl": null,
       "audioWord": "t1-p585-008-word.mp3",
       "audioWordPl": "t1-p585-008-word-pl.mp3",
-      "audioSentence": "t1-p585-008-sentence.mp3"
+      "audioSentence": "t1-p585-008-sentence.mp3",
+      "polishAudio": "Drugi największy"
     },
     {
       "id": "t1-p585-009",
       "english": "Small-scale",
-      "polish": "Na małą skalę",
+      "polish": "Na małą skalę; mniejszy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p585-009-word.mp3",
       "audioWordPl": "t1-p585-009-word-pl.mp3",
-      "audioSentence": "t1-p585-009-sentence.mp3"
+      "audioSentence": "t1-p585-009-sentence.mp3",
+      "polishAudio": "Na małą skalę"
     },
     {
       "id": "t1-p585-010",
@@ -104,17 +113,19 @@
       "sentencePl": null,
       "audioWord": "t1-p585-010-word.mp3",
       "audioWordPl": "t1-p585-010-word-pl.mp3",
-      "audioSentence": "t1-p585-010-sentence.mp3"
+      "audioSentence": "t1-p585-010-sentence.mp3",
+      "polishAudio": "Okazały"
     },
     {
       "id": "t1-p585-011",
       "english": "Extended",
-      "polish": "Przedłużony",
+      "polish": "Przedłużony; długi",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p585-011-word.mp3",
       "audioWordPl": "t1-p585-011-word-pl.mp3",
-      "audioSentence": "t1-p585-011-sentence.mp3"
+      "audioSentence": "t1-p585-011-sentence.mp3",
+      "polishAudio": "Przedłużony"
     },
     {
       "id": "t1-p585-012",
@@ -124,17 +135,19 @@
       "sentencePl": null,
       "audioWord": "t1-p585-012-word.mp3",
       "audioWordPl": "t1-p585-012-word-pl.mp3",
-      "audioSentence": "t1-p585-012-sentence.mp3"
+      "audioSentence": "t1-p585-012-sentence.mp3",
+      "polishAudio": "Przerośnięty"
     },
     {
       "id": "t1-p585-013",
       "english": "Roomy",
-      "polish": "Pojemny",
+      "polish": "Pojemny; przestronny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p585-013-word.mp3",
       "audioWordPl": "t1-p585-013-word-pl.mp3",
-      "audioSentence": "t1-p585-013-sentence.mp3"
+      "audioSentence": "t1-p585-013-sentence.mp3",
+      "polishAudio": "Pojemny"
     },
     {
       "id": "t1-p585-014",
@@ -144,17 +157,19 @@
       "sentencePl": null,
       "audioWord": "t1-p585-014-word.mp3",
       "audioWordPl": "t1-p585-014-word-pl.mp3",
-      "audioSentence": "t1-p585-014-sentence.mp3"
+      "audioSentence": "t1-p585-014-sentence.mp3",
+      "polishAudio": "Średniego rozmiaru"
     },
     {
       "id": "t1-p585-015",
       "english": "High-rise",
-      "polish": "Wysoki",
+      "polish": "Wysoki (budynek, wieżowiec)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p585-015-word.mp3",
       "audioWordPl": "t1-p585-015-word-pl.mp3",
-      "audioSentence": "t1-p585-015-sentence.mp3"
+      "audioSentence": "t1-p585-015-sentence.mp3",
+      "polishAudio": "Wysoki"
     }
   ]
 }

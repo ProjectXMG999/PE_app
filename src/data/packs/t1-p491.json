@@ -9,42 +9,46 @@
     {
       "id": "t1-p491-001",
       "english": "Give sth back",
-      "polish": "Przywrócić coś",
+      "polish": "Przywrócić coś (np. wolność)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p491-001-word.mp3",
       "audioWordPl": "t1-p491-001-word-pl.mp3",
-      "audioSentence": "t1-p491-001-sentence.mp3"
+      "audioSentence": "t1-p491-001-sentence.mp3",
+      "polishAudio": "Przywrócić coś"
     },
     {
       "id": "t1-p491-002",
       "english": "Go through",
-      "polish": "Przejść przez coś",
+      "polish": "Przejść przez coś; przebrnąć",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p491-002-word.mp3",
       "audioWordPl": "t1-p491-002-word-pl.mp3",
-      "audioSentence": "t1-p491-002-sentence.mp3"
+      "audioSentence": "t1-p491-002-sentence.mp3",
+      "polishAudio": "Przejść przez coś"
     },
     {
       "id": "t1-p491-003",
       "english": "Keep away",
-      "polish": "Trzymać się z daleka od",
+      "polish": "Trzymać się z daleka od (kogoś, czegoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p491-003-word.mp3",
       "audioWordPl": "t1-p491-003-word-pl.mp3",
-      "audioSentence": "t1-p491-003-sentence.mp3"
+      "audioSentence": "t1-p491-003-sentence.mp3",
+      "polishAudio": "Trzymać się z daleka od"
     },
     {
       "id": "t1-p491-004",
       "english": "Show up",
-      "polish": "Pojawić się",
+      "polish": "Pojawić się (o osobie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p491-004-word.mp3",
       "audioWordPl": "t1-p491-004-word-pl.mp3",
-      "audioSentence": "t1-p491-004-sentence.mp3"
+      "audioSentence": "t1-p491-004-sentence.mp3",
+      "polishAudio": "Pojawić się"
     },
     {
       "id": "t1-p491-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p491-005-word.mp3",
       "audioWordPl": "t1-p491-005-word-pl.mp3",
-      "audioSentence": "t1-p491-005-sentence.mp3"
+      "audioSentence": "t1-p491-005-sentence.mp3",
+      "polishAudio": "Zostawić"
     },
     {
       "id": "t1-p491-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p491-006-word.mp3",
       "audioWordPl": "t1-p491-006-word-pl.mp3",
-      "audioSentence": "t1-p491-006-sentence.mp3"
+      "audioSentence": "t1-p491-006-sentence.mp3",
+      "polishAudio": "Wypuszczać"
     },
     {
       "id": "t1-p491-007",
@@ -74,37 +80,41 @@
       "sentencePl": null,
       "audioWord": "t1-p491-007-word.mp3",
       "audioWordPl": "t1-p491-007-word-pl.mp3",
-      "audioSentence": "t1-p491-007-sentence.mp3"
+      "audioSentence": "t1-p491-007-sentence.mp3",
+      "polishAudio": "Zjawić się"
     },
     {
       "id": "t1-p491-008",
       "english": "Stick to sth",
-      "polish": "Poprzestawać na czymś",
+      "polish": "Poprzestawać na czymś; trzymać się czegoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p491-008-word.mp3",
       "audioWordPl": "t1-p491-008-word-pl.mp3",
-      "audioSentence": "t1-p491-008-sentence.mp3"
+      "audioSentence": "t1-p491-008-sentence.mp3",
+      "polishAudio": "Poprzestawać na czymś"
     },
     {
       "id": "t1-p491-009",
       "english": "Come out",
-      "polish": "Ukazać się",
+      "polish": "Ukazać się; pojawić się",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p491-009-word.mp3",
       "audioWordPl": "t1-p491-009-word-pl.mp3",
-      "audioSentence": "t1-p491-009-sentence.mp3"
+      "audioSentence": "t1-p491-009-sentence.mp3",
+      "polishAudio": "Ukazać się"
     },
     {
       "id": "t1-p491-010",
       "english": "Keep off",
-      "polish": "Trzymać się z dala",
+      "polish": "Trzymać się z dala (nie być na czymś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p491-010-word.mp3",
       "audioWordPl": "t1-p491-010-word-pl.mp3",
-      "audioSentence": "t1-p491-010-sentence.mp3"
+      "audioSentence": "t1-p491-010-sentence.mp3",
+      "polishAudio": "Trzymać się z dala"
     }
   ]
 }

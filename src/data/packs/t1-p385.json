@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p385-001-word.mp3",
       "audioWordPl": "t1-p385-001-word-pl.mp3",
-      "audioSentence": "t1-p385-001-sentence.mp3"
+      "audioSentence": "t1-p385-001-sentence.mp3",
+      "polishAudio": "W dwie strony"
     },
     {
       "id": "t1-p385-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p385-002-word.mp3",
       "audioWordPl": "t1-p385-002-word-pl.mp3",
-      "audioSentence": "t1-p385-002-sentence.mp3"
+      "audioSentence": "t1-p385-002-sentence.mp3",
+      "polishAudio": "Jednokierunkowy"
     },
     {
       "id": "t1-p385-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p385-003-word.mp3",
       "audioWordPl": "t1-p385-003-word-pl.mp3",
-      "audioSentence": "t1-p385-003-sentence.mp3"
+      "audioSentence": "t1-p385-003-sentence.mp3",
+      "polishAudio": "Skierowany"
     },
     {
       "id": "t1-p385-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p385-004-word.mp3",
       "audioWordPl": "t1-p385-004-word-pl.mp3",
-      "audioSentence": "t1-p385-004-sentence.mp3"
+      "audioSentence": "t1-p385-004-sentence.mp3",
+      "polishAudio": "Dwukierunkowy"
     },
     {
       "id": "t1-p385-005",
@@ -54,27 +58,30 @@
       "sentencePl": null,
       "audioWord": "t1-p385-005-word.mp3",
       "audioWordPl": "t1-p385-005-word-pl.mp3",
-      "audioSentence": "t1-p385-005-sentence.mp3"
+      "audioSentence": "t1-p385-005-sentence.mp3",
+      "polishAudio": "W jedną stronę"
     },
     {
       "id": "t1-p385-006",
       "english": "Straight",
-      "polish": "Prosty",
+      "polish": "Prosty (biegnący prosto, nieskrzywiony)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p385-006-word.mp3",
       "audioWordPl": "t1-p385-006-word-pl.mp3",
-      "audioSentence": "t1-p385-006-sentence.mp3"
+      "audioSentence": "t1-p385-006-sentence.mp3",
+      "polishAudio": "Prosty"
     },
     {
       "id": "t1-p385-007",
       "english": "Opposite",
-      "polish": "Przeciwny",
+      "polish": "Przeciwny; odwrotny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p385-007-word.mp3",
       "audioWordPl": "t1-p385-007-word-pl.mp3",
-      "audioSentence": "t1-p385-007-sentence.mp3"
+      "audioSentence": "t1-p385-007-sentence.mp3",
+      "polishAudio": "Przeciwny"
     },
     {
       "id": "t1-p385-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p385-008-word.mp3",
       "audioWordPl": "t1-p385-008-word-pl.mp3",
-      "audioSentence": "t1-p385-008-sentence.mp3"
+      "audioSentence": "t1-p385-008-sentence.mp3",
+      "polishAudio": "Zgodny z ruchem wskazówek zegara"
     },
     {
       "id": "t1-p385-009",
@@ -94,37 +102,41 @@
       "sentencePl": null,
       "audioWord": "t1-p385-009-word.mp3",
       "audioWordPl": "t1-p385-009-word-pl.mp3",
-      "audioSentence": "t1-p385-009-sentence.mp3"
+      "audioSentence": "t1-p385-009-sentence.mp3",
+      "polishAudio": "Przeciwny do ruchu wskazówek zegara"
     },
     {
       "id": "t1-p385-010",
       "english": "Reverse",
-      "polish": "Odwrotny",
+      "polish": "Odwrotny; wsteczny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p385-010-word.mp3",
       "audioWordPl": "t1-p385-010-word-pl.mp3",
-      "audioSentence": "t1-p385-010-sentence.mp3"
+      "audioSentence": "t1-p385-010-sentence.mp3",
+      "polishAudio": "Odwrotny"
     },
     {
       "id": "t1-p385-011",
       "english": "Horizontal",
-      "polish": "Poziomy",
+      "polish": "Poziomy; horyzontalny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p385-011-word.mp3",
       "audioWordPl": "t1-p385-011-word-pl.mp3",
-      "audioSentence": "t1-p385-011-sentence.mp3"
+      "audioSentence": "t1-p385-011-sentence.mp3",
+      "polishAudio": "Poziomy"
     },
     {
       "id": "t1-p385-012",
       "english": "Vertical",
-      "polish": "Wertykalny",
+      "polish": "Wertykalny; pionowy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p385-012-word.mp3",
       "audioWordPl": "t1-p385-012-word-pl.mp3",
-      "audioSentence": "t1-p385-012-sentence.mp3"
+      "audioSentence": "t1-p385-012-sentence.mp3",
+      "polishAudio": "Wertykalny"
     },
     {
       "id": "t1-p385-013",
@@ -134,17 +146,19 @@
       "sentencePl": null,
       "audioWord": "t1-p385-013-word.mp3",
       "audioWordPl": "t1-p385-013-word-pl.mp3",
-      "audioSentence": "t1-p385-013-sentence.mp3"
+      "audioSentence": "t1-p385-013-sentence.mp3",
+      "polishAudio": "Kierunkowy"
     },
     {
       "id": "t1-p385-014",
       "english": "Upright",
-      "polish": "Pionowy",
+      "polish": "Pionowy; wyprostowany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p385-014-word.mp3",
       "audioWordPl": "t1-p385-014-word-pl.mp3",
-      "audioSentence": "t1-p385-014-sentence.mp3"
+      "audioSentence": "t1-p385-014-sentence.mp3",
+      "polishAudio": "Pionowy"
     },
     {
       "id": "t1-p385-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p385-015-word.mp3",
       "audioWordPl": "t1-p385-015-word-pl.mp3",
-      "audioSentence": "t1-p385-015-sentence.mp3"
+      "audioSentence": "t1-p385-015-sentence.mp3",
+      "polishAudio": "Ukośny"
     }
   ]
 }

@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p351-001-word.mp3",
       "audioWordPl": "t1-p351-001-word-pl.mp3",
-      "audioSentence": "t1-p351-001-sentence.mp3"
+      "audioSentence": "t1-p351-001-sentence.mp3",
+      "polishAudio": "Zaskakujący"
     },
     {
       "id": "t1-p351-002",
@@ -24,17 +25,19 @@
       "sentencePl": null,
       "audioWord": "t1-p351-002-word.mp3",
       "audioWordPl": "t1-p351-002-word-pl.mp3",
-      "audioSentence": "t1-p351-002-sentence.mp3"
+      "audioSentence": "t1-p351-002-sentence.mp3",
+      "polishAudio": "Zwykły"
     },
     {
       "id": "t1-p351-003",
       "english": "Damn",
-      "polish": "Przeklęty",
+      "polish": "Przeklęty; cholerny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p351-003-word.mp3",
       "audioWordPl": "t1-p351-003-word-pl.mp3",
-      "audioSentence": "t1-p351-003-sentence.mp3"
+      "audioSentence": "t1-p351-003-sentence.mp3",
+      "polishAudio": "Przeklęty"
     },
     {
       "id": "t1-p351-004",
@@ -44,17 +47,19 @@
       "sentencePl": null,
       "audioWord": "t1-p351-004-word.mp3",
       "audioWordPl": "t1-p351-004-word-pl.mp3",
-      "audioSentence": "t1-p351-004-sentence.mp3"
+      "audioSentence": "t1-p351-004-sentence.mp3",
+      "polishAudio": "Dogodny"
     },
     {
       "id": "t1-p351-005",
       "english": "Annoying",
-      "polish": "Denerwujący",
+      "polish": "Denerwujący; wkurzający",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p351-005-word.mp3",
       "audioWordPl": "t1-p351-005-word-pl.mp3",
-      "audioSentence": "t1-p351-005-sentence.mp3"
+      "audioSentence": "t1-p351-005-sentence.mp3",
+      "polishAudio": "Denerwujący"
     },
     {
       "id": "t1-p351-006",
@@ -64,87 +69,96 @@
       "sentencePl": null,
       "audioWord": "t1-p351-006-word.mp3",
       "audioWordPl": "t1-p351-006-word-pl.mp3",
-      "audioSentence": "t1-p351-006-sentence.mp3"
+      "audioSentence": "t1-p351-006-sentence.mp3",
+      "polishAudio": "Niezwykły"
     },
     {
       "id": "t1-p351-007",
       "english": "Appropriate",
-      "polish": "Właściwy",
+      "polish": "Właściwy; odpowiedni",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p351-007-word.mp3",
       "audioWordPl": "t1-p351-007-word-pl.mp3",
-      "audioSentence": "t1-p351-007-sentence.mp3"
+      "audioSentence": "t1-p351-007-sentence.mp3",
+      "polishAudio": "Właściwy"
     },
     {
       "id": "t1-p351-008",
       "english": "Unexpected",
-      "polish": "Nieoczekiwany",
+      "polish": "Nieoczekiwany; niespodziewany",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p351-008-word.mp3",
       "audioWordPl": "t1-p351-008-word-pl.mp3",
-      "audioSentence": "t1-p351-008-sentence.mp3"
+      "audioSentence": "t1-p351-008-sentence.mp3",
+      "polishAudio": "Nieoczekiwany"
     },
     {
       "id": "t1-p351-009",
       "english": "Simple",
-      "polish": "Prosty",
+      "polish": "Prosty (łatwy)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p351-009-word.mp3",
       "audioWordPl": "t1-p351-009-word-pl.mp3",
-      "audioSentence": "t1-p351-009-sentence.mp3"
+      "audioSentence": "t1-p351-009-sentence.mp3",
+      "polishAudio": "Prosty"
     },
     {
       "id": "t1-p351-010",
       "english": "Inappropriate",
-      "polish": "Nieodpowiedni",
+      "polish": "Nieodpowiedni; niewłaściwy",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p351-010-word.mp3",
       "audioWordPl": "t1-p351-010-word-pl.mp3",
-      "audioSentence": "t1-p351-010-sentence.mp3"
+      "audioSentence": "t1-p351-010-sentence.mp3",
+      "polishAudio": "Nieodpowiedni"
     },
     {
       "id": "t1-p351-011",
       "english": "Rough",
-      "polish": "Orientacyjny",
+      "polish": "Orientacyjny; przybliżony",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p351-011-word.mp3",
       "audioWordPl": "t1-p351-011-word-pl.mp3",
-      "audioSentence": "t1-p351-011-sentence.mp3"
+      "audioSentence": "t1-p351-011-sentence.mp3",
+      "polishAudio": "Orientacyjny"
     },
     {
       "id": "t1-p351-012",
       "english": "Pointless",
-      "polish": "Bezcelowy",
+      "polish": "Bezcelowy; bezsensowny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p351-012-word.mp3",
       "audioWordPl": "t1-p351-012-word-pl.mp3",
-      "audioSentence": "t1-p351-012-sentence.mp3"
+      "audioSentence": "t1-p351-012-sentence.mp3",
+      "polishAudio": "Bezcelowy"
     },
     {
       "id": "t1-p351-013",
       "english": "Meaningless",
-      "polish": "Bez znaczenia",
+      "polish": "Bez znaczenia; bezsensowny",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p351-013-word.mp3",
       "audioWordPl": "t1-p351-013-word-pl.mp3",
-      "audioSentence": "t1-p351-013-sentence.mp3"
+      "audioSentence": "t1-p351-013-sentence.mp3",
+      "polishAudio": "Bez znaczenia"
     },
     {
       "id": "t1-p351-014",
       "english": "Meaningful",
-      "polish": "Mający znaczenie",
+      "polish": "Mający znaczenie; sens",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p351-014-word.mp3",
       "audioWordPl": "t1-p351-014-word-pl.mp3",
-      "audioSentence": "t1-p351-014-sentence.mp3"
+      "audioSentence": "t1-p351-014-sentence.mp3",
+      "polishAudio": "Mający znaczenie"
     },
     {
       "id": "t1-p351-015",
@@ -154,7 +168,8 @@
       "sentencePl": null,
       "audioWord": "t1-p351-015-word.mp3",
       "audioWordPl": "t1-p351-015-word-pl.mp3",
-      "audioSentence": "t1-p351-015-sentence.mp3"
+      "audioSentence": "t1-p351-015-sentence.mp3",
+      "polishAudio": "Bezwartościowy"
     }
   ]
 }

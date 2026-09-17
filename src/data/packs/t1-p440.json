@@ -14,7 +14,8 @@
       "sentencePl": null,
       "audioWord": "t1-p440-001-word.mp3",
       "audioWordPl": "t1-p440-001-word-pl.mp3",
-      "audioSentence": "t1-p440-001-sentence.mp3"
+      "audioSentence": "t1-p440-001-sentence.mp3",
+      "polishAudio": "Zarąbiście"
     },
     {
       "id": "t1-p440-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p440-002-word.mp3",
       "audioWordPl": "t1-p440-002-word-pl.mp3",
-      "audioSentence": "t1-p440-002-sentence.mp3"
+      "audioSentence": "t1-p440-002-sentence.mp3",
+      "polishAudio": "Grubo"
     },
     {
       "id": "t1-p440-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p440-003-word.mp3",
       "audioWordPl": "t1-p440-003-word-pl.mp3",
-      "audioSentence": "t1-p440-003-sentence.mp3"
+      "audioSentence": "t1-p440-003-sentence.mp3",
+      "polishAudio": "Epickie"
     },
     {
       "id": "t1-p440-004",
       "english": "Hot",
-      "polish": "Gorący",
+      "polish": "Gorący (np. hit)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p440-004-word.mp3",
       "audioWordPl": "t1-p440-004-word-pl.mp3",
-      "audioSentence": "t1-p440-004-sentence.mp3"
+      "audioSentence": "t1-p440-004-sentence.mp3",
+      "polishAudio": "Gorący"
     },
     {
       "id": "t1-p440-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p440-005-word.mp3",
       "audioWordPl": "t1-p440-005-word-pl.mp3",
-      "audioSentence": "t1-p440-005-sentence.mp3"
+      "audioSentence": "t1-p440-005-sentence.mp3",
+      "polishAudio": "Mega"
     },
     {
       "id": "t1-p440-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p440-006-word.mp3",
       "audioWordPl": "t1-p440-006-word-pl.mp3",
-      "audioSentence": "t1-p440-006-sentence.mp3"
+      "audioSentence": "t1-p440-006-sentence.mp3",
+      "polishAudio": "Czaderski"
     },
     {
       "id": "t1-p440-007",
@@ -74,7 +80,8 @@
       "sentencePl": null,
       "audioWord": "t1-p440-007-word.mp3",
       "audioWordPl": "t1-p440-007-word-pl.mp3",
-      "audioSentence": "t1-p440-007-sentence.mp3"
+      "audioSentence": "t1-p440-007-sentence.mp3",
+      "polishAudio": "Odjazdowy"
     },
     {
       "id": "t1-p440-008",
@@ -84,27 +91,30 @@
       "sentencePl": null,
       "audioWord": "t1-p440-008-word.mp3",
       "audioWordPl": "t1-p440-008-word-pl.mp3",
-      "audioSentence": "t1-p440-008-sentence.mp3"
+      "audioSentence": "t1-p440-008-sentence.mp3",
+      "polishAudio": "Bombowy"
     },
     {
       "id": "t1-p440-009",
       "english": "On fire",
-      "polish": "Super",
+      "polish": "Super (leci na maxa)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p440-009-word.mp3",
       "audioWordPl": "t1-p440-009-word-pl.mp3",
-      "audioSentence": "t1-p440-009-sentence.mp3"
+      "audioSentence": "t1-p440-009-sentence.mp3",
+      "polishAudio": "Super"
     },
     {
       "id": "t1-p440-010",
       "english": "Killing it",
-      "polish": "Rozwala",
+      "polish": "Rozwala (robi to świetnie)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p440-010-word.mp3",
       "audioWordPl": "t1-p440-010-word-pl.mp3",
-      "audioSentence": "t1-p440-010-sentence.mp3"
+      "audioSentence": "t1-p440-010-sentence.mp3",
+      "polishAudio": "Rozwala"
     }
   ]
 }

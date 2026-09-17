@@ -9,12 +9,13 @@
     {
       "id": "t1-p402-001",
       "english": "Break",
-      "polish": "Złamać",
+      "polish": "Złamać; zepsuć; rozbić",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p402-001-word.mp3",
       "audioWordPl": "t1-p402-001-word-pl.mp3",
-      "audioSentence": "t1-p402-001-sentence.mp3"
+      "audioSentence": "t1-p402-001-sentence.mp3",
+      "polishAudio": "Złamać"
     },
     {
       "id": "t1-p402-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p402-002-word.mp3",
       "audioWordPl": "t1-p402-002-word-pl.mp3",
-      "audioSentence": "t1-p402-002-sentence.mp3"
+      "audioSentence": "t1-p402-002-sentence.mp3",
+      "polishAudio": "Rozbijać"
     },
     {
       "id": "t1-p402-003",
@@ -34,7 +36,8 @@
       "sentencePl": null,
       "audioWord": "t1-p402-003-word.mp3",
       "audioWordPl": "t1-p402-003-word-pl.mp3",
-      "audioSentence": "t1-p402-003-sentence.mp3"
+      "audioSentence": "t1-p402-003-sentence.mp3",
+      "polishAudio": "Uszkadzać"
     },
     {
       "id": "t1-p402-004",
@@ -44,7 +47,8 @@
       "sentencePl": null,
       "audioWord": "t1-p402-004-word.mp3",
       "audioWordPl": "t1-p402-004-word-pl.mp3",
-      "audioSentence": "t1-p402-004-sentence.mp3"
+      "audioSentence": "t1-p402-004-sentence.mp3",
+      "polishAudio": "Niszczyć"
     },
     {
       "id": "t1-p402-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p402-005-word.mp3",
       "audioWordPl": "t1-p402-005-word-pl.mp3",
-      "audioSentence": "t1-p402-005-sentence.mp3"
+      "audioSentence": "t1-p402-005-sentence.mp3",
+      "polishAudio": "Spalić"
     },
     {
       "id": "t1-p402-006",
@@ -64,7 +69,8 @@
       "sentencePl": null,
       "audioWord": "t1-p402-006-word.mp3",
       "audioWordPl": "t1-p402-006-word-pl.mp3",
-      "audioSentence": "t1-p402-006-sentence.mp3"
+      "audioSentence": "t1-p402-006-sentence.mp3",
+      "polishAudio": "Miażdżyć"
     },
     {
       "id": "t1-p402-007",
@@ -74,17 +80,19 @@
       "sentencePl": null,
       "audioWord": "t1-p402-007-word.mp3",
       "audioWordPl": "t1-p402-007-word-pl.mp3",
-      "audioSentence": "t1-p402-007-sentence.mp3"
+      "audioSentence": "t1-p402-007-sentence.mp3",
+      "polishAudio": "Zrujnować coś"
     },
     {
       "id": "t1-p402-008",
       "english": "Bang",
-      "polish": "Huknąć",
+      "polish": "Huknąć; trzaskać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p402-008-word.mp3",
       "audioWordPl": "t1-p402-008-word-pl.mp3",
-      "audioSentence": "t1-p402-008-sentence.mp3"
+      "audioSentence": "t1-p402-008-sentence.mp3",
+      "polishAudio": "Huknąć"
     },
     {
       "id": "t1-p402-009",
@@ -94,17 +102,19 @@
       "sentencePl": null,
       "audioWord": "t1-p402-009-word.mp3",
       "audioWordPl": "t1-p402-009-word-pl.mp3",
-      "audioSentence": "t1-p402-009-sentence.mp3"
+      "audioSentence": "t1-p402-009-sentence.mp3",
+      "polishAudio": "Eksplodować"
     },
     {
       "id": "t1-p402-010",
       "english": "Launch",
-      "polish": "Wystrzelić",
+      "polish": "Wystrzelić; odpalić; rozpoczynać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p402-010-word.mp3",
       "audioWordPl": "t1-p402-010-word-pl.mp3",
-      "audioSentence": "t1-p402-010-sentence.mp3"
+      "audioSentence": "t1-p402-010-sentence.mp3",
+      "polishAudio": "Wystrzelić"
     },
     {
       "id": "t1-p402-011",
@@ -114,47 +124,52 @@
       "sentencePl": null,
       "audioWord": "t1-p402-011-word.mp3",
       "audioWordPl": "t1-p402-011-word-pl.mp3",
-      "audioSentence": "t1-p402-011-sentence.mp3"
+      "audioSentence": "t1-p402-011-sentence.mp3",
+      "polishAudio": "Rozrywać"
     },
     {
       "id": "t1-p402-012",
       "english": "Scratch",
-      "polish": "Zarysować",
+      "polish": "Zarysować; drapać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p402-012-word.mp3",
       "audioWordPl": "t1-p402-012-word-pl.mp3",
-      "audioSentence": "t1-p402-012-sentence.mp3"
+      "audioSentence": "t1-p402-012-sentence.mp3",
+      "polishAudio": "Zarysować"
     },
     {
       "id": "t1-p402-013",
       "english": "Crack",
-      "polish": "Stłuc",
+      "polish": "Stłuc; pękać; rozbijać",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p402-013-word.mp3",
       "audioWordPl": "t1-p402-013-word-pl.mp3",
-      "audioSentence": "t1-p402-013-sentence.mp3"
+      "audioSentence": "t1-p402-013-sentence.mp3",
+      "polishAudio": "Stłuc"
     },
     {
       "id": "t1-p402-014",
       "english": "Tear",
-      "polish": "Rwać",
+      "polish": "Rwać (się); drzeć (się)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p402-014-word.mp3",
       "audioWordPl": "t1-p402-014-word-pl.mp3",
-      "audioSentence": "t1-p402-014-sentence.mp3"
+      "audioSentence": "t1-p402-014-sentence.mp3",
+      "polishAudio": "Rwać"
     },
     {
       "id": "t1-p402-015",
       "english": "Bump",
-      "polish": "Zderzać się",
+      "polish": "Zderzać się; wpadać na kogoś",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p402-015-word.mp3",
       "audioWordPl": "t1-p402-015-word-pl.mp3",
-      "audioSentence": "t1-p402-015-sentence.mp3"
+      "audioSentence": "t1-p402-015-sentence.mp3",
+      "polishAudio": "Zderzać się"
     }
   ]
 }

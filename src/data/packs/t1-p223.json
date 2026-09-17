@@ -9,152 +9,167 @@
     {
       "id": "t1-p223-001",
       "english": "Beat",
-      "polish": "Pokonać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Pokonać; przezwyciężyć",
+      "sentenceEn": "You beat me again, but I want a rematch tomorrow.",
+      "sentencePl": "Znowu mnie pokonałeś, ale jutro chcę rewanżu.",
       "audioWord": "t1-p223-001-word.mp3",
       "audioWordPl": "t1-p223-001-word-pl.mp3",
-      "audioSentence": "t1-p223-001-sentence.mp3"
+      "audioSentence": "t1-p223-001-sentence.mp3",
+      "polishAudio": "Pokonać"
     },
     {
       "id": "t1-p223-002",
       "english": "Cycle",
       "polish": "Jeździć na rowerze",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Want to cycle by the river with me this Saturday?",
+      "sentencePl": "Chcesz pojeździć ze mną rowerem nad rzeką w tę sobotę?",
       "audioWord": "t1-p223-002-word.mp3",
       "audioWordPl": "t1-p223-002-word-pl.mp3",
-      "audioSentence": "t1-p223-002-sentence.mp3"
+      "audioSentence": "t1-p223-002-sentence.mp3",
+      "polishAudio": "Jeździć na rowerze"
     },
     {
       "id": "t1-p223-003",
       "english": "Exercise",
-      "polish": "Ćwiczyć",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Ćwiczyć; praktykować",
+      "sentenceEn": "I planned to exercise, but my Apple Watch needed charging.",
+      "sentencePl": "Planowałem poćwiczyć, ale mój Apple Watch musiał się naładować.",
       "audioWord": "t1-p223-003-word.mp3",
       "audioWordPl": "t1-p223-003-word-pl.mp3",
-      "audioSentence": "t1-p223-003-sentence.mp3"
+      "audioSentence": "t1-p223-003-sentence.mp3",
+      "polishAudio": "Ćwiczyć"
     },
     {
       "id": "t1-p223-004",
       "english": "Hit",
       "polish": "Trafiać",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You hit the target first.",
+      "sentencePl": "To ty pierwszy trafiłeś w cel.",
       "audioWord": "t1-p223-004-word.mp3",
       "audioWordPl": "t1-p223-004-word-pl.mp3",
-      "audioSentence": "t1-p223-004-sentence.mp3"
+      "audioSentence": "t1-p223-004-sentence.mp3",
+      "polishAudio": "Trafiać"
     },
     {
       "id": "t1-p223-005",
       "english": "Kick",
-      "polish": "Kopać coś",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Kopać coś (np. piłkę)",
+      "sentenceEn": "He kicked the ball so hard it cleared the fence.",
+      "sentencePl": "Kopnął piłkę tak mocno, że przeleciała nad ogrodzeniem.",
       "audioWord": "t1-p223-005-word.mp3",
       "audioWordPl": "t1-p223-005-word-pl.mp3",
-      "audioSentence": "t1-p223-005-sentence.mp3"
+      "audioSentence": "t1-p223-005-sentence.mp3",
+      "polishAudio": "Kopać coś"
     },
     {
       "id": "t1-p223-006",
       "english": "Defend",
       "polish": "Bronić",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "You defend, I'll attack — no laughing at me.",
+      "sentencePl": "Ty broń, ja zaatakuję — tylko się ze mnie nie śmiej.",
       "audioWord": "t1-p223-006-word.mp3",
       "audioWordPl": "t1-p223-006-word-pl.mp3",
-      "audioSentence": "t1-p223-006-sentence.mp3"
+      "audioSentence": "t1-p223-006-sentence.mp3",
+      "polishAudio": "Bronić"
     },
     {
       "id": "t1-p223-007",
       "english": "Train",
       "polish": "Trenować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Will you train with me before our big game?",
+      "sentencePl": "Potrenujesz ze mną przed naszym ważnym meczem?",
       "audioWord": "t1-p223-007-word.mp3",
       "audioWordPl": "t1-p223-007-word-pl.mp3",
-      "audioSentence": "t1-p223-007-sentence.mp3"
+      "audioSentence": "t1-p223-007-sentence.mp3",
+      "polishAudio": "Trenować"
     },
     {
       "id": "t1-p223-008",
       "english": "Race",
       "polish": "Ścigać się",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "Race me to the gate; loser carries the bags.",
+      "sentencePl": "Ścigaj się ze mną do bramki; przegrany niesie torby.",
       "audioWord": "t1-p223-008-word.mp3",
       "audioWordPl": "t1-p223-008-word-pl.mp3",
-      "audioSentence": "t1-p223-008-sentence.mp3"
+      "audioSentence": "t1-p223-008-sentence.mp3",
+      "polishAudio": "Ścigać się"
     },
     {
       "id": "t1-p223-009",
       "english": "Score",
-      "polish": "Zdobywać punkty",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "polish": "Zdobywać punkty; strzelić gola",
+      "sentenceEn": "Score one more point, and I'll buy you fries.",
+      "sentencePl": "Zdobądź jeszcze jeden punkt, a kupię ci frytki.",
       "audioWord": "t1-p223-009-word.mp3",
       "audioWordPl": "t1-p223-009-word-pl.mp3",
-      "audioSentence": "t1-p223-009-sentence.mp3"
+      "audioSentence": "t1-p223-009-sentence.mp3",
+      "polishAudio": "Zdobywać punkty"
     },
     {
       "id": "t1-p223-010",
       "english": "Skate",
       "polish": "Jeździć na deskorolce lub łyżwach",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I haven't skated in years, so wish me luck.",
+      "sentencePl": "Nie jeździłem na łyżwach od lat, więc życz mi szczęścia.",
       "audioWord": "t1-p223-010-word.mp3",
       "audioWordPl": "t1-p223-010-word-pl.mp3",
-      "audioSentence": "t1-p223-010-sentence.mp3"
+      "audioSentence": "t1-p223-010-sentence.mp3",
+      "polishAudio": "Jeździć na deskorolce lub łyżwach"
     },
     {
       "id": "t1-p223-011",
       "english": "Ski",
       "polish": "Jeździć na nartach",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I ski badly, but I love the first run.",
+      "sentencePl": "Słabo jeżdżę na nartach, ale uwielbiam pierwszy zjazd.",
       "audioWord": "t1-p223-011-word.mp3",
       "audioWordPl": "t1-p223-011-word-pl.mp3",
-      "audioSentence": "t1-p223-011-sentence.mp3"
+      "audioSentence": "t1-p223-011-sentence.mp3",
+      "polishAudio": "Jeździć na nartach"
     },
     {
       "id": "t1-p223-012",
       "english": "Climb",
       "polish": "Wspinać się",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "That wall looked easy until I tried to climb it.",
+      "sentencePl": "Ta ściana wyglądała na łatwą, dopóki nie spróbowałem się na nią wspiąć.",
       "audioWord": "t1-p223-012-word.mp3",
       "audioWordPl": "t1-p223-012-word-pl.mp3",
-      "audioSentence": "t1-p223-012-sentence.mp3"
+      "audioSentence": "t1-p223-012-sentence.mp3",
+      "polishAudio": "Wspinać się"
     },
     {
       "id": "t1-p223-013",
       "english": "Dive",
       "polish": "Nurkować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "I can dive, but cold water takes courage.",
+      "sentencePl": "Potrafię nurkować, ale zimna woda wymaga odwagi.",
       "audioWord": "t1-p223-013-word.mp3",
       "audioWordPl": "t1-p223-013-word-pl.mp3",
-      "audioSentence": "t1-p223-013-sentence.mp3"
+      "audioSentence": "t1-p223-013-sentence.mp3",
+      "polishAudio": "Nurkować"
     },
     {
       "id": "t1-p223-014",
       "english": "Qualify",
       "polish": "Kwalifikować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "The race app says I qualify for the next group — finally.",
+      "sentencePl": "Aplikacja wyścigu pokazuje, że kwalifikuję się do następnej grupy — nareszcie.",
       "audioWord": "t1-p223-014-word.mp3",
       "audioWordPl": "t1-p223-014-word-pl.mp3",
-      "audioSentence": "t1-p223-014-sentence.mp3"
+      "audioSentence": "t1-p223-014-sentence.mp3",
+      "polishAudio": "Kwalifikować"
     },
     {
       "id": "t1-p223-015",
       "english": "Simulate",
       "polish": "Symulować",
-      "sentenceEn": null,
-      "sentencePl": null,
+      "sentenceEn": "This VR game can simulate a ski jump pretty well.",
+      "sentencePl": "Ta gra VR potrafi całkiem dobrze symulować skok narciarski.",
       "audioWord": "t1-p223-015-word.mp3",
       "audioWordPl": "t1-p223-015-word-pl.mp3",
-      "audioSentence": "t1-p223-015-sentence.mp3"
+      "audioSentence": "t1-p223-015-sentence.mp3",
+      "polishAudio": "Symulować"
     }
   ]
 }

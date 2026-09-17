@@ -9,12 +9,13 @@
     {
       "id": "t1-p361-001",
       "english": "Apart from",
-      "polish": "Oprócz",
+      "polish": "Oprócz (czegoś)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p361-001-word.mp3",
       "audioWordPl": "t1-p361-001-word-pl.mp3",
-      "audioSentence": "t1-p361-001-sentence.mp3"
+      "audioSentence": "t1-p361-001-sentence.mp3",
+      "polishAudio": "Oprócz"
     },
     {
       "id": "t1-p361-002",
@@ -24,7 +25,8 @@
       "sentencePl": null,
       "audioWord": "t1-p361-002-word.mp3",
       "audioWordPl": "t1-p361-002-word-pl.mp3",
-      "audioSentence": "t1-p361-002-sentence.mp3"
+      "audioSentence": "t1-p361-002-sentence.mp3",
+      "polishAudio": "Oprócz tego, że"
     },
     {
       "id": "t1-p361-003",
@@ -34,17 +36,19 @@
       "sentencePl": null,
       "audioWord": "t1-p361-003-word.mp3",
       "audioWordPl": "t1-p361-003-word-pl.mp3",
-      "audioSentence": "t1-p361-003-sentence.mp3"
+      "audioSentence": "t1-p361-003-sentence.mp3",
+      "polishAudio": "Z jednej strony"
     },
     {
       "id": "t1-p361-004",
       "english": "Whereas",
-      "polish": "Podczas gdy",
+      "polish": "Podczas gdy (ale)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p361-004-word.mp3",
       "audioWordPl": "t1-p361-004-word-pl.mp3",
-      "audioSentence": "t1-p361-004-sentence.mp3"
+      "audioSentence": "t1-p361-004-sentence.mp3",
+      "polishAudio": "Podczas gdy"
     },
     {
       "id": "t1-p361-005",
@@ -54,7 +58,8 @@
       "sentencePl": null,
       "audioWord": "t1-p361-005-word.mp3",
       "audioWordPl": "t1-p361-005-word-pl.mp3",
-      "audioSentence": "t1-p361-005-sentence.mp3"
+      "audioSentence": "t1-p361-005-sentence.mp3",
+      "polishAudio": "Pomimo czegoś"
     },
     {
       "id": "t1-p361-006",
@@ -64,17 +69,19 @@
       "sentencePl": null,
       "audioWord": "t1-p361-006-word.mp3",
       "audioWordPl": "t1-p361-006-word-pl.mp3",
-      "audioSentence": "t1-p361-006-sentence.mp3"
+      "audioSentence": "t1-p361-006-sentence.mp3",
+      "polishAudio": "Albo"
     },
     {
       "id": "t1-p361-007",
       "english": "Even so",
-      "polish": "Nawet jeśli",
+      "polish": "Nawet jeśli (np. to prawda)",
       "sentenceEn": null,
       "sentencePl": null,
       "audioWord": "t1-p361-007-word.mp3",
       "audioWordPl": "t1-p361-007-word-pl.mp3",
-      "audioSentence": "t1-p361-007-sentence.mp3"
+      "audioSentence": "t1-p361-007-sentence.mp3",
+      "polishAudio": "Nawet jeśli"
     },
     {
       "id": "t1-p361-008",
@@ -84,7 +91,8 @@
       "sentencePl": null,
       "audioWord": "t1-p361-008-word.mp3",
       "audioWordPl": "t1-p361-008-word-pl.mp3",
-      "audioSentence": "t1-p361-008-sentence.mp3"
+      "audioSentence": "t1-p361-008-sentence.mp3",
+      "polishAudio": "Nawet mimo tego, że"
     },
     {
       "id": "t1-p361-009",
@@ -94,7 +102,8 @@
       "sentencePl": null,
       "audioWord": "t1-p361-009-word.mp3",
       "audioWordPl": "t1-p361-009-word-pl.mp3",
-      "audioSentence": "t1-p361-009-sentence.mp3"
+      "audioSentence": "t1-p361-009-sentence.mp3",
+      "polishAudio": "Wyłączając"
     },
     {
       "id": "t1-p361-010",
@@ -104,7 +113,8 @@
       "sentencePl": null,
       "audioWord": "t1-p361-010-word.mp3",
       "audioWordPl": "t1-p361-010-word-pl.mp3",
-      "audioSentence": "t1-p361-010-sentence.mp3"
+      "audioSentence": "t1-p361-010-sentence.mp3",
+      "polishAudio": "W rzeczywistości"
     }
   ]
 }
