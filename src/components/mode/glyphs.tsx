@@ -279,3 +279,22 @@ export function ChevronLeftGlyph(props: GlyphProps) {
     </Svg>
   )
 }
+
+/** Light theme — a sun. */
+export function SunGlyph(props: GlyphProps) {
+  return (
+    <Svg {...props}>
+      <circle cx="12" cy="12" r="4.2" />
+      <path d="M12 2.5v2.2M12 19.3v2.2M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6" />
+    </Svg>
+  )
+}
+
+/** Dark theme — a crescent moon. */
+export function MoonGlyph(props: GlyphProps) {
+  return (
+    <Svg {...props}>
+      <path d="M20.5 13.2A8.6 8.6 0 1 1 10.8 3.5a6.9 6.9 0 0 0 9.7 9.7z" />
+    </Svg>
+  )
+}

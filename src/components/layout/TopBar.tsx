@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useAppStore, resolveTheme } from '../../store/useAppStore'
 import { useAuthStore } from '../../store/useAuthStore'
+import { MoonGlyph, SunGlyph } from '../mode/glyphs'
 import { ProgressPill } from './ProgressPill'
 import { ProgressLogo } from '../brand/ProgressLogo'
 import { HOME } from '../../navigation/navigation'
@@ -19,13 +21,17 @@ const COMPACT_AFTER = 64
 /**
  * The phone's top bar: brand and streak on the left, account on the right.
  *
- * The version string and the theme toggle used to sit here too. The version
- * (and its five-tap developer easter egg) now lives at the foot of Ustawienia,
- * and the theme already had a proper control there — a bar that carries five
- * objects has no hierarchy left for the one screen title it needs to show.
+ * The version string used to sit here too, in the middle; it (and its five-tap
+ * developer easter egg) now lives at the foot of Ustawienia, which is what
+ * freed the centre for the screen title. The theme toggle stays — switching
+ * light/dark is a thing people do often enough to want one tap away, and
+ * Ustawienia keeps the three-way control (jasny / ciemny / systemowy).
  */
 export function TopBar() {
   const { user, hasAccess } = useAuthStore()
+  const theme = useAppStore(s => s.theme)
+  const toggleTheme = useAppStore(s => s.toggleTheme)
+  const resolved = resolveTheme(theme)
   const navigate = useNavigate()
   const { pathname } = useLocation()
   const compactTitle = COMPACT_TITLES[pathname]
@@ -63,7 +69,17 @@ export function TopBar() {
 
       <div className="topbar__actions">
         <motion.button
-          className="topbar__account-btn u-liquid"
+          className="topbar__icon-btn u-liquid"
+          onClick={toggleTheme}
+          aria-label={resolved === 'dark' ? 'Włącz jasny motyw' : 'Włącz ciemny motyw'}
+          title={resolved === 'dark' ? 'Jasny motyw' : 'Ciemny motyw'}
+          whileTap={{ scale: 0.9 }}
+        >
+          {resolved === 'dark' ? <SunGlyph size={20} weight={1.9} /> : <MoonGlyph size={20} weight={1.9} />}
+        </motion.button>
+
+        <motion.button
+          className="topbar__icon-btn topbar__account-btn u-liquid"
           onClick={() => navigate('/konto')}
           aria-label="Konto"
           title="Konto"
