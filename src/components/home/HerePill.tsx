@@ -6,6 +6,10 @@ import './HerePill.css'
 interface Props {
   frontier: PackMeta | null
   onJump: () => void
+  /** The volume on screen — the frontier row appears and disappears with it. */
+  scope?: string | null
+  /** Your position is in another volume: the row isn't on the page at all. */
+  elsewhere?: boolean
 }
 
 /**
@@ -19,11 +23,11 @@ interface Props {
  * It only appears once the frontier node has actually left the viewport, so it
  * never covers the thing it points at.
  */
-export function HerePill({ frontier, onJump }: Props) {
+export function HerePill({ frontier, onJump, scope, elsewhere = false }: Props) {
   const [away, setAway] = useState(false)
 
   useEffect(() => {
-    if (!frontier) { setAway(false); return }
+    if (!frontier || elsewhere) { setAway(false); return }
 
     let io: IntersectionObserver | null = null
     let raf = 0
@@ -49,9 +53,9 @@ export function HerePill({ frontier, onJump }: Props) {
     attach()
 
     return () => { cancelAnimationFrame(raf); io?.disconnect() }
-  }, [frontier])
+  }, [frontier, scope, elsewhere])
 
-  if (!frontier || !away) return null
+  if (!frontier || (!away && !elsewhere)) return null
 
   return (
     <button className="herepill" onClick={onJump}>

@@ -13,6 +13,7 @@
 .homepage {
   --rc-h: 64px;
   --chrome-h: var(--rc-h);
+  --page-gutter: var(--spacing-md);
 
   display: flex;
   flex-direction: column;
@@ -30,30 +31,45 @@
   min-width: 0;
 }
 
-/* Purely a sticky positioner — no paint of its own.
+/* The sticky block: search bar, then the level/volume switcher.
  *
- * It used to carry its own full-bleed glass background (a second, separate
- * rectangle drawn behind the search bar, which already has a real opaque
- * `--bg-card` fill of its own). Two things came from that, both wrong:
- *  1. `color-mix(in oklch, var(--bg-primary) 86%, transparent)` mixes toward
- *     transparent's implicit black, which drags the resulting LIGHTNESS down
- *     with it — the token resolved to oklch(0.07…), noticeably darker than
- *     `--bg-primary` (0.13) itself, not just the same colour at 86% opacity.
- *     That's what read as a flat, near-black slab sitting behind a search
- *     pill that was already correctly lit.
- *  2. On desktop its `margin-inline: calc(var(--spacing-lg) * -1)` +
- *     `padding-inline: var(--spacing-lg)` compensation was carried over from
- *     the mobile rule without accounting for the desktop grid's own gutter,
- *     so the rectangle measured 720px against a 672px content column —
- *     visibly wider than the cards it sat above.
- * Removing the background sidesteps both: there is no rectangle left to
- * mismatch. The search pill and filter button are fully opaque on their own
- * (the same `--bg-card` flat fill Dzisiaj's LevelPill uses), so they still
- * read clearly while pinned during scroll. */
+ * With only the search bar this needed no paint of its own (the pill is
+ * opaque). The switcher is not — it is a translucent track with gaps — so once
+ * it is here the cards would visibly scroll through it. The block takes the
+ * app's single glass recipe (tokens.css: glass is for things that stick) and
+ * bleeds to the edge of the page gutter so its edge lines up with nothing but
+ * the screen. `--page-gutter` is the one number both the padding and the bleed
+ * read, which is what keeps the desktop width from drifting past the column —
+ * the mismatch an earlier full-bleed version of this block shipped with. */
 .homepage__chrome {
   position: sticky;
   top: 0;
   z-index: 20;
+}
+
+.homepage__chrome.has-switcher {
+  margin-inline: calc(var(--page-gutter) * -1);
+  padding: 0 var(--page-gutter) var(--spacing-sm);
+  border-bottom: 1px solid transparent;
+  transition: background var(--transition-med), border-color var(--transition-med);
+}
+
+/* Glass only once it is actually stuck. At rest, above the banners, a glass
+   slab reads as a dark band across the aurora for no reason — there is nothing
+   underneath it yet to separate from. */
+.homepage__chrome.has-switcher.is-stuck {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+          backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  border-bottom-color: var(--border);
+}
+
+/* A zero-height marker right above the chrome; when it scrolls out of view the
+   chrome is stuck. */
+.homepage__stick-sentinel {
+  height: 0;
+  /* Cancel the flex gap it would otherwise add above the chrome. */
+  margin-bottom: calc(var(--spacing-sm) * -1);
 }
 
 /* Rendered only when packs are actually fading, so it never costs space for
@@ -76,28 +92,238 @@
 
 /* Off-screen rows skip layout and paint. The intrinsic size must match the real
    row height (--row-h in PackageCard.css) or the scrollbar jumps. */
-.homepage__list > .packcard,
-.volsec__cards > .packcard {
+.homepage__list > .packcard {
   content-visibility: auto;
   contain-intrinsic-size: auto 92px;
 }
 
 /* Entrance cascade. Scroll-driven where supported — compositor-only, no JS and
    no observer for 864 rows; the delay-staggered fallback is above it. */
-.homepage__list > .packcard,
-.volsec__cards > .packcard {
+.homepage__list > .packcard {
   animation: fx-rise 420ms var(--ease-out-expo) both;
   animation-delay: calc(min(var(--i, 0), 10) * 32ms);
 }
 
 @supports (animation-timeline: view()) {
-  .homepage__list > .packcard,
-  .volsec__cards > .packcard {
+  .homepage__list > .packcard {
     animation: fx-rise 1ms linear both;
     animation-delay: 0s;
     animation-timeline: view();
     animation-range: entry 0% entry 42%;
   }
+}
+
+/* ── One volume at a time ──────────────────────────────────────────────────
+   The stage is what the switcher swaps. `pan-y` is what lets a horizontal
+   swipe change volume without stealing the vertical scroll from the page. */
+.homepage__stage {
+  position: relative;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+.homepage__volume {
+  touch-action: pan-y;
+  padding-top: var(--spacing-sm);
+}
+
+/* Which stretch of the route this is, what it promises, how far you are. */
+.homepage__volhead {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--spacing-sm) 2px var(--spacing-xs);
+}
+
+.homepage__volhead-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.homepage__volhead-title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+}
+
+.homepage__volhead-level {
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--lvl, var(--text-muted));
+}
+
+.homepage__volhead-count {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.homepage__volhead-count b {
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.homepage__volhead-promise {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.homepage__volhead-meter {
+  position: relative;
+  height: 4px;
+  margin-top: 4px;
+  border-radius: var(--radius-full);
+  background: var(--border);
+  overflow: hidden;
+}
+
+.homepage__volhead-meter > span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: inherit;
+  background: var(--lvl, var(--accent));
+  transition: width var(--transition-slow) var(--ease-out-expo);
+}
+
+.homepage__volhead-meta {
+  margin: 0;
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+.homepage__volhead-match {
+  font-weight: 800;
+  color: var(--accent-bright);
+}
+
+/* A filter with nothing in this volume: say so, and offer the nearest volume
+   that does have matches rather than a dead end. */
+.homepage__vol-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+  padding: var(--spacing-lg) var(--spacing-md);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-strong);
+  text-align: center;
+}
+
+.homepage__vol-empty-text {
+  margin: 0;
+  font-size: var(--text-md);
+  color: var(--text-secondary);
+}
+
+.homepage__vol-empty-sub {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.homepage__vol-empty-go {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  color: var(--text-on-accent);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.homepage__vol-empty-n {
+  display: inline-grid;
+  place-items: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  background: var(--text-on-accent);
+  color: var(--accent-dim);
+  font-size: var(--text-2xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.homepage__vol-empty-clear {
+  min-height: 40px;
+  padding: 0 14px;
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* End of the volume is not the end of the road: one tap to the next stretch. */
+.homepage__next {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  column-gap: var(--spacing-md);
+  width: 100%;
+  margin-top: var(--spacing-md);
+  padding: 14px var(--spacing-md);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-accent);
+  background: color-mix(in oklch, var(--accent) 10%, transparent);
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.homepage__next:active { transform: scale(0.99); }
+
+@media (hover: hover) {
+  .homepage__next:hover { background: color-mix(in oklch, var(--accent) 16%, transparent); }
+}
+
+.homepage__next-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--accent-bright);
+}
+
+.homepage__next-title {
+  grid-row: 2;
+  font-family: var(--font-heading);
+  font-size: var(--text-md);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.homepage__next-arrow {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  color: var(--accent-bright);
 }
 
 .homepage__skeleton {
@@ -152,6 +378,7 @@
    product. Wide screens buy breathing room, not more columns. */
 @media (min-width: 1024px) {
   .homepage {
+    --page-gutter: var(--spacing-lg);
     max-width: var(--focus-max-width);
     padding-inline: var(--spacing-lg);
   }
@@ -159,7 +386,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .homepage__list > .packcard,
-  .volsec__cards > .packcard {
+  .homepage__volume {
     animation: none;
   }
 }

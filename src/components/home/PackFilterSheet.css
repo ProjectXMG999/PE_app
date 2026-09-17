@@ -97,6 +97,8 @@
   background: var(--accent);
 }
 
+.pfsheet__note--top { margin: 0 0 var(--spacing-sm); }
+
 .pfsheet__note {
   margin: var(--spacing-sm) 0 0;
   font-size: var(--text-xs);
@@ -112,9 +114,6 @@
   color: var(--text-primary);
 }
 
-.pfsheet__progress {
-  margin: 0 calc(-1 * var(--spacing-md)) var(--spacing-md);
-}
 
 .pfsheet__list {
   display: flex;
@@ -314,15 +313,4 @@
 .pfsheet__lens-dot--all { background: var(--text-secondary); }
 
 /* ── Volume rows ─────────────────────────────────────────────────────────── */
-.pfsheet__vol {
-  flex: 0 0 34px;
-  font-family: var(--font-heading);
-  font-size: var(--text-base);
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  color: var(--text-primary);
-  text-align: center;
-}
 
-.pfsheet__row.is-done .pfsheet__vol { color: var(--gold); }
-.pfsheet__row.is-done .pfsheet__gauge-fill { background: var(--gold); }

@@ -1,37 +1,43 @@
-import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { Fragment, MouseEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import type { CSSProperties } from 'react'
 import { useLocation, useNavigate, useSearchParams } from 'react-router-dom'
+import { AnimatePresence, PanInfo, motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
 import { InstallBanner } from '../components/home/InstallBanner'
 import { OnboardingCard } from '../components/home/OnboardingCard'
 import { OnboardingModal } from '../components/onboarding/OnboardingModal'
 import { MemoryStrip } from '../components/home/MemoryStrip'
 import { RouteControls } from '../components/home/RouteControls'
+import { RouteSwitcher } from '../components/home/RouteSwitcher'
 import { HerePill } from '../components/home/HerePill'
-import { LevelSection } from '../components/home/LevelSection'
-import { VolumeSection } from '../components/home/VolumeSection'
 import { MilestoneBand } from '../components/home/MilestoneBand'
 import { PackageCard } from '../components/home/PackageCard'
+import { EASE_OUT_EXPO } from '../components/today/motion'
 import { useProgressData } from '../hooks/useProgressData'
 import { useAppStore } from '../store/useAppStore'
 import packagesIndex from '../data/packages-index.json'
+import { LEVEL_COLORS, LEVEL_META } from '../data/levels'
 import { PackMeta } from '../types/vocabulary'
+import { plural } from '../utils/plural'
 import { buildPackMemory, fadingPacks } from '../utils/packMemory'
 import { milestonesFor } from '../utils/packMilestones'
-import { categoryStats, nearlySealedByPack } from '../utils/packProfile'
+import { categoryStats, nearlySealedByPack, secondsPerWord } from '../utils/packProfile'
 import {
-  EMPTY_FILTERS,
   LensContext,
   PackFilters,
   PackLens,
   facetCounts,
   filterPacksByQuery,
-  filtersActive,
+  isFilteringRoute,
+  isSearching,
   isJumpQuery,
   frontierPack,
   groupByLevel,
   groupByVolume,
   levelStats,
-  packMatchesLens,
+  LENS_LABEL,
+  packMatchesRouteFilter,
+  routeFilterCounts,
   routeNumber,
   volumeStats,
 } from '../utils/packRoute'
@@ -46,49 +52,73 @@ import './HomePage.css'
  */
 const allPacks = packagesIndex as PackMeta[]
 
-const COLLAPSED_KEY = 'pe-home-collapsed'
+const SELECTED_KEY = 'pe-home-volume'
 const SCROLL_KEY = 'pe-home-scroll'
 const RESULT_PAGE = 40
+/** A horizontal swipe past this distance (px) or speed (px/s) changes volume. */
+const SWIPE_DISTANCE = 70
+const SWIPE_VELOCITY = 500
 
-function readCollapsed(): Set<string> | null {
-  try {
-    const raw = sessionStorage.getItem(COLLAPSED_KEY)
-    return raw ? new Set(JSON.parse(raw) as string[]) : null
-  } catch { return null }
+function readSelected(): string | null {
+  try { return sessionStorage.getItem(SELECTED_KEY) } catch { return null }
 }
 
-function persistCollapsed(next: Set<string>) {
-  try { sessionStorage.setItem(COLLAPSED_KEY, JSON.stringify([...next])) } catch { /* private mode */ }
+function persistSelected(volume: string) {
+  try { sessionStorage.setItem(SELECTED_KEY, volume) } catch { /* private mode */ }
 }
 
 /** URL ⇄ filters. Keeping them in the address bar makes a lens linkable and
  *  survives a refresh — goal E4, which sessionStorage alone never satisfied. */
 function filtersFromParams(p: URLSearchParams): PackFilters {
-  const level = parseInt(p.get('poziom') ?? '', 10)
   return {
     query: p.get('q') ?? '',
-    level: Number.isFinite(level) && level >= 1 && level <= 4 ? level : null,
     cat: p.get('kategoria'),
     lens: (p.get('soczewka') as PackLens) ?? 'all',
   }
 }
 
+/** An old `?poziom=N` link: no longer a filter, now "open this level". */
+function legacyLevelParam(p: URLSearchParams): number | null {
+  const level = parseInt(p.get('poziom') ?? '', 10)
+  return Number.isFinite(level) && level >= 1 && level <= 4 ? level : null
+}
+
 function paramsFromFilters(f: PackFilters): URLSearchParams {
   const p = new URLSearchParams()
   if (f.query.trim()) p.set('q', f.query)
-  if (f.level != null) p.set('poziom', String(f.level))
   if (f.cat) p.set('kategoria', f.cat)
   if (f.lens !== 'all') p.set('soczewka', f.lens)
   return p
 }
 
+/** Enter/exit for the volume stage, travelling in the direction you moved. */
+const stageVariants = {
+  enter: (dir: number) => ({ opacity: 0, x: dir * 28 }),
+  center: { opacity: 1, x: 0 },
+  exit: (dir: number) => ({ opacity: 0, x: dir * -28 }),
+}
+
+/**
+ * PAKIETY — the route, one volume at a time.
+ *
+ * The screen used to be a single 864-row scroll with collapsible volumes, and
+ * scrolling was the only way to move along it. Now the level and volume are
+ * picked at the top (RouteSwitcher) and only that volume's packs are on the
+ * page. The order is untouched: volumes are contiguous stretches of the route,
+ * so picking one is a jump along the road, never a re-sort of it — and the
+ * end of each volume hands you straight to the next.
+ */
 export function HomePage() {
   const snapshot = useProgressData()
   const location = useLocation()
   const navigate = useNavigate()
+  const reduced = useReducedMotion()
   const [params, setParams] = useSearchParams()
   const filters = useMemo(() => filtersFromParams(params), [params])
-  const active = filtersActive(filters)
+  /** Text search: the only mode that leaves the route for a flat list. */
+  const searching = isSearching(filters)
+  /** Stan / Kategoria: narrows the packs inside the selected volume. */
+  const routeFiltering = isFilteringRoute(filters)
 
   const setFilters = useCallback((patch: Partial<PackFilters>) => {
     setParams(paramsFromFilters({ ...filtersFromParams(params), ...patch }), { replace: true })
@@ -97,19 +127,6 @@ export function HomePage() {
   const clearFilters = useCallback(() => {
     setParams(new URLSearchParams(), { replace: true })
   }, [setParams])
-
-  // Dzisiaj's "Przeglądaj poziom" hands off through the store (it predates the
-  // URL being the source of truth here). Consume it once on mount and clear it,
-  // so the handoff keeps working without Dzisiaj needing to know about the URL.
-  const storeLevel = useAppStore(s => s.activeLevel)
-  const setStoreLevel = useAppStore(s => s.setLevel)
-  useEffect(() => {
-    if (storeLevel == null) return
-    setStoreLevel(null)
-    setParams(paramsFromFilters({ ...EMPTY_FILTERS, level: storeLevel }), { replace: true })
-    // Mount-only: this is a one-shot handoff, not a subscription.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
 
   // ── Territory ─────────────────────────────────────────────────────────────
   const memory = useMemo(() => buildPackMemory(allPacks, snapshot), [snapshot])
@@ -142,122 +159,191 @@ export function HomePage() {
     return m
   }, [])
 
-  const fadingMetas = useMemo(() => {
-    const ids = new Set(fadingPacks(memory))
-    return allPacks.filter(p => ids.has(p.id))
-  }, [memory])
+  /** Slipping packs, weakest first, with how much of each is still there. */
+  const fading = useMemo(() => {
+    const byId = new Map(allPacks.map(p => [p.id, p]))
+    const items = fadingPacks(memory).flatMap(id => {
+      const pack = byId.get(id)
+      const m = memory.get(id)
+      return pack && m ? [{ pack, strength: m.strength, known: m.known }] : []
+    })
+    // One pass over every known word in them, at the user's own measured pace.
+    const words = items.reduce((sum, it) => sum + it.known, 0)
+    const minutes = Math.ceil((words * secondsPerWord(snapshot)) / 60)
+    return { items, minutes }
+  }, [memory, snapshot])
 
-  // ── Result mode ───────────────────────────────────────────────────────────
+  // ── Search results (flat, across the whole route) ─────────────────────────
   const results = useMemo(() => {
-    if (!active) return []
-    let out = allPacks.filter(p =>
-      (filters.level == null || p.level === filters.level) &&
-      (filters.cat == null || p.category === filters.cat) &&
-      packMatchesLens(p, filters.lens, lensCtx))
+    if (!searching) return []
+    let out = allPacks.filter(p => packMatchesRouteFilter(p, filters, lensCtx))
     // Query last: it re-orders by match quality, and that ordering must win.
     // A jump query ("317") means "take me there", not "filter to this text" —
     // skip it here too, or combining it with a lens would fuzzy-match digits
     // against pack names and silently empty the list.
     if (filters.query.trim() && !isJumpQuery(filters.query)) out = filterPacksByQuery(out, filters.query)
     return out
-  }, [active, filters, lensCtx])
+  }, [searching, filters, lensCtx])
+
+  /** volume → packs passing Stan/Kategoria. Empty unless a filter is on. */
+  const matchesByVolume = useMemo(
+    () => routeFilterCounts(allPacks, filters, lensCtx),
+    [filters, lensCtx],
+  )
+  const totalMatches = useMemo(
+    () => [...matchesByVolume.values()].reduce((a, b) => a + b, 0),
+    [matchesByVolume],
+  )
 
   const [shown, setShown] = useState(RESULT_PAGE)
-  useEffect(() => { setShown(RESULT_PAGE) }, [filters.query, filters.level, filters.cat, filters.lens])
+  useEffect(() => { setShown(RESULT_PAGE) }, [filters.query, filters.cat, filters.lens])
 
-  // ── Volumes: collapsed by default, except the one you're standing in ──────
-  const [collapsed, setCollapsed] = useState<Set<string> | null>(readCollapsed)
+  // ── Which volume is on screen ─────────────────────────────────────────────
+  const [selected, setSelected] = useState<string | null>(readSelected)
+  /** +1 moving forward along the route, −1 back — drives the slide direction. */
+  const [dir, setDir] = useState(1)
+  const volumeIndex = useCallback((v: string | null) => groups.findIndex(g => g.volume === v), [groups])
+
+  const chromeRef = useRef<HTMLDivElement>(null)
+  const stageRef = useRef<HTMLDivElement>(null)
+
+  /**
+   * If the reader is further down than the top of the volume, put them back at
+   * its start — a new volume opening mid-page, under whatever row you had
+   * scrolled to in the old one, reads as a bug. If they're above it (the
+   * banners are on screen) leave them where they are.
+   */
+  const scrollToStage = useCallback(() => {
+    const main = document.querySelector('.appshell__main') as HTMLElement | null
+    const stage = stageRef.current
+    const chrome = chromeRef.current
+    if (!main || !stage) return
+    const stageTop = stage.getBoundingClientRect().top - main.getBoundingClientRect().top + main.scrollTop
+    const target = stageTop - (chrome?.offsetHeight ?? 0)
+    if (main.scrollTop > target) main.scrollTop = Math.max(0, target)
+  }, [])
+
+  const selectedRef = useRef(selected)
+  selectedRef.current = selected
+
+  const selectVolume = useCallback((volume: string, opts: { scroll?: boolean } = {}) => {
+    const prev = selectedRef.current
+    if (prev !== volume) {
+      setDir(volumeIndex(volume) >= volumeIndex(prev) ? 1 : -1)
+      setSelected(volume)
+      selectedRef.current = volume
+    }
+    persistSelected(volume)
+    if (opts.scroll !== false) scrollToStage()
+  }, [volumeIndex, scrollToStage])
+
+  /** Nearest volume with filter matches: forward first, then back. */
+  const nearestMatchingVolume = useCallback((from: string | null): string | null => {
+    const i = volumeIndex(from)
+    for (let k = Math.max(0, i); k < groups.length; k++) {
+      if ((matchesByVolume.get(groups[k].volume) ?? 0) > 0) return groups[k].volume
+    }
+    for (let k = i - 1; k >= 0; k--) {
+      if ((matchesByVolume.get(groups[k].volume) ?? 0) > 0) return groups[k].volume
+    }
+    return null
+  }, [groups, matchesByVolume, volumeIndex])
+
+  // Default: the volume your next pack lives in. Also repairs a stored label
+  // that no longer exists (a renamed volume in a content update).
   useEffect(() => {
-    if (collapsed != null || !frontier) return
-    setCollapsed(new Set(groups.map(g => g.volume).filter(v => v !== frontier.volume)))
-  }, [collapsed, frontier, groups])
+    if (!snapshot) return
+    if (selected && volumeIndex(selected) >= 0) return
+    const fallback = frontier?.volume ?? groups[0]?.volume
+    if (fallback) { setSelected(fallback); persistSelected(fallback) }
+  }, [snapshot, selected, frontier, groups, volumeIndex])
 
-  const toggleVolume = useCallback((volume: string) => {
-    setCollapsed(prev => {
-      const next = new Set(prev ?? [])
-      if (next.has(volume)) next.delete(volume)
-      else next.add(volume)
-      persistCollapsed(next)
-      return next
+  // Dzisiaj's "Przeglądaj poziom" hands a level off through the store. It used
+  // to become a level *filter* (a flat result list); now it simply opens that
+  // level — at your position if you're in it, otherwise its first unfinished
+  // volume. Consumed once, after progress has loaded so "unfinished" is real.
+  const storeLevel = useAppStore(s => s.activeLevel)
+  const setStoreLevel = useAppStore(s => s.setLevel)
+  const pendingLevel = useRef<number | null>(storeLevel ?? legacyLevelParam(params))
+  useEffect(() => {
+    if (storeLevel != null) setStoreLevel(null)
+    if (legacyLevelParam(params) != null) setParams(paramsFromFilters(filters), { replace: true })
+    // Mount-only: this is a one-shot handoff, not a subscription.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  useEffect(() => {
+    const level = pendingLevel.current
+    if (level == null || !snapshot) return
+    pendingLevel.current = null
+    const group = levels.find(l => l.level === level)
+    if (!group) return
+    const here = group.volumes.find(v => v.volume === frontier?.volume)
+    const open = group.volumes.find(v => {
+      const s = statOfVolume.get(v.volume)
+      return s ? s.done < s.packs : true
     })
-  }, [])
+    selectVolume((here ?? open ?? group.volumes[0]).volume)
+  }, [snapshot, levels, frontier, statOfVolume, selectVolume])
 
-  // ── Scroll-spy: which volume is under the sticky bar ──────────────────────
-  const [currentVolume, setCurrentVolume] = useState<string | null>(null)
-  const headsRef = useRef(new Map<string, HTMLElement>())
-  const headCb = useCallback((volume: string) => (node: HTMLElement | null) => {
-    if (node) headsRef.current.set(volume, node)
-    else headsRef.current.delete(volume)
-  }, [])
-
+  // ── Stuck state: glass behind the chrome only while it is pinned ─────────
+  const sentinelRef = useRef<HTMLDivElement>(null)
+  const [stuck, setStuck] = useState(false)
   useEffect(() => {
-    if (active) { setCurrentVolume(null); return }
-    const root = document.querySelector('.appshell__main')
+    const node = sentinelRef.current
+    if (!node) return
     const io = new IntersectionObserver(
-      entries => {
-        for (const e of entries) {
-          if (e.isIntersecting) setCurrentVolume(e.target.getAttribute('data-volume'))
-        }
-      },
-      // A thin band just under the sticky chrome: whichever header last crossed
-      // it is the volume you're in.
-      { root: root ?? null, rootMargin: '-25% 0px -70% 0px' },
+      ([e]) => setStuck(!e.isIntersecting),
+      { root: document.querySelector('.appshell__main'), threshold: 0 },
     )
-    headsRef.current.forEach(node => io.observe(node))
+    io.observe(node)
     return () => io.disconnect()
-  }, [active, collapsed])
+  }, [])
+
+  // ── Sticky chrome height ──────────────────────────────────────────────────
+  // The chrome is now the search bar *plus* the switcher, so the scroll target
+  // offset has to track the whole block — RouteControls only measures itself.
+  useEffect(() => {
+    const el = chromeRef.current
+    const page = el?.closest('.homepage') as HTMLElement | null
+    if (!el || !page) return
+    const publish = () => page.style.setProperty('--chrome-h', `${Math.round(el.offsetHeight)}px`)
+    publish()
+    const ro = new ResizeObserver(publish)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
 
   // ── Jumping ───────────────────────────────────────────────────────────────
   /**
    * Scroll an element to just below the sticky chrome and *keep it there*.
    *
-   * `scrollIntoView({ behavior: 'smooth' })` is not reliable on this page: the
-   * list is still settling while the scroll animates — `content-visibility`
-   * replaces estimated row heights with real ones, and an expanding volume adds
-   * a hundred rows — so the target moves out from under a single computed
-   * destination. Jumping to Tom VII landed on #333 that way. Re-aiming every
-   * frame until the element actually sits where it should is what makes
-   * "anywhere in two seconds" true rather than approximately true.
-   *
-   * The re-aiming used to just set `scrollTop` straight to the target each
-   * frame, which — since the target is usually already at (nearly) its final
-   * position after the first frame or two — meant the entire "jump" was one
-   * instant teleport with no travel to it at all. It now closes a *fraction*
-   * of the remaining distance every frame (classic ease-out damping: fast
-   * first, decelerating into the landing), while still re-reading the live
-   * target position each frame — so a target that's still moving under
-   * layout settling gets naturally re-aimed instead of chased with a single
-   * fixed-endpoint animation.
+   * `scrollIntoView({ behavior: 'smooth' })` is not reliable here: the target
+   * row may not exist yet (the volume is switching) and `content-visibility`
+   * replaces estimated row heights with real ones while the scroll animates. So
+   * this re-reads the live position every frame and closes a fraction of the
+   * remaining distance — fast first, decelerating into the landing.
    */
   const homeOnto = useCallback((find: () => HTMLElement | null, pulse = false) => {
     const main = document.querySelector('.appshell__main') as HTMLElement | null
-    const page = document.querySelector('.homepage') as HTMLElement | null
     if (!main) return
-    const chrome = page
-      ? parseFloat(getComputedStyle(page).getPropertyValue('--chrome-h')) || 0
-      : 0
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     let frames = 0
     let settled = 0
     const tick = () => {
       const el = find()
-      // The row may not exist for a few frames — a filter reset has to re-render
-      // the route and the volume body has to expand first.
       if (!el) {
         if (frames++ < 90) requestAnimationFrame(tick)
         return
       }
+      const chrome = chromeRef.current?.offsetHeight ?? 0
       const delta = el.getBoundingClientRect().top - main.getBoundingClientRect().top - chrome - 8
       const closeEnough = Math.abs(delta) < 1.5
-      // Snap the final, imperceptible sliver shut instead of decaying toward
-      // it forever; ease toward everything larger than that.
-      main.scrollTop += closeEnough || reduced ? delta : delta * 0.22
+      main.scrollTop += closeEnough || reducedMotion ? delta : delta * 0.22
 
       if (closeEnough) settled++
       else settled = 0
 
-      // Three consecutive settled frames means the layout stopped moving.
       if (settled < 3 && frames++ < 90) { requestAnimationFrame(tick); return }
       if (pulse) {
         el.classList.add('packcard--pulse')
@@ -267,28 +353,15 @@ export function HomePage() {
     requestAnimationFrame(tick)
   }, [])
 
-  const jumpToVolume = useCallback((volume: string) => {
-    setCollapsed(prev => {
-      const next = new Set(prev ?? [])
-      next.delete(volume)
-      persistCollapsed(next)
-      return next
-    })
-    homeOnto(() => headsRef.current.get(volume) ?? null)
-  }, [homeOnto])
-
   const jumpToPack = useCallback((packId: string) => {
     const pack = allPacks.find(p => p.id === packId)
     if (!pack) return
-    if (active) clearFilters()
-    setCollapsed(prev => {
-      const next = new Set(prev ?? [])
-      next.delete(pack.volume)
-      persistCollapsed(next)
-      return next
-    })
+    // A search list or a filter that hides the pack would leave nothing to land
+    // on, so jumping clears whichever of them is in the way.
+    if (searching || (routeFiltering && !packMatchesRouteFilter(pack, filters, lensCtx))) clearFilters()
+    selectVolume(pack.volume, { scroll: false })
     homeOnto(() => document.getElementById(`pack-${packId}`), true)
-  }, [active, clearFilters, homeOnto])
+  }, [searching, routeFiltering, filters, lensCtx, clearFilters, selectVolume, homeOnto])
 
   const jumpToFrontier = useCallback(() => {
     if (frontier) jumpToPack(frontier.id)
@@ -297,62 +370,89 @@ export function HomePage() {
   // ── Coming back from a pack ───────────────────────────────────────────────
   /**
    * PackPreview's "Pakiety" hands the pack id back in the navigation state, so
-   * you land on the row you just left rather than at a remembered pixel offset
-   * — which was wrong whenever you'd reached the pack from Dzisiaj, a search or
-   * a related-pack hop, and couldn't work at all when the pack's volume was
-   * collapsed. jumpToPack expands that volume, clears any lens and pulses the
-   * row, so "where was I" answers itself.
-   *
-   * Read before the scroll-restore block below on purpose: restore has to see
-   * this on the very first render where the route is ready, or both would run
-   * their own rAF loop and fight over scrollTop for a second.
+   * you land on the row you just left — in its volume — rather than at a
+   * remembered pixel offset, which was wrong whenever you'd reached the pack
+   * from Dzisiaj, a search or a related-pack hop.
    */
   const focusPack = (location.state as { focusPack?: string } | null)?.focusPack ?? null
   const focusedRef = useRef(false)
+  useEffect(() => {
+    if (!focusPack || focusedRef.current || !snapshot) return
+    focusedRef.current = true
+    restoredRef.current = true
+    navigate('/', { replace: true, state: null })
+    jumpToPack(focusPack)
+  }, [focusPack, snapshot, navigate, jumpToPack])
 
-  // ── Scroll restore (route mode only — a result list has no stable place) ──
+  // ── Scroll restore (per volume) ───────────────────────────────────────────
+  // Only meaningful for the volume you left: another volume has other rows.
   const restoredRef = useRef(false)
   useEffect(() => {
     const main = document.querySelector('.appshell__main')
     if (!main) return
     const onScroll = () => {
-      if (!restoredRef.current) return
-      try { sessionStorage.setItem(SCROLL_KEY, String(main.scrollTop)) } catch { /* private mode */ }
+      if (!restoredRef.current || !selected) return
+      try {
+        sessionStorage.setItem(SCROLL_KEY, JSON.stringify({ v: selected, top: main.scrollTop }))
+      } catch { /* private mode */ }
     }
     main.addEventListener('scroll', onScroll, { passive: true })
     return () => main.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [selected])
 
   useEffect(() => {
-    if (restoredRef.current || focusPack || !snapshot || collapsed == null || active) return
-    const saved = parseInt(sessionStorage.getItem(SCROLL_KEY) ?? '', 10)
+    if (restoredRef.current || focusPack || !snapshot || !selected || searching) return
     const main = document.querySelector('.appshell__main') as HTMLElement | null
-    if (!main || !Number.isFinite(saved) || saved <= 0) { restoredRef.current = true; return }
-    // The list keeps growing for many frames as content-visibility measures real
-    // card heights, so keep re-applying the target until it sticks.
+    let saved: { v?: string; top?: number } | null = null
+    try { saved = JSON.parse(sessionStorage.getItem(SCROLL_KEY) ?? 'null') } catch { saved = null }
+    if (!main || !saved || saved.v !== selected || !(Number(saved.top) > 0)) { restoredRef.current = true; return }
+    const top = Number(saved.top)
     let tries = 0
     const tick = () => {
-      main.scrollTop = saved
-      if (Math.abs(main.scrollTop - saved) > 2 && tries++ < 60) requestAnimationFrame(tick)
+      main.scrollTop = top
+      if (Math.abs(main.scrollTop - top) > 2 && tries++ < 60) requestAnimationFrame(tick)
       else restoredRef.current = true
     }
     requestAnimationFrame(tick)
-  }, [snapshot, collapsed, active, focusPack])
+  }, [snapshot, selected, searching, focusPack])
 
+  // ── A filter was switched on or changed: go where its packs are ───────────
+  // If the volume on screen has none, move to the nearest one that does —
+  // forward along the route first, since that is where you are heading.
+  // Only on a filter change: tapping an empty volume chip on purpose stays put.
+  const filterKey = routeFiltering ? `${filters.lens}|${filters.cat ?? ''}` : ''
   useEffect(() => {
-    if (!focusPack || focusedRef.current) return
-    // Wait for the route to actually exist — the card has to be renderable
-    // before homeOnto can aim at it.
-    if (!snapshot || collapsed == null) return
-    focusedRef.current = true
-    // Stops the restore effect from claiming the scroll once focusPack clears,
-    // and re-arms persisting the position you actually end up at.
-    restoredRef.current = true
-    // Drops the handoff (and any stale lens) so a refresh doesn't jump again.
-    navigate('/', { replace: true, state: null })
-    jumpToPack(focusPack)
-  }, [focusPack, snapshot, collapsed, navigate, jumpToPack])
+    if (!filterKey || !snapshot) return
+    const cur = selectedRef.current
+    if (!cur || (matchesByVolume.get(cur) ?? 0) > 0) return
+    const target = nearestMatchingVolume(cur)
+    if (target) selectVolume(target)
+    // matchesByVolume is derived from the same filter; re-running on its
+    // identity would fight a deliberate tap on an empty volume.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filterKey, snapshot])
 
+  // ── Swipe between volumes ─────────────────────────────────────────────────
+  const selIdx = volumeIndex(selected)
+  const current = selIdx >= 0 ? groups[selIdx] : null
+  const prevVolume = selIdx > 0 ? groups[selIdx - 1] : null
+  const nextVolume = selIdx >= 0 && selIdx < groups.length - 1 ? groups[selIdx + 1] : null
+
+  // A mouse drag still ends in a click on whatever card it started on; this
+  // swallows that one click so a swipe never also opens a pack.
+  const draggedAt = useRef(0)
+  const onDragEnd = (_: unknown, info: PanInfo) => {
+    const far = Math.abs(info.offset.x) > SWIPE_DISTANCE || Math.abs(info.velocity.x) > SWIPE_VELOCITY
+    if (Math.abs(info.offset.x) > 6) draggedAt.current = Date.now()
+    if (!far) return
+    if (info.offset.x < 0 && nextVolume) selectVolume(nextVolume.volume)
+    else if (info.offset.x > 0 && prevVolume) selectVolume(prevVolume.volume)
+  }
+  const swallowDragClick = (e: MouseEvent) => {
+    if (Date.now() - draggedAt.current < 250) { e.preventDefault(); e.stopPropagation() }
+  }
+
+  // ── Rows ──────────────────────────────────────────────────────────────────
   const card = (pack: PackMeta, i: number) => {
     // Słuchaj progress is the one axis that lives on PackageProgress rather
     // than in the memory map — currentIndex is how far playback got.
@@ -372,19 +472,42 @@ export function HomePage() {
 
   const visible = results.slice(0, shown)
 
+  /** The packs of the volume on screen, narrowed by Stan/Kategoria if set. */
+  const volumePacks = current
+    ? (routeFiltering ? current.packs.filter(p => packMatchesRouteFilter(p, filters, lensCtx)) : current.packs)
+    : []
+  /** Human name of the active filter, for the header and the empty state. */
+  const filterName = [
+    filters.lens !== 'all' ? `„${LENS_LABEL[filters.lens]}"` : null,
+    filters.cat,
+  ].filter(Boolean).join(' · ')
+  /** Where "Dalej na trasie" goes: the next volume, or while filtering the next
+   *  one that actually has matches. */
+  const nextStop = (() => {
+    if (!current) return null
+    if (!routeFiltering) return nextVolume
+    for (let k = selIdx + 1; k < groups.length; k++) {
+      if ((matchesByVolume.get(groups[k].volume) ?? 0) > 0) return groups[k]
+    }
+    return null
+  })()
+  const nearestElsewhere = routeFiltering && current && volumePacks.length === 0
+    ? nearestMatchingVolume(current.volume)
+    : null
+  const currentLevel = current ? levels.find(l => l.volumes.some(v => v.volume === current.volume)) : null
+  const levelMeta = currentLevel ? LEVEL_META.find(l => l.level === currentLevel.level) : null
+  const curStats = current ? statOfVolume.get(current.volume) : undefined
+
   return (
     <AppShell>
       <OnboardingModal />
       <div className="homepage">
-        {/* Only ever rendered when something is actually slipping. This screen
-            opens on packs: anything that sits above the first card has to earn
-            the space every single visit, and a coverage card that says "~0%" to
-            a beginner spends the whole fold saying "you have nothing". The
-            coverage estimate rides along as one line in the bar instead. */}
-        {fadingMetas.length > 0 && (
+        {/* Only ever rendered when something is actually slipping. */}
+        {fading.items.length > 0 && (
           <aside className="homepage__aside">
             <MemoryStrip
-              packs={fadingMetas}
+              items={fading.items}
+              minutes={fading.minutes}
               onPick={jumpToPack}
               onShowAll={() => setFilters({ lens: 'fading' })}
             />
@@ -395,33 +518,45 @@ export function HomePage() {
           <InstallBanner />
           <OnboardingCard />
 
-          <div className="homepage__chrome">
+          <div className="homepage__stick-sentinel" ref={sentinelRef} aria-hidden="true" />
+          <div
+            className={`homepage__chrome${!searching ? ' has-switcher' : ''}${stuck ? ' is-stuck' : ''}`}
+            ref={chromeRef}
+          >
             <RouteControls
               filters={filters}
               onChange={setFilters}
               onClear={clearFilters}
               lensCounts={facets.lens}
-              levelCounts={facets.level}
               categoryCounts={facets.category}
               resultCount={results.length}
               stats={stats}
-              knownMap={snapshot?.knownMap ?? new Map()}
               knownWords={knownWords}
-              groups={groups}
-              groupStats={gStats}
-              currentVolume={currentVolume}
-              onPickVolume={jumpToVolume}
               onJump={jumpToPack}
             />
+            {/* Hidden only while searching: search results span the whole route,
+                so a "you are in Tom IV" control would be a lie. A Stan or
+                Kategoria filter keeps it, with a match count on every stop. */}
+            {!searching && snapshot && current && (
+              <RouteSwitcher
+                levels={levels}
+                levelStats={lStats}
+                volumeStats={statOfVolume}
+                selected={current.volume}
+                frontierVolume={frontier?.volume ?? null}
+                onSelect={v => selectVolume(v)}
+                matches={routeFiltering ? matchesByVolume : null}
+              />
+            )}
           </div>
 
-          {!snapshot ? (
+          {!snapshot || (!searching && !current) ? (
             <div className="homepage__list">
               {Array.from({ length: 8 }).map((_, i) => (
                 <div key={i} className="homepage__skeleton skeleton" />
               ))}
             </div>
-          ) : active ? (
+          ) : searching ? (
             <div className="homepage__list homepage__list--results">
               {visible.map(card)}
               {results.length === 0 && (
@@ -436,36 +571,118 @@ export function HomePage() {
                 </button>
               )}
             </div>
-          ) : (
-            levels.map((lvl, li) => (
-              <LevelSection key={lvl.level} group={lvl} stats={lStats[li]}>
-                {lvl.volumes.map(g => (
-                  <VolumeSection
-                    key={g.volume}
-                    group={g}
-                    stats={statOfVolume.get(g.volume)!}
-                    collapsed={collapsed?.has(g.volume) ?? false}
-                    onToggle={() => toggleVolume(g.volume)}
-                    headRef={headCb(g.volume)}
+          ) : current && (
+            <div className="homepage__stage" ref={stageRef}>
+              <AnimatePresence mode="wait" initial={false} custom={dir}>
+                <motion.section
+                  key={current.volume}
+                  className="homepage__volume"
+                  custom={dir}
+                  variants={stageVariants}
+                  initial={reduced ? false : 'enter'}
+                  animate="center"
+                  exit={reduced ? undefined : 'exit'}
+                  transition={{ duration: reduced ? 0 : 0.22, ease: EASE_OUT_EXPO }}
+                  drag="x"
+                  dragDirectionLock
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={0.16}
+                  dragSnapToOrigin
+                  onDragEnd={onDragEnd}
+                  onClickCapture={swallowDragClick}
+                  aria-label={`Tom ${current.short}, pakiety ${current.firstNum}–${current.lastNum}`}
+                >
+                  <header
+                    className="homepage__volhead"
+                    style={{ '--lvl': currentLevel ? LEVEL_COLORS[currentLevel.level] : undefined } as CSSProperties}
                   >
-                    {g.packs.map((pack, i) => {
-                      const m = milestones.get(pack.id)
-                      return (
-                        <Fragment key={pack.id}>
-                          {m && <MilestoneBand milestone={m} knownWords={knownWords} />}
-                          {card(pack, i)}
-                        </Fragment>
-                      )
-                    })}
-                  </VolumeSection>
-                ))}
-              </LevelSection>
-            ))
+                    <div className="homepage__volhead-top">
+                      <h2 className="homepage__volhead-title">
+                        Tom {current.short}
+                        {levelMeta && <span className="homepage__volhead-level">{levelMeta.name}</span>}
+                      </h2>
+                      {curStats && (
+                        <span className="homepage__volhead-count">
+                          <b>{curStats.done}</b>/{curStats.packs}
+                        </span>
+                      )}
+                    </div>
+                    {levelMeta && <p className="homepage__volhead-promise">{levelMeta.promise}</p>}
+                    <div className="homepage__volhead-meter" aria-hidden="true">
+                      <span style={{ width: `${Math.round(curStats?.pct ?? 0)}%` }} />
+                    </div>
+                    <p className="homepage__volhead-meta">
+                      {routeFiltering
+                        ? <><b className="homepage__volhead-match">{volumePacks.length}</b> z {current.packs.length} pasuje · {filterName}</>
+                        : <>Pakiety {current.firstNum}–{current.lastNum} · {curStats?.done ?? 0} z {current.packs.length} ukończonych</>}
+                    </p>
+                  </header>
+
+                  {volumePacks.length > 0 ? (
+                    <div className="homepage__list">
+                      {volumePacks.map((pack, i) => {
+                        // Landmarks mark positions on the full route; between
+                        // filtered packs they would sit next to the wrong rows.
+                        const m = routeFiltering ? undefined : milestones.get(pack.id)
+                        return (
+                          <Fragment key={pack.id}>
+                            {m && <MilestoneBand milestone={m} knownWords={knownWords} />}
+                            {card(pack, i)}
+                          </Fragment>
+                        )
+                      })}
+                    </div>
+                  ) : (
+                    <div className="homepage__vol-empty">
+                      <p className="homepage__vol-empty-text">
+                        W Tomie {current.short} nie ma pakietów {filterName}.
+                      </p>
+                      {nearestElsewhere ? (
+                        <button className="homepage__vol-empty-go" onClick={() => selectVolume(nearestElsewhere)}>
+                          Przejdź do Tomu {groups[volumeIndex(nearestElsewhere)]?.short}
+                          <span className="homepage__vol-empty-n">{matchesByVolume.get(nearestElsewhere)}</span>
+                        </button>
+                      ) : totalMatches === 0 ? (
+                        <p className="homepage__vol-empty-sub">Na całej trasie nie ma takich pakietów.</p>
+                      ) : null}
+                      <button className="homepage__vol-empty-clear" onClick={() => setFilters({ lens: 'all', cat: null })}>
+                        Wyczyść filtry
+                      </button>
+                    </div>
+                  )}
+
+                  {nextStop && (volumePacks.length > 0 || !routeFiltering) && (
+                    <button className="homepage__next" onClick={() => selectVolume(nextStop.volume)}>
+                      <span className="homepage__next-label">
+                        {routeFiltering ? 'Dalej: następne pasujące' : 'Dalej na trasie'}
+                      </span>
+                      <span className="homepage__next-title">
+                        {routeFiltering
+                          ? `Tom ${nextStop.short} · ${matchesByVolume.get(nextStop.volume)} ${plural(matchesByVolume.get(nextStop.volume) ?? 0, 'pakiet', 'pakiety', 'pakietów')}`
+                          : `Tom ${nextStop.short} · pakiety ${nextStop.firstNum}–${nextStop.lastNum}`}
+                      </span>
+                      <svg className="homepage__next-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+                      </svg>
+                    </button>
+                  )}
+                </motion.section>
+              </AnimatePresence>
+            </div>
           )}
         </div>
       </div>
 
-      {!active && <HerePill frontier={frontier} onJump={jumpToFrontier} />}
+      {/* Not over an empty filtered volume: there the empty state's own button
+          is the next step, and the floating pill landed right on top of it. */}
+      {!searching && !(routeFiltering && current && volumePacks.length === 0) && (
+        <HerePill
+          frontier={frontier}
+          onJump={jumpToFrontier}
+          scope={selected}
+          elsewhere={!!frontier && !!selected && frontier.volume !== selected}
+        />
+      )}
     </AppShell>
   )
 }

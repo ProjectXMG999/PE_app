@@ -1,30 +1,22 @@
 import { useEffect, useRef, useState } from 'react'
-import { LEVEL_META } from '../../data/levels'
-import { LEVEL_COLORS, getCategoryColor } from '../../utils/packVisuals'
-import {
-  LENS_LABEL,
-  PACK_LENSES,
-  PackFilters,
-  PackLens,
-  VolumeGroup,
-  VolumeStats,
-} from '../../utils/packRoute'
+import { getCategoryColor } from '../../utils/packVisuals'
+import { plural } from '../../utils/plural'
+import { LENS_LABEL, PACK_LENSES, PackFilters, PackLens } from '../../utils/packRoute'
 import { CategoryStat, MIN_SAMPLE } from '../../utils/packProfile'
 import { coveragePct } from '../../utils/coverage'
 import { CoverageInfoSheet } from './CoverageInfoSheet'
-import packagesIndex from '../../data/packages-index.json'
-import { PackMeta } from '../../types/vocabulary'
-import { LevelProgressBars } from './LevelProgressBars'
 import './PackFilterSheet.css'
 
-const allPacks = packagesIndex as PackMeta[]
-
-export type SheetKind = 'lens' | 'volumes' | 'level' | 'category'
+/**
+ * Two tabs. "Tomy" and "Poziom" used to live here too; both are now the level
+ * and volume switcher at the top of the page, and the level tab was actively
+ * wrong next to it (it filtered on a per-pack difficulty tag, the switcher
+ * groups whole volumes).
+ */
+export type SheetKind = 'lens' | 'category'
 
 const TABS: { id: SheetKind; label: string }[] = [
   { id: 'lens',     label: 'Stan' },
-  { id: 'volumes',  label: 'Tomy' },
-  { id: 'level',    label: 'Poziom' },
   { id: 'category', label: 'Kategoria' },
 ]
 
@@ -35,15 +27,9 @@ interface Props {
   onSwitchKind: (kind: SheetKind) => void
   lensCounts: Record<PackLens, number>
   knownWords: number
-  groups: VolumeGroup[]
-  groupStats: VolumeStats[]
-  currentVolume: string | null
-  onPickVolume: (volume: string) => void
   categories: { cat: string; n: number }[]
   /** Your measured success rate per category — turns the filter into a diagnosis. */
   categoryStats: CategoryStat[]
-  levelCounts: Record<number, number>
-  knownMap: Map<string, number>
   onClose: () => void
 }
 
@@ -65,8 +51,7 @@ interface Props {
  * silence.
  */
 export function PackFilterSheet({
-  kind, filters, onChange, onSwitchKind, lensCounts, knownWords, groups, groupStats,
-  currentVolume, onPickVolume, categories, categoryStats, levelCounts, knownMap, onClose,
+  kind, filters, onChange, onSwitchKind, lensCounts, knownWords, categories, categoryStats, onClose,
 }: Props) {
   const ref = useRef<HTMLDialogElement>(null)
   const [covOpen, setCovOpen] = useState(false)
@@ -78,8 +63,6 @@ export function PackFilterSheet({
   const statOf = new Map(categoryStats.map(s => [s.category, s]))
   const dirty: Record<SheetKind, boolean> = {
     lens: filters.lens !== 'all',
-    volumes: false,
-    level: filters.level != null,
     category: filters.cat != null,
   }
 
@@ -123,6 +106,9 @@ export function PackFilterSheet({
                 </span>
               </button>
             )}
+          <p className="pfsheet__note pfsheet__note--top">
+            Liczby dotyczą całej trasy. Poziomy i tomy zostają — przy każdym zobaczysz, ile pasuje.
+          </p>
           <div className="pfsheet__list" role="radiogroup" aria-label="Stan pakietów">
             {PACK_LENSES.map(lens => {
               const n = lensCounts[lens]
@@ -143,64 +129,6 @@ export function PackFilterSheet({
               )
             })}
           </div>
-          </>
-        )}
-
-        {kind === 'volumes' && (
-          <div className="pfsheet__list" aria-label="Tomy">
-            {groups.map((g, i) => {
-              const s = groupStats[i]
-              const done = s.packs > 0 && s.done === s.packs
-              return (
-                <button
-                  key={g.volume}
-                  className={`pfsheet__row${g.volume === currentVolume ? ' is-active' : ''}${done ? ' is-done' : ''}`}
-                  onClick={() => { onPickVolume(g.volume); close() }}
-                >
-                  <span className="pfsheet__vol">{g.short}</span>
-                  <span className="pfsheet__row-text">
-                    <span className="pfsheet__row-name">Tom {g.short}</span>
-                    <span className="pfsheet__row-sub">{g.firstNum}–{g.lastNum}</span>
-                  </span>
-                  <span className="pfsheet__gauge" aria-hidden="true">
-                    <span className="pfsheet__gauge-fill" style={{ width: `${Math.round(s.pct)}%` }} />
-                  </span>
-                  <span className="pfsheet__count">{Math.round(s.pct)}%</span>
-                </button>
-              )
-            })}
-          </div>
-        )}
-
-        {kind === 'level' && (
-          <>
-            <div className="pfsheet__progress">
-              <LevelProgressBars allPacks={allPacks} knownMap={knownMap} />
-            </div>
-            <div className="pfsheet__list" role="radiogroup" aria-label="Poziom">
-              <button
-                className={`pfsheet__row${filters.level == null ? ' is-active' : ''}`}
-                role="radio" aria-checked={filters.level == null}
-                onClick={() => pick({ level: null })}
-              >
-                <span className="pfsheet__row-name">Wszystkie poziomy</span>
-              </button>
-              {LEVEL_META.map(l => (
-                <button
-                  key={l.level}
-                  className={`pfsheet__row${filters.level === l.level ? ' is-active' : ''}`}
-                  role="radio" aria-checked={filters.level === l.level}
-                  onClick={() => pick({ level: l.level })}
-                >
-                  <span className="pfsheet__dot" style={{ background: LEVEL_COLORS[l.level] }} aria-hidden="true" />
-                  <span className="pfsheet__row-text">
-                    <span className="pfsheet__row-name">Level {l.level} · {l.name}</span>
-                    <span className="pfsheet__row-sub">{l.promise}</span>
-                  </span>
-                  <span className="pfsheet__count">{levelCounts[l.level] ?? 0}</span>
-                </button>
-              ))}
-            </div>
           </>
         )}
 
@@ -232,7 +160,7 @@ export function PackFilterSheet({
                     <span className="pfsheet__row-sub">
                       {show
                         ? `${stat!.successPct}% Twoich słów opanowanych`
-                        : `${n} ${n === 1 ? 'pakiet' : 'pakietów'}`}
+                        : `${n} ${plural(n, 'pakiet', 'pakiety', 'pakietów')}`}
                     </span>
                   </span>
                   {show && (

@@ -1,0 +1,236 @@
+/* =============================================================================
+ * ROUTE SWITCHER — level segments + volume chips, pinned under the search bar.
+ * -----------------------------------------------------------------------------
+ * Same language as Dzisiaj's ModeSlider: a translucent track, a sliding
+ * indicator, muted labels that take their colour only when active. Each level
+ * carries its own colour (--lvl, from LEVEL_COLORS) on the label, the progress
+ * hairline and the indicator border — never as a fill, so four coloured
+ * segments don't turn the header into a flag.
+ * ========================================================================== */
+
+.rsw {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* ── Levels: a four-way segmented control ─────────────────────────────────── */
+.rsw__levels {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2px;
+  padding: 3px;
+  background: var(--surface-translucent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.rsw__level {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
+  height: 46px;
+  padding: 0 4px;
+  border: none;
+  background: none;
+  border-radius: calc(var(--radius-lg) - 3px);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.rsw__level-ind {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--surface-translucent-strong);
+  border: 1px solid color-mix(in oklch, var(--lvl) 45%, transparent);
+  pointer-events: none;
+}
+
+.rsw__level-name {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 100%;
+  font-family: var(--font-heading);
+  font-size: var(--text-xs-plus);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-muted);
+  white-space: nowrap;
+  /* No overflow clipping: it cut the glow of the "you are here" dot into a
+     visible dark square. The four short names fit at this size. */
+  transition: color var(--transition-fast);
+}
+
+.rsw__level.is-on .rsw__level-name { color: var(--text-primary); }
+
+@media (hover: hover) {
+  .rsw__level:not(.is-on):hover .rsw__level-name { color: var(--text-secondary); }
+}
+
+/* Progress as a hairline under the name — every level shows how far you are
+   in it, not only the one you are looking at. */
+.rsw__level-bar {
+  position: relative;
+  width: 60%;
+  height: 2px;
+  border-radius: var(--radius-full);
+  background: var(--border-strong);
+  overflow: hidden;
+}
+
+.rsw__level-bar > span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: inherit;
+  background: var(--lvl);
+  transition: width var(--transition-slow) var(--ease-out-expo);
+}
+
+/* ── Volumes: chips for the selected level ─────────────────────────────────── */
+.rsw__vols {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  /* Let chips run to the screen edge on a phone instead of clipping inside
+     the page gutter. */
+  margin-inline: calc(var(--page-gutter, var(--spacing-md)) * -1);
+  padding-inline: var(--page-gutter, var(--spacing-md));
+}
+
+.rsw__vols::-webkit-scrollbar { display: none; }
+
+.rsw__vol {
+  position: relative;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 36px;
+  padding: 0 14px 0 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: transparent;
+  scroll-snap-align: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.rsw__vol.is-on { border-color: transparent; }
+
+.rsw__vol-ind {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: var(--surface-translucent-strong);
+  border: 1px solid color-mix(in oklch, var(--lvl) 45%, transparent);
+  pointer-events: none;
+}
+
+/* A 20px completion ring — the same conic technique as the pack cards. */
+.rsw__vol-ring {
+  position: relative;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: conic-gradient(var(--lvl) calc(var(--pct, 0) * 1%), var(--border-strong) 0);
+  -webkit-mask: radial-gradient(circle, transparent 6px, #000 6.5px);
+          mask: radial-gradient(circle, transparent 6px, #000 6.5px);
+}
+
+.rsw__vol-name {
+  position: relative;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.rsw__vol.is-on .rsw__vol-name { color: var(--text-primary); }
+
+.rsw__vol-range {
+  position: relative;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ── Filter counts ────────────────────────────────────────────────────────
+   Shown only while a Stan/Kategoria filter is on. A count per volume and per
+   level turns the filter into "where", and dimming the empty ones keeps them
+   tappable (you may want to confirm a volume really has none) without asking
+   for attention. */
+.rsw__count {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  min-width: 22px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: var(--radius-full);
+  background: var(--accent);
+  color: var(--text-on-accent);
+  font-family: var(--font-heading);
+  font-size: var(--text-2xs);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.rsw__count.is-zero {
+  background: var(--border-strong);
+  color: var(--text-muted);
+}
+
+.rsw__count--level {
+  position: absolute;
+  top: -7px;
+  right: -3px;
+  min-width: 20px;
+  height: 18px;
+  padding: 0 5px;
+  z-index: 1;
+  box-shadow: 0 0 0 2px var(--bg-primary);
+}
+
+.rsw__levels { overflow: visible; }
+
+.rsw__level.is-empty .rsw__level-name,
+.rsw__level.is-empty .rsw__level-bar,
+.rsw__vol.is-empty .rsw__vol-ring,
+.rsw__vol.is-empty .rsw__vol-name {
+  opacity: 0.4;
+}
+
+/* ── "You are here" — one small dot, wherever your next pack lives ─────────── */
+.rsw__here {
+  position: relative;
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--accent-bright);
+  box-shadow: 0 0 8px 1px color-mix(in oklch, var(--accent) 70%, transparent);
+}
+
+.rsw__level:focus-visible,
+.rsw__vol:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rsw__level-bar > span { transition: none; }
+}

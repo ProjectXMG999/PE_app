@@ -203,15 +203,22 @@ export const LENS_LABEL: Record<PackLens, string> = {
   new: 'Nowe',
 }
 
-/** The four lenses the map can be viewed through. All-null = the full route. */
+/**
+ * What the route is being looked at through.
+ *
+ * There is deliberately no `level` here any more. The level filter used to
+ * match `pack.level` — a difficulty tag that is not monotonic along the route —
+ * while the level switcher groups whole volumes by majority level, so the two
+ * disagreed: "Everyday" as a filter returned packs from volumes the switcher
+ * files under Freedom. The switcher is now the only way to pick a level.
+ */
 export interface PackFilters {
   query: string
-  level: number | null
   cat: string | null
   lens: PackLens
 }
 
-export const EMPTY_FILTERS: PackFilters = { query: '', level: null, cat: null, lens: 'all' }
+export const EMPTY_FILTERS: PackFilters = { query: '', cat: null, lens: 'all' }
 
 /** A bare number (optionally `#`-prefixed) in the search box addresses a pack
  *  directly rather than filtering by text — see `isJumpQuery`. */
@@ -223,17 +230,34 @@ export function isJumpQuery(query: string): boolean {
 }
 
 /**
- * True when any lens is engaged — the list then drops to a flat filtered view.
+ * A text search is on — the one case that leaves the route for a flat list.
  *
- * A query that's purely a route number is excluded: it means "take me there",
- * not "filter the route down to this". Counting it as a text filter used to
- * drop the whole list into result mode and then find nothing (numbers don't
- * fuzzy-match names), so typing "317" showed the jump hint sitting above an
- * empty "no packs match" screen instead of the full route underneath it.
+ * Search means "find it wherever it is", so results span every volume. A query
+ * that's purely a route number is excluded: it means "take me there", not
+ * "filter the route down to this" (typing "317" used to drop into an empty
+ * result list instead of offering the jump).
  */
+export function isSearching(f: PackFilters): boolean {
+  return f.query.trim() !== '' && !isJumpQuery(f.query)
+}
+
+/**
+ * A state lens or a category is on. These narrow the route *in place*: levels
+ * and volumes stay, and each shows how many of its packs match — the filter
+ * answers "where are my in-progress packs", not just "which".
+ */
+export function isFilteringRoute(f: PackFilters): boolean {
+  return f.lens !== 'all' || f.cat != null
+}
+
+/** Any narrowing at all — search or an in-route filter. */
 export function filtersActive(f: PackFilters): boolean {
-  const hasTextQuery = f.query.trim() !== '' && !isJumpQuery(f.query)
-  return hasTextQuery || f.level != null || f.cat != null || f.lens !== 'all'
+  return isSearching(f) || isFilteringRoute(f)
+}
+
+/** Does a pack pass the in-route filters (lens + category, not the query)? */
+export function packMatchesRouteFilter(pack: PackMeta, f: PackFilters, ctx: LensContext): boolean {
+  return (f.cat == null || pack.category === f.cat) && packMatchesLens(pack, f.lens, ctx)
 }
 
 /** Per-pack status filter shared by the flat (filtered) list view. */
@@ -297,36 +321,30 @@ export function lensCounts(packs: PackMeta[], ctx: LensContext): Record<PackLens
 
 export interface FacetCounts {
   lens: Record<PackLens, number>
-  level: Record<number, number>
   category: Record<string, number>
 }
 
 /**
- * Counts for each tab of the filter sheet, each computed with the *other* two
- * facets already applied — standard faceted search, and the fix for a real
- * bug: the sheet used to tally every tab against the full 864-pack catalogue
- * no matter what else was selected. Filter to Level 1 (111 packs total) and
- * the Kategoria tab still claimed "Czasowniki · 113" — more packs than exist
- * in the level you'd already chosen, because it never looked at the level
- * filter at all. Numbers a user can prove wrong at a glance are the fastest
- * way to make a filter feel broken, even when the packs it returns are
- * actually correct.
+ * Counts for each tab of the filter sheet, each computed with the *other*
+ * facet already applied — standard faceted search. Tallying every tab against
+ * the full catalogue regardless of the other selection produced numbers a user
+ * could prove wrong at a glance, which is the fastest way to make a filter feel
+ * broken even when the packs it returns are correct.
  *
- * The free-text query applies to all three, since it isn't a tab of its own.
- * A jump query ("317") is excluded, same reasoning as `filtersActive`.
+ * The free-text query applies to both, since it isn't a tab of its own. A jump
+ * query ("317") is excluded, same reasoning as `isSearching`.
  */
 export function facetCounts(packs: PackMeta[], filters: PackFilters, ctx: LensContext): FacetCounts {
-  const useQuery = filters.query.trim() !== '' && !isJumpQuery(filters.query)
-  const queryIds = useQuery ? new Set(filterPacksByQuery(packs, filters.query).map(p => p.id)) : null
+  const queryIds = isSearching(filters)
+    ? new Set(filterPacksByQuery(packs, filters.query).map(p => p.id))
+    : null
 
-  const matches = (p: PackMeta, skip: 'level' | 'cat' | 'lens'): boolean =>
-    (skip === 'level' || filters.level == null || p.level === filters.level) &&
+  const matches = (p: PackMeta, skip: 'cat' | 'lens'): boolean =>
     (skip === 'cat' || filters.cat == null || p.category === filters.cat) &&
     (skip === 'lens' || packMatchesLens(p, filters.lens, ctx)) &&
     (queryIds == null || queryIds.has(p.id))
 
   const lens = { all: 0, fading: 0, sealing: 0, started: 0, mastered: 0, new: 0 }
-  const level: Record<number, number> = {}
   const category: Record<string, number> = {}
 
   for (const p of packs) {
@@ -334,11 +352,28 @@ export function facetCounts(packs: PackMeta[], filters: PackFilters, ctx: LensCo
       lens.all++
       for (const l of PACK_LENSES) if (l !== 'all' && packMatchesLens(p, l, ctx)) lens[l]++
     }
-    if (matches(p, 'level')) level[p.level] = (level[p.level] ?? 0) + 1
     if (matches(p, 'cat')) category[p.category] = (category[p.category] ?? 0) + 1
   }
 
-  return { lens, level, category }
+  return { lens, category }
+}
+
+/**
+ * How many packs pass the in-route filters in each volume — the numbers on the
+ * volume chips and level segments while a filter is on. Only volumes with at
+ * least one match are present.
+ */
+export function routeFilterCounts(
+  packs: PackMeta[],
+  filters: PackFilters,
+  ctx: LensContext,
+): Map<string, number> {
+  const out = new Map<string, number>()
+  if (!isFilteringRoute(filters)) return out
+  for (const p of packs) {
+    if (packMatchesRouteFilter(p, filters, ctx)) out.set(p.volume, (out.get(p.volume) ?? 0) + 1)
+  }
+  return out
 }
 
 /**

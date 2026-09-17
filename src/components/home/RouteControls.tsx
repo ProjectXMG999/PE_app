@@ -2,12 +2,11 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import packagesIndex from '../../data/packages-index.json'
 import { PackMeta } from '../../types/vocabulary'
 import {
+  LENS_LABEL,
   PackFilters,
   PackLens,
-  VolumeGroup,
-  VolumeStats,
-  filtersActive,
   isJumpQuery,
+  isSearching,
   routeNumber,
 } from '../../utils/packRoute'
 import { CategoryStat } from '../../utils/packProfile'
@@ -27,16 +26,10 @@ interface Props {
   onClear: () => void
   /** All three scoped to the *other* active facets — see `facetCounts`. */
   lensCounts: Record<PackLens, number>
-  levelCounts: Record<number, number>
   categoryCounts: Record<string, number>
   resultCount: number
   stats: CategoryStat[]
-  knownMap: Map<string, number>
   knownWords: number
-  groups: VolumeGroup[]
-  groupStats: VolumeStats[]
-  currentVolume: string | null
-  onPickVolume: (volume: string) => void
   /** Jump straight to a pack — used by the `#317` shortcut. */
   onJump: (packId: string) => void
 }
@@ -55,8 +48,7 @@ interface Props {
  *    what the route numbers are *for*.
  */
 export function RouteControls({
-  filters, onChange, onClear, lensCounts, levelCounts, categoryCounts, resultCount, stats,
-  knownMap, knownWords, groups, groupStats, currentVolume, onPickVolume, onJump,
+  filters, onChange, onClear, lensCounts, categoryCounts, resultCount, stats, knownWords, onJump,
 }: Props) {
   const [sheet, setSheet] = useState<SheetKind | null>(null)
   const barRef = useRef<HTMLDivElement>(null)
@@ -95,8 +87,9 @@ export function RouteControls({
     return allPacks.find(p => routeNumber(p.id) === n) ?? null
   }, [filters.query])
 
-  const active = filtersActive(filters)
-  const filtering = filters.lens !== 'all' || filters.level != null || filters.cat != null
+  const searching = isSearching(filters)
+  const activeCount = (filters.lens !== 'all' ? 1 : 0) + (filters.cat != null ? 1 : 0)
+  const filtering = activeCount > 0
 
   function doJump() {
     if (!jumpTarget) return
@@ -114,7 +107,7 @@ export function RouteControls({
           <input
             type="search"
             className="rc__search-input"
-            placeholder="Szukaj albo wpisz numer"
+            placeholder="Nazwa albo numer"
             value={filters.query}
             onChange={e => onChange({ query: e.target.value })}
             onKeyDown={e => {
@@ -132,17 +125,22 @@ export function RouteControls({
           )}
         </div>
 
+        {/* A labelled button, not a bare icon. The filters are the only way to
+            see the route through your memory (what's slipping, what's close to
+            "Na stałe") and by category — an unlabelled 48px circle in the
+            card colour read as decoration next to the search pill.
+            Its width is fixed so the count badge appearing never shifts the
+            search field under your thumb. */}
         <button
           className={`rc__filters${filtering ? ' is-active' : ''}`}
           onClick={() => setSheet('lens')}
-          aria-label="Filtry: stan, tomy, poziom, kategoria"
+          aria-label={filtering ? `Filtry, aktywne: ${activeCount}` : 'Filtry: stan i kategoria'}
         >
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
             <line x1="4" y1="7" x2="20" y2="7" /><line x1="7" y1="12" x2="17" y2="12" /><line x1="10" y1="17" x2="14" y2="17" />
           </svg>
-          {/* A dot rather than a count: the bar must not change width as you
-              filter, or the layout twitches under your thumb. */}
-          {filtering && <span className="rc__filters-dot" aria-hidden="true" />}
+          <span className="rc__filters-label">Filtry</span>
+          {filtering && <span className="rc__filters-count" aria-hidden="true">{activeCount}</span>}
         </button>
       </div>
 
@@ -156,9 +154,38 @@ export function RouteControls({
         </button>
       )}
 
-      {/* The one exception to "nothing else on the bar": without it there is no
-          sign that you're looking at a filtered subset rather than the route. */}
-      {active && !jumpTarget && (
+      {/* What is narrowing the route, each removable on its own. Without this
+          row a filtered volume looks like a volume with fewer packs in it. */}
+      {filtering && (
+        <div className="rc__chips" aria-label="Aktywne filtry">
+          {filters.lens !== 'all' && (
+            <button className="rc__chip" onClick={() => onChange({ lens: 'all' })} aria-label={`Usuń filtr: ${LENS_LABEL[filters.lens]}`}>
+              <span className={`rc__chip-dot pfsheet__lens-dot pfsheet__lens-dot--${filters.lens}`} aria-hidden="true" />
+              {LENS_LABEL[filters.lens]}
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          )}
+          {filters.cat != null && (
+            <button className="rc__chip" onClick={() => onChange({ cat: null })} aria-label={`Usuń filtr: ${filters.cat}`}>
+              {filters.cat}
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          )}
+          {activeCount > 1 && (
+            <button className="rc__chip rc__chip--clear" onClick={() => onChange({ lens: 'all', cat: null })}>
+              Wyczyść
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* Search is the one mode that leaves the route for a flat list, so it is
+          the one that needs a way back. */}
+      {searching && !jumpTarget && (
         <div className="rc__result">
           <span>{resultCount.toLocaleString('pl-PL')} z {allPacks.length.toLocaleString('pl-PL')}</span>
           <button className="rc__clear" onClick={onClear}>Wróć na trasę</button>
@@ -173,14 +200,8 @@ export function RouteControls({
           onSwitchKind={setSheet}
           lensCounts={lensCounts}
           knownWords={knownWords}
-          groups={groups}
-          groupStats={groupStats}
-          currentVolume={currentVolume}
-          onPickVolume={onPickVolume}
           categories={categories}
           categoryStats={stats}
-          levelCounts={levelCounts}
-          knownMap={knownMap}
           onClose={() => setSheet(null)}
         />
       )}

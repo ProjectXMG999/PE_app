@@ -86,36 +86,126 @@
    border, no shadow. */
 .rc__filters {
   position: relative;
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
   flex: 0 0 auto;
-  width: 48px;
+  width: 108px;
   height: 48px;
+  padding: 0 12px;
   border-radius: var(--radius-full);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  color: var(--text-secondary);
+  /* Tinted with the accent even when idle: this has to read as a control at a
+     glance, not as a second, emptier search field. */
+  background: color-mix(in oklch, var(--accent) 16%, var(--bg-card));
+  border: 1px solid var(--border-accent);
+  color: var(--text-accent);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 800;
   cursor: pointer;
-  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+  transition: background var(--transition-fast), border-color var(--transition-fast),
+              color var(--transition-fast), transform var(--transition-fast);
 }
+
+.rc__filters svg { flex: none; }
+
+.rc__filters:active { transform: scale(0.96); }
 
 @media (hover: hover) {
-  .rc__filters:hover { border-color: var(--border-strong); color: var(--text-primary); }
+  .rc__filters:hover {
+    background: color-mix(in oklch, var(--accent) 24%, var(--bg-card));
+    color: var(--text-primary);
+  }
 }
 
+.rc__filters:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 2px;
+}
+
+/* Something is filtering: the button fills, so a narrowed route is never
+   mistaken for the whole one. */
 .rc__filters.is-active {
-  border-color: var(--border-accent);
-  color: var(--accent-bright);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--text-on-accent);
+  box-shadow: 0 6px 18px color-mix(in oklch, var(--accent) 38%, transparent);
 }
 
-.rc__filters-dot {
-  position: absolute;
-  top: 9px;
-  right: 9px;
-  width: 7px;
-  height: 7px;
+.rc__filters-label { white-space: nowrap; }
+
+.rc__filters-count {
+  display: grid;
+  place-items: center;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 5px;
   border-radius: var(--radius-full);
-  background: var(--accent-bright);
+  background: var(--text-on-accent);
+  color: var(--accent-dim);
+  font-size: var(--text-2xs);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rc__filters { transition: none; }
+  .rc__filters:active { transform: none; }
+}
+
+/* The smallest phones (320px): keep the label — it is the whole point — and
+   tighten the pair instead, so the search placeholder still reads in full. */
+@media (max-width: 340px) {
+  .rc__filters { width: auto; padding: 0 10px; gap: 5px; }
+  .rc__search { padding: 0 10px; }
+  .rc__search-input { padding: 0 6px; }
+}
+
+/* ── Active filters ───────────────────────────────────────────────────────
+   One chip per active filter, each its own "remove". Accent-tinted like the
+   Filtry button they came from, so the two read as one control. */
+.rc__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rc__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 10px 0 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-accent);
+  background: color-mix(in oklch, var(--accent) 16%, var(--bg-card));
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs-plus);
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.rc__chip svg { flex: none; color: var(--text-accent); }
+
+.rc__chip:active { transform: scale(0.97); }
+
+.rc__chip--clear {
+  padding: 0 12px;
+  border-color: var(--border);
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.rc__chip-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
 }
 
 /* ── Jump-to-number hint ──────────────────────────────────────────────────
