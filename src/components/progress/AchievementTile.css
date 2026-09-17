@@ -69,18 +69,17 @@ button.achtile:active {
 
 .achtile--unlocked {
   border-color: transparent;
+  /* The tile's glass is translucent in dark theme, and the rim gradient is
+     painted across the whole border-box underneath it — so without an opaque
+     floor between them, the tile fills with copper instead of wearing it. */
   background:
     var(--surface-tile) padding-box,
+    linear-gradient(var(--bg-surface), var(--bg-surface)) padding-box,
     var(--tier-rim, var(--border)) border-box;
   border: 1px solid transparent;
 }
 
-.achtile--bronze { --tier-rim: linear-gradient(135deg, #B87333, #E8A87C, #8C5A2B); }
-.achtile--silver { --tier-rim: linear-gradient(135deg, #9CA3AF, #E5E7EB, #6B7280); }
-.achtile--gold   { --tier-rim: linear-gradient(135deg, #B7791F, var(--points-gold), #92610F); }
-.achtile--legend {
-  --tier-rim: linear-gradient(135deg, #7C3AED, #F5C451, #22C55E, #3B82F6, #7C3AED);
-}
+/* Rim colours come from tiers.css (.tier-*), shared with the sheet and toast. */
 
 .achtile--gold .achtile__title,
 .achtile--legend .achtile__title {
@@ -108,17 +107,95 @@ button.achtile:active {
   100%     { background-position: -60% 0; }
 }
 
-/* ── Freshly earned ─────────────────────────────────────────────────────── */
+/* ── Earned: the icon has weight ────────────────────────────────────────── */
 
-.achtile__new-dot {
+.achtile__icon {
+  transition: transform 320ms var(--ease-spring);
+}
+
+@media (hover: hover) {
+  button.achtile--unlocked:hover .achtile__icon {
+    transform: translateY(-2px) scale(1.08) rotate(-4deg);
+  }
+}
+
+/* ── Freshly earned: a reveal, then a quiet "Nowa" until you open it ───── */
+
+.achtile--new {
+  box-shadow: var(--tile-hi), 0 0 0 1px color-mix(in oklch, var(--tier-spark) 30%, transparent), 0 6px 22px var(--tier-glow);
+}
+
+/* The medal lands… */
+.achtile--new .achtile__icon {
+  animation: achtile-land 760ms var(--ease-spring) 120ms both;
+}
+
+@keyframes achtile-land {
+  0%   { opacity: 0; transform: scale(0.3) rotate(-30deg); }
+  55%  { opacity: 1; transform: scale(1.18) rotate(6deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+/* …a halo breathes out from behind it twice… */
+.achtile--new::before {
+  content: '';
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 7px;
-  height: 7px;
+  top: calc(var(--spacing-md) + 13px);
+  left: 50%;
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--tier-glow), transparent 68%);
+  opacity: 0;
+  animation: achtile-halo 1600ms var(--ease-out-expo) 200ms 2 both;
+  pointer-events: none;
+}
+
+@keyframes achtile-halo {
+  0%   { opacity: 0; transform: scale(0.4); }
+  35%  { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.7); }
+}
+
+/* …and one foil sweep crosses the tile (every tier, once — legend keeps its
+   own slow loop). */
+.achtile--new:not(.achtile--legend)::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 35%, oklch(1 0 0 / 0.2) 48%, transparent 60%);
+  background-size: 260% 100%;
+  animation: achtile-sweep 1200ms var(--ease-out-expo) 420ms both;
+  pointer-events: none;
+}
+
+@keyframes achtile-sweep {
+  from { background-position: 160% 0; }
+  to   { background-position: -60% 0; }
+}
+
+.achtile__new {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 1px 6px;
+  font-family: var(--font-heading);
+  font-size: var(--text-3xs, 9px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  /* Every tier's spark is a light metal, in both themes — so the ink is fixed. */
+  color: oklch(0.2 0.02 275);
+  background: var(--tier-spark, var(--accent-bright));
   border-radius: var(--radius-full);
-  background: var(--accent-bright);
-  box-shadow: 0 0 8px var(--accent-glow);
+  box-shadow: 0 0 10px var(--tier-glow, var(--accent-glow));
+  animation: achtile-chip 2.4s ease-in-out 1.2s infinite;
+}
+
+@keyframes achtile-chip {
+  0%, 100% { box-shadow: 0 0 6px var(--tier-glow, var(--accent-glow)); }
+  50%      { box-shadow: 0 0 14px var(--tier-glow, var(--accent-glow)); }
 }
 
 /* ── Progress readout ───────────────────────────────────────────────────── */
@@ -143,12 +220,22 @@ button.achtile:active {
 .achtile__bar-fill {
   display: block;
   height: 100%;
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent-dim), var(--accent-bright));
   border-radius: var(--radius-full);
   transition: width 600ms var(--ease-out-expo);
+  animation: achtile-fill 1000ms var(--ease-out-expo) 150ms both;
+}
+
+@keyframes achtile-fill {
+  from { width: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .achtile--legend::after { animation: none; }
-  .achtile__bar-fill { transition: none; }
+  .achtile--legend::after,
+  .achtile--new::after,
+  .achtile--new::before,
+  .achtile--new .achtile__icon,
+  .achtile__new,
+  .achtile__bar-fill { animation: none; transition: none; }
+  .achtile__icon { transition: none; }
 }

@@ -49,6 +49,14 @@ export type AchievementUnit =
   | 'word' | 'day' | 'session' | 'pack' | 'minute'
   | 'review' | 'weekend' | 'volume' | 'chapter' | 'category'
 
+/** Tier names as shown to the user. */
+export const TIER_LABEL: Record<AchievementTier, string> = {
+  bronze: 'Brąz',
+  silver: 'Srebro',
+  gold: 'Złoto',
+  legend: 'Legenda',
+}
+
 export interface AchievementGroup {
   id: string
   label: string

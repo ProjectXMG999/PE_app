@@ -1,4 +1,5 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { AchievementState, closestToUnlock, recentlyUnlocked } from '../../services/achievements'
 import { ACHIEVEMENT_GROUPS } from '../../data/achievements'
 import { AchievementTile } from './AchievementTile'
@@ -41,6 +42,28 @@ export function AchievementGrid({ states, onSeen }: Props) {
     if (s.isNew) onSeen?.([s.achievement.id])
   }
 
+  // Arriving from a badge notification: bring the cabinet into view and open
+  // that badge. The id is then cleared from history, so going back or
+  // refreshing doesn't pop the sheet open a second time.
+  const location = useLocation()
+  const navigate = useNavigate()
+  const rootRef = useRef<HTMLDivElement>(null)
+  const focusId = (location.state as { badge?: string } | null)?.badge
+  const openTimer = useRef<number>()
+  useEffect(() => () => window.clearTimeout(openTimer.current), [])
+  useEffect(() => {
+    if (!focusId) return
+    const target = states.find(s => s.achievement.id === focusId)
+    if (!target) return
+    // Clearing the state re-renders without focusId — so the timer below is
+    // not tied to this effect's cleanup, only to unmount.
+    navigate({ hash: location.hash }, { replace: true, state: null })
+    rootRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    // Let the scroll settle before the sheet covers it.
+    openTimer.current = window.setTimeout(() => open(target), 350)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focusId, states])
+
   const grouped = useMemo(() => {
     return ACHIEVEMENT_GROUPS
       .map(g => ({ group: g, items: states.filter(s => s.achievement.group === g.id) }))
@@ -48,7 +71,7 @@ export function AchievementGrid({ states, onSeen }: Props) {
   }, [states])
 
   return (
-    <div className="achgrid">
+    <div className="achgrid" id="odznaki" ref={rootRef}>
       <header className="achgrid__header">
         <h2 className="achgrid__title">Odznaki</h2>
         <span className="achgrid__count">

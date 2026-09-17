@@ -14,6 +14,8 @@
 }
 
 .achsheet__inner {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +29,7 @@
 }
 
 .achsheet__handle {
+  position: relative;
   width: 36px;
   height: 4px;
   margin-bottom: var(--spacing-lg);
@@ -34,7 +37,44 @@
   background: var(--border);
 }
 
+/* ── Medallion ────────────────────────────────────────────────────────────
+   The icon sits on a disc inside a metal rim (the tier's --tier-ring). An
+   earned badge also gets slow light rays turning behind it, and one glint
+   travelling round the rim as the sheet opens. */
+.achsheet__medal {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 132px;
+  height: 132px;
+  margin: -12px 0 -24px;
+}
+
+.achsheet__medal--unlocked::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: repeating-conic-gradient(from 0deg, var(--tier-glow) 0 8deg, transparent 8deg 30deg);
+  -webkit-mask: radial-gradient(circle, #000 22%, transparent 70%);
+  mask: radial-gradient(circle, #000 22%, transparent 70%);
+  opacity: 0.8;
+  animation:
+    achsheet-rays-in 700ms var(--ease-out-expo) 120ms both,
+    achsheet-rays-spin 24s linear infinite;
+}
+
+@keyframes achsheet-rays-in {
+  from { opacity: 0; scale: 0.5; }
+  to   { opacity: 0.8; scale: 1; }
+}
+
+@keyframes achsheet-rays-spin {
+  to { rotate: 1turn; }
+}
+
 .achsheet__icon {
+  position: relative;
   display: grid;
   place-items: center;
   width: 84px;
@@ -43,7 +83,13 @@
   border-radius: var(--radius-full);
   background: var(--bg-card);
   border: 2px solid var(--border);
-  animation: bounceIn 420ms var(--ease-spring);
+  animation: achsheet-medal-in 620ms var(--ease-spring) both;
+}
+
+@keyframes achsheet-medal-in {
+  0%   { opacity: 0; transform: scale(0.5) rotate(-24deg); }
+  60%  { opacity: 1; transform: scale(1.06) rotate(4deg); }
+  100% { transform: scale(1) rotate(0); }
 }
 
 .achsheet__icon--locked {
@@ -51,14 +97,50 @@
   opacity: 0.4;
 }
 
-.achsheet__icon--bronze { border-color: #B87333; }
-.achsheet__icon--silver { border-color: #9CA3AF; }
-.achsheet__icon--gold   { border-color: var(--points-gold); }
-.achsheet__icon--legend {
-  border-color: transparent;
+.achsheet__medal--unlocked .achsheet__icon {
+  border: 3px solid transparent;
   background:
-    linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
-    linear-gradient(135deg, #7C3AED, #F5C451, #22C55E, #3B82F6) border-box;
+    radial-gradient(circle at 50% 35%, color-mix(in oklch, var(--tier-spark) 14%, var(--bg-card)), var(--bg-card) 70%) padding-box,
+    var(--tier-ring) border-box;
+  box-shadow: 0 0 32px var(--tier-glow), inset 0 2px 8px oklch(0 0 0 / 0.2);
+}
+
+.achsheet__medal--unlocked .achsheet__icon::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0 72%, oklch(1 0 0 / 0.7) 82%, transparent 92%);
+  -webkit-mask: radial-gradient(circle, transparent 38px, #000 39px);
+  mask: radial-gradient(circle, transparent 38px, #000 39px);
+  animation: achsheet-glint 1500ms var(--ease-out-expo) 380ms both;
+  pointer-events: none;
+}
+
+@keyframes achsheet-glint {
+  from { transform: rotate(-140deg); opacity: 1; }
+  to   { transform: rotate(220deg); opacity: 0; }
+}
+
+.achsheet__new {
+  position: relative;
+  margin: var(--spacing-md) 0 -6px;
+  padding: 3px 10px;
+  font-family: var(--font-heading);
+  font-size: var(--text-2xs);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tier-spark);
+  border: 1px solid color-mix(in oklch, var(--tier-spark) 40%, transparent);
+  border-radius: var(--radius-full);
+  background: color-mix(in oklch, var(--tier-spark) 10%, transparent);
+  animation: slideUp 420ms var(--ease-out-expo) 260ms both;
+}
+
+.achsheet__confetti {
+  z-index: 0;
+  border-radius: inherit;
 }
 
 .achsheet__group {
@@ -127,9 +209,15 @@
 
 .achsheet__bar-fill {
   height: 100%;
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent-dim), var(--accent-bright));
   border-radius: var(--radius-full);
   transition: width 600ms var(--ease-out-expo);
+  /* Fills from empty as the sheet opens — the distance left is the point. */
+  animation: achsheet-fill 900ms var(--ease-out-expo) 200ms both;
+}
+
+@keyframes achsheet-fill {
+  from { width: 0; }
 }
 
 .achsheet__close {
@@ -162,7 +250,11 @@
 
 @media (prefers-reduced-motion: reduce) {
   .achsheet__inner,
-  .achsheet__icon {
+  .achsheet__icon,
+  .achsheet__icon::after,
+  .achsheet__new,
+  .achsheet__bar-fill,
+  .achsheet__medal--unlocked::before {
     animation: none;
   }
 

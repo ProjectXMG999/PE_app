@@ -1,5 +1,6 @@
 import { AchievementState } from '../../services/achievements'
 import { unitLabel } from '../../data/achievements'
+import './tiers.css'
 import './AchievementTile.css'
 
 interface Props {
@@ -30,15 +31,15 @@ export function AchievementTile({ state, onClick, showProgress }: Props) {
       type={onClick ? 'button' : undefined}
       className={[
         'achtile',
-        unlocked ? `achtile--unlocked achtile--${a.tier}` : 'achtile--locked',
+        unlocked ? `achtile--unlocked achtile--${a.tier} tier-${a.tier}` : 'achtile--locked',
         isNew ? 'achtile--new' : '',
       ].filter(Boolean).join(' ')}
       onClick={onClick ? () => onClick(state) : undefined}
       aria-label={`${a.title} — ${unlocked
-        ? 'zdobyte'
+        ? (isNew ? 'nowa, zdobyta' : 'zdobyte')
         : `${formatValue(value)} z ${formatValue(a.threshold)} ${unitLabel(a.unit, a.threshold)}`}`}
     >
-      {isNew && <span className="achtile__new-dot" aria-hidden="true" />}
+      {isNew && <span className="achtile__new">Nowa</span>}
 
       <span className="achtile__icon" aria-hidden="true">{a.icon}</span>
       <span className="achtile__title">{a.title}</span>

@@ -1,18 +1,14 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AchievementState } from '../../services/achievements'
-import { ACHIEVEMENT_GROUPS, unitLabel } from '../../data/achievements'
+import { ACHIEVEMENT_GROUPS, TIER_LABEL, unitLabel } from '../../data/achievements'
+import { Confetti } from '../shared/Confetti'
+import { playUnlock } from '../../services/sfx'
+import './tiers.css'
 import './AchievementSheet.css'
 
 interface Props {
   state: AchievementState
   onClose: () => void
-}
-
-const TIER_LABEL: Record<string, string> = {
-  bronze: 'Brąz',
-  silver: 'Srebro',
-  gold: 'Złoto',
-  legend: 'Legenda',
 }
 
 /**
@@ -21,11 +17,19 @@ const TIER_LABEL: Record<string, string> = {
  */
 export function AchievementSheet({ state, onClose }: Props) {
   const ref = useRef<HTMLDialogElement>(null)
-  const { achievement: a, unlocked, value, pct, unlockedAt } = state
+  const { achievement: a, unlocked, value, pct, unlockedAt, isNew } = state
+  // Captured on open: the parent marks the badge seen the moment it opens, and
+  // the celebration must not vanish on that re-render.
+  const [celebrate] = useState(() => unlocked && isNew === true)
   const group = ACHIEVEMENT_GROUPS.find(g => g.id === a.group)
 
   useEffect(() => {
     ref.current?.showModal()
+    if (celebrate) {
+      playUnlock(a.tier)
+      navigator.vibrate?.([8, 40, 12])
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -37,15 +41,17 @@ export function AchievementSheet({ state, onClose }: Props) {
         if (e.target === ref.current) ref.current?.close()
       }}
     >
-      <div className="achsheet__inner">
+      <div className={`achsheet__inner${unlocked ? ` tier-${a.tier}` : ''}`}>
+        {celebrate && <Confetti bursts={[[46, 140], [28, 520]]} className="achsheet__confetti" />}
         <span className="achsheet__handle" aria-hidden="true" />
 
-        <span
-          className={`achsheet__icon${unlocked ? ` achsheet__icon--${a.tier}` : ' achsheet__icon--locked'}`}
-          aria-hidden="true"
-        >
-          {a.icon}
+        <span className={`achsheet__medal${unlocked ? ' achsheet__medal--unlocked' : ''}`} aria-hidden="true">
+          <span className={`achsheet__icon${unlocked ? ` achsheet__icon--${a.tier}` : ' achsheet__icon--locked'}`}>
+            {a.icon}
+          </span>
         </span>
+
+        {celebrate && <p className="achsheet__new">Nowa odznaka</p>}
 
         <p className="achsheet__group">
           {group?.label ?? ''} · {TIER_LABEL[a.tier] ?? a.tier}

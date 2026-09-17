@@ -1,0 +1,38 @@
+/* =============================================================================
+ * BADGE TIERS — one metal per tier, shared by every surface that shows a badge
+ * (the cabinet tile, the detail sheet, the unlock notification), so a gold
+ * badge is the same gold wherever it appears.
+ *
+ *   --tier-rim    the metallic border gradient
+ *   --tier-ring   the same metal as a conic sweep (medallion rims, rays)
+ *   --tier-glow   a soft halo colour for glows and sparks
+ *   --tier-spark  the brightest stop — particle and highlight colour
+ * ========================================================================== */
+
+.tier-bronze {
+  --tier-rim: linear-gradient(135deg, #B87333, #E8A87C, #8C5A2B);
+  --tier-ring: conic-gradient(from 210deg, #8C5A2B, #E8A87C, #B87333, #F2C39E, #8C5A2B);
+  --tier-glow: oklch(0.7 0.11 55 / 0.45);
+  --tier-spark: #F2C39E;
+}
+
+.tier-silver {
+  --tier-rim: linear-gradient(135deg, #9CA3AF, #E5E7EB, #6B7280);
+  --tier-ring: conic-gradient(from 210deg, #6B7280, #F3F4F6, #9CA3AF, #E5E7EB, #6B7280);
+  --tier-glow: oklch(0.85 0.01 260 / 0.42);
+  --tier-spark: #F3F4F6;
+}
+
+.tier-gold {
+  --tier-rim: linear-gradient(135deg, #B7791F, var(--points-gold), #92610F);
+  --tier-ring: conic-gradient(from 210deg, #92610F, #FCD34D, #B7791F, #FDE68A, #92610F);
+  --tier-glow: oklch(0.82 0.14 85 / 0.5);
+  --tier-spark: #FDE68A;
+}
+
+.tier-legend {
+  --tier-rim: linear-gradient(135deg, #7C3AED, #F5C451, #22C55E, #3B82F6, #7C3AED);
+  --tier-ring: conic-gradient(from 210deg, #7C3AED, #F5C451, #22C55E, #3B82F6, #7C3AED);
+  --tier-glow: oklch(0.72 0.17 292 / 0.55);
+  --tier-spark: #F5C451;
+}

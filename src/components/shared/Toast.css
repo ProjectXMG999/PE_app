@@ -1,43 +1,89 @@
-.toast {
+/* =============================================================================
+ * TOAST — milestones, confirmations and newly earned badges.
+ * -----------------------------------------------------------------------------
+ * Motion lives in Toast.tsx (framer-motion: the spring entrance, the flick to
+ * dismiss). This file is the material and the one-shot flourishes that don't
+ * need JS: the spark ring, the foil sweep, the medallion rim, the timer line.
+ * ========================================================================== */
+
+/* The positioning layer. Full-width and click-through, so the toast itself can
+   be centred and dragged freely — framer owns the toast's transform, which
+   would otherwise fight a translateX(-50%) centring trick. */
+.toast-layer {
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  /* Clears the bottom nav on mobile; the nav is hidden on desktop but the extra
-     inset is harmless there. */
+  left: 0;
+  right: 0;
+  /* Clears the bottom nav on mobile. */
   bottom: calc(var(--bottomnav-reserve) + var(--spacing-sm));
   z-index: 200;
+  display: flex;
+  justify-content: center;
+  padding-inline: var(--spacing-md);
+  pointer-events: none;
+}
 
+@media (min-width: 1024px) {
+  .toast-layer {
+    bottom: var(--spacing-xl);
+    /* Centred on the content column, not the window — the sidebar is chrome. */
+    left: var(--sidebar-width);
+  }
+}
+
+.toast {
+  --toast-accent: var(--accent);
+
+  position: relative;
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  max-width: min(92vw, 420px);
-  padding: 12px var(--spacing-md);
+  gap: 12px;
+  width: max-content;
+  max-width: min(100%, 440px);
+  padding: 12px 16px 13px 14px;
+  pointer-events: auto;
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  outline: none;
 
-  background: var(--bg-card);
-  border: 1px solid var(--border-accent);
-  /* Not a pill: these messages routinely wrap to two or three lines, and a
-     fully-rounded block reads as a lozenge with the text crammed inside. */
+  /* Frosted, like the rest of the app's floating chrome. */
+  background: var(--glass-bg-strong);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  border: 1px solid var(--border-strong);
+  /* Not a pill: these messages routinely wrap to two lines, and a fully
+     rounded block reads as a lozenge with the text crammed inside. */
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  cursor: pointer;
-
-  animation: toast-in 320ms var(--ease-spring);
+  box-shadow:
+    var(--shadow-lg),
+    inset 0 1px 0 oklch(1 0 0 / 0.06);
+  /* Not overflow:hidden — the spark ring is allowed past the edge. The sheen
+     below stays inside by being its own rounded box. */
+  isolation: isolate;
 }
 
-.toast--leaving {
-  animation: toast-out 300ms ease forwards;
+.toast:active { cursor: grabbing; }
+
+.toast:focus-visible {
+  box-shadow: var(--shadow-lg), 0 0 0 2px var(--toast-accent);
 }
 
-.toast--celebrate {
-  border-color: var(--points-gold);
-  box-shadow: var(--shadow-lg), 0 0 24px color-mix(in oklch, var(--points-gold) 35%, transparent);
+/* ── Note ──────────────────────────────────────────────────────────────── */
+
+.toast__icon-wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 26px;
+  height: 22px;
 }
 
 .toast__icon {
   font-size: 18px;
-  line-height: 1.35;
-  flex-shrink: 0;
-  align-self: flex-start;
+  line-height: 1;
 }
 
 .toast__text {
@@ -46,25 +92,231 @@
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.35;
+  text-wrap: pretty;
 }
 
-@keyframes toast-in {
-  from { opacity: 0; transform: translate(-50%, 20px) scale(0.94); }
-  to   { opacity: 1; transform: translate(-50%, 0) scale(1); }
+/* ── Celebrate: gold rim, a halo, one foil sweep ───────────────────────── */
+
+.toast--celebrate.toast--note {
+  --toast-accent: var(--points-gold);
+  border-color: color-mix(in oklch, var(--points-gold) 60%, transparent);
+  box-shadow:
+    var(--shadow-lg),
+    0 0 28px color-mix(in oklch, var(--points-gold) 28%, transparent),
+    inset 0 1px 0 oklch(1 0 0 / 0.08);
 }
 
-@keyframes toast-out {
-  from { opacity: 1; transform: translate(-50%, 0); }
-  to   { opacity: 0; transform: translate(-50%, 12px); }
+.toast--celebrate::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    color-mix(in oklch, var(--toast-accent) 22%, transparent) 46%,
+    oklch(1 0 0 / 0.14) 50%,
+    color-mix(in oklch, var(--toast-accent) 22%, transparent) 54%,
+    transparent 70%
+  );
+  background-size: 250% 100%;
+  background-position: 130% 0;
+  animation: toast-sheen 1100ms var(--ease-out-expo) 260ms both;
+  pointer-events: none;
+}
+
+@keyframes toast-sheen {
+  to { background-position: -30% 0; }
+}
+
+/* ── Sparks: a ring thrown out from the icon, once ─────────────────────── */
+
+.toast__sparks {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.toast__sparks i {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--tier-spark, var(--points-gold));
+  box-shadow: 0 0 6px var(--tier-glow, color-mix(in oklch, var(--points-gold) 60%, transparent));
+  opacity: 0;
+  animation: toast-spark 720ms cubic-bezier(0.2, 0.7, 0.3, 1) var(--delay) both;
+}
+
+.toast__sparks i:nth-child(3n) {
+  background: var(--accent-bright);
+  width: 3px;
+  height: 3px;
+}
+
+@keyframes toast-spark {
+  0%   { opacity: 0; transform: rotate(var(--angle)) translateX(4px) scale(0.4); }
+  18%  { opacity: 1; }
+  100% { opacity: 0; transform: rotate(var(--angle)) translateX(var(--reach)) scale(0); }
+}
+
+/* ── Achievement ───────────────────────────────────────────────────────── */
+
+.toast--achievement {
+  --toast-accent: var(--tier-spark);
+  gap: 14px;
+  padding: 12px 14px 14px 12px;
+  cursor: pointer;
+  border-color: transparent;
+  background:
+    /* Opaque inside the rim: over glass, a rainbow legend rim bleeds through
+       and muddies the whole card. */
+    linear-gradient(var(--bg-surface), var(--bg-surface)) padding-box,
+    var(--tier-rim) border-box;
+  box-shadow:
+    var(--shadow-lg),
+    0 0 34px var(--tier-glow),
+    inset 0 1px 0 oklch(1 0 0 / 0.08);
+}
+
+.toast__medal-wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+/* A metal rim that spins up into place, with the icon on an inner disc. */
+.toast__medal {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--tier-ring);
+  box-shadow: 0 0 18px var(--tier-glow);
+}
+
+.toast__medal::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  box-shadow: inset 0 2px 6px oklch(0 0 0 / 0.25);
+}
+
+/* One slow rotation of the rim — reads as the metal catching light. */
+.toast__medal::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0 70%, oklch(1 0 0 / 0.55) 80%, transparent 90%);
+  -webkit-mask: radial-gradient(circle, transparent 19px, #000 20px);
+  mask: radial-gradient(circle, transparent 19px, #000 20px);
+  animation: toast-rim 1400ms var(--ease-out-expo) 180ms both;
+}
+
+@keyframes toast-rim {
+  from { transform: rotate(-120deg); opacity: 1; }
+  to   { transform: rotate(240deg); opacity: 0; }
+}
+
+.toast__medal-icon {
+  position: relative;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.toast__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.toast__kicker {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.toast__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.tier-gold .toast__title,
+.tier-legend .toast__title {
+  color: var(--points-gold);
+}
+
+.toast__desc {
+  font-size: var(--text-xs);
+  line-height: 1.35;
+  color: var(--text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.toast__more {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.toast__chevron {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  margin-left: 2px;
+}
+
+/* ── Timer: a hairline that drains while the toast is up ───────────────── */
+
+.toast__timer {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 5px;
+  height: 2px;
+  border-radius: var(--radius-full);
+  background: color-mix(in oklch, var(--toast-accent) 55%, transparent);
+  opacity: 0.55;
+  transform-origin: left center;
+  animation-name: toast-timer;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes toast-timer {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(0); }
+}
+
+/* ── Reduced motion: it appears and goes; nothing flies ────────────────── */
+
+.toast--reduced::after,
+.toast--reduced .toast__medal::after {
+  animation: none;
+  opacity: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .toast,
-  .toast--leaving {
-    animation: none;
-  }
-
-  .toast--leaving {
-    opacity: 0;
-  }
+  .toast__sparks { display: none; }
+  .toast__timer { animation: none; opacity: 0; }
 }
