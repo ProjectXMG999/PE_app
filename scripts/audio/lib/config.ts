@@ -9,6 +9,7 @@ export const AUDIO_OUT_DIR = path.join(ROOT, 'audio-output')
 
 export interface Config {
   packIds?: Set<string>
+  wordIds?: Set<string> // when set (via --ids-file), further narrows scope to these exact words within packIds
   level?: number
   limit: number
   concurrency: number
@@ -34,10 +35,15 @@ export function loadConfig(): Config {
   const all = Boolean(args.all)
   const level = args.level !== undefined ? Number(args.level) : undefined
   let packIds: Set<string> | undefined
+  let wordIds: Set<string> | undefined
   if (args.packs) packIds = new Set(String(args.packs).split(',').map((s) => s.trim()).filter(Boolean))
   if (args['ids-file']) {
     const raw = JSON.parse(fs.readFileSync(path.resolve(ROOT, String(args['ids-file'])), 'utf-8')) as string[]
+    wordIds = new Set(raw)
     // ids-file holds WORD ids; derive the set of PACK ids that contain them
+    // (packIds narrows which pack files to open — wordIds then narrows to
+    // the exact words within, so a pack that's only partially in scope
+    // doesn't pull in its other words).
     const packSet = new Set<string>()
     for (const wid of raw) packSet.add(wid.split('-').slice(0, 2).join('-'))
     packIds = packSet
@@ -45,6 +51,7 @@ export function loadConfig(): Config {
   const defaultLimit = all || packIds || level !== undefined ? Infinity : 20
   return {
     packIds,
+    wordIds,
     level,
     limit: args.limit !== undefined ? Number(args.limit) : defaultLimit,
     concurrency: args.concurrency !== undefined ? Number(args.concurrency) : Number(process.env.ELEVENLABS_CONCURRENCY || 3),

@@ -58,7 +58,14 @@ function main() {
       return p.level === config.level
     })
   }
-  packFiles.sort()
+  // Order by true Lp/browse position (packages-index.json), not filename —
+  // pack id numbers don't track true order (e.g. "Kraje" is id t1-p678 but
+  // sits at true position 84). This matters for --limit and any range like
+  // "first 4000 words" to mean what it says.
+  const indexOrder = new Map<string, number>(
+    (JSON.parse(fs.readFileSync(path.join(PACK_DIR, '../packages-index.json'), 'utf-8')) as { id: string }[]).map((e, i) => [e.id, i])
+  )
+  packFiles.sort((a, b) => (indexOrder.get(a.replace('.json', '')) ?? 1e9) - (indexOrder.get(b.replace('.json', '')) ?? 1e9))
   if (Number.isFinite(config.limit)) {
     // limit by WORDS, not packs — trim the pack list down to roughly that many words
     let words = 0
@@ -82,6 +89,7 @@ function main() {
 
   for (const { pack } of packsData) {
     for (const w of pack.words) {
+      if (config.wordIds && !config.wordIds.has(w.id)) { wordIndex++; continue }
       const plVoice = PL_VOICES[wordIndex % PL_VOICES.length]
       const enVoice = EN_VOICES[wordIndex % EN_VOICES.length]
       wordIndex++
