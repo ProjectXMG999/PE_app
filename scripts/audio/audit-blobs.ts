@@ -116,6 +116,7 @@ async function main() {
 
   if (args.out) {
     const outPath = path.resolve(ROOT, String(args.out))
+    fs.mkdirSync(path.dirname(outPath), { recursive: true })
     fs.writeFileSync(outPath, JSON.stringify({ byKind, missing, suspiciouslySmall, unexpected }, null, 2))
     console.log(`\nFull report written to ${path.relative(ROOT, outPath)}`)
   } else {
