@@ -95,7 +95,7 @@ export default defineConfig({
         name: 'Project English',
         short_name: 'PE',
         description: 'Ucz się angielskiego offline — fiszki i auto-play',
-        start_url: '/',
+        start_url: '/dzis',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#010102',

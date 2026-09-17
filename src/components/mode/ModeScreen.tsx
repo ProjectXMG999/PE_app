@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../layout/AppShell'
 import { fadeUp, fadeUpReduced, staggerContainer } from '../today/motion'
 import { noOrphans } from '../../utils/typography'
+import { useBack } from '../../navigation/navigation'
 import './ModeScreen.css'
 
 /**
@@ -29,11 +30,13 @@ interface ScreenProps {
   facts?: ReactNode
   /** One sentence on what the choice below actually decides. */
   lead?: string
-  onBack: () => void
   children: ReactNode
 }
 
-export function ModeScreen({ tone, kicker, title, facts, lead, onBack, children }: ScreenProps) {
+export function ModeScreen({ tone, kicker, title, facts, lead, children }: ScreenProps) {
+  // Back leads wherever the chooser was opened from — the pack page, or
+  // straight back to Dzisiaj when it launched this pack directly.
+  const { goBack, label, backLabel } = useBack()
   const reduced = useReducedMotion()
   const item = reduced ? fadeUpReduced : fadeUp
 
@@ -46,11 +49,11 @@ export function ModeScreen({ tone, kicker, title, facts, lead, onBack, children 
         animate="show"
       >
         <motion.div className="modescreen__nav" variants={item}>
-          <button type="button" className="modescreen__back" onClick={onBack}>
+          <button type="button" className="modescreen__back" onClick={() => goBack()} aria-label={backLabel}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="15 18 9 12 15 6" />
             </svg>
-            <span>Pakiet</span>
+            <span>{label}</span>
           </button>
         </motion.div>
 

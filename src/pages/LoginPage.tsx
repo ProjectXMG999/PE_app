@@ -1,5 +1,6 @@
 import { FormEvent, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { HOME } from '../navigation/navigation'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
 import { fadeUp, fadeUpReduced, staggerContainer } from '../components/today/motion'
@@ -24,6 +25,13 @@ const SUBTITLES: Record<Mode, string> = {
 
 export function LoginPage() {
   const navigate = useNavigate()
+  const location = useLocation()
+  // Set by RequireEntitlement when it bounced you here. Only in-app paths —
+  // never a protocol-relative '//host' handed in through history state.
+  const gate = location.state as { returnTo?: unknown; returnState?: unknown } | null
+  const returnTo = typeof gate?.returnTo === 'string' && gate.returnTo.startsWith('/') && !gate.returnTo.startsWith('//')
+    ? gate.returnTo
+    : null
   const reduced = useReducedMotion()
   const { theme, toggleTheme } = useAppStore()
   const resolved = resolveTheme(theme)
@@ -44,7 +52,10 @@ export function LoginPage() {
       if (mode === 'signin') {
         const { error: err } = await supabase!.auth.signInWithPassword({ email, password })
         if (err) throw err
-        navigate('/konto')
+        // Back to the page you were stopped at; the gate there sends you on to
+        // Konto by itself if the account has no access yet.
+        if (returnTo) navigate(returnTo, { replace: true, state: gate?.returnState })
+        else navigate('/konto')
       } else if (mode === 'signup') {
         const { error: err } = await supabase!.auth.signUp({ email, password })
         if (err) throw err
@@ -77,7 +88,7 @@ export function LoginPage() {
           animate="show"
         >
           <motion.div className="login__brand" variants={variants}>
-            <button className="login__brand-mark" onClick={() => navigate('/')} aria-label="Progress — strona główna">
+            <button className="login__brand-mark" onClick={() => navigate(HOME)} aria-label="Progress — strona główna">
               <ProgressLogo size={30} />
             </button>
             <motion.button

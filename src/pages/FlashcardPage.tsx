@@ -1,5 +1,6 @@
 import { useEffect, useRef, useCallback, useState } from 'react'
-import { useParams, useNavigate, useLocation } from 'react-router-dom'
+import { useParams, useLocation } from 'react-router-dom'
+import { useAppNavigate, useBack } from '../navigation/navigation'
 import { AppShell } from '../components/layout/AppShell'
 import { FlashcardHeader } from '../components/flashcard/FlashcardHeader'
 import { FlashCard } from '../components/flashcard/FlashCard'
@@ -38,7 +39,10 @@ function getNextPack(currentId: string): PackMeta | null {
 
 export function FlashcardPage() {
   const { packageId, mode } = useParams<{ packageId: string; mode: string }>()
-  const navigate = useNavigate()
+  const navigate = useAppNavigate()
+  // Leaving the session goes back to wherever it was launched from — Dzisiaj,
+  // the pack page — not to a fixed parent.
+  const { goBack: leave, label: backTo, backLabel } = useBack()
   const location = useLocation()
   const studyMode = (mode === 'autoplay' ? 'autoplay' : 'fiszki') as StudyMode
 
@@ -377,8 +381,8 @@ export function FlashcardPage() {
       masteredAt: now,
       currentIndex: allWords.length,
     })
-    navigate(packageId ? `/pakiet/${packageId}` : '/')
-  }, [packageId, allWords, navigate])
+    leave()
+  }, [packageId, allWords, leave])
 
   const handleRepeat = useCallback(() => {
     stop()
@@ -395,7 +399,7 @@ export function FlashcardPage() {
   }, [reset, stop, allWords, restart])
 
   const handleNextPack = useCallback(() => {
-    if (nextPack) navigate(`/pakiet/${nextPack.id}/${studyMode}`)
+    if (nextPack) navigate(`/pakiet/${nextPack.id}/${studyMode}`, { step: 'sideways' })
   }, [nextPack, studyMode, navigate])
 
   // Countdown timer on completion screen — autoplay only
@@ -457,7 +461,7 @@ export function FlashcardPage() {
       <AppShell hideBottomNav hideSidebar={false}>
         <div className="flashcard-page__error">
           <p>Nie udało się załadować paczki</p>
-          <button onClick={() => navigate('/')}>Wróć</button>
+          <button onClick={() => leave()}>{backLabel}</button>
         </div>
       </AppShell>
     )
@@ -479,7 +483,7 @@ export function FlashcardPage() {
       <AppShell hideBottomNav hideSidebar={false}>
         <div className="flashcard-page__error">
           <p>Nie udało się załadować paczki</p>
-          <button onClick={() => navigate('/')}>Wróć</button>
+          <button onClick={() => leave()}>{backLabel}</button>
         </div>
       </AppShell>
     )
@@ -499,7 +503,7 @@ export function FlashcardPage() {
           onRepeat={handleRepeat}
           onNext={nextPack ? handleNextPack : null}
           nextPackName={nextPack?.name}
-          onExit={() => navigate('/')}
+          onExit={() => leave()}
         />
       )
     }
@@ -547,18 +551,18 @@ export function FlashcardPage() {
                   <span className="completion__btn-icon">▶</span>
                 </button>
               ) : (
-                <button className="completion__btn completion__btn--next" onClick={() => navigate('/')}>
+                <button className="completion__btn completion__btn--next" onClick={() => leave()}>
                   <span className="completion__btn-body">
-                    <span className="completion__btn-label">Lista paczek</span>
-                    <span className="completion__btn-sub">Wróć do menu</span>
+                    <span className="completion__btn-label">{backTo}</span>
+                    <span className="completion__btn-sub">Zakończ sesję</span>
                   </span>
                   <span className="completion__btn-icon">⌂</span>
                 </button>
               )}
             </div>
 
-            <button className="completion__exit" onClick={() => navigate('/')}>
-              Zakończ i wróć do menu
+            <button className="completion__exit" onClick={() => leave()}>
+              {backLabel}
             </button>
           </div>
         </div>
@@ -583,7 +587,7 @@ export function FlashcardPage() {
         onNext={nextPack ? handleNextPack : null}
         onPractice={() => navigate(`/pakiet/${packageId}/word-flash`)}
         onMastered={handleMastered}
-        onExit={() => navigate('/')}
+        onExit={() => leave()}
       />
     )
   }
@@ -610,8 +614,8 @@ export function FlashcardPage() {
           kicker={<>Słuchaj · {AUTOPLAY_MODES[autoplayMode].label}</>}
           packageId={packageId}
           counter={`${currentCardIndex + 1} / ${total}`}
-          onExit={() => navigate(packageId ? `/pakiet/${packageId}` : '/')}
-          exitLabel="Wróć do pakietu"
+          onExit={() => leave()}
+          exitLabel={backLabel}
         />
 
         <div className="stage__rail">

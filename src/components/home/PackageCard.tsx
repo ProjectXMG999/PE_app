@@ -1,5 +1,6 @@
 import { MouseEvent, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useAppNavigate } from '../../navigation/navigation'
 import { PackMeta } from '../../types/vocabulary'
 import { useAuthStore } from '../../store/useAuthStore'
 import { usePackWords } from '../../hooks/usePackWords'
@@ -66,6 +67,7 @@ const RELATION_META: Record<PackMemory['relation'], { label: string; cls: string
  */
 export function PackageCard({ pack, memory, heardPct = 0, isFrontier, prevNum, index = 0 }: Props) {
   const navigate = useNavigate()
+  const openFlow = useAppNavigate()
   const { user, hasAccess: hasAccessFn } = useAuthStore()
   const hasAccess = hasAccessFn()
   const numRef = useRef<HTMLSpanElement>(null)
@@ -86,7 +88,10 @@ export function PackageCard({ pack, memory, heardPct = 0, isFrontier, prevNum, i
   // unentitled ones go to the account page.
   function open(e: MouseEvent) {
     e.preventDefault()
-    if (!hasAccess) { navigate(user ? '/konto' : '/logowanie'); return }
+    if (!hasAccess) {
+      navigate(user ? '/konto' : '/logowanie', user ? undefined : { state: { returnTo: `/pakiet/${pack.id}` } })
+      return
+    }
     // Name the mark only for the click that's actually navigating — 864
     // permanently-named elements would make every view transition expensive.
     const el = numRef.current
@@ -94,7 +99,7 @@ export function PackageCard({ pack, memory, heardPct = 0, isFrontier, prevNum, i
       el.style.viewTransitionName = 'pack-mark'
       window.setTimeout(() => { el.style.viewTransitionName = '' }, 600)
     }
-    navigate(`/pakiet/${pack.id}`)
+    openFlow(`/pakiet/${pack.id}`)
   }
 
   return (

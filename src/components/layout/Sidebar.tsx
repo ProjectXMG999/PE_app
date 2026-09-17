@@ -1,9 +1,10 @@
 import { useRef } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useAppStore, resolveTheme } from '../../store/useAppStore'
 import { useAuthStore } from '../../store/useAuthStore'
-import { NAV_ITEMS, getActiveNavItem } from './navItems'
+import { NAV_ITEMS } from './navItems'
+import { HOME, useActiveHub } from '../../navigation/navigation'
 import { NavIndicator } from './NavIndicator'
 import { SidebarPulse } from './SidebarPulse'
 import { ProgressLogo } from '../brand/ProgressLogo'
@@ -13,12 +14,11 @@ export function Sidebar() {
   const { theme, toggleTheme, devUnlocked, setDevUnlocked } = useAppStore()
   const { user, hasAccess } = useAuthStore()
   const navigate = useNavigate()
-  const location = useLocation()
   const tapsRef = useRef<number[]>([])
 
   const version = import.meta.env.VITE_APP_VERSION || '1.0.0'
   const resolved = resolveTheme(theme)
-  const activeItem = getActiveNavItem(location.pathname)
+  const activeItem = useActiveHub()
 
   function handleVersionTap() {
     const now = Date.now()
@@ -34,7 +34,7 @@ export function Sidebar() {
       <button
         type="button"
         className="sidebar__brand"
-        onClick={() => navigate('/')}
+        onClick={() => navigate(HOME)}
         aria-label="Progress — strona główna"
       >
         <ProgressLogo size={30} />

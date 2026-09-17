@@ -1,4 +1,5 @@
 import { Confetti } from '../shared/Confetti'
+import { useBack } from '../../navigation/navigation'
 import './MasteryScreen.css'
 
 interface Props {
@@ -10,6 +11,8 @@ interface Props {
 }
 
 export function MasteryScreen({ packName, onRepeat, onNext, nextPackName, onExit }: Props) {
+  // Only the wording: the caller decides what onExit does.
+  const { label, backLabel } = useBack()
   return (
     <div className="mastery">
       <Confetti className="mastery__canvas" />
@@ -58,7 +61,7 @@ export function MasteryScreen({ packName, onRepeat, onNext, nextPackName, onExit
                 <path d="m3 10.5 9-7 9 7" />
                 <path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5" />
               </svg>
-              <span>Strona główna</span>
+              <span>{label}</span>
             </button>
           )}
         </div>
@@ -69,7 +72,7 @@ export function MasteryScreen({ packName, onRepeat, onNext, nextPackName, onExit
               <path d="m3 10.5 9-7 9 7" />
               <path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5" />
             </svg>
-            Wróć do strony głównej
+            {backLabel}
           </button>
         )}
       </div>

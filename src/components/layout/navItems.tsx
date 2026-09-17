@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import type { Hub } from '../../navigation/navigation'
 
 /**
  * Calendar-with-today's-dot mark for Dziś.
@@ -17,7 +18,7 @@ export function todayIcon(active = false) {
   )
 }
 
-export const NAV_ITEMS = [
+export const NAV_ITEMS: { path: Hub; label: string; icon: (active: boolean) => ReactNode }[] = [
   {
     // First position, ahead of the library: this is the answer to "what do I do
     // today", which is the question the method is built around.
@@ -26,7 +27,7 @@ export const NAV_ITEMS = [
     icon: (active: boolean): ReactNode => todayIcon(active),
   },
   {
-    path: '/',
+    path: '/pakiety',
     label: 'Pakiety',
     icon: (active: boolean): ReactNode => (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -73,22 +74,3 @@ export const NAV_ITEMS = [
     ),
   },
 ]
-
-export function getActiveNavItem(pathname: string): string {
-  let path: string
-  try {
-    path = decodeURIComponent(pathname)
-  } catch {
-    path = pathname
-  }
-  if (path === '/') return '/'
-  if (path === '/dzis') return '/dzis'
-  // The review and Inteligentny sessions both launch from Dziś, so keep that
-  // tab lit while either is open rather than falling through to '/' (Pakiety).
-  if (path === '/powtorka' || path === '/inteligentny') return '/dzis'
-  if (path === '/trening' || path.startsWith('/trening/')) return '/trening'
-  if (path === '/postęp' || path.startsWith('/postęp/')) return '/postęp'
-  if (path === '/ustawienia' || path.startsWith('/ustawienia/')) return '/ustawienia'
-  if (path.startsWith('/pakiet')) return '/'
-  return '/'
-}

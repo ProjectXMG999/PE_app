@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { useAudio } from '../hooks/useAudio'
 import { useCardFlip } from '../hooks/useCardFlip'
 import { useStudyClock } from '../hooks/useStudyClock'
@@ -18,6 +17,7 @@ import { SmartDoneScreen, SmartSegmentTally } from '../components/smart/SmartDon
 import { LevelUpPrompt } from '../components/today/LevelUpPrompt'
 import { StudyStage } from '../components/flashcard/StudyStage'
 import { plPackets } from '../utils/packVisuals'
+import { useBack } from '../navigation/navigation'
 import './ReviewPage.css'
 
 const EMPTY_TALLY = (): Record<SmartSegment, SmartSegmentTally> => ({
@@ -47,7 +47,9 @@ const measuresRetention = (segment: SmartSegment, progress?: { status: string })
  * comfort-level update.
  */
 export function SmartSessionPage() {
-  const navigate = useNavigate()
+  // Launched from Dzisiaj, so that's where the way out leads — by popping
+  // back to it rather than stacking another copy on top of the session.
+  const { goBack, backLabel } = useBack()
   const { enRate, plRate } = useAppStore()
   const [nonce, setNonce] = useState(0)
   const { steps, packCount, loading, error } = useSmartSession(nonce)
@@ -206,8 +208,8 @@ export function SmartSessionPage() {
           {error ?? 'Wszystko na dziś zrobione — wróć jutro po więcej.'}
         </p>
         <div className="review__state-actions">
-          <button className="review__state-btn review__state-btn--primary u-cta" onClick={() => navigate('/dzis')}>
-            Wróć do Dzisiaj
+          <button className="review__state-btn review__state-btn--primary u-cta" onClick={() => goBack()}>
+            {backLabel}
           </button>
         </div>
       </div>
@@ -222,7 +224,7 @@ export function SmartSessionPage() {
           comfortBefore={comfortBefore}
           comfortAfter={comfortAfter}
           onRepeat={handleRepeat}
-          onExit={() => navigate('/dzis')}
+          onExit={() => goBack()}
         />
         {levelUpTarget != null && (
           <LevelUpPrompt
@@ -251,8 +253,8 @@ export function SmartSessionPage() {
       packageId={card?.packageId}
       counter={`${Math.min(cardsBefore + 1, cardTotal)} / ${cardTotal}`}
       rail={<SmartProgressRail steps={steps} stepIndex={stepIndex} />}
-      onExit={() => { stop(); navigate('/dzis') }}
-      exitLabel="Wróć do Dzisiaj"
+      onExit={() => { stop(); goBack() }}
+      exitLabel={backLabel}
       cardKey={stepIndex}
       polish={card?.word.polish ?? ''}
       english={card?.word.english ?? ''}

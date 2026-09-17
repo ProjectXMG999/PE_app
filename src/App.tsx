@@ -1,5 +1,5 @@
 import { Suspense, lazy, useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useRegisterSW } from 'virtual:pwa-register/react'
 import { useAppStore, resolveTheme } from './store/useAppStore'
 import { initAuthListener } from './store/useAuthStore'
@@ -15,10 +15,13 @@ import './debug/devAutoLogin'
 import { DebugOverlay } from './components/debug/DebugOverlay'
 import { RequireEntitlement } from './components/auth/RequireEntitlement'
 import { ToastHost } from './components/shared/ToastHost'
+import { AchievementWatcher } from './components/progress/AchievementWatcher'
 import { AmbientBackground } from './components/ambient/AmbientBackground'
-import { HomePage } from './pages/HomePage'
+import { TodayPage } from './pages/TodayPage'
+import { HOME, NavigationTracker } from './navigation/navigation'
 import './App.css'
 
+const HomePage = lazy(() => import('./pages/HomePage').then(m => ({ default: m.HomePage })))
 const FlashcardPage = lazy(() => import('./pages/FlashcardPage').then(m => ({ default: m.FlashcardPage })))
 const StatsPage = lazy(() => import('./pages/StatsPage').then(m => ({ default: m.StatsPage })))
 const TrainingPage = lazy(() => import('./pages/TrainingPage').then(m => ({ default: m.TrainingPage })))
@@ -31,7 +34,6 @@ const ActiveSentencePage = lazy(() => import('./pages/ActiveSentencePage').then(
 const SettingsPage = lazy(() => import('./pages/SettingsPage').then(m => ({ default: m.SettingsPage })))
 const LoginPage = lazy(() => import('./pages/LoginPage').then(m => ({ default: m.LoginPage })))
 const AccountPage = lazy(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage })))
-const TodayPage = lazy(() => import('./pages/TodayPage').then(m => ({ default: m.TodayPage })))
 const ReviewPage = lazy(() => import('./pages/ReviewPage').then(m => ({ default: m.ReviewPage })))
 const SmartSessionPage = lazy(() => import('./pages/SmartSessionPage').then(m => ({ default: m.SmartSessionPage })))
 
@@ -113,6 +115,7 @@ export function App() {
       {/* Mounted once, above <Routes> — see AmbientBackground's doc comment for
           why it must not live inside the per-page AppShell. */}
       <AmbientBackground />
+      <NavigationTracker />
       {needRefresh[0] && import.meta.env.PROD && (
         <div className="sw-update-toast">
           <span>Dostępna aktualizacja</span>
@@ -121,7 +124,10 @@ export function App() {
       )}
       <Suspense fallback={<LoadingFallback />}>
         <Routes>
-          <Route path="/" element={<HomePage key={location.pathname} />} />
+          {/* Dzisiaj is the start page: the root, the PWA start_url and any
+              unknown path all land there. Pakiety has its own address. */}
+          <Route path="/" element={<Navigate to={HOME} replace />} />
+          <Route path="/pakiety" element={<HomePage key={location.pathname} />} />
           <Route path="/pakiet/:packageId" element={<RequireEntitlement><PackPreviewPage /></RequireEntitlement>} />
           <Route path="/pakiet/:packageId/start" element={<RequireEntitlement><AutoplayModePage /></RequireEntitlement>} />
           <Route path="/pakiet/:packageId/fiszki-start" element={<RequireEntitlement><FlashcardModePage /></RequireEntitlement>} />
@@ -137,10 +143,11 @@ export function App() {
           <Route path="/ustawienia" element={<SettingsPage />} />
           <Route path="/logowanie" element={<LoginPage />} />
           <Route path="/konto" element={<AccountPage />} />
-          <Route path="*" element={<HomePage />} />
+          <Route path="*" element={<Navigate to={HOME} replace />} />
         </Routes>
       </Suspense>
       <ToastHost />
+      <AchievementWatcher />
       <DebugOverlay />
     </>
   )

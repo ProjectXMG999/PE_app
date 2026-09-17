@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import { useAppNavigate, useBack } from '../navigation/navigation'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Pack, PackMeta } from '../types/vocabulary'
 import { PackageProgress } from '../types/progress'
@@ -89,7 +90,12 @@ function relatedStatus(
 
 export function PackPreviewPage() {
   const { packageId } = useParams<{ packageId: string }>()
-  const navigate = useNavigate()
+  const navigate = useAppNavigate()
+  const back = useBack()
+  /** Out of the pack page. Into Pakiety it hands the pack id over, so the list
+   *  lands on this row — in its volume, pulsing — rather than on a remembered
+   *  scroll offset from however you last browsed it. */
+  const leave = () => back.goBack(back.path.split('?')[0] === '/pakiety' && packageId ? { focusPack: packageId } : undefined)
   const reduced = useReducedMotion()
   const [pack, setPack] = useState<Pack | null>(null)
   const [snapshot, setSnapshot] = useState<ProgressSnapshot | null>(null)
@@ -190,7 +196,7 @@ export function PackPreviewPage() {
       <AppShell hideBottomNav hideSidebar={false} hideAmbient={false} lockScroll={false}>
         <div className="packpreview__error">
           <p>{error ?? 'Nie znaleziono pakietu'}</p>
-          <button onClick={() => navigate('/')}>Wróć do listy</button>
+          <button onClick={leave}>{back.backLabel}</button>
         </div>
       </AppShell>
     )
@@ -282,15 +288,13 @@ export function PackPreviewPage() {
         <button
           type="button"
           className="packpreview__navbtn"
-          /* Hands the pack id back so Pakiety lands on this row — expanding its
-             volume and pulsing it — instead of on a remembered scroll offset
-             that belongs to however you last browsed the list. */
-          onClick={() => navigate('/', { state: { focusPack: pack.id }, viewTransition: true })}
+          onClick={leave}
+          aria-label={back.backLabel}
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="15 18 9 12 15 6" />
           </svg>
-          <span>Pakiety</span>
+          <span>{back.label}</span>
         </button>
 
         <div className="packpreview__steps">
@@ -298,7 +302,7 @@ export function PackPreviewPage() {
             <button
               type="button"
               className="packpreview__navbtn packpreview__navbtn--icon"
-              onClick={() => navigate(`/pakiet/${prevPack.id}`)}
+              onClick={() => navigate(`/pakiet/${prevPack.id}`, { step: 'sideways' })}
               aria-label={`Poprzedni pakiet: ${prevPack.name}`}
               title={prevPack.name}
             >
@@ -311,7 +315,7 @@ export function PackPreviewPage() {
             <button
               type="button"
               className="packpreview__navbtn"
-              onClick={() => navigate(`/pakiet/${nextPack.id}`)}
+              onClick={() => navigate(`/pakiet/${nextPack.id}`, { step: 'sideways' })}
               aria-label={`Następny pakiet: ${nextPack.name}`}
               title={nextPack.name}
             >
@@ -484,7 +488,7 @@ export function PackPreviewPage() {
                 <button
                   key={sib.id}
                   className="packpreview__related-row u-tile"
-                  onClick={() => navigate(`/pakiet/${sib.id}`)}
+                  onClick={() => navigate(`/pakiet/${sib.id}`, { step: 'sideways' })}
                 >
                   {inner}
                 </button>

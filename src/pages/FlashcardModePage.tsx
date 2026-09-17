@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { usePackageData } from '../hooks/usePackageData'
 import { ModeScreen, ModeBlock, ModeCard, ModeFact, ModeLabel, ModeNote } from '../components/mode/ModeScreen'
 import { CardsGlyph, SpeechGlyph } from '../components/mode/glyphs'
@@ -8,6 +8,7 @@ import { LEVEL_COLORS } from '../data/levels'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import './FlashcardModePage.css'
+import { useAppNavigate } from '../navigation/navigation'
 
 const allPacks = packagesIndex as PackMeta[]
 
@@ -56,7 +57,7 @@ function plSentences(n: number): string {
 
 export function FlashcardModePage() {
   const { packageId } = useParams<{ packageId: string }>()
-  const navigate = useNavigate()
+  const navigate = useAppNavigate()
 
   const meta = allPacks.find(p => p.id === packageId)
   const { pack } = usePackageData(packageId ?? null)
@@ -103,7 +104,6 @@ export function FlashcardModePage() {
         </>
       }
       lead="W obu trybach ćwiczysz te same słowa. Różnica jest w tym, ile musisz powiedzieć z głowy, zanim odsłonisz odpowiedź."
-      onBack={() => navigate(packageId ? `/pakiet/${packageId}` : '/')}
     >
       <ModeBlock>
         <ModeLabel aside="Od łatwiejszego">Tryb treningu</ModeLabel>

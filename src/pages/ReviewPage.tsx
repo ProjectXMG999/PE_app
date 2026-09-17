@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { useAudio } from '../hooks/useAudio'
 import { useCardFlip } from '../hooks/useCardFlip'
 import { useStudyClock } from '../hooks/useStudyClock'
@@ -10,6 +9,7 @@ import { saveSession, saveWordProgress } from '../services/db'
 import { dayKey } from '../utils/day'
 import { plPackets } from '../utils/packVisuals'
 import { StudyStage, StageTrack } from '../components/flashcard/StudyStage'
+import { useBack } from '../navigation/navigation'
 import './ReviewPage.css'
 
 /**
@@ -26,7 +26,9 @@ import './ReviewPage.css'
  * past the day's budget or stop.
  */
 export function ReviewPage() {
-  const navigate = useNavigate()
+  // Launched from Dzisiaj, so that's where the way out leads — by popping
+  // back to it rather than stacking another copy on top of the session.
+  const { goBack, backLabel } = useBack()
   const { enRate, plRate } = useAppStore()
 
   const [overBudget, setOverBudget] = useState(false)
@@ -167,8 +169,8 @@ export function ReviewPage() {
               Kontynuuj mimo to
             </button>
           )}
-          <button className="review__state-btn" onClick={() => navigate('/dzis')}>
-            Wróć do Dzisiaj
+          <button className="review__state-btn" onClick={() => goBack()}>
+            {backLabel}
           </button>
         </div>
       </div>
@@ -193,9 +195,9 @@ export function ReviewPage() {
     const stopBtn = (
       <button
         className={`review__state-btn${portionDone ? ' review__state-btn--primary u-cta' : ''}`}
-        onClick={() => navigate('/dzis')}
+        onClick={() => goBack()}
       >
-        {queueLeft > 0 ? 'Na dziś wystarczy' : 'Wróć do Dzisiaj'}
+        {queueLeft > 0 ? 'Na dziś wystarczy' : backLabel}
       </button>
     )
     return (
@@ -247,8 +249,8 @@ export function ReviewPage() {
       packageId={card?.packageId}
       counter={`${cardsBefore + 1} / ${cardCount}`}
       rail={<StageTrack current={progressPct} />}
-      onExit={() => { stop(); navigate('/dzis') }}
-      exitLabel="Wróć do Dzisiaj"
+      onExit={() => { stop(); goBack() }}
+      exitLabel={backLabel}
       cardKey={stepIndex}
       polish={card?.word.polish ?? ''}
       english={card?.word.english ?? ''}

@@ -24,7 +24,7 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
   hasAccess: () => get().entitlementStatus === 'active',
 }))
 
-async function refreshEntitlement(userId: string) {
+export async function refreshEntitlement(userId: string) {
   if (!supabase) return
   const { data } = await supabase
     .from('entitlements')

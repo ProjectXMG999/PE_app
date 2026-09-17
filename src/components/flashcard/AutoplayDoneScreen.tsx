@@ -1,4 +1,5 @@
 import { CSSProperties, useEffect, useRef } from 'react'
+import { useBack } from '../../navigation/navigation'
 import './AutoplayDoneScreen.css'
 
 interface Props {
@@ -33,6 +34,7 @@ export function AutoplayDoneScreen({
   accent, packName, wordCount, newCount, autoContinue, countdown, totalSecs,
   nextPackName, onToggleAutoContinue, onRepeat, onNext, onPractice, onMastered, onExit,
 }: Props) {
+  const { label, backLabel } = useBack()
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const rafRef = useRef<number>(0)
   const startRef = useRef<number>(0)
@@ -164,7 +166,7 @@ export function AutoplayDoneScreen({
             ) : (
               <button className="apdone__btn apdone__btn--secondary" onClick={onExit}>
                 <span className="apdone__btn-body">
-                  <span className="apdone__btn-label">Lista paczek</span>
+                  <span className="apdone__btn-label">{label}</span>
                 </span>
                 <span className="apdone__btn-icon">⌂</span>
               </button>
@@ -172,7 +174,7 @@ export function AutoplayDoneScreen({
           </div>
 
           <button className="apdone__exit" onClick={onExit}>
-            Zakończ i wróć do menu
+            {backLabel}
           </button>
 
           {onNext && (

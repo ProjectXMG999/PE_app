@@ -380,7 +380,7 @@ export function HomePage() {
     if (!focusPack || focusedRef.current || !snapshot) return
     focusedRef.current = true
     restoredRef.current = true
-    navigate('/', { replace: true, state: null })
+    navigate({ search: location.search }, { replace: true, state: null })
     jumpToPack(focusPack)
   }, [focusPack, snapshot, navigate, jumpToPack])
 
@@ -409,6 +409,9 @@ export function HomePage() {
     const top = Number(saved.top)
     let tries = 0
     const tick = () => {
+      // A pack focus can arrive a frame later (the back button pops history,
+      // then hands the pack id over) — it wins over the remembered offset.
+      if (focusedRef.current) { restoredRef.current = true; return }
       main.scrollTop = top
       if (Math.abs(main.scrollTop - top) > 2 && tries++ < 60) requestAnimationFrame(tick)
       else restoredRef.current = true

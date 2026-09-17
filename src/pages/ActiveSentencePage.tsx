@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { usePackageData } from '../hooks/usePackageData'
 import { useAudio } from '../hooks/useAudio'
 import { useCardFlip } from '../hooks/useCardFlip'
@@ -15,12 +15,14 @@ import { useStudyClock } from '../hooks/useStudyClock'
 import { dayKey } from '../utils/day'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
+import { useAppNavigate, useBack } from '../navigation/navigation'
 
 const allPacks = packagesIndex as PackMeta[]
 
 export function ActiveSentencePage() {
   const { packageId } = useParams<{ packageId: string }>()
-  const navigate = useNavigate()
+  const navigate = useAppNavigate()
+  const { goBack, backLabel } = useBack()
   const { pack, loading } = usePackageData(packageId ?? null)
   const { enRate, plRate } = useAppStore()
   const { playWord, playSentence, playWordPl, playSentencePl, stop } = useAudio(packageId ?? null, enRate, plRate)
@@ -178,9 +180,9 @@ export function ActiveSentencePage() {
       <MasteryScreen
         packName={pack.name}
         onRepeat={handleRepeat}
-        onNext={nextPack ? () => navigate(`/pakiet/${nextPack.id}/fiszki-start`) : null}
+        onNext={nextPack ? () => navigate(`/pakiet/${nextPack.id}/fiszki-start`, { step: 'sideways' }) : null}
         nextPackName={nextPack?.name}
-        onExit={() => navigate('/')}
+        onExit={() => goBack()}
       />
     )
   }
@@ -196,9 +198,9 @@ export function ActiveSentencePage() {
         packKnown={knownCount}
         packTotal={pack?.words.length ?? 0}
         onRepeat={handleRepeat}
-        onNext={nextPack ? () => navigate(`/pakiet/${nextPack.id}/fiszki-start`) : null}
+        onNext={nextPack ? () => navigate(`/pakiet/${nextPack.id}/fiszki-start`, { step: 'sideways' }) : null}
         nextPackName={nextPack?.name}
-        onExit={() => navigate('/')}
+        onExit={() => goBack()}
       />
     )
   }
@@ -215,8 +217,8 @@ export function ActiveSentencePage() {
       packageId={packageId}
       counter={`${cardIndex + 1} / ${total}`}
       rail={<StageTrack current={progressPct} known={knownPct} />}
-      onExit={() => { stop(); navigate(-1) }}
-      exitLabel="Wróć do pakietu"
+      onExit={() => { stop(); goBack() }}
+      exitLabel={backLabel}
       cardKey={cardIndex}
       polish={currentWord?.polish ?? ''}
       english={currentWord?.english ?? ''}

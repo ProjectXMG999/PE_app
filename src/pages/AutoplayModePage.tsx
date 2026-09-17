@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useMemo, useState, type ReactNode } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useAppStore } from '../store/useAppStore'
 import { usePackageData } from '../hooks/usePackageData'
 import { getPackageProgress } from '../services/db'
@@ -22,6 +22,7 @@ import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import { AutoplayMode } from '../types/progress'
 import './AutoplayModePage.css'
+import { useAppNavigate } from '../navigation/navigation'
 
 const allPacks = packagesIndex as PackMeta[]
 
@@ -99,7 +100,7 @@ function StepStrip({ steps }: { steps: AutoplayStep[] }) {
 
 export function AutoplayModePage() {
   const { packageId } = useParams<{ packageId: string }>()
-  const navigate = useNavigate()
+  const navigate = useAppNavigate()
   const { autoplayMode, setAutoplayMode, enRate, setEnRate } = useAppStore()
   const [resume, setResume] = useState<{ index: number; total: number } | null>(null)
 
@@ -151,7 +152,6 @@ export function AutoplayModePage() {
         </>
       }
       lead="Wybierz rytm sesji. Tryb i tempo zmienisz też w trakcie słuchania."
-      onBack={() => navigate(packageId ? `/pakiet/${packageId}` : '/')}
     >
       {resume && (
         <ModeBlock className="resume">

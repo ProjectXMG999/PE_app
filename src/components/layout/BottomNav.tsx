@@ -1,5 +1,6 @@
-import { Link, useLocation } from 'react-router-dom'
-import { NAV_ITEMS, getActiveNavItem } from './navItems'
+import { Link } from 'react-router-dom'
+import { NAV_ITEMS } from './navItems'
+import { useActiveHub } from '../../navigation/navigation'
 import { NavIndicator } from './NavIndicator'
 import './BottomNav.css'
 
@@ -10,8 +11,9 @@ import './BottomNav.css'
  * moves.
  */
 export function BottomNav() {
-  const location = useLocation()
-  const activeItem = getActiveNavItem(location.pathname)
+  // Follows the flow's origin, not just the URL: a pack session launched from
+  // Dzisiaj keeps Dzisiaj lit.
+  const activeItem = useActiveHub()
 
   return (
     <nav className="bottomnav">
