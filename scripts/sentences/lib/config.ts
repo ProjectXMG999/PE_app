@@ -1,3 +1,4 @@
+import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -16,6 +17,11 @@ export interface RunConfig {
   onlyMissing: boolean
   candidate: number
   packFilter?: Set<string>
+  // Explicit word ids to process (from --ids-file, a JSON array). Ranges the
+  // owner thinks in ("words 1-3000") follow the master spreadsheet's Lp
+  // order, which does NOT match pack-file order, so they're resolved to ids
+  // up front (scripts/build-word-ranges.ts) instead of using --limit.
+  idFilter?: Set<string>
   pricingOverride?: { inputPerMillion: number; outputPerMillion: number }
 }
 
@@ -38,7 +44,9 @@ export function loadConfig(argv: string[]): RunConfig {
 
   return {
     model: String(args.model ?? process.env.OPENAI_MODEL ?? 'gpt-5.6-terra'),
-    limit: args.all ? Infinity : Number(args.limit ?? 1000),
+    // An --ids-file is already an explicit scope, so it isn't capped by the
+    // 1000-word sample default unless --limit is passed too.
+    limit: args.limit !== undefined ? Number(args.limit) : args.all || args['ids-file'] ? Infinity : 1000,
     // Max words per request. Batches are grouped by pack (see lib/batching.ts)
     // so the model sees a full pack's words together — this is a cap, only
     // packs bigger than it get split into sequential chunks (most packs are
@@ -46,7 +54,9 @@ export function loadConfig(argv: string[]): RunConfig {
     batchSize: Number(args['batch-size'] ?? 20),
     concurrency: Number(args.concurrency ?? 6),
     packDir: path.join(ROOT, 'src/data/packs'),
-    checkpointPath: path.join(ROOT, 'sentence-output/checkpoint.jsonl'),
+    checkpointPath: args.checkpoint
+      ? path.resolve(ROOT, String(args.checkpoint))
+      : path.join(ROOT, 'sentence-output/checkpoint.jsonl'),
     errorLogPath: path.join(ROOT, 'sentence-output/errors.log'),
     dryRun: Boolean(args['dry-run']),
     // Default: regenerate every word in scope, ignoring whatever sentence
@@ -59,6 +69,9 @@ export function loadConfig(argv: string[]): RunConfig {
     // picking per word.
     candidate: Number(args.candidate ?? 1),
     packFilter: args.packs ? new Set(String(args.packs).split(',')) : undefined,
+    idFilter: args['ids-file']
+      ? new Set(JSON.parse(fs.readFileSync(path.resolve(ROOT, String(args['ids-file'])), 'utf-8')) as string[])
+      : undefined,
     pricingOverride:
       inputPrice && outputPrice
         ? { inputPerMillion: Number(inputPrice), outputPerMillion: Number(outputPrice) }

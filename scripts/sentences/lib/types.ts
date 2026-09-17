@@ -9,11 +9,12 @@ export interface WordTask {
 }
 
 export interface SentenceCandidate {
-  sentenceEn: string
   sentencePl: string
+  sentenceEn: string
 }
 
-// One row per word, 6 sentence columns (3 candidate EN/PL pairs) plus the
+// One row per word, 5 candidate EN/PL pairs (candidate4/5 are absent on
+// records generated before the 5-slot prompt) plus the
 // context needed to re-join this row against a copy of the master word
 // database later (see export-candidates-master.ts). `id` is the primary,
 // unique join key (matches the pack word id used everywhere else in the
@@ -34,6 +35,10 @@ export interface CheckpointRecord {
   candidate2Pl: string
   candidate3En: string
   candidate3Pl: string
+  candidate4En?: string
+  candidate4Pl?: string
+  candidate5En?: string
+  candidate5Pl?: string
   model: string
   generatedAt: string
 }

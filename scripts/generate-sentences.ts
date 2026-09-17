@@ -1,5 +1,6 @@
-// Generate 3 candidate EN/PL example sentences per vocabulary word, using
-// OpenAI in concurrent batches. Every word in scope is regenerated from
+// Generate 5 candidate PL/EN example sentences per vocabulary word (Polish
+// written first, then translated — see lib/prompt.ts), using OpenAI in
+// concurrent batches. Every word in scope is regenerated from
 // scratch — an existing sentence in the pack JSON is never treated as
 // "done" and is left untouched until you explicitly apply a chosen
 // candidate (apply-generated-sentences.ts). Safe to interrupt and re-run:
@@ -15,6 +16,7 @@
 //   npm run gen-sentences -- --only-missing       # skip words that already have a sentence
 //   npm run gen-sentences -- --model=gpt-5-mini --batch-size=20 --concurrency=6
 //   npm run gen-sentences -- --dry-run            # preview the word list, no API calls
+//   npm run gen-sentences -- --ids-file=sentence-output/ids-x.json --checkpoint=sentence-output/checkpoint-v9.jsonl
 //
 // After a run:
 //   npm run gen-sentences:review                  # -> sentence-output/review.csv (6 sentence columns)
@@ -58,7 +60,12 @@ async function main() {
   }
 
   const packFiles = loadPackFiles(config.packDir, config.packFilter)
-  const inScope = collectWordTasks(packFiles, config.onlyMissing)
+  const inScope = collectWordTasks(packFiles, config.onlyMissing).filter(
+    (w) => !config.idFilter || config.idFilter.has(w.id)
+  )
+  if (config.idFilter && inScope.length < config.idFilter.size) {
+    console.warn(`⚠ ${config.idFilter.size - inScope.length} ids from --ids-file were not found in pack data`)
+  }
   // Resume support for THIS pipeline's own progress (distinct from the pack
   // JSON's sentenceEn/sentencePl, which are ignored above by design).
   const completedIds = loadCompletedIds(config.checkpointPath)
@@ -75,7 +82,7 @@ async function main() {
   }
 
   console.log(
-    `This run: ${todo.length} words x 3 candidates — model=${config.model} batch-size=${config.batchSize} concurrency=${config.concurrency}`
+    `This run: ${todo.length} words x 5 candidates — model=${config.model} batch-size=${config.batchSize} concurrency=${config.concurrency}`
   )
 
   if (config.dryRun) {
@@ -127,6 +134,10 @@ async function main() {
               candidate2Pl: s.candidate2.sentencePl,
               candidate3En: s.candidate3.sentenceEn,
               candidate3Pl: s.candidate3.sentencePl,
+              candidate4En: s.candidate4.sentenceEn,
+              candidate4Pl: s.candidate4.sentencePl,
+              candidate5En: s.candidate5.sentenceEn,
+              candidate5Pl: s.candidate5.sentencePl,
               model: config.model,
               generatedAt: new Date().toISOString(),
             }

@@ -83,9 +83,11 @@ export class RepetitionTracker {
     for (const r of records) this.addRecord(r)
   }
 
-  addRecord(r: Pick<CheckpointRecord, 'candidate1En' | 'candidate2En' | 'candidate3En' | 'english'>): void {
+  addRecord(
+    r: Pick<CheckpointRecord, 'candidate1En' | 'candidate2En' | 'candidate3En' | 'candidate4En' | 'candidate5En' | 'english'>
+  ): void {
     this.totalWords++
-    const text = [r.candidate1En, r.candidate2En, r.candidate3En].join(' ')
+    const text = [r.candidate1En, r.candidate2En, r.candidate3En, r.candidate4En ?? '', r.candidate5En ?? ''].join(' ')
     // A word's own vocabulary tokens don't count toward "overuse" — a "Cat"
     // or "Dog" record legitimately using "cat"/"dog" shouldn't dilute the
     // signal that would otherwise catch "cat"/"dog" being reused as a
