@@ -54,7 +54,9 @@
 }
 
 /* Small moving waveform in place of a static headphone icon — the tab reads
-   as "live" rather than a plain label. */
+   as "live" rather than a plain label. Both glyphs move ONLY on the active tab:
+   two idle animations looping forever on a row you aren't using is motion that
+   means nothing, and it makes the inactive tab compete with the live one. */
 .modeslider__tab-wave {
   display: inline-flex;
   align-items: flex-end;
@@ -69,12 +71,16 @@
   border-radius: 1px;
   background: currentColor;
   opacity: 0.75;
-  animation: modeslider-eq 1.3s ease-in-out infinite;
+  transform: scaleY(0.75);
 }
 
 .modeslider__tab-wave span:nth-child(1) { height: 5px; animation-delay: 0s; }
 .modeslider__tab-wave span:nth-child(2) { height: 10px; animation-delay: 0.2s; }
 .modeslider__tab-wave span:nth-child(3) { height: 6px; animation-delay: 0.4s; }
+
+.modeslider__tab--active .modeslider__tab-wave span {
+  animation: modeslider-eq 1.3s ease-in-out infinite;
+}
 
 @keyframes modeslider-eq {
   0%, 100% { transform: scaleY(0.5); }
@@ -82,7 +88,12 @@
 }
 
 .modeslider__tab-bolt {
-  display: inline-block;
+  display: inline-grid;
+  place-items: center;
+  vertical-align: middle;
+}
+
+.modeslider__tab--active .modeslider__tab-bolt {
   animation: modeslider-bolt 2.2s ease-in-out infinite;
 }
 
@@ -152,8 +163,8 @@
     transition: none;
   }
 
-  .modeslider__tab-wave span,
-  .modeslider__tab-bolt {
+  .modeslider__tab--active .modeslider__tab-wave span,
+  .modeslider__tab--active .modeslider__tab-bolt {
     animation: none;
   }
 }

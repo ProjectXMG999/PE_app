@@ -6,6 +6,7 @@
  * tokens.css; motion/decoration comes from animations.css (`.fx-*`).
  *
  *   .u-surface           flat glass card (the default)
+ *   .u-surface--stat     important readout: gradient ground, no hairline
  *   .u-surface--raised   hero card: gradient ground + float shadow + top hairline
  *      + --gold / --live  recolours the hairline + border for reward / priority
  *   .u-rail              compact info row with a left accent border
@@ -24,6 +25,20 @@
 
 .u-surface--strong {
   background: var(--surface-translucent-strong);
+}
+
+/* ── Stat card ────────────────────────────────────────────────────────────
+   The middle rung: a number that matters, but is not the thing you came to
+   press. Same ground as the hero card so the two read as one family, minus the
+   hairline and with a calmer lift — the hairline is the hero's signature, and
+   a screen with three of them has no hero at all. */
+.u-surface--stat {
+  position: relative;
+  overflow: hidden;
+  background: var(--gradient-hero);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
 }
 
 /* ── Hero card ────────────────────────────────────────────────────────────── */

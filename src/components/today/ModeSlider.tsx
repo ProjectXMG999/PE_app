@@ -1,6 +1,7 @@
 import { ReactNode, useRef } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { NavIndicator } from '../layout/NavIndicator'
+import { BoltGlyph } from '../mode/glyphs'
 import { EASE_OUT_EXPO, staggerContainerWide } from './motion'
 import './ModeSlider.css'
 
@@ -14,6 +15,10 @@ interface Props {
   onInfoClick: () => void
 }
 
+/* The chevrons that used to flank these labels ("‹ … Słuchaj", "Trenuj ›") are
+   gone: the sliding indicator already says which tab is live and which way the
+   page will travel, so they were a third signal for something two already
+   covered. The glyphs animate only on the active tab — see the CSS. */
 const WAVE = (
   <span className="modeslider__tab-wave" aria-hidden="true">
     <span /><span /><span />
@@ -54,7 +59,7 @@ export function ModeSlider({ active, onChange, listenContent, trainContent, onIn
             <NavIndicator layoutId="today-mode-indicator" className="modeslider__indicator" />
           )}
           <span className="modeslider__tab-label">
-            ‹ {WAVE} Słuchaj
+            {WAVE} Słuchaj
           </span>
         </button>
         <button
@@ -65,7 +70,7 @@ export function ModeSlider({ active, onChange, listenContent, trainContent, onIn
             <NavIndicator layoutId="today-mode-indicator" className="modeslider__indicator" />
           )}
           <span className="modeslider__tab-label">
-            <span className="modeslider__tab-bolt" aria-hidden="true">⚡</span> Trenuj ›
+            <span className="modeslider__tab-bolt" aria-hidden="true"><BoltGlyph size={13} /></span> Trenuj
           </span>
         </button>
         <button

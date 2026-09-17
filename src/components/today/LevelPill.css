@@ -1,22 +1,48 @@
+/* The level badge, tinted by that level's own colour — the same recipe the
+   session header uses for the pack's level (.stage__source-level), so a level
+   looks the same wherever it appears. A colour dot on an otherwise grey pill
+   was carrying that information on eight pixels. */
 .levelpill {
+  --lvl: var(--text-muted);
+
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
+  gap: 7px;
+  min-height: 32px;
+  padding: 6px 13px;
+  border-radius: var(--radius-full);
   font-family: var(--font-heading);
   font-size: var(--text-sm);
   font-weight: 700;
-  color: var(--text-secondary);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-full);
-  cursor: pointer;
   white-space: nowrap;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  color: var(--lvl);
+  border: 1px solid color-mix(in oklch, var(--lvl) 42%, transparent);
+  background: color-mix(in oklch, var(--lvl) 14%, transparent);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.levelpill:hover {
+  border-color: color-mix(in oklch, var(--lvl) 60%, transparent);
+  background: color-mix(in oklch, var(--lvl) 20%, transparent);
 }
 
 .levelpill__dot {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
+  width: 7px;
+  height: 7px;
   flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: currentColor;
 }
+
+/* Nothing picked yet: neutral pill that breathes until it's dealt with.
+   --fx-glow is read by .fx-breathe in animations.css. */
+.levelpill--empty {
+  color: var(--text-secondary);
+  border-color: var(--border);
+  background: var(--surface-translucent);
+  --fx-glow: var(--glow-primary);
+}
+
+.levelpill--empty .levelpill__dot { background: var(--text-muted); }
