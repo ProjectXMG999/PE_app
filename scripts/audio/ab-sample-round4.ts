@@ -31,14 +31,15 @@ fs.mkdirSync(OUT_DIR, { recursive: true })
 const BASELINE: VoiceSettings = { stability: 0.5, similarity_boost: 0.8, style: 0.2, use_speaker_boost: true, speed: 0.75 }
 const BASELINE_PL: VoiceSettings = { stability: 0.5, similarity_boost: 0.8, style: 0.2, use_speaker_boost: true }
 
-// Violetta and Paweł excluded per feedback.
+// Violetta and Paweł excluded per feedback; Samantha dropped ("robi off"),
+// replaced with Kristen.
 const PL_VOICES = [
   { id: 'o2xdfKUpc1Bwq7RchZuW', name: 'Piotr' },
   { id: 'N0GCuK2B0qwWozQNTS8F', name: 'Magdalena' },
 ]
 const EN_VOICES = [
   { id: 'wBXNqKUATyqu0RtYt25i', name: 'Adam (US)' },
-  { id: 'uIZsnBL0YK1S5j69bAih', name: 'Samantha (US)' },
+  { id: 'dfeOmy6Uay63tNhyO99j', name: 'Kristen (US)' },
   { id: 'fjnwTZkKtQOJaYzGLa6n', name: 'William (UK)' },
   { id: 'dAlhI9qAHVIjXuVppzhW', name: 'Tamsin (UK)' },
 ]

@@ -1,6 +1,8 @@
 // Generate EN + PL audio for specified packs with alternating voices
-// PL rotation (per word, mod 4): Piotr(M) → Magdalena(F) → Pawel(M) → Violetta(F) → repeat
-// EN rotation (per word, mod 4): Adam US(M) → Samantha US(F) → William UK(M) → Tamsin UK(F) → repeat
+// PL rotation (per word, mod 2): Piotr(M) → Magdalena(F) → repeat (Pawel/Violetta dropped per feedback)
+// EN rotation (per word, mod 4): Adam US(M) → Kristen US(F) → William UK(M) → Tamsin UK(F) → repeat (Samantha dropped, "robi off")
+//
+// Superseded by scripts/audio/generate-packs.ts — kept in sync for safety, not the active pipeline.
 
 import * as fs from 'fs'
 import * as path from 'path'
@@ -34,13 +36,11 @@ const TARGET_PACKS = TARGET_PACKS_FULL_LEVEL1
 const PL_VOICES = [
   { id: 'o2xdfKUpc1Bwq7RchZuW', name: 'Piotr',    gender: 'M' },
   { id: 'N0GCuK2B0qwWozQNTS8F', name: 'Magdalena', gender: 'F' },
-  { id: 'zzBTsLBFM6AOJtkr1e9b', name: 'Pawel',     gender: 'M' },
-  { id: 'gfKKsLN1k0oYYN9n2dXX', name: 'Violetta',  gender: 'F' },
 ]
 
 const EN_VOICES = [
   { id: 'wBXNqKUATyqu0RtYt25i', name: 'Adam',     accent: 'US',  gender: 'M' },
-  { id: 'uIZsnBL0YK1S5j69bAih', name: 'Samantha', accent: 'US',  gender: 'F' },
+  { id: 'dfeOmy6Uay63tNhyO99j', name: 'Kristen',  accent: 'US',  gender: 'F' },
   { id: 'fjnwTZkKtQOJaYzGLa6n', name: 'William',  accent: 'UK',  gender: 'M' },
   { id: 'dAlhI9qAHVIjXuVppzhW', name: 'Tamsin',   accent: 'UK',  gender: 'F' },
 ]

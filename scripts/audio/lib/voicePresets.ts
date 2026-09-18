@@ -55,16 +55,17 @@ export const SENTENCE_SETTINGS_PL: VoiceSettings = {
   use_speaker_boost: true,
 }
 
+// Pawel and Violetta dropped per feedback — Piotr/Magdalena only.
 export const PL_VOICES = [
   { id: 'o2xdfKUpc1Bwq7RchZuW', name: 'Piotr', gender: 'M' },
   { id: 'N0GCuK2B0qwWozQNTS8F', name: 'Magdalena', gender: 'F' },
-  { id: 'zzBTsLBFM6AOJtkr1e9b', name: 'Pawel', gender: 'M' },
-  { id: 'gfKKsLN1k0oYYN9n2dXX', name: 'Violetta', gender: 'F' },
 ]
 
+// Samantha dropped ("robi off" per feedback), replaced with Kristen — same
+// American-female slot, from the account's ElevenLabs voice library.
 export const EN_VOICES = [
   { id: 'wBXNqKUATyqu0RtYt25i', name: 'Adam', accent: 'US', gender: 'M' },
-  { id: 'uIZsnBL0YK1S5j69bAih', name: 'Samantha', accent: 'US', gender: 'F' },
+  { id: 'dfeOmy6Uay63tNhyO99j', name: 'Kristen', accent: 'US', gender: 'F' },
   { id: 'fjnwTZkKtQOJaYzGLa6n', name: 'William', accent: 'UK', gender: 'M' },
   { id: 'dAlhI9qAHVIjXuVppzhW', name: 'Tamsin', accent: 'UK', gender: 'F' },
 ]
