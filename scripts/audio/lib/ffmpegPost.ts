@@ -12,11 +12,18 @@ if (ffmpegPath) ffmpeg.setFfmpegPath(ffmpegPath)
 
 // Fade-out longer than fade-in: listener feedback on the first carrier-
 // phrase round was that clips ended too abruptly ("za szybko ucięte z
-// tyłu") even after widening the cut's own end margin — a longer trailing
-// fade smooths that out without needing to bleed further into the carrier
-// phrase's next word/period.
+// tyłu") even after widening the cut's own end margin.
 const FADE_IN_MS = 20
 const FADE_OUT_MS = 45
+// Round 3 feedback: STILL clipping the word's tail even with a wider cut
+// margin. Root cause found by reading the pipeline again: postProcessClip's
+// silenceremove step ran unconditionally on every clip, including carrier
+// cuts that were already precisely trimmed — a word's natural trailing
+// decay (a soft fricative, a vowel tapering off) can dip under -40dB well
+// within the cut's own end margin, so the "silence" trim was quietly eating
+// back into real word audio and undoing the margin fix. Carrier clips now
+// skip silenceremove entirely (trimSilence: false) and rely only on the
+// alignment-based cut margin + a longer fade for a natural ending.
 const SILENCE_THRESHOLD_DB = '-40dB'
 const SILENCE_MIN_DURATION = 0.08 // seconds; avoid clipping soft plosive onsets
 
@@ -29,19 +36,34 @@ export function cutClip(inputPath: string, outputPath: string, startSec: number,
   })
 }
 
-/** In-place post-process: trim silence, 2-pass loudness normalize, fade in/out. */
-export async function postProcessClip(filePath: string): Promise<void> {
+interface PostProcessOptions {
+  /** Trim silence at both ends before normalizing. Good for a bare-word
+   * generation (the model pads isolated words with dead air); actively
+   * harmful on an already-precisely-cut carrier-phrase segment — see note
+   * above. Default true (today's word/sentence pipeline behavior). */
+  trimSilence?: boolean
+  fadeInMs?: number
+  fadeOutMs?: number
+}
+
+/** In-place post-process: optional silence trim, 2-pass loudness normalize, fade in/out. */
+export async function postProcessClip(filePath: string, opts: PostProcessOptions = {}): Promise<void> {
+  const { trimSilence = true, fadeInMs = FADE_IN_MS, fadeOutMs = FADE_OUT_MS } = opts
   const tmp1 = filePath + '.trim.mp3'
   const tmp2 = filePath + '.norm.mp3'
   try {
-    await run(filePath, tmp1, (c) => {
-      c.audioFilters([
-        `silenceremove=start_periods=1:start_duration=${SILENCE_MIN_DURATION}:start_threshold=${SILENCE_THRESHOLD_DB}:detection=peak`,
-        `areverse`,
-        `silenceremove=start_periods=1:start_duration=${SILENCE_MIN_DURATION}:start_threshold=${SILENCE_THRESHOLD_DB}:detection=peak`,
-        `areverse`,
-      ])
-    })
+    if (trimSilence) {
+      await run(filePath, tmp1, (c) => {
+        c.audioFilters([
+          `silenceremove=start_periods=1:start_duration=${SILENCE_MIN_DURATION}:start_threshold=${SILENCE_THRESHOLD_DB}:detection=peak`,
+          `areverse`,
+          `silenceremove=start_periods=1:start_duration=${SILENCE_MIN_DURATION}:start_threshold=${SILENCE_THRESHOLD_DB}:detection=peak`,
+          `areverse`,
+        ])
+      })
+    } else {
+      fs.copyFileSync(filePath, tmp1)
+    }
     // Measure loudness (pass 1), then apply corrected normalization (pass 2) — single-pass
     // loudnorm "pumps" volume and isn't safe for offline batch files. Falls back to
     // single-pass loudnorm if the measured values are unusable (e.g. a very short/
@@ -58,9 +80,9 @@ export async function postProcessClip(filePath: string): Promise<void> {
       await run(tmp1, tmp2, (c) => { c.audioFilters(['loudnorm=I=-16:TP=-1.5:LRA=11']) })
     }
     const durationSec = await getDuration(tmp2)
-    const fadeOutStart = Math.max(0, durationSec - FADE_OUT_MS / 1000)
+    const fadeOutStart = Math.max(0, durationSec - fadeOutMs / 1000)
     await run(tmp2, filePath, (c) => {
-      c.audioFilters([`afade=t=in:d=${FADE_IN_MS / 1000}`, `afade=t=out:st=${fadeOutStart}:d=${FADE_OUT_MS / 1000}`])
+      c.audioFilters([`afade=t=in:d=${fadeInMs / 1000}`, `afade=t=out:st=${fadeOutStart}:d=${fadeOutMs / 1000}`])
     })
   } finally {
     for (const t of [tmp1, tmp2]) if (fs.existsSync(t)) fs.unlinkSync(t)

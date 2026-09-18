@@ -19,7 +19,7 @@ export const CARRIER_TEMPLATES = {
  * actual audible sound, so we pull the start back further than the end is
  * pushed forward, and lean on a longer fade-out (ffmpegPost.ts) rather than
  * a huge end margin, which would risk bleeding into the carrier's period. */
-export function extractWordSpan(fullText: string, word: string, alignment: Alignment, startMarginSec = 0.07, endMarginSec = 0.09): { startSec: number; endSec: number } {
+export function extractWordSpan(fullText: string, word: string, alignment: Alignment, startMarginSec = 0.08, endMarginSec = 0.16): { startSec: number; endSec: number } {
   const idx = fullText.indexOf(word)
   if (idx === -1) throw new Error(`extractWordSpan: "${word}" not found in carrier text "${fullText}"`)
   const startChar = idx
