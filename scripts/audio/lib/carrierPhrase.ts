@@ -31,3 +31,11 @@ export function extractWordSpan(fullText: string, word: string, alignment: Align
   const endSec = alignment.character_end_times_seconds[endChar] + endMarginSec
   return { startSec, endSec }
 }
+
+/** Carrier v4: only the start time — see cutClipFromStart in ffmpegPost.ts
+ * for why the end is deliberately not estimated at all anymore. */
+export function extractWordStart(fullText: string, word: string, alignment: Alignment, startMarginSec = 0.08): number {
+  const idx = fullText.indexOf(word)
+  if (idx === -1) throw new Error(`extractWordStart: "${word}" not found in carrier text "${fullText}"`)
+  return Math.max(0, alignment.character_start_times_seconds[idx] - startMarginSec)
+}

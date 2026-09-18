@@ -36,6 +36,33 @@ export function cutClip(inputPath: string, outputPath: string, startSec: number,
   })
 }
 
+/** Carrier v4: cuts from `startSec` to the actual end of the file — no
+ * estimated end time at all. Insight from feedback: the carrier prefix
+ * ("The word is " / "Słowo: ") is fixed text spoken identically every time,
+ * so the alignment API's START timestamp for the target word is reliable —
+ * but every version of the END-timestamp-based cut still clipped the word's
+ * tail, because the model's own alignment consistently marks the word as
+ * ending slightly before the audio actually finishes decaying. Cutting to
+ * the clip's true end and trimming only genuine trailing silence (via
+ * trimTrailingSilence) sidesteps that estimate instead of padding around it. */
+export function cutClipFromStart(inputPath: string, outputPath: string, startSec: number): Promise<void> {
+  return run(inputPath, outputPath, (c) => {
+    c.setStartTime(startSec)
+  })
+}
+
+const TAIL_SILENCE_THRESHOLD_DB = '-50dB' // quieter than the old -40dB: only catch real dead air, not the word's natural decay
+const TAIL_SILENCE_MIN_DURATION = 0.15 // seconds of continuous near-silence before it counts as trailing silence, not a dip mid-word
+
+/** Trims only trailing silence (the carrier phrase's period + dead air after
+ * the target word) — no leading trim (the cut's own start is already
+ * precise) and no reliance on any estimated word-end time. */
+export function trimTrailingSilence(inputPath: string, outputPath: string): Promise<void> {
+  return run(inputPath, outputPath, (c) => {
+    c.audioFilters([`silenceremove=stop_periods=1:stop_duration=${TAIL_SILENCE_MIN_DURATION}:stop_threshold=${TAIL_SILENCE_THRESHOLD_DB}:detection=peak`])
+  })
+}
+
 interface PostProcessOptions {
   /** Trim silence at both ends before normalizing. Good for a bare-word
    * generation (the model pads isolated words with dead air); actively
