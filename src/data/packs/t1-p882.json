@@ -1,6 +1,6 @@
 {
   "id": "t1-p882",
-  "name": "Mentalne",
+  "name": "Mentalne / Złe",
   "volume": "Tom V",
   "level": 3,
   "category": "Przymiotniki",
@@ -159,6 +159,17 @@
       "audioWord": "t1-p882-014-word.mp3",
       "audioWordPl": "t1-p882-014-word-pl.mp3",
       "audioSentence": "t1-p882-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p882-015",
+      "english": "Frightening",
+      "polish": "Przerażający",
+      "polishAudio": "Przerażający",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p882-015-word.mp3",
+      "audioWordPl": "t1-p882-015-word-pl.mp3",
+      "audioSentence": "t1-p882-015-sentence.mp3"
     }
   ]
 }

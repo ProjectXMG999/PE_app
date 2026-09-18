@@ -1,77 +1,11 @@
 {
-  "id": "t1-p918",
+  "id": "t1-p873-incomplete-6",
   "name": "Społeczeństwo",
-  "volume": "Tom VIII",
-  "level": 4,
+  "volume": "Tom III",
+  "level": 3,
   "category": "Czasowniki",
-  "chapter": "Rozdział LXXIX",
+  "chapter": "Rozdział XXX",
   "words": [
-    {
-      "id": "t1-p918-001",
-      "english": "Nurture",
-      "polish": "Wykształcać; wychowywać; karmić (hodować)",
-      "polishAudio": "Wykształcać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p918-001-word.mp3",
-      "audioWordPl": "t1-p918-001-word-pl.mp3",
-      "audioSentence": "t1-p918-001-sentence.mp3"
-    },
-    {
-      "id": "t1-p918-002",
-      "english": "Prescribe",
-      "polish": "Przepisać (lekarstwo)",
-      "polishAudio": "Przepisać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p918-002-word.mp3",
-      "audioWordPl": "t1-p918-002-word-pl.mp3",
-      "audioSentence": "t1-p918-002-sentence.mp3"
-    },
-    {
-      "id": "t1-p918-003",
-      "english": "Rebel",
-      "polish": "Buntować się",
-      "polishAudio": "Buntować się",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p918-003-word.mp3",
-      "audioWordPl": "t1-p918-003-word-pl.mp3",
-      "audioSentence": "t1-p918-003-sentence.mp3"
-    },
-    {
-      "id": "t1-p918-004",
-      "english": "Reign",
-      "polish": "Panować (królestwem)",
-      "polishAudio": "Panować",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p918-004-word.mp3",
-      "audioWordPl": "t1-p918-004-word-pl.mp3",
-      "audioSentence": "t1-p918-004-sentence.mp3"
-    },
-    {
-      "id": "t1-p918-005",
-      "english": "Seize",
-      "polish": "Przejąć; zająć",
-      "polishAudio": "Przejąć",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p918-005-word.mp3",
-      "audioWordPl": "t1-p918-005-word-pl.mp3",
-      "audioSentence": "t1-p918-005-sentence.mp3"
-    },
-    {
-      "id": "t1-p918-006",
-      "english": "Violate",
-      "polish": "Naruszać; zakłócać (porządek)",
-      "polishAudio": "Naruszać",
-      "sentenceEn": null,
-      "sentencePl": null,
-      "audioWord": "t1-p918-006-word.mp3",
-      "audioWordPl": "t1-p918-006-word-pl.mp3",
-      "audioSentence": "t1-p918-006-sentence.mp3"
-    },
     {
       "id": "t1-p918-007",
       "english": "Accustom",

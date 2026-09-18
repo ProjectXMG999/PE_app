@@ -1,6 +1,6 @@
 {
   "id": "t1-p873",
-  "name": "Sukces",
+  "name": "Sukces / Komunikacja",
   "volume": "Tom III",
   "level": 3,
   "category": "Czasowniki",
@@ -159,6 +159,17 @@
       "audioWord": "t1-p873-014-word.mp3",
       "audioWordPl": "t1-p873-014-word-pl.mp3",
       "audioSentence": "t1-p873-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p873-015",
+      "english": "Quote",
+      "polish": "Cytować (dokładne słowa)",
+      "polishAudio": "Cytować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p873-015-word.mp3",
+      "audioWordPl": "t1-p873-015-word-pl.mp3",
+      "audioSentence": "t1-p873-015-sentence.mp3"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "id": "t1-p880",
-  "name": "Miejsce",
+  "name": "Miejsce / Niefajne",
   "volume": "Tom V",
   "level": 3,
   "category": "Slang",
@@ -104,6 +104,72 @@
       "audioWord": "t1-p880-009-word.mp3",
       "audioWordPl": "t1-p880-009-word-pl.mp3",
       "audioSentence": "t1-p880-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p880-010",
+      "english": "Trash",
+      "polish": "Gdy coś lub ktoś jest bez klasy lub smaku; chłam",
+      "polishAudio": "Gdy coś lub ktoś jest bez klasy lub smaku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p880-010-word.mp3",
+      "audioWordPl": "t1-p880-010-word-pl.mp3",
+      "audioSentence": "t1-p880-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p880-011",
+      "english": "Vid",
+      "polish": "Wirus covid-19",
+      "polishAudio": "Wirus covid-19",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p880-011-word.mp3",
+      "audioWordPl": "t1-p880-011-word-pl.mp3",
+      "audioSentence": "t1-p880-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p880-012",
+      "english": "Zero chill",
+      "polish": "Gdy ktoś przesadza, nie panuje nad sobą i jest sztywny",
+      "polishAudio": "Gdy ktoś przesadza, nie panuje nad sobą i jest sztywny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p880-012-word.mp3",
+      "audioWordPl": "t1-p880-012-word-pl.mp3",
+      "audioSentence": "t1-p880-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p880-013",
+      "english": "Go nuts",
+      "polish": "Zwariować",
+      "polishAudio": "Zwariować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p880-013-word.mp3",
+      "audioWordPl": "t1-p880-013-word-pl.mp3",
+      "audioSentence": "t1-p880-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p880-014",
+      "english": "Trippin'",
+      "polish": "Świrować",
+      "polishAudio": "Świrować",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p880-014-word.mp3",
+      "audioWordPl": "t1-p880-014-word-pl.mp3",
+      "audioSentence": "t1-p880-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p880-015",
+      "english": "Busted",
+      "polish": "Złapany na gorącym uczynku; wpadłeś",
+      "polishAudio": "Złapany na gorącym uczynku",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p880-015-word.mp3",
+      "audioWordPl": "t1-p880-015-word-pl.mp3",
+      "audioSentence": "t1-p880-015-sentence.mp3"
     }
   ]
 }

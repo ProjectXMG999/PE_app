@@ -1,11 +1,22 @@
 {
-  "id": "t1-p923",
-  "name": "Biznes",
-  "volume": "Tom IX",
-  "level": 4,
+  "id": "t1-p874-incomplete-10",
+  "name": "Społeczeństwo / Biznes",
+  "volume": "Tom IV",
+  "level": 3,
   "category": "Przymiotniki",
-  "chapter": "Rozdział LXXXII",
+  "chapter": "Rozdział XXXIII",
   "words": [
+    {
+      "id": "t1-p921-013",
+      "english": "Postgraduate",
+      "polish": "Podyplomowy",
+      "polishAudio": "Podyplomowy",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p921-013-word.mp3",
+      "audioWordPl": "t1-p921-013-word-pl.mp3",
+      "audioSentence": "t1-p921-013-sentence.mp3"
+    },
     {
       "id": "t1-p923-001",
       "english": "Fast-growing",

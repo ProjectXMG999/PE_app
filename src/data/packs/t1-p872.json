@@ -1,6 +1,6 @@
 {
   "id": "t1-p872",
-  "name": "Kraje",
+  "name": "Kraje / Wojskowe",
   "volume": "Tom III",
   "level": 3,
   "category": "Rzeczowniki",
@@ -137,6 +137,39 @@
       "audioWord": "t1-p872-012-word.mp3",
       "audioWordPl": "t1-p872-012-word-pl.mp3",
       "audioSentence": "t1-p872-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p872-013",
+      "english": "Battle",
+      "polish": "Bitwa",
+      "polishAudio": "Bitwa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p872-013-word.mp3",
+      "audioWordPl": "t1-p872-013-word-pl.mp3",
+      "audioSentence": "t1-p872-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p872-014",
+      "english": "Dynamite",
+      "polish": "Dynamit",
+      "polishAudio": "Dynamit",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p872-014-word.mp3",
+      "audioWordPl": "t1-p872-014-word-pl.mp3",
+      "audioSentence": "t1-p872-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p872-015",
+      "english": "Survival",
+      "polish": "Przetrwanie",
+      "polishAudio": "Przetrwanie",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p872-015-word.mp3",
+      "audioWordPl": "t1-p872-015-word-pl.mp3",
+      "audioSentence": "t1-p872-015-sentence.mp3"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "id": "t1-p874",
-  "name": "Unikać",
+  "name": "Unikać / Przymiotniki 19",
   "volume": "Tom IV",
   "level": 3,
   "category": "Przymiotniki",
@@ -16,6 +16,160 @@
       "audioWord": "t1-p874-001-word.mp3",
       "audioWordPl": "t1-p874-001-word-pl.mp3",
       "audioSentence": "t1-p874-001-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-002",
+      "english": "Lonely",
+      "polish": "Osamotniony",
+      "polishAudio": "Osamotniony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-002-word.mp3",
+      "audioWordPl": "t1-p874-002-word-pl.mp3",
+      "audioSentence": "t1-p874-002-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-003",
+      "english": "Common",
+      "polish": "Wspólny",
+      "polishAudio": "Wspólny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-003-word.mp3",
+      "audioWordPl": "t1-p874-003-word-pl.mp3",
+      "audioSentence": "t1-p874-003-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-004",
+      "english": "Separate",
+      "polish": "Oddzielny; osobny",
+      "polishAudio": "Oddzielny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-004-word.mp3",
+      "audioWordPl": "t1-p874-004-word-pl.mp3",
+      "audioSentence": "t1-p874-004-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-005",
+      "english": "Lone",
+      "polish": "Samotny (pojedynczy)",
+      "polishAudio": "Samotny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-005-word.mp3",
+      "audioWordPl": "t1-p874-005-word-pl.mp3",
+      "audioSentence": "t1-p874-005-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-006",
+      "english": "Independent",
+      "polish": "Niezależny; niepodległy",
+      "polishAudio": "Niezależny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-006-word.mp3",
+      "audioWordPl": "t1-p874-006-word-pl.mp3",
+      "audioSentence": "t1-p874-006-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-007",
+      "english": "Dependent",
+      "polish": "Zależny",
+      "polishAudio": "Zależny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-007-word.mp3",
+      "audioWordPl": "t1-p874-007-word-pl.mp3",
+      "audioSentence": "t1-p874-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-008",
+      "english": "Face-to-face",
+      "polish": "Twarzą w twarz",
+      "polishAudio": "Twarzą w twarz",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-008-word.mp3",
+      "audioWordPl": "t1-p874-008-word-pl.mp3",
+      "audioSentence": "t1-p874-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-009",
+      "english": "Joint",
+      "polish": "Łączny; wspólny",
+      "polishAudio": "Łączny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-009-word.mp3",
+      "audioWordPl": "t1-p874-009-word-pl.mp3",
+      "audioSentence": "t1-p874-009-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-010",
+      "english": "Associated",
+      "polish": "Kojarzony; związany",
+      "polishAudio": "Kojarzony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-010-word.mp3",
+      "audioWordPl": "t1-p874-010-word-pl.mp3",
+      "audioSentence": "t1-p874-010-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-011",
+      "english": "Connected",
+      "polish": "Połączony; związany z czymś",
+      "polishAudio": "Połączony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-011-word.mp3",
+      "audioWordPl": "t1-p874-011-word-pl.mp3",
+      "audioSentence": "t1-p874-011-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-012",
+      "english": "Mutual",
+      "polish": "Wzajemny; wspólny",
+      "polishAudio": "Wzajemny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-012-word.mp3",
+      "audioWordPl": "t1-p874-012-word-pl.mp3",
+      "audioSentence": "t1-p874-012-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-013",
+      "english": "Reciprocal",
+      "polish": "Obopólny",
+      "polishAudio": "Obopólny",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-013-word.mp3",
+      "audioWordPl": "t1-p874-013-word-pl.mp3",
+      "audioSentence": "t1-p874-013-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-014",
+      "english": "United",
+      "polish": "Zjednoczony; zespołowy",
+      "polishAudio": "Zjednoczony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-014-word.mp3",
+      "audioWordPl": "t1-p874-014-word-pl.mp3",
+      "audioSentence": "t1-p874-014-sentence.mp3"
+    },
+    {
+      "id": "t1-p874-015",
+      "english": "Reconciled",
+      "polish": "Pogodzony",
+      "polishAudio": "Pogodzony",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p874-015-word.mp3",
+      "audioWordPl": "t1-p874-015-word-pl.mp3",
+      "audioSentence": "t1-p874-015-sentence.mp3"
     }
   ]
 }

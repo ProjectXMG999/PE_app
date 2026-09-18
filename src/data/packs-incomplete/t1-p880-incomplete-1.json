@@ -1,11 +1,44 @@
 {
-  "id": "t1-p926",
-  "name": "Niefajne - Slang",
-  "volume": "Tom IX",
-  "level": 4,
+  "id": "t1-p880-incomplete-1",
+  "name": "Niefajne / Niefajne - Slang",
+  "volume": "Tom V",
+  "level": 3,
   "category": "Slang",
-  "chapter": "Rozdział LXXXV",
+  "chapter": "Rozdział XLI",
   "words": [
+    {
+      "id": "t1-p888-007",
+      "english": "Red-flag",
+      "polish": "Czerwone światło (masz stopera)",
+      "polishAudio": "Czerwone światło",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p888-007-word.mp3",
+      "audioWordPl": "t1-p888-007-word-pl.mp3",
+      "audioSentence": "t1-p888-007-sentence.mp3"
+    },
+    {
+      "id": "t1-p888-008",
+      "english": "Shady",
+      "polish": "Podejrzany",
+      "polishAudio": "Podejrzany",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p888-008-word.mp3",
+      "audioWordPl": "t1-p888-008-word-pl.mp3",
+      "audioSentence": "t1-p888-008-sentence.mp3"
+    },
+    {
+      "id": "t1-p888-009",
+      "english": "Sellout",
+      "polish": "Sprzedawczyk",
+      "polishAudio": "Sprzedawczyk",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p888-009-word.mp3",
+      "audioWordPl": "t1-p888-009-word-pl.mp3",
+      "audioSentence": "t1-p888-009-sentence.mp3"
+    },
     {
       "id": "t1-p926-001",
       "english": "Damp squib",
