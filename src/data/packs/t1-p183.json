@@ -159,6 +159,17 @@
       "audioWordPl": "t1-p183-014-word-pl.mp3",
       "audioSentence": "t1-p183-014-sentence.mp3",
       "polishAudio": "Studio"
+    },
+    {
+      "id": "t1-p183-015",
+      "english": "Elemental",
+      "polish": "Żywiołak",
+      "polishAudio": "Żywiołak",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p183-015-word.mp3",
+      "audioWordPl": "t1-p183-015-word-pl.mp3",
+      "audioSentence": "t1-p183-015-sentence.mp3"
     }
   ]
 }

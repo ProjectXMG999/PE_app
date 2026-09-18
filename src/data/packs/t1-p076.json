@@ -104,6 +104,17 @@
       "audioWordPl": "t1-p076-009-word-pl.mp3",
       "audioSentence": "t1-p076-009-sentence.mp3",
       "polishAudio": "Podróżować"
+    },
+    {
+      "id": "t1-p076-010",
+      "english": "Accustom",
+      "polish": "Przyzwyczajać; przywyknąć",
+      "polishAudio": "Przyzwyczajać",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p076-010-word.mp3",
+      "audioWordPl": "t1-p076-010-word-pl.mp3",
+      "audioSentence": "t1-p076-010-sentence.mp3"
     }
   ]
 }

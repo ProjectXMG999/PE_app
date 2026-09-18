@@ -159,6 +159,17 @@
       "audioWordPl": "t1-p198-014-word-pl.mp3",
       "audioSentence": "t1-p198-014-sentence.mp3",
       "polishAudio": "Na górę"
+    },
+    {
+      "id": "t1-p198-015",
+      "english": "Outdoors",
+      "polish": "Poza domem",
+      "polishAudio": "Poza domem",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p198-015-word.mp3",
+      "audioWordPl": "t1-p198-015-word-pl.mp3",
+      "audioSentence": "t1-p198-015-sentence.mp3"
     }
   ]
 }

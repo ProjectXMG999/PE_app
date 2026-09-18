@@ -104,6 +104,17 @@
       "audioWordPl": "t1-p062-009-word-pl.mp3",
       "audioSentence": "t1-p062-009-sentence.mp3",
       "polishAudio": "Znaczenie"
+    },
+    {
+      "id": "t1-p062-010",
+      "english": "Scale armor",
+      "polish": "Zbroja łuskowa",
+      "polishAudio": "Zbroja łuskowa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p062-010-word.mp3",
+      "audioWordPl": "t1-p062-010-word-pl.mp3",
+      "audioSentence": "t1-p062-010-sentence.mp3"
     }
   ]
 }

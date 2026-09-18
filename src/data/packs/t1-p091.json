@@ -104,6 +104,17 @@
       "audioWordPl": "t1-p091-009-word-pl.mp3",
       "audioSentence": "t1-p091-009-sentence.mp3",
       "polishAudio": "Suknia"
+    },
+    {
+      "id": "t1-p091-010",
+      "english": "Revenant",
+      "polish": "Zjawa",
+      "polishAudio": "Zjawa",
+      "sentenceEn": null,
+      "sentencePl": null,
+      "audioWord": "t1-p091-010-word.mp3",
+      "audioWordPl": "t1-p091-010-word-pl.mp3",
+      "audioSentence": "t1-p091-010-sentence.mp3"
     }
   ]
 }
