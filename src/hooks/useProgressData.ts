@@ -33,6 +33,12 @@ const PACK_LEVEL = new Map<string, number>(
 )
 export const packLevelOf = (id: string): number => PACK_LEVEL.get(id) ?? 1
 
+/** packageId → how many words the pack actually holds today. The catalogue is
+ *  the authority on what exists; word progress is only a claim about it. */
+const PACK_WORDS = new Map<string, number>(
+  (packagesIndex as PackMeta[]).map(p => [p.id, p.wordCount])
+)
+
 export interface ProgressSnapshot {
   packageProgress: PackageProgress[]
   progressMap: Map<string, PackageProgress>
@@ -92,7 +98,7 @@ async function fetchSnapshot(): Promise<ProgressSnapshot> {
   // them here rather than being derivable from sessions alone.
   const { streakFreeze, dailyGoalSec, todayLevel } = useAppStore.getState()
 
-  const [packageProgress, wordProgress, sessions, ledger, dailyTime, streak] = await Promise.all([
+  const [packageProgress, storedWordProgress, sessions, ledger, dailyTime, streak] = await Promise.all([
     getAllPackageProgress(),
     getAllWordProgress(),
     getAllSessions(),
@@ -101,11 +107,18 @@ async function fetchSnapshot(): Promise<ProgressSnapshot> {
     getStreak(streakFreeze.usedOn),
   ])
 
+  // Progress rows outlive the catalogue. Past data passes consolidated packs
+  // and deduped words (see the `packs/` deletions in git history), and every
+  // row the learner had earned in a pack that no longer exists stayed behind in
+  // IndexedDB. Counted, they pushed "słów poznanych" past the corpus itself —
+  // 10 948 known out of 10 935 that exist, with every territory bar at exactly
+  // full, because the bars read the catalogue and the counter didn't. A word
+  // that isn't on the route any more isn't a word you know here.
+  const wordProgress = storedWordProgress.filter(wp => PACK_WORDS.has(wp.packageId))
+
   const today = dayKey()
   const knownMap = new Map<string, number>()
-  let knownTotal = 0
   const declaredKnownMap = new Map<string, number>()
-  let declaredKnownTotal = 0
   let reviewTotal = 0
   let retiredCount = 0
   let declaredRetiredCount = 0
@@ -113,17 +126,40 @@ async function fetchSnapshot(): Promise<ProgressSnapshot> {
   for (const wp of wordProgress) {
     if (wp.status === 'known') {
       knownMap.set(wp.packageId, (knownMap.get(wp.packageId) ?? 0) + 1)
-      knownTotal++
       if (isDeclaredKnownWord(wp)) {
         declaredKnownMap.set(wp.packageId, (declaredKnownMap.get(wp.packageId) ?? 0) + 1)
-        declaredKnownTotal++
       }
     }
     if (wp.retiredAt != null) {
       retiredCount++
       if (isDeclaredRetiredWord(wp)) declaredRetiredCount++
-    } else if (wp.nextReviewAt != null && wp.nextReviewAt <= today) dueWords.push(wp)
+    }
+    // Being retired is not what keeps a word out of the queue — having no date
+    // is. A declaration clears nextReviewAt for good (levelMastery.ts), so those
+    // words never come back, which is exactly what the learner asked for. An
+    // EARNED retirement deliberately keeps a real ~yearly date (review.ts), and
+    // that check-in is the whole point of deep maintenance. The `else` here
+    // swallowed it, which quietly made "Na stałe · raz w roku" a promise nothing
+    // kept, and left W_DEEP_MAINT scoring a case that could never arise.
+    if (wp.nextReviewAt != null && wp.nextReviewAt <= today) dueWords.push(wp)
     reviewTotal += wp.reviewCount ?? 0
+  }
+
+  // The same rule one level finer. A word dropped from a pack that still
+  // exists leaves a row the filter above can't catch — its packageId is still
+  // real — so cap each pack at its own size: no pack can hold more known words
+  // than it holds words. Declared-known is capped under that, since it's a
+  // subset of it and feeds the "oznaczyłeś bez nauki" line.
+  let knownTotal = 0
+  let declaredKnownTotal = 0
+  for (const [packageId, rawKnown] of knownMap) {
+    const known = Math.min(rawKnown, PACK_WORDS.get(packageId) ?? 0)
+    knownMap.set(packageId, known)
+    knownTotal += known
+    const declared = Math.min(declaredKnownMap.get(packageId) ?? 0, known)
+    if (declared > 0) declaredKnownMap.set(packageId, declared)
+    else declaredKnownMap.delete(packageId)
+    declaredKnownTotal += declared
   }
 
   const secPerCard = reviewSecPerCard(sessions, today)
