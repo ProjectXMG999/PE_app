@@ -182,7 +182,7 @@ async function main() {
     fs.writeFileSync(packFile, JSON.stringify(pack, null, 2))
     console.log(`Updated ${packId}.json`)
   }
-  console.log('Pack JSONs updated. Run: npm run sync-packs')
+  console.log('Pack JSONs updated.')
 }
 
 main().catch(console.error)

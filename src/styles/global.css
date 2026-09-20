@@ -1,10 +1,12 @@
-/* The app is set in the system face (see --font-heading in tokens.css). These
-   self-hosted imports are no longer referenced by any token; they stay until a
-   pass over every screen confirms nothing names the faces directly. */
-@import '@fontsource-variable/bricolage-grotesque/opsz.css';
-@import '@fontsource/inter/400.css';
-@import '@fontsource/inter/500.css';
-@import '@fontsource/inter/600.css';
+/* The app is set in the system face (see --font-heading in tokens.css). The
+   self-hosted Bricolage/Inter imports that used to sit here are gone: the pass
+   they were waiting for has been done — `grep -rn "font-family" src/` finds one
+   hit, `Sidebar.css`'s `monospace`, and nothing names either face. They were
+   costing 45 font files (~770 KiB) of service-worker precache and 24 dead
+   @font-face rules in the CSS bundle, for zero requests at runtime.
+
+   Fonts for the share-image canvas are NOT loaded here on purpose — see
+   services/weeklyRecap.ts, which imports them on the one code path that draws. */
 @import './tokens.css';
 @import './animations.css';
 @import './surfaces.css';

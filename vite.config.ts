@@ -89,7 +89,21 @@ export default defineConfig({
       filename: 'sw.ts',
       registerType: 'autoUpdate',
       injectManifest: {
-        globPatterns: ['**/*.{js,css,html,json,png,svg,webmanifest,woff,woff2}'],
+        // No legacy `woff`: fontsource emits .woff alongside .woff2 and every
+        // browser that can run this PWA reads woff2, so precaching both stores
+        // each face twice and serves one of them never.
+        globPatterns: ['**/*.{js,css,html,json,png,svg,webmanifest,woff2}'],
+        // vite-plugin-pwa already injects the manifest and every icon it names
+        // into the precache. Without these ignores the glob adds them a second
+        // time — the build was precaching manifest.webmanifest and all four
+        // icons twice, ~110 KiB of pure duplication.
+        globIgnores: [
+          'manifest.webmanifest',
+          'icons/icon-192.png',
+          'icons/icon-512.png',
+          'icons/maskable-512.png',
+          'icons/apple-touch-icon.png',
+        ],
       },
       manifest: {
         name: 'Project English',

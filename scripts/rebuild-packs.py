@@ -5,7 +5,7 @@ Jednorazowy skrypt:
 3. Przenumerowuje wszystkie paczki sekwencyjnie od t1-p001
 4. Aktualizuje pliki JSON paczek — strategia: wczytaj wszystko do RAM, wyczyść katalog, zapisz
 """
-import json, os, shutil, subprocess, re
+import json, os, shutil, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC_PACKS = os.path.join(ROOT, 'src', 'data', 'packs')
@@ -236,13 +236,9 @@ wul_in_index = [p for p in new_packs if p['category'] == 'Wulgaryzmy']
 print(f"\nIndex saved: {len(new_packs)} packs total")
 print(f"Wulgaryzmy in index: {[(p['id'], p['name'], p['level']) for p in wul_in_index]}")
 
-# ── 9. Sync do public/ ────────────────────────────────────────────────────────
-
-print("\nRunning sync-packs...")
-result = subprocess.run(["node", "scripts/sync-packs.mjs"], cwd=ROOT,
-                        capture_output=True, text=True)
-print(result.stdout.strip())
-if result.stderr:
-    print("STDERR:", result.stderr[:200])
+# ── 9. Koniec ─────────────────────────────────────────────────────────────────
+# Nie ma już kroku "sync do public/": public/data/packages-index.json był martwą,
+# nieaktualną kopią, której nic nie pobierało (aplikacja importuje indeks
+# bezpośrednio z src/data/), a która trafiała do precache service workera.
 
 print("\nDone!")

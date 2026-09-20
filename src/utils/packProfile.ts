@@ -161,25 +161,12 @@ export function effortLabel(relativeEffort: number | null): string | null {
   return null
 }
 
-/** Words in this pack that a single successful review would retire. */
-export function nearlySealed(
-  pack: PackMeta,
-  snapshot: ProgressSnapshot | null,
-  threshold = 0.55,
-): number {
-  if (!snapshot) return 0
-  const words = snapshot.wordProgress.filter(w => w.packageId === pack.id)
-  if (words.length === 0) return 0
-  return words.filter(w => isOneReviewFromRetiring(w, threshold)).length
-}
-
 /**
- * The same count for every pack at once — packId → how many of its words are
- * one review from retiring.
+ * packId → how many of its words are one successful review from retiring.
  *
- * `nearlySealed` filters the whole word list per pack, which is fine for one
- * card and quadratic for a catalogue of 864. The "Blisko »Na stałe«" lens needs
- * this for the entire route on every render, so it gets a single pass instead.
+ * One pass over the whole word list, not one filtered pass per pack: the
+ * "Blisko »Na stałe«" lens needs this for the entire route on every render, and
+ * the per-pack shape this replaced was quadratic across a catalogue of 864.
  * Packs with zero such words are simply absent from the map.
  */
 export function nearlySealedByPack(
