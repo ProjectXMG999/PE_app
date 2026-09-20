@@ -39,27 +39,60 @@ export interface ProgressPulse {
 
 const CACHE_MS = 60_000
 
+/**
+ * Progress writes arrive in bursts, and this refresh is far too expensive to
+ * run once per write.
+ *
+ * `load()` reads every wordProgress row (~11 400) plus all sessions and the
+ * daily-time ledger, then runs several passes over them — all on the main
+ * thread. The widget is mounted during study sessions (FlashcardPage keeps the
+ * TopBar), so it was doing that work once per rated card. Worse in bulk:
+ * "Znam wszystko" on a 40-word pack does
+ * `Promise.all(allWords.map(saveWordProgress))`, and each of those emits, so
+ * forty full recomputations were started at once — a multi-second freeze rather
+ * than a dropped frame. `markLevelMastered` emits twice in a row for the same
+ * reason.
+ *
+ * Coalescing them costs a quarter second of staleness on a number nobody is
+ * watching mid-write.
+ */
+const REFRESH_DEBOUNCE_MS = 250
+
 let cached: ProgressPulse | null = null
 let cachedAt = 0
 let inflight: Promise<ProgressPulse> | null = null
+/** Bumped by every invalidation, so a read that started before a write cannot
+ *  install its now-stale result as the cache when it finally resolves. */
+let generation = 0
+let refreshTimer: ReturnType<typeof setTimeout> | null = null
 
 const subscribers = new Set<(p: ProgressPulse) => void>()
 
 subscribeProgress(() => {
+  // Invalidate immediately — correctness can't wait for the debounce, or a read
+  // landing inside the window would be served pre-write numbers.
+  generation++
   cached = null
   cachedAt = 0
   inflight = null
-  // A write means the visible numbers are wrong right now, so refresh eagerly
-  // rather than waiting for the next mount.
-  if (subscribers.size > 0) {
+
+  // The refresh itself can wait. Nobody is subscribed on the screens that write
+  // the most, and when someone is, the last write in a burst is the only one
+  // whose result is worth computing.
+  if (subscribers.size === 0) return
+  if (refreshTimer != null) clearTimeout(refreshTimer)
+  refreshTimer = setTimeout(() => {
+    refreshTimer = null
     void load().then(p => subscribers.forEach(fn => fn(p)))
-  }
+  }, REFRESH_DEBOUNCE_MS)
 })
 
 async function load(): Promise<ProgressPulse> {
   const now = Date.now()
   if (cached != null && now - cachedAt < CACHE_MS) return cached
   if (inflight != null) return inflight
+
+  const gen = generation
 
   inflight = (async () => {
     const [snapshot, dailyTime, longestStreak, today] = await Promise.all([
@@ -87,9 +120,14 @@ async function load(): Promise<ProgressPulse> {
       goalMet: today.goalMet,
     }
 
-    cached = pulse
-    cachedAt = Date.now()
-    inflight = null
+    // A write landed while this read was in flight: the numbers are already
+    // out of date, so hand them to the caller that asked but leave the cache
+    // (and whatever newer read now owns `inflight`) alone.
+    if (gen === generation) {
+      cached = pulse
+      cachedAt = Date.now()
+      inflight = null
+    }
     return pulse
   })()
 

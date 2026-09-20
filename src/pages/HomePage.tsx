@@ -406,14 +406,34 @@ export function HomePage() {
   useEffect(() => {
     const main = document.querySelector('.appshell__main')
     if (!main) return
-    const onScroll = () => {
+
+    // Written on the next frame rather than on the event. `passive: true` keeps
+    // the listener from blocking the scroll, but it says nothing about what the
+    // listener does — and sessionStorage.setItem is synchronous and
+    // disk-backed. On iOS momentum scrolling this fired ~60×/s, each time
+    // reading scrollTop (a forced layout) and serialising to storage, on the
+    // longest list in the app. Coalescing to one write per frame keeps the
+    // remembered offset just as accurate, since only the last value of a frame
+    // was ever going to be read back.
+    let frame = 0
+    const write = () => {
+      frame = 0
       if (!restoredRef.current || !selected) return
       try {
         sessionStorage.setItem(SCROLL_KEY, JSON.stringify({ v: selected, top: main.scrollTop }))
       } catch { /* private mode */ }
     }
+    const onScroll = () => {
+      if (frame === 0) frame = requestAnimationFrame(write)
+    }
+
     main.addEventListener('scroll', onScroll, { passive: true })
-    return () => main.removeEventListener('scroll', onScroll)
+    return () => {
+      main.removeEventListener('scroll', onScroll)
+      // A scroll that ends with the page unmounting would otherwise write the
+      // offset after `selected` has moved on.
+      if (frame !== 0) cancelAnimationFrame(frame)
+    }
   }, [selected])
 
   useEffect(() => {
