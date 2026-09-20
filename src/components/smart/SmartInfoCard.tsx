@@ -4,7 +4,11 @@ import './SmartInfoCard.css'
 
 export type SmartInfoVariant = 'review-ahead' | 'stretch-ahead' | 'back-to-new'
 
-const COPY: Record<SmartInfoVariant, { icon: string; title: string; sub: (count?: number) => string; tone: string }> = {
+/** Exported so the curtain can say the same thing in the same words when a run
+ *  OPENS on a segment: `composeSmartSteps` no longer emits a hand-off card with
+ *  nothing before it, so for a review-first session this copy is read by
+ *  SmartSessionOpener instead. One table, one wording, either way. */
+export const SMART_INFO_COPY: Record<SmartInfoVariant, { icon: string; title: string; sub: (count?: number) => string; tone: string }> = {
   'stretch-ahead': {
     icon: '🚀',
     title: 'Świetnie Ci idzie',
@@ -35,7 +39,7 @@ interface Props {
  *  explains the hand-off instead of silently changing what's being asked. */
 export function SmartInfoCard({ variant, count, onNext }: Props) {
   const reduced = useReducedMotion()
-  const copy = COPY[variant]
+  const copy = SMART_INFO_COPY[variant]
 
   return (
     <div className={`smartinfo smartinfo--${copy.tone}`} onClick={onNext} role="button" tabIndex={0}>

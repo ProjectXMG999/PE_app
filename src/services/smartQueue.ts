@@ -89,6 +89,15 @@ export const SMART = {
   /** Learn cards shown before the first hand-off, so the session opens on
    *  familiar ground. */
   WARMUP_LEARN: 4,
+  /** Spare learn words to line up beyond the learn quota, in words.
+   *
+   *  The learn loop used to stop at the exact quota, which made the session as
+   *  fragile as its least reliable pack: one /pack-content request failing (or
+   *  one pack whose words all turn out already known) left the run with no way
+   *  to make up the difference, because nothing else had been fetched. Roughly
+   *  one extra pack of slack, which `composeSmartSteps` draws on when the
+   *  review or stretch streams come up short. */
+  LEARN_RESERVE: 8,
 } as const
 
 const allPacks = packagesIndex as PackMeta[]
@@ -268,7 +277,17 @@ export function selectSmart({
 
   // ── review stream ────────────────────────────────────────────────────────
   const ctx: PriorityCtx = { today: dayKey(), todayLevel, packLevelOf }
-  const orderedDue = orderDueWords(snapshot.dueWords, ctx)
+  // A due word whose pack is no longer in the catalog can never become a card:
+  // `composeSmartSteps` has nowhere to read its text from, so it is dropped at
+  // the end and the slot it reserved is simply lost. Worse, it stays due
+  // forever — nothing can answer it and reschedule it — so it reserves that
+  // slot again in every session after this one. Leave those rows alone (they
+  // are the learner's history, and a catalog can come back), but stop letting
+  // them size the review stream.
+  const orderedDue = orderDueWords(
+    snapshot.dueWords.filter(w => PACK_LEVEL.has(w.packageId)),
+    ctx
+  )
 
   const stragglerPacks = scoped.filter(isStraggler)
   const stragglerPackIds = new Set(stragglerPacks.map(p => p.id))
@@ -357,11 +376,15 @@ export function selectSmart({
   const learnPackCap = Number.isFinite(smallestCandidateSize) && smallestCandidateSize > 0
     ? Math.min(SMART.MAX_PACKS_HARD_CEILING, Math.max(SMART.MAX_PACKS, Math.ceil(learnTarget / smallestCandidateSize)))
     : SMART.MAX_PACKS
+  // Line up LEARN_RESERVE words beyond the quota: a stream that can only just
+  // reach its target has no answer to a pack that fails to load or turns out
+  // already known, and the session silently comes up short.
+  const learnSupply = learnTarget > 0 ? learnTarget + SMART.LEARN_RESERVE : 0
   const learnPackIds: string[] = []
   let acc = 0
   for (const p of learnCandidates) {
     if (p.id === stretchPackId) continue
-    if (acc >= learnTarget || learnPackIds.length >= learnPackCap) break
+    if (acc >= learnSupply || learnPackIds.length >= learnPackCap) break
     learnPackIds.push(p.id)
     acc += unknownEstimate(p)
   }
@@ -387,8 +410,7 @@ export function selectSmart({
   }
 }
 
-/** Cheap composition summary for the "today's mix" start card — no fetch. */
-export function smartPeek(args: SelectArgs): {
+export interface SmartPreview {
   learn: number
   review: number
   stretch: number
@@ -399,8 +421,17 @@ export function smartPeek(args: SelectArgs): {
   adapted: boolean
   /** The day's goal is already covered; this session is a voluntary extra. */
   bonus: boolean
-} {
-  const sel = selectSmart(args)
+}
+
+/**
+ * What a selection adds up to, for whoever has to describe it.
+ *
+ * Split out of `smartPeek` so `useSmartSession` can publish the mix the moment
+ * `selectSmart` returns — after one IndexedDB read, before the per-pack
+ * /pack-content fetches — instead of running the whole selection a second time.
+ * The session's curtain is up across exactly that window.
+ */
+export function previewOf(sel: SmartSelection): SmartPreview {
   const total = sel.quota.learn + sel.quota.review + sel.quota.stretch
   return {
     learn: sel.quota.learn,
@@ -418,6 +449,27 @@ export function smartPeek(args: SelectArgs): {
   }
 }
 
+/** Cheap composition summary for the "today's mix" start card — no fetch. */
+export function smartPeek(args: SelectArgs): SmartPreview {
+  return previewOf(selectSmart(args))
+}
+
+/**
+ * The one line that explains an adapted mix, or null when nothing moved.
+ *
+ * Shared by the Dzisiaj start card and the session's own curtain: two screens
+ * describing one decision must not carry two copies of the sentence. The
+ * goal-met line wins — a learner who has already put the time in should be told
+ * that first, not why the ratio shifted.
+ */
+export function smartReason(p: SmartPreview): string | null {
+  if (p.bonus) return 'Cel na dziś masz z głowy — to krótka dokładka, jeśli masz ochotę.'
+  if (!p.adapted) return null
+  if (p.tone === 'strong') return 'Powtórki trzymają się mocno, więc dziś więcej nowych słów.'
+  if (p.tone === 'slipping') return 'Kilka słów zaczyna uciekać, więc dziś więcej powtarzamy.'
+  return null
+}
+
 interface ComposeArgs {
   selection: SmartSelection
   /** Fetched pack content, keyed by pack id (nulls dropped by the caller). */
@@ -429,6 +481,7 @@ export function composeSmartSteps({ selection, packs, wordProgressById }: Compos
   steps: SmartStep[]
   counts: Record<SmartSegment, number>
   packCount: number
+  opensWith: { segment: SmartSegment; count: number } | null
 } {
   const usedPacks = new Set<string>()
 
@@ -452,7 +505,6 @@ export function composeSmartSteps({ selection, packs, wordProgressById }: Compos
     return out
   }
 
-  const learnCards = takeFromPacks(selection.learnPackIds, 'learn', selection.quota.learn)
   const stretchCards = selection.stretchPackId
     ? takeFromPacks([selection.stretchPackId], 'stretch', selection.quota.stretch)
     : []
@@ -475,16 +527,44 @@ export function composeSmartSteps({ selection, packs, wordProgressById }: Compos
   }
   const reviewCards = [...reviewByPack.values()].flat()
 
+  /**
+   * Learn is taken LAST, against what the other two streams actually produced.
+   *
+   * `quota.learn` is what was left after the review stream was *selected*, and a
+   * selected review word is not a card yet: it becomes one only if its pack
+   * arrived and still contains that word id. Every one that doesn't used to
+   * vanish here in silence, with its slot going with it — the session had
+   * already spent that slot on review when it decided how much to learn. A run
+   * whose review words all failed to resolve was left with `quota.learn` cards
+   * and nothing else, which is how a sitting announced as 14 words could open,
+   * and end, on a single card. It repeats for as long as those words stay
+   * unresolvable, because nothing about the failure changes their schedule.
+   *
+   * So the remainder is recomputed from real cards. `learnPackIds` carries
+   * SMART.LEARN_RESERVE words of slack precisely so there is something to take.
+   */
+  const learnLimit = Math.max(
+    selection.quota.learn,
+    selection.targetCount - reviewCards.length - stretchCards.length
+  )
+  const learnCards = takeFromPacks(selection.learnPackIds, 'learn', Math.max(0, learnLimit))
+
   const warmup = learnCards.slice(0, SMART.WARMUP_LEARN)
   const restLearn = learnCards.slice(SMART.WARMUP_LEARN)
 
+  // An info step is a HAND-OFF: it explains why what's being asked of you just
+  // changed. With nothing before it there is no change to explain, and it stops
+  // being a hand-off and becomes a second opening screen — which is exactly
+  // what it was, stacked on top of the curtain, whenever `warmup` came out
+  // empty (quota.learn of 0, or every learn candidate already known). What the
+  // run opens with is the curtain's job to say; see `opensWith` below.
   const steps: SmartStep[] = [...warmup]
   if (reviewCards.length) {
-    steps.push({ kind: 'info', variant: 'review-ahead', count: reviewCards.length })
+    if (steps.length) steps.push({ kind: 'info', variant: 'review-ahead', count: reviewCards.length })
     steps.push(...reviewCards)
   }
   if (stretchCards.length) {
-    steps.push({ kind: 'info', variant: 'stretch-ahead', count: stretchCards.length })
+    if (steps.length) steps.push({ kind: 'info', variant: 'stretch-ahead', count: stretchCards.length })
     steps.push(...stretchCards)
   }
   if (restLearn.length) {
@@ -502,5 +582,35 @@ export function composeSmartSteps({ selection, packs, wordProgressById }: Compos
       stretch: stretchCards.length,
     },
     packCount: usedPacks.size,
+    opensWith: openingRun(steps),
   }
+}
+
+/**
+ * The segment the run opens with and how many cards that opening block holds.
+ *
+ * The curtain announces this, which is the whole reason a review-first run no
+ * longer needs an info step to do the announcing. Read from the composed steps
+ * rather than from the quota on purpose: `quota.learn` is a target, and a
+ * session whose learn candidates all turn out already-known opens on review
+ * while the quota still claims otherwise.
+ *
+ * The count is the opening block, not the segment's total — "zaczynamy od
+ * powtórki, 8 słów" should mean the eight you are about to do, not eight
+ * scattered through the sitting.
+ */
+function openingRun(steps: SmartStep[]): { segment: SmartSegment; count: number } | null {
+  const first = steps.find(s => s.kind === 'card')
+  if (!first || first.kind !== 'card') return null
+
+  let count = 0
+  for (const step of steps) {
+    if (step.kind !== 'card') {
+      if (count > 0) break // a hand-off card closes the opening block
+      continue
+    }
+    if (step.segment !== first.segment) break
+    count++
+  }
+  return { segment: first.segment, count }
 }

@@ -3,6 +3,7 @@ import { useAudio } from '../hooks/useAudio'
 import { useCardFlip } from '../hooks/useCardFlip'
 import { useStudyClock } from '../hooks/useStudyClock'
 import { useSmartSession } from '../hooks/useSmartSession'
+import { useSessionOpener } from '../hooks/useSessionOpener'
 import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { applyKnown, applyUnknown } from '../services/review'
 import { saveSession, saveWordProgress } from '../services/db'
@@ -14,6 +15,8 @@ import { SmartSegment } from '../services/smartQueue'
 import { SmartInfoCard } from '../components/smart/SmartInfoCard'
 import { SmartProgressRail } from '../components/smart/SmartProgressRail'
 import { SmartDoneScreen, SmartSegmentTally } from '../components/smart/SmartDoneScreen'
+import { SmartSessionOpener } from '../components/smart/SmartSessionOpener'
+import { SessionStage } from '../components/flashcard/SessionStage'
 import { LevelUpPrompt } from '../components/today/LevelUpPrompt'
 import { StudyStage } from '../components/flashcard/StudyStage'
 import { useSentenceCardProps } from '../hooks/useSentenceCardProps'
@@ -53,7 +56,9 @@ export function SmartSessionPage() {
   const { goBack, backLabel } = useBack()
   const { enRate, plRate } = useAppStore()
   const [nonce, setNonce] = useState(0)
-  const { steps, packCount, loading, error } = useSmartSession(nonce)
+  const { steps, packCount, preview, opensWith, missing, loading, error } = useSmartSession(nonce)
+  // This mode has no loading screen of its own any more — the curtain is it.
+  const { visible: openerVisible, settled, dismiss: dismissOpener } = useSessionOpener(!loading)
 
   const { side, isAdvancing, flip, advance: animateOut, resetToFront, handleAnimationEnd, cardClass } = useCardFlip()
   const { elapsedSec } = useStudyClock()
@@ -62,6 +67,10 @@ export function SmartSessionPage() {
   const [done, setDone] = useState(false)
   const [levelUpTarget, setLevelUpTarget] = useState<number | null>(null)
   const [comfortBefore] = useState(() => useAppStore.getState().comfortLevel)
+  // Captured on entry alongside comfortBefore: the done screen reads comfort
+  // against the level the session was actually built for, and changing the
+  // floor mid-session would otherwise re-anchor the verdict.
+  const [sessionLevel] = useState(() => useAppStore.getState().todayLevel ?? 1)
   const [comfortAfter, setComfortAfter] = useState(comfortBefore)
 
   const tallyRef = useRef<Record<SmartSegment, SmartSegmentTally>>(EMPTY_TALLY())
@@ -204,11 +213,28 @@ export function SmartSessionPage() {
 
   // Info hand-off cards auto-advance so the session doesn't stall on a tap
   // someone might miss — but still offer "Dalej" for anyone reading slower.
+  //
+  // Not while the curtain is up. `composeSmartSteps` no longer puts a hand-off
+  // card at step 0, so this shouldn't be reachable — but when it WAS, this
+  // timer and the curtain's hold both started in the same commit and the card
+  // spent more than half its life behind an opaque screen. A dwell timer for
+  // something nobody can see is never what was meant.
   useEffect(() => {
-    if (current?.kind !== 'info') return
+    if (current?.kind !== 'info' || openerVisible) return
     const t = window.setTimeout(() => { void goNext() }, 2600)
     return () => window.clearTimeout(t)
-  }, [current, goNext])
+  }, [current, goNext, openerVisible])
+
+  // A session that ran short because content didn't arrive says so. Silence
+  // here is what made a 14-word sitting that delivered one card look like the
+  // mode's own idea of a session rather than a failed download.
+  useEffect(() => {
+    if (loading || missing === 0 || steps.length === 0) return
+    showToast(
+      `Nie udało się pobrać treści ${missing === 1 ? 'jednej paczki' : `${missing} paczek`} — sesja jest krótsza.`,
+      { icon: '⚠' }
+    )
+  }, [loading, missing, steps.length])
 
   const flipCard = useCallback(() => {
     if (!card) return
@@ -258,83 +284,119 @@ export function SmartSessionPage() {
     setNonce(n => n + 1)
   }, [resetToFront, elapsedSec])
 
-  if (loading) {
-    return (
-      <div className="review__state">
-        <div className="skeleton review__state-skeleton" />
-        <p className="review__state-text">Buduję Twoją sesję…</p>
-      </div>
-    )
-  }
-
-  if (error || steps.length === 0) {
-    return (
-      <div className="review__state">
-        <span className="review__state-icon" aria-hidden="true">✓</span>
-        <h1 className="review__state-title">Nic do zrobienia</h1>
-        <p className="review__state-text">
-          {error ?? 'Wszystko na dziś zrobione — wróć jutro po więcej.'}
-        </p>
-        <div className="review__state-actions">
-          <button className="review__state-btn review__state-btn--primary u-cta" onClick={() => goBack()}>
-            {backLabel}
-          </button>
+  // Every branch below renders under the same curtain, so this page has exactly
+  // one return. An early return above <SessionStage> would tear the curtain
+  // off un-animated on precisely the paths that need it to lift gracefully —
+  // the empty and error screens.
+  function body() {
+    if (error || steps.length === 0) {
+      // A session that couldn't be built is not a finished one. It used to say
+      // "Nic do zrobienia — wróć jutro" either way, which turned a failed fetch
+      // into a false all-clear and sent the learner away from work that was
+      // waiting for them.
+      const failed = error != null
+      return (
+        <div className="review__state">
+          <span className="review__state-icon" aria-hidden="true">{failed ? '⚠' : '✓'}</span>
+          <h1 className="review__state-title">
+            {failed ? 'Nie udało się przygotować sesji' : 'Nic do zrobienia'}
+          </h1>
+          <p className="review__state-text">
+            {error ?? 'Wszystko na dziś zrobione — wróć jutro po więcej.'}
+          </p>
+          <div className="review__state-actions">
+            {failed && (
+              <button
+                className="review__state-btn review__state-btn--primary u-cta"
+                onClick={() => setNonce(n => n + 1)}
+              >
+                Spróbuj ponownie
+              </button>
+            )}
+            <button
+              className={`review__state-btn${failed ? '' : ' review__state-btn--primary u-cta'}`}
+              onClick={() => goBack()}
+            >
+              {backLabel}
+            </button>
+          </div>
         </div>
-      </div>
-    )
-  }
+      )
+    }
 
-  if (done) {
-    return (
-      <>
-        <SmartDoneScreen
-          tally={tallyRef.current}
-          comfortBefore={comfortBefore}
-          comfortAfter={comfortAfter}
-          onRepeat={handleRepeat}
-          onExit={() => goBack()}
-        />
-        {levelUpTarget != null && (
-          <LevelUpPrompt
-            target={levelUpTarget}
-            onAccept={() => { useAppStore.getState().setTodayLevel(levelUpTarget); useAppStore.getState().dismissLevelUp(levelUpTarget) }}
-            onDecline={() => { useAppStore.getState().dismissLevelUp(levelUpTarget); setLevelUpTarget(null) }}
+    if (done) {
+      return (
+        <>
+          <SmartDoneScreen
+            tally={tallyRef.current}
+            comfortBefore={comfortBefore}
+            comfortAfter={comfortAfter}
+            level={sessionLevel}
+            onRepeat={handleRepeat}
+            onExit={() => goBack()}
           />
-        )}
-      </>
+          {levelUpTarget != null && (
+            <LevelUpPrompt
+              target={levelUpTarget}
+              onAccept={() => { useAppStore.getState().setTodayLevel(levelUpTarget); useAppStore.getState().dismissLevelUp(levelUpTarget) }}
+              onDecline={() => { useAppStore.getState().dismissLevelUp(levelUpTarget); setLevelUpTarget(null) }}
+            />
+          )}
+        </>
+      )
+    }
+
+    if (current?.kind === 'info') {
+      return <SmartInfoCard variant={current.variant} count={current.count} onNext={() => void goNext()} />
+    }
+
+    const flipped = side === 'back'
+
+    const cardsBefore = steps.slice(0, stepIndex).filter(s => s.kind === 'card').length
+    const cardTotal = steps.filter(s => s.kind === 'card').length
+
+    return (
+      <StudyStage
+        tone="smart"
+        kicker={<>Inteligentnie · {packCount} {plPackets(packCount)}</>}
+        packageId={card?.packageId}
+        counter={`${Math.min(cardsBefore + 1, cardTotal)} / ${cardTotal}`}
+        rail={<SmartProgressRail steps={steps} stepIndex={stepIndex} />}
+        onExit={() => { stop(); goBack() }}
+        exitLabel={backLabel}
+        cardKey={stepIndex}
+        polish={card?.word.polish ?? ''}
+        english={card?.word.english ?? ''}
+        side={side}
+        cardClass={cardClass}
+        onFlip={flipCard}
+        onAnimationEnd={handleAnimationEnd}
+        onPlay={() => { stop(); if (card) playWord(card.word) }}
+        {...sentenceProps}
+        answersVisible={flipped && !isAdvancing}
+        answersDisabled={isAdvancing}
+        onAnswer={answer}
+        covered={openerVisible}
+      />
     )
   }
-
-  if (current?.kind === 'info') {
-    return <SmartInfoCard variant={current.variant} count={current.count} onNext={() => void goNext()} />
-  }
-
-  const flipped = side === 'back'
-
-  const cardsBefore = steps.slice(0, stepIndex).filter(s => s.kind === 'card').length
-  const cardTotal = steps.filter(s => s.kind === 'card').length
 
   return (
-    <StudyStage
+    <SessionStage
       tone="smart"
-      kicker={<>Inteligentnie · {packCount} {plPackets(packCount)}</>}
-      packageId={card?.packageId}
-      counter={`${Math.min(cardsBefore + 1, cardTotal)} / ${cardTotal}`}
-      rail={<SmartProgressRail steps={steps} stepIndex={stepIndex} />}
-      onExit={() => { stop(); goBack() }}
-      exitLabel={backLabel}
-      cardKey={stepIndex}
-      polish={card?.word.polish ?? ''}
-      english={card?.word.english ?? ''}
-      side={side}
-      cardClass={cardClass}
-      onFlip={flipCard}
-      onAnimationEnd={handleAnimationEnd}
-      onPlay={() => { stop(); if (card) playWord(card.word) }}
-      {...sentenceProps}
-      answersVisible={flipped && !isAdvancing}
-      answersDisabled={isAdvancing}
-      onAnswer={answer}
-    />
+      settled={settled}
+      openerVisible={openerVisible}
+      opener={
+        <SmartSessionOpener
+          key="opener"
+          preview={preview}
+          opensWith={opensWith}
+          ready={settled}
+          onDone={dismissOpener}
+        />
+      }
+    >
+      {body}
+    </SessionStage>
   )
 }

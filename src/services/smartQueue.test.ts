@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import {
   smartTargetCount, smartSessionSize, measuredCardsPerMin,
-  selectSmart, composeSmartSteps, SMART, PACE, SmartSelection,
+  selectSmart, composeSmartSteps, previewOf, smartPeek, smartReason, SMART, PACE, SmartSelection,
 } from './smartQueue'
 import { HEALTH, ReviewHealth } from './reviewHealth'
 import type { ProgressSnapshot } from '../hooks/useProgressData'
@@ -192,12 +192,13 @@ describe('selectSmart', () => {
   it('reaches a full sitting for a brand-new user without fanning out over the catalog', () => {
     const selection = selectSmart({ snapshot: baseSnapshot(), comfortLevel: 1.0, todayLevel: 1, goalSec: 3600 })
     // Nothing due and no stretch, so the whole sitting is learn: MAX_CARDS=40
-    // over 10-word level-1 packs is 4 packs. The learn stream must cover the
-    // quota (the old flat MAX_PACKS=8 used to truncate it) without reaching for
-    // a dozen packs to do it — that fan-out is what a session shows as
-    // "16 pakietów" and what makes the /pack-content fetches pile up.
+    // plus LEARN_RESERVE=8 of slack, over 10-word level-1 packs, is 5 packs.
+    // The learn stream must cover the quota (the old flat MAX_PACKS=8 used to
+    // truncate it) without reaching for a dozen packs to do it — that fan-out
+    // is what a session shows as "16 pakietów" and what makes the
+    // /pack-content fetches pile up.
     expect(selection.quota.learn).toBe(SMART.MAX_CARDS)
-    expect(selection.learnPackIds).toHaveLength(4)
+    expect(selection.learnPackIds).toHaveLength(5)
   })
 
   it('orders straggler words by how close their pack is to completion', () => {
@@ -291,6 +292,93 @@ describe('composeSmartSteps', () => {
       'info:review-ahead', 'review',
       'info:stretch-ahead', 'stretch', 'stretch',
     ])
+  })
+
+  /* An info step explains why what's being asked of you just changed. First in
+   * the queue there is no change to explain, and it stopped being a hand-off:
+   * it became a second opening screen, stacked over the curtain (which is
+   * still up for OPENER_MIN_MS after the session settles) and read through its
+   * own translucent scrim. The curtain announces the opening segment instead —
+   * that is what `opensWith` is for. */
+  it('never opens on a hand-off card, and reports what it opens with instead', () => {
+    const selection: SmartSelection = {
+      targetCount: 3,
+      size: sizeOf(3),
+      // No room for new words at all — a review-heavy day, the case that put an
+      // info card at step 0.
+      quota: { learn: 0, review: 3, stretch: 0 },
+      reviewRatio: SMART.REVIEW_RATIO,
+      tone: null,
+      learnPackIds: ['p1'],
+      stretchPackId: null,
+      reviewWords: [
+        wp({ wordId: 'p3-w1', packageId: 'p3' }),
+        wp({ wordId: 'p3-w2', packageId: 'p3' }),
+        wp({ wordId: 'p3-w3', packageId: 'p3' }),
+      ],
+      packIds: ['p1', 'p3'],
+    }
+    const packs = new Map([
+      ['p1', pack('p1', ['p1-w1', 'p1-w2'])],
+      ['p3', pack('p3', ['p3-w1', 'p3-w2', 'p3-w3'])],
+    ])
+
+    const { steps, opensWith } = composeSmartSteps({ selection, packs, wordProgressById: new Map() })
+
+    expect(steps.map(s => (s.kind === 'card' ? s.segment : `info:${s.variant}`)))
+      .toEqual(['review', 'review', 'review'])
+    expect(opensWith).toEqual({ segment: 'review', count: 3 })
+  })
+
+  /* The same hazard on the stretch side: an empty warmup with no reviews puts
+   * `info:stretch-ahead` first. */
+  it('never opens on a stretch hand-off either', () => {
+    const selection: SmartSelection = {
+      targetCount: 2,
+      size: sizeOf(2),
+      quota: { learn: 0, review: 0, stretch: 2 },
+      reviewRatio: SMART.REVIEW_RATIO,
+      tone: null,
+      learnPackIds: ['p1'],
+      stretchPackId: 'p2',
+      reviewWords: [],
+      packIds: ['p1', 'p2'],
+    }
+    const packs = new Map([
+      ['p1', pack('p1', ['p1-w1'])],
+      ['p2', pack('p2', ['p2-w1', 'p2-w2'])],
+    ])
+
+    const { steps, opensWith } = composeSmartSteps({ selection, packs, wordProgressById: new Map() })
+
+    expect(steps.every(s => s.kind === 'card')).toBe(true)
+    expect(opensWith).toEqual({ segment: 'stretch', count: 2 })
+  })
+
+  /* `opensWith.count` is the OPENING BLOCK, not the segment's total: "zaczynamy
+   * od powtórki, 8 słów" has to mean the eight you are about to do. */
+  it('counts only the opening block, not the segment total', () => {
+    const selection: SmartSelection = {
+      targetCount: 5,
+      size: sizeOf(5),
+      quota: { learn: 2, review: 3, stretch: 0 },
+      reviewRatio: SMART.REVIEW_RATIO,
+      tone: null,
+      learnPackIds: ['p1'],
+      stretchPackId: null,
+      reviewWords: [wp({ wordId: 'p3-w1', packageId: 'p3' })],
+      packIds: ['p1', 'p3'],
+    }
+    const packs = new Map([
+      ['p1', pack('p1', ['p1-w1', 'p1-w2'])],
+      ['p3', pack('p3', ['p3-w1'])],
+    ])
+
+    const { steps, opensWith } = composeSmartSteps({ selection, packs, wordProgressById: new Map() })
+
+    expect(steps[0].kind).toBe('card')
+    // Two learn cards open it; the review that follows is behind a hand-off.
+    expect(opensWith).toEqual({ segment: 'learn', count: 2 })
   })
 
   it('produces plain card steps with no info cards when only one segment is present', () => {
@@ -408,5 +496,30 @@ describe('selectSmart × review health', () => {
     const sel = selectSmart({ snapshot: dueSnapshot(), comfortLevel: 1, todayLevel: 1, goalSec, reviewHealth: thin })
     expect(sel.reviewRatio).toBe(SMART.REVIEW_RATIO)
     expect(sel.tone).toBeNull()
+  })
+})
+
+describe('previewOf / smartPeek', () => {
+  const args = { snapshot: baseSnapshot(), comfortLevel: 2, todayLevel: 1, goalSec: 15 * 60 }
+
+  it('matches smartPeek for the same selection — the split is a refactor, not a change', () => {
+    expect(previewOf(selectSmart(args))).toEqual(smartPeek(args))
+  })
+
+  it('reports stretch as 0 when no stretch pack was chosen, whatever the quota says', () => {
+    const sel = selectSmart({ ...args, comfortLevel: 1 })
+    expect(sel.stretchPackId).toBeNull()
+    expect(previewOf(sel).stretch).toBe(0)
+  })
+
+  it('explains itself only when the mix actually moved', () => {
+    const baseline = smartPeek(args)
+    expect(baseline.adapted).toBe(false)
+    expect(smartReason(baseline)).toBeNull()
+
+    // A bonus session is a departure worth a sentence even when the ratio held.
+    expect(smartReason({ ...baseline, bonus: true })).toContain('Cel na dziś')
+    expect(smartReason({ ...baseline, adapted: true, tone: 'strong' })).toContain('nowych słów')
+    expect(smartReason({ ...baseline, adapted: true, tone: 'slipping' })).toContain('powtarzamy')
   })
 })

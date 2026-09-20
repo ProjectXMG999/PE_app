@@ -1,0 +1,77 @@
+/* =============================================================================
+ * SMART SESSION OPENER — what the Inteligentny curtain adds to the shell.
+ * -----------------------------------------------------------------------------
+ * The three chip colours are the three segment colours of SmartProgressRail, so
+ * the curtain opens in the palette the rail underneath is about to use.
+ * ========================================================================== */
+
+/* What the sitting opens on, when that isn't new words. Set as a left-ruled
+   block in the segment's own colour — the same colour its chip and its zone on
+   the progress rail carry — so the curtain names the thing the first card is
+   about to be, rather than a second screen doing it afterwards. */
+.smartopener__lead {
+  --lead: var(--live);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding-left: var(--spacing-md);
+  max-width: 34ch;
+  border-left: 2px solid var(--lead);
+}
+
+.smartopener__lead--review { --lead: var(--live); }
+.smartopener__lead--stretch { --lead: var(--accent-blue); }
+
+.smartopener__lead-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--lead);
+}
+
+.smartopener__lead-sub {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.smartopener__mix {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.smartopener__chip {
+  --chip: var(--accent);
+  padding: 6px 14px;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--chip);
+  border: 1px solid color-mix(in oklch, var(--chip) 40%, transparent);
+  border-radius: var(--radius-full);
+  background: color-mix(in oklch, var(--chip) 12%, transparent);
+}
+
+.smartopener__chip--learn { --chip: var(--accent); }
+.smartopener__chip--review { --chip: var(--live); }
+.smartopener__chip--stretch { --chip: var(--accent-blue); }
+
+.smartopener__reason {
+  position: relative;
+  margin: 0;
+  max-width: 34ch;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
