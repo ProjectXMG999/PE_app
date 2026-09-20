@@ -35,27 +35,31 @@ interface Props {
  * The two top bands describe what comfort PERMITS, not what the queue did:
  * selectSmart also needs review health's consent before it actually reaches for
  * a harder pack, so a promise here would sometimes be false.
+ *
+ * Two things the wording has to keep doing: no adjective that agrees with the
+ * learner's gender ("gotowy/gotowa" — we don't know which), and no engine words
+ * ("komfort", "poziom trudności") leaking out of the model into the copy.
  */
 const FIT_COPY: Record<ComfortFit, { label: string; line: string }> = {
   demanding: {
-    label: 'Wymagająco',
-    line: 'Ten materiał jeszcze Ci się stawia — kolejne sesje będą łatwiejsze.',
+    label: 'Pod górkę',
+    line: 'Ten materiał daje Ci w kość — na razie trochę odpuszczę.',
   },
   matched: {
     label: 'W sam raz',
-    line: 'Trudność jest dobrana pod Ciebie. Tak trzymamy.',
+    line: 'Ani za łatwo, ani za trudno. Tak trzymaj!',
   },
   easy: {
-    label: 'Swobodnie',
-    line: 'Idzie gładko. Jeszcze trochę i zacznę dokładać trudniejsze słowa.',
+    label: 'Z górki',
+    line: 'Radzisz sobie bez trudu — niedługo dorzucę trudniejsze słowa.',
   },
   stretching: {
-    label: 'Podkręcamy',
-    line: 'Komfort pozwala już dokładać słowa z wyższego poziomu.',
+    label: 'Podkręcamy tempo',
+    line: 'Mogę już dorzucać słowa z wyższego poziomu.',
   },
   ready: {
-    label: 'Gotowy na wyżej',
-    line: 'Wyższy poziom jest w Twoim zasięgu.',
+    label: 'Stać Cię na więcej',
+    line: 'Wyższy poziom jest już w Twoim zasięgu.',
   },
 }
 
