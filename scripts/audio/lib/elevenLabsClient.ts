@@ -38,13 +38,18 @@ async function withRetry<T>(fn: () => Promise<T>, label: string): Promise<T> {
     try {
       return await fn()
     } catch (e) {
-      if (!(e instanceof ElevenLabsError)) throw e
+      // A raw network exception (e.g. undici "fetch failed" on a transient
+      // DNS/connection blip) isn't an ElevenLabsError — found in production
+      // over a few thousand requests. Treat it like 'transient' rather than
+      // rethrowing immediately, so a blip doesn't fail a clip outright.
+      const kind = e instanceof ElevenLabsError ? e.kind : 'transient'
+      const status = e instanceof ElevenLabsError ? e.status : 0
       attempt++
-      if (e.kind === 'fatal' || attempt > 6) throw e
-      const wait = e.kind === 'concurrency' ? 1500 : Math.min(delay, 32000)
-      if (e.kind !== 'concurrency') delay *= 2
+      if (kind === 'fatal' || attempt > 6) throw e
+      const wait = kind === 'concurrency' ? 1500 : Math.min(delay, 32000)
+      if (kind !== 'concurrency') delay *= 2
       const jitter = Math.floor(Math.random() * 300)
-      process.stderr.write(`\n[retry ${attempt}] ${label}: ${e.kind} (${e.status}), waiting ${wait + jitter}ms\n`)
+      process.stderr.write(`\n[retry ${attempt}] ${label}: ${kind} (${status}), waiting ${wait + jitter}ms\n`)
       await sleep(wait + jitter)
     }
   }

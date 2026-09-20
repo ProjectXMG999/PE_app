@@ -22,8 +22,9 @@ async function main() {
     token: AUTH_TOKEN,
   })
 
+  // Skip _ab-sample*/_reports etc. — scratch/test directories, not pack audio.
   const packDirs = fs.readdirSync(AUDIO_DIR).filter(d =>
-    fs.statSync(path.join(AUDIO_DIR, d)).isDirectory()
+    !d.startsWith('_') && fs.statSync(path.join(AUDIO_DIR, d)).isDirectory()
   )
 
   let uploaded = 0
