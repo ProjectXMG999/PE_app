@@ -130,9 +130,27 @@ export function betterPackageProgress(a: PackageProgress, b: PackageProgress): P
  * on every merge — which quietly under-counted exactly the users who study most.
  * Sessions written before that field existed fall back to the old loose key,
  * where the collision risk remains but the data is already historical.
+ *
+ * The timestamp MUST be normalised rather than compared as written, because the
+ * two sides spell the same instant differently. Locally it is
+ * `new Date().toISOString()` → `2026-09-20T10:11:12.345Z`; remotely the column
+ * is `timestamptz` (migration 0003) and PostgREST renders it
+ * `2026-09-20T10:11:12.345+00:00`. Those strings never match, so every session
+ * looked local-only to the push AND remote-only to the pull: each merge
+ * re-inserted the whole log remotely and re-added the whole log locally. The
+ * table grew on every sign-in, and with it study time, words completed, the
+ * streak and the readiness score — all of which are derived from it.
  */
-function sessionKey(s: Pick<Session, 'packageId' | 'date' | 'wordsCompleted' | 'mode' | 'startedAt'>): string {
-  return `${s.packageId}|${s.date}|${s.wordsCompleted}|${s.mode}|${s.startedAt ?? ''}`
+function isoStamp(t: string | undefined): string {
+  if (!t) return ''
+  const ms = Date.parse(t)
+  // An unparseable value keeps its literal spelling: still a stable key, and
+  // still matches itself on both sides.
+  return Number.isNaN(ms) ? t : new Date(ms).toISOString()
+}
+
+export function sessionKey(s: Pick<Session, 'packageId' | 'date' | 'wordsCompleted' | 'mode' | 'startedAt'>): string {
+  return `${s.packageId}|${s.date}|${s.wordsCompleted}|${s.mode}|${isoStamp(s.startedAt)}`
 }
 
 /** PostgREST caps a response at the project's `db-max-rows` (1000 on hosted
@@ -315,6 +333,21 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
   })))
 
   // Sessions are append-only, so this one inserts rather than upserts.
+  //
+  // Logged, not thrown — unlike every read and every upsert above. By this
+  // point the four tables that actually carry learning progress are written and
+  // the account is demonstrably reachable, so a failure here is not "the sync
+  // broke", it is "the session log couldn't be appended". Throwing made those
+  // two indistinguishable: it surfaced as a toast telling the user their
+  // progress had failed to sync, and it cleared `lastSyncedUserId` in
+  // useAuthStore, re-arming the identical doomed write on every auth event.
+  //
+  // That is exactly what a schema drift did (see migration 0010 — the CHECK on
+  // `train_mode` predated the Inteligentny mode), and the failure mode is
+  // permanent by nature: a rejected row is rejected the same way every time.
+  // Nothing is lost by continuing. These sessions stay local-only, so the next
+  // merge retries them, and the moment the schema catches up they land.
+  let sessionsFailed = 0
   for (let i = 0; i < localOnlySessions.length; i += SYNC_BATCH) {
     const { error } = await supabase.from('sessions').insert(
       localOnlySessions.slice(i, i + SYNC_BATCH).map(s => ({
@@ -323,7 +356,16 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
         train_mode: s.trainMode, duration_sec: s.durationSec,
       }))
     )
-    if (error) throw new Error(`[progressSync] writing sessions failed: ${error.message}`)
+    if (error) {
+      sessionsFailed += Math.min(SYNC_BATCH, localOnlySessions.length - i)
+      console.error(`[progressSync] appending sessions failed (${error.code ?? 'no code'}):`, error.message)
+    }
+  }
+  if (sessionsFailed > 0) {
+    console.error(
+      `[progressSync] ${sessionsFailed} session row(s) could not be mirrored. ` +
+      'Local progress is unaffected; they will be retried on the next merge.'
+    )
   }
 
   // The merge can pull in rows written by a device that predates the listen
