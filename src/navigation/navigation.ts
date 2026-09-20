@@ -1,6 +1,7 @@
 import { useCallback, useLayoutEffect } from 'react'
 import { useLocation, useNavigate, useNavigationType } from 'react-router-dom'
 import type { NavigateOptions } from 'react-router-dom'
+import { navigateWithTransition, popWithTransition, settle } from './transitions'
 
 /**
  * Where you came from, and how to get back there.
@@ -57,6 +58,26 @@ const HUB_NAMES: Record<Hub, { label: string; backLabel: string }> = {
   '/ustawienia': { label: 'Ustawienia', backLabel: 'Wróć do ustawień' },
 }
 
+/**
+ * The tabs, left to right, exactly as the bar draws them (NAV_ITEMS).
+ *
+ * Which way a tab switch travels is read off this: moving right along the bar
+ * brings the new screen in from the right, moving left brings it in from the
+ * left. A tab bar is a row, not a stack, and animating it as one — every switch
+ * a cross-dissolve, or worse, every switch a push — throws away the one spatial
+ * fact the user already has on screen.
+ */
+const HUB_ORDER: Hub[] = ['/dzis', '/pakiety', '/trening', '/postęp', '/ustawienia']
+
+/** Which way the page should travel when switching from one tab to another. */
+export function hubDirection(from: Hub | null, to: Hub): 'forward' | 'back' | 'lateral' {
+  if (!from || from === to) return 'lateral'
+  const a = HUB_ORDER.indexOf(from)
+  const b = HUB_ORDER.indexOf(to)
+  if (a < 0 || b < 0) return 'lateral'
+  return b > a ? 'forward' : 'back'
+}
+
 function decodePath(pathname: string): string {
   try { return decodeURIComponent(pathname) } catch { return pathname }
 }
@@ -65,7 +86,9 @@ const PACK_PAGE = /^\/pakiet\/[^/]+$/
 const PACK_FLOW = /^(\/pakiet\/[^/]+)\/.+$/
 
 function asHub(path: string): Hub | null {
-  const p = decodePath(path.split('?')[0])
+  // Hash and query stripped: a target like '/postęp#powtorki' is still the
+  // Postęp tab, and reading it as a deeper page would make a tab hop travel.
+  const p = decodePath(path.split('?')[0].split('#')[0])
   return p in HUB_NAMES ? (p as Hub) : null
 }
 
@@ -158,6 +181,11 @@ export function NavigationTracker() {
       pendingReplace = null
       navigate(path, { replace: true, state })
     }
+
+    // The new page is committed and hasn't painted yet: capture it, and the
+    // transition that was opened before the navigation plays out. No-op when
+    // nothing opened one (a deep link, a browser gesture).
+    settle()
   }, [location, type, navigate])
 
   return null
@@ -198,11 +226,14 @@ export function useAppNavigate() {
     }
     // Switching tabs isn't entering a flow — a hub never carries an origin.
     if (asHub(to)) origin = null
-    navigate(to, {
+    // A step deeper travels; a tab switch or a same-depth hop (next pack, mode
+    // toggle) dissolves in place — moving sideways shouldn't read as descending.
+    const dir = step === 'sideways' || asHub(to) ? 'lateral' : 'forward'
+    navigateWithTransition(dir, to, () => navigate(to, {
       ...rest,
       replace: step === 'sideways' ? true : rest.replace,
       state: origin ? { ...(state as object | null), origin } : state,
-    })
+    }))
   }, [navigate, location])
 }
 
@@ -237,10 +268,10 @@ export function useBack() {
       // of the first pack in a "next pack" chain); fix it up after the pop.
       const needsReplace = decodePath(entry) !== decodePath(wanted) || state !== undefined
       if (needsReplace) pendingReplace = { idx: at, path: target.path, state: state ?? null }
-      navigate(at - here)
+      popWithTransition('back', () => navigate(at - here))
       return
     }
-    navigate(target.path, { replace: true, state })
+    navigateWithTransition('back', target.path, () => navigate(target.path, { replace: true, state }))
   }, [navigate, origin?.idx, target.path])
 
   return { goBack, path: target.path, label: target.label, backLabel: target.backLabel, hub: target.hub }

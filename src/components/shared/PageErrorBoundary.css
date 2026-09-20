@@ -1,0 +1,80 @@
+/* Stands in for a whole page, so it carries its own centring and padding —
+   there is no AppShell left around it when this renders. */
+.pageerror {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  min-height: 70vh;
+  padding: var(--spacing-xl) var(--spacing-md);
+  text-align: center;
+}
+
+.pageerror__mark {
+  font-size: 32px;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.pageerror__title {
+  margin: var(--spacing-xs) 0 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pageerror__text {
+  margin: 0;
+  max-width: 34ch;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--text-secondary);
+  text-wrap: balance;
+}
+
+/* Dev only — the message that would otherwise only be in the console. */
+.pageerror__detail {
+  max-width: 100%;
+  margin: var(--spacing-xs) 0 0;
+  padding: var(--spacing-sm);
+  overflow-x: auto;
+  font-size: var(--text-xs);
+  text-align: left;
+  color: var(--warning);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.pageerror__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.pageerror__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pageerror__btn--primary {
+  color: #fff;
+  background: var(--accent);
+  border-color: transparent;
+}

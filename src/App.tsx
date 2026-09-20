@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect } from 'react'
+import { Suspense, lazy, useEffect, type ComponentType } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useRegisterSW } from 'virtual:pwa-register/react'
 import { useAppStore, resolveTheme } from './store/useAppStore'
@@ -7,6 +7,8 @@ import { initInstallService } from './services/installService'
 import { loadProgressSnapshot } from './hooks/useProgressData'
 import { runStreakFreezeUpkeep } from './services/streakFreeze'
 import { repairMasteryFlags } from './services/masteryRepair'
+import { repairListenAxis } from './services/listenRepair'
+import { flushOutbox } from './services/db'
 // Dev-only: exposes window.__seed / window.__clearProgress. The module body is
 // guarded by import.meta.env.DEV, so the bundler drops it from production.
 import './debug/seedProgress'
@@ -15,28 +17,43 @@ import './debug/devAutoLogin'
 import { DebugOverlay } from './components/debug/DebugOverlay'
 import { RequireEntitlement } from './components/auth/RequireEntitlement'
 import { LoadingFallback } from './components/shared/LoadingFallback'
+import { PageErrorBoundary } from './components/shared/PageErrorBoundary'
 import { ToastHost } from './components/shared/ToastHost'
 import { AchievementWatcher } from './components/progress/AchievementWatcher'
 import { AmbientBackground } from './components/ambient/AmbientBackground'
 import { TodayPage } from './pages/TodayPage'
 import { HOME, NavigationTracker } from './navigation/navigation'
+import { registerPage, warmPages } from './navigation/pageChunks'
 import './App.css'
 
-const HomePage = lazy(() => import('./pages/HomePage').then(m => ({ default: m.HomePage })))
-const FlashcardPage = lazy(() => import('./pages/FlashcardPage').then(m => ({ default: m.FlashcardPage })))
-const StatsPage = lazy(() => import('./pages/StatsPage').then(m => ({ default: m.StatsPage })))
-const TrainingPage = lazy(() => import('./pages/TrainingPage').then(m => ({ default: m.TrainingPage })))
-const TrainingExercisePage = lazy(() => import('./pages/TrainingExercisePage').then(m => ({ default: m.TrainingExercisePage })))
-const PackPreviewPage = lazy(() => import('./pages/PackPreviewPage').then(m => ({ default: m.PackPreviewPage })))
-const AutoplayModePage = lazy(() => import('./pages/AutoplayModePage').then(m => ({ default: m.AutoplayModePage })))
-const FlashcardModePage = lazy(() => import('./pages/FlashcardModePage').then(m => ({ default: m.FlashcardModePage })))
-const WordFlashPage = lazy(() => import('./pages/WordFlashPage').then(m => ({ default: m.WordFlashPage })))
-const ActiveSentencePage = lazy(() => import('./pages/ActiveSentencePage').then(m => ({ default: m.ActiveSentencePage })))
-const SettingsPage = lazy(() => import('./pages/SettingsPage').then(m => ({ default: m.SettingsPage })))
-const LoginPage = lazy(() => import('./pages/LoginPage').then(m => ({ default: m.LoginPage })))
-const AccountPage = lazy(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage })))
-const ReviewPage = lazy(() => import('./pages/ReviewPage').then(m => ({ default: m.ReviewPage })))
-const SmartSessionPage = lazy(() => import('./pages/SmartSessionPage').then(m => ({ default: m.SmartSessionPage })))
+/**
+ * The route table, with each page's chunk registered against the paths it
+ * serves so it can be fetched before it's tapped — see navigation/pageChunks.
+ * The order matters exactly as much as it does below: the first pattern that
+ * matches a path wins, so the specific pack routes precede the catch-all one.
+ */
+function lazyPage<M extends Record<string, unknown>>(
+  load: () => Promise<M>, name: keyof M & string, match: RegExp,
+) {
+  registerPage(match, load)
+  return lazy(() => load().then(m => ({ default: m[name] as ComponentType })))
+}
+
+const HomePage = lazyPage(() => import('./pages/HomePage'), 'HomePage', /^\/pakiety$/)
+const PackPreviewPage = lazyPage(() => import('./pages/PackPreviewPage'), 'PackPreviewPage', /^\/pakiet\/[^/]+$/)
+const AutoplayModePage = lazyPage(() => import('./pages/AutoplayModePage'), 'AutoplayModePage', /\/start$/)
+const FlashcardModePage = lazyPage(() => import('./pages/FlashcardModePage'), 'FlashcardModePage', /\/fiszki-start$/)
+const WordFlashPage = lazyPage(() => import('./pages/WordFlashPage'), 'WordFlashPage', /\/word-flash$/)
+const ActiveSentencePage = lazyPage(() => import('./pages/ActiveSentencePage'), 'ActiveSentencePage', /\/active-sentence$/)
+const FlashcardPage = lazyPage(() => import('./pages/FlashcardPage'), 'FlashcardPage', /^\/pakiet\/[^/]+\/[^/]+$/)
+const TrainingPage = lazyPage(() => import('./pages/TrainingPage'), 'TrainingPage', /^\/trening$/)
+const TrainingExercisePage = lazyPage(() => import('./pages/TrainingExercisePage'), 'TrainingExercisePage', /^\/trening\/[^/]+$/)
+const ReviewPage = lazyPage(() => import('./pages/ReviewPage'), 'ReviewPage', /^\/powtorka$/)
+const SmartSessionPage = lazyPage(() => import('./pages/SmartSessionPage'), 'SmartSessionPage', /^\/inteligentny$/)
+const StatsPage = lazyPage(() => import('./pages/StatsPage'), 'StatsPage', /^\/postęp$/)
+const SettingsPage = lazyPage(() => import('./pages/SettingsPage'), 'SettingsPage', /^\/ustawienia$/)
+const LoginPage = lazyPage(() => import('./pages/LoginPage'), 'LoginPage', /^\/logowanie$/)
+const AccountPage = lazyPage(() => import('./pages/AccountPage'), 'AccountPage', /^\/konto$/)
 
 export function App() {
   const { theme, setInstallPrompt, setInstalled, setSwUpdateAvailable, setSwRegistration } = useAppStore()
@@ -98,15 +115,20 @@ export function App() {
     const run = async () => {
       if (cancelled) return
       try { await repairMasteryFlags() } catch (err) { console.error('[mastery] repair failed:', err) }
+      try { await repairListenAxis() } catch (err) { console.error('[listen] repair failed:', err) }
+      // Anything the Supabase mirror couldn't deliver last session.
+      try { await flushOutbox() } catch (err) { console.error('[progressSync] flush failed:', err) }
       try { await runStreakFreezeUpkeep() } catch (err) { console.error('[streak] upkeep failed:', err) }
       // Badging API: show the learning streak on the installed PWA icon. Only
       // this last step is optional — the two repairs above feed the UI.
-      if (cancelled || !('setAppBadge' in navigator)) return
-      try {
-        const s = await loadProgressSnapshot(true)
-        if (s.streak > 0) navigator.setAppBadge(s.streak).catch(() => {})
-        else navigator.clearAppBadge?.().catch(() => {})
-      } catch { /* badge is best-effort */ }
+      if (cancelled) return
+      if ('setAppBadge' in navigator) {
+        try {
+          const s = await loadProgressSnapshot(true)
+          if (s.streak > 0) navigator.setAppBadge(s.streak).catch(() => {})
+          else navigator.clearAppBadge?.().catch(() => {})
+        } catch { /* badge is best-effort */ }
+      }
     }
 
     // Safari has no requestIdleCallback; the timeout is the fallback there and
@@ -118,6 +140,25 @@ export function App() {
     }
     const id = window.setTimeout(() => void run(), 200)
     return () => { cancelled = true; clearTimeout(id) }
+  }, [])
+
+  // Page chunks, shortly after the first screen is up — NOT behind the data
+  // upkeep above, which can run for a second or more. A navigation into a chunk
+  // that hasn't loaded is the one case where the app can't transition, so this
+  // should be done long before anything is tapped. One fetch at a time, in the
+  // background; it is only the view modules.
+  useEffect(() => {
+    const id = window.setTimeout(() => void warmPages(), 400)
+    return () => clearTimeout(id)
+  }, [])
+
+  // Coming back online is the moment a queued write can finally land, and a
+  // phone that studied through a dead spot is exactly the case the outbox is
+  // for. The flush is a no-op when the queue is empty or nobody is signed in.
+  useEffect(() => {
+    const onOnline = () => void flushOutbox().catch(() => {})
+    window.addEventListener('online', onOnline)
+    return () => window.removeEventListener('online', onOnline)
   }, [])
 
   return (
@@ -132,6 +173,10 @@ export function App() {
           <button onClick={() => { updateServiceWorker(true); window.location.reload() }}>Odśwież</button>
         </div>
       )}
+      {/* Keyed by path so navigating away clears a crash: without that, one
+          screen that throws would hold the app on its error page for good.
+          Inside <Suspense>, so a chunk that fails to load is caught here too. */}
+      <PageErrorBoundary key={location.pathname}>
       <Suspense fallback={<LoadingFallback />}>
         <Routes>
           {/* Dzisiaj is the start page: the root, the PWA start_url and any
@@ -156,6 +201,7 @@ export function App() {
           <Route path="*" element={<Navigate to={HOME} replace />} />
         </Routes>
       </Suspense>
+      </PageErrorBoundary>
       <ToastHost />
       <AchievementWatcher />
       <DebugOverlay />

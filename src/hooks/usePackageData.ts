@@ -38,6 +38,21 @@ async function refreshedToken(): Promise<string | null> {
   return data.session?.access_token ?? null
 }
 
+/**
+ * A pack request that came back with an HTTP status.
+ *
+ * Carries the status because the caller's recovery depends on it: 429/5xx is
+ * worth retrying, 401/402/404 never is. The old `new Error('Pack X not found')`
+ * flattened all of them into the same unactionable sentence, which is how a
+ * whole-level declaration could die on an expired session and say nothing.
+ */
+export class PackFetchError extends Error {
+  constructor(public readonly packId: string, public readonly status: number) {
+    super(`Pack ${packId}: HTTP ${status}`)
+    this.name = 'PackFetchError'
+  }
+}
+
 async function requestPack(packId: string, signal?: AbortSignal): Promise<Pack> {
   const url = `/.netlify/functions/pack-content?pack=${encodeURIComponent(packId)}`
   let res = await fetch(url, { signal, headers: tokenHeaders() })
@@ -51,7 +66,7 @@ async function requestPack(packId: string, signal?: AbortSignal): Promise<Pack> 
     }
   }
 
-  if (!res.ok) throw new Error(`Pack ${packId} not found`)
+  if (!res.ok) throw new PackFetchError(packId, res.status)
   return (await res.json()) as Pack
 }
 
