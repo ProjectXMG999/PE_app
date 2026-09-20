@@ -15,6 +15,10 @@ interface MediaSessionOpts {
    *  progress bar. Both must be finite with 0 <= position <= duration. */
   durationSec?: number
   positionSec?: number
+  /** Cover art URL for the current word (see services/lockArtwork.ts). The app
+   *  icon is used when this is absent. Whoever creates it owns its lifetime —
+   *  this hook never revokes a blob URL it didn't make. */
+  artworkUrl?: string | null
 }
 
 // Lock-screen / notification transport for the autoplay sequence.
@@ -38,7 +42,7 @@ export function useMediaSession(opts: MediaSessionOpts): void {
   const handlersRef = useRef({ onPlay: opts.onPlay, onPause: opts.onPause, onNext: opts.onNext, onPrev: opts.onPrev, onStop: opts.onStop })
   handlersRef.current = { onPlay: opts.onPlay, onPause: opts.onPause, onNext: opts.onNext, onPrev: opts.onPrev, onStop: opts.onStop }
 
-  const { enabled, title, artist, album, playing, durationSec, positionSec } = opts
+  const { enabled, title, artist, album, playing, durationSec, positionSec, artworkUrl } = opts
 
   // Action handlers — registered once per enable
   useEffect(() => {
@@ -78,15 +82,20 @@ export function useMediaSession(opts: MediaSessionOpts): void {
         title,
         artist,
         album,
-        artwork: [
-          { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
-          { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
-        ],
+        // The generated card when there is one, the app icon otherwise. The two
+        // icon sizes stay as the fallback so a failed render degrades to what
+        // the lock screen showed before rather than to nothing.
+        artwork: artworkUrl
+          ? [{ src: artworkUrl, sizes: '512x512', type: 'image/png' }]
+          : [
+              { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
+              { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
+            ],
       })
     } catch {
       // MediaMetadata constructor missing on very old browsers
     }
-  }, [supported, enabled, title, artist, album])
+  }, [supported, enabled, title, artist, album, artworkUrl])
 
   // Explicit state hint — overrides the browser's inferred state, which would
   // flip to "paused" during every silent gap between clips

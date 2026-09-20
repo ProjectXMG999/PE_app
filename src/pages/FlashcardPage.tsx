@@ -1,4 +1,5 @@
 import { useEffect, useRef, useCallback, useState } from 'react'
+import { AnimatePresence, useReducedMotion } from 'framer-motion'
 import { useParams, useLocation } from 'react-router-dom'
 import { useAppNavigate, useBack } from '../navigation/navigation'
 import { AppShell } from '../components/layout/AppShell'
@@ -10,6 +11,7 @@ import { ProgressBar } from '../components/flashcard/ProgressBar'
 import { MasteryScreen } from '../components/flashcard/MasteryScreen'
 import { AutoplayDoneScreen } from '../components/flashcard/AutoplayDoneScreen'
 import { AutoplayControls } from '../components/flashcard/AutoplayControls'
+import { SessionOpener } from '../components/flashcard/SessionOpener'
 import { AutoplaySettingsSheet } from '../components/flashcard/AutoplaySettingsSheet'
 import { usePackageData } from '../hooks/usePackageData'
 import { useFlashcard } from '../hooks/useFlashcard'
@@ -17,7 +19,9 @@ import { useAudio } from '../hooks/useAudio'
 import { useAutoplaySequence } from '../hooks/useAutoplaySequence'
 import { useWakeLock } from '../hooks/useWakeLock'
 import { useMediaSession } from '../hooks/useMediaSession'
+import { useLockArtwork } from '../hooks/useLockArtwork'
 import { startKeepAlive, stopKeepAlive } from '../audio/keepAlive'
+import { startStudyPad, stopStudyPad } from '../audio/studyPad'
 import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { saveSession, savePackageProgress, getPackageProgress, saveWordProgress, getPackageWordProgress, getWordProgress } from '../services/db'
 import { StudyMode } from '../types/progress'
@@ -26,6 +30,7 @@ import { AUTOPLAY_MODES, planSequence, estimateWordMs } from '../config/autoplay
 import { RATES } from '../constants/audioRates'
 import { useStudyClock } from '../hooks/useStudyClock'
 import { dayKey } from '../utils/day'
+import { routeNumber } from '../utils/packRoute'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import './FlashcardPage.css'
@@ -46,7 +51,7 @@ export function FlashcardPage() {
   const location = useLocation()
   const studyMode = (mode === 'autoplay' ? 'autoplay' : 'fiszki') as StudyMode
 
-  const { setPackage, setCardIndex, autoplayMode, setAutoplayMode, enRate, setEnRate, plRate, keepScreenAudioAlive } = useAppStore()
+  const { setPackage, setCardIndex, autoplayMode, setAutoplayMode, enRate, setEnRate, plRate, keepScreenAudioAlive, studyPadEnabled } = useAppStore()
   const { pack, loading, error } = usePackageData(packageId ?? null)
   const allWords = pack?.words ?? []
   // In fiszki mode: only show words not yet marked 'known'. Autoplay always shows all.
@@ -86,6 +91,23 @@ export function FlashcardPage() {
   const [autoContinue, setAutoContinue] = useState(true)
   const [countdown, setCountdown] = useState(6)
   const [sheetOpen, setSheetOpen] = useState(false)
+  // The title card before the first word (§12). Starts armed and is disarmed by
+  // the timer below once the session actually has something to show, so the
+  // 1.2s is spent on the curtain rather than on the pack still loading.
+  const [opening, setOpening] = useState(true)
+  const reducedMotion = !!useReducedMotion()
+  // Runs only once the session is ready and only when there is something to
+  // open onto; reduced motion skips it entirely, since a decorative delay is
+  // precisely what that preference is asking not to have. Declared here, above
+  // the autoplay hook, because that hook's `enabled` reads it.
+  const openerReady = !loading && dbLoaded && !!pack && studyWords.length > 0 && !showCompletion
+  const openerVisible = opening && openerReady && !reducedMotion
+
+  useEffect(() => {
+    if (!openerVisible) return
+    const t = window.setTimeout(() => setOpening(false), 1200)
+    return () => clearTimeout(t)
+  }, [openerVisible])
   // Assigned once handleNext / handleAutoplayEnd exist below — the autoplay
   // sequence calls the latest version through these.
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})
@@ -99,7 +121,9 @@ export function FlashcardPage() {
     useAutoplaySequence({
       word: currentWord,
       mode: autoplayMode,
-      enabled: studyMode === 'autoplay' && studyWords.length > 0 && !showCompletion,
+      // Held back while the opener is up — audio starting under a title card
+      // would announce a word the session hasn't revealed yet.
+      enabled: studyMode === 'autoplay' && studyWords.length > 0 && !showCompletion && !openerVisible,
       isPaused,
       isLastCard,
       cardIndex: currentCardIndex,
@@ -165,6 +189,7 @@ export function FlashcardPage() {
     sessionStartRef.current = dayKey()
     ratedRef.current = 0
     knownHitRef.current = 0
+    setOpening(true)
     return () => {
       stop()
     }
@@ -434,13 +459,42 @@ export function FlashcardPage() {
     return () => stopKeepAlive()
   }, [keepAliveActive])
 
+  // Opt-in drone under the listening mode, in the pack's level key — fills the
+  // silence between clips so the session reads as a place rather than a file
+  // playing. Tied to the same condition as the keep-alive above, so pausing
+  // silences everything rather than leaving a tone running under a paused
+  // session. See audio/studyPad.ts, including why it does NOT replace keepAlive.
+  const padActive = studyPadEnabled && studyMode === 'autoplay' && !isPaused && !showCompletion && !loading
+  const padLevel = pack?.level ?? 1
+  useEffect(() => {
+    if (padActive) startStudyPad(padLevel)
+    else stopStudyPad()
+    return () => stopStudyPad()
+  }, [padActive, padLevel])
+
   // Lock-screen / notification transport controls + metadata.
   // Full support on Android Chrome; best-effort on iOS (stop() clears src between
   // cards, which tears down Now Playing — accepted, see useMediaSession docs).
   const perWordMs = currentWord && studyMode === 'autoplay'
     ? estimateWordMs(autoplayMode, currentWord) : 0
+
+  // Cover art for the word that's playing. Słuchaj is built for the screen to
+  // be off, which makes the lock screen the interface — so it shows the word
+  // rather than the app icon. Null outside autoplay: no card, no cover.
+  const lockArtwork = useLockArtwork(
+    studyMode === 'autoplay' && !showCompletion && currentWord
+      ? {
+          english: currentWord.english,
+          polish: currentWord.polish,
+          packName: pack?.name ?? '',
+          level: pack?.level ?? 1,
+        }
+      : null
+  )
+
   useMediaSession({
     enabled: studyMode === 'autoplay' && !showCompletion && !!currentWord,
+    artworkUrl: lockArtwork,
     title: currentWord?.english ?? '',
     artist: currentWord?.polish ?? '',
     album: pack?.name ?? 'Project English',
@@ -653,6 +707,19 @@ export function FlashcardPage() {
         />
 
         {sheetOpen && <AutoplaySettingsSheet onClose={() => setSheetOpen(false)} />}
+
+        <AnimatePresence>
+          {openerVisible && (
+            <SessionOpener
+              key="opener"
+              packName={pack.name}
+              level={pack.level}
+              cards={total}
+              routeNumber={packageId ? routeNumber(packageId) : null}
+              onDone={() => setOpening(false)}
+            />
+          )}
+        </AnimatePresence>
       </div>
     )
   }

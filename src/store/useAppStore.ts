@@ -153,6 +153,13 @@ interface AppStore {
   soundEnabled: boolean
   setSoundEnabled: (v: boolean) => void
 
+  /** The quiet drone under Słuchaj (audio/studyPad.ts). On by default — it is
+   *  the intended texture of the listening mode, and at −30 dB it sits under
+   *  the voice rather than beside it. One toggle in Ustawienia turns it off for
+   *  anyone who studies in silence. */
+  studyPadEnabled: boolean
+  setStudyPadEnabled: (v: boolean) => void
+
   /** Daily study-time goal, in seconds. */
   dailyGoalSec: number
   setDailyGoalSec: (sec: number) => void
@@ -175,7 +182,7 @@ type PersistedState = Pick<
   AppStore,
   'theme' | 'isInstalled' | 'iosBannerDismissed' | 'autoplayMode' | 'enRate' | 'plRate' | 'showDebug' | 'devUnlocked' | 'keepScreenAudioAlive'
   | 'dailyGoalSec' | 'reminderEnabled' | 'reminderHour' | 'streakFreeze' | 'achievementUnlocks' | 'todayLevel' | 'soundEnabled'
-  | 'comfortLevel' | 'comfortUpdatedAt' | 'strongStreak' | 'levelUpPrompt' | 'reviewHealth'
+  | 'comfortLevel' | 'comfortUpdatedAt' | 'strongStreak' | 'levelUpPrompt' | 'reviewHealth' | 'studyPadEnabled'
 >
 
 export const useAppStore = create<AppStore>()(
@@ -267,6 +274,9 @@ export const useAppStore = create<AppStore>()(
       soundEnabled: true,
       setSoundEnabled: (v) => set({ soundEnabled: v }),
 
+      studyPadEnabled: true,
+      setStudyPadEnabled: (v) => set({ studyPadEnabled: v }),
+
       dailyGoalSec: DEFAULT_DAILY_GOAL_SEC,
       // The Dziś ring reads its goal from useProgressPulse, which caches for
       // up to 60s and only refreshes on a progressEvents write — changing the
@@ -328,7 +338,7 @@ export const useAppStore = create<AppStore>()(
     }),
     {
       name: 'pe-store',
-      version: 4,
+      version: 5,
       migrate: (persisted) => {
         const s = (persisted ?? {}) as Partial<PersistedState>
         return {
@@ -354,6 +364,13 @@ export const useAppStore = create<AppStore>()(
           // and this signal is deliberately recent — better a couple of weeks
           // of baseline behaviour than a number fitted to two-year-old answers.
           reviewHealth: s.reviewHealth ?? EMPTY_REVIEW_HEALTH,
+          // v5: the listening drone flips on by default. A forced reset rather
+          // than `?? true`, and that is only defensible because the setting was
+          // introduced and re-defaulted inside a single unreleased change — no
+          // user has ever deliberately chosen "off", so there is no preference
+          // to overwrite. Anyone who wants silence turns it off once, in
+          // Ustawienia, and that choice then persists normally.
+          studyPadEnabled: true,
         }
       },
       partialize: (s) => ({
@@ -373,6 +390,7 @@ export const useAppStore = create<AppStore>()(
         achievementUnlocks: s.achievementUnlocks,
         todayLevel: s.todayLevel,
         soundEnabled: s.soundEnabled,
+        studyPadEnabled: s.studyPadEnabled,
         comfortLevel: s.comfortLevel,
         comfortUpdatedAt: s.comfortUpdatedAt,
         strongStreak: s.strongStreak,

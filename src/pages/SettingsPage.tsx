@@ -27,6 +27,7 @@ export function SettingsPage() {
     devUnlocked, setDevUnlocked,
     dailyGoalSec, setDailyGoalSec,
     soundEnabled, setSoundEnabled,
+    studyPadEnabled, setStudyPadEnabled,
     reviewHealth,
   } = useAppStore()
   const [showReset, setShowReset] = useState(false)
@@ -94,6 +95,14 @@ export function SettingsPage() {
             hint="Krótkie dźwięki i wibracje przy kluczowych akcjach"
             control={
               <Toggle on={soundEnabled} onChange={setSoundEnabled} label="Dźwięki interfejsu" />
+            }
+          />
+          <Row
+            inline
+            name="Podkład w tle"
+            hint="Cichy dźwięk wypełniający ciszę między słowami w trybie Słuchaj"
+            control={
+              <Toggle on={studyPadEnabled} onChange={setStudyPadEnabled} label="Podkład w tle" />
             }
           />
         </Section>
