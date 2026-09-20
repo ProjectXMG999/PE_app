@@ -1,0 +1,21 @@
+-- Phase 10: the listen axis gets its own column.
+--
+-- `current_index` is documented as "how far Słuchaj playback got", and every
+-- "odsłuchane" figure in the app reads it — but a Trenuj run, a pack-level
+-- "Znam wszystko" and a level-mastery declaration all wrote it to the full
+-- word count. Declaring knowledge therefore reported itself as listening, and
+-- a whole level could read "100% odsłuchane" without a second of audio.
+--
+-- One nullable timestamp, same additive pattern as 0005/0006/0008 — a row from
+-- an older client simply has no value:
+--   listened_at — the pack was played through end to end in Słuchaj. The
+--                  single source of "✓ Odsłuchana". `current_index` goes back
+--                  to being nothing but a resume pointer, and
+--                  `completed_at` keeps its broader meaning ("worked through
+--                  in any mode", shown as "✓ Przerobiona").
+--
+-- Existing rows are backfilled on the client from the session log — an
+-- autoplay session is only ever written after a full play-through, so it is
+-- proof rather than a hint. See src/services/listenRepair.ts. camelCase
+-- translation lives in src/services/progressSync.ts.
+alter table package_progress add column listened_at timestamptz;

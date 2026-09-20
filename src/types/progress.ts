@@ -74,12 +74,31 @@ export interface WordProgress {
   declaredRetiredAt?: string
 }
 
+/**
+ * Three independent axes, three fields — what you HEARD, what you WORKED
+ * THROUGH, and what you KNOW. They used to be two, and `currentIndex` was
+ * quietly doing duty for all three: every "odsłuchane" figure in the app reads
+ * it, but a Trenuj run, a "Znam wszystko" tap and a level declaration all wrote
+ * it to the full word count, so declaring knowledge reported itself as
+ * listening. Keep them separate; see services/listenAxis.ts for the one
+ * function allowed to move the listen axis.
+ */
 export interface PackageProgress {
   packageId: string
   startedAt: string
-  completedAt: string | null    // last time all cards were played through
-  masteredAt: string | null     // time when all words were marked 'known'
+  /** How far Słuchaj playback got — a resume pointer, nothing else. Only a
+   *  real autoplay run may move it. */
   currentIndex: number
+  /** When the pack was played through end to end in Słuchaj. The single
+   *  source of "✓ Odsłuchana". Optional: rows written before this field
+   *  existed don't have it, and listenRepair.ts backfills them from the
+   *  session log. */
+  listenedAt?: string | null
+  /** Last time every card was worked through, in ANY mode (Słuchaj, fiszki or
+   *  a Trenuj exercise) — "✓ Przerobiona". */
+  completedAt: string | null
+  /** When every word in the pack reached 'known' — "★ Opanowana". */
+  masteredAt: string | null
 }
 
 // ── Level mastery ("Oznacz cały poziom jako opanowany") ─────────────────────

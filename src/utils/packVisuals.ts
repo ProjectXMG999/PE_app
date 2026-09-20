@@ -225,19 +225,28 @@ export function getPackNumber(id: string): string | null {
   return match ? match[1] : null
 }
 
-export type PackStatus = 'new' | 'started' | 'completed' | 'mastered'
+/**
+ * Three axes, so three ways a pack can be "done" — and they rank, because a
+ * badge has room for one. `'worked'` used to be called `'completed'` and wore
+ * the "✓ Odsłuchana" label, which is how a pack drilled in Trenuj claimed to
+ * have been listened to; the listen claim now rests on `listenedAt` alone.
+ * See types/progress.ts and services/listenAxis.ts.
+ */
+export type PackStatus = 'new' | 'started' | 'worked' | 'listened' | 'mastered'
 
 export function getStatus(progress: PackageProgress | undefined): PackStatus {
   if (!progress) return 'new'
   if (progress.masteredAt) return 'mastered'
-  if (progress.completedAt) return 'completed'
+  if (progress.listenedAt) return 'listened'
+  if (progress.completedAt) return 'worked'
   return 'started'
 }
 
 export const STATUS_META: Record<PackStatus, { label: string; className: string }> = {
   new:       { label: '',              className: '' },
   started:   { label: 'W toku',        className: 'packcard--started' },
-  completed: { label: '✓ Odsłuchana',  className: 'packcard--completed' },
+  worked:    { label: '✓ Przerobiona', className: 'packcard--completed' },
+  listened:  { label: '✓ Odsłuchana',  className: 'packcard--completed' },
   mastered:  { label: '★ Opanowana',   className: 'packcard--mastered' },
 }
 

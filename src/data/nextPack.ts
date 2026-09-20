@@ -7,8 +7,8 @@ import { PackMeta } from '../types/vocabulary'
  * because the order the packs are in *is* the curriculum.
  *
  * Two different notions of "done", one per mode:
- *  - Słuchaj is finished when every card has been played through, so it tracks
- *    currentIndex and can resume mid-pack;
+ *  - Słuchaj is finished when every card has been played through — `listenedAt`
+ *    records that, and `currentIndex` is the pointer it can resume from;
  *  - Trenuj is finished when every word is known, so it tracks knownMap and
  *    always restarts from the top.
  *
@@ -29,8 +29,12 @@ export function nextListenPack(packs: PackMeta[], snapshot: ProgressSnapshot | n
   if (!snapshot) return { pack: packs[0], startIndex: 0, known: 0 }
 
   for (const pack of packs) {
-    const idx = snapshot.progressMap.get(pack.id)?.currentIndex ?? 0
-    if (idx < pack.wordCount) {
+    const progress = snapshot.progressMap.get(pack.id)
+    if (progress?.listenedAt == null) {
+      // Resume from wherever playback actually stopped. Clamped because a
+      // pointer at or past the end without a `listenedAt` would otherwise open
+      // the pack on nothing.
+      const idx = Math.min(progress?.currentIndex ?? 0, Math.max(pack.wordCount - 1, 0))
       return { pack, startIndex: idx, known: snapshot.knownMap.get(pack.id) ?? 0 }
     }
   }
@@ -55,14 +59,38 @@ export function nextTrainPack(packs: PackMeta[], snapshot: ProgressSnapshot | nu
  * counterpart to `knownTotal` (which is a Trenuj-only measure: a word only
  * counts as "known" once it's been actively recalled, not just heard). Packs,
  * not words, because Słuchaj doesn't track per-word mastery the way Trenuj
- * does — `currentIndex` only tells you how far into the pack playback got.
+ * does.
+ *
+ * Reads `listenedAt` and nothing else. It used to test `currentIndex` against
+ * the word count, and half the app wrote that field for reasons having nothing
+ * to do with audio — which is how a declared level reported itself as 100%
+ * listened. See services/listenAxis.ts.
  */
 export function listenedPacksCount(packs: PackMeta[], snapshot: ProgressSnapshot | null): number {
   if (!snapshot) return 0
   let count = 0
   for (const pack of packs) {
-    const idx = snapshot.progressMap.get(pack.id)?.currentIndex ?? 0
-    if (idx >= pack.wordCount) count++
+    if (snapshot.progressMap.get(pack.id)?.listenedAt != null) count++
+  }
+  return count
+}
+
+/**
+ * Unlistened packs BEHIND the frontier — the backlog Dziś doesn't route you
+ * through. `nextListenPack` is handed the packs from the frontier onwards, so
+ * without this the ones you skipped past would simply stop existing; the
+ * counter keeps them visible and reachable from Pakiety.
+ */
+export function listenBacklogCount(
+  packs: PackMeta[],
+  snapshot: ProgressSnapshot | null,
+  frontier: PackMeta | null,
+): number {
+  if (!snapshot || !frontier) return 0
+  let count = 0
+  for (const pack of packs) {
+    if (pack.id === frontier.id) break
+    if (snapshot.progressMap.get(pack.id)?.listenedAt == null) count++
   }
   return count
 }

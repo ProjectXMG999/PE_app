@@ -33,7 +33,10 @@ export async function recomputeMasteryFor(packageIds: string[]): Promise<void> {
         startedAt: pp?.startedAt ?? nowIso,
         completedAt: pp?.completedAt ?? nowIso,
         masteredAt: pp?.completedAt ?? nowIso,
-        currentIndex: Math.max(pp?.currentIndex ?? 0, total),
+        // Knowing every word says nothing about having heard them — the listen
+        // axis passes through. See services/listenAxis.ts.
+        listenedAt: pp?.listenedAt ?? null,
+        currentIndex: pp?.currentIndex ?? 0,
       })
     })
   )
@@ -45,13 +48,13 @@ export async function recomputeMasteryFor(packageIds: string[]): Promise<void> {
  *  - clears `masteredAt` where the known count is BELOW the word count
  *    ("★ Opanowana · 0 / 10 opanowanych"), and
  *  - sets `masteredAt` where every word is known but the flag was never written
- *    ("✓ Odsłuchana · 10 / 10", with no way to finish the pack).
+ *    ("✓ Przerobiona · 10 / 10", with no way to finish the pack).
  *
  * `masteredAt` is sticky by design (a mastered word never demotes, so nothing
  * un-masters a pack on its own), and a few accounts carry packs where it was
  * set without the matching word progress — most plausibly an interrupted
- * cross-device merge (progressSync's betterPackageProgress keeps whichever side
- * has masteredAt) or an early local seed whose word rows were later cleared.
+ * cross-device merge (progressSync's betterPackageProgress keeps a masteredAt
+ * from either side) or an early local seed whose word rows were later cleared.
  *
  * Conservative: only clears the flag where the known count is BELOW the pack's
  * word count. A genuinely mastered pack (known === wordCount) is never touched,
@@ -84,12 +87,12 @@ export async function repairMasteryFlags(): Promise<number> {
   }
 
   // The mirror case: every word is 'known' but masteredAt was never set, so the
-  // pack sits on "✓ Odsłuchana · 10 / 10" with the "Znam wszystko" button hidden
-  // (it only renders while knownCount < wordCount) — no way to finish it off.
-  // Happens when a pack's last words graduate through /powtorka (cross-pack,
+  // pack sits on "✓ Przerobiona · 10 / 10" with the "Znam wszystko" button
+  // hidden (it only renders while knownCount < wordCount) — no way to finish it
+  // off. Happens when a pack's last words graduate through /powtorka (cross-pack,
   // never touches per-pack mastery) rather than a WordFlash/ActiveSentence run.
   // Only touches packs already engaged with (a PackageProgress row exists);
-  // dates the mastery to the listen-through if there was one.
+  // dates the mastery to the last full run through the pack if there was one.
   let promoted = 0
   for (const pp of packages) {
     if (pp.masteredAt != null) continue
@@ -97,10 +100,12 @@ export async function repairMasteryFlags(): Promise<number> {
     if (total == null || total === 0) continue
     if ((knownByPack.get(pp.packageId) ?? 0) < total) continue
 
+    // `...pp` carries the listen axis through untouched — this pass used to
+    // raise currentIndex to the word count, so every fully-known pack reported
+    // itself as fully listened on each boot. See services/listenAxis.ts.
     await savePackageProgress({
       ...pp,
       masteredAt: pp.completedAt ?? new Date().toISOString(),
-      currentIndex: Math.max(pp.currentIndex ?? 0, total),
     })
     promoted++
   }

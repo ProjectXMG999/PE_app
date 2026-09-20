@@ -176,8 +176,6 @@ export function frontierPack(packs: PackMeta[], snapshot: ProgressSnapshot | nul
   return null
 }
 
-export type PackStatusFilter = PackStatus | 'all'
-
 /**
  * The lenses the route can be looked at through.
  *
@@ -260,24 +258,10 @@ export function packMatchesRouteFilter(pack: PackMeta, f: PackFilters, ctx: Lens
   return (f.cat == null || pack.category === f.cat) && packMatchesLens(pack, f.lens, ctx)
 }
 
-/** Per-pack status filter shared by the flat (filtered) list view. */
-export function packMatchesStatus(
-  pack: PackMeta,
-  snapshot: ProgressSnapshot | null,
-  status: PackStatus | 'all',
-): boolean {
-  if (status === 'all') return true
-  const prog = snapshot?.progressMap.get(pack.id)
-  const known = snapshot?.knownMap.get(pack.id) ?? 0
-  const allKnown = known >= pack.wordCount && pack.wordCount > 0
-  switch (status) {
-    case 'new':       return prog == null
-    case 'started':   return prog != null && prog.completedAt == null && !allKnown
-    case 'completed': return prog?.completedAt != null && !allKnown
-    case 'mastered':  return allKnown
-    default:          return true
-  }
-}
+/* `packMatchesStatus` / `PackStatusFilter` lived here until the listen axis was
+   split out of `currentIndex`. Both had been without a caller since the flat
+   list view moved to the lenses below (see the note at packMatchesLens), so
+   rather than teach a dead filter a fifth status they're gone. */
 
 /** Everything a lens needs to judge one pack, gathered once by the caller. */
 export interface LensContext {
