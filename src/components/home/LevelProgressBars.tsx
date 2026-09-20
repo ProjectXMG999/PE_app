@@ -51,16 +51,22 @@ function Row({ lvl, total, known, pct, index, reduced }: RowProps) {
       <span className="level-progress__label" style={{ color: LEVEL_COLORS[lvl] }}>
         Level {lvl}
       </span>
+      {/* Drawn when the row is looked at, not when the page mounts.
+          These bars sit a dozen sections down Postęp; animating on mount meant
+          they had always finished — privately, at the top of the page — by the
+          time anyone scrolled to them. `once` so a scroll back up doesn't
+          replay them, and the same viewport margin the figures use. */}
       <div className="level-progress__bar">
         <motion.div
           className="level-progress__fill"
           initial={{ width: 0 }}
-          animate={{ width: `${pct}%` }}
+          whileInView={{ width: `${pct}%` }}
+          viewport={{ once: true, margin: '0px 0px -10% 0px' }}
           transition={reduced ? { duration: 0 } : { duration: 0.9, ease: EASE_OUT_EXPO, delay: 0.12 + index * 0.08 }}
         />
       </div>
       <span className="level-progress__count">
-        <FlowNumber value={known} delayMs={120 + index * 80} /> / {total.toLocaleString('pl-PL')}
+        <FlowNumber value={known} onView delayMs={120 + index * 80} /> / {total.toLocaleString('pl-PL')}
       </span>
     </div>
   )

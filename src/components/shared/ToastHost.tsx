@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
 import { ExitDirection, Toast } from './Toast'
 import { AchievementToast, ToastData, setToastListener } from '../../services/toast'
 import { useAppStore } from '../../store/useAppStore'
+import { useTransitionNavigate } from '../../navigation/transitions'
 
 /** Queue ceiling — past this, older plain notes are dropped, never badges. */
 const MAX_QUEUED = 6
@@ -25,7 +25,7 @@ export function ToastHost() {
   const [queue, setQueue] = useState<ToastData[]>([])
   const [exitDir, setExitDir] = useState<ExitDirection>('down')
   const inSession = useAppStore(s => s.ambientHidden)
-  const navigate = useNavigate()
+  const navigate = useTransitionNavigate()
 
   useEffect(() => {
     setToastListener(t => setQueue(q => {
@@ -53,7 +53,7 @@ export function ToastHost() {
   const open = useCallback((t: AchievementToast) => {
     setExitDir('down')
     setQueue(q => q.filter(x => x.id !== t.id))
-    navigate('/postęp', { state: { badge: t.achievement.id } })
+    navigate('/postęp', { state: { badge: t.achievement.id }, direction: 'lateral' })
   }, [navigate])
 
   return (

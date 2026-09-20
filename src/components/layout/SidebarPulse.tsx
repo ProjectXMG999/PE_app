@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useLinkTransition } from '../../navigation/transitions'
 import { useProgressPulse } from '../../hooks/useProgressPulse'
 import { formatPoints } from '../../services/points'
 import { ROUTE_TOTAL } from '../../data/levels'
@@ -13,6 +14,7 @@ const WEEKDAY_INITIALS = ['P', 'W', 'Ś', 'C', 'P', 'S', 'N']
  */
 export function SidebarPulse() {
   const pulse = useProgressPulse()
+  const onLink = useLinkTransition()
 
   if (pulse == null) return null
 
@@ -21,7 +23,7 @@ export function SidebarPulse() {
   const todayIndex = (new Date().getDay() + 6) % 7
 
   return (
-    <Link to="/postęp" className="sidebarpulse" viewTransition>
+    <Link to="/postęp" className="sidebarpulse" onClick={onLink('/postęp', 'lateral')}>
       <div className="sidebarpulse__row">
         <span className="sidebarpulse__streak">
           <span aria-hidden="true">🔥</span>

@@ -1,4 +1,5 @@
 import { LEVEL_META, LEVEL_COLORS, MARKER_STEP, ROUTE_TOTAL, nextMarkerInfo } from '../../data/levels'
+import { useRevealOnView } from '../../hooks/useRevealOnView'
 import './RouteMap.css'
 
 interface Props {
@@ -31,6 +32,8 @@ function formatDate(iso: string): string {
  *  - each station says what it lets you *do*, not just how many words it costs.
  */
 export function RouteMap({ knownWords, reachedAt = {} }: Props) {
+  // Exactly one station is "current", so one ref is enough for the whole map.
+  const [youRef, youShown] = useRevealOnView<HTMLDivElement>()
   const stations: Station[] = LEVEL_META.map(l => ({
     level: l.level,
     name: l.name,
@@ -88,15 +91,18 @@ export function RouteMap({ knownWords, reachedAt = {} }: Props) {
               )}
 
               {showYou && (
-                <div className="routemap__you">
+                <div className="routemap__you" ref={youRef}>
+                  {/* Drawn on arrival: the fill and its marker both carry a
+                      900ms transition that only runs if they start somewhere
+                      else, and this station is well below the fold. */}
                   <div className="routemap__segment">
                     <div
                       className="routemap__segment-fill"
-                      style={{ width: `${segmentPct}%` }}
+                      style={{ width: youShown ? `${segmentPct}%` : 0 }}
                     />
                     <span
                       className="routemap__segment-marker"
-                      style={{ left: `${segmentPct}%` }}
+                      style={{ left: youShown ? `${segmentPct}%` : 0 }}
                       aria-hidden="true"
                     />
                   </div>

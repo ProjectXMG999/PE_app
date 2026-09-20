@@ -72,35 +72,22 @@
 
 /* ── Confirm / progress dialog — same shell as reset-modal.css ────────────── */
 
-dialog.lvl-mastery-modal::backdrop {
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(var(--scrim-blur));
-  -webkit-backdrop-filter: blur(var(--scrim-blur));
-}
-
-dialog.lvl-mastery-modal {
-  position: fixed;
-  inset: auto 0 0 0;
-  margin: 0 auto;
+/* Shell, scrim, grabber and the wide-screen switch to a centred card come from
+   `.u-sheet` in styles/surfaces.css; its motion from shared/Sheet.tsx. */
+.u-sheet__panel.lvl-mastery-modal {
   box-sizing: border-box;
-  color: var(--text-primary);
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-  padding: var(--spacing-xl) var(--spacing-lg) calc(var(--spacing-xl) + var(--safe-bottom));
-  width: 100%;
   max-width: 480px;
+  color: var(--text-primary);
+  padding: var(--spacing-lg) var(--spacing-lg)
+           calc(var(--spacing-xl) + var(--safe-bottom));
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
 }
 
-@media (min-height: 600px) {
-  dialog.lvl-mastery-modal {
-    inset: 0;
-    margin: auto;
+@media (min-width: 640px) {
+  .u-sheet__panel.lvl-mastery-modal {
     padding: var(--spacing-xl) var(--spacing-lg);
-    border-radius: var(--radius-xl);
   }
 }
 

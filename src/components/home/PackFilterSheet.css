@@ -1,41 +1,12 @@
-.pfsheet {
-  margin: auto auto 0;
-  padding: 0;
-  width: 100%;
-  max-width: 460px;
-  max-height: 88vh;
-  border: none;
-  background: transparent;
-  overflow: visible;
-}
-
-.pfsheet::backdrop {
-  background: var(--overlay);
-  backdrop-filter: blur(var(--scrim-blur));
-}
+/* Shell, scrim, grabber and the wide-screen switch to a centred card come from
+   `.u-sheet` in styles/surfaces.css; its motion from shared/Sheet.tsx. */
 
 .pfsheet__inner {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  max-height: 88vh;
-  overflow-y: auto;
-  padding: var(--spacing-sm) var(--spacing-lg) var(--spacing-xl);
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-bottom: none;
-  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
-  animation: slideUp 280ms var(--ease-out-expo);
-}
-
-.pfsheet__handle {
-  align-self: center;
-  width: 36px;
-  height: 4px;
-  margin-bottom: var(--spacing-lg);
-  border-radius: var(--radius-full);
-  background: var(--border);
-  flex-shrink: 0;
+  padding: var(--spacing-sm) var(--spacing-lg)
+           max(var(--spacing-xl), env(safe-area-inset-bottom));
 }
 
 .pfsheet__tabs {
@@ -61,11 +32,28 @@
   font-size: var(--text-sm);
   font-weight: 600;
   cursor: pointer;
+  isolation: isolate;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 180ms ease;
 }
 
 .pfsheet__tab.is-active {
-  background: color-mix(in oklch, var(--accent) 18%, transparent);
   color: var(--text-primary);
+}
+
+/* The active background as an object that slides between the two tabs
+   (shared layoutId in PackFilterSheet.tsx), not a class that repaints. */
+.pfsheet__tab-pill {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: color-mix(in oklch, var(--accent) 18%, transparent);
+}
+
+.pfsheet__tab-label {
+  display: inline-flex;
+  align-items: center;
 }
 
 /* A dot means "this axis is filtering", so an unopened tab still tells you it
@@ -238,18 +226,6 @@
 
 .pfsheet__close:active {
   transform: scale(0.97);
-}
-
-@media (min-width: 640px) {
-  .pfsheet { margin: auto; }
-  .pfsheet__inner {
-    border-bottom: 1px solid var(--border);
-    border-radius: var(--radius-2xl);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pfsheet__inner { animation: none; }
 }
 
 /* ── Coverage headline (Stan tab) ────────────────────────────────────────────

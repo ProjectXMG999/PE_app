@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { NAV_ITEMS } from './navItems'
-import { useActiveHub } from '../../navigation/navigation'
+import { hubDirection, useActiveHub } from '../../navigation/navigation'
+import { useLinkTransition } from '../../navigation/transitions'
+import { preloadPath } from '../../navigation/pageChunks'
 import { NavIndicator } from './NavIndicator'
 import './BottomNav.css'
 
@@ -14,6 +16,7 @@ export function BottomNav() {
   // Follows the flow's origin, not just the URL: a pack session launched from
   // Dzisiaj keeps Dzisiaj lit.
   const activeItem = useActiveHub()
+  const onLink = useLinkTransition()
 
   return (
     <nav className="bottomnav">
@@ -23,7 +26,8 @@ export function BottomNav() {
           <Link
             key={item.path}
             to={item.path}
-            viewTransition
+            onPointerDown={() => preloadPath(item.path)}
+            onClick={onLink(item.path, hubDirection(activeItem, item.path))}
             className={`bottomnav__item ${active ? 'bottomnav__item--active' : ''}`}
             aria-current={active ? 'page' : undefined}
           >

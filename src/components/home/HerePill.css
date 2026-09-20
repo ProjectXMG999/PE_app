@@ -21,7 +21,9 @@
   left: 50%;
   /* Clear of the tab island by a full row, so it never lands on top of a card
      the way a tighter offset did. */
-  bottom: calc(var(--bottomnav-reserve) + var(--safe-bottom) + var(--spacing-lg));
+  /* --bottomnav-reserve now carries the safe-area inset itself (tokens.css), so
+     adding it again here would double-count and float the pill too high. */
+  bottom: calc(var(--bottomnav-reserve) + var(--spacing-lg));
   z-index: 30;
   transform: translateX(-50%);
   display: inline-flex;

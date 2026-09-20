@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
+import { motion } from 'framer-motion'
+import { Sheet, useSheetMotion, type SheetHandle } from '../shared/Sheet'
 import './MetricsInfoSheet.css'
 
 interface Props {
@@ -45,54 +47,46 @@ const METRICS: Metric[] = [
 ]
 
 /**
- * Bottom sheet explaining seria / punkty / tempo. Native <dialog>, matching
- * AchievementSheet and DailyGoalPicker elsewhere on this page — same handle
- * bar, same slideUp entrance, so opening it feels like part of the same screen
- * rather than a bolted-on tooltip.
+ * Bottom sheet explaining seria / punkty / tempo. One `<Sheet>`, like every
+ * other in the app: it springs in, the three cards cascade behind it, and it
+ * can be flicked away — so it reads as part of this screen rather than a
+ * bolted-on tooltip. The cascade used to be three hand-set animation-delays.
  */
 export function MetricsInfoSheet({ onClose }: Props) {
-  const ref = useRef<HTMLDialogElement>(null)
-
-  useEffect(() => {
-    ref.current?.showModal()
-  }, [])
+  const sheet = useRef<SheetHandle>(null)
+  const { rise, group, tap } = useSheetMotion()
 
   return (
-    <dialog
-      ref={ref}
-      className="metricsinfo"
-      onClose={onClose}
-      onClick={e => {
-        if (e.target === ref.current) ref.current?.close()
-      }}
-    >
-      <div className="metricsinfo__inner">
-        <span className="metricsinfo__handle" aria-hidden="true" />
+    <Sheet ref={sheet} onClose={onClose} className="metricsinfo__inner" aria-label="Jak to liczymy">
+      <motion.h2 className="metricsinfo__title" variants={rise}>Jak to liczymy</motion.h2>
+      <motion.p className="metricsinfo__sub" variants={rise}>Trzy liczby, które widzisz nad trasą.</motion.p>
 
-        <h2 className="metricsinfo__title">Jak to liczymy</h2>
-        <p className="metricsinfo__sub">Trzy liczby, które widzisz nad trasą.</p>
+      <motion.ul className="metricsinfo__list" variants={group}>
+        {METRICS.map(m => (
+          <motion.li
+            key={m.title}
+            className={`metricsinfo__item metricsinfo__item--${m.accent}`}
+            variants={rise}
+          >
+            <span className="metricsinfo__icon" aria-hidden="true">{m.icon}</span>
+            <div className="metricsinfo__text">
+              <h3 className="metricsinfo__item-title">{m.title}</h3>
+              <p className="metricsinfo__lead">{m.lead}</p>
+              <p className="metricsinfo__detail">{m.detail}</p>
+            </div>
+          </motion.li>
+        ))}
+      </motion.ul>
 
-        <ul className="metricsinfo__list">
-          {METRICS.map((m, i) => (
-            <li
-              key={m.title}
-              className={`metricsinfo__item metricsinfo__item--${m.accent}`}
-              style={{ animationDelay: `${i * 90}ms` }}
-            >
-              <span className="metricsinfo__icon" aria-hidden="true">{m.icon}</span>
-              <div className="metricsinfo__text">
-                <h3 className="metricsinfo__item-title">{m.title}</h3>
-                <p className="metricsinfo__lead">{m.lead}</p>
-                <p className="metricsinfo__detail">{m.detail}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
-
-        <button className="metricsinfo__close" onClick={() => ref.current?.close()}>
-          Zrozumiałem
-        </button>
-      </div>
-    </dialog>
+      <motion.button
+        type="button"
+        className="metricsinfo__close"
+        variants={rise}
+        whileTap={tap}
+        onClick={() => sheet.current?.close()}
+      >
+        Zrozumiałem
+      </motion.button>
+    </Sheet>
   )
 }

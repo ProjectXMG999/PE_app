@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { ReadinessResult } from '../../hooks/useReadinessScore'
 import { ReadinessInfoSheet } from './ReadinessInfoSheet'
+import { FlowNumber } from '../shared/FlowNumber'
+import { useRevealOnView } from '../../hooks/useRevealOnView'
 import './ReadinessBreakdown.css'
 
 interface Props {
@@ -32,6 +34,7 @@ function toneFor(v: number): string {
 export function ReadinessBreakdown({ result }: Props) {
   const { score, breakdown } = result
   const [infoOpen, setInfoOpen] = useState(false)
+  const [partsRef, partsShown] = useRevealOnView<HTMLDListElement>()
   // The lowest part is the one worth naming — it's where the score is leaking.
   const weakest = PARTS.reduce((min, p) =>
     breakdown[p.key] < breakdown[min.key] ? p : min
@@ -72,8 +75,10 @@ export function ReadinessBreakdown({ result }: Props) {
         </div>
       </div>
 
-      <dl className="readiness__parts">
-        {PARTS.map(p => {
+      {/* The four bars fill as the block scrolls in, one behind the other,
+          and each percentage rolls with its own bar. */}
+      <dl className="readiness__parts" ref={partsRef}>
+        {PARTS.map((p, i) => {
           const v = breakdown[p.key]
           return (
             <div key={p.key} className="readiness__part">
@@ -85,10 +90,15 @@ export function ReadinessBreakdown({ result }: Props) {
                 <span className="readiness__bar">
                   <span
                     className={`readiness__bar-fill readiness__bar-fill--${toneFor(v)}`}
-                    style={{ width: `${v}%` }}
+                    style={{
+                      width: partsShown ? `${v}%` : 0,
+                      transitionDelay: `${i * 80}ms`,
+                    }}
                   />
                 </span>
-                <span className="readiness__pct">{v}%</span>
+                <span className="readiness__pct">
+                  <FlowNumber value={v} onView delayMs={i * 80} />%
+                </span>
               </dd>
             </div>
           )

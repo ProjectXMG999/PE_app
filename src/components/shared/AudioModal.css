@@ -1,42 +1,29 @@
-/* <dialog> replaces the old overlay-div + inner-div pair: the browser's
-   top layer handles stacking/focus-trap/ESC, ::backdrop replaces
-   .am-overlay's dim background. */
-dialog.am::backdrop {
-  background: rgba(0, 0, 0, 0.75);
-  animation: amFadeIn 220ms ease-out forwards;
-}
-
-@keyframes amFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-dialog.am {
-  /* Full-height bottom sheet: fixed 85dvh so the transcript always gets
-     a tall scrollable area instead of a content-collapsed frame. */
-  position: fixed;
-  inset: 0;
-  margin: auto auto 0;
+/* Shell, scrim, grabber and the wide-screen switch to a centred card come from
+   `.u-sheet` in styles/surfaces.css; its motion from shared/Sheet.tsx.
+   What is specific here: the player is a FIXED-height sheet, so the transcript
+   always gets a tall scrollable area instead of a content-collapsed frame —
+   and it is wider than an ordinary sheet, because it is mostly text. */
+.u-sheet__panel.am {
   box-sizing: border-box;
-  background: var(--bg-surface);
-  color: var(--text-primary);
-  border-radius: 20px 20px 0 0;
-  padding: 0;
-  width: 100%;
   max-width: 600px;
   height: 85dvh;
-  max-height: 85dvh;
+  color: var(--text-primary);
+  padding: 0;
   display: flex;
   flex-direction: column;
+  /* The transcript scrolls, not the panel. */
   overflow: hidden;
-  animation: amSlideUp 320ms cubic-bezier(0.32, 0.72, 0, 1) forwards;
-  border: 1px solid var(--border);
-  border-bottom: none;
 }
 
-@keyframes amSlideUp {
-  from { transform: translateY(100%); }
-  to   { transform: translateY(0); }
+.u-sheet__panel.am .u-sheet__grip {
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .u-sheet__panel.am {
+    height: min(85dvh, calc(100% - var(--spacing-2xl)));
+  }
 }
 
 /* ── Header ── */

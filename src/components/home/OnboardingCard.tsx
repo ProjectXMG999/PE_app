@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { AudioModal } from '../shared/AudioModal'
 import audioTimings from '../../data/audioTimings.json'
 import './OnboardingCard.css'
+import { useTransitionNavigate } from '../../navigation/transitions'
 
 const ONBOARDING_CARD_HIDDEN_KEY = 'lp_onboarding_card_hidden'
 
@@ -22,7 +22,7 @@ const WELCOME_PARAGRAPHS = [
 export function OnboardingCard() {
   const [isVisible, setIsVisible] = useState(() => !localStorage.getItem(ONBOARDING_CARD_HIDDEN_KEY))
   const [isPlaying, setIsPlaying] = useState(false)
-  const navigate = useNavigate()
+  const navigate = useTransitionNavigate()
 
   const handleHide = () => {
     setIsVisible(false)
@@ -57,7 +57,7 @@ export function OnboardingCard() {
             </button>
             <button
               className="onboarding-card__btn onboarding-card__btn--secondary"
-              onClick={() => navigate('/ustawienia')}
+              onClick={() => navigate('/ustawienia', { direction: 'lateral' })}
             >
               Dowiedz się więcej
             </button>

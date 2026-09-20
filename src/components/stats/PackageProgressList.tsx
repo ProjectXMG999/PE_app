@@ -1,6 +1,8 @@
 import { useMemo } from 'react'
 import packagesIndex from '../../data/packages-index.json'
 import { PackMeta } from '../../types/vocabulary'
+import { PackageProgress } from '../../types/progress'
+import { getStatus } from '../../utils/packVisuals'
 import { useProgressData } from '../../hooks/useProgressData'
 import './PackageProgressList.css'
 
@@ -17,6 +19,15 @@ interface Props {
    *  rather than used as a React `key` on this component: a changing key
    *  remounts, which threw away the sort memo and the DOM on every tick. */
   refreshKey?: unknown
+}
+
+/** Newest of the three things that can have happened to a pack, so a capped
+ *  list really is the most recent five. Listening through counts as touching
+ *  it — it lives on its own field now (see types/progress.ts). */
+function lastTouched(pp: PackageProgress): string {
+  return [pp.listenedAt, pp.completedAt, pp.startedAt]
+    .filter((d): d is string => d != null)
+    .reduce((newest, d) => (d > newest ? d : newest), pp.startedAt)
 }
 
 export function PackageProgressList({ limit, refreshKey }: Props = {}) {
@@ -36,9 +47,7 @@ export function PackageProgressList({ limit, refreshKey }: Props = {}) {
         : limit == null
           ? all
           : [...all]
-              .sort((a, b) =>
-                (b.completedAt ?? b.startedAt).localeCompare(a.completedAt ?? a.startedAt)
-              )
+              .sort((a, b) => lastTouched(b).localeCompare(lastTouched(a)))
               .slice(0, limit),
     [all, limit]
   )
@@ -56,15 +65,21 @@ export function PackageProgressList({ limit, refreshKey }: Props = {}) {
       {progress.map(pp => {
         const pack = packById.get(pp.packageId)
         if (!pack) return null
-        const pct = Math.round((pp.currentIndex / pack.wordCount) * 100)
-        const isMastered = pp.masteredAt != null
-        const isCompleted = pp.completedAt != null && !isMastered
+        // The bar used to be `currentIndex / wordCount` — the Słuchaj playback
+        // pointer — while the badge beside it came from `completedAt`. On the
+        // Postęp page, next to a "★ Opanowana" badge, that mixed two axes in
+        // one row; now it shows knowledge, which is what the badge ranks on.
+        const known = snapshot?.knownMap.get(pp.packageId) ?? 0
+        const pct = pack.wordCount > 0 ? Math.round((known / pack.wordCount) * 100) : 0
+        const status = getStatus(pp)
+        const isMastered = status === 'mastered'
         return (
           <div key={pp.packageId} className={`packprogress__item${isMastered ? ' packprogress__item--mastered' : ''}`}>
             <div className="packprogress__name-row">
               <span className="packprogress__name">{pack.name}</span>
               {isMastered && <span className="packprogress__badge packprogress__badge--mastered">★ Opanowana</span>}
-              {isCompleted && <span className="packprogress__badge packprogress__badge--completed">✓ Odsłuchana</span>}
+              {status === 'listened' && <span className="packprogress__badge packprogress__badge--completed">✓ Odsłuchana</span>}
+              {status === 'worked' && <span className="packprogress__badge packprogress__badge--completed">✓ Przerobiona</span>}
             </div>
             <div className="packprogress__bar-row">
               <div className="packprogress__bar">

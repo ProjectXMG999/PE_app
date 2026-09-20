@@ -2,6 +2,8 @@ import { ReactNode, useMemo, useState } from 'react'
 import type { WordProgress } from '../../types/progress'
 import { retentionBreakdown, type RetentionTier } from '../../services/reviewQueue'
 import { RetentionInfoSheet } from './RetentionInfoSheet'
+import { FlowNumber } from '../shared/FlowNumber'
+import { useRevealOnView } from '../../hooks/useRevealOnView'
 import { plural } from '../../utils/plural'
 import './RetentionBars.css'
 
@@ -44,6 +46,7 @@ const TIER_META: Record<RetentionTier, TierMeta> = {
 
 export function RetentionBars({ wordProgress, queue }: Props) {
   const [infoOpen, setInfoOpen] = useState(false)
+  const [barRef, barShown] = useRevealOnView<HTMLDivElement>()
   const stats = useMemo(() => retentionBreakdown(wordProgress), [wordProgress])
   const { buckets, total, durablePct } = stats
 
@@ -86,7 +89,11 @@ export function RetentionBars({ wordProgress, queue }: Props) {
         </p>
       ) : (
         <>
+          {/* The stacked bar assembles itself when you reach it — every
+              segment already had a 700ms width transition that could never
+              run, because the bar mounted at its final proportions. */}
           <div
+            ref={barRef}
             className="retention__bar"
             role="img"
             aria-label={
@@ -102,7 +109,7 @@ export function RetentionBars({ wordProgress, queue }: Props) {
                   key={b.tier}
                   className="retention__seg"
                   style={{
-                    width: `${(b.count / total) * 100}%`,
+                    width: barShown ? `${(b.count / total) * 100}%` : 0,
                     background: TIER_META[b.tier].color,
                   }}
                 />
@@ -111,7 +118,7 @@ export function RetentionBars({ wordProgress, queue }: Props) {
           </div>
 
           <dl className="retention__legend">
-            {buckets.map(b => {
+            {buckets.map((b, i) => {
               const meta = TIER_META[b.tier]
               const pct = Math.round((b.count / total) * 100)
               return (
@@ -128,7 +135,9 @@ export function RetentionBars({ wordProgress, queue }: Props) {
                     {meta.label}
                   </dt>
                   <dd className="retention__val">
-                    <span className="retention__count">{b.count}</span>
+                    <span className="retention__count">
+                      <FlowNumber value={b.count} onView delayMs={Math.min(i, 5) * 60} />
+                    </span>
                     <span className="retention__pct">{pct}%</span>
                     <span className="retention__cadence">{meta.cadence}</span>
                   </dd>

@@ -367,6 +367,9 @@ export function Constellation({ packs, wordProgress }: Props) {
   }, [selected, field, wordProgress, packs])
 
   const empty = field.litCount === 0
+  // Cheap enough to run on every build of the field (one pass over ~11 000
+  // floats) and it decides whether the twinkle line in the key is worth showing.
+  const hasFlicker = useMemo(() => field.flicker.some(v => v > 0), [field])
 
   return (
     <section
@@ -467,24 +470,52 @@ export function Constellation({ packs, wordProgress }: Props) {
         )}
       </div>
 
-      {/* The colour key, and it is a LEVEL key — see starColors() in renderer.ts:
-          hue comes from the pack's level and nothing else, while brightness
-          carries how well the word is remembered. The first version of this
-          legend labelled the hues by learning state ("w nauce" against orange,
-          "znane" against green), which read a level-2 band as a pile of words
-          in progress. */}
+      {/* The key, and it has to name BOTH axes — see starColors() and the vertex
+          shader in renderer.ts. Hue comes from the pack's level and nothing
+          else; brightness (plus point size, plus the diffraction cross on a
+          retired word) carries how well the word is remembered.
+
+          The first version labelled the hues by learning state ("w nauce"
+          against orange, "znane" against green), which read a level-2 band as a
+          pile of words in progress. Naming the hue axis alone fixed that but
+          left the brightness axis unexplained — so with every level mastered the
+          sky is four solid colours and the key looks like it is describing
+          something else entirely. Both axes, or neither. */}
       <div className="constellation__legend">
-        <span className="constellation__legend-axis">Kolor = poziom</span>
-        {LEVEL_META.map(l => (
-          <span
-            key={l.level}
-            className="constellation__key"
-            style={{ ['--key' as string]: LEVEL_COLORS[l.level] }}
-          >
-            {l.name}
-          </span>
-        ))}
-        <span className="constellation__key constellation__key--dust">jeszcze przed Tobą</span>
+        <div className="constellation__legend-row">
+          <span className="constellation__legend-axis">Kolor = poziom</span>
+          {LEVEL_META.map(l => (
+            <span
+              key={l.level}
+              className="constellation__key"
+              style={{ ['--key' as string]: LEVEL_COLORS[l.level] }}
+            >
+              {l.name}
+            </span>
+          ))}
+          {/* Only while there is dust left to explain: once the whole route is
+              lit, a key for stars that aren't on screen is noise. */}
+          {field.litCount < field.count && (
+            <span className="constellation__key constellation__key--dust">jeszcze przed Tobą</span>
+          )}
+        </div>
+
+        <div className="constellation__legend-row">
+          <span className="constellation__legend-axis">Jasność = pamięć</span>
+          <span className="constellation__ramp-end">świeżo poznane</span>
+          <span className="constellation__ramp" aria-hidden="true" />
+          <span className="constellation__ramp-end">na stałe</span>
+        </div>
+
+        {/* The third channel, and only when the user actually has one: a word
+            that has lapsed twinkles. Silent until it means something. */}
+        {hasFlicker && (
+          <div className="constellation__legend-row">
+            <span className="constellation__key constellation__key--flicker">
+              Migocze — słowo, które już kiedyś Ci uciekło
+            </span>
+          </div>
+        )}
       </div>
 
       <p className="constellation__foot">

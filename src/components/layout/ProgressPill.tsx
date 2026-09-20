@@ -1,8 +1,8 @@
-import { useNavigate } from 'react-router-dom'
 import { useProgressPulse } from '../../hooks/useProgressPulse'
 import { useAppStore } from '../../store/useAppStore'
 import { formatPoints } from '../../services/points'
 import './ProgressPill.css'
+import { useTransitionNavigate } from '../../navigation/transitions'
 
 /**
  * Streak, points and freeze, on every screen.
@@ -21,7 +21,7 @@ import './ProgressPill.css'
 export function ProgressPill() {
   const pulse = useProgressPulse()
   const freeze = useAppStore(s => s.streakFreeze)
-  const navigate = useNavigate()
+  const navigate = useTransitionNavigate()
 
   // Loading only — not "nothing to show yet". A zero-streak, zero-point pill
   // used to hide itself entirely, which meant a brand-new install (or a phone
@@ -32,10 +32,10 @@ export function ProgressPill() {
 
   return (
     <div className="progresspill">
-      <button className="progresspill__stat progresspill__stat--flame u-liquid" onClick={() => navigate('/postęp')}>
+      <button className="progresspill__stat progresspill__stat--flame u-liquid" onClick={() => navigate('/postęp', { direction: 'lateral' })}>
         <span className="progresspill__icon" aria-hidden="true">🔥</span> {pulse.streak} dni
       </button>
-      <button className="progresspill__stat progresspill__stat--points u-liquid" onClick={() => navigate('/postęp')}>
+      <button className="progresspill__stat progresspill__stat--points u-liquid" onClick={() => navigate('/postęp', { direction: 'lateral' })}>
         <span className="progresspill__icon" aria-hidden="true">⬥</span> {formatPoints(pulse.points)}
       </button>
       {freeze.available > 0 && (

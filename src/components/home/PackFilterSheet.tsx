@@ -1,4 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
+import { motion } from 'framer-motion'
+import { Sheet, useSheetMotion, type SheetHandle } from '../shared/Sheet'
+import { SPRING_SNAPPY } from '../today/motion'
 import { getCategoryColor } from '../../utils/packVisuals'
 import { plural } from '../../utils/plural'
 import { LENS_LABEL, PACK_LENSES, PackFilters, PackLens } from '../../utils/packRoute'
@@ -53,11 +56,13 @@ interface Props {
 export function PackFilterSheet({
   kind, filters, onChange, onSwitchKind, lensCounts, knownWords, categories, categoryStats, onClose,
 }: Props) {
-  const ref = useRef<HTMLDialogElement>(null)
+  const sheet = useRef<SheetHandle>(null)
   const [covOpen, setCovOpen] = useState(false)
-  useEffect(() => { ref.current?.showModal() }, [])
+  const { reduced, rise, group, tap } = useSheetMotion()
 
-  const close = () => ref.current?.close()
+  const close = () => sheet.current?.close()
+  // Picking is also the way out — but the sheet leaves on its own animation,
+  // so the row you chose is visibly marked before it goes.
   const pick = (patch: Partial<PackFilters>) => { onChange(patch); close() }
 
   const statOf = new Map(categoryStats.map(s => [s.category, s]))
@@ -67,57 +72,72 @@ export function PackFilterSheet({
   }
 
   return (
-    <dialog
-      ref={ref}
-      className="pfsheet"
-      onClose={onClose}
-      onClick={e => { if (e.target === ref.current) close() }}
-    >
-      <div className="pfsheet__inner">
-        <span className="pfsheet__handle" aria-hidden="true" />
-
-        <div className="pfsheet__tabs" role="tablist">
-          {TABS.map(t => (
-            <button
-              key={t.id}
-              role="tab" aria-selected={kind === t.id}
-              className={`pfsheet__tab${kind === t.id ? ' is-active' : ''}`}
-              onClick={() => onSwitchKind(t.id)}
-            >
+    <>
+    <Sheet ref={sheet} onClose={onClose} className="pfsheet__inner" aria-label="Filtry pakietów">
+      <motion.div className="pfsheet__tabs" role="tablist" variants={rise}>
+        {TABS.map(t => (
+          <button
+            key={t.id}
+            type="button"
+            role="tab" aria-selected={kind === t.id}
+            className={`pfsheet__tab${kind === t.id ? ' is-active' : ''}`}
+            onClick={() => onSwitchKind(t.id)}
+          >
+            {/* One pill that slides between the tabs, rather than two
+                backgrounds swapping — the same marker as everywhere else. */}
+            {kind === t.id && (
+              <motion.span
+                layoutId="pfsheet-tab"
+                className="pfsheet__tab-pill"
+                aria-hidden="true"
+                transition={reduced ? { duration: 0 } : SPRING_SNAPPY}
+              />
+            )}
+            <span className="pfsheet__tab-label">
               {t.label}
               {dirty[t.id] && <span className="pfsheet__tab-dot" />}
-            </button>
-          ))}
-        </div>
+            </span>
+          </button>
+        ))}
+      </motion.div>
 
-        {kind === 'lens' && (
-          <>
-            {/* Capability, not a fraction: "1 221 / 10 000" measures distance to
-                the end of a list, while the same words are most of an ordinary
-                conversation. Always an estimate — hence the tilde and the sheet
-                behind it. It lives here rather than on the bar so it costs no
-                height on a screen whose job is showing packs. */}
-            {knownWords > 0 && (
-              <button type="button" className="pfsheet__coverage" onClick={() => setCovOpen(true)}>
-                <span className="pfsheet__coverage-num">~{coveragePct(knownWords)}%</span>
-                <span className="pfsheet__coverage-text">
-                  codziennej rozmowy już rozumiesz
-                  <em>skąd to wiemy →</em>
-                </span>
-              </button>
-            )}
-          <p className="pfsheet__note pfsheet__note--top">
+      {kind === 'lens' && (
+        <>
+          {/* Capability, not a fraction: "1 221 / 10 000" measures distance to
+              the end of a list, while the same words are most of an ordinary
+              conversation. Always an estimate — hence the tilde and the sheet
+              behind it. It lives here rather than on the bar so it costs no
+              height on a screen whose job is showing packs. */}
+          {knownWords > 0 && (
+            <motion.button
+              type="button"
+              className="pfsheet__coverage"
+              variants={rise}
+              whileTap={tap}
+              onClick={() => setCovOpen(true)}
+            >
+              <span className="pfsheet__coverage-num">~{coveragePct(knownWords)}%</span>
+              <span className="pfsheet__coverage-text">
+                codziennej rozmowy już rozumiesz
+                <em>skąd to wiemy →</em>
+              </span>
+            </motion.button>
+          )}
+          <motion.p className="pfsheet__note pfsheet__note--top" variants={rise}>
             Liczby dotyczą całej trasy. Poziomy i tomy zostają — przy każdym zobaczysz, ile pasuje.
-          </p>
-          <div className="pfsheet__list" role="radiogroup" aria-label="Stan pakietów">
+          </motion.p>
+          <motion.div className="pfsheet__list" role="radiogroup" aria-label="Stan pakietów" variants={group}>
             {PACK_LENSES.map(lens => {
               const n = lensCounts[lens]
               if (n === 0 && lens !== 'all' && filters.lens !== lens) return null
               return (
-                <button
+                <motion.button
                   key={lens}
+                  type="button"
                   className={`pfsheet__row${filters.lens === lens ? ' is-active' : ''}`}
                   role="radio" aria-checked={filters.lens === lens}
+                  variants={rise}
+                  whileTap={tap}
                   onClick={() => pick({ lens })}
                 >
                   <span className={`pfsheet__lens-dot pfsheet__lens-dot--${lens}`} aria-hidden="true" />
@@ -125,64 +145,81 @@ export function PackFilterSheet({
                     <span className="pfsheet__row-name">{LENS_LABEL[lens]}</span>
                   </span>
                   <span className="pfsheet__count">{n.toLocaleString('pl-PL')}</span>
-                </button>
+                </motion.button>
               )
             })}
-          </div>
-          </>
-        )}
+          </motion.div>
+        </>
+      )}
 
-        {kind === 'category' && (
-          <div className="pfsheet__list" role="radiogroup" aria-label="Kategoria">
-            <button
-              className={`pfsheet__row${filters.cat == null ? ' is-active' : ''}`}
-              role="radio" aria-checked={filters.cat == null}
-              onClick={() => pick({ cat: null })}
-            >
-              <span className="pfsheet__row-name">Wszystkie kategorie</span>
-            </button>
-            {categories.map(({ cat, n }) => {
-              const stat = statOf.get(cat)
-              const show = stat?.reliable === true
-              return (
-                <button
-                  key={cat}
-                  className={`pfsheet__row${filters.cat === cat ? ' is-active' : ''}`}
-                  role="radio" aria-checked={filters.cat === cat}
-                  onClick={() => pick({ cat })}
-                >
-                  {/* Same dot-per-row pattern as the Poziom tab, in the exact
-                      colour PackageCard already tints this category's emoji
-                      tile with — scanning the two lists now uses the same eye. */}
-                  <span className="pfsheet__dot" style={{ background: getCategoryColor(cat) }} aria-hidden="true" />
-                  <span className="pfsheet__row-text">
-                    <span className="pfsheet__row-name">{cat}</span>
-                    <span className="pfsheet__row-sub">
-                      {show
-                        ? `${stat!.successPct}% Twoich słów opanowanych`
-                        : `${n} ${plural(n, 'pakiet', 'pakiety', 'pakietów')}`}
-                    </span>
+      {kind === 'category' && (
+        <motion.div className="pfsheet__list" role="radiogroup" aria-label="Kategoria" variants={group}>
+          <motion.button
+            type="button"
+            className={`pfsheet__row${filters.cat == null ? ' is-active' : ''}`}
+            role="radio" aria-checked={filters.cat == null}
+            variants={rise}
+            whileTap={tap}
+            onClick={() => pick({ cat: null })}
+          >
+            <span className="pfsheet__row-name">Wszystkie kategorie</span>
+          </motion.button>
+          {categories.map(({ cat, n }) => {
+            const stat = statOf.get(cat)
+            const show = stat?.reliable === true
+            return (
+              <motion.button
+                key={cat}
+                type="button"
+                className={`pfsheet__row${filters.cat === cat ? ' is-active' : ''}`}
+                role="radio" aria-checked={filters.cat === cat}
+                variants={rise}
+                whileTap={tap}
+                onClick={() => pick({ cat })}
+              >
+                {/* Same dot-per-row pattern as the Poziom tab, in the exact
+                    colour PackageCard already tints this category's emoji
+                    tile with — scanning the two lists now uses the same eye. */}
+                <span className="pfsheet__dot" style={{ background: getCategoryColor(cat) }} aria-hidden="true" />
+                <span className="pfsheet__row-text">
+                  <span className="pfsheet__row-name">{cat}</span>
+                  <span className="pfsheet__row-sub">
+                    {show
+                      ? `${stat!.successPct}% Twoich słów opanowanych`
+                      : `${n} ${plural(n, 'pakiet', 'pakiety', 'pakietów')}`}
                   </span>
-                  {show && (
-                    <span className="pfsheet__gauge" aria-hidden="true">
-                      <span className="pfsheet__gauge-fill" style={{ width: `${stat!.successPct}%` }} />
-                    </span>
-                  )}
-                  <span className="pfsheet__count">{show ? `${stat!.successPct}%` : n}</span>
-                </button>
-              )
-            })}
-            <p className="pfsheet__note">
-              Procent liczymy tylko tam, gdzie masz co najmniej {MIN_SAMPLE} ocenionych słów —
-              niżej byłby to szum, nie diagnoza.
-            </p>
-          </div>
-        )}
+                </span>
+                {show && (
+                  <span className="pfsheet__gauge" aria-hidden="true">
+                    <span className="pfsheet__gauge-fill" style={{ width: `${stat!.successPct}%` }} />
+                  </span>
+                )}
+                <span className="pfsheet__count">{show ? `${stat!.successPct}%` : n}</span>
+              </motion.button>
+            )
+          })}
+          <p className="pfsheet__note">
+            Procent liczymy tylko tam, gdzie masz co najmniej {MIN_SAMPLE} ocenionych słów —
+            niżej byłby to szum, nie diagnoza.
+          </p>
+        </motion.div>
+      )}
 
-        {covOpen && <CoverageInfoSheet knownWords={knownWords} onClose={() => setCovOpen(false)} />}
+      <motion.button
+        type="button"
+        className="pfsheet__close"
+        variants={rise}
+        whileTap={tap}
+        onClick={close}
+      >
+        Gotowe
+      </motion.button>
+    </Sheet>
 
-        <button className="pfsheet__close" onClick={close}>Gotowe</button>
-      </div>
-    </dialog>
+    {/* A sheet of its own, kept OUTSIDE the panel above: the panel is a
+        transformed, scrolling box, and nesting one dialog inside another's
+        transformed subtree is asking a browser to decide what "fixed" means. */}
+    {covOpen && <CoverageInfoSheet knownWords={knownWords} onClose={() => setCovOpen(false)} />}
+    </>
   )
 }

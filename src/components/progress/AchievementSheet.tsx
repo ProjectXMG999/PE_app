@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
 import { AchievementState } from '../../services/achievements'
 import { ACHIEVEMENT_GROUPS, TIER_LABEL, unitLabel } from '../../data/achievements'
 import { Confetti } from '../shared/Confetti'
+import { Sheet, sheetRise, sheetRiseReduced, type SheetHandle } from '../shared/Sheet'
 import { playUnlock } from '../../services/sfx'
 import { shareBadge } from '../../services/badgeCard'
 import './tiers.css'
@@ -16,11 +18,15 @@ interface Props {
 }
 
 /**
- * Badge detail. Uses the native <dialog> element, matching the other sheets in
- * the app — free focus trap and Escape handling rather than a hand-rolled one.
+ * Badge detail. One `<Sheet>` like every other — the spring, the scrim and the
+ * drag-to-dismiss are shared; what belongs to this sheet is the medallion, and
+ * the order things arrive in: the medal lands first, then the name, then the
+ * number. Tapping a badge should feel like picking it up.
  */
 export function AchievementSheet({ state, onClose, knownTotal = 0, nextStation = null }: Props) {
-  const ref = useRef<HTMLDialogElement>(null)
+  const sheet = useRef<SheetHandle>(null)
+  const reduced = useReducedMotion()
+  const rise = reduced ? sheetRiseReduced : sheetRise
   const { achievement: a, unlocked, value, pct, unlockedAt, isNew } = state
   // Captured on open: the parent marks the badge seen the moment it opens, and
   // the celebration must not vanish on that re-render.
@@ -42,7 +48,6 @@ export function AchievementSheet({ state, onClose, knownTotal = 0, nextStation =
   }
 
   useEffect(() => {
-    ref.current?.showModal()
     if (celebrate) {
       playUnlock(a.tier)
       navigator.vibrate?.([8, 40, 12])
@@ -51,73 +56,86 @@ export function AchievementSheet({ state, onClose, knownTotal = 0, nextStation =
   }, [])
 
   return (
-    <dialog
-      ref={ref}
-      className="achsheet u-sheet"
+    <Sheet
+      ref={sheet}
       onClose={onClose}
-      onClick={e => {
-        if (e.target === ref.current) ref.current?.close()
-      }}
+      dialogClassName="achsheet"
+      className={`achsheet__inner${unlocked ? ` tier-${a.tier}` : ''}`}
+      aria-label={a.title}
     >
-      <div className={`achsheet__inner u-sheet__panel${unlocked ? ` tier-${a.tier}` : ''}`}>
-        {celebrate && <Confetti bursts={[[46, 140], [28, 520]]} className="achsheet__confetti" />}
-        <span className="achsheet__handle" aria-hidden="true" />
+      {celebrate && <Confetti bursts={[[46, 140], [28, 520]]} className="achsheet__confetti" />}
 
-        <span className={`achsheet__medal${unlocked ? ' achsheet__medal--unlocked' : ''}`} aria-hidden="true">
-          <span className={`achsheet__icon${unlocked ? ` achsheet__icon--${a.tier}` : ' achsheet__icon--locked'}`}>
-            {a.icon}
-          </span>
+      <motion.span
+        className={`achsheet__medal${unlocked ? ' achsheet__medal--unlocked' : ''}`}
+        variants={rise}
+        aria-hidden="true"
+      >
+        <span className={`achsheet__icon${unlocked ? ` achsheet__icon--${a.tier}` : ' achsheet__icon--locked'}`}>
+          {a.icon}
         </span>
+      </motion.span>
 
-        {celebrate && <p className="achsheet__new">Nowa odznaka</p>}
+      {celebrate && <motion.p className="achsheet__new" variants={rise}>Nowa odznaka</motion.p>}
 
-        <p className="achsheet__group">
-          {group?.label ?? ''} · {TIER_LABEL[a.tier] ?? a.tier}
-        </p>
-        <h2 className="achsheet__title">{a.title}</h2>
-        <p className="achsheet__desc">{a.desc}</p>
+      <motion.p className="achsheet__group" variants={rise}>
+        {group?.label ?? ''} · {TIER_LABEL[a.tier] ?? a.tier}
+      </motion.p>
+      <motion.h2 className="achsheet__title" variants={rise}>{a.title}</motion.h2>
+      <motion.p className="achsheet__desc" variants={rise}>{a.desc}</motion.p>
 
-        {unlocked ? (
-          <p className="achsheet__status achsheet__status--done">
-            ✓ Zdobyte
-            {unlockedAt && (
-              <span className="achsheet__date">
-                {new Date(unlockedAt).toLocaleDateString('pl-PL', {
-                  day: 'numeric', month: 'long', year: 'numeric',
-                })}
-              </span>
-            )}
-          </p>
-        ) : (
-          <div className="achsheet__progress">
-            <div className="achsheet__bar">
-              <div className="achsheet__bar-fill" style={{ width: `${pct}%` }} />
-            </div>
-            <p className="achsheet__status">
-              {value.toLocaleString('pl-PL')} / {a.threshold.toLocaleString('pl-PL')}
-              {' '}{unitLabel(a.unit, a.threshold)}
-              <span className="achsheet__remaining">
-                jeszcze {(a.threshold - value).toLocaleString('pl-PL')}
-              </span>
-            </p>
+      {unlocked ? (
+        <motion.p className="achsheet__status achsheet__status--done" variants={rise}>
+          ✓ Zdobyte
+          {unlockedAt && (
+            <span className="achsheet__date">
+              {new Date(unlockedAt).toLocaleDateString('pl-PL', {
+                day: 'numeric', month: 'long', year: 'numeric',
+              })}
+            </span>
+          )}
+        </motion.p>
+      ) : (
+        <motion.div className="achsheet__progress" variants={rise}>
+          <div className="achsheet__bar">
+            <div className="achsheet__bar-fill" style={{ width: `${pct}%` }} />
           </div>
-        )}
+          <p className="achsheet__status">
+            {value.toLocaleString('pl-PL')} / {a.threshold.toLocaleString('pl-PL')}
+            {' '}{unitLabel(a.unit, a.threshold)}
+            <span className="achsheet__remaining">
+              jeszcze {(a.threshold - value).toLocaleString('pl-PL')}
+            </span>
+          </p>
+        </motion.div>
+      )}
 
-        {/* Only for badges actually earned — a card announcing something you
-            haven't done yet is the opposite of the point. */}
-        {unlocked && (
-          <>
-            <button className="achsheet__share u-cta" onClick={handleShare} disabled={sharing}>
-              {sharing ? 'Przygotowuję…' : 'Pokaż znajomym'}
-            </button>
-            {shareNote && <p className="achsheet__share-note">{shareNote}</p>}
-          </>
-        )}
+      {/* Only for badges actually earned — a card announcing something you
+          haven't done yet is the opposite of the point. */}
+      {unlocked && (
+        <>
+          <motion.button
+            type="button"
+            className="achsheet__share u-cta"
+            variants={rise}
+            whileTap={reduced ? undefined : { scale: 0.97 }}
+            onClick={handleShare}
+            disabled={sharing}
+          >
+            {sharing ? 'Przygotowuję…' : 'Pokaż znajomym'}
+          </motion.button>
+          {shareNote && <p className="achsheet__share-note">{shareNote}</p>}
+        </>
+      )}
 
-        <button className="achsheet__close" onClick={() => ref.current?.close()}>
-          Zamknij
-        </button>
-      </div>
-    </dialog>
+      <motion.button
+        type="button"
+        className="achsheet__close"
+        variants={rise}
+        whileTap={reduced ? undefined : { scale: 0.97 }}
+        onClick={() => sheet.current?.close()}
+      >
+        Zamknij
+      </motion.button>
+    </Sheet>
   )
 }

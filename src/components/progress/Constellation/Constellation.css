@@ -213,7 +213,14 @@
 
 .constellation__legend {
   display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.constellation__legend-row {
+  display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 6px 14px;
 }
 
@@ -238,6 +245,53 @@
 .constellation__key--dust::before {
   background: var(--text-muted);
   opacity: 0.3;
+}
+
+/* A word that has lapsed twinkles in the sky; the key shows it as a dot that
+   breathes at the same rate, so the two read as the same thing. */
+.constellation__key--flicker::before {
+  background: oklch(0.95 0.01 275);
+  animation: constellation-twinkle 2.3s ease-in-out infinite;
+}
+
+@keyframes constellation-twinkle {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.32; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .constellation__key--flicker::before {
+    animation: none;
+    opacity: 0.66;
+  }
+}
+
+/* The brightness axis, drawn the only way it can be honest: on the panel's own
+   night ground. Stars are light, and a light ramp laid straight on the card
+   would vanish in the light theme — so the swatch carries its piece of sky with
+   it, in both themes, exactly as the canvas above does. */
+.constellation__ramp {
+  flex: 1 1 56px;
+  min-width: 44px;
+  max-width: 120px;
+  height: 9px;
+  border-radius: var(--radius-full, 999px);
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(90deg, oklch(1 0 0 / 0.1), oklch(1 0 0 / 0.95)),
+    var(--constellation-ground);
+}
+
+.constellation__ramp-end {
+  font-size: var(--text-3xs, 10px);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* The ramp and its two ends are one unit — they must not be split across lines
+   by the row's wrap, or "na stałe" ends up under an unrelated swatch. */
+.constellation__legend-row:has(.constellation__ramp) {
+  gap: 6px 8px;
 }
 
 /* Names the axis the swatches belong to, so nobody reads them as states. */
@@ -318,8 +372,23 @@
 .constellation--expanded .constellation__title,
 .constellation--expanded .constellation__sub,
 .constellation--expanded .constellation__foot,
+.constellation--expanded .constellation__ramp-end,
 .constellation--expanded .constellation__key {
   color: oklch(0.95 0.01 275 / 0.72);
+}
+
+/* Full screen keeps the night ground in the light theme too, so the key's own
+   light-theme ink and borders would sit dark-on-dark here. */
+.constellation--expanded .constellation__legend-axis {
+  color: oklch(0.96 0.01 275 / 0.9);
+}
+
+.constellation--expanded .constellation__ramp {
+  border-color: oklch(1 0 0 / 0.18);
+}
+
+.constellation--expanded .constellation__key--dust::before {
+  background: oklch(0.95 0.01 275);
 }
 
 .constellation--expanded .constellation__title {

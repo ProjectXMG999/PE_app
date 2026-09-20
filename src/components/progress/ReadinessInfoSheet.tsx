@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
+import { motion } from 'framer-motion'
+import { Sheet, useSheetMotion, type SheetHandle } from '../shared/Sheet'
 import './ReadinessInfoSheet.css'
 
 interface Props {
@@ -66,54 +68,52 @@ const METRICS: Metric[] = [
 ]
 
 /**
- * Bottom sheet explaining the readiness breakdown. Native <dialog>, matching
- * MetricsInfoSheet on the same page — same handle bar, same slideUp entrance,
- * so opening it feels like part of the same screen rather than a bolted-on
- * tooltip.
+ * Bottom sheet explaining the readiness breakdown. One `<Sheet>`, like
+ * MetricsInfoSheet on the same page, so opening either feels like part of the
+ * screen rather than a bolted-on tooltip.
  */
 export function ReadinessInfoSheet({ onClose }: Props) {
-  const ref = useRef<HTMLDialogElement>(null)
-
-  useEffect(() => {
-    ref.current?.showModal()
-  }, [])
+  const sheet = useRef<SheetHandle>(null)
+  const { rise, group, tap } = useSheetMotion()
 
   return (
-    <dialog
-      ref={ref}
-      className="readinessinfo"
+    <Sheet
+      ref={sheet}
       onClose={onClose}
-      onClick={e => {
-        if (e.target === ref.current) ref.current?.close()
-      }}
+      className="readinessinfo__inner"
+      aria-label="Jak liczymy gotowość do mówienia"
     >
-      <div className="readinessinfo__inner">
-        <span className="readinessinfo__handle" aria-hidden="true" />
+      <motion.h2 className="readinessinfo__title" variants={rise}>Jak to liczymy</motion.h2>
+      <motion.p className="readinessinfo__sub" variants={rise}>
+        Pięć części, z których składa się Twoja gotowość do mówienia.
+      </motion.p>
 
-        <h2 className="readinessinfo__title">Jak to liczymy</h2>
-        <p className="readinessinfo__sub">Pięć części, z których składa się Twoja gotowość do mówienia.</p>
+      <motion.ul className="readinessinfo__list" variants={group}>
+        {METRICS.map(m => (
+          <motion.li
+            key={m.title}
+            className={`readinessinfo__item readinessinfo__item--${m.accent}`}
+            variants={rise}
+          >
+            <span className="readinessinfo__icon" aria-hidden="true">{m.icon}</span>
+            <div className="readinessinfo__text">
+              <h3 className="readinessinfo__item-title">{m.title}</h3>
+              <p className="readinessinfo__lead">{m.lead}</p>
+              <p className="readinessinfo__detail">{m.detail}</p>
+            </div>
+          </motion.li>
+        ))}
+      </motion.ul>
 
-        <ul className="readinessinfo__list">
-          {METRICS.map((m, i) => (
-            <li
-              key={m.title}
-              className={`readinessinfo__item readinessinfo__item--${m.accent}`}
-              style={{ animationDelay: `${i * 80}ms` }}
-            >
-              <span className="readinessinfo__icon" aria-hidden="true">{m.icon}</span>
-              <div className="readinessinfo__text">
-                <h3 className="readinessinfo__item-title">{m.title}</h3>
-                <p className="readinessinfo__lead">{m.lead}</p>
-                <p className="readinessinfo__detail">{m.detail}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
-
-        <button className="readinessinfo__close" onClick={() => ref.current?.close()}>
-          Zrozumiałem
-        </button>
-      </div>
-    </dialog>
+      <motion.button
+        type="button"
+        className="readinessinfo__close"
+        variants={rise}
+        whileTap={tap}
+        onClick={() => sheet.current?.close()}
+      >
+        Zrozumiałem
+      </motion.button>
+    </Sheet>
   )
 }

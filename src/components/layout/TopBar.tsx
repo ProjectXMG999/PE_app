@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useAppStore, resolveTheme } from '../../store/useAppStore'
 import { useAuthStore } from '../../store/useAuthStore'
@@ -8,6 +8,7 @@ import { ProgressPill } from './ProgressPill'
 import { ProgressLogo } from '../brand/ProgressLogo'
 import { HOME } from '../../navigation/navigation'
 import './TopBar.css'
+import { useTransitionNavigate } from '../../navigation/transitions'
 
 /** Screens that open with their own large title; once it scrolls away, the bar
  *  takes over the name, the way an iOS navigation bar does. */
@@ -32,7 +33,7 @@ export function TopBar() {
   const theme = useAppStore(s => s.theme)
   const toggleTheme = useAppStore(s => s.toggleTheme)
   const resolved = resolveTheme(theme)
-  const navigate = useNavigate()
+  const navigate = useTransitionNavigate()
   const { pathname } = useLocation()
   const compactTitle = COMPACT_TITLES[pathname]
   const [scrolled, setScrolled] = useState(false)
@@ -55,7 +56,7 @@ export function TopBar() {
         <button
           type="button"
           className="topbar__brand"
-          onClick={() => navigate(HOME)}
+          onClick={() => navigate(HOME, { direction: 'lateral' })}
           aria-label="Progress — strona główna"
         >
           <ProgressLogo size={28} mark={false} />

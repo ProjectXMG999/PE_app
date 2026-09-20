@@ -134,11 +134,19 @@
   transform: translateY(-50%);
   background: var(--route-line);
   border-radius: 1px;
+  /* Lights up as the fill's leading edge reaches it — the per-notch
+     `transition-delay` is set inline, from where it sits along the line
+     (see notchDelay in CompassHero.tsx). Kept short so the milestone catches
+     the moment the line passes rather than trailing it. */
+  transition: background 260ms var(--ease-out-expo), opacity 260ms var(--ease-out-expo),
+    height 260ms var(--ease-out-expo);
 }
 
 .compass__notch--passed {
   background: var(--text-primary);
   opacity: 0.5;
+  /* A passed milestone also stands a little prouder of the line. */
+  height: 14px;
 }
 
 .compass__marker {
@@ -214,10 +222,19 @@
   color: var(--text-muted);
 }
 
+/* Arrives last, once the figure it comments on has finished rolling — a delta
+   shown next to a number still counting up is a claim about a value that isn't
+   on screen yet. */
 .compass__delta {
   font-size: var(--text-xs);
   font-weight: 700;
   color: var(--success);
+  animation: compass-delta-in 340ms var(--ease-out-expo) 900ms both;
+}
+
+@keyframes compass-delta-in {
+  from { opacity: 0; transform: translateY(3px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .compass__delta--down {
@@ -254,7 +271,8 @@
 
   .compass__aurora,
   .compass__fill,
-  .compass__marker {
+  .compass__marker,
+  .compass__notch {
     transition: none;
   }
 }

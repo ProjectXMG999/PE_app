@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
+import { motion } from 'framer-motion'
+import { Sheet, useSheetMotion, type SheetHandle } from '../shared/Sheet'
 import '../today/NextStepInfoSheet.css'
 
 interface Props {
@@ -46,49 +48,44 @@ const POINTS: Point[] = [
 ]
 
 export function RetentionInfoSheet({ onClose }: Props) {
-  const ref = useRef<HTMLDialogElement>(null)
-
-  useEffect(() => {
-    ref.current?.showModal()
-  }, [])
+  const sheet = useRef<SheetHandle>(null)
+  const { rise, group, tap } = useSheetMotion()
 
   return (
-    <dialog
-      ref={ref}
-      className="nextstepinfo"
+    <Sheet
+      ref={sheet}
       onClose={onClose}
-      onClick={e => {
-        if (e.target === ref.current) ref.current?.close()
-      }}
+      className="nextstepinfo__inner"
+      aria-label="Jak dobrze pamiętasz słowa"
     >
-      <div className="nextstepinfo__inner">
-        <span className="nextstepinfo__handle" aria-hidden="true" />
+      <motion.h2 className="nextstepinfo__title" variants={rise}>
+        Jak dobrze pamiętasz słowa
+      </motion.h2>
+      <motion.p className="nextstepinfo__sub" variants={rise}>
+        Opanowane słowa podzielone według tego, jak długo zostają w pamięci.
+      </motion.p>
 
-        <h2 className="nextstepinfo__title">Jak dobrze pamiętasz słowa</h2>
-        <p className="nextstepinfo__sub">
-          Opanowane słowa podzielone według tego, jak długo zostają w pamięci.
-        </p>
+      <motion.ul className="nextstepinfo__list" variants={group}>
+        {POINTS.map(pt => (
+          <motion.li key={pt.title} className="nextstepinfo__item" variants={rise}>
+            <span className="nextstepinfo__icon" aria-hidden="true">{pt.icon}</span>
+            <div className="nextstepinfo__text">
+              <h3 className="nextstepinfo__item-title">{pt.title}</h3>
+              <p className="nextstepinfo__detail">{pt.text}</p>
+            </div>
+          </motion.li>
+        ))}
+      </motion.ul>
 
-        <ul className="nextstepinfo__list">
-          {POINTS.map((pt, i) => (
-            <li
-              key={pt.title}
-              className="nextstepinfo__item"
-              style={{ animationDelay: `${i * 80}ms` }}
-            >
-              <span className="nextstepinfo__icon" aria-hidden="true">{pt.icon}</span>
-              <div className="nextstepinfo__text">
-                <h3 className="nextstepinfo__item-title">{pt.title}</h3>
-                <p className="nextstepinfo__detail">{pt.text}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
-
-        <button className="nextstepinfo__close" onClick={() => ref.current?.close()}>
-          Zrozumiałem
-        </button>
-      </div>
-    </dialog>
+      <motion.button
+        type="button"
+        className="nextstepinfo__close"
+        variants={rise}
+        whileTap={tap}
+        onClick={() => sheet.current?.close()}
+      >
+        Zrozumiałem
+      </motion.button>
+    </Sheet>
   )
 }

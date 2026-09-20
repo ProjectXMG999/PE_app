@@ -39,6 +39,24 @@
   margin: 0 0 var(--spacing-md);
 }
 
+/* The top of the page arrives; everything under it settles on scroll (below).
+ * Postęp used to be the one tab that simply appeared, fully formed, while
+ * Dzisiaj, Pakiety and Trening all eased in — the scroll-driven rule below
+ * covers the sections, but the header and the compass are already on screen
+ * when the page opens, so nothing animated them. Same tokens as `.pe-enter`
+ * and the Framer vocabulary, so this reads as the same arrival as everywhere
+ * else. `.statspage__header + *` is the compass (or its skeleton). */
+@media (prefers-reduced-motion: no-preference) {
+  .statspage__header {
+    animation: pe-enter-rise var(--pe-enter-duration) var(--ease-out-expo) var(--pe-enter-delay) both;
+  }
+
+  .statspage__header + * {
+    animation: pe-enter-rise var(--pe-enter-duration) var(--ease-out-expo)
+      calc(var(--pe-enter-delay) + var(--pe-enter-step)) both;
+  }
+}
+
 /* Sections */
 .statspage__section {
   margin-top: var(--spacing-xl);

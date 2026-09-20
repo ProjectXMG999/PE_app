@@ -1,10 +1,12 @@
 import { useRef } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useAppStore, resolveTheme } from '../../store/useAppStore'
 import { useAuthStore } from '../../store/useAuthStore'
 import { NAV_ITEMS } from './navItems'
-import { HOME, useActiveHub } from '../../navigation/navigation'
+import { HOME, hubDirection, useActiveHub } from '../../navigation/navigation'
+import { useLinkTransition, useTransitionNavigate } from '../../navigation/transitions'
+import { preloadPath } from '../../navigation/pageChunks'
 import { NavIndicator } from './NavIndicator'
 import { SidebarPulse } from './SidebarPulse'
 import { ProgressLogo } from '../brand/ProgressLogo'
@@ -13,12 +15,13 @@ import './Sidebar.css'
 export function Sidebar() {
   const { theme, toggleTheme, devUnlocked, setDevUnlocked } = useAppStore()
   const { user, hasAccess } = useAuthStore()
-  const navigate = useNavigate()
+  const navigate = useTransitionNavigate()
   const tapsRef = useRef<number[]>([])
 
   const version = import.meta.env.VITE_APP_VERSION || '1.0.0'
   const resolved = resolveTheme(theme)
   const activeItem = useActiveHub()
+  const onLink = useLinkTransition()
 
   function handleVersionTap() {
     const now = Date.now()
@@ -34,7 +37,7 @@ export function Sidebar() {
       <button
         type="button"
         className="sidebar__brand"
-        onClick={() => navigate(HOME)}
+        onClick={() => navigate(HOME, { direction: 'lateral' })}
         aria-label="Progress — strona główna"
       >
         <ProgressLogo size={30} />
@@ -47,7 +50,8 @@ export function Sidebar() {
             <Link
               key={item.path}
               to={item.path}
-              viewTransition
+              onPointerDown={() => preloadPath(item.path)}
+              onClick={onLink(item.path, hubDirection(activeItem, item.path))}
               className={`sidebar__nav-item ${active ? 'sidebar__nav-item--active' : ''}`}
               aria-current={active ? 'page' : undefined}
             >

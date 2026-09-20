@@ -386,10 +386,53 @@
   align-items: center;
 }
 
+/* The scrim fades in with the sheet and, on the way out, fades with it — the
+   panel's exit is a transform, so a scrim that disappeared in one frame left
+   the page snapping back from behind a blur that was still there. The exit is
+   driven by `.u-sheet--closing`, which components/shared/Sheet.tsx puts on the
+   dialog for the length of the panel's leave animation. */
 .u-sheet::backdrop {
   background: var(--overlay);
   -webkit-backdrop-filter: blur(var(--scrim-blur));
           backdrop-filter: blur(var(--scrim-blur));
+  animation: u-sheet-scrim-in 260ms ease-out both;
+  transition: opacity 220ms ease-in;
+}
+
+.u-sheet--closing::backdrop {
+  opacity: 0;
+}
+
+@keyframes u-sheet-scrim-in {
+  from { opacity: 0; }
+}
+
+/* ── Grabber ──────────────────────────────────────────────────────────────
+   The bar at the top of every sheet. It used to be decoration — a 4px line
+   that said "drag me" and did nothing. It is now the drag surface itself, so
+   the row around it is the hit area (a 4px target is not one), and it takes
+   the pointer off the browser's hands while a drag is in flight. */
+.u-sheet__grip {
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
+  padding: 6px 0 2px;
+  margin-bottom: var(--spacing-md);
+  cursor: grab;
+  touch-action: none;
+}
+
+.u-sheet__grip:active {
+  cursor: grabbing;
+}
+
+.u-sheet__grabber {
+  display: block;
+  width: 36px;
+  height: 4px;
+  margin: 0 auto;
+  border-radius: var(--radius-full);
+  background: var(--border-strong, var(--border));
 }
 
 /* The panel. `max-height: 100%` resolves because the dialog above it now has a
@@ -405,6 +448,21 @@
   border-bottom: none;
   border-radius: var(--radius-xl) var(--radius-xl) 0 0;
   background: var(--bg-surface);
+  box-shadow: 0 -12px 40px oklch(0 0 0 / 0.28);
+}
+
+/* A card, not a sheet: centred at every width, with its corners all the way
+   round. For the dialogs that ask a question rather than offer a surface. */
+.u-sheet--centered[open] {
+  justify-content: center;
+  padding: var(--spacing-lg);
+}
+
+.u-sheet--centered .u-sheet__panel {
+  max-height: 100%;
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
 }
 
 @media (min-width: 640px) {
@@ -414,5 +472,10 @@
     max-height: calc(100% - var(--spacing-2xl));
     border-bottom: 1px solid var(--border);
     border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .u-sheet::backdrop { animation: none; transition: none; }
 }

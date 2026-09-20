@@ -1,6 +1,8 @@
 import { MouseEvent, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAppNavigate } from '../../navigation/navigation'
+import { armMorph } from '../../navigation/transitions'
+import { preloadPath } from '../../navigation/pageChunks'
 import { PackMeta } from '../../types/vocabulary'
 import { useAuthStore } from '../../store/useAuthStore'
 import { usePackWords } from '../../hooks/usePackWords'
@@ -70,7 +72,8 @@ export function PackageCard({ pack, memory, heardPct = 0, isFrontier, prevNum, i
   const openFlow = useAppNavigate()
   const { user, hasAccess: hasAccessFn } = useAuthStore()
   const hasAccess = hasAccessFn()
-  const numRef = useRef<HTMLSpanElement>(null)
+  const iconRef = useRef<HTMLSpanElement>(null)
+  const nameRef = useRef<HTMLSpanElement>(null)
 
   const words = usePackWords(pack.id)
   const relation = memory?.relation ?? 'ahead'
@@ -92,13 +95,23 @@ export function PackageCard({ pack, memory, heardPct = 0, isFrontier, prevNum, i
       navigate(user ? '/konto' : '/logowanie', user ? undefined : { state: { returnTo: `/pakiet/${pack.id}` } })
       return
     }
-    // Name the mark only for the click that's actually navigating — 864
-    // permanently-named elements would make every view transition expensive.
-    const el = numRef.current
-    if (el) {
-      el.style.viewTransitionName = 'pack-mark'
+    // The row opens *into* the pack page: its emoji and its name travel to the
+    // header of the page being opened, so the two screens read as one object
+    // unfolding rather than two layouts swapping.
+    //
+    // Named only for the click that's actually navigating, and only for as long
+    // as the transition lasts. A view transition costs per named element, and
+    // this list is 864 rows — naming them up front would tax every navigation
+    // in the app for the sake of the one row that gets tapped.
+    for (const [el, name] of [[iconRef.current, 'pack-mark'], [nameRef.current, 'pack-title']] as const) {
+      if (!el) continue
+      el.style.viewTransitionName = name
       window.setTimeout(() => { el.style.viewTransitionName = '' }, 600)
     }
+    // Tell the pack page its half of the morph is worth naming. Without this a
+    // pack opened from anywhere else (Dzisiaj, a deep link) would animate a
+    // lone half, which reads as a glitch — see armMorph.
+    armMorph(`pack:${pack.id}`)
     openFlow(`/pakiet/${pack.id}`)
   }
 
@@ -117,7 +130,12 @@ export function PackageCard({ pack, memory, heardPct = 0, isFrontier, prevNum, i
       }}
       data-num={num}
     >
-      <a className="packcard__hit" href={`/pakiet/${pack.id}`} onClick={open}>
+      <a
+        className="packcard__hit"
+        href={`/pakiet/${pack.id}`}
+        onPointerDown={() => preloadPath(`/pakiet/${pack.id}`)}
+        onClick={open}
+      >
         <span className="packcard__sr">
           {pack.name}, pakiet numer {num}, opanowane {known} z {total}
         </span>
@@ -127,13 +145,13 @@ export function PackageCard({ pack, memory, heardPct = 0, isFrontier, prevNum, i
         <span className="packcard__tile">
           <span className="packcard__ring packcard__ring--known" />
           <span className="packcard__ring packcard__ring--heard" />
-          <span className="packcard__icon">{icon}</span>
+          <span className="packcard__icon" ref={iconRef}>{icon}</span>
         </span>
-        <span className="packcard__num" ref={numRef}>{num}</span>
+        <span className="packcard__num">{num}</span>
       </span>
 
       <span className="packcard__body">
-        <span className="packcard__name">{pack.name}</span>
+        <span className="packcard__name" ref={nameRef}>{pack.name}</span>
         <span className="packcard__words">
           {words?.length ? words.join(' · ') : pack.category}
         </span>

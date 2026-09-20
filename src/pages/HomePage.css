@@ -122,8 +122,12 @@
 /* Entrance cascade. Scroll-driven where supported — compositor-only, no JS and
    no observer for 864 rows; the delay-staggered fallback is above it. */
 .homepage__list > .packcard {
-  animation: fx-rise 420ms var(--ease-out-expo) both;
-  animation-delay: calc(min(var(--i, 0), 10) * 32ms);
+  animation: fx-rise var(--pe-enter-duration) var(--ease-out-expo) both;
+  /* Rows cascade tighter than page blocks do (32ms, not --pe-enter-step): a
+     long list should read as one moving surface, not as items being counted.
+     The base delay is shared, so the first row lands with every other page's
+     first block. */
+  animation-delay: calc(var(--pe-enter-delay) + min(var(--i, 0), 10) * 32ms);
 }
 
 @supports (animation-timeline: view()) {
@@ -141,8 +145,8 @@
      cascade so arriving here looks like arriving anywhere else; everything
      below stays scroll-driven, which is what keeps 864 rows free. */
   .homepage__list > .packcard:nth-child(-n + 12) {
-    animation: fx-rise 420ms var(--ease-out-expo) both;
-    animation-delay: calc(min(var(--i, 0), 10) * 32ms);
+    animation: fx-rise var(--pe-enter-duration) var(--ease-out-expo) both;
+    animation-delay: calc(var(--pe-enter-delay) + min(var(--i, 0), 10) * 32ms);
     animation-timeline: auto;
   }
 }

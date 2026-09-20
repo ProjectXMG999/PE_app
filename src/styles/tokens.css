@@ -341,10 +341,16 @@
   --topbar-height: 60px;
   --bottomnav-height: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
-  /* Floating island: 64px tall, lifted 14px off the edge. Scroll clearance is
-     EXACTLY that — island height + its lift — or a slab of page background
-     shows between the last item and the island. */
-  --bottomnav-reserve: calc(var(--bottomnav-height) + 14px + var(--spacing-xs));
+  /* Floating island: 64px tall, lifted 14px off the edge — plus whatever the
+     device reserves below it. The safe-area inset is part of BOTH numbers or
+     neither: the island is positioned at `bottom: calc(14px + safe)` (see
+     BottomNav.css), so clearance that left the inset out fell ~34px short on
+     any phone with a home indicator and the last row of every scrollable page
+     slid under the capsule. */
+  --bottomnav-lift: 14px;
+  --bottomnav-reserve: calc(
+    var(--bottomnav-height) + var(--bottomnav-lift) + var(--spacing-xs) + var(--safe-bottom)
+  );
 
   /* Breakpoints (magic numbers — custom properties can't sit in @media
      conditions): 640px = tablet, 1024px = desktop sidebar cutoff. Copy the

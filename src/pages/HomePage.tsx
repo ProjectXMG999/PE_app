@@ -474,15 +474,20 @@ export function HomePage() {
   // ── Rows ──────────────────────────────────────────────────────────────────
   const card = (pack: PackMeta, i: number) => {
     // Słuchaj progress is the one axis that lives on PackageProgress rather
-    // than in the memory map — currentIndex is how far playback got.
-    const idx = snapshot?.progressMap.get(pack.id)?.currentIndex ?? 0
+    // than in the memory map: `listenedAt` once the pack has been played
+    // through, `currentIndex` for how far a run in progress got.
+    const progress = snapshot?.progressMap.get(pack.id)
+    const idx = progress?.currentIndex ?? 0
+    const heardPct = progress?.listenedAt != null
+      ? 100
+      : pack.wordCount > 0 ? Math.min(100, (idx / pack.wordCount) * 100) : 0
     return (
       <PackageCard
         key={pack.id}
         pack={pack}
         index={i}
         memory={memory.get(pack.id)}
-        heardPct={pack.wordCount > 0 ? Math.min(100, (idx / pack.wordCount) * 100) : 0}
+        heardPct={heardPct}
         isFrontier={frontier?.id === pack.id}
         prevNum={prevNum.get(pack.id)}
       />

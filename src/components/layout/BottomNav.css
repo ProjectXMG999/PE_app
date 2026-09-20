@@ -7,7 +7,11 @@
   position: fixed;
   left: var(--spacing-md);
   right: var(--spacing-md);
-  bottom: 14px;
+  /* Clear of the home indicator, not on top of it. At a flat 14px the capsule
+     sat inside the system gesture zone on any notched phone: iOS draws the
+     indicator over it and claims swipes there, so the bottom edge of every tab
+     target was fighting the OS. */
+  bottom: calc(var(--bottomnav-lift) + var(--safe-bottom));
   z-index: 1000;
   isolation: isolate;
   height: var(--bottomnav-height);

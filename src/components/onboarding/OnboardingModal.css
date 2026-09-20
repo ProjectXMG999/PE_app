@@ -1,51 +1,23 @@
-dialog.onboarding-modal::backdrop {
-  background: rgba(0, 0, 0, 0.6);
-  animation: fadeIn 300ms ease-out forwards;
-  backdrop-filter: blur(var(--scrim-blur));
-}
+/* Shell, scrim and motion come from `.u-sheet` / `.u-sheet--centered` in
+   styles/surfaces.css and shared/Sheet.tsx. This stays a CARD rather than a
+   bottom sheet: it is the first thing the app ever says, and a welcome should
+   stop you, not slide in under your thumb.
 
-dialog.onboarding-modal {
-  color: var(--text-primary);
-  position: fixed;
-  top: calc(50% - var(--bottomnav-height) / 2);
-  left: 16px;
-  right: 16px;
-  transform: translateY(-50%);
-  width: auto;
-  max-width: 340px;
-  margin: 0 auto;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-accent);
-  border-radius: var(--radius-lg);
-  padding: 20px 24px;
-  max-height: 85vh;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  animation: onboarding-rise 300ms ease-out forwards;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+   It used to carry its own centring, its own scrim and its own entrance —
+   and that entrance was the `slideUp` bug: @keyframes resolve by NAME across
+   the whole document, last definition wins, and this modal's copy carried the
+   `translateY(-50%)` its centring needed. Every bottom sheet in the app was
+   being lifted half its own height and dropped back. The lesson holds even
+   with the keyframes gone: keep decorative keyframes local, or better, keep
+   the motion in the one component that owns it. */
+
+.u-sheet__panel.onboarding-modal {
+  position: relative;
   box-sizing: border-box;
-}
-
-/* Named for this modal, and it has to be: @keyframes are resolved by name
-   across the whole document and the LAST definition of a name wins outright,
-   for every element in the app that animates it.
-   This block used to be called `slideUp` — the same name as the app-wide one
-   in styles/animations.css, which every bottom sheet uses. Because this modal
-   is centred with `transform: translateY(-50%)`, its keyframes carry that -50%
-   — so every sheet in the app was being lifted half its own height, and then
-   dropped back the moment the 280ms animation ended (those rules have no fill
-   mode). That was the "sheet appears at the top and jumps to the bottom" bug,
-   and it was invisible here because this modal is the one element the
-   keyframes were actually written for. Keep decorative keyframes local. */
-@keyframes onboarding-rise {
-  from {
-    opacity: 0;
-    transform: translateY(calc(-50% + 16px));
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
+  max-width: 340px;
+  padding: 20px 24px;
+  color: var(--text-primary);
+  border-color: var(--border-accent);
 }
 
 .onboarding-modal__close {
@@ -143,7 +115,7 @@ dialog.onboarding-modal {
 }
 
 @media (min-width: 600px) {
-  dialog.onboarding-modal {
+  .u-sheet__panel.onboarding-modal {
     max-width: 420px;
     padding: 24px 28px;
   }

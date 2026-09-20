@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from 'react'
+import { Sheet, type SheetHandle } from './Sheet'
 import './AudioModal.css'
 
 export interface Timing {
@@ -25,7 +26,7 @@ function fmt(s: number) {
 }
 
 export function AudioModal({ title, label, duration, src, paragraphs, timings, onClose }: AudioModalProps) {
-  const dialogRef = useRef<HTMLDialogElement>(null)
+  const sheet = useRef<SheetHandle>(null)
   const audioRef = useRef<HTMLAudioElement>(null)
   const [playing, setPlaying] = useState(false)
   const [current, setCurrent] = useState(0)
@@ -85,19 +86,6 @@ export function AudioModal({ title, label, duration, src, paragraphs, timings, o
     }
   }, [dragging, onClose])
 
-  // Native <dialog> gives us a focus trap, top-layer stacking and ESC-to-close
-  // for free. showModal() must be called imperatively; the 'close' event
-  // (fired by ESC, form method="dialog", or our own .close() calls below)
-  // is the single funnel back to the onClose prop.
-  useEffect(() => {
-    const dialog = dialogRef.current
-    if (!dialog) return
-    if (!dialog.open) dialog.showModal()
-    dialog.addEventListener('close', onClose)
-    return () => dialog.removeEventListener('close', onClose)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
   const togglePlay = () => {
     const a = audioRef.current
     if (!a) return
@@ -123,11 +111,7 @@ export function AudioModal({ title, label, duration, src, paragraphs, timings, o
   const bufPct = total > 0 ? (buffered / total) * 100 : 0
 
   return (
-    <dialog
-      ref={dialogRef}
-      className="am"
-      onClick={e => { if (e.target === dialogRef.current) dialogRef.current?.close() }}
-    >
+    <Sheet ref={sheet} onClose={onClose} className="am" aria-label={title}>
         <audio ref={audioRef} src={src} preload="auto" />
 
         {/* Header */}
@@ -136,7 +120,7 @@ export function AudioModal({ title, label, duration, src, paragraphs, timings, o
             <span className="am__label">{label}</span>
             <span className="am__dur-badge">{duration}</span>
           </div>
-          <button className="am__close" onClick={() => dialogRef.current?.close()} aria-label="Zamknij">
+          <button type="button" className="am__close" onClick={() => sheet.current?.close()} aria-label="Zamknij">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
             </svg>
@@ -226,6 +210,6 @@ export function AudioModal({ title, label, duration, src, paragraphs, timings, o
             ))}
           </div>
         </div>
-    </dialog>
+    </Sheet>
   )
 }

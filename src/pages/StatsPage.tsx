@@ -15,6 +15,7 @@ import { PackageProgressList } from '../components/stats/PackageProgressList'
 import { LevelProgressBars } from '../components/home/LevelProgressBars'
 import { CategoryProgressBars } from '../components/stats/CategoryProgressBars'
 import { TimeOfDayChart } from '../components/stats/TimeOfDayChart'
+import { FlowNumber } from '../components/shared/FlowNumber'
 import { useStats, measuredStudyMinutes } from '../hooks/useStats'
 import { studyWordsPerMinute } from '../utils/pace'
 import { useProgressData } from '../hooks/useProgressData'
@@ -297,22 +298,27 @@ export function StatsPage() {
         {/* Numbers that don't belong on the route itself, but are worth having. */}
         <section className="statspage__section">
           <h2 className="statspage__section-title">W liczbach</h2>
+          {/* Each figure rolls when its tile scrolls into view, a beat after
+              the one before it — the four read as a row counting itself up
+              rather than as four numbers switching on together. `onView` is
+              what makes them animate at all this far down: without it they'd
+              have finished while the page was still at the top. */}
           <dl className="statspage__facts">
             <div className="statspage__fact statspage__fact--listen">
               <dt>🎧 Odsłuchane</dt>
-              <dd>{totalWordsHeard.toLocaleString('pl-PL')}<span>{plWords(totalWordsHeard)}</span></dd>
+              <dd><FlowNumber value={totalWordsHeard} onView delayMs={0} /><span>{plWords(totalWordsHeard)}</span></dd>
             </div>
             <div className="statspage__fact">
               <dt>Czas nauki</dt>
-              <dd>{studyMinutes.toLocaleString('pl-PL')}<span>min</span></dd>
+              <dd><FlowNumber value={studyMinutes} onView delayMs={70} /><span>min</span></dd>
             </div>
             <div className="statspage__fact statspage__fact--train">
               <dt>⚡ Opanowane</dt>
-              <dd>{masteredPacks}<span>{plPacks(masteredPacks)}</span></dd>
+              <dd><FlowNumber value={masteredPacks} onView delayMs={140} /><span>{plPacks(masteredPacks)}</span></dd>
             </div>
             <div className="statspage__fact">
               <dt>Na bieżąco</dt>
-              <dd>{freshnessPct}<span>%</span></dd>
+              <dd><FlowNumber value={freshnessPct} onView delayMs={210} /><span>%</span></dd>
             </div>
           </dl>
         </section>

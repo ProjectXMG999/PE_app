@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion'
 import { AudioModal } from '../shared/AudioModal'
+import { Sheet, useSheetMotion, type SheetHandle } from '../shared/Sheet'
 import audioTimings from '../../data/audioTimings.json'
 import './OnboardingModal.css'
 
@@ -21,7 +23,10 @@ const WELCOME_PARAGRAPHS = [
 export function OnboardingModal() {
   const [isOpen, setIsOpen] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
-  const dialogRef = useRef<HTMLDialogElement>(null)
+  const sheet = useRef<SheetHandle>(null)
+  // What the user chose, acted on once the card has actually left.
+  const intent = useRef<'close' | 'audio'>('close')
+  const { rise, tap } = useSheetMotion()
 
   useEffect(() => {
     const seen = localStorage.getItem(ONBOARDING_SEEN_KEY)
@@ -30,67 +35,72 @@ export function OnboardingModal() {
     }
   }, [])
 
-  // showModal() after the conditional <dialog> mounts; ESC funnels through
-  // the native 'close' event so the seen-flag is always persisted.
-  useEffect(() => {
-    const dialog = dialogRef.current
-    if (!isOpen || !dialog) return
-    if (!dialog.open) dialog.showModal()
-    const onNativeClose = () => handleClose()
-    dialog.addEventListener('close', onNativeClose)
-    return () => dialog.removeEventListener('close', onNativeClose)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isOpen])
-
-  const handleClose = () => {
+  // Every way out of this card — both buttons, ESC, the backdrop — funnels
+  // through the sheet's close, so the seen-flag is always persisted exactly
+  // once and the intro only starts after the card has finished leaving.
+  const handleClosed = () => {
     setIsOpen(false)
     localStorage.setItem(ONBOARDING_SEEN_KEY, 'true')
+    if (intent.current === 'audio') setIsPlaying(true)
   }
 
-  const handlePlayAudio = () => {
-    setIsOpen(false)
-    setIsPlaying(true)
-    localStorage.setItem(ONBOARDING_SEEN_KEY, 'true')
+  const leave = (pick: 'close' | 'audio') => {
+    intent.current = pick
+    sheet.current?.close()
   }
 
   return (
     <>
       {isOpen && (
-          <dialog
-            ref={dialogRef}
-            className="onboarding-modal"
-            onClick={e => { if (e.target === dialogRef.current) dialogRef.current?.close() }}
+        <Sheet
+          ref={sheet}
+          onClose={handleClosed}
+          className="onboarding-modal"
+          aria-label="Witaj w Language Performance"
+          centered
+          grabber={false}
+        >
+          <button
+            type="button"
+            className="onboarding-modal__close"
+            onClick={() => leave('close')}
+            aria-label="Zamknij"
           >
-            <button className="onboarding-modal__close" onClick={() => dialogRef.current?.close()} aria-label="Zamknij">
-              ✕
-            </button>
+            ✕
+          </button>
 
-            <div className="onboarding-modal__content">
-              <h2 className="onboarding-modal__title">Witaj w Language Performance 👋</h2>
-              <p className="onboarding-modal__subtitle">
-                To nie jest zwykła aplikacja do klikania słówek. To jest Twój językowy trening.
-              </p>
+          <div className="onboarding-modal__content">
+            <motion.h2 className="onboarding-modal__title" variants={rise}>
+              Witaj w Language Performance 👋
+            </motion.h2>
+            <motion.p className="onboarding-modal__subtitle" variants={rise}>
+              To nie jest zwykła aplikacja do klikania słówek. To jest Twój językowy trening.
+            </motion.p>
 
-              <div className="onboarding-modal__actions">
-                <button
-                  className="onboarding-modal__btn onboarding-modal__btn--primary"
-                  onClick={handlePlayAudio}
-                >
-                  🎧 Słuchaj intro
-                </button>
-                <button
-                  className="onboarding-modal__btn onboarding-modal__btn--secondary"
-                  onClick={handleClose}
-                >
-                  Rozpocznij trening
-                </button>
-              </div>
+            <motion.div className="onboarding-modal__actions" variants={rise}>
+              <motion.button
+                type="button"
+                className="onboarding-modal__btn onboarding-modal__btn--primary"
+                whileTap={tap}
+                onClick={() => leave('audio')}
+              >
+                🎧 Słuchaj intro
+              </motion.button>
+              <motion.button
+                type="button"
+                className="onboarding-modal__btn onboarding-modal__btn--secondary"
+                whileTap={tap}
+                onClick={() => leave('close')}
+              >
+                Rozpocznij trening
+              </motion.button>
+            </motion.div>
 
-              <p className="onboarding-modal__hint">
-                Możesz wrócić do tej informacji w dowolnym momencie
-              </p>
-            </div>
-          </dialog>
+            <motion.p className="onboarding-modal__hint" variants={rise}>
+              Możesz wrócić do tej informacji w dowolnym momencie
+            </motion.p>
+          </div>
+        </Sheet>
       )}
 
       {isPlaying && (

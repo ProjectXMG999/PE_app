@@ -1,36 +1,12 @@
-.metricsinfo {
-  margin: auto auto 0;
-  padding: 0;
-  width: 100%;
-  max-width: 460px;
-  border: none;
-  background: transparent;
-  overflow: visible;
-}
-
-.metricsinfo::backdrop {
-  background: var(--overlay);
-  backdrop-filter: blur(var(--scrim-blur));
-}
+/* Shell, scrim, grabber and the wide-screen switch to a centred card come from
+   `.u-sheet` in styles/surfaces.css; its motion from shared/Sheet.tsx. */
 
 .metricsinfo__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--spacing-sm) var(--spacing-lg) var(--spacing-xl);
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-bottom: none;
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-  animation: slideUp 280ms var(--ease-out-expo);
-}
-
-.metricsinfo__handle {
-  width: 36px;
-  height: 4px;
-  margin-bottom: var(--spacing-lg);
-  border-radius: var(--radius-full);
-  background: var(--border);
+  padding: var(--spacing-sm) var(--spacing-lg)
+           max(var(--spacing-xl), env(safe-area-inset-bottom));
 }
 
 .metricsinfo__title {
@@ -68,8 +44,6 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   text-align: left;
-  opacity: 0;
-  animation: slideUp 360ms var(--ease-out-expo) forwards;
 }
 
 .metricsinfo__item--streak { border-left: 3px solid var(--accent-orange); }
@@ -128,24 +102,3 @@
   transform: scale(0.97);
 }
 
-@media (min-width: 640px) {
-  .metricsinfo {
-    margin: auto;
-  }
-
-  .metricsinfo__inner {
-    border-bottom: 1px solid var(--border);
-    border-radius: var(--radius-xl);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .metricsinfo__inner {
-    animation: none;
-  }
-
-  .metricsinfo__item {
-    opacity: 1;
-    animation: none;
-  }
-}
