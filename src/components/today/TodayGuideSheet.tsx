@@ -5,7 +5,7 @@ import {
   BoltGlyph, CalendarGlyph, CheckCircleGlyph, FlagGlyph, HeadphonesGlyph, PulseGlyph,
   InfoGlyph, RepeatGlyph, RoutesGlyph, SparklesGlyph, StepsGlyph, TargetGlyph, TrendUpGlyph,
 } from '../mode/glyphs'
-import { RETIRE_AT_REVIEW_COUNT, SERVING_MAX, SERVING_MIN } from '../../services/reviewConfig'
+import { DEBT_HORIZON_DAYS, RETIRE_AT_REVIEW_COUNT } from '../../services/reviewConfig'
 import { SPRING_SNAPPY } from './motion'
 import './TodayGuideSheet.css'
 
@@ -89,7 +89,7 @@ const TOPICS: Record<GuideTopic, Topic> = {
         glyph: <CalendarGlyph size={G} />,
         tint: 'live',
         title: 'Tyle, ile dasz radę zrobić',
-        text: `Codziennie dostajesz od ${SERVING_MIN} do ${SERVING_MAX} słów, zależnie od Twojego celu i tempa. Nawet gdy zaległości urosną, reszta spokojnie poczeka na kolejne dni.`,
+        text: `Porcja na dziś dopasowuje się do Twojego celu i do tego, ile czasu realnie siadasz do nauki. Gdy urosną zaległości, rośnie razem z nimi — tak, żeby rozłożyć je na jakieś ${DEBT_HORIZON_DAYS} dni zamiast wrzucać wszystko naraz.`,
       },
       {
         glyph: <FlagGlyph size={G} />,

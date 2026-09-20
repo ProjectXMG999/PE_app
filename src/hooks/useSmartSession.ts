@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { fetchPack } from './usePackageData'
 import { loadProgressSnapshot } from './useProgressData'
+import { todayProgress } from '../services/dailyTime'
 import { selectSmart, composeSmartSteps, SmartStep, SmartSegment } from '../services/smartQueue'
 import { useAppStore } from '../store/useAppStore'
 import { Pack } from '../types/vocabulary'
@@ -38,7 +39,10 @@ export function useSmartSession(nonce = 0): SmartSession {
 
     async function build() {
       try {
-        const snapshot = await loadProgressSnapshot()
+        // The day's time ledger is what makes a second sitting a *continuation*
+        // rather than a restart: it survives a session nobody finished, so the
+        // 14 cards done before walking away still shrink what's offered now.
+        const [snapshot, today] = await Promise.all([loadProgressSnapshot(), todayProgress()])
         if (!alive) return
 
         const { comfortLevel, todayLevel, dailyGoalSec, reviewHealth } = useAppStore.getState()
@@ -47,6 +51,7 @@ export function useSmartSession(nonce = 0): SmartSession {
           comfortLevel,
           todayLevel,
           goalSec: dailyGoalSec,
+          secondsStudiedToday: today.secondsStudied,
           reviewHealth,
         })
 

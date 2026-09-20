@@ -1,7 +1,11 @@
 import { describe, it, expect } from 'vitest'
 import {
+  activeDayMinutes,
   computeReviewBudget,
   computeServingState,
+  maintenanceLoad,
+  reviewMinutes,
+  reviewSecPerCard,
   reviewsDoneToday,
   scoreDueWord,
   orderDueWords,
@@ -13,8 +17,11 @@ import {
   retentionBreakdown,
   PriorityCtx,
 } from './reviewQueue'
-import { SERVING_MIN, SERVING_MAX, PACE_FLOOR } from './reviewConfig'
-import type { WordProgress } from '../types/progress'
+import {
+  SERVING_MIN, PACE_FLOOR, DEBT_HORIZON_DAYS, REVIEWS_PER_MINUTE,
+  REVIEW_SEC_PER_CARD, REVIEW_PACE,
+} from './reviewConfig'
+import type { DailyTime, Session, WordProgress } from '../types/progress'
 
 const TODAY = '2026-06-01'
 const ctx: PriorityCtx = { today: TODAY, todayLevel: null, packLevelOf: () => 1 }
@@ -27,18 +34,215 @@ function due(overrides: Partial<WordProgress> = {}): WordProgress {
   } as WordProgress
 }
 
-describe('computeReviewBudget (pace mode)', () => {
-  it('caps at the goal-derived value; the recent pace is the reality check', () => {
-    // goal 15 min → goalDerived 18. Pace 40/day → paceDerived 60. min(18, 60) = 18.
-    expect(computeReviewBudget({ goalSec: 15 * 60, recentPace: 40 })).toBe(18)
-    // Low pace pulls the budget below the goal ceiling: goalDerived 72, pace 4 →
-    // paceDerived 6 → min(72, max(6, PACE_FLOOR)) → clamped up to SERVING_MIN.
-    expect(computeReviewBudget({ goalSec: 60 * 60, recentPace: 4 })).toBe(Math.max(SERVING_MIN, PACE_FLOOR))
+describe('activeDayMinutes', () => {
+  const day = (date: string, secondsStudied: number): DailyTime =>
+    ({ date, secondsStudied, goalSec: 3600, goalMetAt: null })
+
+  it('averages over study days, not calendar days', () => {
+    // Two 20-minute days in a week is a 20-minute learner who studies twice a
+    // week — not a 5-minute learner. The old 7-day pace divided by 7 and read
+    // the same history as "barely studies at all".
+    const ledger = [day('2026-05-30', 1200), day('2026-06-01', 1200)]
+    expect(activeDayMinutes(ledger, TODAY)).toBe(20)
   })
 
-  it('never drops below SERVING_MIN, never above SERVING_MAX', () => {
-    expect(computeReviewBudget({ goalSec: 60 * 60, recentPace: 0 })).toBe(Math.max(SERVING_MIN, PACE_FLOOR))
-    expect(computeReviewBudget({ goalSec: 60 * 60, recentPace: 1000 })).toBe(SERVING_MAX)
+  it('ignores days too short to be study, and anything outside the window', () => {
+    const ledger = [
+      day('2026-06-01', 1200), // counts
+      day('2026-05-31', 30), // app opened and closed — not a study day
+      day('2026-01-01', 6000), // long before the window
+    ]
+    expect(activeDayMinutes(ledger, TODAY)).toBe(20)
+  })
+
+  it('returns null — not zero — when there is no qualifying day at all', () => {
+    expect(activeDayMinutes([], TODAY)).toBeNull()
+    expect(activeDayMinutes([day('2026-06-01', 10)], TODAY)).toBeNull()
+  })
+
+  it('falls back to older study days for a learner returning after a break', () => {
+    // Null means "no history", which the budget reads as "trust the stated
+    // goal" and hands over all of it. Someone back after three weeks away has
+    // history — and meeting them with the biggest serving the app can build is
+    // the starvation bug pointed the other way.
+    const lapsed = [day('2026-05-01', 720), day('2026-05-02', 720)] // 12-min sittings, long ago
+    expect(activeDayMinutes(lapsed, TODAY)).toBe(12)
+    expect(computeReviewBudget({ goalSec: 60 * 60, activeMinutes: activeDayMinutes(lapsed, TODAY), backlog: 316 }))
+      .toBeLessThan(computeReviewBudget({ goalSec: 60 * 60, activeMinutes: null, backlog: 316 }))
+  })
+
+  it('prefers the window over the fallback when the window has anything at all', () => {
+    const mixed = [day('2026-05-01', 3600), day('2026-06-01', 600)] // 60 min long ago, 10 min now
+    expect(activeDayMinutes(mixed, TODAY)).toBe(10)
+  })
+})
+
+/** Cards a given number of minutes buys at the cold-start pace — the budget's
+ *  own unit. Written out rather than hardcoded so re-tuning the pace re-tunes
+ *  the expectations with it, instead of failing eight tests. */
+const cards = (minutes: number) => Math.round(minutes * REVIEWS_PER_MINUTE)
+
+describe('computeReviewBudget', () => {
+  it('caps at the goal-derived value; measured study time is the reality check', () => {
+    // goal 15 min → goalDerived 90. Sits for 40 min → timeDerived 240. min = 90.
+    expect(computeReviewBudget({ goalSec: 15 * 60, activeMinutes: 40 })).toBe(cards(15))
+    // Short sittings pull the budget below the goal ceiling: a 60-minute goal
+    // with 10-minute sittings gets 10 minutes' worth.
+    expect(computeReviewBudget({ goalSec: 60 * 60, activeMinutes: 10 })).toBe(cards(10))
+  })
+
+  it("sizes the day in the learner's own seconds per card", () => {
+    // The whole point of threading the pace through: the same goal and the same
+    // sittings buy more cards for someone who answers faster. At 50 s a card —
+    // the figure the app used to assume for everyone — a 20-minute goal was 24
+    // reviews, done in four real minutes.
+    const brisk = computeReviewBudget({ goalSec: 20 * 60, activeMinutes: 20, secPerCard: 6 })
+    const slow = computeReviewBudget({ goalSec: 20 * 60, activeMinutes: 20, secPerCard: 24 })
+    expect(brisk).toBe(200)
+    expect(slow).toBe(50)
+  })
+
+  it('never drops below the floor, never promises more than the goal holds', () => {
+    expect(computeReviewBudget({ goalSec: 60 * 60, activeMinutes: 0 })).toBe(Math.max(SERVING_MIN, PACE_FLOOR))
+    // The goal is the ceiling however long they sit or how far behind they are.
+    expect(computeReviewBudget({ goalSec: 60 * 60, activeMinutes: 600, backlog: 10_000 })).toBe(cards(60))
+  })
+
+  it('trusts the stated goal when there is no history to check it against', () => {
+    // Measured zero is evidence about a learner; a MISSING measurement is a
+    // brand-new account, where the only signal there is happens to be the goal
+    // they just chose. Conflating the two let day one on a 60-minute goal serve
+    // eight words and call the day's portion done.
+    const noHistory = computeReviewBudget({ goalSec: 60 * 60, activeMinutes: null })
+    expect(noHistory).toBe(cards(60))
+    expect(noHistory).toBeGreaterThan(computeReviewBudget({ goalSec: 60 * 60, activeMinutes: 0 }))
+    // A small goal is still respected — this trusts the goal, it doesn't ignore it.
+    expect(computeReviewBudget({ goalSec: 10 * 60, activeMinutes: null })).toBe(cards(10))
+  })
+
+  it('lets the backlog raise the floor, spread over DEBT_HORIZON_DAYS', () => {
+    // A 60-minute goal, 2-minute sittings, 316 words due. Time alone says 12;
+    // the arrears say ceil(316/14) = 23. (The reported case was stated in
+    // 10-minute sittings, which at an honest pace now covers the arrears on
+    // their own — which is the fix working, not the floor going away.)
+    const behind = computeReviewBudget({ goalSec: 60 * 60, activeMinutes: 2, backlog: 316 })
+    expect(behind).toBe(Math.ceil(316 / DEBT_HORIZON_DAYS))
+    expect(behind).toBeGreaterThan(computeReviewBudget({ goalSec: 60 * 60, activeMinutes: 2, backlog: 0 }))
+  })
+
+  it('never lets the debt floor overrun the goal ceiling', () => {
+    // A small goal with a huge backlog still gets a small-goal serving: the
+    // point of the floor is to stop under-serving, not to overrule the goal.
+    expect(computeReviewBudget({ goalSec: 10 * 60, activeMinutes: 10, backlog: 10_000 })).toBe(cards(10))
+  })
+
+  it('does not measure itself — a capped serving cannot ratchet the budget down', () => {
+    // The old model read `wordsCompleted`, which on a review session IS the
+    // budget it granted. Simulated over 60 days, a learner clearing the serving
+    // on 3 days a week stayed pinned to the floor forever. The budget now reads
+    // study time, so the same learner is judged on the length of their sittings.
+    const ledger: DailyTime[] = []
+    let budget = SERVING_MIN
+    for (let i = 0; i < 60; i++) {
+      const date = `2026-04-${String((i % 28) + 1).padStart(2, '0')}`
+      const studies = i % 7 < 3 // three days a week
+      if (studies) ledger.push({ date, secondsStudied: 25 * 60, goalSec: 3600, goalMetAt: null })
+      budget = computeReviewBudget({
+        goalSec: 60 * 60,
+        activeMinutes: activeDayMinutes(ledger, date),
+        backlog: 0,
+      })
+    }
+    expect(budget).toBe(cards(25)) // 25-minute sittings, honestly read
+    expect(budget).toBeGreaterThan(SERVING_MIN)
+  })
+})
+
+describe('reviewMinutes', () => {
+  it('reads the count at the pace the budget was sized with', () => {
+    expect(reviewMinutes(30)).toBe(Math.round(30 / REVIEWS_PER_MINUTE))
+    expect(reviewMinutes(0)).toBe(1) // never "0 min"
+  })
+
+  it('takes the measured pace, so the label cannot outrun the cards', () => {
+    // The reported case: 88 due words announced as "ok. 73 min" — the 50 s/card
+    // assumption — for a queue its owner clears at about eight seconds a card.
+    expect(reviewMinutes(88, 50)).toBe(73)
+    expect(reviewMinutes(88, 8)).toBe(12)
+  })
+})
+
+describe('reviewSecPerCard', () => {
+  const session = (over: Partial<Session> = {}): Session => ({
+    packageId: '__review__', date: TODAY, wordsCompleted: 20, mode: 'fiszki',
+    trainMode: 'review', durationSec: 160, ...over,
+  })
+
+  it('falls back to the default until there is enough review history', () => {
+    expect(reviewSecPerCard([], TODAY)).toBe(REVIEW_SEC_PER_CARD)
+    // One 20-card sitting is real evidence but not yet enough of it.
+    expect(reviewSecPerCard([session()], TODAY)).toBe(REVIEW_SEC_PER_CARD)
+  })
+
+  it('measures the learner once they have a history', () => {
+    // Two 20-card sittings at 8 s a card.
+    expect(reviewSecPerCard([session(), session()], TODAY)).toBe(8)
+  })
+
+  it('ignores sessions that are not reviews, and ones too old to mean anything', () => {
+    // Trenuj and Inteligentny cards are a different job at a different speed.
+    const others = [
+      session({ trainMode: 'word-flash', durationSec: 600 }),
+      session({ trainMode: 'word-flash', durationSec: 600 }),
+    ]
+    expect(reviewSecPerCard(others, TODAY)).toBe(REVIEW_SEC_PER_CARD)
+    const stale = [session({ date: '2025-01-01' }), session({ date: '2025-01-02' })]
+    expect(reviewSecPerCard(stale, TODAY)).toBe(REVIEW_SEC_PER_CARD)
+  })
+
+  it('bounds a clock artefact out of the pace', () => {
+    // A tab left open behind a finished session is not a 40-minute card.
+    const abandoned = [session({ durationSec: 4000 }), session({ durationSec: 4000 })]
+    expect(reviewSecPerCard(abandoned, TODAY)).toBe(REVIEW_PACE.MAX_SEC)
+    const impossible = [session({ durationSec: 20 }), session({ durationSec: 20 })]
+    expect(reviewSecPerCard(impossible, TODAY)).toBe(REVIEW_PACE.MIN_SEC)
+  })
+})
+
+describe('maintenanceLoad', () => {
+  it('sums 1/stability over live known words', () => {
+    const load = maintenanceLoad([
+      due({ wordId: 'a', status: 'known', stability: 2 }), // 0.5/day
+      due({ wordId: 'b', status: 'known', stability: 4 }), // 0.25/day
+      due({ wordId: 'c', status: 'known', stability: 4 }), // 0.25/day
+    ], 1)
+    expect(load.perDay).toBe(1)
+    // A load this small is under a minute, but "~0 min to keep this up" reads
+    // as a broken number rather than a light one — hence reviewMinutes' floor.
+    expect(load.minutesPerDay).toBe(1)
+    expect(maintenanceLoad([], 1).minutesPerDay).toBe(0) // …and no load is no minutes
+    // The daily upkeep is quoted at the learner's own pace, like every other
+    // minutes figure on the card it's printed on.
+    const six = Array.from({ length: 6 }, (_, i) =>
+      due({ wordId: `s${i}`, status: 'known', stability: 1 }))
+    expect(maintenanceLoad(six, 1, 10).minutesPerDay).toBe(1)
+    expect(maintenanceLoad(six, 1, 60).minutesPerDay).toBe(6)
+    expect(load.coveredPct).toBe(100)
+  })
+
+  it('excludes retired and not-yet-known words, and reports the shortfall', () => {
+    const load = maintenanceLoad([
+      due({ wordId: 'a', status: 'known', stability: 1 }), // 1/day
+      due({ wordId: 'b', status: 'known', stability: 1, retiredAt: '2026-01-01' }), // deep maintenance
+      due({ wordId: 'c', status: 'learning', stability: 1 }), // not known yet
+    ], 1)
+    expect(load.perDay).toBe(1)
+    // A budget covering half the inflow is a queue that grows whatever the
+    // budget is tuned to — the number Etap 3 exists to act on.
+    expect(maintenanceLoad([
+      due({ wordId: 'a', status: 'known', stability: 1 }),
+      due({ wordId: 'b', status: 'known', stability: 1 }),
+    ], 1).coveredPct).toBe(50)
   })
 })
 
@@ -46,7 +250,7 @@ describe('computeServingState', () => {
   const words = [due()]
   it('remaining is min(backlog, budget - served)', () => {
     const s = computeServingState({
-      due: words, wordProgress: words, goalSec: 15 * 60, recentPace: 30, today: TODAY,
+      due: words, wordProgress: words, goalSec: 15 * 60, activeMinutes: 30, today: TODAY,
     })
     expect(s.backlog).toBe(1)
     expect(s.remaining).toBe(1) // only 1 due, plenty of budget

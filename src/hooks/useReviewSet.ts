@@ -16,13 +16,25 @@ import { WordProgress } from '../types/progress'
  *  - the DAILY serving (reviewQueue) caps how much of the backlog is shown today,
  *    so an advanced learner isn't buried. The user can opt past it: pass
  *    `overBudget` after finishing the day's serving.
- *  - REVIEW_MAX_WORDS / REVIEW_MAX_PACKS are the per-SESSION ceilings — pack
+ *  - REVIEW_MAX_WORDS / REVIEW_MAX_PACKS are the per-SITTING ceilings — pack
  *    content is fetched per pack through an authenticated function, so an
- *    unbounded queue would fire dozens of requests before the first card, and a
- *    session finishable in ~4 minutes is one the user will actually start.
+ *    unbounded queue would fire dozens of requests before the first card.
+ *
+ * The distinction now carries real weight. The day's budget used to carry a
+ * flat ceiling of 40, which quietly made the two largest goal options
+ * identical — a 60-minute goal derives 72 reviews and got 40. The ceiling on a
+ * day is now the goal itself, and REVIEW_MAX_WORDS is what keeps one sitting
+ * humane, after which ReviewPage's checkpoint offers the next batch. Same
+ * judgement SMART.MAX_CARDS makes for the Inteligentny mode.
  * See src/services/reviewConfig.ts for the serving knobs.
  */
-export const REVIEW_MAX_WORDS = 20
+/** Cards in one sitting. Raised from 20 alongside the review-pace fix: "20 is
+ *  ~17 minutes" held only under the old 50 s/card figure, which was five times
+ *  too slow. At a real pace 20 cards is about three minutes, so a corrected
+ *  day's serving would have been handed over in four checkpoints. 40 matches
+ *  SMART.MAX_CARDS and costs no extra fetches — REVIEW_MAX_PACKS still bounds
+ *  those. */
+export const REVIEW_MAX_WORDS = 40
 export const REVIEW_MAX_PACKS = 8
 
 const allPacks = packagesIndex as PackMeta[]
@@ -53,6 +65,10 @@ export interface ReviewSet {
   servingLeft: number
   /** Today's full review budget (before anything was served). */
   reviewBudget: number
+  /** Reviews already done today BEFORE this run — from earlier visits and from
+   *  Inteligentny sessions. `reviewsDoneToday` derives it from wordProgress, so
+   *  it counts every review however it was earned. */
+  servedBefore: number
   /** Today's budget already spent and backlog remains — offer "continue anyway". */
   exhausted: boolean
   packCount: number
@@ -68,8 +84,8 @@ interface Options {
 }
 
 const EMPTY: ReviewSet = {
-  steps: [], cardCount: 0, dueTotal: 0, servingLeft: 0, reviewBudget: 0, exhausted: false,
-  packCount: 0, loading: true, error: null,
+  steps: [], cardCount: 0, dueTotal: 0, servingLeft: 0, reviewBudget: 0, servedBefore: 0,
+  exhausted: false, packCount: 0, loading: true, error: null,
 }
 
 export function useReviewSet(enabled = true, opts: Options = {}): ReviewSet {
@@ -97,6 +113,7 @@ export function useReviewSet(enabled = true, opts: Options = {}): ReviewSet {
             dueTotal: due.length,
             servingLeft: snap.servingLeft,
             reviewBudget: snap.reviewBudget,
+            servedBefore: snap.served,
             exhausted: cap === 0 && due.length > 0,
             loading: false,
           })
@@ -163,6 +180,7 @@ export function useReviewSet(enabled = true, opts: Options = {}): ReviewSet {
           dueTotal: due.length,
           servingLeft: snap.servingLeft,
           reviewBudget: snap.reviewBudget,
+          servedBefore: snap.served,
           exhausted: false,
           packCount: cardPacks.size,
           loading: false,

@@ -33,7 +33,7 @@ export function ReviewPage() {
 
   const [overBudget, setOverBudget] = useState(false)
   const [round, setRound] = useState(0)
-  const { steps, cardCount, dueTotal, packCount, reviewBudget, exhausted, loading, error } =
+  const { steps, cardCount, dueTotal, packCount, reviewBudget, servedBefore, exhausted, loading, error } =
     useReviewSet(true, { overBudget, nonce: round })
 
   const { side, isAdvancing, flip, advance: animateOut, resetToFront, handleAnimationEnd, cardClass } = useCardFlip()
@@ -47,6 +47,12 @@ export function ReviewPage() {
   // retention. `status: 'known'` is permanent, so it's the honest test.
   const retentionRef = useRef({ rated: 0, known: 0 })
   const [batchDone, setBatchDone] = useState(false)
+  // The clock runs for the whole visit, but `wordsCompleted` is per batch, so a
+  // session row must record only its own slice — otherwise batch 3 of a visit
+  // claims all three batches' minutes against twenty cards, and the sec/card
+  // ratio `reviewSecPerCard` reads off those rows inflates with every
+  // "Kontynuuj mimo to".
+  const batchStartSec = useRef(0)
   const [noAudio, setNoAudio] = useState(false)
   // Cumulative across every batch of this visit.
   const [sessionSeen, setSessionSeen] = useState(0)
@@ -62,6 +68,7 @@ export function ReviewPage() {
   const { playWord, stop } = useAudio(card?.packageId ?? null, enRate, plRate)
 
   const finishBatch = useCallback(async () => {
+    const batchSec = Math.max(0, elapsedSec() - batchStartSec.current)
     await saveSession({
       // Not a real pack — this session spans many, so it gets its own marker
       // rather than being attributed to whichever pack came first.
@@ -71,7 +78,7 @@ export function ReviewPage() {
       wordsCompleted: cardCount,
       mode: 'fiszki',
       trainMode: 'review',
-      durationSec: elapsedSec(),
+      durationSec: batchSec,
       // Recorded for stats. The adaptive difficulty signal ignores review
       // sessions (it only reads trainMode word-flash / active-sentence).
       ratedCount: cardCount,
@@ -126,12 +133,15 @@ export function ReviewPage() {
   }, [card, isAdvancing, stop, animateOut, goNext])
 
   const continueBatch = useCallback(() => {
+    // Start the next batch's clock here, not when the last one was saved, so
+    // the time spent reading the checkpoint belongs to neither batch's pace.
+    batchStartSec.current = elapsedSec()
     setStepIndex(0)
     setKept(0)
     setBatchDone(false)
     setOverBudget(true)
     setRound(r => r + 1)
-  }, [])
+  }, [elapsedSec])
 
   if (loading) {
     return (
@@ -183,7 +193,15 @@ export function ReviewPage() {
     const totalToday = sessionSeen
     // Once the day's portion is done, stop nudging "keep going" — swap the
     // buttons so "enough for today" is the primary, and reassure.
-    const portionDone = reviewBudget > 0 && sessionSeen >= reviewBudget
+    //
+    // Counted against the whole day, not just this visit. `sessionSeen` alone
+    // was right only while one sitting could cover a day's budget; now that the
+    // day's ceiling is the goal (72 at the largest) and a sitting is capped at
+    // REVIEW_MAX_WORDS, a learner returning for their second batch would have
+    // been nudged to "keep going" all the way past a portion they had in fact
+    // already finished.
+    const doneToday = servedBefore + sessionSeen
+    const portionDone = reviewBudget > 0 && doneToday >= reviewBudget
     const continueBtn = (
       <button
         className={`review__state-btn${portionDone ? '' : ' review__state-btn--primary u-cta'}`}
@@ -211,7 +229,7 @@ export function ReviewPage() {
           {totalToday > cardCount && ` · dziś łącznie ${totalToday}`}.
           {queueLeft > 0 ? ` W kolejce jeszcze ${queueLeft}.` : ' Kolejka pusta.'}
           {portionDone && queueLeft > 0 &&
-            ` Zrobiłeś dziś ${sessionSeen} — reszta spokojnie może poczekać.`}
+            ` Zrobiłeś dziś ${doneToday} — reszta spokojnie może poczekać.`}
         </p>
         <div className="review__state-actions">
           {queueLeft > 0 && (portionDone ? <>{stopBtn}{continueBtn}</> : <>{continueBtn}{stopBtn}</>)}

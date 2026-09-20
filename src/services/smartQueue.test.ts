@@ -1,8 +1,11 @@
 import { describe, it, expect } from 'vitest'
-import { smartTargetCount, selectSmart, composeSmartSteps, SMART, SmartSelection } from './smartQueue'
+import {
+  smartTargetCount, smartSessionSize, measuredCardsPerMin,
+  selectSmart, composeSmartSteps, SMART, PACE, SmartSelection,
+} from './smartQueue'
 import { HEALTH, ReviewHealth } from './reviewHealth'
 import type { ProgressSnapshot } from '../hooks/useProgressData'
-import type { WordProgress } from '../types/progress'
+import type { Session, WordProgress } from '../types/progress'
 import type { Pack, Word } from '../types/vocabulary'
 import { dayKey } from '../utils/day'
 
@@ -20,12 +23,16 @@ function baseSnapshot(overrides: Partial<ProgressSnapshot> = {}): ProgressSnapsh
     wordProgress: [],
     knownMap: new Map(),
     knownTotal: 0,
-    bulkKnownTotal: 0,
+    declaredKnownTotal: 0,
+    declaredKnownMap: new Map(),
+    declaredRetiredCount: 0,
     dueCount: 0,
     dueWords: [],
     servingLeft: 20,
     reviewBudget: 20,
+    reviewSecPerCard: 10,
     served: 0,
+    maintenanceLoad: { perDay: 0, minutesPerDay: 0, coveredPct: 0 },
     retiredCount: 0,
     staleCount: 0,
     reviewUrgency: 'calm',
@@ -48,6 +55,82 @@ describe('smartTargetCount', () => {
   it('clamps to [MIN_CARDS, MAX_CARDS]', () => {
     expect(smartTargetCount(0)).toBe(SMART.MIN_CARDS)
     expect(smartTargetCount(3600)).toBe(SMART.MAX_CARDS)
+  })
+})
+
+describe('measuredCardsPerMin', () => {
+  const today = '2026-06-10'
+  function rated(date: string, ratedCount: number, durationSec: number): Session {
+    return { packageId: 'p', date, wordsCompleted: ratedCount, mode: 'fiszki', ratedCount, durationSec }
+  }
+
+  it('returns null until there is enough recent evidence', () => {
+    expect(measuredCardsPerMin([], today)).toBeNull()
+    // Two sessions is below PACE.MIN_SESSIONS however many cards they hold.
+    expect(measuredCardsPerMin([rated(today, 40, 1200), rated(today, 40, 1200)], today)).toBeNull()
+    // Enough sessions, but outside the window.
+    const old = Array.from({ length: 4 }, () => rated('2026-01-01', 30, 1200))
+    expect(measuredCardsPerMin(old, today)).toBeNull()
+  })
+
+  it('reads the real cards-per-minute once there is', () => {
+    // 4 sessions × 30 cards in 20 min = 1.5 cards/min.
+    const sessions = Array.from({ length: 4 }, () => rated(today, 30, 1200))
+    expect(measuredCardsPerMin(sessions, today)).toBeCloseTo(1.5, 5)
+  })
+
+  it('ignores autoplay and sessions too short to time honestly', () => {
+    const sessions = [
+      ...Array.from({ length: 3 }, () => rated(today, 30, 1200)), // 1.5/min
+      { packageId: 'p', date: today, wordsCompleted: 200, mode: 'autoplay' as const, ratedCount: 200, durationSec: 60 },
+      rated(today, 3, 600), // a phone put down, not a pace
+    ]
+    expect(measuredCardsPerMin(sessions, today)).toBeCloseTo(1.5, 5)
+  })
+
+  it('clamps a clock artefact into the plausible band', () => {
+    const stuck = Array.from({ length: 4 }, () => rated(today, 40, 36_000)) // 10 h "session"
+    expect(measuredCardsPerMin(stuck, today)).toBe(PACE.MIN)
+  })
+})
+
+describe('smartSessionSize', () => {
+  const goalSec = 3600 // the biggest goal on the picker — where the old wall appeared
+
+  it('sizes one sitting, not the whole day', () => {
+    const size = smartSessionSize({ goalSec })
+    expect(size.dailyTarget).toBe(Math.round(60 * SMART.CARDS_PER_MIN))
+    expect(size.targetCount).toBe(SMART.MAX_CARDS)
+    expect(size.targetCount).toBeLessThan(size.dailyTarget)
+  })
+
+  it('offers what is LEFT of the day after an earlier sitting', () => {
+    const pace = SMART.CARDS_PER_MIN
+    const daily = Math.round(60 * pace)
+    // 50 minutes already studied today, whatever finished or not.
+    const size = smartSessionSize({ goalSec, secondsStudiedToday: 50 * 60 })
+    expect(size.doneToday).toBe(Math.round(50 * pace))
+    expect(size.remaining).toBe(daily - Math.round(50 * pace))
+    expect(size.targetCount).toBeLessThan(SMART.MAX_CARDS)
+    expect(size.bonus).toBe(false)
+  })
+
+  it('drops to a short extra once the goal is met, instead of a fresh full session', () => {
+    const size = smartSessionSize({ goalSec, secondsStudiedToday: 90 * 60 })
+    expect(size.remaining).toBe(0)
+    expect(size.bonus).toBe(true)
+    expect(size.targetCount).toBe(SMART.MIN_CARDS)
+  })
+
+  it('prefers the learner\'s measured pace over the cold-start constant', () => {
+    const today = dayKey()
+    // 4 sessions at 1.0 cards/min — slower than CARDS_PER_MIN, so a smaller day.
+    const sessions: Session[] = Array.from({ length: 4 }, () => ({
+      packageId: 'p', date: today, wordsCompleted: 20, mode: 'fiszki', ratedCount: 20, durationSec: 1200,
+    }))
+    const measured = smartSessionSize({ goalSec, sessions, today })
+    expect(measured.pace).toBeCloseTo(1.0, 5)
+    expect(measured.dailyTarget).toBeLessThan(smartSessionSize({ goalSec }).dailyTarget)
   })
 })
 
@@ -105,7 +188,70 @@ describe('selectSmart', () => {
     })
     expect(zeroBudget.reviewWords.map(w => w.wordId)).toEqual([`${P002}-010`])
   })
+
+  it('reaches a full sitting for a brand-new user without fanning out over the catalog', () => {
+    const selection = selectSmart({ snapshot: baseSnapshot(), comfortLevel: 1.0, todayLevel: 1, goalSec: 3600 })
+    // Nothing due and no stretch, so the whole sitting is learn: MAX_CARDS=40
+    // over 10-word level-1 packs is 4 packs. The learn stream must cover the
+    // quota (the old flat MAX_PACKS=8 used to truncate it) without reaching for
+    // a dozen packs to do it — that fan-out is what a session shows as
+    // "16 pakietów" and what makes the /pack-content fetches pile up.
+    expect(selection.quota.learn).toBe(SMART.MAX_CARDS)
+    expect(selection.learnPackIds).toHaveLength(4)
+  })
+
+  it('orders straggler words by how close their pack is to completion', () => {
+    const snapshot = baseSnapshot({
+      progressMap: new Map([
+        [P001, { packageId: P001, startedAt: '2026-05-01', completedAt: null, masteredAt: null, currentIndex: 9 }],
+        [P002, { packageId: P002, startedAt: '2026-05-01', completedAt: null, masteredAt: null, currentIndex: 8 }],
+      ]),
+      knownMap: new Map([[P001, 9], [P002, 8]]), // p001: 1 word left, p002: 2 words left
+      wordProgress: [
+        wp({ wordId: 'b-word-1', packageId: P002, status: 'learning' }),
+        wp({ wordId: 'a-word', packageId: P001, status: 'learning' }),
+        wp({ wordId: 'b-word-2', packageId: P002, status: 'learning' }),
+      ],
+    })
+
+    const sel = selectSmart({ snapshot, comfortLevel: 1, todayLevel: 1, goalSec: 15 * 60 })
+
+    const orderedIds = sel.reviewWords.map(w => w.wordId)
+    expect(orderedIds.indexOf('a-word')).toBeLessThan(orderedIds.indexOf('b-word-1'))
+    expect(orderedIds.indexOf('a-word')).toBeLessThan(orderedIds.indexOf('b-word-2'))
+  })
+
+  it('caps the straggler overflow instead of letting it swell review toward half the session', () => {
+    const stragglerIds = Array.from({ length: 60 }, (_, i) => `t1-p${String(i + 1).padStart(3, '0')}`)
+    const progressMap = new Map(stragglerIds.map(id =>
+      [id, { packageId: id, startedAt: '2026-05-01', completedAt: null, masteredAt: null, currentIndex: 9 }]
+    ))
+    const knownMap = new Map(stragglerIds.map(id => [id, 9])) // 1 word left in each
+    const wordProgress = stragglerIds.map(id => wp({ wordId: `${id}-last`, packageId: id, status: 'learning' }))
+
+    const snapshot = baseSnapshot({ progressMap, knownMap, wordProgress, servingLeft: 0 })
+    const sel = selectSmart({ snapshot, comfortLevel: 1, todayLevel: 1, goalSec: 3600 })
+
+    // A full sitting is MAX_CARDS at base reviewRatio=0.35. An earlier cap
+    // (ceil(targetCount*0.5)) would have let far more of the 60 stragglers ride
+    // along; the overflow is a flat SMART.STRAGGLER_OVERFLOW instead.
+    const reviewTarget = Math.round(SMART.MAX_CARDS * SMART.REVIEW_RATIO)
+    expect(sel.reviewWords).toHaveLength(reviewTarget + SMART.STRAGGLER_OVERFLOW)
+    expect(sel.reviewWords.length).toBeLessThan(Math.ceil(SMART.MAX_CARDS * 0.5))
+  })
 })
+
+/** A fixed-size sitting, for compose tests that don't care how it was sized. */
+function sizeOf(targetCount: number) {
+  return {
+    targetCount,
+    pace: SMART.CARDS_PER_MIN,
+    dailyTarget: targetCount,
+    doneToday: 0,
+    remaining: targetCount,
+    bonus: false,
+  }
+}
 
 function word(id: string): Word {
   return { id, english: id, polish: id, sentenceEn: null, sentencePl: null, audioWord: '', audioSentence: '' }
@@ -119,6 +265,7 @@ describe('composeSmartSteps', () => {
   it('weaves warmup → review hand-off → stretch hand-off, with no info card for an empty segment', () => {
     const selection: SmartSelection = {
       targetCount: 6,
+      size: sizeOf(6),
       quota: { learn: 3, review: 1, stretch: 2 },
       reviewRatio: SMART.REVIEW_RATIO,
       tone: null,
@@ -149,6 +296,7 @@ describe('composeSmartSteps', () => {
   it('produces plain card steps with no info cards when only one segment is present', () => {
     const selection: SmartSelection = {
       targetCount: 3,
+      size: sizeOf(3),
       quota: { learn: 3, review: 0, stretch: 0 },
       reviewRatio: SMART.REVIEW_RATIO,
       tone: null,
@@ -167,6 +315,7 @@ describe('composeSmartSteps', () => {
   it('skips words already known when pulling learn/stretch cards', () => {
     const selection: SmartSelection = {
       targetCount: 2,
+      size: sizeOf(2),
       quota: { learn: 2, review: 0, stretch: 0 },
       reviewRatio: SMART.REVIEW_RATIO,
       tone: null,
@@ -234,6 +383,17 @@ describe('selectSmart × review health', () => {
     const urgent = dueSnapshot({ reviewUrgency: 'urgent' })
     const sel = selectSmart({ snapshot: urgent, comfortLevel: 1, todayLevel: 1, goalSec, reviewHealth: health(0.97) })
     expect(sel.reviewRatio).toBe(SMART.REVIEW_RATIO)
+  })
+
+  it('serves due words when the backlog is urgent even with no fresh review-health signal', () => {
+    // A returning learner: no reviewHealth passed → EMPTY_REVIEW_HEALTH →
+    // reviewRatioFor falls back to base, same as a stale/thin signal would.
+    // reviewUrgency, computed straight from the live backlog, still says
+    // 'urgent' — and the day's /powtorka budget is already spent.
+    const urgentSpent = dueSnapshot({ reviewUrgency: 'urgent', servingLeft: 0, served: 20 })
+    const sel = selectSmart({ snapshot: urgentSpent, comfortLevel: 1, todayLevel: 1, goalSec })
+    expect(sel.reviewRatio).toBe(SMART.REVIEW_RATIO)
+    expect(sel.quota.review).toBeGreaterThan(0)
   })
 
   it('drops stretch words when retention is below the floor, however comfortable the level feels', () => {

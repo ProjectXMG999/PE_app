@@ -72,6 +72,14 @@
   color: var(--text-muted);
 }
 
+/* The maintenance-load line: same voice as the note above it, set apart by a
+   rule so the "what your vocabulary costs per day" figure reads as its own
+   fact rather than a continuation of the serving explanation. */
+.reviewqueue__note--load {
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
 .reviewqueue__levels-title {
   margin: 6px 0 0;
   font-size: var(--text-md);

@@ -12,7 +12,8 @@
  *     keeps a real (long, ~yearly) nextReviewAt so a forgotten word is still
  *     eventually caught. Any lapse un-retires.
  *  3. Each day only a *serving* of the backlog is shown: budget = the time goal
- *     as a ceiling, the recent 7-day pace as the reality check.
+ *     as a ceiling, measured study time as the reality check, and the backlog
+ *     itself as a floor (arrears spread over DEBT_HORIZON_DAYS).
  *  4. When the serving is capped, words are ordered by PRIORITY (mostly
  *     1 − retrievability), with an anti-starvation override.
  *  5. Freshness / clean-streak count only genuinely neglected words, and the
@@ -53,21 +54,98 @@ export const BULK_KNOWN_STABILITY = 15      // FSRS: first check in ~2 weeks
 export const BULK_KNOWN_DIFFICULTY = 4.5    // a touch easier than the study default (~5.3)
 export const BULK_KNOWN_REVIEW_COUNT = 2    // legacy ladder: rung 2 → intervalFor(2) = 20 days
 
+// ── Level mastery ("Oznacz cały poziom jako opanowany") ─────────────────────
+/** pack-content fetch concurrency while marking a level — level 4 alone is
+ *  335 packs against an authenticated, per-pack Netlify function with no
+ *  batch endpoint, so an unbounded Promise.all would fire 335 at once. */
+export const LEVEL_MASTERY_FETCH_CONCURRENCY = 6
+
 // ── Daily serving budget ────────────────────────────────────────────────────
-// 'pace' (current): budget = clamp(min(goalDerived, max(paceDerived, PACE_FLOOR)), MIN, MAX)
-//   goalDerived = round(goalMinutes * REVIEWS_PER_MINUTE)   ← the ceiling
-//   paceDerived = round(recentPace7d * PACE_HEADROOM)       ← the reality check
-// 'flex' (legacy, kept for quick rollback): goalDerived + min(SERVING_FLEX_CAP, floor(knownTotal / SERVING_FLEX_DIVISOR))
-export const BUDGET_MODE: 'pace' | 'flex' = 'pace'
-export const REVIEWS_PER_MINUTE = 1.2
+// budget = min(goalDerived, max(timeDerived, debtFloor, PACE_FLOOR)), floored at
+//          SERVING_MIN and bounded by SERVING_DAY_MAX.
+//
+//   goalDerived = round(goalMinutes    * perMinute)  ← the ceiling: the day's goal
+//   timeDerived = round(activeDayMins  * perMinute)  ← how long they actually sit down for
+//   perMinute   = 60 / secPerCard                    ← the learner's measured review pace
+//   debtFloor   = min(goalDerived, ceil(backlog / DEBT_HORIZON_DAYS))  ← the arrears
+//
+// Two things the previous model got wrong, both visible on the first screen.
+//
+// It measured the reality check as *words completed* over the last 7 days — but
+// a review session writes `wordsCompleted = cardCount`, which is exactly what
+// the budget just allowed. The budget therefore measured itself: simulated over
+// 60 days, a learner clearing their serving on 4 days a week stayed pinned to
+// SERVING_MIN forever, because the only way to demonstrate a higher pace was to
+// be granted a higher budget first. `activeDayMinutes` breaks the loop by
+// reading the dailyTime ledger instead — seconds actually studied, which no
+// budget caps — and by averaging over days with real study rather than over all
+// 7, so two solid sessions a week no longer read as "pace 5".
+//
+// And the backlog appeared nowhere in the formula at all, so the learner
+// furthest behind got the smallest serving: a 60-minute goal with 316 words due
+// served eight of them. `debtFloor` amortises the arrears over
+// DEBT_HORIZON_DAYS — bounded by the goal, so it can never promise more than
+// the day can hold, and computed straight from the backlog rather than from
+// `reviewUrgency` (which is itself derived from the budget, and would close the
+// loop the wrong way round).
+//
+// The rate itself was the third thing it got wrong, and the most visible: at
+// REVIEWS_PER_MINUTE = 1.2 a review card took 50 seconds. Nothing measured that
+// — a card is a flip, the word's audio, and a Znam/Nie znam, which real
+// sessions run in well under ten. Two consequences met on the same screen: 88
+// due words were announced as "ok. 73 min", and a 10-minute goal derived a
+// serving of 12, finished inside two minutes, while the queue behind it grew.
+// The rate is now seconds per card, measured from the learner's own review
+// sessions (`reviewSecPerCard`) with REVIEW_SEC_PER_CARD as the cold start.
+/** Cold-start seconds for one review card — flip, audio, verdict. Used until
+ *  the learner's own review sessions carry enough evidence to replace it. */
+export const REVIEW_SEC_PER_CARD = 10
+/** Reviews per minute at the cold-start pace. Derived, never tuned on its own:
+ *  seconds per card is the quantity sessions actually measure. */
+export const REVIEWS_PER_MINUTE = 60 / REVIEW_SEC_PER_CARD
+/** Evidence thresholds and sanity bounds for the MEASURED pace. The bounds are
+ *  what keep a clock artefact out of the budget: a tab left open behind a
+ *  finished session, or a card "answered" in a hundred milliseconds. */
+export const REVIEW_PACE = {
+  /** Only recent sessions — pace changes as the queue's material changes. */
+  WINDOW_DAYS: 60,
+  /** Review cards needed in the window before the measurement beats the default. */
+  MIN_CARDS: 30,
+  /** Per-session floors: a 2-card stub with a 5-minute clock is a phone put
+   *  down, not a pace. */
+  MIN_SESSION_CARDS: 4,
+  MIN_SESSION_SEC: 20,
+  MIN_SEC: 4,
+  MAX_SEC: 40,
+} as const
 export const SERVING_MIN = 8
-export const SERVING_MAX = 40
-export const PACE_HEADROOM = 1.5 // you can sustain ~1.5× your recent words/day in review
-export const PACE_FLOOR = 6 // …but never drop below this (a returning user isn't stuck at 0)
-/** @deprecated legacy 'flex' budget mode only */
-export const SERVING_FLEX_DIVISOR = 500
-/** @deprecated legacy 'flex' budget mode only */
-export const SERVING_FLEX_CAP = 12
+/** Absolute sanity bound on a day's serving. `goalDerived` is the real ceiling
+ *  (360 at the largest goal option and the cold-start pace), so this is not
+ *  expected to bind — it exists so a corrupted goal or ledger can't produce an
+ *  unbounded queue. Raised from 120 with the pace fix: at 50 s a card, 120 was
+ *  double the largest goal's worth and never bound; at a real pace it would
+ *  have quietly capped a 60-minute goal at 20 minutes of reviews. */
+export const SERVING_DAY_MAX = 400
+/** Never drop below this, whatever the measured time says — a returning learner
+ *  isn't stuck at zero. */
+export const PACE_FLOOR = 6
+/** Days the current backlog is spread over by `debtFloor`. */
+export const DEBT_HORIZON_DAYS = 14
+/** Study-time window `activeDayMinutes` averages over. Longer than the old
+ *  7-day pace window: one quiet week should bend the budget, not zero it. */
+export const ACTIVE_WINDOW_DAYS = 14
+/** Seconds in a day below which it isn't a study day at all — an app opened and
+ *  closed shouldn't drag the average down. */
+export const ACTIVE_DAY_MIN_SEC = 60
+/** When the window holds no study day at all but the ledger does, fall back to
+ *  the most recent this many study days, however old. A learner returning after
+ *  a break is not a learner with no history: "no evidence" hands the budget the
+ *  full goal, which would greet them with the largest serving the app can make
+ *  on their first day back. Their own past sittings are a far better estimate. */
+export const ACTIVE_FALLBACK_DAYS = 5
+/** false → the backlog stops raising the floor, i.e. the budget is goal-and-time
+ *  only. The one genuinely new term in the model, so it gets the rollback. */
+export const DEBT_FLOOR_ENABLED = true
 
 // ── Priority weights (higher = served sooner) ───────────────────────────────
 export const PRIORITY = {

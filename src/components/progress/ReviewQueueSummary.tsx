@@ -1,9 +1,9 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import type { ProgressSnapshot } from '../../hooks/useProgressData'
 import { packLevelOf } from '../../hooks/useProgressData'
-import { estimateMinutes } from '../../data/nextPack'
+import { reviewMinutes } from '../../services/reviewQueue'
 import { LEVEL_COLORS, LEVEL_META } from '../../data/levels'
-import { plural, plWords } from '../../utils/plural'
+import { plural, plReviews, plWords } from '../../utils/plural'
 import { EASE_OUT_EXPO } from '../today/motion'
 import './ReviewQueueSummary.css'
 
@@ -24,7 +24,13 @@ interface Props {
  */
 export function ReviewQueueSummary({ snapshot }: Props) {
   const reduced = useReducedMotion()
-  const { dueWords, dueCount, reviewBudget, served, servingLeft } = snapshot
+  const {
+    dueWords, dueCount, reviewBudget, served, servingLeft,
+    maintenanceLoad: load, reviewSecPerCard: pace,
+  } = snapshot
+  // Every "ok. N min" on this card is the learner's own measured pace, the same
+  // one the budget above was sized with.
+  const minutes = (count: number) => reviewMinutes(count, pace)
 
   const perLevel = LEVEL_META.map(meta => {
     const count = dueWords.filter(w => packLevelOf(w.packageId) === meta.level).length
@@ -48,7 +54,7 @@ export function ReviewQueueSummary({ snapshot }: Props) {
           </span>
           <span className="reviewqueue__hint">
             {servingLeft > 0
-              ? `${servingLeft} do zrobienia, ok. ${estimateMinutes(servingLeft)} min`
+              ? `${servingLeft} do zrobienia, ok. ${minutes(servingLeft)} min`
               : extraToday > 0
                 ? `Zrobione, do tego ${extraToday} ${plural(extraToday, 'dodatkowa', 'dodatkowe', 'dodatkowych')}`
                 : 'Wszystko zrobione'}
@@ -60,7 +66,7 @@ export function ReviewQueueSummary({ snapshot }: Props) {
             {dueCount.toLocaleString('pl-PL')}<small> {plWords(dueCount)}</small>
           </span>
           <span className="reviewqueue__hint">
-            {dueCount > 0 ? `razem ok. ${estimateMinutes(dueCount)} min` : 'Nic nie czeka'}
+            {dueCount > 0 ? `razem ok. ${minutes(dueCount)} min` : 'Nic nie czeka'}
           </span>
         </div>
       </div>
@@ -79,8 +85,21 @@ export function ReviewQueueSummary({ snapshot }: Props) {
       </div>
 
       <p className="reviewqueue__note">
-        Na dziś dostajesz tyle powtórek, ile zmieścisz w dziennym celu. Pozostałe słowa rozkładamy na kolejne dni.
+        Na dziś dostajesz tyle powtórek, ile zmieścisz w dziennym celu. Gdy zaległości rosną, porcja rośnie razem z nimi.
       </p>
+
+      {/* The inflow the serving is up against. Until this existed, a queue that
+          was simply the schedule's equilibrium read as arrears to catch up on —
+          and no amount of budget tuning drains a queue that refills faster. */}
+      {load.perDay > 0 && (
+        <p className="reviewqueue__note reviewqueue__note--load">
+          Twoje słownictwo wymaga dziennie ok. <strong>{load.perDay} {plReviews(load.perDay)}</strong>
+          {' '}(~{load.minutesPerDay} min), żeby się utrzymać.{' '}
+          {load.coveredPct >= 100
+            ? 'Dzisiejsza porcja w pełni to pokrywa.'
+            : `Dzisiejsza porcja pokrywa ${load.coveredPct}% — przy takim tempie kolejka będzie rosła.`}
+        </p>
+      )}
 
       <h3 className="reviewqueue__levels-title">Ile czeka na każdym poziomie</h3>
       <ul className="reviewqueue__levels">
@@ -100,7 +119,7 @@ export function ReviewQueueSummary({ snapshot }: Props) {
             </span>
             <span className="reviewqueue__level-count">
               {l.count.toLocaleString('pl-PL')}
-              <small> {plWords(l.count)}{l.count > 0 && `, ok. ${estimateMinutes(l.count)} min`}</small>
+              <small> {plWords(l.count)}{l.count > 0 && `, ok. ${minutes(l.count)} min`}</small>
             </span>
           </li>
         ))}

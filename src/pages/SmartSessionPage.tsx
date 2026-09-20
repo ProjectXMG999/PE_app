@@ -16,6 +16,7 @@ import { SmartProgressRail } from '../components/smart/SmartProgressRail'
 import { SmartDoneScreen, SmartSegmentTally } from '../components/smart/SmartDoneScreen'
 import { LevelUpPrompt } from '../components/today/LevelUpPrompt'
 import { StudyStage } from '../components/flashcard/StudyStage'
+import { useSentenceCardProps } from '../hooks/useSentenceCardProps'
 import { plPackets } from '../utils/packVisuals'
 import { useBack } from '../navigation/navigation'
 import './ReviewPage.css'
@@ -69,12 +70,96 @@ export function SmartSessionPage() {
   const retentionRef = useRef({ rated: 0, known: 0 })
   const packsRef = useRef<Set<string>>(new Set())
   const sessionEndedRef = useRef(false)
+  // What has already been written to a Session row, so a second write records
+  // the delta rather than the whole run again.
+  const savedRef = useRef({ rated: 0, known: 0, sec: 0 })
+  // Comfort / review-health fold once per sitting — see `foldSignals`.
+  const signalsFoldedRef = useRef(false)
 
   const current = steps[stepIndex] ?? null
   const isLastStep = stepIndex >= steps.length - 1
   const card = current?.kind === 'card' ? current : null
 
-  const { playWord, stop } = useAudio(card?.packageId ?? null, enRate, plRate)
+  const { playWord, playSentence, playWordPl, playSentencePl, stop } = useAudio(card?.packageId ?? null, enRate, plRate)
+  const sentenceProps = useSentenceCardProps(card?.word, { stop, playSentence, playSentencePl, playWordPl })
+
+  /**
+   * Writes everything answered since the last write to a Session row.
+   *
+   * Separate from `finish` because a sitting ends when the learner leaves, not
+   * only when the last card is answered — and `finish` used to be the ONLY
+   * place that wrote one. Nothing was lost per word (every answer saves its own
+   * WordProgress), but the *session* was, and half the app is derived from
+   * session rows: `sevenDayPace` feeds `computeReviewBudget`, so a run of
+   * abandoned sessions pinned the daily review budget at its floor — which is
+   * how Dzisiaj came to say "Porcja na dziś zrobiona" after a handful of words
+   * while the hero above it still offered a full session.
+   *
+   * Idempotent: a second call with nothing new answered writes nothing.
+   */
+  const persistProgress = useCallback(async () => {
+    const tally = tallyRef.current
+    const rated = tally.learn.rated + tally.review.rated + tally.stretch.rated
+    const known = tally.learn.known + tally.review.known + tally.stretch.known
+    const saved = savedRef.current
+    if (rated <= saved.rated) return
+
+    const sec = elapsedSec()
+    savedRef.current = { rated, known, sec }
+
+    await saveSession({
+      packageId: '__smart__',
+      date: dayKey(),
+      startedAt: new Date().toISOString(),
+      wordsCompleted: rated - saved.rated,
+      mode: 'fiszki',
+      trainMode: 'smart',
+      durationSec: Math.max(0, sec - saved.sec),
+      ratedCount: rated - saved.rated,
+      knownHitCount: known - saved.known,
+    })
+    await recomputeMasteryFor([...packsRef.current])
+  }, [elapsedSec])
+
+  /**
+   * Folds the sitting into the two adaptive signals. Once per sitting, on the
+   * cumulative totals — `updateComfort` and `strongStreakNext` are defined per
+   * *session*, so folding partial batches would let one run rack up the three
+   * "strong sessions" the level-up prompt waits for.
+   *
+   * Two signals, two questions. Comfort asks "is the NEW material the right
+   * difficulty", so it reads learn + stretch only: "Nie znam" on a word being
+   * met for the first time is the expected answer, and folding it in made the
+   * number a function of how much new material the session happened to hold.
+   * Health asks "is what I already learned still holding", so it reads the
+   * scheduled re-checks and nothing else.
+   */
+  const foldSignals = useCallback(() => {
+    if (signalsFoldedRef.current) return
+    const tally = tallyRef.current
+    const newRated = tally.learn.rated + tally.stretch.rated
+    if (newRated === 0 && retentionRef.current.rated === 0) return
+    signalsFoldedRef.current = true
+
+    const newKnown = tally.learn.known + tally.stretch.known
+    useAppStore.getState().applyTrainingOutcome({ ratedCount: newRated, knownHitCount: newKnown })
+    useAppStore.getState().applyReviewOutcome(retentionRef.current)
+  }, [])
+
+  // Leaving mid-session is an ordinary way to end one, so it saves like one.
+  // `pagehide` covers the tab being killed while backgrounded (the cost is an
+  // extra Session row if they come back and finish — every consumer sums rows,
+  // so only the Statystyki session count notices). Signals fold on unmount
+  // only: a mid-run fold would lock out the rest of the sitting.
+  useEffect(() => {
+    const onHide = () => { void persistProgress() }
+    window.addEventListener('pagehide', onHide)
+    return () => {
+      window.removeEventListener('pagehide', onHide)
+      void persistProgress()
+      foldSignals()
+    }
+  }, [persistProgress, foldSignals])
 
   const finish = useCallback(async () => {
     if (sessionEndedRef.current) return
@@ -82,31 +167,9 @@ export function SmartSessionPage() {
 
     const tally = tallyRef.current
     const ratedCount = tally.learn.rated + tally.review.rated + tally.stretch.rated
-    const knownHitCount = tally.learn.known + tally.review.known + tally.stretch.known
 
-    // Two signals, two questions. Comfort asks "is the NEW material the right
-    // difficulty", so it reads learn + stretch only: "Nie znam" on a word being
-    // met for the first time is the expected answer, and folding it in made the
-    // number a function of how much new material the session happened to hold.
-    // Health asks "is what I already learned still holding", so it reads the
-    // scheduled re-checks and nothing else.
-    const newRated = tally.learn.rated + tally.stretch.rated
-    const newKnown = tally.learn.known + tally.stretch.known
-
-    await saveSession({
-      packageId: '__smart__',
-      date: dayKey(),
-      startedAt: new Date().toISOString(),
-      wordsCompleted: ratedCount,
-      mode: 'fiszki',
-      trainMode: 'smart',
-      durationSec: elapsedSec(),
-      ratedCount,
-      knownHitCount,
-    })
-    await recomputeMasteryFor([...packsRef.current])
-    useAppStore.getState().applyTrainingOutcome({ ratedCount: newRated, knownHitCount: newKnown })
-    useAppStore.getState().applyReviewOutcome(retentionRef.current)
+    await persistProgress()
+    foldSignals()
 
     const store = useAppStore.getState()
     setComfortAfter(store.comfortLevel)
@@ -128,7 +191,7 @@ export function SmartSessionPage() {
     }
 
     setDone(true)
-  }, [elapsedSec])
+  }, [persistProgress, foldSignals])
 
   const goNext = useCallback(async () => {
     if (isLastStep) {
@@ -186,9 +249,14 @@ export function SmartSessionPage() {
     retentionRef.current = { rated: 0, known: 0 }
     packsRef.current = new Set()
     sessionEndedRef.current = false
+    // "Jeszcze raz" is a new sitting: its own session row, its own fold. The
+    // study clock isn't reset by a repeat, so the seconds baseline carries over
+    // — otherwise the second run would re-bill the first run's minutes.
+    savedRef.current = { rated: 0, known: 0, sec: elapsedSec() }
+    signalsFoldedRef.current = false
     resetToFront()
     setNonce(n => n + 1)
-  }, [resetToFront])
+  }, [resetToFront, elapsedSec])
 
   if (loading) {
     return (
@@ -263,6 +331,7 @@ export function SmartSessionPage() {
       onFlip={flipCard}
       onAnimationEnd={handleAnimationEnd}
       onPlay={() => { stop(); if (card) playWord(card.word) }}
+      {...sentenceProps}
       answersVisible={flipped && !isAdvancing}
       answersDisabled={isAdvancing}
       onAnswer={answer}
