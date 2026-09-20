@@ -46,10 +46,23 @@ interface Props {
    *  site wanted (`toLocaleString('pl-PL')`). NumberFlow's own `Format` is a
    *  deliberate subset of Intl's — it can't animate scientific notation. */
   format?: Format
+  /**
+   * Override NumberFlow's own duration and curve.
+   *
+   * For a numeral standing on its own the default is right and this should stay
+   * unset. It exists for a numeral that shares the screen with a second reading
+   * of the SAME quantity — a figure inside a progress ring, say — where the two
+   * have to land together: left on its own timing the number finishes early, on
+   * a different curve, and one fact visibly arrives twice.
+   *
+   * `easing` is a CSS easing string, so a framer-motion cubic-bezier tuple has
+   * to be spelled out as `cubic-bezier(...)`.
+   */
+  timing?: EffectTiming
   'aria-hidden'?: boolean
 }
 
-export function FlowNumber({ value, delayMs = 0, onView = false, className, format, ...rest }: Props) {
+export function FlowNumber({ value, delayMs = 0, onView = false, className, format, timing, ...rest }: Props) {
   // Reduced motion skips the hold as well as the roll. NumberFlow would snap to
   // the value anyway, so keeping the delay would only show a 0 for a moment and
   // then replace it — a flicker offered to the people who asked for less motion.
@@ -74,6 +87,13 @@ export function FlowNumber({ value, delayMs = 0, onView = false, className, form
     return () => { stop(); clearTimeout(timer) }
   }, [armed, delayMs, onView])
 
+  // Spread rather than passed as `transformTiming={timing}`: these are set as
+  // properties on the custom element, and handing them an explicit `undefined`
+  // overwrites NumberFlow's defaults with nothing instead of leaving them be.
+  // `spinTiming` falls back to `transformTiming` when unset, so one value keeps
+  // the digit spin and the width change on the same clock.
+  const timingProps = timing ? { transformTiming: timing, spinTiming: timing } : {}
+
   return (
     <NumberFlow
       ref={ref}
@@ -81,6 +101,7 @@ export function FlowNumber({ value, delayMs = 0, onView = false, className, form
       locales="pl-PL"
       format={format}
       className={className}
+      {...timingProps}
       {...rest}
     />
   )

@@ -109,6 +109,13 @@
   font-size: 17px;
 }
 
+/* Deliberately no reserved width on the minutes. Measured at 1:1: a 9 → 10 roll
+   keeps the group's centre within 0.05px (67.95 → 68.00), because the row
+   centres its children and NumberFlow widens in place — the digit grows left by
+   exactly as much as "/15" slides right. Pinning `min-width: 2ch` does hold
+   "/15" still, but it buys nothing the eye was missing and leaves a permanent
+   gap in single-digit readings ("9 /15"). */
+
 /* The goal is context, not the reading — it takes the muted weight so the
    minutes actually studied stay the number the eye lands on. */
 .sessionhero__ring-goal {

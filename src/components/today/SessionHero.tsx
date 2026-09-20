@@ -18,6 +18,24 @@ interface Props {
 }
 
 /**
+ * The ring's arc and the ring's figure are two readings of one quantity —
+ * today's minutes — so they run on one clock and one curve.
+ *
+ * Measured rather than assumed, because the obvious guess was wrong: NumberFlow's
+ * default transformTiming is already 900 ms, exactly the arc's, so the figure
+ * was never settling early. What did differ was the curve (its default is a
+ * `linear()` spring approximation, the arc is EASE_OUT_EXPO) and a 50 ms head
+ * start. Both are small; aligning them costs one prop and removes the question.
+ */
+const RING_DELAY_MS = 150
+const RING_DURATION_MS = 900
+/** Same curve as the arc's EASE_OUT_EXPO, spelled as CSS for NumberFlow. */
+const RING_TIMING: EffectTiming = {
+  duration: RING_DURATION_MS,
+  easing: `cubic-bezier(${EASE_OUT_EXPO.join(', ')})`,
+}
+
+/**
  * Dzisiaj's one hero: the daily goal as an Activity-style ring, the session
  * pitch beside it, and the only filled button on the page.
  *
@@ -104,7 +122,11 @@ export function SessionHero({ snapshot, onStart, secondsStudied, goalSec, onEdit
                 className="sessionhero__ring-fill"
                 initial={{ pathLength: reduced ? fraction : 0 }}
                 animate={{ pathLength: fraction }}
-                transition={{ duration: reduced ? 0 : 0.9, ease: EASE_OUT_EXPO, delay: reduced ? 0 : 0.15 }}
+                transition={{
+                  duration: reduced ? 0 : RING_DURATION_MS / 1000,
+                  ease: EASE_OUT_EXPO,
+                  delay: reduced ? 0 : RING_DELAY_MS / 1000,
+                }}
               />
             )}
           </svg>
@@ -116,8 +138,17 @@ export function SessionHero({ snapshot, onStart, secondsStudied, goalSec, onEdit
               ring is normally read. The full sentence lives in aria-label. */}
           <span className="sessionhero__ring-label" aria-hidden="true">
             <span className={`sessionhero__ring-num${mins >= 100 ? ' sessionhero__ring-num--long' : ''}`}>
-              <FlowNumber value={mins} delayMs={100} />
-              <span className="sessionhero__ring-goal">/{goalMins}</span>
+              <FlowNumber value={mins} delayMs={RING_DELAY_MS} timing={RING_TIMING} />
+              {/* The goal rolls too, but with no arrival hold: on opening the
+                  page it is context, not the reading, and a second figure
+                  counting up beside the first turns one arrival into a show.
+                  It animates only when it actually changes — which is the one
+                  moment it IS the news, straight after the picker sets it. That
+                  also stops the ring being the one place this number snaps
+                  while it rolls inside the picker that just changed it. */}
+              <span className="sessionhero__ring-goal">
+                /<FlowNumber value={goalMins} timing={RING_TIMING} />
+              </span>
             </span>
             <span className="sessionhero__ring-of">min</span>
           </span>
