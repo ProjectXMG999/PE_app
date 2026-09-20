@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react'
 import { useParams } from 'react-router-dom'
 import { useAppNavigate, useBack } from '../navigation/navigation'
+import { morphArmed } from '../navigation/transitions'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Pack, PackMeta } from '../types/vocabulary'
 import { PackageProgress } from '../types/progress'
@@ -11,6 +12,7 @@ import { getPackageWordProgress, getPackageProgress, saveWordProgress, savePacka
 import { applyKnown } from '../services/review'
 import { currentRequestRetention } from '../store/useAppStore'
 import { AppShell } from '../components/layout/AppShell'
+import { Sheet, useSheetMotion, type SheetHandle } from '../components/shared/Sheet'
 import { ModeFact, ModeLabel } from '../components/mode/ModeScreen'
 import { EASE_OUT_EXPO, fadeUp, fadeUpReduced, glassReveal, glassRevealReduced, staggerContainer } from '../components/today/motion'
 import { noOrphans } from '../utils/typography'
@@ -81,11 +83,140 @@ function relatedStatus(
   status: PackStatus
 ): { label: string; tone: 'mastered' | 'completed' | 'started' } | null {
   switch (status) {
-    case 'mastered':  return { label: 'Opanowana', tone: 'mastered' }
-    case 'completed': return { label: 'Odsłuchana', tone: 'completed' }
-    case 'started':   return { label: 'W toku', tone: 'started' }
-    default:          return null
+    case 'mastered': return { label: 'Opanowana', tone: 'mastered' }
+    case 'listened': return { label: 'Odsłuchana', tone: 'completed' }
+    case 'worked':   return { label: 'Przerobiona', tone: 'started' }
+    case 'started':  return { label: 'W toku', tone: 'started' }
+    default:         return null
   }
+}
+
+/** Everything the header needs — a PackMeta, or the same fields read off a
+ *  fetched Pack when the catalogue has no entry for this id. */
+type IdentityMeta = Pick<PackMeta, 'id' | 'name' | 'level' | 'category' | 'volume' | 'wordCount'>
+
+interface IdentityProps {
+  meta: IdentityMeta
+  /** As printed in the kicker — getPackNumber hands back the digits as text. */
+  packNum: string | null
+  backLabel: string
+  backAria: string
+  onBack: () => void
+  prev: PackMeta | null
+  next: PackMeta | null
+  onStep: (id: string) => void
+  wordCount: number
+  /** Status pills — they only exist once progress has been read. */
+  extraFacts?: ReactNode
+}
+
+/**
+ * Who this page is about: the back/step row and the header.
+ *
+ * Split out because it is the part of the page that needs no network. The pack
+ * body comes from /.netlify/functions/pack-content, and while that was in
+ * flight the whole screen used to be a spinner — so the most-walked navigation
+ * in the app (a row on Pakiety → that pack) transitioned into a blank page and
+ * then cut to the real one. Everything here is already in packages-index.json,
+ * which ships with the app, so the pack you tapped is on screen in the same
+ * frame the page arrives.
+ *
+ * Rendered as the first child of the same wrapper in both the loading and the
+ * loaded tree, so React reconciles it across the swap and the header never
+ * remounts.
+ *
+ * Deliberately unanimated: the page itself already arrives on a view
+ * transition, and a header that fades up inside a page that is sliding in is
+ * two entrances stacked on one element.
+ */
+function PackIdentity({
+  meta, packNum, backLabel, backAria, onBack, prev, next, onStep, wordCount, extraFacts,
+}: IdentityProps) {
+  const glyphRef = useRef<HTMLSpanElement>(null)
+  const titleRef = useRef<HTMLHeadingElement>(null)
+  const levelColor = meta.level ? LEVEL_COLORS[meta.level] : undefined
+
+  /* The row that opened this page named its emoji and its title; this claims
+     the other half, so both travel here instead of cross-fading. A layout
+     effect because the incoming snapshot is taken as soon as React commits —
+     and the names come off again straight after, see armMorph. */
+  useLayoutEffect(() => {
+    if (!morphArmed(`pack:${meta.id}`)) return
+    const named: Array<[HTMLElement | null, string]> = [
+      [glyphRef.current, 'pack-mark'],
+      [titleRef.current, 'pack-title'],
+    ]
+    for (const [el, name] of named) if (el) el.style.viewTransitionName = name
+    const clear = () => { for (const [el] of named) if (el) el.style.viewTransitionName = '' }
+    const t = window.setTimeout(clear, 600)
+    return () => { window.clearTimeout(t); clear() }
+  }, [meta.id])
+
+  return (
+    <>
+      {/* ── Nav ──────────────────────────────────────────────────────────────
+          In the flow, not floating over it. The old version pinned these as
+          fixed circles at the top corners, which sat on top of the TopBar's
+          logo and action buttons. Same pill language as ModeScreen's back. */}
+      <div className="packpreview__nav">
+        <button type="button" className="packpreview__navbtn" onClick={onBack} aria-label={backAria}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+          <span>{backLabel}</span>
+        </button>
+
+        <div className="packpreview__steps">
+          {prev && (
+            <button
+              type="button"
+              className="packpreview__navbtn packpreview__navbtn--icon"
+              onClick={() => onStep(prev.id)}
+              aria-label={`Poprzedni pakiet: ${prev.name}`}
+              title={prev.name}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+          )}
+          {next && (
+            <button
+              type="button"
+              className="packpreview__navbtn"
+              onClick={() => onStep(next.id)}
+              aria-label={`Następny pakiet: ${next.name}`}
+              title={next.name}
+            >
+              <span>Następny</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* ── Head — the same kicker / display title / fact-pill header the two
+          mode screens use, so the pack keeps its identity all the way into a
+          session. Tinted by the pack's level colour. */}
+      <header className="packpreview__head">
+        <p className="packpreview__kicker u-kicker">
+          {meta.category}{packNum ? ` · pakiet #${packNum}` : ''}
+        </p>
+        <div className="packpreview__titlerow">
+          <span className="packpreview__glyph" aria-hidden="true" ref={glyphRef}>{getPackIcon(meta)}</span>
+          <h1 className="packpreview__title u-display" ref={titleRef}>{meta.name}</h1>
+        </div>
+        <div className="packpreview__facts">
+          {meta.level > 0 && <ModeFact color={levelColor}>Poziom {meta.level}</ModeFact>}
+          {meta.volume && <ModeFact>{meta.volume}</ModeFact>}
+          <ModeFact>{wordCount} {plWords(wordCount)}</ModeFact>
+          {extraFacts}
+        </div>
+      </header>
+    </>
+  )
 }
 
 export function PackPreviewPage() {
@@ -105,7 +236,8 @@ export function PackPreviewPage() {
   const [markAllOpen, setMarkAllOpen] = useState(false)
   const [markingAll, setMarkingAll] = useState(false)
   const infoRef = useRef<HTMLDivElement>(null)
-  const markDialogRef = useRef<HTMLDialogElement>(null)
+  const markSheetRef = useRef<SheetHandle>(null)
+  const { rise: markRise, tap: markTap } = useSheetMotion()
 
   // Close the mode-info popover on any outside click.
   useEffect(() => {
@@ -118,23 +250,6 @@ export function PackPreviewPage() {
     document.addEventListener('mousedown', handleClick)
     return () => document.removeEventListener('mousedown', handleClick)
   }, [activeInfo])
-
-  // "Znam wszystko" confirm dialog — mirrors ResetProgressModal: only mounted
-  // while markAllOpen is true, and calls showModal() on that mount. A dialog
-  // element left permanently in the DOM stays visible regardless of its
-  // `open` attribute once any CSS on it sets `display`, since an author rule
-  // and the UA's `dialog:not([open]) { display: none }` tie on specificity
-  // and the author rule wins — so "always mounted, toggle imperatively" was
-  // the bug, not a viable alternative.
-  useEffect(() => {
-    if (!markAllOpen) return
-    const dialog = markDialogRef.current
-    if (!dialog) return
-    if (!dialog.open) dialog.showModal()
-    function handleClose() { setMarkAllOpen(false) }
-    dialog.addEventListener('close', handleClose)
-    return () => dialog.removeEventListener('close', handleClose)
-  }, [markAllOpen])
 
   useEffect(() => {
     if (!packageId) return
@@ -186,11 +301,37 @@ export function PackPreviewPage() {
   }, [seriesBase])
 
   if (loading) {
+    // Same wrapper as the loaded page, with the same first child: React
+    // reconciles the header across the swap instead of remounting it, so the
+    // pack's name doesn't blink when its words arrive.
     return (
       <AppShell hideBottomNav hideSidebar={false} hideAmbient={false} lockScroll={false}>
-        <div className="packpreview__loading">
-          <div className="spinner" />
-        </div>
+        <motion.div
+          className="packpreview"
+          style={{
+            '--pp-accent': (currentMeta?.level ? LEVEL_COLORS[currentMeta.level] : undefined) ?? 'var(--accent)',
+          } as CSSProperties}
+          variants={staggerContainer}
+          initial="hidden"
+          animate="show"
+        >
+          {currentMeta && (
+            <PackIdentity
+              meta={currentMeta}
+              packNum={packageId ? getPackNumber(packageId) : null}
+              backLabel={back.label}
+              backAria={back.backLabel}
+              onBack={leave}
+              prev={prevPack}
+              next={nextPack}
+              onStep={id => navigate(`/pakiet/${id}`, { step: 'sideways' })}
+              wordCount={currentMeta.wordCount}
+            />
+          )}
+          <div className="packpreview__loading">
+            <div className="spinner" />
+          </div>
+        </motion.div>
       </AppShell>
     )
   }
@@ -246,10 +387,13 @@ export function PackPreviewPage() {
         startedAt: existingPkg?.startedAt ?? nowIso,
         completedAt: nowIso,
         masteredAt: nowIso,
-        currentIndex: wordCount,
+        // A declaration of knowledge, not a play-through — the listen axis
+        // stays exactly where it was. See services/listenAxis.ts.
+        listenedAt: existingPkg?.listenedAt ?? null,
+        currentIndex: existingPkg?.currentIndex ?? 0,
       })
       setSnapshot(await loadProgressSnapshot(true))
-      markDialogRef.current?.close()
+      markSheetRef.current?.close()
     } finally {
       setMarkingAll(false)
     }
@@ -263,8 +407,10 @@ export function PackPreviewPage() {
         ? `Wszystko opanowane — ${formatDate(progress.masteredAt)}. Słowa i tak wracają w powtórkach.`
         : 'Wszystko opanowane. Słowa i tak wracają w powtórkach.'
       : (() => {
-          const heard = progress?.completedAt
-            ? `Odsłuchane w całości — ${formatDate(progress.completedAt)}. `
+          // listenedAt, not completedAt: the latter now means "worked through
+          // in any mode", and a pack drilled in Trenuj was never heard.
+          const heard = progress?.listenedAt
+            ? `Odsłuchane w całości — ${formatDate(progress.listenedAt)}. `
             : ''
           const left = wordCount - knownCount
           if (left <= 0) return `${heard}Wszystkie słowa masz już opanowane.`
@@ -287,78 +433,29 @@ export function PackPreviewPage() {
       initial="hidden"
       animate="show"
     >
-      {/* ── Nav ──────────────────────────────────────────────────────────────
-          In the flow, not floating over it. The old version pinned these as
-          fixed circles at the top corners, which sat on top of the TopBar's
-          logo and action buttons. Same pill language as ModeScreen's back. */}
-      <motion.div className="packpreview__nav" variants={item}>
-        <button
-          type="button"
-          className="packpreview__navbtn"
-          onClick={leave}
-          aria-label={back.backLabel}
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-          <span>{back.label}</span>
-        </button>
-
-        <div className="packpreview__steps">
-          {prevPack && (
-            <button
-              type="button"
-              className="packpreview__navbtn packpreview__navbtn--icon"
-              onClick={() => navigate(`/pakiet/${prevPack.id}`, { step: 'sideways' })}
-              aria-label={`Poprzedni pakiet: ${prevPack.name}`}
-              title={prevPack.name}
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
-            </button>
-          )}
-          {nextPack && (
-            <button
-              type="button"
-              className="packpreview__navbtn"
-              onClick={() => navigate(`/pakiet/${nextPack.id}`, { step: 'sideways' })}
-              aria-label={`Następny pakiet: ${nextPack.name}`}
-              title={nextPack.name}
-            >
-              <span>Następny</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </button>
-          )}
-        </div>
-      </motion.div>
-
-      {/* ── Head — the same kicker / display title / fact-pill header the two
-          mode screens use, so the pack keeps its identity all the way into a
-          session. Tinted by the pack's level colour. */}
-      <motion.header className="packpreview__head" variants={item}>
-        <p className="packpreview__kicker u-kicker">
-          {pack.category}{packNum ? ` · pakiet #${packNum}` : ''}
-        </p>
-        <div className="packpreview__titlerow">
-          <span className="packpreview__glyph" aria-hidden="true">{icon}</span>
-          <h1
-            className="packpreview__title u-display"
-            style={{ viewTransitionName: `pack-name-${pack.id}` }}
-          >
-            {pack.name}
-          </h1>
-        </div>
-        <div className="packpreview__facts">
-          {pack.level > 0 && <ModeFact color={levelColor}>Poziom {pack.level}</ModeFact>}
-          {pack.volume && <ModeFact>{pack.volume}</ModeFact>}
-          <ModeFact>{wordCount} {plWords(wordCount)}</ModeFact>
+      <PackIdentity
+        meta={currentMeta ?? {
+          id: pack.id,
+          name: pack.name,
+          level: pack.level,
+          category: pack.category,
+          volume: pack.volume,
+          wordCount,
+        }}
+        packNum={packNum}
+        backLabel={back.label}
+        backAria={back.backLabel}
+        onBack={leave}
+        prev={prevPack}
+        next={nextPack}
+        onStep={id => navigate(`/pakiet/${id}`, { step: 'sideways' })}
+        wordCount={wordCount}
+        extraFacts={<>
           {status === 'mastered' && <ModeFact color="var(--gold)">★ Opanowana</ModeFact>}
-          {status === 'completed' && <ModeFact color="var(--listen-blue)">✓ Odsłuchana</ModeFact>}
-        </div>
-      </motion.header>
+          {status === 'listened' && <ModeFact color="var(--listen-blue)">✓ Odsłuchana</ModeFact>}
+          {status === 'worked' && <ModeFact color="var(--accent)">✓ Przerobiona</ModeFact>}
+        </>}
+      />
 
       {/* ── Progress ── the one raised card on the page (the .u-surface--raised
           recipe: gradient ground, float shadow, glowing hairline). */}
@@ -572,34 +669,42 @@ export function PackPreviewPage() {
       </motion.div>
 
       {markAllOpen && (
-        <dialog
-          ref={markDialogRef}
+        <Sheet
+          ref={markSheetRef}
+          onClose={() => setMarkAllOpen(false)}
           className="packpreview__mark-modal"
           aria-labelledby="mark-all-title"
-          onClick={e => { if (e.target === markDialogRef.current) markDialogRef.current?.close() }}
+          /* Mid-write there is no way out but the outcome. */
+          dismissible={!markingAll}
         >
-          <div className="packpreview__mark-modal-icon" aria-hidden="true">✓</div>
-          <h2 className="packpreview__mark-modal-title" id="mark-all-title">Oznaczyć wszystko jako znane?</h2>
-          <p className="packpreview__mark-modal-desc">
+          <motion.div className="packpreview__mark-modal-icon" variants={markRise} aria-hidden="true">✓</motion.div>
+          <motion.h2 className="packpreview__mark-modal-title" id="mark-all-title" variants={markRise}>
+            Oznaczyć wszystko jako znane?
+          </motion.h2>
+          <motion.p className="packpreview__mark-modal-desc" variants={markRise}>
             Wszystkie {wordCount} {plWords(wordCount)} z tego pakietu zostaną oznaczone jako opanowane, a cały pakiet jako w pełni opanowany. Nadal będą wracać w powtórkach jak każde inne opanowane słowo.
-          </p>
-          <div className="packpreview__mark-modal-actions">
-            <button
+          </motion.p>
+          <motion.div className="packpreview__mark-modal-actions" variants={markRise}>
+            <motion.button
+              type="button"
               className="packpreview__mark-modal-btn packpreview__mark-modal-btn--cancel"
-              onClick={() => markDialogRef.current?.close()}
+              whileTap={markTap}
+              onClick={() => markSheetRef.current?.close()}
               disabled={markingAll}
             >
               Anuluj
-            </button>
-            <button
+            </motion.button>
+            <motion.button
+              type="button"
               className="packpreview__mark-modal-btn packpreview__mark-modal-btn--confirm u-cta"
+              whileTap={markTap}
               onClick={handleMarkAllKnown}
               disabled={markingAll}
             >
               {markingAll ? 'Oznaczanie…' : 'Tak, oznacz wszystkie'}
-            </button>
-          </div>
-        </dialog>
+            </motion.button>
+          </motion.div>
+        </Sheet>
       )}
     </motion.div>
     </AppShell>

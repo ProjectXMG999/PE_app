@@ -14,13 +14,6 @@
   text-align: center;
 }
 
-.review__state-skeleton {
-  width: 100%;
-  max-width: 320px;
-  height: 180px;
-  border-radius: var(--radius-lg);
-}
-
 .review__state-icon {
   display: grid;
   place-items: center;

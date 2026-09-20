@@ -107,7 +107,11 @@ export async function seedProgress(options: SeedOptions = {}): Promise<string> {
       startedAt: `${shiftDay(-days, today)}T12:00:00.000Z`,
       completedAt: `${today}T12:00:00.000Z`,
       masteredAt: mastered ? `${today}T12:00:00.000Z` : null,
-      currentIndex: take,
+      // Seeded progress is knowledge, not listening — leaving the listen axis
+      // at zero keeps a seeded DB from reproducing the "everything odsłuchane"
+      // bug this repo just fixed. Seed Słuchaj separately if you need it.
+      listenedAt: null,
+      currentIndex: 0,
     })
 
     remaining -= take

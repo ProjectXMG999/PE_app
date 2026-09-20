@@ -25,6 +25,9 @@ interface Props {
   unit: string
   ticks: StripTick[]
   band?: StripBand
+  /** One extra line under the track — Słuchaj uses it for the backlog left
+   *  behind the frontier, which the figure above would otherwise hide. */
+  note?: ReactNode
 }
 
 /**
@@ -36,7 +39,7 @@ interface Props {
  * bar are the level thresholds, so the bar is a scale you can read. One tint
  * for both paths, and the only motion is the fill growing once.
  */
-export function PathStrip({ eyebrow, value, total, unit, ticks, band }: Props) {
+export function PathStrip({ eyebrow, value, total, unit, ticks, band, note }: Props) {
   const reduced = useReducedMotion()
   const pct = total > 0 ? Math.min(100, (value / total) * 100) : 0
   const shownPct = Math.round(pct)
@@ -78,6 +81,8 @@ export function PathStrip({ eyebrow, value, total, unit, ticks, band }: Props) {
           do {band.next.label}: {band.next.remaining.toLocaleString('pl-PL')} {unit}
         </p>
       )}
+
+      {note && <p className="pathstrip__note">{note}</p>}
     </div>
   )
 }

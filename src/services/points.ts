@@ -26,8 +26,20 @@ import { ProgressSnapshot, declaredMasteredPackIds } from '../hooks/useProgressD
  * and a pack mastered entirely by declaration no longer earns the pack
  * bonus. A deliberate, accepted retroactive correction for existing bulk-mark
  * users, not just new declarations — see services/review.ts `isDeclaredKnownWord`.
+ *
+ * v5: the pack bonus follows the listen axis. `perCompletedPack` was keyed on
+ * `completedAt`, which a Trenuj run stamps — so finishing a pack in training
+ * paid a "listened through" bonus on top of the per-word session weights
+ * already earned for that same work, and a level declaration paid it for work
+ * never done at all. It is now `perListenedPack`, keyed on `listenedAt`, which
+ * only a real Słuchaj play-through sets (see services/listenAxis.ts); working
+ * a pack through in any other mode earns its session points and nothing extra.
+ * Conversely the declared-pack exclusion no longer swallows the listen bonus:
+ * the axes are independent, so a declared pack you did genuinely listen to
+ * keeps what it earned. Retroactive, like v4 — this affects everyone who
+ * trained packs to the end, not only those who declared a level.
  */
-export const RULES_VERSION = 4
+export const RULES_VERSION = 5
 
 /**
  * Per-word multiplier by how the session was run. Speaking and active training
@@ -54,8 +66,8 @@ export const POINTS = {
   perRetiredWord: 30,
   /** A pack with every word mastered. */
   perMasteredPack: 50,
-  /** A pack listened through end to end. */
-  perCompletedPack: 25,
+  /** A pack genuinely listened through end to end in Słuchaj. */
+  perListenedPack: 25,
   /** Personal-best streak, rewarded once rather than per day. */
   perLongestStreakDay: 10,
   /** Each day the study-time goal was met. */
@@ -112,15 +124,18 @@ export function computePoints(
   const reviews = snapshot.reviewTotal * POINTS.perReview
   const retired = (snapshot.retiredCount - snapshot.declaredRetiredCount) * POINTS.perRetiredWord
 
+  // Two independent bonuses, so a pack can earn both: mastery is knowledge,
+  // listening is time spent with the audio. The declared-pack exclusion applies
+  // only to the mastery half — a declaration says nothing about listening, and
+  // a pack you declared AND played through earned that half honestly.
   const declaredPackIds = declaredMasteredPackIds(snapshot)
   let mastered = 0
-  let completed = 0
+  let listened = 0
   for (const p of snapshot.packageProgress) {
-    if (declaredPackIds.has(p.packageId)) continue // fully declared — no pack bonus either way
-    if (p.masteredAt != null) mastered++
-    else if (p.completedAt != null) completed++
+    if (p.masteredAt != null && !declaredPackIds.has(p.packageId)) mastered++
+    if (p.listenedAt != null) listened++
   }
-  const packs = mastered * POINTS.perMasteredPack + completed * POINTS.perCompletedPack
+  const packs = mastered * POINTS.perMasteredPack + listened * POINTS.perListenedPack
 
   const streak = longestStreak * POINTS.perLongestStreakDay
   const goals = goalDays * POINTS.perGoalDay

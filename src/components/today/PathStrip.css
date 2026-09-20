@@ -84,3 +84,13 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+/* The backlog line. Allowed to wrap, unlike __next: it is context for the
+   figure above rather than the next milestone, and it carries a sentence. */
+.pathstrip__note {
+  margin: 2px 0 0;
+  font-size: var(--text-xs);
+  line-height: 1.35;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}

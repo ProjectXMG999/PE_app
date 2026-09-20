@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { FlowNumber } from '../shared/FlowNumber'
-import { smartPeek } from '../../services/smartQueue'
+import { smartPeek, smartReason } from '../../services/smartQueue'
 import { useAppStore } from '../../store/useAppStore'
 import type { ProgressSnapshot } from '../../hooks/useProgressData'
 import { SparklesGlyph } from '../mode/glyphs'
@@ -75,16 +75,9 @@ export function SessionHero({ snapshot, onStart, secondsStudied, goalSec, onEdit
     : ''
 
   // Only when the mix actually moved — a line explaining a decision that wasn't
-  // made reads as noise. The goal-met line wins: a learner who has already put
-  // the time in should be told that first, not why the ratio shifted.
-  const reason =
-    peek?.bonus
-      ? 'Cel na dziś masz z głowy — to krótka dokładka, jeśli masz ochotę.'
-      : peek?.adapted && peek.tone === 'strong'
-        ? 'Powtórki trzymają się mocno, więc dziś więcej nowych słów.'
-        : peek?.adapted && peek.tone === 'slipping'
-          ? 'Kilka słów zaczyna uciekać, więc dziś więcej powtarzamy.'
-          : null
+  // made reads as noise. Shared with the Inteligentny session's own curtain, so
+  // the two screens can't describe one decision differently.
+  const reason = peek ? smartReason(peek) : null
 
   return (
     <div

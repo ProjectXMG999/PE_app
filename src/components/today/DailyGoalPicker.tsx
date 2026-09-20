@@ -70,6 +70,13 @@ function Roll({ value, dir }: { value: string; dir: 1 | -1 }) {
  * rate (the same model as Postęp's simulator), so "20 minutes gets you to
  * Everyday English in 11 months" is a promise their history has already made,
  * not a figure from a brochure.
+ *
+ * This sheet's motion is the one every other sheet in the app now shares —
+ * generalised into components/shared/Sheet.tsx (spring in, tween out, scrim
+ * that fades both ways, staggered content, flick to dismiss). It keeps its own
+ * copy for one reason: here the WHOLE panel is draggable rather than only the
+ * grabber, which works because this sheet's content barely scrolls. Any change
+ * to how sheets move belongs in Sheet.tsx first, and then here.
  */
 export function DailyGoalPicker({ onClose }: Props) {
   const ref = useRef<HTMLDialogElement>(null)

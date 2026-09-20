@@ -1,44 +1,10 @@
+/* Shell, scrim, grabber and the wide-screen switch to a centred card come from
+   `.u-sheet` in styles/surfaces.css; its motion from shared/Sheet.tsx. */
+
 .aps-sheet {
-  position: fixed;
-  bottom: 0;
-  top: auto;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 480px;
-  border: 1px solid var(--border);
-  border-bottom: none;
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-  background: var(--bg-surface);
+  padding: var(--spacing-sm) var(--spacing-lg)
+           calc(var(--spacing-lg) + var(--safe-bottom));
   color: var(--text-primary);
-  padding: var(--spacing-sm) var(--spacing-lg) calc(var(--spacing-lg) + var(--safe-bottom));
-  box-shadow: var(--shadow-lg);
-  max-height: 80dvh;
-  overflow-y: auto;
-}
-
-.aps-sheet::backdrop {
-  background: var(--overlay, rgba(0, 0, 0, 0.55));
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .aps-sheet[open] {
-    animation: aps-slide-up 320ms var(--ease-out-expo);
-  }
-
-  @keyframes aps-slide-up {
-    from { transform: translateY(40px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-}
-
-.aps-sheet__handle {
-  width: 40px;
-  height: 4px;
-  border-radius: var(--radius-full);
-  background: var(--border);
-  margin: 0 auto var(--spacing-sm);
 }
 
 .aps-sheet__header {
@@ -111,6 +77,9 @@
 }
 
 .aps-sheet__pill {
+  position: relative;
+  isolation: isolate;
+  -webkit-tap-highlight-color: transparent;
   flex: 1;
   height: 44px;
   border-radius: var(--radius-full);
@@ -126,9 +95,24 @@
 }
 
 .aps-sheet__pill--active {
-  background: var(--accent);
-  color: white;
+  color: #fff;
   border-color: var(--accent);
+}
+
+/* The active fill as one thumb that slides between the rates (shared layoutId
+   in AutoplaySettingsSheet.tsx) — you are re-aiming a control that is already
+   playing, so the marker moves rather than the colours swapping. */
+.aps-sheet__pill-thumb {
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: var(--accent);
+  box-shadow: 0 4px 14px color-mix(in oklch, var(--accent) 30%, transparent);
+}
+
+.aps-sheet__pill-label {
+  position: relative;
 }
 
 .aps-sheet__pill:not(.aps-sheet__pill--active):hover {

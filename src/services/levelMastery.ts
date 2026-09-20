@@ -1,10 +1,10 @@
 import packagesIndex from '../data/packages-index.json'
-import { PackMeta } from '../types/vocabulary'
+import { Pack, PackMeta } from '../types/vocabulary'
 import {
   WordProgress, PackageProgress, LevelMasterySnapshot,
   LevelMasteryWordEntry, LevelMasteryPackageEntry,
 } from '../types/progress'
-import { fetchPack } from '../hooks/usePackageData'
+import { fetchPack, PackFetchError } from '../hooks/usePackageData'
 import {
   getAllWordProgress, getAllPackageProgress, saveLevelMastery, undoLevelMastery,
   getLevelMasterySnapshot,
@@ -42,6 +42,51 @@ async function mapWithConcurrency<T, R>(
 export interface LevelMasteryProgress {
   loaded: number
   total: number
+}
+
+/**
+ * Marking a level is one all-or-nothing write over 109–335 pack requests. When
+ * one of them fails the declaration cannot honestly proceed — a partial mark
+ * would leave the level flagged as known with words that were never touched —
+ * so it stops here, and it stops LOUDLY: the whole operation used to reject
+ * with whatever the first failed fetch threw, straight past a `try/finally`
+ * with no `catch`, which put the UI back exactly where it started and told the
+ * user nothing at all.
+ */
+export class LevelMasteryFetchError extends Error {
+  constructor(
+    public readonly failed: string[],
+    public readonly total: number,
+    /** HTTP status shared by the failures, when there is one — 402 (expired
+     *  entitlement) and 401 (expired session) are the ones worth naming. */
+    public readonly status: number | null,
+  ) {
+    super(`Level mastery: ${failed.length}/${total} packs failed to load${status ? ` (HTTP ${status})` : ''}`)
+    this.name = 'LevelMasteryFetchError'
+  }
+}
+
+/** Retried only where a retry can help: a network drop, a rate limit, a 5xx.
+ *  401 already gets one token-refresh retry inside requestPack; 402/403/404
+ *  are settled answers and retrying them just makes the wait longer. */
+function worthRetrying(err: unknown): boolean {
+  if (err instanceof PackFetchError) return err.status === 429 || err.status >= 500
+  return true // a thrown fetch/JSON error — no status, so: transient until proven otherwise
+}
+
+const PACK_FETCH_ATTEMPTS = 3
+
+type PackResult = { ok: true; pack: Pack } | { ok: false; error: unknown }
+
+async function fetchPackResilient(id: string): Promise<PackResult> {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return { ok: true, pack: await fetchPack(id) }
+    } catch (err) {
+      if (attempt >= PACK_FETCH_ATTEMPTS || !worthRetrying(err)) return { ok: false, error: err }
+      await new Promise(r => setTimeout(r, 250 * attempt))
+    }
+  }
 }
 
 /**
@@ -97,6 +142,31 @@ export function applyLevelMasteryToWord(
   }
 }
 
+/**
+ * Per-pack transition for the declaration. Mastery is a claim about KNOWLEDGE,
+ * so it stamps `masteredAt` (and `completedAt`, since a level you declare
+ * known is a level you're done working through) and leaves the listen axis
+ * exactly as it was.
+ *
+ * This used to write `currentIndex: pack.words.length`, which is what made a
+ * declared level report itself as fully listened: every "odsłuchane" figure in
+ * the app reads that field. See services/listenAxis.ts.
+ */
+export function packageProgressForLevelMastery(
+  existing: PackageProgress | undefined,
+  packageId: string,
+  nowIso: string,
+): PackageProgress {
+  return {
+    packageId,
+    startedAt: existing?.startedAt ?? nowIso,
+    completedAt: nowIso,
+    masteredAt: nowIso,
+    listenedAt: existing?.listenedAt ?? null,
+    currentIndex: existing?.currentIndex ?? 0,
+  }
+}
+
 /** Marks every word in `level` as mastered with a full undo snapshot.
  *  `onProgress` drives the "Pobieranie X/N paczek" UI — fetching pack content
  *  for a big level can take real, user-visible time. */
@@ -109,11 +179,24 @@ export async function markLevelMastered(
   const nowIso = now.toISOString()
 
   let loaded = 0
-  const packs = await mapWithConcurrency(packageIds, LEVEL_MASTERY_FETCH_CONCURRENCY, async id => {
-    const pack = await fetchPack(id)
+  const results = await mapWithConcurrency(packageIds, LEVEL_MASTERY_FETCH_CONCURRENCY, async id => {
+    const result = await fetchPackResilient(id)
     onProgress?.({ loaded: ++loaded, total: packageIds.length })
-    return pack
+    return result
   })
+
+  // Every failure, not just the first: "nie udało się pobrać 1 z 335 paczek"
+  // is a fixable problem, "nie udało się pobrać 335 z 335 (błąd 402)" is a
+  // different one, and the user can only tell them apart if we count.
+  const errors = results.filter((r): r is { ok: false; error: unknown } => !r.ok)
+  if (errors.length > 0) {
+    const failed = packageIds.filter((_, i) => !results[i].ok)
+    const statuses = errors.map(r => (r.error instanceof PackFetchError ? r.error.status : null))
+    const shared = statuses.every(s => s === statuses[0]) ? statuses[0] : null
+    console.error('[levelMastery] pack fetch failed:', failed.slice(0, 10), errors[0].error)
+    throw new LevelMasteryFetchError(failed, packageIds.length, shared)
+  }
+  const packs = results.map(r => (r as { ok: true; pack: Pack }).pack)
 
   // Two IndexedDB reads total, not one per pack.
   const [allWords, allPackages] = await Promise.all([getAllWordProgress(), getAllPackageProgress()])
@@ -133,13 +216,7 @@ export async function markLevelMastered(
     }
     const existingPkg = ppByPackageId.get(pack.id)
     packageEntries.push({ packageId: pack.id, prev: existingPkg ?? null })
-    newPackages.push({
-      packageId: pack.id,
-      startedAt: existingPkg?.startedAt ?? nowIso,
-      completedAt: nowIso,
-      masteredAt: nowIso,
-      currentIndex: pack.words.length,
-    })
+    newPackages.push(packageProgressForLevelMastery(existingPkg, pack.id, nowIso))
   }
 
   const snapshot: LevelMasterySnapshot = {

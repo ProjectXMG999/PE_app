@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { COMFORT, updateComfort, strongStreakNext, shouldPromptLevelUp, sessionRatio } from './comfort'
+import { COMFORT, updateComfort, strongStreakNext, shouldPromptLevelUp, sessionRatio, comfortFit, COMFORT_FIT_ORDER } from './comfort'
 
 describe('sessionRatio', () => {
   it('is null below MIN_RATED — too short a session to read anything into', () => {
@@ -106,5 +106,41 @@ describe('shouldPromptLevelUp', () => {
   it('a dismissal for a different (lower) target does not block a fresh higher target', () => {
     expect(shouldPromptLevelUp({ ...base, levelUpPrompt: { dismissedForLevel: 2, lastShownAt: '2026-06-01' } }))
       .toEqual({ target: 3 })
+  })
+})
+
+describe('comfortFit', () => {
+  // Every boundary below is a real engine threshold, not a UI choice — the
+  // point of these tests is that they stay tied to COMFORT, so moving a
+  // constant moves the wording with it instead of quietly desynchronising.
+  it('calls it matched inside one session of movement either way', () => {
+    expect(comfortFit(2, 2)).toBe('matched')
+    expect(comfortFit(2 + COMFORT.MAX_STEP - 0.01, 2)).toBe('matched')
+    expect(comfortFit(2 - COMFORT.MAX_STEP + 0.01, 2)).toBe('matched')
+  })
+
+  it('calls it demanding once comfort trails the level by more than a step', () => {
+    expect(comfortFit(2 - COMFORT.MAX_STEP - 0.01, 2)).toBe('demanding')
+    expect(comfortFit(1, 4)).toBe('demanding')
+  })
+
+  it('separates "easy" from "stretching" exactly at STRETCH_MARGIN', () => {
+    expect(comfortFit(2 + COMFORT.STRETCH_MARGIN - 0.01, 2)).toBe('easy')
+    // selectSmart starts weaving in harder words at precisely this point.
+    expect(comfortFit(2 + COMFORT.STRETCH_MARGIN, 2)).toBe('stretching')
+  })
+
+  it('calls it ready at a full level ahead — shouldPromptLevelUp\'s own floor', () => {
+    expect(comfortFit(2.99, 2)).toBe('stretching')
+    expect(comfortFit(3, 2)).toBe('ready')
+    expect(comfortFit(4.9, 1)).toBe('ready')
+  })
+
+  it('never falls outside the ordered scale', () => {
+    for (const level of [1, 2, 3, 4]) {
+      for (let c = COMFORT.MIN; c <= COMFORT.MAX; c += 0.1) {
+        expect(COMFORT_FIT_ORDER).toContain(comfortFit(c, level))
+      }
+    }
   })
 })

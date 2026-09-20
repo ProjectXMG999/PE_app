@@ -113,3 +113,44 @@ export function shouldPromptLevelUp(args: LevelUpArgs): { target: number } | nul
 
   return { target }
 }
+
+/* ── Fit: comfort as something a learner can read ───────────────────────────
+ *
+ * `comfortLevel` is the setpoint of a feedback loop, not a score. Shown raw it
+ * was a number on an unexplained 1.0–4.9 scale that could go DOWN after a hard
+ * session — which reads as a demotion, collides with the app's own "poziom"
+ * 1–4, and carries a decimal place the signal doesn't support (a session of
+ * MIN_RATED cards moves its ratio in steps of 0.2).
+ *
+ * What is actually legible is the DISTANCE between comfort and the level being
+ * studied, because that distance is what the engine acts on. Every boundary
+ * below is a real threshold, not a round number picked for the UI:
+ *
+ *   level − MAX_STEP   one session's worth of movement below the material
+ *   level + MAX_STEP   …and above it: inside this band nothing changes
+ *   level + STRETCH_MARGIN   selectSmart starts weaving in harder words
+ *   level + 1          shouldPromptLevelUp's own floor for offering a move up
+ */
+
+export type ComfortFit = 'demanding' | 'matched' | 'easy' | 'stretching' | 'ready'
+
+/** Ordered easiest-fit-last, so a meter can render position directly. */
+export const COMFORT_FIT_ORDER: ComfortFit[] = [
+  'demanding', 'matched', 'easy', 'stretching', 'ready',
+]
+
+/**
+ * Where the learner sits relative to the level they're working at.
+ *
+ * `level` is the floor they chose (todayLevel), which is the same anchor
+ * shouldPromptLevelUp uses — so "ready" here and the prompt firing cannot
+ * disagree about which level is in question.
+ */
+export function comfortFit(comfort: number, level: number): ComfortFit {
+  const d = comfort - level
+  if (d < -COMFORT.MAX_STEP) return 'demanding'
+  if (d < COMFORT.MAX_STEP) return 'matched'
+  if (d < COMFORT.STRETCH_MARGIN) return 'easy'
+  if (d < 1) return 'stretching'
+  return 'ready'
+}

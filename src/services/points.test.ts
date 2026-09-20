@@ -32,7 +32,11 @@ function snapshot(over: Partial<ProgressSnapshot> = {}): ProgressSnapshot {
 }
 
 function pkg(id: string, over: Partial<PackageProgress> = {}): PackageProgress {
-  return { packageId: id, startedAt: '2026-05-01', completedAt: null, masteredAt: null, currentIndex: 0, ...over }
+  return {
+    packageId: id, startedAt: '2026-05-01',
+    completedAt: null, masteredAt: null, listenedAt: null, currentIndex: 0,
+    ...over,
+  }
 }
 
 describe('computePoints — declared-known exclusion', () => {
@@ -74,14 +78,44 @@ describe('computePoints — declared-known exclusion', () => {
     expect(breakdown.packs).toBe(POINTS.perMasteredPack)
   })
 
-  it('an untouched, fully organic snapshot behaves exactly as before (no declared fields set)', () => {
+  it('an untouched, fully organic snapshot pays for mastery and for a real listen', () => {
     const snap = snapshot({
       knownTotal: 50, reviewTotal: 10, retiredCount: 2,
-      packageProgress: [pkg('p1', { masteredAt: '2026-06-01' }), pkg('p2', { completedAt: '2026-06-01' })],
+      packageProgress: [
+        pkg('p1', { masteredAt: '2026-06-01' }),
+        pkg('p2', { completedAt: '2026-06-01', listenedAt: '2026-06-01' }),
+      ],
     })
     const { breakdown } = computePoints(snap)
     expect(breakdown.known).toBe(50 * POINTS.perKnownWord)
     expect(breakdown.retired).toBe(2 * POINTS.perRetiredWord)
-    expect(breakdown.packs).toBe(POINTS.perMasteredPack + POINTS.perCompletedPack)
+    expect(breakdown.packs).toBe(POINTS.perMasteredPack + POINTS.perListenedPack)
+  })
+})
+
+/* RULES_VERSION 5 — the pack bonus follows the listen axis. Before this, any
+   pack with a `completedAt` paid the "listened through" bonus, which a Trenuj
+   run and a level declaration both stamped. */
+describe('computePoints — the pack bonus is per axis', () => {
+  it('a pack worked through in Trenuj but never played earns no listen bonus', () => {
+    const snap = snapshot({ packageProgress: [pkg('p1', { completedAt: '2026-06-01' })] })
+    expect(computePoints(snap).breakdown.packs).toBe(0)
+  })
+
+  it('a pack both mastered and genuinely listened earns both bonuses', () => {
+    const snap = snapshot({
+      knownMap: new Map([['p1', 10]]),
+      packageProgress: [pkg('p1', { masteredAt: '2026-06-01', listenedAt: '2026-06-02' })],
+    })
+    expect(computePoints(snap).breakdown.packs).toBe(POINTS.perMasteredPack + POINTS.perListenedPack)
+  })
+
+  it('a declared pack keeps the listen bonus it earned honestly, but not the mastery one', () => {
+    const snap = snapshot({
+      knownMap: new Map([['p1', 10]]),
+      declaredKnownMap: new Map([['p1', 10]]), // mastered purely by declaration
+      packageProgress: [pkg('p1', { masteredAt: '2026-06-01', listenedAt: '2026-05-20' })],
+    })
+    expect(computePoints(snap).breakdown.packs).toBe(POINTS.perListenedPack)
   })
 })

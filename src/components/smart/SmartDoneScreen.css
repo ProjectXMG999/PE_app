@@ -89,15 +89,57 @@
   color: oklch(1 0 0 / 0.65);
 }
 
-.smartdone__comfort {
+/* How well the difficulty fits, as a named band on a five-step meter rather
+   than the loop's raw setpoint. See FIT_COPY in SmartDoneScreen.tsx. */
+.smartdone__fit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
   margin: 0;
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  color: oklch(1 0 0 / 0.75);
 }
 
-.smartdone__comfort strong {
+.smartdone__fit-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.smartdone__fit-label {
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
   color: #FCD34D;
+}
+
+.smartdone__fit-meter {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.smartdone__fit-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: oklch(1 0 0 / 0.22);
+}
+
+.smartdone__fit-dot.is-on {
+  background: #FCD34D;
+  /* The filled step is the whole point of the meter — at 6px a colour change
+     alone reads as a rendering artefact rather than a position. */
+  transform: scale(1.5);
+}
+
+.smartdone__fit-line {
+  margin: 0;
+  max-width: 34ch;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: oklch(1 0 0 / 0.75);
 }
 
 .smartdone__actions {

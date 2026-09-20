@@ -1,29 +1,13 @@
-.levelup {
-  margin: auto auto 0;
-  padding: 0;
-  width: 100%;
-  max-width: 420px;
-  border: none;
-  background: transparent;
-  overflow: visible;
-}
-
-.levelup::backdrop {
-  background: var(--overlay);
-  backdrop-filter: blur(var(--scrim-blur));
-}
+/* Shell, scrim, grabber and the wide-screen switch to a centred card come from
+   `.u-sheet` in styles/surfaces.css; its motion from shared/Sheet.tsx. */
 
 .levelup__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: var(--spacing-2xl) var(--spacing-lg) var(--spacing-xl);
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-bottom: none;
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-  animation: slideUp 280ms var(--ease-out-expo);
+  padding: var(--spacing-lg) var(--spacing-lg)
+           max(var(--spacing-xl), env(safe-area-inset-bottom));
 }
 
 .levelup__icon {
@@ -87,16 +71,7 @@
 }
 
 @media (min-width: 640px) {
-  .levelup {
-    margin: auto;
-  }
-
   .levelup__inner {
-    border-bottom: 1px solid var(--border);
-    border-radius: var(--radius-xl);
+    max-width: 420px;
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .levelup__inner { animation: none; }
 }
