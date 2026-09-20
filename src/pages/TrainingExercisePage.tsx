@@ -1,4 +1,4 @@
-import { useState, type CSSProperties } from 'react'
+import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { Navigate, useParams } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
@@ -13,6 +13,7 @@ import {
   markExerciseListened,
 } from '../data/trainingExercises'
 import { useBack } from '../navigation/navigation'
+import { armMorph, morphArmed } from '../navigation/transitions'
 import './TrainingPage.css'
 
 /**
@@ -30,9 +31,39 @@ export function TrainingExercisePage() {
      thickens after it lands. See glassReveal in today/motion.ts. */
   const glassItem = reduced ? glassRevealReduced : glassReveal
 
+  /* ── The icon morph, this half ─────────────────────────────────────────────
+     Claimed rather than declared: the card that opened this page arms the name
+     (see TrainingPage.openExercise), and the name comes straight off again.
+     Left on permanently — as it was — the icon is snapshotted as its own
+     transition group on every navigation away from here, including the ones
+     with nothing to morph into, and a transition group is painted above the
+     document: the icon floated over the tab bar on the way out. */
+  const iconRef = useRef<HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    if (exerciseId == null || !morphArmed(`exercise:${exerciseId}`)) return
+    const el = iconRef.current
+    if (!el) return
+    el.style.viewTransitionName = `exercise-icon-${exerciseId}`
+    const clear = () => { el.style.viewTransitionName = '' }
+    const t = window.setTimeout(clear, 600)
+    return () => { window.clearTimeout(t); clear() }
+  }, [exerciseId])
+
   const exercise = TRAINING_EXERCISES.find(e => e.id === exerciseId)
   if (!exercise) {
     return <Navigate to="/trening" replace />
+  }
+
+  /** Back the way we came, icon and all — the return leg of the same morph. */
+  function leave() {
+    const el = iconRef.current
+    if (el && exerciseId != null) {
+      el.style.viewTransitionName = `exercise-icon-${exerciseId}`
+      window.setTimeout(() => { el.style.viewTransitionName = '' }, 600)
+      armMorph(`exercise:${exerciseId}`)
+    }
+    goBack()
   }
 
   function handlePlayAudio() {
@@ -52,7 +83,7 @@ export function TrainingExercisePage() {
         <motion.button
           type="button"
           className="training-detail__back"
-          onClick={() => goBack()}
+          onClick={leave}
           aria-label={backLabel}
           variants={item}
         >
@@ -62,11 +93,7 @@ export function TrainingExercisePage() {
 
         <motion.div className="training-detail__header u-liquid" variants={glassItem}>
           <div className="training-detail__title-row">
-            <div
-              className="training-detail__icon"
-              aria-hidden="true"
-              style={{ viewTransitionName: `exercise-icon-${exercise.id}` }}
-            >
+            <div className="training-detail__icon" aria-hidden="true" ref={iconRef}>
               {exerciseGlyph(exercise.id, 30)}
             </div>
             <div className="training-detail__titles">

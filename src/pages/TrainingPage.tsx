@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+import { useLayoutEffect, useRef, type CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
@@ -8,6 +8,7 @@ import { CheckGlyph, ChevronRightGlyph, SpeakerGlyph } from '../components/mode/
 import { fadeUpReduced, glassReveal, glassRevealReduced, heroReveal, staggerContainer } from '../components/today/motion'
 import { TRAINING_EXERCISES, getListenedExercises } from '../data/trainingExercises'
 import './TrainingPage.css'
+import { armMorph, morphArmed, useLinkTransition } from '../navigation/transitions'
 
 const MotionLink = motion.create(Link)
 
@@ -21,6 +22,7 @@ const MotionLink = motion.create(Link)
  */
 export function TrainingPage() {
   const listened = getListenedExercises()
+  const onLink = useLinkTransition()
   const reduced = useReducedMotion()
   const item = reduced ? fadeUpReduced : heroReveal
   /* Anything that IS or CONTAINS glass rises without an opacity channel. A
@@ -29,6 +31,46 @@ export function TrainingPage() {
      full fog a third of a second later — it reads as the effect restarting
      after the page has arrived. See glassReveal in today/motion.ts. */
   const glassItem = reduced ? glassRevealReduced : glassReveal
+
+  /* ── The icon morph ────────────────────────────────────────────────────────
+     The four icons used to carry `view-transition-name` permanently, in the
+     JSX. That is the thing armMorph exists to prevent, and it broke two ways:
+
+      - Leaving Trening for anywhere else (any tab) snapshotted four named
+        groups with no counterpart on the page being entered. A lone half still
+        animates, and a view-transition group lives in the transition overlay —
+        above the whole document — so the four icons floated over the tab bar
+        on the way out instead of leaving with the page under it.
+      - Every navigation on this screen, morph or not, paid for four extra
+        groups, each snapshotting an element inside a backdrop-blurred glass
+        card. That is the stutter.
+
+     So: named for the one card being tapped, for the length of one
+     transition. Same shape as PackageCard.open(). */
+  const iconRefs = useRef(new Map<string, HTMLDivElement | null>())
+
+  const openExercise = (id: string) => {
+    const el = iconRefs.current.get(id)
+    if (el) {
+      el.style.viewTransitionName = `exercise-icon-${id}`
+      window.setTimeout(() => { el.style.viewTransitionName = '' }, 600)
+    }
+    // Let the detail page claim the other half. Without this an exercise
+    // reached any other way (a deep link, a reload) animates a lone icon.
+    armMorph(`exercise:${id}`)
+  }
+
+  /* The return leg: coming back from an exercise, its icon travels to the card
+     it came from. Claimed the same way, and only when that page armed it. */
+  useLayoutEffect(() => {
+    const id = TRAINING_EXERCISES.find(e => morphArmed(`exercise:${e.id}`))?.id
+    const el = id ? iconRefs.current.get(id) : null
+    if (!id || !el) return
+    el.style.viewTransitionName = `exercise-icon-${id}`
+    const clear = () => { el.style.viewTransitionName = '' }
+    const t = window.setTimeout(clear, 600)
+    return () => { window.clearTimeout(t); clear() }
+  }, [])
 
   return (
     <AppShell>
@@ -48,7 +90,7 @@ export function TrainingPage() {
             <MotionLink
               key={exercise.id}
               to={`/trening/${exercise.id}`}
-              viewTransition
+              onClick={e => { openExercise(exercise.id); onLink(`/trening/${exercise.id}`, 'forward')(e) }}
               className="training-card u-liquid"
               style={{ ['--ex' as string]: exercise.color } as CSSProperties}
               variants={glassItem}
@@ -58,7 +100,7 @@ export function TrainingPage() {
                 <div
                   className="training-card__icon"
                   aria-hidden="true"
-                  style={{ viewTransitionName: `exercise-icon-${exercise.id}` }}
+                  ref={el => { iconRefs.current.set(exercise.id, el) }}
                 >
                   {exerciseGlyph(exercise.id, 24)}
                 </div>

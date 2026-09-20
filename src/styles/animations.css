@@ -132,35 +132,148 @@
   }
 }
 
-/* View Transitions API — tab switches (BottomNav/Sidebar), the Training
-   card→detail icon morph, and any `navigate(to, { viewTransition: true })`
-   call opt in via react-router. Browsers without support just navigate
-   normally (progressive enhancement, no fallback code needed).
+/* =============================================================================
+ * PAGE TRANSITIONS — how the app moves from one screen to the next.
+ * -----------------------------------------------------------------------------
+ * Every in-app navigation runs through the View Transitions API; see
+ * navigation/transitions.ts for the JS half, which is the only place that has
+ * to know about it. Browsers without support just navigate (iOS < 18).
+ *
+ * Three ideas, and they're what make this read as an app rather than a
+ * slide-show:
+ *
+ *  1. **The page swap is quiet; the content is what moves.** A full-width push
+ *     was tried and thrown out: at phone scale two half-transparent screens
+ *     sliding across a shared aurora is noise, not motion. The swap is a short
+ *     dissolve with a hint of travel in the direction you're going — enough to
+ *     say "forward" or "back" without performing it — and the character of the
+ *     arrival lives in the blocks of the page itself, cascading in right after
+ *     (--pe-enter-*, and the Framer vocabulary in components/today/motion.ts).
+ *     `<html data-nav>` carries the direction, stamped before the snapshot.
+ *  2. **The chrome doesn't travel.** Each page mounts its own AppShell, so the
+ *     top bar, tab bar and sidebar are literally torn down and rebuilt on every
+ *     navigation. Naming them below lifts them out of the page snapshot: they
+ *     hold still while the content slides under them, and on a focus screen
+ *     that drops the tab bar it now fades out instead of vanishing between two
+ *     frames.
+ *  3. **Nothing waits.** The transition wraps a synchronous commit, so the only
+ *     still frame is the render itself. Every earlier version of this held the
+ *     outgoing page on screen for a quarter of a second first, and no amount of
+ *     easing survives that.
+ *
+ * Deliberately NOT named: `.ambient`. The aurora would ideally hold still while
+ * the pages slide across it, but naming it doesn't achieve that — lifting an
+ * element into the transition layer strips the stacking it had on the page, so
+ * the aurora painted over the entire app, and pushing its group to z-index -1
+ * put it behind the root snapshot's own black ground, which erased it (and left
+ * the tab bar's backdrop-filter with nothing to sample). Both were tried. It
+ * rides along inside the page instead, which is invisible: it's a slow blurred
+ * mesh, and the two layers cross-fade through each other.
+ * ========================================================================== */
 
-   Named/shared elements (nav indicators, the training icon morph) keep the
-   plain cross-fade at .group(*); the whole-page swap on `root` gets its own
-   pair so it can settle with a touch of scale instead of a flat fade — reads
-   as one surface easing into the next, not a slide-show cut. Only safe now
-   that AmbientBackground lives outside the per-page tree (App.tsx) and stays
-   put across the transition instead of flashing back in underneath it. */
+/* Named/shared elements — the nav markers, the Training icon morph, the pack
+   mark. Short, so a morph lands before the page around it has finished. */
 ::view-transition-group(*) {
-  animation-duration: 220ms;
-  animation-timing-function: ease;
-}
-
-::view-transition-group(root) {
-  animation-duration: 280ms;
+  animation-duration: 240ms;
   animation-timing-function: var(--ease-out-expo);
 }
 
+/* ── What holds still ──────────────────────────────────────────────────────
+   Two navs, two names: both are mounted at every width (AppShell toggles them
+   with `display`), and two live elements sharing one view-transition-name
+   aborts the whole transition. */
+.topbar    { view-transition-name: pe-topbar; }
+.bottomnav { view-transition-name: pe-tabbar; }
+.sidebar   { view-transition-name: pe-rail; }
+
+/* The active-tab marker is named separately so it SLIDES from the old tab to
+   the new one across the navigation. Framer Motion's layoutId can't do it here
+   — the nav unmounts with the page, so there is no shared layout to animate. */
+.bottomnav__indicator    { view-transition-name: pe-tabbar-marker; }
+.sidebar__nav-indicator  { view-transition-name: pe-rail-marker; }
+
+/* …and holding still means NOT cross-fading either.
+ *
+ * The root snapshot already opts out of the UA's `plus-lighter` below, with the
+ * note that it reads as a bright ghost. The named chrome never got the same
+ * treatment, and it needs it more: the tab bar is a translucent capsule (45% of
+ * the ground plus a blur), so its two identical snapshots were being ADDED
+ * together for the length of every navigation. The bar lit up on each page
+ * change — subtle on a dark page, obvious against a bright one.
+ *
+ * `animation: none` removes the fade outright rather than tuning it. Old and
+ * new are the same picture, so there is nothing to animate between; the only
+ * thing the cross-fade contributed was the artefact. The markers keep their
+ * animation — they genuinely travel — and only lose the additive blending. */
+::view-transition-old(pe-tabbar),
+::view-transition-new(pe-tabbar),
+::view-transition-old(pe-topbar),
+::view-transition-new(pe-topbar),
+::view-transition-old(pe-rail),
+::view-transition-new(pe-rail) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(pe-tabbar-marker),
+::view-transition-new(pe-tabbar-marker),
+::view-transition-old(pe-rail-marker),
+::view-transition-new(pe-rail-marker) {
+  mix-blend-mode: normal;
+}
+
+/* ── …and holding still means staying on top ───────────────────────────────
+   Every named element becomes its own group in the transition layer, and that
+   layer is a flat overlay above the whole document — the page's own stacking
+   context is gone. Groups are painted in the order their elements were
+   encountered, so any morph named inside page content paints ABOVE the chrome
+   it sits under on the real page. The training icon did exactly that: it flew
+   over the tab bar instead of behind it.
+
+   The chrome is what the page scrolls under, and that has to remain true for
+   the 240ms the transition owns the screen. The markers ride one above their
+   own bar. Content morphs (pack-mark, pack-title, the exercise icon) keep the
+   default 0 and pass underneath. */
+::view-transition-group(pe-tabbar),
+::view-transition-group(pe-topbar),
+::view-transition-group(pe-rail) {
+  z-index: 20;
+}
+
+::view-transition-group(pe-tabbar-marker),
+::view-transition-group(pe-rail-marker) {
+  z-index: 21;
+}
+
+/* ── The page itself ────────────────────────────────────────────────────────
+   Short, soft, and out of the way of the content cascade that follows it. */
+::view-transition-group(root) {
+  animation-duration: 260ms;
+  animation-timing-function: var(--ease-out-expo);
+}
+
+/* The outgoing page leaves faster than the incoming one arrives, so the new
+   screen leads the movement instead of the two crossing in the middle.
+   `mix-blend-mode: normal` overrides the UA's plus-lighter, which is right for
+   a pure cross-fade and reads as a bright ghost once transforms are involved. */
 ::view-transition-old(root) {
   animation-name: pe-page-out;
+  animation-duration: 180ms;
+  animation-timing-function: ease-in;
+  mix-blend-mode: normal;
 }
 
 ::view-transition-new(root) {
   animation-name: pe-page-in;
+  mix-blend-mode: normal;
 }
 
+:root[data-nav='forward']::view-transition-old(root) { animation-name: pe-page-out-fwd; }
+:root[data-nav='forward']::view-transition-new(root) { animation-name: pe-page-in-fwd; }
+:root[data-nav='back']::view-transition-old(root)    { animation-name: pe-page-out-back; }
+:root[data-nav='back']::view-transition-new(root)    { animation-name: pe-page-in-back; }
+
+/* Lateral — the default, and what a tab switch gets. */
 @keyframes pe-page-out {
   from { opacity: 1; transform: scale(1); }
   to   { opacity: 0; transform: scale(1.012); }
@@ -169,6 +282,30 @@
 @keyframes pe-page-in {
   from { opacity: 0; transform: scale(0.988); }
   to   { opacity: 1; transform: scale(1); }
+}
+
+/* Forward — deeper, or rightwards along the tab bar: the new page arrives from
+   the right. 10px, not 100 — the direction is a hint under the dissolve, and
+   the blocks of the page carry the arrival from there. */
+@keyframes pe-page-out-fwd {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(-6px); }
+}
+
+@keyframes pe-page-in-fwd {
+  from { opacity: 0; transform: translateX(10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Back — the same hint, mirrored. */
+@keyframes pe-page-out-back {
+  from { opacity: 1; transform: translateX(0); }
+  to   { opacity: 0; transform: translateX(6px); }
+}
+
+@keyframes pe-page-in-back {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 
 /* Respect users who ask the OS for less motion: collapse all CSS
@@ -257,26 +394,6 @@
 /* One-shot version — plays once when the element first paints, then rests. */
 .fx-shine--once::after { animation-iteration-count: 1; }
 
-/* Radar ping — an expanding ring that fades. Element (or its ::after host)
-   needs `position: relative`. Reads --fx-ping-color. */
-@keyframes fx-ping {
-  from { opacity: 0.9; transform: scale(0.4); }
-  to   { opacity: 0;   transform: scale(3);   }
-}
-
-.fx-ping::after {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  border-radius: inherit;
-  border: 2px solid var(--fx-ping-color, var(--accent-bright));
-  pointer-events: none;
-  animation: fx-ping var(--fx-ping-duration, 1.6s) var(--ease-out-expo)
-    var(--fx-ping-delay, 0s) infinite;
-}
-
-.fx-ping--once::after { animation-iteration-count: 1; }
-
 /* Travelling rim light — a single highlight orbiting the element's border.
    Host needs `position: relative` and its own border-radius (inherited below).
    Reads --fx-rim-color and --fx-rim-duration.
@@ -331,4 +448,44 @@
 .fx-rise {
   animation: fx-rise 500ms var(--ease-out-expo) var(--fx-rise-delay, 0s) both;
 }
+
+/* ── Page entrance ─────────────────────────────────────────────────────────
+ * The blocks of a page settling in, just behind the page swap itself. This is
+ * the half of the app's arrival that actually carries it — the transition
+ * between two screens is deliberately quiet (see PAGE TRANSITIONS above), and
+ * what you read as "the page arrived" is this cascade.
+ *
+ * One vocabulary, two implementations, the same numbers in both:
+ *
+ *  • Framer Motion — components/today/motion.ts — for the screens already
+ *    built out of motion components (Dzisiaj, Trening, Ustawienia, Konto, the
+ *    pack page, the mode chooser, Logowanie).
+ *  • These tokens and `pe-enter-rise` for everything else, so a page gets the
+ *    same arrival without an animation library being dragged onto it: the
+ *    Pakiety row cascade (HomePage.css) and the Postęp header (StatsPage.css)
+ *    both read from here.
+ *
+ * Changing --pe-enter-* changes every screen in the app at once; the Framer
+ * constants are kept in step by hand, and named the same.
+ */
+:root {
+  --pe-enter-delay: 60ms;
+  --pe-enter-step: 60ms;
+  --pe-enter-duration: 500ms;
+}
+
+/* Half a second on an expo curve: most of the distance is covered in the first
+   third and the last few pixels take their time. That long tail is what reads
+   as "settling" rather than "sliding in" — the same shape the Framer variants
+   use, so a CSS page and a Framer page land identically. */
+@keyframes pe-enter-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* CAUTION when applying this to a new block: `both` keeps the transform
+   attached for good, which makes the element a containing block for any
+   `position: fixed` DESCENDANT — a child that goes full screen would then lay
+   itself out against the block instead of the viewport. Same trap the Postęp
+   sections documented; a block that hosts such a child can't carry this. */
 
