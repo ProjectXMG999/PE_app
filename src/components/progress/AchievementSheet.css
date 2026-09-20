@@ -1,30 +1,18 @@
-.achsheet {
-  margin: auto auto 0;
-  padding: 0;
-  width: 100%;
-  max-width: 460px;
-  border: none;
-  background: transparent;
-  overflow: visible;
-}
-
-.achsheet::backdrop {
-  background: var(--overlay);
-  backdrop-filter: blur(var(--scrim-blur));
-}
+/* Shell, position, scrim, panel material and the wide-screen switch to a
+   centred modal all come from `.u-sheet` in styles/surfaces.css. This file
+   only describes what a BADGE looks like.
+   It used to carry its own copy of that shell, and was the one copy with no
+   height ceiling at all — which on a short viewport left the tallest sheet in
+   the app with nothing to scroll. */
 
 .achsheet__inner {
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: var(--spacing-sm) var(--spacing-lg) var(--spacing-xl);
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-bottom: none;
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  padding: var(--spacing-sm) var(--spacing-lg)
+           max(var(--spacing-xl), env(safe-area-inset-bottom));
   animation: slideUp 280ms var(--ease-out-expo);
 }
 
@@ -221,22 +209,25 @@
 }
 
 /* The one outward-facing action in the app: turn this badge into an image
-   worth showing someone. Filled, because it is the reason to keep the sheet
-   open — Zamknij below it stays quiet. */
+   worth showing someone. It is the reason to keep the sheet open — Zamknij
+   below it stays quiet.
+   Shape only: the fill comes from `.u-cta` in styles/surfaces.css, the app's
+   single primary-action treatment. It used to be a flat `var(--accent)` with
+   `--text-primary` on top, which is a different button from every other
+   primary action in the app and the only place that pairing appears. */
 .achsheet__share {
+  flex-shrink: 0;
+  width: 100%;
   margin-top: var(--spacing-xl);
   padding: 12px var(--spacing-2xl);
   font-family: var(--font-heading);
   font-size: var(--text-base);
   font-weight: 600;
-  color: var(--text-primary);
-  background: var(--accent);
   border: 0;
   border-radius: var(--radius-full);
   cursor: pointer;
 }
 
-.achsheet__share:active { transform: scale(0.97); }
 .achsheet__share:disabled { opacity: 0.6; cursor: default; }
 
 .achsheet__share-note {
@@ -245,7 +236,12 @@
   color: var(--text-muted);
 }
 
+/* Same close button as every other sheet on this page: full width, quiet,
+   pinned against being squashed by the scroll container above it. It was a
+   centred pill here and nowhere else. */
 .achsheet__close {
+  flex-shrink: 0;
+  width: 100%;
   margin-top: var(--spacing-md);
   padding: 12px var(--spacing-2xl);
   font-family: var(--font-heading);
@@ -260,17 +256,6 @@
 
 .achsheet__close:active {
   transform: scale(0.97);
-}
-
-@media (min-width: 640px) {
-  .achsheet {
-    margin: auto;
-  }
-
-  .achsheet__inner {
-    border-bottom: 1px solid var(--border);
-    border-radius: var(--radius-xl);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

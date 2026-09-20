@@ -342,3 +342,77 @@
 @media (hover: hover) {
   .u-tile:hover { background: var(--surface-tile-hover); }
 }
+
+/* ── Sheet ────────────────────────────────────────────────────────────────
+   The shell for a native <dialog> that sits on the bottom edge of the phone
+   and becomes a centred modal on a wide screen.
+
+   Why a utility rather than the ten hand-copied blocks that grew before it:
+   ten copies is ten places for one of them to drift, and they had already
+   drifted — three capped their panel at 88vh and scrolled it, two at 90dvh,
+   two not at all.
+
+   It also drops the shared trick those copies relied on. They anchored the
+   sheet with `margin: auto auto 0` against the block insets the UA gives a
+   dialog only once it is `:modal`, letting `margin-top: auto` eat the leftover
+   space. That works, but it is a side effect of measurement: how tall the
+   panel is, and when. Here the dialog IS the viewport — explicitly, not by way
+   of a UA rule — laid out as a flex column that puts its one child on the
+   bottom edge. The panel can only grow upwards and then scroll, and nothing
+   about where it sits depends on how tall it turned out to be.
+
+   `display` is set under [open] alone: a <dialog> is display:none until it is
+   opened, and a utility that set `display: flex` unconditionally would paint
+   the sheet over the page for the frame between React mounting it and the
+   effect calling showModal(). */
+.u-sheet {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+.u-sheet[open] {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.u-sheet::backdrop {
+  background: var(--overlay);
+  -webkit-backdrop-filter: blur(var(--scrim-blur));
+          backdrop-filter: blur(var(--scrim-blur));
+}
+
+/* The panel. `max-height: 100%` resolves because the dialog above it now has a
+   definite height — it couldn't against `fit-content`. */
+.u-sheet__panel {
+  width: 100%;
+  max-width: 460px;
+  max-height: 100%;
+  /* x hidden so a celebration inside stays within the rounded corners. */
+  overflow: hidden auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  background: var(--bg-surface);
+}
+
+@media (min-width: 640px) {
+  .u-sheet[open] { justify-content: center; }
+
+  .u-sheet__panel {
+    max-height: calc(100% - var(--spacing-2xl));
+    border-bottom: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+  }
+}

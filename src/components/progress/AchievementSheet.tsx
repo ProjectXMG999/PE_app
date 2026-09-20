@@ -53,13 +53,13 @@ export function AchievementSheet({ state, onClose, knownTotal = 0, nextStation =
   return (
     <dialog
       ref={ref}
-      className="achsheet"
+      className="achsheet u-sheet"
       onClose={onClose}
       onClick={e => {
         if (e.target === ref.current) ref.current?.close()
       }}
     >
-      <div className={`achsheet__inner${unlocked ? ` tier-${a.tier}` : ''}`}>
+      <div className={`achsheet__inner u-sheet__panel${unlocked ? ` tier-${a.tier}` : ''}`}>
         {celebrate && <Confetti bursts={[[46, 140], [28, 520]]} className="achsheet__confetti" />}
         <span className="achsheet__handle" aria-hidden="true" />
 
@@ -107,7 +107,7 @@ export function AchievementSheet({ state, onClose, knownTotal = 0, nextStation =
             haven't done yet is the opposite of the point. */}
         {unlocked && (
           <>
-            <button className="achsheet__share" onClick={handleShare} disabled={sharing}>
+            <button className="achsheet__share u-cta" onClick={handleShare} disabled={sharing}>
               {sharing ? 'Przygotowuję…' : 'Pokaż znajomym'}
             </button>
             {shareNote && <p className="achsheet__share-note">{shareNote}</p>}

@@ -4,11 +4,6 @@ dialog.onboarding-modal::backdrop {
   backdrop-filter: blur(var(--scrim-blur));
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 dialog.onboarding-modal {
   color: var(--text-primary);
   position: fixed;
@@ -26,12 +21,23 @@ dialog.onboarding-modal {
   max-height: 85vh;
   overflow-y: auto;
   overscroll-behavior: contain;
-  animation: slideUp 300ms ease-out forwards;
+  animation: onboarding-rise 300ms ease-out forwards;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
 }
 
-@keyframes slideUp {
+/* Named for this modal, and it has to be: @keyframes are resolved by name
+   across the whole document and the LAST definition of a name wins outright,
+   for every element in the app that animates it.
+   This block used to be called `slideUp` — the same name as the app-wide one
+   in styles/animations.css, which every bottom sheet uses. Because this modal
+   is centred with `transform: translateY(-50%)`, its keyframes carry that -50%
+   — so every sheet in the app was being lifted half its own height, and then
+   dropped back the moment the 280ms animation ended (those rules have no fill
+   mode). That was the "sheet appears at the top and jumps to the bottom" bug,
+   and it was invisible here because this modal is the one element the
+   keyframes were actually written for. Keep decorative keyframes local. */
+@keyframes onboarding-rise {
   from {
     opacity: 0;
     transform: translateY(calc(-50% + 16px));
