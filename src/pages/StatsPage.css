@@ -44,6 +44,48 @@
   margin-top: var(--spacing-xl);
 }
 
+/* Sections settle as they come into view.
+ *
+ * Scroll-driven animations rather than an IntersectionObserver per section:
+ * Postęp has thirteen of them, this costs no JavaScript at all, and the whole
+ * thing is inert where `animation-timeline` isn't supported — the sections are
+ * simply already at their final state, which is the correct fallback.
+ *
+ * `@supports` is load-bearing rather than decorative. Without it, a browser
+ * that parses the keyframes but ignores `animation-timeline` would run this as
+ * an ordinary time-based animation: every section on the page would fade from
+ * zero at once, on load, including the ones below the fold.
+ *
+ * `animation-range` ends at 32% so a section finishes settling shortly after
+ * its top edge clears the fold — it reads as arriving, not as being dragged in.
+ *
+ * TRAP, and it cost an hour: a transform in the keyframes makes the section a
+ * containing block for `position: fixed` DESCENDANTS — permanently, because the
+ * animation is always attached. A child that goes full screen then lays itself
+ * out against the section instead of the viewport. Any section hosting such a
+ * child opts out with --overlay-host below.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .statspage__section {
+      animation: statspage-settle linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 32%;
+    }
+
+    @keyframes statspage-settle {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hosts a child that goes full screen (the Constellation). No transform
+       here, so `position: fixed` inside still resolves against the viewport. */
+    .statspage__section--overlay-host {
+      animation: none;
+    }
+  }
+}
+
 /* Same recipe as .u-kicker (surfaces.css) — kept local rather than adding
    the class in ~10 call sites, but on the same tokens so it stays in step. */
 .statspage__section-title {

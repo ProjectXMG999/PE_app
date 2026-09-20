@@ -1,0 +1,326 @@
+/* The Constellation panel.
+ *
+ * Dressed as one of Postęp's liquid-glass cards (.u-liquid), with the same
+ * shallow shadow RetentionBars uses — it sits between sections and the
+ * material's full float read as it spilling onto the one below.
+ *
+ * The sky inside keeps its own dark ground in both themes (see
+ * Constellation.tsx): stars are additive light, and additive light on paper is
+ * a grey smudge. The level hues still come from the shared --accent-* tokens,
+ * so the palette is the app's — only the ground is fixed. */
+
+.constellation {
+  --constellation-ground: #05060c;
+  --liquid-shadow: 0 8px 24px oklch(0 0 0 / 0.22);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: 18px var(--spacing-md) var(--spacing-md);
+  border-radius: var(--radius-xl);
+}
+
+[data-theme="light"] .constellation {
+  --liquid-shadow: 0 6px 18px oklch(0.25 0.04 280 / 0.08);
+}
+
+.constellation__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.constellation__sub {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  color: var(--text-muted);
+  max-width: 34ch;
+}
+
+/* 40px tall, not 30: this is a thumb target on a phone, and it sits next to a
+   canvas that swallows every stray touch. */
+.constellation__expand {
+  flex-shrink: 0;
+  min-height: 40px;
+  padding: 0 var(--spacing-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full, 999px);
+  background: var(--surface-translucent);
+  color: var(--text-secondary);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.constellation__expand:active {
+  transform: scale(0.97);
+}
+
+.constellation__sky {
+  position: relative;
+  /* Not square. A 1:1 canvas is 358px tall at phone width and turned the panel
+     into a full screen of black with the legend pushed under the fold; the disc
+     is drawn against the SHORTER axis, so a wider box costs it nothing and
+     leaves room for the key and the count. */
+  aspect-ratio: 6 / 5;
+  max-height: 42vh;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl, 22px);
+  background: var(--constellation-ground);
+}
+
+.constellation__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* The canvas handles pan and pinch itself — leaving the browser its default
+     touch behaviour would scroll the page out from under the gesture. */
+  touch-action: none;
+  cursor: grab;
+}
+
+.constellation__canvas:active {
+  cursor: grabbing;
+}
+
+.constellation__empty {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  margin: 0;
+  padding: var(--space-4, 16px);
+  text-align: center;
+  font-size: var(--text-sm, 14px);
+  line-height: 1.6;
+  color: oklch(0.82 0.03 275 / 0.62);
+  pointer-events: none;
+}
+
+/* Floating chrome over the starfield, so it takes the chrome glass blur from
+   the one --glass-* scale rather than a locally invented radius. The fills
+   below stay raw and dark on purpose: this view has no light theme — it is a
+   night sky in both. */
+.constellation__reset,
+.constellation__detail {
+  position: absolute;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.constellation__reset {
+  /* Bottom-right, not top-right: on a phone the top corners of a full-width
+     canvas are the hardest place to reach one-handed, and this is the control
+     you want after panning yourself into a corner. */
+  right: 10px;
+  bottom: 10px;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid oklch(1 0 0 / 0.16);
+  border-radius: var(--radius-full, 999px);
+  background: oklch(0.2 0.02 275 / 0.55);
+  color: oklch(0.95 0.01 275);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* The detail panel owns the bottom of the canvas while it is open, so the
+   recentre button steps out of its way rather than sitting on top of it. */
+.constellation__sky--detail .constellation__reset {
+  top: 10px;
+  bottom: auto;
+}
+
+.constellation__detail {
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 12px 14px;
+  border: 1px solid oklch(1 0 0 / 0.14);
+  border-radius: var(--radius-lg, 16px);
+  background: oklch(0.16 0.02 275 / 0.72);
+  color: oklch(0.96 0.01 275);
+}
+
+.constellation__detail-close {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: none;
+  color: oklch(0.96 0.01 275 / 0.6);
+  font-size: 19px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.constellation__detail-word {
+  margin: 0;
+  padding-right: 26px;
+  font-size: var(--text-lg, 17px);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.constellation__detail-pl {
+  margin: 1px 0 0;
+  font-size: var(--text-xs, 12px);
+  color: oklch(0.96 0.01 275 / 0.62);
+}
+
+.constellation__detail-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 10px 0 0;
+}
+
+.constellation__detail-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.constellation__detail-stats dt {
+  font-size: var(--text-3xs, 10px);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: oklch(0.96 0.01 275 / 0.45);
+}
+
+.constellation__detail-stats dd {
+  margin: 0;
+  font-size: var(--text-sm, 14px);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.constellation__detail-pack {
+  margin: 9px 0 0;
+  font-size: var(--text-3xs, 10px);
+  color: oklch(0.96 0.01 275 / 0.4);
+}
+
+/* ── Legend ─────────────────────────────────────────────────────────────── */
+
+.constellation__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+}
+
+.constellation__key {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-3xs, 10px);
+  color: var(--text-muted);
+}
+
+.constellation__key::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.constellation__key--dust::before {
+  background: var(--text-muted);
+  opacity: 0.3;
+}
+
+.constellation__key--learning::before {
+  background: var(--accent-orange);
+  opacity: 0.6;
+}
+
+.constellation__key--known::before {
+  background: var(--accent-green);
+}
+
+.constellation__key--retired::before {
+  background: #fff;
+  box-shadow: 0 0 7px 1px oklch(1 0 0 / 0.75);
+}
+
+/* The sky is a night sky in both themes, so this swatch stays white — but a
+   white disc with a white glow is invisible on a light card. The fill keeps its
+   meaning ("burning hottest"); a hairline gives it back its edge. */
+[data-theme="light"] .constellation__key--retired::before {
+  box-shadow: 0 0 0 1px var(--border-strong), 0 0 6px 1px oklch(0.55 0.18 292 / 0.3);
+}
+
+.constellation__foot {
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.constellation__hint {
+  color: var(--text-secondary);
+}
+
+/* ── Expanded ───────────────────────────────────────────────────────────── */
+
+/* Full screen sheds the card entirely.
+ *
+ * .u-liquid is a translucent material — its ::before carries the glass fill and
+ * a backdrop-filter, its ::after the rim — and a translucent full-screen layer
+ * shows the page still sitting behind it. So the expanded view opts out of all
+ * three: opaque ground, no rim, no lamp. */
+.constellation--expanded {
+  position: fixed;
+  inset: 0;
+  /* Above BottomNav (1000) and TopBar (100). "Full screen" has to mean the app
+     chrome too — at z-index 60 the tab bar sat on the footer and the top bar
+     covered the Zamknij button, which is the one control that gets you out. */
+  z-index: 1100;
+  gap: 10px;
+  padding: calc(env(safe-area-inset-top) + 14px) 14px calc(env(safe-area-inset-bottom) + 14px);
+  border-radius: 0;
+  background: var(--constellation-ground);
+  box-shadow: none;
+}
+
+.constellation--expanded::before,
+.constellation--expanded::after {
+  display: none;
+}
+
+.constellation--expanded .constellation__sky {
+  flex: 1;
+  aspect-ratio: auto;
+  /* The inline panel caps the sky so the key and the count stay above the fold.
+     Full screen has no fold to protect, and leaving the cap on collapsed the
+     canvas to 42vh inside a flex column that had already given it the rest. */
+  max-height: none;
+  min-height: 0;
+}
+
+.constellation--expanded .constellation__title,
+.constellation--expanded .constellation__sub,
+.constellation--expanded .constellation__foot,
+.constellation--expanded .constellation__key {
+  color: oklch(0.95 0.01 275 / 0.72);
+}
+
+.constellation--expanded .constellation__title {
+  color: oklch(0.98 0.005 275);
+}
+
+.constellation--expanded .constellation__expand {
+  border-color: oklch(1 0 0 / 0.18);
+  background: oklch(1 0 0 / 0.08);
+  color: oklch(0.96 0.01 275);
+}

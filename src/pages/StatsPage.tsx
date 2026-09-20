@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell'
 import { CompassHero } from '../components/progress/CompassHero'
@@ -10,6 +10,7 @@ import { ReadinessBreakdown } from '../components/progress/ReadinessBreakdown'
 import { RetentionBars } from '../components/progress/RetentionBars'
 import { ReviewQueueSummary } from '../components/progress/ReviewQueueSummary'
 import { WeeklyRecapCard } from '../components/progress/WeeklyRecapCard'
+import { YearRecapCard } from '../components/progress/YearRecapCard'
 import { PackageProgressList } from '../components/stats/PackageProgressList'
 import { LevelProgressBars } from '../components/home/LevelProgressBars'
 import { CategoryProgressBars } from '../components/stats/CategoryProgressBars'
@@ -22,6 +23,7 @@ import { useReadinessScore } from '../hooks/useReadinessScore'
 import { useAppStore } from '../store/useAppStore'
 import { getAllDailyTime, getEffectivenessByTimeOfDay, TimeOfDayStats } from '../services/db'
 import { computeWeeklyRecap, recapWorthShowing } from '../services/weeklyRecap'
+import { computeYearSummary, yearWorthShowing } from '../services/yearCard'
 import { DailyTime } from '../types/progress'
 import { LEVEL_META, ROUTE_TOTAL, stationForThreshold } from '../data/levels'
 import { plWords, plDays, plPacks } from '../utils/plural'
@@ -30,6 +32,10 @@ import { PackMeta } from '../types/vocabulary'
 import './StatsPage.css'
 
 const allPacks = packagesIndex as PackMeta[]
+
+/** Split out for the same reason MeshField is: it carries the WebGL runtime,
+ *  and nobody should download that just to read their streak. */
+const Constellation = lazy(() => import('../components/progress/Constellation/Constellation'))
 
 /** Words available across all 864 packs. Larger than ROUTE_TOTAL — the route is
  *  a goal, the corpus is the supply. */
@@ -121,7 +127,7 @@ export function StatsPage() {
 
   // Words learned per minute of study, the basis for the projection below —
   // the same model the daily-goal picker on Dzisiaj projects with.
-  const wordsPerMinute = studyWordsPerMinute(knownWords, snapshot?.bulkKnownTotal ?? 0, studyMinutes)
+  const wordsPerMinute = studyWordsPerMinute(knownWords, snapshot?.declaredKnownTotal ?? 0, studyMinutes)
 
   // Arriving from Dzisiaj's review element (/postęp#powtorki): the page renders
   // its sections as data lands, so wait for the snapshot, then bring the
@@ -146,6 +152,18 @@ export function StatsPage() {
     return recapWorthShowing(r) ? r : null
   }, [snapshot, achievements, dailyTime, levelStats, knownWords])
 
+  // Only once there is a year's worth of something to show — see
+  // YEAR_CARD_MIN_DAYS. A "year in review" built from four days of use is
+  // embarrassing for whoever shares it.
+  const yearSummary = useMemo(() => {
+    if (snapshot == null) return null
+    const next = levelStats?.nextLevel != null && levelStats.nextLevelWords != null
+      ? { words: levelStats.nextLevelWords, name: stationName(knownWords, levelStats.nextLevelWords) }
+      : null
+    const y = computeYearSummary(snapshot, dailyTime, next)
+    return yearWorthShowing(y) ? y : null
+  }, [snapshot, dailyTime, levelStats, knownWords])
+
   return (
     <AppShell>
       <div className="statspage">
@@ -167,14 +185,28 @@ export function StatsPage() {
           />
         )}
 
-        {!loading && (snapshot?.bulkKnownTotal ?? 0) > 0 && (
+        {!loading && (snapshot?.declaredKnownTotal ?? 0) > 0 && (
           <p className="statspage__note">
-            {snapshot!.bulkKnownTotal === 1
+            {snapshot!.declaredKnownTotal === 1
               ? 'Jedno słowo oznaczyłeś'
-              : `${snapshot!.bulkKnownTotal.toLocaleString('pl-PL')} ${plWords(snapshot!.bulkKnownTotal)} oznaczyłeś`}{' '}
-            jako znane bez nauki w aplikacji — {snapshot!.bulkKnownTotal === 1 ? 'liczy' : 'liczą'} się
-            do „słów poznanych", ale nie do tempa.
+              : `${snapshot!.declaredKnownTotal.toLocaleString('pl-PL')} ${plWords(snapshot!.declaredKnownTotal)} oznaczyłeś`}{' '}
+            jako znane bez nauki w aplikacji — {snapshot!.declaredKnownTotal === 1 ? 'liczy' : 'liczą'} się
+            do „słów poznanych", ale nie do tempa ani do punktów/odznak.
           </p>
+        )}
+
+        {/* --overlay-host: the panel can go full screen, and the scroll-settle
+            animation on a plain section would trap that `position: fixed`
+            inside it — see StatsPage.css. */}
+        {snapshot != null && (
+          <section className="statspage__section statspage__section--overlay-host">
+            <h2 className="statspage__section-title">Konstelacja pamięci</h2>
+            <Suspense
+              fallback={<div className="statspage__skeleton skeleton" style={{ height: 460 }} />}
+            >
+              <Constellation packs={allPacks} wordProgress={snapshot.wordProgress} />
+            </Suspense>
+          </section>
         )}
 
         <section className="statspage__section" id="powtorki">
@@ -213,13 +245,28 @@ export function StatsPage() {
           {achievements == null ? (
             <div className="statspage__skeleton skeleton" style={{ height: 260 }} />
           ) : (
-            <AchievementGrid states={achievements.states} onSeen={markUnlocksSeen} />
+            <AchievementGrid
+              states={achievements.states}
+              onSeen={markUnlocksSeen}
+              knownTotal={knownWords}
+              nextStation={
+                levelStats?.nextLevel != null && levelStats.nextLevelWords != null
+                  ? { words: levelStats.nextLevelWords, name: stationName(knownWords, levelStats.nextLevelWords) }
+                  : null
+              }
+            />
           )}
         </section>
 
         {recap && (
           <section className="statspage__section">
             <WeeklyRecapCard recap={recap} />
+          </section>
+        )}
+
+        {yearSummary && (
+          <section className="statspage__section">
+            <YearRecapCard year={yearSummary} />
           </section>
         )}
 
@@ -302,7 +349,7 @@ export function StatsPage() {
           {loading ? (
             <div className="statspage__skeleton skeleton" style={{ height: 80 }} />
           ) : (
-            <PackageProgressList key={tick} limit={5} />
+            <PackageProgressList limit={5} refreshKey={tick} />
           )}
         </section>
       </div>
