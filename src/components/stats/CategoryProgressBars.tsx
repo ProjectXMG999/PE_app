@@ -1,3 +1,4 @@
+import { memo, useMemo } from 'react'
 import { PackMeta } from '../../types/vocabulary'
 import { knownByCategory } from '../../data/categories'
 import './CategoryProgressBars.css'
@@ -7,8 +8,10 @@ interface Props {
   knownMap: Map<string, number>
 }
 
-export function CategoryProgressBars({ allPacks, knownMap }: Props) {
-  const rows = knownByCategory(allPacks, knownMap)
+export const CategoryProgressBars = memo(function CategoryProgressBars({ allPacks, knownMap }: Props) {
+  // knownByCategory walks the catalogue once per category; both props are
+  // stable per snapshot, so there is nothing to recompute between them.
+  const rows = useMemo(() => knownByCategory(allPacks, knownMap), [allPacks, knownMap])
 
   return (
     <div className="category-progress">
@@ -26,4 +29,4 @@ export function CategoryProgressBars({ allPacks, knownMap }: Props) {
       ))}
     </div>
   )
-}
+})

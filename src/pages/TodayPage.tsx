@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
 import { SessionHero } from '../components/today/SessionHero'
@@ -9,15 +9,16 @@ import { TodayGuideButton } from '../components/today/TodayGuideSheet'
 import { PathStrip, StripBand, StripTick } from '../components/today/PathStrip'
 import { ModeSlider, StudyPath } from '../components/today/ModeSlider'
 import { LevelUpPrompt } from '../components/today/LevelUpPrompt'
-import { EASE_SPRING, fadeUpReduced, heroCard, heroReveal, staggerContainer, staggerContainerWide } from '../components/today/motion'
+import { EASE_SPRING, fadeUpReduced, glassReveal, glassRevealReduced, heroReveal, staggerContainer, staggerContainerWide } from '../components/today/motion'
 import { useProgressData, avgWordsPerDayTrend, packLevelOf } from '../hooks/useProgressData'
 import { useProgressPulse } from '../hooks/useProgressPulse'
-import { useCountUp } from '../hooks/useCountUp'
+import { FlowNumber } from '../components/shared/FlowNumber'
 import { useHaptics } from '../hooks/useHaptics'
 import { unlockAudioGlobally } from '../audio/audioUnlock'
 import { playTick, playSuccess } from '../services/sfx'
 import { nextListenPack, nextTrainPack, listenedPacksCount, estimateMinutes, packLevelThresholds } from '../data/nextPack'
 import { shouldPromptLevelUp } from '../services/comfort'
+import { reviewMinutes } from '../services/reviewQueue'
 import { LEVEL_COLORS, LEVEL_META, ROUTE_TOTAL } from '../data/levels'
 import { BoltGlyph, CheckGlyph, ChevronRightGlyph, HeadphonesGlyph, RepeatGlyph } from '../components/mode/glyphs'
 import { plWords } from '../utils/plural'
@@ -62,9 +63,17 @@ const trainBand = (knownWords: number) =>
 
 const listenBand = (listenedPacks: number) => bandFor(listenedPacks, listenThresholds)
 
-/** "środa, 17 września" — the line above the large title. */
-const todayLabel = () =>
-  new Date().toLocaleDateString('pl-PL', { weekday: 'long', day: 'numeric', month: 'long' })
+/** "środa, 17 września" — the line above the large title.
+ *
+ *  The formatter is built once for the module rather than per call:
+ *  `toLocaleDateString` constructs a fresh Intl.DateTimeFormat every time, and
+ *  this is called from the render body of a component that re-renders on every
+ *  frame of a count-up. The Date is still read per call, so the label is still
+ *  right after midnight. */
+const dayFormatter = new Intl.DateTimeFormat('pl-PL', {
+  weekday: 'long', day: 'numeric', month: 'long',
+})
+const todayLabel = () => dayFormatter.format(new Date())
 
 /**
  * Dzisiaj — the coaching screen, laid out to fit a phone without scrolling:
@@ -108,9 +117,20 @@ export function TodayPage() {
     setLevelUpTarget(prompt?.target ?? null)
   }, [snapshot, comfortLevel, strongStreak, todayLevel, levelUpPromptState])
 
-  const scopedPacks = todayLevel == null ? allPacks : allPacks.filter(p => p.level >= todayLevel)
-  const listen = nextListenPack(scopedPacks, snapshot)
-  const train = nextTrainPack(scopedPacks, snapshot)
+  // Memoised because this page re-renders on every mode toggle, progress pulse
+  // and goal-sheet open, and unmemoised each of those re-filtered all 834 packs
+  // and re-scanned them twice more for the two next-pack picks. (It used to be
+  // far worse: the serving counter held its interpolation in this component's
+  // state, so a single count-up meant ~48 of these renders in 800 ms. That one
+  // is now a NumberFlow, which animates without involving React at all.)
+  // `allPacks` is a module constant, so level is the only input; `snapshot`
+  // changes identity only per fetch.
+  const scopedPacks = useMemo(
+    () => (todayLevel == null ? allPacks : allPacks.filter(p => p.level >= todayLevel)),
+    [todayLevel]
+  )
+  const listen = useMemo(() => nextListenPack(scopedPacks, snapshot), [scopedPacks, snapshot])
+  const train = useMemo(() => nextTrainPack(scopedPacks, snapshot), [scopedPacks, snapshot])
 
   const [activeMode, setActiveMode] = useState<StudyPath>(() => (train ? 'train' : 'listen'))
 
@@ -118,12 +138,16 @@ export function TodayPage() {
   const serving = pulse?.servingLeft ?? 0
   const urgency = pulse?.reviewUrgency ?? 'calm'
   const reviewDone = backlog > 0 && serving === 0
-  const pace = snapshot ? avgWordsPerDayTrend(snapshot) : null
+  // The learner's own measured seconds-per-card, so the two "ok. N min" below
+  // describe their pace rather than an assumed one.
+  const reviewSec = pulse?.reviewSecPerCard
+  // Three full passes over the session history — not something to redo on every
+  // frame of a count-up.
+  const pace = useMemo(() => (snapshot ? avgWordsPerDayTrend(snapshot) : null), [snapshot])
   const showPace = pace?.deltaPct != null && pace.deltaPct > 0
 
   const nothingLeft = listen == null && train == null && serving === 0
   const goalMet = pulse?.goalMet ?? false
-  const shownServing = useCountUp(serving, 800)
 
   useEffect(() => {
     if (nothingLeft && !celebratedRef.current) {
@@ -151,7 +175,9 @@ export function TodayPage() {
   }
 
   const variants = reduced ? fadeUpReduced : heroReveal
-  const cardVariants = reduced ? fadeUpReduced : heroCard
+  /** For blocks that are — or contain — a .u-liquid surface: rise, never fade.
+   *  See glassReveal in today/motion.ts for what fading does to their fog. */
+  const glassVariants = reduced ? glassRevealReduced : glassReveal
 
   const levelName = (level: number) => LEVEL_META.find(l => l.level === level)?.name ?? `Poziom ${level}`
 
@@ -166,7 +192,11 @@ export function TodayPage() {
     />
   )
 
-  const listenedCount = snapshot ? listenedPacksCount(allPacks, snapshot) : 0
+  // A fourth full pass over the catalogue — same reasoning as scopedPacks above.
+  const listenedCount = useMemo(
+    () => (snapshot ? listenedPacksCount(allPacks, snapshot) : 0),
+    [snapshot]
+  )
   const listenStrip = snapshot && (
     <PathStrip
       eyebrow={<><HeadphonesGlyph size={14} weight={2} /> Twój <em>progress</em> słuchania</>}
@@ -182,7 +212,7 @@ export function TodayPage() {
     <motion.button
       type="button"
       className="today__pick u-liquid"
-      variants={cardVariants}
+      variants={glassVariants}
       onClick={() => pressCta(() => navigate(`/pakiet/${train.pack.id}/fiszki-start`, { viewTransition: true }))}
     >
       {showPace && (
@@ -195,7 +225,7 @@ export function TodayPage() {
       <span className="today__pick-cta">Zacznij trening</span>
     </motion.button>
   ) : (
-    <motion.div className="today__path-empty u-liquid" variants={variants}>
+    <motion.div className="today__path-empty u-liquid" variants={glassVariants}>
       <p>Na tym poziomie nie ma nic do trenowania. Zajrzyj do Słuchaj albo zmień poziom.</p>
     </motion.div>
   )
@@ -204,7 +234,7 @@ export function TodayPage() {
     <motion.button
       type="button"
       className="today__pick u-liquid"
-      variants={cardVariants}
+      variants={glassVariants}
       onClick={() => pressCta(() => navigate(`/pakiet/${listen.pack.id}/start`, { viewTransition: true }))}
     >
       <span className="today__pick-name">{listen.pack.name}</span>
@@ -214,13 +244,14 @@ export function TodayPage() {
       <span className="today__pick-cta">Zacznij słuchać</span>
     </motion.button>
   ) : (
-    <motion.div className="today__path-empty u-liquid" variants={variants}>
+    <motion.div className="today__path-empty u-liquid" variants={glassVariants}>
       <p>Na tym poziomie nie ma nic do słuchania. Zajrzyj do Trenuj albo zmień poziom.</p>
     </motion.div>
   )
 
+  // PathStrip is glass too, so this slot rises without fading.
   const stripSlot = (strip: typeof trainStrip) => (
-    <motion.div variants={variants}>
+    <motion.div variants={glassVariants}>
       {strip || <div className="today__strip-loading" />}
     </motion.div>
   )
@@ -233,7 +264,8 @@ export function TodayPage() {
       <motion.div className="today" variants={staggerContainerWide} initial="hidden" animate="show">
         {/* Large title, the way an iOS tab opens: the date above, the screen's
             name below, the level and the one info button on the right. */}
-        <motion.header className="today__header" variants={variants}>
+        {/* LevelPill in here is glass — glassVariants, not variants. */}
+        <motion.header className="today__header" variants={glassVariants}>
           <div className="today__heading">
             <p className="today__date">{todayLabel()}</p>
             <h1 className="today__title">Dzisiaj</h1>
@@ -245,7 +277,7 @@ export function TodayPage() {
         </motion.header>
 
         {nothingLeft ? (
-          <motion.section className="today__done u-liquid u-liquid--gold" variants={variants}>
+          <motion.section className="today__done u-liquid u-liquid--gold" variants={glassVariants}>
             <motion.span
               className="today__done-icon"
               aria-hidden="true"
@@ -267,7 +299,8 @@ export function TodayPage() {
         ) : (
           <>
             <motion.div className="today__group" variants={staggerContainer}>
-              <motion.div variants={cardVariants}>
+              {/* SessionHero is glass. */}
+              <motion.div variants={glassVariants}>
                 {pulse == null ? (
                   <div className="today__skeleton skeleton" style={{ height: 196 }} />
                 ) : (
@@ -284,7 +317,7 @@ export function TodayPage() {
               {backlog > 0 && (
                 <motion.div
                   className={`today__reviews u-liquid today__reviews--${reviewDone ? 'done' : urgency}`}
-                  variants={variants}
+                  variants={glassVariants}
                 >
                   {/* Row 1 — the action: today's portion and how long it takes. */}
                   <button
@@ -298,9 +331,14 @@ export function TodayPage() {
                     <span className="today__reviews-body">
                       <strong>{reviewDone ? 'Porcja na dziś zrobiona' : 'Powtórka na dziś'}</strong>
                       <span>
-                        {reviewDone
-                          ? 'Możesz powtórzyć więcej z kolejki'
-                          : `${shownServing} ${plWords(serving)} · ok. ${estimateMinutes(serving)} min`}
+                        {reviewDone ? (
+                          'Możesz powtórzyć więcej z kolejki'
+                        ) : (
+                          <>
+                            <FlowNumber value={serving} /> {plWords(serving)} · ok.{' '}
+                            {reviewMinutes(serving, reviewSec)} min
+                          </>
+                        )}
                       </span>
                     </span>
                     <span className="today__reviews-chevron" aria-hidden="true"><ChevronRightGlyph size={16} weight={2.2} /></span>
@@ -319,7 +357,7 @@ export function TodayPage() {
                           <em> · {urgency === 'urgent' ? 'sporo zaległych' : 'rośnie'}</em>
                         )}
                       </span>
-                      <strong>{backlog.toLocaleString('pl-PL')} {plWords(backlog)} · ok. {estimateMinutes(backlog)} min</strong>
+                      <strong>{backlog.toLocaleString('pl-PL')} {plWords(backlog)} · ok. {reviewMinutes(backlog, reviewSec)} min</strong>
                     </span>
                     <span className="today__reviews-link">
                       Statystyki <ChevronRightGlyph size={14} weight={2.2} />
@@ -330,7 +368,8 @@ export function TodayPage() {
             </motion.div>
 
             <motion.div className="today__group" variants={staggerContainer}>
-              <motion.div variants={variants}>
+              {/* The slider's own tab track is glass. */}
+              <motion.div variants={glassVariants}>
                 <ModeSlider
                   active={activeMode}
                   onChange={setActiveMode}
