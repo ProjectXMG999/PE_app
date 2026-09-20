@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest'
-import { record, summarize, CardOutcome, HORIZON_BUCKETS } from './smartOutcome'
+import { record, summarize, judgesDifficulty, CardOutcome, MEMORY_LEVELS } from './smartOutcome'
 import { WordProgress } from '../types/progress'
 
-const TODAY = '2026-09-20'
+const TODAY = '2026-09-21'
 
 const wp = (o: Partial<WordProgress> = {}): WordProgress => ({
   wordId: 'w1',
@@ -16,8 +16,7 @@ const wp = (o: Partial<WordProgress> = {}): WordProgress => ({
 const out = (o: Partial<CardOutcome> = {}): CardOutcome => ({
   segment: 'review',
   transition: 'held',
-  intervalBefore: 4,
-  intervalAfter: 11,
+  memoryDays: 11,
   ...o,
 })
 
@@ -26,7 +25,7 @@ describe('record', () => {
     const entered = record({
       segment: 'learn',
       before: undefined,
-      after: wp({ status: 'known', nextReviewAt: '2026-09-23' }),
+      after: wp({ status: 'known', stability: 3 }),
       recalled: true,
       today: TODAY,
     })
@@ -36,115 +35,101 @@ describe('record', () => {
     const met = record({
       segment: 'learn',
       before: wp({ status: 'learning' }),
-      after: wp({ status: 'learning', nextReviewAt: '2026-09-21' }),
+      after: wp({ status: 'learning', stability: 1 }),
       recalled: false,
       today: TODAY,
     })
     expect(met.transition).toBe('met')
 
-    const known = wp({ status: 'known', lastSeen: '2026-09-16T08:00:00.000Z', nextReviewAt: '2026-09-20' })
-    expect(record({ segment: 'review', before: known, after: wp({ status: 'known', nextReviewAt: '2026-10-01' }), recalled: true, today: TODAY }).transition)
+    const known = wp({ status: 'known', stability: 15 })
+    expect(record({ segment: 'review', before: known, after: wp({ status: 'known', stability: 104 }), recalled: true, today: TODAY }).transition)
       .toBe('held')
-    expect(record({ segment: 'review', before: known, after: wp({ status: 'known', nextReviewAt: '2026-09-21' }), recalled: false, today: TODAY }).transition)
+    expect(record({ segment: 'review', before: known, after: wp({ status: 'known', stability: 2 }), recalled: false, today: TODAY }).transition)
       .toBe('slipped')
   })
 
-  it('measures the previous interval from when the word was last answered, not from today', () => {
-    // Scheduled on the 16th for the 20th: a 4-day interval it had been holding.
-    // Answered today, three days LATE — measuring from today would call that -3
-    // and report a fact about the queue rather than about the memory.
+  it('reads memory strength, not the scheduled date', () => {
+    // Stability and the next gap differ (~10% apart at the target retention).
+    // The screen reports LEVELS, so it must read the property of the memory.
     const o = record({
       segment: 'review',
-      before: wp({ status: 'known', lastSeen: '2026-09-16T08:00:00.000Z', nextReviewAt: '2026-09-20' }),
-      after: wp({ status: 'known', nextReviewAt: '2026-10-02' }),
-      recalled: true,
-      today: '2026-09-23',
-    })
-    expect(o.intervalBefore).toBe(4)
-    expect(o.intervalAfter).toBe(9)
-  })
-
-  it('has no previous interval for a word met for the first time', () => {
-    const o = record({
-      segment: 'learn',
-      before: undefined,
-      after: wp({ status: 'known', nextReviewAt: '2026-09-23' }),
+      before: wp({ status: 'known', stability: 15 }),
+      after: wp({ status: 'known', stability: 104, nextReviewAt: '2026-12-28' }),
       recalled: true,
       today: TODAY,
     })
-    expect(o.intervalBefore).toBeNull()
-    expect(o.intervalAfter).toBe(3)
+    expect(o.memoryDays).toBe(104)
+  })
+
+  it('falls back to the scheduled gap for a row with no stability', () => {
+    const o = record({
+      segment: 'review',
+      before: wp({ status: 'known' }),
+      after: wp({ status: 'known', nextReviewAt: '2026-09-30' }),
+      recalled: true,
+      today: TODAY,
+    })
+    expect(o.memoryDays).toBe(9)
+  })
+
+  it('places nothing when the word carries neither', () => {
+    const o = record({
+      segment: 'learn',
+      before: undefined,
+      after: wp({ status: 'learning' }),
+      recalled: false,
+      today: TODAY,
+    })
+    expect(o.memoryDays).toBeNull()
   })
 })
 
 describe('summarize', () => {
-  it('buckets by when the word comes back', () => {
+  it('sorts the session into memory tiers', () => {
     const s = summarize([
-      out({ intervalAfter: 1 }), out({ intervalAfter: 2 }),
-      out({ intervalAfter: 5 }),
-      out({ intervalAfter: 21 }),
-      out({ intervalAfter: 400 }),
+      out({ memoryDays: 1 }), out({ memoryDays: 2 }),
+      out({ memoryDays: 5 }),
+      out({ memoryDays: 21 }),
+      out({ memoryDays: 400 }),
     ])
-    expect(s.horizon).toEqual([2, 1, 1, 0, 1])
-    expect(s.horizon).toHaveLength(HORIZON_BUCKETS.length)
+    expect(s.levels).toEqual([2, 1, 1, 0, 1])
+    expect(s.levels).toHaveLength(MEMORY_LEVELS.length)
   })
 
-  it('compares the same words to themselves', () => {
-    const s = summarize([
-      out({ intervalBefore: 3, intervalAfter: 9 }),
-      out({ intervalBefore: 4, intervalAfter: 11 }),
-      out({ intervalBefore: 5, intervalAfter: 14 }),
-      // No previous schedule: contributes to the strip but to neither median.
-      out({ intervalBefore: null, intervalAfter: 1 }),
-    ])
-    expect(s.shift).toEqual({ before: 4, after: 11 })
-  })
-
-  it('uses a median so one graduating word cannot invent a horizon', () => {
-    const s = summarize([
-      out({ intervalBefore: 3, intervalAfter: 8 }),
-      out({ intervalBefore: 4, intervalAfter: 9 }),
-      out({ intervalBefore: 5, intervalAfter: 10 }),
-      out({ intervalBefore: 6, intervalAfter: 400 }),
-    ])
-    // A mean would claim these words come back in three and a half months.
-    expect(s.shift!.after).toBe(10)
-  })
-
-  it('says nothing when there is too little to compare, or nothing moved', () => {
-    expect(summarize([out(), out()]).shift).toBeNull()
-    expect(summarize([
-      out({ intervalBefore: 8, intervalAfter: 8 }),
-      out({ intervalBefore: 8, intervalAfter: 8 }),
-      out({ intervalBefore: 8, intervalAfter: 8 }),
-    ]).shift).toBeNull()
-  })
-
-  it('hides the strip when every word lands in one bucket', () => {
-    // A sitting of nothing but first-time words: all scheduled alike, so the
-    // "distribution" is one bar.
+  it('hides the breakdown when every word lands in one tier', () => {
+    // A sitting of nothing but first-time words: all land alike, so the
+    // "distribution" is a single bar.
     const allNew = Array.from({ length: 10 }, () =>
-      out({ transition: 'entered', intervalBefore: null, intervalAfter: 2 })
+      out({ transition: 'entered', memoryDays: 2 })
     )
-    expect(summarize(allNew).showHorizon).toBe(false)
-
-    const spread = [...allNew.slice(0, 8), out({ intervalAfter: 30 })]
-    expect(summarize(spread).showHorizon).toBe(true)
+    expect(summarize(allNew).showLevels).toBe(false)
+    expect(summarize([...allNew.slice(0, 8), out({ memoryDays: 30 })]).showLevels).toBe(true)
   })
 
-  it('hides the strip when too few words are scheduled at all', () => {
-    const s = summarize([out({ intervalAfter: 1 }), out({ intervalAfter: 30 })])
-    expect(s.showHorizon).toBe(false)
+  it('hides the breakdown when too few words could be placed', () => {
+    expect(summarize([out({ memoryDays: 1 }), out({ memoryDays: 30 })]).showLevels).toBe(false)
   })
 
-  it('counts every answered card, scheduled or not', () => {
+  it('counts every answered card, placed or not', () => {
     const s = summarize([
-      out({ transition: 'entered', intervalAfter: 3 }),
-      out({ transition: 'held', intervalAfter: 20 }),
-      out({ transition: 'slipped', intervalAfter: 1 }),
-      out({ transition: 'met', intervalAfter: null }),
+      out({ transition: 'entered', memoryDays: 3 }),
+      out({ transition: 'held', memoryDays: 20 }),
+      out({ transition: 'slipped', memoryDays: 1 }),
+      out({ transition: 'met', memoryDays: null }),
     ])
     expect(s.total).toBe(4)
     expect(s.transitions).toEqual({ entered: 1, held: 1, slipped: 1, met: 1 })
+    // The unplaceable one still counts as a card, just not as a bar.
+    expect(s.levels.reduce((a, b) => a + b, 0)).toBe(3)
+  })
+})
+
+describe('judgesDifficulty', () => {
+  it('only speaks for a sitting that carried new material', () => {
+    expect(judgesDifficulty(6)).toBe(true)
+    // The regression this exists for: comfort is folded from learn + stretch
+    // alone, so a review-only sitting leaves it untouched and showing its band
+    // captions THIS session with a reading taken days ago.
+    expect(judgesDifficulty(0)).toBe(false)
   })
 })

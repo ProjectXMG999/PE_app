@@ -6,16 +6,22 @@ import { dayKey, daysBetween } from '../utils/day'
  * What a sitting actually CHANGED, as opposed to what it consisted of.
  *
  * The done screen used to report the session's composition — cards answered,
- * times "Znam" was tapped — which is a description of the last ten minutes, not
- * of any progress. In a spaced-repetition app the thing that moves is the
- * SCHEDULE: every answer rewrites when the word comes back and how strongly it
- * is held. `applyKnown`/`applyUnknown` compute exactly that on every card and
- * the runner then dropped it on the floor, keeping two integers per segment.
+ * times "Znam" was tapped — which describes the last ten minutes, not any
+ * progress. `applyKnown`/`applyUnknown` compute the real change on every card
+ * (memory strength and the next date) and the runner dropped it on the floor,
+ * keeping two integers per segment.
  *
- * This module is the memory of it. Pure and synchronous: `record` folds one
- * before/after pair into a `CardOutcome`, `summarize` turns the run's outcomes
- * into the numbers the screen draws. Nothing here is persisted — it describes
- * one sitting, and the durable record is the WordProgress rows themselves.
+ * Pure and synchronous: `record` folds one before/after pair into a
+ * `CardOutcome`, `summarize` turns the run's outcomes into the two facts the
+ * screen states. Nothing here is persisted — it describes one sitting, and the
+ * durable record is the WordProgress rows themselves.
+ *
+ * What this module deliberately does NOT do is compare a word's old interval to
+ * its new one and call the difference a cadence. FSRS intervals expand after
+ * every successful review, so a word was never "on a 15-day cycle" — it had a
+ * 15-day gap behind it and a 104-day one ahead. Phrasing that as "trzeba było
+ * powtarzać co 15 dni — teraz wystarczy raz na 104 dni" described a schedule
+ * the scheduler does not run.
  */
 
 /**
@@ -32,13 +38,16 @@ export type Transition = 'entered' | 'held' | 'slipped' | 'met'
 export interface CardOutcome {
   segment: SmartSegment
   transition: Transition
-  /** How many days the word was LAST scheduled across — the interval it had
-   *  been holding for. Null when it had no schedule to compare against (a word
-   *  being met for the first time, or a pre-FSRS row with no date). */
-  intervalBefore: number | null
-  /** Days until it is due again after this answer. Null when it is no longer
-   *  scheduled at all. */
-  intervalAfter: number | null
+  /**
+   * Memory strength after the answer, in days — FSRS `stability`, i.e. how long
+   * the word can now go before recall drops to the target. Null when the word
+   * carries no reading (a pre-FSRS row the scheduler hasn't migrated).
+   *
+   * Stability rather than "days until the next review": the two are within ~10%
+   * of each other, but only one of them is a property of the MEMORY. The screen
+   * reports levels, so it reads the level.
+   */
+  memoryDays: number | null
 }
 
 /**
@@ -63,104 +72,92 @@ export function record(args: {
     ? recalled ? 'held' : 'slipped'
     : after.status === 'known' ? 'entered' : 'met'
 
-  // The interval it HAD been holding: scheduled date minus the day it was last
-  // answered. Measuring from today instead would report how overdue the word
-  // was, which is a fact about the queue rather than about the memory.
-  const intervalBefore =
-    before?.nextReviewAt && before.lastSeen
-      ? Math.max(0, daysBetween(dayKey(new Date(before.lastSeen)), before.nextReviewAt))
-      : null
+  // Falls back to the scheduled gap for a row with no stability: the legacy
+  // interval ladder is a decent proxy, and a word with neither is simply
+  // unplaceable and says so with null.
+  const memoryDays = after.stability
+    ?? (after.nextReviewAt ? Math.max(0, daysBetween(today, after.nextReviewAt)) : null)
 
-  const intervalAfter = after.nextReviewAt
-    ? Math.max(0, daysBetween(today, after.nextReviewAt))
-    : null
-
-  return { segment, transition, intervalBefore, intervalAfter }
+  return { segment, transition, memoryDays }
 }
 
-/** Where a next-review distance falls on the strip. Open-ended at the top:
- *  a durable word in deep maintenance is a year out and must not widen the
- *  scale for everything else. */
-export const HORIZON_BUCKETS: { maxDays: number; label: string }[] = [
-  { maxDays: 2, label: '1–2 dni' },
-  { maxDays: 7, label: '3–7 dni' },
-  { maxDays: 30, label: '2–4 tyg.' },
-  { maxDays: 180, label: '1–6 mies.' },
-  { maxDays: Infinity, label: 'dłużej' },
+/**
+ * The memory-strength tiers the screen reports, weakest first.
+ *
+ * Fixed boundaries, never rescaled to the sitting: the whole value of this
+ * breakdown is watching words climb out of the left-hand tiers over weeks, and
+ * a scale that redrew itself each session would hide exactly that.
+ *
+ * `range` is shown under the name because the names alone are relative —
+ * "mocne" means nothing until you know it is months rather than days.
+ */
+export const MEMORY_LEVELS: { maxDays: number; label: string; range: string }[] = [
+  { maxDays: 2, label: 'świeże', range: 'do 2 dni' },
+  { maxDays: 7, label: 'młode', range: '3–7 dni' },
+  { maxDays: 30, label: 'okrzepłe', range: '1–4 tyg.' },
+  { maxDays: 180, label: 'mocne', range: '1–6 mies.' },
+  { maxDays: Infinity, label: 'trwałe', range: 'pół roku+' },
 ]
 
-/** Scheduled words needed before the strip says anything worth drawing. */
-const MIN_HORIZON_CARDS = 4
-/** Words carrying a previous schedule needed before the shift line is honest. */
-const MIN_SHIFT_SAMPLES = 3
+/** Placed words needed before the breakdown says anything worth drawing. */
+const MIN_PLACED_CARDS = 4
+
+const EMPTY_TRANSITIONS = (): Record<Transition, number> =>
+  ({ entered: 0, held: 0, slipped: 0, met: 0 })
 
 export interface SmartOutcome {
   /** Cards answered — the run's size, transitions and all. */
   total: number
   transitions: Record<Transition, number>
-  /** One count per HORIZON_BUCKETS entry, same order. */
-  horizon: number[]
+  /** One count per MEMORY_LEVELS entry, same order. */
+  levels: number[]
   /**
-   * Typical days-to-return before this sitting and after it, or null when too
-   * few words carried a previous schedule to compare honestly.
-   *
-   * Median, not mean: one word graduating into deep maintenance sits a year
-   * out and would drag an average somewhere no actual word is.
+   * Whether the breakdown is worth drawing. A sitting of nothing but first-time
+   * words lands them all in one tier, so the "distribution" is a single bar —
+   * a chart of a fact the tiles above already stated.
    */
-  shift: { before: number; after: number } | null
-  /**
-   * Whether the strip is worth drawing. A sitting of nothing but first-time
-   * words schedules them all at nearly the same distance, so the "distribution"
-   * is one tall bar — a chart of a fact the sentence above it already stated.
-   */
-  showHorizon: boolean
+  showLevels: boolean
 }
 
-const EMPTY_TRANSITIONS = (): Record<Transition, number> =>
-  ({ entered: 0, held: 0, slipped: 0, met: 0 })
-
-function median(xs: number[]): number {
-  const s = [...xs].sort((a, b) => a - b)
-  const mid = Math.floor(s.length / 2)
-  return s.length % 2 ? s[mid] : Math.round((s[mid - 1] + s[mid]) / 2)
-}
-
-function bucketOf(days: number): number {
-  const i = HORIZON_BUCKETS.findIndex(b => days <= b.maxDays)
-  return i === -1 ? HORIZON_BUCKETS.length - 1 : i
+function levelOf(days: number): number {
+  const i = MEMORY_LEVELS.findIndex(b => days <= b.maxDays)
+  return i === -1 ? MEMORY_LEVELS.length - 1 : i
 }
 
 export function summarize(outcomes: CardOutcome[]): SmartOutcome {
   const transitions = EMPTY_TRANSITIONS()
-  const horizon = HORIZON_BUCKETS.map(() => 0)
-  const before: number[] = []
-  const after: number[] = []
+  const levels = MEMORY_LEVELS.map(() => 0)
+  let placed = 0
 
   for (const o of outcomes) {
     transitions[o.transition]++
-    if (o.intervalAfter == null) continue
-    horizon[bucketOf(o.intervalAfter)]++
-    // Paired on purpose: the sentence compares the SAME words to themselves, so
-    // a word with no previous schedule contributes to neither side of it.
-    if (o.intervalBefore != null) {
-      before.push(o.intervalBefore)
-      after.push(o.intervalAfter)
-    }
+    if (o.memoryDays == null) continue
+    levels[levelOf(o.memoryDays)]++
+    placed++
   }
-
-  const scheduled = horizon.reduce((a, b) => a + b, 0)
-  const occupied = horizon.filter(n => n > 0).length
-  const shift = before.length >= MIN_SHIFT_SAMPLES
-    ? { before: median(before), after: median(after) }
-    : null
 
   return {
     total: outcomes.length,
     transitions,
-    horizon,
-    // A shift of "8 → 8" is a sentence saying nothing; drop it rather than
-    // dress it up.
-    shift: shift && shift.before !== shift.after ? shift : null,
-    showHorizon: scheduled >= MIN_HORIZON_CARDS && occupied >= 2,
+    levels,
+    showLevels: placed >= MIN_PLACED_CARDS && levels.filter(n => n > 0).length >= 2,
   }
+}
+
+/**
+ * Does this sitting get to pass judgement on DIFFICULTY?
+ *
+ * The mode keeps two adaptive signals (see `foldSignals` in SmartSessionPage)
+ * and comfort — the one the done screen's band reports — is folded from
+ * learn + stretch alone. After a review-only sitting it has not moved, so
+ * showing its band prints a reading taken on some earlier day directly beneath
+ * this sitting's results, where it is read as a verdict on them. That is how a
+ * session of eight words held came to be captioned "Ten materiał daje Ci w
+ * kość", about material the sitting never touched.
+ *
+ * No verdict costs the learner nothing; a stale one contradicts the numbers
+ * above it.
+ */
+export function judgesDifficulty(newRated: number): boolean {
+  return newRated > 0
 }

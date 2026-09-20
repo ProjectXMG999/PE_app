@@ -4,8 +4,8 @@ import { FlowNumber } from '../shared/FlowNumber'
 import { heroCard, heroReveal, fadeUpReduced, staggerContainerWide } from '../today/motion'
 import { SmartSegment } from '../../services/smartQueue'
 import { comfortFit, COMFORT_FIT_ORDER, type ComfortFit } from '../../services/comfort'
-import { HORIZON_BUCKETS, type SmartOutcome, type Transition } from '../../services/smartOutcome'
-import { plural } from '../../utils/plural'
+import { MEMORY_LEVELS, judgesDifficulty, type SmartOutcome, type Transition } from '../../services/smartOutcome'
+import { plural, plReviews } from '../../utils/plural'
 import './SmartDoneScreen.css'
 
 export interface SmartSegmentTally {
@@ -17,6 +17,9 @@ interface Props {
   tally: Record<SmartSegment, SmartSegmentTally>
   /** What the sitting did to the schedule — see services/smartOutcome.ts. */
   outcome: SmartOutcome
+  /** Reviews still owed today once this sitting is folded in, or null when the
+   *  count could not be re-read (a sitting that rated nothing). */
+  reviewsLeft: number | null
   comfortBefore: number
   comfortAfter: number
   /** The level the learner is working at — the anchor comfort is read against.
@@ -81,46 +84,79 @@ const FIT_COPY: Record<ComfortFit, { label: string; line: string }> = {
  * that slipped is not a failure and must not be dressed as one — docs/
  * strona-pakiety.md §8, the same rule FIT_COPY above follows.
  */
-const TRANSITION_COPY: Record<Transition, string> = {
-  entered: 'nowe opanowane',
-  held: 'utrzymane',
-  slipped: 'do odświeżenia',
-  met: 'w trakcie',
+/**
+ * Each label is a caption under a numeral, so it has to survive Polish
+ * agreement: "8 utrzymane" is not a sentence anyone would write. Two of them
+ * inflect through `plural`; the other two are prepositional phrases, which take
+ * any count unchanged and are the safer shape wherever one fits.
+ *
+ * Only `entered` names "słowa" — repeating the noun under all four numerals
+ * reads like a form, not a result.
+ */
+const TRANSITION_COPY: Record<Transition, (n: number) => string> = {
+  entered: n => plural(n, 'nowe słowo', 'nowe słowa', 'nowych słów'),
+  held: n => plural(n, 'utrwalone', 'utrwalone', 'utrwalonych'),
+  slipped: () => 'do powtórki',
+  met: () => 'w nauce',
 }
 
 /** Order the tiles read in — the wins first, then what is still in flight. */
 const TRANSITION_ORDER: Transition[] = ['entered', 'held', 'met', 'slipped']
 
 /**
- * When the session's words come back, as a distribution.
+ * A review-only sitting gets no verdict band at all.
  *
- * This is the one thing on the screen that says the sitting BOUGHT something.
- * Everything else describes what was done; the strip shows the schedule that
- * was rewritten — mass moving rightward, session after session, is what
- * progress in a spaced-repetition app physically is.
+ * There was one here briefly, built on review health, and it had to go: its top
+ * band read "Pamiętasz aż za dobrze", which is not a thing. Health above target
+ * is a statement about the SCHEDULER having room to stretch intervals, and
+ * there is no way to say that about the learner without implying they did
+ * something wrong by remembering. The screen states facts instead — which
+ * memory tiers the sitting covered, and how many reviews are still owed.
+ */
+
+/**
+ * Which memory tiers this sitting covered.
  *
- * Bars carry a floor height on purpose: a bucket holding one word has to be
+ * A statement of fact, not an interpretation: these are the words that were
+ * just answered, sorted by how strongly they are now held. Over weeks the mass
+ * climbs out of the left-hand tiers, which is what progress in a spaced-
+ * repetition app physically is — and the fixed scale (MEMORY_LEVELS) is what
+ * makes that visible from one session to the next.
+ *
+ * Each column carries the tier's NAME and its day range, because the names are
+ * relative: "mocne" means nothing until you can see it is months, not days.
+ *
+ * Bars carry a floor height on purpose: a tier holding one word has to be
  * visibly a bar, not a hairline that reads as an empty column.
  */
-function Horizon({ counts }: { counts: number[] }) {
+function MemoryLevels({ counts }: { counts: number[] }) {
   const peak = Math.max(...counts)
-  const described = HORIZON_BUCKETS
-    .map((b, i) => (counts[i] > 0 ? `${b.label}: ${counts[i]}` : null))
+  const described = MEMORY_LEVELS
+    .map((b, i) => (counts[i] > 0 ? `${b.label} (${b.range}): ${counts[i]}` : null))
     .filter(Boolean)
     .join(', ')
 
   return (
     <div className="smartdone__horizon">
-      <span className="smartdone__horizon-head">Kiedy wrócą</span>
-      <div className="smartdone__horizon-chart" role="img" aria-label={`Kiedy wrócą — ${described}.`}>
-        {HORIZON_BUCKETS.map((b, i) => (
+      <span className="smartdone__horizon-head">Poziom pamięci</span>
+      <div
+        className="smartdone__horizon-chart"
+        role="img"
+        aria-label={`Poziom pamięci powtórzonych słów — ${described}.`}
+      >
+        {MEMORY_LEVELS.map((b, i) => (
           <div className="smartdone__horizon-col" key={b.label} aria-hidden="true">
             <span className="smartdone__horizon-count">{counts[i] || ''}</span>
+            {/* No inline height for an empty tier: an inline 0 beat the
+                `is-empty` track's own height and collapsed the column to
+                nothing, so a gap in the distribution read as a rendering
+                fault rather than as the information it is. */}
             <span
               className={`smartdone__horizon-bar${counts[i] === 0 ? ' is-empty' : ''}`}
-              style={{ height: `${counts[i] === 0 ? 0 : 8 + (counts[i] / peak) * 36}px` }}
+              style={counts[i] === 0 ? undefined : { height: `${8 + (counts[i] / peak) * 36}px` }}
             />
             <span className="smartdone__horizon-label">{b.label}</span>
+            <span className="smartdone__horizon-range">{b.range}</span>
           </div>
         ))}
       </div>
@@ -128,19 +164,20 @@ function Horizon({ counts }: { counts: number[] }) {
   )
 }
 
-const days = (n: number) => `${n} ${plural(n, 'dzień', 'dni', 'dni')}`
-
 /** Premium completion screen for an Inteligentny session — what changed in the
  *  schedule, which words crossed over, and (if the mode moved) how the comfort
  *  level shifted. */
-export function SmartDoneScreen({ tally, outcome, comfortBefore, comfortAfter, level, onRepeat, onExit }: Props) {
+export function SmartDoneScreen({
+  tally, outcome, reviewsLeft,
+  comfortBefore, comfortAfter, level, onRepeat, onExit,
+}: Props) {
   const reduced = useReducedMotion()
   const variants = reduced ? fadeUpReduced : heroReveal
   const cardVariants = reduced ? fadeUpReduced : heroCard
 
+  // Whether the difficulty band gets to speak at all — see smartOutcome.ts.
+  const showsFit = judgesDifficulty(tally.learn.rated + tally.stretch.rated)
 
-  // The meter is a status and shows every time — it is the answer to "is this
-  // the right difficulty for me", which is worth a glance after any session.
   // The sentence is an event and only appears when the BAND actually changed:
   // a 0.1 drift that alters nothing about the next session is not news, and
   // "trudność jest dobrana pod Ciebie" repeated nightly becomes wallpaper.
@@ -166,25 +203,26 @@ export function SmartDoneScreen({ tally, outcome, comfortBefore, comfortAfter, l
               <span className="smartdone__stat-value">
                 <FlowNumber value={outcome.transitions[t]} delayMs={150 + i * 120} />
               </span>
-              <span className="smartdone__stat-label">{TRANSITION_COPY[t]}</span>
+              <span className="smartdone__stat-label">{TRANSITION_COPY[t](outcome.transitions[t])}</span>
             </motion.div>
           ))}
         </motion.div>
 
-        {outcome.showHorizon && (
+        {outcome.showLevels && (
           <motion.div variants={variants}>
-            <Horizon counts={outcome.horizon} />
+            <MemoryLevels counts={outcome.levels} />
           </motion.div>
         )}
 
-        {/* The comparison is what turns a number into progress — and it compares
-            the same words to themselves, so it is a statement about this
-            learner's memory rather than about the catalogue. Absent whenever
-            too few words carried a previous schedule to say it honestly. */}
-        {outcome.shift && (
+        {/* What is still owed today. The one number a learner can act on
+            straight from this screen — and the reason "Gotowe" is or isn't the
+            end of the day. Null when the sitting rated nothing, so there was no
+            snapshot to re-read. */}
+        {reviewsLeft != null && (
           <motion.p className="smartdone__shift" variants={variants}>
-            Wracały zwykle za {days(outcome.shift.before)} — teraz za{' '}
-            <strong>{days(outcome.shift.after)}</strong>.
+            {reviewsLeft > 0
+              ? <>Zostało dziś <strong>{reviewsLeft}</strong> {plReviews(reviewsLeft)}.</>
+              : <>Powtórki na dziś zrobione.</>}
           </motion.p>
         )}
 
@@ -193,11 +231,12 @@ export function SmartDoneScreen({ tally, outcome, comfortBefore, comfortAfter, l
             seventh tile competing for the same glance. */}
         {tally.stretch.rated > 0 && (
           <motion.p className="smartdone__note" variants={variants}>
-            W tym {tally.stretch.rated} {plural(tally.stretch.rated, 'słowo', 'słowa', 'słów')} z wyższego poziomu.
+            Wśród nich {tally.stretch.rated} {plural(tally.stretch.rated, 'słowo', 'słowa', 'słów')} z wyższego poziomu.
           </motion.p>
         )}
 
-        <motion.div className="smartdone__fit" variants={variants}>
+        {showsFit && (
+          <motion.div className="smartdone__fit" variants={variants}>
             <span className="smartdone__fit-head">
               <span className="smartdone__fit-label">{FIT_COPY[fit].label}</span>
               <span className="smartdone__fit-meter" aria-hidden="true">
@@ -210,7 +249,8 @@ export function SmartDoneScreen({ tally, outcome, comfortBefore, comfortAfter, l
               </span>
             </span>
             {moved && <p className="smartdone__fit-line">{FIT_COPY[fit].line}</p>}
-        </motion.div>
+          </motion.div>
+        )}
 
         <motion.div className="smartdone__actions" variants={variants}>
           <button className="smartdone__btn" onClick={onRepeat}>Jeszcze jedna seria</button>

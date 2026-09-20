@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useAudio } from '../hooks/useAudio'
 import { useCardFlip } from '../hooks/useCardFlip'
 import { useStudyClock } from '../hooks/useStudyClock'
@@ -74,6 +74,9 @@ export function SmartSessionPage() {
   // floor mid-session would otherwise re-anchor the verdict.
   const [sessionLevel] = useState(() => useAppStore.getState().todayLevel ?? 1)
   const [comfortAfter, setComfortAfter] = useState(comfortBefore)
+  // Reviews still owed today once this sitting is folded in. Read off the
+  // snapshot `finish` already loads, so it costs no extra IO.
+  const [reviewsLeft, setReviewsLeft] = useState<number | null>(null)
 
   const tallyRef = useRef<Record<SmartSegment, SmartSegmentTally>>(EMPTY_TALLY())
   // What each answer did to the word's schedule — the done screen's "what
@@ -90,6 +93,14 @@ export function SmartSessionPage() {
   const savedRef = useRef({ rated: 0, known: 0, sec: 0 })
   // Comfort / review-health fold once per sitting — see `foldSignals`.
   const signalsFoldedRef = useRef(false)
+
+  // Folded once, when the sitting ends. It was being recomputed inline in the
+  // done screen's JSX, i.e. on every one of that screen's renders — and the
+  // screen animates, so that is a full pass over the run's outcomes per frame
+  // of the entrance cascade. `done` is the only thing that can change the
+  // answer: the outcomes ref is frozen by then, and `handleRepeat` flips it
+  // back to false before refilling it.
+  const outcome = useMemo(() => summarize(outcomesRef.current), [done])
 
   const current = steps[stepIndex] ?? null
   const isLastStep = stepIndex >= steps.length - 1
@@ -186,11 +197,14 @@ export function SmartSessionPage() {
     await persistProgress()
     foldSignals()
 
+    // Read AFTER foldSignals, so the verdict includes this sitting.
     const store = useAppStore.getState()
     setComfortAfter(store.comfortLevel)
 
     if (ratedCount > 0) {
       const snapshot = await loadProgressSnapshot(true)
+      // Forced re-read, so this already reflects every word just answered.
+      setReviewsLeft(snapshot.servingLeft)
       const floor = store.todayLevel ?? 1
       const masteredPacksAtFloor = snapshot.packageProgress.filter(
         p => p.masteredAt != null && packLevelOf(p.packageId) === floor
@@ -342,9 +356,10 @@ export function SmartSessionPage() {
         <>
           <SmartDoneScreen
             tally={tallyRef.current}
-            outcome={summarize(outcomesRef.current)}
+            outcome={outcome}
             comfortBefore={comfortBefore}
             comfortAfter={comfortAfter}
+            reviewsLeft={reviewsLeft}
             level={sessionLevel}
             onRepeat={handleRepeat}
             onExit={() => goBack()}
