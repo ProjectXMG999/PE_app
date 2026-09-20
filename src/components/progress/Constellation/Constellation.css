@@ -281,10 +281,27 @@
  * three: opaque ground, no rim, no lamp. */
 .constellation--expanded {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* NOT `inset: 0`, and this is the whole fix for "can't get out of full screen
+     on a phone".
+
+     A fixed element sized by top/bottom fills the LAYOUT viewport, which on iOS
+     Safari includes the strip behind the collapsible toolbars. So the header —
+     with Zamknij, the only way out — sat under the top bar, and the legend and
+     count sat under the bottom one. Both were on screen as far as the DOM was
+     concerned and unreachable as far as a thumb was concerned.
+
+     `svh` is the *small* viewport height: the height with those toolbars
+     expanded. Deliberately not `dvh`, which tracks them as they slide and would
+     resize the canvas — and re-run the WebGL resize path — on every scroll
+     flick. A little unused space when the bars retract is the right trade. */
+  height: 100vh;
+  height: 100svh;
   /* Above BottomNav (1000) and TopBar (100). "Full screen" has to mean the app
      chrome too — at z-index 60 the tab bar sat on the footer and the top bar
-     covered the Zamknij button, which is the one control that gets you out. */
+     covered the Zamknij button. */
   z-index: 1100;
   gap: 10px;
   padding: calc(env(safe-area-inset-top) + 14px) 14px calc(env(safe-area-inset-bottom) + 14px);

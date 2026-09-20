@@ -125,6 +125,46 @@ export function Constellation({ packs, wordProgress }: Props) {
     rendererRef.current?.setActive(engaged)
   }, [engaged])
 
+  /**
+   * Ways out of full screen, beyond the one button.
+   *
+   * A full-screen layer that only answers a 77×40 target in a corner is a trap
+   * on a phone — the back gesture is what people actually reach for, and
+   * without this it would leave Postęp entirely. So opening pushes a history
+   * entry and back pops it; the button closes by going back too, so the entry
+   * is always consumed rather than left behind for the next swipe to eat.
+   *
+   * The URL is deliberately unchanged (pushState with no url), so the router
+   * sees the same location and nothing re-navigates.
+   */
+  useEffect(() => {
+    if (!expanded) return
+    window.history.pushState({ constellationExpanded: true }, '')
+    const onPop = () => setExpanded(false)
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setExpanded(false)
+    }
+    window.addEventListener('popstate', onPop)
+    window.addEventListener('keydown', onKey)
+    return () => {
+      window.removeEventListener('popstate', onPop)
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [expanded])
+
+  // Read through a ref rather than the state updater: a state updater must be
+  // pure, and React calls it twice under StrictMode — which would have gone
+  // back two entries and thrown the user off Postęp altogether.
+  const expandedRef = useRef(expanded)
+  expandedRef.current = expanded
+
+  const toggleExpanded = useCallback(() => {
+    // Closing goes through history so the entry pushed on open is consumed;
+    // popstate then flips the state. Opening flips it directly.
+    if (expandedRef.current) window.history.back()
+    else setExpanded(true)
+  }, [])
+
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
@@ -335,7 +375,7 @@ export function Constellation({ packs, wordProgress }: Props) {
         <button
           type="button"
           className="constellation__expand"
-          onClick={() => setExpanded(v => !v)}
+          onClick={toggleExpanded}
         >
           {expanded ? 'Zamknij' : 'Powiększ'}
         </button>
