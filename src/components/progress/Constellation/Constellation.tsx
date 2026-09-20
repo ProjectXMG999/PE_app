@@ -70,10 +70,7 @@ const STAGE_KEYS: {
   { stage: STAGE_DUE, name: 'do powtórki', color: 'var(--accent-pink)', fallback: [240, 110, 130] },
   { stage: STAGE_KNOWN, name: 'w pamięci', color: 'var(--accent-blue)', fallback: [120, 140, 237] },
   // "na stałe" — the app's own word for emerytura, and the same one the detail
-  // panel prints. It was briefly "utrwalone", to dodge the ramp end that used
-  // to read "na stałe"; that end is now "ponad rok", so the collision moved
-  // rather than went away — "utrwalone" (etap) against "trwałość" (jasność) is
-  // one root doing duty on two axes, which is the thing to avoid here.
+  // panel prints for a retired word.
   { stage: STAGE_PERMANENT, name: 'na stałe', color: 'var(--accent-green)', fallback: [140, 217, 140] },
 ]
 
@@ -429,9 +426,6 @@ export function Constellation({ packs, wordProgress }: Props) {
   }, [field])
 
   const empty = field.litCount === 0
-  // Cheap enough to run on every build of the field (one pass over ~11 000
-  // floats) and it decides whether the twinkle line in the key is worth showing.
-  const hasFlicker = useMemo(() => field.flicker.some(v => v > 0), [field])
 
   return (
     <section
@@ -439,16 +433,13 @@ export function Constellation({ packs, wordProgress }: Props) {
       className={`constellation u-liquid${expanded ? ' constellation--expanded' : ''}`}
     >
       <header className="constellation__head">
-        {/* Names both axes, and names them for the mode that is actually on.
-            "Im jaśniejsza, tym lepiej je pamiętasz" had to go: it says nothing
-            about hue (which now carries two different things), and in Etapy it
-            is contradicted on screen — a word due today can be one of the
-            brightest stars in the sky, because jasność is how LONG the memory
-            holds, not how fresh it is. */}
+        {/* Says what the colour means in the mode that is on, and stops there.
+            "Im jaśniejsza, tym lepiej je pamiętasz" went the same way as the
+            brightness row in the legend below, and for the same reason: you
+            cannot see it at this density. */}
         <p className="constellation__sub">
-          Jedna gwiazda — jedno słowo. Kolor to{' '}
-          {colorBy === 'stage' ? 'etap nauki' : 'poziom'}, jasność — na jak długo je
-          pamiętasz.
+          Jedna gwiazda — jedno słowo. Kolor pokazuje{' '}
+          {colorBy === 'stage' ? 'etap nauki' : 'poziom słowa'}.
         </p>
         <button
           type="button"
@@ -533,10 +524,9 @@ export function Constellation({ packs, wordProgress }: Props) {
             {word && <p className="constellation__detail-pl">{word.polish}</p>}
             <dl className="constellation__detail-stats">
               <div>
-                {/* The same number the brightness ramp is drawn from, so it
-                    carries the same name — "Pamięć: 30 dni" next to a legend
-                    that has stopped calling that axis pamięć would be two words
-                    for one quantity. */}
+                {/* FSRS stability, named for what it is. The one place the
+                    number is actually legible — the sky itself cannot show it,
+                    which is why the legend no longer claims it does. */}
                 <dt>Trwałość</dt>
                 <dd>
                   {detail.retired
@@ -568,18 +558,21 @@ export function Constellation({ packs, wordProgress }: Props) {
         )}
       </div>
 
-      {/* The key, and it has to name BOTH axes — see starColors() and the vertex
-          shader in renderer.ts. Hue comes from whichever mode is selected and
-          nothing else; brightness (plus point size, plus the diffraction cross
-          on a retired word) carries how long the memory holds — FSRS stability
-          — and carries it in both modes.
+      {/* The key names the HUE axis and nothing else, and that is deliberate.
+          It used to carry two more rows — a brightness ramp ("Jasność = pamięć",
+          świeżo poznane → na stałe) and a line about lapsed words twinkling.
+          Both were dropped because neither survives the screen: at ~11 000
+          points on a 390 px phone the stars sit ~3 px apart, and a sky with a
+          full 1–400 day spread of stability is all but indistinguishable from
+          one where every word sits at the bulk-declared 15 days. Measured, not
+          guessed — a harness rendered both through this renderer at phone size.
 
-          The first version labelled the hues by learning state ("w nauce"
-          against orange, "znane" against green), which read a level-2 band as a
-          pile of words in progress. Naming the hue axis alone fixed that but
-          left the brightness axis unexplained — so with every level mastered the
-          sky is four solid colours and the key looks like it is describing
-          something else entirely. Both axes, or neither. */}
+          A legend that names an axis you cannot see is worse than no legend: it
+          sends people hunting for a difference that isn't there. The channels
+          themselves stay (they do real work up close, at zoom, and the
+          diffraction cross on a retired word is legible) — only the promises
+          about them are gone. If brightness is ever given the contrast to carry
+          a claim, the row comes back with it. */}
       <div className="constellation__legend">
         <div className="constellation__legend-row">
           <span className="constellation__legend-axis">
@@ -614,33 +607,6 @@ export function Constellation({ packs, wordProgress }: Props) {
           )}
         </div>
 
-        {/* The axis and its ends name the thing brightness is actually made of —
-            FSRS stability, from a couple of days to the year at which a word
-            retires (RETIRE_STABILITY_DAYS).
-
-            It used to read "Jasność = pamięć · świeżo poznane → na stałe",
-            which was serviceable while hue meant level and false once it could
-            mean etap. Twice over: the ends repeated two of the swatches one row
-            above on a different axis, and "pamięć" claimed the whole idea of
-            remembering for an axis that only carries its DURATION — so a pink
-            "do powtórki" star burning bright read as a contradiction. It isn't
-            one: that word is held for a long time AND is due today. */}
-        <div className="constellation__legend-row">
-          <span className="constellation__legend-axis">Jasność = trwałość</span>
-          <span className="constellation__ramp-end">kilka dni</span>
-          <span className="constellation__ramp" aria-hidden="true" />
-          <span className="constellation__ramp-end">ponad rok</span>
-        </div>
-
-        {/* The third channel, and only when the user actually has one: a word
-            that has lapsed twinkles. Silent until it means something. */}
-        {hasFlicker && (
-          <div className="constellation__legend-row">
-            <span className="constellation__key constellation__key--flicker">
-              Migocze — słowo, które już kiedyś Ci uciekło
-            </span>
-          </div>
-        )}
       </div>
 
       <p className="constellation__foot">
