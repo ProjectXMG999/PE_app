@@ -1,11 +1,29 @@
-export type WordStatus = 'new' | 'learning' | 'known'
-export type StudyMode = 'fiszki' | 'autoplay'
-export type AutoplayMode = 'fast' | 'standard' | 'speaking'
+// Each of these four unions is mirrored by a CHECK constraint in
+// supabase/migrations, so each is declared as a const array with the type
+// derived from it rather than the other way round. The arrays are what lets
+// schema-drift.test.ts enumerate the variants at runtime and assert that the
+// database still accepts every one of them.
+//
+// That test exists because this drifted once and cost real users a recurring
+// "progress failed to sync" alarm: 'smart' was added to TrainMode below and
+// written by the app, but no migration widened the CHECK, so every Inteligentny
+// session was rejected forever. See migration 0010.
+
+export const WORD_STATUSES = ['new', 'learning', 'known'] as const
+export type WordStatus = typeof WORD_STATUSES[number]
+
+export const STUDY_MODES = ['fiszki', 'autoplay'] as const
+export type StudyMode = typeof STUDY_MODES[number]
+
+export const AUTOPLAY_MODES = ['fast', 'standard', 'speaking'] as const
+export type AutoplayMode = typeof AUTOPLAY_MODES[number]
+
 /** Which Trenuj exercise a `mode: 'fiszki'` session was. `review` is the
  *  cross-pack review queue rather than a single pack; `smart` is the
  *  Inteligentny mode's mixed queue (also cross-pack). Optional because
  *  sessions written before this field existed don't have it. */
-export type TrainMode = 'word-flash' | 'active-sentence' | 'review' | 'smart'
+export const TRAIN_MODES = ['word-flash', 'active-sentence', 'review', 'smart'] as const
+export type TrainMode = typeof TRAIN_MODES[number]
 
 export interface Session {
   id?: number
