@@ -70,6 +70,13 @@ interface AppStore {
   ambientHidden: boolean
   setAmbientHidden: (hidden: boolean) => void
 
+  /** A full-screen overlay *inside* a page asking the shell's chrome to stand
+   *  down. Distinct from AppShell's hide* props, which are per-route and fixed
+   *  at render time — this is set by a child that goes full screen after the
+   *  page has already mounted. Not persisted. */
+  chromeHidden: boolean
+  setChromeHidden: (hidden: boolean) => void
+
   currentPackageId: string | null
   currentMode: StudyMode | null
   currentCardIndex: number
@@ -192,6 +199,8 @@ export const useAppStore = create<AppStore>()(
       setTheme: (t) => set({ theme: t }),
       ambientHidden: false,
       setAmbientHidden: (hidden) => set(s => (s.ambientHidden === hidden ? s : { ambientHidden: hidden })),
+      chromeHidden: false,
+      setChromeHidden: (hidden) => set(s => (s.chromeHidden === hidden ? s : { chromeHidden: hidden })),
       toggleTheme: () => set(s => ({ theme: resolveTheme(s.theme) === 'dark' ? 'light' : 'dark' })),
 
       currentPackageId: null,

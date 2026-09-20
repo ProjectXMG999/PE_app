@@ -27,6 +27,12 @@ export function AppShell({
   lockScroll = hideBottomNav,
 }: Props) {
   const setAmbientHidden = useAppStore(s => s.setAmbientHidden)
+  // Set by a child that has gone full screen (the Konstelacja). The chrome is
+  // not merely covered but unmounted, because covering it does not work: the
+  // tab bar is a backdrop-filter capsule, and WebKit lets such an element paint
+  // over content with a higher z-index. On iOS the legend sat under a tab bar
+  // that Chrome had happily drawn beneath it.
+  const chromeHidden = useAppStore(s => s.chromeHidden)
 
   // The ambient WebGL background mounts once at the app root (App.tsx) so
   // navigating between pages never tears down and rebuilds its GPU context —
@@ -36,16 +42,23 @@ export function AppShell({
     return () => setAmbientHidden(false)
   }, [hideAmbient, setAmbientHidden])
 
+  const noNav = hideBottomNav || chromeHidden
+  const noTop = hideTopBar || chromeHidden
+  const noSide = hideSidebar || chromeHidden
+  // A full-screen overlay must also stop the page behind it from scrolling,
+  // or a stray drag on a phone moves the content under the overlay.
+  const noScroll = lockScroll || chromeHidden
+
   return (
-    <div className={`appshell ${hideSidebar ? 'appshell--no-sidebar' : ''}`}>
-      {!hideTopBar && <TopBar />}
-      {!hideSidebar && <Sidebar />}
+    <div className={`appshell ${noSide ? 'appshell--no-sidebar' : ''}`}>
+      {!noTop && <TopBar />}
+      {!noSide && <Sidebar />}
       <main
-        className={`appshell__main ${hideBottomNav ? 'appshell__main--no-pad' : ''} ${lockScroll ? 'appshell__main--no-scroll' : ''}`}
+        className={`appshell__main ${noNav ? 'appshell__main--no-pad' : ''} ${noScroll ? 'appshell__main--no-scroll' : ''}`}
       >
         <div className="appshell__main-inner">{children}</div>
       </main>
-      {!hideBottomNav && <BottomNav />}
+      {!noNav && <BottomNav />}
     </div>
   )
 }

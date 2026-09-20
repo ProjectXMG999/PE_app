@@ -76,6 +76,7 @@ export function Constellation({ packs, wordProgress }: Props) {
 
   const theme = useAppStore(s => s.theme)
   const setAmbientHidden = useAppStore(s => s.setAmbientHidden)
+  const setChromeHidden = useAppStore(s => s.setChromeHidden)
   const reduced = !!useReducedMotion()
 
   const field = useMemo(() => buildStarfield(packs, wordProgress), [packs, wordProgress])
@@ -118,8 +119,12 @@ export function Constellation({ packs, wordProgress }: Props) {
   useEffect(() => {
     if (!expanded) return
     setAmbientHidden(true)
-    return () => setAmbientHidden(false)
-  }, [expanded, setAmbientHidden])
+    setChromeHidden(true)
+    return () => {
+      setAmbientHidden(false)
+      setChromeHidden(false)
+    }
+  }, [expanded, setAmbientHidden, setChromeHidden])
 
   useEffect(() => {
     rendererRef.current?.setActive(engaged)
