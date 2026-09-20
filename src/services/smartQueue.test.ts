@@ -6,7 +6,8 @@ import {
 import { HEALTH, ReviewHealth } from './reviewHealth'
 import type { ProgressSnapshot } from '../hooks/useProgressData'
 import type { Session, WordProgress } from '../types/progress'
-import type { Pack, Word } from '../types/vocabulary'
+import type { Pack, PackMeta, Word } from '../types/vocabulary'
+import packagesIndex from '../data/packages-index.json'
 import { dayKey } from '../utils/day'
 
 // Real fixtures from the current catalog (src/data/packages-index.json):
@@ -634,6 +635,43 @@ describe('due words whose pack has left the catalog', () => {
     expect(sel.reviewWords).toHaveLength(0)
     // The whole sitting goes to words that can actually be shown.
     expect(sel.quota.learn).toBe(sel.targetCount)
+  })
+})
+
+/**
+ * The quota is a remainder of the daily goal; the catalogue is what can
+ * actually be served. When those two disagreed, every screen believed the
+ * remainder: Dzisiaj offered "29 nowych słów" — a 15-minute goal's worth of
+ * cards — to a learner with nothing left to learn, and the session they tapped
+ * into opened on "Nic do zrobienia".
+ */
+describe('a route with nothing (or almost nothing) left on it', () => {
+  const catalogue = packagesIndex as PackMeta[]
+  const goalSec = 15 * 60
+  const args = { comfortLevel: 1, todayLevel: 1, goalSec } as const
+
+  it('promises no new words once every pack is fully known', () => {
+    const sel = selectSmart({
+      snapshot: baseSnapshot({ knownMap: new Map(catalogue.map(p => [p.id, p.wordCount])) }),
+      ...args,
+    })
+
+    expect(sel.learnPackIds).toHaveLength(0)
+    expect(sel.packIds).toHaveLength(0)
+    expect(sel.targetCount).toBeGreaterThan(0) // the sitting was still sized…
+    expect(sel.quota.learn).toBe(0) // …but sizing a sitting is not finding words
+    expect(previewOf(sel).learn).toBe(0)
+  })
+
+  it('caps the learn quota at the words the last unfinished pack still holds', () => {
+    const knownMap = new Map(catalogue.map(p => [p.id, p.wordCount]))
+    knownMap.set(P003, 7) // 3 words left in the whole catalogue
+
+    const sel = selectSmart({ snapshot: baseSnapshot({ knownMap }), ...args })
+
+    expect(sel.learnPackIds).toEqual([P003])
+    expect(sel.quota.learn).toBe(3)
+    expect(sel.quota.learn).toBeLessThan(sel.targetCount)
   })
 })
 

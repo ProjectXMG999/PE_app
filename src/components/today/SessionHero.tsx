@@ -159,8 +159,17 @@ export function SessionHero({ snapshot, onStart, secondsStudied, goalSec, onEdit
             <SparklesGlyph size={14} weight={2} /> Twoja sesja na dziś
           </span>
           <h2 className="sessionhero__title">Ucz się inteligentnie</h2>
+          {/* Three states, not two. A peek that came back empty is a FACT —
+              nothing new left on the route, nothing due — and saying "dobiorę
+              słowa i powtórki" there promises a session the next screen then
+              refuses with "Nic do zrobienia". The pitch only speaks in the
+              future tense while the snapshot is still loading. */}
           <p className="sessionhero__stat">
-            {hasMix ? mix : 'Dobiorę słowa i powtórki do tego, jak Ci dziś idzie.'}
+            {hasMix
+              ? mix
+              : peek
+                ? 'Wszystko opanowane — dziś nie ma nowych słów ani powtórek.'
+                : 'Dobiorę słowa i powtórki do tego, jak Ci dziś idzie.'}
           </p>
         </div>
       </div>

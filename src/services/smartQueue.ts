@@ -370,7 +370,13 @@ export function selectSmart({
     )
     if (stretchPack) {
       stretchPackId = stretchPack.id
-      stretchTarget = Math.round(targetCount * SMART.STRETCH_RATIO)
+      // Capped by what the pack still holds, for the same reason the learn
+      // quota is capped below: a share of the sitting is a wish, the pack is
+      // the fact. Uncapped, a 3-words-left stretch pack promised 8.
+      stretchTarget = Math.min(
+        Math.round(targetCount * SMART.STRETCH_RATIO),
+        unknownEstimate(stretchPack)
+      )
     }
   }
 
@@ -400,6 +406,23 @@ export function selectSmart({
     acc += unknownEstimate(p)
   }
 
+  /**
+   * The learn quota is a REMAINDER, and nothing used to check it against the
+   * catalogue: `targetCount - review - stretch` is what's left of today's goal
+   * in cards, which it then called new words whether or not a single unlearned
+   * word remained. So a learner who had mastered everything was told "29 nowych
+   * słów" on Dzisiaj — 29 being their goal's worth of cards — and then met
+   * "Nic do zrobienia" one tap later, because `learnPackIds` was empty and the
+   * session had nothing to build from. Two screens, one selection, opposite
+   * answers.
+   *
+   * `acc` is the words the chosen packs actually still hold, so it is the
+   * honest ceiling. It carries LEARN_RESERVE of slack above the target
+   * (the loop stops at `learnSupply`), so wherever there IS enough material
+   * this changes nothing — it only bites when the route runs out.
+   */
+  const learnQuota = Math.min(learnTarget, acc)
+
   const packIds = [
     ...new Set([
       ...learnPackIds,
@@ -411,7 +434,7 @@ export function selectSmart({
   return {
     targetCount,
     size,
-    quota: { learn: learnTarget, review: reviewWords.length, stretch: stretchTarget },
+    quota: { learn: learnQuota, review: reviewWords.length, stretch: stretchTarget },
     reviewRatio,
     tone: healthTone(reviewHealth),
     learnPackIds,
