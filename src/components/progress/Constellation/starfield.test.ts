@@ -7,6 +7,12 @@ import {
   buildStarfield,
   hitTest,
   parseWordId,
+  STAGE_DUE,
+  STAGE_DUST,
+  STAGE_KNOWN,
+  STAGE_LEARNING,
+  STAGE_PERMANENT,
+  stageFor,
   STATE_DUST,
   STATE_KNOWN,
   STATE_LEARNING,
@@ -163,6 +169,72 @@ describe('brightnessFor', () => {
 
   it('burns a retired word at full brightness', () => {
     expect(brightnessFor(wp('a-b-001', { retiredAt: '2026-08-01T00:00:00.000Z' }))).toBe(1)
+  })
+})
+
+describe('stageFor', () => {
+  const TODAY = '2026-09-21'
+
+  it('leaves an untouched word without a stage', () => {
+    expect(stageFor(wp('a-b-001', { status: 'new' }), TODAY)).toBe(STAGE_DUST)
+  })
+
+  it('keeps a word in nauce even once its date has come round', () => {
+    const learning = wp('a-b-001', { status: 'learning', nextReviewAt: '2026-09-01' })
+    expect(stageFor(learning, TODAY)).toBe(STAGE_LEARNING)
+  })
+
+  it('marks a known word due on and after its date, not before', () => {
+    expect(stageFor(wp('a-b-001', { nextReviewAt: '2026-09-22' }), TODAY)).toBe(STAGE_KNOWN)
+    expect(stageFor(wp('a-b-001', { nextReviewAt: TODAY }), TODAY)).toBe(STAGE_DUE)
+    expect(stageFor(wp('a-b-001', { nextReviewAt: '2026-08-01' }), TODAY)).toBe(STAGE_DUE)
+  })
+
+  it('treats an unscheduled known word as settled rather than due', () => {
+    expect(stageFor(wp('a-b-001', { nextReviewAt: undefined }), TODAY)).toBe(STAGE_KNOWN)
+  })
+
+  it('shows a retired word as permanent — until its deep maintenance falls due', () => {
+    const retired = { retiredAt: '2026-01-01T00:00:00.000Z' }
+    expect(stageFor(wp('a-b-001', { ...retired, nextReviewAt: '2027-01-01' }), TODAY))
+      .toBe(STAGE_PERMANENT)
+    expect(stageFor(wp('a-b-001', { ...retired, nextReviewAt: '2026-09-01' }), TODAY))
+      .toBe(STAGE_DUE)
+  })
+})
+
+describe('buildStarfield — stages', () => {
+  it('stamps each star with its stage, and dust with none', () => {
+    const f = buildStarfield(
+      PACKS,
+      [
+        wp('t1-p001-001', { status: 'learning' }),
+        wp('t1-p001-002', { nextReviewAt: '2026-01-01' }),
+        wp('t1-p001-003', { nextReviewAt: '2027-01-01' }),
+        wp('t1-p001-004', { retiredAt: '2026-01-01T00:00:00.000Z' }),
+      ],
+      '2026-09-21',
+    )
+    expect(f.stage[0]).toBe(STAGE_LEARNING)
+    expect(f.stage[1]).toBe(STAGE_DUE)
+    expect(f.stage[2]).toBe(STAGE_KNOWN)
+    expect(f.stage[3]).toBe(STAGE_PERMANENT)
+    expect(f.stage[4]).toBe(STAGE_DUST)
+  })
+
+  it('gives every lit star a stage — the key must count them all', () => {
+    const f = buildStarfield(
+      PACKS,
+      [
+        wp('t1-p001-001', { status: 'learning' }),
+        wp('t1-p001-002'),
+        wp('t2-p003-001', { retiredAt: '2026-01-01T00:00:00.000Z' }),
+      ],
+      '2026-09-21',
+    )
+    let staged = 0
+    for (let i = 0; i < f.count; i++) if (f.stage[i] !== STAGE_DUST) staged++
+    expect(staged).toBe(f.litCount)
   })
 })
 

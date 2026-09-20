@@ -15,12 +15,17 @@ import { STATE_DUST, STATE_LEARNING, STATE_RETIRED, Starfield } from './starfiel
  * so this module never has to know what a theme is.
  */
 
-/** RGB 0..1 per level, index 0 = level 1. */
-export type LevelColors = [number, number, number][]
+/** RGB 0..1 per palette slot, index 0 = level 1 / stage 1. */
+export type StarPalette = [number, number, number][]
+
+/** Which of the field's two categorical attributes drives the hue. */
+export type ColorBy = 'level' | 'stage'
 
 export interface RendererOpts {
   field: Starfield
-  levelColors: LevelColors
+  palette: StarPalette
+  /** Defaults to 'level' — the pack's difficulty tier. */
+  colorBy?: ColorBy
   /** Background the stars sit on, RGB 0..1. */
   ground: [number, number, number]
   /** Skip the intro sweep and all idle motion. */
@@ -45,7 +50,7 @@ export interface StarRenderer {
   setActive(active: boolean): void
   /** World-space centre and zoom factor. */
   setView(centerX: number, centerY: number, zoom: number): void
-  setColors(levelColors: LevelColors, ground: [number, number, number]): void
+  setColors(palette: StarPalette, ground: [number, number, number], colorBy?: ColorBy): void
   /** Restart the ignition sweep from the beginning. */
   replayIntro(): void
   dispose(): void
@@ -53,14 +58,22 @@ export interface StarRenderer {
 
 const DPR_CAP = 2
 
+/** Dust in the stage palette has no stage of its own — it is the route you
+ *  haven't walked. The same near-white the canvas fallback draws it in. */
+const DUST_RGB: [number, number, number] = [0.745, 0.784, 1]
+
 /* Stars are lit by how well the word is remembered, and hot stars in the sky
-   run white — so brightness pulls the level's hue toward white rather than just
+   run white — so brightness pulls the hue toward white rather than just
    raising its alpha. Keeps a mastered word from looking like a louder version
    of a half-learned one. */
-function starColors(field: Starfield, levels: LevelColors): Float32Array {
+function starColors(field: Starfield, palette: StarPalette, colorBy: ColorBy): Float32Array {
   const out = new Float32Array(field.count * 3)
+  const slots = colorBy === 'stage' ? field.stage : field.level
   for (let i = 0; i < field.count; i++) {
-    const c = levels[Math.round(field.level[i]) - 1] ?? levels[0]
+    // Slot 0 only ever occurs in the stage palette, where it means dust; level
+    // is 1..4 for every star, studied or not.
+    const slot = Math.round(slots[i])
+    const c = slot >= 1 ? (palette[slot - 1] ?? palette[0]) : DUST_RGB
     const lit = field.state[i] !== STATE_DUST
     // 0.35, not 0.55. Brightness is already carried twice over — by alpha and
     // by point size — so washing the hue out on top of that was redundant
@@ -159,6 +172,7 @@ const FRAGMENT = /* glsl */ `
 
 function createWebglRenderer(canvas: HTMLCanvasElement, opts: RendererOpts): StarRenderer | null {
   const { field } = opts
+  let colorBy: ColorBy = opts.colorBy ?? 'level'
   let renderer: Renderer
   try {
     renderer = new Renderer({
@@ -179,7 +193,7 @@ function createWebglRenderer(canvas: HTMLCanvasElement, opts: RendererOpts): Sta
   const gl = renderer.gl
   const geometry = new Geometry(gl, {
     position: { size: 2, data: field.position },
-    aColor: { size: 3, data: starColors(field, opts.levelColors) },
+    aColor: { size: 3, data: starColors(field, opts.palette, colorBy) },
     aBright: { size: 1, data: field.brightness },
     aState: { size: 1, data: field.state },
     aIgnite: { size: 1, data: field.ignite },
@@ -294,9 +308,10 @@ function createWebglRenderer(canvas: HTMLCanvasElement, opts: RendererOpts): Sta
       updateSpacing()
       if (opts.reducedMotion && !disposed) raf = requestAnimationFrame(frame)
     },
-    setColors(levelColors, nextGround) {
+    setColors(palette, nextGround, nextColorBy) {
       ground = nextGround
-      geometry.attributes.aColor.data = starColors(field, levelColors)
+      colorBy = nextColorBy ?? colorBy
+      geometry.attributes.aColor.data = starColors(field, palette, colorBy)
       geometry.attributes.aColor.needsUpdate = true
       if (opts.reducedMotion && !disposed) raf = requestAnimationFrame(frame)
     },
@@ -319,7 +334,8 @@ function createWebglRenderer(canvas: HTMLCanvasElement, opts: RendererOpts): Sta
   }
 }
 
-/** One pre-rendered radial glow per level, tinted and reused for every star. */
+/** One pre-rendered radial glow per palette slot, tinted and reused for every
+ *  star that falls in it. */
 function glowSprite(rgb: [number, number, number], size: number): HTMLCanvasElement {
   const c = document.createElement('canvas')
   c.width = c.height = size
@@ -342,7 +358,8 @@ function createCanvasRenderer(canvas: HTMLCanvasElement, opts: RendererOpts): St
   const ctx = canvas.getContext('2d')!
   const dpr = Math.min(DPR_CAP, window.devicePixelRatio || 1)
 
-  let sprites = opts.levelColors.map(c => glowSprite(c, 32))
+  let sprites = opts.palette.map(c => glowSprite(c, 32))
+  let colorBy: ColorBy = opts.colorBy ?? 'level'
   let ground = opts.ground
   let center: [number, number] = [0, 0]
   let zoom = 1
@@ -390,6 +407,8 @@ function createCanvasRenderer(canvas: HTMLCanvasElement, opts: RendererOpts): St
       ctx.fillRect(x, y, dpr, dpr)
     }
 
+    // Dust is drawn above and skipped below, so the slot is always ≥ 1 here.
+    const slots = colorBy === 'stage' ? field.stage : field.level
     for (let i = 0; i < field.count; i++) {
       if (field.state[i] === STATE_DUST) continue
       if (field.ignite[i] > progress) continue
@@ -400,7 +419,7 @@ function createCanvasRenderer(canvas: HTMLCanvasElement, opts: RendererOpts): St
       // cubed falloff piles up fast, hence the slightly lower alpha.
       const size = Math.max(dpr, spacing * (0.75 + 1.25 * field.brightness[i]))
       if (x + size < 0 || y + size < 0 || x - size > canvas.width || y - size > canvas.height) continue
-      const sprite = sprites[Math.round(field.level[i]) - 1] ?? sprites[0]
+      const sprite = sprites[Math.round(slots[i]) - 1] ?? sprites[0]
       ctx.globalAlpha = 0.14 + 0.46 * field.brightness[i]
       ctx.drawImage(sprite, x - size / 2, y - size / 2, size, size)
     }
@@ -431,8 +450,9 @@ function createCanvasRenderer(canvas: HTMLCanvasElement, opts: RendererOpts): St
       zoom = nz
       draw()
     },
-    setColors(levelColors, nextGround) {
-      sprites = levelColors.map(c => glowSprite(c, 32))
+    setColors(palette, nextGround, nextColorBy) {
+      sprites = palette.map(c => glowSprite(c, 32))
+      colorBy = nextColorBy ?? colorBy
       ground = nextGround
       draw()
     },

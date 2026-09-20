@@ -8,8 +8,17 @@ import { WordProgress } from '../../../types/progress'
 import { PackMeta } from '../../../types/vocabulary'
 import { dayKey, daysBetween } from '../../../utils/day'
 import { plDays, plTimes, plWords } from '../../../utils/plural'
-import { createStarRenderer, LevelColors, StarRenderer } from './renderer'
-import { buildStarfield, hitTest, STATE_RETIRED, wordIdAt } from './starfield'
+import { ColorBy, createStarRenderer, StarPalette, StarRenderer } from './renderer'
+import {
+  buildStarfield,
+  hitTest,
+  STAGE_DUE,
+  STAGE_KNOWN,
+  STAGE_LEARNING,
+  STAGE_PERMANENT,
+  STATE_RETIRED,
+  wordIdAt,
+} from './starfield'
 import './Constellation.css'
 
 /**
@@ -43,16 +52,43 @@ const LEVEL_FALLBACKS: [number, number, number][] = [
   [120, 140, 237],
 ]
 
-/** Pulls the four level accents out of LEVEL_COLORS ("var(--accent-yellow)")
- *  and resolves them, so this stays in step with levels.ts by construction. */
-function readLevelColors(): LevelColors {
-  return ([1, 2, 3, 4] as const).map((lvl, i) => {
-    const token = tokenNameOf(LEVEL_COLORS[lvl] ?? '')
-    const rgb = token
-      ? resolveToken(token, LEVEL_FALLBACKS[i])
-      : resolveCssColor(LEVEL_COLORS[lvl] ?? '', LEVEL_FALLBACKS[i])
+/**
+ * The second colour mode, in ladder order — one hue per *situation* a word can
+ * be in, not per difficulty tier.
+ *
+ * It earns its place next to the brightness axis because none of this is
+ * derivable from stability: "do powtórki" is the day's actual work, and a
+ * strong word and a weak word can both be waiting for it.
+ */
+const STAGE_KEYS: {
+  stage: number
+  name: string
+  color: string
+  fallback: [number, number, number]
+}[] = [
+  { stage: STAGE_LEARNING, name: 'w nauce', color: 'var(--accent-orange)', fallback: [237, 140, 66] },
+  { stage: STAGE_DUE, name: 'do powtórki', color: 'var(--accent-pink)', fallback: [240, 110, 130] },
+  { stage: STAGE_KNOWN, name: 'w pamięci', color: 'var(--accent-blue)', fallback: [120, 140, 237] },
+  // "utrwalone", not "na stałe": the brightness row below already ends in "na
+  // stałe", and one panel cannot have the same words mean two different axes.
+  { stage: STAGE_PERMANENT, name: 'utrwalone', color: 'var(--accent-green)', fallback: [140, 217, 140] },
+]
+
+/** Resolves a list of CSS colours ("var(--accent-yellow)") to the 0-1 RGB the
+ *  renderer wants, so the sky stays in step with the token palette by
+ *  construction rather than by a copied hex. */
+function readPalette(colors: string[], fallbacks: [number, number, number][]): StarPalette {
+  return colors.map((raw, i) => {
+    const token = tokenNameOf(raw)
+    const rgb = token ? resolveToken(token, fallbacks[i]) : resolveCssColor(raw, fallbacks[i])
     return rgbUnit(rgb)
-  }) as LevelColors
+  })
+}
+
+function readColors(colorBy: ColorBy): StarPalette {
+  return colorBy === 'stage'
+    ? readPalette(STAGE_KEYS.map(s => s.color), STAGE_KEYS.map(s => s.fallback))
+    : readPalette(([1, 2, 3, 4] as const).map(l => LEVEL_COLORS[l] ?? ''), LEVEL_FALLBACKS)
 }
 
 /** The panel's own night-sky ground, as the shader wants it (0-1). */
@@ -70,6 +106,9 @@ export function Constellation({ packs, wordProgress }: Props) {
   const [selected, setSelected] = useState<number | null>(null)
   const [word, setWord] = useState<{ english: string; polish: string } | null>(null)
   const [expanded, setExpanded] = useState(false)
+  // What the hue means. Brightness always means memory; this picks the other
+  // axis — the pack's level, or where the word stands in the review cycle.
+  const [colorBy, setColorBy] = useState<ColorBy>('level')
   // A canvas that has held a WebGL context can never hand out a 2D one, so a
   // lost context has to remount the element before the fallback can draw.
   const [glLost, setGlLost] = useState(false)
@@ -170,13 +209,20 @@ export function Constellation({ packs, wordProgress }: Props) {
     else setExpanded(true)
   }, [])
 
+  // Read through a ref: switching mode must not tear down the WebGL context and
+  // replay the ignition sweep — it is one attribute buffer rewrite (see the
+  // colours effect below), and the sky should simply change colour under you.
+  const colorByRef = useRef(colorBy)
+  colorByRef.current = colorBy
+
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
 
     const renderer = createStarRenderer(canvas, {
       field,
-      levelColors: readLevelColors(),
+      palette: readColors(colorByRef.current),
+      colorBy: colorByRef.current,
       ground: readGround(canvas),
       reducedMotion: reduced,
       forceCanvas2d: glLost,
@@ -205,15 +251,16 @@ export function Constellation({ packs, wordProgress }: Props) {
     }
   }, [field, reduced, glLost])
 
-  // Level accents are theme-independent today, but re-reading on a theme flip
-  // costs one pass over the colour attribute and means this doesn't quietly go
-  // stale the day someone gives the light palette its own accents.
+  // Runs on a mode switch, and on a theme flip: the accents are
+  // theme-independent today, but re-reading costs one pass over the colour
+  // attribute and means this doesn't quietly go stale the day someone gives the
+  // light palette its own accents.
   useEffect(() => {
     const canvas = canvasRef.current
     const renderer = rendererRef.current
     if (!canvas || !renderer) return
-    renderer.setColors(readLevelColors(), readGround(canvas))
-  }, [theme])
+    renderer.setColors(readColors(colorBy), readGround(canvas), colorBy)
+  }, [theme, colorBy])
 
   const applyView = useCallback((cx: number, cy: number, zoom: number) => {
     const z = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, zoom))
@@ -366,6 +413,18 @@ export function Constellation({ packs, wordProgress }: Props) {
     }
   }, [selected, field, wordProgress, packs])
 
+  // One pass over the stage attribute, and it makes the key do double duty: in
+  // "Etapy" the swatches are also the breakdown, so "ile mam dziś do powtórki"
+  // is answered on the map itself rather than only in the review card above.
+  const stageCounts = useMemo(() => {
+    const counts = new Map<number, number>()
+    for (let i = 0; i < field.count; i++) {
+      const s = field.stage[i]
+      if (s > 0) counts.set(s, (counts.get(s) ?? 0) + 1)
+    }
+    return counts
+  }, [field])
+
   const empty = field.litCount === 0
   // Cheap enough to run on every build of the field (one pass over ~11 000
   // floats) and it decides whether the twinkle line in the key is worth showing.
@@ -388,6 +447,30 @@ export function Constellation({ packs, wordProgress }: Props) {
           {expanded ? 'Zamknij' : 'Powiększ'}
         </button>
       </header>
+
+      {/* Two ways to read the same sky. The positions never move — only the
+          hue — so switching reads as the same 10 000 words seen in a different
+          light, not as a different chart. */}
+      <div
+        className="constellation__modes"
+        role="group"
+        aria-label="Co oznacza kolor gwiazd"
+      >
+        {([
+          ['level', 'Poziomy'],
+          ['stage', 'Etapy'],
+        ] as const).map(([mode, label]) => (
+          <button
+            key={mode}
+            type="button"
+            className={`constellation__mode${colorBy === mode ? ' is-active' : ''}`}
+            aria-pressed={colorBy === mode}
+            onClick={() => setColorBy(mode)}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
 
       <div className={`constellation__sky${detail ? ' constellation__sky--detail' : ''}`}>
         <canvas
@@ -471,9 +554,10 @@ export function Constellation({ packs, wordProgress }: Props) {
       </div>
 
       {/* The key, and it has to name BOTH axes — see starColors() and the vertex
-          shader in renderer.ts. Hue comes from the pack's level and nothing
-          else; brightness (plus point size, plus the diffraction cross on a
-          retired word) carries how well the word is remembered.
+          shader in renderer.ts. Hue comes from whichever mode is selected and
+          nothing else; brightness (plus point size, plus the diffraction cross
+          on a retired word) carries how well the word is remembered, in both
+          modes.
 
           The first version labelled the hues by learning state ("w nauce"
           against orange, "znane" against green), which read a level-2 band as a
@@ -483,16 +567,31 @@ export function Constellation({ packs, wordProgress }: Props) {
           something else entirely. Both axes, or neither. */}
       <div className="constellation__legend">
         <div className="constellation__legend-row">
-          <span className="constellation__legend-axis">Kolor = poziom</span>
-          {LEVEL_META.map(l => (
-            <span
-              key={l.level}
-              className="constellation__key"
-              style={{ ['--key' as string]: LEVEL_COLORS[l.level] }}
-            >
-              {l.name}
-            </span>
-          ))}
+          <span className="constellation__legend-axis">
+            {colorBy === 'stage' ? 'Kolor = etap' : 'Kolor = poziom'}
+          </span>
+          {colorBy === 'stage'
+            ? STAGE_KEYS.map(s => (
+                <span
+                  key={s.stage}
+                  className="constellation__key"
+                  style={{ ['--key' as string]: s.color }}
+                >
+                  {s.name}
+                  <b className="constellation__key-count">
+                    {(stageCounts.get(s.stage) ?? 0).toLocaleString('pl-PL')}
+                  </b>
+                </span>
+              ))
+            : LEVEL_META.map(l => (
+                <span
+                  key={l.level}
+                  className="constellation__key"
+                  style={{ ['--key' as string]: LEVEL_COLORS[l.level] }}
+                >
+                  {l.name}
+                </span>
+              ))}
           {/* Only while there is dust left to explain: once the whole route is
               lit, a key for stars that aren't on screen is noise. */}
           {field.litCount < field.count && (
@@ -500,11 +599,17 @@ export function Constellation({ packs, wordProgress }: Props) {
           )}
         </div>
 
+        {/* The ends name the thing brightness is actually made of — FSRS
+            stability, from a couple of days to the year at which a word retires
+            (RETIRE_STABILITY_DAYS). They used to read "świeżo poznane" → "na
+            stałe", which was fine while hue meant level and impossible once it
+            could mean etap: "świeżo poznane" and "na stałe" then said the same
+            words as two of the swatches one row above, on a different axis. */}
         <div className="constellation__legend-row">
           <span className="constellation__legend-axis">Jasność = pamięć</span>
-          <span className="constellation__ramp-end">świeżo poznane</span>
+          <span className="constellation__ramp-end">kilka dni</span>
           <span className="constellation__ramp" aria-hidden="true" />
-          <span className="constellation__ramp-end">na stałe</span>
+          <span className="constellation__ramp-end">ponad rok</span>
         </div>
 
         {/* The third channel, and only when the user actually has one: a word

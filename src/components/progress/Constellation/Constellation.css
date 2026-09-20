@@ -58,6 +58,49 @@
   transform: scale(0.97);
 }
 
+/* ── Colour-mode switch ─────────────────────────────────────────────────── */
+
+/* A segmented control, sized as a thumb target: it sits directly above a canvas
+   that swallows every stray touch, so a 24px pill here would be a coin toss. */
+.constellation__modes {
+  display: inline-flex;
+  align-self: flex-start;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full, 999px);
+  background: var(--surface-translucent);
+}
+
+.constellation__mode {
+  min-height: 32px;
+  padding: 0 14px;
+  border: none;
+  border-radius: var(--radius-full, 999px);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--dur-fast, 140ms) ease, color var(--dur-fast, 140ms) ease;
+}
+
+.constellation__mode.is-active {
+  background: var(--accent-glow);
+  color: var(--text-primary);
+}
+
+.constellation__mode:active {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .constellation__mode {
+    transition: none;
+  }
+}
+
 .constellation__sky {
   position: relative;
   /* Not square. A 1:1 canvas is 358px tall at phone width and turned the panel
@@ -240,6 +283,14 @@
   background: var(--key, currentColor);
 }
 
+/* In the stage mode the key is also the breakdown, so each swatch carries its
+   count. Tabular figures keep the four chips from jittering as they change. */
+.constellation__key-count {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+}
+
 /* Untouched words: present, but only just — the same near-nothing the dust is
    drawn at in the canvas. */
 .constellation__key--dust::before {
@@ -399,4 +450,22 @@
   border-color: oklch(1 0 0 / 0.18);
   background: oklch(1 0 0 / 0.08);
   color: oklch(0.96 0.01 275);
+}
+
+.constellation--expanded .constellation__key-count {
+  color: oklch(0.96 0.01 275 / 0.92);
+}
+
+.constellation--expanded .constellation__modes {
+  border-color: oklch(1 0 0 / 0.18);
+  background: oklch(1 0 0 / 0.06);
+}
+
+.constellation--expanded .constellation__mode {
+  color: oklch(0.95 0.01 275 / 0.6);
+}
+
+.constellation--expanded .constellation__mode.is-active {
+  background: oklch(1 0 0 / 0.16);
+  color: oklch(0.98 0.005 275);
 }

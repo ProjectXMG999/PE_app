@@ -1,6 +1,8 @@
+import { isDue } from '../../../services/review'
 import { RETIRE_STABILITY_DAYS } from '../../../services/reviewConfig'
 import { WordProgress } from '../../../types/progress'
 import { PackMeta } from '../../../types/vocabulary'
+import { dayKey } from '../../../utils/day'
 
 /**
  * Turns the pack catalogue plus the user's word progress into a star field:
@@ -28,6 +30,37 @@ export const STATE_RETIRED = 3
 /** Ignite value marking a star that is always on (dust never animates in). */
 export const IGNITE_ALWAYS = -1
 
+/**
+ * Where the word stands in the review cycle — the sky's *second* colour mode.
+ *
+ * Deliberately not a re-banding of `brightness`: brightness is FSRS stability,
+ * and colouring by stability too would say the same thing twice. These are the
+ * four *situations* a word can be in, which brightness cannot express at all —
+ * above all "due today", which is the one thing in the panel you can act on.
+ */
+export const STAGE_DUST = 0
+export const STAGE_LEARNING = 1
+export const STAGE_DUE = 2
+export const STAGE_KNOWN = 3
+export const STAGE_PERMANENT = 4
+
+/**
+ * A word that is still being learned counts as learning even when its date has
+ * come round — it has never left the grind, so calling it "do powtórki" would
+ * be a promotion it hasn't earned. A retired word that IS due keeps the due
+ * hue, because deep maintenance is a real review the queue will serve
+ * (reviewQueue's W_DEEP_MAINT) — it still draws its diffraction cross, so the
+ * sky says "permanent, and asking for its yearly check".
+ */
+export function stageFor(wp: WordProgress, today: string = dayKey()): number {
+  const st = stateFor(wp)
+  if (st === STATE_DUST) return STAGE_DUST
+  if (st === STATE_LEARNING) return STAGE_LEARNING
+  if (isDue(wp, today)) return STAGE_DUE
+  if (wp.retiredAt != null) return STAGE_PERMANENT
+  return STAGE_KNOWN
+}
+
 export interface Starfield {
   /** Total stars — every word on the route, studied or not. */
   count: number
@@ -35,6 +68,8 @@ export interface Starfield {
   position: Float32Array
   /** Pack difficulty tier 1..4 — the shader maps it to a level colour. */
   level: Float32Array
+  /** One of the STAGE_* constants — the other thing the shader can colour by. */
+  stage: Float32Array
   /** 0..1 — how brightly the star burns. Derived from FSRS stability. */
   brightness: Float32Array
   /** One of the STATE_* constants. */
@@ -113,12 +148,17 @@ export function wordIdAt(field: Starfield, packs: PackMeta[], star: number): str
   return `${pack.id}-${String(field.ordinalOf[star]).padStart(3, '0')}`
 }
 
-export function buildStarfield(packs: PackMeta[], wordProgress: WordProgress[]): Starfield {
+export function buildStarfield(
+  packs: PackMeta[],
+  wordProgress: WordProgress[],
+  today: string = dayKey(),
+): Starfield {
   let count = 0
   for (const p of packs) count += p.wordCount
 
   const position = new Float32Array(count * 2)
   const level = new Float32Array(count)
+  const stage = new Float32Array(count)
   const brightness = new Float32Array(count)
   const state = new Float32Array(count)
   const ignite = new Float32Array(count)
@@ -156,6 +196,7 @@ export function buildStarfield(packs: PackMeta[], wordProgress: WordProgress[]):
       ordinalOf[star] = ord
       ignite[star] = IGNITE_ALWAYS
       state[star] = STATE_DUST
+      stage[star] = STAGE_DUST
 
       const wpIndex = byWordId.get(`${pack.id}-${String(ord).padStart(3, '0')}`)
       if (wpIndex == null) continue
@@ -164,6 +205,7 @@ export function buildStarfield(packs: PackMeta[], wordProgress: WordProgress[]):
       if (st === STATE_DUST) continue
       progressOf[star] = wpIndex
       state[star] = st
+      stage[star] = stageFor(wp, today)
       brightness[star] = brightnessFor(wp)
       // A word you once answered "Nie znam" after mastering it never quite
       // settles again — it flickers, which is the honest picture.
@@ -188,6 +230,7 @@ export function buildStarfield(packs: PackMeta[], wordProgress: WordProgress[]):
     count,
     position,
     level,
+    stage,
     brightness,
     state,
     ignite,
