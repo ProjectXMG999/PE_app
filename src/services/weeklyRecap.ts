@@ -5,6 +5,8 @@ import { measuredStudyMinutes } from '../hooks/useStats'
 import { dayKey, shiftDay } from '../utils/day'
 import { studyDayKeys } from '../utils/studyDays'
 import { plWords, plMinutes, plDays, plSessions, plPractised } from '../utils/plural'
+import { ROUTE_TOTAL } from '../data/levels'
+import { renderShareCard, shareImage, type ShareCardSpec, type ShareResult } from './shareCard'
 
 /**
  * The week in review.
@@ -85,161 +87,39 @@ export function recapWorthShowing(r: WeeklyRecap): boolean {
 
 // ── Share image ─────────────────────────────────────────────────────────────
 
-const W = 1080
-const H = 1350
-
-function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) {
-  ctx.beginPath()
-  ctx.moveTo(x + r, y)
-  ctx.arcTo(x + w, y, x + w, y + h, r)
-  ctx.arcTo(x + w, y + h, x, y + h, r)
-  ctx.arcTo(x, y + h, x, y, r)
-  ctx.arcTo(x, y, x + w, y, r)
-  ctx.closePath()
-}
-
 /**
- * Draws the recap as a share image.
+ * The week, as a share card.
  *
- * Painted directly onto a canvas rather than rasterising the DOM: there's no
- * html-to-canvas dependency in the project, and a share image wants a different
- * composition from the in-app card anyway — bigger numbers, portrait crop,
- * legible as a thumbnail.
+ * The drawing itself lives in services/shareCard.ts — this is only the mapping
+ * from a WeeklyRecap to that template's fields. It used to be ~110 lines of
+ * canvas code with the palette and the 10 000-word denominator hard-coded,
+ * which is exactly what stopped the milestone card from reusing it.
  */
-export async function renderRecapImage(r: WeeklyRecap): Promise<Blob | null> {
-  const canvas = document.createElement('canvas')
-  canvas.width = W
-  canvas.height = H
-  const ctx = canvas.getContext('2d')
-  if (!ctx) return null
-
-  // Background, with the same violet bloom the app uses behind the route marker.
-  ctx.fillStyle = '#010102'
-  ctx.fillRect(0, 0, W, H)
-  const bloom = ctx.createRadialGradient(W * 0.3, H * 0.28, 0, W * 0.3, H * 0.28, W * 0.75)
-  bloom.addColorStop(0, 'rgba(139, 92, 246, 0.34)')
-  bloom.addColorStop(1, 'rgba(139, 92, 246, 0)')
-  ctx.fillStyle = bloom
-  ctx.fillRect(0, 0, W, H)
-
-  const pad = 88
-
-  ctx.fillStyle = 'rgba(255,255,255,0.45)'
-  ctx.font = '700 30px Montserrat, sans-serif'
-  ctx.letterSpacing = '5px'
-  ctx.fillText('MÓJ TYDZIEŃ', pad, 150)
-  ctx.letterSpacing = '0px'
-
-  // Headline: the number that means the most.
-  ctx.fillStyle = '#FFFFFF'
-  ctx.font = '700 190px Montserrat, sans-serif'
-  ctx.fillText(String(r.wordsPractised), pad, 340)
-
-  ctx.fillStyle = 'rgba(255,255,255,0.75)'
-  ctx.font = '400 40px Roboto, sans-serif'
-  ctx.fillText(`${plWords(r.wordsPractised)} ${plPractised(r.wordsPractised)}`, pad, 400)
-
-  // Stat grid.
-  const stats: [string, string][] = [
-    [`${r.minutes}`, `${plMinutes(r.minutes)} nauki`],
-    [`${r.activeDays}/7`, 'dni z treningiem'],
-    [`${r.sessions}`, plSessions(r.sessions)],
-    [`${r.goalDays}`, `${plDays(r.goalDays)} z celem`],
-  ]
-
-  const gx = pad
-  const gy = 500
-  const cw = (W - pad * 2 - 32) / 2
-  const ch = 190
-
-  stats.forEach(([value, label], i) => {
-    const x = gx + (i % 2) * (cw + 32)
-    const y = gy + Math.floor(i / 2) * (ch + 32)
-    ctx.fillStyle = 'rgba(255,255,255,0.06)'
-    roundRect(ctx, x, y, cw, ch, 32)
-    ctx.fill()
-    ctx.strokeStyle = 'rgba(255,255,255,0.10)'
-    ctx.lineWidth = 2
-    ctx.stroke()
-
-    ctx.fillStyle = '#FFFFFF'
-    ctx.font = '700 76px Montserrat, sans-serif'
-    ctx.fillText(value, x + 40, y + 108)
-    ctx.fillStyle = 'rgba(255,255,255,0.5)'
-    ctx.font = '400 30px Roboto, sans-serif'
-    ctx.fillText(label, x + 40, y + 152)
-  })
-
-  // Route position.
-  const ry = gy + ch * 2 + 96
-  ctx.fillStyle = 'rgba(255,255,255,0.5)'
-  ctx.font = '400 32px Roboto, sans-serif'
-  ctx.fillText('Na trasie do 10 000 słów', pad, ry)
-
-  ctx.fillStyle = '#FFFFFF'
-  ctx.font = '700 84px Montserrat, sans-serif'
-  ctx.fillText(`${r.knownTotal.toLocaleString('pl-PL')} / 10 000`, pad, ry + 96)
-
-  const barY = ry + 140
-  const barW = W - pad * 2
-  ctx.fillStyle = 'rgba(255,255,255,0.14)'
-  roundRect(ctx, pad, barY, barW, 16, 8)
-  ctx.fill()
-
-  const fillW = Math.max(16, Math.min(1, r.knownTotal / 10000) * barW)
-  const grad = ctx.createLinearGradient(pad, 0, pad + barW, 0)
-  grad.addColorStop(0, '#eab308')
-  grad.addColorStop(0.35, '#f97316')
-  grad.addColorStop(0.7, '#22c55e')
-  grad.addColorStop(1, '#3b82f6')
-  ctx.fillStyle = grad
-  roundRect(ctx, pad, barY, fillW, 16, 8)
-  ctx.fill()
-
-  if (r.nextStationName && r.toNextStation != null) {
-    ctx.fillStyle = 'rgba(255,255,255,0.6)'
-    ctx.font = '400 32px Roboto, sans-serif'
-    ctx.fillText(
-      `jeszcze ${r.toNextStation.toLocaleString('pl-PL')} ${plWords(r.toNextStation)} do ${r.nextStationName}`,
-      pad,
-      barY + 76
-    )
+export function recapCardSpec(r: WeeklyRecap): ShareCardSpec {
+  return {
+    kicker: 'MÓJ TYDZIEŃ',
+    headline: String(r.wordsPractised),
+    subline: `${plWords(r.wordsPractised)} ${plPractised(r.wordsPractised)}`,
+    stats: [
+      { value: `${r.minutes}`, label: `${plMinutes(r.minutes)} nauki` },
+      { value: `${r.activeDays}/7`, label: 'dni z treningiem' },
+      { value: `${r.sessions}`, label: plSessions(r.sessions) },
+      { value: `${r.goalDays}`, label: `${plDays(r.goalDays)} z celem` },
+    ],
+    route: {
+      knownTotal: r.knownTotal,
+      total: ROUTE_TOTAL,
+      toNext: r.toNextStation,
+      nextName: r.nextStationName,
+    },
   }
-
-  ctx.fillStyle = 'rgba(255,255,255,0.35)'
-  ctx.font = '700 28px Montserrat, sans-serif'
-  ctx.letterSpacing = '4px'
-  ctx.fillText('PROGRESS', pad, H - 70)
-  ctx.letterSpacing = '0px'
-
-  return new Promise(resolve => canvas.toBlob(resolve, 'image/png'))
 }
 
-/**
- * Shares the recap image, falling back to a download. The Web Share file API is
- * absent on desktop Chrome and older Safari, so the fallback isn't an edge case.
- */
-export async function shareRecap(r: WeeklyRecap): Promise<'shared' | 'downloaded' | 'failed'> {
+export function renderRecapImage(r: WeeklyRecap): Promise<Blob | null> {
+  return renderShareCard(recapCardSpec(r))
+}
+
+export async function shareRecap(r: WeeklyRecap): Promise<ShareResult> {
   const blob = await renderRecapImage(r)
-  if (blob == null) return 'failed'
-
-  const file = new File([blob], `progress-${r.to}.png`, { type: 'image/png' })
-
-  if (navigator.canShare?.({ files: [file] })) {
-    try {
-      await navigator.share({ files: [file], title: 'Mój tydzień w Progress' })
-      return 'shared'
-    } catch (err) {
-      // A user dismissing the share sheet is not a failure worth reporting.
-      if ((err as Error).name === 'AbortError') return 'shared'
-    }
-  }
-
-  const url = URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = file.name
-  a.click()
-  URL.revokeObjectURL(url)
-  return 'downloaded'
+  return shareImage(blob, `progress-${r.to}.png`, 'Mój tydzień w Progress')
 }

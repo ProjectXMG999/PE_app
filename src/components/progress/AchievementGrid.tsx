@@ -10,6 +10,10 @@ interface Props {
   states: AchievementState[]
   /** Called with the ids whose "new" celebration has been shown. */
   onSeen?: (ids: string[]) => void
+  /** Route context for the share card a badge can produce — the card shows
+   *  where the badge sits on the 10 000-word route, not just the badge. */
+  knownTotal?: number
+  nextStation?: { words: number; name: string } | null
 }
 
 function timeAgo(iso: string): string {
@@ -29,7 +33,7 @@ function timeAgo(iso: string): string {
  * stronger pull than a wall of trophies, because it names something achievable
  * in the next session.
  */
-export function AchievementGrid({ states, onSeen }: Props) {
+export function AchievementGrid({ states, onSeen, knownTotal = 0, nextStation = null }: Props) {
   const [expanded, setExpanded] = useState(false)
   const [selected, setSelected] = useState<AchievementState | null>(null)
 
@@ -134,7 +138,12 @@ export function AchievementGrid({ states, onSeen }: Props) {
       )}
 
       {selected && (
-        <AchievementSheet state={selected} onClose={() => setSelected(null)} />
+        <AchievementSheet
+          state={selected}
+          knownTotal={knownTotal}
+          nextStation={nextStation}
+          onClose={() => setSelected(null)}
+        />
       )}
     </div>
   )
