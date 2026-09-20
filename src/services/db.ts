@@ -82,7 +82,40 @@ export interface OutboxEntry {
   table: string
   rows: Record<string, unknown>[]
   queuedAt: string
+  /** Delivery attempts that came back with a retryable failure. Absent on rows
+   *  queued before this field existed, which is the same as zero. */
+  attempts?: number
 }
+
+/**
+ * Will this write ever succeed if we simply try again later?
+ *
+ * The queue is ordered and replayed head-first, so an entry that can never
+ * succeed is not merely one lost write — it is a cork. Every later write of
+ * every table queues up behind it until the queue hits OUTBOX_MAX and starts
+ * discarding the OLDEST entries, i.e. throwing away good work to make room for
+ * more of it. A schema drift did exactly this (see migration 0010).
+ *
+ * The distinction is the Postgres error class. A constraint violation, a bad
+ * value or an unknown column is a property of the row and the schema, identical
+ * on every retry. A network failure, an expired token or a 5xx is a property of
+ * this moment.
+ */
+function isPermanentFailure(code: string | undefined): boolean {
+  if (!code) return false          // network-level: no PostgREST response at all
+  if (code === 'PGRST301') return false  // JWT expired — the next flush has a fresh one
+  return (
+    code.startsWith('22') ||       // data exception (bad literal, out of range)
+    code.startsWith('23') ||       // integrity constraint (check, unique, fk, not-null)
+    code.startsWith('42') ||       // undefined column/table, syntax
+    code.startsWith('PGRST')       // schema cache: column/function not found
+  )
+}
+
+/** Backstop for a retryable failure that never stops being retryable. Without
+ *  it a row the server dislikes for some reason we didn't classify would cork
+ *  the queue just as effectively as a permanent one. */
+const OUTBOX_MAX_ATTEMPTS = 8
 
 /** Old, unreachable work shouldn't grow without bound — a queue this long
  *  means the account has been unreachable for a very long time, and the local
@@ -118,10 +151,15 @@ let flushing = false
 /**
  * Replays whatever the mirrors couldn't deliver, oldest first.
  *
- * Stops at the first failure and leaves the rest queued: the entries are an
- * ordered log of the same rows, so replaying them out of order could write a
- * stale value over a newer one. Entries belonging to a different account are
- * dropped rather than sent.
+ * Stops at the first RETRYABLE failure and leaves the rest queued: the entries
+ * are an ordered log of the same rows, so replaying them out of order could
+ * write a stale value over a newer one. Entries belonging to a different
+ * account are dropped rather than sent.
+ *
+ * An entry that can never succeed is discarded instead of stopping the queue —
+ * see isPermanentFailure. Order still holds for everything that remains: a row
+ * the server refuses outright was never going to establish a value that a later
+ * write could overwrite out of sequence.
  */
 export async function flushOutbox(): Promise<number> {
   if (flushing) return 0
@@ -131,6 +169,7 @@ export async function flushOutbox(): Promise<number> {
 
   flushing = true
   let sent = 0
+  let dropped = 0
   try {
     const db = await getDB()
     const entries = await db.getAll('syncOutbox')
@@ -144,7 +183,19 @@ export async function flushOutbox(): Promise<number> {
         ? await supabase.from(entry.table).insert(entry.rows)
         : await supabase.from(entry.table).upsert(entry.rows)
       if (error) {
-        console.warn('[progressSync] outbox still blocked:', error.message)
+        const attempts = (entry.attempts ?? 0) + 1
+        const permanent = isPermanentFailure(error.code)
+        if (permanent || attempts >= OUTBOX_MAX_ATTEMPTS) {
+          console.error(
+            `[progressSync] dropping an undeliverable ${entry.op} into ${entry.table} ` +
+            `(${error.code ?? 'no code'}, attempt ${attempts}):`, error.message
+          )
+          dropped++
+          await db.delete('syncOutbox', entry.id)
+          continue
+        }
+        console.warn(`[progressSync] outbox still blocked (attempt ${attempts}):`, error.message)
+        await db.put('syncOutbox', { ...entry, attempts })
         break
       }
       await db.delete('syncOutbox', entry.id)
@@ -156,6 +207,7 @@ export async function flushOutbox(): Promise<number> {
     flushing = false
   }
   if (sent > 0) console.info(`[progressSync] outbox: delivered ${sent} queued write(s)`)
+  if (dropped > 0) console.warn(`[progressSync] outbox: discarded ${dropped} undeliverable write(s)`)
   return sent
 }
 
