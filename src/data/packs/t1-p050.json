@@ -17,7 +17,7 @@
       "audioSentence": "t1-p050-001-sentence.mp3",
       "polishAudio": "Gwiazda",
       "audioSentencePl": "t1-p050-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p050-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p050-002-sentence.mp3",
       "polishAudio": "Kaczka",
       "audioSentencePl": "t1-p050-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p050-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p050-003-sentence.mp3",
       "polishAudio": "Księżyc",
       "audioSentencePl": "t1-p050-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p050-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p050-004-sentence.mp3",
       "polishAudio": "Kurczak",
       "audioSentencePl": "t1-p050-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p050-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p050-005-sentence.mp3",
       "polishAudio": "Kwiat",
       "audioSentencePl": "t1-p050-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p050-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p050-006-sentence.mp3",
       "polishAudio": "Ogród",
       "audioSentencePl": "t1-p050-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p050-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p050-007-sentence.mp3",
       "polishAudio": "Ptak",
       "audioSentencePl": "t1-p050-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p050-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p050-008-sentence.mp3",
       "polishAudio": "Roślina",
       "audioSentencePl": "t1-p050-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p050-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p050-009-sentence.mp3",
       "polishAudio": "Róża",
       "audioSentencePl": "t1-p050-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p050-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p050-010-sentence.mp3",
       "polishAudio": "Trawa",
       "audioSentencePl": "t1-p050-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

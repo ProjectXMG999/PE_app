@@ -17,7 +17,7 @@
       "audioSentence": "t1-p035-001-sentence.mp3",
       "polishAudio": "Koń",
       "audioSentencePl": "t1-p035-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p035-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p035-002-sentence.mp3",
       "polishAudio": "Kot",
       "audioSentencePl": "t1-p035-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p035-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p035-003-sentence.mp3",
       "polishAudio": "Krowa",
       "audioSentencePl": "t1-p035-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p035-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p035-004-sentence.mp3",
       "polishAudio": "Motyl",
       "audioSentencePl": "t1-p035-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p035-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p035-005-sentence.mp3",
       "polishAudio": "Mucha",
       "audioSentencePl": "t1-p035-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p035-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p035-006-sentence.mp3",
       "polishAudio": "Mysz",
       "audioSentencePl": "t1-p035-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p035-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p035-007-sentence.mp3",
       "polishAudio": "Pająk",
       "audioSentencePl": "t1-p035-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p035-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p035-008-sentence.mp3",
       "polishAudio": "Pies",
       "audioSentencePl": "t1-p035-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p035-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p035-009-sentence.mp3",
       "polishAudio": "Świnia",
       "audioSentencePl": "t1-p035-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p035-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p035-010-sentence.mp3",
       "polishAudio": "Zwierzę",
       "audioSentencePl": "t1-p035-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

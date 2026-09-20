@@ -17,7 +17,7 @@
       "audioSentence": "t1-p110-001-sentence.mp3",
       "polishAudio": "Alkohol",
       "audioSentencePl": "t1-p110-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p110-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p110-002-sentence.mp3",
       "polishAudio": "Biżuteria",
       "audioSentencePl": "t1-p110-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p110-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p110-003-sentence.mp3",
       "polishAudio": "Diament",
       "audioSentencePl": "t1-p110-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p110-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p110-004-sentence.mp3",
       "polishAudio": "Kolczyk",
       "audioSentencePl": "t1-p110-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p110-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p110-005-sentence.mp3",
       "polishAudio": "Papieros",
       "audioSentencePl": "t1-p110-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p110-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p110-006-sentence.mp3",
       "polishAudio": "Pierścionek",
       "audioSentencePl": "t1-p110-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p110-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p110-007-sentence.mp3",
       "polishAudio": "Piwo",
       "audioSentencePl": "t1-p110-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p110-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p110-008-sentence.mp3",
       "polishAudio": "Whisky",
       "audioSentencePl": "t1-p110-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p110-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p110-009-sentence.mp3",
       "polishAudio": "Wódka",
       "audioSentencePl": "t1-p110-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p110-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p110-010-sentence.mp3",
       "polishAudio": "Zegarek",
       "audioSentencePl": "t1-p110-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

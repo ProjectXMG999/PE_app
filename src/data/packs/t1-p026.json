@@ -17,7 +17,7 @@
       "audioSentence": "t1-p026-001-sentence.mp3",
       "polishAudio": "Ciężki",
       "audioSentencePl": "t1-p026-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p026-002",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p026-003-sentence.mp3",
       "polishAudio": "Duży",
       "audioSentencePl": "t1-p026-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p026-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p026-004-sentence.mp3",
       "polishAudio": "Krótki",
       "audioSentencePl": "t1-p026-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p026-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p026-005-sentence.mp3",
       "polishAudio": "Mały",
       "audioSentencePl": "t1-p026-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p026-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p026-006-sentence.mp3",
       "polishAudio": "Mały, troszkę",
       "audioSentencePl": "t1-p026-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p026-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p026-007-sentence.mp3",
       "polishAudio": "Miękki",
       "audioSentencePl": "t1-p026-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p026-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p026-008-sentence.mp3",
       "polishAudio": "Mini",
       "audioSentencePl": "t1-p026-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p026-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p026-009-sentence.mp3",
       "polishAudio": "Wysoki",
       "audioSentencePl": "t1-p026-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p026-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p026-010-sentence.mp3",
       "polishAudio": "Wysoki",
       "audioSentencePl": "t1-p026-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

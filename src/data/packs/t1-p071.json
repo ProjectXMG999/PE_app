@@ -17,7 +17,7 @@
       "audioSentence": "t1-p071-001-sentence.mp3",
       "polishAudio": "Awokado",
       "audioSentencePl": "t1-p071-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p071-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p071-002-sentence.mp3",
       "polishAudio": "Brzoskwinia",
       "audioSentencePl": "t1-p071-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p071-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p071-003-sentence.mp3",
       "polishAudio": "Cebula",
       "audioSentencePl": "t1-p071-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p071-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p071-004-sentence.mp3",
       "polishAudio": "Kalafior",
       "audioSentencePl": "t1-p071-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p071-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p071-005-sentence.mp3",
       "polishAudio": "Kukurydza",
       "audioSentencePl": "t1-p071-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p071-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p071-006-sentence.mp3",
       "polishAudio": "Marchewka",
       "audioSentencePl": "t1-p071-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p071-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p071-007-sentence.mp3",
       "polishAudio": "Sałata",
       "audioSentencePl": "t1-p071-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p071-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p071-008-sentence.mp3",
       "polishAudio": "Truskawka",
       "audioSentencePl": "t1-p071-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p071-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p071-009-sentence.mp3",
       "polishAudio": "Winogrono",
       "audioSentencePl": "t1-p071-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p071-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p071-010-sentence.mp3",
       "polishAudio": "Wiśnia",
       "audioSentencePl": "t1-p071-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

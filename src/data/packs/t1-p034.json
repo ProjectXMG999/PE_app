@@ -17,7 +17,7 @@
       "audioSentence": "t1-p034-001-sentence.mp3",
       "polishAudio": "Deszcz",
       "audioSentencePl": "t1-p034-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p034-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p034-002-sentence.mp3",
       "polishAudio": "Lód",
       "audioSentencePl": "t1-p034-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p034-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p034-003-sentence.mp3",
       "polishAudio": "Niebo",
       "audioSentencePl": "t1-p034-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p034-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p034-004-sentence.mp3",
       "polishAudio": "Pogoda",
       "audioSentencePl": "t1-p034-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p034-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p034-005-sentence.mp3",
       "polishAudio": "Powietrze",
       "audioSentencePl": "t1-p034-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p034-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p034-006-sentence.mp3",
       "polishAudio": "Słońce",
       "audioSentencePl": "t1-p034-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p034-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p034-007-sentence.mp3",
       "polishAudio": "Stopień celsjusza",
       "audioSentencePl": "t1-p034-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p034-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p034-008-sentence.mp3",
       "polishAudio": "Śnieg",
       "audioSentencePl": "t1-p034-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p034-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p034-009-sentence.mp3",
       "polishAudio": "Temperatura",
       "audioSentencePl": "t1-p034-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p034-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p034-010-sentence.mp3",
       "polishAudio": "Wiatr",
       "audioSentencePl": "t1-p034-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

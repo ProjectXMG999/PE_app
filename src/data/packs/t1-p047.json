@@ -17,7 +17,7 @@
       "audioSentence": "t1-p047-001-sentence.mp3",
       "polishAudio": "Dawać",
       "audioSentencePl": "t1-p047-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p047-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p047-002-sentence.mp3",
       "polishAudio": "Patrzeć",
       "audioSentencePl": "t1-p047-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p047-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p047-003-sentence.mp3",
       "polishAudio": "Brać",
       "audioSentencePl": "t1-p047-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p047-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p047-004-sentence.mp3",
       "polishAudio": "Oglądać",
       "audioSentencePl": "t1-p047-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p047-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p047-005-sentence.mp3",
       "polishAudio": "Budować",
       "audioSentencePl": "t1-p047-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p047-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p047-006-sentence.mp3",
       "polishAudio": "Umierać",
       "audioSentencePl": "t1-p047-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p047-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p047-007-sentence.mp3",
       "polishAudio": "Nienawidzić",
       "audioSentencePl": "t1-p047-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p047-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p047-008-sentence.mp3",
       "polishAudio": "Gubić",
       "audioSentencePl": "t1-p047-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p047-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p047-009-sentence.mp3",
       "polishAudio": "Tęsknić",
       "audioSentencePl": "t1-p047-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p047-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p047-010-sentence.mp3",
       "polishAudio": "Mówić",
       "audioSentencePl": "t1-p047-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

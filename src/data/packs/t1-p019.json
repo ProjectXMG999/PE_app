@@ -17,7 +17,7 @@
       "audioSentence": "t1-p019-001-sentence.mp3",
       "polishAudio": "Gotowy",
       "audioSentencePl": "t1-p019-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p019-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p019-002-sentence.mp3",
       "polishAudio": "W porządku",
       "audioSentencePl": "t1-p019-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p019-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p019-003-sentence.mp3",
       "polishAudio": "Wesoły",
       "audioSentencePl": "t1-p019-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p019-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p019-004-sentence.mp3",
       "polishAudio": "Bezpieczny",
       "audioSentencePl": "t1-p019-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p019-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p019-005-sentence.mp3",
       "polishAudio": "Trudny",
       "audioSentencePl": "t1-p019-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p019-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p019-006-sentence.mp3",
       "polishAudio": "Ważny",
       "audioSentencePl": "t1-p019-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p019-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p019-007-sentence.mp3",
       "polishAudio": "Dobry",
       "audioSentencePl": "t1-p019-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p019-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p019-008-sentence.mp3",
       "polishAudio": "Łatwy",
       "audioSentencePl": "t1-p019-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p019-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p019-009-sentence.mp3",
       "polishAudio": "Ulubiony",
       "audioSentencePl": "t1-p019-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p019-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p019-010-sentence.mp3",
       "polishAudio": "Zły",
       "audioSentencePl": "t1-p019-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

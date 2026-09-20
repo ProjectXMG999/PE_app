@@ -17,7 +17,7 @@
       "audioSentence": "t1-p085-001-sentence.mp3",
       "polishAudio": "Anglia",
       "audioSentencePl": "t1-p085-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p085-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p085-002-sentence.mp3",
       "polishAudio": "Angielka",
       "audioSentencePl": "t1-p085-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p085-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p085-003-sentence.mp3",
       "polishAudio": "Zjednoczone królestwo",
       "audioSentencePl": "t1-p085-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p085-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p085-004-sentence.mp3",
       "polishAudio": "Wielka brytania",
       "audioSentencePl": "t1-p085-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p085-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p085-005-sentence.mp3",
       "polishAudio": "Brytyjka",
       "audioSentencePl": "t1-p085-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p085-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p085-006-sentence.mp3",
       "polishAudio": "Chiny",
       "audioSentencePl": "t1-p085-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p085-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p085-007-sentence.mp3",
       "polishAudio": "Chinka",
       "audioSentencePl": "t1-p085-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p085-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p085-008-sentence.mp3",
       "polishAudio": "Francja",
       "audioSentencePl": "t1-p085-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p085-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p085-009-sentence.mp3",
       "polishAudio": "Francuzka",
       "audioSentencePl": "t1-p085-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p085-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p085-010-sentence.mp3",
       "polishAudio": "Kraj",
       "audioSentencePl": "t1-p085-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

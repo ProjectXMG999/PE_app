@@ -17,7 +17,7 @@
       "audioSentence": "t1-p072-001-sentence.mp3",
       "polishAudio": "Pewny",
       "audioSentencePl": "t1-p072-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p072-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p072-002-sentence.mp3",
       "polishAudio": "Popularny",
       "audioSentencePl": "t1-p072-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p072-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p072-003-sentence.mp3",
       "polishAudio": "Bogaty",
       "audioSentencePl": "t1-p072-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p072-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p072-004-sentence.mp3",
       "polishAudio": "Perfekcyjny",
       "audioSentencePl": "t1-p072-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p072-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p072-005-sentence.mp3",
       "polishAudio": "Fantastyczny",
       "audioSentencePl": "t1-p072-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p072-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p072-006-sentence.mp3",
       "polishAudio": "Lepszy",
       "audioSentencePl": "t1-p072-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p072-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p072-007-sentence.mp3",
       "polishAudio": "Niesamowity",
       "audioSentencePl": "t1-p072-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p072-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p072-008-sentence.mp3",
       "polishAudio": "Super",
       "audioSentencePl": "t1-p072-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p072-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p072-009-sentence.mp3",
       "polishAudio": "Wspaniały",
       "audioSentencePl": "t1-p072-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p072-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p072-010-sentence.mp3",
       "polishAudio": "Jedyny",
       "audioSentencePl": "t1-p072-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p041-001-sentence.mp3",
       "polishAudio": "Bateria",
       "audioSentencePl": "t1-p041-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p041-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p041-002-sentence.mp3",
       "polishAudio": "Aparat",
       "audioSentencePl": "t1-p041-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p041-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p041-003-sentence.mp3",
       "polishAudio": "Komputer",
       "audioSentencePl": "t1-p041-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p041-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p041-004-sentence.mp3",
       "polishAudio": "Laptop",
       "audioSentencePl": "t1-p041-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p041-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p041-005-sentence.mp3",
       "polishAudio": "Ładowarka",
       "audioSentencePl": "t1-p041-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p041-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p041-006-sentence.mp3",
       "polishAudio": "Rozmowa telefoniczna",
       "audioSentencePl": "t1-p041-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p041-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p041-007-sentence.mp3",
       "polishAudio": "Suszarka do włosów",
       "audioSentencePl": "t1-p041-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p041-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p041-008-sentence.mp3",
       "polishAudio": "Telefon",
       "audioSentencePl": "t1-p041-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p041-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p041-009-sentence.mp3",
       "polishAudio": "Telefon komórkowy",
       "audioSentencePl": "t1-p041-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p041-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p041-010-sentence.mp3",
       "polishAudio": "Wiadomość",
       "audioSentencePl": "t1-p041-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

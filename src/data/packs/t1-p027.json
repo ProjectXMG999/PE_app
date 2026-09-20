@@ -17,7 +17,7 @@
       "audioSentence": "t1-p027-001-sentence.mp3",
       "polishAudio": "Chleb",
       "audioSentencePl": "t1-p027-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p027-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p027-002-sentence.mp3",
       "polishAudio": "Czekolada",
       "audioSentencePl": "t1-p027-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p027-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p027-003-sentence.mp3",
       "polishAudio": "Jedzenie",
       "audioSentencePl": "t1-p027-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p027-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p027-004-sentence.mp3",
       "polishAudio": "Lody",
       "audioSentencePl": "t1-p027-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p027-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p027-005-sentence.mp3",
       "polishAudio": "Masło",
       "audioSentencePl": "t1-p027-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p027-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p027-006-sentence.mp3",
       "polishAudio": "Mięso",
       "audioSentencePl": "t1-p027-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p027-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p027-007-sentence.mp3",
       "polishAudio": "Miód",
       "audioSentencePl": "t1-p027-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p027-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p027-008-sentence.mp3",
       "polishAudio": "Ryż",
       "audioSentencePl": "t1-p027-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p027-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p027-009-sentence.mp3",
       "polishAudio": "Ser",
       "audioSentencePl": "t1-p027-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p027-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p027-010-sentence.mp3",
       "polishAudio": "Śniadanie",
       "audioSentencePl": "t1-p027-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

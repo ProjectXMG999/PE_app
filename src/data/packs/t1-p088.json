@@ -17,7 +17,7 @@
       "audioSentence": "t1-p088-001-sentence.mp3",
       "polishAudio": "Olej napędowy",
       "audioSentencePl": "t1-p088-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p088-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p088-002-sentence.mp3",
       "polishAudio": "Pasażer",
       "audioSentencePl": "t1-p088-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p088-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p088-003-sentence.mp3",
       "polishAudio": "Siedzenie",
       "audioSentencePl": "t1-p088-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p088-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p088-004-sentence.mp3",
       "polishAudio": "Taksówka",
       "audioSentencePl": "t1-p088-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p088-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p088-005-sentence.mp3",
       "polishAudio": "Taryfa",
       "audioSentencePl": "t1-p088-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p088-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p088-006-sentence.mp3",
       "polishAudio": "Autostrada",
       "audioSentencePl": "t1-p088-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p088-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p088-007-sentence.mp3",
       "polishAudio": "Benzyna",
       "audioSentencePl": "t1-p088-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p088-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p088-008-sentence.mp3",
       "polishAudio": "Gaz",
       "audioSentencePl": "t1-p088-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p088-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p088-009-sentence.mp3",
       "polishAudio": "Kluczyki do samochodu",
       "audioSentencePl": "t1-p088-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p088-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p088-010-sentence.mp3",
       "polishAudio": "Motocykl",
       "audioSentencePl": "t1-p088-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

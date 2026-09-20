@@ -17,7 +17,7 @@
       "audioSentence": "t1-p059-001-sentence.mp3",
       "polishAudio": "temu",
       "audioSentencePl": "t1-p059-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p059-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p059-002-sentence.mp3",
       "polishAudio": "Cały",
       "audioSentencePl": "t1-p059-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p059-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p059-003-sentence.mp3",
       "polishAudio": "Do",
       "audioSentencePl": "t1-p059-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p059-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p059-004-sentence.mp3",
       "polishAudio": "O",
       "audioSentencePl": "t1-p059-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p059-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p059-005-sentence.mp3",
       "polishAudio": "Podczas gdy",
       "audioSentencePl": "t1-p059-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p059-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p059-006-sentence.mp3",
       "polishAudio": "Przed dniami tygodnia",
       "audioSentencePl": "t1-p059-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p059-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p059-007-sentence.mp3",
       "polishAudio": "Przed miesiącami i latami",
       "audioSentencePl": "t1-p059-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p059-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p059-008-sentence.mp3",
       "polishAudio": "Przez",
       "audioSentencePl": "t1-p059-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p059-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p059-009-sentence.mp3",
       "polishAudio": "W ciągu",
       "audioSentencePl": "t1-p059-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p059-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p059-010-sentence.mp3",
       "polishAudio": "Za",
       "audioSentencePl": "t1-p059-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

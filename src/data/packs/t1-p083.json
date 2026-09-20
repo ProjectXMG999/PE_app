@@ -17,7 +17,7 @@
       "audioSentence": "t1-p083-001-sentence.mp3",
       "polishAudio": "Kontynuować robienie czegoś",
       "audioSentencePl": "t1-p083-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p083-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p083-002-sentence.mp3",
       "polishAudio": "Chodź szybko!",
       "audioSentencePl": "t1-p083-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p083-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p083-003-sentence.mp3",
       "polishAudio": "Być z powrotem",
       "audioSentencePl": "t1-p083-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p083-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p083-004-sentence.mp3",
       "polishAudio": "Wrócić",
       "audioSentencePl": "t1-p083-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p083-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p083-005-sentence.mp3",
       "polishAudio": "Wejść",
       "audioSentencePl": "t1-p083-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p083-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p083-006-sentence.mp3",
       "polishAudio": "Dotrzeć dokądś",
       "audioSentencePl": "t1-p083-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p083-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p083-007-sentence.mp3",
       "polishAudio": "Wracać",
       "audioSentencePl": "t1-p083-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p083-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p083-008-sentence.mp3",
       "polishAudio": "Podnieść się",
       "audioSentencePl": "t1-p083-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p083-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p083-009-sentence.mp3",
       "polishAudio": "Usiąść",
       "audioSentencePl": "t1-p083-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p083-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p083-010-sentence.mp3",
       "polishAudio": "Dowiedzieć się",
       "audioSentencePl": "t1-p083-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

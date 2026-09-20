@@ -17,7 +17,7 @@
       "audioSentence": "t1-p020-001-sentence.mp3",
       "polishAudio": "Płakać",
       "audioSentencePl": "t1-p020-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p020-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p020-002-sentence.mp3",
       "polishAudio": "Pić",
       "audioSentencePl": "t1-p020-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p020-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p020-003-sentence.mp3",
       "polishAudio": "Jeść",
       "audioSentencePl": "t1-p020-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p020-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p020-004-sentence.mp3",
       "polishAudio": "Pomagać",
       "audioSentencePl": "t1-p020-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p020-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p020-005-sentence.mp3",
       "polishAudio": "Żyć",
       "audioSentencePl": "t1-p020-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p020-006",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p020-007-sentence.mp3",
       "polishAudio": "Przygotowywać",
       "audioSentencePl": "t1-p020-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p020-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p020-008-sentence.mp3",
       "polishAudio": "Używać",
       "audioSentencePl": "t1-p020-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p020-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p020-009-sentence.mp3",
       "polishAudio": "Myć",
       "audioSentencePl": "t1-p020-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p020-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p020-010-sentence.mp3",
       "polishAudio": "Działać",
       "audioSentencePl": "t1-p020-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

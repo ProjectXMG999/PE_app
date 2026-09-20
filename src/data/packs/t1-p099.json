@@ -17,7 +17,7 @@
       "audioSentence": "t1-p099-001-sentence.mp3",
       "polishAudio": "Apetyt",
       "audioSentencePl": "t1-p099-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p099-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p099-002-sentence.mp3",
       "polishAudio": "Emocja",
       "audioSentencePl": "t1-p099-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p099-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p099-003-sentence.mp3",
       "polishAudio": "Marzenie",
       "audioSentencePl": "t1-p099-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p099-004",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p099-005-sentence.mp3",
       "polishAudio": "Potrzeba",
       "audioSentencePl": "t1-p099-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p099-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p099-006-sentence.mp3",
       "polishAudio": "Śmiech",
       "audioSentencePl": "t1-p099-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p099-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p099-007-sentence.mp3",
       "polishAudio": "Uczucie",
       "audioSentencePl": "t1-p099-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p099-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p099-008-sentence.mp3",
       "polishAudio": "Zapach",
       "audioSentencePl": "t1-p099-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p099-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p099-009-sentence.mp3",
       "polishAudio": "Zmysł smaku",
       "audioSentencePl": "t1-p099-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p099-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p099-010-sentence.mp3",
       "polishAudio": "Życzenie",
       "audioSentencePl": "t1-p099-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

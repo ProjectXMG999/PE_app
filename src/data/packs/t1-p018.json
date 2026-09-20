@@ -17,7 +17,7 @@
       "audioSentence": "t1-p018-001-sentence.mp3",
       "polishAudio": "Bank",
       "audioSentencePl": "t1-p018-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p018-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p018-002-sentence.mp3",
       "polishAudio": "Bar",
       "audioSentencePl": "t1-p018-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p018-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p018-003-sentence.mp3",
       "polishAudio": "Centrum miasta",
       "audioSentencePl": "t1-p018-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p018-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p018-004-sentence.mp3",
       "polishAudio": "Galeria handlowa",
       "audioSentencePl": "t1-p018-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p018-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p018-005-sentence.mp3",
       "polishAudio": "Hotel",
       "audioSentencePl": "t1-p018-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p018-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p018-006-sentence.mp3",
       "polishAudio": "Park",
       "audioSentencePl": "t1-p018-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p018-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p018-007-sentence.mp3",
       "polishAudio": "Posterunek policji",
       "audioSentencePl": "t1-p018-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p018-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p018-008-sentence.mp3",
       "polishAudio": "Sklepik",
       "audioSentencePl": "t1-p018-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p018-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p018-009-sentence.mp3",
       "polishAudio": "Sklep",
       "audioSentencePl": "t1-p018-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p018-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p018-010-sentence.mp3",
       "polishAudio": "Szpital",
       "audioSentencePl": "t1-p018-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

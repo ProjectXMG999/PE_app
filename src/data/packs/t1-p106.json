@@ -17,7 +17,7 @@
       "audioSentence": "t1-p106-001-sentence.mp3",
       "polishAudio": "Włoski",
       "audioSentencePl": "t1-p106-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p106-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p106-002-sentence.mp3",
       "polishAudio": "Hindi",
       "audioSentencePl": "t1-p106-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p106-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p106-003-sentence.mp3",
       "polishAudio": "Hiszpański",
       "audioSentencePl": "t1-p106-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p106-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p106-004-sentence.mp3",
       "polishAudio": "Japoński",
       "audioSentencePl": "t1-p106-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p106-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p106-005-sentence.mp3",
       "polishAudio": "Turecki",
       "audioSentencePl": "t1-p106-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p106-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p106-006-sentence.mp3",
       "polishAudio": "Angielski",
       "audioSentencePl": "t1-p106-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p106-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p106-007-sentence.mp3",
       "polishAudio": "Chiński",
       "audioSentencePl": "t1-p106-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p106-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p106-008-sentence.mp3",
       "polishAudio": "Francuski",
       "audioSentencePl": "t1-p106-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p106-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p106-009-sentence.mp3",
       "polishAudio": "Polski",
       "audioSentencePl": "t1-p106-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p106-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p106-010-sentence.mp3",
       "polishAudio": "Niemiecki",
       "audioSentencePl": "t1-p106-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

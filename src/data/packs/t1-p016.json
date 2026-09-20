@@ -17,7 +17,7 @@
       "audioSentence": "t1-p016-001-sentence.mp3",
       "polishAudio": "Odpowiadać",
       "audioSentencePl": "t1-p016-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p016-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p016-002-sentence.mp3",
       "polishAudio": "Pytać",
       "audioSentencePl": "t1-p016-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p016-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p016-003-sentence.mp3",
       "polishAudio": "Dzwonić do kogoś",
       "audioSentencePl": "t1-p016-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p016-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p016-004-sentence.mp3",
       "polishAudio": "Kontaktować się",
       "audioSentencePl": "t1-p016-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p016-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p016-005-sentence.mp3",
       "polishAudio": "Informować",
       "audioSentencePl": "t1-p016-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p016-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p016-006-sentence.mp3",
       "polishAudio": "Powiedzieć",
       "audioSentencePl": "t1-p016-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p016-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p016-007-sentence.mp3",
       "polishAudio": "Pokazywać",
       "audioSentencePl": "t1-p016-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p016-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p016-008-sentence.mp3",
       "polishAudio": "Uśmiechać się",
       "audioSentencePl": "t1-p016-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p016-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p016-009-sentence.mp3",
       "polishAudio": "Powiedzieć",
       "audioSentencePl": "t1-p016-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p016-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p016-010-sentence.mp3",
       "polishAudio": "Dziękować",
       "audioSentencePl": "t1-p016-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

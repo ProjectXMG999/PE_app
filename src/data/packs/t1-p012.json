@@ -17,7 +17,7 @@
       "audioSentence": "t1-p012-001-sentence.mp3",
       "polishAudio": "Kozak",
       "audioSentencePl": "t1-p012-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p012-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p012-002-sentence.mp3",
       "polishAudio": "Bratku, bracie",
       "audioSentencePl": "t1-p012-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p012-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p012-003-sentence.mp3",
       "polishAudio": "Dolce",
       "audioSentencePl": "t1-p012-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p012-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p012-004-sentence.mp3",
       "polishAudio": "Wyluzować",
       "audioSentencePl": "t1-p012-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p012-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p012-005-sentence.mp3",
       "polishAudio": "Stary, ziomuś",
       "audioSentencePl": "t1-p012-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p012-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p012-006-sentence.mp3",
       "polishAudio": "Kochanie",
       "audioSentencePl": "t1-p012-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p012-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p012-007-sentence.mp3",
       "polishAudio": "Kolego, chłopie",
       "audioSentencePl": "t1-p012-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p012-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p012-008-sentence.mp3",
       "polishAudio": "Jak jest?",
       "audioSentencePl": "t1-p012-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p012-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p012-009-sentence.mp3",
       "polishAudio": "Być świetnym",
       "audioSentencePl": "t1-p012-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p012-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p012-010-sentence.mp3",
       "polishAudio": "Bawić się zarąbiście",
       "audioSentencePl": "t1-p012-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

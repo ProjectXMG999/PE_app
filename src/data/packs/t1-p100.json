@@ -17,7 +17,7 @@
       "audioSentence": "t1-p100-001-sentence.mp3",
       "polishAudio": "Przynosić",
       "audioSentencePl": "t1-p100-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p100-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p100-002-sentence.mp3",
       "polishAudio": "Łapać",
       "audioSentencePl": "t1-p100-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p100-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p100-003-sentence.mp3",
       "polishAudio": "Zamykać",
       "audioSentencePl": "t1-p100-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p100-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p100-004-sentence.mp3",
       "polishAudio": "Trzymać",
       "audioSentencePl": "t1-p100-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p100-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p100-005-sentence.mp3",
       "polishAudio": "Otwierać",
       "audioSentencePl": "t1-p100-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p100-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p100-006-sentence.mp3",
       "polishAudio": "Ciągnąć",
       "audioSentencePl": "t1-p100-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p100-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p100-007-sentence.mp3",
       "polishAudio": "Pchać",
       "audioSentencePl": "t1-p100-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p100-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p100-008-sentence.mp3",
       "polishAudio": "Kłaść",
       "audioSentencePl": "t1-p100-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p100-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p100-009-sentence.mp3",
       "polishAudio": "Dotykać",
       "audioSentencePl": "t1-p100-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p100-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p100-010-sentence.mp3",
       "polishAudio": "Pisać",
       "audioSentencePl": "t1-p100-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

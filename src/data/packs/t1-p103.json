@@ -17,7 +17,7 @@
       "audioSentence": "t1-p103-001-sentence.mp3",
       "polishAudio": "Firma",
       "audioSentencePl": "t1-p103-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p103-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p103-002-sentence.mp3",
       "polishAudio": "Klient",
       "audioSentencePl": "t1-p103-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p103-003",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p103-004-sentence.mp3",
       "polishAudio": "Produkt",
       "audioSentencePl": "t1-p103-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p103-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p103-005-sentence.mp3",
       "polishAudio": "Rachunek",
       "audioSentencePl": "t1-p103-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p103-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p103-006-sentence.mp3",
       "polishAudio": "Szansa",
       "audioSentencePl": "t1-p103-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p103-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p103-007-sentence.mp3",
       "polishAudio": "Umowa",
       "audioSentencePl": "t1-p103-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p103-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p103-008-sentence.mp3",
       "polishAudio": "Rezultat",
       "audioSentencePl": "t1-p103-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p103-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p103-009-sentence.mp3",
       "polishAudio": "Wyprzedaż",
       "audioSentencePl": "t1-p103-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p103-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p103-010-sentence.mp3",
       "polishAudio": "Zniżka",
       "audioSentencePl": "t1-p103-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

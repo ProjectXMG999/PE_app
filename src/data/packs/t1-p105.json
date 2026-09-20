@@ -17,7 +17,7 @@
       "audioSentence": "t1-p105-001-sentence.mp3",
       "polishAudio": "Grudzień",
       "audioSentencePl": "t1-p105-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p105-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p105-002-sentence.mp3",
       "polishAudio": "Jesień",
       "audioSentencePl": "t1-p105-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p105-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p105-003-sentence.mp3",
       "polishAudio": "Kalendarz",
       "audioSentencePl": "t1-p105-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p105-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p105-004-sentence.mp3",
       "polishAudio": "Lato",
       "audioSentencePl": "t1-p105-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p105-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p105-005-sentence.mp3",
       "polishAudio": "Listopad",
       "audioSentencePl": "t1-p105-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p105-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p105-006-sentence.mp3",
       "polishAudio": "Luty",
       "audioSentencePl": "t1-p105-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p105-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p105-007-sentence.mp3",
       "polishAudio": "Marzec",
       "audioSentencePl": "t1-p105-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p105-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p105-008-sentence.mp3",
       "polishAudio": "Sierpień",
       "audioSentencePl": "t1-p105-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p105-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p105-009-sentence.mp3",
       "polishAudio": "Styczeń",
       "audioSentencePl": "t1-p105-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p105-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p105-010-sentence.mp3",
       "polishAudio": "Zima",
       "audioSentencePl": "t1-p105-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

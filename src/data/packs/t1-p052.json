@@ -17,7 +17,7 @@
       "audioSentence": "t1-p052-001-sentence.mp3",
       "polishAudio": "Policja",
       "audioSentencePl": "t1-p052-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p052-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p052-002-sentence.mp3",
       "polishAudio": "Bóg",
       "audioSentencePl": "t1-p052-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p052-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p052-003-sentence.mp3",
       "polishAudio": "Dowód osobisty",
       "audioSentencePl": "t1-p052-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p052-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p052-004-sentence.mp3",
       "polishAudio": "Drzewo",
       "audioSentencePl": "t1-p052-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p052-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p052-005-sentence.mp3",
       "polishAudio": "Maszyna",
       "audioSentencePl": "t1-p052-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p052-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p052-006-sentence.mp3",
       "polishAudio": "Nastrój",
       "audioSentencePl": "t1-p052-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p052-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p052-007-sentence.mp3",
       "polishAudio": "Start",
       "audioSentencePl": "t1-p052-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p052-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p052-008-sentence.mp3",
       "polishAudio": "Waga",
       "audioSentencePl": "t1-p052-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p052-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p052-009-sentence.mp3",
       "polishAudio": "Wigilia",
       "audioSentencePl": "t1-p052-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p052-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p052-010-sentence.mp3",
       "polishAudio": "Wzrost",
       "audioSentencePl": "t1-p052-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p045-001-sentence.mp3",
       "polishAudio": "Dwadzieścia",
       "audioSentencePl": "t1-p045-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p045-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p045-002-sentence.mp3",
       "polishAudio": "Dwadzieścia jeden",
       "audioSentencePl": "t1-p045-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p045-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p045-003-sentence.mp3",
       "polishAudio": "Dwadzieścia dwa",
       "audioSentencePl": "t1-p045-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p045-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p045-004-sentence.mp3",
       "polishAudio": "Dwadzieścia trzy",
       "audioSentencePl": "t1-p045-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p045-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p045-005-sentence.mp3",
       "polishAudio": "Trzydzieści",
       "audioSentencePl": "t1-p045-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p045-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p045-006-sentence.mp3",
       "polishAudio": "Czterdzieści",
       "audioSentencePl": "t1-p045-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p045-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p045-007-sentence.mp3",
       "polishAudio": "Pięćdziesiąt",
       "audioSentencePl": "t1-p045-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p045-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p045-008-sentence.mp3",
       "polishAudio": "Sześćdziesiąt",
       "audioSentencePl": "t1-p045-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p045-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p045-009-sentence.mp3",
       "polishAudio": "Siedemdziesiąt",
       "audioSentencePl": "t1-p045-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p045-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p045-010-sentence.mp3",
       "polishAudio": "Osiemdziesiąt",
       "audioSentencePl": "t1-p045-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

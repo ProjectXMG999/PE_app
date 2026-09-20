@@ -17,7 +17,7 @@
       "audioSentence": "t1-p040-001-sentence.mp3",
       "polishAudio": "Ale",
       "audioSentencePl": "t1-p040-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p040-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p040-002-sentence.mp3",
       "polishAudio": "Cóż",
       "audioSentencePl": "t1-p040-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p040-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p040-003-sentence.mp3",
       "polishAudio": "Dla",
       "audioSentencePl": "t1-p040-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p040-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p040-004-sentence.mp3",
       "polishAudio": "I",
       "audioSentencePl": "t1-p040-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p040-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p040-005-sentence.mp3",
       "polishAudio": "Jeśli",
       "audioSentencePl": "t1-p040-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p040-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p040-006-sentence.mp3",
       "polishAudio": "Nie",
       "audioSentencePl": "t1-p040-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p040-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p040-007-sentence.mp3",
       "polishAudio": "Tak",
       "audioSentencePl": "t1-p040-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p040-008",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p040-009-sentence.mp3",
       "polishAudio": "Wszyscy",
       "audioSentencePl": "t1-p040-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p040-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p040-010-sentence.mp3",
       "polishAudio": "Żeby",
       "audioSentencePl": "t1-p040-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

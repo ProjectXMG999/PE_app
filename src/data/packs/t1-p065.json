@@ -17,7 +17,7 @@
       "audioSentence": "t1-p065-001-sentence.mp3",
       "polishAudio": "Jego",
       "audioSentencePl": "t1-p065-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p065-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p065-002-sentence.mp3",
       "polishAudio": "Jej",
       "audioSentencePl": "t1-p065-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p065-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p065-003-sentence.mp3",
       "polishAudio": "Twój",
       "audioSentencePl": "t1-p065-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p065-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p065-004-sentence.mp3",
       "polishAudio": "Wasz, wasza, wasze",
       "audioSentencePl": "t1-p065-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p065-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p065-005-sentence.mp3",
       "polishAudio": "Ich",
       "audioSentencePl": "t1-p065-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p065-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p065-006-sentence.mp3",
       "polishAudio": "Nasz",
       "audioSentencePl": "t1-p065-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p065-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p065-007-sentence.mp3",
       "polishAudio": "Mój",
       "audioSentencePl": "t1-p065-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p065-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p065-008-sentence.mp3",
       "polishAudio": "Tego",
       "audioSentencePl": "t1-p065-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p065-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p065-009-sentence.mp3",
       "polishAudio": "Jego",
       "audioSentencePl": "t1-p065-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p065-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p065-010-sentence.mp3",
       "polishAudio": "Jej",
       "audioSentencePl": "t1-p065-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

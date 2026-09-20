@@ -17,7 +17,7 @@
       "audioSentence": "t1-p032-001-sentence.mp3",
       "polishAudio": "Chusteczka do nosa",
       "audioSentencePl": "t1-p032-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p032-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p032-002-sentence.mp3",
       "polishAudio": "Grzebień",
       "audioSentencePl": "t1-p032-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p032-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p032-003-sentence.mp3",
       "polishAudio": "Mydło",
       "audioSentencePl": "t1-p032-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p032-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p032-004-sentence.mp3",
       "polishAudio": "Papier toaletowy",
       "audioSentencePl": "t1-p032-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p032-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p032-005-sentence.mp3",
       "polishAudio": "Pasta do zębów",
       "audioSentencePl": "t1-p032-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p032-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p032-006-sentence.mp3",
       "polishAudio": "Prysznic",
       "audioSentencePl": "t1-p032-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p032-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p032-007-sentence.mp3",
       "polishAudio": "Ręcznik",
       "audioSentencePl": "t1-p032-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p032-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p032-008-sentence.mp3",
       "polishAudio": "Szampon",
       "audioSentencePl": "t1-p032-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p032-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p032-009-sentence.mp3",
       "polishAudio": "Szczoteczka do zębów",
       "audioSentencePl": "t1-p032-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p032-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p032-010-sentence.mp3",
       "polishAudio": "Szczotka do włosów",
       "audioSentencePl": "t1-p032-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }
