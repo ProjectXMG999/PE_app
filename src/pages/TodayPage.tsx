@@ -16,12 +16,13 @@ import { FlowNumber } from '../components/shared/FlowNumber'
 import { useHaptics } from '../hooks/useHaptics'
 import { unlockAudioGlobally } from '../audio/audioUnlock'
 import { playTick, playSuccess } from '../services/sfx'
-import { nextListenPack, nextTrainPack, listenedPacksCount, estimateMinutes, packLevelThresholds } from '../data/nextPack'
+import { nextListenPack, nextTrainPack, listenedPacksCount, listenBacklogCount, estimateMinutes, packLevelThresholds } from '../data/nextPack'
 import { shouldPromptLevelUp } from '../services/comfort'
 import { reviewMinutes } from '../services/reviewQueue'
 import { LEVEL_COLORS, LEVEL_META, ROUTE_TOTAL } from '../data/levels'
 import { BoltGlyph, CheckGlyph, ChevronRightGlyph, HeadphonesGlyph, RepeatGlyph } from '../components/mode/glyphs'
-import { plWords } from '../utils/plural'
+import { plWords, plPacks } from '../utils/plural'
+import { frontierPack } from '../utils/packRoute'
 import { useAppStore } from '../store/useAppStore'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
@@ -129,7 +130,23 @@ export function TodayPage() {
     () => (todayLevel == null ? allPacks : allPacks.filter(p => p.level >= todayLevel)),
     [todayLevel]
   )
-  const listen = useMemo(() => nextListenPack(scopedPacks, snapshot), [scopedPacks, snapshot])
+  // Słuchaj starts from where the learner actually is, not from the top of the
+  // catalogue. Since the listen axis stopped counting declared and trained
+  // packs, "the earliest pack you haven't heard" is pack #1 for nearly
+  // everyone — a plain reading of the route that would send someone at 3 000
+  // words back to the beginning. The frontier is the honest starting point;
+  // the packs behind it are counted as a backlog rather than silently dropped.
+  const frontier = useMemo(() => frontierPack(scopedPacks, snapshot), [scopedPacks, snapshot])
+  const listenPacks = useMemo(() => {
+    if (!frontier) return scopedPacks
+    const from = scopedPacks.findIndex(p => p.id === frontier.id)
+    return from <= 0 ? scopedPacks : scopedPacks.slice(from)
+  }, [scopedPacks, frontier])
+  const listen = useMemo(() => nextListenPack(listenPacks, snapshot), [listenPacks, snapshot])
+  const listenBacklog = useMemo(
+    () => listenBacklogCount(scopedPacks, snapshot, frontier),
+    [scopedPacks, snapshot, frontier]
+  )
   const train = useMemo(() => nextTrainPack(scopedPacks, snapshot), [scopedPacks, snapshot])
 
   const [activeMode, setActiveMode] = useState<StudyPath>(() => (train ? 'train' : 'listen'))
@@ -205,6 +222,9 @@ export function TodayPage() {
       unit="paczek"
       ticks={listenTicks}
       band={listenBand(listenedCount)}
+      note={listenBacklog > 0
+        ? `Z tyłu do przesłuchania: ${listenBacklog.toLocaleString('pl-PL')} ${plPacks(listenBacklog)} — nadrobisz w Pakietach.`
+        : undefined}
     />
   )
 
@@ -213,7 +233,7 @@ export function TodayPage() {
       type="button"
       className="today__pick u-liquid"
       variants={glassVariants}
-      onClick={() => pressCta(() => navigate(`/pakiet/${train.pack.id}/fiszki-start`, { viewTransition: true }))}
+      onClick={() => pressCta(() => navigate(`/pakiet/${train.pack.id}/fiszki-start`))}
     >
       {showPace && (
         <span className="today__pick-pace">+{pace!.deltaPct}% szybciej niż tydzień temu</span>
@@ -235,7 +255,7 @@ export function TodayPage() {
       type="button"
       className="today__pick u-liquid"
       variants={glassVariants}
-      onClick={() => pressCta(() => navigate(`/pakiet/${listen.pack.id}/start`, { viewTransition: true }))}
+      onClick={() => pressCta(() => navigate(`/pakiet/${listen.pack.id}/start`))}
     >
       <span className="today__pick-name">{listen.pack.name}</span>
       <span className="today__pick-detail">
@@ -319,13 +339,18 @@ export function TodayPage() {
                   className={`today__reviews u-liquid today__reviews--${reviewDone ? 'done' : urgency}`}
                   variants={glassVariants}
                 >
+                  {/* The urgency breath — the whole card, not the icon. It has
+                      to be an element of its own: .u-liquid has already spent
+                      both pseudo-elements on the glass and its rim. */}
+                  <span className="today__reviews-aura" aria-hidden="true" />
+
                   {/* Row 1 — the action: today's portion and how long it takes. */}
                   <button
                     type="button"
                     className="today__reviews-row"
-                    onClick={() => pressCta(() => { unlockAudioGlobally(); navigate('/powtorka', { viewTransition: true }) })}
+                    onClick={() => pressCta(() => { unlockAudioGlobally(); navigate('/powtorka') })}
                   >
-                    <span className={`today__reviews-badge${urgency === 'urgent' && !reviewDone ? ' fx-ping' : ''}`} aria-hidden="true">
+                    <span className="today__reviews-badge" aria-hidden="true">
                       {reviewDone ? <CheckGlyph size={18} weight={2.4} /> : <RepeatGlyph size={18} weight={2.2} />}
                     </span>
                     <span className="today__reviews-body">
@@ -348,7 +373,7 @@ export function TodayPage() {
                   <button
                     type="button"
                     className="today__reviews-row today__reviews-row--queue"
-                    onClick={() => navigate('/postęp#powtorki', { viewTransition: true })}
+                    onClick={() => navigate('/postęp#powtorki')}
                   >
                     <span className="today__reviews-body">
                       <span>
@@ -382,7 +407,7 @@ export function TodayPage() {
                   type="button"
                   className="today__browse-level"
                   variants={variants}
-                  onClick={() => { homeSetLevel(todayLevel); navigate('/pakiety', { viewTransition: true }) }}
+                  onClick={() => { homeSetLevel(todayLevel); navigate('/pakiety') }}
                 >
                   Wszystkie paczki poziomu {levelName(todayLevel)}
                   <ChevronRightGlyph size={14} weight={2.2} />
@@ -396,7 +421,8 @@ export function TodayPage() {
         {levelPickerOpen && (
           <LevelPicker
             current={todayLevel}
-            onSelect={l => { setTodayLevel(l); setLevelPickerOpen(false); playTick(); haptics.tap() }}
+            /* The sheet closes itself once the marker has moved — see LevelPicker. */
+            onSelect={l => { setTodayLevel(l); playTick(); haptics.tap() }}
             onClose={() => setLevelPickerOpen(false)}
           />
         )}
