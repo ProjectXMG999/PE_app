@@ -230,33 +230,23 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: currentColor;
+  background: var(--key, currentColor);
 }
 
+/* Untouched words: present, but only just — the same near-nothing the dust is
+   drawn at in the canvas. */
 .constellation__key--dust::before {
   background: var(--text-muted);
   opacity: 0.3;
 }
 
-.constellation__key--learning::before {
-  background: var(--accent-orange);
-  opacity: 0.6;
-}
-
-.constellation__key--known::before {
-  background: var(--accent-green);
-}
-
-.constellation__key--retired::before {
-  background: #fff;
-  box-shadow: 0 0 7px 1px oklch(1 0 0 / 0.75);
-}
-
-/* The sky is a night sky in both themes, so this swatch stays white — but a
-   white disc with a white glow is invisible on a light card. The fill keeps its
-   meaning ("burning hottest"); a hairline gives it back its edge. */
-[data-theme="light"] .constellation__key--retired::before {
-  box-shadow: 0 0 0 1px var(--border-strong), 0 0 6px 1px oklch(0.55 0.18 292 / 0.3);
+/* Names the axis the swatches belong to, so nobody reads them as states. */
+.constellation__legend-axis {
+  font-size: var(--text-3xs, 10px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
 }
 
 .constellation__foot {

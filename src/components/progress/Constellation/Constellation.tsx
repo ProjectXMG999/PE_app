@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useReducedMotion } from 'framer-motion'
-import { LEVEL_COLORS } from '../../../data/levels'
+import { LEVEL_COLORS, LEVEL_META } from '../../../data/levels'
 import { resolveCssColor, resolveToken, rgbUnit, tokenNameOf } from '../../../utils/cssColor'
 import { fetchPack } from '../../../hooks/usePackageData'
 import { useAppStore } from '../../../store/useAppStore'
@@ -467,11 +467,24 @@ export function Constellation({ packs, wordProgress }: Props) {
         )}
       </div>
 
+      {/* The colour key, and it is a LEVEL key — see starColors() in renderer.ts:
+          hue comes from the pack's level and nothing else, while brightness
+          carries how well the word is remembered. The first version of this
+          legend labelled the hues by learning state ("w nauce" against orange,
+          "znane" against green), which read a level-2 band as a pile of words
+          in progress. */}
       <div className="constellation__legend">
-        <span className="constellation__key constellation__key--dust">przed Tobą</span>
-        <span className="constellation__key constellation__key--learning">w nauce</span>
-        <span className="constellation__key constellation__key--known">znane</span>
-        <span className="constellation__key constellation__key--retired">na stałe</span>
+        <span className="constellation__legend-axis">Kolor = poziom</span>
+        {LEVEL_META.map(l => (
+          <span
+            key={l.level}
+            className="constellation__key"
+            style={{ ['--key' as string]: LEVEL_COLORS[l.level] }}
+          >
+            {l.name}
+          </span>
+        ))}
+        <span className="constellation__key constellation__key--dust">jeszcze przed Tobą</span>
       </div>
 
       <p className="constellation__foot">

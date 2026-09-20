@@ -62,7 +62,12 @@ function starColors(field: Starfield, levels: LevelColors): Float32Array {
   for (let i = 0; i < field.count; i++) {
     const c = levels[Math.round(field.level[i]) - 1] ?? levels[0]
     const lit = field.state[i] !== STATE_DUST
-    const mixToWhite = lit ? 0.55 * field.brightness[i] : 0
+    // 0.35, not 0.55. Brightness is already carried twice over — by alpha and
+    // by point size — so washing the hue out on top of that was redundant
+    // reinforcement that cost the one thing hue is for. At 0.55 the level-1
+    // core came out cream rather than yellow, which made the legend's promise
+    // ("kolor = poziom") false exactly where memory is strongest.
+    const mixToWhite = lit ? 0.35 * field.brightness[i] : 0
     out[i * 3] = c[0] + (1 - c[0]) * mixToWhite
     out[i * 3 + 1] = c[1] + (1 - c[1]) * mixToWhite
     out[i * 3 + 2] = c[2] + (1 - c[2]) * mixToWhite
