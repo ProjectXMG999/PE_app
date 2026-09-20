@@ -15,7 +15,9 @@
       "audioWord": "t1-p160-001-word.mp3",
       "audioWordPl": "t1-p160-001-word-pl.mp3",
       "audioSentence": "t1-p160-001-sentence.mp3",
-      "polishAudio": "Ja sam lub sama"
+      "polishAudio": "Ja sam lub sama",
+      "audioSentencePl": "t1-p160-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p160-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p160-002-word.mp3",
       "audioWordPl": "t1-p160-002-word-pl.mp3",
       "audioSentence": "t1-p160-002-sentence.mp3",
-      "polishAudio": "My sami"
+      "polishAudio": "My sami",
+      "audioSentencePl": "t1-p160-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p160-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p160-003-word.mp3",
       "audioWordPl": "t1-p160-003-word-pl.mp3",
       "audioSentence": "t1-p160-003-sentence.mp3",
-      "polishAudio": "Ono samo"
+      "polishAudio": "Ono samo",
+      "audioSentencePl": "t1-p160-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p160-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p160-004-word.mp3",
       "audioWordPl": "t1-p160-004-word-pl.mp3",
       "audioSentence": "t1-p160-004-sentence.mp3",
-      "polishAudio": "Oni sami"
+      "polishAudio": "Oni sami",
+      "audioSentencePl": "t1-p160-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p160-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p160-005-word.mp3",
       "audioWordPl": "t1-p160-005-word-pl.mp3",
       "audioSentence": "t1-p160-005-sentence.mp3",
-      "polishAudio": "Ty sam lub sama"
+      "polishAudio": "Ty sam lub sama",
+      "audioSentencePl": "t1-p160-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p160-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p160-006-word.mp3",
       "audioWordPl": "t1-p160-006-word-pl.mp3",
       "audioSentence": "t1-p160-006-sentence.mp3",
-      "polishAudio": "Wy sami"
+      "polishAudio": "Wy sami",
+      "audioSentencePl": "t1-p160-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p160-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p160-007-word.mp3",
       "audioWordPl": "t1-p160-007-word-pl.mp3",
       "audioSentence": "t1-p160-007-sentence.mp3",
-      "polishAudio": "Ona sama"
+      "polishAudio": "Ona sama",
+      "audioSentencePl": "t1-p160-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p160-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p160-008-word.mp3",
       "audioWordPl": "t1-p160-008-word-pl.mp3",
       "audioSentence": "t1-p160-008-sentence.mp3",
-      "polishAudio": "On sam"
+      "polishAudio": "On sam",
+      "audioSentencePl": "t1-p160-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p160-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p160-009-word.mp3",
       "audioWordPl": "t1-p160-009-word-pl.mp3",
       "audioSentence": "t1-p160-009-sentence.mp3",
-      "polishAudio": "Ja sam lub sama"
+      "polishAudio": "Ja sam lub sama",
+      "audioSentencePl": "t1-p160-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p160-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p160-010-word.mp3",
       "audioWordPl": "t1-p160-010-word-pl.mp3",
       "audioSentence": "t1-p160-010-sentence.mp3",
-      "polishAudio": "My sami"
+      "polishAudio": "My sami",
+      "audioSentencePl": "t1-p160-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

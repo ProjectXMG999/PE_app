@@ -15,7 +15,9 @@
       "audioWord": "t1-p009-001-word.mp3",
       "audioWordPl": "t1-p009-001-word-pl.mp3",
       "audioSentence": "t1-p009-001-sentence.mp3",
-      "polishAudio": "Ambicja"
+      "polishAudio": "Ambicja",
+      "audioSentencePl": "t1-p009-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p009-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p009-002-word.mp3",
       "audioWordPl": "t1-p009-002-word-pl.mp3",
       "audioSentence": "t1-p009-002-sentence.mp3",
-      "polishAudio": "Humor"
+      "polishAudio": "Humor",
+      "audioSentencePl": "t1-p009-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p009-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p009-003-word.mp3",
       "audioWordPl": "t1-p009-003-word-pl.mp3",
       "audioSentence": "t1-p009-003-sentence.mp3",
-      "polishAudio": "Miłość"
+      "polishAudio": "Miłość",
+      "audioSentencePl": "t1-p009-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p009-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p009-004-word.mp3",
       "audioWordPl": "t1-p009-004-word-pl.mp3",
       "audioSentence": "t1-p009-004-sentence.mp3",
-      "polishAudio": "Nadzieja"
+      "polishAudio": "Nadzieja",
+      "audioSentencePl": "t1-p009-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p009-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p009-005-word.mp3",
       "audioWordPl": "t1-p009-005-word-pl.mp3",
       "audioSentence": "t1-p009-005-sentence.mp3",
-      "polishAudio": "Przyjaźń"
+      "polishAudio": "Przyjaźń",
+      "audioSentencePl": "t1-p009-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p009-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p009-006-word.mp3",
       "audioWordPl": "t1-p009-006-word-pl.mp3",
       "audioSentence": "t1-p009-006-sentence.mp3",
-      "polishAudio": "Szacunek"
+      "polishAudio": "Szacunek",
+      "audioSentencePl": "t1-p009-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p009-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p009-007-word.mp3",
       "audioWordPl": "t1-p009-007-word-pl.mp3",
       "audioSentence": "t1-p009-007-sentence.mp3",
-      "polishAudio": "Szczęście"
+      "polishAudio": "Szczęście",
+      "audioSentencePl": "t1-p009-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p009-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p009-008-word.mp3",
       "audioWordPl": "t1-p009-008-word-pl.mp3",
       "audioSentence": "t1-p009-008-sentence.mp3",
-      "polishAudio": "Szczęście"
+      "polishAudio": "Szczęście",
+      "audioSentencePl": "t1-p009-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p009-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p009-009-word.mp3",
       "audioWordPl": "t1-p009-009-word-pl.mp3",
       "audioSentence": "t1-p009-009-sentence.mp3",
-      "polishAudio": "Uśmiech"
+      "polishAudio": "Uśmiech",
+      "audioSentencePl": "t1-p009-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p009-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p009-010-word.mp3",
       "audioWordPl": "t1-p009-010-word-pl.mp3",
       "audioSentence": "t1-p009-010-sentence.mp3",
-      "polishAudio": "Zabawa"
+      "polishAudio": "Zabawa",
+      "audioSentencePl": "t1-p009-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

@@ -15,7 +15,9 @@
       "audioWord": "t1-p191-001-word.mp3",
       "audioWordPl": "t1-p191-001-word-pl.mp3",
       "audioSentence": "t1-p191-001-sentence.mp3",
-      "polishAudio": "Kalkulator"
+      "polishAudio": "Kalkulator",
+      "audioSentencePl": "t1-p191-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p191-002-word.mp3",
       "audioWordPl": "t1-p191-002-word-pl.mp3",
       "audioSentence": "t1-p191-002-sentence.mp3",
-      "polishAudio": "Koperta"
+      "polishAudio": "Koperta",
+      "audioSentencePl": "t1-p191-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p191-003-word.mp3",
       "audioWordPl": "t1-p191-003-word-pl.mp3",
       "audioSentence": "t1-p191-003-sentence.mp3",
-      "polishAudio": "Lista"
+      "polishAudio": "Lista",
+      "audioSentencePl": "t1-p191-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-004",
@@ -59,7 +65,9 @@
       "audioWord": "t1-p191-005-word.mp3",
       "audioWordPl": "t1-p191-005-word-pl.mp3",
       "audioSentence": "t1-p191-005-sentence.mp3",
-      "polishAudio": "Raport"
+      "polishAudio": "Raport",
+      "audioSentencePl": "t1-p191-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-006",
@@ -70,7 +78,9 @@
       "audioWord": "t1-p191-006-word.mp3",
       "audioWordPl": "t1-p191-006-word-pl.mp3",
       "audioSentence": "t1-p191-006-sentence.mp3",
-      "polishAudio": "Kartka"
+      "polishAudio": "Kartka",
+      "audioSentencePl": "t1-p191-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-007",
@@ -81,7 +91,9 @@
       "audioWord": "t1-p191-007-word.mp3",
       "audioWordPl": "t1-p191-007-word-pl.mp3",
       "audioSentence": "t1-p191-007-sentence.mp3",
-      "polishAudio": "Marker"
+      "polishAudio": "Marker",
+      "audioSentencePl": "t1-p191-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-008",
@@ -92,7 +104,9 @@
       "audioWord": "t1-p191-008-word.mp3",
       "audioWordPl": "t1-p191-008-word-pl.mp3",
       "audioSentence": "t1-p191-008-sentence.mp3",
-      "polishAudio": "Papierkowa robota"
+      "polishAudio": "Papierkowa robota",
+      "audioSentencePl": "t1-p191-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-009",
@@ -103,7 +117,9 @@
       "audioWord": "t1-p191-009-word.mp3",
       "audioWordPl": "t1-p191-009-word-pl.mp3",
       "audioSentence": "t1-p191-009-sentence.mp3",
-      "polishAudio": "Dokumentacja"
+      "polishAudio": "Dokumentacja",
+      "audioSentencePl": "t1-p191-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-010",
@@ -114,7 +130,9 @@
       "audioWord": "t1-p191-010-word.mp3",
       "audioWordPl": "t1-p191-010-word-pl.mp3",
       "audioSentence": "t1-p191-010-sentence.mp3",
-      "polishAudio": "Stempel"
+      "polishAudio": "Stempel",
+      "audioSentencePl": "t1-p191-010-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-011",
@@ -125,7 +143,9 @@
       "audioWord": "t1-p191-011-word.mp3",
       "audioWordPl": "t1-p191-011-word-pl.mp3",
       "audioSentence": "t1-p191-011-sentence.mp3",
-      "polishAudio": "Wizytówka"
+      "polishAudio": "Wizytówka",
+      "audioSentencePl": "t1-p191-011-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-012",
@@ -136,7 +156,9 @@
       "audioWord": "t1-p191-012-word.mp3",
       "audioWordPl": "t1-p191-012-word-pl.mp3",
       "audioSentence": "t1-p191-012-sentence.mp3",
-      "polishAudio": "Kwestionariusz"
+      "polishAudio": "Kwestionariusz",
+      "audioSentencePl": "t1-p191-012-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-013",
@@ -147,7 +169,9 @@
       "audioWord": "t1-p191-013-word.mp3",
       "audioWordPl": "t1-p191-013-word-pl.mp3",
       "audioSentence": "t1-p191-013-sentence.mp3",
-      "polishAudio": "Spinacz"
+      "polishAudio": "Spinacz",
+      "audioSentencePl": "t1-p191-013-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-014",
@@ -158,7 +182,9 @@
       "audioWord": "t1-p191-014-word.mp3",
       "audioWordPl": "t1-p191-014-word-pl.mp3",
       "audioSentence": "t1-p191-014-sentence.mp3",
-      "polishAudio": "Teczka"
+      "polishAudio": "Teczka",
+      "audioSentencePl": "t1-p191-014-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p191-015",
@@ -169,7 +195,9 @@
       "audioWord": "t1-p191-015-word.mp3",
       "audioWordPl": "t1-p191-015-word-pl.mp3",
       "audioSentence": "t1-p191-015-sentence.mp3",
-      "polishAudio": "Flamaster"
+      "polishAudio": "Flamaster",
+      "audioSentencePl": "t1-p191-015-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

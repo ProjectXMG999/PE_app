@@ -15,7 +15,9 @@
       "audioWord": "t1-p212-001-word.mp3",
       "audioWordPl": "t1-p212-001-word-pl.mp3",
       "audioSentence": "t1-p212-001-sentence.mp3",
-      "polishAudio": "Z"
+      "polishAudio": "Z",
+      "audioSentencePl": "t1-p212-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p212-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p212-002-word.mp3",
       "audioWordPl": "t1-p212-002-word-pl.mp3",
       "audioSentence": "t1-p212-002-sentence.mp3",
-      "polishAudio": "Bez"
+      "polishAudio": "Bez",
+      "audioSentencePl": "t1-p212-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p212-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p212-003-word.mp3",
       "audioWordPl": "t1-p212-003-word-pl.mp3",
       "audioSentence": "t1-p212-003-sentence.mp3",
-      "polishAudio": "Następnie"
+      "polishAudio": "Następnie",
+      "audioSentencePl": "t1-p212-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p212-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p212-004-word.mp3",
       "audioWordPl": "t1-p212-004-word-pl.mp3",
       "audioSentence": "t1-p212-004-sentence.mp3",
-      "polishAudio": "Przede wszystkim"
+      "polishAudio": "Przede wszystkim",
+      "audioSentencePl": "t1-p212-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p212-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p212-005-word.mp3",
       "audioWordPl": "t1-p212-005-word-pl.mp3",
       "audioSentence": "t1-p212-005-sentence.mp3",
-      "polishAudio": "Po pierwsze"
+      "polishAudio": "Po pierwsze",
+      "audioSentencePl": "t1-p212-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p212-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p212-006-word.mp3",
       "audioWordPl": "t1-p212-006-word-pl.mp3",
       "audioSentence": "t1-p212-006-sentence.mp3",
-      "polishAudio": "Po drugie"
+      "polishAudio": "Po drugie",
+      "audioSentencePl": "t1-p212-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p212-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p212-007-word.mp3",
       "audioWordPl": "t1-p212-007-word-pl.mp3",
       "audioSentence": "t1-p212-007-sentence.mp3",
-      "polishAudio": "Do teraz"
+      "polishAudio": "Do teraz",
+      "audioSentencePl": "t1-p212-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p212-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p212-008-word.mp3",
       "audioWordPl": "t1-p212-008-word-pl.mp3",
       "audioSentence": "t1-p212-008-sentence.mp3",
-      "polishAudio": "Wtedy"
+      "polishAudio": "Wtedy",
+      "audioSentencePl": "t1-p212-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p212-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p212-009-word.mp3",
       "audioWordPl": "t1-p212-009-word-pl.mp3",
       "audioSentence": "t1-p212-009-sentence.mp3",
-      "polishAudio": "Podsumowując"
+      "polishAudio": "Podsumowując",
+      "audioSentencePl": "t1-p212-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p212-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p212-010-word.mp3",
       "audioWordPl": "t1-p212-010-word-pl.mp3",
       "audioSentence": "t1-p212-010-sentence.mp3",
-      "polishAudio": "W ogóle"
+      "polishAudio": "W ogóle",
+      "audioSentencePl": "t1-p212-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

@@ -15,7 +15,9 @@
       "audioWord": "t1-p038-001-word.mp3",
       "audioWordPl": "t1-p038-001-word-pl.mp3",
       "audioSentence": "t1-p038-001-sentence.mp3",
-      "polishAudio": "Banan"
+      "polishAudio": "Banan",
+      "audioSentencePl": "t1-p038-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p038-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p038-002-word.mp3",
       "audioWordPl": "t1-p038-002-word-pl.mp3",
       "audioSentence": "t1-p038-002-sentence.mp3",
-      "polishAudio": "Cytryna"
+      "polishAudio": "Cytryna",
+      "audioSentencePl": "t1-p038-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p038-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p038-003-word.mp3",
       "audioWordPl": "t1-p038-003-word-pl.mp3",
       "audioSentence": "t1-p038-003-sentence.mp3",
-      "polishAudio": "Jabłko"
+      "polishAudio": "Jabłko",
+      "audioSentencePl": "t1-p038-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p038-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p038-004-word.mp3",
       "audioWordPl": "t1-p038-004-word-pl.mp3",
       "audioSentence": "t1-p038-004-sentence.mp3",
-      "polishAudio": "Ogórek"
+      "polishAudio": "Ogórek",
+      "audioSentencePl": "t1-p038-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p038-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p038-005-word.mp3",
       "audioWordPl": "t1-p038-005-word-pl.mp3",
       "audioSentence": "t1-p038-005-sentence.mp3",
-      "polishAudio": "Owoc"
+      "polishAudio": "Owoc",
+      "audioSentencePl": "t1-p038-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p038-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p038-006-word.mp3",
       "audioWordPl": "t1-p038-006-word-pl.mp3",
       "audioSentence": "t1-p038-006-sentence.mp3",
-      "polishAudio": "Papryka"
+      "polishAudio": "Papryka",
+      "audioSentencePl": "t1-p038-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p038-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p038-007-word.mp3",
       "audioWordPl": "t1-p038-007-word-pl.mp3",
       "audioSentence": "t1-p038-007-sentence.mp3",
-      "polishAudio": "Pomarańcza"
+      "polishAudio": "Pomarańcza",
+      "audioSentencePl": "t1-p038-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p038-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p038-008-word.mp3",
       "audioWordPl": "t1-p038-008-word-pl.mp3",
       "audioSentence": "t1-p038-008-sentence.mp3",
-      "polishAudio": "Pomidor"
+      "polishAudio": "Pomidor",
+      "audioSentencePl": "t1-p038-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p038-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p038-009-word.mp3",
       "audioWordPl": "t1-p038-009-word-pl.mp3",
       "audioSentence": "t1-p038-009-sentence.mp3",
-      "polishAudio": "Warzywo"
+      "polishAudio": "Warzywo",
+      "audioSentencePl": "t1-p038-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p038-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p038-010-word.mp3",
       "audioWordPl": "t1-p038-010-word-pl.mp3",
       "audioSentence": "t1-p038-010-sentence.mp3",
-      "polishAudio": "Ziemniak"
+      "polishAudio": "Ziemniak",
+      "audioSentencePl": "t1-p038-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

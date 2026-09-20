@@ -15,7 +15,9 @@
       "audioWord": "t1-p047-001-word.mp3",
       "audioWordPl": "t1-p047-001-word-pl.mp3",
       "audioSentence": "t1-p047-001-sentence.mp3",
-      "polishAudio": "Dawać"
+      "polishAudio": "Dawać",
+      "audioSentencePl": "t1-p047-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p047-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p047-002-word.mp3",
       "audioWordPl": "t1-p047-002-word-pl.mp3",
       "audioSentence": "t1-p047-002-sentence.mp3",
-      "polishAudio": "Patrzeć"
+      "polishAudio": "Patrzeć",
+      "audioSentencePl": "t1-p047-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p047-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p047-003-word.mp3",
       "audioWordPl": "t1-p047-003-word-pl.mp3",
       "audioSentence": "t1-p047-003-sentence.mp3",
-      "polishAudio": "Brać"
+      "polishAudio": "Brać",
+      "audioSentencePl": "t1-p047-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p047-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p047-004-word.mp3",
       "audioWordPl": "t1-p047-004-word-pl.mp3",
       "audioSentence": "t1-p047-004-sentence.mp3",
-      "polishAudio": "Oglądać"
+      "polishAudio": "Oglądać",
+      "audioSentencePl": "t1-p047-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p047-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p047-005-word.mp3",
       "audioWordPl": "t1-p047-005-word-pl.mp3",
       "audioSentence": "t1-p047-005-sentence.mp3",
-      "polishAudio": "Budować"
+      "polishAudio": "Budować",
+      "audioSentencePl": "t1-p047-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p047-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p047-006-word.mp3",
       "audioWordPl": "t1-p047-006-word-pl.mp3",
       "audioSentence": "t1-p047-006-sentence.mp3",
-      "polishAudio": "Umierać"
+      "polishAudio": "Umierać",
+      "audioSentencePl": "t1-p047-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p047-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p047-007-word.mp3",
       "audioWordPl": "t1-p047-007-word-pl.mp3",
       "audioSentence": "t1-p047-007-sentence.mp3",
-      "polishAudio": "Nienawidzić"
+      "polishAudio": "Nienawidzić",
+      "audioSentencePl": "t1-p047-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p047-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p047-008-word.mp3",
       "audioWordPl": "t1-p047-008-word-pl.mp3",
       "audioSentence": "t1-p047-008-sentence.mp3",
-      "polishAudio": "Gubić"
+      "polishAudio": "Gubić",
+      "audioSentencePl": "t1-p047-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p047-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p047-009-word.mp3",
       "audioWordPl": "t1-p047-009-word-pl.mp3",
       "audioSentence": "t1-p047-009-sentence.mp3",
-      "polishAudio": "Tęsknić"
+      "polishAudio": "Tęsknić",
+      "audioSentencePl": "t1-p047-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p047-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p047-010-word.mp3",
       "audioWordPl": "t1-p047-010-word-pl.mp3",
       "audioSentence": "t1-p047-010-sentence.mp3",
-      "polishAudio": "Mówić"
+      "polishAudio": "Mówić",
+      "audioSentencePl": "t1-p047-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

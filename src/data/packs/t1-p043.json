@@ -15,7 +15,9 @@
       "audioWord": "t1-p043-001-word.mp3",
       "audioWordPl": "t1-p043-001-word-pl.mp3",
       "audioSentence": "t1-p043-001-sentence.mp3",
-      "polishAudio": "Błąd"
+      "polishAudio": "Błąd",
+      "audioSentencePl": "t1-p043-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p043-002-word.mp3",
       "audioWordPl": "t1-p043-002-word-pl.mp3",
       "audioSentence": "t1-p043-002-sentence.mp3",
-      "polishAudio": "Długopis"
+      "polishAudio": "Długopis",
+      "audioSentencePl": "t1-p043-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p043-003-word.mp3",
       "audioWordPl": "t1-p043-003-word-pl.mp3",
       "audioSentence": "t1-p043-003-sentence.mp3",
-      "polishAudio": "Egzamin"
+      "polishAudio": "Egzamin",
+      "audioSentencePl": "t1-p043-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p043-004-word.mp3",
       "audioWordPl": "t1-p043-004-word-pl.mp3",
       "audioSentence": "t1-p043-004-sentence.mp3",
-      "polishAudio": "Lekcja"
+      "polishAudio": "Lekcja",
+      "audioSentencePl": "t1-p043-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p043-005-word.mp3",
       "audioWordPl": "t1-p043-005-word-pl.mp3",
       "audioSentence": "t1-p043-005-sentence.mp3",
-      "polishAudio": "Ołówek"
+      "polishAudio": "Ołówek",
+      "audioSentencePl": "t1-p043-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p043-006-word.mp3",
       "audioWordPl": "t1-p043-006-word-pl.mp3",
       "audioSentence": "t1-p043-006-sentence.mp3",
-      "polishAudio": "Praca domowa"
+      "polishAudio": "Praca domowa",
+      "audioSentencePl": "t1-p043-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p043-007-word.mp3",
       "audioWordPl": "t1-p043-007-word-pl.mp3",
       "audioSentence": "t1-p043-007-sentence.mp3",
-      "polishAudio": "Temat"
+      "polishAudio": "Temat",
+      "audioSentencePl": "t1-p043-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p043-008-word.mp3",
       "audioWordPl": "t1-p043-008-word-pl.mp3",
       "audioSentence": "t1-p043-008-sentence.mp3",
-      "polishAudio": "Test"
+      "polishAudio": "Test",
+      "audioSentencePl": "t1-p043-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p043-009-word.mp3",
       "audioWordPl": "t1-p043-009-word-pl.mp3",
       "audioSentence": "t1-p043-009-sentence.mp3",
-      "polishAudio": "Uczeń"
+      "polishAudio": "Uczeń",
+      "audioSentencePl": "t1-p043-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p043-010-word.mp3",
       "audioWordPl": "t1-p043-010-word-pl.mp3",
       "audioSentence": "t1-p043-010-sentence.mp3",
-      "polishAudio": "Zeszyt"
+      "polishAudio": "Zeszyt",
+      "audioSentencePl": "t1-p043-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

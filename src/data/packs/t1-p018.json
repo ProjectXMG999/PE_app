@@ -15,7 +15,9 @@
       "audioWord": "t1-p018-001-word.mp3",
       "audioWordPl": "t1-p018-001-word-pl.mp3",
       "audioSentence": "t1-p018-001-sentence.mp3",
-      "polishAudio": "Bank"
+      "polishAudio": "Bank",
+      "audioSentencePl": "t1-p018-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p018-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p018-002-word.mp3",
       "audioWordPl": "t1-p018-002-word-pl.mp3",
       "audioSentence": "t1-p018-002-sentence.mp3",
-      "polishAudio": "Bar"
+      "polishAudio": "Bar",
+      "audioSentencePl": "t1-p018-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p018-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p018-003-word.mp3",
       "audioWordPl": "t1-p018-003-word-pl.mp3",
       "audioSentence": "t1-p018-003-sentence.mp3",
-      "polishAudio": "Centrum miasta"
+      "polishAudio": "Centrum miasta",
+      "audioSentencePl": "t1-p018-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p018-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p018-004-word.mp3",
       "audioWordPl": "t1-p018-004-word-pl.mp3",
       "audioSentence": "t1-p018-004-sentence.mp3",
-      "polishAudio": "Galeria handlowa"
+      "polishAudio": "Galeria handlowa",
+      "audioSentencePl": "t1-p018-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p018-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p018-005-word.mp3",
       "audioWordPl": "t1-p018-005-word-pl.mp3",
       "audioSentence": "t1-p018-005-sentence.mp3",
-      "polishAudio": "Hotel"
+      "polishAudio": "Hotel",
+      "audioSentencePl": "t1-p018-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p018-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p018-006-word.mp3",
       "audioWordPl": "t1-p018-006-word-pl.mp3",
       "audioSentence": "t1-p018-006-sentence.mp3",
-      "polishAudio": "Park"
+      "polishAudio": "Park",
+      "audioSentencePl": "t1-p018-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p018-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p018-007-word.mp3",
       "audioWordPl": "t1-p018-007-word-pl.mp3",
       "audioSentence": "t1-p018-007-sentence.mp3",
-      "polishAudio": "Posterunek policji"
+      "polishAudio": "Posterunek policji",
+      "audioSentencePl": "t1-p018-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p018-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p018-008-word.mp3",
       "audioWordPl": "t1-p018-008-word-pl.mp3",
       "audioSentence": "t1-p018-008-sentence.mp3",
-      "polishAudio": "Sklepik"
+      "polishAudio": "Sklepik",
+      "audioSentencePl": "t1-p018-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p018-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p018-009-word.mp3",
       "audioWordPl": "t1-p018-009-word-pl.mp3",
       "audioSentence": "t1-p018-009-sentence.mp3",
-      "polishAudio": "Sklep"
+      "polishAudio": "Sklep",
+      "audioSentencePl": "t1-p018-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p018-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p018-010-word.mp3",
       "audioWordPl": "t1-p018-010-word-pl.mp3",
       "audioSentence": "t1-p018-010-sentence.mp3",
-      "polishAudio": "Szpital"
+      "polishAudio": "Szpital",
+      "audioSentencePl": "t1-p018-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

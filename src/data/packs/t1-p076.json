@@ -15,7 +15,9 @@
       "audioWord": "t1-p076-001-word.mp3",
       "audioWordPl": "t1-p076-001-word-pl.mp3",
       "audioSentence": "t1-p076-001-sentence.mp3",
-      "polishAudio": "Rysować"
+      "polishAudio": "Rysować",
+      "audioSentencePl": "t1-p076-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p076-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p076-002-word.mp3",
       "audioWordPl": "t1-p076-002-word-pl.mp3",
       "audioSentence": "t1-p076-002-sentence.mp3",
-      "polishAudio": "Malować"
+      "polishAudio": "Malować",
+      "audioSentencePl": "t1-p076-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p076-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p076-003-word.mp3",
       "audioWordPl": "t1-p076-003-word-pl.mp3",
       "audioSentence": "t1-p076-003-sentence.mp3",
-      "polishAudio": "Bawić się"
+      "polishAudio": "Bawić się",
+      "audioSentencePl": "t1-p076-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p076-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p076-004-word.mp3",
       "audioWordPl": "t1-p076-004-word-pl.mp3",
       "audioSentence": "t1-p076-004-sentence.mp3",
-      "polishAudio": "Relaksować się"
+      "polishAudio": "Relaksować się",
+      "audioSentencePl": "t1-p076-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p076-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p076-005-word.mp3",
       "audioWordPl": "t1-p076-005-word-pl.mp3",
       "audioSentence": "t1-p076-005-sentence.mp3",
-      "polishAudio": "Odpoczywać"
+      "polishAudio": "Odpoczywać",
+      "audioSentencePl": "t1-p076-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p076-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p076-006-word.mp3",
       "audioWordPl": "t1-p076-006-word-pl.mp3",
       "audioSentence": "t1-p076-006-sentence.mp3",
-      "polishAudio": "Jeździć"
+      "polishAudio": "Jeździć",
+      "audioSentencePl": "t1-p076-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p076-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p076-007-word.mp3",
       "audioWordPl": "t1-p076-007-word-pl.mp3",
       "audioSentence": "t1-p076-007-sentence.mp3",
-      "polishAudio": "Śpiewać"
+      "polishAudio": "Śpiewać",
+      "audioSentencePl": "t1-p076-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p076-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p076-008-word.mp3",
       "audioWordPl": "t1-p076-008-word-pl.mp3",
       "audioSentence": "t1-p076-008-sentence.mp3",
-      "polishAudio": "Palić papierosy"
+      "polishAudio": "Palić papierosy",
+      "audioSentencePl": "t1-p076-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p076-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p076-009-word.mp3",
       "audioWordPl": "t1-p076-009-word-pl.mp3",
       "audioSentence": "t1-p076-009-sentence.mp3",
-      "polishAudio": "Podróżować"
+      "polishAudio": "Podróżować",
+      "audioSentencePl": "t1-p076-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p076-010",

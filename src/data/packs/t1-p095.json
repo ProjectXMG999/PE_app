@@ -15,7 +15,9 @@
       "audioWord": "t1-p095-001-word.mp3",
       "audioWordPl": "t1-p095-001-word-pl.mp3",
       "audioSentence": "t1-p095-001-sentence.mp3",
-      "polishAudio": "Dezodorant"
+      "polishAudio": "Dezodorant",
+      "audioSentencePl": "t1-p095-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p095-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p095-002-word.mp3",
       "audioWordPl": "t1-p095-002-word-pl.mp3",
       "audioSentence": "t1-p095-002-sentence.mp3",
-      "polishAudio": "Figura"
+      "polishAudio": "Figura",
+      "audioSentencePl": "t1-p095-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p095-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p095-003-word.mp3",
       "audioWordPl": "t1-p095-003-word-pl.mp3",
       "audioSentence": "t1-p095-003-sentence.mp3",
-      "polishAudio": "Higiena"
+      "polishAudio": "Higiena",
+      "audioSentencePl": "t1-p095-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p095-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p095-004-word.mp3",
       "audioWordPl": "t1-p095-004-word-pl.mp3",
       "audioSentence": "t1-p095-004-sentence.mp3",
-      "polishAudio": "Kolor"
+      "polishAudio": "Kolor",
+      "audioSentencePl": "t1-p095-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p095-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p095-005-word.mp3",
       "audioWordPl": "t1-p095-005-word-pl.mp3",
       "audioSentence": "t1-p095-005-sentence.mp3",
-      "polishAudio": "Krem"
+      "polishAudio": "Krem",
+      "audioSentencePl": "t1-p095-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p095-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p095-006-word.mp3",
       "audioWordPl": "t1-p095-006-word-pl.mp3",
       "audioSentence": "t1-p095-006-sentence.mp3",
-      "polishAudio": "Makijaż"
+      "polishAudio": "Makijaż",
+      "audioSentencePl": "t1-p095-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p095-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p095-007-word.mp3",
       "audioWordPl": "t1-p095-007-word-pl.mp3",
       "audioSentence": "t1-p095-007-sentence.mp3",
-      "polishAudio": "Perfumy"
+      "polishAudio": "Perfumy",
+      "audioSentencePl": "t1-p095-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p095-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p095-008-word.mp3",
       "audioWordPl": "t1-p095-008-word-pl.mp3",
       "audioSentence": "t1-p095-008-sentence.mp3",
-      "polishAudio": "Piękno"
+      "polishAudio": "Piękno",
+      "audioSentencePl": "t1-p095-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p095-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p095-009-word.mp3",
       "audioWordPl": "t1-p095-009-word-pl.mp3",
       "audioSentence": "t1-p095-009-sentence.mp3",
-      "polishAudio": "Tatuaż"
+      "polishAudio": "Tatuaż",
+      "audioSentencePl": "t1-p095-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p095-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p095-010-word.mp3",
       "audioWordPl": "t1-p095-010-word-pl.mp3",
       "audioSentence": "t1-p095-010-sentence.mp3",
-      "polishAudio": "Żel"
+      "polishAudio": "Żel",
+      "audioSentencePl": "t1-p095-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

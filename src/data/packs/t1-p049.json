@@ -15,7 +15,9 @@
       "audioWord": "t1-p049-001-word.mp3",
       "audioWordPl": "t1-p049-001-word-pl.mp3",
       "audioSentence": "t1-p049-001-sentence.mp3",
-      "polishAudio": "Czas"
+      "polishAudio": "Czas",
+      "audioSentencePl": "t1-p049-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p049-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p049-002-word.mp3",
       "audioWordPl": "t1-p049-002-word-pl.mp3",
       "audioSentence": "t1-p049-002-sentence.mp3",
-      "polishAudio": "Czwartek"
+      "polishAudio": "Czwartek",
+      "audioSentencePl": "t1-p049-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p049-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p049-003-word.mp3",
       "audioWordPl": "t1-p049-003-word-pl.mp3",
       "audioSentence": "t1-p049-003-sentence.mp3",
-      "polishAudio": "Dzień"
+      "polishAudio": "Dzień",
+      "audioSentencePl": "t1-p049-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p049-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p049-004-word.mp3",
       "audioWordPl": "t1-p049-004-word-pl.mp3",
       "audioSentence": "t1-p049-004-sentence.mp3",
-      "polishAudio": "Miesiąc"
+      "polishAudio": "Miesiąc",
+      "audioSentencePl": "t1-p049-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p049-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p049-005-word.mp3",
       "audioWordPl": "t1-p049-005-word-pl.mp3",
       "audioSentence": "t1-p049-005-sentence.mp3",
-      "polishAudio": "Niedziela"
+      "polishAudio": "Niedziela",
+      "audioSentencePl": "t1-p049-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p049-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p049-006-word.mp3",
       "audioWordPl": "t1-p049-006-word-pl.mp3",
       "audioSentence": "t1-p049-006-sentence.mp3",
-      "polishAudio": "Poniedziałek"
+      "polishAudio": "Poniedziałek",
+      "audioSentencePl": "t1-p049-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p049-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p049-007-word.mp3",
       "audioWordPl": "t1-p049-007-word-pl.mp3",
       "audioSentence": "t1-p049-007-sentence.mp3",
-      "polishAudio": "Rano"
+      "polishAudio": "Rano",
+      "audioSentencePl": "t1-p049-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p049-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p049-008-word.mp3",
       "audioWordPl": "t1-p049-008-word-pl.mp3",
       "audioSentence": "t1-p049-008-sentence.mp3",
-      "polishAudio": "Sobota"
+      "polishAudio": "Sobota",
+      "audioSentencePl": "t1-p049-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p049-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p049-009-word.mp3",
       "audioWordPl": "t1-p049-009-word-pl.mp3",
       "audioSentence": "t1-p049-009-sentence.mp3",
-      "polishAudio": "Środa"
+      "polishAudio": "Środa",
+      "audioSentencePl": "t1-p049-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p049-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p049-010-word.mp3",
       "audioWordPl": "t1-p049-010-word-pl.mp3",
       "audioSentence": "t1-p049-010-sentence.mp3",
-      "polishAudio": "Wtorek"
+      "polishAudio": "Wtorek",
+      "audioSentencePl": "t1-p049-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

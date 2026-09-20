@@ -15,7 +15,9 @@
       "audioWord": "t1-p094-001-word.mp3",
       "audioWordPl": "t1-p094-001-word-pl.mp3",
       "audioSentence": "t1-p094-001-sentence.mp3",
-      "polishAudio": "Urodzić się"
+      "polishAudio": "Urodzić się",
+      "audioSentencePl": "t1-p094-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p094-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p094-002-word.mp3",
       "audioWordPl": "t1-p094-002-word-pl.mp3",
       "audioSentence": "t1-p094-002-sentence.mp3",
-      "polishAudio": "Zachowywać się"
+      "polishAudio": "Zachowywać się",
+      "audioSentencePl": "t1-p094-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p094-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p094-003-word.mp3",
       "audioWordPl": "t1-p094-003-word-pl.mp3",
       "audioSentence": "t1-p094-003-sentence.mp3",
-      "polishAudio": "Przebierać się"
+      "polishAudio": "Przebierać się",
+      "audioSentencePl": "t1-p094-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p094-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p094-004-word.mp3",
       "audioWordPl": "t1-p094-004-word-pl.mp3",
       "audioSentence": "t1-p094-004-sentence.mp3",
-      "polishAudio": "Marzyć"
+      "polishAudio": "Marzyć",
+      "audioSentencePl": "t1-p094-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p094-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p094-005-word.mp3",
       "audioWordPl": "t1-p094-005-word-pl.mp3",
       "audioSentence": "t1-p094-005-sentence.mp3",
-      "polishAudio": "Całować"
+      "polishAudio": "Całować",
+      "audioSentencePl": "t1-p094-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p094-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p094-006-word.mp3",
       "audioWordPl": "t1-p094-006-word-pl.mp3",
       "audioSentence": "t1-p094-006-sentence.mp3",
-      "polishAudio": "Śmiać się"
+      "polishAudio": "Śmiać się",
+      "audioSentencePl": "t1-p094-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p094-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p094-007-word.mp3",
       "audioWordPl": "t1-p094-007-word-pl.mp3",
       "audioSentence": "t1-p094-007-sentence.mp3",
-      "polishAudio": "Wysłać"
+      "polishAudio": "Wysłać",
+      "audioSentencePl": "t1-p094-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p094-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p094-008-word.mp3",
       "audioWordPl": "t1-p094-008-word-pl.mp3",
       "audioSentence": "t1-p094-008-sentence.mp3",
-      "polishAudio": "Zrobić niespodziankę"
+      "polishAudio": "Zrobić niespodziankę",
+      "audioSentencePl": "t1-p094-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p094-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p094-009-word.mp3",
       "audioWordPl": "t1-p094-009-word-pl.mp3",
       "audioSentence": "t1-p094-009-sentence.mp3",
-      "polishAudio": "Ufać"
+      "polishAudio": "Ufać",
+      "audioSentencePl": "t1-p094-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p094-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p094-010-word.mp3",
       "audioWordPl": "t1-p094-010-word-pl.mp3",
       "audioSentence": "t1-p094-010-sentence.mp3",
-      "polishAudio": "Nosić ubrania"
+      "polishAudio": "Nosić ubrania",
+      "audioSentencePl": "t1-p094-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

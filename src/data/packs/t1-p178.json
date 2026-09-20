@@ -15,7 +15,9 @@
       "audioWord": "t1-p178-001-word.mp3",
       "audioWordPl": "t1-p178-001-word-pl.mp3",
       "audioSentence": "t1-p178-001-sentence.mp3",
-      "polishAudio": "Awans"
+      "polishAudio": "Awans",
+      "audioSentencePl": "t1-p178-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p178-002-word.mp3",
       "audioWordPl": "t1-p178-002-word-pl.mp3",
       "audioSentence": "t1-p178-002-sentence.mp3",
-      "polishAudio": "Dzień pracy"
+      "polishAudio": "Dzień pracy",
+      "audioSentencePl": "t1-p178-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p178-003-word.mp3",
       "audioWordPl": "t1-p178-003-word-pl.mp3",
       "audioSentence": "t1-p178-003-sentence.mp3",
-      "polishAudio": "Godziny pracy"
+      "polishAudio": "Godziny pracy",
+      "audioSentencePl": "t1-p178-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p178-004-word.mp3",
       "audioWordPl": "t1-p178-004-word-pl.mp3",
       "audioSentence": "t1-p178-004-sentence.mp3",
-      "polishAudio": "Spotkanie"
+      "polishAudio": "Spotkanie",
+      "audioSentencePl": "t1-p178-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p178-005-word.mp3",
       "audioWordPl": "t1-p178-005-word-pl.mp3",
       "audioSentence": "t1-p178-005-sentence.mp3",
-      "polishAudio": "Kadra"
+      "polishAudio": "Kadra",
+      "audioSentencePl": "t1-p178-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p178-006-word.mp3",
       "audioWordPl": "t1-p178-006-word-pl.mp3",
       "audioSentence": "t1-p178-006-sentence.mp3",
-      "polishAudio": "Stanowisko"
+      "polishAudio": "Stanowisko",
+      "audioSentencePl": "t1-p178-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p178-007-word.mp3",
       "audioWordPl": "t1-p178-007-word-pl.mp3",
       "audioSentence": "t1-p178-007-sentence.mp3",
-      "polishAudio": "Kariera"
+      "polishAudio": "Kariera",
+      "audioSentencePl": "t1-p178-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p178-008-word.mp3",
       "audioWordPl": "t1-p178-008-word-pl.mp3",
       "audioSentence": "t1-p178-008-sentence.mp3",
-      "polishAudio": "Kolega z pracy"
+      "polishAudio": "Kolega z pracy",
+      "audioSentencePl": "t1-p178-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p178-009-word.mp3",
       "audioWordPl": "t1-p178-009-word-pl.mp3",
       "audioSentence": "t1-p178-009-sentence.mp3",
-      "polishAudio": "Miejsce pracy"
+      "polishAudio": "Miejsce pracy",
+      "audioSentencePl": "t1-p178-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-010",
@@ -125,7 +143,9 @@
       "audioWord": "t1-p178-011-word.mp3",
       "audioWordPl": "t1-p178-011-word-pl.mp3",
       "audioSentence": "t1-p178-011-sentence.mp3",
-      "polishAudio": "Porozumienie"
+      "polishAudio": "Porozumienie",
+      "audioSentencePl": "t1-p178-011-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-012",
@@ -136,7 +156,9 @@
       "audioWord": "t1-p178-012-word.mp3",
       "audioWordPl": "t1-p178-012-word-pl.mp3",
       "audioSentence": "t1-p178-012-sentence.mp3",
-      "polishAudio": "Praca na cały etat"
+      "polishAudio": "Praca na cały etat",
+      "audioSentencePl": "t1-p178-012-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-013",
@@ -147,7 +169,9 @@
       "audioWord": "t1-p178-013-word.mp3",
       "audioWordPl": "t1-p178-013-word-pl.mp3",
       "audioSentence": "t1-p178-013-sentence.mp3",
-      "polishAudio": "Praca na pół etatu"
+      "polishAudio": "Praca na pół etatu",
+      "audioSentencePl": "t1-p178-013-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-014",
@@ -158,7 +182,9 @@
       "audioWord": "t1-p178-014-word.mp3",
       "audioWordPl": "t1-p178-014-word-pl.mp3",
       "audioSentence": "t1-p178-014-sentence.mp3",
-      "polishAudio": "Pracodawca"
+      "polishAudio": "Pracodawca",
+      "audioSentencePl": "t1-p178-014-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p178-015",
@@ -169,7 +195,9 @@
       "audioWord": "t1-p178-015-word.mp3",
       "audioWordPl": "t1-p178-015-word-pl.mp3",
       "audioSentence": "t1-p178-015-sentence.mp3",
-      "polishAudio": "Pracownik"
+      "polishAudio": "Pracownik",
+      "audioSentencePl": "t1-p178-015-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

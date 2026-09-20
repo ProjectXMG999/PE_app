@@ -15,7 +15,9 @@
       "audioWord": "t1-p159-001-word.mp3",
       "audioWordPl": "t1-p159-001-word-pl.mp3",
       "audioSentence": "t1-p159-001-sentence.mp3",
-      "polishAudio": "Chory"
+      "polishAudio": "Chory",
+      "audioSentencePl": "t1-p159-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p159-002",
@@ -37,7 +39,9 @@
       "audioWord": "t1-p159-003-word.mp3",
       "audioWordPl": "t1-p159-003-word-pl.mp3",
       "audioSentence": "t1-p159-003-sentence.mp3",
-      "polishAudio": "Dojrzały"
+      "polishAudio": "Dojrzały",
+      "audioSentencePl": "t1-p159-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p159-004",
@@ -48,7 +52,9 @@
       "audioWord": "t1-p159-004-word.mp3",
       "audioWordPl": "t1-p159-004-word-pl.mp3",
       "audioSentence": "t1-p159-004-sentence.mp3",
-      "polishAudio": "Osobisty"
+      "polishAudio": "Osobisty",
+      "audioSentencePl": "t1-p159-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p159-005",
@@ -59,7 +65,9 @@
       "audioWord": "t1-p159-005-word.mp3",
       "audioWordPl": "t1-p159-005-word-pl.mp3",
       "audioSentence": "t1-p159-005-sentence.mp3",
-      "polishAudio": "Dorosły"
+      "polishAudio": "Dorosły",
+      "audioSentencePl": "t1-p159-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p159-006",
@@ -70,7 +78,9 @@
       "audioWord": "t1-p159-006-word.mp3",
       "audioWordPl": "t1-p159-006-word-pl.mp3",
       "audioSentence": "t1-p159-006-sentence.mp3",
-      "polishAudio": "Emerytowany"
+      "polishAudio": "Emerytowany",
+      "audioSentencePl": "t1-p159-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p159-007",
@@ -81,7 +91,9 @@
       "audioWord": "t1-p159-007-word.mp3",
       "audioWordPl": "t1-p159-007-word-pl.mp3",
       "audioSentence": "t1-p159-007-sentence.mp3",
-      "polishAudio": "Głuchy"
+      "polishAudio": "Głuchy",
+      "audioSentencePl": "t1-p159-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p159-008",
@@ -92,7 +104,9 @@
       "audioWord": "t1-p159-008-word.mp3",
       "audioWordPl": "t1-p159-008-word-pl.mp3",
       "audioSentence": "t1-p159-008-sentence.mp3",
-      "polishAudio": "Ludzki"
+      "polishAudio": "Ludzki",
+      "audioSentencePl": "t1-p159-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p159-009",
@@ -103,7 +117,9 @@
       "audioWord": "t1-p159-009-word.mp3",
       "audioWordPl": "t1-p159-009-word-pl.mp3",
       "audioSentence": "t1-p159-009-sentence.mp3",
-      "polishAudio": "Męski"
+      "polishAudio": "Męski",
+      "audioSentencePl": "t1-p159-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p159-010",
@@ -114,7 +130,9 @@
       "audioWord": "t1-p159-010-word.mp3",
       "audioWordPl": "t1-p159-010-word-pl.mp3",
       "audioSentence": "t1-p159-010-sentence.mp3",
-      "polishAudio": "Nastoletni"
+      "polishAudio": "Nastoletni",
+      "audioSentencePl": "t1-p159-010-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p159-011",
@@ -125,7 +143,9 @@
       "audioWord": "t1-p159-011-word.mp3",
       "audioWordPl": "t1-p159-011-word-pl.mp3",
       "audioSentence": "t1-p159-011-sentence.mp3",
-      "polishAudio": "Sam"
+      "polishAudio": "Sam",
+      "audioSentencePl": "t1-p159-011-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p159-012",
@@ -136,7 +156,9 @@
       "audioWord": "t1-p159-012-word.mp3",
       "audioWordPl": "t1-p159-012-word-pl.mp3",
       "audioSentence": "t1-p159-012-sentence.mp3",
-      "polishAudio": "W ciąży"
+      "polishAudio": "W ciąży",
+      "audioSentencePl": "t1-p159-012-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p159-013",
@@ -158,7 +180,9 @@
       "audioWord": "t1-p159-014-word.mp3",
       "audioWordPl": "t1-p159-014-word-pl.mp3",
       "audioSentence": "t1-p159-014-sentence.mp3",
-      "polishAudio": "Żeński"
+      "polishAudio": "Żeński",
+      "audioSentencePl": "t1-p159-014-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p159-015",
@@ -169,7 +193,9 @@
       "audioWord": "t1-p159-015-word.mp3",
       "audioWordPl": "t1-p159-015-word-pl.mp3",
       "audioSentence": "t1-p159-015-sentence.mp3",
-      "polishAudio": "Żonaty"
+      "polishAudio": "Żonaty",
+      "audioSentencePl": "t1-p159-015-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

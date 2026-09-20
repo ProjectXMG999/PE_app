@@ -15,7 +15,9 @@
       "audioWord": "t1-p071-001-word.mp3",
       "audioWordPl": "t1-p071-001-word-pl.mp3",
       "audioSentence": "t1-p071-001-sentence.mp3",
-      "polishAudio": "Awokado"
+      "polishAudio": "Awokado",
+      "audioSentencePl": "t1-p071-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p071-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p071-002-word.mp3",
       "audioWordPl": "t1-p071-002-word-pl.mp3",
       "audioSentence": "t1-p071-002-sentence.mp3",
-      "polishAudio": "Brzoskwinia"
+      "polishAudio": "Brzoskwinia",
+      "audioSentencePl": "t1-p071-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p071-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p071-003-word.mp3",
       "audioWordPl": "t1-p071-003-word-pl.mp3",
       "audioSentence": "t1-p071-003-sentence.mp3",
-      "polishAudio": "Cebula"
+      "polishAudio": "Cebula",
+      "audioSentencePl": "t1-p071-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p071-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p071-004-word.mp3",
       "audioWordPl": "t1-p071-004-word-pl.mp3",
       "audioSentence": "t1-p071-004-sentence.mp3",
-      "polishAudio": "Kalafior"
+      "polishAudio": "Kalafior",
+      "audioSentencePl": "t1-p071-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p071-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p071-005-word.mp3",
       "audioWordPl": "t1-p071-005-word-pl.mp3",
       "audioSentence": "t1-p071-005-sentence.mp3",
-      "polishAudio": "Kukurydza"
+      "polishAudio": "Kukurydza",
+      "audioSentencePl": "t1-p071-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p071-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p071-006-word.mp3",
       "audioWordPl": "t1-p071-006-word-pl.mp3",
       "audioSentence": "t1-p071-006-sentence.mp3",
-      "polishAudio": "Marchewka"
+      "polishAudio": "Marchewka",
+      "audioSentencePl": "t1-p071-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p071-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p071-007-word.mp3",
       "audioWordPl": "t1-p071-007-word-pl.mp3",
       "audioSentence": "t1-p071-007-sentence.mp3",
-      "polishAudio": "Sałata"
+      "polishAudio": "Sałata",
+      "audioSentencePl": "t1-p071-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p071-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p071-008-word.mp3",
       "audioWordPl": "t1-p071-008-word-pl.mp3",
       "audioSentence": "t1-p071-008-sentence.mp3",
-      "polishAudio": "Truskawka"
+      "polishAudio": "Truskawka",
+      "audioSentencePl": "t1-p071-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p071-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p071-009-word.mp3",
       "audioWordPl": "t1-p071-009-word-pl.mp3",
       "audioSentence": "t1-p071-009-sentence.mp3",
-      "polishAudio": "Winogrono"
+      "polishAudio": "Winogrono",
+      "audioSentencePl": "t1-p071-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p071-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p071-010-word.mp3",
       "audioWordPl": "t1-p071-010-word-pl.mp3",
       "audioSentence": "t1-p071-010-sentence.mp3",
-      "polishAudio": "Wiśnia"
+      "polishAudio": "Wiśnia",
+      "audioSentencePl": "t1-p071-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

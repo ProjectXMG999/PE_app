@@ -15,7 +15,9 @@
       "audioWord": "t1-p216-001-word.mp3",
       "audioWordPl": "t1-p216-001-word-pl.mp3",
       "audioSentence": "t1-p216-001-sentence.mp3",
-      "polishAudio": "Gospodyni domowa"
+      "polishAudio": "Gospodyni domowa",
+      "audioSentencePl": "t1-p216-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p216-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p216-002-word.mp3",
       "audioWordPl": "t1-p216-002-word-pl.mp3",
       "audioSentence": "t1-p216-002-sentence.mp3",
-      "polishAudio": "Prace domowe"
+      "polishAudio": "Prace domowe",
+      "audioSentencePl": "t1-p216-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p216-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p216-003-word.mp3",
       "audioWordPl": "t1-p216-003-word-pl.mp3",
       "audioSentence": "t1-p216-003-sentence.mp3",
-      "polishAudio": "Pranie"
+      "polishAudio": "Pranie",
+      "audioSentencePl": "t1-p216-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p216-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p216-004-word.mp3",
       "audioWordPl": "t1-p216-004-word-pl.mp3",
       "audioSentence": "t1-p216-004-sentence.mp3",
-      "polishAudio": "Przedpokój"
+      "polishAudio": "Przedpokój",
+      "audioSentencePl": "t1-p216-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p216-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p216-005-word.mp3",
       "audioWordPl": "t1-p216-005-word-pl.mp3",
       "audioSentence": "t1-p216-005-sentence.mp3",
-      "polishAudio": "Schody"
+      "polishAudio": "Schody",
+      "audioSentencePl": "t1-p216-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p216-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p216-006-word.mp3",
       "audioWordPl": "t1-p216-006-word-pl.mp3",
       "audioSentence": "t1-p216-006-sentence.mp3",
-      "polishAudio": "Strych"
+      "polishAudio": "Strych",
+      "audioSentencePl": "t1-p216-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p216-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p216-007-word.mp3",
       "audioWordPl": "t1-p216-007-word-pl.mp3",
       "audioSentence": "t1-p216-007-sentence.mp3",
-      "polishAudio": "Sufit"
+      "polishAudio": "Sufit",
+      "audioSentencePl": "t1-p216-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p216-008",
@@ -92,7 +106,8 @@
       "audioWord": "t1-p216-008-word.mp3",
       "audioWordPl": "t1-p216-008-word-pl.mp3",
       "audioSentence": "t1-p216-008-sentence.mp3",
-      "polishAudio": "Śmieci"
+      "polishAudio": "Śmieci",
+      "audioSentencePl": "t1-p216-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p216-009",
@@ -103,7 +118,8 @@
       "audioWord": "t1-p216-009-word.mp3",
       "audioWordPl": "t1-p216-009-word-pl.mp3",
       "audioSentence": "t1-p216-009-sentence.mp3",
-      "polishAudio": "Winda"
+      "polishAudio": "Winda",
+      "audioSentencePl": "t1-p216-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p216-010",
@@ -114,7 +130,8 @@
       "audioWord": "t1-p216-010-word.mp3",
       "audioWordPl": "t1-p216-010-word-pl.mp3",
       "audioSentence": "t1-p216-010-sentence.mp3",
-      "polishAudio": "Współlokator"
+      "polishAudio": "Współlokator",
+      "audioSentencePl": "t1-p216-010-sentence-pl.mp3"
     },
     {
       "id": "t1-p216-011",
@@ -125,7 +142,8 @@
       "audioWord": "t1-p216-011-word.mp3",
       "audioWordPl": "t1-p216-011-word-pl.mp3",
       "audioSentence": "t1-p216-011-sentence.mp3",
-      "polishAudio": "Czynsz"
+      "polishAudio": "Czynsz",
+      "audioSentencePl": "t1-p216-011-sentence-pl.mp3"
     },
     {
       "id": "t1-p216-012",
@@ -136,7 +154,8 @@
       "audioWord": "t1-p216-012-word.mp3",
       "audioWordPl": "t1-p216-012-word-pl.mp3",
       "audioSentence": "t1-p216-012-sentence.mp3",
-      "polishAudio": "Dom rodzinny"
+      "polishAudio": "Dom rodzinny",
+      "audioSentencePl": "t1-p216-012-sentence-pl.mp3"
     },
     {
       "id": "t1-p216-013",
@@ -147,7 +166,8 @@
       "audioWord": "t1-p216-013-word.mp3",
       "audioWordPl": "t1-p216-013-word-pl.mp3",
       "audioSentence": "t1-p216-013-sentence.mp3",
-      "polishAudio": "Korytarz"
+      "polishAudio": "Korytarz",
+      "audioSentencePl": "t1-p216-013-sentence-pl.mp3"
     },
     {
       "id": "t1-p216-014",
@@ -158,7 +178,8 @@
       "audioWord": "t1-p216-014-word.mp3",
       "audioWordPl": "t1-p216-014-word-pl.mp3",
       "audioSentence": "t1-p216-014-sentence.mp3",
-      "polishAudio": "Kurz"
+      "polishAudio": "Kurz",
+      "audioSentencePl": "t1-p216-014-sentence-pl.mp3"
     },
     {
       "id": "t1-p216-015",
@@ -169,7 +190,8 @@
       "audioWord": "t1-p216-015-word.mp3",
       "audioWordPl": "t1-p216-015-word-pl.mp3",
       "audioSentence": "t1-p216-015-sentence.mp3",
-      "polishAudio": "Monitoring"
+      "polishAudio": "Monitoring",
+      "audioSentencePl": "t1-p216-015-sentence-pl.mp3"
     }
   ]
 }

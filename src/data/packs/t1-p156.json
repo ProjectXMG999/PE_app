@@ -15,7 +15,9 @@
       "audioWord": "t1-p156-001-word.mp3",
       "audioWordPl": "t1-p156-001-word-pl.mp3",
       "audioSentence": "t1-p156-001-sentence.mp3",
-      "polishAudio": "Prosić o"
+      "polishAudio": "Prosić o",
+      "audioSentencePl": "t1-p156-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p156-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p156-002-word.mp3",
       "audioWordPl": "t1-p156-002-word-pl.mp3",
       "audioSentence": "t1-p156-002-sentence.mp3",
-      "polishAudio": "Oddzwonić"
+      "polishAudio": "Oddzwonić",
+      "audioSentencePl": "t1-p156-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p156-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p156-003-word.mp3",
       "audioWordPl": "t1-p156-003-word-pl.mp3",
       "audioSentence": "t1-p156-003-sentence.mp3",
-      "polishAudio": "Mówić do kogoś"
+      "polishAudio": "Mówić do kogoś",
+      "audioSentencePl": "t1-p156-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p156-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p156-004-word.mp3",
       "audioWordPl": "t1-p156-004-word-pl.mp3",
       "audioSentence": "t1-p156-004-sentence.mp3",
-      "polishAudio": "Przegadać"
+      "polishAudio": "Przegadać",
+      "audioSentencePl": "t1-p156-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p156-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p156-005-word.mp3",
       "audioWordPl": "t1-p156-005-word-pl.mp3",
       "audioSentence": "t1-p156-005-sentence.mp3",
-      "polishAudio": "Zsumować"
+      "polishAudio": "Zsumować",
+      "audioSentencePl": "t1-p156-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p156-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p156-006-word.mp3",
       "audioWordPl": "t1-p156-006-word-pl.mp3",
       "audioSentence": "t1-p156-006-sentence.mp3",
-      "polishAudio": "Akceptować coś"
+      "polishAudio": "Akceptować coś",
+      "audioSentencePl": "t1-p156-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p156-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p156-007-word.mp3",
       "audioWordPl": "t1-p156-007-word-pl.mp3",
       "audioSentence": "t1-p156-007-sentence.mp3",
-      "polishAudio": "Usłyszeć o"
+      "polishAudio": "Usłyszeć o",
+      "audioSentencePl": "t1-p156-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p156-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p156-008-word.mp3",
       "audioWordPl": "t1-p156-008-word-pl.mp3",
       "audioSentence": "t1-p156-008-sentence.mp3",
-      "polishAudio": "Zmyślić coś"
+      "polishAudio": "Zmyślić coś",
+      "audioSentencePl": "t1-p156-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p156-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p156-009-word.mp3",
       "audioWordPl": "t1-p156-009-word-pl.mp3",
       "audioSentence": "t1-p156-009-sentence.mp3",
-      "polishAudio": "Przerywać"
+      "polishAudio": "Przerywać",
+      "audioSentencePl": "t1-p156-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p156-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p156-010-word.mp3",
       "audioWordPl": "t1-p156-010-word-pl.mp3",
       "audioSentence": "t1-p156-010-sentence.mp3",
-      "polishAudio": "Rozłączyć się"
+      "polishAudio": "Rozłączyć się",
+      "audioSentencePl": "t1-p156-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

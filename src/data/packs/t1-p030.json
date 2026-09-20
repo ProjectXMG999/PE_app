@@ -15,7 +15,9 @@
       "audioWord": "t1-p030-001-word.mp3",
       "audioWordPl": "t1-p030-001-word-pl.mp3",
       "audioSentence": "t1-p030-001-sentence.mp3",
-      "polishAudio": "Głowa"
+      "polishAudio": "Głowa",
+      "audioSentencePl": "t1-p030-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p030-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p030-002-word.mp3",
       "audioWordPl": "t1-p030-002-word-pl.mp3",
       "audioSentence": "t1-p030-002-sentence.mp3",
-      "polishAudio": "Noga"
+      "polishAudio": "Noga",
+      "audioSentencePl": "t1-p030-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p030-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p030-003-word.mp3",
       "audioWordPl": "t1-p030-003-word-pl.mp3",
       "audioSentence": "t1-p030-003-sentence.mp3",
-      "polishAudio": "Nos"
+      "polishAudio": "Nos",
+      "audioSentencePl": "t1-p030-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p030-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p030-004-word.mp3",
       "audioWordPl": "t1-p030-004-word-pl.mp3",
       "audioSentence": "t1-p030-004-sentence.mp3",
-      "polishAudio": "Oko"
+      "polishAudio": "Oko",
+      "audioSentencePl": "t1-p030-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p030-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p030-005-word.mp3",
       "audioWordPl": "t1-p030-005-word-pl.mp3",
       "audioSentence": "t1-p030-005-sentence.mp3",
-      "polishAudio": "Ręka"
+      "polishAudio": "Ręka",
+      "audioSentencePl": "t1-p030-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p030-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p030-006-word.mp3",
       "audioWordPl": "t1-p030-006-word-pl.mp3",
       "audioSentence": "t1-p030-006-sentence.mp3",
-      "polishAudio": "Serce"
+      "polishAudio": "Serce",
+      "audioSentencePl": "t1-p030-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p030-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p030-007-word.mp3",
       "audioWordPl": "t1-p030-007-word-pl.mp3",
       "audioSentence": "t1-p030-007-sentence.mp3",
-      "polishAudio": "Twarz"
+      "polishAudio": "Twarz",
+      "audioSentencePl": "t1-p030-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p030-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p030-008-word.mp3",
       "audioWordPl": "t1-p030-008-word-pl.mp3",
       "audioSentence": "t1-p030-008-sentence.mp3",
-      "polishAudio": "Ucho"
+      "polishAudio": "Ucho",
+      "audioSentencePl": "t1-p030-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p030-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p030-009-word.mp3",
       "audioWordPl": "t1-p030-009-word-pl.mp3",
       "audioSentence": "t1-p030-009-sentence.mp3",
-      "polishAudio": "Usta"
+      "polishAudio": "Usta",
+      "audioSentencePl": "t1-p030-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p030-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p030-010-word.mp3",
       "audioWordPl": "t1-p030-010-word-pl.mp3",
       "audioSentence": "t1-p030-010-sentence.mp3",
-      "polishAudio": "Włosy"
+      "polishAudio": "Włosy",
+      "audioSentencePl": "t1-p030-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

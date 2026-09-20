@@ -15,7 +15,9 @@
       "audioWord": "t1-p142-001-word.mp3",
       "audioWordPl": "t1-p142-001-word-pl.mp3",
       "audioSentence": "t1-p142-001-sentence.mp3",
-      "polishAudio": "Szybki"
+      "polishAudio": "Szybki",
+      "audioSentencePl": "t1-p142-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p142-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p142-002-word.mp3",
       "audioWordPl": "t1-p142-002-word-pl.mp3",
       "audioSentence": "t1-p142-002-sentence.mp3",
-      "polishAudio": "Bieżący"
+      "polishAudio": "Bieżący",
+      "audioSentencePl": "t1-p142-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p142-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p142-003-word.mp3",
       "audioWordPl": "t1-p142-003-word-pl.mp3",
       "audioSentence": "t1-p142-003-sentence.mp3",
-      "polishAudio": "Były"
+      "polishAudio": "Były",
+      "audioSentencePl": "t1-p142-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p142-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p142-004-word.mp3",
       "audioWordPl": "t1-p142-004-word-pl.mp3",
       "audioSentence": "t1-p142-004-sentence.mp3",
-      "polishAudio": "Całodniowy"
+      "polishAudio": "Całodniowy",
+      "audioSentencePl": "t1-p142-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p142-005",
@@ -70,7 +78,9 @@
       "audioWord": "t1-p142-006-word.mp3",
       "audioWordPl": "t1-p142-006-word-pl.mp3",
       "audioSentence": "t1-p142-006-sentence.mp3",
-      "polishAudio": "Dzisiejszy"
+      "polishAudio": "Dzisiejszy",
+      "audioSentencePl": "t1-p142-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p142-007",
@@ -81,7 +91,9 @@
       "audioWord": "t1-p142-007-word.mp3",
       "audioWordPl": "t1-p142-007-word-pl.mp3",
       "audioSentence": "t1-p142-007-sentence.mp3",
-      "polishAudio": "Jutrzejszy"
+      "polishAudio": "Jutrzejszy",
+      "audioSentencePl": "t1-p142-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p142-008",
@@ -92,7 +104,9 @@
       "audioWord": "t1-p142-008-word.mp3",
       "audioWordPl": "t1-p142-008-word-pl.mp3",
       "audioSentence": "t1-p142-008-sentence.mp3",
-      "polishAudio": "Niedawny"
+      "polishAudio": "Niedawny",
+      "audioSentencePl": "t1-p142-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p142-009",
@@ -103,7 +117,9 @@
       "audioWord": "t1-p142-009-word.mp3",
       "audioWordPl": "t1-p142-009-word-pl.mp3",
       "audioSentence": "t1-p142-009-sentence.mp3",
-      "polishAudio": "Nieprzerwany"
+      "polishAudio": "Nieprzerwany",
+      "audioSentencePl": "t1-p142-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p142-010",
@@ -114,7 +130,9 @@
       "audioWord": "t1-p142-010-word.mp3",
       "audioWordPl": "t1-p142-010-word-pl.mp3",
       "audioSentence": "t1-p142-010-sentence.mp3",
-      "polishAudio": "Przeszły"
+      "polishAudio": "Przeszły",
+      "audioSentencePl": "t1-p142-010-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p142-011",
@@ -125,7 +143,9 @@
       "audioWord": "t1-p142-011-word.mp3",
       "audioWordPl": "t1-p142-011-word-pl.mp3",
       "audioSentence": "t1-p142-011-sentence.mp3",
-      "polishAudio": "Przyszły"
+      "polishAudio": "Przyszły",
+      "audioSentencePl": "t1-p142-011-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p142-012",
@@ -147,7 +167,9 @@
       "audioWord": "t1-p142-013-word.mp3",
       "audioWordPl": "t1-p142-013-word-pl.mp3",
       "audioSentence": "t1-p142-013-sentence.mp3",
-      "polishAudio": "Wcześniejszy"
+      "polishAudio": "Wcześniejszy",
+      "audioSentencePl": "t1-p142-013-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p142-014",
@@ -158,7 +180,9 @@
       "audioWord": "t1-p142-014-word.mp3",
       "audioWordPl": "t1-p142-014-word-pl.mp3",
       "audioSentence": "t1-p142-014-sentence.mp3",
-      "polishAudio": "Wczorajszy"
+      "polishAudio": "Wczorajszy",
+      "audioSentencePl": "t1-p142-014-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p142-015",
@@ -169,7 +193,9 @@
       "audioWord": "t1-p142-015-word.mp3",
       "audioWordPl": "t1-p142-015-word-pl.mp3",
       "audioSentence": "t1-p142-015-sentence.mp3",
-      "polishAudio": "Czasochłonny"
+      "polishAudio": "Czasochłonny",
+      "audioSentencePl": "t1-p142-015-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

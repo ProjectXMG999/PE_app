@@ -15,7 +15,9 @@
       "audioWord": "t1-p069-001-word.mp3",
       "audioWordPl": "t1-p069-001-word-pl.mp3",
       "audioSentence": "t1-p069-001-sentence.mp3",
-      "polishAudio": "Charakter"
+      "polishAudio": "Charakter",
+      "audioSentencePl": "t1-p069-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p069-002-word.mp3",
       "audioWordPl": "t1-p069-002-word-pl.mp3",
       "audioSentence": "t1-p069-002-sentence.mp3",
-      "polishAudio": "Decyzja"
+      "polishAudio": "Decyzja",
+      "audioSentencePl": "t1-p069-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p069-003-word.mp3",
       "audioWordPl": "t1-p069-003-word-pl.mp3",
       "audioSentence": "t1-p069-003-sentence.mp3",
-      "polishAudio": "Intuicja"
+      "polishAudio": "Intuicja",
+      "audioSentencePl": "t1-p069-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p069-004-word.mp3",
       "audioWordPl": "t1-p069-004-word-pl.mp3",
       "audioSentence": "t1-p069-004-sentence.mp3",
-      "polishAudio": "Myśl"
+      "polishAudio": "Myśl",
+      "audioSentencePl": "t1-p069-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p069-005-word.mp3",
       "audioWordPl": "t1-p069-005-word-pl.mp3",
       "audioSentence": "t1-p069-005-sentence.mp3",
-      "polishAudio": "Opinia"
+      "polishAudio": "Opinia",
+      "audioSentencePl": "t1-p069-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p069-006-word.mp3",
       "audioWordPl": "t1-p069-006-word-pl.mp3",
       "audioSentence": "t1-p069-006-sentence.mp3",
-      "polishAudio": "Pomysł"
+      "polishAudio": "Pomysł",
+      "audioSentencePl": "t1-p069-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p069-007-word.mp3",
       "audioWordPl": "t1-p069-007-word-pl.mp3",
       "audioSentence": "t1-p069-007-sentence.mp3",
-      "polishAudio": "Powód"
+      "polishAudio": "Powód",
+      "audioSentencePl": "t1-p069-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p069-008-word.mp3",
       "audioWordPl": "t1-p069-008-word-pl.mp3",
       "audioSentence": "t1-p069-008-sentence.mp3",
-      "polishAudio": "Racja"
+      "polishAudio": "Racja",
+      "audioSentencePl": "t1-p069-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p069-009-word.mp3",
       "audioWordPl": "t1-p069-009-word-pl.mp3",
       "audioSentence": "t1-p069-009-sentence.mp3",
-      "polishAudio": "Talent"
+      "polishAudio": "Talent",
+      "audioSentencePl": "t1-p069-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p069-010-word.mp3",
       "audioWordPl": "t1-p069-010-word-pl.mp3",
       "audioSentence": "t1-p069-010-sentence.mp3",
-      "polishAudio": "Żart"
+      "polishAudio": "Żart",
+      "audioSentencePl": "t1-p069-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

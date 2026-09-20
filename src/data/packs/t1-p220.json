@@ -15,7 +15,8 @@
       "audioWord": "t1-p220-001-word.mp3",
       "audioWordPl": "t1-p220-001-word-pl.mp3",
       "audioSentence": "t1-p220-001-sentence.mp3",
-      "polishAudio": "Moja lepsza połowa"
+      "polishAudio": "Moja lepsza połowa",
+      "audioSentencePl": "t1-p220-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p220-002",
@@ -26,7 +27,8 @@
       "audioWord": "t1-p220-002-word.mp3",
       "audioWordPl": "t1-p220-002-word-pl.mp3",
       "audioSentence": "t1-p220-002-sentence.mp3",
-      "polishAudio": "Geniusze myślą podobnie"
+      "polishAudio": "Geniusze myślą podobnie",
+      "audioSentencePl": "t1-p220-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p220-003",
@@ -37,7 +39,8 @@
       "audioWord": "t1-p220-003-word.mp3",
       "audioWordPl": "t1-p220-003-word-pl.mp3",
       "audioSentence": "t1-p220-003-sentence.mp3",
-      "polishAudio": "Wiem, co czujesz"
+      "polishAudio": "Wiem, co czujesz",
+      "audioSentencePl": "t1-p220-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p220-004",
@@ -48,7 +51,8 @@
       "audioWord": "t1-p220-004-word.mp3",
       "audioWordPl": "t1-p220-004-word-pl.mp3",
       "audioSentence": "t1-p220-004-sentence.mp3",
-      "polishAudio": "Kocham cię"
+      "polishAudio": "Kocham cię",
+      "audioSentencePl": "t1-p220-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p220-005",
@@ -59,7 +63,8 @@
       "audioWord": "t1-p220-005-word.mp3",
       "audioWordPl": "t1-p220-005-word-pl.mp3",
       "audioSentence": "t1-p220-005-sentence.mp3",
-      "polishAudio": "Tęsknię za tobą"
+      "polishAudio": "Tęsknię za tobą",
+      "audioSentencePl": "t1-p220-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p220-006",
@@ -70,7 +75,8 @@
       "audioWord": "t1-p220-006-word.mp3",
       "audioWordPl": "t1-p220-006-word-pl.mp3",
       "audioSentence": "t1-p220-006-sentence.mp3",
-      "polishAudio": "Po moim trupie"
+      "polishAudio": "Po moim trupie",
+      "audioSentencePl": "t1-p220-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p220-007",
@@ -81,7 +87,8 @@
       "audioWord": "t1-p220-007-word.mp3",
       "audioWordPl": "t1-p220-007-word-pl.mp3",
       "audioSentence": "t1-p220-007-sentence.mp3",
-      "polishAudio": "Łzy w moich oczach"
+      "polishAudio": "Łzy w moich oczach",
+      "audioSentencePl": "t1-p220-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p220-008",
@@ -92,7 +99,8 @@
       "audioWord": "t1-p220-008-word.mp3",
       "audioWordPl": "t1-p220-008-word-pl.mp3",
       "audioSentence": "t1-p220-008-sentence.mp3",
-      "polishAudio": "Szkoda, że cię tu nie ma"
+      "polishAudio": "Szkoda, że cię tu nie ma",
+      "audioSentencePl": "t1-p220-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p220-009",
@@ -103,7 +111,8 @@
       "audioWord": "t1-p220-009-word.mp3",
       "audioWordPl": "t1-p220-009-word-pl.mp3",
       "audioSentence": "t1-p220-009-sentence.mp3",
-      "polishAudio": "Najlepsi przyjaciele na zawsze"
+      "polishAudio": "Najlepsi przyjaciele na zawsze",
+      "audioSentencePl": "t1-p220-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p220-010",
@@ -114,7 +123,8 @@
       "audioWord": "t1-p220-010-word.mp3",
       "audioWordPl": "t1-p220-010-word-pl.mp3",
       "audioSentence": "t1-p220-010-sentence.mp3",
-      "polishAudio": "Hejt"
+      "polishAudio": "Hejt",
+      "audioSentencePl": "t1-p220-010-sentence-pl.mp3"
     }
   ]
 }

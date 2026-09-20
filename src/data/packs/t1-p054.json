@@ -15,7 +15,9 @@
       "audioWord": "t1-p054-001-word.mp3",
       "audioWordPl": "t1-p054-001-word-pl.mp3",
       "audioSentence": "t1-p054-001-sentence.mp3",
-      "polishAudio": "Urząd"
+      "polishAudio": "Urząd",
+      "audioSentencePl": "t1-p054-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p054-002-word.mp3",
       "audioWordPl": "t1-p054-002-word-pl.mp3",
       "audioSentence": "t1-p054-002-sentence.mp3",
-      "polishAudio": "Fryzura"
+      "polishAudio": "Fryzura",
+      "audioSentencePl": "t1-p054-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p054-003-word.mp3",
       "audioWordPl": "t1-p054-003-word-pl.mp3",
       "audioSentence": "t1-p054-003-sentence.mp3",
-      "polishAudio": "Klub nocny"
+      "polishAudio": "Klub nocny",
+      "audioSentencePl": "t1-p054-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p054-004-word.mp3",
       "audioWordPl": "t1-p054-004-word-pl.mp3",
       "audioSentence": "t1-p054-004-sentence.mp3",
-      "polishAudio": "Kosmetyki"
+      "polishAudio": "Kosmetyki",
+      "audioSentencePl": "t1-p054-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p054-005-word.mp3",
       "audioWordPl": "t1-p054-005-word-pl.mp3",
       "audioSentence": "t1-p054-005-sentence.mp3",
-      "polishAudio": "Plac zabaw"
+      "polishAudio": "Plac zabaw",
+      "audioSentencePl": "t1-p054-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p054-006-word.mp3",
       "audioWordPl": "t1-p054-006-word-pl.mp3",
       "audioSentence": "t1-p054-006-sentence.mp3",
-      "polishAudio": "Plac"
+      "polishAudio": "Plac",
+      "audioSentencePl": "t1-p054-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p054-007-word.mp3",
       "audioWordPl": "t1-p054-007-word-pl.mp3",
       "audioSentence": "t1-p054-007-sentence.mp3",
-      "polishAudio": "Poczta"
+      "polishAudio": "Poczta",
+      "audioSentencePl": "t1-p054-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p054-008-word.mp3",
       "audioWordPl": "t1-p054-008-word-pl.mp3",
       "audioSentence": "t1-p054-008-sentence.mp3",
-      "polishAudio": "Pole"
+      "polishAudio": "Pole",
+      "audioSentencePl": "t1-p054-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p054-009-word.mp3",
       "audioWordPl": "t1-p054-009-word-pl.mp3",
       "audioSentence": "t1-p054-009-sentence.mp3",
-      "polishAudio": "Rekin"
+      "polishAudio": "Rekin",
+      "audioSentencePl": "t1-p054-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p054-010-word.mp3",
       "audioWordPl": "t1-p054-010-word-pl.mp3",
       "audioSentence": "t1-p054-010-sentence.mp3",
-      "polishAudio": "Ryba"
+      "polishAudio": "Ryba",
+      "audioSentencePl": "t1-p054-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

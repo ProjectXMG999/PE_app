@@ -15,7 +15,9 @@
       "audioWord": "t1-p164-001-word.mp3",
       "audioWordPl": "t1-p164-001-word-pl.mp3",
       "audioSentence": "t1-p164-001-sentence.mp3",
-      "polishAudio": "Zadziwiający"
+      "polishAudio": "Zadziwiający",
+      "audioSentencePl": "t1-p164-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p164-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p164-002-word.mp3",
       "audioWordPl": "t1-p164-002-word-pl.mp3",
       "audioSentence": "t1-p164-002-sentence.mp3",
-      "polishAudio": "Heroiczny"
+      "polishAudio": "Heroiczny",
+      "audioSentencePl": "t1-p164-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p164-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p164-003-word.mp3",
       "audioWordPl": "t1-p164-003-word-pl.mp3",
       "audioSentence": "t1-p164-003-sentence.mp3",
-      "polishAudio": "Wyjątkowy"
+      "polishAudio": "Wyjątkowy",
+      "audioSentencePl": "t1-p164-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p164-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p164-004-word.mp3",
       "audioWordPl": "t1-p164-004-word-pl.mp3",
       "audioSentence": "t1-p164-004-sentence.mp3",
-      "polishAudio": "Wyśmienity"
+      "polishAudio": "Wyśmienity",
+      "audioSentencePl": "t1-p164-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p164-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p164-005-word.mp3",
       "audioWordPl": "t1-p164-005-word-pl.mp3",
       "audioSentence": "t1-p164-005-sentence.mp3",
-      "polishAudio": "Nie z tego świata"
+      "polishAudio": "Nie z tego świata",
+      "audioSentencePl": "t1-p164-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p164-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p164-006-word.mp3",
       "audioWordPl": "t1-p164-006-word-pl.mp3",
       "audioSentence": "t1-p164-006-sentence.mp3",
-      "polishAudio": "Wybitny"
+      "polishAudio": "Wybitny",
+      "audioSentencePl": "t1-p164-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p164-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p164-007-word.mp3",
       "audioWordPl": "t1-p164-007-word-pl.mp3",
       "audioSentence": "t1-p164-007-sentence.mp3",
-      "polishAudio": "Potężny"
+      "polishAudio": "Potężny",
+      "audioSentencePl": "t1-p164-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p164-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p164-008-word.mp3",
       "audioWordPl": "t1-p164-008-word-pl.mp3",
       "audioSentence": "t1-p164-008-sentence.mp3",
-      "polishAudio": "Fantastyczny"
+      "polishAudio": "Fantastyczny",
+      "audioSentencePl": "t1-p164-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p164-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p164-009-word.mp3",
       "audioWordPl": "t1-p164-009-word-pl.mp3",
       "audioSentence": "t1-p164-009-sentence.mp3",
-      "polishAudio": "Hit"
+      "polishAudio": "Hit",
+      "audioSentencePl": "t1-p164-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p164-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p164-010-word.mp3",
       "audioWordPl": "t1-p164-010-word-pl.mp3",
       "audioSentence": "t1-p164-010-sentence.mp3",
-      "polishAudio": "Dajesz czadu"
+      "polishAudio": "Dajesz czadu",
+      "audioSentencePl": "t1-p164-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

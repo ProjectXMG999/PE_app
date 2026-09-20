@@ -15,7 +15,9 @@
       "audioWord": "t1-p026-001-word.mp3",
       "audioWordPl": "t1-p026-001-word-pl.mp3",
       "audioSentence": "t1-p026-001-sentence.mp3",
-      "polishAudio": "Ciężki"
+      "polishAudio": "Ciężki",
+      "audioSentencePl": "t1-p026-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p026-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p026-002-word.mp3",
       "audioWordPl": "t1-p026-002-word-pl.mp3",
       "audioSentence": "t1-p026-002-sentence.mp3",
-      "polishAudio": "Długi"
+      "polishAudio": "Długi",
+      "audioSentencePl": "t1-p026-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p026-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p026-003-word.mp3",
       "audioWordPl": "t1-p026-003-word-pl.mp3",
       "audioSentence": "t1-p026-003-sentence.mp3",
-      "polishAudio": "Duży"
+      "polishAudio": "Duży",
+      "audioSentencePl": "t1-p026-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p026-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p026-004-word.mp3",
       "audioWordPl": "t1-p026-004-word-pl.mp3",
       "audioSentence": "t1-p026-004-sentence.mp3",
-      "polishAudio": "Krótki"
+      "polishAudio": "Krótki",
+      "audioSentencePl": "t1-p026-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p026-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p026-005-word.mp3",
       "audioWordPl": "t1-p026-005-word-pl.mp3",
       "audioSentence": "t1-p026-005-sentence.mp3",
-      "polishAudio": "Mały"
+      "polishAudio": "Mały",
+      "audioSentencePl": "t1-p026-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p026-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p026-006-word.mp3",
       "audioWordPl": "t1-p026-006-word-pl.mp3",
       "audioSentence": "t1-p026-006-sentence.mp3",
-      "polishAudio": "Mały, troszkę"
+      "polishAudio": "Mały, troszkę",
+      "audioSentencePl": "t1-p026-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p026-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p026-007-word.mp3",
       "audioWordPl": "t1-p026-007-word-pl.mp3",
       "audioSentence": "t1-p026-007-sentence.mp3",
-      "polishAudio": "Miękki"
+      "polishAudio": "Miękki",
+      "audioSentencePl": "t1-p026-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p026-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p026-008-word.mp3",
       "audioWordPl": "t1-p026-008-word-pl.mp3",
       "audioSentence": "t1-p026-008-sentence.mp3",
-      "polishAudio": "Mini"
+      "polishAudio": "Mini",
+      "audioSentencePl": "t1-p026-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p026-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p026-009-word.mp3",
       "audioWordPl": "t1-p026-009-word-pl.mp3",
       "audioSentence": "t1-p026-009-sentence.mp3",
-      "polishAudio": "Wysoki"
+      "polishAudio": "Wysoki",
+      "audioSentencePl": "t1-p026-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p026-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p026-010-word.mp3",
       "audioWordPl": "t1-p026-010-word-pl.mp3",
       "audioSentence": "t1-p026-010-sentence.mp3",
-      "polishAudio": "Wysoki"
+      "polishAudio": "Wysoki",
+      "audioSentencePl": "t1-p026-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

@@ -15,7 +15,9 @@
       "audioWord": "t1-p013-001-word.mp3",
       "audioWordPl": "t1-p013-001-word-pl.mp3",
       "audioSentence": "t1-p013-001-sentence.mp3",
-      "polishAudio": "Rozwalać system"
+      "polishAudio": "Rozwalać system",
+      "audioSentencePl": "t1-p013-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p013-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p013-002-word.mp3",
       "audioWordPl": "t1-p013-002-word-pl.mp3",
       "audioSentence": "t1-p013-002-sentence.mp3",
-      "polishAudio": "Twardziel"
+      "polishAudio": "Twardziel",
+      "audioSentencePl": "t1-p013-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p013-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p013-003-word.mp3",
       "audioWordPl": "t1-p013-003-word-pl.mp3",
       "audioSentence": "t1-p013-003-sentence.mp3",
-      "polishAudio": "Najlepszy ze wszystkich"
+      "polishAudio": "Najlepszy ze wszystkich",
+      "audioSentencePl": "t1-p013-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p013-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p013-004-word.mp3",
       "audioWordPl": "t1-p013-004-word-pl.mp3",
       "audioSentence": "t1-p013-004-sentence.mp3",
-      "polishAudio": "Dziany"
+      "polishAudio": "Dziany",
+      "audioSentencePl": "t1-p013-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p013-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p013-005-word.mp3",
       "audioWordPl": "t1-p013-005-word-pl.mp3",
       "audioSentence": "t1-p013-005-sentence.mp3",
-      "polishAudio": "Pozamiatać"
+      "polishAudio": "Pozamiatać",
+      "audioSentencePl": "t1-p013-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p013-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p013-006-word.mp3",
       "audioWordPl": "t1-p013-006-word-pl.mp3",
       "audioSentence": "t1-p013-006-sentence.mp3",
-      "polishAudio": "Zacny"
+      "polishAudio": "Zacny",
+      "audioSentencePl": "t1-p013-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p013-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p013-007-word.mp3",
       "audioWordPl": "t1-p013-007-word-pl.mp3",
       "audioSentence": "t1-p013-007-sentence.mp3",
-      "polishAudio": "Reputacja"
+      "polishAudio": "Reputacja",
+      "audioSentencePl": "t1-p013-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p013-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p013-008-word.mp3",
       "audioWordPl": "t1-p013-008-word-pl.mp3",
       "audioSentence": "t1-p013-008-sentence.mp3",
-      "polishAudio": "Furka"
+      "polishAudio": "Furka",
+      "audioSentencePl": "t1-p013-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p013-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p013-009-word.mp3",
       "audioWordPl": "t1-p013-009-word-pl.mp3",
       "audioSentence": "t1-p013-009-sentence.mp3",
-      "polishAudio": "Zdobyć coś fajnego"
+      "polishAudio": "Zdobyć coś fajnego",
+      "audioSentencePl": "t1-p013-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p013-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p013-010-word.mp3",
       "audioWordPl": "t1-p013-010-word-pl.mp3",
       "audioSentence": "t1-p013-010-sentence.mp3",
-      "polishAudio": "Fura"
+      "polishAudio": "Fura",
+      "audioSentencePl": "t1-p013-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

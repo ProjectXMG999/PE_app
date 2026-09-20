@@ -15,7 +15,9 @@
       "audioWord": "t1-p209-001-word.mp3",
       "audioWordPl": "t1-p209-001-word-pl.mp3",
       "audioSentence": "t1-p209-001-sentence.mp3",
-      "polishAudio": "Połowa"
+      "polishAudio": "Połowa",
+      "audioSentencePl": "t1-p209-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p209-002-word.mp3",
       "audioWordPl": "t1-p209-002-word-pl.mp3",
       "audioSentence": "t1-p209-002-sentence.mp3",
-      "polishAudio": "Argument"
+      "polishAudio": "Argument",
+      "audioSentencePl": "t1-p209-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p209-003-word.mp3",
       "audioWordPl": "t1-p209-003-word-pl.mp3",
       "audioSentence": "t1-p209-003-sentence.mp3",
-      "polishAudio": "Para"
+      "polishAudio": "Para",
+      "audioSentencePl": "t1-p209-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p209-004-word.mp3",
       "audioWordPl": "t1-p209-004-word-pl.mp3",
       "audioSentence": "t1-p209-004-sentence.mp3",
-      "polishAudio": "Akcja"
+      "polishAudio": "Akcja",
+      "audioSentencePl": "t1-p209-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p209-005-word.mp3",
       "audioWordPl": "t1-p209-005-word-pl.mp3",
       "audioSentence": "t1-p209-005-sentence.mp3",
-      "polishAudio": "Chemia"
+      "polishAudio": "Chemia",
+      "audioSentencePl": "t1-p209-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p209-006-word.mp3",
       "audioWordPl": "t1-p209-006-word-pl.mp3",
       "audioSentence": "t1-p209-006-sentence.mp3",
-      "polishAudio": "Fizyka"
+      "polishAudio": "Fizyka",
+      "audioSentencePl": "t1-p209-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p209-007-word.mp3",
       "audioWordPl": "t1-p209-007-word-pl.mp3",
       "audioSentence": "t1-p209-007-sentence.mp3",
-      "polishAudio": "Maksimum"
+      "polishAudio": "Maksimum",
+      "audioSentencePl": "t1-p209-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p209-008-word.mp3",
       "audioWordPl": "t1-p209-008-word-pl.mp3",
       "audioSentence": "t1-p209-008-sentence.mp3",
-      "polishAudio": "Matematyka"
+      "polishAudio": "Matematyka",
+      "audioSentencePl": "t1-p209-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p209-009-word.mp3",
       "audioWordPl": "t1-p209-009-word-pl.mp3",
       "audioSentence": "t1-p209-009-sentence.mp3",
-      "polishAudio": "Minimum"
+      "polishAudio": "Minimum",
+      "audioSentencePl": "t1-p209-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p209-010-word.mp3",
       "audioWordPl": "t1-p209-010-word-pl.mp3",
       "audioSentence": "t1-p209-010-sentence.mp3",
-      "polishAudio": "Nauka"
+      "polishAudio": "Nauka",
+      "audioSentencePl": "t1-p209-010-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-011",
@@ -125,7 +145,9 @@
       "audioWord": "t1-p209-011-word.mp3",
       "audioWordPl": "t1-p209-011-word-pl.mp3",
       "audioSentence": "t1-p209-011-sentence.mp3",
-      "polishAudio": "Przykład"
+      "polishAudio": "Przykład",
+      "audioSentencePl": "t1-p209-011-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-012",
@@ -136,7 +158,9 @@
       "audioWord": "t1-p209-012-word.mp3",
       "audioWordPl": "t1-p209-012-word-pl.mp3",
       "audioSentence": "t1-p209-012-sentence.mp3",
-      "polishAudio": "Rozwiązanie"
+      "polishAudio": "Rozwiązanie",
+      "audioSentencePl": "t1-p209-012-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-013",
@@ -147,7 +171,9 @@
       "audioWord": "t1-p209-013-word.mp3",
       "audioWordPl": "t1-p209-013-word-pl.mp3",
       "audioSentence": "t1-p209-013-sentence.mp3",
-      "polishAudio": "Reakcja"
+      "polishAudio": "Reakcja",
+      "audioSentencePl": "t1-p209-013-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-014",
@@ -158,7 +184,9 @@
       "audioWord": "t1-p209-014-word.mp3",
       "audioWordPl": "t1-p209-014-word-pl.mp3",
       "audioSentence": "t1-p209-014-sentence.mp3",
-      "polishAudio": "Ekspert"
+      "polishAudio": "Ekspert",
+      "audioSentencePl": "t1-p209-014-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p209-015",
@@ -169,7 +197,9 @@
       "audioWord": "t1-p209-015-word.mp3",
       "audioWordPl": "t1-p209-015-word-pl.mp3",
       "audioSentence": "t1-p209-015-sentence.mp3",
-      "polishAudio": "Funkcja"
+      "polishAudio": "Funkcja",
+      "audioSentencePl": "t1-p209-015-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

@@ -15,7 +15,9 @@
       "audioWord": "t1-p012-001-word.mp3",
       "audioWordPl": "t1-p012-001-word-pl.mp3",
       "audioSentence": "t1-p012-001-sentence.mp3",
-      "polishAudio": "Kozak"
+      "polishAudio": "Kozak",
+      "audioSentencePl": "t1-p012-001-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p012-002",
@@ -26,7 +28,9 @@
       "audioWord": "t1-p012-002-word.mp3",
       "audioWordPl": "t1-p012-002-word-pl.mp3",
       "audioSentence": "t1-p012-002-sentence.mp3",
-      "polishAudio": "Bratku, bracie"
+      "polishAudio": "Bratku, bracie",
+      "audioSentencePl": "t1-p012-002-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p012-003",
@@ -37,7 +41,9 @@
       "audioWord": "t1-p012-003-word.mp3",
       "audioWordPl": "t1-p012-003-word-pl.mp3",
       "audioSentence": "t1-p012-003-sentence.mp3",
-      "polishAudio": "Dolce"
+      "polishAudio": "Dolce",
+      "audioSentencePl": "t1-p012-003-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p012-004",
@@ -48,7 +54,9 @@
       "audioWord": "t1-p012-004-word.mp3",
       "audioWordPl": "t1-p012-004-word-pl.mp3",
       "audioSentence": "t1-p012-004-sentence.mp3",
-      "polishAudio": "Wyluzować"
+      "polishAudio": "Wyluzować",
+      "audioSentencePl": "t1-p012-004-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p012-005",
@@ -59,7 +67,9 @@
       "audioWord": "t1-p012-005-word.mp3",
       "audioWordPl": "t1-p012-005-word-pl.mp3",
       "audioSentence": "t1-p012-005-sentence.mp3",
-      "polishAudio": "Stary, ziomuś"
+      "polishAudio": "Stary, ziomuś",
+      "audioSentencePl": "t1-p012-005-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p012-006",
@@ -70,7 +80,9 @@
       "audioWord": "t1-p012-006-word.mp3",
       "audioWordPl": "t1-p012-006-word-pl.mp3",
       "audioSentence": "t1-p012-006-sentence.mp3",
-      "polishAudio": "Kochanie"
+      "polishAudio": "Kochanie",
+      "audioSentencePl": "t1-p012-006-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p012-007",
@@ -81,7 +93,9 @@
       "audioWord": "t1-p012-007-word.mp3",
       "audioWordPl": "t1-p012-007-word-pl.mp3",
       "audioSentence": "t1-p012-007-sentence.mp3",
-      "polishAudio": "Kolego, chłopie"
+      "polishAudio": "Kolego, chłopie",
+      "audioSentencePl": "t1-p012-007-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p012-008",
@@ -92,7 +106,9 @@
       "audioWord": "t1-p012-008-word.mp3",
       "audioWordPl": "t1-p012-008-word-pl.mp3",
       "audioSentence": "t1-p012-008-sentence.mp3",
-      "polishAudio": "Jak jest?"
+      "polishAudio": "Jak jest?",
+      "audioSentencePl": "t1-p012-008-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p012-009",
@@ -103,7 +119,9 @@
       "audioWord": "t1-p012-009-word.mp3",
       "audioWordPl": "t1-p012-009-word-pl.mp3",
       "audioSentence": "t1-p012-009-sentence.mp3",
-      "polishAudio": "Być świetnym"
+      "polishAudio": "Być świetnym",
+      "audioSentencePl": "t1-p012-009-sentence-pl.mp3",
+      "sentenceAudio": true
     },
     {
       "id": "t1-p012-010",
@@ -114,7 +132,9 @@
       "audioWord": "t1-p012-010-word.mp3",
       "audioWordPl": "t1-p012-010-word-pl.mp3",
       "audioSentence": "t1-p012-010-sentence.mp3",
-      "polishAudio": "Bawić się zarąbiście"
+      "polishAudio": "Bawić się zarąbiście",
+      "audioSentencePl": "t1-p012-010-sentence-pl.mp3",
+      "sentenceAudio": true
     }
   ]
 }

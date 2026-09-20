@@ -15,7 +15,8 @@
       "audioWord": "t1-p251-001-word.mp3",
       "audioWordPl": "t1-p251-001-word-pl.mp3",
       "audioSentence": "t1-p251-001-sentence.mp3",
-      "polishAudio": "Oczekiwany czas przyjazdu"
+      "polishAudio": "Oczekiwany czas przyjazdu",
+      "audioSentencePl": "t1-p251-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p251-002",
@@ -26,7 +27,8 @@
       "audioWord": "t1-p251-002-word.mp3",
       "audioWordPl": "t1-p251-002-word-pl.mp3",
       "audioSentence": "t1-p251-002-sentence.mp3",
-      "polishAudio": "Biznes z biznesem"
+      "polishAudio": "Biznes z biznesem",
+      "audioSentencePl": "t1-p251-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p251-003",
@@ -37,7 +39,8 @@
       "audioWord": "t1-p251-003-word.mp3",
       "audioWordPl": "t1-p251-003-word-pl.mp3",
       "audioSentence": "t1-p251-003-sentence.mp3",
-      "polishAudio": "Biznes z konsumentem"
+      "polishAudio": "Biznes z konsumentem",
+      "audioSentencePl": "t1-p251-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p251-004",
@@ -48,7 +51,8 @@
       "audioWord": "t1-p251-004-word.mp3",
       "audioWordPl": "t1-p251-004-word-pl.mp3",
       "audioSentence": "t1-p251-004-sentence.mp3",
-      "polishAudio": "Dyrektor generalny"
+      "polishAudio": "Dyrektor generalny",
+      "audioSentencePl": "t1-p251-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p251-005",
@@ -59,7 +63,8 @@
       "audioWord": "t1-p251-005-word.mp3",
       "audioWordPl": "t1-p251-005-word-pl.mp3",
       "audioSentence": "t1-p251-005-sentence.mp3",
-      "polishAudio": "Dyrektor ds. sprzedaży"
+      "polishAudio": "Dyrektor ds. sprzedaży",
+      "audioSentencePl": "t1-p251-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p251-006",
@@ -70,7 +75,8 @@
       "audioWord": "t1-p251-006-word.mp3",
       "audioWordPl": "t1-p251-006-word-pl.mp3",
       "audioSentence": "t1-p251-006-sentence.mp3",
-      "polishAudio": "Zasoby ludzkie"
+      "polishAudio": "Zasoby ludzkie",
+      "audioSentencePl": "t1-p251-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p251-007",
@@ -81,7 +87,8 @@
       "audioWord": "t1-p251-007-word.mp3",
       "audioWordPl": "t1-p251-007-word-pl.mp3",
       "audioSentence": "t1-p251-007-sentence.mp3",
-      "polishAudio": "Poza biurem"
+      "polishAudio": "Poza biurem",
+      "audioSentencePl": "t1-p251-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p251-008",
@@ -92,7 +99,8 @@
       "audioWord": "t1-p251-008-word.mp3",
       "audioWordPl": "t1-p251-008-word-pl.mp3",
       "audioSentence": "t1-p251-008-sentence.mp3",
-      "polishAudio": "Niedostępny"
+      "polishAudio": "Niedostępny",
+      "audioSentencePl": "t1-p251-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p251-009",
@@ -103,7 +111,8 @@
       "audioWord": "t1-p251-009-word.mp3",
       "audioWordPl": "t1-p251-009-word-pl.mp3",
       "audioSentence": "t1-p251-009-sentence.mp3",
-      "polishAudio": "Asystent"
+      "polishAudio": "Asystent",
+      "audioSentencePl": "t1-p251-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p251-010",
@@ -114,7 +123,8 @@
       "audioWord": "t1-p251-010-word.mp3",
       "audioWordPl": "t1-p251-010-word-pl.mp3",
       "audioSentence": "t1-p251-010-sentence.mp3",
-      "polishAudio": "Relacje publiczne"
+      "polishAudio": "Relacje publiczne",
+      "audioSentencePl": "t1-p251-010-sentence-pl.mp3"
     }
   ]
 }

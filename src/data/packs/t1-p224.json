@@ -15,7 +15,8 @@
       "audioWord": "t1-p224-001-word.mp3",
       "audioWordPl": "t1-p224-001-word-pl.mp3",
       "audioSentence": "t1-p224-001-sentence.mp3",
-      "polishAudio": "Brednie"
+      "polishAudio": "Brednie",
+      "audioSentencePl": "t1-p224-001-sentence-pl.mp3"
     },
     {
       "id": "t1-p224-002",
@@ -26,7 +27,8 @@
       "audioWord": "t1-p224-002-word.mp3",
       "audioWordPl": "t1-p224-002-word-pl.mp3",
       "audioSentence": "t1-p224-002-sentence.mp3",
-      "polishAudio": "Żonkil"
+      "polishAudio": "Żonkil",
+      "audioSentencePl": "t1-p224-002-sentence-pl.mp3"
     },
     {
       "id": "t1-p224-003",
@@ -37,7 +39,8 @@
       "audioWord": "t1-p224-003-word.mp3",
       "audioWordPl": "t1-p224-003-word-pl.mp3",
       "audioSentence": "t1-p224-003-sentence.mp3",
-      "polishAudio": "Riposta"
+      "polishAudio": "Riposta",
+      "audioSentencePl": "t1-p224-003-sentence-pl.mp3"
     },
     {
       "id": "t1-p224-004",
@@ -48,7 +51,8 @@
       "audioWord": "t1-p224-004-word.mp3",
       "audioWordPl": "t1-p224-004-word-pl.mp3",
       "audioSentence": "t1-p224-004-sentence.mp3",
-      "polishAudio": "Zawiły"
+      "polishAudio": "Zawiły",
+      "audioSentencePl": "t1-p224-004-sentence-pl.mp3"
     },
     {
       "id": "t1-p224-005",
@@ -59,7 +63,8 @@
       "audioWord": "t1-p224-005-word.mp3",
       "audioWordPl": "t1-p224-005-word-pl.mp3",
       "audioSentence": "t1-p224-005-sentence.mp3",
-      "polishAudio": "Czas wypoczynku"
+      "polishAudio": "Czas wypoczynku",
+      "audioSentencePl": "t1-p224-005-sentence-pl.mp3"
     },
     {
       "id": "t1-p224-006",
@@ -70,7 +75,8 @@
       "audioWord": "t1-p224-006-word.mp3",
       "audioWordPl": "t1-p224-006-word-pl.mp3",
       "audioSentence": "t1-p224-006-sentence.mp3",
-      "polishAudio": "Posągowy"
+      "polishAudio": "Posągowy",
+      "audioSentencePl": "t1-p224-006-sentence-pl.mp3"
     },
     {
       "id": "t1-p224-007",
@@ -81,7 +87,8 @@
       "audioWord": "t1-p224-007-word.mp3",
       "audioWordPl": "t1-p224-007-word-pl.mp3",
       "audioSentence": "t1-p224-007-sentence.mp3",
-      "polishAudio": "Rozpływający się w ustach"
+      "polishAudio": "Rozpływający się w ustach",
+      "audioSentencePl": "t1-p224-007-sentence-pl.mp3"
     },
     {
       "id": "t1-p224-008",
@@ -92,7 +99,8 @@
       "audioWord": "t1-p224-008-word.mp3",
       "audioWordPl": "t1-p224-008-word-pl.mp3",
       "audioSentence": "t1-p224-008-sentence.mp3",
-      "polishAudio": "Słowik"
+      "polishAudio": "Słowik",
+      "audioSentencePl": "t1-p224-008-sentence-pl.mp3"
     },
     {
       "id": "t1-p224-009",
@@ -103,7 +111,8 @@
       "audioWord": "t1-p224-009-word.mp3",
       "audioWordPl": "t1-p224-009-word-pl.mp3",
       "audioSentence": "t1-p224-009-sentence.mp3",
-      "polishAudio": "Bratnia dusza"
+      "polishAudio": "Bratnia dusza",
+      "audioSentencePl": "t1-p224-009-sentence-pl.mp3"
     },
     {
       "id": "t1-p224-010",
@@ -114,7 +123,8 @@
       "audioWord": "t1-p224-010-word.mp3",
       "audioWordPl": "t1-p224-010-word-pl.mp3",
       "audioSentence": "t1-p224-010-sentence.mp3",
-      "polishAudio": "Jednorożec"
+      "polishAudio": "Jednorożec",
+      "audioSentencePl": "t1-p224-010-sentence-pl.mp3"
     }
   ]
 }
