@@ -69,9 +69,12 @@ const STAGE_KEYS: {
   { stage: STAGE_LEARNING, name: 'w nauce', color: 'var(--accent-orange)', fallback: [237, 140, 66] },
   { stage: STAGE_DUE, name: 'do powtórki', color: 'var(--accent-pink)', fallback: [240, 110, 130] },
   { stage: STAGE_KNOWN, name: 'w pamięci', color: 'var(--accent-blue)', fallback: [120, 140, 237] },
-  // "utrwalone", not "na stałe": the brightness row below already ends in "na
-  // stałe", and one panel cannot have the same words mean two different axes.
-  { stage: STAGE_PERMANENT, name: 'utrwalone', color: 'var(--accent-green)', fallback: [140, 217, 140] },
+  // "na stałe" — the app's own word for emerytura, and the same one the detail
+  // panel prints. It was briefly "utrwalone", to dodge the ramp end that used
+  // to read "na stałe"; that end is now "ponad rok", so the collision moved
+  // rather than went away — "utrwalone" (etap) against "trwałość" (jasność) is
+  // one root doing duty on two axes, which is the thing to avoid here.
+  { stage: STAGE_PERMANENT, name: 'na stałe', color: 'var(--accent-green)', fallback: [140, 217, 140] },
 ]
 
 /** Resolves a list of CSS colours ("var(--accent-yellow)") to the 0-1 RGB the
@@ -436,8 +439,16 @@ export function Constellation({ packs, wordProgress }: Props) {
       className={`constellation u-liquid${expanded ? ' constellation--expanded' : ''}`}
     >
       <header className="constellation__head">
+        {/* Names both axes, and names them for the mode that is actually on.
+            "Im jaśniejsza, tym lepiej je pamiętasz" had to go: it says nothing
+            about hue (which now carries two different things), and in Etapy it
+            is contradicted on screen — a word due today can be one of the
+            brightest stars in the sky, because jasność is how LONG the memory
+            holds, not how fresh it is. */}
         <p className="constellation__sub">
-          Jedna gwiazda — jedno słowo. Im jaśniejsza, tym lepiej je pamiętasz.
+          Jedna gwiazda — jedno słowo. Kolor to{' '}
+          {colorBy === 'stage' ? 'etap nauki' : 'poziom'}, jasność — na jak długo je
+          pamiętasz.
         </p>
         <button
           type="button"
@@ -522,7 +533,11 @@ export function Constellation({ packs, wordProgress }: Props) {
             {word && <p className="constellation__detail-pl">{word.polish}</p>}
             <dl className="constellation__detail-stats">
               <div>
-                <dt>Pamięć</dt>
+                {/* The same number the brightness ramp is drawn from, so it
+                    carries the same name — "Pamięć: 30 dni" next to a legend
+                    that has stopped calling that axis pamięć would be two words
+                    for one quantity. */}
+                <dt>Trwałość</dt>
                 <dd>
                   {detail.retired
                     ? 'na stałe'
@@ -556,8 +571,8 @@ export function Constellation({ packs, wordProgress }: Props) {
       {/* The key, and it has to name BOTH axes — see starColors() and the vertex
           shader in renderer.ts. Hue comes from whichever mode is selected and
           nothing else; brightness (plus point size, plus the diffraction cross
-          on a retired word) carries how well the word is remembered, in both
-          modes.
+          on a retired word) carries how long the memory holds — FSRS stability
+          — and carries it in both modes.
 
           The first version labelled the hues by learning state ("w nauce"
           against orange, "znane" against green), which read a level-2 band as a
@@ -568,7 +583,7 @@ export function Constellation({ packs, wordProgress }: Props) {
       <div className="constellation__legend">
         <div className="constellation__legend-row">
           <span className="constellation__legend-axis">
-            {colorBy === 'stage' ? 'Kolor = etap' : 'Kolor = poziom'}
+            {colorBy === 'stage' ? 'Kolor = etap nauki' : 'Kolor = poziom'}
           </span>
           {colorBy === 'stage'
             ? STAGE_KEYS.map(s => (
@@ -599,14 +614,19 @@ export function Constellation({ packs, wordProgress }: Props) {
           )}
         </div>
 
-        {/* The ends name the thing brightness is actually made of — FSRS
-            stability, from a couple of days to the year at which a word retires
-            (RETIRE_STABILITY_DAYS). They used to read "świeżo poznane" → "na
-            stałe", which was fine while hue meant level and impossible once it
-            could mean etap: "świeżo poznane" and "na stałe" then said the same
-            words as two of the swatches one row above, on a different axis. */}
+        {/* The axis and its ends name the thing brightness is actually made of —
+            FSRS stability, from a couple of days to the year at which a word
+            retires (RETIRE_STABILITY_DAYS).
+
+            It used to read "Jasność = pamięć · świeżo poznane → na stałe",
+            which was serviceable while hue meant level and false once it could
+            mean etap. Twice over: the ends repeated two of the swatches one row
+            above on a different axis, and "pamięć" claimed the whole idea of
+            remembering for an axis that only carries its DURATION — so a pink
+            "do powtórki" star burning bright read as a contradiction. It isn't
+            one: that word is held for a long time AND is due today. */}
         <div className="constellation__legend-row">
-          <span className="constellation__legend-axis">Jasność = pamięć</span>
+          <span className="constellation__legend-axis">Jasność = trwałość</span>
           <span className="constellation__ramp-end">kilka dni</span>
           <span className="constellation__ramp" aria-hidden="true" />
           <span className="constellation__ramp-end">ponad rok</span>
