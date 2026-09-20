@@ -42,7 +42,14 @@ export function ReviewQueueSummary({ snapshot }: Props) {
   // extra separately, rather than showing "266 z 8".
   const doneToday = Math.min(served, reviewBudget)
   const extraToday = Math.max(0, served - reviewBudget)
-  const todayPct = reviewBudget > 0 ? Math.min(100, (served / reviewBudget) * 100) : 0
+  // The target can never exceed what actually exists. `servingLeft` is already
+  // capped by the queue (reviewQueue.ts caps `remaining` at the backlog), but
+  // the budget behind the denominator isn't capped by anything — so a budget of
+  // 42 against a queue of 5 printed "16 z 42 · 5 do zrobienia" and a bar that
+  // stops at 38% with nothing left to do. Now the two halves of "N z M" are
+  // measured against the same queue.
+  const todayTotal = Math.min(reviewBudget, served + dueCount)
+  const todayPct = todayTotal > 0 ? Math.min(100, (served / todayTotal) * 100) : 0
 
   return (
     <div className="reviewqueue">
@@ -50,7 +57,7 @@ export function ReviewQueueSummary({ snapshot }: Props) {
         <div className="reviewqueue__stat">
           <span className="reviewqueue__label">Na dziś</span>
           <span className="reviewqueue__value">
-            {doneToday}<small> z {reviewBudget}</small>
+            {doneToday}<small> z {todayTotal}</small>
           </span>
           <span className="reviewqueue__hint">
             {servingLeft > 0
@@ -74,7 +81,7 @@ export function ReviewQueueSummary({ snapshot }: Props) {
       <div
         className="reviewqueue__today-track"
         role="img"
-        aria-label={`Powtórki na dziś: ${doneToday} z ${reviewBudget}`}
+        aria-label={`Powtórki na dziś: ${doneToday} z ${todayTotal}`}
       >
         <motion.span
           className="reviewqueue__today-fill"

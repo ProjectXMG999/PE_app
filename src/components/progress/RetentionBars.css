@@ -170,6 +170,28 @@
   white-space: nowrap;
 }
 
+/* Declared words sit below the legend behind a dashed rule, and deliberately
+   NOT on the legend's grid: one full-width line, label left and count right.
+   On the tier grid the label wrapped to two lines inside a 116px column and the
+   row read as a sixth, broken tier — which is the one thing it must not be. */
+.retention__declared {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 6px;
+  padding: 10px 0 0;
+  border-top: 1px dashed var(--border);
+}
+
+.retention__declared-label {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
 .retention__summary {
   margin: var(--spacing-sm) 0 0;
   padding-top: var(--spacing-sm);
@@ -183,6 +205,14 @@
 .retention__summary strong {
   color: var(--text-secondary);
   font-variant-numeric: tabular-nums;
+}
+
+/* The declared note follows the main summary, so it gets no second rule — two
+   stacked borders read as two unrelated cards. */
+.retention__summary--declared {
+  padding-top: 0;
+  border-top: 0;
+  margin-top: 8px;
 }
 
 @media (min-width: 1024px) {

@@ -4,7 +4,7 @@ import { retentionBreakdown, type RetentionTier } from '../../services/reviewQue
 import { RetentionInfoSheet } from './RetentionInfoSheet'
 import { FlowNumber } from '../shared/FlowNumber'
 import { useRevealOnView } from '../../hooks/useRevealOnView'
-import { plural } from '../../utils/plural'
+import { plural, plWords } from '../../utils/plural'
 import './RetentionBars.css'
 
 interface Props {
@@ -41,17 +41,69 @@ const TIER_META: Record<RetentionTier, TierMeta> = {
   setting: { label: 'Utrwalają się', color: '#84CC16', cadence: 'co 1–3 tygodnie' },
   solid:   { label: 'Utrwalone',     color: '#22C55E', cadence: 'co 1–2 miesiące' },
   strong:  { label: 'Dobrze znane',  color: '#14B8A6', cadence: 'co kilka miesięcy' },
-  locked:  { label: 'Na stałe',      color: '#8B5CF6', cadence: 'raz w roku' },
+  // Deep maintenance is capped at FSRS_MAX_INTERVAL (730 days), so "raz w roku"
+  // was the floor of the range quoted as the whole of it.
+  locked:  { label: 'Na stałe',      color: '#8B5CF6', cadence: 'raz na rok albo dwa' },
+}
+
+/** Grey, and outside the warm→cool ramp on purpose: declared words aren't a
+ *  stage of memory the others lead to, they're vocabulary that never entered
+ *  the scale. */
+const DECLARED_COLOR = '#94A3B8'
+
+/**
+ * Shares that add up to 100 — largest remainder, and never a bare "0%" beside a
+ * non-zero count. Plain `Math.round` per row printed "49 · 0%" three times over
+ * and made the column sum to 99, which reads as a broken screen rather than as
+ * rounding.
+ */
+function sharePcts(counts: number[], total: number): string[] {
+  if (total <= 0) return counts.map(() => '0%')
+  const exact = counts.map(c => (c / total) * 100)
+  const out = exact.map(Math.floor)
+  let left = 100 - out.reduce((a, b) => a + b, 0)
+  const byRemainder = exact
+    .map((v, i) => ({ rem: v - Math.floor(v), i }))
+    .sort((a, b) => b.rem - a.rem)
+  for (const { i } of byRemainder) {
+    if (left <= 0) break
+    out[i]++
+    left--
+  }
+  return out.map((p, i) => (p === 0 && counts[i] > 0 ? '<1%' : `${p}%`))
 }
 
 export function RetentionBars({ wordProgress, queue }: Props) {
   const [infoOpen, setInfoOpen] = useState(false)
   const [barRef, barShown] = useRevealOnView<HTMLDivElement>()
   const stats = useMemo(() => retentionBreakdown(wordProgress), [wordProgress])
-  const { buckets, total, durablePct } = stats
+  const { buckets, total, durablePct, declared } = stats
+  const pcts = useMemo(() => sharePcts(buckets.map(b => b.count), total), [buckets, total])
 
   // The most populated tier — named in the summary when nothing is durable yet.
   const biggest = buckets.reduce((a, b) => (b.count > a.count ? b : a), buckets[0])
+
+  // Words the learner declared known are real vocabulary, so they belong on the
+  // card — but not inside the bar. They carry no measured memory strength and
+  // no next review date, so they'd sit in a tier they never climbed to, under a
+  // cadence they'll never come back at.
+  const declaredLine = declared > 0 && (
+    <div className="retention__declared">
+      <span className="retention__dot" style={{ background: DECLARED_COLOR }} aria-hidden="true" />
+      <span className="retention__declared-label">Oznaczone jako znane</span>
+      <span className="retention__count">
+        <FlowNumber value={declared} onView delayMs={360} />
+      </span>
+    </div>
+  )
+
+  const declaredNote = declared > 0 && (
+    <p className="retention__summary retention__summary--declared">
+      {declared === 1 ? 'Jedno słowo masz oznaczone' : `${declared.toLocaleString('pl-PL')} ${plural(declared, 'słowo masz oznaczone', 'słowa masz oznaczone', 'słów masz oznaczonych')}`}{' '}
+      jako znane — to słownictwo, które przyniosłeś spoza aplikacji. Nie wraca w powtórkach
+      i nie liczy się do tempa nauki, ale liczy się do Twojego słownictwa.
+    </p>
+  )
 
   return (
     <div className="retention u-liquid">
@@ -67,7 +119,12 @@ export function RetentionBars({ wordProgress, queue }: Props) {
         <p className="retention__total">
           {total === 0
             ? 'Opanowane słowa'
-            : `${total.toLocaleString('pl-PL')} ${plural(total, 'opanowane słowo', 'opanowane słowa', 'opanowanych słów')}`}
+            : declared > 0
+              // Scoped once there's a second population on the card, so the
+              // number here can't be read as the whole vocabulary — that figure
+              // lives on Statystyki and is the two added together.
+              ? `${total.toLocaleString('pl-PL')} ${plWords(total)} w powtórkach`
+              : `${total.toLocaleString('pl-PL')} ${plural(total, 'opanowane słowo', 'opanowane słowa', 'opanowanych słów')}`}
         </p>
         <button
           type="button"
@@ -84,9 +141,15 @@ export function RetentionBars({ wordProgress, queue }: Props) {
       </div>
 
       {total === 0 ? (
-        <p className="retention__empty">
-          Kiedy oznaczysz pierwsze słowa jako znane, zobaczysz tu, jak dobrze je pamiętasz.
-        </p>
+        <>
+          <p className="retention__empty">
+            {declared > 0
+              ? 'Całe Twoje słownictwo jest oznaczone jako znane, więc nie ma tu jeszcze czego mierzyć. Grupy pojawią się, kiedy zaczniesz robić powtórki.'
+              : 'Kiedy oznaczysz pierwsze słowa jako znane, zobaczysz tu, jak dobrze je pamiętasz.'}
+          </p>
+          {declaredLine}
+          {declaredNote}
+        </>
       ) : (
         <>
           {/* The stacked bar assembles itself when you reach it — every
@@ -120,7 +183,7 @@ export function RetentionBars({ wordProgress, queue }: Props) {
           <dl className="retention__legend">
             {buckets.map((b, i) => {
               const meta = TIER_META[b.tier]
-              const pct = Math.round((b.count / total) * 100)
+              const pct = pcts[i]
               return (
                 <div
                   key={b.tier}
@@ -138,7 +201,7 @@ export function RetentionBars({ wordProgress, queue }: Props) {
                     <span className="retention__count">
                       <FlowNumber value={b.count} onView delayMs={Math.min(i, 5) * 60} />
                     </span>
-                    <span className="retention__pct">{pct}%</span>
+                    <span className="retention__pct">{pct}</span>
                     <span className="retention__cadence">{meta.cadence}</span>
                   </dd>
                 </div>
@@ -146,24 +209,31 @@ export function RetentionBars({ wordProgress, queue }: Props) {
             })}
           </dl>
 
+          {declaredLine}
+
           <p className="retention__summary">
+            {/* "z nich" and not "słów": with a declared population on the card
+                the bare noun would claim the whole vocabulary, and this share is
+                only ever about the words the app has actually measured. */}
             {durablePct >= 50 ? (
               <>
-                <strong>{durablePct}%</strong> słów pamiętasz już na miesiące albo dłużej. To zasługa
+                <strong>{durablePct}%</strong> z nich pamiętasz już na miesiące albo dłużej. To zasługa
                 powtórek robionych w coraz dłuższych odstępach.
               </>
             ) : durablePct > 0 ? (
               <>
-                <strong>{durablePct}%</strong> słów masz już dobrze utrwalone. Pozostałe jeszcze się
+                <strong>{durablePct}%</strong> z nich masz już dobrze utrwalone. Pozostałe jeszcze się
                 utrwalają. Im więcej poprawnych odpowiedzi w powtórkach, tym rzadziej będą wracać.
               </>
             ) : (
               <>
-                Najwięcej słów jest teraz w grupie „{TIER_META[biggest.tier].label}”. Rób powtórki,
+                Najwięcej z nich jest teraz w grupie „{TIER_META[biggest.tier].label}”. Rób powtórki,
                 kiedy się pojawią, a słowa będą przechodzić do kolejnych grup.
               </>
             )}
           </p>
+
+          {declaredNote}
         </>
       )}
 

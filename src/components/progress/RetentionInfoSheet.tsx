@@ -38,7 +38,12 @@ const POINTS: Point[] = [
   {
     icon: '🎓',
     title: 'Na stałe',
-    text: 'Po mniej więcej pół roku słowo znika z codziennych powtórek. Wraca tylko raz w roku, żeby sprawdzić, czy nadal je pamiętasz, i nie zabiera Ci już czasu.',
+    text: 'Kiedy słowo trzyma się w pamięci mniej więcej rok, znika z codziennych powtórek. Wraca tylko raz na rok albo dwa, żeby sprawdzić, czy nadal je pamiętasz, i nie zabiera Ci już czasu.',
+  },
+  {
+    icon: '✅',
+    title: 'Oznaczone jako znane',
+    text: 'Poziom oznaczony jako opanowany to Twoja deklaracja: znasz te słowa spoza aplikacji. Dlatego nie wracają w powtórkach i nie ma ich w podziale powyżej — nie mamy jak zmierzyć, jak dobrze je pamiętasz, skoro nigdy ich nie sprawdzaliśmy. Liczą się natomiast do Twojego słownictwa.',
   },
   {
     icon: '🎯',

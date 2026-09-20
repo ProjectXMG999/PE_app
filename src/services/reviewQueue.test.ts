@@ -366,4 +366,35 @@ describe('retention breakdown', () => {
     expect(retentionBreakdown([]).durablePct).toBe(0)
     expect(retentionBreakdown([]).total).toBe(0)
   })
+
+  it('splits declared-retired words out of the tiers instead of binning them as locked', () => {
+    const declaredOne = {
+      status: 'known' as const,
+      retiredAt: '2026-01-01T00:00:00Z',
+      declaredRetiredAt: '2026-01-01T00:00:00Z',
+      declaredKnownAt: '2026-01-01T00:00:00Z',
+    }
+    const list: WordProgress[] = [
+      due({ status: 'known', stability: 4 }),   // fresh, earned
+      due({ status: 'known', stability: 400 }), // locked, earned
+      due({ ...declaredOne, wordId: 'd1' }),
+      due({ ...declaredOne, wordId: 'd2' }),
+      due({ ...declaredOne, wordId: 'd3' }),
+    ]
+    const b = retentionBreakdown(list)
+    // The three declarations neither swamp `locked` nor inflate the total…
+    expect(b.declared).toBe(3)
+    expect(b.total).toBe(2)
+    expect(b.buckets.find(x => x.tier === 'locked')!.count).toBe(1)
+    // …and the durable share describes the measured vocabulary alone: 1 of 2,
+    // not 4 of 5.
+    expect(b.durablePct).toBe(50)
+  })
+
+  it('a word studied to durable stability still counts as earned, declaration or not', () => {
+    const b = retentionBreakdown([due({ status: 'known', stability: 400, retiredAt: '2026-01-01T00:00:00Z' })])
+    expect(b.declared).toBe(0)
+    expect(b.total).toBe(1)
+    expect(b.durablePct).toBe(100)
+  })
 })

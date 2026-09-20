@@ -16,6 +16,7 @@ import { WordProgress, PackageProgress, DailyTime, Session } from '../types/prog
 import { PackMeta } from '../types/vocabulary'
 import { dayKey, daysBetween, shiftDay } from '../utils/day'
 import { retrievability } from './fsrs'
+import { isDeclaredRetiredWord } from './review'
 import {
   REVIEW_LADDER,
   REVIEW_SEC_PER_CARD,
@@ -402,20 +403,42 @@ export function retentionTierOf(wp: WordProgress): RetentionTier {
 
 export interface RetentionBreakdown {
   buckets: { tier: RetentionTier; count: number }[]
-  /** Total 'known' words. */
+  /** Known words the tiers actually describe — everything the app has measured
+   *  a memory strength for and still has a date for. */
   total: number
   /** Share (0–100) that is 'strong' or 'locked' — holds for months+. */
   durablePct: number
+  /** Known words a declaration pulled out of review for good ("oznacz poziom
+   *  jako opanowany"). Knowledge the learner brought from outside the app: it
+   *  has no measured stability and no next date, so binning it by memory
+   *  strength and printing a cadence beside it would be two fictions. Counted
+   *  and named separately instead. */
+  declared: number
 }
 
-/** Distribution of the user's `known` vocabulary across retention tiers. */
+/**
+ * Distribution of the user's `known` vocabulary across retention tiers.
+ *
+ * Declared-retired words are split off rather than binned. They used to land in
+ * `locked` — which on an account that had declared a level or two meant 98% of
+ * the chart sat in one segment, under a cadence ("raz w roku") that nothing in
+ * the scheduler was ever going to honour, over a summary crediting it to
+ * "powtórki robione w coraz dłuższych odstępach" that had never happened. The
+ * rest of the app already draws this line (points.ts, the learning rate, the
+ * Statystyki note); this is the one place that didn't.
+ */
 export function retentionBreakdown(wordProgress: WordProgress[]): RetentionBreakdown {
   const counts: Record<RetentionTier, number> = {
     fresh: 0, setting: 0, solid: 0, strong: 0, locked: 0,
   }
   let total = 0
+  let declared = 0
   for (const wp of wordProgress) {
     if (wp.status !== 'known') continue
+    if (isDeclaredRetiredWord(wp)) {
+      declared++
+      continue
+    }
     counts[retentionTierOf(wp)]++
     total++
   }
@@ -424,6 +447,7 @@ export function retentionBreakdown(wordProgress: WordProgress[]): RetentionBreak
     buckets: RETENTION_TIERS.map(tier => ({ tier, count: counts[tier] })),
     total,
     durablePct: total > 0 ? Math.round((durable / total) * 100) : 0,
+    declared,
   }
 }
 
