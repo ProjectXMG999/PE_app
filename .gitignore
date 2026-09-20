@@ -13,3 +13,4 @@ Thumbs.db
 .netlify
 deno.lock
 public/data/packs/
+dev-dist/
