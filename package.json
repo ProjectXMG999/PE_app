@@ -25,6 +25,7 @@
     "gen-sentences:build-v5": "tsx scripts/build-master-v5.ts",
     "gen-sentences:apply-master": "tsx scripts/apply-master-sentences.ts",
     "gen-sentences:apply-translations": "tsx scripts/apply-master-translations.ts",
+    "generate-brand": "node scripts/generate-brand.mjs",
     "generate-icons": "node scripts/generate-icons.mjs",
     "generate-audio": "tsx --env-file=.env scripts/generate-audio.ts",
     "generate-audio-demo": "tsx --env-file=.env scripts/generate-audio-demo.ts",

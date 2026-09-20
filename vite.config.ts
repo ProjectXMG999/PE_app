@@ -106,8 +106,11 @@ export default defineConfig({
         ],
       },
       manifest: {
-        name: 'Project English',
-        short_name: 'PE',
+        // The brand the app actually shows on every screen. These two strings
+        // are what an installed app is called in the launcher and under its
+        // home-screen icon, and they still named the previous identity.
+        name: 'Progress',
+        short_name: 'Progress',
         description: 'Ucz się angielskiego offline — fiszki i auto-play',
         start_url: '/dzis',
         display: 'standalone',

@@ -18,7 +18,7 @@
         }
       } catch(e) {}
     </script>
-    <meta name="description" content="Project English — nauka angielskiego offline" />
+    <meta name="description" content="Progress — nauka angielskiego offline" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <!-- NOT black-translucent: on Dynamic Island iPhones that legacy mode left
@@ -28,14 +28,17 @@
          full-height viewport; viewport-fit=cover still lets content into the
          home-indicator area. -->
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="PE" />
+    <!-- The label under the icon on an iOS home screen. "PE" was left over from
+         the old identity, so an installed app showed one brand on its icon and
+         another on every screen inside. -->
+    <meta name="apple-mobile-web-app-title" content="Progress" />
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-    <!-- Progress mark first; the PE PNG stays as the fallback for browsers
-         without SVG favicon support (and for the installed-app icons, which
-         are still generated from the old artwork). -->
+    <!-- The mark as SVG first; favicon-32 is the fallback for browsers without
+         SVG favicon support. Both now come from scripts/generate-brand.mjs,
+         so the tab, the install icon and the logo in the app are one drawing. -->
     <link rel="icon" type="image/svg+xml" href="/icons/progress-mark.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-192.png" />
-    <title>Project English</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
+    <title>Progress</title>
   </head>
   <body>
     <div id="root"></div>

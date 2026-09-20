@@ -1,7 +1,10 @@
 /* =============================================================================
  * PROGRESS — brand lockup.
  * The wordmark rides --plogo-size, so one number sets the whole lockup: the
- * word is 0.72× the mark, the byline 0.3×.
+ * word is 0.535× the mark at cap height, the byline 0.3×.
+ *
+ * The logotype is an SVG of outlines, not type, so its size comes from the
+ * component (which sizes by cap height) and only its colour is set here.
  * ========================================================================== */
 
 .plogo {
@@ -39,14 +42,16 @@
   align-items: center;
 }
 
+/* `display: block` kills the inline baseline gap an inline SVG otherwise
+   carries — without it the lockup sits a few pixels high inside its box. */
+.plogo__word,
+.plogo__glyph {
+  display: block;
+  flex-shrink: 0;
+}
+
 .plogo__word {
-  font-family: var(--font-heading);
-  font-size: calc(var(--plogo-size, 32px) * 0.72);
-  font-weight: 800;
-  letter-spacing: -0.045em;
-  line-height: 1;
   color: var(--text-primary);
-  white-space: nowrap;
 }
 
 /* Provenance, not a tagline: small, wide-tracked, deliberately quiet. */
