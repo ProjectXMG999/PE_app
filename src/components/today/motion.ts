@@ -9,10 +9,32 @@ export const EASE_SPRING: Transition = { type: 'spring', stiffness: 300, damping
 /** Critically damped and quick — selection indicators, press feedback. No bounce. */
 export const SPRING_SNAPPY: Transition = { type: 'spring', stiffness: 600, damping: 40 }
 
+/**
+ * ── The choreography ────────────────────────────────────────────────────────
+ * Two things now move when you open a page: the page itself (a view transition
+ * — see navigation/transitions.ts) and the blocks inside it. Played at the same
+ * instant they read as one blurred event; played in order they read as an
+ * arrival. So the content waits out most of the page's own travel and then
+ * settles into it.
+ *
+ * ENTER_DELAY is that wait, and it is the single number that keeps every screen
+ * in the app in step — CSS pages read the same value from --pe-enter-delay in
+ * animations.css. ENTER_STEP is the gap between siblings: enough to read as a
+ * cascade, small enough that a six-block page is finished in a third of a
+ * second. A screen you open daily should be ready, not performing.
+ */
+/* Exported because the curtain cascades by hand rather than through a variants
+ * container — it reveals its lines on `ready` instead of on mount — and a
+ * screen cascading on numbers of its own is exactly what these constants exist
+ * to prevent. */
+export const ENTER_DELAY = 0.06
+export const ENTER_STEP = 0.06
+export const ENTER_DURATION = 0.5
+
 export const staggerContainer: Variants = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.05 },
+    transition: { delayChildren: ENTER_DELAY, staggerChildren: ENTER_STEP },
   },
 }
 
@@ -20,13 +42,13 @@ export const staggerContainer: Variants = {
 export const staggerContainerWide: Variants = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.05 },
+    transition: { delayChildren: ENTER_DELAY, staggerChildren: ENTER_STEP },
   },
 }
 
 export const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 10 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: EASE_OUT_EXPO } },
+  hidden: { opacity: 0, y: 14 },
+  show: { opacity: 1, y: 0, transition: { duration: ENTER_DURATION, ease: EASE_OUT_EXPO } },
 }
 
 /**
@@ -35,8 +57,8 @@ export const fadeUp: Variants = {
  * you open daily should just be there.
  */
 export const heroReveal: Variants = {
-  hidden: { opacity: 0, y: 8 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: EASE_OUT_EXPO } },
+  hidden: { opacity: 0, y: 12 },
+  show: { opacity: 1, y: 0, transition: { duration: ENTER_DURATION, ease: EASE_OUT_EXPO } },
 }
 
 /**
@@ -44,11 +66,11 @@ export const heroReveal: Variants = {
  * rises in AND cascades its own inner lines (each a `heroReveal` child).
  */
 export const heroCard: Variants = {
-  hidden: { opacity: 0, y: 8 },
+  hidden: { opacity: 0, y: 12 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.35, ease: EASE_OUT_EXPO, staggerChildren: 0.05 },
+    transition: { duration: ENTER_DURATION, ease: EASE_OUT_EXPO, staggerChildren: ENTER_STEP },
   },
 }
 
@@ -77,13 +99,13 @@ export const fadeUpReduced: Variants = {
  * cascade its own children.
  */
 export const glassReveal: Variants = {
-  hidden: { y: 8 },
-  show: { y: 0, transition: { duration: 0.35, ease: EASE_OUT_EXPO, staggerChildren: 0.05 } },
+  hidden: { y: 12 },
+  show: { y: 0, transition: { duration: ENTER_DURATION, ease: EASE_OUT_EXPO, staggerChildren: ENTER_STEP } },
 }
 
 /** `glassReveal` with the motion taken out — reduced-motion swap. It has no
  *  opacity to fade either, so glass simply appears at its final fog level. */
 export const glassRevealReduced: Variants = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.05 } },
+  show: { transition: { staggerChildren: ENTER_STEP } },
 }

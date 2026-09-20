@@ -3,12 +3,16 @@ import { useAudio } from '../hooks/useAudio'
 import { useCardFlip } from '../hooks/useCardFlip'
 import { useStudyClock } from '../hooks/useStudyClock'
 import { useReviewSet, ReviewInterludeStep } from '../hooks/useReviewSet'
+import { useSessionOpener } from '../hooks/useSessionOpener'
 import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { applyKnown, applyUnknown } from '../services/review'
 import { saveSession, saveWordProgress } from '../services/db'
 import { dayKey } from '../utils/day'
 import { plPackets } from '../utils/packVisuals'
+import { plWords } from '../utils/plural'
 import { StudyStage, StageTrack } from '../components/flashcard/StudyStage'
+import { SessionOpener } from '../components/flashcard/SessionOpener'
+import { SessionStage } from '../components/flashcard/SessionStage'
 import { useBack } from '../navigation/navigation'
 import './ReviewPage.css'
 
@@ -35,6 +39,8 @@ export function ReviewPage() {
   const [round, setRound] = useState(0)
   const { steps, cardCount, dueTotal, packCount, reviewBudget, servedBefore, exhausted, loading, error } =
     useReviewSet(true, { overBudget, nonce: round })
+  // This mode has no loading screen of its own any more — the curtain is it.
+  const { visible: openerVisible, settled, dismiss: dismissOpener } = useSessionOpener(!loading)
 
   const { side, isAdvancing, flip, advance: animateOut, resetToFront, handleAnimationEnd, cardClass } = useCardFlip()
   const { elapsedSec } = useStudyClock()
@@ -143,144 +149,169 @@ export function ReviewPage() {
     setRound(r => r + 1)
   }, [elapsedSec])
 
-  if (loading) {
-    return (
-      <div className="review__state">
-        <div className="skeleton review__state-skeleton" />
-        <p className="review__state-text">Zbieram słowa do powtórki…</p>
-      </div>
-    )
-  }
-
-  // Nothing to show: either a genuinely fresh route, an error, or today's budget
-  // is already spent (in which case the user can still opt to keep going).
-  if (error || cardCount === 0) {
-    const title = error
-      ? 'Nie udało się wczytać powtórki'
-      : exhausted
-        ? 'Dzisiejsza porcja zrobiona'
-        : 'Nic nie czeka na powtórkę'
-    const text = error
-      ? error
-      : exhausted
-        ? `Na dziś tyle. W kolejce jeszcze ${dueTotal} — wrócą w kolejnych dniach.`
-        : 'Cała Twoja trasa jest świeża. Wróć, gdy coś dojrzeje.'
-    return (
-      <div className="review__state">
-        <span className="review__state-icon" aria-hidden="true">{exhausted ? '🔁' : '✓'}</span>
-        <h1 className="review__state-title">{title}</h1>
-        <p className="review__state-text">{text}</p>
-        <div className="review__state-actions">
-          {exhausted && dueTotal > 0 && (
-            <button
-              className="review__state-btn review__state-btn--primary u-cta"
-              onClick={continueBatch}
-            >
-              Kontynuuj mimo to
+  // Every branch below renders under the same curtain, so this page has
+  // exactly one return. An early return above <SessionStage> would tear the
+  // curtain off un-animated on precisely the paths that need it to lift
+  // gracefully — the empty and checkpoint screens.
+  function body() {
+    // Nothing to show: either a genuinely fresh route, an error, or today's budget
+    // is already spent (in which case the user can still opt to keep going).
+    if (error || cardCount === 0) {
+      const title = error
+        ? 'Nie udało się wczytać powtórki'
+        : exhausted
+          ? 'Dzisiejsza porcja zrobiona'
+          : 'Nic nie czeka na powtórkę'
+      const text = error
+        ? error
+        : exhausted
+          ? `Na dziś tyle. W kolejce jeszcze ${dueTotal} — wrócą w kolejnych dniach.`
+          : 'Cała Twoja trasa jest świeża. Wróć, gdy coś dojrzeje.'
+      return (
+        <div className="review__state">
+          <span className="review__state-icon" aria-hidden="true">{exhausted ? '🔁' : '✓'}</span>
+          <h1 className="review__state-title">{title}</h1>
+          <p className="review__state-text">{text}</p>
+          <div className="review__state-actions">
+            {exhausted && dueTotal > 0 && (
+              <button
+                className="review__state-btn review__state-btn--primary u-cta"
+                onClick={continueBatch}
+              >
+                Kontynuuj mimo to
+              </button>
+            )}
+            <button className="review__state-btn" onClick={() => goBack()}>
+              {backLabel}
             </button>
-          )}
-          <button className="review__state-btn" onClick={() => goBack()}>
-            {backLabel}
-          </button>
+          </div>
         </div>
-      </div>
-    )
-  }
+      )
+    }
 
-  // Checkpoint after each finished batch — do you want to keep going?
-  if (batchDone) {
-    const queueLeft = Math.max(0, dueTotal - cardCount)
-    const totalToday = sessionSeen
-    // Once the day's portion is done, stop nudging "keep going" — swap the
-    // buttons so "enough for today" is the primary, and reassure.
-    //
-    // Counted against the whole day, not just this visit. `sessionSeen` alone
-    // was right only while one sitting could cover a day's budget; now that the
-    // day's ceiling is the goal (72 at the largest) and a sitting is capped at
-    // REVIEW_MAX_WORDS, a learner returning for their second batch would have
-    // been nudged to "keep going" all the way past a portion they had in fact
-    // already finished.
-    const doneToday = servedBefore + sessionSeen
-    const portionDone = reviewBudget > 0 && doneToday >= reviewBudget
-    const continueBtn = (
-      <button
-        className={`review__state-btn${portionDone ? '' : ' review__state-btn--primary u-cta'}`}
-        onClick={continueBatch}
-      >
-        Kontynuuj powtórkę
-      </button>
-    )
-    const stopBtn = (
-      <button
-        className={`review__state-btn${portionDone ? ' review__state-btn--primary u-cta' : ''}`}
-        onClick={() => goBack()}
-      >
-        {queueLeft > 0 ? 'Na dziś wystarczy' : backLabel}
-      </button>
-    )
-    return (
-      <div className="review__state">
-        <span className="review__state-icon" aria-hidden="true">{queueLeft > 0 ? '💪' : '🎉'}</span>
-        <h1 className="review__state-title">
-          {queueLeft > 0 ? 'Świetnie!' : 'Wszystko zrobione!'}
-        </h1>
-        <p className="review__state-text">
-          Utrzymane <strong>{kept}</strong> z {cardCount} w tej porcji
-          {totalToday > cardCount && ` · dziś łącznie ${totalToday}`}.
-          {queueLeft > 0 ? ` W kolejce jeszcze ${queueLeft}.` : ' Kolejka pusta.'}
-          {portionDone && queueLeft > 0 &&
-            ` Zrobiłeś dziś ${doneToday} — reszta spokojnie może poczekać.`}
-        </p>
-        <div className="review__state-actions">
-          {queueLeft > 0 && (portionDone ? <>{stopBtn}{continueBtn}</> : <>{continueBtn}{stopBtn}</>)}
-          {queueLeft === 0 && stopBtn}
+    // Checkpoint after each finished batch — do you want to keep going?
+    if (batchDone) {
+      const queueLeft = Math.max(0, dueTotal - cardCount)
+      const totalToday = sessionSeen
+      // Once the day's portion is done, stop nudging "keep going" — swap the
+      // buttons so "enough for today" is the primary, and reassure.
+      //
+      // Counted against the whole day, not just this visit. `sessionSeen` alone
+      // was right only while one sitting could cover a day's budget; now that the
+      // day's ceiling is the goal (72 at the largest) and a sitting is capped at
+      // REVIEW_MAX_WORDS, a learner returning for their second batch would have
+      // been nudged to "keep going" all the way past a portion they had in fact
+      // already finished.
+      const doneToday = servedBefore + sessionSeen
+      const portionDone = reviewBudget > 0 && doneToday >= reviewBudget
+      const continueBtn = (
+        <button
+          className={`review__state-btn${portionDone ? '' : ' review__state-btn--primary u-cta'}`}
+          onClick={continueBatch}
+        >
+          Kontynuuj powtórkę
+        </button>
+      )
+      const stopBtn = (
+        <button
+          className={`review__state-btn${portionDone ? ' review__state-btn--primary u-cta' : ''}`}
+          onClick={() => goBack()}
+        >
+          {queueLeft > 0 ? 'Na dziś wystarczy' : backLabel}
+        </button>
+      )
+      return (
+        <div className="review__state">
+          <span className="review__state-icon" aria-hidden="true">{queueLeft > 0 ? '💪' : '🎉'}</span>
+          <h1 className="review__state-title">
+            {queueLeft > 0 ? 'Świetnie!' : 'Wszystko zrobione!'}
+          </h1>
+          <p className="review__state-text">
+            Utrzymane <strong>{kept}</strong> z {cardCount} w tej porcji
+            {totalToday > cardCount && ` · dziś łącznie ${totalToday}`}.
+            {queueLeft > 0 ? ` W kolejce jeszcze ${queueLeft}.` : ' Kolejka pusta.'}
+            {portionDone && queueLeft > 0 &&
+              ` Zrobiłeś dziś ${doneToday} — reszta spokojnie może poczekać.`}
+          </p>
+          <div className="review__state-actions">
+            {queueLeft > 0 && (portionDone ? <>{stopBtn}{continueBtn}</> : <>{continueBtn}{stopBtn}</>)}
+            {queueLeft === 0 && stopBtn}
+          </div>
         </div>
-      </div>
-    )
-  }
+      )
+    }
 
-  const progressPct = cardCount > 0 ? (cardsBefore / cardCount) * 100 : 0
+    const progressPct = cardCount > 0 ? (cardsBefore / cardCount) * 100 : 0
 
-  if (current?.kind === 'interlude') {
+    if (current?.kind === 'interlude') {
+      return (
+        <ReviewInterlude
+          step={current}
+          enRate={enRate}
+          plRate={plRate}
+          onDone={() => void goNext()}
+          onDisableAudio={() => setNoAudio(true)}
+        />
+      )
+    }
+
+    const flipped = side === 'back'
+
     return (
-      <ReviewInterlude
-        step={current}
-        enRate={enRate}
-        plRate={plRate}
-        onDone={() => void goNext()}
-        onDisableAudio={() => setNoAudio(true)}
+      <StudyStage
+        tone="review"
+        kicker={
+          <>
+            Powtórka · {packCount} {plPackets(packCount)}
+            {dueTotal > cardCount && ` · ${dueTotal - cardCount} w kolejce`}
+          </>
+        }
+        packageId={card?.packageId}
+        counter={`${cardsBefore + 1} / ${cardCount}`}
+        rail={<StageTrack current={progressPct} />}
+        onExit={() => { stop(); goBack() }}
+        exitLabel={backLabel}
+        cardKey={stepIndex}
+        polish={card?.word.polish ?? ''}
+        english={card?.word.english ?? ''}
+        side={side}
+        cardClass={cardClass}
+        onFlip={flipCard}
+        onAnimationEnd={handleAnimationEnd}
+        onPlay={() => { stop(); if (card) playWord(card.word) }}
+        answersVisible={flipped && !isAdvancing}
+        answersDisabled={isAdvancing}
+        onAnswer={answer}
+        covered={openerVisible}
       />
     )
   }
 
-  const flipped = side === 'back'
-
   return (
-    <StudyStage
+    <SessionStage
       tone="review"
-      kicker={
-        <>
-          Powtórka · {packCount} {plPackets(packCount)}
-          {dueTotal > cardCount && ` · ${dueTotal - cardCount} w kolejce`}
-        </>
+      settled={settled}
+      openerVisible={openerVisible}
+      opener={
+        <SessionOpener
+          key="opener"
+          accent="var(--live)"
+          kicker="Powtórka"
+          title="Dzisiejsza porcja"
+          // No "Zbieram słowa…" placeholder: a line that is replaced by the
+          // real one a moment later is a second entrance. The card waits.
+          meta={
+            cardCount > 0
+              ? <>{cardCount} {plWords(cardCount)} · {packCount} {plPackets(packCount)}</>
+              : undefined
+          }
+          ready={settled}
+          onDone={dismissOpener}
+        />
       }
-      packageId={card?.packageId}
-      counter={`${cardsBefore + 1} / ${cardCount}`}
-      rail={<StageTrack current={progressPct} />}
-      onExit={() => { stop(); goBack() }}
-      exitLabel={backLabel}
-      cardKey={stepIndex}
-      polish={card?.word.polish ?? ''}
-      english={card?.word.english ?? ''}
-      side={side}
-      cardClass={cardClass}
-      onFlip={flipCard}
-      onAnimationEnd={handleAnimationEnd}
-      onPlay={() => { stop(); if (card) playWord(card.word) }}
-      answersVisible={flipped && !isAdvancing}
-      answersDisabled={isAdvancing}
-      onAnswer={answer}
-    />
+    >
+      {body}
+    </SessionStage>
   )
 }
 

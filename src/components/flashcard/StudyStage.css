@@ -187,6 +187,18 @@
    animation would restart every time the flip classes come off. */
 .stage__card--enter { animation: card-enter 0.34s var(--ease-out-expo) both; }
 
+/* ── Held under the curtain ────────────────────────────────────────────────
+   The stage mounts when the session settles, but SessionOpener stays up for
+   another ~1.2s. Everything below used to play out in that window, invisibly,
+   against an opaque screen — the card's 3D entrance and the track's glow both
+   compositing while the curtain ran its own animation. `animation: none` here
+   holds the card at the keyframe's start; when the class comes off at lift the
+   animation starts for real (and its animationend still drives useCardFlip's
+   state machine, so nothing downstream changes). The progress fill likewise
+   snaps to its starting width rather than easing there unseen. */
+.stage--covered .stage__card--enter { animation: none; }
+.stage--covered .stage__track-fill { transition: none; }
+
 .stage__card:focus-visible .stage__face {
   outline: 2px solid var(--stage-accent);
   outline-offset: 3px;
@@ -427,13 +439,8 @@
   border: none;
 }
 
-/* ── Loading ──────────────────────────────────────────────────────────────── */
-.stage-loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100dvh;
-}
+/* No loading rule here any more: every session's loading state is its curtain
+   (components/flashcard/SessionOpener.tsx), which covers the stage outright. */
 
 /* ── Desktop: header, rail, card and answers as one aligned column ────────── */
 @media (min-width: 1024px) {

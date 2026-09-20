@@ -52,6 +52,17 @@ interface Props {
   answersVisible: boolean
   answersDisabled: boolean
   onAnswer: (recalled: boolean) => void
+
+  /** The curtain is still over this stage.
+   *
+   *  The stage mounts as soon as the session settles, but the curtain holds for
+   *  another OPENER_MIN_MS — and the stage was spending that time animating:
+   *  the first card's `card-enter` is a 3D transform on its own compositing
+   *  layer, and it ran to completion behind an opaque screen, in exactly the
+   *  frames the curtain itself was animating. Nobody ever saw the card arrive.
+   *  While this is true the entrance is held at its start; it plays into the
+   *  curtain's fade instead. */
+  covered?: boolean
 }
 
 /**
@@ -67,13 +78,13 @@ export function StudyStage({
   tone, kicker, packageId, counter, rail, onExit, exitLabel = 'Zakończ sesję',
   cardKey, polish, english, side, cardClass, onFlip, onAnimationEnd, onPlay, onPlayPolish,
   frontExtra, backExtra, frontHint, backHint,
-  answersVisible, answersDisabled, onAnswer,
+  answersVisible, answersDisabled, onAnswer, covered = false,
 }: Props) {
   const rich = Boolean(frontExtra || backExtra)
   useStageAmbient()
 
   return (
-    <div className={`stage stage--${tone}${rich ? ' stage--rich' : ''}`}>
+    <div className={`stage stage--${tone}${rich ? ' stage--rich' : ''}${covered ? ' stage--covered' : ''}`}>
       <StageHeader
         kicker={kicker}
         packageId={packageId}

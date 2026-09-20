@@ -1,7 +1,8 @@
 /* =============================================================================
  * SESSION OPENER — the title card before the first word.
  * -----------------------------------------------------------------------------
- * Sits above the stage, covering it completely for ~1.2s. Deliberately opaque:
+ * Sits above the stage, covering it completely while the session builds and for
+ * ~1.2s after. Deliberately opaque: it stands in for the loading screen, and
  * catching a glimpse of the card underneath would give away the word before the
  * session has started asking for it.
  * ========================================================================== */
@@ -9,26 +10,37 @@
 .sessionopener {
   position: fixed;
   inset: 0;
-  z-index: 70;
+  /* Above SmartInfoCard's interstitial (150), below the session end screens
+     (200). It used to sit at 70 — under TopBar (100) and BottomNav (1000) —
+     which held only because study screens mount no chrome; a Toast (200) or
+     the Inteligentny hand-off card drew straight over it, and the hand-off
+     card's scrim is translucent, so the curtain was legible underneath. The
+     two can no longer coincide (see composeSmartSteps), but the curtain should
+     win by definition rather than by luck. */
+  z-index: 160;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: var(--spacing-lg);
-  padding: 0 var(--spacing-2xl);
+  /* Landscape on a notched phone puts the left gutter under the notch, and the
+     kicker is the first thing to go. */
+  padding-block: 0;
+  padding-inline: max(var(--spacing-2xl), env(safe-area-inset-left))
+                  max(var(--spacing-2xl), env(safe-area-inset-right));
   /* The session screen's own ground, not a translucent wash — see above. */
   background: var(--bg-primary);
   cursor: pointer;
 }
 
-/* A wash of the level's colour, so the four levels open differently. */
+/* A wash of the session's colour, so the modes and levels open differently. */
 .sessionopener::before {
   content: '';
   position: absolute;
   inset: 0;
   background: radial-gradient(
     120% 70% at 12% 34%,
-    color-mix(in oklch, var(--lvl, var(--accent)) 22%, transparent),
+    color-mix(in oklch, var(--so-accent, var(--accent)) 22%, transparent),
     transparent 70%
   );
   pointer-events: none;
@@ -47,7 +59,7 @@
   font-weight: 800;
   letter-spacing: var(--tracking-kicker);
   text-transform: uppercase;
-  color: var(--lvl, var(--accent));
+  color: var(--so-accent, var(--accent));
 }
 
 .sessionopener__name {
@@ -66,12 +78,17 @@
   color: var(--text-secondary);
 }
 
-/* Draws itself left to right under the title — the one moving part. */
+/* Draws itself left to right under the title — the one moving part.
+   scaleX, never width: a width animation relayouts the column every frame,
+   while a transform composites. The layer hint is what stops a 2px gradient
+   from re-rasterising as it stretches, which on a low-end Android is a visible
+   shimmer along the line. */
 .sessionopener__rule {
   position: relative;
   width: min(220px, 52vw);
   height: 2px;
   transform-origin: left center;
+  will-change: transform;
   border-radius: 2px;
-  background: linear-gradient(90deg, var(--lvl, var(--accent)), transparent);
+  background: linear-gradient(90deg, var(--so-accent, var(--accent)), transparent);
 }
