@@ -88,20 +88,33 @@
   }
 }
 
+/* The unfold also pulls focus: the revealed face arrives soft and sharpens.
+ *
+ * Not decoration — it matches what the card is asking for. The half-flip swaps
+ * the face at the fold, so for the first ~60% of the unfold the answer is
+ * already on screen and merely edge-on; a blur means the moment of recall is
+ * "something is there, and it isn't readable yet" rather than "here it is at an
+ * angle". That is the retrieval beat the whole mode is built around.
+ *
+ * Kept inside the existing keyframes rather than added as a second animation:
+ * useCardFlip advances its state machine by matching `animationName` on
+ * animationend (see the note above card-enter), so a new animation on the same
+ * element would fire a second, unrecognised event — and two `filter` animations
+ * on one element don't compose, the later one simply wins. */
 @keyframes card-flip-unfold {
   0% {
     transform: perspective(1100px) rotateY(-90deg) scale(1.04);
-    filter: brightness(1.06);
+    filter: brightness(1.06) blur(7px);
     opacity: 0.85;
   }
   60% {
     transform: perspective(1100px) rotateY(5deg) scale(1.01);
-    filter: brightness(1.02);
+    filter: brightness(1.02) blur(1.4px);
     opacity: 1;
   }
   100% {
     transform: perspective(1100px) rotateY(0deg) scale(1);
-    filter: brightness(1);
+    filter: brightness(1) blur(0);
     opacity: 1;
   }
 }
@@ -199,10 +212,16 @@
 /* =============================================================================
  * SYSTEM EFFECTS — canonical decorative motion, in one place.
  * -----------------------------------------------------------------------------
- * Every "shine sweep", "breathing glow", "radar ping", "count-up pop",
- * "comet trail", "staggered rise" and "equalizer" in the app should be ONE of
- * these, tuned via the CSS vars each reads — not a bespoke @keyframes per
- * component. The global reduced-motion block above already collapses them.
+ * Every "shine sweep", "radar ping", "travelling rim" and "staggered rise" in
+ * the app should be ONE of these, tuned via the CSS vars each reads — not a
+ * bespoke @keyframes per component. The global reduced-motion block above
+ * already collapses them.
+ *
+ * This set is deliberately only what is in use. It once also carried
+ * `fx-breathe`, `fx-pop`, `fx-trail`, `fx-fill-sweep` and `fx-equalizer`,
+ * written speculatively and never applied to anything — ~90 lines of CSS
+ * shipped to every visitor for nothing. They were removed rather than given
+ * invented homes; git history has them if a design ever calls for one.
  *
  * Migration: components still carrying local copies (`today-cta-shine`,
  * `today-num-pop` ×3, `today-marker-*` ×2, `goldSheen`, `qs-shine`, `qs-eq`,
@@ -238,16 +257,6 @@
 /* One-shot version — plays once when the element first paints, then rests. */
 .fx-shine--once::after { animation-iteration-count: 1; }
 
-/* Breathing glow. Reads --fx-glow (a full box-shadow value, e.g. var(--glow-primary)). */
-@keyframes fx-breathe {
-  0%, 100% { box-shadow: 0 0 0 0 transparent; }
-  50%      { box-shadow: var(--fx-glow, var(--glow-primary)); }
-}
-
-.fx-breathe {
-  animation: fx-breathe var(--fx-breathe-duration, 3.4s) ease-in-out infinite;
-}
-
 /* Radar ping — an expanding ring that fades. Element (or its ::after host)
    needs `position: relative`. Reads --fx-ping-color. */
 @keyframes fx-ping {
@@ -268,17 +277,49 @@
 
 .fx-ping--once::after { animation-iteration-count: 1; }
 
-/* Overshoot pop — for a number/badge landing on its value. Hold flat, then
-   a small scale bump near the end. Reads --fx-pop-duration. */
-@keyframes fx-pop {
-  0%, 72% { transform: scale(1); }
-  85%     { transform: scale(1.14); }
-  100%    { transform: scale(1); }
+/* Travelling rim light — a single highlight orbiting the element's border.
+   Host needs `position: relative` and its own border-radius (inherited below).
+   Reads --fx-rim-color and --fx-rim-duration.
+
+   The angle is a registered custom property because an unregistered one is a
+   plain string to the animation engine and would jump 0deg → 360deg in one
+   step. Where @property isn't supported (Safari < 16.4) the gradient simply
+   holds still, which is a perfectly good static rim. */
+@property --fx-rim-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }
 
-.fx-pop {
-  display: inline-block;
-  animation: fx-pop var(--fx-pop-duration, 900ms) var(--ease-out-expo) 1 both;
+@keyframes fx-rim-spin {
+  to { --fx-rim-angle: 360deg; }
+}
+
+.fx-rim::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: var(--fx-rim-width, 1px);
+  background: conic-gradient(
+    from var(--fx-rim-angle),
+    transparent 0%,
+    var(--fx-rim-color, var(--accent-bright)) 7%,
+    transparent 17%,
+    transparent 100%
+  );
+  /* Punch out the middle so only the 1px band paints: two masks, one clipped
+     to the content box, composited so they cancel everywhere but the padding. */
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: fx-rim-spin var(--fx-rim-duration, 6s) linear infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-rim::before { animation: none; }
 }
 
 /* Staggered entrance. Set --fx-rise-delay per item (e.g. calc(var(--i) * 60ms)). */
@@ -291,52 +332,3 @@
   animation: fx-rise 500ms var(--ease-out-expo) var(--fx-rise-delay, 0s) both;
 }
 
-/* Comet trail behind a travelling marker. Host is the marker; needs
-   `position: relative`. Reads --fx-trail-color. */
-@keyframes fx-trail {
-  0%   { opacity: 0;    width: 10px; }
-  25%  { opacity: 0.85; width: 46px; }
-  85%  { opacity: 0.5;  width: 34px; }
-  100% { opacity: 0;    width: 8px;  }
-}
-
-.fx-trail::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 6px;
-  height: 5px;
-  transform: translateY(-50%);
-  border-radius: var(--radius-full);
-  filter: blur(1px);
-  background: linear-gradient(90deg, transparent, var(--fx-trail-color, var(--accent)));
-  pointer-events: none;
-  animation: fx-trail var(--fx-trail-duration, 1.65s) var(--ease-out-expo) 1 both;
-}
-
-/* One-shot light pass over a progress fill (e.g. "goal met"). */
-@keyframes fx-fill-sweep {
-  from { background-position: -70% 0; opacity: 1; }
-  to   { background-position: 170% 0; opacity: 0; }
-}
-
-.fx-fill-sweep {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent 20%, oklch(1 0 0 / 0.85) 50%, transparent 80%);
-  background-size: 60% 100%;
-  background-repeat: no-repeat;
-  animation: fx-fill-sweep 900ms var(--ease-out-expo) 1 both;
-}
-
-/* Audio-equalizer bars. Apply to each bar; vary height + --fx-eq-delay per bar. */
-@keyframes fx-equalizer {
-  0%, 100% { transform: scaleY(0.5); }
-  50%      { transform: scaleY(1); }
-}
-
-.fx-equalizer {
-  transform-origin: bottom;
-  animation: fx-equalizer var(--fx-eq-duration, 1.3s) ease-in-out
-    var(--fx-eq-delay, 0s) infinite;
-}

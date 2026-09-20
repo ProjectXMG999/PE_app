@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useCountUp } from '../../hooks/useCountUp'
+import { FlowNumber } from '../shared/FlowNumber'
 import { LEVEL_META, ROUTE_TOTAL } from '../../data/levels'
 import { plWords, plDays } from '../../utils/plural'
 import { formatPoints } from '../../services/points'
@@ -29,7 +29,6 @@ interface Props {
  * the page literally brighten at the point you've reached.
  */
 export function CompassHero({ knownWords, streak, points, pace, guidance, loading }: Props) {
-  const animated = useCountUp(loading ? 0 : knownWords)
   const pct = Math.min(100, (knownWords / ROUTE_TOTAL) * 100)
   const [infoOpen, setInfoOpen] = useState(false)
 
@@ -59,7 +58,7 @@ export function CompassHero({ knownWords, streak, points, pace, guidance, loadin
       <p className="compass__eyebrow">Twoja trasa</p>
 
       <p className="compass__figure">
-        <span className="compass__value">{animated.toLocaleString('pl-PL')}</span>
+        <span className="compass__value"><FlowNumber value={loading ? 0 : knownWords} /></span>
         <span className="compass__total">/ {ROUTE_TOTAL.toLocaleString('pl-PL')}</span>
       </p>
       <p className="compass__unit">słów poznanych</p>

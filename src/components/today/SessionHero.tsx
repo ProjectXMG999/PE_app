@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
-import { useCountUp } from '../../hooks/useCountUp'
+import { FlowNumber } from '../shared/FlowNumber'
 import { smartPeek } from '../../services/smartQueue'
 import { useAppStore } from '../../store/useAppStore'
 import type { ProgressSnapshot } from '../../hooks/useProgressData'
@@ -42,7 +42,6 @@ export function SessionHero({ snapshot, onStart, secondsStudied, goalSec, onEdit
   const goalMins = Math.round(goalSec / 60)
   const fraction = goalSec > 0 ? Math.min(1, secondsStudied / goalSec) : 0
   const met = fraction >= 1
-  const shownMins = useCountUp(mins, 900, 100)
 
   // One small bump when the goal closes while the page is open — not on every
   // visit to a page where it was already closed.
@@ -53,8 +52,14 @@ export function SessionHero({ snapshot, onStart, secondsStudied, goalSec, onEdit
     wasMet.current = met
   }, [met, reduced])
 
+  // Same `secondsStudied` the ring above is drawn from, so the pitch and the
+  // ring describe one day: once the ring is part-filled the session shrinks to
+  // what's left of the goal instead of re-offering the whole thing.
   const peek = snapshot
-    ? smartPeek({ snapshot, comfortLevel, todayLevel, goalSec: dailyGoalSec, reviewHealth })
+    ? smartPeek({
+        snapshot, comfortLevel, todayLevel, goalSec: dailyGoalSec,
+        secondsStudiedToday: secondsStudied, reviewHealth,
+      })
     : null
   const hasMix = peek != null && (peek.learn > 0 || peek.review > 0 || peek.stretch > 0)
 
@@ -70,17 +75,20 @@ export function SessionHero({ snapshot, onStart, secondsStudied, goalSec, onEdit
     : ''
 
   // Only when the mix actually moved — a line explaining a decision that wasn't
-  // made reads as noise.
+  // made reads as noise. The goal-met line wins: a learner who has already put
+  // the time in should be told that first, not why the ratio shifted.
   const reason =
-    peek?.adapted && peek.tone === 'strong'
-      ? 'Powtórki trzymają się mocno, więc dziś więcej nowych słów.'
-      : peek?.adapted && peek.tone === 'slipping'
-        ? 'Kilka słów zaczyna uciekać, więc dziś więcej powtarzamy.'
-        : null
+    peek?.bonus
+      ? 'Cel na dziś masz z głowy — to krótka dokładka, jeśli masz ochotę.'
+      : peek?.adapted && peek.tone === 'strong'
+        ? 'Powtórki trzymają się mocno, więc dziś więcej nowych słów.'
+        : peek?.adapted && peek.tone === 'slipping'
+          ? 'Kilka słów zaczyna uciekać, więc dziś więcej powtarzamy.'
+          : null
 
   return (
     <div
-      className={`sessionhero u-liquid ${met ? 'u-liquid--gold sessionhero--met' : 'u-liquid--tint'}`}
+      className={`sessionhero u-liquid u-liquid--pressable ${met ? 'u-liquid--gold sessionhero--met' : 'u-liquid--tint'}`}
       onClick={onStart}
     >
       <div className="sessionhero__top">
@@ -107,9 +115,18 @@ export function SessionHero({ snapshot, onStart, secondsStudied, goalSec, onEdit
               />
             )}
           </svg>
+          {/* "0/60" over "min", not "0" over "z 60 min". The ring's clear inner
+              width is ~66px (88 minus the 10px stroke either side) and narrower
+              still off-centre, where the second line sits; eight nowrap
+              characters ran onto the stroke at every two-digit goal. The unit
+              moves to its own line, which is both narrower and the way a goal
+              ring is normally read. The full sentence lives in aria-label. */}
           <span className="sessionhero__ring-label" aria-hidden="true">
-            <span className="sessionhero__ring-num">{shownMins}</span>
-            <span className="sessionhero__ring-of">z {goalMins} min</span>
+            <span className={`sessionhero__ring-num${mins >= 100 ? ' sessionhero__ring-num--long' : ''}`}>
+              <FlowNumber value={mins} delayMs={100} />
+              <span className="sessionhero__ring-goal">/{goalMins}</span>
+            </span>
+            <span className="sessionhero__ring-of">min</span>
           </span>
         </motion.button>
 
@@ -128,7 +145,7 @@ export function SessionHero({ snapshot, onStart, secondsStudied, goalSec, onEdit
 
       <button
         type="button"
-        className="sessionhero__cta u-cta"
+        className="sessionhero__cta u-cta fx-rim"
         onClick={e => { e.stopPropagation(); onStart() }}
       >
         Zaczynamy

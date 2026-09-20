@@ -87,17 +87,46 @@
   line-height: 1;
 }
 
+/* Both lines are bounded by the ring's inner circle, so they carry a hard
+   max-width rather than trusting the strings to stay short. 60px leaves a
+   hair of clearance against the ~66px opening at the widest point. */
 .sessionhero__ring-num {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  max-width: 60px;
   font-size: 22px;
   font-weight: 700;
+  line-height: 1;
   color: var(--text-primary);
   font-variant-numeric: tabular-nums;
 }
 
+/* Studying past 99 minutes is ordinary on a 60-minute goal, and "120/60" at
+   full size is back over the opening. One step down keeps it inside without
+   touching the common two-digit case. */
+.sessionhero__ring-num--long {
+  font-size: 17px;
+}
+
+/* The goal is context, not the reading — it takes the muted weight so the
+   minutes actually studied stay the number the eye lands on. */
+.sessionhero__ring-goal {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.sessionhero__ring-num--long .sessionhero__ring-goal {
+  font-size: 12px;
+}
+
 .sessionhero__ring-of {
   margin-top: 3px;
-  font-size: var(--text-xs-plus);
+  max-width: 60px;
+  font-size: var(--text-xs);
   font-weight: 500;
+  letter-spacing: 0.02em;
   color: var(--text-muted);
   white-space: nowrap;
 }
@@ -142,6 +171,8 @@
 /* The one filled button on the page — a pill inside the card, not a bar bolted
    to its bottom edge. */
 .sessionhero__cta {
+  /* `position: relative` is what .fx-rim's ::before anchors to. */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,4 +181,15 @@
   font-size: 17px;
   font-weight: 600;
   border-radius: var(--radius-full);
+  /* A highlight walking the rim, one lap every 7s. This is the only filled
+     button on the start screen and the app's single primary action, so it gets
+     the one effect that never stops — slow enough to read as a surface catching
+     the light rather than as something nagging for a tap. See .fx-rim in
+     styles/animations.css; it holds still under prefers-reduced-motion.
+     Deliberately NOT on the frontier pack card, where it was tried first: that
+     row already spends ::before on its state edge and clips to `overflow:
+     hidden`, so the rim never painted at all. */
+  --fx-rim-color: oklch(1 0 0);
+  --fx-rim-width: 2px;
+  --fx-rim-duration: 7s;
 }
