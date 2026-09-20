@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import {
+  getAllDailyTime,
   getAllPackageProgress,
   getAllReviewLedger,
   getAllSessions,
@@ -8,10 +9,15 @@ import {
   saveReviewLedger,
 } from '../services/db'
 import { subscribeProgress } from '../services/progressEvents'
+import { isDeclaredKnownWord, isDeclaredRetiredWord } from '../services/review'
 import {
+  activeDayMinutes,
   computeServingState,
+  maintenanceLoad,
+  reviewSecPerCard,
   reviewUrgency,
   staleWordCount,
+  MaintenanceLoad,
   PriorityCtx,
   ReviewUrgency,
 } from '../services/reviewQueue'
@@ -34,25 +40,40 @@ export interface ProgressSnapshot {
   /** packageId → count of words with status 'known' */
   knownMap: Map<string, number>
   knownTotal: number
-  /** Known words that came from "oznacz całą paczkę jako znaną" rather than
-   *  actual study — identified as packs mastered with zero sessions to their
-   *  name (the bulk-mark writes no session; every other route to masteredAt
-   *  does). Subtracted from the learning-pace average so catching the app up to
-   *  knowledge you already had doesn't inflate "słów / dzień". Deliberately NOT
-   *  subtracted from knownTotal — those words are genuinely known. */
-  bulkKnownTotal: number
+  /** Known words that are 'known' purely by a bulk declaration — per-pack
+   *  "Znam wszystko" or a level-mastery mark (services/levelMastery.ts) —
+   *  rather than real study. Exact, per-word (see services/review.ts
+   *  `isDeclaredKnownWord`), unlike the pack-level heuristic this replaced
+   *  (a pack studied for real and later topped up with declared words used to
+   *  slip through undetected). Subtracted from pace, points and achievements;
+   *  still counted in knownTotal and toward levels — those words are
+   *  genuinely known, just not genuinely studied. */
+  declaredKnownTotal: number
+  /** packageId → declared-known count, the per-pack breakdown of the above. */
+  declaredKnownMap: Map<string, number>
   /** Raw backlog: due, non-retired words whose review date has arrived. */
   dueCount: number
   /** The due words themselves — kept so scoring/urgency need no second read. */
   dueWords: WordProgress[]
   /** How many of today's review budget are still unshown. */
   servingLeft: number
-  /** Today's review budget (scaled from goal + vocabulary). */
+  /** Today's review budget (goal as ceiling, study time as check, backlog as floor). */
   reviewBudget: number
+  /** Seconds one review card takes this learner — measured from their own
+   *  review sessions. Sizes the budget AND every "ok. N min" next to a review
+   *  count, so the two can't disagree. See reviewQueue.reviewSecPerCard. */
+  reviewSecPerCard: number
   /** Reviews already done today through /powtorka. */
   served: number
+  /** Reviews per day the learner's own vocabulary generates, vs. what the
+   *  budget covers. The inflow the serving is trying to keep up with. */
+  maintenanceLoad: MaintenanceLoad
   /** Words graduated out of the active queue. */
   retiredCount: number
+  /** Of retiredCount, how many were forced by a level-mastery declaration
+   *  rather than earned via durable FSRS stability — excluded from the
+   *  retirement point bonus. */
+  declaredRetiredCount: number
   /** Due words neglected past the grace window (excl. below-level) — feeds freshness. */
   staleCount: number
   /** calm / building / urgent — drives the indicator on the "Powtórka" element. */
@@ -71,49 +92,53 @@ async function fetchSnapshot(): Promise<ProgressSnapshot> {
   // them here rather than being derivable from sessions alone.
   const { streakFreeze, dailyGoalSec, todayLevel } = useAppStore.getState()
 
-  const [packageProgress, wordProgress, sessions, ledger, streak] = await Promise.all([
+  const [packageProgress, wordProgress, sessions, ledger, dailyTime, streak] = await Promise.all([
     getAllPackageProgress(),
     getAllWordProgress(),
     getAllSessions(),
     getAllReviewLedger(),
+    getAllDailyTime(),
     getStreak(streakFreeze.usedOn),
   ])
 
   const today = dayKey()
   const knownMap = new Map<string, number>()
   let knownTotal = 0
+  const declaredKnownMap = new Map<string, number>()
+  let declaredKnownTotal = 0
   let reviewTotal = 0
   let retiredCount = 0
+  let declaredRetiredCount = 0
   const dueWords: WordProgress[] = []
   for (const wp of wordProgress) {
     if (wp.status === 'known') {
       knownMap.set(wp.packageId, (knownMap.get(wp.packageId) ?? 0) + 1)
       knownTotal++
+      if (isDeclaredKnownWord(wp)) {
+        declaredKnownMap.set(wp.packageId, (declaredKnownMap.get(wp.packageId) ?? 0) + 1)
+        declaredKnownTotal++
+      }
     }
-    if (wp.retiredAt != null) retiredCount++
-    else if (wp.nextReviewAt != null && wp.nextReviewAt <= today) dueWords.push(wp)
+    if (wp.retiredAt != null) {
+      retiredCount++
+      if (isDeclaredRetiredWord(wp)) declaredRetiredCount++
+    } else if (wp.nextReviewAt != null && wp.nextReviewAt <= today) dueWords.push(wp)
     reviewTotal += wp.reviewCount ?? 0
   }
 
-  // A pack whose masteredAt is set but which has no session attributed to it
-  // was marked known in bulk from the pack preview — count its known words so
-  // the pace average can leave them out. Review sessions use the '__review__'
-  // marker, never a real packageId, so reviewing bulk-known words later doesn't
-  // spuriously reclassify the pack as studied.
-  const studiedPackIds = new Set(sessions.map(s => s.packageId))
-  let bulkKnownTotal = 0
-  for (const p of packageProgress) {
-    if (p.masteredAt != null && !studiedPackIds.has(p.packageId)) {
-      bulkKnownTotal += knownMap.get(p.packageId) ?? 0
-    }
-  }
-
+  const secPerCard = reviewSecPerCard(sessions, today)
   const serving = computeServingState({
     due: dueWords,
     wordProgress,
     goalSec: dailyGoalSec,
-    recentPace: sevenDayPace(sessions, today),
-    knownTotal,
+    secPerCard,
+    // Study TIME, not words completed. A review session records exactly as many
+    // words as the budget allowed, so deriving the budget from that number made
+    // it measure itself — see the note in reviewConfig.ts. `activeDayMinutes`
+    // returns null when there's no qualifying study day at all, which is a
+    // different statement from "they studied zero minutes" and must not hold
+    // the budget down to its floor.
+    activeMinutes: activeDayMinutes(dailyTime, today),
     today,
   })
   const priorityCtx: PriorityCtx = { today, todayLevel, packLevelOf }
@@ -134,13 +159,17 @@ async function fetchSnapshot(): Promise<ProgressSnapshot> {
     wordProgress,
     knownMap,
     knownTotal,
-    bulkKnownTotal,
+    declaredKnownTotal,
+    declaredKnownMap,
     dueCount: serving.backlog,
     dueWords,
     servingLeft: serving.remaining,
     reviewBudget: serving.budget,
+    reviewSecPerCard: secPerCard,
     served: serving.served,
+    maintenanceLoad: maintenanceLoad(wordProgress, serving.budget, secPerCard),
     retiredCount,
+    declaredRetiredCount,
     staleCount: staleWordCount(dueWords, priorityCtx),
     reviewUrgency: reviewUrgency({ state: serving, due: dueWords, today }),
     reviewTotal,
@@ -174,31 +203,43 @@ export function invalidateProgressSnapshot() {
 
 subscribeProgress(invalidateProgressSnapshot)
 
-/** Returns null while loading. */
-export function useProgressData(): ProgressSnapshot | null {
+/**
+ * Returns null while loading.
+ *
+ * `refreshKey` is an escape hatch for a page that mutates progress itself and
+ * needs its own numbers to update without a remount — e.g. HomePage bumping a
+ * counter after "Oznacz poziom jako opanowany" so the level bar and X/10 000
+ * move right away. Every other call site omits it: `undefined` never changes
+ * across renders, so the effect's dependency array behaves exactly like the
+ * old `[]` and existing consumers are unaffected. Passing it forces a fresh
+ * read (bypassing the dedupe window) rather than relying on the global cache
+ * invalidation other writers already trigger via progressEvents.
+ */
+export function useProgressData(refreshKey?: unknown): ProgressSnapshot | null {
   const [data, setData] = useState<ProgressSnapshot | null>(null)
   useEffect(() => {
     let alive = true
-    loadProgressSnapshot().then(d => {
+    loadProgressSnapshot(refreshKey !== undefined).then(d => {
       if (alive) setData(d)
     })
     return () => {
       alive = false
     }
-  }, [])
+  }, [refreshKey])
   return data
 }
 
 /**
  * Average known words learned per day across the session history.
  *
- * Words the user bulk-marked as known (a pack "opanowana" without ever studying
- * it) are excluded from the numerator — that's someone syncing the app to
- * vocabulary they already had, not learning done at this pace. They still count
- * in knownTotal and toward levels; only the *rate* leaves them out.
+ * Words the user declared known in bulk (a pack "opanowana" without ever
+ * studying it, or a whole level via "Oznacz jako opanowany") are excluded
+ * from the numerator — that's someone syncing the app to vocabulary they
+ * already had, not learning done at this pace. They still count in
+ * knownTotal and toward levels; only the *rate* leaves them out.
  */
 export function avgWordsPerDay(snapshot: ProgressSnapshot): number {
-  const { sessions, knownTotal, bulkKnownTotal } = snapshot
+  const { sessions, knownTotal, declaredKnownTotal } = snapshot
   if (sessions.length === 0) return 0
   // getAllSessions() returns insertion order, not date order — find the
   // earliest date directly rather than assuming array position.
@@ -211,8 +252,25 @@ export function avgWordsPerDay(snapshot: ProgressSnapshot): number {
   // tempie jesteś 91 dni od Survival English" stayed true however long the app
   // went unopened. A pace that can't fall isn't a pace.
   const daysElapsed = Math.max(1, daysBetween(earliest, dayKey()) + 1)
-  const studyLearned = Math.max(0, knownTotal - bulkKnownTotal)
+  const studyLearned = Math.max(0, knownTotal - declaredKnownTotal)
   return Math.round(studyLearned / daysElapsed)
+}
+
+/** Packs whose mastery came ENTIRELY from a bulk declaration — every known
+ *  word in the pack is declared, none earned. Used to zero out the per-pack
+ *  point/achievement bonus for a pack nobody actually studied. A pack with a
+ *  MIX of real and declared words still counts toward that bonus — dividing
+ *  it proportionally was judged unnecessary complexity for how rarely a pack
+ *  straddles the two. */
+export function declaredMasteredPackIds(snapshot: ProgressSnapshot): Set<string> {
+  const out = new Set<string>()
+  for (const p of snapshot.packageProgress) {
+    if (p.masteredAt == null) continue
+    const known = snapshot.knownMap.get(p.packageId) ?? 0
+    const declared = snapshot.declaredKnownMap.get(p.packageId) ?? 0
+    if (known > 0 && declared === known) out.add(p.packageId)
+  }
+  return out
 }
 
 export interface PaceTrend {

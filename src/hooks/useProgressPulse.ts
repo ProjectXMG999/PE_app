@@ -25,6 +25,9 @@ export interface ProgressPulse {
   servingLeft: number
   /** Today's review budget. */
   reviewBudget: number
+  /** Measured seconds per review card — what turns the counts above into the
+   *  "ok. N min" beside them. See reviewQueue.reviewSecPerCard. */
+  reviewSecPerCard: number
   /** calm / building / urgent. */
   reviewUrgency: ReviewUrgency
   /** Seconds studied today. */
@@ -76,6 +79,7 @@ async function load(): Promise<ProgressPulse> {
       dueCount: snapshot.dueCount,
       servingLeft: snapshot.servingLeft,
       reviewBudget: snapshot.reviewBudget,
+      reviewSecPerCard: snapshot.reviewSecPerCard,
       reviewUrgency: snapshot.reviewUrgency,
       secondsToday: today.secondsStudied,
       goalSec: today.goalSec,

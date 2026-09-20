@@ -41,6 +41,33 @@ export function isDue(wp: WordProgress, on: string = dayKey()): boolean {
   return wp.nextReviewAt != null && wp.nextReviewAt <= on
 }
 
+/**
+ * True when a word's `known` status was asserted by a bulk declaration rather
+ * than earned by actually answering it — per-pack "Znam wszystko" or a
+ * level-mastery mark (services/levelMastery.ts). Falls back to the
+ * pre-migration numeric fingerprint (reviewCount 0 + the exact bulk FSRS
+ * seed) for rows written before `declaredKnownAt` existed — a deliberate,
+ * accepted retroactive correction: a real first "Znam" seeds
+ * stability≈3.13/difficulty≈5.32 (initCard(GOOD)), never exactly the bulk
+ * constants, so this cannot misclassify an organically-learned word.
+ */
+export function isDeclaredKnownWord(wp: WordProgress | undefined): boolean {
+  if (!wp || wp.status !== 'known') return false
+  if (wp.declaredKnownAt != null) return true
+  return (
+    (wp.reviewCount ?? 0) === 0 &&
+    wp.stability === BULK_KNOWN_STABILITY &&
+    wp.difficulty === BULK_KNOWN_DIFFICULTY
+  )
+}
+
+/** True when `retiredAt` was forced by a level-mastery declaration rather
+ *  than earned via durable FSRS stability. No legacy fallback needed — this
+ *  concept didn't exist before level mastery, so nothing predates the flag. */
+export function isDeclaredRetiredWord(wp: WordProgress): boolean {
+  return wp.retiredAt != null && wp.declaredRetiredAt != null
+}
+
 /** Runs the FSRS model for one answer, seeding state if the word has none yet. */
 function fsrsApply(
   existing: WordProgress | undefined,
@@ -105,6 +132,14 @@ export function applyKnown(
     reviewCount,
     lapseCount: existing?.lapseCount,
     lastLapseAt: existing?.lastLapseAt,
+    // A bulk seed asserts the flag; a real "Znam" on an already-known word is
+    // a genuine review, graduating it out of "declared" (a first-time known
+    // that isn't a bulk seed never had the flag to begin with).
+    declaredKnownAt: bulkSeed
+      ? (existing?.declaredKnownAt ?? now.toISOString())
+      : wasKnown
+        ? undefined
+        : existing?.declaredKnownAt,
   }
 
   if (!FSRS_ENABLED) {
@@ -170,6 +205,10 @@ export function applyUnknown(
     status: (wasKnown ? 'known' : 'learning') as WordProgress['status'],
     lapseCount: wasKnown ? (existing?.lapseCount ?? 0) + 1 : existing?.lapseCount,
     lastLapseAt: wasKnown ? nowIso : existing?.lastLapseAt,
+    // A lapse on a known word is a real interaction — it graduates the word
+    // out of "declared" even though the answer was wrong (see WordProgress
+    // .declaredKnownAt: cleared on any real review/lapse, not just a success).
+    declaredKnownAt: wasKnown ? undefined : existing?.declaredKnownAt,
   }
 
   if (!FSRS_ENABLED) {

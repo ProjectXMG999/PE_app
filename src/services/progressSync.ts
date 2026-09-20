@@ -1,4 +1,4 @@
-import { supabase } from './supabaseClient'
+import { getSupabase } from './supabaseClient'
 import {
   getAllSessions, getAllWordProgress, getAllPackageProgress, getAllDailyTime,
   getAllReviewLedger, getDB,
@@ -40,8 +40,13 @@ function betterWordProgress(a: WordProgress, b: WordProgress): WordProgress {
   }
 
   // Normalise: keep retiredAt / nextReviewAt consistent with the merged FSRS
-  // stability (in case the two sides disagreed on retirement).
-  if (merged.stability != null) {
+  // stability (in case the two sides disagreed on retirement) — but never for
+  // a level-mastery declaration. That retirement is a deliberate, permanent
+  // claim independent of `stability` (a word can be pulled out of rotation
+  // long before it would earn durable retirement on its own merits), so this
+  // FSRS-consistency repair must not resurrect its schedule or clear its
+  // retiredAt on the next cross-device merge.
+  if (merged.stability != null && merged.declaredRetiredAt == null) {
     const durable = merged.stability >= RETIRE_STABILITY_DAYS
     if (!durable) merged.retiredAt = undefined
     if (merged.nextReviewAt == null) {
@@ -119,6 +124,9 @@ function sessionKey(s: Pick<Session, 'packageId' | 'date' | 'wordsCompleted' | '
  * volume, and idempotent.
  */
 export async function pullAndMergeProgress(userId: string): Promise<void> {
+  // Already async, and only ever called from handleSession — i.e. after the
+  // client has loaded — so awaiting the accessor here costs nothing.
+  const supabase = await getSupabase()
   if (!supabase) return
 
   const [
@@ -148,6 +156,7 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
     lastLapseAt: r.last_lapse_at ?? undefined, nextReviewAt: r.next_review_at ?? undefined,
     retiredAt: r.retired_at ?? undefined,
     stability: r.stability ?? undefined, difficulty: r.difficulty ?? undefined,
+    declaredKnownAt: r.declared_known_at ?? undefined, declaredRetiredAt: r.declared_retired_at ?? undefined,
   })) as WordProgress[]
   const remotePackages = (remotePackagesRes.data ?? []).map(r => ({
     packageId: r.package_id, startedAt: r.started_at, completedAt: r.completed_at, masteredAt: r.mastered_at, currentIndex: r.current_index,
@@ -216,6 +225,7 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
         last_lapse_at: w.lastLapseAt, next_review_at: w.nextReviewAt,
         retired_at: w.retiredAt,
         stability: w.stability, difficulty: w.difficulty,
+        declared_known_at: w.declaredKnownAt, declared_retired_at: w.declaredRetiredAt,
       }))
     ),
     mergedPackages.length && supabase.from('package_progress').upsert(

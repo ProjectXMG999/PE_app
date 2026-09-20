@@ -60,6 +60,18 @@ export interface WordProgress {
   stability?: number
   /** FSRS intrinsic difficulty, 1..10. Paired with `stability`. */
   difficulty?: number
+  /** ISO timestamp: `status: 'known'` was ASSERTED by a bulk declaration
+   *  (per-pack "Znam wszystko" or a level-mastery mark) rather than earned by
+   *  actually answering the word. Cleared the moment the word gets a real
+   *  review/lapse (services/review.ts). Drives the "declaration, not effort"
+   *  exclusion in points.ts / achievements.ts. */
+  declaredKnownAt?: string
+  /** ISO timestamp: `retiredAt` was forced by a level-mastery declaration
+   *  rather than earned via durable FSRS stability. Only "Cofnij" (the level
+   *  mastery snapshot) ever clears it — never touched by normal review flow,
+   *  since a retired word never re-enters the queue while the level stays
+   *  marked. */
+  declaredRetiredAt?: string
 }
 
 export interface PackageProgress {
@@ -68,6 +80,31 @@ export interface PackageProgress {
   completedAt: string | null    // last time all cards were played through
   masteredAt: string | null     // time when all words were marked 'known'
   currentIndex: number
+}
+
+// ── Level mastery ("Oznacz cały poziom jako opanowany") ─────────────────────
+// The undo snapshot behind this feature is intentionally IndexedDB-local, not
+// mirrored to Supabase — see services/db.ts / services/levelMastery.ts.
+
+export interface LevelMasteryWordEntry {
+  wordId: string
+  packageId: string
+  /** Exact prior row, or null if the word had no progress at all before marking. */
+  prev: WordProgress | null
+}
+
+export interface LevelMasteryPackageEntry {
+  packageId: string
+  /** Exact prior row, or null if the package had no progress at all before marking. */
+  prev: PackageProgress | null
+}
+
+export interface LevelMasterySnapshot {
+  /** Primary key of the `levelMastery` store. */
+  level: number
+  markedAt: string
+  words: LevelMasteryWordEntry[]
+  packages: LevelMasteryPackageEntry[]
 }
 
 export interface DayActivity {

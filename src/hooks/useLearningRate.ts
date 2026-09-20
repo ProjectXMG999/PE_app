@@ -22,7 +22,7 @@ export function useLearningRate(): LearningRate | null {
       const minutes = measuredStudyMinutes(dailyTime, snapshot.sessions)
       setRate({
         knownWords: snapshot.knownTotal,
-        wordsPerMinute: studyWordsPerMinute(snapshot.knownTotal, snapshot.bulkKnownTotal ?? 0, minutes),
+        wordsPerMinute: studyWordsPerMinute(snapshot.knownTotal, snapshot.declaredKnownTotal ?? 0, minutes),
       })
     })
     return () => { alive = false }

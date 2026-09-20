@@ -134,4 +134,73 @@ describe('applyKnown / applyUnknown — FSRS path (FSRS_ENABLED = true, GRADUATI
     expect(wp.stability!).toBeGreaterThan(40) // grew via a real review, not reseeded down
     expect(wp.reviewCount).toBe(3)
   })
+
+  it('"Znam wszystko" (bulk) stamps declaredKnownAt; a normal first "Znam" does not', async () => {
+    vi.resetModules()
+    vi.doMock('./reviewConfig', mockFsrs)
+    const { applyKnown } = await import('./review')
+    const bulk = applyKnown(undefined, 'w1', 'p1', today, { bulk: true })
+    const normal = applyKnown(undefined, 'w2', 'p1', today)
+    expect(bulk.declaredKnownAt).toBeTruthy()
+    expect(normal.declaredKnownAt).toBeUndefined()
+  })
+
+  it('a real "Znam" on a previously bulk-declared word clears declaredKnownAt', async () => {
+    vi.resetModules()
+    vi.doMock('./reviewConfig', mockFsrs)
+    const { applyKnown } = await import('./review')
+    const declared = applyKnown(undefined, 'w1', 'p1', today, { bulk: true })
+    expect(declared.declaredKnownAt).toBeTruthy()
+    const reviewed = applyKnown(declared, 'w1', 'p1', new Date('2026-06-15T12:00:00Z'))
+    expect(reviewed.declaredKnownAt).toBeUndefined()
+  })
+
+  it('a real "Nie znam" on a previously bulk-declared word clears declaredKnownAt too', async () => {
+    vi.resetModules()
+    vi.doMock('./reviewConfig', mockFsrs)
+    const { applyKnown, applyUnknown } = await import('./review')
+    const declared = applyKnown(undefined, 'w1', 'p1', today, { bulk: true })
+    const lapsed = applyUnknown(declared, 'w1', 'p1', new Date('2026-06-15T12:00:00Z'))
+    expect(lapsed.status).toBe('known') // permanent, per the module doc comment
+    expect(lapsed.declaredKnownAt).toBeUndefined()
+  })
+})
+
+describe('isDeclaredKnownWord / isDeclaredRetiredWord', () => {
+  it('is false for anything not status:known', async () => {
+    vi.resetModules()
+    const { isDeclaredKnownWord } = await import('./review')
+    expect(isDeclaredKnownWord(undefined)).toBe(false)
+    expect(isDeclaredKnownWord({ status: 'learning' } as WordProgress)).toBe(false)
+  })
+
+  it('trusts an explicit declaredKnownAt', async () => {
+    vi.resetModules()
+    const { isDeclaredKnownWord } = await import('./review')
+    expect(isDeclaredKnownWord({ status: 'known', declaredKnownAt: today.toISOString() } as WordProgress)).toBe(true)
+  })
+
+  it('falls back to the numeric fingerprint for pre-migration rows, without misclassifying a real first "Znam"', async () => {
+    vi.resetModules()
+    vi.doMock('./reviewConfig', async orig => ({ ...(await orig<object>()), FSRS_ENABLED: true, GRADUATION_ENABLED: true }))
+    const { applyKnown, isDeclaredKnownWord } = await import('./review')
+    const { BULK_KNOWN_STABILITY, BULK_KNOWN_DIFFICULTY } = await import('./reviewConfig')
+
+    const legacyBulk = {
+      status: 'known', reviewCount: 0, stability: BULK_KNOWN_STABILITY, difficulty: BULK_KNOWN_DIFFICULTY,
+    } as WordProgress
+    expect(isDeclaredKnownWord(legacyBulk)).toBe(true)
+
+    const organicFirstKnown = applyKnown(undefined, 'w1', 'p1', today) // initCard(GOOD): stability≈3.13, difficulty≈5.32
+    expect(isDeclaredKnownWord(organicFirstKnown)).toBe(false)
+  })
+
+  it('isDeclaredRetiredWord requires both retiredAt and declaredRetiredAt', async () => {
+    vi.resetModules()
+    const { isDeclaredRetiredWord } = await import('./review')
+    expect(isDeclaredRetiredWord({ retiredAt: today.toISOString() } as WordProgress)).toBe(false)
+    expect(isDeclaredRetiredWord({
+      retiredAt: today.toISOString(), declaredRetiredAt: today.toISOString(),
+    } as WordProgress)).toBe(true)
+  })
 })

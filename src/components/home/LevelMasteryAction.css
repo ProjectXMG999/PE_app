@@ -1,0 +1,165 @@
+/* A rare, reversible declaration — not a study action. It used to be a tinted
+   card with a level-coloured outlined pill in weight 700, which gave a control
+   most people touch once the same visual weight as the route switcher above it.
+   Now it's a quiet secondary button that warms to the level colour only on
+   hover/focus.
+
+   Left-aligned, and the reason is the switcher above: `.rsw__vols` bleeds past
+   the page gutter to the screen edge so its chips can run off as a scroll
+   affordance. Nothing up there holds a right edge, so a right-aligned control
+   underneath invented an alignment line of its own. The page's left gutter is
+   the line everything else already shares. */
+.lvl-mastery {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  /* No margin of its own: it's now a direct child of homepage__main's flex
+     column, which already spaces its children by --spacing-sm. */
+}
+
+.lvl-mastery__badge {
+  /* State, not an action — it keeps the level colour, since that's the whole
+     information it carries. Dimmed a step so the row still reads as quiet. */
+  font-family: var(--font-heading);
+  font-size: var(--text-xs-plus);
+  font-weight: 600;
+  color: color-mix(in srgb, var(--lvl) 72%, var(--text-muted));
+}
+
+.lvl-mastery__btn {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs-plus);
+  font-weight: 600;
+  min-height: 36px;
+  padding: 0 var(--spacing-sm);
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  background: transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+/* Pull the button's own padding back so its TEXT starts on the page gutter,
+   not one --spacing-sm inside it. The hover pill still extends past the text
+   on both sides, which is what keeps it feeling like a button. Only when the
+   button leads the row — in the marked state the badge comes first and already
+   sits flush, having no padding of its own. */
+.lvl-mastery__btn:first-child {
+  margin-inline-start: calc(var(--spacing-sm) * -1);
+}
+
+.lvl-mastery__btn:hover:not(:disabled),
+.lvl-mastery__btn:focus-visible:not(:disabled) {
+  color: var(--lvl);
+  border-color: color-mix(in srgb, var(--lvl) 45%, transparent);
+  background: color-mix(in srgb, var(--lvl) 8%, transparent);
+}
+
+.lvl-mastery__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Undo sits next to the badge and stays neutral on hover — the level colour
+   here would read as "confirmed", which is the opposite of what it does. */
+.lvl-mastery__btn--undo:hover:not(:disabled),
+.lvl-mastery__btn--undo:focus-visible:not(:disabled) {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  background: transparent;
+}
+
+/* ── Confirm / progress dialog — same shell as reset-modal.css ────────────── */
+
+dialog.lvl-mastery-modal::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(var(--scrim-blur));
+  -webkit-backdrop-filter: blur(var(--scrim-blur));
+}
+
+dialog.lvl-mastery-modal {
+  position: fixed;
+  inset: auto 0 0 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: var(--text-primary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  padding: var(--spacing-xl) var(--spacing-lg) calc(var(--spacing-xl) + var(--safe-bottom));
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+@media (min-height: 600px) {
+  dialog.lvl-mastery-modal {
+    inset: 0;
+    margin: auto;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    border-radius: var(--radius-xl);
+  }
+}
+
+.lvl-mastery-modal__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.lvl-mastery-modal__desc {
+  font-size: var(--text-base);
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.lvl-mastery-modal__progress {
+  width: 100%;
+  height: 8px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: none;
+  accent-color: var(--accent-blue);
+}
+
+.lvl-mastery-modal__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.lvl-mastery-modal__btn {
+  height: 48px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-md);
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+.lvl-mastery-modal__btn--cancel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.lvl-mastery-modal__btn--cancel:hover:not(:disabled) {
+  border-color: var(--border-accent);
+}
+
+.lvl-mastery-modal__btn--confirm {
+  background: var(--accent-blue);
+  color: white;
+  border: 1px solid transparent;
+}
+
+.lvl-mastery-modal__btn--confirm:hover:not(:disabled) {
+  filter: brightness(1.08);
+}

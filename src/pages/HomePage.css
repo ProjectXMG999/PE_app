@@ -51,17 +51,39 @@
   margin-inline: calc(var(--page-gutter) * -1);
   padding: 0 var(--page-gutter) var(--spacing-sm);
   border-bottom: 1px solid transparent;
-  transition: background var(--transition-med), border-color var(--transition-med);
+  transition: background var(--transition-med), border-color var(--transition-med),
+    box-shadow var(--transition-med);
 }
 
 /* Glass only once it is actually stuck. At rest, above the banners, a glass
    slab reads as a dark band across the aurora for no reason — there is nothing
-   underneath it yet to separate from. */
+   underneath it yet to separate from. Same recipe as HerePill's floating pill
+   on this same screen (--glass-bg-strong, --border-accent, --shadow-float),
+   so the two chrome layers read as one material rather than two. */
 .homepage__chrome.has-switcher.is-stuck {
-  background: var(--glass-bg);
+  background: var(--glass-bg-strong);
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
           backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  border-bottom-color: var(--border);
+  border-bottom-color: var(--border-accent);
+  box-shadow: var(--shadow-float);
+}
+
+/* Desktop only: the reading column sits centred with open ambient space
+   either side of it, not flush with the screen like on mobile — so a stuck,
+   square-cornered slab there reads as a stray black box rather than a bar.
+   The shape (radius, invisible 1px border) is set unconditionally so nothing
+   pops in structurally when it sticks — only the shared glass/rim/shadow
+   above fades in, now framed on all four sides instead of just the bottom. */
+@media (min-width: 1024px) {
+  .homepage__chrome.has-switcher {
+    top: var(--spacing-sm);
+    border: 1px solid transparent;
+    border-radius: var(--radius-lg);
+  }
+
+  .homepage__chrome.has-switcher.is-stuck {
+    border-color: var(--border-accent);
+  }
 }
 
 /* A zero-height marker right above the chrome; when it scrolls out of view the
@@ -110,6 +132,18 @@
     animation-delay: 0s;
     animation-timeline: view();
     animation-range: entry 0% entry 42%;
+  }
+
+  /* …except the rows that are already on screen when the page opens. A view()
+     timeline puts them past the end of their own entry range on the first
+     frame, so they appear fully formed — the page arrived with no motion at
+     all, unlike Dzisiaj or Trening. The first screenful keeps the time-based
+     cascade so arriving here looks like arriving anywhere else; everything
+     below stays scroll-driven, which is what keeps 864 rows free. */
+  .homepage__list > .packcard:nth-child(-n + 12) {
+    animation: fx-rise 420ms var(--ease-out-expo) both;
+    animation-delay: calc(min(var(--i, 0), 10) * 32ms);
+    animation-timeline: auto;
   }
 }
 
@@ -385,7 +419,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  /* The :nth-child half of the entrance cascade outranks a bare `.packcard`
+     selector, so it has to be named here too or it would keep animating. */
   .homepage__list > .packcard,
+  .homepage__list > .packcard:nth-child(-n + 12),
   .homepage__volume {
     animation: none;
   }

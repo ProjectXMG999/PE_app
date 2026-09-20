@@ -1,5 +1,5 @@
 import { Session } from '../types/progress'
-import { ProgressSnapshot } from '../hooks/useProgressData'
+import { ProgressSnapshot, declaredMasteredPackIds } from '../hooks/useProgressData'
 
 /**
  * Punkty Progress (⬥) — the effort currency.
@@ -19,8 +19,15 @@ import { ProgressSnapshot } from '../hooks/useProgressData'
  *
  * v3: FSRS scheduler (reviewCount accrues at a different rate long-term;
  * retirement is now a stability threshold, not a rep count).
+ *
+ * v4: "declared, not effort" exclusion. Words known/retired purely by a bulk
+ * declaration (per-pack "Znam wszystko" — retroactively — or "Oznacz cały
+ * poziom jako opanowany") no longer earn the known-word or retirement bonus,
+ * and a pack mastered entirely by declaration no longer earns the pack
+ * bonus. A deliberate, accepted retroactive correction for existing bulk-mark
+ * users, not just new declarations — see services/review.ts `isDeclaredKnownWord`.
  */
-export const RULES_VERSION = 3
+export const RULES_VERSION = 4
 
 /**
  * Per-word multiplier by how the session was run. Speaking and active training
@@ -101,13 +108,15 @@ export function computePoints(
   const sessions = Math.round(
     snapshot.sessions.reduce((sum, s) => sum + s.wordsCompleted * weightFor(s), 0)
   )
-  const known = snapshot.knownTotal * POINTS.perKnownWord
+  const known = (snapshot.knownTotal - snapshot.declaredKnownTotal) * POINTS.perKnownWord
   const reviews = snapshot.reviewTotal * POINTS.perReview
-  const retired = snapshot.retiredCount * POINTS.perRetiredWord
+  const retired = (snapshot.retiredCount - snapshot.declaredRetiredCount) * POINTS.perRetiredWord
 
+  const declaredPackIds = declaredMasteredPackIds(snapshot)
   let mastered = 0
   let completed = 0
   for (const p of snapshot.packageProgress) {
+    if (declaredPackIds.has(p.packageId)) continue // fully declared — no pack bonus either way
     if (p.masteredAt != null) mastered++
     else if (p.completedAt != null) completed++
   }

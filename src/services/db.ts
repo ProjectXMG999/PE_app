@@ -1,6 +1,8 @@
 import { openDB, DBSchema, IDBPDatabase } from 'idb'
-import { Session, WordProgress, PackageProgress, DailyTime, ReviewLedgerEntry } from '../types/progress'
-import { supabase } from './supabaseClient'
+import {
+  Session, WordProgress, PackageProgress, DailyTime, ReviewLedgerEntry, LevelMasterySnapshot,
+} from '../types/progress'
+import { supabaseIfLoaded } from './supabaseClient'
 import { useAuthStore } from '../store/useAuthStore'
 import { emitProgress } from './progressEvents'
 import { dayKey, shiftDay, daysBetween } from '../utils/day'
@@ -11,8 +13,16 @@ import { studyDayKeys, streakFrom } from '../utils/studyDays'
 // for the app itself; this just mirrors writes out for cross-device sync.
 // sessions is append-only (no stable natural key to upsert on locally), so it
 // inserts a new row each time; word/package progress upsert on their natural keys.
+//
+// These use `supabaseIfLoaded()` rather than `await getSupabase()` deliberately:
+// db.ts is reachable eagerly from useProgressData, so a single await here would
+// pull @supabase/supabase-js straight back into the main bundle and undo the
+// lazy split. Nothing is lost — a signed-in `user.id` can only have been set by
+// the auth listener, which by then has the client — and these are fire-and-
+// forget mirrors that must stay synchronous anyway.
 function syncInsert(table: 'sessions', row: Record<string, unknown>) {
   const userId = useAuthStore.getState().user?.id
+  const supabase = supabaseIfLoaded()
   if (!supabase || !userId) return
   supabase.from(table).insert({ ...row, user_id: userId }).then(({ error }) => {
     if (error) console.error(`[progressSync] insert into ${table} failed:`, error.message)
@@ -21,10 +31,71 @@ function syncInsert(table: 'sessions', row: Record<string, unknown>) {
 
 function syncUpsert(table: 'word_progress' | 'package_progress' | 'daily_time' | 'review_ledger', row: Record<string, unknown>) {
   const userId = useAuthStore.getState().user?.id
+  const supabase = supabaseIfLoaded()
   if (!supabase || !userId) return
   supabase.from(table).upsert({ ...row, user_id: userId }).then(({ error }) => {
     if (error) console.error(`[progressSync] upsert into ${table} failed:`, error.message)
   })
+}
+
+/** Same contract as syncUpsert, batched into one request — the shape
+ *  progressSync.ts's pullAndMergeProgress already proves works against these
+ *  tables. Used where writing hundreds/thousands of rows one at a time would
+ *  be prohibitively slow (level mastery: up to 4535 words). */
+function syncUpsertBatch(
+  table: 'word_progress' | 'package_progress',
+  rows: Record<string, unknown>[]
+) {
+  const userId = useAuthStore.getState().user?.id
+  const supabase = supabaseIfLoaded()
+  if (!supabase || !userId || rows.length === 0) return
+  supabase.from(table).upsert(rows.map(r => ({ ...r, user_id: userId }))).then(({ error }) => {
+    if (error) console.error(`[progressSync] batch upsert into ${table} failed:`, error.message)
+  })
+}
+
+/** Deletes rows by natural key — needed by undoLevelMastery for words/packages
+ *  that had no row before the mark (upsert can restore a row, never remove one). */
+function syncDeleteBatch(
+  table: 'word_progress' | 'package_progress',
+  column: 'word_id' | 'package_id',
+  ids: string[]
+) {
+  const userId = useAuthStore.getState().user?.id
+  const supabase = supabaseIfLoaded()
+  if (!supabase || !userId || ids.length === 0) return
+  supabase.from(table).delete().eq('user_id', userId).in(column, ids).then(({ error }) => {
+    if (error) console.error(`[progressSync] batch delete from ${table} failed:`, error.message)
+  })
+}
+
+function wordProgressRow(w: WordProgress) {
+  return {
+    word_id: w.wordId,
+    package_id: w.packageId,
+    seen_count: w.seenCount,
+    last_seen: w.lastSeen,
+    status: w.status,
+    review_count: w.reviewCount,
+    lapse_count: w.lapseCount,
+    last_lapse_at: w.lastLapseAt,
+    next_review_at: w.nextReviewAt,
+    retired_at: w.retiredAt,
+    stability: w.stability,
+    difficulty: w.difficulty,
+    declared_known_at: w.declaredKnownAt,
+    declared_retired_at: w.declaredRetiredAt,
+  }
+}
+
+function packageProgressRow(p: PackageProgress) {
+  return {
+    package_id: p.packageId,
+    started_at: p.startedAt,
+    completed_at: p.completedAt,
+    mastered_at: p.masteredAt,
+    current_index: p.currentIndex,
+  }
 }
 
 interface PEDB extends DBSchema {
@@ -50,13 +121,17 @@ interface PEDB extends DBSchema {
     key: string
     value: ReviewLedgerEntry
   }
+  levelMastery: {
+    key: number
+    value: LevelMasterySnapshot
+  }
 }
 
 let dbPromise: Promise<IDBPDatabase<PEDB>> | null = null
 
 export function getDB() {
   if (!dbPromise) {
-    dbPromise = openDB<PEDB>('PE_DB', 6, {
+    dbPromise = openDB<PEDB>('PE_DB', 7, {
       upgrade(db, oldVersion) {
         if (oldVersion < 1) {
           const sessions = db.createObjectStore('sessions', { keyPath: 'id', autoIncrement: true })
@@ -83,6 +158,11 @@ export function getDB() {
         //     store change); the per-day review ledger is a new store.
         if (oldVersion < 6) {
           db.createObjectStore('reviewLedger', { keyPath: 'date' })
+        }
+        // v7: the undo snapshot behind "Oznacz cały poziom jako opanowany" —
+        // local-only by design, see services/levelMastery.ts.
+        if (oldVersion < 7) {
+          db.createObjectStore('levelMastery', { keyPath: 'level' })
         }
       },
     })
@@ -121,20 +201,7 @@ export async function getAllSessions(): Promise<Session[]> {
 export async function saveWordProgress(wp: WordProgress): Promise<void> {
   const db = await getDB()
   await db.put('wordProgress', wp)
-  syncUpsert('word_progress', {
-    word_id: wp.wordId,
-    package_id: wp.packageId,
-    seen_count: wp.seenCount,
-    last_seen: wp.lastSeen,
-    status: wp.status,
-    review_count: wp.reviewCount,
-    lapse_count: wp.lapseCount,
-    last_lapse_at: wp.lastLapseAt,
-    next_review_at: wp.nextReviewAt,
-    retired_at: wp.retiredAt,
-    stability: wp.stability,
-    difficulty: wp.difficulty,
-  })
+  syncUpsert('word_progress', wordProgressRow(wp))
   emitProgress('word')
 }
 
@@ -158,22 +225,10 @@ export async function getAllWordProgress(): Promise<WordProgress[]> {
   return db.getAll('wordProgress')
 }
 
-export async function getTotalKnownWords(): Promise<number> {
-  const db = await getDB()
-  const all = await db.getAll('wordProgress')
-  return all.filter(w => w.status === 'known').length
-}
-
 export async function savePackageProgress(pp: PackageProgress): Promise<void> {
   const db = await getDB()
   await db.put('packageProgress', pp)
-  syncUpsert('package_progress', {
-    package_id: pp.packageId,
-    started_at: pp.startedAt,
-    completed_at: pp.completedAt,
-    mastered_at: pp.masteredAt,
-    current_index: pp.currentIndex,
-  })
+  syncUpsert('package_progress', packageProgressRow(pp))
   emitProgress('package')
 }
 
@@ -194,6 +249,7 @@ export async function resetAllProgress(): Promise<void> {
     db.clear('packageProgress'),
     db.clear('sessions'),
     db.clear('dailyTime'),
+    db.clear('levelMastery'),
   ])
   emitProgress('reset')
 }
@@ -216,7 +272,95 @@ export async function resetProgressForPackages(packageIds: string[]): Promise<vo
   await Promise.all(sessionsToDelete.map(id => tx3.store.delete(id)))
   await tx3.done
 
+  // A level's undo snapshot references specific package rows; if any of them
+  // just got wiped, the snapshot can no longer restore truthfully — drop it
+  // rather than leave "Cofnij" pointing at data that no longer exists.
+  const levelSnapshots = await db.getAll('levelMastery')
+  const staleLevels = levelSnapshots
+    .filter(s => s.packages.some(p => packageIds.includes(p.packageId)))
+    .map(s => s.level)
+  if (staleLevels.length > 0) {
+    const tx4 = db.transaction('levelMastery', 'readwrite')
+    await Promise.all(staleLevels.map(lvl => tx4.store.delete(lvl)))
+    await tx4.done
+  }
+
   emitProgress('reset')
+}
+
+// ── Level mastery ("Oznacz cały poziom jako opanowany") ─────────────────────
+// See services/levelMastery.ts for the orchestration (fetching pack content,
+// building the snapshot, deciding per-word how to mutate). This layer only
+// knows how to write/restore rows atomically and cheaply at scale.
+
+export async function getLevelMasterySnapshot(level: number): Promise<LevelMasterySnapshot | undefined> {
+  const db = await getDB()
+  return db.get('levelMastery', level)
+}
+
+export async function getAllLevelMasterySnapshots(): Promise<LevelMasterySnapshot[]> {
+  const db = await getDB()
+  return db.getAll('levelMastery')
+}
+
+/**
+ * Writes every word/package row for a level, plus its undo snapshot, in one
+ * IndexedDB transaction — extends the batch-delete pattern already
+ * established by resetProgressForPackages to a batch write. The Supabase
+ * mirror goes out as ONE upsert per table (word_progress/package_progress),
+ * not one request per word — see progressSync.ts's pullAndMergeProgress for
+ * the proof this shape already works against these tables.
+ */
+export async function saveLevelMastery(
+  snapshot: LevelMasterySnapshot,
+  words: WordProgress[],
+  packages: PackageProgress[],
+): Promise<void> {
+  const db = await getDB()
+  const tx = db.transaction(['wordProgress', 'packageProgress', 'levelMastery'], 'readwrite')
+  await Promise.all([
+    ...words.map(w => tx.objectStore('wordProgress').put(w)),
+    ...packages.map(p => tx.objectStore('packageProgress').put(p)),
+    tx.objectStore('levelMastery').put(snapshot),
+  ])
+  await tx.done
+
+  syncUpsertBatch('word_progress', words.map(wordProgressRow))
+  syncUpsertBatch('package_progress', packages.map(packageProgressRow))
+
+  emitProgress('word')
+  emitProgress('package')
+}
+
+/** "Cofnij": restores every word/package to its exact pre-mark row (or
+ *  deletes it, if it didn't exist before), then drops the snapshot. */
+export async function undoLevelMastery(level: number): Promise<void> {
+  const db = await getDB()
+  const snapshot = await db.get('levelMastery', level)
+  if (!snapshot) return
+
+  const tx = db.transaction(['wordProgress', 'packageProgress', 'levelMastery'], 'readwrite')
+  const wpStore = tx.objectStore('wordProgress')
+  const ppStore = tx.objectStore('packageProgress')
+  await Promise.all([
+    ...snapshot.words.map(w => (w.prev ? wpStore.put(w.prev) : wpStore.delete(w.wordId))),
+    ...snapshot.packages.map(p => (p.prev ? ppStore.put(p.prev) : ppStore.delete(p.packageId))),
+    tx.objectStore('levelMastery').delete(level),
+  ])
+  await tx.done
+
+  const restoredWords = snapshot.words.map(w => w.prev).filter((w): w is WordProgress => w != null)
+  const deletedWordIds = snapshot.words.filter(w => w.prev == null).map(w => w.wordId)
+  const restoredPackages = snapshot.packages.map(p => p.prev).filter((p): p is PackageProgress => p != null)
+  const deletedPackageIds = snapshot.packages.filter(p => p.prev == null).map(p => p.packageId)
+
+  syncUpsertBatch('word_progress', restoredWords.map(wordProgressRow))
+  syncDeleteBatch('word_progress', 'word_id', deletedWordIds)
+  syncUpsertBatch('package_progress', restoredPackages.map(packageProgressRow))
+  syncDeleteBatch('package_progress', 'package_id', deletedPackageIds)
+
+  emitProgress('word')
+  emitProgress('package')
 }
 
 /**

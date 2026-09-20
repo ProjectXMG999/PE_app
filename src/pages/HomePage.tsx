@@ -9,10 +9,12 @@ import { OnboardingModal } from '../components/onboarding/OnboardingModal'
 import { MemoryStrip } from '../components/home/MemoryStrip'
 import { RouteControls } from '../components/home/RouteControls'
 import { RouteSwitcher } from '../components/home/RouteSwitcher'
+import { LevelMasteryAction } from '../components/home/LevelMasteryAction'
+import { getAllLevelMasterySnapshots } from '../services/db'
 import { HerePill } from '../components/home/HerePill'
 import { MilestoneBand } from '../components/home/MilestoneBand'
 import { PackageCard } from '../components/home/PackageCard'
-import { EASE_OUT_EXPO } from '../components/today/motion'
+import { EASE_OUT_EXPO, fadeUpReduced, heroReveal, staggerContainer } from '../components/today/motion'
 import { useProgressData } from '../hooks/useProgressData'
 import { useAppStore } from '../store/useAppStore'
 import packagesIndex from '../data/packages-index.json'
@@ -109,7 +111,21 @@ const stageVariants = {
  * end of each volume hands you straight to the next.
  */
 export function HomePage() {
-  const snapshot = useProgressData()
+  // Bumped after "Oznacz poziom jako opanowany" / "Cofnij" so this page's own
+  // numbers (X/10 000, the level bar) update immediately — see useProgressData's
+  // `refreshKey` doc comment. 0 → undefined keeps every other render identical
+  // to the old `useProgressData()` (no argument), so this doesn't force an
+  // extra read on first mount or on unrelated re-renders.
+  const [masteryRefresh, setMasteryRefresh] = useState(0)
+  const snapshot = useProgressData(masteryRefresh || undefined)
+  const [masteredLevels, setMasteredLevels] = useState<Set<number>>(new Set())
+  useEffect(() => {
+    let alive = true
+    getAllLevelMasterySnapshots().then(list => {
+      if (alive) setMasteredLevels(new Set(list.map(s => s.level)))
+    })
+    return () => { alive = false }
+  }, [masteryRefresh])
   const location = useLocation()
   const navigate = useNavigate()
   const reduced = useReducedMotion()
@@ -501,30 +517,36 @@ export function HomePage() {
   const levelMeta = currentLevel ? LEVEL_META.find(l => l.level === currentLevel.level) : null
   const curStats = current ? statOfVolume.get(current.volume) : undefined
 
+  /** Entrance, same as Dzisiaj and Trening: the page's own blocks settle in once
+   *  on arrival. The container itself carries no transform — only the stagger —
+   *  so the sticky chrome keeps sticking to the scrollport. */
+  const item = reduced ? fadeUpReduced : heroReveal
+
   return (
     <AppShell>
       <OnboardingModal />
-      <div className="homepage">
+      <motion.div className="homepage" variants={staggerContainer} initial="hidden" animate="show">
         {/* Only ever rendered when something is actually slipping. */}
         {fading.items.length > 0 && (
-          <aside className="homepage__aside">
+          <motion.aside className="homepage__aside" variants={item}>
             <MemoryStrip
               items={fading.items}
               minutes={fading.minutes}
               onPick={jumpToPack}
               onShowAll={() => setFilters({ lens: 'fading' })}
             />
-          </aside>
+          </motion.aside>
         )}
 
-        <div className="homepage__main">
+        <motion.div className="homepage__main" variants={staggerContainer}>
           <InstallBanner />
           <OnboardingCard />
 
           <div className="homepage__stick-sentinel" ref={sentinelRef} aria-hidden="true" />
-          <div
+          <motion.div
             className={`homepage__chrome${!searching ? ' has-switcher' : ''}${stuck ? ' is-stuck' : ''}`}
             ref={chromeRef}
+            variants={item}
           >
             <RouteControls
               filters={filters}
@@ -551,16 +573,37 @@ export function HomePage() {
                 matches={routeFiltering ? matchesByVolume : null}
               />
             )}
-          </div>
+          </motion.div>
+
+          {/* Deliberately OUTSIDE homepage__chrome. Two reasons it read badly
+              inside: the chrome is sticky, so a once-per-level declaration rode
+              along through the whole pack list; and the volume chips above it
+              bleed past the gutter to the screen edge on purpose, so anything
+              right-aligned underneath drew a third alignment line that nothing
+              else shared. Out here it sits on the page's own left edge — the
+              line every card and heading already starts on. */}
+          {!searching && snapshot && currentLevel && (
+            <motion.div variants={item}>
+              <LevelMasteryAction
+                level={currentLevel.level}
+                levelName={levelMeta?.name ?? `Poziom ${currentLevel.level}`}
+                color={LEVEL_COLORS[currentLevel.level]}
+                total={lStats[levels.indexOf(currentLevel)]?.total ?? 0}
+                marked={masteredLevels.has(currentLevel.level)}
+                onMarked={() => setMasteryRefresh(n => n + 1)}
+                onUnmarked={() => setMasteryRefresh(n => n + 1)}
+              />
+            </motion.div>
+          )}
 
           {!snapshot || (!searching && !current) ? (
-            <div className="homepage__list">
+            <motion.div className="homepage__list" variants={item}>
               {Array.from({ length: 8 }).map((_, i) => (
                 <div key={i} className="homepage__skeleton skeleton" />
               ))}
-            </div>
+            </motion.div>
           ) : searching ? (
-            <div className="homepage__list homepage__list--results">
+            <motion.div className="homepage__list homepage__list--results" variants={item}>
               {visible.map(card)}
               {results.length === 0 && (
                 <div className="homepage__empty">
@@ -573,9 +616,9 @@ export function HomePage() {
                   Pokaż więcej ({(results.length - shown).toLocaleString('pl-PL')})
                 </button>
               )}
-            </div>
+            </motion.div>
           ) : current && (
-            <div className="homepage__stage" ref={stageRef}>
+            <motion.div className="homepage__stage" ref={stageRef} variants={item}>
               <AnimatePresence mode="wait" initial={false} custom={dir}>
                 <motion.section
                   key={current.volume}
@@ -671,10 +714,10 @@ export function HomePage() {
                   )}
                 </motion.section>
               </AnimatePresence>
-            </div>
+            </motion.div>
           )}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Not over an empty filtered volume: there the empty state's own button
           is the next step, and the floating pill landed right on top of it. */}

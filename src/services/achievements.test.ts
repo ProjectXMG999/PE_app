@@ -30,13 +30,17 @@ function snapshot(over: Partial<ProgressSnapshot> = {}): ProgressSnapshot {
     wordProgress: [],
     knownMap: new Map(),
     knownTotal: 0,
-    bulkKnownTotal: 0,
+    declaredKnownTotal: 0,
+    declaredKnownMap: new Map(),
     dueCount: 0,
     dueWords: [],
     servingLeft: 0,
     reviewBudget: 0,
+    reviewSecPerCard: 10,
     served: 0,
+    maintenanceLoad: { perDay: 0, minutesPerDay: 0, coveredPct: 0 },
     retiredCount: 0,
+    declaredRetiredCount: 0,
     staleCount: 0,
     reviewUrgency: 'calm',
     reviewTotal: 0,
@@ -104,6 +108,56 @@ describe('categoriesStarted', () => {
       }),
     })
     expect(metrics.categoriesStarted).toBe(1)
+  })
+})
+
+describe('declared-known exclusion (points/achievements must not be earned by declaration alone)', () => {
+  it('knownWords nets out declaredKnownTotal', () => {
+    const metrics = computeMetrics({
+      ...base,
+      snapshot: snapshot({ knownTotal: 1090, declaredKnownTotal: 1090 }),
+    })
+    expect(metrics.knownWords).toBe(0)
+  })
+
+  it('a pack mastered entirely by declaration does not count toward masteredPacks', () => {
+    const allPacks = [pack('a', 'Rzeczowniki')]
+    const metrics = computeMetrics({
+      ...base,
+      allPacks,
+      snapshot: snapshot({
+        knownMap: new Map([['a', 10]]),
+        declaredKnownMap: new Map([['a', 10]]),
+        packageProgress: [
+          { packageId: 'a', startedAt: '', currentIndex: 10, completedAt: '2026-06-01', masteredAt: '2026-06-01' },
+        ] as ProgressSnapshot['packageProgress'],
+      }),
+    })
+    expect(metrics.masteredPacks).toBe(0)
+  })
+
+  it('a category cannot be completed purely by declaring its words known', () => {
+    const allPacks = [pack('a', 'Rzeczowniki')]
+    const metrics = computeMetrics({
+      ...base,
+      allPacks,
+      snapshot: snapshot({
+        knownMap: new Map([['a', 10]]),
+        declaredKnownMap: new Map([['a', 10]]),
+      }),
+    })
+    expect(metrics.categoryComplete).toBe(0)
+    expect(metrics.categoriesStarted).toBe(0)
+  })
+
+  it('a category IS completed once its words are genuinely known, unaffected by an unrelated declaration', () => {
+    const allPacks = [pack('a', 'Rzeczowniki')]
+    const metrics = computeMetrics({
+      ...base,
+      allPacks,
+      snapshot: snapshot({ knownMap: new Map([['a', 10]]), declaredKnownMap: new Map() }),
+    })
+    expect(metrics.categoryComplete).toBe(1)
   })
 })
 

@@ -1,5 +1,5 @@
 import { ACHIEVEMENTS, Achievement, AchievementMetric } from '../data/achievements'
-import { ProgressSnapshot } from '../hooks/useProgressData'
+import { ProgressSnapshot, declaredMasteredPackIds } from '../hooks/useProgressData'
 import { DailyTime, Session } from '../types/progress'
 import { PackMeta } from '../types/vocabulary'
 import { measuredStudyMinutes } from '../hooks/useStats'
@@ -130,9 +130,25 @@ function fullyMasteredGroups(
 
 export function computeMetrics(input: AchievementInput): MetricValues {
   const { snapshot, allPacks, dailyTime, longestStreak, bestDayCount } = input
-  const { sessions, packageProgress, knownTotal, reviewTotal, knownMap } = snapshot
+  const {
+    sessions, packageProgress, knownTotal, declaredKnownTotal, reviewTotal, knownMap, declaredKnownMap,
+  } = snapshot
 
-  const masteredIds = new Set(packageProgress.filter(p => p.masteredAt != null).map(p => p.packageId))
+  // A category/volume/pack "started"/"complete" badge has to be earned the
+  // same way `knownWords` is — otherwise bulk-declaring a level could unlock
+  // "Wszędzie byłem" or a category-complete badge for free. Netting out
+  // declared words at the source keeps every downstream aggregate
+  // (startedCategories, catTotals, fullyMasteredGroups via masteredIds below)
+  // consistent without special-casing each one.
+  const effectiveKnownMap = new Map<string, number>()
+  for (const [id, n] of knownMap) effectiveKnownMap.set(id, n - (declaredKnownMap.get(id) ?? 0))
+
+  const declaredPackIds = declaredMasteredPackIds(snapshot)
+  const masteredIds = new Set(
+    packageProgress
+      .filter(p => p.masteredAt != null && !declaredPackIds.has(p.packageId))
+      .map(p => p.packageId)
+  )
   const startedIds = new Set(packageProgress.map(p => p.packageId))
 
   // "Zaczęta" has to mean the same thing here as on the category bars, which
@@ -140,7 +156,7 @@ export function computeMetrics(input: AchievementInput): MetricValues {
   // could award "Wszędzie byłem — 11/12 kategorii" while three of the twelve
   // bars sat at 0 %.
   const startedCategories = new Set(
-    allPacks.filter(p => (knownMap.get(p.id) ?? 0) > 0).map(p => p.category)
+    allPacks.filter(p => (effectiveKnownMap.get(p.id) ?? 0) > 0).map(p => p.category)
   )
 
   // A category counts as complete when every word in every one of its packs is
@@ -150,13 +166,13 @@ export function computeMetrics(input: AchievementInput): MetricValues {
   for (const p of allPacks) {
     const entry = catTotals.get(p.category) ?? { known: 0, total: 0 }
     entry.total += p.wordCount
-    entry.known += knownMap.get(p.id) ?? 0
+    entry.known += effectiveKnownMap.get(p.id) ?? 0
     catTotals.set(p.category, entry)
   }
   const categoryComplete = [...catTotals.values()].filter(c => c.total > 0 && c.known >= c.total).length
 
   return {
-    knownWords: knownTotal,
+    knownWords: knownTotal - declaredKnownTotal,
     streak: Math.max(snapshot.streak, longestStreak),
     // Słuchaj only — same filter the "🎧 Odsłuchane" figure on Postęp uses.
     // Without it this counted every mode, so the badge "100 słów odsłuchanych"
