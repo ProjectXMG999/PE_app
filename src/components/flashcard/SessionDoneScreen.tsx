@@ -35,7 +35,7 @@ export function SessionDoneScreen({
   const { label, backLabel } = useBack()
   return (
     <div className="sessiondone">
-      <div className="sessiondone__content" role="dialog" aria-label="Sesja zakończona">
+      <div className="sessiondone__content u-liquid" role="dialog" aria-label="Sesja zakończona">
         <div className="sessiondone__badge">
           <span className="sessiondone__ring" aria-hidden="true" />
           <span className="sessiondone__medal">

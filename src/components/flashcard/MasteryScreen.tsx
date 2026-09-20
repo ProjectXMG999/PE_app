@@ -1,6 +1,24 @@
+import { Suspense, lazy, useEffect, useState } from 'react'
+import { useReducedMotion } from 'framer-motion'
 import { Confetti } from '../shared/Confetti'
 import { useBack } from '../../navigation/navigation'
 import './MasteryScreen.css'
+
+/** The one screen in the app that gets a shader of its own — see MasteryField
+ *  for why it can afford one and why the glass here needed it. */
+const MasteryField = lazy(() => import('./MasteryField'))
+
+const RAY_TOKENS = ['--rays-1', '--rays-2', '--rays-3']
+
+/** Read if the tokens can't be: the dark reward palette, so a failure still
+ *  looks like the app. */
+const FALLBACK_RAYS = ['#ebbd57', '#ad8031', '#a88dff']
+
+function readRayColors(): string[] {
+  const cs = getComputedStyle(document.documentElement)
+  const colors = RAY_TOKENS.map(t => cs.getPropertyValue(t).trim())
+  return colors.every(Boolean) ? colors : FALLBACK_RAYS
+}
 
 interface Props {
   packName: string
@@ -13,11 +31,32 @@ interface Props {
 export function MasteryScreen({ packName, onRepeat, onNext, nextPackName, onExit }: Props) {
   // Only the wording: the caller decides what onExit does.
   const { label, backLabel } = useBack()
+  const reduced = useReducedMotion()
+
+  // Held back one frame so the card's entrance animation owns the first
+  // moment: the rays fade up behind a card that is already rising, rather
+  // than everything arriving at once. The colours are read at mount — this
+  // screen is short-lived, so it doesn't need the live theme observer the
+  // ambient background carries.
+  const [lit, setLit] = useState(false)
+  useEffect(() => {
+    const id = window.setTimeout(() => setLit(true), 180)
+    return () => window.clearTimeout(id)
+  }, [])
+
   return (
     <div className="mastery">
+      <div className={`mastery__rays${lit ? ' mastery__rays--lit' : ''}`} aria-hidden="true">
+        {lit && (
+          <Suspense fallback={null}>
+            <MasteryField colors={readRayColors()} still={!!reduced} />
+          </Suspense>
+        )}
+      </div>
+
       <Confetti className="mastery__canvas" />
 
-      <div className="mastery__content" role="dialog" aria-label="Paczka opanowana">
+      <div className="mastery__content u-liquid" role="dialog" aria-label="Paczka opanowana">
         <div className="mastery__badge">
           <span className="mastery__ring" aria-hidden="true" />
           <span className="mastery__ring mastery__ring--inner" aria-hidden="true" />

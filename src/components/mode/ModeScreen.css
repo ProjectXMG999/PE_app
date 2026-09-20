@@ -157,11 +157,25 @@
 }
 
 /* Each mode owns a colour (--card-accent, from the categorical accents in
-   tokens.css) and wears it on the ground, the edge, the glyph tile and the
-   action bar. Three violet-on-violet cards in a row are unreadable at a
-   glance; three differently-tinted ones are told apart before you read them. */
+   tokens.css) and wears it on the ground, the glyph tile and the action bar.
+   Three violet-on-violet cards in a row are unreadable at a glance; three
+   differently-tinted ones are told apart before you read them.
+
+   Liquid glass (.u-liquid, added in ModeScreen.tsx), recoloured per card the
+   way LevelPill recolours it per level. This card used to carry the language
+   .u-liquid replaced: an opaque --bg-card ground under a tint, a flat 1px
+   border, and a 3px lit bar drawn across the top edge as its signature. The
+   colour now lives IN the glass — lamp, wash and caustic all take
+   --card-accent — and the lit rim does the bar's job without painting a line
+   across the card. The bar also had to go on its own account: .u-liquid owns
+   both ::before and ::after, so a third pseudo-element was never available. */
 .modecard {
-  position: relative;
+  --card-hue: var(--card-accent, var(--mode-accent));
+  --liquid-tint: radial-gradient(120% 100% at 0% 0%,
+    color-mix(in oklch, var(--card-hue) 24%, transparent), transparent 60%);
+  --liquid-lamp-color: var(--card-hue);
+  --liquid-glow-color: color-mix(in oklch, var(--card-hue) var(--liquid-glow-mix), transparent);
+
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-areas:
@@ -175,58 +189,44 @@
   width: 100%;
   padding: 13px 14px 12px;
   border-radius: var(--radius-xl);
-  background:
-    radial-gradient(120% 90% at 0% 0%,
-      color-mix(in oklch, var(--card-accent, var(--mode-accent)) 26%, transparent) 0%,
-      transparent 62%),
-    var(--bg-card);
-  border: 1px solid color-mix(in oklch, var(--card-accent, var(--mode-accent)) 34%, transparent);
-  box-shadow: var(--shadow-card);
+  border: 0;
   text-align: left;
   cursor: pointer;
-  overflow: hidden;
   -webkit-tap-highlight-color: transparent;
-  transition: border-color var(--transition-fast), transform var(--transition-fast),
-              box-shadow var(--transition-fast);
 }
 
-/* The colour edge across the top — the card's signature, in its own hue. */
-.modecard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg,
-    var(--card-accent, var(--mode-accent)),
-    color-mix(in oklch, var(--card-accent, var(--mode-accent)) 35%, transparent));
-  pointer-events: none;
-}
+/* No translateY on hover, and no scale on press (the whileTap was dropped in
+   the component for the same reason): both force the backdrop behind the glass
+   to be re-sampled every frame, over a ground the ambient mesh already redraws
+   continuously. Lifting the lamp reads as the card coming forward and costs
+   one repaint — see the press note in surfaces.css. */
+@media (hover: hover) {
+  .modecard {
+    transition: box-shadow var(--transition-fast);
+  }
 
-.modecard:hover {
-  border-color: color-mix(in oklch, var(--card-accent, var(--mode-accent)) 60%, transparent);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-float);
+  /* Above --current's 1.55 on purpose: :hover outranks it on specificity, so a
+     lower value here would dim the remembered card the moment you point at it. */
+  .modecard:hover {
+    --liquid-lamp-strength: calc(var(--liquid-lamp-mix) * 1.7);
+    box-shadow: var(--liquid-shadow),
+                0 16px 40px -8px color-mix(in oklch, var(--card-hue) calc(var(--liquid-glow-mix) * 1.4), transparent);
+  }
 }
 
 .modecard:focus-visible {
-  outline: 2px solid var(--card-accent, var(--mode-accent));
+  outline: 2px solid var(--card-hue);
   outline-offset: 3px;
 }
 
-/* The remembered mode: brighter edge and a visible glow, so the thing you
-   chose last time is obvious before you start reading. */
+/* The remembered mode: a brighter lamp and a stronger caustic, so the thing
+   you chose last time is obvious before you start reading. Same signal the
+   hairline used to carry, now made of light rather than a drawn bar. */
 .modecard--current {
-  border-color: color-mix(in oklch, var(--card-accent, var(--mode-accent)) 62%, transparent);
-  box-shadow: var(--shadow-card),
-              0 0 0 1px color-mix(in oklch, var(--card-accent, var(--mode-accent)) 28%, transparent),
-              0 10px 30px color-mix(in oklch, var(--card-accent, var(--mode-accent)) 22%, transparent);
-}
-
-.modecard--current::before {
-  height: 4px;
-  box-shadow: 0 0 16px 1px color-mix(in oklch, var(--card-accent, var(--mode-accent)) 60%, transparent);
+  --liquid-lamp-strength: calc(var(--liquid-lamp-mix) * 1.55);
+  --liquid-tint: radial-gradient(120% 100% at 0% 0%,
+    color-mix(in oklch, var(--card-hue) 34%, transparent), transparent 62%);
+  --liquid-glow-color: color-mix(in oklch, var(--card-hue) calc(var(--liquid-glow-mix) * 1.5), transparent);
 }
 
 .modecard__glyph {
@@ -339,8 +339,17 @@
 
 /* ── The tap target ──────────────────────────────────────────────────────────
    Not a button — the whole card already is one. This is a full-width, thumb-
-   sized label that says what the tap does, in the mode's own colour. */
+   sized label that says what the tap does, in the mode's own colour.
+
+   The fill is .u-cta (added in ModeScreen.tsx) recoloured to --card-hue, so
+   it's the same gloss, inset highlight and coloured drop shadow as "Zaczynamy"
+   on Dzisiaj. It used to hand-roll a 135° gradient mixed toward black, which
+   was the one recipe on these screens that no other primary action shared.
+   Only shape and type live here. Note .u-cta's :active scale is fine — this is
+   an inner element, not the glass card itself. */
 .modecard__cta {
+  --u-cta-color: var(--card-hue);
+
   grid-area: cta;
   display: flex;
   align-items: center;
@@ -350,16 +359,10 @@
   margin-top: 11px;
   padding: 0 14px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg,
-    color-mix(in oklch, var(--card-accent, var(--mode-accent)) 94%, black) 0%,
-    color-mix(in oklch, var(--card-accent, var(--mode-accent)) 55%, black) 100%);
-  box-shadow: 0 5px 16px color-mix(in oklch, var(--card-accent, var(--mode-accent)) 30%, transparent);
-  color: #fff;
   font-family: var(--font-heading);
   font-size: var(--text-base);
   font-weight: 700;
   letter-spacing: -0.01em;
-  transition: box-shadow var(--transition-fast);
 }
 
 .modecard__cta svg { flex-shrink: 0; transition: transform var(--transition-fast); }

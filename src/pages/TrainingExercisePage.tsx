@@ -6,7 +6,7 @@ import { AudioModal } from '../components/shared/AudioModal'
 import { TrainingMarkdown } from '../components/training/TrainingMarkdown'
 import { exerciseGlyph } from '../components/training/exerciseGlyph'
 import { ChevronLeftGlyph, PlayGlyph } from '../components/mode/glyphs'
-import { fadeUpReduced, heroReveal, staggerContainer } from '../components/today/motion'
+import { fadeUpReduced, glassReveal, glassRevealReduced, heroReveal, staggerContainer } from '../components/today/motion'
 import {
   TRAINING_EXERCISES,
   exerciseToParagraphs,
@@ -26,6 +26,9 @@ export function TrainingExercisePage() {
   const { goBack, backLabel } = useBack()
   const reduced = useReducedMotion()
   const item = reduced ? fadeUpReduced : heroReveal
+  /* The hero card is glass — no opacity channel on its entrance, or its fog
+     thickens after it lands. See glassReveal in today/motion.ts. */
+  const glassItem = reduced ? glassRevealReduced : glassReveal
 
   const exercise = TRAINING_EXERCISES.find(e => e.id === exerciseId)
   if (!exercise) {
@@ -57,7 +60,7 @@ export function TrainingExercisePage() {
           Wróć
         </motion.button>
 
-        <motion.div className="training-detail__header u-liquid" variants={item}>
+        <motion.div className="training-detail__header u-liquid" variants={glassItem}>
           <div className="training-detail__title-row">
             <div
               className="training-detail__icon"

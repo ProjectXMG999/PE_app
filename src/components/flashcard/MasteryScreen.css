@@ -22,6 +22,24 @@
   overflow: hidden;
 }
 
+/* Volumetric light behind the medallion (MasteryField.tsx). It sits above the
+   screen's radial ground and below the content, and fades up rather than
+   popping so the card's own entrance still owns the first moment.
+   z-index 0, not -1: .mastery paints its own background and doesn't isolate,
+   so a negative child would disappear underneath it. */
+.mastery__rays {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.2s var(--ease-out-expo);
+  pointer-events: none;
+}
+
+.mastery__rays--lit {
+  opacity: var(--rays-strength);
+}
+
 .mastery__canvas {
   position: absolute;
   inset: 0;
@@ -63,20 +81,21 @@
   max-width: 380px;
   padding: 40px 26px 26px;
   text-align: center;
+  /* Material comes from .u-liquid (surfaces.css); only the shape is local.
+     This card carried its own glass recipe from before .u-liquid existed, so
+     every later tuning of the material passed it by. */
   border-radius: var(--radius-xl);
-  background: linear-gradient(180deg, oklch(1 0 0 / 0.07) 0%, oklch(1 0 0 / 0.02) 100%);
-  border: 1px solid oklch(1 0 0 / 0.1);
-  box-shadow:
-    0 24px 70px oklch(0 0 0 / 0.5),
-    inset 0 1px 0 oklch(1 0 0 / 0.12);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
   animation: mastery-rise 0.75s var(--ease-out-expo) both;
 }
 
+/* No opacity channel: the card is glass, and a group opacity below 1
+   composites its blurred backdrop at partial alpha over the unblurred one —
+   the card lands looking almost clear and only reaches full fog a moment
+   later, which reads as the effect restarting. Same reason today/motion.ts
+   keeps glassReveal free of opacity. */
 @keyframes mastery-rise {
-  from { opacity: 0; transform: translateY(36px) scale(0.94); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  from { transform: translateY(36px) scale(0.94); }
+  to   { transform: translateY(0) scale(1); }
 }
 
 /* ---------- Medallion: trophy + rotating rings + stars ---------- */

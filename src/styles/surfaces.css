@@ -56,14 +56,15 @@
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(120% 100% at 0% 0%, color-mix(in oklch, var(--u-hairline-color) 24%, transparent), transparent 60%),
-    var(--liquid-bg);
-  -webkit-backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
-          backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+  /* Same lamp-under-glass order as .u-liquid — see the long note there. */
+  background: radial-gradient(125% 100% at 16% -6%,
+    color-mix(in oklch, var(--u-hairline-color) calc(var(--liquid-lamp-mix) * 1.55), transparent) 0%,
+    transparent 72%);
   border: 0;
   border-radius: var(--radius-xl);
-  box-shadow: var(--liquid-shadow);
+  box-shadow:
+    var(--liquid-shadow),
+    0 12px 32px -8px color-mix(in oklch, var(--u-hairline-color) var(--liquid-glow-mix), transparent);
 }
 
 .u-surface--raised::before,
@@ -77,6 +78,16 @@
 }
 
 .u-surface--raised::before {
+  background:
+    var(--liquid-grain-url),
+    var(--liquid-sheen),
+    radial-gradient(120% 100% at 0% 0%, color-mix(in oklch, var(--u-hairline-color) 24%, transparent), transparent 60%),
+    var(--liquid-bg);
+  -webkit-backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+          backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+}
+
+.u-surface--raised::after {
   padding: 1px;
   background: var(--liquid-rim);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
@@ -84,28 +95,54 @@
           mask-composite: exclude;
 }
 
-.u-surface--raised::after {
-  background: var(--liquid-sheen);
-}
-
 .u-surface--raised.u-surface--gold { --u-hairline-color: var(--gold); }
 .u-surface--raised.u-surface--live { --u-hairline-color: var(--live); }
 
 /* ── Liquid glass card ────────────────────────────────────────────────────
-   The rim is a 1px gradient border drawn by masking a padded ::before down to
-   its padding box, so it can fade from bright at the top to nearly nothing at
-   the bottom — a flat `border` can't. Both pseudo-elements sit at z-index -1
-   inside the card's own stacking context (isolation), above its background
-   but under its content. Set border-radius on the component; both inherit it. */
+   THE LAMP. Glass is a light-transport material: with nothing luminous behind
+   it, a 28px blur of a near-black ground produces a near-black rectangle and
+   no amount of rim, grain or shadow tuning fixes that. The app's ambient mesh
+   is deliberately calibrated to be felt and not looked at, so the ground can't
+   supply that light — and it shouldn't have to. Each card brings its own.
+
+   That forces the layer order, which is the one thing to understand here:
+
+     element background  →  the lamp        (a pool of the card's own colour)
+     ::before            →  the glass       (backdrop-filter + fill + sheen)
+     ::after             →  the rim         (1px gradient edge)
+     content
+
+   backdrop-filter has to live on ::before rather than on the element, because
+   an element's own background paints ABOVE its own backdrop-filter result —
+   a lamp on the element could never be behind the blur. As a child of an
+   unfiltered element, ::before's backdrop includes the element's background,
+   so the glass genuinely refracts the lamp. Verified in Blink; the WebKit
+   half still wants a real device.
+
+   The rim is masked down to its padding box so it can fade from bright at the
+   top to nearly nothing at the bottom, which a flat `border` can't do. Both
+   pseudo-elements sit at z-index -1 inside the card's own stacking context
+   (isolation), above the lamp and under the content. Set border-radius on the
+   component; both inherit it. */
 .u-liquid {
   --liquid-tint: none;
+  /* Transparent on the base card, so the caustic costs nothing until a variant
+     below opts into it. --liquid-tint can't drive this: it holds a gradient,
+     and color-mix() takes colours. */
+  --liquid-glow-color: transparent;
+  --liquid-lamp-color: var(--accent);
+  --liquid-lamp-strength: var(--liquid-lamp-mix);
 
   position: relative;
   isolation: isolate;
-  background: var(--liquid-tint), var(--liquid-bg);
-  -webkit-backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
-          backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
-  box-shadow: var(--liquid-shadow);
+  /* Lit from above-left, the same corner the sheen falls from and the same
+     edge the rim is brightest along — so all three agree about where the light
+     is. A centred or bottom-weighted pool reads as a uniform wash and makes
+     every card on the screen identical. */
+  background: radial-gradient(125% 100% at 16% -6%,
+    color-mix(in oklch, var(--liquid-lamp-color) var(--liquid-lamp-strength), transparent) 0%,
+    transparent 72%);
+  box-shadow: var(--liquid-shadow), 0 12px 32px -8px var(--liquid-glow-color);
 }
 
 .u-liquid::before,
@@ -118,7 +155,17 @@
   pointer-events: none;
 }
 
+/* The glass itself. The grain rides along as the topmost background layer:
+   it has to sit ABOVE the blur (a blurred grain is just haze), and ::after is
+   spoken for by the rim — so its strength is baked into --liquid-grain-url
+   per theme rather than carried by an `opacity` of its own. */
 .u-liquid::before {
+  background: var(--liquid-grain-url), var(--liquid-sheen), var(--liquid-tint), var(--liquid-bg);
+  -webkit-backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+          backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
+}
+
+.u-liquid::after {
   padding: 1px;
   background: var(--liquid-rim);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
@@ -126,23 +173,61 @@
           mask-composite: exclude;
 }
 
-.u-liquid::after {
-  background: var(--liquid-sheen);
+/* ── Press ────────────────────────────────────────────────────────────────
+   Glass is pushed into the ground: the rim catches more light and the lift
+   collapses to a whisper. On a touch screen this tactility is a large share
+   of what "expensive" actually means, and the card had none of it.
+
+   Scoped to elements that are genuinely pressable. .u-liquid also dresses
+   static cards (RetentionBars, PathStrip, ModeSlider, the done screens), and a
+   static card that lights up under a stray finger reads as a bug, not as a
+   material. --pressable is the opt-in for the ones the tag can't reveal:
+   SessionHero is a <div onClick>, so no selector can tell it apart from the
+   cards around it.
+
+   Two things are deliberately absent:
+   - the blur radius does not animate. A changing radius can't reuse the last
+     frame, so it's a full convolution every frame over a backdrop that the
+     mesh shader already leaves dirty every frame — the stutter documented in
+     today/TodayGuideSheet.css.
+   - the card itself does not scale, which would force the backdrop to be
+     re-sampled at a new scale every frame. Scale an inner wrapper instead;
+     .u-cta and .bottomnav__item both already dodge it that way. */
+.u-liquid:is(button, a, [role='button'], label, .u-liquid--pressable) {
+  transition: box-shadow var(--transition-fast);
 }
 
+.u-liquid:is(button, a, [role='button'], label, .u-liquid--pressable):active {
+  --liquid-rim: var(--liquid-rim-active);
+  box-shadow: var(--shadow-card), 0 6px 16px -8px var(--liquid-glow-color);
+}
+
+/* The variants recolour all three light sources at once — the lamp under the
+   glass, the wash inside it and the caustic below it — so a gold card is lit
+   gold from behind rather than merely painted gold on the front. */
 .u-liquid--tint {
   --liquid-tint: radial-gradient(120% 100% at 0% 0%, color-mix(in oklch, var(--accent) 26%, transparent), transparent 60%);
+  --liquid-glow-color: color-mix(in oklch, var(--accent) var(--liquid-glow-mix), transparent);
+  --liquid-lamp-color: var(--accent);
+  /* Hero cards burn brighter than the quiet ones. Proportional rather than
+     absolute, so the light theme's much lower ceiling carries through. */
+  --liquid-lamp-strength: calc(var(--liquid-lamp-mix) * 1.55);
 }
 
 .u-liquid--gold {
   --liquid-tint: radial-gradient(120% 100% at 0% 0%, color-mix(in oklch, var(--gold) 24%, transparent), transparent 60%);
+  --liquid-glow-color: color-mix(in oklch, var(--gold) var(--liquid-glow-mix), transparent);
+  --liquid-lamp-color: var(--gold);
+  --liquid-lamp-strength: calc(var(--liquid-lamp-mix) * 1.45);
 }
 
 /* No backdrop-filter (old WebViews): fall back to a solid card, not a see-
    through one with unreadable text over the moving mesh. */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .u-liquid { background: var(--liquid-tint), var(--bg-card); }
-  .u-surface--raised { background: var(--bg-card); }
+  /* The fill lives on ::before now, so that is where the opaque ground has to
+     land. The lamp on the element behind it is harmless — nothing sees it. */
+  .u-liquid::before { background: var(--liquid-sheen), var(--liquid-tint), var(--bg-card); }
+  .u-surface--raised::before { background: var(--bg-card); }
 }
 
 /* ── Left-rail info row ───────────────────────────────────────────────────── */

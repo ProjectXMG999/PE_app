@@ -5,7 +5,7 @@ import { AppShell } from '../components/layout/AppShell'
 import { TrainingOnboardingCard } from '../components/training/TrainingOnboardingCard'
 import { exerciseGlyph } from '../components/training/exerciseGlyph'
 import { CheckGlyph, ChevronRightGlyph, SpeakerGlyph } from '../components/mode/glyphs'
-import { fadeUpReduced, heroReveal, staggerContainer } from '../components/today/motion'
+import { fadeUpReduced, glassReveal, glassRevealReduced, heroReveal, staggerContainer } from '../components/today/motion'
 import { TRAINING_EXERCISES, getListenedExercises } from '../data/trainingExercises'
 import './TrainingPage.css'
 
@@ -23,6 +23,12 @@ export function TrainingPage() {
   const listened = getListenedExercises()
   const reduced = useReducedMotion()
   const item = reduced ? fadeUpReduced : heroReveal
+  /* Anything that IS or CONTAINS glass rises without an opacity channel. A
+     group opacity below 1 composites the blurred backdrop at partial alpha over
+     the unblurred one, so the card lands looking almost clear and only reaches
+     full fog a third of a second later — it reads as the effect restarting
+     after the page has arrived. See glassReveal in today/motion.ts. */
+  const glassItem = reduced ? glassRevealReduced : glassReveal
 
   return (
     <AppShell>
@@ -33,7 +39,7 @@ export function TrainingPage() {
           <p className="training-header__subtitle">Poznaj 4 ćwiczenia, dzięki którym zaczniesz naprawdę mówić po angielsku.</p>
         </motion.div>
 
-        <motion.div variants={item}>
+        <motion.div variants={glassItem}>
           <TrainingOnboardingCard />
         </motion.div>
 
@@ -45,7 +51,7 @@ export function TrainingPage() {
               viewTransition
               className="training-card u-liquid"
               style={{ ['--ex' as string]: exercise.color } as CSSProperties}
-              variants={item}
+              variants={glassItem}
               whileTap={reduced ? undefined : { scale: 0.975 }}
             >
               <div className="training-card__top">

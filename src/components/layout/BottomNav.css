@@ -13,7 +13,7 @@
   height: var(--bottomnav-height);
   display: flex;
   padding: 0 4px;
-  background: var(--liquid-bg), color-mix(in oklch, var(--bg-primary) 45%, transparent);
+  background: var(--liquid-sheen), var(--liquid-bg), color-mix(in oklch, var(--bg-primary) 45%, transparent);
   border-radius: var(--radius-full);
   box-shadow: var(--liquid-shadow);
   -webkit-backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
@@ -39,11 +39,12 @@
 }
 
 .bottomnav::after {
-  background: var(--liquid-sheen);
+  background-image: var(--noise-url);
+  opacity: var(--liquid-grain);
 }
 
 [data-theme="light"] .bottomnav {
-  background: var(--liquid-bg), color-mix(in oklch, var(--bg-primary) 40%, transparent);
+  background: var(--liquid-sheen), var(--liquid-bg), color-mix(in oklch, var(--bg-primary) 40%, transparent);
 }
 
 .bottomnav__item {

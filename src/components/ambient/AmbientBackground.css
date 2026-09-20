@@ -59,13 +59,17 @@
    glossy plastic and ties it to the same material language as the cards. Drawn
    in CSS rather than by the shader so it stays at native device resolution;
    the shader renders below 1× on purpose, and blurred grain is just haze.
-   This is the single cheapest thing in the app that reads as "expensive". */
+   This is the single cheapest thing in the app that reads as "expensive".
+
+   The texture itself now lives in tokens.css as --noise-url, because the glass
+   carries the same grain (.u-liquid::after) and the two have to be one film,
+   not two. Only the strength and the blend differ between them. */
 .ambient__grain {
   position: absolute;
   inset: -50%;
   opacity: var(--ambient-grain);
   mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-image: var(--noise-url);
 }
 
 /* Floor vignette — content sits above a soft shadow, not a hard edge.

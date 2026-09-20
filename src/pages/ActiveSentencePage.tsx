@@ -6,7 +6,8 @@ import { useCardFlip } from '../hooks/useCardFlip'
 import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { MasteryScreen } from '../components/flashcard/MasteryScreen'
 import { SessionDoneScreen } from '../components/flashcard/SessionDoneScreen'
-import { StudyStage, StageTrack, StageSentence } from '../components/flashcard/StudyStage'
+import { StudyStage, StageTrack } from '../components/flashcard/StudyStage'
+import { useSentenceCardProps } from '../hooks/useSentenceCardProps'
 import { Word } from '../types/vocabulary'
 import { WordProgress } from '../types/progress'
 import { getPackageWordProgress, saveWordProgress, saveSession, savePackageProgress, getPackageProgress } from '../services/db'
@@ -66,6 +67,7 @@ export function ActiveSentencePage() {
 
   const currentWord = studyWords[cardIndex] ?? null
   const total = studyWords.length
+  const sentenceProps = useSentenceCardProps(currentWord, { stop, playSentence, playSentencePl, playWordPl })
   const isLast = cardIndex >= total - 1
   const packIdx = allPacks.findIndex(p => p.id === packageId)
   const nextPack = packIdx >= 0 && packIdx < allPacks.length - 1 ? allPacks[packIdx + 1] : null
@@ -207,8 +209,6 @@ export function ActiveSentencePage() {
 
   const knownPct = pack ? (knownCount / pack.words.length) * 100 : 0
   const progressPct = total > 0 ? (cardIndex / total) * 100 : 0
-  const hasSentencePl = !!currentWord?.sentencePl
-  const hasSentenceEn = !!currentWord?.sentenceEn
 
   return (
     <StudyStage
@@ -227,24 +227,7 @@ export function ActiveSentencePage() {
       onFlip={flipCard}
       onAnimationEnd={handleAnimationEnd}
       onPlay={() => { stop(); if (currentWord) playWord(currentWord) }}
-      onPlayPolish={() => { stop(); if (currentWord) playWordPl(currentWord) }}
-      frontExtra={hasSentencePl && currentWord ? (
-        <StageSentence
-          text={currentWord.sentencePl!}
-          onPlay={() => { stop(); playSentencePl(currentWord) }}
-          label="Wymowa zdania po polsku"
-        />
-      ) : undefined}
-      backExtra={hasSentenceEn && currentWord ? (
-        <StageSentence
-          text={currentWord.sentenceEn!}
-          onPlay={() => { stop(); playSentence(currentWord) }}
-          label="Wymowa zdania po angielsku"
-        />
-      ) : undefined}
-      frontHint={hasSentencePl
-        ? 'Powiedz po angielsku całe zdanie. Potem odsłoń.'
-        : 'Powiedz po angielsku. Potem odsłoń.'}
+      {...sentenceProps}
       answersVisible={revealed && !isAdvancing}
       answersDisabled={isAdvancing}
       onAnswer={advance}

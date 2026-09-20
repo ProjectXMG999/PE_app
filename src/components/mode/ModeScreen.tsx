@@ -140,11 +140,14 @@ export function ModeCard({
   return (
     <motion.button
       type="button"
-      className={`modecard${current ? ' modecard--current' : ''}`}
+      className={`modecard u-liquid${current ? ' modecard--current' : ''}`}
       style={{ '--card-accent': color } as CSSProperties}
       onClick={onClick}
       variants={reduced ? fadeUpReduced : fadeUp}
-      whileTap={reduced ? undefined : { scale: 0.985 }}
+      // No whileTap scale: .u-liquid's press note (surfaces.css) — scaling the
+      // card re-samples the blurred backdrop every frame. The rim brightening
+      // from .u-liquid:active carries the press instead (the card is a
+      // <button>, so it matches without needing --pressable).
     >
       <span className="modecard__glyph" aria-hidden="true">{glyph}</span>
 
@@ -164,7 +167,7 @@ export function ModeCard({
         </span>
       )}
 
-      <span className="modecard__cta">
+      <span className="modecard__cta u-cta">
         {cta}
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M4 12h14M13 6l6 6-6 6" />

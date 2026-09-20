@@ -154,7 +154,7 @@ export function AutoplayModePage() {
       lead="Wybierz rytm sesji. Tryb i tempo zmienisz też w trakcie słuchania."
     >
       {resume && (
-        <ModeBlock className="resume">
+        <ModeBlock className="resume u-liquid">
           <div className="resume__top">
             <span className="u-kicker resume__kicker">Przerwana sesja</span>
             <span className="resume__count">{resume.index} / {resume.total}</span>
@@ -172,7 +172,7 @@ export function AutoplayModePage() {
               Od początku
             </button>
             <button
-              className="resume__btn resume__btn--primary"
+              className="resume__btn resume__btn--primary u-cta u-cta--live"
               onClick={() => start(autoplayMode, 'from')}
             >
               Wznów

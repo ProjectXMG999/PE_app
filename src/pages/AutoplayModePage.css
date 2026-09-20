@@ -7,16 +7,20 @@
 /* ── Interrupted session ──────────────────────────────────────────────────── */
 
 /* A session left mid-way is time-sensitive, not "earned" — the one place on
-   this screen that wears --live rather than a mode colour. */
+   this screen that wears --live rather than a mode colour. Liquid glass
+   (.u-liquid, added in AutoplayModePage.tsx) lit by --live, so it sits in the
+   same material as the mode cards below it instead of being the one opaque
+   panel on the screen. */
 .resume {
+  --liquid-tint: radial-gradient(120% 100% at 0% 0%,
+    color-mix(in oklch, var(--live) 24%, transparent), transparent 60%);
+  --liquid-lamp-color: var(--live);
+  --liquid-lamp-strength: calc(var(--liquid-lamp-mix) * 1.35);
+  --liquid-glow-color: color-mix(in oklch, var(--live) var(--liquid-glow-mix), transparent);
+
   padding: 13px var(--spacing-md) 14px;
   border-radius: var(--radius-lg);
-  background:
-    radial-gradient(110% 90% at 0% 0%,
-      color-mix(in oklch, var(--live) 22%, transparent) 0%, transparent 60%),
-    var(--bg-card);
-  border: 1px solid color-mix(in oklch, var(--live) 32%, transparent);
-  box-shadow: var(--shadow-card);
+  border: 0;
 }
 
 .resume__top {
@@ -71,6 +75,9 @@
   gap: 8px;
 }
 
+/* Shape and type only. The ground is split out below so the primary variant
+   can take .u-cta's fill: the two selectors have equal specificity, so a
+   `background` here would beat the shared recipe purely on bundle order. */
 .resume__btn {
   min-height: 46px;
   padding: 0 12px;
@@ -78,8 +85,6 @@
   font-family: var(--font-heading);
   font-size: var(--text-base);
   font-weight: 700;
-  color: var(--text-secondary);
-  background: var(--surface-translucent-strong);
   border: 1px solid var(--border);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -87,26 +92,25 @@
               background var(--transition-fast), transform var(--transition-fast);
 }
 
-.resume__btn:active { transform: scale(0.985); }
-
-.resume__btn:hover {
-  color: var(--text-primary);
-  border-color: var(--border-strong);
+.resume__btn:not(.resume__btn--primary) {
+  color: var(--text-secondary);
   background: var(--surface-translucent-strong);
 }
 
-.resume__btn--primary {
-  color: #fff;
-  background: linear-gradient(135deg, var(--live) 0%,
-    color-mix(in oklch, var(--live) 58%, black) 100%);
-  border-color: transparent;
-  box-shadow: 0 6px 18px color-mix(in oklch, var(--live) 32%, transparent);
+.resume__btn:not(.resume__btn--primary):active { transform: scale(0.985); }
+
+.resume__btn:not(.resume__btn--primary):hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
 }
 
+/* The fill comes from .u-cta--live (added in AutoplayModePage.tsx): one gloss
+   recipe for every primary action in the app, rather than a third hand-rolled
+   135° gradient on this screen alone. Only the reset of the shared .resume__btn
+   chrome lives here. */
+.resume__btn--primary,
 .resume__btn--primary:hover {
-  color: #fff;
   border-color: transparent;
-  box-shadow: 0 8px 22px color-mix(in oklch, var(--live) 42%, transparent);
 }
 
 /* ── Step strip ───────────────────────────────────────────────────────────── */
@@ -162,12 +166,16 @@
 
 /* ── Tempo ────────────────────────────────────────────────────────────────── */
 
+/* The same translucent track as every other segmented control in the app
+   (.rsw__levels on Pakiety, .modeslider__tabs on Dzisiaj) — it was the last
+   opaque --bg-card panel on this screen, which read as a solid slab sitting on
+   glass. */
 .tempo__track {
   display: flex;
   gap: 4px;
   padding: 5px;
   border-radius: var(--radius-full);
-  background: var(--bg-card);
+  background: var(--surface-translucent);
   border: 1px solid var(--border);
 }
 
@@ -192,12 +200,22 @@
   background: var(--surface-translucent-strong);
 }
 
+/* The house recipe for a selected segment (.modeslider__indicator on Dzisiaj):
+   a neutral raised chip, with the mode's colour carried by the LABEL. An
+   accent-filled pill made the tempo control shout louder than the mode cards
+   that are the actual decision on this screen. */
 .tempo__pill--active,
 .tempo__pill--active:hover {
-  color: #fff;
-  background: linear-gradient(135deg, var(--mode-accent) 0%,
-    color-mix(in oklch, var(--mode-accent) 58%, black) 100%);
-  box-shadow: 0 4px 14px color-mix(in oklch, var(--mode-accent) 38%, transparent);
+  color: var(--mode-accent);
+  background: linear-gradient(180deg, oklch(1 0 0 / 0.22), oklch(1 0 0 / 0.1));
+  box-shadow: 0 2px 8px oklch(0 0 0 / 0.3), inset 0 1px 0 oklch(1 0 0 / 0.35),
+              inset 0 -1px 0 oklch(1 0 0 / 0.06);
+}
+
+[data-theme="light"] .tempo__pill--active,
+[data-theme="light"] .tempo__pill--active:hover {
+  background: oklch(1 0 0);
+  box-shadow: 0 2px 6px oklch(0.2 0.02 275 / 0.14), inset 0 1px 0 oklch(1 0 0);
 }
 
 .tempo__hint {

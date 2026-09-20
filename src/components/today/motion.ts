@@ -57,3 +57,33 @@ export const fadeUpReduced: Variants = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { duration: 0.01 } },
 }
+
+/**
+ * Entrance for anything that IS or CONTAINS a backdrop-filtered surface
+ * (`.u-liquid`, `.u-surface--raised`) — the same rise as `heroReveal`, with the
+ * opacity channel deliberately absent.
+ *
+ * A group opacity below 1 makes the element composite its *blurred* backdrop at
+ * partial alpha over the unblurred real one, so a glass card that fades in
+ * looks like its fog thickens as it lands: on arrival the aurora reads through
+ * almost sharp, a third of a second later it is at the full 28px of
+ * --liquid-blur. On Dzisiaj, where nearly every block is glass, that was
+ * visible as the whole page quietly frosting over after it had already
+ * arrived. Pakiety never showed it because nothing inside its entrance carries
+ * a backdrop-filter. Moving only on the transform channel keeps one fog level
+ * from the first frame.
+ *
+ * Doubles as a stagger container (like `heroCard`) so a glass card can still
+ * cascade its own children.
+ */
+export const glassReveal: Variants = {
+  hidden: { y: 8 },
+  show: { y: 0, transition: { duration: 0.35, ease: EASE_OUT_EXPO, staggerChildren: 0.05 } },
+}
+
+/** `glassReveal` with the motion taken out — reduced-motion swap. It has no
+ *  opacity to fade either, so glass simply appears at its final fog level. */
+export const glassRevealReduced: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.05 } },
+}
