@@ -485,3 +485,33 @@
   --route-line: oklch(0.2 0.02 275 / 0.16);
   --route-glow: oklch(0.55 0.22 292 / 0.16);
 }
+
+/* ── Touch devices: the same material, a kernel they can afford ─────────────
+   Last block in the file on purpose, so it overrides both themes.
+
+   A backdrop-filter is only cheap when its backdrop holds still, and here it
+   never does: #root isolates, so the ambient WebGL canvas at z-index -1 is the
+   backdrop of every glass surface in the app (see the note in
+   animations.css about the tab bar having "nothing to sample" without it).
+   The blur therefore cannot be cached and is re-convolved on every frame the
+   shader draws — which is all of them.
+
+   Dzisiaj carries 11–14 of these at once: two top-bar buttons, the progress
+   pill's stats, the level pill, the session hero, the reviews card, the mode
+   slider track, the path strip, the pick card and the tab-bar capsule. At
+   28px on a 3× screen that is a very large kernel, a dozen times over, sixty
+   times a second. It is the single biggest contributor to the app feeling
+   sticky on a phone, and it is a multiplier on the shader rather than a cost
+   of its own.
+
+   The radii below are the largest that still cost meaningfully less. The
+   material is unchanged — same saturation, same rim, same grain, same layer
+   order — because a blur this wide is already past the point where more of it
+   reads as anything. Verify by eye on a device before tuning further; the
+   glass is meant to feel lit, not frosted. */
+@media (pointer: coarse) {
+  :root {
+    --glass-blur: 10px;
+    --liquid-blur: 14px;
+  }
+}
