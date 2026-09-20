@@ -7,7 +7,7 @@ import { Row, Section } from '../components/settings/PrefsList'
 import { ProgressMark } from '../components/brand/ProgressLogo'
 import { fadeUp, fadeUpReduced, staggerContainer } from '../components/today/motion'
 import { refreshEntitlement, useAuthStore } from '../store/useAuthStore'
-import { supabase } from '../services/supabaseClient'
+import { getSupabase } from '../services/supabaseClient'
 import { EntitlementPlan, EntitlementStatus } from '../types/entitlement'
 import './AccountPage.css'
 
@@ -32,6 +32,7 @@ interface EntitlementDetails {
 }
 
 async function callFunction(path: string, body?: unknown): Promise<{ url: string } | null> {
+  const supabase = await getSupabase()
   if (!supabase) return null
   const { data } = await supabase.auth.getSession()
   const token = data.session?.access_token
@@ -115,21 +116,24 @@ export function AccountPage() {
   // Plan and renewal date, for the access card. Status itself comes from the
   // auth store, which the rest of the app already relies on.
   useEffect(() => {
-    if (!user || !supabase) return
+    if (!user) return
     let alive = true
-    supabase
-      .from('entitlements')
-      .select('plan, current_period_end')
-      .eq('user_id', user.id)
-      .maybeSingle()
-      .then(({ data }) => {
-        if (alive && data) setDetails({ plan: data.plan ?? null, currentPeriodEnd: data.current_period_end ?? null })
-      })
+    void getSupabase().then(sb => {
+      if (!sb || !alive) return
+      sb.from('entitlements')
+        .select('plan, current_period_end')
+        .eq('user_id', user.id)
+        .maybeSingle()
+        .then(({ data }) => {
+          if (alive && data) setDetails({ plan: data.plan ?? null, currentPeriodEnd: data.current_period_end ?? null })
+        })
+    })
     return () => { alive = false }
   }, [user, entitlementStatus])
 
   async function handleSignOut() {
-    await supabase?.auth.signOut()
+    const sb = await getSupabase()
+    await sb?.auth.signOut()
     navigate(HOME)
   }
 
@@ -148,7 +152,9 @@ export function AccountPage() {
 
     setPwBusy(true)
     try {
-      const { error } = await supabase!.auth.updateUser({ password: newPassword })
+      const sb = await getSupabase()
+      if (!sb) throw new Error('Logowanie nie jest skonfigurowane.')
+      const { error } = await sb.auth.updateUser({ password: newPassword })
       if (error) throw error
       setPwDone(true)
       setPwOpen(false)

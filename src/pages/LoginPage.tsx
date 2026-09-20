@@ -6,7 +6,7 @@ import { AppShell } from '../components/layout/AppShell'
 import { fadeUp, fadeUpReduced, staggerContainer } from '../components/today/motion'
 import { ProgressLogo } from '../components/brand/ProgressLogo'
 import { useAppStore, resolveTheme } from '../store/useAppStore'
-import { supabase } from '../services/supabaseClient'
+import { getSupabase, supabaseEnabled } from '../services/supabaseClient'
 import './LoginPage.css'
 
 type Mode = 'signin' | 'signup' | 'reset'
@@ -49,19 +49,23 @@ export function LoginPage() {
     setMessage(null)
     setBusy(true)
     try {
+      // Loaded here rather than at module scope: the sign-in screen is a lazy
+      // route, and this is the first moment the client is genuinely needed.
+      const sb = await getSupabase()
+      if (!sb) throw new Error('Logowanie nie jest jeszcze skonfigurowane.')
       if (mode === 'signin') {
-        const { error: err } = await supabase!.auth.signInWithPassword({ email, password })
+        const { error: err } = await sb.auth.signInWithPassword({ email, password })
         if (err) throw err
         // Back to the page you were stopped at; the gate there sends you on to
         // Konto by itself if the account has no access yet.
         if (returnTo) navigate(returnTo, { replace: true, state: gate?.returnState })
         else navigate('/konto')
       } else if (mode === 'signup') {
-        const { error: err } = await supabase!.auth.signUp({ email, password })
+        const { error: err } = await sb.auth.signUp({ email, password })
         if (err) throw err
         setMessage('Konto utworzone. Sprawdź maila, aby potwierdzić adres.')
       } else {
-        const { error: err } = await supabase!.auth.resetPasswordForEmail(email)
+        const { error: err } = await sb.auth.resetPasswordForEmail(email)
         if (err) throw err
         setMessage('Wysłaliśmy link do zresetowania hasła.')
       }
@@ -122,7 +126,7 @@ export function LoginPage() {
             <h1 className="login__title">{TITLES[mode]}</h1>
             <p className="login__subtitle">{SUBTITLES[mode]}</p>
 
-            {!supabase ? (
+            {!supabaseEnabled ? (
               <p className="login__notice">Logowanie nie jest jeszcze skonfigurowane.</p>
             ) : (
               <form className="login__form" onSubmit={handleSubmit}>

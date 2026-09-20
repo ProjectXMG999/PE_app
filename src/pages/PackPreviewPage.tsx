@@ -6,13 +6,13 @@ import { Pack, PackMeta } from '../types/vocabulary'
 import { PackageProgress } from '../types/progress'
 import { loadProgressSnapshot, ProgressSnapshot } from '../hooks/useProgressData'
 import { getAudioUrl } from '../services/audioService'
-import { supabase } from '../services/supabaseClient'
+import { useAuthStore } from '../store/useAuthStore'
 import { getPackageWordProgress, getPackageProgress, saveWordProgress, savePackageProgress } from '../services/db'
 import { applyKnown } from '../services/review'
 import { currentRequestRetention } from '../store/useAppStore'
 import { AppShell } from '../components/layout/AppShell'
 import { ModeFact, ModeLabel } from '../components/mode/ModeScreen'
-import { EASE_OUT_EXPO, fadeUp, fadeUpReduced, staggerContainer } from '../components/today/motion'
+import { EASE_OUT_EXPO, fadeUp, fadeUpReduced, glassReveal, glassRevealReduced, staggerContainer } from '../components/today/motion'
 import { noOrphans } from '../utils/typography'
 import {
   LEVEL_COLORS,
@@ -144,12 +144,16 @@ export function PackPreviewPage() {
     // container would otherwise keep the previous pack's scroll position.
     document.querySelector('.appshell__main')?.scrollTo({ top: 0 })
     Promise.all([
-      supabase!.auth.getSession().then(({ data }) => {
-        const token = data.session?.access_token
+      // Token straight from the auth store rather than supabase.auth.getSession()
+      // — same value, one less promise hop, and it keeps this page off the
+      // Supabase import chain. This request has its own 402 handling, so it
+      // can't go through fetchPack.
+      (() => {
+        const token = useAuthStore.getState().accessToken
         return fetch(`/.netlify/functions/pack-content?pack=${encodeURIComponent(packageId)}`, {
           headers: token ? { Authorization: `Bearer ${token}` } : {},
         })
-      }).then(r => {
+      })().then(r => {
         if (r.status === 402) { navigate('/konto'); throw new Error('Wymagana subskrypcja') }
         if (!r.ok) throw new Error('Nie znaleziono pakietu')
         return r.json() as Promise<Pack>
@@ -270,6 +274,9 @@ export function PackPreviewPage() {
   )
 
   const item = reduced ? fadeUpReduced : fadeUp
+  /* The raised card below is glass — it rises without an opacity channel, or
+     its fog thickens after it has landed. See glassReveal in today/motion.ts. */
+  const glassItem = reduced ? glassRevealReduced : glassReveal
 
   return (
     <AppShell hideBottomNav hideSidebar={false} hideAmbient={false} lockScroll={false}>
@@ -355,7 +362,7 @@ export function PackPreviewPage() {
 
       {/* ── Progress ── the one raised card on the page (the .u-surface--raised
           recipe: gradient ground, float shadow, glowing hairline). */}
-      <motion.section className="packpreview__progress u-surface--raised" variants={item}>
+      <motion.section className="packpreview__progress u-surface--raised" variants={glassItem}>
         <div
           className="packpreview__ring"
           role="img"

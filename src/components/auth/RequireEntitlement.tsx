@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
 import { useAuthStore } from '../../store/useAuthStore'
+import { LoadingFallback } from '../shared/LoadingFallback'
 
 interface Props {
   children: ReactNode
@@ -14,7 +15,11 @@ export function RequireEntitlement({ children }: Props) {
   // entitlementStatus starts 'loading' and only resolves after authLoading
   // flips false (refreshEntitlement fires once the session is known) — wait
   // for both, or a logged-in user briefly reads as unentitled and gets bounced.
-  if (authLoading || entitlementStatus === 'loading') return null
+  //
+  // A spinner rather than `null`: this wait is about to get longer, because the
+  // Supabase client is loaded on demand instead of in the main bundle, and a
+  // blank screen for that window reads as a broken deep link.
+  if (authLoading || entitlementStatus === 'loading') return <LoadingFallback />
   // Remember where the gate stopped you — path and navigation state, so the
   // page still knows its origin once you're signed in and sent back.
   if (!user) {

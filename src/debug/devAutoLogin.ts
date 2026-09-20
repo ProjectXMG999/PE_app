@@ -1,4 +1,4 @@
-import { supabase } from '../services/supabaseClient'
+import { getSupabase } from '../services/supabaseClient'
 
 /**
  * Development-only auto sign-in.
@@ -8,6 +8,7 @@ import { supabase } from '../services/supabaseClient'
  * instead of requiring a manual visit to /logowanie every time.
  */
 export async function devAutoLogin(): Promise<void> {
+  const supabase = await getSupabase()
   if (!supabase) return
 
   const email = import.meta.env.VITE_DEV_TEST_EMAIL

@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import type { Session, User } from '@supabase/supabase-js'
-import { supabase } from '../services/supabaseClient'
+import { getSupabase, supabaseEnabled } from '../services/supabaseClient'
 import { EntitlementStatus } from '../types/entitlement'
 import { pullAndMergeProgress } from '../services/progressSync'
 
@@ -25,8 +25,9 @@ export const useAuthStore = create<AuthStore>((set, get) => ({
 }))
 
 export async function refreshEntitlement(userId: string) {
-  if (!supabase) return
-  const { data } = await supabase
+  const sb = await getSupabase()
+  if (!sb) return
+  const { data } = await sb
     .from('entitlements')
     .select('status')
     .eq('user_id', userId)
@@ -54,19 +55,45 @@ function handleSession(session: Session | null) {
   }
 }
 
-/** Rehydrates auth/entitlement state on boot and keeps it in sync. Call once from App.tsx. */
+/**
+ * Rehydrates auth/entitlement state on boot and keeps it in sync. Call once
+ * from App.tsx.
+ *
+ * Stays synchronous on purpose: App.tsx calls it as `useEffect(() =>
+ * initAuthListener(), [])`, and React needs the cleanup function back
+ * immediately — an async function would hand it a promise instead.
+ *
+ * So the client is loaded inside, and `cancelled` is load-bearing rather than
+ * defensive: under React.StrictMode this effect mounts, tears down and mounts
+ * again, and the teardown happens while the import is still in flight. Without
+ * the flag the first run would still go on to subscribe after being cancelled,
+ * leaking a listener and running pullAndMergeProgress twice.
+ */
 export function initAuthListener(): () => void {
-  if (!supabase) {
+  if (!supabaseEnabled) {
     useAuthStore.getState().setSession(null)
     useAuthStore.getState().setEntitlementStatus('none')
     return () => {}
   }
 
-  supabase.auth.getSession().then(({ data }) => handleSession(data.session))
+  let cancelled = false
+  let unsubscribe: (() => void) | null = null
 
-  const { data: subscription } = supabase.auth.onAuthStateChange((_event, session) => {
-    handleSession(session)
+  void getSupabase().then(sb => {
+    if (!sb || cancelled) return
+    sb.auth.getSession().then(({ data }) => {
+      if (!cancelled) handleSession(data.session)
+    })
+    const { data: subscription } = sb.auth.onAuthStateChange((_event, session) => {
+      handleSession(session)
+    })
+    unsubscribe = () => subscription.subscription.unsubscribe()
+    // Lost the race: teardown ran while the client was still loading.
+    if (cancelled) unsubscribe()
   })
 
-  return () => subscription.subscription.unsubscribe()
+  return () => {
+    cancelled = true
+    unsubscribe?.()
+  }
 }

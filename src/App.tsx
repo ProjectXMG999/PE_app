@@ -14,6 +14,7 @@ import './debug/seedProgress'
 import './debug/devAutoLogin'
 import { DebugOverlay } from './components/debug/DebugOverlay'
 import { RequireEntitlement } from './components/auth/RequireEntitlement'
+import { LoadingFallback } from './components/shared/LoadingFallback'
 import { ToastHost } from './components/shared/ToastHost'
 import { AchievementWatcher } from './components/progress/AchievementWatcher'
 import { AmbientBackground } from './components/ambient/AmbientBackground'
@@ -36,19 +37,6 @@ const LoginPage = lazy(() => import('./pages/LoginPage').then(m => ({ default: m
 const AccountPage = lazy(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage })))
 const ReviewPage = lazy(() => import('./pages/ReviewPage').then(m => ({ default: m.ReviewPage })))
 const SmartSessionPage = lazy(() => import('./pages/SmartSessionPage').then(m => ({ default: m.SmartSessionPage })))
-
-function LoadingFallback() {
-  return (
-    <div style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '60vh',
-    }}>
-      <div className="spinner" />
-    </div>
-  )
-}
 
 export function App() {
   const { theme, setInstallPrompt, setInstalled, setSwUpdateAvailable, setSwRegistration } = useAppStore()
@@ -93,21 +81,43 @@ export function App() {
 
   useEffect(() => initAuthListener(), [])
 
-  // One-time data upkeep, before the streak / points / progress widgets read
-  // it: heal packs stuck "mastered" with no known words, then run streak-freeze
-  // upkeep so a rescued run is intact by the time the badge renders.
+  // One-time data upkeep: heal packs stuck "mastered" with no known words, then
+  // run streak-freeze upkeep so a rescued run is intact, then badge the icon.
+  //
+  // Deferred to idle rather than run on mount. Between them these three steps
+  // are two full reads of wordProgress (~11 000 rows) and three of sessions,
+  // and they used to land in the middle of the first paint. Nothing on screen
+  // waits for them — a pack stuck on a stale "opanowana" flag now heals a couple
+  // of hundred milliseconds later than it did, which nobody can perceive.
+  //
+  // `force: true` on the snapshot load stays: by the time this runs, TodayPage
+  // has already populated the 2 s dedupe cache, so without it the badge would be
+  // computed from a snapshot taken BEFORE the two repairs above.
   useEffect(() => {
-    ;(async () => {
+    let cancelled = false
+    const run = async () => {
+      if (cancelled) return
       try { await repairMasteryFlags() } catch (err) { console.error('[mastery] repair failed:', err) }
       try { await runStreakFreezeUpkeep() } catch (err) { console.error('[streak] upkeep failed:', err) }
-      // Badging API: show the learning streak on the installed PWA icon
-      if (!('setAppBadge' in navigator)) return
+      // Badging API: show the learning streak on the installed PWA icon. Only
+      // this last step is optional — the two repairs above feed the UI.
+      if (cancelled || !('setAppBadge' in navigator)) return
       try {
         const s = await loadProgressSnapshot(true)
         if (s.streak > 0) navigator.setAppBadge(s.streak).catch(() => {})
         else navigator.clearAppBadge?.().catch(() => {})
       } catch { /* badge is best-effort */ }
-    })()
+    }
+
+    // Safari has no requestIdleCallback; the timeout is the fallback there and
+    // the ceiling everywhere else, so upkeep can't be starved by a busy tab.
+    const ric = (window as Window & typeof globalThis).requestIdleCallback
+    if (typeof ric === 'function') {
+      const id = ric(() => void run(), { timeout: 2000 })
+      return () => { cancelled = true; window.cancelIdleCallback?.(id) }
+    }
+    const id = window.setTimeout(() => void run(), 200)
+    return () => { cancelled = true; clearTimeout(id) }
   }, [])
 
   return (
