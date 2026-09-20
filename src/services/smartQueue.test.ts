@@ -164,19 +164,24 @@ describe('selectSmart', () => {
     expect(withStretch.quota.stretch).toBeGreaterThan(0)
   })
 
-  it('caps real due words at servingLeft but never blocks leftover-pack words on the serving budget', () => {
+  it('sizes the review slice by reviewRatio, not by today\'s serving budget', () => {
     const due = Array.from({ length: 5 }, (_, i) =>
       wp({ wordId: `due-${i}`, packageId: P003, nextReviewAt: '2026-06-01', reviewCount: 1 })
     )
+    const args = { comfortLevel: 1.0, todayLevel: 1, goalSec: 15 * 60 } as const
 
-    const capped = selectSmart({
-      snapshot: baseSnapshot({ dueWords: due, servingLeft: 2 }),
-      comfortLevel: 1.0, todayLevel: 1, goalSec: 15 * 60,
-    })
-    expect(capped.reviewWords).toHaveLength(2)
+    // A 15-minute sitting's reviewTarget comfortably exceeds five words, so the
+    // slice takes all of them however much of the day's serving is left.
+    const unspent = selectSmart({ snapshot: baseSnapshot({ dueWords: due, servingLeft: 20 }), ...args })
+    expect(unspent.reviewWords).toHaveLength(5)
 
+    // Clearing the queue in /powtorka used to zero this slice, which left every
+    // Inteligentny sitting for the rest of that day as pure new material.
+    // Reviews here displace learn cards rather than adding to the day, so the
+    // serving budget does not gate them — and leftover-pack stragglers, which
+    // never obeyed it, still ride along beyond the slice.
     const stragglerWord = wp({ wordId: `${P002}-010`, packageId: P002, status: 'learning' })
-    const zeroBudget = selectSmart({
+    const spent = selectSmart({
       snapshot: baseSnapshot({
         dueWords: due,
         servingLeft: 0,
@@ -184,9 +189,11 @@ describe('selectSmart', () => {
         knownMap: new Map([[P002, 9]]),
         wordProgress: [stragglerWord],
       }),
-      comfortLevel: 1.0, todayLevel: 1, goalSec: 15 * 60,
+      ...args,
     })
-    expect(zeroBudget.reviewWords.map(w => w.wordId)).toEqual([`${P002}-010`])
+    expect(spent.reviewWords).toHaveLength(6)
+    expect(spent.reviewWords.filter(w => w.packageId === P003)).toHaveLength(5)
+    expect(spent.reviewWords.map(w => w.wordId)).toContain(`${P002}-010`)
   })
 
   it('reaches a full sitting for a brand-new user without fanning out over the catalog', () => {
@@ -455,16 +462,15 @@ describe('selectSmart × review health', () => {
     expect(weak.quota.learn).toBeLessThan(neutral.quota.learn)
   })
 
-  it('serves the reviews a slipping learner needs even after the day\'s budget is spent', () => {
-    // servingLeft 0 normally means "no due words today"; here the reviews cost
-    // no extra time (they displace learn cards), so the slice still fills.
+  it('serves reviews after the day\'s budget is spent, whatever health says', () => {
+    // servingLeft 0 means /powtorka's serving for today is done. The reviews
+    // cost no extra time here (they displace learn cards), so the slice still
+    // fills for both learners — health moves its SIZE, it does not gate it.
     const spent = dueSnapshot({ servingLeft: 0, served: 20 })
     const weak = selectSmart({ snapshot: spent, comfortLevel: 1, todayLevel: 1, goalSec, reviewHealth: health(0.7) })
-    expect(weak.quota.review).toBeGreaterThan(0)
-
-    // A learner who is doing fine still respects it — no reason to overrule.
     const strong = selectSmart({ snapshot: spent, comfortLevel: 1, todayLevel: 1, goalSec, reviewHealth: health(0.97) })
-    expect(strong.quota.review).toBe(0)
+    expect(strong.quota.review).toBeGreaterThan(0)
+    expect(strong.quota.review).toBeLessThan(weak.quota.review)
   })
 
   it('does not let a strong run shrink the review slice while the backlog is urgent', () => {
@@ -520,6 +526,126 @@ describe('previewOf / smartPeek', () => {
     // A bonus session is a departure worth a sentence even when the ratio held.
     expect(smartReason({ ...baseline, bonus: true })).toContain('Cel na dziś')
     expect(smartReason({ ...baseline, adapted: true, tone: 'strong' })).toContain('nowych słów')
-    expect(smartReason({ ...baseline, adapted: true, tone: 'slipping' })).toContain('powtarzamy')
+    expect(smartReason({ ...baseline, adapted: true, tone: 'slipping' })).toContain('powtórek')
+  })
+})
+
+/**
+ * The reported failure, in one place: a sitting announced as 14 words that
+ * opens on a single card and ends there, every time it is rebuilt.
+ *
+ * Nothing about the selection is wrong — the queue picks a full session. The
+ * cards are lost downstream, in composition: a review word becomes a card only
+ * if its pack arrived and still holds that word id, and the slot it had already
+ * been given was never handed to anything else.
+ */
+describe('a session whose review content never arrives', () => {
+  const REVIEW_PACK = 'gone-pack'
+
+  function shortSelection(): SmartSelection {
+    return {
+      targetCount: 14,
+      size: sizeOf(14),
+      // The shape selectSmart produces on a slipping-health day: review takes
+      // most of the sitting, new words get what's left.
+      quota: { learn: 1, review: 13, stretch: 0 },
+      reviewRatio: 0.65,
+      tone: 'slipping',
+      learnPackIds: ['learn1', 'learn2'],
+      stretchPackId: null,
+      reviewWords: Array.from({ length: 13 }, (_, i) =>
+        wp({ wordId: `${REVIEW_PACK}-w${i}`, packageId: REVIEW_PACK })),
+      packIds: ['learn1', 'learn2', REVIEW_PACK],
+    }
+  }
+
+  /** Everything the session asked for EXCEPT the review pack — one failed fetch. */
+  const arrived = () => new Map([
+    ['learn1', pack('learn1', Array.from({ length: 10 }, (_, i) => `learn1-w${i}`))],
+    ['learn2', pack('learn2', Array.from({ length: 10 }, (_, i) => `learn2-w${i}`))],
+  ])
+
+  it('fills the sitting from the packs that did arrive instead of shrinking to one card', () => {
+    const { steps, counts } = composeSmartSteps({
+      selection: shortSelection(),
+      packs: arrived(),
+      wordProgressById: new Map(),
+    })
+
+    const cards = steps.filter(s => s.kind === 'card')
+    expect(counts.review).toBe(0)
+    // Was 1 — quota.learn, with the 13 review slots evaporating in silence.
+    expect(cards).toHaveLength(14)
+    expect(counts.learn).toBe(14)
+  })
+
+  it('names what went missing, and tells a failed download from a stale row', () => {
+    const selection = shortSelection()
+    const packs = arrived()
+    // The pack arrives, but holds none of the word ids the queue asked for.
+    packs.set(REVIEW_PACK, pack(REVIEW_PACK, ['something-else']))
+
+    const withPack = composeSmartSteps({ selection, packs, wordProgressById: new Map() })
+    expect(withPack.unresolved).toHaveLength(13)
+    expect(withPack.unresolved.every(u => u.reason === 'word')).toBe(true)
+
+    const withoutPack = composeSmartSteps({
+      selection, packs: arrived(), wordProgressById: new Map(),
+    })
+    expect(withoutPack.unresolved.every(u => u.reason === 'pack')).toBe(true)
+  })
+
+  it('still honours the quota when every stream does arrive', () => {
+    const selection = shortSelection()
+    const packs = arrived()
+    packs.set(REVIEW_PACK, pack(REVIEW_PACK, selection.reviewWords.map(w => w.wordId)))
+
+    const { counts } = composeSmartSteps({ selection, packs, wordProgressById: new Map() })
+
+    expect(counts).toEqual({ learn: 1, review: 13, stretch: 0 })
+  })
+
+  it('backfills a partial arrival too — the remainder is what is missing, not the whole slice', () => {
+    const selection = shortSelection()
+    const packs = arrived()
+    // Four of the thirteen review words survive.
+    packs.set(REVIEW_PACK, pack(REVIEW_PACK, selection.reviewWords.slice(0, 4).map(w => w.wordId)))
+
+    const { counts } = composeSmartSteps({ selection, packs, wordProgressById: new Map() })
+
+    expect(counts.review).toBe(4)
+    expect(counts.learn).toBe(10)
+  })
+})
+
+describe('due words whose pack has left the catalog', () => {
+  const goalSec = 15 * 60
+
+  it('never reserve a slot they cannot fill', () => {
+    const ghosts = Array.from({ length: 8 }, (_, i) =>
+      wp({ wordId: `ghost-w${i}`, packageId: 'no-such-pack', status: 'known', nextReviewAt: '2020-01-01' }))
+    const sel = selectSmart({
+      snapshot: baseSnapshot({ dueWords: ghosts, wordProgress: ghosts }),
+      comfortLevel: 1,
+      todayLevel: 1,
+      goalSec,
+    })
+
+    expect(sel.reviewWords).toHaveLength(0)
+    // The whole sitting goes to words that can actually be shown.
+    expect(sel.quota.learn).toBe(sel.targetCount)
+  })
+})
+
+describe('learn supply', () => {
+  it('lines up more words than the quota, so one dead pack cannot empty the stream', () => {
+    const sel = selectSmart({
+      snapshot: baseSnapshot(),
+      comfortLevel: 1,
+      todayLevel: 1,
+      goalSec: 15 * 60,
+    })
+    const supply = sel.learnPackIds.length * 10 // level-1 packs hold 10 words
+    expect(supply).toBeGreaterThanOrEqual(sel.quota.learn + SMART.LEARN_RESERVE)
   })
 })

@@ -136,18 +136,27 @@ export function useSmartSession(nonce = 0): SmartSession {
           snapshot.wordProgress.map(wp => [wp.wordId, wp])
         )
 
-        const { steps, counts, packCount, opensWith } = composeSmartSteps({
+        const { steps, counts, packCount, opensWith, unresolved } = composeSmartSteps({
           selection,
           packs,
           wordProgressById,
         })
 
         const hasCards = steps.some(s => s.kind === 'card')
+        // Loud in the console, because a session quietly missing half its
+        // content is the kind of thing that gets reported as "the mode is
+        // broken" with nothing to go on. Both lines name the fault precisely:
+        // packs that would not download, and progress rows pointing at words
+        // their pack no longer contains (which no retry will ever fix).
         if (missing.length) {
-          // Loud in the console, because a session quietly missing half its
-          // content is the kind of thing that gets reported as "the mode is
-          // broken" with nothing to go on.
           console.warn('[smart] pack content unavailable:', missing.join(', '))
+        }
+        if (unresolved.length) {
+          const stale = unresolved.filter(u => u.reason === 'word')
+          console.warn(
+            `[smart] ${unresolved.length} review words produced no card`,
+            { missingPacks: unresolved.length - stale.length, staleWords: stale }
+          )
         }
 
         setState({

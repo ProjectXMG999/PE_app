@@ -28,23 +28,36 @@ import packagesIndex from '../data/packages-index.json'
  * stretch stream is dropped entirely.
  */
 
+/** Cold-start seconds for one Smart card — a new word, its audio, and a typed
+ *  answer. Seconds per card, not cards per minute, is what gets tuned here: it
+ *  is the quantity sessions actually measure, so it is the one that can be
+ *  caught being wrong. /powtorka makes the same judgement in
+ *  REVIEW_SEC_PER_CARD (reviewConfig.ts) and lands at 10 — a flip, the audio, a
+ *  Znam/Nie znam. A Smart card carries new material and typing on top of that,
+ *  so 25 s reads as "about two and a half review flips".
+ *
+ *  It replaces a hardcoded 1.4 cards/min — 43 s a card — which nothing measured
+ *  and which the note here already suspected of being far too slow. The cost
+ *  was not abstract: at a 15-minute goal, 43 s sized the WHOLE DAY at 21 cards,
+ *  so MIN_CARDS swallowed most of the day and every sitting came out the same
+ *  size whatever was left of the goal. */
+const SEC_PER_CARD = 25
+
 export const SMART = {
-  /** Cold-start pace, in cards per minute, used to turn goal-minutes into a
-   *  number of cards. It used to sit at 2.2 (27 s/card), a figure nothing
-   *  measured; combined with a whole-goal session it made a 60-minute goal
-   *  promise 132 cards, i.e. ~90 real minutes in one sitting.
+  SEC_PER_CARD,
+  /** Cold-start pace in cards per minute. Derived, never tuned on its own;
    *  `measuredCardsPerMin` replaces it with the learner's own pace the moment
-   *  there's enough history to read one.
-   *
-   *  1.4 was then set to sit near /powtorka's REVIEWS_PER_MINUTE of 1.2 — a
-   *  figure since found to be five times too slow (see the pace note in
-   *  reviewConfig.ts) and replaced there by a measured seconds-per-card. That
-   *  makes this cold start, and PACE.MAX below, almost certainly too slow as
-   *  well: a Smart card carries new words and typed answers, so it is genuinely
-   *  heavier than a review flip, but not 43 seconds' worth. Left alone pending
-   *  the same measurement treatment — a deliberate to-do, not a justification. */
-  CARDS_PER_MIN: 1.4,
-  MIN_CARDS: 12,
+   *  there is enough history to read one. */
+  CARDS_PER_MIN: 60 / SEC_PER_CARD,
+  /** Floor on ONE SITTING, and the size of the extra offered once the day's
+   *  goal is already met. It exists so the mode never opens on a 2-card stub —
+   *  not to decide how big a session is. At 12 it was deciding exactly that:
+   *  more than half of what a 15-minute goal's whole day came to, so every
+   *  remainder below it was inflated back up to 12 and the mode handed out an
+   *  identical session every time, no matter how much of the day was left.
+   *  Small enough now that a floored sitting overshoots the goal by a couple of
+   *  minutes rather than by half of it. */
+  MIN_CARDS: 6,
   /** Ceiling on ONE SITTING, not on the day. The daily goal is spread over
    *  however many sittings the learner wants: `smartSessionSize` re-measures
    *  what's left of the goal every time the mode is opened, so leaving after 14
@@ -146,9 +159,16 @@ export const PACE = {
   MIN_SESSION_CARDS: 5,
   MIN_SESSION_SEC: 60,
   /** Bounds on the result: anything outside is a clock artefact (a tab left
-   *  open, a session resumed hours later), not a person answering cards. */
+   *  open, a session resumed hours later), not a person answering cards.
+   *
+   *  MIN is 75 s a card. MAX is 10 s — /powtorka's cold-start
+   *  REVIEW_SEC_PER_CARD, on the reasoning that a card carrying a new word and
+   *  a typed answer cannot honestly be answered faster than a bare review flip.
+   *  Raised from 3.5 (17 s a card), which sat inside the range a fluent learner
+   *  genuinely runs at and so clamped real pace down to it, quietly holding
+   *  their sittings short. */
   MIN: 0.8,
-  MAX: 3.5,
+  MAX: 6,
 } as const
 
 /**
@@ -316,29 +336,20 @@ export function selectSmart({
   })
   const reviewTarget = Math.round(targetCount * reviewRatio)
 
-  // Real due words are normally gated by today's serving budget; leftovers are a
-  // finish-the-job concern and ignore it (but the whole review slice still
-  // can't take over the session).
+  // The review slice is sized by `reviewRatio` alone. Today's /powtorka serving
+  // budget deliberately does NOT gate it.
   //
-  // The budget exists to cap how much TIME reviews take, which is why /powtorka
-  // obeys it strictly. Here they cost none: the session is `targetCount` cards
-  // either way, so a review displaces a learn card rather than adding to the
-  // day. So when health says the learner is behind, the slice is allowed past a
-  // spent budget — without that, raising the ratio would be a no-op for exactly
-  // the person it's meant to help.
-  // `reviewRatio` only exceeds base when reviewHealth had a *fresh* signal to
-  // move it. A stale/absent signal (>STALE_DAYS, or too few samples — e.g. a
-  // returning learner after a long break) makes reviewRatioFor fall back to
-  // `base` even while `reviewUrgency` — computed straight from the live
-  // backlog, no health signal required — already says 'urgent'. Falling
-  // through to the servingLeft gate in that case is exactly what let a real
-  // backlog go unserved once the day's /powtorka budget was already spent.
-  const behind = reviewRatio > SMART.REVIEW_RATIO || snapshot.reviewUrgency === 'urgent'
-  const dueCap = behind
-    ? reviewTarget
-    : snapshot.servingLeft === 0
-      ? 0
-      : Math.min(reviewTarget, snapshot.servingLeft)
+  // That budget exists to cap how much TIME reviews take, which is why
+  // /powtorka obeys it strictly. Here they cost none: the sitting is
+  // `targetCount` cards either way, so a review displaces a learn card rather
+  // than adding to the day. Gating on it anyway made the mode do the opposite
+  // of what it is for — clear your queue in /powtorka, `servingLeft` hits 0,
+  // and every Inteligentny sitting for the rest of that day came out as pure
+  // new material with no interleaving at all, on precisely the day there was
+  // most worth interleaving. The old `behind` escape hatch (health moved the
+  // ratio, or the backlog is urgent) only ever unlocked the case where the
+  // learner was already in trouble; the ordinary case was the broken one.
+  const dueCap = reviewTarget
   const reviewWords = [
     ...orderedDue.slice(0, dueCap),
     ...stragglerWords,
@@ -465,8 +476,8 @@ export function smartPeek(args: SelectArgs): SmartPreview {
 export function smartReason(p: SmartPreview): string | null {
   if (p.bonus) return 'Cel na dziś masz z głowy — to krótka dokładka, jeśli masz ochotę.'
   if (!p.adapted) return null
-  if (p.tone === 'strong') return 'Powtórki trzymają się mocno, więc dziś więcej nowych słów.'
-  if (p.tone === 'slipping') return 'Kilka słów zaczyna uciekać, więc dziś więcej powtarzamy.'
+  if (p.tone === 'strong') return 'Powtórki idą ci świetnie, więc dziś więcej nowych słów.'
+  if (p.tone === 'slipping') return 'Kilka słów zaczyna ci uciekać, więc dziś więcej powtórek.'
   return null
 }
 
@@ -477,11 +488,24 @@ interface ComposeArgs {
   wordProgressById: Map<string, WordProgress>
 }
 
+/** A review word that could not be turned into a card, and why. */
+export interface UnresolvedReview {
+  wordId: string
+  packageId: string
+  /** 'pack': its content never arrived. 'word': the pack arrived without it. */
+  reason: 'pack' | 'word'
+}
+
 export function composeSmartSteps({ selection, packs, wordProgressById }: ComposeArgs): {
   steps: SmartStep[]
   counts: Record<SmartSegment, number>
   packCount: number
   opensWith: { segment: SmartSegment; count: number } | null
+  /** Review words that produced no card. Two very different faults wear the
+   *  same face on screen — a session that came up short — and only this tells
+   *  them apart: a pack that failed to download is a retry, a word that is no
+   *  longer in its pack is a stale row that will never be servable again. */
+  unresolved: UnresolvedReview[]
 } {
   const usedPacks = new Set<string>()
 
@@ -516,10 +540,18 @@ export function composeSmartSteps({ selection, packs, wordProgressById }: Compos
   // Map iteration is insertion order, so packs still appear in the order their
   // most urgent word did.
   const reviewByPack = new Map<string, Extract<SmartStep, { kind: 'card' }>[]>()
+  const unresolved: UnresolvedReview[] = []
   for (const wp of selection.reviewWords) {
     const pack = packs.get(wp.packageId)
     const word = pack?.words.find(w => w.id === wp.wordId)
-    if (!word) continue
+    if (!word) {
+      unresolved.push({
+        wordId: wp.wordId,
+        packageId: wp.packageId,
+        reason: pack ? 'word' : 'pack',
+      })
+      continue
+    }
     usedPacks.add(wp.packageId)
     const bucket = reviewByPack.get(wp.packageId) ?? []
     bucket.push({ kind: 'card', segment: 'review', word, packageId: wp.packageId, progress: wp })
@@ -583,6 +615,7 @@ export function composeSmartSteps({ selection, packs, wordProgressById }: Compos
     },
     packCount: usedPacks.size,
     opensWith: openingRun(steps),
+    unresolved,
   }
 }
 
