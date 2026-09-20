@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useState } from 'react'
-import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { HOME } from '../navigation/navigation'
 import { AppShell } from '../components/layout/AppShell'
@@ -10,6 +10,7 @@ import { refreshEntitlement, useAuthStore } from '../store/useAuthStore'
 import { getSupabase } from '../services/supabaseClient'
 import { EntitlementPlan, EntitlementStatus } from '../types/entitlement'
 import './AccountPage.css'
+import { useTransitionNavigate } from '../navigation/transitions'
 
 const EASE_OUT_EXPO = [0.16, 1, 0.3, 1] as const
 
@@ -70,7 +71,7 @@ function StatusBadge({ status }: { status: EntitlementStatus }) {
  * security, then signing out.
  */
 export function AccountPage() {
-  const navigate = useNavigate()
+  const navigate = useTransitionNavigate()
   const reduced = useReducedMotion()
   const item = reduced ? fadeUpReduced : fadeUp
   const { user, authLoading, entitlementStatus } = useAuthStore()
@@ -134,7 +135,7 @@ export function AccountPage() {
   async function handleSignOut() {
     const sb = await getSupabase()
     await sb?.auth.signOut()
-    navigate(HOME)
+    navigate(HOME, { direction: 'lateral' })
   }
 
   async function handlePasswordChange(e: FormEvent) {

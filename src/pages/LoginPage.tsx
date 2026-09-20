@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { HOME } from '../navigation/navigation'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
@@ -8,6 +8,7 @@ import { ProgressLogo } from '../components/brand/ProgressLogo'
 import { useAppStore, resolveTheme } from '../store/useAppStore'
 import { getSupabase, supabaseEnabled } from '../services/supabaseClient'
 import './LoginPage.css'
+import { useTransitionNavigate } from '../navigation/transitions'
 
 type Mode = 'signin' | 'signup' | 'reset'
 
@@ -24,7 +25,7 @@ const SUBTITLES: Record<Mode, string> = {
 }
 
 export function LoginPage() {
-  const navigate = useNavigate()
+  const navigate = useTransitionNavigate()
   const location = useLocation()
   // Set by RequireEntitlement when it bounced you here. Only in-app paths —
   // never a protocol-relative '//host' handed in through history state.
@@ -92,7 +93,7 @@ export function LoginPage() {
           animate="show"
         >
           <motion.div className="login__brand" variants={variants}>
-            <button className="login__brand-mark" onClick={() => navigate(HOME)} aria-label="Progress — strona główna">
+            <button className="login__brand-mark" onClick={() => navigate(HOME, { direction: 'back' })} aria-label="Progress — strona główna">
               <ProgressLogo size={30} />
             </button>
             <motion.button

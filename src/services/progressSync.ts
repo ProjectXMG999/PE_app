@@ -1,12 +1,14 @@
+import type { SupabaseClient } from '@supabase/supabase-js'
 import { getSupabase } from './supabaseClient'
 import {
   getAllSessions, getAllWordProgress, getAllPackageProgress, getAllDailyTime,
-  getAllReviewLedger, getDB,
+  getAllReviewLedger, getDB, flushOutbox,
 } from './db'
 import {
   Session, WordProgress, PackageProgress, WordStatus, DailyTime, ReviewLedgerEntry,
 } from '../types/progress'
 import { emitProgress } from './progressEvents'
+import { repairListenAxis } from './listenRepair'
 import { RETIRE_STABILITY_DAYS } from './reviewConfig'
 import { nextInterval } from './fsrs'
 import { currentRequestRetention } from '../store/useAppStore'
@@ -98,10 +100,27 @@ function earlierDefined(a: string | null, b: string | null): string | null {
   return a <= b ? a : b
 }
 
-function betterPackageProgress(a: PackageProgress, b: PackageProgress): PackageProgress {
-  if (!!a.masteredAt !== !!b.masteredAt) return a.masteredAt ? a : b
-  if (!!a.completedAt !== !!b.completedAt) return a.completedAt ? a : b
-  return a.currentIndex >= b.currentIndex ? a : b
+/**
+ * Composed field by field rather than by picking a winning row. The old rule
+ * returned whichever side looked "more advanced" whole — so a remote row
+ * carrying `masteredAt` and `currentIndex: 0` erased a genuine listen position
+ * on the other device, and the three axes could never disagree without one of
+ * them losing. They're independent now: the pack is listened/worked/mastered
+ * if EITHER side got there, dated to the first time it happened, and the
+ * resume pointer is simply the furthest either device played.
+ *
+ * Exported for the tests — this is the subtlest logic in the sync layer and
+ * the one place a cross-device merge can silently undo real progress.
+ */
+export function betterPackageProgress(a: PackageProgress, b: PackageProgress): PackageProgress {
+  return {
+    packageId: a.packageId,
+    startedAt: a.startedAt <= b.startedAt ? a.startedAt : b.startedAt,
+    currentIndex: Math.max(a.currentIndex, b.currentIndex),
+    listenedAt: earlierDefined(a.listenedAt ?? null, b.listenedAt ?? null),
+    completedAt: earlierDefined(a.completedAt, b.completedAt),
+    masteredAt: earlierDefined(a.masteredAt, b.masteredAt),
+  }
 }
 
 /**
@@ -115,6 +134,59 @@ function betterPackageProgress(a: PackageProgress, b: PackageProgress): PackageP
 function sessionKey(s: Pick<Session, 'packageId' | 'date' | 'wordsCompleted' | 'mode' | 'startedAt'>): string {
   return `${s.packageId}|${s.date}|${s.wordsCompleted}|${s.mode}|${s.startedAt ?? ''}`
 }
+
+/** PostgREST caps a response at the project's `db-max-rows` (1000 on hosted
+ *  Supabase by default), silently — a truncated page looks exactly like a
+ *  complete one. A single level declaration writes up to 4535 word_progress
+ *  rows, so an unpaginated read handed a fresh device a fraction of the
+ *  account's history and then pushed that fraction back as the merged truth.
+ *  Pages until a short one comes back. */
+const PAGE = 1000
+
+/** A row as PostgREST returns it from `select('*')` — snake_case and untyped.
+ *  The mappers below turn each one into its camelCase TS type. */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type RemoteRow = Record<string, any>
+
+async function selectAllRows(
+  supabase: SupabaseClient,
+  table: string,
+  userId: string,
+  /** A column unique per user — paging without a stable order can repeat or
+   *  skip rows between requests. Each of these tables has one in its key. */
+  orderBy: string,
+): Promise<RemoteRow[]> {
+  const rows: RemoteRow[] = []
+  for (let from = 0; ; from += PAGE) {
+    const { data, error } = await supabase
+      .from(table).select('*').eq('user_id', userId)
+      .order(orderBy, { ascending: true })
+      .range(from, from + PAGE - 1)
+    // Thrown, not swallowed: `data ?? []` would make a failed read
+    // indistinguishable from an empty account, and the merge would then treat
+    // the remote side as blank and overwrite it with whatever is local.
+    if (error) throw new Error(`[progressSync] reading ${table} failed: ${error.message}`)
+    const page = data ?? []
+    rows.push(...page)
+    if (page.length < PAGE) return rows
+  }
+}
+
+/** Upserts in bounded batches. One request per few thousand rows is a
+ *  multi-megabyte body that times out or gets rejected whole; each batch is
+ *  awaited so a failure surfaces instead of vanishing into a floating promise. */
+async function upsertAll(
+  supabase: SupabaseClient,
+  table: string,
+  rows: RemoteRow[],
+): Promise<void> {
+  for (let i = 0; i < rows.length; i += SYNC_BATCH) {
+    const { error } = await supabase.from(table).upsert(rows.slice(i, i + SYNC_BATCH))
+    if (error) throw new Error(`[progressSync] writing ${table} failed: ${error.message}`)
+  }
+}
+
+const SYNC_BATCH = 500
 
 /**
  * One-time reconciliation on login: merges local IndexedDB progress with
@@ -131,26 +203,26 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
 
   const [
     localSessions, localWords, localPackages, localDaily, localLedger,
-    remoteSessionsRes, remoteWordsRes, remotePackagesRes, remoteDailyRes, remoteLedgerRes,
+    remoteSessionRows, remoteWordRows, remotePackageRows, remoteDailyRows, remoteLedgerRows,
   ] = await Promise.all([
     getAllSessions(),
     getAllWordProgress(),
     getAllPackageProgress(),
     getAllDailyTime(),
     getAllReviewLedger(),
-    supabase.from('sessions').select('*').eq('user_id', userId),
-    supabase.from('word_progress').select('*').eq('user_id', userId),
-    supabase.from('package_progress').select('*').eq('user_id', userId),
-    supabase.from('daily_time').select('*').eq('user_id', userId),
-    supabase.from('review_ledger').select('*').eq('user_id', userId),
+    selectAllRows(supabase, 'sessions', userId, 'id'),
+    selectAllRows(supabase, 'word_progress', userId, 'word_id'),
+    selectAllRows(supabase, 'package_progress', userId, 'package_id'),
+    selectAllRows(supabase, 'daily_time', userId, 'date'),
+    selectAllRows(supabase, 'review_ledger', userId, 'date'),
   ])
 
-  const remoteSessions = (remoteSessionsRes.data ?? []).map(r => ({
+  const remoteSessions = remoteSessionRows.map(r => ({
     packageId: r.package_id, date: r.date, startedAt: r.started_at ?? undefined,
     wordsCompleted: r.words_completed, mode: r.mode, autoplayMode: r.autoplay_mode ?? undefined,
     trainMode: r.train_mode ?? undefined, durationSec: r.duration_sec ?? undefined,
   })) as Omit<Session, 'id'>[]
-  const remoteWords = (remoteWordsRes.data ?? []).map(r => ({
+  const remoteWords = remoteWordRows.map(r => ({
     wordId: r.word_id, packageId: r.package_id, seenCount: r.seen_count, lastSeen: r.last_seen, status: r.status,
     reviewCount: r.review_count ?? undefined, lapseCount: r.lapse_count ?? undefined,
     lastLapseAt: r.last_lapse_at ?? undefined, nextReviewAt: r.next_review_at ?? undefined,
@@ -158,13 +230,14 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
     stability: r.stability ?? undefined, difficulty: r.difficulty ?? undefined,
     declaredKnownAt: r.declared_known_at ?? undefined, declaredRetiredAt: r.declared_retired_at ?? undefined,
   })) as WordProgress[]
-  const remotePackages = (remotePackagesRes.data ?? []).map(r => ({
-    packageId: r.package_id, startedAt: r.started_at, completedAt: r.completed_at, masteredAt: r.mastered_at, currentIndex: r.current_index,
+  const remotePackages = remotePackageRows.map(r => ({
+    packageId: r.package_id, startedAt: r.started_at, completedAt: r.completed_at, masteredAt: r.mastered_at,
+    listenedAt: r.listened_at ?? null, currentIndex: r.current_index,
   })) as PackageProgress[]
-  const remoteDaily = (remoteDailyRes.data ?? []).map(r => ({
+  const remoteDaily = remoteDailyRows.map(r => ({
     date: r.date, secondsStudied: r.seconds_studied, goalSec: r.goal_sec, goalMetAt: r.goal_met_at ?? null,
   })) as DailyTime[]
-  const remoteLedger = (remoteLedgerRes.data ?? []).map(r => ({
+  const remoteLedger = remoteLedgerRows.map(r => ({
     date: r.date, cleared: !!r.cleared, clearedAt: r.cleared_at ?? null,
   })) as ReviewLedgerEntry[]
 
@@ -216,43 +289,51 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
     ...remoteOnlySessions.map(s => db.add('sessions', s as Session)),
   ])
 
-  await Promise.all([
-    mergedWords.length && supabase.from('word_progress').upsert(
-      mergedWords.map(w => ({
-        user_id: userId, word_id: w.wordId, package_id: w.packageId,
-        seen_count: w.seenCount, last_seen: w.lastSeen, status: w.status,
-        review_count: w.reviewCount, lapse_count: w.lapseCount,
-        last_lapse_at: w.lastLapseAt, next_review_at: w.nextReviewAt,
-        retired_at: w.retiredAt,
-        stability: w.stability, difficulty: w.difficulty,
-        declared_known_at: w.declaredKnownAt, declared_retired_at: w.declaredRetiredAt,
-      }))
-    ),
-    mergedPackages.length && supabase.from('package_progress').upsert(
-      mergedPackages.map(p => ({
-        user_id: userId, package_id: p.packageId, started_at: p.startedAt,
-        completed_at: p.completedAt, mastered_at: p.masteredAt, current_index: p.currentIndex,
-      }))
-    ),
-    mergedDaily.length && supabase.from('daily_time').upsert(
-      mergedDaily.map(d => ({
-        user_id: userId, date: d.date, seconds_studied: d.secondsStudied,
-        goal_sec: d.goalSec, goal_met_at: d.goalMetAt,
-      }))
-    ),
-    mergedLedger.length && supabase.from('review_ledger').upsert(
-      mergedLedger.map(e => ({
-        user_id: userId, date: e.date, cleared: e.cleared, cleared_at: e.clearedAt,
-      }))
-    ),
-    localOnlySessions.length && supabase.from('sessions').insert(
-      localOnlySessions.map(s => ({
+  // Batched and awaited. A committed learner merges thousands of word rows,
+  // and one upsert of all of them is a multi-megabyte body — previously fired
+  // and forgotten, so a rejection left the two sides silently disagreeing.
+  await upsertAll(supabase, 'word_progress', mergedWords.map(w => ({
+    user_id: userId, word_id: w.wordId, package_id: w.packageId,
+    seen_count: w.seenCount, last_seen: w.lastSeen, status: w.status,
+    review_count: w.reviewCount, lapse_count: w.lapseCount,
+    last_lapse_at: w.lastLapseAt, next_review_at: w.nextReviewAt,
+    retired_at: w.retiredAt,
+    stability: w.stability, difficulty: w.difficulty,
+    declared_known_at: w.declaredKnownAt, declared_retired_at: w.declaredRetiredAt,
+  })))
+  await upsertAll(supabase, 'package_progress', mergedPackages.map(p => ({
+    user_id: userId, package_id: p.packageId, started_at: p.startedAt,
+    completed_at: p.completedAt, mastered_at: p.masteredAt,
+    listened_at: p.listenedAt ?? null, current_index: p.currentIndex,
+  })))
+  await upsertAll(supabase, 'daily_time', mergedDaily.map(d => ({
+    user_id: userId, date: d.date, seconds_studied: d.secondsStudied,
+    goal_sec: d.goalSec, goal_met_at: d.goalMetAt,
+  })))
+  await upsertAll(supabase, 'review_ledger', mergedLedger.map(e => ({
+    user_id: userId, date: e.date, cleared: e.cleared, cleared_at: e.clearedAt,
+  })))
+
+  // Sessions are append-only, so this one inserts rather than upserts.
+  for (let i = 0; i < localOnlySessions.length; i += SYNC_BATCH) {
+    const { error } = await supabase.from('sessions').insert(
+      localOnlySessions.slice(i, i + SYNC_BATCH).map(s => ({
         user_id: userId, package_id: s.packageId, date: s.date, started_at: s.startedAt,
         words_completed: s.wordsCompleted, mode: s.mode, autoplay_mode: s.autoplayMode,
         train_mode: s.trainMode, duration_sec: s.durationSec,
       }))
-    ),
-  ])
+    )
+    if (error) throw new Error(`[progressSync] writing sessions failed: ${error.message}`)
+  }
+
+  // The merge can pull in rows written by a device that predates the listen
+  // axis, so the repair has to run on the merged result too — a boot-only pass
+  // would be undone by the next sign-in and never converge.
+  try { await repairListenAxis() } catch (err) { console.error('[listen] repair after merge failed:', err) }
+
+  // The account is demonstrably reachable right now, so this is the best
+  // moment to clear anything the mirrors couldn't deliver earlier.
+  try { await flushOutbox() } catch (err) { console.error('[progressSync] flush after merge failed:', err) }
 
   // Anything cached off the old local state (the always-mounted streak/points
   // widget, in-flight progress snapshots) is stale now.
