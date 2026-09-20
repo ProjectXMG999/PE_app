@@ -13,6 +13,7 @@ import { showToast } from '../services/toast'
 import { loadProgressSnapshot, packLevelOf } from '../hooks/useProgressData'
 import { dayKey } from '../utils/day'
 import { SmartSegment } from '../services/smartQueue'
+import { record as recordOutcome, summarize, CardOutcome } from '../services/smartOutcome'
 import { SmartInfoCard } from '../components/smart/SmartInfoCard'
 import { SmartProgressRail } from '../components/smart/SmartProgressRail'
 import { SmartDoneScreen, SmartSegmentTally } from '../components/smart/SmartDoneScreen'
@@ -75,6 +76,10 @@ export function SmartSessionPage() {
   const [comfortAfter, setComfortAfter] = useState(comfortBefore)
 
   const tallyRef = useRef<Record<SmartSegment, SmartSegmentTally>>(EMPTY_TALLY())
+  // What each answer did to the word's schedule — the done screen's "what
+  // changed" half. Kept out of `tallyRef` because it is nobody else's business:
+  // no signal, no Session row and no sync reads it.
+  const outcomesRef = useRef<CardOutcome[]>([])
   // Scheduled re-checks only — the reviewHealth signal, kept apart from the
   // per-segment tally the done screen shows.
   const retentionRef = useRef({ rated: 0, known: 0 })
@@ -259,6 +264,12 @@ export function SmartSessionPage() {
     const t = tallyRef.current[card.segment]
     t.rated += 1
     if (recalled) t.known += 1
+    outcomesRef.current.push(recordOutcome({
+      segment: card.segment,
+      before: card.progress,
+      after: updated,
+      recalled,
+    }))
     if (measuresRetention(card.segment, card.progress)) {
       retentionRef.current.rated += 1
       if (recalled) retentionRef.current.known += 1
@@ -273,6 +284,7 @@ export function SmartSessionPage() {
     setDone(false)
     setLevelUpTarget(null)
     tallyRef.current = EMPTY_TALLY()
+    outcomesRef.current = []
     retentionRef.current = { rated: 0, known: 0 }
     packsRef.current = new Set()
     sessionEndedRef.current = false
@@ -330,6 +342,7 @@ export function SmartSessionPage() {
         <>
           <SmartDoneScreen
             tally={tallyRef.current}
+            outcome={summarize(outcomesRef.current)}
             comfortBefore={comfortBefore}
             comfortAfter={comfortAfter}
             level={sessionLevel}

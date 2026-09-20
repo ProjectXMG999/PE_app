@@ -89,6 +89,98 @@
   color: oklch(1 0 0 / 0.65);
 }
 
+/* ── Horizon: when the session's words come back ───────────────────────────
+   The one block on this screen that reports a CHANGE rather than a count.
+   Five fixed buckets (HORIZON_BUCKETS in smartOutcome.ts) so the scale means
+   the same thing every session and the mass can be seen moving right over
+   time — a chart that rescaled itself to each sitting would hide exactly the
+   trend it exists to show. */
+.smartdone__horizon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.smartdone__horizon-head {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: oklch(1 0 0 / 0.55);
+}
+
+.smartdone__horizon-chart {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: end;
+  gap: 6px;
+  width: 100%;
+}
+
+.smartdone__horizon-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.smartdone__horizon-count {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  /* Holds the row even for an empty bucket, so bars sit on one baseline. */
+  min-height: 1em;
+}
+
+.smartdone__horizon-bar {
+  width: 100%;
+  max-width: 34px;
+  border-radius: 4px 4px 2px 2px;
+  background: linear-gradient(180deg, var(--accent-bright), var(--accent));
+}
+
+/* An empty bucket keeps its column and its label — the gap in the distribution
+   is information — but draws a track rather than a bar of height zero. */
+.smartdone__horizon-bar.is-empty {
+  height: 3px;
+  background: oklch(1 0 0 / 0.12);
+}
+
+.smartdone__horizon-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+  color: oklch(1 0 0 / 0.5);
+}
+
+.smartdone__shift {
+  margin: 0;
+  max-width: 34ch;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: oklch(1 0 0 / 0.8);
+}
+
+.smartdone__shift strong {
+  color: #fff;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.smartdone__note {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: oklch(1 0 0 / 0.6);
+}
+
 /* How well the difficulty fits, as a named band on a five-step meter rather
    than the loop's raw setpoint. See FIT_COPY in SmartDoneScreen.tsx. */
 .smartdone__fit {
