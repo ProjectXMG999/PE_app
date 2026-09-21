@@ -421,8 +421,10 @@ export function TodayPage() {
         {levelPickerOpen && (
           <LevelPicker
             current={todayLevel}
-            /* The sheet closes itself once the marker has moved — see LevelPicker. */
-            onSelect={l => { setTodayLevel(l); playTick(); haptics.tap() }}
+            /* Fires once the sheet has closed, and the sheet plays its own tap
+               feedback — re-scoping the whole page on the tap itself is what
+               made the marker stutter. See the note on `choose` in LevelPicker. */
+            onSelect={setTodayLevel}
             onClose={() => setLevelPickerOpen(false)}
           />
         )}

@@ -1,12 +1,14 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Sheet, sheetRise, sheetRiseReduced, type SheetHandle } from '../shared/Sheet'
 import { LEVEL_COLORS, LEVEL_META } from '../../data/levels'
+import { playTick } from '../../services/sfx'
 import { SPRING_SNAPPY } from './motion'
 import './LevelPicker.css'
 
 interface Props {
   current: number | null
+  /** Fired ONCE, after the sheet has closed — see `choose` below. */
   onSelect: (level: number) => void
   onClose: () => void
 }
@@ -27,6 +29,8 @@ export function LevelPicker({ current, onSelect, onClose }: Props) {
   const timer = useRef<number>()
   const reduced = useReducedMotion()
   const rise = reduced ? sheetRiseReduced : sheetRise
+  /** What the marker is on. Local, so the tap moves it and nothing else. */
+  const [picked, setPicked] = useState(current)
 
   useEffect(() => () => window.clearTimeout(timer.current), [])
 
@@ -36,16 +40,41 @@ export function LevelPicker({ current, onSelect, onClose }: Props) {
    * was never on screen: the sheet blinked out and you were back on Dzisiaj,
    * trusting that the tap landed. Now the marker travels to the row, and the
    * sheet leaves on its own animation a beat later, having shown its answer.
+   *
+   * And the choice is COMMITTED on the way out, not on the tap.
+   *
+   * Dzisiaj's floor is `todayLevel`: changing it re-scopes the catalogue and
+   * re-derives every recommendation on the page — the route slice, the
+   * frontier, both next-pack picks, the backlog count, the session preview.
+   * Measured on a phone-class CPU that landed as a 58 ms frame on the second
+   * frame of the marker's spring, which is the stutter: the marker is a
+   * JS-driven animation, so it simply stops for the length of that render.
+   * (The goal picker sets one number nothing re-scopes — hence 34 ms, hence
+   * smooth. The difference was never the motion; it was the work behind it.)
+   *
+   * The marker runs off local state, so the tap re-renders this sheet and
+   * nothing else, and the page recomputes once the sheet has gone.
    */
   function choose(level: number) {
-    if (level === current) return
-    onSelect(level)
+    if (level === picked) return
+    setPicked(level)
+    playTick()
+    navigator.vibrate?.(6)
     window.clearTimeout(timer.current)
     timer.current = window.setTimeout(() => sheet.current?.close(), reduced ? 0 : 320)
   }
 
   return (
-    <Sheet ref={sheet} onClose={onClose} className="levelpicker__inner">
+    <Sheet
+      ref={sheet}
+      onClose={() => {
+        // Covers every way out — the auto-close above, Escape, the backdrop,
+        // a flick — so a choice can't be lost by leaving the sheet quickly.
+        if (picked != null && picked !== current) onSelect(picked)
+        onClose()
+      }}
+      className="levelpicker__inner"
+    >
       <motion.h2 className="levelpicker__title" variants={rise}>
         Od którego poziomu zacząć?
       </motion.h2>
@@ -60,7 +89,7 @@ export function LevelPicker({ current, onSelect, onClose }: Props) {
         variants={rise}
       >
         {LEVEL_META.map(l => {
-          const active = l.level === current
+          const active = l.level === picked
           return (
             <button
               key={l.level}

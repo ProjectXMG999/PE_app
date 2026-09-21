@@ -49,11 +49,20 @@
   cursor: pointer;
   isolation: isolate;
   -webkit-tap-highlight-color: transparent;
-  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
+/* Press feedback is COLOUR here, not scale — and that is not a style choice.
+   The marker inside this button is laid out by Framer's projection, which
+   measures the destination row with getBoundingClientRect. A CSS transform on
+   the row is baked into that rectangle, so a row pressed at 0.98 was measured
+   2% small: the marker sprang toward a box that then eased back to full size
+   under it over the same 150 ms, and landed by snapping. That is the stutter —
+   the goal picker's thumb is smooth because its cells never transform.
+   Anything that moves this row must move the marker with it, or not exist. */
 .levelpicker__option:active {
-  transform: scale(0.98);
+  background: color-mix(in oklch, var(--accent) 8%, var(--bg-card));
+  border-color: color-mix(in oklch, var(--accent) 45%, var(--border));
 }
 
 .levelpicker__option:focus-visible {
