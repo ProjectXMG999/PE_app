@@ -111,6 +111,21 @@ function viewTransitions(): StartViewTransition | null {
  * worse than no transition. Those navigate plainly and kick off the fetch —
  * see pageChunks, which makes this rare.
  */
+/**
+ * The transition currently running, if any.
+ *
+ * Rapid tapping used to be the most expensive thing you could do to this app.
+ * Nothing here guarded against overlap — `pending`/`popTimer` below exist only
+ * for history pops — so a second tap inside the 260 ms window simply called
+ * `startViewTransition` again. Per spec that ABANDONS the running one, which
+ * means everything it had already paid for is thrown away: two full-viewport
+ * captures (~12 MB each at DPR 3, and the outgoing one has to paint the live
+ * WebGL background and every backdrop-filter surface first), a synchronous
+ * React commit, and the pseudo-element tree. Three taps in half a second bought
+ * six captures to show one animation.
+ */
+let active: ViewTransition | null = null
+
 export function navigateWithTransition(dir: NavDirection, to: string, navigate: () => void) {
   markDirection(dir)
   const start = viewTransitions()
@@ -119,7 +134,27 @@ export function navigateWithTransition(dir: NavDirection, to: string, navigate: 
     navigate()
     return
   }
-  start(() => { flushSync(navigate) })
+
+  // Already mid-transition: end it and move plainly rather than photographing
+  // the screen twice more for an animation the next tap will abandon anyway.
+  // `skipTransition` jumps to the end state, so the screen lands on the page
+  // that was in flight and then on this one — which is what tapping quickly
+  // asks for. Stop tapping and the very next navigation animates normally.
+  if (active) {
+    active.skipTransition()
+    active = null
+    navigate()
+    return
+  }
+
+  const t = start(() => { flushSync(navigate) })
+  active = t
+  // Two-argument form, not `.catch`: `finished` rejects if the update callback
+  // throws, and an unhandled rejection here would be noise on a path that has
+  // already done its job. Guarded on identity so a transition that was
+  // superseded can't clear its successor.
+  const clear = () => { if (active === t) active = null }
+  t.finished.then(clear, clear)
 }
 
 /**
