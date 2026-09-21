@@ -352,10 +352,17 @@ export function StatsPage() {
 
         <section className="statspage__section">
           <h2 className="statspage__section-title">Ostatnio odwiedzone</h2>
+          {/* `tick || undefined` below, not `tick`. useProgressData treats ANY
+              defined refreshKey as "force a fresh read", and `tick` starts at
+              0 — which is defined. So this list forced a second full
+              fetchSnapshot (six getAll()s, ~11 000 rows, four passes) on every
+              visit, and reset the dedupe window while it was at it, so the next
+              page paid for a cold read too. HomePage:120 already spells the
+              idiom out for the same reason. */}
           {loading ? (
             <div className="statspage__skeleton skeleton" style={{ height: 80 }} />
           ) : (
-            <PackageProgressList limit={5} refreshKey={tick} />
+            <PackageProgressList limit={5} refreshKey={tick || undefined} />
           )}
         </section>
       </div>
