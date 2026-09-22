@@ -47,15 +47,18 @@
      note on --ambient-strength there), and this raise is measured into that:
      4.5:1 for secondary text reading off the ground at its worst pool.
 
-     Pulled back from 58/50/44 when the shader went to seven stops. This layer
-     has no structure — it is three static blobs covering most of the screen —
-     so it was the half of the composite that could not be black, and at 28%
-     of the result (1 − --ambient-strength) it was quietly filling in exactly
-     the space the extra ink stops had just cleared. */
+     Pulled back hard — 58/50/44 to 26/20/18 — when the shader gained its
+     response curve. This layer has no structure (three static blobs covering
+     most of the screen) and no curve, so it is the half of the composite that
+     cannot be black; at 28% of the result (1 − --ambient-strength) it was
+     filling in exactly the space the curve had just cleared, and the screen
+     kept a navy floor under the currents instead of ink. It is still the same
+     three pools in the same three places, just far enough down to be a floor
+     rather than a wash. */
   background:
-    radial-gradient(54% 40% at 20% 10%, color-mix(in oklch, var(--mesh-2) 44%, transparent) 0%, transparent 58%),
-    radial-gradient(48% 38% at 88% 4%, color-mix(in oklch, var(--mesh-6) 36%, transparent) 0%, transparent 62%),
-    radial-gradient(66% 46% at 64% 100%, color-mix(in oklch, var(--mesh-4) 32%, transparent) 0%, transparent 64%),
+    radial-gradient(54% 40% at 20% 10%, color-mix(in oklch, var(--mesh-2) 26%, transparent) 0%, transparent 58%),
+    radial-gradient(48% 38% at 88% 4%, color-mix(in oklch, var(--mesh-6) 20%, transparent) 0%, transparent 62%),
+    radial-gradient(66% 46% at 64% 100%, color-mix(in oklch, var(--mesh-4) 18%, transparent) 0%, transparent 64%),
     var(--bg-primary);
 }
 
@@ -74,6 +77,31 @@
   inset: 0;
   opacity: 0;
   transition: opacity 900ms var(--ease-out-expo);
+  /* The response curve, and the reason most of the screen is black.
+
+     The shader blends one drifting site per stop by inverse distance, so every
+     pixel is a weighted AVERAGE of the whole palette — which means the space
+     between the pools can never be darker than that average. Adding ink stops
+     lowers the average, but it lowers it everywhere: measured, going from 3
+     colour : 2 ink to 1 colour : 6 ink took the median from 0.26 to 0.14 of
+     lightness and the pools' chroma down with it, 0.080 to 0.041. Blacker and
+     duller, when what we want is blacker and no duller.
+
+     A curve does what a palette can't, because it is not linear. contrast()
+     pivots each channel around 0.5: the mid-dark field at ~0.20 collapses to
+     near zero while a pool at ~0.40 keeps about four fifths of itself, and the
+     channels of anything coloured spread APART, so the pools gain saturation
+     as the field loses light. Measured against the same palette without it:
+     black area (L < 0.12) 3% → 72%, pool chroma p90 0.056 → 0.079.
+
+     1.5, not 1.9: at 1.9 the field is 94% black but the currents go with it
+     (chroma p90 0.022) and the background stops moving, which is the one thing
+     it is for. The saturate() is a small top-up, not the mechanism.
+
+     Cheap in a way blur is not — a per-pixel colour matrix, no neighbourhood
+     sampling — and it replaces nothing: the canvas was already its own
+     composited layer because of the opacity below. */
+  filter: contrast(1.5) saturate(1.15);
 }
 
 .ambient__field--ready {

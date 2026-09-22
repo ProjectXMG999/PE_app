@@ -121,12 +121,35 @@
      while the ink stops stayed on the floor. That is deliberately the opposite
      of turning the whole thing up: the ink is what the colour is measured
      against, so widening the gap between the two halves of the palette is what
-     makes the currents read, and it costs the blacks nothing. */
+     makes the currents read, and it costs the blacks nothing.
+
+     SEVEN stops, not five, and this is the knob for how much of the screen is
+     black. The shader is an inverse-distance blend of one drifting site per
+     stop (weight = 1/dist^3.5, mesh-gradient.js): every fragment is a weighted
+     average of all of them, so what fills the space BETWEEN the pools is
+     whatever the list is mostly made of. At 3 colour : 2 ink the average was
+     coloured and the bottom half of the screen was a continuous indigo wash
+     with the pools sitting in it. At 3 colour : 4 ink the same three pools
+     burn just as bright — their own site still dominates nearby — and the
+     field between them falls to ink.
+
+     So: to make the background blacker, add ink stops. To make the colour
+     stronger, raise the chromatic ones. Those are now separate knobs, which
+     they were not when the ratio was fixed at 3:2.
+
+     Violet and teal are brighter again (L 0.46 → 0.56 and 0.43 → 0.56) because
+     the response curve below spends most of its range on the dark half: with
+     the field crushed to black, a stop at the old lightness came out as a
+     grey-violet smudge rather than a current. Indigo deliberately stays where
+     it was — three stops at the top of the range is a light show, and this one
+     is the wide, slow one that fills the space the other two are not in. */
   --mesh-1: #000001;  /* ink */
-  --mesh-2: #5e3baf;  /* violet — --accent hue,        oklch(0.46 0.175 292) */
+  --mesh-2: #7d4fe0;  /* violet — --accent hue,        oklch(0.56 0.209 293) */
   --mesh-3: #010103;  /* ink */
-  --mesh-4: #015b63;  /* teal — --live hue,            oklch(0.43 0.073 205) */
-  --mesh-5: #2d308d;  /* indigo — --accent-indigo hue, oklch(0.37 0.151 275) */
+  --mesh-4: #01838f;  /* teal — --live hue,            oklch(0.56 0.095 206) */
+  --mesh-5: #000002;  /* ink */
+  --mesh-6: #2d308d;  /* indigo — --accent-indigo hue, oklch(0.37 0.151 275) */
+  --mesh-7: #010102;  /* ink */
   /* How far the shader canvas is allowed to come up over the flat ground. The
      stops alternate ink and colour, so raising this deepens the blacks at the
      same rate it brightens the currents — it buys contrast, not tint.
@@ -648,10 +671,12 @@
      theme's 0.72 the same pool falls to 3.7:1, which is under AA for small
      text. So light keeps 0.5 and takes its extra presence from the stops. */
   --mesh-1: #ffffff;  /* paper — mirrors ink #000001 */
-  --mesh-2: #7f60d7;  /* violet — mirrors #5e3baf */
+  --mesh-2: #6835c6;  /* violet — mirrors #7d4fe0 */
   --mesh-3: #f3f4f9;  /* paper — mirrors ink #010103 */
-  --mesh-4: #38929b;  /* teal — mirrors #015b63 */
-  --mesh-5: #7b8bf0;  /* indigo — mirrors #2d308d */
+  --mesh-4: #066b75;  /* teal — mirrors #01838f */
+  --mesh-5: #fefeff;  /* paper — mirrors ink #000002 */
+  --mesh-6: #7b8bf0;  /* indigo — mirrors #2d308d */
+  --mesh-7: #f4f4f9;  /* paper — mirrors ink #010102 */
   --ambient-strength: 0.5;
   --ambient-grain: 0.05;
 

@@ -33,11 +33,15 @@ import './AmbientBackground.css'
  */
 const MeshField = lazy(() => import('./MeshField'))
 
-const MESH_TOKENS = ['--mesh-1', '--mesh-2', '--mesh-3', '--mesh-4', '--mesh-5']
+/** Seven, and the count is load-bearing rather than incidental: the shader
+ *  averages one drifting site per stop, so the ink:colour ratio in this list is
+ *  what decides how much of the screen is black between the pools. See the
+ *  --mesh-* note in tokens.css. */
+const MESH_TOKENS = ['--mesh-1', '--mesh-2', '--mesh-3', '--mesh-4', '--mesh-5', '--mesh-6', '--mesh-7']
 
-/** Used if the tokens can't be read — the dark palette, so a failure looks like
- *  the app rather than like a bug. */
-const FALLBACK_COLORS = ['#080612', '#1a1442', '#241155', '#081a2c', '#080612']
+/** Used if the tokens can't be read — the dark palette at the same ratio, so a
+ *  failure looks like the app rather than like a bug. */
+const FALLBACK_COLORS = ['#000001', '#5e3baf', '#010103', '#015b63', '#000002', '#2d308d', '#010102']
 
 function readMeshColors(): string[] {
   const cs = getComputedStyle(document.documentElement)
