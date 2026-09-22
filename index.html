@@ -81,13 +81,25 @@
     <meta name="description" content="Progress — nauka angielskiego offline" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <!-- NOT black-translucent: on Dynamic Island iPhones that legacy mode left
-         the standalone viewport ~59px short of the physical bottom (content
-         drew under the status bar but height stayed screen − statusbar), so a
-         black band sat below everything fixed. `default` gives a normal
-         full-height viewport; viewport-fit=cover still lets content into the
-         home-indicator area. -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <!-- black-translucent is the ONLY value that puts the app's own background
+         under the status bar. `default` and `black` both hand the strip to iOS,
+         which paints it itself — a flat black band above the app, and
+         env(safe-area-inset-top) reads 0 because the web view starts below it.
+         theme-color does not help: iOS ignores it here (it still drives the
+         Android address-bar tint, which is why it is still maintained).
+
+         With this, the web view is the whole screen, safe-area-inset-top
+         becomes ~59px, and --topbar-reserve in tokens.css grows the bar to
+         cover the strip so the ambient runs up behind the clock.
+
+         Two things to watch, both iOS-side and neither fixable from CSS:
+         WebKit has historically sized the installed view to screen height
+         minus the top inset, anchored at the top, leaving the bottom strip
+         outside the view; and the status-bar glyphs are always white, which
+         the light theme has no answer for. Note also that iOS freezes
+         apple-mobile-web-app-* at install time — changing this value does
+         nothing until the home-screen icon is deleted and re-added. -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <!-- The label under the icon on an iOS home screen. "PE" was left over from
          the old identity, so an installed app showed one brand on its icon and
          another on every screen inside. -->
