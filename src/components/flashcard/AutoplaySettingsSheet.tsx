@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Sheet, useSheetMotion, type SheetHandle } from '../shared/Sheet'
+import { Toggle } from '../settings/PrefsList'
 import { useAppStore } from '../../store/useAppStore'
 import { RATES } from '../../constants/audioRates'
 import { SPRING_SNAPPY } from '../today/motion'
@@ -11,16 +12,23 @@ interface Props {
 }
 
 /**
- * Bottom sheet with live playback-speed controls. Deliberately does NOT pause
- * playback — rates apply from the next clip, so the user tunes while listening.
+ * Bottom sheet with the live controls for a running listening session: playback
+ * speed and the background pad. Deliberately does NOT pause playback — rates
+ * apply from the next clip, so the user tunes while listening.
  *
  * The speed pills are a segmented control like the goal picker's: one thumb
  * slides to the rate you picked. You are adjusting something that is running,
  * and a marker that travels says "this one now" far better than two pills
  * swapping colour while audio plays on.
+ *
+ * The pad switch is the same store value as the one in Ustawienia, not a
+ * session-local copy — someone who turns the pad off mid-session means it, and
+ * finding it back on tomorrow would read as the switch not having worked. It
+ * takes effect immediately: FlashcardPage keys the pad off this flag, so the
+ * drone fades out under the finger rather than at the next card.
  */
 export function AutoplaySettingsSheet({ onClose }: Props) {
-  const { enRate, plRate, setEnRate, setPlRate } = useAppStore()
+  const { enRate, plRate, setEnRate, setPlRate, studyPadEnabled, setStudyPadEnabled } = useAppStore()
   const sheet = useRef<SheetHandle>(null)
   const { reduced, rise, tap } = useSheetMotion()
 
@@ -89,8 +97,16 @@ export function AutoplaySettingsSheet({ onClose }: Props) {
       {rateRow('en', 'Tempo angielskiego', 'słowa i zdania EN', 'Tempo audio angielskiego', enRate, setEnRate)}
       {rateRow('pl', 'Tempo polskiego', 'słowa i zdania PL', 'Tempo audio polskiego', plRate, setPlRate)}
 
+      <motion.div className="aps-sheet__row aps-sheet__row--inline" variants={rise}>
+        <div className="aps-sheet__row-label">
+          <span className="aps-sheet__row-name">Muzyka w tle</span>
+          <span className="aps-sheet__row-hint">Cichy oddech w przerwach między nagraniami</span>
+        </div>
+        <Toggle on={studyPadEnabled} onChange={setStudyPadEnabled} label="Muzyka w tle" />
+      </motion.div>
+
       <motion.p className="aps-sheet__note" variants={rise}>
-        Zmiany działają od następnego nagrania
+        Tempo działa od następnego nagrania
       </motion.p>
     </Sheet>
   )

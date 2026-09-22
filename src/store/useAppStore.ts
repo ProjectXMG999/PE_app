@@ -160,8 +160,8 @@ interface AppStore {
   soundEnabled: boolean
   setSoundEnabled: (v: boolean) => void
 
-  /** The quiet drone under Słuchaj (audio/studyPad.ts). On by default — it is
-   *  the intended texture of the listening mode, and at −30 dB it sits under
+  /** The breathing pad under Słuchaj (audio/studyPad.ts). On by default — it is
+   *  the intended texture of the listening mode, and at −38 dB it sits under
    *  the voice rather than beside it. One toggle in Ustawienia turns it off for
    *  anyone who studies in silence. */
   studyPadEnabled: boolean

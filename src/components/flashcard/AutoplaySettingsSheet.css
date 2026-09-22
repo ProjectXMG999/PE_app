@@ -52,6 +52,16 @@
   padding-top: var(--spacing-md);
 }
 
+/* Boolean rows read label-left / switch-right. Only the rate rows need the
+   full width below their label — a switch stretched across it would look like
+   it was waiting for something. */
+.aps-sheet__row--inline {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
 .aps-sheet__row-label {
   display: flex;
   flex-direction: column;

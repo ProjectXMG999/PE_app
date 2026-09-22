@@ -99,10 +99,10 @@ export function SettingsPage() {
           />
           <Row
             inline
-            name="Podkład w tle"
-            hint="Cichy dźwięk wypełniający ciszę między słowami w trybie Słuchaj"
+            name="Muzyka w tle"
+            hint="Cichy oddech wypełniający ciszę między słowami w trybie Słuchaj"
             control={
-              <Toggle on={studyPadEnabled} onChange={setStudyPadEnabled} label="Podkład w tle" />
+              <Toggle on={studyPadEnabled} onChange={setStudyPadEnabled} label="Muzyka w tle" />
             }
           />
         </Section>
