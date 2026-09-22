@@ -12,6 +12,27 @@ const TIER_RANK: Record<AchievementTier, number> = { bronze: 0, silver: 1, gold:
 const DELAY_MS = 900
 const DAILY_TIME_DELAY_MS = 15_000
 
+/**
+ * A single rated card gets a much longer fuse than a session boundary does.
+ *
+ * `run()` is expensive — `evaluateAchievementsNow` is a cold
+ * `loadProgressSnapshot` plus three more `getAll`s plus a pass over all 834
+ * packs and every session. At 900ms it fired once per answered card, because a
+ * learner rating a card every ~3s never lands two writes inside the fuse.
+ *
+ * Deferring costs nothing visible, and that is not a guess: `ToastHost` already
+ * refuses to show an achievement toast while a session is running (it filters
+ * on `inSession`, keeping everything but `kind: 'note'` queued). So a badge
+ * evaluated on card 12 sits in the queue until the session ends anyway. The
+ * expensive mid-session evaluation was buying a celebration nobody could see.
+ *
+ * What makes the long fuse safe is `schedule`'s earliest-deadline rule below:
+ * finishing or abandoning a session emits `'session'` (via `saveSession`),
+ * which pulls the timer back in to DELAY_MS. So the badge still lands about a
+ * second after the session ends — exactly when the toast would have surfaced.
+ */
+const WORD_DELAY_MS = 20_000
+
 /** Of several badges earned at once, the one to headline: highest tier, then
  *  the hardest threshold within it. */
 function headline(fresh: AchievementState[]): AchievementState {
@@ -92,7 +113,11 @@ export function AchievementWatcher() {
       // another device's history. Re-baseline silently instead of announcing
       // every badge that history happens to contain.
       if (kind === 'reset') primed = false
-      schedule(kind === 'dailyTime' ? DAILY_TIME_DELAY_MS : DELAY_MS)
+      schedule(
+        kind === 'word' ? WORD_DELAY_MS
+        : kind === 'dailyTime' ? DAILY_TIME_DELAY_MS
+        : DELAY_MS
+      )
     })
 
     return () => {

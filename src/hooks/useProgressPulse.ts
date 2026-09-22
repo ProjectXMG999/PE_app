@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { loadProgressSnapshot } from './useProgressData'
 import { getAllDailyTime, getLongestStreak } from '../services/db'
-import { subscribeProgress } from '../services/progressEvents'
+import { subscribeProgress, type ProgressEventKind } from '../services/progressEvents'
 import { computePoints } from '../services/points'
 import { ReviewUrgency } from '../services/reviewQueue'
 import { todayProgress } from '../services/dailyTime'
@@ -58,6 +58,54 @@ const CACHE_MS = 60_000
  */
 const REFRESH_DEBOUNCE_MS = 250
 
+/**
+ * …and a debounce alone turned out not to be enough.
+ *
+ * A debounce coalesces a burst. It does nothing about a steady cadence: a
+ * learner answering a card every ~3 s re-armed the 250 ms timer, it expired
+ * between cards, and the full refresh ran once per card after all — a cold
+ * `loadProgressSnapshot` (six `getAll`s, ~11 000 rows deserialised on the main
+ * thread) plus `getAllDailyTime`, `getLongestStreak`, `todayProgress` and
+ * `computePoints`, in the middle of a study session. What is needed is a
+ * MINIMUM INTERVAL, and only for the kinds that can afford one.
+ *
+ * `'word'` and `'dailyTime'` are the per-card drip. Everything else is a
+ * boundary the user can point at — finishing a session, a pack completing, a
+ * level declaration, a sign-in merge — and those stay immediate.
+ *
+ * The split is safe because of an invariant worth stating: **every bulk write
+ * in the app already emits a `package` or `reset` alongside its `word`
+ * events.** "Znam wszystko" writes the words then the package; level mastery
+ * and its undo emit both; a merge emits `reset`. So the only thing that can go
+ * stale is the points figure between single cards, and only for QUIET_MS. The
+ * streak cannot move mid-session at all — `getStreak` is day-granular, and the
+ * day is already marked by the `dailyTime` write.
+ */
+const QUIET_MS = 15_000
+
+/** Kinds that must be reflected at once. Not a performance judgement — these
+ *  are the moments a user would notice a number failing to move. */
+const IMMEDIATE: ReadonlySet<ProgressEventKind> = new Set<ProgressEventKind>([
+  'session', 'package', 'reset', 'reviewLedger',
+])
+
+/**
+ * How long to wait before refreshing, given what just changed.
+ *
+ * Exported for its test: the case that would silently regress is a `'word'`
+ * followed by a `'package'` — the pair a bulk declaration emits — where the
+ * second must pull the refresh in to 250 ms rather than inheriting the first's
+ * long fuse.
+ */
+export function refreshDelayFor(
+  kind: ProgressEventKind,
+  now: number,
+  lastRefreshAt: number,
+): number {
+  if (IMMEDIATE.has(kind)) return REFRESH_DEBOUNCE_MS
+  return Math.max(REFRESH_DEBOUNCE_MS, QUIET_MS - (now - lastRefreshAt))
+}
+
 let cached: ProgressPulse | null = null
 let cachedAt = 0
 let inflight: Promise<ProgressPulse> | null = null
@@ -65,26 +113,41 @@ let inflight: Promise<ProgressPulse> | null = null
  *  install its now-stale result as the cache when it finally resolves. */
 let generation = 0
 let refreshTimer: ReturnType<typeof setTimeout> | null = null
+/** When the pending refresh is due, so an immediate kind arriving after a quiet
+ *  one can pull it in rather than being pushed back behind it. */
+let refreshDue = Infinity
+let lastRefreshAt = 0
 
 const subscribers = new Set<(p: ProgressPulse) => void>()
 
-subscribeProgress(() => {
-  // Invalidate immediately — correctness can't wait for the debounce, or a read
-  // landing inside the window would be served pre-write numbers.
+subscribeProgress(kind => {
+  // Invalidate immediately, on EVERY kind. This is the correctness anchor the
+  // 60s snapshot cache rests on and it costs nothing — only the refresh below
+  // is rescheduled. A page mounting after any write still reads fresh.
   generation++
   cached = null
   cachedAt = 0
   inflight = null
 
-  // The refresh itself can wait. Nobody is subscribed on the screens that write
-  // the most, and when someone is, the last write in a burst is the only one
+  // The refresh itself can wait. Nobody is subscribed on four of the five
+  // session screens — only Fiszki mounts AppShell, so only there is the pill
+  // on screen — and when someone is, the last write in a run is the only one
   // whose result is worth computing.
   if (subscribers.size === 0) return
+
+  const delay = refreshDelayFor(kind, Date.now(), lastRefreshAt)
+  const at = Date.now() + delay
+  // Earliest deadline wins, same rule AchievementWatcher.schedule uses: a
+  // `package` landing after a `word` must bring the refresh forward.
+  if (refreshTimer != null && at >= refreshDue) return
   if (refreshTimer != null) clearTimeout(refreshTimer)
+  refreshDue = at
   refreshTimer = setTimeout(() => {
     refreshTimer = null
+    refreshDue = Infinity
+    lastRefreshAt = Date.now()
     void load().then(p => subscribers.forEach(fn => fn(p)))
-  }, REFRESH_DEBOUNCE_MS)
+  }, delay)
 })
 
 async function load(): Promise<ProgressPulse> {
