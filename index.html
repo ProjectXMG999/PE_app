@@ -11,8 +11,21 @@
          (global.css). -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <!-- Dark = app base colour. Also the opaque status-bar background in an
-         installed iOS PWA now that black-translucent is gone (see below). -->
-    <meta name="theme-color" content="#010102" />
+         installed iOS PWA now that black-translucent is gone (see below).
+
+         NOT a `media="(prefers-color-scheme: …)"` pair, for two reasons. The
+         app's theme is a STORED preference, not the OS one, so a media tag
+         would show the wrong band to anyone whose choice disagrees with their
+         phone — which is the bug this is here to fix, reintroduced through the
+         fallback. And because the UA uses the first tag whose media matches, a
+         pair would always match and silently swallow the runtime update
+         App.tsx makes on every theme flip.
+
+         One tag, rewritten by the script below before first paint and by
+         App.tsx thereafter. The two hexes are the only copies not read from
+         --theme-color-meta in tokens.css — no stylesheet exists yet this early
+         in the parse. Keep all three in step. -->
+    <meta name="theme-color" id="theme-color" content="#010102" />
     <script>
       try {
         var s = JSON.parse(localStorage.getItem('pe-store') || '{}')
@@ -23,6 +36,12 @@
         if (t === 'light') {
           document.documentElement.setAttribute('data-theme', 'light')
         }
+        // Same reason the line above exists. Without it the band is dark for
+        // the ~100ms until React's theme effect runs — and iOS ANIMATES a
+        // theme-color change, so that shows up as a visible dark flash at the
+        // top of a light-theme launch rather than as nothing at all.
+        document.getElementById('theme-color').content =
+          t === 'light' ? '#f4f5f9' : '#010102'
       } catch(e) {}
     </script>
     <meta name="description" content="Progress — nauka angielskiego offline" />

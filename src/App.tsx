@@ -14,6 +14,9 @@ import { flushOutbox } from './services/db'
 import './debug/seedProgress'
 // Dev-only: auto signs into the local test account on boot. Also DEV-guarded.
 import './debug/devAutoLogin'
+// Dev-only: ?safe=59 or window.__safe(59) fakes a Dynamic Island's insets so
+// the safe-area work is visible in a desktop browser. Also DEV-guarded.
+import './debug/safeArea'
 import { DebugOverlay } from './components/debug/DebugOverlay'
 import { RequireEntitlement } from './components/auth/RequireEntitlement'
 import { LoadingFallback } from './components/shared/LoadingFallback'
@@ -73,6 +76,19 @@ export function App() {
     const apply = () => {
       el.classList.add('no-transition')
       el.setAttribute('data-theme', resolveTheme(theme))
+      // The iOS status-bar band and the Chrome-on-Android address-bar tint.
+      // It isn't CSS, so it doesn't follow [data-theme] on its own — before
+      // this it was a static #010102 in index.html and the light theme ran
+      // with a black band above a near-white app. Read from
+      // --theme-color-meta rather than hard-coded here so the colour keeps one
+      // home in tokens.css; the setAttribute above has already invalidated
+      // style and getComputedStyle forces the recalc, so this reads the NEW
+      // theme's value in the same tick.
+      const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]')
+      if (meta) {
+        const c = getComputedStyle(el).getPropertyValue('--theme-color-meta').trim()
+        if (c) meta.content = c
+      }
       // One rAF to let the attribute apply, then remove the class so transitions resume
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
