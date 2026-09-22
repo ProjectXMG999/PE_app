@@ -282,6 +282,7 @@ describe('composeSmartSteps', () => {
       size: sizeOf(4),
       quota: { learn: 3, review: 1, stretch: 0 },
       reviewRatio: SMART.REVIEW_RATIO,
+      learnExhausted: false,
       tone: null,
       learnPackIds: ['p1'],
       stretchPackId: null,
@@ -303,6 +304,7 @@ describe('composeSmartSteps', () => {
       size: sizeOf(6),
       quota: { learn: 3, review: 1, stretch: 2 },
       reviewRatio: SMART.REVIEW_RATIO,
+      learnExhausted: false,
       tone: null,
       learnPackIds: ['p1'],
       stretchPackId: 'p2',
@@ -342,6 +344,7 @@ describe('composeSmartSteps', () => {
       // info card at step 0.
       quota: { learn: 0, review: 3, stretch: 0 },
       reviewRatio: SMART.REVIEW_RATIO,
+      learnExhausted: false,
       tone: null,
       learnPackIds: ['p1'],
       stretchPackId: null,
@@ -372,6 +375,7 @@ describe('composeSmartSteps', () => {
       size: sizeOf(2),
       quota: { learn: 0, review: 0, stretch: 2 },
       reviewRatio: SMART.REVIEW_RATIO,
+      learnExhausted: false,
       tone: null,
       learnPackIds: ['p1'],
       stretchPackId: 'p2',
@@ -397,6 +401,7 @@ describe('composeSmartSteps', () => {
       size: sizeOf(5),
       quota: { learn: 2, review: 3, stretch: 0 },
       reviewRatio: SMART.REVIEW_RATIO,
+      learnExhausted: false,
       tone: null,
       learnPackIds: ['p1'],
       stretchPackId: null,
@@ -421,6 +426,7 @@ describe('composeSmartSteps', () => {
       size: sizeOf(3),
       quota: { learn: 3, review: 0, stretch: 0 },
       reviewRatio: SMART.REVIEW_RATIO,
+      learnExhausted: false,
       tone: null,
       learnPackIds: ['p1'],
       stretchPackId: null,
@@ -440,6 +446,7 @@ describe('composeSmartSteps', () => {
       size: sizeOf(2),
       quota: { learn: 2, review: 0, stretch: 0 },
       reviewRatio: SMART.REVIEW_RATIO,
+      learnExhausted: false,
       tone: null,
       learnPackIds: ['p1'],
       stretchPackId: null,
@@ -577,6 +584,7 @@ describe('a session whose review content never arrives', () => {
       // most of the sitting, new words get what's left.
       quota: { learn: 1, review: 13, stretch: 0 },
       reviewRatio: 0.65,
+      learnExhausted: false,
       tone: 'slipping',
       learnPackIds: ['learn1', 'learn2'],
       stretchPackId: null,
@@ -687,6 +695,49 @@ describe('a route with nothing (or almost nothing) left on it', () => {
     expect(sel.targetCount).toBeGreaterThan(0) // the sitting was still sized…
     expect(sel.quota.learn).toBe(0) // …but sizing a sitting is not finding words
     expect(previewOf(sel).learn).toBe(0)
+  })
+
+  /**
+   * The reported screen: every word in the app learned, 53 due, review health
+   * "strong" — and Dzisiaj offered a 7-card sitting captioned "Powtórki idą ci
+   * świetnie, więc dziś więcej nowych słów."
+   *
+   * Both halves came from the same place. `reviewRatio` shrank the review slice
+   * to buy new words, the learn quota then clamped to 0 against an empty
+   * catalogue, and nothing claimed the slots the ratio had set aside — so the
+   * ratio, which exists to stop review crowding out new material, became a
+   * ceiling on the whole session instead.
+   */
+  describe('and a queue of due words behind it', () => {
+    const allKnown = new Map(catalogue.map(p => [p.id, p.wordCount]))
+    const dueWords = Array.from({ length: 53 }, (_, i) =>
+      wp({ wordId: `${P003}-${i}`, packageId: P003, status: 'known', nextReviewAt: '2020-01-01', stability: 10 })
+    )
+    const strong: ReviewHealth = { value: 0.97, samples: HEALTH.MIN_SAMPLES, updatedAt: dayKey() }
+    const sel = selectSmart({
+      snapshot: baseSnapshot({ knownMap: allKnown, dueWords, dueCount: dueWords.length }),
+      ...args,
+      reviewHealth: strong,
+    })
+
+    it('fills the sitting with review instead of shrinking it', () => {
+      expect(sel.quota.learn).toBe(0)
+      expect(sel.quota.review).toBe(sel.targetCount)
+      // The ratio still decides the MIX; it no longer decides the SIZE.
+      expect(sel.quota.review).toBeGreaterThan(Math.round(sel.targetCount * sel.reviewRatio))
+    })
+
+    it('does not promise new words it has none of', () => {
+      const reason = smartReason(previewOf(sel))
+      expect(reason).not.toContain('więcej nowych słów')
+      expect(reason).toContain('utrwalamy')
+    })
+
+    it('still takes the most urgent words first, and each only once', () => {
+      const ids = sel.reviewWords.map(w => w.wordId)
+      expect(new Set(ids).size).toBe(ids.length)
+      expect(ids.every(id => dueWords.some(d => d.wordId === id))).toBe(true)
+    })
   })
 
   it('caps the learn quota at the words the last unfinished pack still holds', () => {
