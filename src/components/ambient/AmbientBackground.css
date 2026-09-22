@@ -13,6 +13,13 @@
 .ambient {
   position: fixed;
   inset: 0;
+  /* Fixed positioning resolves against the VIEWPORT, and in the installed iOS
+     app that viewport is reported short by the status-bar inset (see
+     utils/iosViewportGap). Growing the document is not enough for this layer —
+     it would still stop where the viewport does and leave the ground's last
+     strip unpainted — so it reaches past the bottom edge by the same amount.
+     Zero everywhere else. */
+  bottom: calc(0px - var(--ios-bottom-shim, 0px));
   overflow: hidden;
   z-index: -1;
   pointer-events: none;
@@ -22,7 +29,7 @@
      mounts on top of it later (lazily) and cross-fades in; until then — and
      forever, on a device that can't run it — this is what the app sits on.
 
-     It draws from the CHROMATIC mesh stops only (2, 4, 5) and leaves the ink
+     It draws from the CHROMATIC mesh stops only (2, 4, 6) and leaves the ink
      ones to the ground: mixing an ink stop in here just made a slightly
      purple black, which is what put a violet cast over the whole page before
      the shader had even loaded. Percentages are deliberately low — this is the
@@ -35,14 +42,20 @@
      floor — the mix percentages went up by less than the shader did.
 
      One set of percentages for both themes, because the stops they mix are
-     already per-theme: the same 58% of light-theme --mesh-2 is pigment on
+     already per-theme: the same 44% of light-theme --mesh-2 is pigment on
      paper rather than light on ink. Light keeps its shader at 0.5 (see the
      note on --ambient-strength there), and this raise is measured into that:
-     4.5:1 for secondary text reading off the ground at its worst pool. */
+     4.5:1 for secondary text reading off the ground at its worst pool.
+
+     Pulled back from 58/50/44 when the shader went to seven stops. This layer
+     has no structure — it is three static blobs covering most of the screen —
+     so it was the half of the composite that could not be black, and at 28%
+     of the result (1 − --ambient-strength) it was quietly filling in exactly
+     the space the extra ink stops had just cleared. */
   background:
-    radial-gradient(54% 40% at 20% 10%, color-mix(in oklch, var(--mesh-2) 58%, transparent) 0%, transparent 58%),
-    radial-gradient(48% 38% at 88% 4%, color-mix(in oklch, var(--mesh-5) 50%, transparent) 0%, transparent 62%),
-    radial-gradient(66% 46% at 64% 100%, color-mix(in oklch, var(--mesh-4) 44%, transparent) 0%, transparent 64%),
+    radial-gradient(54% 40% at 20% 10%, color-mix(in oklch, var(--mesh-2) 44%, transparent) 0%, transparent 58%),
+    radial-gradient(48% 38% at 88% 4%, color-mix(in oklch, var(--mesh-6) 36%, transparent) 0%, transparent 62%),
+    radial-gradient(66% 46% at 64% 100%, color-mix(in oklch, var(--mesh-4) 32%, transparent) 0%, transparent 64%),
     var(--bg-primary);
 }
 

@@ -33,7 +33,12 @@ html {
   -webkit-text-size-adjust: 100%;
   overscroll-behavior: none;
   background-color: var(--bg-primary);
-  height: 100%;
+  /* The shim is 0 everywhere but the installed iOS app, where the viewport is
+     reported short by the status-bar inset while the page is drawn from y=0 —
+     see utils/iosViewportGap. Adding it here is enough for the whole chain:
+     body and #root are 100% OF THIS, so they grow with it and the ground
+     reaches the real bottom of the screen instead of stopping ~59px above it. */
+  height: calc(100% + var(--ios-bottom-shim, 0px));
 }
 
 body {

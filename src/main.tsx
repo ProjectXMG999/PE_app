@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { App } from './App'
 import './styles/global.css'
 import { pushLog } from './debug/audioLogger'
+import { measureIosViewportGap } from './utils/iosViewportGap'
 
 // Intercept console logs for the debug overlay (captures [audio], [action],
 // [seq] prefixes).
@@ -43,6 +44,10 @@ console.warn = (...args) => {
   origWarn(...args)
   if (tagged(args)) pushLog(serialise(args))
 }
+
+// Before React paints: the installed iOS app reports a viewport short by the
+// status-bar inset, and everything here is sized off that.
+measureIosViewportGap()
 
 // Force reload when a new SW takes control — prevents stale chunk 404s after deploy
 if ('serviceWorker' in navigator) {
