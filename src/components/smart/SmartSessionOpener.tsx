@@ -88,6 +88,12 @@ export function SmartSessionOpener({ preview, opensWith, ready, onDone }: Props)
       kicker="Inteligentnie"
       title="Twoja sesja na dziś"
       meta={hasMix ? <>≈ {preview!.minutes} {plMinutes(preview!.minutes)}</> : undefined}
+      // The hero on Dzisiaj promises "Dobiorę słowa i powtórki do tego, jak Ci
+      // dziś idzie"; this is that sentence in the present tense, on the screen
+      // where it is actually happening. Of all the modes this one has the most
+      // to say here — it is reading the whole progress snapshot and then
+      // fetching a pack per stream — and the longest wait in which to say it.
+      waiting="Dobieram słowa i powtórki…"
       // `ready` is the built session, NOT the arrival of `preview`.
       //
       // The preview is published one IndexedDB read in, before any pack is

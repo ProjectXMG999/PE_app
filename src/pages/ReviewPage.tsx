@@ -280,13 +280,17 @@ export function ReviewPage() {
           accent="var(--live)"
           kicker="Powtórka"
           title="Dzisiejsza porcja"
-          // No "Zbieram słowa…" placeholder: a line that is replaced by the
-          // real one a moment later is a second entrance. The card waits.
           meta={
             cardCount > 0
               ? <>{cardCount} {plWords(cardCount)} · {packCount} {plPackets(packCount)}</>
               : undefined
           }
+          // It used to say nothing here — "a line replaced by the real one a
+          // moment later is a second entrance". It isn't one any more: the two
+          // cross-fade inside the same reserved line box, so what the learner
+          // sees is one line changing what it says, and the alternative was a
+          // curtain that states the mode and then withholds why it is waiting.
+          waiting="Zbieram dzisiejszą porcję…"
           ready={settled}
           onDone={dismissOpener}
         />

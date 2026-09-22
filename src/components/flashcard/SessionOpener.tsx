@@ -125,8 +125,13 @@ export function SessionOpener({ accent, kicker, title, meta, waiting, children, 
               A polite live region, so the hand-over is announced once rather
               than the title being re-read. */}
           <p className="sessionopener__meta" aria-live="polite">
+            {/* Keyed on `ready`, not on whether there is a `meta` to show: a
+                session can settle with nothing to say on this line (an empty
+                review queue, a mix that came back all zeros), and falling back
+                to the status line there would leave the curtain claiming to be
+                working on a session it had already finished building. */}
             <AnimatePresence initial={false}>
-              {ready && meta ? (
+              {ready ? meta && (
                 <motion.span
                   key="meta"
                   className="sessionopener__meta-line"
@@ -137,7 +142,7 @@ export function SessionOpener({ accent, kicker, title, meta, waiting, children, 
                 >
                   {meta}
                 </motion.span>
-              ) : waiting ? (
+              ) : waiting && (
                 <motion.span
                   key="waiting"
                   className="sessionopener__meta-line"
@@ -154,7 +159,7 @@ export function SessionOpener({ accent, kicker, title, meta, waiting, children, 
                       instead of fighting. */}
                   <span className="sessionopener__working">{waiting}</span>
                 </motion.span>
-              ) : null}
+              )}
             </AnimatePresence>
           </p>
         </motion.div>
@@ -222,6 +227,11 @@ export function PackSessionOpener({ packId, mode, cards, ready, onDone }: PackPr
           {cards != null && <> · {cards} {plWords(cards)}</>}
         </>
       }
+      // What these modes are actually waiting on: /pack-content, then the
+      // progress rows that decide which of its words this sitting will use.
+      // Named rather than described as loading — the pack is the thing on the
+      // line above, so the learner can see what is being fetched.
+      waiting="Wczytuję pakiet…"
       ready={ready ?? cards != null}
       onDone={onDone}
     />

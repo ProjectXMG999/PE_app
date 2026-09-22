@@ -130,12 +130,44 @@
    what keeps the title still when it does. `lh` where it's understood, an em
    approximation of the same line box everywhere else. */
 .sessionopener__meta {
+  position: relative;
   margin: 0;
   min-height: 1.5em;
   min-height: 1lh;
   font-size: var(--text-md);
   line-height: 1.5;
   color: var(--text-secondary);
+}
+
+/* The status line and the counts share this one line box and cross-fade in it,
+   so neither can push the other around — hence absolute rather than a flow
+   that would briefly hold both. */
+.sessionopener__meta-line {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+/* "Dobieram słowa i powtórki…" while the session is being built.
+   The breath is what separates a line that is working from a line that is
+   simply dim — at this size a static 70% grey reads as final copy, and the
+   whole point of the line is that it isn't. Slow and shallow: it sits under a
+   title that is holding still. */
+.sessionopener__working {
+  display: inline-block;
+  animation: so-working 2s ease-in-out infinite;
+}
+
+@keyframes so-working {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sessionopener__working {
+    animation: none;
+    opacity: 0.8;
+  }
 }
 
 /* Draws itself left to right under the title — the one moving part.
