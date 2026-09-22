@@ -203,9 +203,15 @@ export function reviewSecPerCard(sessions: Session[], today: string = dayKey()):
 export function reviewsDoneToday(wordProgress: WordProgress[], today: string = dayKey()): number {
   let n = 0
   for (const w of wordProgress) {
-    if (!w.lastSeen || dayKey(new Date(w.lastSeen)) !== today) continue
+    // Cheap guards first. All three are ANDed `continue`s, so the order is
+    // free to choose — and the date one is the expensive member by a wide
+    // margin: a Date parse plus dayKey()'s three padStart calls and a template
+    // literal, i.e. ~11 000 parses and ~44 000 string allocations per snapshot
+    // when it ran first. The two below reject the overwhelming majority of
+    // rows with an integer compare and a string compare.
     if ((w.reviewCount ?? 0) + (w.lapseCount ?? 0) < 1) continue
     if (w.nextReviewAt == null || w.nextReviewAt <= today) continue
+    if (!w.lastSeen || dayKey(new Date(w.lastSeen)) !== today) continue
     n++
   }
   return n
@@ -414,6 +420,14 @@ export interface RetentionBreakdown {
    *  strength and printing a cadence beside it would be two fictions. Counted
    *  and named separately instead. */
   declared: number
+  /** Known words whose only evidence is an unverified first-exposure claim
+   *  ("Znam" the first time the app ever showed the word — review.ts
+   *  `firstExposure`). The same principle as `declared`, one step milder:
+   *  these DO have a real schedule, but their stability was asserted rather
+   *  than measured, so the chart must not call a single tap "Dobrze znane ·
+   *  co kilka miesięcy". They join the tiers the moment the word survives its
+   *  first interval, which is when `assertedKnownAt` clears. */
+  asserted: number
 }
 
 /**
@@ -433,10 +447,15 @@ export function retentionBreakdown(wordProgress: WordProgress[]): RetentionBreak
   }
   let total = 0
   let declared = 0
+  let asserted = 0
   for (const wp of wordProgress) {
     if (wp.status !== 'known') continue
     if (isDeclaredRetiredWord(wp)) {
       declared++
+      continue
+    }
+    if (wp.assertedKnownAt != null) {
+      asserted++
       continue
     }
     counts[retentionTierOf(wp)]++
@@ -448,6 +467,7 @@ export function retentionBreakdown(wordProgress: WordProgress[]): RetentionBreak
     total,
     durablePct: total > 0 ? Math.round((durable / total) * 100) : 0,
     declared,
+    asserted,
   }
 }
 

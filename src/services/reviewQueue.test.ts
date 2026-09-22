@@ -272,6 +272,15 @@ describe('reviewsDoneToday', () => {
     ]
     expect(reviewsDoneToday(list, TODAY)).toBe(1)
   })
+
+  // The three guards are ANDed `continue`s, so their order is free — and the
+  // date one is far the most expensive (a Date parse plus dayKey()'s padStart
+  // calls, once per row over ~11 000 rows). It runs last now, which moves this
+  // row from the first guard to the third. Same answer, and this pins it.
+  it('rejects a row with no lastSeen, whichever guard gets there first', () => {
+    const noSeen = { ...due({ reviewCount: 3, nextReviewAt: '2026-06-20' }), lastSeen: '' }
+    expect(reviewsDoneToday([noSeen], TODAY)).toBe(0)
+  })
 })
 
 describe('scoreDueWord — anti-starvation', () => {
@@ -395,6 +404,37 @@ describe('retention breakdown', () => {
     const b = retentionBreakdown([due({ status: 'known', stability: 400, retiredAt: '2026-01-01T00:00:00Z' })])
     expect(b.declared).toBe(0)
     expect(b.total).toBe(1)
+    expect(b.durablePct).toBe(100)
+  })
+
+  it('keeps an unverified first-exposure claim out of the tiers until it is confirmed', () => {
+    // FIRST_KNOWN_STABILITY is 100, which bins as `strong` — "Dobrze znane · co
+    // kilka miesięcy". Saying that on the strength of one tap, before a single
+    // interval has elapsed, is the fiction this split exists to prevent.
+    const claimed = {
+      status: 'known' as const,
+      stability: 100,
+      difficulty: 4.5,
+      assertedKnownAt: '2026-01-01T00:00:00Z',
+    }
+    const list: WordProgress[] = [
+      due({ status: 'known', stability: 4 }),   // fresh, measured
+      due({ status: 'known', stability: 400 }), // locked, measured
+      due({ ...claimed, wordId: 'a1' }),
+      due({ ...claimed, wordId: 'a2' }),
+    ]
+    const b = retentionBreakdown(list)
+    expect(b.asserted).toBe(2)
+    expect(b.total).toBe(2)
+    expect(b.buckets.find(x => x.tier === 'strong')!.count).toBe(0)
+    expect(b.durablePct).toBe(50) // 1 of 2 measured, not 3 of 4
+  })
+
+  it('a confirmed claim rejoins the tiers — the flag is what holds it out, not the stability', () => {
+    const b = retentionBreakdown([due({ status: 'known', stability: 100, difficulty: 4.5 })])
+    expect(b.asserted).toBe(0)
+    expect(b.total).toBe(1)
+    expect(b.buckets.find(x => x.tier === 'strong')!.count).toBe(1)
     expect(b.durablePct).toBe(100)
   })
 })

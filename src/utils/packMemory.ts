@@ -2,6 +2,7 @@ import { PackMeta } from '../types/vocabulary'
 import { WordProgress } from '../types/progress'
 import { ProgressSnapshot } from '../hooks/useProgressData'
 import { retrievabilityOf, retentionTierOf } from '../services/reviewQueue'
+import { isDeclaredKnownWord } from '../services/review'
 import { dayKey } from './day'
 
 /**
@@ -51,9 +52,10 @@ export interface PackMemory {
   /** Known words that have graduated out of the daily queue (tier `locked`). */
   retired: number
   /**
-   * Known words carrying an asserted stability from "Znam wszystko" rather than
-   * an actual review. They ARE scheduled (first check ~2 weeks out) — the bulk
-   * mark is a claim the scheduler still intends to verify, not a graduation.
+   * Known words carrying an ASSERTED stability rather than a measured one —
+   * "Znam wszystko" over a whole pack, or a "Znam" the first time the app ever
+   * showed the word. Both are scheduled, and both are claims the scheduler
+   * still intends to verify, not graduations.
    */
   claimed: number
 }
@@ -117,10 +119,11 @@ export function buildPackMemory(
     for (const wp of words) {
       if (wp.status !== 'known') continue
       if (retentionTierOf(wp) === 'locked') retired++
-      // The bulk mark asserts a stability without ever running a review, so
-      // reviewCount stays 0 while stability is set. Nothing else produces that
-      // combination.
-      else if ((wp.reviewCount ?? 0) === 0 && wp.stability != null) claimed++
+      // Both kinds of claim, read off the explicit flags. This used to infer
+      // them from "reviewCount 0 with a stability set", which was true of the
+      // bulk mark alone until a first-exposure "Znam" started writing the same
+      // shape — an accidental match is not the same as an intended one.
+      else if (isDeclaredKnownWord(wp) || wp.assertedKnownAt != null) claimed++
     }
     const allRetired = everHeld && retired >= known && known > 0
 

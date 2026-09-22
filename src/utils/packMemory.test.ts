@@ -110,6 +110,21 @@ describe('buildPackMemory', () => {
     expect(sealedPacks(m)).toEqual([])
   })
 
+  it('counts an unverified first-exposure "Znam" as claimed too', () => {
+    // What applyKnown writes on a word nobody has ever answered: a hundred days
+    // of asserted stability, flagged as a claim until the first review lands.
+    const words = Array.from({ length: 2 }, () => word({
+      stability: 100,
+      difficulty: 4.5,
+      reviewCount: 0,
+      assertedKnownAt: daysAgo(1),
+      lastSeen: daysAgo(1),
+    }))
+    const m = buildPackMemory([PACK], snap(words, { masteredAt: daysAgo(1) }))
+    expect(m.get('p1')!.claimed).toBe(2)
+    expect(m.get('p1')!.retired).toBe(0)
+  })
+
   it('treats words with no FSRS state as held rather than fading', () => {
     const words = Array.from({ length: 3 }, () => word({ lastSeen: daysAgo(300) }))
     expect(buildPackMemory([PACK], snap(words)).get('p1')!.relation).toBe('held')

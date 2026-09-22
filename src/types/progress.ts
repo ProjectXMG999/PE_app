@@ -84,11 +84,23 @@ export interface WordProgress {
    *  review/lapse (services/review.ts). Drives the "declaration, not effort"
    *  exclusion in points.ts / achievements.ts. */
   declaredKnownAt?: string
+  /** ISO timestamp: this word's `stability` is a CLAIM, not a measurement —
+   *  the learner's first-ever verdict on it was "Znam", i.e. "I knew this
+   *  before the app showed it to me" (services/reviewConfig.ts
+   *  FIRST_KNOWN_STABILITY). It buys a real, long schedule, but until the word
+   *  survives that first interval nothing has been measured, so the retention
+   *  chart counts it apart instead of binning it by memory strength
+   *  (reviewQueue.ts `retentionBreakdown`). Cleared by the first real
+   *  review/lapse, like `declaredKnownAt`. Unlike `declaredKnownAt` it does NOT
+   *  suppress points: the learner did face the word. */
+  assertedKnownAt?: string
   /** ISO timestamp: `retiredAt` was forced by a level-mastery declaration
-   *  rather than earned via durable FSRS stability. Only "Cofnij" (the level
-   *  mastery snapshot) ever clears it — never touched by normal review flow,
-   *  since a retired word never re-enters the queue while the level stays
-   *  marked. */
+   *  rather than earned via durable FSRS stability. Cleared by "Cofnij" (the
+   *  level mastery snapshot) and by one other thing: a real "Nie znam", which
+   *  un-retires the word — a demonstrated miss outranks a declaration, and
+   *  leaving the flag behind would strand `isDeclaredRetiredWord`. A correct
+   *  answer does not clear it; the declaration wins over the scheduler there
+   *  (services/review.ts). */
   declaredRetiredAt?: string
 }
 

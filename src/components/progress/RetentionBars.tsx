@@ -51,6 +51,12 @@ const TIER_META: Record<RetentionTier, TierMeta> = {
  *  the scale. */
 const DECLARED_COLOR = '#94A3B8'
 
+/** The same grey family, one step darker: words the learner said they already
+ *  knew the first time the app showed them. They DO have a schedule (unlike
+ *  declared words), but nothing has been measured yet, so they sit outside the
+ *  ramp too — until the first review, when they join a real tier. */
+const ASSERTED_COLOR = '#64748B'
+
 /**
  * Shares that add up to 100 — largest remainder, and never a bare "0%" beside a
  * non-zero count. Plain `Math.round` per row printed "49 · 0%" three times over
@@ -77,7 +83,7 @@ export function RetentionBars({ wordProgress, queue }: Props) {
   const [infoOpen, setInfoOpen] = useState(false)
   const [barRef, barShown] = useRevealOnView<HTMLDivElement>()
   const stats = useMemo(() => retentionBreakdown(wordProgress), [wordProgress])
-  const { buckets, total, durablePct, declared } = stats
+  const { buckets, total, durablePct, declared, asserted } = stats
   const pcts = useMemo(() => sharePcts(buckets.map(b => b.count), total), [buckets, total])
 
   // The most populated tier — named in the summary when nothing is durable yet.
@@ -105,6 +111,42 @@ export function RetentionBars({ wordProgress, queue }: Props) {
     </p>
   )
 
+  // Words the learner knew before the app taught them. They have a real date —
+  // a long one — but nothing has been measured yet, so they can't be shown in a
+  // tier: a single tap is not "Dobrze znane · co kilka miesięcy". They move into
+  // the bar the moment that first review confirms them.
+  const assertedLine = asserted > 0 && (
+    <div className="retention__declared">
+      <span className="retention__dot" style={{ background: ASSERTED_COLOR }} aria-hidden="true" />
+      <span className="retention__declared-label">Znane od pierwszego razu</span>
+      <span className="retention__count">
+        <FlowNumber value={asserted} onView delayMs={400} />
+      </span>
+    </div>
+  )
+
+  // Two whole sentences rather than one with slots: the count governs the verb
+  // twice over ("wróci/wrócą", "pokaże/pokażą") and the pronoun once ("go/ich"),
+  // and stitching those in turns the note into a puzzle for the next reader.
+  const assertedNote = asserted > 0 && (
+    <p className="retention__summary retention__summary--declared">
+      {asserted === 1 ? (
+        <>
+          Jedno słowo znałeś już przy pierwszym pokazaniu. Wróci dopiero za kilka miesięcy —
+          i dopiero ta powtórka pokaże, jak dobrze je pamiętasz, więc na razie nie ma go
+          w grupach wyżej.
+        </>
+      ) : (
+        <>
+          {asserted.toLocaleString('pl-PL')}{' '}
+          {plural(asserted, 'słowo znałeś', 'słowa znałeś', 'słów znałeś')} już przy pierwszym
+          pokazaniu. Wrócą dopiero za kilka miesięcy — i dopiero te powtórki pokażą, jak dobrze
+          je pamiętasz, więc na razie nie ma ich w grupach wyżej.
+        </>
+      )}
+    </p>
+  )
+
   return (
     <div className="retention u-liquid">
       {queue && (
@@ -119,11 +161,13 @@ export function RetentionBars({ wordProgress, queue }: Props) {
         <p className="retention__total">
           {total === 0
             ? 'Opanowane słowa'
-            : declared > 0
+            : declared > 0 || asserted > 0
               // Scoped once there's a second population on the card, so the
               // number here can't be read as the whole vocabulary — that figure
-              // lives on Statystyki and is the two added together.
-              ? `${total.toLocaleString('pl-PL')} ${plWords(total)} w powtórkach`
+              // lives on Statystyki and is the populations added together.
+              // "w grupach" and not "w powtórkach": asserted words are in the
+              // review queue too, they just aren't in a tier yet.
+              ? `${total.toLocaleString('pl-PL')} ${plWords(total)} w grupach`
               : `${total.toLocaleString('pl-PL')} ${plural(total, 'opanowane słowo', 'opanowane słowa', 'opanowanych słów')}`}
         </p>
         <button
@@ -143,11 +187,15 @@ export function RetentionBars({ wordProgress, queue }: Props) {
       {total === 0 ? (
         <>
           <p className="retention__empty">
-            {declared > 0
-              ? 'Całe Twoje słownictwo jest oznaczone jako znane, więc nie ma tu jeszcze czego mierzyć. Grupy pojawią się, kiedy zaczniesz robić powtórki.'
-              : 'Kiedy oznaczysz pierwsze słowa jako znane, zobaczysz tu, jak dobrze je pamiętasz.'}
+            {asserted > 0
+              ? 'Te słowa czekają na pierwszą powtórkę — dopiero ona pokaże, jak dobrze je pamiętasz. Wtedy pojawią się tu grupy.'
+              : declared > 0
+                ? 'Całe Twoje słownictwo jest oznaczone jako znane, więc nie ma tu jeszcze czego mierzyć. Grupy pojawią się, kiedy zaczniesz robić powtórki.'
+                : 'Kiedy oznaczysz pierwsze słowa jako znane, zobaczysz tu, jak dobrze je pamiętasz.'}
           </p>
+          {assertedLine}
           {declaredLine}
+          {assertedNote}
           {declaredNote}
         </>
       ) : (
@@ -209,6 +257,7 @@ export function RetentionBars({ wordProgress, queue }: Props) {
             })}
           </dl>
 
+          {assertedLine}
           {declaredLine}
 
           <p className="retention__summary">
@@ -233,6 +282,7 @@ export function RetentionBars({ wordProgress, queue }: Props) {
             )}
           </p>
 
+          {assertedNote}
           {declaredNote}
         </>
       )}

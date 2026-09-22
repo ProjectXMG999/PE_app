@@ -247,6 +247,7 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
     retiredAt: r.retired_at ?? undefined,
     stability: r.stability ?? undefined, difficulty: r.difficulty ?? undefined,
     declaredKnownAt: r.declared_known_at ?? undefined, declaredRetiredAt: r.declared_retired_at ?? undefined,
+    assertedKnownAt: r.asserted_known_at ?? undefined,
   })) as WordProgress[]
   const remotePackages = remotePackageRows.map(r => ({
     packageId: r.package_id, startedAt: r.started_at, completedAt: r.completed_at, masteredAt: r.mastered_at,
@@ -299,54 +300,113 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
 
   const db = await getDB()
 
+  // One transaction across all five stores, not ~12 000 independent puts.
+  // Independent puts commit independently, so a failure part-way through left
+  // the device holding half a merge — most visibly word rows without the
+  // package rows that go with them, which is a pack reading "15 / 15 słów" with
+  // no "★ Opanowana" on it: the flag lives in `packageProgress`, the count in
+  // `wordProgress`. Either the whole merge lands or none of it does.
+  const tx = db.transaction(
+    ['wordProgress', 'packageProgress', 'dailyTime', 'reviewLedger', 'sessions'],
+    'readwrite',
+  )
   await Promise.all([
-    ...mergedWords.map(w => db.put('wordProgress', w)),
-    ...mergedPackages.map(p => db.put('packageProgress', p)),
-    ...mergedDaily.map(d => db.put('dailyTime', d)),
-    ...mergedLedger.map(e => db.put('reviewLedger', e)),
-    ...remoteOnlySessions.map(s => db.add('sessions', s as Session)),
+    ...mergedWords.map(w => tx.objectStore('wordProgress').put(w)),
+    ...mergedPackages.map(p => tx.objectStore('packageProgress').put(p)),
+    ...mergedDaily.map(d => tx.objectStore('dailyTime').put(d)),
+    ...mergedLedger.map(e => tx.objectStore('reviewLedger').put(e)),
+    ...remoteOnlySessions.map(s => tx.objectStore('sessions').add(s as Session)),
   ])
+  await tx.done
 
-  // Batched and awaited. A committed learner merges thousands of word rows,
-  // and one upsert of all of them is a multi-megabyte body — previously fired
-  // and forgotten, so a rejection left the two sides silently disagreeing.
-  await upsertAll(supabase, 'word_progress', mergedWords.map(w => ({
-    user_id: userId, word_id: w.wordId, package_id: w.packageId,
-    seen_count: w.seenCount, last_seen: w.lastSeen, status: w.status,
-    review_count: w.reviewCount, lapse_count: w.lapseCount,
-    last_lapse_at: w.lastLapseAt, next_review_at: w.nextReviewAt,
-    retired_at: w.retiredAt,
-    stability: w.stability, difficulty: w.difficulty,
-    declared_known_at: w.declaredKnownAt, declared_retired_at: w.declaredRetiredAt,
-  })))
-  await upsertAll(supabase, 'package_progress', mergedPackages.map(p => ({
-    user_id: userId, package_id: p.packageId, started_at: p.startedAt,
-    completed_at: p.completedAt, mastered_at: p.masteredAt,
-    listened_at: p.listenedAt ?? null, current_index: p.currentIndex,
-  })))
-  await upsertAll(supabase, 'daily_time', mergedDaily.map(d => ({
-    user_id: userId, date: d.date, seconds_studied: d.secondsStudied,
-    goal_sec: d.goalSec, goal_met_at: d.goalMetAt,
-  })))
-  await upsertAll(supabase, 'review_ledger', mergedLedger.map(e => ({
-    user_id: userId, date: e.date, cleared: e.cleared, cleared_at: e.clearedAt,
-  })))
+  // The device now holds the merged truth, and everything downstream of here is
+  // about the *mirror*. Emitted before the push rather than only after it,
+  // because a push that throws used to skip this line entirely: the merged rows
+  // sat in IndexedDB while every screen went on rendering the 60-second cached
+  // snapshot taken before them. That is how a pack the server had long since
+  // marked mastered kept reading "15 / 15" with no star until the next reload.
+  emitProgress('reset')
 
-  // Sessions are append-only, so this one inserts rather than upserts.
-  //
-  // Logged, not thrown — unlike every read and every upsert above. By this
-  // point the four tables that actually carry learning progress are written and
-  // the account is demonstrably reachable, so a failure here is not "the sync
-  // broke", it is "the session log couldn't be appended". Throwing made those
-  // two indistinguishable: it surfaced as a toast telling the user their
-  // progress had failed to sync, and it cleared `lastSyncedUserId` in
-  // useAuthStore, re-arming the identical doomed write on every auth event.
-  //
-  // That is exactly what a schema drift did (see migration 0010 — the CHECK on
-  // `train_mode` predated the Inteligentny mode), and the failure mode is
-  // permanent by nature: a rejected row is rejected the same way every time.
-  // Nothing is lost by continuing. These sessions stay local-only, so the next
-  // merge retries them, and the moment the schema catches up they land.
+  // Everything from here on is the MIRROR, not the device. It is allowed to
+  // fail — the caller turns that into "nie udało się zsynchronizować" and a
+  // retry — but it must not skip the local upkeep below it, which is what a
+  // bare `await` chain did.
+  let pushError: unknown = null
+  try {
+    // Batched and awaited. A committed learner merges thousands of word rows,
+    // and one upsert of all of them is a multi-megabyte body — previously fired
+    // and forgotten, so a rejection left the two sides silently disagreeing.
+    await upsertAll(supabase, 'word_progress', mergedWords.map(w => ({
+      user_id: userId, word_id: w.wordId, package_id: w.packageId,
+      seen_count: w.seenCount, last_seen: w.lastSeen, status: w.status,
+      review_count: w.reviewCount, lapse_count: w.lapseCount,
+      last_lapse_at: w.lastLapseAt, next_review_at: w.nextReviewAt,
+      retired_at: w.retiredAt,
+      stability: w.stability, difficulty: w.difficulty,
+      declared_known_at: w.declaredKnownAt, declared_retired_at: w.declaredRetiredAt,
+      asserted_known_at: w.assertedKnownAt,
+    })))
+    await upsertAll(supabase, 'package_progress', mergedPackages.map(p => ({
+      user_id: userId, package_id: p.packageId, started_at: p.startedAt,
+      completed_at: p.completedAt, mastered_at: p.masteredAt,
+      listened_at: p.listenedAt ?? null, current_index: p.currentIndex,
+    })))
+    await upsertAll(supabase, 'daily_time', mergedDaily.map(d => ({
+      user_id: userId, date: d.date, seconds_studied: d.secondsStudied,
+      goal_sec: d.goalSec, goal_met_at: d.goalMetAt,
+    })))
+    await upsertAll(supabase, 'review_ledger', mergedLedger.map(e => ({
+      user_id: userId, date: e.date, cleared: e.cleared, cleared_at: e.clearedAt,
+    })))
+    await appendSessions(supabase, userId, localOnlySessions)
+  } catch (err) {
+    pushError = err
+  }
+
+  // The merge can pull in rows written by a device that predates the listen
+  // axis, so the repair has to run on the merged result too — a boot-only pass
+  // would be undone by the next sign-in and never converge.
+  try { await repairListenAxis() } catch (err) { console.error('[listen] repair after merge failed:', err) }
+
+  // The account is demonstrably reachable right now, so this is the best
+  // moment to clear anything the mirrors couldn't deliver earlier. Skipped
+  // when the push just failed — the account is plainly not reachable.
+  if (!pushError) {
+    try { await flushOutbox() } catch (err) { console.error('[progressSync] flush after merge failed:', err) }
+  }
+
+  // The listen repair above may have rewritten rows; re-emit so the UI reads
+  // the final state either way.
+  emitProgress('reset')
+
+  // Reported last, so the caller's toast and retry still happen — after the
+  // device itself has been brought fully up to date.
+  if (pushError) throw pushError
+}
+
+/**
+ * Mirrors sessions the account hasn't seen. Append-only, so this one inserts
+ * rather than upserts.
+ *
+ * Logged, not thrown — unlike every read and every upsert around it. By this
+ * point the four tables that actually carry learning progress are written and
+ * the account is demonstrably reachable, so a failure here is not "the sync
+ * broke", it is "the session log couldn't be appended". Throwing made those
+ * two indistinguishable: it surfaced as a toast telling the user their
+ * progress had failed to sync, and it cleared `lastSyncedUserId` in
+ * useAuthStore, re-arming the identical doomed write on every auth event.
+ *
+ * That is exactly what a schema drift did (see migration 0010 — the CHECK on
+ * `train_mode` predated the Inteligentny mode), and the failure mode is
+ * permanent by nature: a rejected row is rejected the same way every time.
+ * Nothing is lost by continuing. These sessions stay local-only, so the next
+ * merge retries them, and the moment the schema catches up they land.
+ */
+async function appendSessions(
+  supabase: SupabaseClient,
+  userId: string,
+  localOnlySessions: Omit<Session, 'id'>[],
+): Promise<void> {
   let sessionsFailed = 0
   for (let i = 0; i < localOnlySessions.length; i += SYNC_BATCH) {
     const { error } = await supabase.from('sessions').insert(
@@ -367,17 +427,4 @@ export async function pullAndMergeProgress(userId: string): Promise<void> {
       'Local progress is unaffected; they will be retried on the next merge.'
     )
   }
-
-  // The merge can pull in rows written by a device that predates the listen
-  // axis, so the repair has to run on the merged result too — a boot-only pass
-  // would be undone by the next sign-in and never converge.
-  try { await repairListenAxis() } catch (err) { console.error('[listen] repair after merge failed:', err) }
-
-  // The account is demonstrably reachable right now, so this is the best
-  // moment to clear anything the mirrors couldn't deliver earlier.
-  try { await flushOutbox() } catch (err) { console.error('[progressSync] flush after merge failed:', err) }
-
-  // Anything cached off the old local state (the always-mounted streak/points
-  // widget, in-flight progress snapshots) is stale now.
-  emitProgress('reset')
 }

@@ -1,0 +1,23 @@
+-- Pierwsze "Znam" na słowie widzianym pierwszy raz.
+--
+-- One nullable timestamp on word_progress, same additive pattern as
+-- 0005/0006/0008 — a row from an older client simply has no value.
+--   asserted_known_at — the word's `stability` is a CLAIM, not a measurement:
+--                       the learner's first-ever verdict on it was "Znam",
+--                       meaning "I knew this before the app showed it to me"
+--                       (reviewConfig.ts FIRST_KNOWN_STABILITY = 100 days).
+--                       Cleared by the first real review or lapse.
+--
+-- It buys a long schedule but no claim about memory strength, which is what
+-- separates it from a measured stability: the retention chart counts these
+-- apart instead of binning them (reviewQueue.ts `retentionBreakdown`), the way
+-- declared_retired_at words are already handled. Unlike declared_known_at it
+-- does NOT suppress points — the learner did face the word.
+--
+-- No backfill: nothing in an existing row records whether a past "Znam" was a
+-- first exposure. Rows written before this migration keep the stability they
+-- were given (initCard(GOOD), ~3.13) and behave exactly as they do today —
+-- correct, since they never received the long schedule this flag qualifies.
+--
+-- camelCase translation lives in src/services/progressSync.ts and db.ts.
+alter table word_progress add column asserted_known_at timestamptz;

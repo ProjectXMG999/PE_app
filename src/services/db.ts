@@ -233,6 +233,7 @@ function wordProgressRow(w: WordProgress) {
     difficulty: w.difficulty,
     declared_known_at: w.declaredKnownAt,
     declared_retired_at: w.declaredRetiredAt,
+    asserted_known_at: w.assertedKnownAt,
   }
 }
 

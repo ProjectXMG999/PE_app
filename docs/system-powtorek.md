@@ -123,6 +123,8 @@ retrievability(t, S) = (1 + FACTOR * t / S) ** DECAY      // R = 0.9 gdy t = S
 nextInterval(S)      = round(clamp((S/FACTOR)*(0.9**(1/DECAY) - 1), 1, 730))   // ≈ S przy RR 0.9
 
 init (pierwsza ocena):  S0(G) = W[G-1] ;  D0(G) = clamp(W[4] - exp(W[5]*(G-1)) + 1, 1, 10)
+  UWAGA: przy „Znam" na słowie widzianym PIERWSZY RAZ `initCard` nie jest wołane —
+  patrz „Pierwsza ekspozycja" niżej. Ścieżka init dotyczy dziś tylko „Nie znam".
 
 review (słowo z FSRS-state), t = max(1, dni od lastSeen), R = retrievability(t, S):
   D' = clamp( W[7]*D0(4) + (1-W[7])*(D - W[6]*(G-3)) , 1, 10)
@@ -141,6 +143,49 @@ w roku realny test). Każda wpadka → `retiredAt = undefined`, S spada wg wzoru
 `applyUnknown` nigdy nie inkrementuje `reviewCount`.
 
 `fsrs.ts` — czyste, przetestowane (`fsrs.test.ts`, `review.test.ts`).
+
+### Pierwsza ekspozycja — „Znam" na słowie, którego aplikacja nigdy nie pokazała
+
+Karta to samoocena: prompt PL → próba przypomnienia → odsłonięcie EN → werdykt. Na
+słowie widzianym pierwszy raz „Znam" **nie** znaczy „właśnie się nauczyłem" (to jest
+semantyka oceny `GOOD`, `S0 ≈ 3.13` → 3 dni), tylko **„znałem to, zanim mi je
+pokazałeś"** — i to powiedziane po realnej próbie przypomnienia. Dlatego `applyKnown`
+nie uruchamia wtedy modelu, tylko **stwierdza** stability:
+
+```
+firstExposure = !bulk && !wasKnown && stability == null && reviewCount == null
+                && status !== 'learning'     // ← ostatni warunek łapie „Nie znam" sprzed FSRS
+  → S = FIRST_KNOWN_STABILITY (100) ; D = FIRST_KNOWN_DIFFICULTY (4.5)
+  → assertedKnownAt = teraz     (declaredKnownAt NIE — słowo liczy się do punktów)
+```
+
+Dalej: 100 d → 284 d → 730 d; emerytura (`S ≥ 365`) przy 3. potwierdzeniu, po ~384
+dniach realnie upłyniętego czasu. Pomyłka kosztuje 100 dni niewidoczności, po czym
+wpadka sprowadza słowo do ~6 dni i podnosi `D` do ~6.55 — system sam się koryguje.
+
+Kolejność jest teraz zgodna z siłą dowodu: **deklaracja zbiorowa (15 d) < odpowiedziane
+pierwsze „Znam" (100 d)**. Wcześniej działało odwrotnie — „Znam wszystko" dawało 15 dni
+za gest, który niczego nie dowodzi, a odpowiedź na karcie 3 dni.
+
+`assertedKnownAt` rozdziela **harmonogram** od **deklarowanej siły pamięci**: termin jest
+realny, ale dopóki słowo nie przetrwa pierwszego interwału, nic nie zostało zmierzone —
+więc `retentionBreakdown` liczy je osobno (`asserted`), poza kubełkami i poza
+`durablePct`, tak jak od dawna robi to z `declared`. Flaga znika przy pierwszej
+prawdziwej powtórce **lub wpadce** i słowo wchodzi do grup normalnie.
+
+### Jedna odpowiedź dziennie liczy się do harmonogramu
+
+FSRS-4.5 nie ma członu krótkoterminowego — `review()` klampuje przerwę do ≥ 1 dnia, więc
+druga odpowiedź tego samego dnia jest liczona tak, jakby minęła noc: `R` wychodzi niższe,
+`(1−R)` większe, i stability rośnie mocniej, niż uzasadnia dowód. Trzy kliknięcia
+„Powtórz" potrafiły wypchnąć słowo o miesiące na podstawie trzech przypomnień w minutę.
+
+`clampSameDay` (review.ts): **w obrębie doby odpowiedź może harmonogram skrócić, nigdy
+wydłużyć.** Porównanie idzie po `stability`, nie po dacie — `nextReviewAt` niesie ±8%
+fuzzu, więc identyczna powtórka lądowałaby na innym dniu mniej więcej co drugi raz i
+połowa takich trafień przeszłaby przez porównanie dat jako fałszywa „korekta".
+Bookkeeping (`seenCount`, `status`, `lapseCount`, flagi) aktualizuje się zawsze —
+zamrożony jest wyłącznie terminarz.
 
 ### Jak słowo wchodzi do systemu
 `applyKnown` / `applyUnknown` wołane z: `WordFlashPage`, `ActiveSentencePage`, `FlashcardPage`

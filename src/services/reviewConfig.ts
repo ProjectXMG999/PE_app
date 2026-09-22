@@ -54,6 +54,27 @@ export const BULK_KNOWN_STABILITY = 15      // FSRS: first check in ~2 weeks
 export const BULK_KNOWN_DIFFICULTY = 4.5    // a touch easier than the study default (~5.3)
 export const BULK_KNOWN_REVIEW_COUNT = 2    // legacy ladder: rung 2 → intervalFor(2) = 20 days
 
+// ── Pierwsze "Znam" na słowie widzianym pierwszy raz ────────────────────────
+// A card is a self-report: prompt, attempt, reveal, verdict. On a word the app
+// has never shown before, "Znam" does not mean "I just learned this" — it means
+// "I knew this before you showed it to me", and it was said after a real
+// attempt at recall. FSRS's GOOD (S₀≈3.13, three days) encodes the first of
+// those, which is why an untouched bulk declaration used to outrank an answered
+// card: 15 days for the gesture that proves nothing, 3 for the one that proves
+// something. This is the second-to-last rung of the legacy REVIEW_LADDER.
+//
+// The schedule this seeds is deliberately long; what it does NOT do is claim a
+// measured memory strength. That distinction is `assertedKnownAt` — see
+// WordProgress and `retentionBreakdown` (reviewQueue.ts).
+export const FIRST_KNOWN_STABILITY = 100
+/** Same number as BULK_KNOWN_DIFFICULTY, and that is fine — but the PAIR must
+ *  stay distinct. `isDeclaredKnownWord` (review.ts) fingerprints pre-flag rows
+ *  as (reviewCount 0, stability, difficulty) === (0, BULK_KNOWN_*), so
+ *  FIRST_KNOWN_STABILITY must never be equal to BULK_KNOWN_STABILITY: an
+ *  organically answered word would then be read as a declaration and silently
+ *  dropped from points. */
+export const FIRST_KNOWN_DIFFICULTY = 4.5
+
 // ── Level mastery ("Oznacz cały poziom jako opanowany") ─────────────────────
 /** pack-content fetch concurrency while marking a level — level 4 alone is
  *  335 packs against an authenticated, per-pack Netlify function with no

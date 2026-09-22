@@ -27,6 +27,11 @@ import { ProgressSnapshot, declaredMasteredPackIds } from '../hooks/useProgressD
  * bonus. A deliberate, accepted retroactive correction for existing bulk-mark
  * users, not just new declarations — see services/review.ts `isDeclaredKnownWord`.
  *
+ * `assertedKnownAt` is deliberately NOT treated the same way. A first-exposure
+ * "Znam" also asserts prior knowledge, but the learner faced that specific word
+ * and answered it, which is the thing points are for. It suppresses a claim
+ * about memory STRENGTH (the retention chart), not a claim about effort.
+ *
  * v5: the pack bonus follows the listen axis. `perCompletedPack` was keyed on
  * `completedAt`, which a Trenuj run stamps — so finishing a pack in training
  * paid a "listened through" bonus on top of the per-word session weights
