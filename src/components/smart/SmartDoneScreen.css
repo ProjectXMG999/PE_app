@@ -22,7 +22,7 @@
   align-items: safe center;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: env(safe-area-inset-top, 0px) 20px env(safe-area-inset-bottom, 0px);
+  padding: var(--safe-top) 20px var(--safe-bottom);
   background:
     radial-gradient(ellipse 80% 55% at 50% 22%,
       color-mix(in oklch, var(--accent) 18%, transparent) 0%, transparent 60%),

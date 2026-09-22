@@ -586,6 +586,10 @@
   gap: var(--spacing-sm);
   padding: var(--spacing-md);
   padding-bottom: calc(var(--spacing-md) + var(--safe-bottom));
+  /* Fixed edge-to-edge, so in landscape the notch lands on this bar's own
+     gutter — over the primary CTA for the pack. */
+  padding-inline: max(var(--spacing-md), var(--safe-left))
+                  max(var(--spacing-md), var(--safe-right));
   z-index: 20;
 }
 

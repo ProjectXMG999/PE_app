@@ -16,6 +16,12 @@
      directions and the top is clipped beyond reach. Bites in landscape, where
      the viewport is 390-412px tall and the actions are the only way out. */
   align-items: safe center;
+  /* The one screen in this family that never got the inset its three siblings
+     have (MasteryScreen / SessionDoneScreen / SmartDoneScreen). Same fixed
+     inset-0 box, same `safe center`, so on a notched phone the card's top edge
+     could sit under the island with nothing to push it clear — and by the note
+     above, the actions are the only way off this screen. */
+  padding: var(--safe-top) 20px var(--safe-bottom);
   background: var(--bg-primary);
   z-index: 200;
   overflow-x: hidden;

@@ -19,6 +19,13 @@
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  /* Landscape on a notched phone puts the notch over this screen's left or
+     right gutter, and the two things it eats are the exit button and the
+     "Znam" side of the answer row — the only two controls that get you out.
+     Set once on the container rather than per row: every child here is
+     full-bleed with a --spacing-md gutter, so inseting the box keeps all of
+     those gutters intact instead of making four rows agree by hand. */
+  padding-inline: var(--safe-left) var(--safe-right);
   background: var(--bg-primary);
   overflow: hidden;
 }
@@ -40,7 +47,8 @@
   align-items: center;
   gap: var(--spacing-sm);
   flex-shrink: 0;
-  padding: calc(10px + env(safe-area-inset-top, 0px)) var(--spacing-md) 10px;
+  padding-block: calc(10px + var(--safe-top)) 10px;
+  padding-inline: var(--spacing-md);
 }
 
 .stage__exit {

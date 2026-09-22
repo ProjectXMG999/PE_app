@@ -6,19 +6,31 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  height: calc(var(--topbar-height) + env(safe-area-inset-top, 0px));
+  height: var(--topbar-reserve);
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 0 var(--spacing-md) 8px;
-  padding-top: calc(8px + env(safe-area-inset-top, 0px));
+  padding-block: calc(8px + var(--safe-top)) 8px;
+  /* Portrait is zero, so this is the landscape case: on a notched phone the
+     notch covers 59px of one edge, which is exactly where the wordmark and the
+     account button sit. Same max() form as SessionOpener.css. */
+  padding-inline: max(var(--spacing-md), var(--safe-left))
+                  max(var(--spacing-md), var(--safe-right));
   background: transparent;
   box-shadow: inset 0 -1px 0 transparent;
-  transition: box-shadow var(--transition-med), background var(--transition-med);
+  transition: box-shadow var(--transition-med);
 }
 
+/* Hairline only — no fill. The bar is a sibling ABOVE <main>, so nothing ever
+   passes under it and there is no content to mask; the 35% wash of
+   --bg-primary that used to be here was masking the ambient mesh instead. That
+   mesh is at its brightest and busiest along the top edge (two of its three
+   CSS stops are anchored there), so a flat tint over the top 119px — the bar
+   plus the status-bar strip — dimmed exactly the band the Dynamic Island sits
+   in, and gave the island a dulled rectangle to float in with a hard cut at
+   its bottom edge. That reads as a seam across the screen. The hairline is the
+   edge; the ground should run under it unbroken. */
 .topbar--scrolled {
-  background: color-mix(in oklch, var(--bg-primary) 35%, transparent);
   box-shadow: inset 0 -1px 0 var(--border);
 }
 
@@ -84,10 +96,15 @@
   flex-shrink: 0;
 }
 
-/* Liquid glass (.u-liquid) — only the shape and the glyph colour live here. */
+/* Liquid glass (.u-liquid) — only the shape and the glyph colour live here.
+   44px, not 40: this is the closest control on the screen to the island and
+   the notch, and it is what the bar's 60px height minus its 8px padding was
+   already reserving — so the HIG minimum costs nothing here but the number,
+   and the bar's height does not move. The glyph stays 20px (TopBar.tsx): the
+   button grew, not the icon. */
 .topbar__icon-btn {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,10 +113,12 @@
   cursor: pointer;
 }
 
+/* 7px, not 6: the dot rides the rim of the circle, and the 45° rim of a 44px
+   circle is 6.4px in from the corner where a 40px one was 5.9px. */
 .topbar__account-dot {
   position: absolute;
-  top: 6px;
-  right: 6px;
+  top: 7px;
+  right: 7px;
   width: 8px;
   height: 8px;
   border-radius: 50%;

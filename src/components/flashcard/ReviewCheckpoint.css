@@ -10,8 +10,8 @@
   align-items: center;
   justify-content: center;
   min-height: 100dvh;
-  padding: calc(20px + env(safe-area-inset-top, 0px)) 20px
-           calc(20px + env(safe-area-inset-bottom, 0px));
+  padding: calc(20px + var(--safe-top)) 20px
+           calc(20px + var(--safe-bottom));
   background:
     radial-gradient(ellipse 80% 55% at 50% 24%,
       color-mix(in oklch, var(--live) 18%, transparent) 0%, transparent 62%),

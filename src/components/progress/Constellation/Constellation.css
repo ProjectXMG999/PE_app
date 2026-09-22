@@ -357,7 +357,11 @@
      covered the Zamknij button. */
   z-index: 1100;
   gap: 10px;
-  padding: calc(env(safe-area-inset-top) + 14px) 14px calc(env(safe-area-inset-bottom) + 14px);
+  padding-block: calc(var(--safe-top) + 14px) calc(var(--safe-bottom) + 14px);
+  /* Landscape puts the notch over the 14px gutter, and the gutter is where
+     Zamknij lives — the same "the only way out is under something" failure the
+     z-index note above exists for, arriving from the side instead of the top. */
+  padding-inline: max(14px, var(--safe-left)) max(14px, var(--safe-right));
   border-radius: 0;
   background: var(--constellation-ground);
   box-shadow: none;

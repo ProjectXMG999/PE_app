@@ -18,7 +18,7 @@
      viewport height — clips ~50px off BOTH ends with plain `center`, and
      `.mastery__actions` is the only way off this screen. */
   align-items: safe center;
-  padding: env(safe-area-inset-top, 0px) 20px env(safe-area-inset-bottom, 0px);
+  padding: var(--safe-top) 20px var(--safe-bottom);
   background:
     radial-gradient(ellipse 80% 55% at 50% 22%, var(--accent-glow) 0%, transparent 60%),
     radial-gradient(ellipse at 50% 30%,

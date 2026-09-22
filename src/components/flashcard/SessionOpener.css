@@ -26,8 +26,8 @@
   /* Landscape on a notched phone puts the left gutter under the notch, and the
      kicker is the first thing to go. */
   padding-block: 0;
-  padding-inline: max(var(--spacing-2xl), env(safe-area-inset-left))
-                  max(var(--spacing-2xl), env(safe-area-inset-right));
+  padding-inline: max(var(--spacing-2xl), var(--safe-left))
+                  max(var(--spacing-2xl), var(--safe-right));
   /* The session screen's own ground, not a translucent wash — see above. */
   background: var(--bg-primary);
   cursor: pointer;

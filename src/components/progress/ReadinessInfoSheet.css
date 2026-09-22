@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   padding: var(--spacing-sm) var(--spacing-lg)
-           max(var(--spacing-xl), env(safe-area-inset-bottom));
+           max(var(--spacing-xl), var(--safe-bottom));
 }
 
 .readinessinfo__title {

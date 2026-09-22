@@ -36,7 +36,7 @@
   max-height: calc(100dvh - var(--spacing-lg));
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: var(--spacing-sm) var(--spacing-lg) calc(var(--spacing-lg) + env(safe-area-inset-bottom, 0px));
+  padding: var(--spacing-sm) var(--spacing-lg) calc(var(--spacing-lg) + var(--safe-bottom));
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-bottom: none;

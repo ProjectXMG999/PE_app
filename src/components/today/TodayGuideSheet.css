@@ -36,7 +36,7 @@
   /* A fixed height, not max-height: topics differ in length, and a sheet that
      resized on every tab switch jumped under the finger. */
   height: min(84vh, 720px);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-bottom: var(--safe-bottom);
   /* A violet glow falling from the top edge onto a near-black surface — the
      same light the hero card carries, without a blur to recompute. */
   background:
