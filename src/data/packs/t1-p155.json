@@ -17,7 +17,7 @@
       "audioSentence": "t1-p155-001-sentence.mp3",
       "polishAudio": "Nawet",
       "audioSentencePl": "t1-p155-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p155-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p155-002-sentence.mp3",
       "polishAudio": "Jednakże",
       "audioSentencePl": "t1-p155-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p155-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p155-003-sentence.mp3",
       "polishAudio": "Oprócz",
       "audioSentencePl": "t1-p155-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p155-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p155-004-sentence.mp3",
       "polishAudio": "Chociaż",
       "audioSentencePl": "t1-p155-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p155-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p155-005-sentence.mp3",
       "polishAudio": "Mimo że",
       "audioSentencePl": "t1-p155-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p155-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p155-006-sentence.mp3",
       "polishAudio": "Jednocześnie",
       "audioSentencePl": "t1-p155-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p155-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p155-007-sentence.mp3",
       "polishAudio": "Właściwie",
       "audioSentencePl": "t1-p155-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p155-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p155-008-sentence.mp3",
       "polishAudio": "Zamiast",
       "audioSentencePl": "t1-p155-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p155-009",
@@ -132,7 +132,7 @@
       "audioSentence": "t1-p155-010-sentence.mp3",
       "polishAudio": "Niż",
       "audioSentencePl": "t1-p155-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

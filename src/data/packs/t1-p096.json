@@ -17,7 +17,7 @@
       "audioSentence": "t1-p096-001-sentence.mp3",
       "polishAudio": "Inny",
       "audioSentencePl": "t1-p096-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p096-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p096-002-sentence.mp3",
       "polishAudio": "Chłodny",
       "audioSentencePl": "t1-p096-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p096-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p096-003-sentence.mp3",
       "polishAudio": "Ciepły",
       "audioSentencePl": "t1-p096-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p096-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p096-004-sentence.mp3",
       "polishAudio": "Mokry",
       "audioSentencePl": "t1-p096-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p096-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p096-005-sentence.mp3",
       "polishAudio": "Bliski",
       "audioSentencePl": "t1-p096-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p096-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p096-006-sentence.mp3",
       "polishAudio": "Współczujący",
       "audioSentencePl": "t1-p096-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p096-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p096-007-sentence.mp3",
       "polishAudio": "Biedny",
       "audioSentencePl": "t1-p096-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p096-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p096-008-sentence.mp3",
       "polishAudio": "Słodki",
       "audioSentencePl": "t1-p096-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p096-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p096-009-sentence.mp3",
       "polishAudio": "Świeży",
       "audioSentencePl": "t1-p096-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p096-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p096-010-sentence.mp3",
       "polishAudio": "Bardzo trudny",
       "audioSentencePl": "t1-p096-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

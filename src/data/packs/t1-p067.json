@@ -17,7 +17,7 @@
       "audioSentence": "t1-p067-001-sentence.mp3",
       "polishAudio": "Który",
       "audioSentencePl": "t1-p067-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p067-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p067-002-sentence.mp3",
       "polishAudio": "Dlaczego",
       "audioSentencePl": "t1-p067-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p067-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p067-003-sentence.mp3",
       "polishAudio": "Gdzie",
       "audioSentencePl": "t1-p067-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p067-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p067-004-sentence.mp3",
       "polishAudio": "Jak",
       "audioSentencePl": "t1-p067-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p067-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p067-005-sentence.mp3",
       "polishAudio": "Kiedy",
       "audioSentencePl": "t1-p067-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p067-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p067-006-sentence.mp3",
       "polishAudio": "Co",
       "audioSentencePl": "t1-p067-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p067-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p067-007-sentence.mp3",
       "polishAudio": "Kto",
       "audioSentencePl": "t1-p067-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p067-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p067-008-sentence.mp3",
       "polishAudio": "Lub",
       "audioSentencePl": "t1-p067-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p067-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p067-009-sentence.mp3",
       "polishAudio": "Czyje",
       "audioSentencePl": "t1-p067-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p067-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p067-010-sentence.mp3",
       "polishAudio": "Komu",
       "audioSentencePl": "t1-p067-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

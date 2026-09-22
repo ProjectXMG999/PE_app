@@ -17,7 +17,7 @@
       "audioSentence": "t1-p104-001-sentence.mp3",
       "polishAudio": "Kończyć",
       "audioSentencePl": "t1-p104-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p104-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p104-002-sentence.mp3",
       "polishAudio": "Wydarzać się",
       "audioSentencePl": "t1-p104-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p104-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p104-003-sentence.mp3",
       "polishAudio": "Znaczyć coś",
       "audioSentencePl": "t1-p104-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p104-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p104-004-sentence.mp3",
       "polishAudio": "Musieć",
       "audioSentencePl": "t1-p104-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p104-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p104-005-sentence.mp3",
       "polishAudio": "Oferować",
       "audioSentencePl": "t1-p104-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p104-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p104-006-sentence.mp3",
       "polishAudio": "Prowadzić",
       "audioSentencePl": "t1-p104-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p104-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p104-007-sentence.mp3",
       "polishAudio": "Sprzedać",
       "audioSentencePl": "t1-p104-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p104-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p104-008-sentence.mp3",
       "polishAudio": "Spędzać",
       "audioSentencePl": "t1-p104-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p104-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p104-009-sentence.mp3",
       "polishAudio": "Wygrywać",
       "audioSentencePl": "t1-p104-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p104-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p104-010-sentence.mp3",
       "polishAudio": "-bym",
       "audioSentencePl": "t1-p104-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

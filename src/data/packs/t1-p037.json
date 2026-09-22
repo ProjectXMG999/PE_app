@@ -17,7 +17,7 @@
       "audioSentence": "t1-p037-001-sentence.mp3",
       "polishAudio": "Pusty",
       "audioSentencePl": "t1-p037-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p037-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p037-002-sentence.mp3",
       "polishAudio": "Otwarty",
       "audioSentencePl": "t1-p037-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p037-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p037-003-sentence.mp3",
       "polishAudio": "Zamknięty",
       "audioSentencePl": "t1-p037-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p037-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p037-004-sentence.mp3",
       "polishAudio": "Bezpłatny",
       "audioSentencePl": "t1-p037-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p037-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p037-005-sentence.mp3",
       "polishAudio": "Drogi",
       "audioSentencePl": "t1-p037-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p037-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p037-006-sentence.mp3",
       "polishAudio": "Tani",
       "audioSentencePl": "t1-p037-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p037-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p037-007-sentence.mp3",
       "polishAudio": "Lewy",
       "audioSentencePl": "t1-p037-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p037-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p037-008-sentence.mp3",
       "polishAudio": "Prawy",
       "audioSentencePl": "t1-p037-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p037-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p037-009-sentence.mp3",
       "polishAudio": "Ciemny",
       "audioSentencePl": "t1-p037-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p037-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p037-010-sentence.mp3",
       "polishAudio": "Jasny",
       "audioSentencePl": "t1-p037-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

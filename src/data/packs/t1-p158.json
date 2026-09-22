@@ -17,7 +17,7 @@
       "audioSentence": "t1-p158-001-sentence.mp3",
       "polishAudio": "Biznes",
       "audioSentencePl": "t1-p158-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p158-002-sentence.mp3",
       "polishAudio": "Biznesmen",
       "audioSentencePl": "t1-p158-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p158-003-sentence.mp3",
       "polishAudio": "Dział",
       "audioSentencePl": "t1-p158-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p158-004-sentence.mp3",
       "polishAudio": "Godziny otwarcia",
       "audioSentencePl": "t1-p158-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p158-005-sentence.mp3",
       "polishAudio": "Gospodarka",
       "audioSentencePl": "t1-p158-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p158-006-sentence.mp3",
       "polishAudio": "Logo",
       "audioSentencePl": "t1-p158-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p158-007-sentence.mp3",
       "polishAudio": "Marka",
       "audioSentencePl": "t1-p158-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p158-008-sentence.mp3",
       "polishAudio": "Oferta",
       "audioSentencePl": "t1-p158-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p158-009-sentence.mp3",
       "polishAudio": "Organizacja",
       "audioSentencePl": "t1-p158-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p158-010-sentence.mp3",
       "polishAudio": "Podpis",
       "audioSentencePl": "t1-p158-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p158-011-sentence.mp3",
       "polishAudio": "Reklama",
       "audioSentencePl": "t1-p158-011-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p158-012-sentence.mp3",
       "polishAudio": "Ogłoszenie",
       "audioSentencePl": "t1-p158-012-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-013",
@@ -184,7 +184,7 @@
       "audioSentence": "t1-p158-014-sentence.mp3",
       "polishAudio": "Szef",
       "audioSentencePl": "t1-p158-014-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p158-015",
@@ -197,7 +197,7 @@
       "audioSentence": "t1-p158-015-sentence.mp3",
       "polishAudio": "Zamówienie",
       "audioSentencePl": "t1-p158-015-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

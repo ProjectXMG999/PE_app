@@ -17,7 +17,7 @@
       "audioSentence": "t1-p075-001-sentence.mp3",
       "polishAudio": "Chuj",
       "audioSentencePl": "t1-p075-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p075-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p075-002-sentence.mp3",
       "polishAudio": "Cipka",
       "audioSentencePl": "t1-p075-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p075-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p075-003-sentence.mp3",
       "polishAudio": "Dupek",
       "audioSentencePl": "t1-p075-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p075-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p075-004-sentence.mp3",
       "polishAudio": "Drań",
       "audioSentencePl": "t1-p075-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p075-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p075-005-sentence.mp3",
       "polishAudio": "Pedał",
       "audioSentencePl": "t1-p075-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p075-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p075-006-sentence.mp3",
       "polishAudio": "Dziwka",
       "audioSentencePl": "t1-p075-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p075-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p075-007-sentence.mp3",
       "polishAudio": "Odpierdol się!",
       "audioSentencePl": "t1-p075-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p075-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p075-008-sentence.mp3",
       "polishAudio": "Wypierdalaj!",
       "audioSentencePl": "t1-p075-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p075-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p075-009-sentence.mp3",
       "polishAudio": "Spierdalaj!",
       "audioSentencePl": "t1-p075-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p075-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p075-010-sentence.mp3",
       "polishAudio": "Chujowo, do dupy",
       "audioSentencePl": "t1-p075-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

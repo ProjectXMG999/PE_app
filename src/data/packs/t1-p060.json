@@ -17,7 +17,7 @@
       "audioSentence": "t1-p060-001-sentence.mp3",
       "polishAudio": "Czterysta",
       "audioSentencePl": "t1-p060-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p060-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p060-002-sentence.mp3",
       "polishAudio": "Tysiąc",
       "audioSentencePl": "t1-p060-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p060-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p060-003-sentence.mp3",
       "polishAudio": "Dwa tysiące",
       "audioSentencePl": "t1-p060-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p060-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p060-004-sentence.mp3",
       "polishAudio": "Milion",
       "audioSentencePl": "t1-p060-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p060-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p060-005-sentence.mp3",
       "polishAudio": "Miliard",
       "audioSentencePl": "t1-p060-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p060-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p060-006-sentence.mp3",
       "polishAudio": "Bilion",
       "audioSentencePl": "t1-p060-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p060-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p060-007-sentence.mp3",
       "polishAudio": "Dziewięćdziesiąt",
       "audioSentencePl": "t1-p060-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p060-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p060-008-sentence.mp3",
       "polishAudio": "Sto",
       "audioSentencePl": "t1-p060-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p060-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p060-009-sentence.mp3",
       "polishAudio": "Dwieście",
       "audioSentencePl": "t1-p060-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p060-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p060-010-sentence.mp3",
       "polishAudio": "Trzysta",
       "audioSentencePl": "t1-p060-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

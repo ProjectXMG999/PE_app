@@ -17,7 +17,7 @@
       "audioSentence": "t1-p101-001-sentence.mp3",
       "polishAudio": "Małżeństwo",
       "audioSentencePl": "t1-p101-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p101-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p101-002-sentence.mp3",
       "polishAudio": "Miejsce urodzenia",
       "audioSentencePl": "t1-p101-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p101-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p101-003-sentence.mp3",
       "polishAudio": "Para",
       "audioSentencePl": "t1-p101-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p101-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p101-004-sentence.mp3",
       "polishAudio": "Przyjęcie",
       "audioSentencePl": "t1-p101-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p101-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p101-005-sentence.mp3",
       "polishAudio": "Styl",
       "audioSentencePl": "t1-p101-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p101-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p101-006-sentence.mp3",
       "polishAudio": "Styl życia",
       "audioSentencePl": "t1-p101-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p101-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p101-007-sentence.mp3",
       "polishAudio": "Urodziny",
       "audioSentencePl": "t1-p101-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p101-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p101-008-sentence.mp3",
       "polishAudio": "Wydarzenie",
       "audioSentencePl": "t1-p101-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p101-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p101-009-sentence.mp3",
       "polishAudio": "Życie",
       "audioSentencePl": "t1-p101-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p101-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p101-010-sentence.mp3",
       "polishAudio": "Życie nocne",
       "audioSentencePl": "t1-p101-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

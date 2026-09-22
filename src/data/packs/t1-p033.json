@@ -17,7 +17,7 @@
       "audioSentence": "t1-p033-001-sentence.mp3",
       "polishAudio": "Godzina",
       "audioSentencePl": "t1-p033-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p033-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p033-002-sentence.mp3",
       "polishAudio": "Minuta",
       "audioSentencePl": "t1-p033-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p033-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p033-003-sentence.mp3",
       "polishAudio": "Noc",
       "audioSentencePl": "t1-p033-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p033-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p033-004-sentence.mp3",
       "polishAudio": "Piątek",
       "audioSentencePl": "t1-p033-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p033-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p033-005-sentence.mp3",
       "polishAudio": "Popołudnie",
       "audioSentencePl": "t1-p033-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p033-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p033-006-sentence.mp3",
       "polishAudio": "Rok",
       "audioSentencePl": "t1-p033-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p033-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p033-007-sentence.mp3",
       "polishAudio": "Sekunda",
       "audioSentencePl": "t1-p033-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p033-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p033-008-sentence.mp3",
       "polishAudio": "Tydzień",
       "audioSentencePl": "t1-p033-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p033-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p033-009-sentence.mp3",
       "polishAudio": "Weekend",
       "audioSentencePl": "t1-p033-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p033-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p033-010-sentence.mp3",
       "polishAudio": "Wieczór",
       "audioSentencePl": "t1-p033-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

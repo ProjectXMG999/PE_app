@@ -17,7 +17,7 @@
       "audioSentence": "t1-p074-001-sentence.mp3",
       "polishAudio": "Babcia",
       "audioSentencePl": "t1-p074-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p074-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p074-002-sentence.mp3",
       "polishAudio": "Babka",
       "audioSentencePl": "t1-p074-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p074-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p074-003-sentence.mp3",
       "polishAudio": "Ciotka",
       "audioSentencePl": "t1-p074-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p074-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p074-004-sentence.mp3",
       "polishAudio": "Dziadek",
       "audioSentencePl": "t1-p074-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p074-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p074-005-sentence.mp3",
       "polishAudio": "Dziadzio",
       "audioSentencePl": "t1-p074-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p074-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p074-006-sentence.mp3",
       "polishAudio": "Kuzyn",
       "audioSentencePl": "t1-p074-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p074-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p074-007-sentence.mp3",
       "polishAudio": "Niemowlę",
       "audioSentencePl": "t1-p074-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p074-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p074-008-sentence.mp3",
       "polishAudio": "Rodzic",
       "audioSentencePl": "t1-p074-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p074-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p074-009-sentence.mp3",
       "polishAudio": "Siostra",
       "audioSentencePl": "t1-p074-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p074-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p074-010-sentence.mp3",
       "polishAudio": "Wujek",
       "audioSentencePl": "t1-p074-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

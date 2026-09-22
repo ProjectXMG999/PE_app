@@ -39,7 +39,7 @@
       "audioSentence": "t1-p143-003-sentence.mp3",
       "polishAudio": "Tak żebyś wiedział",
       "audioSentencePl": "t1-p143-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p143-004",
@@ -52,7 +52,7 @@
       "audioSentence": "t1-p143-004-sentence.mp3",
       "polishAudio": "Z tego, co mi wiadomo",
       "audioSentencePl": "t1-p143-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p143-005",
@@ -65,7 +65,7 @@
       "audioSentence": "t1-p143-005-sentence.mp3",
       "polishAudio": "Szczerze mówiąc",
       "audioSentencePl": "t1-p143-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p143-006",
@@ -78,7 +78,7 @@
       "audioSentence": "t1-p143-006-sentence.mp3",
       "polishAudio": "Ty też",
       "audioSentencePl": "t1-p143-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p143-007",
@@ -102,7 +102,7 @@
       "audioSentence": "t1-p143-008-sentence.mp3",
       "polishAudio": "Nieważne",
       "audioSentencePl": "t1-p143-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p143-009",
@@ -115,7 +115,7 @@
       "audioSentence": "t1-p143-009-sentence.mp3",
       "polishAudio": "No a jak",
       "audioSentencePl": "t1-p143-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p143-010",
@@ -128,7 +128,7 @@
       "audioSentence": "t1-p143-010-sentence.mp3",
       "polishAudio": "Peffka",
       "audioSentencePl": "t1-p143-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

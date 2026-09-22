@@ -17,7 +17,7 @@
       "audioSentence": "t1-p008-001-sentence.mp3",
       "polishAudio": "Tak szybko, jak to możliwe",
       "audioSentencePl": "t1-p008-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p008-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p008-002-sentence.mp3",
       "polishAudio": "Przy okazji",
       "audioSentencePl": "t1-p008-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p008-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p008-003-sentence.mp3",
       "polishAudio": "Dozo",
       "audioSentencePl": "t1-p008-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p008-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p008-004-sentence.mp3",
       "polishAudio": "Do twojej wiadomości",
       "audioSentencePl": "t1-p008-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p008-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p008-005-sentence.mp3",
       "polishAudio": "Okej",
       "audioSentencePl": "t1-p008-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p008-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p008-006-sentence.mp3",
       "polishAudio": "O mój boże",
       "audioSentencePl": "t1-p008-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p008-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p008-007-sentence.mp3",
       "polishAudio": "Plis",
       "audioSentencePl": "t1-p008-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p008-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p008-008-sentence.mp3",
       "polishAudio": "Dzięks",
       "audioSentencePl": "t1-p008-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p008-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p008-009-sentence.mp3",
       "polishAudio": "Śmiać się na głos",
       "audioSentencePl": "t1-p008-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p008-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p008-010-sentence.mp3",
       "polishAudio": "Buziaki i uściski",
       "audioSentencePl": "t1-p008-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p066-001-sentence.mp3",
       "polishAudio": "Cel",
       "audioSentencePl": "t1-p066-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p066-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p066-002-sentence.mp3",
       "polishAudio": "Centrum",
       "audioSentencePl": "t1-p066-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p066-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p066-003-sentence.mp3",
       "polishAudio": "Kategoria",
       "audioSentencePl": "t1-p066-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p066-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p066-004-sentence.mp3",
       "polishAudio": "Miejsce",
       "audioSentencePl": "t1-p066-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p066-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p066-005-sentence.mp3",
       "polishAudio": "Problem",
       "audioSentencePl": "t1-p066-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p066-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p066-006-sentence.mp3",
       "polishAudio": "Przedmiot",
       "audioSentencePl": "t1-p066-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p066-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p066-007-sentence.mp3",
       "polishAudio": "Rzecz",
       "audioSentencePl": "t1-p066-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p066-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p066-008-sentence.mp3",
       "polishAudio": "Sposób",
       "audioSentencePl": "t1-p066-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p066-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p066-009-sentence.mp3",
       "polishAudio": "Szczegół",
       "audioSentencePl": "t1-p066-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p066-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p066-010-sentence.mp3",
       "polishAudio": "Znak",
       "audioSentencePl": "t1-p066-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

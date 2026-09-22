@@ -17,7 +17,7 @@
       "audioSentence": "t1-p115-001-sentence.mp3",
       "polishAudio": "Gościnny",
       "audioSentencePl": "t1-p115-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p115-002-sentence.mp3",
       "polishAudio": "Pomysłowy",
       "audioSentencePl": "t1-p115-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p115-003-sentence.mp3",
       "polishAudio": "Porządny",
       "audioSentencePl": "t1-p115-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p115-004-sentence.mp3",
       "polishAudio": "Radosny",
       "audioSentencePl": "t1-p115-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p115-005-sentence.mp3",
       "polishAudio": "Spójny",
       "audioSentencePl": "t1-p115-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p115-006-sentence.mp3",
       "polishAudio": "Szczery",
       "audioSentencePl": "t1-p115-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p115-007-sentence.mp3",
       "polishAudio": "Zaangażowany",
       "audioSentencePl": "t1-p115-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p115-008-sentence.mp3",
       "polishAudio": "Zręczny",
       "audioSentencePl": "t1-p115-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p115-009-sentence.mp3",
       "polishAudio": "Biegły",
       "audioSentencePl": "t1-p115-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p115-010-sentence.mp3",
       "polishAudio": "Wiarygodny",
       "audioSentencePl": "t1-p115-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-011",
@@ -158,7 +158,7 @@
       "audioSentence": "t1-p115-012-sentence.mp3",
       "polishAudio": "Pełen wigoru",
       "audioSentencePl": "t1-p115-012-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-013",
@@ -171,7 +171,7 @@
       "audioSentence": "t1-p115-013-sentence.mp3",
       "polishAudio": "Owocny",
       "audioSentencePl": "t1-p115-013-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-014",
@@ -184,7 +184,7 @@
       "audioSentence": "t1-p115-014-sentence.mp3",
       "polishAudio": "Wesoły",
       "audioSentencePl": "t1-p115-014-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p115-015",
@@ -197,7 +197,7 @@
       "audioSentence": "t1-p115-015-sentence.mp3",
       "polishAudio": "Otwarty",
       "audioSentencePl": "t1-p115-015-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

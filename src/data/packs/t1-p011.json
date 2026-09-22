@@ -17,7 +17,7 @@
       "audioSentence": "t1-p011-001-sentence.mp3",
       "polishAudio": "Wierzyć",
       "audioSentencePl": "t1-p011-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p011-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p011-002-sentence.mp3",
       "polishAudio": "Sprawdzać",
       "audioSentencePl": "t1-p011-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p011-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p011-003-sentence.mp3",
       "polishAudio": "Decydować",
       "audioSentencePl": "t1-p011-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p011-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p011-004-sentence.mp3",
       "polishAudio": "Mieć nadzieję",
       "audioSentencePl": "t1-p011-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p011-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p011-005-sentence.mp3",
       "polishAudio": "Wiedzieć",
       "audioSentencePl": "t1-p011-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p011-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p011-006-sentence.mp3",
       "polishAudio": "Lubić, podobać się",
       "audioSentencePl": "t1-p011-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p011-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p011-007-sentence.mp3",
       "polishAudio": "Kochać",
       "audioSentencePl": "t1-p011-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p011-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p011-008-sentence.mp3",
       "polishAudio": "Myśleć",
       "audioSentencePl": "t1-p011-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p011-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p011-009-sentence.mp3",
       "polishAudio": "Rozumieć",
       "audioSentencePl": "t1-p011-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p011-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p011-010-sentence.mp3",
       "polishAudio": "Chcieć",
       "audioSentencePl": "t1-p011-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

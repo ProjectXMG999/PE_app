@@ -17,7 +17,7 @@
       "audioSentence": "t1-p152-001-sentence.mp3",
       "polishAudio": "Rysunek",
       "audioSentencePl": "t1-p152-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p152-002-sentence.mp3",
       "polishAudio": "Symbol",
       "audioSentencePl": "t1-p152-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p152-003-sentence.mp3",
       "polishAudio": "Zespół muzyczny",
       "audioSentencePl": "t1-p152-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p152-004-sentence.mp3",
       "polishAudio": "Fotografia",
       "audioSentencePl": "t1-p152-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p152-005-sentence.mp3",
       "polishAudio": "Teatr",
       "audioSentencePl": "t1-p152-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p152-006-sentence.mp3",
       "polishAudio": "Ładować",
       "audioSentencePl": "t1-p152-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p152-007-sentence.mp3",
       "polishAudio": "Klikać",
       "audioSentencePl": "t1-p152-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p152-008-sentence.mp3",
       "polishAudio": "Kopiować",
       "audioSentencePl": "t1-p152-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p152-009-sentence.mp3",
       "polishAudio": "Zablokować",
       "audioSentencePl": "t1-p152-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p152-010-sentence.mp3",
       "polishAudio": "Napisać e-mail",
       "audioSentencePl": "t1-p152-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p152-011-sentence.mp3",
       "polishAudio": "Wklejać",
       "audioSentencePl": "t1-p152-011-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p152-012-sentence.mp3",
       "polishAudio": "Drukować",
       "audioSentencePl": "t1-p152-012-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p152-013-sentence.mp3",
       "polishAudio": "Brzmieć",
       "audioSentencePl": "t1-p152-013-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p152-014-sentence.mp3",
       "polishAudio": "Załączać",
       "audioSentencePl": "t1-p152-014-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p152-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p152-015-sentence.mp3",
       "polishAudio": "Anulować",
       "audioSentencePl": "t1-p152-015-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

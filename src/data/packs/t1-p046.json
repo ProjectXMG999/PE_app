@@ -17,7 +17,7 @@
       "audioSentence": "t1-p046-001-sentence.mp3",
       "polishAudio": "Adres",
       "audioSentencePl": "t1-p046-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p046-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p046-002-sentence.mp3",
       "polishAudio": "Krzesło",
       "audioSentencePl": "t1-p046-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p046-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p046-003-sentence.mp3",
       "polishAudio": "Lampa",
       "audioSentencePl": "t1-p046-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p046-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p046-004-sentence.mp3",
       "polishAudio": "Lustro",
       "audioSentencePl": "t1-p046-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p046-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p046-005-sentence.mp3",
       "polishAudio": "Łóżko",
       "audioSentencePl": "t1-p046-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p046-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p046-006-sentence.mp3",
       "polishAudio": "Pokój",
       "audioSentencePl": "t1-p046-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p046-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p046-007-sentence.mp3",
       "polishAudio": "Kanapa",
       "audioSentencePl": "t1-p046-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p046-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p046-008-sentence.mp3",
       "polishAudio": "Szafa",
       "audioSentencePl": "t1-p046-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p046-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p046-009-sentence.mp3",
       "polishAudio": "Ściana",
       "audioSentencePl": "t1-p046-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p046-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p046-010-sentence.mp3",
       "polishAudio": "Toaleta",
       "audioSentencePl": "t1-p046-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p058-001-sentence.mp3",
       "polishAudio": "Filiżanka",
       "audioSentencePl": "t1-p058-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p058-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p058-002-sentence.mp3",
       "polishAudio": "Kubek",
       "audioSentencePl": "t1-p058-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p058-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p058-003-sentence.mp3",
       "polishAudio": "Kuchnia",
       "audioSentencePl": "t1-p058-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p058-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p058-004-sentence.mp3",
       "polishAudio": "Lodówka",
       "audioSentencePl": "t1-p058-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p058-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p058-005-sentence.mp3",
       "polishAudio": "Łyżka",
       "audioSentencePl": "t1-p058-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p058-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p058-006-sentence.mp3",
       "polishAudio": "Miska",
       "audioSentencePl": "t1-p058-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p058-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p058-007-sentence.mp3",
       "polishAudio": "Nóż",
       "audioSentencePl": "t1-p058-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p058-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p058-008-sentence.mp3",
       "polishAudio": "Patelnia",
       "audioSentencePl": "t1-p058-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p058-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p058-009-sentence.mp3",
       "polishAudio": "Szklanka",
       "audioSentencePl": "t1-p058-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p058-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p058-010-sentence.mp3",
       "polishAudio": "Talerz",
       "audioSentencePl": "t1-p058-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

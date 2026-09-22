@@ -17,7 +17,7 @@
       "audioSentence": "t1-p036-001-sentence.mp3",
       "polishAudio": "Nie mam",
       "audioSentencePl": "t1-p036-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p036-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p036-002-sentence.mp3",
       "polishAudio": "Za starych czasów",
       "audioSentencePl": "t1-p036-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p036-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p036-003-sentence.mp3",
       "polishAudio": "Pewniaczek",
       "audioSentencePl": "t1-p036-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p036-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p036-004-sentence.mp3",
       "polishAudio": "Bądź autentyczny",
       "audioSentencePl": "t1-p036-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p036-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p036-005-sentence.mp3",
       "polishAudio": "Puść mi strzałę",
       "audioSentencePl": "t1-p036-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p036-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p036-006-sentence.mp3",
       "polishAudio": "Kumasz?",
       "audioSentencePl": "t1-p036-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p036-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p036-007-sentence.mp3",
       "polishAudio": "Muszę spadać",
       "audioSentencePl": "t1-p036-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p036-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p036-008-sentence.mp3",
       "polishAudio": "Brak mi słów",
       "audioSentencePl": "t1-p036-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p036-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p036-009-sentence.mp3",
       "polishAudio": "Widziałem",
       "audioSentencePl": "t1-p036-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p036-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p036-010-sentence.mp3",
       "polishAudio": "Nawet mi nie mów",
       "audioSentencePl": "t1-p036-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

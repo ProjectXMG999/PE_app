@@ -17,7 +17,7 @@
       "audioSentence": "t1-p010-001-sentence.mp3",
       "polishAudio": "Zmieniać",
       "audioSentencePl": "t1-p010-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p010-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p010-002-sentence.mp3",
       "polishAudio": "Kosztować",
       "audioSentencePl": "t1-p010-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p010-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p010-003-sentence.mp3",
       "polishAudio": "Zarabiać",
       "audioSentencePl": "t1-p010-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p010-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p010-004-sentence.mp3",
       "polishAudio": "Kupować",
       "audioSentencePl": "t1-p010-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p010-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p010-005-sentence.mp3",
       "polishAudio": "Skończyć",
       "audioSentencePl": "t1-p010-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p010-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p010-006-sentence.mp3",
       "polishAudio": "Płacić",
       "audioSentencePl": "t1-p010-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p010-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p010-007-sentence.mp3",
       "polishAudio": "Planować",
       "audioSentencePl": "t1-p010-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p010-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p010-008-sentence.mp3",
       "polishAudio": "Wydawać pieniądze",
       "audioSentencePl": "t1-p010-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p010-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p010-009-sentence.mp3",
       "polishAudio": "Czekać",
       "audioSentencePl": "t1-p010-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p010-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p010-010-sentence.mp3",
       "polishAudio": "Pracować",
       "audioSentencePl": "t1-p010-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

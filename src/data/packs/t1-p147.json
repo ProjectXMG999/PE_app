@@ -17,7 +17,7 @@
       "audioSentence": "t1-p147-001-sentence.mp3",
       "polishAudio": "Teraz",
       "audioSentencePl": "t1-p147-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p147-002-sentence.mp3",
       "polishAudio": "Obecnie",
       "audioSentencePl": "t1-p147-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p147-003-sentence.mp3",
       "polishAudio": "Dopiero co",
       "audioSentencePl": "t1-p147-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p147-004-sentence.mp3",
       "polishAudio": "W czasie",
       "audioSentencePl": "t1-p147-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p147-005-sentence.mp3",
       "polishAudio": "Kiedykolwiek",
       "audioSentencePl": "t1-p147-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p147-006-sentence.mp3",
       "polishAudio": "W porę",
       "audioSentencePl": "t1-p147-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p147-007-sentence.mp3",
       "polishAudio": "Ostatnio",
       "audioSentencePl": "t1-p147-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p147-008-sentence.mp3",
       "polishAudio": "Później",
       "audioSentencePl": "t1-p147-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p147-009-sentence.mp3",
       "polishAudio": "Na czas",
       "audioSentencePl": "t1-p147-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p147-010-sentence.mp3",
       "polishAudio": "Pewnego dnia",
       "audioSentencePl": "t1-p147-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p147-011-sentence.mp3",
       "polishAudio": "Po",
       "audioSentencePl": "t1-p147-011-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p147-012-sentence.mp3",
       "polishAudio": "Pewnego razu",
       "audioSentencePl": "t1-p147-012-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p147-013-sentence.mp3",
       "polishAudio": "Wkrótce",
       "audioSentencePl": "t1-p147-013-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p147-014-sentence.mp3",
       "polishAudio": "Wcześniej",
       "audioSentencePl": "t1-p147-014-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p147-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p147-015-sentence.mp3",
       "polishAudio": "Nadal",
       "audioSentencePl": "t1-p147-015-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

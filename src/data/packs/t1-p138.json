@@ -17,7 +17,7 @@
       "audioSentence": "t1-p138-001-sentence.mp3",
       "polishAudio": "Porównywać",
       "audioSentencePl": "t1-p138-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p138-002-sentence.mp3",
       "polishAudio": "Liczyć",
       "audioSentencePl": "t1-p138-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p138-003-sentence.mp3",
       "polishAudio": "Zgadywać",
       "audioSentencePl": "t1-p138-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p138-004-sentence.mp3",
       "polishAudio": "Wyobrażać sobie",
       "audioSentencePl": "t1-p138-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p138-005-sentence.mp3",
       "polishAudio": "Wybrać",
       "audioSentencePl": "t1-p138-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p138-006-sentence.mp3",
       "polishAudio": "Zareagować",
       "audioSentencePl": "t1-p138-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p138-007-sentence.mp3",
       "polishAudio": "Zdawać sobie sprawę",
       "audioSentencePl": "t1-p138-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p138-008-sentence.mp3",
       "polishAudio": "Przypuszczać",
       "audioSentencePl": "t1-p138-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p138-009-sentence.mp3",
       "polishAudio": "Uczyć",
       "audioSentencePl": "t1-p138-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p138-010-sentence.mp3",
       "polishAudio": "Zastanawiać się",
       "audioSentencePl": "t1-p138-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p138-011-sentence.mp3",
       "polishAudio": "Rozważać",
       "audioSentencePl": "t1-p138-011-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p138-012-sentence.mp3",
       "polishAudio": "Wątpić",
       "audioSentencePl": "t1-p138-012-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p138-013-sentence.mp3",
       "polishAudio": "Spodziewać się",
       "audioSentencePl": "t1-p138-013-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p138-014-sentence.mp3",
       "polishAudio": "Dawać sobie radę",
       "audioSentencePl": "t1-p138-014-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p138-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p138-015-sentence.mp3",
       "polishAudio": "Skupiać",
       "audioSentencePl": "t1-p138-015-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

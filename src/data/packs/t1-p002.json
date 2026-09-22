@@ -17,7 +17,7 @@
       "audioSentence": "t1-p002-001-sentence.mp3",
       "polishAudio": "Bankomat",
       "audioSentencePl": "t1-p002-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p002-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p002-002-sentence.mp3",
       "polishAudio": "Biuro",
       "audioSentencePl": "t1-p002-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p002-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p002-003-sentence.mp3",
       "polishAudio": "Menu",
       "audioSentencePl": "t1-p002-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p002-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p002-004-sentence.mp3",
       "polishAudio": "Kawiarnia",
       "audioSentencePl": "t1-p002-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p002-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p002-005-sentence.mp3",
       "polishAudio": "Miasto",
       "audioSentencePl": "t1-p002-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p002-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p002-006-sentence.mp3",
       "polishAudio": "Miasto",
       "audioSentencePl": "t1-p002-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p002-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p002-007-sentence.mp3",
       "polishAudio": "Parking",
       "audioSentencePl": "t1-p002-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p002-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p002-008-sentence.mp3",
       "polishAudio": "Restauracja",
       "audioSentencePl": "t1-p002-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p002-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p002-009-sentence.mp3",
       "polishAudio": "Szkoła",
       "audioSentencePl": "t1-p002-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p002-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p002-010-sentence.mp3",
       "polishAudio": "Ulica",
       "audioSentencePl": "t1-p002-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

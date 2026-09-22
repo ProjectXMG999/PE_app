@@ -17,7 +17,7 @@
       "audioSentence": "t1-p123-001-sentence.mp3",
       "polishAudio": "W tej chwili",
       "audioSentencePl": "t1-p123-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p123-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p123-002-sentence.mp3",
       "polishAudio": "Wcześniej",
       "audioSentencePl": "t1-p123-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p123-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p123-003-sentence.mp3",
       "polishAudio": "Narka",
       "audioSentencePl": "t1-p123-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p123-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p123-004-sentence.mp3",
       "polishAudio": "Niedługo wracam",
       "audioSentencePl": "t1-p123-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p123-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p123-005-sentence.mp3",
       "polishAudio": "Kompletna strata czasu",
       "audioSentencePl": "t1-p123-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p123-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p123-006-sentence.mp3",
       "polishAudio": "Muszę iść",
       "audioSentencePl": "t1-p123-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p123-007",
@@ -106,7 +106,7 @@
       "audioSentence": "t1-p123-008-sentence.mp3",
       "polishAudio": "W drodze",
       "audioSentencePl": "t1-p123-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p123-009",
@@ -119,7 +119,7 @@
       "audioSentence": "t1-p123-009-sentence.mp3",
       "polishAudio": "Pogadamy później",
       "audioSentencePl": "t1-p123-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p123-010",
@@ -132,7 +132,7 @@
       "audioSentence": "t1-p123-010-sentence.mp3",
       "polishAudio": "Czekaj",
       "audioSentencePl": "t1-p123-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

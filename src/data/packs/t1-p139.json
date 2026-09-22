@@ -17,7 +17,7 @@
       "audioSentence": "t1-p139-001-sentence.mp3",
       "polishAudio": "Bark",
       "audioSentencePl": "t1-p139-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p139-002-sentence.mp3",
       "polishAudio": "Brew",
       "audioSentencePl": "t1-p139-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p139-003-sentence.mp3",
       "polishAudio": "Broda",
       "audioSentencePl": "t1-p139-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p139-004-sentence.mp3",
       "polishAudio": "Brzuch",
       "audioSentencePl": "t1-p139-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-005",
@@ -80,7 +80,7 @@
       "audioSentence": "t1-p139-006-sentence.mp3",
       "polishAudio": "Dłoń",
       "audioSentencePl": "t1-p139-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-007",
@@ -93,7 +93,7 @@
       "audioSentence": "t1-p139-007-sentence.mp3",
       "polishAudio": "Gardło",
       "audioSentencePl": "t1-p139-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-008",
@@ -106,7 +106,7 @@
       "audioSentence": "t1-p139-008-sentence.mp3",
       "polishAudio": "Kciuk",
       "audioSentencePl": "t1-p139-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-009",
@@ -119,7 +119,7 @@
       "audioSentence": "t1-p139-009-sentence.mp3",
       "polishAudio": "Klatka piersiowa",
       "audioSentencePl": "t1-p139-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-010",
@@ -132,7 +132,7 @@
       "audioSentence": "t1-p139-010-sentence.mp3",
       "polishAudio": "Kolano",
       "audioSentencePl": "t1-p139-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-011",
@@ -145,7 +145,7 @@
       "audioSentence": "t1-p139-011-sentence.mp3",
       "polishAudio": "Kość",
       "audioSentencePl": "t1-p139-011-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-012",
@@ -158,7 +158,7 @@
       "audioSentence": "t1-p139-012-sentence.mp3",
       "polishAudio": "Kręgosłup",
       "audioSentencePl": "t1-p139-012-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-013",
@@ -171,7 +171,7 @@
       "audioSentence": "t1-p139-013-sentence.mp3",
       "polishAudio": "Łokieć",
       "audioSentencePl": "t1-p139-013-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-014",
@@ -184,7 +184,7 @@
       "audioSentence": "t1-p139-014-sentence.mp3",
       "polishAudio": "Mięsień",
       "audioSentencePl": "t1-p139-014-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p139-015",
@@ -197,7 +197,7 @@
       "audioSentence": "t1-p139-015-sentence.mp3",
       "polishAudio": "Mózg",
       "audioSentencePl": "t1-p139-015-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

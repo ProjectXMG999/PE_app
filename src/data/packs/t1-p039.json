@@ -17,7 +17,7 @@
       "audioSentence": "t1-p039-001-sentence.mp3",
       "polishAudio": "Banknot",
       "audioSentencePl": "t1-p039-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p039-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p039-002-sentence.mp3",
       "polishAudio": "Budżet",
       "audioSentencePl": "t1-p039-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p039-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p039-003-sentence.mp3",
       "polishAudio": "Cena",
       "audioSentencePl": "t1-p039-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p039-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p039-004-sentence.mp3",
       "polishAudio": "Gotówka",
       "audioSentencePl": "t1-p039-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p039-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p039-005-sentence.mp3",
       "polishAudio": "Karta debetowa",
       "audioSentencePl": "t1-p039-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p039-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p039-006-sentence.mp3",
       "polishAudio": "Karta kredytowa",
       "audioSentencePl": "t1-p039-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p039-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p039-007-sentence.mp3",
       "polishAudio": "Konto",
       "audioSentencePl": "t1-p039-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p039-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p039-008-sentence.mp3",
       "polishAudio": "Kredyt",
       "audioSentencePl": "t1-p039-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p039-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p039-009-sentence.mp3",
       "polishAudio": "Pensja",
       "audioSentencePl": "t1-p039-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p039-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p039-010-sentence.mp3",
       "polishAudio": "Pieniądze",
       "audioSentencePl": "t1-p039-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

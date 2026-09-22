@@ -17,7 +17,7 @@
       "audioSentence": "t1-p077-001-sentence.mp3",
       "polishAudio": "Budzik",
       "audioSentencePl": "t1-p077-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p077-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p077-002-sentence.mp3",
       "polishAudio": "Garaż",
       "audioSentencePl": "t1-p077-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p077-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p077-003-sentence.mp3",
       "polishAudio": "Łazienka",
       "audioSentencePl": "t1-p077-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p077-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p077-004-sentence.mp3",
       "polishAudio": "Meble",
       "audioSentencePl": "t1-p077-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p077-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p077-005-sentence.mp3",
       "polishAudio": "Parasol",
       "audioSentencePl": "t1-p077-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p077-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p077-006-sentence.mp3",
       "polishAudio": "Poduszka",
       "audioSentencePl": "t1-p077-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p077-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p077-007-sentence.mp3",
       "polishAudio": "Pralka",
       "audioSentencePl": "t1-p077-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p077-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p077-008-sentence.mp3",
       "polishAudio": "Salon",
       "audioSentencePl": "t1-p077-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p077-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p077-009-sentence.mp3",
       "polishAudio": "Sąsiad",
       "audioSentencePl": "t1-p077-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p077-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p077-010-sentence.mp3",
       "polishAudio": "Sypialnia",
       "audioSentencePl": "t1-p077-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

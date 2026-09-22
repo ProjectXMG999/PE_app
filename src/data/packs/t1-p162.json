@@ -17,7 +17,7 @@
       "audioSentence": "t1-p162-001-sentence.mp3",
       "polishAudio": "Baseball",
       "audioSentencePl": "t1-p162-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p162-002-sentence.mp3",
       "polishAudio": "Bieganie",
       "audioSentencePl": "t1-p162-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p162-003-sentence.mp3",
       "polishAudio": "Gol",
       "audioSentencePl": "t1-p162-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p162-004-sentence.mp3",
       "polishAudio": "Pozycja",
       "audioSentencePl": "t1-p162-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p162-005-sentence.mp3",
       "polishAudio": "Ćwiczenie",
       "audioSentencePl": "t1-p162-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p162-006-sentence.mp3",
       "polishAudio": "Amator",
       "audioSentencePl": "t1-p162-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p162-007-sentence.mp3",
       "polishAudio": "Gra",
       "audioSentencePl": "t1-p162-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p162-008-sentence.mp3",
       "polishAudio": "Punkt",
       "audioSentencePl": "t1-p162-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p162-009-sentence.mp3",
       "polishAudio": "Hobby",
       "audioSentencePl": "t1-p162-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p162-010-sentence.mp3",
       "polishAudio": "Hokej",
       "audioSentencePl": "t1-p162-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p162-011-sentence.mp3",
       "polishAudio": "Instruktor",
       "audioSentencePl": "t1-p162-011-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p162-012-sentence.mp3",
       "polishAudio": "Początkujący",
       "audioSentencePl": "t1-p162-012-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p162-013-sentence.mp3",
       "polishAudio": "Joga",
       "audioSentencePl": "t1-p162-013-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p162-014-sentence.mp3",
       "polishAudio": "Jogging",
       "audioSentencePl": "t1-p162-014-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p162-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p162-015-sentence.mp3",
       "polishAudio": "Karty",
       "audioSentencePl": "t1-p162-015-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

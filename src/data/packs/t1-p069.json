@@ -17,7 +17,7 @@
       "audioSentence": "t1-p069-001-sentence.mp3",
       "polishAudio": "Charakter",
       "audioSentencePl": "t1-p069-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p069-002-sentence.mp3",
       "polishAudio": "Decyzja",
       "audioSentencePl": "t1-p069-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p069-003-sentence.mp3",
       "polishAudio": "Intuicja",
       "audioSentencePl": "t1-p069-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p069-004-sentence.mp3",
       "polishAudio": "Myśl",
       "audioSentencePl": "t1-p069-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p069-005-sentence.mp3",
       "polishAudio": "Opinia",
       "audioSentencePl": "t1-p069-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p069-006-sentence.mp3",
       "polishAudio": "Pomysł",
       "audioSentencePl": "t1-p069-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p069-007-sentence.mp3",
       "polishAudio": "Powód",
       "audioSentencePl": "t1-p069-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p069-008-sentence.mp3",
       "polishAudio": "Racja",
       "audioSentencePl": "t1-p069-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p069-009-sentence.mp3",
       "polishAudio": "Talent",
       "audioSentencePl": "t1-p069-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p069-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p069-010-sentence.mp3",
       "polishAudio": "Żart",
       "audioSentencePl": "t1-p069-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

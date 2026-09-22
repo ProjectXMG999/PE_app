@@ -17,7 +17,7 @@
       "audioSentence": "t1-p017-001-sentence.mp3",
       "polishAudio": "Po",
       "audioSentencePl": "t1-p017-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p017-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p017-002-sentence.mp3",
       "polishAudio": "Przed",
       "audioSentencePl": "t1-p017-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p017-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p017-003-sentence.mp3",
       "polishAudio": "Wcześnie",
       "audioSentencePl": "t1-p017-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p017-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p017-004-sentence.mp3",
       "polishAudio": "Od",
       "audioSentencePl": "t1-p017-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p017-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p017-005-sentence.mp3",
       "polishAudio": "Późno",
       "audioSentencePl": "t1-p017-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p017-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p017-006-sentence.mp3",
       "polishAudio": "Dzisiaj",
       "audioSentencePl": "t1-p017-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p017-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p017-007-sentence.mp3",
       "polishAudio": "Jutro",
       "audioSentencePl": "t1-p017-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p017-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p017-008-sentence.mp3",
       "polishAudio": "Dziś wieczorem",
       "audioSentencePl": "t1-p017-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p017-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p017-009-sentence.mp3",
       "polishAudio": "Do",
       "audioSentencePl": "t1-p017-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p017-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p017-010-sentence.mp3",
       "polishAudio": "Wczoraj",
       "audioSentencePl": "t1-p017-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p054-001-sentence.mp3",
       "polishAudio": "Urząd",
       "audioSentencePl": "t1-p054-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p054-002-sentence.mp3",
       "polishAudio": "Fryzura",
       "audioSentencePl": "t1-p054-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p054-003-sentence.mp3",
       "polishAudio": "Klub nocny",
       "audioSentencePl": "t1-p054-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p054-004-sentence.mp3",
       "polishAudio": "Kosmetyki",
       "audioSentencePl": "t1-p054-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p054-005-sentence.mp3",
       "polishAudio": "Plac zabaw",
       "audioSentencePl": "t1-p054-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p054-006-sentence.mp3",
       "polishAudio": "Plac",
       "audioSentencePl": "t1-p054-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p054-007-sentence.mp3",
       "polishAudio": "Poczta",
       "audioSentencePl": "t1-p054-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p054-008-sentence.mp3",
       "polishAudio": "Pole",
       "audioSentencePl": "t1-p054-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p054-009-sentence.mp3",
       "polishAudio": "Rekin",
       "audioSentencePl": "t1-p054-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p054-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p054-010-sentence.mp3",
       "polishAudio": "Ryba",
       "audioSentencePl": "t1-p054-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p141-001-sentence.mp3",
       "polishAudio": "Przechodzić",
       "audioSentencePl": "t1-p141-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p141-002-sentence.mp3",
       "polishAudio": "Odjeżdżać",
       "audioSentencePl": "t1-p141-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p141-003-sentence.mp3",
       "polishAudio": "Wejść",
       "audioSentencePl": "t1-p141-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p141-004-sentence.mp3",
       "polishAudio": "Spadać",
       "audioSentencePl": "t1-p141-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p141-005-sentence.mp3",
       "polishAudio": "Spieszyć się",
       "audioSentencePl": "t1-p141-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p141-006-sentence.mp3",
       "polishAudio": "Lądować",
       "audioSentencePl": "t1-p141-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p141-007-sentence.mp3",
       "polishAudio": "Wychodzić",
       "audioSentencePl": "t1-p141-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p141-008-sentence.mp3",
       "polishAudio": "Leżeć",
       "audioSentencePl": "t1-p141-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p141-009-sentence.mp3",
       "polishAudio": "Zostać",
       "audioSentencePl": "t1-p141-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p141-010-sentence.mp3",
       "polishAudio": "Obracać się",
       "audioSentencePl": "t1-p141-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p141-011-sentence.mp3",
       "polishAudio": "Skręcać",
       "audioSentencePl": "t1-p141-011-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p141-012-sentence.mp3",
       "polishAudio": "Pojawiać się",
       "audioSentencePl": "t1-p141-012-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p141-013-sentence.mp3",
       "polishAudio": "Znikać",
       "audioSentencePl": "t1-p141-013-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p141-014-sentence.mp3",
       "polishAudio": "Śledzić",
       "audioSentencePl": "t1-p141-014-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p141-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p141-015-sentence.mp3",
       "polishAudio": "Powracać",
       "audioSentencePl": "t1-p141-015-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

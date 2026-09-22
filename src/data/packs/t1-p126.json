@@ -17,7 +17,7 @@
       "audioSentence": "t1-p126-001-sentence.mp3",
       "polishAudio": "Boczek",
       "audioSentencePl": "t1-p126-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p126-002-sentence.mp3",
       "polishAudio": "Bułka",
       "audioSentencePl": "t1-p126-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p126-003-sentence.mp3",
       "polishAudio": "Ciasto",
       "audioSentencePl": "t1-p126-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p126-004-sentence.mp3",
       "polishAudio": "Dżem",
       "audioSentencePl": "t1-p126-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p126-005-sentence.mp3",
       "polishAudio": "Galaretka",
       "audioSentencePl": "t1-p126-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p126-006-sentence.mp3",
       "polishAudio": "Jajecznica",
       "audioSentencePl": "t1-p126-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p126-007-sentence.mp3",
       "polishAudio": "Jedzenie na wynos",
       "audioSentencePl": "t1-p126-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p126-008-sentence.mp3",
       "polishAudio": "Keczup",
       "audioSentencePl": "t1-p126-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p126-009-sentence.mp3",
       "polishAudio": "Kiełbasa",
       "audioSentencePl": "t1-p126-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p126-010-sentence.mp3",
       "polishAudio": "Kotlet",
       "audioSentencePl": "t1-p126-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p126-011-sentence.mp3",
       "polishAudio": "Kromka",
       "audioSentencePl": "t1-p126-011-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p126-012-sentence.mp3",
       "polishAudio": "Majonez",
       "audioSentencePl": "t1-p126-012-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p126-013-sentence.mp3",
       "polishAudio": "Musztarda",
       "audioSentencePl": "t1-p126-013-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p126-014-sentence.mp3",
       "polishAudio": "Naleśnik",
       "audioSentencePl": "t1-p126-014-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p126-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p126-015-sentence.mp3",
       "polishAudio": "Olej",
       "audioSentencePl": "t1-p126-015-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

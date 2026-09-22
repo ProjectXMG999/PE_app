@@ -17,7 +17,7 @@
       "audioSentence": "t1-p043-001-sentence.mp3",
       "polishAudio": "Błąd",
       "audioSentencePl": "t1-p043-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p043-002-sentence.mp3",
       "polishAudio": "Długopis",
       "audioSentencePl": "t1-p043-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p043-003-sentence.mp3",
       "polishAudio": "Egzamin",
       "audioSentencePl": "t1-p043-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p043-004-sentence.mp3",
       "polishAudio": "Lekcja",
       "audioSentencePl": "t1-p043-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p043-005-sentence.mp3",
       "polishAudio": "Ołówek",
       "audioSentencePl": "t1-p043-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p043-006-sentence.mp3",
       "polishAudio": "Praca domowa",
       "audioSentencePl": "t1-p043-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p043-007-sentence.mp3",
       "polishAudio": "Temat",
       "audioSentencePl": "t1-p043-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p043-008-sentence.mp3",
       "polishAudio": "Test",
       "audioSentencePl": "t1-p043-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p043-009-sentence.mp3",
       "polishAudio": "Uczeń",
       "audioSentencePl": "t1-p043-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p043-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p043-010-sentence.mp3",
       "polishAudio": "Zeszyt",
       "audioSentencePl": "t1-p043-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }

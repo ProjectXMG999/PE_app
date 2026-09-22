@@ -17,7 +17,7 @@
       "audioSentence": "t1-p022-001-sentence.mp3",
       "polishAudio": "Raz",
       "audioSentencePl": "t1-p022-001-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p022-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p022-002-sentence.mp3",
       "polishAudio": "Dwa",
       "audioSentencePl": "t1-p022-002-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p022-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p022-003-sentence.mp3",
       "polishAudio": "Trzy",
       "audioSentencePl": "t1-p022-003-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p022-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p022-004-sentence.mp3",
       "polishAudio": "Cztery",
       "audioSentencePl": "t1-p022-004-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p022-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p022-005-sentence.mp3",
       "polishAudio": "Pięć",
       "audioSentencePl": "t1-p022-005-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p022-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p022-006-sentence.mp3",
       "polishAudio": "Sześć",
       "audioSentencePl": "t1-p022-006-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p022-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p022-007-sentence.mp3",
       "polishAudio": "Siedem",
       "audioSentencePl": "t1-p022-007-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p022-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p022-008-sentence.mp3",
       "polishAudio": "Osiem",
       "audioSentencePl": "t1-p022-008-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p022-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p022-009-sentence.mp3",
       "polishAudio": "Dziewięć",
       "audioSentencePl": "t1-p022-009-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     },
     {
       "id": "t1-p022-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p022-010-sentence.mp3",
       "polishAudio": "Zero",
       "audioSentencePl": "t1-p022-010-sentence-pl.mp3",
-      "sentenceAudio": false
+      "sentenceAudio": true
     }
   ]
 }
