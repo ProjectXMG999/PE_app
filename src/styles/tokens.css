@@ -34,6 +34,19 @@
   --bg-card-hover: oklch(0.205 0.018 275);
   --bg-input: oklch(0.145 0.013 275);
 
+  /* The browser/OS chrome colour: the status-bar band in an installed iOS PWA
+     and the address-bar tint in Chrome on Android. Hex, and read out with
+     getComputedStyle by App.tsx, for the same reason --mesh-* below is hex —
+     the value leaves CSS entirely, here into a <meta> attribute, and a UA that
+     cannot parse oklch() there fails SILENTLY back to its own chrome colour,
+     which is invisible on any device you did not test.
+
+     This is --bg-primary resolved to sRGB and has to be re-derived if that
+     moves: oklch(0.07 0.008 275) -> #010102. Not a free colour — the band has
+     to be the ink the page starts with, or the status area reads as a separate
+     strip of chrome laid on top of the app instead of as the top of the app. */
+  --theme-color-meta: #010102;
+
   /* ── Accent (violet) — the interactive colour ──────────────────────────── */
   --accent: oklch(0.72 0.17 292);
   --accent-dim: oklch(0.58 0.14 293);
@@ -340,7 +353,44 @@
   /* ── Layout metrics ───────────────────────────────────────────────────── */
   --topbar-height: 60px;
   --bottomnav-height: 64px;
+
+  /* ── Safe areas ─────────────────────────────────────────────────────────
+     The four device insets, named once. Until now only the bottom one had a
+     token and `env(safe-area-inset-top, 0px)` was written out inline in eight
+     stylesheets — which is how Constellation.css ended up with the only copy
+     missing its `0px` fallback, and how AutoplayDoneScreen ended up with no
+     copy at all while its three sibling screens each had one.
+
+     Tokens for a second reason too: `env()` can only be read by the engine, so
+     a value written inline is unreachable from anywhere else. Routing through
+     a custom property lets the DEV-only override in debug/safeArea.ts redefine
+     all of them at once and put a Dynamic Island on a desktop browser, which
+     is the only way any of this is testable without a physical phone.
+
+     Keep the `, 0px` fallbacks: without them the whole declaration they sit in
+     is dropped on a UA that doesn't know env(), rather than resolving to zero. */
+  --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+  /* Zero in portrait, 59px on the notch side in landscape. The manifest says
+     `orientation: portrait`, so an INSTALLED app never sees these — but the app
+     is a website first and a browser tab rotates whatever the manifest says.
+     Anything spanning the full width that isn't centred inside a max-width
+     needs them; SessionOpener.css is where the first one was paid for. */
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+
+  /* The bar's full height including the status-bar strip it covers — the
+     mirror of --bottomnav-reserve below, named for the same reason: the height
+     and the inset are one number or the app has a seam. The TopBar is a flex
+     SIBLING above <main>, not an overlay, so nothing has to reserve this as
+     padding; the bar itself is the only consumer (TopBar.css).
+
+     Self-correcting across both PWA modes on purpose. In a browser tab the top
+     inset is already spent by the browser's own chrome, --safe-top resolves to
+     0 and this is a flat 60px, which is right; in an installed app it is
+     60 + 59 and the bar grows to cover the island, which is also right. */
+  --topbar-reserve: calc(var(--topbar-height) + var(--safe-top));
+
   /* Floating island: 64px tall, lifted 14px off the edge — plus whatever the
      device reserves below it. The safe-area inset is part of BOTH numbers or
      neither: the island is positioned at `bottom: calc(14px + safe)` (see
@@ -377,6 +427,12 @@
   --bg-card: oklch(1 0 0);
   --bg-card-hover: oklch(0.965 0.012 290);
   --bg-input: oklch(1 0 0);
+
+  /* oklch(0.97 0.006 275) -> #f4f5f9, the same conversion as the dark value in
+     :root. Before this existed the meta tag was a single static #010102, so a
+     light-theme phone wore a black status band above a near-white app — the one
+     place the theme switch never reached. */
+  --theme-color-meta: #f4f5f9;
 
   --accent: oklch(0.55 0.22 292);
   --accent-dim: oklch(0.48 0.2 292);
