@@ -15,12 +15,51 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: background-color var(--transition-med), border-color var(--transition-med), color var(--transition-med);
 }
 
-/* Don't transition transforms/opacity — would break animations */
-*[class*="animate"], *[class*="spinner"] {
-  transition: none;
+/* Colour changes glide, on devices where you can see them glide.
+   -----------------------------------------------------------------------------
+   This used to be three transitions declared on `*, *::before, *::after` — every
+   element and both pseudo-elements in the document — plus an
+   `*[class*="animate"], *[class*="spinner"]` suppressor, which is an attribute
+   SUBSTRING match run against every element on top of that.
+
+   The bill comes due on navigation. Each page mounts its own AppShell and the
+   router commits the whole incoming tree in one synchronous `flushSync`, so
+   every element in a fresh page has these records created and checked at once.
+   Measured on a phone-class CPU (throttle x6, 390x844 @ DPR 3), median blocked
+   time in the first 1.5 s after the tap. The two arms were INTERLEAVED — one
+   browser, one page, the media condition flipped through CSS hot-reload between
+   every rep — because this machine runs several sessions at once and a
+   sequential A/B drifts by more than the effect: Dzisiaj -> Pakiety 777 ->
+   632 ms (-19%), Pakiety -> Dzisiaj 337 -> 252 ms (-25%), n=7 each. A run on a
+   quiet machine put the same pair at 693 -> 549 and 260 -> 165. A fifth to a
+   quarter of the cost of changing pages.
+
+   Note this cannot be measured by OVERRIDING the rule — injecting
+   `* { transition: none !important }` to test it made every hop 25-80% worse,
+   because the added universal selector costs more than the records it removes.
+   The numbers above come from deleting it at source and reloading, which is the
+   only honest way to ask this question. Same trap applies to `.no-transition *`
+   below, which is why that one is left alone: it runs for two frames during a
+   theme flip and nowhere else.
+
+   Kept for fine pointers, dropped for coarse ones. What the transition actually
+   animates is hover and focus tints — and a touch device has no hover, while a
+   `:active` tint gliding over 250 ms reads as lag rather than polish. Nothing
+   that is visible on a phone is lost. The theme flip never used it either: it
+   sets `.no-transition` precisely so the palette swaps in one cut.
+   Same shape as the blur reduction in tokens.css and the CTA shine in
+   animations.css, for the same reason. */
+@media (pointer: fine) {
+  *, *::before, *::after {
+    transition: background-color var(--transition-med), border-color var(--transition-med), color var(--transition-med);
+  }
+
+  /* Don't transition transforms/opacity — would break animations */
+  *[class*="animate"], *[class*="spinner"] {
+    transition: none;
+  }
 }
 
 /* Applied during theme switch — kills all transitions so colors swap instantly and in sync */
