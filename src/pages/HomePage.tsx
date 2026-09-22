@@ -24,6 +24,7 @@ import { plural } from '../utils/plural'
 import { buildPackMemory, fadingPacks } from '../utils/packMemory'
 import { milestonesFor } from '../utils/packMilestones'
 import { categoryStats, nearlySealedByPack, secondsPerWord } from '../utils/packProfile'
+import { nextRestoreStep } from '../utils/scrollRestore'
 import {
   LensContext,
   PackFilters,
@@ -56,6 +57,11 @@ const allPacks = packagesIndex as PackMeta[]
 
 const SELECTED_KEY = 'pe-home-volume'
 const SCROLL_KEY = 'pe-home-scroll'
+/** Ceiling on the scroll-restore loop. Deliberately left at the original 60:
+ *  it is what protects a genuinely long list whose height grows gradually, and
+ *  lowering it is the version that truncates a restore that was still working.
+ *  The stall detector in utils/scrollRestore is what ends the common case. */
+const RESTORE_MAX_FRAMES = 60
 const RESULT_PAGE = 40
 /** A horizontal swipe past this distance (px) or speed (px/s) changes volume. */
 const SWIPE_DISTANCE = 70
@@ -444,15 +450,39 @@ export function HomePage() {
     if (!main || !saved || saved.v !== selected || !(Number(saved.top) > 0)) { restoredRef.current = true; return }
     const top = Number(saved.top)
     let tries = 0
+    let stalled = 0
+    let prev = -1
+    let raf = 0
+
     const tick = () => {
+      raf = 0
       // A pack focus can arrive a frame later (the back button pops history,
       // then hands the pack id over) — it wins over the remembered offset.
       if (focusedRef.current) { restoredRef.current = true; return }
+
       main.scrollTop = top
-      if (Math.abs(main.scrollTop - top) > 2 && tries++ < 60) requestAnimationFrame(tick)
-      else restoredRef.current = true
+      // The one forced layout, unchanged — but now it is allowed to conclude
+      // something. See utils/scrollRestore: this used to run its full 60-frame
+      // budget whenever the offset was unreachable, which is the common case on
+      // a fresh mount, and 60 frames of forced layout over a hundred-row list
+      // is the one-second stall on arriving at /pakiety.
+      const step = nextRestoreStep(top, main.scrollTop, prev, stalled, tries, RESTORE_MAX_FRAMES)
+      stalled = step.stalled
+      prev = step.prev
+      tries++
+
+      if (step.done) restoredRef.current = true
+      else raf = requestAnimationFrame(tick)
     }
-    requestAnimationFrame(tick)
+    raf = requestAnimationFrame(tick)
+
+    // Without this the loop outlived the effect that started it. Swiping to
+    // another volume mid-restore re-runs the effect, which bails on
+    // `saved.v !== selected` and sets restoredRef — while the old tick carries
+    // on writing the old offset for up to a second, dragging the scroll back
+    // out from under the swipe. `focusedRef` covered the pack-focus race;
+    // nothing covered this one.
+    return () => { if (raf) cancelAnimationFrame(raf) }
   }, [snapshot, selected, searching, focusPack])
 
   // ── A filter was switched on or changed: go where its packs are ───────────
