@@ -17,7 +17,7 @@
       "audioSentence": "t1-p187-001-sentence.mp3",
       "polishAudio": "Nieść coś",
       "audioSentencePl": "t1-p187-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p187-002-sentence.mp3",
       "polishAudio": "Pukać",
       "audioSentencePl": "t1-p187-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p187-003-sentence.mp3",
       "polishAudio": "Zamykać na klucz",
       "audioSentencePl": "t1-p187-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p187-004-sentence.mp3",
       "polishAudio": "Zrywać",
       "audioSentencePl": "t1-p187-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p187-005-sentence.mp3",
       "polishAudio": "Rzucać",
       "audioSentencePl": "t1-p187-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p187-006-sentence.mp3",
       "polishAudio": "Powiesić",
       "audioSentencePl": "t1-p187-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-007",
@@ -106,7 +106,7 @@
       "audioSentence": "t1-p187-008-sentence.mp3",
       "polishAudio": "Zamknąć",
       "audioSentencePl": "t1-p187-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-009",
@@ -119,7 +119,7 @@
       "audioSentence": "t1-p187-009-sentence.mp3",
       "polishAudio": "Podpisywać",
       "audioSentencePl": "t1-p187-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-010",
@@ -132,7 +132,7 @@
       "audioSentence": "t1-p187-010-sentence.mp3",
       "polishAudio": "Klaskać",
       "audioSentencePl": "t1-p187-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-011",
@@ -145,7 +145,7 @@
       "audioSentence": "t1-p187-011-sentence.mp3",
       "polishAudio": "Chwytać",
       "audioSentencePl": "t1-p187-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-012",
@@ -158,7 +158,7 @@
       "audioSentence": "t1-p187-012-sentence.mp3",
       "polishAudio": "Położyć",
       "audioSentencePl": "t1-p187-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-013",
@@ -171,7 +171,7 @@
       "audioSentence": "t1-p187-013-sentence.mp3",
       "polishAudio": "Dosięgać",
       "audioSentencePl": "t1-p187-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-014",
@@ -184,7 +184,7 @@
       "audioSentence": "t1-p187-014-sentence.mp3",
       "polishAudio": "Trząść",
       "audioSentencePl": "t1-p187-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p187-015",
@@ -197,7 +197,7 @@
       "audioSentence": "t1-p187-015-sentence.mp3",
       "polishAudio": "Upuszczać",
       "audioSentencePl": "t1-p187-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

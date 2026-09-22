@@ -17,7 +17,7 @@
       "audioSentence": "t1-p188-001-sentence.mp3",
       "polishAudio": "Przeciętny",
       "audioSentencePl": "t1-p188-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p188-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p188-002-sentence.mp3",
       "polishAudio": "Przyzwoity",
       "audioSentencePl": "t1-p188-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p188-003",
@@ -65,7 +65,7 @@
       "audioSentence": "t1-p188-005-sentence.mp3",
       "polishAudio": "Dostępny",
       "audioSentencePl": "t1-p188-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p188-006",
@@ -89,7 +89,7 @@
       "audioSentence": "t1-p188-007-sentence.mp3",
       "polishAudio": "Przytulny",
       "audioSentencePl": "t1-p188-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p188-008",
@@ -102,7 +102,7 @@
       "audioSentence": "t1-p188-008-sentence.mp3",
       "polishAudio": "Dobrze znany",
       "audioSentencePl": "t1-p188-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p188-009",
@@ -115,7 +115,7 @@
       "audioSentence": "t1-p188-009-sentence.mp3",
       "polishAudio": "Czterogwiazdkowy",
       "audioSentencePl": "t1-p188-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p188-010",
@@ -128,7 +128,7 @@
       "audioSentence": "t1-p188-010-sentence.mp3",
       "polishAudio": "Polecany",
       "audioSentencePl": "t1-p188-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p188-011",
@@ -141,7 +141,7 @@
       "audioSentence": "t1-p188-011-sentence.mp3",
       "polishAudio": "Zarezerwowany",
       "audioSentencePl": "t1-p188-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p188-012",
@@ -154,7 +154,7 @@
       "audioSentence": "t1-p188-012-sentence.mp3",
       "polishAudio": "Najwyżej oceniany",
       "audioSentencePl": "t1-p188-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p188-013",
@@ -167,7 +167,7 @@
       "audioSentence": "t1-p188-013-sentence.mp3",
       "polishAudio": "Wysokiej jakości",
       "audioSentencePl": "t1-p188-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p188-014",
@@ -180,7 +180,7 @@
       "audioSentence": "t1-p188-014-sentence.mp3",
       "polishAudio": "Pięciogwiazdkowy",
       "audioSentencePl": "t1-p188-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p188-015",
@@ -193,7 +193,7 @@
       "audioSentence": "t1-p188-015-sentence.mp3",
       "polishAudio": "Słabo znany",
       "audioSentencePl": "t1-p188-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

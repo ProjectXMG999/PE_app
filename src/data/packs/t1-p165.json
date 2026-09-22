@@ -17,7 +17,7 @@
       "audioSentence": "t1-p165-001-sentence.mp3",
       "polishAudio": "Grill",
       "audioSentencePl": "t1-p165-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p165-002-sentence.mp3",
       "polishAudio": "Pocałunek",
       "audioSentencePl": "t1-p165-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p165-003-sentence.mp3",
       "polishAudio": "Rocznica",
       "audioSentencePl": "t1-p165-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p165-004-sentence.mp3",
       "polishAudio": "Imieniny",
       "audioSentencePl": "t1-p165-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p165-005-sentence.mp3",
       "polishAudio": "Uroczystość",
       "audioSentencePl": "t1-p165-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p165-006-sentence.mp3",
       "polishAudio": "Prezent",
       "audioSentencePl": "t1-p165-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p165-007-sentence.mp3",
       "polishAudio": "Nowy rok",
       "audioSentencePl": "t1-p165-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p165-008-sentence.mp3",
       "polishAudio": "Zaproszenie",
       "audioSentencePl": "t1-p165-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p165-009-sentence.mp3",
       "polishAudio": "Sylwester",
       "audioSentencePl": "t1-p165-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p165-010-sentence.mp3",
       "polishAudio": "Odwiedzający",
       "audioSentencePl": "t1-p165-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p165-011-sentence.mp3",
       "polishAudio": "Okazja",
       "audioSentencePl": "t1-p165-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p165-012-sentence.mp3",
       "polishAudio": "Toast",
       "audioSentencePl": "t1-p165-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p165-013-sentence.mp3",
       "polishAudio": "Karaoke",
       "audioSentencePl": "t1-p165-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p165-014-sentence.mp3",
       "polishAudio": "Walentynki",
       "audioSentencePl": "t1-p165-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p165-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p165-015-sentence.mp3",
       "polishAudio": "Jako",
       "audioSentencePl": "t1-p165-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

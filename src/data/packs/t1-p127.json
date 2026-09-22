@@ -17,7 +17,7 @@
       "audioSentence": "t1-p127-001-sentence.mp3",
       "polishAudio": "Wkurzać",
       "audioSentencePl": "t1-p127-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p127-002-sentence.mp3",
       "polishAudio": "Oszukiwać",
       "audioSentencePl": "t1-p127-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p127-003-sentence.mp3",
       "polishAudio": "Uderzyć",
       "audioSentencePl": "t1-p127-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p127-004-sentence.mp3",
       "polishAudio": "Ranić",
       "audioSentencePl": "t1-p127-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p127-005-sentence.mp3",
       "polishAudio": "Kłamać",
       "audioSentencePl": "t1-p127-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p127-006-sentence.mp3",
       "polishAudio": "Przegrywać",
       "audioSentencePl": "t1-p127-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p127-007-sentence.mp3",
       "polishAudio": "Nie zdążyć",
       "audioSentencePl": "t1-p127-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p127-008-sentence.mp3",
       "polishAudio": "Żałować",
       "audioSentencePl": "t1-p127-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p127-009-sentence.mp3",
       "polishAudio": "Krzyczeć",
       "audioSentencePl": "t1-p127-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p127-010-sentence.mp3",
       "polishAudio": "Krzyczeć",
       "audioSentencePl": "t1-p127-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p127-011-sentence.mp3",
       "polishAudio": "Śmierdzieć",
       "audioSentencePl": "t1-p127-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p127-012-sentence.mp3",
       "polishAudio": "Martwić",
       "audioSentencePl": "t1-p127-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p127-013-sentence.mp3",
       "polishAudio": "Popełniać",
       "audioSentencePl": "t1-p127-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p127-014-sentence.mp3",
       "polishAudio": "Zawodzić",
       "audioSentencePl": "t1-p127-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p127-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p127-015-sentence.mp3",
       "polishAudio": "Cierpieć",
       "audioSentencePl": "t1-p127-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

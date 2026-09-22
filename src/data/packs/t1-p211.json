@@ -17,7 +17,7 @@
       "audioSentence": "t1-p211-001-sentence.mp3",
       "polishAudio": "Kujon",
       "audioSentencePl": "t1-p211-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p211-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p211-002-sentence.mp3",
       "polishAudio": "Hejter",
       "audioSentencePl": "t1-p211-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p211-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p211-003-sentence.mp3",
       "polishAudio": "Nerd",
       "audioSentencePl": "t1-p211-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p211-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p211-004-sentence.mp3",
       "polishAudio": "Pozer",
       "audioSentencePl": "t1-p211-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p211-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p211-005-sentence.mp3",
       "polishAudio": "Staruch",
       "audioSentencePl": "t1-p211-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p211-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p211-006-sentence.mp3",
       "polishAudio": "Cykor",
       "audioSentencePl": "t1-p211-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p211-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p211-007-sentence.mp3",
       "polishAudio": "Nowicjusz",
       "audioSentencePl": "t1-p211-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p211-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p211-008-sentence.mp3",
       "polishAudio": "Tandetny",
       "audioSentencePl": "t1-p211-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p211-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p211-009-sentence.mp3",
       "polishAudio": "Walić truizmami",
       "audioSentencePl": "t1-p211-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p211-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p211-010-sentence.mp3",
       "polishAudio": "Pozer",
       "audioSentencePl": "t1-p211-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

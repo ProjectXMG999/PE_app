@@ -17,7 +17,7 @@
       "audioSentence": "t1-p117-001-sentence.mp3",
       "polishAudio": "Chłopie",
       "audioSentencePl": "t1-p117-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p117-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p117-002-sentence.mp3",
       "polishAudio": "Stój!",
       "audioSentencePl": "t1-p117-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p117-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p117-003-sentence.mp3",
       "polishAudio": "Cholera jasna",
       "audioSentencePl": "t1-p117-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p117-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p117-004-sentence.mp3",
       "polishAudio": "Bez jaj",
       "audioSentencePl": "t1-p117-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p117-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p117-005-sentence.mp3",
       "polishAudio": "Nie według moich zasad",
       "audioSentencePl": "t1-p117-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p117-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p117-006-sentence.mp3",
       "polishAudio": "Za tobą",
       "audioSentencePl": "t1-p117-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p117-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p117-007-sentence.mp3",
       "polishAudio": "I kropka – totalnie",
       "audioSentencePl": "t1-p117-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p117-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p117-008-sentence.mp3",
       "polishAudio": "Mega prawdziwy",
       "audioSentencePl": "t1-p117-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p117-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p117-009-sentence.mp3",
       "polishAudio": "Co jest grane?",
       "audioSentencePl": "t1-p117-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p117-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p117-010-sentence.mp3",
       "polishAudio": "Pożegnanie",
       "audioSentencePl": "t1-p117-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

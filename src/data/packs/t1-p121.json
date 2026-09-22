@@ -17,7 +17,7 @@
       "audioSentence": "t1-p121-001-sentence.mp3",
       "polishAudio": "Lalka",
       "audioSentencePl": "t1-p121-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p121-002-sentence.mp3",
       "polishAudio": "Dzieciak",
       "audioSentencePl": "t1-p121-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p121-003-sentence.mp3",
       "polishAudio": "Zabawka",
       "audioSentencePl": "t1-p121-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p121-004-sentence.mp3",
       "polishAudio": "Dzieciństwo",
       "audioSentencePl": "t1-p121-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p121-005-sentence.mp3",
       "polishAudio": "Grzechotka",
       "audioSentencePl": "t1-p121-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p121-006-sentence.mp3",
       "polishAudio": "Łóżeczko niemowlęce",
       "audioSentencePl": "t1-p121-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p121-007-sentence.mp3",
       "polishAudio": "Mała dziewczynka",
       "audioSentencePl": "t1-p121-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p121-008-sentence.mp3",
       "polishAudio": "Mały chłopczyk",
       "audioSentencePl": "t1-p121-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p121-009-sentence.mp3",
       "polishAudio": "Mamusia",
       "audioSentencePl": "t1-p121-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p121-010-sentence.mp3",
       "polishAudio": "Narodziny",
       "audioSentencePl": "t1-p121-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p121-011-sentence.mp3",
       "polishAudio": "Niania",
       "audioSentencePl": "t1-p121-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p121-012-sentence.mp3",
       "polishAudio": "Noworodek",
       "audioSentencePl": "t1-p121-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p121-013-sentence.mp3",
       "polishAudio": "Tatuś",
       "audioSentencePl": "t1-p121-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p121-014-sentence.mp3",
       "polishAudio": "Guma do żucia",
       "audioSentencePl": "t1-p121-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p121-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p121-015-sentence.mp3",
       "polishAudio": "Pluszowa zabawka",
       "audioSentencePl": "t1-p121-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

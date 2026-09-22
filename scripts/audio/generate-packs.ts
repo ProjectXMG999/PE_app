@@ -187,7 +187,14 @@ function main() {
         } else {
           const result = await ttsPlain(t.text, t.voiceId, settingsFor(t.kind), outPath, `${t.kind} ${t.wordId}`)
           if (result === 'generated') {
-            await postProcessClip(outPath)
+            // Sentences carried the OLD default (bidirectional silenceremove
+            // at -40dB/0.08s) — the exact setting already proven to eat into
+            // real trailing sound, not just dead air, which is why carrier-
+            // phrase word generation moved off it (see cutClipFromStart /
+            // trimTrailingSilence in ffmpegPost.ts). A full sentence from
+            // context already has clean edges from the model — skip the
+            // destructive trim, keep only the gentle fades.
+            await postProcessClip(outPath, { trimSilence: false, fadeOutMs: 60 })
             const { ok, seconds } = await checkDuration(outPath)
             if (!ok) throw new Error(`suspiciously short output (${seconds.toFixed(2)}s)`)
             generated++

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p168-001-sentence.mp3",
       "polishAudio": "Czeski",
       "audioSentencePl": "t1-p168-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p168-002-sentence.mp3",
       "polishAudio": "Grecki",
       "audioSentencePl": "t1-p168-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p168-003-sentence.mp3",
       "polishAudio": "Niderlandzki",
       "audioSentencePl": "t1-p168-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p168-004-sentence.mp3",
       "polishAudio": "Irlandzki",
       "audioSentencePl": "t1-p168-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p168-005-sentence.mp3",
       "polishAudio": "Norweski",
       "audioSentencePl": "t1-p168-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p168-006-sentence.mp3",
       "polishAudio": "Rosyjski",
       "audioSentencePl": "t1-p168-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p168-007-sentence.mp3",
       "polishAudio": "Węgierski",
       "audioSentencePl": "t1-p168-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p168-008-sentence.mp3",
       "polishAudio": "Białoruski",
       "audioSentencePl": "t1-p168-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p168-009-sentence.mp3",
       "polishAudio": "Chorwacki",
       "audioSentencePl": "t1-p168-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p168-010-sentence.mp3",
       "polishAudio": "Portugalski",
       "audioSentencePl": "t1-p168-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p168-011-sentence.mp3",
       "polishAudio": "Serbski",
       "audioSentencePl": "t1-p168-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p168-012-sentence.mp3",
       "polishAudio": "Słowacki",
       "audioSentencePl": "t1-p168-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p168-013-sentence.mp3",
       "polishAudio": "Szkocki",
       "audioSentencePl": "t1-p168-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p168-014-sentence.mp3",
       "polishAudio": "Szwedzki",
       "audioSentencePl": "t1-p168-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p168-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p168-015-sentence.mp3",
       "polishAudio": "Ukraiński",
       "audioSentencePl": "t1-p168-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

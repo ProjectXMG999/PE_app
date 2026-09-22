@@ -17,7 +17,7 @@
       "audioSentence": "t1-p190-001-sentence.mp3",
       "polishAudio": "Wrócić",
       "audioSentencePl": "t1-p190-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p190-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p190-002-sentence.mp3",
       "polishAudio": "Iść po coś",
       "audioSentencePl": "t1-p190-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p190-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p190-003-sentence.mp3",
       "polishAudio": "Wejść do",
       "audioSentencePl": "t1-p190-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p190-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p190-004-sentence.mp3",
       "polishAudio": "Wyjść na zewnątrz",
       "audioSentencePl": "t1-p190-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p190-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p190-005-sentence.mp3",
       "polishAudio": "Wchodzić",
       "audioSentencePl": "t1-p190-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p190-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p190-006-sentence.mp3",
       "polishAudio": "Zejść na dół",
       "audioSentencePl": "t1-p190-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p190-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p190-007-sentence.mp3",
       "polishAudio": "Podejść bliżej",
       "audioSentencePl": "t1-p190-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p190-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p190-008-sentence.mp3",
       "polishAudio": "Zahaczyć gdzieś",
       "audioSentencePl": "t1-p190-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p190-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p190-009-sentence.mp3",
       "polishAudio": "Wpaść gdzieś",
       "audioSentencePl": "t1-p190-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p190-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p190-010-sentence.mp3",
       "polishAudio": "Wyjść",
       "audioSentencePl": "t1-p190-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

@@ -28,7 +28,7 @@
       "audioSentence": "t1-p173-002-sentence.mp3",
       "polishAudio": "Kontakt",
       "audioSentencePl": "t1-p173-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p173-003",
@@ -41,7 +41,7 @@
       "audioSentence": "t1-p173-003-sentence.mp3",
       "polishAudio": "Jakość",
       "audioSentencePl": "t1-p173-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p173-004",
@@ -54,7 +54,7 @@
       "audioSentence": "t1-p173-004-sentence.mp3",
       "polishAudio": "Koniec",
       "audioSentencePl": "t1-p173-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p173-005",
@@ -67,7 +67,7 @@
       "audioSentence": "t1-p173-005-sentence.mp3",
       "polishAudio": "Możliwość",
       "audioSentencePl": "t1-p173-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p173-006",
@@ -80,7 +80,7 @@
       "audioSentence": "t1-p173-006-sentence.mp3",
       "polishAudio": "Początek",
       "audioSentencePl": "t1-p173-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p173-007",
@@ -93,7 +93,7 @@
       "audioSentence": "t1-p173-007-sentence.mp3",
       "polishAudio": "Prawda",
       "audioSentencePl": "t1-p173-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p173-008",
@@ -106,7 +106,7 @@
       "audioSentence": "t1-p173-008-sentence.mp3",
       "polishAudio": "Rodzaj",
       "audioSentencePl": "t1-p173-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p173-009",
@@ -119,7 +119,7 @@
       "audioSentence": "t1-p173-009-sentence.mp3",
       "polishAudio": "Różnica",
       "audioSentencePl": "t1-p173-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p173-010",
@@ -132,7 +132,7 @@
       "audioSentence": "t1-p173-010-sentence.mp3",
       "polishAudio": "Sort",
       "audioSentencePl": "t1-p173-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p173-011",
@@ -156,7 +156,7 @@
       "audioSentence": "t1-p173-012-sentence.mp3",
       "polishAudio": "Sytuacja",
       "audioSentencePl": "t1-p173-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p173-013",
@@ -169,7 +169,7 @@
       "audioSentence": "t1-p173-013-sentence.mp3",
       "polishAudio": "Typ",
       "audioSentencePl": "t1-p173-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p173-014",
@@ -182,7 +182,7 @@
       "audioSentence": "t1-p173-014-sentence.mp3",
       "polishAudio": "Stan",
       "audioSentencePl": "t1-p173-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p173-015",
@@ -195,7 +195,7 @@
       "audioSentence": "t1-p173-015-sentence.mp3",
       "polishAudio": "Wybór",
       "audioSentencePl": "t1-p173-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

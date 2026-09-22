@@ -17,7 +17,7 @@
       "audioSentence": "t1-p205-001-sentence.mp3",
       "polishAudio": "Ekspres do kawy",
       "audioSentencePl": "t1-p205-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p205-002-sentence.mp3",
       "polishAudio": "Kuchenka",
       "audioSentencePl": "t1-p205-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p205-003-sentence.mp3",
       "polishAudio": "Odtwarzacz",
       "audioSentencePl": "t1-p205-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p205-004-sentence.mp3",
       "polishAudio": "Piekarnik",
       "audioSentencePl": "t1-p205-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p205-005-sentence.mp3",
       "polishAudio": "Pilot do telewizora",
       "audioSentencePl": "t1-p205-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p205-006-sentence.mp3",
       "polishAudio": "Robot",
       "audioSentencePl": "t1-p205-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p205-007-sentence.mp3",
       "polishAudio": "Gniazdko",
       "audioSentencePl": "t1-p205-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p205-008-sentence.mp3",
       "polishAudio": "Kabel",
       "audioSentencePl": "t1-p205-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p205-009-sentence.mp3",
       "polishAudio": "Kaseta wideo",
       "audioSentencePl": "t1-p205-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p205-010-sentence.mp3",
       "polishAudio": "Konsola",
       "audioSentencePl": "t1-p205-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p205-011-sentence.mp3",
       "polishAudio": "Wieża",
       "audioSentencePl": "t1-p205-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p205-012-sentence.mp3",
       "polishAudio": "Wtyczka",
       "audioSentencePl": "t1-p205-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p205-013-sentence.mp3",
       "polishAudio": "Zamrażarka",
       "audioSentencePl": "t1-p205-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p205-014-sentence.mp3",
       "polishAudio": "Zmywarka",
       "audioSentencePl": "t1-p205-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p205-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p205-015-sentence.mp3",
       "polishAudio": "Mikser",
       "audioSentencePl": "t1-p205-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

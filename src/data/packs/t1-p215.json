@@ -17,7 +17,7 @@
       "audioSentence": "t1-p215-001-sentence.mp3",
       "polishAudio": "Lesbijka",
       "audioSentencePl": "t1-p215-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p215-002-sentence.mp3",
       "polishAudio": "Marzyciel",
       "audioSentencePl": "t1-p215-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p215-003-sentence.mp3",
       "polishAudio": "Pan",
       "audioSentencePl": "t1-p215-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p215-004-sentence.mp3",
       "polishAudio": "Pani",
       "audioSentencePl": "t1-p215-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p215-005-sentence.mp3",
       "polishAudio": "Pani",
       "audioSentencePl": "t1-p215-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p215-006-sentence.mp3",
       "polishAudio": "Płeć",
       "audioSentencePl": "t1-p215-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p215-007-sentence.mp3",
       "polishAudio": "Płeć",
       "audioSentencePl": "t1-p215-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p215-008-sentence.mp3",
       "polishAudio": "Weganin",
       "audioSentencePl": "t1-p215-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p215-009-sentence.mp3",
       "polishAudio": "Wegetarianin",
       "audioSentencePl": "t1-p215-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p215-010-sentence.mp3",
       "polishAudio": "Osobowość",
       "audioSentencePl": "t1-p215-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p215-011-sentence.mp3",
       "polishAudio": "Geniusz",
       "audioSentencePl": "t1-p215-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p215-012-sentence.mp3",
       "polishAudio": "Rasa",
       "audioSentencePl": "t1-p215-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p215-013-sentence.mp3",
       "polishAudio": "Perfekcjonista",
       "audioSentencePl": "t1-p215-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p215-014-sentence.mp3",
       "polishAudio": "Młodość",
       "audioSentencePl": "t1-p215-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p215-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p215-015-sentence.mp3",
       "polishAudio": "Starość",
       "audioSentencePl": "t1-p215-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

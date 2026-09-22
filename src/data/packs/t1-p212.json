@@ -17,7 +17,7 @@
       "audioSentence": "t1-p212-001-sentence.mp3",
       "polishAudio": "Z",
       "audioSentencePl": "t1-p212-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p212-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p212-002-sentence.mp3",
       "polishAudio": "Bez",
       "audioSentencePl": "t1-p212-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p212-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p212-003-sentence.mp3",
       "polishAudio": "Następnie",
       "audioSentencePl": "t1-p212-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p212-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p212-004-sentence.mp3",
       "polishAudio": "Przede wszystkim",
       "audioSentencePl": "t1-p212-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p212-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p212-005-sentence.mp3",
       "polishAudio": "Po pierwsze",
       "audioSentencePl": "t1-p212-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p212-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p212-006-sentence.mp3",
       "polishAudio": "Po drugie",
       "audioSentencePl": "t1-p212-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p212-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p212-007-sentence.mp3",
       "polishAudio": "Do teraz",
       "audioSentencePl": "t1-p212-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p212-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p212-008-sentence.mp3",
       "polishAudio": "Wtedy",
       "audioSentencePl": "t1-p212-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p212-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p212-009-sentence.mp3",
       "polishAudio": "Podsumowując",
       "audioSentencePl": "t1-p212-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p212-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p212-010-sentence.mp3",
       "polishAudio": "W ogóle",
       "audioSentencePl": "t1-p212-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

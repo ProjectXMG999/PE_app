@@ -17,7 +17,7 @@
       "audioSentence": "t1-p154-001-sentence.mp3",
       "polishAudio": "Bezużyteczny",
       "audioSentencePl": "t1-p154-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p154-002-sentence.mp3",
       "polishAudio": "Użyteczny",
       "audioSentencePl": "t1-p154-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p154-003-sentence.mp3",
       "polishAudio": "Dziki",
       "audioSentencePl": "t1-p154-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p154-004-sentence.mp3",
       "polishAudio": "Niewygodny",
       "audioSentencePl": "t1-p154-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p154-005-sentence.mp3",
       "polishAudio": "Martwy",
       "audioSentencePl": "t1-p154-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p154-006-sentence.mp3",
       "polishAudio": "Żywy",
       "audioSentencePl": "t1-p154-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p154-007-sentence.mp3",
       "polishAudio": "Przejrzysty",
       "audioSentencePl": "t1-p154-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p154-008-sentence.mp3",
       "polishAudio": "Wygodny",
       "audioSentencePl": "t1-p154-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p154-009-sentence.mp3",
       "polishAudio": "Wymagający",
       "audioSentencePl": "t1-p154-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p154-010-sentence.mp3",
       "polishAudio": "Milczący",
       "audioSentencePl": "t1-p154-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p154-011-sentence.mp3",
       "polishAudio": "Hałaśliwy",
       "audioSentencePl": "t1-p154-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p154-012-sentence.mp3",
       "polishAudio": "Oczywisty",
       "audioSentencePl": "t1-p154-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p154-013-sentence.mp3",
       "polishAudio": "Neutralny",
       "audioSentencePl": "t1-p154-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p154-014-sentence.mp3",
       "polishAudio": "Odpowiedni",
       "audioSentencePl": "t1-p154-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p154-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p154-015-sentence.mp3",
       "polishAudio": "Sympatyczny",
       "audioSentencePl": "t1-p154-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

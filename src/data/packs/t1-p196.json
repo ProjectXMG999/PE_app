@@ -17,7 +17,7 @@
       "audioSentence": "t1-p196-001-sentence.mp3",
       "polishAudio": "Gniew",
       "audioSentencePl": "t1-p196-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p196-002-sentence.mp3",
       "polishAudio": "Narkotyki",
       "audioSentencePl": "t1-p196-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p196-003-sentence.mp3",
       "polishAudio": "Kłamstwo",
       "audioSentencePl": "t1-p196-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p196-004-sentence.mp3",
       "polishAudio": "Kłopot",
       "audioSentencePl": "t1-p196-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p196-005-sentence.mp3",
       "polishAudio": "Łza",
       "audioSentencePl": "t1-p196-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p196-006-sentence.mp3",
       "polishAudio": "Nienawiść",
       "audioSentencePl": "t1-p196-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p196-007-sentence.mp3",
       "polishAudio": "Pech",
       "audioSentencePl": "t1-p196-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p196-008-sentence.mp3",
       "polishAudio": "Płacz",
       "audioSentencePl": "t1-p196-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-009",
@@ -132,7 +132,7 @@
       "audioSentence": "t1-p196-010-sentence.mp3",
       "polishAudio": "Strach",
       "audioSentencePl": "t1-p196-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-011",
@@ -145,7 +145,7 @@
       "audioSentence": "t1-p196-011-sentence.mp3",
       "polishAudio": "Szok",
       "audioSentencePl": "t1-p196-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-012",
@@ -158,7 +158,7 @@
       "audioSentence": "t1-p196-012-sentence.mp3",
       "polishAudio": "Wina",
       "audioSentencePl": "t1-p196-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-013",
@@ -171,7 +171,7 @@
       "audioSentence": "t1-p196-013-sentence.mp3",
       "polishAudio": "Wypalenie",
       "audioSentencePl": "t1-p196-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-014",
@@ -184,7 +184,7 @@
       "audioSentence": "t1-p196-014-sentence.mp3",
       "polishAudio": "Agresja",
       "audioSentencePl": "t1-p196-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p196-015",
@@ -197,7 +197,7 @@
       "audioSentence": "t1-p196-015-sentence.mp3",
       "polishAudio": "Cierpienie",
       "audioSentencePl": "t1-p196-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p174-001-sentence.mp3",
       "polishAudio": "Artykuł",
       "audioSentencePl": "t1-p174-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p174-002-sentence.mp3",
       "polishAudio": "Celebryta",
       "audioSentencePl": "t1-p174-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p174-003-sentence.mp3",
       "polishAudio": "Magazyn",
       "audioSentencePl": "t1-p174-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-004",
@@ -67,7 +67,7 @@
       "audioSentence": "t1-p174-005-sentence.mp3",
       "polishAudio": "Sława",
       "audioSentencePl": "t1-p174-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-006",
@@ -80,7 +80,7 @@
       "audioSentence": "t1-p174-006-sentence.mp3",
       "polishAudio": "Wywiad",
       "audioSentencePl": "t1-p174-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-007",
@@ -93,7 +93,7 @@
       "audioSentence": "t1-p174-007-sentence.mp3",
       "polishAudio": "Konferencja",
       "audioSentencePl": "t1-p174-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-008",
@@ -106,7 +106,7 @@
       "audioSentence": "t1-p174-008-sentence.mp3",
       "polishAudio": "Media",
       "audioSentencePl": "t1-p174-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-009",
@@ -119,7 +119,7 @@
       "audioSentence": "t1-p174-009-sentence.mp3",
       "polishAudio": "Wizerunek",
       "audioSentencePl": "t1-p174-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-010",
@@ -132,7 +132,7 @@
       "audioSentence": "t1-p174-010-sentence.mp3",
       "polishAudio": "Billboard",
       "audioSentencePl": "t1-p174-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-011",
@@ -145,7 +145,7 @@
       "audioSentence": "t1-p174-011-sentence.mp3",
       "polishAudio": "Czasopismo",
       "audioSentencePl": "t1-p174-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-012",
@@ -158,7 +158,7 @@
       "audioSentence": "t1-p174-012-sentence.mp3",
       "polishAudio": "Motto",
       "audioSentencePl": "t1-p174-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-013",
@@ -171,7 +171,7 @@
       "audioSentence": "t1-p174-013-sentence.mp3",
       "polishAudio": "Panel",
       "audioSentencePl": "t1-p174-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-014",
@@ -184,7 +184,7 @@
       "audioSentence": "t1-p174-014-sentence.mp3",
       "polishAudio": "Slogan",
       "audioSentencePl": "t1-p174-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p174-015",
@@ -197,7 +197,7 @@
       "audioSentence": "t1-p174-015-sentence.mp3",
       "polishAudio": "Biuletyn",
       "audioSentencePl": "t1-p174-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

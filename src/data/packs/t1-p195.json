@@ -17,7 +17,7 @@
       "audioSentence": "t1-p195-001-sentence.mp3",
       "polishAudio": "Centymetr",
       "audioSentencePl": "t1-p195-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p195-002-sentence.mp3",
       "polishAudio": "Gram",
       "audioSentencePl": "t1-p195-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p195-003-sentence.mp3",
       "polishAudio": "Grupa",
       "audioSentencePl": "t1-p195-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p195-004-sentence.mp3",
       "polishAudio": "Kawałek",
       "audioSentencePl": "t1-p195-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p195-005-sentence.mp3",
       "polishAudio": "Kilogram",
       "audioSentencePl": "t1-p195-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p195-006-sentence.mp3",
       "polishAudio": "Kilometr",
       "audioSentencePl": "t1-p195-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p195-007-sentence.mp3",
       "polishAudio": "Litr",
       "audioSentencePl": "t1-p195-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p195-008-sentence.mp3",
       "polishAudio": "Metr",
       "audioSentencePl": "t1-p195-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p195-009-sentence.mp3",
       "polishAudio": "Prędkość",
       "audioSentencePl": "t1-p195-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p195-010-sentence.mp3",
       "polishAudio": "Rozmiar",
       "audioSentencePl": "t1-p195-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p195-011-sentence.mp3",
       "polishAudio": "Zestaw",
       "audioSentencePl": "t1-p195-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p195-012-sentence.mp3",
       "polishAudio": "Ciśnienie",
       "audioSentencePl": "t1-p195-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p195-013-sentence.mp3",
       "polishAudio": "Dawka",
       "audioSentencePl": "t1-p195-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p195-014-sentence.mp3",
       "polishAudio": "Granica",
       "audioSentencePl": "t1-p195-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p195-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p195-015-sentence.mp3",
       "polishAudio": "Kaloria",
       "audioSentencePl": "t1-p195-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

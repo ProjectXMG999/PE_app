@@ -17,7 +17,7 @@
       "audioSentence": "t1-p199-001-sentence.mp3",
       "polishAudio": "Bogini",
       "audioSentencePl": "t1-p199-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p199-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p199-002-sentence.mp3",
       "polishAudio": "Ktoś, kto przyciąga wzrok",
       "audioSentencePl": "t1-p199-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p199-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p199-003-sentence.mp3",
       "polishAudio": "Pięknisia",
       "audioSentencePl": "t1-p199-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p199-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p199-004-sentence.mp3",
       "polishAudio": "Urocza",
       "audioSentencePl": "t1-p199-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p199-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p199-005-sentence.mp3",
       "polishAudio": "Atrakcyjna",
       "audioSentencePl": "t1-p199-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p199-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p199-006-sentence.mp3",
       "polishAudio": "Zapierający dech w piersiach",
       "audioSentencePl": "t1-p199-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p199-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p199-007-sentence.mp3",
       "polishAudio": "Rozkoszny",
       "audioSentencePl": "t1-p199-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p199-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p199-008-sentence.mp3",
       "polishAudio": "Boska",
       "audioSentencePl": "t1-p199-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p199-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p199-009-sentence.mp3",
       "polishAudio": "Jak ze snu",
       "audioSentencePl": "t1-p199-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p199-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p199-010-sentence.mp3",
       "polishAudio": "Uczta dla oczu",
       "audioSentencePl": "t1-p199-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

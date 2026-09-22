@@ -17,7 +17,7 @@
       "audioSentence": "t1-p146-001-sentence.mp3",
       "polishAudio": "Burza",
       "audioSentencePl": "t1-p146-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p146-002-sentence.mp3",
       "polishAudio": "Chmura",
       "audioSentencePl": "t1-p146-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p146-003-sentence.mp3",
       "polishAudio": "Klimat",
       "audioSentencePl": "t1-p146-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p146-004-sentence.mp3",
       "polishAudio": "Mgła",
       "audioSentencePl": "t1-p146-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p146-005-sentence.mp3",
       "polishAudio": "Prognoza pogody",
       "audioSentencePl": "t1-p146-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p146-006-sentence.mp3",
       "polishAudio": "Stopień",
       "audioSentencePl": "t1-p146-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p146-007-sentence.mp3",
       "polishAudio": "Blask słońca",
       "audioSentencePl": "t1-p146-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p146-008-sentence.mp3",
       "polishAudio": "Cień",
       "audioSentencePl": "t1-p146-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p146-009-sentence.mp3",
       "polishAudio": "Cień",
       "audioSentencePl": "t1-p146-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p146-010-sentence.mp3",
       "polishAudio": "Grzmot",
       "audioSentencePl": "t1-p146-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p146-011-sentence.mp3",
       "polishAudio": "Mróz",
       "audioSentencePl": "t1-p146-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p146-012-sentence.mp3",
       "polishAudio": "Para",
       "audioSentencePl": "t1-p146-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p146-013-sentence.mp3",
       "polishAudio": "Tęcza",
       "audioSentencePl": "t1-p146-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p146-014-sentence.mp3",
       "polishAudio": "Wschód słońca",
       "audioSentencePl": "t1-p146-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p146-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p146-015-sentence.mp3",
       "polishAudio": "Zachód słońca",
       "audioSentencePl": "t1-p146-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

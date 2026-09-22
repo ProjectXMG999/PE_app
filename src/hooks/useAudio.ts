@@ -1,6 +1,7 @@
 import { useCallback, useRef } from 'react'
 import { getAudioUrl, preloadAudio } from '../services/audioService'
 import { getAudioElement } from '../audio/audioElement'
+import { hasSentenceAudioEn, hasSentenceAudioPl } from '../audio/sentenceAudio'
 import { Word } from '../types/vocabulary'
 
 // EN audio was generated at ElevenLabs speed=0.75 (slower, for learner clarity) and PL at
@@ -101,7 +102,7 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
 
   const playSentence = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
     // Audio zdania gramy tylko, gdy nagrano je dla aktualnej treści zdania (sentenceAudio)
-    if (!packId || !word.sentenceEn || !word.sentenceAudio) return Promise.resolve('ok' as const)
+    if (!packId || !hasSentenceAudioEn(word)) return Promise.resolve('ok' as const)
     return play(getAudioUrl(packId, word.audioSentence), EN_BASE * ratesRef.current.enRate)
   }, [packId, play])
 
@@ -111,8 +112,8 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
   }, [packId, play])
 
   const playSentencePl = useCallback((word: Word): Promise<'ok' | 'timeout' | 'error'> => {
-    if (!packId || !word.audioSentencePl || !word.sentenceAudio) return Promise.resolve('ok' as const)
-    return play(getAudioUrl(packId, word.audioSentencePl), PL_BASE * ratesRef.current.plRate)
+    if (!packId || !hasSentenceAudioPl(word)) return Promise.resolve('ok' as const)
+    return play(getAudioUrl(packId, word.audioSentencePl!), PL_BASE * ratesRef.current.plRate)
   }, [packId, play])
 
   // hard=true (default): full reset — pause, rewind, clear src, reload. Required to
@@ -150,9 +151,9 @@ export function useAudio(packId: string | null, enRate = 1.0, plRate = 1.0) {
         if (i < words.length) {
           const w = words[i]
           preloadAudio(getAudioUrl(packId, w.audioWord))
-          if (w.sentenceEn && w.sentenceAudio) preloadAudio(getAudioUrl(packId, w.audioSentence))
+          if (hasSentenceAudioEn(w)) preloadAudio(getAudioUrl(packId, w.audioSentence))
           if (w.audioWordPl) preloadAudio(getAudioUrl(packId, w.audioWordPl))
-          if (w.audioSentencePl && w.sentenceAudio) preloadAudio(getAudioUrl(packId, w.audioSentencePl))
+          if (hasSentenceAudioPl(w)) preloadAudio(getAudioUrl(packId, w.audioSentencePl!))
         }
       })
     })

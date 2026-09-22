@@ -17,7 +17,7 @@
       "audioSentence": "t1-p169-001-sentence.mp3",
       "polishAudio": "Emerytura",
       "audioSentencePl": "t1-p169-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p169-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p169-002-sentence.mp3",
       "polishAudio": "Flaga",
       "audioSentencePl": "t1-p169-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p169-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p169-003-sentence.mp3",
       "polishAudio": "Kolejka",
       "audioSentencePl": "t1-p169-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p169-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p169-004-sentence.mp3",
       "polishAudio": "Król",
       "audioSentencePl": "t1-p169-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p169-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p169-005-sentence.mp3",
       "polishAudio": "Królowa",
       "audioSentencePl": "t1-p169-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p169-006",
@@ -93,7 +93,7 @@
       "audioSentence": "t1-p169-007-sentence.mp3",
       "polishAudio": "Pokój",
       "audioSentencePl": "t1-p169-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p169-008",
@@ -106,7 +106,7 @@
       "audioSentence": "t1-p169-008-sentence.mp3",
       "polishAudio": "Polityka",
       "audioSentencePl": "t1-p169-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p169-009",
@@ -119,7 +119,7 @@
       "audioSentence": "t1-p169-009-sentence.mp3",
       "polishAudio": "Prawo",
       "audioSentencePl": "t1-p169-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p169-010",
@@ -132,7 +132,7 @@
       "audioSentence": "t1-p169-010-sentence.mp3",
       "polishAudio": "Premier",
       "audioSentencePl": "t1-p169-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p169-011",
@@ -145,7 +145,7 @@
       "audioSentence": "t1-p169-011-sentence.mp3",
       "polishAudio": "Wolność",
       "audioSentencePl": "t1-p169-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p169-012",
@@ -169,7 +169,7 @@
       "audioSentence": "t1-p169-013-sentence.mp3",
       "polishAudio": "Przepis",
       "audioSentencePl": "t1-p169-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p169-014",
@@ -182,7 +182,7 @@
       "audioSentence": "t1-p169-014-sentence.mp3",
       "polishAudio": "Rząd",
       "audioSentencePl": "t1-p169-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p169-015",
@@ -195,7 +195,7 @@
       "audioSentence": "t1-p169-015-sentence.mp3",
       "polishAudio": "Społeczeństwo",
       "audioSentencePl": "t1-p169-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p122-001-sentence.mp3",
       "polishAudio": "Agresywny",
       "audioSentencePl": "t1-p122-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p122-002-sentence.mp3",
       "polishAudio": "Arogancki",
       "audioSentencePl": "t1-p122-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p122-003-sentence.mp3",
       "polishAudio": "Chciwy",
       "audioSentencePl": "t1-p122-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p122-004-sentence.mp3",
       "polishAudio": "Dziecinny",
       "audioSentencePl": "t1-p122-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p122-005-sentence.mp3",
       "polishAudio": "Gorszy",
       "audioSentencePl": "t1-p122-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p122-006-sentence.mp3",
       "polishAudio": "Kapryśny",
       "audioSentencePl": "t1-p122-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p122-007-sentence.mp3",
       "polishAudio": "Leniwy",
       "audioSentencePl": "t1-p122-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p122-008-sentence.mp3",
       "polishAudio": "Naiwny",
       "audioSentencePl": "t1-p122-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p122-009-sentence.mp3",
       "polishAudio": "Najgorszy",
       "audioSentencePl": "t1-p122-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p122-010-sentence.mp3",
       "polishAudio": "Winny",
       "audioSentencePl": "t1-p122-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p122-011-sentence.mp3",
       "polishAudio": "Nerwowy",
       "audioSentencePl": "t1-p122-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p122-012-sentence.mp3",
       "polishAudio": "Niedouczony",
       "audioSentencePl": "t1-p122-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p122-013-sentence.mp3",
       "polishAudio": "Niegrzeczny",
       "audioSentencePl": "t1-p122-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p122-014-sentence.mp3",
       "polishAudio": "Niesforny",
       "audioSentencePl": "t1-p122-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p122-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p122-015-sentence.mp3",
       "polishAudio": "Niemądry",
       "audioSentencePl": "t1-p122-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

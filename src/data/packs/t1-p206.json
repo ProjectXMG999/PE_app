@@ -17,7 +17,7 @@
       "audioSentence": "t1-p206-001-sentence.mp3",
       "polishAudio": "Już",
       "audioSentencePl": "t1-p206-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p206-002-sentence.mp3",
       "polishAudio": "O",
       "audioSentencePl": "t1-p206-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p206-003-sentence.mp3",
       "polishAudio": "Prawie",
       "audioSentencePl": "t1-p206-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p206-004-sentence.mp3",
       "polishAudio": "Także",
       "audioSentencePl": "t1-p206-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p206-005-sentence.mp3",
       "polishAudio": "Osobno",
       "audioSentencePl": "t1-p206-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p206-006-sentence.mp3",
       "polishAudio": "Właściwie",
       "audioSentencePl": "t1-p206-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p206-007-sentence.mp3",
       "polishAudio": "Prawdopodobnie",
       "audioSentencePl": "t1-p206-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p206-008-sentence.mp3",
       "polishAudio": "Szczególnie",
       "audioSentencePl": "t1-p206-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p206-009-sentence.mp3",
       "polishAudio": "Zaledwie, właśnie",
       "audioSentencePl": "t1-p206-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p206-010-sentence.mp3",
       "polishAudio": "Tylko",
       "audioSentencePl": "t1-p206-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-011",
@@ -158,7 +158,7 @@
       "audioSentence": "t1-p206-012-sentence.mp3",
       "polishAudio": "Dalej",
       "audioSentencePl": "t1-p206-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-013",
@@ -171,7 +171,7 @@
       "audioSentence": "t1-p206-013-sentence.mp3",
       "polishAudio": "Prawie",
       "audioSentencePl": "t1-p206-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-014",
@@ -184,7 +184,7 @@
       "audioSentence": "t1-p206-014-sentence.mp3",
       "polishAudio": "Normalnie",
       "audioSentencePl": "t1-p206-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p206-015",
@@ -197,7 +197,7 @@
       "audioSentence": "t1-p206-015-sentence.mp3",
       "polishAudio": "Przynajmniej",
       "audioSentencePl": "t1-p206-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

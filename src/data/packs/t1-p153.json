@@ -17,7 +17,7 @@
       "audioSentence": "t1-p153-001-sentence.mp3",
       "polishAudio": "Po drugiej stronie",
       "audioSentencePl": "t1-p153-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p153-002",
@@ -41,7 +41,7 @@
       "audioSentence": "t1-p153-003-sentence.mp3",
       "polishAudio": "Daleko",
       "audioSentencePl": "t1-p153-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p153-004",
@@ -54,7 +54,7 @@
       "audioSentence": "t1-p153-004-sentence.mp3",
       "polishAudio": "Nad",
       "audioSentencePl": "t1-p153-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p153-005",
@@ -67,7 +67,7 @@
       "audioSentence": "t1-p153-005-sentence.mp3",
       "polishAudio": "Na przeciwko",
       "audioSentencePl": "t1-p153-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p153-006",
@@ -91,7 +91,7 @@
       "audioSentence": "t1-p153-007-sentence.mp3",
       "polishAudio": "Gdziekolwiek",
       "audioSentencePl": "t1-p153-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p153-008",
@@ -104,7 +104,7 @@
       "audioSentence": "t1-p153-008-sentence.mp3",
       "polishAudio": "Dookoła",
       "audioSentencePl": "t1-p153-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p153-009",
@@ -117,7 +117,7 @@
       "audioSentence": "t1-p153-009-sentence.mp3",
       "polishAudio": "Z dala",
       "audioSentencePl": "t1-p153-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p153-010",
@@ -130,7 +130,7 @@
       "audioSentence": "t1-p153-010-sentence.mp3",
       "polishAudio": "Z tyłu",
       "audioSentencePl": "t1-p153-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p153-011",
@@ -143,7 +143,7 @@
       "audioSentence": "t1-p153-011-sentence.mp3",
       "polishAudio": "Ponad",
       "audioSentencePl": "t1-p153-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p153-012",
@@ -156,7 +156,7 @@
       "audioSentence": "t1-p153-012-sentence.mp3",
       "polishAudio": "Pod",
       "audioSentencePl": "t1-p153-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p153-013",
@@ -169,7 +169,7 @@
       "audioSentence": "t1-p153-013-sentence.mp3",
       "polishAudio": "Obok",
       "audioSentencePl": "t1-p153-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p153-014",
@@ -182,7 +182,7 @@
       "audioSentence": "t1-p153-014-sentence.mp3",
       "polishAudio": "Pomiędzy",
       "audioSentencePl": "t1-p153-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p153-015",
@@ -195,7 +195,7 @@
       "audioSentence": "t1-p153-015-sentence.mp3",
       "polishAudio": "Wszędzie",
       "audioSentencePl": "t1-p153-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

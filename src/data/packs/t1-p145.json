@@ -17,7 +17,7 @@
       "audioSentence": "t1-p145-001-sentence.mp3",
       "polishAudio": "Czas wolny",
       "audioSentencePl": "t1-p145-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p145-002-sentence.mp3",
       "polishAudio": "Dzień roboczy",
       "audioSentencePl": "t1-p145-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p145-003-sentence.mp3",
       "polishAudio": "Epoka",
       "audioSentencePl": "t1-p145-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p145-004-sentence.mp3",
       "polishAudio": "Kwadrans",
       "audioSentencePl": "t1-p145-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p145-005-sentence.mp3",
       "polishAudio": "Opóźnienie",
       "audioSentencePl": "t1-p145-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p145-006-sentence.mp3",
       "polishAudio": "Pojutrze",
       "audioSentencePl": "t1-p145-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p145-007-sentence.mp3",
       "polishAudio": "Południe",
       "audioSentencePl": "t1-p145-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p145-008-sentence.mp3",
       "polishAudio": "Południe",
       "audioSentencePl": "t1-p145-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p145-009-sentence.mp3",
       "polishAudio": "Pora roku",
       "audioSentencePl": "t1-p145-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p145-010-sentence.mp3",
       "polishAudio": "Północ",
       "audioSentencePl": "t1-p145-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p145-011-sentence.mp3",
       "polishAudio": "Przedwczoraj",
       "audioSentencePl": "t1-p145-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p145-012-sentence.mp3",
       "polishAudio": "Przeszłość",
       "audioSentencePl": "t1-p145-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p145-013-sentence.mp3",
       "polishAudio": "Przyszłość",
       "audioSentencePl": "t1-p145-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p145-014-sentence.mp3",
       "polishAudio": "Stulecie",
       "audioSentencePl": "t1-p145-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p145-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p145-015-sentence.mp3",
       "polishAudio": "Teraźniejszość",
       "audioSentencePl": "t1-p145-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p200-001-sentence.mp3",
       "polishAudio": "Nalewać",
       "audioSentencePl": "t1-p200-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p200-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p200-002-sentence.mp3",
       "polishAudio": "Wsiadać",
       "audioSentencePl": "t1-p200-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p200-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p200-003-sentence.mp3",
       "polishAudio": "Odjechać",
       "audioSentencePl": "t1-p200-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p200-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p200-004-sentence.mp3",
       "polishAudio": "Wysiadać",
       "audioSentencePl": "t1-p200-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p200-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p200-005-sentence.mp3",
       "polishAudio": "Podjechać po kogoś",
       "audioSentencePl": "t1-p200-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p200-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p200-006-sentence.mp3",
       "polishAudio": "Wyjeżdżać",
       "audioSentencePl": "t1-p200-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p200-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p200-007-sentence.mp3",
       "polishAudio": "Zatrzymać się",
       "audioSentencePl": "t1-p200-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p200-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p200-008-sentence.mp3",
       "polishAudio": "Zwolnić",
       "audioSentencePl": "t1-p200-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p200-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p200-009-sentence.mp3",
       "polishAudio": "Przyspieszać",
       "audioSentencePl": "t1-p200-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p200-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p200-010-sentence.mp3",
       "polishAudio": "Skręcić",
       "audioSentencePl": "t1-p200-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

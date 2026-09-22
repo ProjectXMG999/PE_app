@@ -17,7 +17,7 @@
       "audioSentence": "t1-p112-001-sentence.mp3",
       "polishAudio": "Bliźniak",
       "audioSentencePl": "t1-p112-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p112-002-sentence.mp3",
       "polishAudio": "Jedynak",
       "audioSentencePl": "t1-p112-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p112-003-sentence.mp3",
       "polishAudio": "Krewny",
       "audioSentencePl": "t1-p112-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p112-004-sentence.mp3",
       "polishAudio": "Mama",
       "audioSentencePl": "t1-p112-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p112-005-sentence.mp3",
       "polishAudio": "Rodzeństwo",
       "audioSentencePl": "t1-p112-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p112-006-sentence.mp3",
       "polishAudio": "Siostrzenica",
       "audioSentencePl": "t1-p112-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p112-007-sentence.mp3",
       "polishAudio": "Siostrzeniec",
       "audioSentencePl": "t1-p112-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p112-008-sentence.mp3",
       "polishAudio": "Tata",
       "audioSentencePl": "t1-p112-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p112-009-sentence.mp3",
       "polishAudio": "Teściowa",
       "audioSentencePl": "t1-p112-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p112-010-sentence.mp3",
       "polishAudio": "Teść",
       "audioSentencePl": "t1-p112-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p112-011-sentence.mp3",
       "polishAudio": "Wnuki",
       "audioSentencePl": "t1-p112-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p112-012-sentence.mp3",
       "polishAudio": "Życie rodzinne",
       "audioSentencePl": "t1-p112-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p112-013-sentence.mp3",
       "polishAudio": "Synowa",
       "audioSentencePl": "t1-p112-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p112-014-sentence.mp3",
       "polishAudio": "Wnuk",
       "audioSentencePl": "t1-p112-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p112-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p112-015-sentence.mp3",
       "polishAudio": "Zięć",
       "audioSentencePl": "t1-p112-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

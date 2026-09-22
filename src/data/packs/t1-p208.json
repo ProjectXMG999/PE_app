@@ -17,7 +17,7 @@
       "audioSentence": "t1-p208-001-sentence.mp3",
       "polishAudio": "Klatka",
       "audioSentencePl": "t1-p208-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p208-002-sentence.mp3",
       "polishAudio": "Wioska",
       "audioSentencePl": "t1-p208-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p208-003-sentence.mp3",
       "polishAudio": "Rolnik",
       "audioSentencePl": "t1-p208-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p208-004-sentence.mp3",
       "polishAudio": "Grunt",
       "audioSentencePl": "t1-p208-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p208-005-sentence.mp3",
       "polishAudio": "Farma",
       "audioSentencePl": "t1-p208-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p208-006-sentence.mp3",
       "polishAudio": "Rolnictwo",
       "audioSentencePl": "t1-p208-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p208-007-sentence.mp3",
       "polishAudio": "Wieś",
       "audioSentencePl": "t1-p208-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p208-008-sentence.mp3",
       "polishAudio": "Kowboj",
       "audioSentencePl": "t1-p208-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p208-009-sentence.mp3",
       "polishAudio": "Gleba",
       "audioSentencePl": "t1-p208-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p208-010-sentence.mp3",
       "polishAudio": "Festyn wiejski",
       "audioSentencePl": "t1-p208-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p208-011-sentence.mp3",
       "polishAudio": "Mieszkaniec wioski",
       "audioSentencePl": "t1-p208-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p208-012-sentence.mp3",
       "polishAudio": "Traktor",
       "audioSentencePl": "t1-p208-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p208-013-sentence.mp3",
       "polishAudio": "Pszenica",
       "audioSentencePl": "t1-p208-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p208-014-sentence.mp3",
       "polishAudio": "Agroturystyka",
       "audioSentencePl": "t1-p208-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p208-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p208-015-sentence.mp3",
       "polishAudio": "Podkowa",
       "audioSentencePl": "t1-p208-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

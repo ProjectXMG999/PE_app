@@ -23,6 +23,7 @@ import { useMediaSession } from '../hooks/useMediaSession'
 import { useLockArtwork } from '../hooks/useLockArtwork'
 import { startKeepAlive, stopKeepAlive } from '../audio/keepAlive'
 import { startStudyPad, stopStudyPad } from '../audio/studyPad'
+import { hasSentenceAudioEn, hasSentenceAudioPl } from '../audio/sentenceAudio'
 import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { saveSession, savePackageProgress, getPackageProgress, saveWordProgress, getPackageWordProgress, getWordProgress } from '../services/db'
 import { StudyMode } from '../types/progress'
@@ -400,7 +401,15 @@ export function FlashcardPage() {
     // with no follow-up.
     const existingList = await getPackageWordProgress(packageId)
     const byId = new Map(existingList.map(w => [w.wordId, w]))
-    const rrOpts = { requestRetention: currentRequestRetention() }
+    // `bulk` because that is what this button is: one gesture declaring a whole
+    // pack known, exactly like "Znam wszystko" on the pack preview. Without the
+    // flag the two buttons meant the same thing and did different things —
+    // unseen words took the per-card first-exposure path (a hundred days, and
+    // counted toward points as if each had been answered). Words that WERE
+    // answered here are untouched by the flag: applyKnown only honours the bulk
+    // seed for a word with no history, and clampSameDay keeps the schedule a
+    // word already earned in this session.
+    const rrOpts = { bulk: true, requestRetention: currentRequestRetention() }
     await Promise.all(allWords.map(w =>
       saveWordProgress(applyKnown(byId.get(w.id), w.id, packageId, new Date(), rrOpts))
     ))
@@ -772,8 +781,13 @@ export function FlashcardPage() {
             onPlay={() => {
                 if (revealStep === 0) return playWordPl(currentWord)
                 if (revealStep === 1) return playWord(currentWord)
-                if (revealStep === 2) return currentWord.sentencePl ? playSentencePl(currentWord) : playWord(currentWord)
-                return currentWord.sentenceEn ? playSentence(currentWord) : playWord(currentWord)
+                // Bez nagrania zdania odtwarzamy słowo — przycisk wymowy ma zawsze coś powiedzieć.
+                // Na kroku polskiego zdania sięgamy po polskie słowo, a gdy i jego nie nagrano — po angielskie.
+                if (revealStep === 2) {
+                  if (hasSentenceAudioPl(currentWord)) return playSentencePl(currentWord)
+                  return currentWord.audioWordPl ? playWordPl(currentWord) : playWord(currentWord)
+                }
+                return hasSentenceAudioEn(currentWord) ? playSentence(currentWord) : playWord(currentWord)
               }}
             onStop={stop}
             caption="Odtwórz wymowę"

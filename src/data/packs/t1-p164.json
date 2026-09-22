@@ -17,7 +17,7 @@
       "audioSentence": "t1-p164-001-sentence.mp3",
       "polishAudio": "Zadziwiający",
       "audioSentencePl": "t1-p164-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p164-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p164-002-sentence.mp3",
       "polishAudio": "Heroiczny",
       "audioSentencePl": "t1-p164-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p164-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p164-003-sentence.mp3",
       "polishAudio": "Wyjątkowy",
       "audioSentencePl": "t1-p164-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p164-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p164-004-sentence.mp3",
       "polishAudio": "Wyśmienity",
       "audioSentencePl": "t1-p164-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p164-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p164-005-sentence.mp3",
       "polishAudio": "Nie z tego świata",
       "audioSentencePl": "t1-p164-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p164-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p164-006-sentence.mp3",
       "polishAudio": "Wybitny",
       "audioSentencePl": "t1-p164-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p164-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p164-007-sentence.mp3",
       "polishAudio": "Potężny",
       "audioSentencePl": "t1-p164-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p164-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p164-008-sentence.mp3",
       "polishAudio": "Fantastyczny",
       "audioSentencePl": "t1-p164-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p164-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p164-009-sentence.mp3",
       "polishAudio": "Hit",
       "audioSentencePl": "t1-p164-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p164-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p164-010-sentence.mp3",
       "polishAudio": "Dajesz czadu",
       "audioSentencePl": "t1-p164-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

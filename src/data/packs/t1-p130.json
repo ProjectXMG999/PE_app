@@ -17,7 +17,7 @@
       "audioSentence": "t1-p130-001-sentence.mp3",
       "polishAudio": "Wiadomość multimedialna",
       "audioSentencePl": "t1-p130-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p130-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p130-002-sentence.mp3",
       "polishAudio": "Sieć ogólnoświatowa",
       "audioSentencePl": "t1-p130-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p130-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p130-003-sentence.mp3",
       "polishAudio": "Wiad.",
       "audioSentencePl": "t1-p130-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p130-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p130-004-sentence.mp3",
       "polishAudio": "Nr.",
       "audioSentencePl": "t1-p130-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p130-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p130-005-sentence.mp3",
       "polishAudio": "Ludzie",
       "audioSentencePl": "t1-p130-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p130-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p130-006-sentence.mp3",
       "polishAudio": "Jakaś osoba",
       "audioSentencePl": "t1-p130-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p130-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p130-007-sentence.mp3",
       "polishAudio": "Ktoś",
       "audioSentencePl": "t1-p130-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p130-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p130-008-sentence.mp3",
       "polishAudio": "Wiadomość tekstowa",
       "audioSentencePl": "t1-p130-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p130-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p130-009-sentence.mp3",
       "polishAudio": "Coś",
       "audioSentencePl": "t1-p130-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p130-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p130-010-sentence.mp3",
       "polishAudio": "Cdn.",
       "audioSentencePl": "t1-p130-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

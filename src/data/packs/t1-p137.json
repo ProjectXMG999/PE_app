@@ -17,7 +17,7 @@
       "audioSentence": "t1-p137-001-sentence.mp3",
       "polishAudio": "Luksusowo lub git",
       "audioSentencePl": "t1-p137-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p137-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p137-002-sentence.mp3",
       "polishAudio": "Kiksy",
       "audioSentencePl": "t1-p137-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p137-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p137-003-sentence.mp3",
       "polishAudio": "Wyglądać perfekcyjnie",
       "audioSentencePl": "t1-p137-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p137-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p137-004-sentence.mp3",
       "polishAudio": "Odpicować",
       "audioSentencePl": "t1-p137-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p137-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p137-005-sentence.mp3",
       "polishAudio": "Nabity",
       "audioSentencePl": "t1-p137-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p137-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p137-006-sentence.mp3",
       "polishAudio": "Fotka samego siebie",
       "audioSentencePl": "t1-p137-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p137-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p137-007-sentence.mp3",
       "polishAudio": "Oksy",
       "audioSentencePl": "t1-p137-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p137-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p137-008-sentence.mp3",
       "polishAudio": "Skóra i kości",
       "audioSentencePl": "t1-p137-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p137-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p137-009-sentence.mp3",
       "polishAudio": "Lanser",
       "audioSentencePl": "t1-p137-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p137-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p137-010-sentence.mp3",
       "polishAudio": "Ciuchy",
       "audioSentencePl": "t1-p137-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

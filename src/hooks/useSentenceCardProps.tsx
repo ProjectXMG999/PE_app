@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { StageSentence } from '../components/flashcard/StudyStage'
+import { hasSentenceAudioEn, hasSentenceAudioPl } from '../audio/sentenceAudio'
 import { Word } from '../types/vocabulary'
 
 interface SentenceAudio {
@@ -35,14 +36,18 @@ export function useSentenceCardProps(
     frontExtra: hasSentencePl && word ? (
       <StageSentence
         text={word.sentencePl!}
-        onPlay={() => { audio.stop(); audio.playSentencePl(word) }}
+        onPlay={hasSentenceAudioPl(word)
+          ? () => { audio.stop(); audio.playSentencePl(word) }
+          : undefined}
         label="Wymowa zdania po polsku"
       />
     ) : undefined,
     backExtra: hasSentenceEn && word ? (
       <StageSentence
         text={word.sentenceEn!}
-        onPlay={() => { audio.stop(); audio.playSentence(word) }}
+        onPlay={hasSentenceAudioEn(word)
+          ? () => { audio.stop(); audio.playSentence(word) }
+          : undefined}
         label="Wymowa zdania po angielsku"
       />
     ) : undefined,

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p201-001-sentence.mp3",
       "polishAudio": "Alergia",
       "audioSentencePl": "t1-p201-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p201-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p201-002-sentence.mp3",
       "polishAudio": "Antybiotyk",
       "audioSentencePl": "t1-p201-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p201-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p201-003-sentence.mp3",
       "polishAudio": "Badanie",
       "audioSentencePl": "t1-p201-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p201-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p201-004-sentence.mp3",
       "polishAudio": "Bandaż",
       "audioSentencePl": "t1-p201-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p201-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p201-005-sentence.mp3",
       "polishAudio": "Ból żołądka",
       "audioSentencePl": "t1-p201-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p201-006",
@@ -93,7 +93,7 @@
       "audioSentence": "t1-p201-007-sentence.mp3",
       "polishAudio": "Choroba",
       "audioSentencePl": "t1-p201-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p201-008",
@@ -106,7 +106,7 @@
       "audioSentence": "t1-p201-008-sentence.mp3",
       "polishAudio": "Grypa",
       "audioSentencePl": "t1-p201-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p201-009",
@@ -119,7 +119,7 @@
       "audioSentence": "t1-p201-009-sentence.mp3",
       "polishAudio": "Klinika",
       "audioSentencePl": "t1-p201-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p201-010",
@@ -132,7 +132,7 @@
       "audioSentence": "t1-p201-010-sentence.mp3",
       "polishAudio": "Koszmar",
       "audioSentencePl": "t1-p201-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p201-011",
@@ -156,7 +156,7 @@
       "audioSentence": "t1-p201-012-sentence.mp3",
       "polishAudio": "Objaw",
       "audioSentencePl": "t1-p201-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p201-013",
@@ -169,7 +169,7 @@
       "audioSentence": "t1-p201-013-sentence.mp3",
       "polishAudio": "Operacja",
       "audioSentencePl": "t1-p201-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p201-014",
@@ -182,7 +182,7 @@
       "audioSentence": "t1-p201-014-sentence.mp3",
       "polishAudio": "Pacjent",
       "audioSentencePl": "t1-p201-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p201-015",
@@ -195,7 +195,7 @@
       "audioSentence": "t1-p201-015-sentence.mp3",
       "polishAudio": "Plaster",
       "audioSentencePl": "t1-p201-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

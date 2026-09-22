@@ -17,7 +17,7 @@
       "audioSentence": "t1-p192-001-sentence.mp3",
       "polishAudio": "Czasownik",
       "audioSentencePl": "t1-p192-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p192-002-sentence.mp3",
       "polishAudio": "Gramatyka",
       "audioSentencePl": "t1-p192-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p192-003-sentence.mp3",
       "polishAudio": "Historia",
       "audioSentencePl": "t1-p192-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p192-004-sentence.mp3",
       "polishAudio": "Opis",
       "audioSentencePl": "t1-p192-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p192-005-sentence.mp3",
       "polishAudio": "Przymiotnik",
       "audioSentencePl": "t1-p192-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p192-006-sentence.mp3",
       "polishAudio": "Przysłówek",
       "audioSentencePl": "t1-p192-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p192-007-sentence.mp3",
       "polishAudio": "Rozdział",
       "audioSentencePl": "t1-p192-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p192-008-sentence.mp3",
       "polishAudio": "Rzeczownik",
       "audioSentencePl": "t1-p192-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p192-009-sentence.mp3",
       "polishAudio": "Słownictwo",
       "audioSentencePl": "t1-p192-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p192-010-sentence.mp3",
       "polishAudio": "Słownik",
       "audioSentencePl": "t1-p192-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p192-011-sentence.mp3",
       "polishAudio": "Strona",
       "audioSentencePl": "t1-p192-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p192-012-sentence.mp3",
       "polishAudio": "Tłumaczenie",
       "audioSentencePl": "t1-p192-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p192-013-sentence.mp3",
       "polishAudio": "Tytuł",
       "audioSentencePl": "t1-p192-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p192-014-sentence.mp3",
       "polishAudio": "Publikacja",
       "audioSentencePl": "t1-p192-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p192-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p192-015-sentence.mp3",
       "polishAudio": "Encyklopedia",
       "audioSentencePl": "t1-p192-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

@@ -11,8 +11,12 @@ const wordOnly: Word = {
 const withSentences: Word = {
   ...wordOnly, id: 'w2',
   sentenceEn: 'A storm is coming.', sentencePl: 'Nadchodzi burza.',
-  audioSentencePl: 'spl.mp3',
+  audioSentencePl: 'spl.mp3', sentenceAudio: true,
 }
+
+/** Sentence text, but the recording was made for an earlier draft of it —
+ *  most of the base today (all of level 1, all of levels 3-4). */
+const sentencesUnrecorded: Word = { ...withSentences, id: 'w3', sentenceAudio: false }
 
 describe('planSequence', () => {
   it('fast mode: PL word then EN word, regardless of sentences', () => {
@@ -30,6 +34,20 @@ describe('planSequence', () => {
       .toEqual(['wordPl', 'word', 'sentencePl', 'sentenceEn'])
     expect(planSequence('speaking', withSentences).map(s => s.line))
       .toEqual([0, 1, 2, 3])
+  })
+
+  it('drops sentence steps when the sentence has text but no matching recording', () => {
+    // Keeping them held 2.5 s (standard) / 8 s (speaking) of dead air per card.
+    expect(planSequence('standard', sentencesUnrecorded).map(s => s.clip)).toEqual(['wordPl', 'word'])
+    expect(planSequence('speaking', sentencesUnrecorded).map(s => s.clip)).toEqual(['wordPl', 'word'])
+  })
+
+  it('drops only the side whose recording is missing', () => {
+    const plOnly: Word = { ...withSentences, id: 'w4', audioSentence: '' }
+    expect(planSequence('standard', plOnly).map(s => s.clip)).toEqual(['wordPl', 'word', 'sentencePl'])
+
+    const enOnly: Word = { ...withSentences, id: 'w5', audioSentencePl: undefined }
+    expect(planSequence('standard', enOnly).map(s => s.clip)).toEqual(['wordPl', 'word', 'sentenceEn'])
   })
 
   it('carries repeat / gap / speak metadata through untouched', () => {

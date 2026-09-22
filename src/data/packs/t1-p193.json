@@ -17,7 +17,7 @@
       "audioSentence": "t1-p193-001-sentence.mp3",
       "polishAudio": "Afryka",
       "audioSentencePl": "t1-p193-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p193-002-sentence.mp3",
       "polishAudio": "Ameryka południowa",
       "audioSentencePl": "t1-p193-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p193-003-sentence.mp3",
       "polishAudio": "Ameryka północna",
       "audioSentencePl": "t1-p193-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p193-004-sentence.mp3",
       "polishAudio": "Piasek",
       "audioSentencePl": "t1-p193-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p193-005-sentence.mp3",
       "polishAudio": "Antarktyda",
       "audioSentencePl": "t1-p193-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p193-006-sentence.mp3",
       "polishAudio": "Australia",
       "audioSentencePl": "t1-p193-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p193-007-sentence.mp3",
       "polishAudio": "Azja",
       "audioSentencePl": "t1-p193-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p193-008-sentence.mp3",
       "polishAudio": "Europa",
       "audioSentencePl": "t1-p193-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p193-009-sentence.mp3",
       "polishAudio": "Geografia",
       "audioSentencePl": "t1-p193-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p193-010-sentence.mp3",
       "polishAudio": "Kierunek",
       "audioSentencePl": "t1-p193-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p193-011-sentence.mp3",
       "polishAudio": "Ocean",
       "audioSentencePl": "t1-p193-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p193-012-sentence.mp3",
       "polishAudio": "Południe",
       "audioSentencePl": "t1-p193-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p193-013-sentence.mp3",
       "polishAudio": "Północ",
       "audioSentencePl": "t1-p193-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p193-014-sentence.mp3",
       "polishAudio": "Wschód",
       "audioSentencePl": "t1-p193-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p193-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p193-015-sentence.mp3",
       "polishAudio": "Zachód",
       "audioSentencePl": "t1-p193-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

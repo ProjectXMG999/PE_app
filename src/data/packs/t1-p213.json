@@ -17,7 +17,7 @@
       "audioSentence": "t1-p213-001-sentence.mp3",
       "polishAudio": "Umyć się",
       "audioSentencePl": "t1-p213-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p213-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p213-002-sentence.mp3",
       "polishAudio": "Nakładać",
       "audioSentencePl": "t1-p213-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p213-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p213-003-sentence.mp3",
       "polishAudio": "Mieć coś na sobie",
       "audioSentencePl": "t1-p213-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p213-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p213-004-sentence.mp3",
       "polishAudio": "Wyglądać jak",
       "audioSentencePl": "t1-p213-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p213-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p213-005-sentence.mp3",
       "polishAudio": "Przytyć",
       "audioSentencePl": "t1-p213-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p213-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p213-006-sentence.mp3",
       "polishAudio": "Ściągać",
       "audioSentencePl": "t1-p213-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p213-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p213-007-sentence.mp3",
       "polishAudio": "Przymierzyć",
       "audioSentencePl": "t1-p213-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p213-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p213-008-sentence.mp3",
       "polishAudio": "Założyć coś",
       "audioSentencePl": "t1-p213-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p213-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p213-009-sentence.mp3",
       "polishAudio": "Wystroić się",
       "audioSentencePl": "t1-p213-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p213-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p213-010-sentence.mp3",
       "polishAudio": "Przebrać się za",
       "audioSentencePl": "t1-p213-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

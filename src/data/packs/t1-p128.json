@@ -17,7 +17,7 @@
       "audioSentence": "t1-p128-001-sentence.mp3",
       "polishAudio": "Centrum handlowe",
       "audioSentencePl": "t1-p128-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p128-002-sentence.mp3",
       "polishAudio": "Chodnik",
       "audioSentencePl": "t1-p128-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p128-003-sentence.mp3",
       "polishAudio": "Dzielnica",
       "audioSentencePl": "t1-p128-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p128-004-sentence.mp3",
       "polishAudio": "Most",
       "audioSentencePl": "t1-p128-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p128-005-sentence.mp3",
       "polishAudio": "Fabryka",
       "audioSentencePl": "t1-p128-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p128-006-sentence.mp3",
       "polishAudio": "Kod pocztowy",
       "audioSentencePl": "t1-p128-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p128-007-sentence.mp3",
       "polishAudio": "Ławka",
       "audioSentencePl": "t1-p128-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p128-008-sentence.mp3",
       "polishAudio": "Miasto rodzinne",
       "audioSentencePl": "t1-p128-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p128-009-sentence.mp3",
       "polishAudio": "Sąd",
       "audioSentencePl": "t1-p128-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p128-010-sentence.mp3",
       "polishAudio": "Stolica",
       "audioSentencePl": "t1-p128-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p128-011-sentence.mp3",
       "polishAudio": "Więzienie",
       "audioSentencePl": "t1-p128-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p128-012-sentence.mp3",
       "polishAudio": "Gimnazjum",
       "audioSentencePl": "t1-p128-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p128-013-sentence.mp3",
       "polishAudio": "Więzienie",
       "audioSentencePl": "t1-p128-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p128-014-sentence.mp3",
       "polishAudio": "Stare miasto",
       "audioSentencePl": "t1-p128-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p128-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p128-015-sentence.mp3",
       "polishAudio": "Sklep z pamiątkami",
       "audioSentencePl": "t1-p128-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

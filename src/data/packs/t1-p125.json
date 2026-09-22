@@ -17,7 +17,7 @@
       "audioSentence": "t1-p125-001-sentence.mp3",
       "polishAudio": "Tworzyć",
       "audioSentencePl": "t1-p125-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p125-002-sentence.mp3",
       "polishAudio": "Trzymać",
       "audioSentencePl": "t1-p125-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p125-003-sentence.mp3",
       "polishAudio": "Układać w kolejności",
       "audioSentencePl": "t1-p125-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p125-004-sentence.mp3",
       "polishAudio": "Ustawiać",
       "audioSentencePl": "t1-p125-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p125-005-sentence.mp3",
       "polishAudio": "Służy do wyrażania przyszłości",
       "audioSentencePl": "t1-p125-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p125-006-sentence.mp3",
       "polishAudio": "Działać",
       "audioSentencePl": "t1-p125-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p125-007-sentence.mp3",
       "polishAudio": "Stawać się",
       "audioSentencePl": "t1-p125-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p125-008-sentence.mp3",
       "polishAudio": "Odbierać",
       "audioSentencePl": "t1-p125-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p125-009-sentence.mp3",
       "polishAudio": "Mogłem",
       "audioSentencePl": "t1-p125-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p125-010-sentence.mp3",
       "polishAudio": "Móc",
       "audioSentencePl": "t1-p125-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p125-011-sentence.mp3",
       "polishAudio": "Może coś się stać",
       "audioSentencePl": "t1-p125-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p125-012-sentence.mp3",
       "polishAudio": "Wykonywać",
       "audioSentencePl": "t1-p125-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p125-013-sentence.mp3",
       "polishAudio": "Wydawać się",
       "audioSentencePl": "t1-p125-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p125-014-sentence.mp3",
       "polishAudio": "Należeć",
       "audioSentencePl": "t1-p125-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p125-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p125-015-sentence.mp3",
       "polishAudio": "Odkrywać",
       "audioSentencePl": "t1-p125-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

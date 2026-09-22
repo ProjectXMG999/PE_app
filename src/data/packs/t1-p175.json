@@ -17,7 +17,7 @@
       "audioSentence": "t1-p175-001-sentence.mp3",
       "polishAudio": "Pokrojony",
       "audioSentencePl": "t1-p175-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p175-002-sentence.mp3",
       "polishAudio": "Chrupiący",
       "audioSentencePl": "t1-p175-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p175-003-sentence.mp3",
       "polishAudio": "Dietetyczny",
       "audioSentencePl": "t1-p175-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p175-004-sentence.mp3",
       "polishAudio": "Gazowany",
       "audioSentencePl": "t1-p175-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p175-005-sentence.mp3",
       "polishAudio": "Gorzki",
       "audioSentencePl": "t1-p175-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p175-006-sentence.mp3",
       "polishAudio": "Kwaśny",
       "audioSentencePl": "t1-p175-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p175-007-sentence.mp3",
       "polishAudio": "Niegazowany",
       "audioSentencePl": "t1-p175-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p175-008-sentence.mp3",
       "polishAudio": "Niskotłuszczowy",
       "audioSentencePl": "t1-p175-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p175-009-sentence.mp3",
       "polishAudio": "Ohydne",
       "audioSentencePl": "t1-p175-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p175-010-sentence.mp3",
       "polishAudio": "Pikantny",
       "audioSentencePl": "t1-p175-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p175-011-sentence.mp3",
       "polishAudio": "Półsłodki",
       "audioSentencePl": "t1-p175-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p175-012-sentence.mp3",
       "polishAudio": "Pyszne",
       "audioSentencePl": "t1-p175-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p175-013-sentence.mp3",
       "polishAudio": "Surowy",
       "audioSentencePl": "t1-p175-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p175-014-sentence.mp3",
       "polishAudio": "Słony",
       "audioSentencePl": "t1-p175-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p175-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p175-015-sentence.mp3",
       "polishAudio": "Smaczny",
       "audioSentencePl": "t1-p175-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

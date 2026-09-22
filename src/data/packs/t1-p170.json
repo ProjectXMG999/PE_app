@@ -17,7 +17,7 @@
       "audioSentence": "t1-p170-001-sentence.mp3",
       "polishAudio": "Cisza",
       "audioSentencePl": "t1-p170-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p170-002-sentence.mp3",
       "polishAudio": "Dół",
       "audioSentencePl": "t1-p170-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p170-003-sentence.mp3",
       "polishAudio": "Dźwięk",
       "audioSentencePl": "t1-p170-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p170-004-sentence.mp3",
       "polishAudio": "Głos",
       "audioSentencePl": "t1-p170-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p170-005-sentence.mp3",
       "polishAudio": "Góra",
       "audioSentencePl": "t1-p170-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p170-006-sentence.mp3",
       "polishAudio": "Hałas",
       "audioSentencePl": "t1-p170-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p170-007-sentence.mp3",
       "polishAudio": "Krzyk",
       "audioSentencePl": "t1-p170-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-008",
@@ -119,7 +119,7 @@
       "audioSentence": "t1-p170-009-sentence.mp3",
       "polishAudio": "Przód",
       "audioSentencePl": "t1-p170-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-010",
@@ -132,7 +132,7 @@
       "audioSentence": "t1-p170-010-sentence.mp3",
       "polishAudio": "Tył",
       "audioSentencePl": "t1-p170-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-011",
@@ -145,7 +145,7 @@
       "audioSentence": "t1-p170-011-sentence.mp3",
       "polishAudio": "Róg",
       "audioSentencePl": "t1-p170-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-012",
@@ -158,7 +158,7 @@
       "audioSentence": "t1-p170-012-sentence.mp3",
       "polishAudio": "Strona",
       "audioSentencePl": "t1-p170-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-013",
@@ -171,7 +171,7 @@
       "audioSentence": "t1-p170-013-sentence.mp3",
       "polishAudio": "Środek",
       "audioSentencePl": "t1-p170-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-014",
@@ -184,7 +184,7 @@
       "audioSentence": "t1-p170-014-sentence.mp3",
       "polishAudio": "Przestrzeń",
       "audioSentencePl": "t1-p170-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p170-015",
@@ -197,7 +197,7 @@
       "audioSentence": "t1-p170-015-sentence.mp3",
       "polishAudio": "Linia",
       "audioSentencePl": "t1-p170-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

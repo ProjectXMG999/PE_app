@@ -17,7 +17,7 @@
       "audioSentence": "t1-p140-001-sentence.mp3",
       "polishAudio": "Pliki pliki",
       "audioSentencePl": "t1-p140-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p140-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p140-002-sentence.mp3",
       "polishAudio": "Rozmienić pieniądze",
       "audioSentencePl": "t1-p140-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p140-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p140-003-sentence.mp3",
       "polishAudio": "Coś za darmo",
       "audioSentencePl": "t1-p140-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p140-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p140-004-sentence.mp3",
       "polishAudio": "Zaliczka",
       "audioSentencePl": "t1-p140-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p140-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p140-005-sentence.mp3",
       "polishAudio": "Drożyzna",
       "audioSentencePl": "t1-p140-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p140-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p140-006-sentence.mp3",
       "polishAudio": "Drobne",
       "audioSentencePl": "t1-p140-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p140-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p140-007-sentence.mp3",
       "polishAudio": "Zrzucić się na coś",
       "audioSentencePl": "t1-p140-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p140-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p140-008-sentence.mp3",
       "polishAudio": "Tysiak",
       "audioSentencePl": "t1-p140-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p140-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p140-009-sentence.mp3",
       "polishAudio": "Niewielkie pieniądze",
       "audioSentencePl": "t1-p140-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p140-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p140-010-sentence.mp3",
       "polishAudio": "Część zysku",
       "audioSentencePl": "t1-p140-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

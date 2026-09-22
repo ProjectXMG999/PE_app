@@ -113,7 +113,7 @@
       "audioSentence": "t1-p227-009-sentence.mp3",
       "polishAudio": "Pisarz",
       "audioSentencePl": "t1-p227-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p227-010",
@@ -126,7 +126,7 @@
       "audioSentence": "t1-p227-010-sentence.mp3",
       "polishAudio": "Policjant",
       "audioSentencePl": "t1-p227-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p227-011",
@@ -139,7 +139,7 @@
       "audioSentence": "t1-p227-011-sentence.mp3",
       "polishAudio": "Pracownik fizyczny",
       "audioSentencePl": "t1-p227-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p227-012",
@@ -152,7 +152,7 @@
       "audioSentence": "t1-p227-012-sentence.mp3",
       "polishAudio": "Prawnik",
       "audioSentencePl": "t1-p227-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p227-013",
@@ -165,7 +165,7 @@
       "audioSentence": "t1-p227-013-sentence.mp3",
       "polishAudio": "Profesor",
       "audioSentencePl": "t1-p227-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p227-014",
@@ -178,7 +178,7 @@
       "audioSentence": "t1-p227-014-sentence.mp3",
       "polishAudio": "Programista",
       "audioSentencePl": "t1-p227-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p227-015",
@@ -191,7 +191,7 @@
       "audioSentence": "t1-p227-015-sentence.mp3",
       "polishAudio": "Projektant",
       "audioSentencePl": "t1-p227-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

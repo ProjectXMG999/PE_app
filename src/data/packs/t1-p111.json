@@ -17,7 +17,7 @@
       "audioSentence": "t1-p111-001-sentence.mp3",
       "polishAudio": "Cudzoziemiec",
       "audioSentencePl": "t1-p111-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p111-002-sentence.mp3",
       "polishAudio": "Człowieczeństwo",
       "audioSentencePl": "t1-p111-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p111-003-sentence.mp3",
       "polishAudio": "Inni",
       "audioSentencePl": "t1-p111-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p111-004-sentence.mp3",
       "polishAudio": "Człowiek",
       "audioSentencePl": "t1-p111-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p111-005-sentence.mp3",
       "polishAudio": "Damulka",
       "audioSentencePl": "t1-p111-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p111-006-sentence.mp3",
       "polishAudio": "Dorosły",
       "audioSentencePl": "t1-p111-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p111-007-sentence.mp3",
       "polishAudio": "Gej",
       "audioSentencePl": "t1-p111-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p111-008-sentence.mp3",
       "polishAudio": "Gość",
       "audioSentencePl": "t1-p111-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p111-009-sentence.mp3",
       "polishAudio": "Homoseksualista",
       "audioSentencePl": "t1-p111-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p111-010-sentence.mp3",
       "polishAudio": "Idiota",
       "audioSentencePl": "t1-p111-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p111-011-sentence.mp3",
       "polishAudio": "Jednostka",
       "audioSentencePl": "t1-p111-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p111-012-sentence.mp3",
       "polishAudio": "Kłamca",
       "audioSentencePl": "t1-p111-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p111-013-sentence.mp3",
       "polishAudio": "Kobieta",
       "audioSentencePl": "t1-p111-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p111-014-sentence.mp3",
       "polishAudio": "Kochanek",
       "audioSentencePl": "t1-p111-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p111-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p111-015-sentence.mp3",
       "polishAudio": "Ksywa",
       "audioSentencePl": "t1-p111-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

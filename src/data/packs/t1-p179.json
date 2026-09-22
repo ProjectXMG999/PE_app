@@ -17,7 +17,7 @@
       "audioSentence": "t1-p179-001-sentence.mp3",
       "polishAudio": "Ściągnąć",
       "audioSentencePl": "t1-p179-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p179-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p179-002-sentence.mp3",
       "polishAudio": "Zawiesić",
       "audioSentencePl": "t1-p179-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p179-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p179-003-sentence.mp3",
       "polishAudio": "Trzymać się",
       "audioSentencePl": "t1-p179-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p179-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p179-004-sentence.mp3",
       "polishAudio": "Podźwignąć",
       "audioSentencePl": "t1-p179-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p179-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p179-005-sentence.mp3",
       "polishAudio": "Podnosić coś",
       "audioSentencePl": "t1-p179-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p179-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p179-006-sentence.mp3",
       "polishAudio": "Pociągnąć coś",
       "audioSentencePl": "t1-p179-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p179-007",
@@ -106,7 +106,7 @@
       "audioSentence": "t1-p179-008-sentence.mp3",
       "polishAudio": "Zdejmować coś",
       "audioSentencePl": "t1-p179-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p179-009",
@@ -119,7 +119,7 @@
       "audioSentence": "t1-p179-009-sentence.mp3",
       "polishAudio": "Zdjąć coś",
       "audioSentencePl": "t1-p179-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p179-010",
@@ -132,7 +132,7 @@
       "audioSentence": "t1-p179-010-sentence.mp3",
       "polishAudio": "Wyciągnąć coś",
       "audioSentencePl": "t1-p179-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

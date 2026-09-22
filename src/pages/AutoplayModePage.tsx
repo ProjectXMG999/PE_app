@@ -5,6 +5,7 @@ import { usePackageData } from '../hooks/usePackageData'
 import { getPackageProgress } from '../services/db'
 import { unlockAudioGlobally } from '../audio/audioUnlock'
 import { unlockKeepAlive } from '../audio/keepAlive'
+import { hasAnySentenceAudio } from '../audio/sentenceAudio'
 import { RATES } from '../constants/audioRates'
 import {
   AUTOPLAY_MODES,
@@ -38,6 +39,13 @@ const MODE_TAGLINE: Record<AutoplayMode, string> = {
   fast: 'Szybka powtórka',
   standard: 'Słowo i zdanie w kontekście',
   speaking: 'Powiedz, zanim usłyszysz',
+}
+
+/** Standard zapowiada zdanie w kontekście — w pakiecie bez nagranych zdań
+ *  sesja jest samym słowem z powtórką, więc tyle ma obiecywać. */
+function modeTagline(id: AutoplayMode, hasSentenceAudio: boolean): string {
+  if (id === 'standard' && !hasSentenceAudio) return 'Słowo z powtórką i przerwą'
+  return MODE_TAGLINE[id]
 }
 
 const MODE_HINT: Record<AutoplayMode, string> = {
@@ -79,8 +87,8 @@ function plSteps(n: number): string {
 
 /**
  * The mode's timeline, drawn as beads on a thread — one per clip it will
- * actually play for *this* pack (sentence steps drop out of sentence-less
- * packs). Shows what a mode does before you commit to a whole session of it.
+ * actually play for *this* pack (sentence beads drop out when the pack has no
+ * sentence recordings). Shows what a mode does before you commit to a session.
  */
 function StepStrip({ steps }: { steps: AutoplayStep[] }) {
   return (
@@ -107,14 +115,16 @@ export function AutoplayModePage() {
   const meta = allPacks.find(p => p.id === packageId)
   const { pack } = usePackageData(packageId ?? null)
 
-  // A word that carries sentences if the pack has any — so the step preview and
-  // the estimate reflect what this pack will actually play. Falls back to the
-  // first word, or (before the pack body loads) to "no sentences".
+  // A word with playable sentence audio if the pack has any — so the step
+  // preview and the estimate reflect what this pack will actually play. Sentence
+  // TEXT isn't enough: most packs carry text whose recording doesn't exist yet,
+  // and those steps never sound. Falls back to the first word, or (before the
+  // pack body loads) to "no sentence audio".
   const sample = useMemo(
-    () => pack?.words.find(w => w.sentenceEn || w.sentencePl) ?? pack?.words[0] ?? null,
+    () => pack?.words.find(hasAnySentenceAudio) ?? pack?.words[0] ?? null,
     [pack],
   )
-  const hasSentences = !!pack?.words.some(w => w.sentenceEn || w.sentencePl)
+  const hasSentences = !!pack?.words.some(hasAnySentenceAudio)
   const wordCount = pack?.words.length ?? meta?.wordCount ?? 0
   const packNum = packageId ? getPackNumber(packageId) : null
 
@@ -193,7 +203,7 @@ export function AutoplayModePage() {
                 color={AUTOPLAY_MODES[id].color}
                 cta="Zacznij słuchać"
                 name={AUTOPLAY_MODES[id].label}
-                tagline={MODE_TAGLINE[id]}
+                tagline={modeTagline(id, steps.some(s => s.needs != null))}
                 desc={MODE_HINT[id]}
                 detail={<StepStrip steps={steps} />}
                 badge={autoplayMode === id ? 'Ostatnio' : undefined}

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p209-001-sentence.mp3",
       "polishAudio": "Połowa",
       "audioSentencePl": "t1-p209-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p209-002-sentence.mp3",
       "polishAudio": "Argument",
       "audioSentencePl": "t1-p209-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p209-003-sentence.mp3",
       "polishAudio": "Para",
       "audioSentencePl": "t1-p209-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p209-004-sentence.mp3",
       "polishAudio": "Akcja",
       "audioSentencePl": "t1-p209-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p209-005-sentence.mp3",
       "polishAudio": "Chemia",
       "audioSentencePl": "t1-p209-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p209-006-sentence.mp3",
       "polishAudio": "Fizyka",
       "audioSentencePl": "t1-p209-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p209-007-sentence.mp3",
       "polishAudio": "Maksimum",
       "audioSentencePl": "t1-p209-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p209-008-sentence.mp3",
       "polishAudio": "Matematyka",
       "audioSentencePl": "t1-p209-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p209-009-sentence.mp3",
       "polishAudio": "Minimum",
       "audioSentencePl": "t1-p209-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p209-010-sentence.mp3",
       "polishAudio": "Nauka",
       "audioSentencePl": "t1-p209-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p209-011-sentence.mp3",
       "polishAudio": "Przykład",
       "audioSentencePl": "t1-p209-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p209-012-sentence.mp3",
       "polishAudio": "Rozwiązanie",
       "audioSentencePl": "t1-p209-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p209-013-sentence.mp3",
       "polishAudio": "Reakcja",
       "audioSentencePl": "t1-p209-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p209-014-sentence.mp3",
       "polishAudio": "Ekspert",
       "audioSentencePl": "t1-p209-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p209-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p209-015-sentence.mp3",
       "polishAudio": "Funkcja",
       "audioSentencePl": "t1-p209-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

@@ -17,7 +17,7 @@
       "audioSentence": "t1-p202-001-sentence.mp3",
       "polishAudio": "Akademia",
       "audioSentencePl": "t1-p202-001-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-002",
@@ -30,7 +30,7 @@
       "audioSentence": "t1-p202-002-sentence.mp3",
       "polishAudio": "Biologia",
       "audioSentencePl": "t1-p202-002-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-003",
@@ -43,7 +43,7 @@
       "audioSentence": "t1-p202-003-sentence.mp3",
       "polishAudio": "Dzwonek",
       "audioSentencePl": "t1-p202-003-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-004",
@@ -56,7 +56,7 @@
       "audioSentence": "t1-p202-004-sentence.mp3",
       "polishAudio": "Zachowanie",
       "audioSentencePl": "t1-p202-004-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-005",
@@ -69,7 +69,7 @@
       "audioSentence": "t1-p202-005-sentence.mp3",
       "polishAudio": "Dyskusja",
       "audioSentencePl": "t1-p202-005-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-006",
@@ -82,7 +82,7 @@
       "audioSentence": "t1-p202-006-sentence.mp3",
       "polishAudio": "Historia",
       "audioSentencePl": "t1-p202-006-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-007",
@@ -95,7 +95,7 @@
       "audioSentence": "t1-p202-007-sentence.mp3",
       "polishAudio": "Instytut",
       "audioSentencePl": "t1-p202-007-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-008",
@@ -108,7 +108,7 @@
       "audioSentence": "t1-p202-008-sentence.mp3",
       "polishAudio": "Klasa",
       "audioSentencePl": "t1-p202-008-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-009",
@@ -121,7 +121,7 @@
       "audioSentence": "t1-p202-009-sentence.mp3",
       "polishAudio": "Kolega szkolny",
       "audioSentencePl": "t1-p202-009-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-010",
@@ -134,7 +134,7 @@
       "audioSentence": "t1-p202-010-sentence.mp3",
       "polishAudio": "Kolega z klasy",
       "audioSentencePl": "t1-p202-010-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-011",
@@ -147,7 +147,7 @@
       "audioSentence": "t1-p202-011-sentence.mp3",
       "polishAudio": "Kurs",
       "audioSentencePl": "t1-p202-011-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-012",
@@ -160,7 +160,7 @@
       "audioSentence": "t1-p202-012-sentence.mp3",
       "polishAudio": "Liceum",
       "audioSentencePl": "t1-p202-012-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-013",
@@ -173,7 +173,7 @@
       "audioSentence": "t1-p202-013-sentence.mp3",
       "polishAudio": "Linijka",
       "audioSentencePl": "t1-p202-013-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-014",
@@ -186,7 +186,7 @@
       "audioSentence": "t1-p202-014-sentence.mp3",
       "polishAudio": "Miasteczko uniwersyteckie",
       "audioSentencePl": "t1-p202-014-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     },
     {
       "id": "t1-p202-015",
@@ -199,7 +199,7 @@
       "audioSentence": "t1-p202-015-sentence.mp3",
       "polishAudio": "Notatka",
       "audioSentencePl": "t1-p202-015-sentence-pl.mp3",
-      "sentenceAudio": true
+      "sentenceAudio": false
     }
   ]
 }

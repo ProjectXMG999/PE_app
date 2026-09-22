@@ -1,5 +1,6 @@
 import { AutoplayMode } from '../types/progress'
 import { Word } from '../types/vocabulary'
+import { hasSentenceAudioEn, hasSentenceAudioPl } from '../audio/sentenceAudio'
 
 // Declarative timeline for the /pakiet/:id/autoplay listening sequence.
 //
@@ -23,8 +24,11 @@ export interface AutoplayStep {
   gapMs: number
   /** Mark the terminal gap as a "say it aloud" beat — the runner shows the ring. */
   speak?: boolean
-  /** Step is dropped when the word lacks this field — sentence-less packs today,
-   *  full sequence once sentence content ships. No code change at that point. */
+  /** Step is dropped when the word has no PLAYABLE clip of this kind — i.e. the
+   *  sentence text AND a recording made for that exact text (Word.sentenceAudio).
+   *  Testing the text alone left the runner holding a 2.5-8 s silence where a
+   *  sentence should sound, on every pack whose sentence audio isn't recorded
+   *  yet. The step comes back on its own once the audio ships. */
   needs?: 'sentencePl' | 'sentenceEn'
 }
 
@@ -85,7 +89,11 @@ export const AUTOPLAY_MODES: Record<AutoplayMode, AutoplayModeDef> = {
  * `needs` field is absent on the word. Pure — this is the unit-tested seam.
  */
 export function planSequence(mode: AutoplayMode, word: Word): AutoplayStep[] {
-  return AUTOPLAY_MODES[mode].steps.filter(s => !s.needs || word[s.needs] != null)
+  return AUTOPLAY_MODES[mode].steps.filter(s => !s.needs || canPlayStep(s.needs, word))
+}
+
+function canPlayStep(needs: 'sentencePl' | 'sentenceEn', word: Word): boolean {
+  return needs === 'sentencePl' ? hasSentenceAudioPl(word) : hasSentenceAudioEn(word)
 }
 
 /** Rough ms for a step list: gaps (exact) + a flat guess per clip play (clip
@@ -105,7 +113,7 @@ export function estimateWordMs(mode: AutoplayMode, word: Word): number {
 }
 
 /** The step list a mode will actually run, when only "does the pack have
- *  sentences" is known (the picker, before pack words are loaded). */
-export function modeStepsForContent(mode: AutoplayMode, hasSentences: boolean): AutoplayStep[] {
-  return AUTOPLAY_MODES[mode].steps.filter(s => !s.needs || hasSentences)
+ *  playable sentence audio" is known (the picker, before pack words load). */
+export function modeStepsForContent(mode: AutoplayMode, hasSentenceAudio: boolean): AutoplayStep[] {
+  return AUTOPLAY_MODES[mode].steps.filter(s => !s.needs || hasSentenceAudio)
 }

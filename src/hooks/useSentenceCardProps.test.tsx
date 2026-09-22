@@ -10,6 +10,15 @@ function word(overrides: Partial<Word> = {}): Word {
   }
 }
 
+/** Both sentences, both recorded against the current text. */
+function recorded(overrides: Partial<Word> = {}): Word {
+  return word({
+    sentencePl: 'On biega.', sentenceEn: 'He runs.',
+    audioSentence: 's.mp3', audioSentencePl: 'spl.mp3', sentenceAudio: true,
+    ...overrides,
+  })
+}
+
 function audio() {
   return {
     stop: vi.fn(),
@@ -40,7 +49,7 @@ describe('useSentenceCardProps', () => {
   })
 
   it('exposes frontExtra and frontHint, but not backExtra, for a word with only a Polish sentence', () => {
-    const w = word({ sentencePl: 'On biega codziennie.' })
+    const w = word({ sentencePl: 'On biega codziennie.', audioSentencePl: 'spl.mp3', sentenceAudio: true })
     const props = useSentenceCardProps(w, audio())
     expect(props.frontExtra).toBeDefined()
     expect((props.frontExtra as { props: { text: string } }).props.text).toBe('On biega codziennie.')
@@ -49,17 +58,35 @@ describe('useSentenceCardProps', () => {
   })
 
   it('exposes backExtra for a word with only an English sentence', () => {
-    const w = word({ sentenceEn: 'He runs every day.' })
+    const w = word({ sentenceEn: 'He runs every day.', audioSentence: 's.mp3', sentenceAudio: true })
     const props = useSentenceCardProps(w, audio())
     expect(props.frontExtra).toBeUndefined()
     expect((props.backExtra as { props: { text: string } }).props.text).toBe('He runs every day.')
   })
 
   it('exposes both extras for a word with both sentences', () => {
-    const w = word({ sentencePl: 'On biega.', sentenceEn: 'He runs.' })
+    const w = recorded()
     const props = useSentenceCardProps(w, audio())
     expect(props.frontExtra).toBeDefined()
     expect(props.backExtra).toBeDefined()
+  })
+
+  it('shows the sentence text but no play button when the recording does not match it', () => {
+    // sentenceAudio false = the mp3 was made for an earlier draft of this
+    // sentence. A glyph that plays nothing reads as broken audio, not as
+    // content still to come, so it stays off the card.
+    const w = recorded({ sentenceAudio: false })
+    const props = useSentenceCardProps(w, audio())
+    expect((props.frontExtra as { props: { text: string } }).props.text).toBe('On biega.')
+    expect((props.frontExtra as { props: { onPlay?: () => void } }).props.onPlay).toBeUndefined()
+    expect((props.backExtra as { props: { onPlay?: () => void } }).props.onPlay).toBeUndefined()
+  })
+
+  it('keeps the play button on the side that is recorded', () => {
+    const w = recorded({ audioSentencePl: undefined })
+    const props = useSentenceCardProps(w, audio())
+    expect((props.frontExtra as { props: { onPlay?: () => void } }).props.onPlay).toBeUndefined()
+    expect((props.backExtra as { props: { onPlay?: () => void } }).props.onPlay).toBeInstanceOf(Function)
   })
 
   it('onPlayPolish stops current audio and plays the Polish word', () => {
@@ -73,7 +100,7 @@ describe('useSentenceCardProps', () => {
 
   it('the front/back sentence buttons stop current audio and play the matching sentence', () => {
     const a = audio()
-    const w = word({ sentencePl: 'On biega.', sentenceEn: 'He runs.' })
+    const w = recorded()
     const props = useSentenceCardProps(w, a)
 
     ;(props.frontExtra as { props: { onPlay: () => void } }).props.onPlay()
