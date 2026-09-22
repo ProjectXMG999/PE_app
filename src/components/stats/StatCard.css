@@ -52,7 +52,7 @@
 }
 
 .statcard__label--hero {
-  color: rgba(255, 255, 255, 0.7);
+  color: oklch(1 0 0 / 0.7);
   font-size: var(--text-base);
 }
 
@@ -66,7 +66,7 @@
 .statcard--hero {
   background: linear-gradient(135deg, #7B2FBE 0%, #4C1D95 100%);
   border: none;
-  box-shadow: 0 8px 32px rgba(123, 47, 190, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px color-mix(in oklch, var(--accent) 45%, transparent), 0 2px 8px oklch(0 0 0 / 0.3);
   padding: var(--spacing-lg);
   position: relative;
   overflow: hidden;
@@ -76,7 +76,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.07) 50%, transparent 65%);
+  background: linear-gradient(105deg, transparent 35%, oklch(1 0 0 / 0.07) 50%, transparent 65%);
   background-size: 200% 100%;
   background-position: -100% 0;
   animation: hero-shine 4s ease-in-out infinite;

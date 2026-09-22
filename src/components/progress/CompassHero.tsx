@@ -88,7 +88,7 @@ export function CompassHero({ knownWords, streak, points, pace, guidance, loadin
 
   return (
     <section
-      className="compass"
+      className="compass u-surface--raised"
       style={{ ['--you-pct' as string]: `${drawn}%` }}
       aria-label="Twoja trasa"
     >

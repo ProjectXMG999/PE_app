@@ -221,7 +221,7 @@
   padding: 10px 16px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-accent);
-  background: var(--gradient-hero);
+  background: var(--surface-tile-accent);
   color: var(--text-primary);
   cursor: pointer;
   text-align: left;

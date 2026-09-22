@@ -30,11 +30,15 @@
   gap: var(--spacing-sm);
 }
 
+/* --text-secondary, not --text-muted: this card is glass over the brightest
+   part of the mesh on Postęp, and muted measured 3.6:1 against it — under AA
+   for a line that explains what the whole panel means. The ladder fixes the
+   surfaces; where a bright pool still lands under one, the text steps up. */
 .constellation__sub {
   margin: 0;
   font-size: var(--text-sm);
   line-height: 1.4;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   max-width: 34ch;
 }
 
@@ -46,7 +50,7 @@
   padding: 0 var(--spacing-md);
   border: 1px solid var(--border);
   border-radius: var(--radius-full, 999px);
-  background: var(--surface-translucent);
+  background: var(--fill-chip);
   color: var(--text-secondary);
   font-family: var(--font-heading);
   font-size: var(--text-xs);
@@ -67,9 +71,9 @@
   align-self: flex-start;
   gap: 2px;
   padding: 3px;
-  border: 1px solid var(--border);
   border-radius: var(--radius-full, 999px);
-  background: var(--surface-translucent);
+  background: var(--fill-track);
+  box-shadow: var(--fill-track-line);
 }
 
 .constellation__mode {
@@ -86,8 +90,11 @@
   transition: background var(--dur-fast, 140ms) ease, color var(--dur-fast, 140ms) ease;
 }
 
+/* The app's one segmented thumb — this was the third recipe for it (an accent
+   glow, against Dzisiaj's white pill and Ustawienia's accent gradient). */
 .constellation__mode.is-active {
-  background: var(--accent-glow);
+  background: var(--fill-thumb);
+  box-shadow: var(--fill-thumb-shadow);
   color: var(--text-primary);
 }
 

@@ -66,9 +66,16 @@ export function SmartSessionOpener({ preview, opensWith, ready, onDone }: Props)
   const lead = opensWith ? OPENS_WITH[opensWith.segment] : undefined
 
   // One clock for the whole cascade, on the app's entrance rhythm rather than
-  // four hand-picked delays. The last line lands at ~0.68s against the 1200ms
-  // hold, so the screen is STILL for a beat before it leaves — which is the
-  // difference between the curtain giving way and the curtain running off.
+  // three hand-picked delays.
+  //
+  // Counted from where these mount, which is the moment the session is built —
+  // not from the curtain's own mount, which is where the title cascade starts.
+  // They used to continue that one (steps 2, 3 and 4 of it) because they used
+  // to arrive with it; now the two are separated by however long the build
+  // took, and carrying its offsets over would just be a third of a second of
+  // nothing after the wait that preceded it. The last line lands ~0.2s in,
+  // against a 450ms floor, so the screen is STILL for a beat before it leaves
+  // — which is the difference between the curtain giving way and running off.
   const step = (i: number) => ({
     duration: 0.4,
     ease: EASE_OUT_EXPO,
@@ -99,7 +106,7 @@ export function SmartSessionOpener({ preview, opensWith, ready, onDone }: Props)
           className={`smartopener__lead smartopener__lead--${opensWith!.segment}`}
           initial={reduced ? false : { opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={step(2)}
+          transition={step(0)}
         >
           <span className="smartopener__lead-title">{lead.lead}</span>
           <span className="smartopener__lead-sub">
@@ -113,7 +120,7 @@ export function SmartSessionOpener({ preview, opensWith, ready, onDone }: Props)
           className="smartopener__mix"
           initial={reduced ? false : { opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={step(3)}
+          transition={step(1)}
         >
           {segments.map(s => (
             <li key={s} className={`smartopener__chip smartopener__chip--${s}`}>
@@ -128,7 +135,7 @@ export function SmartSessionOpener({ preview, opensWith, ready, onDone }: Props)
           className="smartopener__reason"
           initial={reduced ? false : { opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={step(4)}
+          transition={step(2)}
         >
           {reason}
         </motion.p>

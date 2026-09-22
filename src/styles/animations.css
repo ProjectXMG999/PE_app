@@ -186,11 +186,15 @@
 .bottomnav { view-transition-name: pe-tabbar; }
 .sidebar   { view-transition-name: pe-rail; }
 
-/* The active-tab marker is named separately so it SLIDES from the old tab to
-   the new one across the navigation. Framer Motion's layoutId can't do it here
-   — the nav unmounts with the page, so there is no shared layout to animate. */
-.bottomnav__indicator    { view-transition-name: pe-tabbar-marker; }
-.sidebar__nav-indicator  { view-transition-name: pe-rail-marker; }
+/* The active-tab marker is deliberately NOT named, and that took a measurement
+   to settle. Named, it becomes its own group in the transition layer — a flat
+   overlay that has lost the stacking it had inside the bar. On the page the
+   marker sits UNDER its tab's icon and label; lifted out it sits over them, and
+   in the light theme --fill-thumb is opaque white, so for the length of every
+   navigation the marker painted the icons and labels it passed over clean out
+   of the bar. Left unnamed it rides inside the tab bar's own snapshot, in its
+   own z-order, and Framer Motion's layoutId slides the live element once the
+   transition hands the screen back. */
 
 /* …and holding still means NOT cross-fading either.
  *
@@ -201,10 +205,9 @@
  * together for the length of every navigation. The bar lit up on each page
  * change — subtle on a dark page, obvious against a bright one.
  *
- * `animation: none` removes the fade outright rather than tuning it. Old and
- * new are the same picture, so there is nothing to animate between; the only
- * thing the cross-fade contributed was the artefact. The markers keep their
- * animation — they genuinely travel — and only lose the additive blending. */
+ * `animation: none` removes the fade outright rather than tuning it. The two
+ * snapshots differ only in which tab is lit, and the new one paints over the
+ * old, so the lit tab changes in one frame and nothing else moves. */
 ::view-transition-old(pe-tabbar),
 ::view-transition-new(pe-tabbar),
 ::view-transition-old(pe-topbar),
@@ -212,13 +215,6 @@
 ::view-transition-old(pe-rail),
 ::view-transition-new(pe-rail) {
   animation: none;
-  mix-blend-mode: normal;
-}
-
-::view-transition-old(pe-tabbar-marker),
-::view-transition-new(pe-tabbar-marker),
-::view-transition-old(pe-rail-marker),
-::view-transition-new(pe-rail-marker) {
   mix-blend-mode: normal;
 }
 
@@ -231,18 +227,34 @@
    over the tab bar instead of behind it.
 
    The chrome is what the page scrolls under, and that has to remain true for
-   the 240ms the transition owns the screen. The markers ride one above their
-   own bar. Content morphs (pack-mark, pack-title, the exercise icon) keep the
-   default 0 and pass underneath. */
+   the 240ms the transition owns the screen. Content morphs (pack-mark,
+   pack-title, the exercise icon) keep the default 0 and pass underneath. */
 ::view-transition-group(pe-tabbar),
 ::view-transition-group(pe-topbar),
 ::view-transition-group(pe-rail) {
   z-index: 20;
 }
 
-::view-transition-group(pe-tabbar-marker),
-::view-transition-group(pe-rail-marker) {
-  z-index: 21;
+/* ── …and holding still means keeping its shape ────────────────────────────
+ * The one visible defect left on every page change, and it was reported as
+ * "square padding appears on the tab bar for less than half a second".
+ *
+ * A snapshot of an element that carries a `backdrop-filter` bakes the blurred
+ * backdrop into the image — and it bakes it into the whole RECTANGLE, not into
+ * the rounded box the live element paints. Measured on the capsule: for the
+ * 240ms the transition owns the screen, the four corners the pill leaves empty
+ * filled with a slab of blurred aurora (a hard-edged block from x=16 to x=374,
+ * y=766 to y=830 — exactly the border box), so the capsule squared off and then
+ * snapped back to a pill. Dropping the blur removes it too, which is how it was
+ * pinned down; this keeps the glass and clips the artefact instead.
+ *
+ * The cost is the outer drop shadow, which lives outside the border box and is
+ * cut with the corners for those 240ms. Checked at 1:1 phone scale on a dark
+ * and a light page: it isn't visible — 60px of 38%-black under a capsule that
+ * is itself dark. A square corner very much is. */
+::view-transition-group(pe-tabbar) {
+  border-radius: var(--radius-full);
+  overflow: clip;
 }
 
 /* ── The page itself ────────────────────────────────────────────────────────
@@ -439,6 +451,32 @@
   .fx-rim::before { animation: none; }
 }
 
+/* ── Both of the above, on a touch device ───────────────────────────────────
+   These two are the app's most expensive decorations, and neither can be
+   composited: fx-shine repaints a color-mix gradient across the element every
+   frame, and fx-rim animates a REGISTERED custom property that a conic-gradient
+   plus two masks is built from — a full repaint of the border band per frame,
+   forever, on every .u-cta in the app.
+
+   That is affordable while a screen sits still. It is not affordable during a
+   navigation, when the incoming page's whole tree mounts in one synchronous
+   commit and every one of these starts up at once. Measured on a phone-class
+   CPU (throttle ×6, 390×844 @ DPR 3, 6 runs, median blocked time in the first
+   1.5 s after the tap): Dzisiaj → Pakiety 578 → 441 ms, Pakiety → Dzisiaj
+   169 → 122 ms. A quarter of the cost of changing pages, for motion nobody is
+   looking at while the page is being replaced.
+
+   So on a coarse pointer the shine plays once and rests — the same behaviour
+   .fx-shine--once above already ships for — and the rim holds still, which is
+   exactly what the whole of Safari < 16.4 has always shown (see the @property
+   note) and reads as a lit edge rather than a dead one. Fine pointers keep
+   both: a desktop has the headroom, and this is the app's motion language.
+   Same shape as the blur reduction in tokens.css, for the same reason. */
+@media (pointer: coarse) {
+  .fx-shine::after { animation-iteration-count: 1; }
+  .fx-rim::before { animation: none; }
+}
+
 /* Staggered entrance. Set --fx-rise-delay per item (e.g. calc(var(--i) * 60ms)). */
 @keyframes fx-rise {
   from { opacity: 0; transform: translateY(10px); }
@@ -551,17 +589,5 @@
 
 .pe-arrive {
   animation: pe-arrive var(--pe-arrive-duration) var(--pe-arrive-ease) backwards;
-}
-
-/* Held at its first frame while the launch curtain is still down.
-   /dzis mounts underneath an opaque screen, so without this the whole arrival
-   plays out — and finishes — before anyone can see it, which is the same waste
-   useSessionOpener's `lifting` flag exists to prevent inside a session. The
-   attribute is dropped the moment the lift starts, so the content rises into
-   the fade rather than being revealed already settled.
-   index.html removes the attribute on its own timer too: a cascade paused by a
-   bundle that then failed to load would strand every page 12px off its mark. */
-:root[data-splash='on'] .pe-arrive {
-  animation-play-state: paused;
 }
 

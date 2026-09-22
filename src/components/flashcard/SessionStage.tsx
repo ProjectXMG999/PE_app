@@ -28,6 +28,14 @@ interface Props {
  *
  * The placeholder is not a loading state — the curtain is. It only exists so
  * the ground behind a translucent page transition is the right colour.
+ *
+ * One thing this deliberately does NOT do is claim `ambientHidden`. It is
+ * tempting: the shader runs behind the opaque curtain for its whole length,
+ * and the iOS status band (which follows that same flag) shows the mesh's
+ * colour over a flat screen until the curtain lifts. But claiming it at mount
+ * unmounts the shader inside the entering view transition, and a WebGL
+ * teardown there is the stall AppShell's own claim logic exists to avoid.
+ * StudyStage keeps the claim, a beat later and off the animation's path.
  */
 export function SessionStage({ tone, settled, openerVisible, opener, children }: Props) {
   return (

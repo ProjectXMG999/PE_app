@@ -18,8 +18,10 @@
   /* Clear of the home indicator, not on top of it. At a flat 14px the capsule
      sat inside the system gesture zone on any notched phone: iOS draws the
      indicator over it and claims swipes there, so the bottom edge of every tab
-     target was fighting the OS. */
-  bottom: calc(var(--bottomnav-lift) + var(--safe-bottom));
+     target was fighting the OS. One token, because the pages have to reserve
+     exactly this much at their foot — and it drops lower once the app is
+     installed and there is no browser toolbar down there (tokens.css). */
+  bottom: var(--bottomnav-drop);
   z-index: 1000;
   isolation: isolate;
   height: var(--bottomnav-height);
@@ -53,10 +55,6 @@
 .bottomnav::after {
   background-image: var(--noise-url);
   opacity: var(--liquid-grain);
-}
-
-[data-theme="light"] .bottomnav {
-  background: var(--liquid-sheen), var(--liquid-bg), color-mix(in oklch, var(--bg-primary) 40%, transparent);
 }
 
 .bottomnav__item {

@@ -27,7 +27,6 @@ import { AmbientBackground } from './components/ambient/AmbientBackground'
 import { TodayPage } from './pages/TodayPage'
 import { HOME, NavigationTracker } from './navigation/navigation'
 import { registerPage, warmPages } from './navigation/pageChunks'
-import { holdNoTransition } from './utils/noTransition'
 import './App.css'
 
 /**
@@ -35,9 +34,8 @@ import './App.css'
  * serves so it can be fetched before it's tapped — see navigation/pageChunks.
  * The order matters exactly as much as it does below: the first pattern that
  * matches a path wins, so the specific pack routes precede the catch-all one.
- */
-/**
- * Not `React.lazy`, and the difference is visible.
+ *
+ * ── Not `React.lazy`, and the difference is visible ─────────────────────────
  *
  * `lazy()` keeps its own idea of whether the chunk is here, and it only forms
  * that idea the first time React renders the component: the very first render
@@ -96,23 +94,24 @@ const LoginPage = lazyPage(() => import('./pages/LoginPage'), 'LoginPage', /^\/l
 const AccountPage = lazyPage(() => import('./pages/AccountPage'), 'AccountPage', /^\/konto$/)
 
 /**
- * The iOS status-bar band and the Chrome-on-Android address-bar tint. It isn't
- * CSS, so it follows neither [data-theme] nor the page on its own.
+ * The Chrome-on-Android address-bar tint. It isn't CSS, so it follows neither
+ * [data-theme] nor the page on its own.
  *
- * The colour has to be what the app actually paints along its top edge, and
- * that is NOT --bg-primary: with `status-bar-style=default` iOS reserves the
- * strip, paints it from this tag and puts the web view underneath, so the strip
- * sits directly above the AmbientBackground — whose two brightest radial stops
- * are anchored at the top of the screen. Measured on an iPhone-width viewport
- * the app's top row is #181e45 dark / #bfc5eb light while this tag was saying
- * #010102, which is the flat black band that showed above a violet app.
+ * Android only, despite the tag's name: iOS ignores theme-color for a
+ * standalone web app's status bar (and ignores the manifest's theme_color
+ * too) — there the only lever is apple-mobile-web-app-status-bar-style, now
+ * black-translucent, which puts the page itself under the strip. Android in
+ * `display: standalone` still paints its bar from this tag with the content
+ * below it, so the colour still has to be matched by hand.
  *
- * Two exceptions put the flat --bg-primary under the strip instead, and both
- * read the -flat token: the screens that hide the ambient (the study/focus
- * stack), and the launch curtain, which paints that same flat colour over
- * everything while [data-splash] is set. Without the curtain check React would
- * mount and move the band to the mesh colour a full second before the mesh is
- * actually on screen.
+ * And it has to be what the app actually paints along its top edge, which is
+ * NOT --bg-primary: the strip sits directly above the AmbientBackground, whose
+ * two brightest radial stops are anchored at the top of the screen. Measured
+ * on a phone-width viewport the app's top row is #181e45 dark / #bfc5eb light
+ * while this tag used to say #010102 — a flat black band above a violet app.
+ *
+ * One exception puts the flat --bg-primary under the strip instead, and reads
+ * the -flat token: the screens that hide the ambient (the study/focus stack).
  *
  * Read from the store rather than a prop so every caller shares one
  * implementation.
@@ -121,7 +120,7 @@ function syncThemeColor() {
   const el = document.documentElement
   const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]')
   if (!meta) return
-  const flat = el.hasAttribute('data-splash') || useAppStore.getState().ambientHidden
+  const flat = useAppStore.getState().ambientHidden
   const token = flat ? '--theme-color-meta-flat' : '--theme-color-meta'
   const c = getComputedStyle(el).getPropertyValue(token).trim()
   if (c) meta.content = c
@@ -154,18 +153,17 @@ export function App() {
   useEffect(() => {
     const el = document.documentElement
     const apply = () => {
-      // Reference counted, because a navigation now holds the same class for
-      // the length of its transition — see utils/noTransition. Whichever of
-      // the two finishes first must not uncork the other.
-      const release = holdNoTransition()
+      el.classList.add('no-transition')
       el.setAttribute('data-theme', resolveTheme(theme))
       // setAttribute above has already invalidated style, and syncThemeColor's
       // getComputedStyle forces the recalc, so this reads the NEW theme's
       // value in the same tick.
       syncThemeColor()
-      // One rAF to let the attribute apply, then release so transitions resume
+      // One rAF to let the attribute apply, then remove the class so transitions resume
       requestAnimationFrame(() => {
-        requestAnimationFrame(release)
+        requestAnimationFrame(() => {
+          el.classList.remove('no-transition')
+        })
       })
     }
     apply()
@@ -183,22 +181,6 @@ export function App() {
   useEffect(() => {
     syncThemeColor()
   }, [ambientHidden])
-
-  // The third thing that changes that ground: the launch curtain lifting. It
-  // is removed from the root by a timer in index.html and by boot/splash.ts on
-  // a tap, neither of which React hears about — so watch the attribute, the
-  // way AmbientBackground already watches data-theme.
-  useEffect(() => {
-    const el = document.documentElement
-    if (!el.hasAttribute('data-splash')) return
-    const mo = new MutationObserver(() => {
-      if (el.hasAttribute('data-splash')) return
-      syncThemeColor()
-      mo.disconnect()
-    })
-    mo.observe(el, { attributes: true, attributeFilter: ['data-splash'] })
-    return () => mo.disconnect()
-  }, [])
 
   useEffect(() => {
     initInstallService(

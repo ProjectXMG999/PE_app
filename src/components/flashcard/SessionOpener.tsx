@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { LEVEL_COLORS, LEVEL_META } from '../../data/levels'
 import { plWords } from '../../utils/plural'
 import { routeNumber } from '../../utils/packRoute'
@@ -14,23 +14,40 @@ interface Props {
   /** The colour the curtain is washed in: the pack's level colour in a
    *  pack-scoped mode, the session tone's accent otherwise. */
   accent: string
-  /** Small-caps line above the title — where you are, which mode this is. */
+  /** Small-caps line above the title — where you are, which mode this is.
+   *  Known at mount in every mode, and shown then. */
   kicker?: ReactNode
-  /** The one big line: a pack name, or what this session is. */
+  /** The one big line: a pack name, or what this session is. Also known at
+   *  mount — a pack's name comes from the index, not from its content. */
   title: ReactNode
-  /** Under it, the size of what you're about to do. A node, because in most
-   *  modes half of it isn't known yet when the curtain goes up. */
+  /** Under it, the size of what you're about to do. A node, because in every
+   *  mode this is the half that isn't known yet when the curtain goes up. */
   meta?: ReactNode
-  /** Extra content under the rule — the Inteligentny mix. */
+  /**
+   * What the session is doing while `meta` doesn't exist yet — "Dobieram słowa
+   * i powtórki…". Sits in the line `meta` will take and hands it over there, so
+   * the wait is stated rather than merely endured.
+   *
+   * Present tense and specific per mode: this is the one moment the app is
+   * visibly working for a second or two, and "Ładowanie…" would waste it.
+   */
+  waiting?: ReactNode
+  /** Extra content under the rule — the Inteligentny mix. Waits with `meta`. */
   children?: ReactNode
   /**
-   * Is everything above final? The ground paints on the first frame; the
-   * content waits for this and then plays ONE cascade.
+   * Are the session's FACTS final — the counts, the mix, the minutes?
    *
-   * Not an optimisation — the whole point. Mounting the card with half its
-   * data and letting the rest arrive meant a second entrance animation a
-   * fraction of a second after the first, which reads as the screen restarting
-   * itself. Whatever isn't ready when this flips simply isn't shown.
+   * It gates those and nothing else. Mounting them half-built and letting the
+   * rest arrive would be a second entrance animation a fraction of a second
+   * after the first, which reads as the screen restarting itself; so whatever
+   * isn't ready when this flips simply isn't shown, and they play one cascade.
+   *
+   * What it used to gate was the whole card, title included — and since a
+   * session can take a couple of seconds to build (a progress snapshot plus a
+   * pack fetch each), the curtain spent that time as an empty coloured screen.
+   * It is the loading state: a loading state with nothing on it is the blank
+   * screen it was meant to replace. The identity is free — every mode has it
+   * synchronously — so it goes up immediately, and the facts land into it.
    */
   ready?: boolean
   onDone: () => void
@@ -48,8 +65,13 @@ interface Props {
  * It goes up on entry and the session builds underneath it, so there is no
  * spinner in front of it; `useSessionOpener` owns when it lifts. Tappable to
  * skip once there is something to skip to.
+ *
+ * Two tiers, and the split is the difference between a curtain and a blank
+ * screen: the identity — mode, pack, the rule under them — is known
+ * synchronously and cascades in on mount, while the facts the session has to
+ * be built to know wait for `ready` and land as one later cascade.
  */
-export function SessionOpener({ accent, kicker, title, meta, children, ready = true, onDone }: Props) {
+export function SessionOpener({ accent, kicker, title, meta, waiting, children, ready = true, onDone }: Props) {
   const reduced = useReducedMotion()
 
   return (
@@ -78,36 +100,78 @@ export function SessionOpener({ accent, kicker, title, meta, children, ready = t
         }
       }}
     >
-      {ready && (
-        <>
-          <motion.div
-            className="sessionopener__inner"
-            initial={reduced ? false : { opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            // ENTER_* rather than hand-picked delays, and the shared easing
-            // constant rather than the same bezier retyped: this cascades on
-            // the clock every other screen in the app cascades on.
-            transition={{ duration: ENTER_DURATION, ease: EASE_OUT_EXPO, delay: reduced ? 0 : ENTER_DELAY }}
-          >
-            {kicker && <span className="sessionopener__num">{kicker}</span>}
-            <h1 className="sessionopener__name">{title}</h1>
-            {meta && <p className="sessionopener__meta">{meta}</p>}
-          </motion.div>
+      {/* Bottom-anchored (see the CSS): the facts below grow downward into
+          space that is already allocated, so nothing here moves when they
+          arrive. A title that jumps as the counts land would undo the point of
+          showing it early. */}
+      <div className="sessionopener__head">
+        <motion.div
+          className="sessionopener__inner"
+          initial={reduced ? false : { opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          // ENTER_* rather than hand-picked delays, and the shared easing
+          // constant rather than the same bezier retyped: this cascades on
+          // the clock every other screen in the app cascades on.
+          transition={{ duration: ENTER_DURATION, ease: EASE_OUT_EXPO, delay: reduced ? 0 : ENTER_DELAY }}
+        >
+          {kicker && <span className="sessionopener__num">{kicker}</span>}
+          <h1 className="sessionopener__name">{title}</h1>
+          {/* Always rendered, so the line it will occupy is reserved from the
+              first frame — `meta` is the one thing here that arrives late.
+              The status line and the counts cross-fade INSIDE it (both are
+              absolute, see the CSS): one line that changes what it says, not
+              a line replaced by another line, which is the second entrance
+              this card is built to avoid.
+              A polite live region, so the hand-over is announced once rather
+              than the title being re-read. */}
+          <p className="sessionopener__meta" aria-live="polite">
+            <AnimatePresence initial={false}>
+              {ready && meta ? (
+                <motion.span
+                  key="meta"
+                  className="sessionopener__meta-line"
+                  initial={reduced ? false : { opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: reduced ? 0 : 0.35, ease: EASE_OUT_EXPO }}
+                >
+                  {meta}
+                </motion.span>
+              ) : waiting ? (
+                <motion.span
+                  key="waiting"
+                  className="sessionopener__meta-line"
+                  // No entrance: it arrives inside the identity block's own
+                  // cascade, which is already fading this whole column in.
+                  initial={false}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: reduced ? 0 : 0.25, ease: EASE_OUT_EXPO }}
+                >
+                  {/* Its own element: the breath is a CSS animation on
+                      opacity, and the motion span above is already writing an
+                      inline opacity of its own. Nested, the two multiply
+                      instead of fighting. */}
+                  <span className="sessionopener__working">{waiting}</span>
+                </motion.span>
+              ) : null}
+            </AnimatePresence>
+          </p>
+        </motion.div>
 
-          <motion.span
-            className="sessionopener__rule"
-            aria-hidden="true"
-            initial={reduced ? false : { scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            // Was 0.9s — the rule was still drawing when the curtain began to
-            // leave, so the last thing you saw was an unfinished line. It now
-            // lands with the rest of the cascade, well inside the hold.
-            transition={{ duration: 0.6, ease: EASE_OUT_EXPO, delay: reduced ? 0 : ENTER_DELAY + ENTER_STEP }}
-          />
+        <motion.span
+          className="sessionopener__rule"
+          aria-hidden="true"
+          initial={reduced ? false : { scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          // Was 0.9s — the rule was still drawing when the curtain began to
+          // leave, so the last thing you saw was an unfinished line. It now
+          // lands with the rest of the cascade, well inside the hold.
+          transition={{ duration: 0.6, ease: EASE_OUT_EXPO, delay: reduced ? 0 : ENTER_DELAY + ENTER_STEP }}
+        />
+      </div>
 
-          {children}
-        </>
-      )}
+      {children && <div className="sessionopener__facts">{ready && children}</div>}
     </motion.div>
   )
 }

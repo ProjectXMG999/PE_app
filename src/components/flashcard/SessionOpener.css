@@ -18,11 +18,17 @@
      two can no longer coincide (see composeSmartSteps), but the curtain should
      win by definition rather than by luck. */
   z-index: 160;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: var(--spacing-lg);
+  /* Not a centred column, and the reason is the two-tier reveal: the identity
+     is up from the first frame and the facts arrive a second or two later, so
+     a layout that centres the pair would slide the title upwards the moment
+     the counts land. Three rows instead — an empty one above, the identity,
+     and the facts — pins the identity's bottom edge at a fixed fraction of the
+     viewport (1 / 2.35 ≈ 43% of the free height), wherever the facts end up.
+     The ratio, not a fixed offset, so landscape and a notched phone in
+     portrait both keep the same proportion. */
+  display: grid;
+  grid-template-rows: 1fr auto 1.35fr;
+  justify-items: start;
   /* Landscape on a notched phone puts the left gutter under the notch, and the
      kicker is the first thing to go. */
   padding-block: 0;
@@ -31,6 +37,12 @@
   /* The session screen's own ground, not a translucent wash — see above. */
   background: var(--bg-primary);
   cursor: pointer;
+}
+
+/* The same ground with nothing on it yet, held up by LoadingFallback while the
+   page that owns the curtain is still being fetched. Nothing to tap. */
+.sessionopener--ground {
+  cursor: default;
 }
 
 /* A wash of the session's colour, so the modes and levels open differently. */
@@ -44,6 +56,47 @@
     transparent 70%
   );
   pointer-events: none;
+}
+
+/* Row 2: what the curtain knows on sight. */
+.sessionopener__head {
+  position: relative;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+}
+
+/* Row 3, growing downward from the rule into space that already exists. */
+.sessionopener__facts {
+  position: relative;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  padding-block-start: var(--spacing-lg);
+}
+
+/* Short viewports — a small phone in portrait, any phone in landscape. The
+   facts are the tall part (Inteligentny stacks a lead, a row of chips and a
+   reason), and once they need more than their row the grid takes it from the
+   spacer above, which is the one case where the identity does move as they
+   land. Tightening the gaps buys most of that back before it has to. */
+@media (max-height: 700px) {
+  .sessionopener {
+    grid-template-rows: 0.7fr auto 1.5fr;
+  }
+
+  .sessionopener__head,
+  .sessionopener__facts {
+    gap: var(--spacing-md);
+  }
+
+  .sessionopener__facts {
+    padding-block-start: var(--spacing-md);
+  }
 }
 
 .sessionopener__inner {
@@ -72,9 +125,16 @@
   color: var(--text-primary);
 }
 
+/* Always in the layout, empty until the counts exist: the line it will fill is
+   the only part of the identity block that arrives late, and reserving it is
+   what keeps the title still when it does. `lh` where it's understood, an em
+   approximation of the same line box everywhere else. */
 .sessionopener__meta {
   margin: 0;
+  min-height: 1.5em;
+  min-height: 1lh;
   font-size: var(--text-md);
+  line-height: 1.5;
   color: var(--text-secondary);
 }
 

@@ -49,8 +49,8 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
-  background: rgba(139, 92, 246, 0.1);
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  background: color-mix(in oklch, var(--accent) var(--fill-tint-mix), transparent);
+  border: 1px solid color-mix(in oklch, var(--accent) 26%, transparent);
   border-radius: var(--radius-full);
   padding: 3px 9px;
 }
@@ -123,7 +123,7 @@
   top: 0;
   height: 100%;
   border-radius: var(--radius-full);
-  background: rgba(139, 92, 246, 0.2);
+  background: color-mix(in oklch, var(--accent) 20%, transparent);
   pointer-events: none;
 }
 
@@ -146,7 +146,7 @@
   height: 14px;
   border-radius: var(--radius-full);
   background: white;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.35);
+  box-shadow: 0 1px 4px oklch(0 0 0 / 0.35);
   flex-shrink: 0;
   margin-right: -7px;
   transition: transform 120ms ease;
@@ -187,14 +187,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.45);
+  box-shadow: 0 4px 16px color-mix(in oklch, var(--accent) 45%, transparent);
   transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
   flex-shrink: 0;
 }
 
 .am__play-btn:hover {
   background: var(--accent-bright);
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.55);
+  box-shadow: 0 6px 20px color-mix(in oklch, var(--accent) 55%, transparent);
 }
 
 .am__play-btn:active {
@@ -281,12 +281,12 @@
   font-weight: 600;
   color: var(--text-primary);
   border-left-color: var(--accent);
-  background: rgba(139, 92, 246, 0.05);
+  background: color-mix(in oklch, var(--accent) 6%, transparent);
 }
 
 .am__paragraph--active {
   color: var(--text-primary);
   border-left-color: var(--accent);
-  background: rgba(139, 92, 246, 0.12);
+  background: color-mix(in oklch, var(--accent) var(--fill-tint-mix), transparent);
   font-weight: 500;
 }

@@ -5,7 +5,6 @@ import type { MouseEvent } from 'react'
 import type { NavigateOptions } from 'react-router-dom'
 import { isPageLoaded, preloadPath } from './pageChunks'
 import { freezeAmbient, thawAmbient } from '../components/ambient/ambientControl'
-import { holdNoTransition } from '../utils/noTransition'
 
 /**
  * One motion vocabulary for moving between pages.
@@ -129,32 +128,35 @@ function viewTransitions(): StartViewTransition | null {
 let active: ViewTransition | null = null
 
 /**
- * Quiet the two things that make a transition cost more than it animates, for
- * exactly as long as one is running.
+ * Hold the ambient shader still for exactly as long as a transition is running.
  *
- *  • **The ambient shader** stops where it stands. It is the backdrop every
- *    glass surface blurs through, so while it draws, a dozen large-kernel
- *    blurs are re-convolved every frame — including through the outgoing
- *    capture, which has to paint all of it first. See ambientControl.
- *  • **The universal colour transition** (`*, *::before, *::after` in
- *    global.css) stops being billed on the incoming page's first style
- *    recalculation. That recalc was measured at 178–341 ms per tab-to-tab hop
- *    on a phone-class CPU, on a tree that has just been mounted whole by
- *    `flushSync`. Nothing is mid-fade during a page swap, so suppressing it
- *    here changes nothing you can see.
+ * The mesh is the backdrop every glass surface blurs through, so while it
+ * draws, a dozen large-kernel blurs are re-convolved with it every frame —
+ * including through the outgoing capture, which has to paint all of that first.
+ * Freezing is free and invisible: the shader resumes from the frame it stopped
+ * on. See ambientControl.
  *
- * Both are restored by the returned function, which is idempotent and safe to
- * call from every exit a transition has.
+ * Measured honestly: on a desktop GPU this makes no difference to blocked time,
+ * because there the canvas is small and the blurs are cheap. It is aimed at the
+ * axis that rig cannot reproduce — a phone's GPU filling a DPR-3 viewport.
+ *
+ * A neighbouring idea was tried and dropped: also suspending the universal
+ * colour transition (`*, *::before, *::after` in global.css) via
+ * `.no-transition` for the same window. It measured as no gain — and injecting
+ * a second universal selector to test it made every hop 25–80% WORSE, which is
+ * the answer about what `.no-transition *` itself costs. The style recalc on a
+ * freshly mounted page is real, but this is not the way to get it back.
+ *
+ * The returned function is idempotent and safe to call from every exit a
+ * transition has.
  */
 function quietForTransition(): () => void {
   freezeAmbient()
-  const releaseTransitions = holdNoTransition()
   let done = false
   return () => {
     if (done) return
     done = true
     thawAmbient()
-    releaseTransitions()
   }
 }
 

@@ -233,6 +233,15 @@
   --tile-border: oklch(1 0 0 / 0.13);
   --tile-hi: inset 0 1px 0 oklch(1 0 0 / 0.09);
 
+  /* The tile with the accent wash a "this one is the point" card carries —
+     the translucent half of --gradient-hero, which is the same wash over the
+     OPAQUE --bg-card. Both exist on purpose: the opaque one is for the study
+     screens, which hide the ambient and so have no light to transmit, and
+     this one is for the five tabs, which do. */
+  --surface-tile-accent:
+    linear-gradient(150deg, color-mix(in oklch, var(--accent) 16%, transparent) 0%, transparent 62%),
+    var(--surface-tile);
+
   /* ── Rung 4: fills ───────────────────────────────────────────────────────
      The small stuff inside a surface. Every one of these existed already, two
      to four times over, at values that were within a hundredth of each other
@@ -530,13 +539,16 @@
 
   /* Floating island: 64px tall, lifted 14px off the edge — plus whatever the
      device reserves below it. The safe-area inset is part of BOTH numbers or
-     neither: the island is positioned at `bottom: calc(14px + safe)` (see
-     BottomNav.css), so clearance that left the inset out fell ~34px short on
-     any phone with a home indicator and the last row of every scrollable page
-     slid under the capsule. */
+     neither: the island is positioned at `bottom: var(--bottomnav-drop)` (see
+     BottomNav.css) and every page reserves --bottomnav-reserve at its foot, so
+     clearance that left the inset out fell ~34px short on any phone with a home
+     indicator and the last row of every scrollable page slid under the capsule.
+
+     One number, two consumers — change the drop and the clearance follows. */
   --bottomnav-lift: 14px;
+  --bottomnav-drop: calc(var(--bottomnav-lift) + var(--safe-bottom));
   --bottomnav-reserve: calc(
-    var(--bottomnav-height) + var(--bottomnav-lift) + var(--spacing-xs) + var(--safe-bottom)
+    var(--bottomnav-height) + var(--bottomnav-drop) + var(--spacing-xs)
   );
 
   /* Breakpoints (magic numbers — custom properties can't sit in @media
@@ -557,6 +569,35 @@
   --ease-in-sharp: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+
+/* ── Installed to the home screen: the tab bar sits lower ───────────────────
+   In a browser tab the 14px lift is measured off the top of Safari's own
+   toolbar, and --safe-bottom is 0 there because the browser has already spent
+   the inset. Installed, that toolbar is gone and the inset comes back: the
+   same rule then reads 14 + 34 = 48px on a home-indicator iPhone, and the
+   capsule floated a finger's width off the bottom of the screen for no reason
+   anyone could see — the lift was clearing a toolbar that isn't there.
+
+   Installed, the only thing left to clear is the system's own gesture strip at
+   the foot of the screen, and --safe-bottom is exactly its height. So the drop
+   IS the inset: the capsule's bottom edge lands on the top of the home
+   indicator's reserved band — as low as it can sit without putting the bottom
+   row of tab targets into the strip that iOS claims for the home swipe, which
+   is the thing a flat 14px got wrong before the inset was added at all.
+
+   The floor is for everywhere the inset is 0 — an installed Android PWA whose
+   gesture bar is outside the viewport, a desktop install, an older phone with
+   a hardware home button. 20px there keeps the capsule off the very edge.
+
+   Two selectors because the two platforms answer different questions: iOS
+   answered only `navigator.standalone` for years, which index.html stamps as
+   [data-standalone] before first paint; everything else answers the media
+   query. Either one is enough. */
+@media (display-mode: standalone), (display-mode: fullscreen) {
+  :root { --bottomnav-drop: max(var(--safe-bottom), 20px); }
+}
+
+:root[data-standalone] { --bottomnav-drop: max(var(--safe-bottom), 20px); }
 
 [data-theme="light"] {
   --bg-primary: oklch(0.97 0.006 275);

@@ -94,7 +94,7 @@ button.achtile:active {
   background: linear-gradient(
     115deg,
     transparent 35%,
-    rgba(255, 255, 255, 0.22) 48%,
+    oklch(1 0 0 / 0.22) 48%,
     transparent 60%
   );
   background-size: 260% 100%;
