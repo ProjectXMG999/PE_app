@@ -52,9 +52,15 @@ export const fadeUp: Variants = {
 }
 
 /**
- * Dzisiaj's entrance — a short settle, no scale. It used to travel 22px and
- * scale up from 0.97, which made every visit to the page a small show; a screen
- * you open daily should just be there.
+ * A short settle, no scale. It used to travel 22px and scale up from 0.97,
+ * which made every visit to the page a small show; a screen you open daily
+ * should just be there.
+ *
+ * Dzisiaj, which this was written for, took that argument the rest of the way
+ * and no longer cascades: ten blocks animated from the main thread, on top of
+ * the 107–250 ms it takes to mount the route, read as the page stuttering into
+ * place. It arrives as one plane now — `.pe-arrive` in animations.css. What is
+ * left here serves the lighter screens.
  */
 export const heroReveal: Variants = {
   hidden: { opacity: 0, y: 12 },

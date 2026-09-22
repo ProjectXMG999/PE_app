@@ -2,10 +2,14 @@ import { Link } from 'react-router-dom'
 import { useLinkTransition } from '../../navigation/transitions'
 import { useProgressPulse } from '../../hooks/useProgressPulse'
 import { formatPoints } from '../../services/points'
+import { FlameGlyph, GemGlyph } from '../mode/glyphs'
 import { ROUTE_TOTAL } from '../../data/levels'
 import './SidebarPulse.css'
 
 const WEEKDAY_INITIALS = ['P', 'W', 'Ś', 'C', 'P', 'S', 'N']
+
+/** Groups from the first thousand, unlike pl-PL's default. Built once. */
+const grouped = new Intl.NumberFormat('pl-PL', { useGrouping: true })
 
 /**
  * The desktop counterpart to ProgressPill, filling the empty space between the
@@ -26,12 +30,12 @@ export function SidebarPulse() {
     <Link to="/postęp" className="sidebarpulse" onClick={onLink('/postęp', 'lateral')}>
       <div className="sidebarpulse__row">
         <span className="sidebarpulse__streak">
-          <span aria-hidden="true">🔥</span>
+          <FlameGlyph size={13} weight={2} />
           <strong>{pulse.streak}</strong>
           <span className="sidebarpulse__unit">dni</span>
         </span>
         <span className="sidebarpulse__points">
-          <span aria-hidden="true">⬥</span>
+          <GemGlyph size={12} weight={2} />
           <strong>{formatPoints(pulse.points)}</strong>
         </span>
       </div>
@@ -65,8 +69,10 @@ export function SidebarPulse() {
         <div className="sidebarpulse__route-bar">
           <div className="sidebarpulse__route-fill" style={{ width: `${routePct}%` }} />
         </div>
+        {/* Same pair, same rule as the compass: pl-PL groups only from five
+            digits, so a plain toLocaleString wrote "2437 / 10 000". */}
         <span className="sidebarpulse__route-text">
-          {pulse.knownWords.toLocaleString('pl-PL')} / {ROUTE_TOTAL.toLocaleString('pl-PL')}
+          {grouped.format(pulse.knownWords)} / {grouped.format(ROUTE_TOTAL)}
         </span>
       </div>
 

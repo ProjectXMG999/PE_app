@@ -35,7 +35,8 @@
 }
 
 .progresspill__icon {
-  font-size: var(--text-xs-plus);
+  display: inline-flex;
+  align-items: center;
   line-height: 1;
 }
 
@@ -48,13 +49,15 @@
   cursor: default;
 }
 
+/* The flame carried its own colour as an emoji; as a line glyph it takes the
+   accent the rest of the app gives a streak. Points and freeze inherit theirs
+   from the chip (--points-gold / --review-teal) through currentColor. */
 .progresspill__stat--flame .progresspill__icon {
-  display: inline-block;
+  color: var(--accent-orange);
   animation: progresspill-flicker 2.6s ease-in-out infinite;
 }
 
 .progresspill__stat--points .progresspill__icon {
-  display: inline-block;
   animation: progresspill-sparkle-once 900ms ease-out 600ms both;
 }
 

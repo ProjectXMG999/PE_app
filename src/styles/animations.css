@@ -458,12 +458,16 @@
  * One vocabulary, two implementations, the same numbers in both:
  *
  *  • Framer Motion — components/today/motion.ts — for the screens already
- *    built out of motion components (Dzisiaj, Trening, Ustawienia, Konto, the
- *    pack page, the mode chooser, Logowanie).
+ *    built out of motion components (Ustawienia, Konto, the pack page, the
+ *    mode chooser, Logowanie, the exercise screen).
  *  • These tokens and `pe-enter-rise` for everything else, so a page gets the
  *    same arrival without an animation library being dragged onto it: the
  *    Pakiety row cascade (HomePage.css) and the Postęp header (StatsPage.css)
  *    both read from here.
+ *
+ * Dzisiaj and Trening — the two heaviest screens, and the two opened most
+ * often — no longer cascade at all. See `.pe-arrive` below for what they do
+ * instead and what measuring them said.
  *
  * Changing --pe-enter-* changes every screen in the app at once; the Framer
  * constants are kept in step by hand, and named the same.
@@ -488,4 +492,64 @@
    `position: fixed` DESCENDANT — a child that goes full screen would then lay
    itself out against the block instead of the viewport. Same trap the Postęp
    sections documented; a block that hosts such a child can't carry this. */
+
+/* ── Page arrival — one plane ───────────────────────────────────────────────
+ * The cascade above is the app's older answer, and on the two heaviest screens
+ * it was the wrong one. Measured on a phone-class CPU (6× throttle), opening
+ * Dzisiaj from another tab cost one blocked frame of 107–250 ms — React
+ * mounting the route — and the Framer cascade had already started its 60 ms
+ * clock when it landed. So the entrance played its first third, froze for a
+ * quarter of a second, then snapped to wherever it should have been: eight
+ * blocks each arriving late by a different amount. That is the "jumping" this
+ * replaces. After it, a further run of 24–50 ms frames through +700 ms — the
+ * cascade itself, with Framer measuring and writing every block's transform
+ * from the main thread (`measureScroll` / `calcProjection` topped the profile)
+ * while each one re-convolved its own 28 px backdrop blur.
+ *
+ * Three properties make the replacement immune to all of it:
+ *
+ *  1. **CSS, not JS.** A transform animation runs on the compositor, so the
+ *     long mount task can't stall it — and it can't start until the element
+ *     first paints, which is *after* that task. The ordering that had to be
+ *     guessed at with a delay is now structural.
+ *  2. **One element, not eight.** The page arrives as a single plane. Nothing
+ *     can arrive out of step with anything else, because there is no step.
+ *  3. **Transform only, no opacity.** Fading a group of glass composites its
+ *     blurred backdrop at partial alpha over the unblurred real one — the fog
+ *     that visibly thickens after the card has landed (see glassReveal in
+ *     components/today/motion.ts). The cross-fade belongs to the page
+ *     transition above, which animates a flat snapshot and has no such
+ *     problem. Here the two halves finally divide cleanly: the transition
+ *     dissolves the screen, this settles it.
+ *
+ * `backwards`, never `both`: the fill is needed before the first frame, and
+ * keeping the transform afterwards would make the page a containing block for
+ * any fixed descendant — the trap documented just above. (The app's own sheets
+ * turn out to be safe either way: they are native <dialog>s opened with
+ * showModal, and a top-layer element ignores an ancestor transform — measured
+ * in Chrome, full-viewport rect unchanged with .today translated 12 px. The
+ * fill mode stays `backwards` regardless: nothing else here should have to
+ * know that.) */
+/* The curve is deliberately NOT --ease-out-expo, the app's usual one. Expo puts
+   the whole 12 px inside the first ~170 ms and spends the rest of its duration
+   on sub-pixel arithmetic nobody can see — on a cascade that is fine, because
+   the next block starting is what carries the eye onwards. With nothing behind
+   it, the plane simply stops, 90 ms before the page dissolve above finishes,
+   and the screen reads as two separate events again. This curve travels its
+   last visible pixel at ~230 ms instead, so the settle and the dissolve end
+   together and the arrival is one thing. */
+:root {
+  --pe-arrive-distance: 12px;
+  --pe-arrive-duration: 400ms;
+  --pe-arrive-ease: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@keyframes pe-arrive {
+  from { transform: translate3d(0, var(--pe-arrive-distance), 0); }
+  to   { transform: translate3d(0, 0, 0); }
+}
+
+.pe-arrive {
+  animation: pe-arrive var(--pe-arrive-duration) var(--pe-arrive-ease) backwards;
+}
 

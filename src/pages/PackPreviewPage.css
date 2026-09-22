@@ -46,6 +46,22 @@
   color: var(--text-muted);
 }
 
+/* A sentence, not a label — it wraps, so it needs a measure and room to breathe. */
+.packpreview__error p {
+  max-width: 34ch;
+  padding-inline: var(--spacing-md);
+  text-align: center;
+  text-wrap: pretty;
+  line-height: 1.55;
+}
+
+.packpreview__error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
 .packpreview__error button {
   margin-top: var(--spacing-sm);
   padding: 10px var(--spacing-lg);
@@ -55,6 +71,13 @@
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: var(--text-base);
+}
+
+/* Going back is the fallback, not the suggestion — retrying is what usually
+   works, so only it wears the accent. */
+.packpreview__error-actions button + button {
+  background: var(--surface-translucent-strong);
+  color: var(--text-secondary);
 }
 
 /* ── Nav ──────────────────────────────────────────────────────────────────

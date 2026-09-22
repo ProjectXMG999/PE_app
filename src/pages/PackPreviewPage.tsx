@@ -7,7 +7,7 @@ import { Pack, PackMeta } from '../types/vocabulary'
 import { PackageProgress } from '../types/progress'
 import { loadProgressSnapshot, ProgressSnapshot } from '../hooks/useProgressData'
 import { getAudioUrl } from '../services/audioService'
-import { useAuthStore } from '../store/useAuthStore'
+import { fetchPack, PackFetchError } from '../hooks/usePackageData'
 import { getPackageWordProgress, getPackageProgress, saveWordProgress, savePackageProgress } from '../services/db'
 import { applyKnown } from '../services/review'
 import { currentRequestRetention } from '../store/useAppStore'
@@ -32,6 +32,27 @@ const allPacks = packagesIndex as PackMeta[]
 
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString('pl-PL', { day: 'numeric', month: 'short', year: 'numeric' })
+}
+
+/**
+ * Why the pack didn't load, in Polish and in terms of what to do about it.
+ *
+ * `fetch` rejects with a bare `TypeError: "Failed to fetch"` for every
+ * network-level failure — no signal, a dropped connection, a dev server
+ * restarting mid-request — and this screen used to print that string straight
+ * onto the page. An English browser internal is not an error message: it names
+ * nothing the reader did and nothing they can do, and it reads as a broken app
+ * rather than a missing connection. Pack content is deliberately never cached
+ * (it's paywalled — see sw.ts), so this is the one screen a flaky connection
+ * can always stop, which makes it the one screen that has to explain itself.
+ */
+function packErrorMessage(err: unknown): string {
+  if (err instanceof PackFetchError) {
+    if (err.status === 401 || err.status === 403) return 'Twoja sesja wygasła. Zaloguj się ponownie, aby otworzyć ten pakiet.'
+    if (err.status === 404) return 'Nie znaleziono tego pakietu.'
+    return 'Nie udało się pobrać pakietu. Spróbuj jeszcze raz za chwilę.'
+  }
+  return 'Brak połączenia — nie udało się pobrać słów z tego pakietu. Twoje postępy są bezpieczne na tym urządzeniu.'
 }
 
 const MODE_INFO = {
@@ -232,6 +253,9 @@ export function PackPreviewPage() {
   const [snapshot, setSnapshot] = useState<ProgressSnapshot | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  /** Bumped by "Spróbuj ponownie" — re-runs the load effect in place, so a
+   *  connection that came back doesn't cost the user a trip out and back. */
+  const [retryKey, setRetryKey] = useState(0)
   const [activeInfo, setActiveInfo] = useState<'sluchaj' | 'aktywuj' | null>(null)
   const [markAllOpen, setMarkAllOpen] = useState(false)
   const [markingAll, setMarkingAll] = useState(false)
@@ -259,21 +283,18 @@ export function PackPreviewPage() {
     // container would otherwise keep the previous pack's scroll position.
     document.querySelector('.appshell__main')?.scrollTo({ top: 0 })
     Promise.all([
-      // Token straight from the auth store rather than supabase.auth.getSession()
-      // — same value, one less promise hop, and it keeps this page off the
-      // Supabase import chain. This request has its own 402 handling, so it
-      // can't go through fetchPack.
-      (() => {
-        const token = useAuthStore.getState().accessToken
-        return fetch(`/.netlify/functions/pack-content?pack=${encodeURIComponent(packageId)}`, {
-          headers: token ? { Authorization: `Bearer ${token}` } : {},
-        })
-      })().then(r => {
-        if (r.status === 402) { navigate('/konto'); throw new Error('Wymagana subskrypcja') }
-        if (!r.ok) throw new Error('Nie znaleziono pakietu')
-        return r.json() as Promise<Pack>
+      // Shared with every other screen (hooks/usePackageData): one in-memory
+      // cache, so re-entering a pack costs nothing, and one 401 → token-refresh
+      // retry, which this page used to lack — a session that expired while the
+      // tab slept failed here and nowhere else.
+      fetchPack(packageId),
+      // The pack's own content is the screen; the progress snapshot only
+      // decorates it. A snapshot that can't be read must not take the words
+      // down with it.
+      loadProgressSnapshot().catch(err => {
+        console.error('[packpreview] progress snapshot failed:', err)
+        return null
       }),
-      loadProgressSnapshot(),
     ])
       .then(([data, snap]) => {
         setPack(data)
@@ -281,10 +302,11 @@ export function PackPreviewPage() {
         setLoading(false)
       })
       .catch(err => {
-        setError(err instanceof Error ? err.message : 'Błąd ładowania')
+        if (err instanceof PackFetchError && err.status === 402) { navigate('/konto'); return }
+        setError(packErrorMessage(err))
         setLoading(false)
       })
-  }, [packageId])
+  }, [packageId, retryKey])
 
   const currentMeta = allPacks.find(p => p.id === packageId)
   const nextPack = packageId ? getNextPack(packageId) : null
@@ -341,7 +363,10 @@ export function PackPreviewPage() {
       <AppShell hideBottomNav hideSidebar={false} hideAmbient={false} lockScroll={false}>
         <div className="packpreview__error">
           <p>{error ?? 'Nie znaleziono pakietu'}</p>
-          <button onClick={leave}>{back.backLabel}</button>
+          <div className="packpreview__error-actions">
+            <button onClick={() => setRetryKey(k => k + 1)}>Spróbuj ponownie</button>
+            <button onClick={leave}>{back.backLabel}</button>
+          </div>
         </div>
       </AppShell>
     )

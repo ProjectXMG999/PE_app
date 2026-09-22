@@ -298,3 +298,40 @@ export function MoonGlyph(props: GlyphProps) {
     </Svg>
   )
 }
+
+/* ── The three readings the app keeps quoting ───────────────────────────────
+ * Seria, punkty and tempo appear on the compass, in the header pill, in the
+ * sidebar and in the sheet that explains them — as 🔥 ⬥ ⚡ in every one of
+ * those places until now. The file header already says why that is the wrong
+ * material for a UI mark; these carry the accent each reading is coloured with
+ * anywhere it appears (orange, gold, bright) instead of whatever palette the
+ * platform's emoji font happens to ship. */
+
+/** Seria — a flame. */
+export function FlameGlyph(props: GlyphProps) {
+  return (
+    <Svg {...props}>
+      <path d="M12 2.6c.5 3 2 4.7 3.6 6.3 1.6 1.7 2.6 3.3 2.6 5.5a6.2 6.2 0 0 1-12.4 0c0-1.8.7-3.4 1.9-4.8.2 1.3.8 2.2 1.8 2.7-.7-3.3.2-6.4 2.5-9.7Z" />
+    </Svg>
+  )
+}
+
+/** Punkty Progress — a cut gem, the app's own currency mark. */
+export function GemGlyph(props: GlyphProps) {
+  return (
+    <Svg {...props}>
+      <path d="M12 2.9 20.6 12 12 21.1 3.4 12z" />
+      <path d="M7.6 12h8.8" />
+    </Svg>
+  )
+}
+
+/** Zamrożenie serii — a snowflake. */
+export function SnowflakeGlyph(props: GlyphProps) {
+  return (
+    <Svg {...props}>
+      <path d="M12 2.8v18.4M4 7.4l16 9.2M20 7.4l-16 9.2" />
+      <path d="M9.6 5.2 12 7.6l2.4-2.4M9.6 18.8 12 16.4l2.4 2.4" />
+    </Svg>
+  )
+}

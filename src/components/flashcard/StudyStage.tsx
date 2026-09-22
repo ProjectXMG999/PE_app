@@ -255,19 +255,25 @@ function PlayGlyph({ size = 15 }: { size?: number }) {
 /**
  * The example sentence under a word, with its own play button. Stops the click
  * from reaching the card, which would flip it mid-listen.
+ *
+ * `onPlay` omitted = this sentence has no recording (most of the base today):
+ * the text still shows, the button doesn't — a glyph that makes no sound reads
+ * as broken audio, not as missing content.
  */
-export function StageSentence({ text, onPlay, label }: { text: string; onPlay: () => void; label: string }) {
+export function StageSentence({ text, onPlay, label }: { text: string; onPlay?: () => void; label: string }) {
   return (
     <div className="stage__sentence">
       <p className="stage__sentence-text">{text}</p>
-      <button
-        type="button"
-        className="stage__play stage__play--sm"
-        onClick={e => { e.stopPropagation(); onPlay() }}
-        aria-label={label}
-      >
-        <PlayGlyph size={12} />
-      </button>
+      {onPlay && (
+        <button
+          type="button"
+          className="stage__play stage__play--sm"
+          onClick={e => { e.stopPropagation(); onPlay() }}
+          aria-label={label}
+        >
+          <PlayGlyph size={12} />
+        </button>
+      )}
     </div>
   )
 }

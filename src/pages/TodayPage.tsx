@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
 import { SessionHero } from '../components/today/SessionHero'
 import { DailyGoalPicker } from '../components/today/DailyGoalPicker'
@@ -9,7 +8,6 @@ import { TodayGuideButton } from '../components/today/TodayGuideSheet'
 import { PathStrip, StripBand, StripTick } from '../components/today/PathStrip'
 import { ModeSlider, StudyPath } from '../components/today/ModeSlider'
 import { LevelUpPrompt } from '../components/today/LevelUpPrompt'
-import { EASE_SPRING, fadeUpReduced, glassReveal, glassRevealReduced, heroReveal, staggerContainer, staggerContainerWide } from '../components/today/motion'
 import { useProgressData, avgWordsPerDayTrend, packLevelOf } from '../hooks/useProgressData'
 import { useProgressPulse } from '../hooks/useProgressPulse'
 import { FlowNumber } from '../components/shared/FlowNumber'
@@ -81,10 +79,23 @@ const todayLabel = () => dayFormatter.format(new Date())
  * a large title, the session hero with the daily goal ring, the review row,
  * and one recommendation per path behind a segmented control. The library
  * (Pakiety) is a different screen.
+ *
+ * ── The entrance is CSS, and it is one movement ────────────────────────────
+ * Every block here used to be a Framer `motion` element in a staggered
+ * container: ten of them, each rising 12 px on its own 60 ms offset, each one
+ * a glass surface re-convolving a 28 px backdrop blur while it moved, and all
+ * of it driven from the main thread. Opening this tab on a phone-class CPU
+ * blocks that thread for 107–250 ms mounting the route, which is exactly when
+ * the cascade was mid-flight — so it stalled and then jumped. It is now
+ * `.pe-arrive` on the page root (animations.css): one plane, on the
+ * compositor, starting only once the page has actually painted.
+ *
+ * The motion that is left is motion you ask for — the mode slider's
+ * indicator, the level sheet, the goal ring. Nothing animates merely because
+ * the screen opened.
  */
 export function TodayPage() {
   const navigate = useAppNavigate()
-  const reduced = useReducedMotion()
   const haptics = useHaptics()
   const snapshot = useProgressData()
   const pulse = useProgressPulse()
@@ -191,11 +202,6 @@ export function TodayPage() {
     action()
   }
 
-  const variants = reduced ? fadeUpReduced : heroReveal
-  /** For blocks that are — or contain — a .u-liquid surface: rise, never fade.
-   *  See glassReveal in today/motion.ts for what fading does to their fog. */
-  const glassVariants = reduced ? glassRevealReduced : glassReveal
-
   const levelName = (level: number) => LEVEL_META.find(l => l.level === level)?.name ?? `Poziom ${level}`
 
   const trainStrip = snapshot && (
@@ -229,10 +235,9 @@ export function TodayPage() {
   )
 
   const trainPick = train ? (
-    <motion.button
+    <button
       type="button"
       className="today__pick u-liquid"
-      variants={glassVariants}
       onClick={() => pressCta(() => navigate(`/pakiet/${train.pack.id}/fiszki-start`))}
     >
       {showPace && (
@@ -243,18 +248,17 @@ export function TodayPage() {
         {levelName(train.pack.level)} · ok. {estimateMinutes(train.pack.wordCount - train.known)} min
       </span>
       <span className="today__pick-cta">Zacznij trening</span>
-    </motion.button>
+    </button>
   ) : (
-    <motion.div className="today__path-empty u-liquid" variants={glassVariants}>
+    <div className="today__path-empty u-liquid">
       <p>Na tym poziomie nie ma nic do trenowania. Zajrzyj do Słuchaj albo zmień poziom.</p>
-    </motion.div>
+    </div>
   )
 
   const listenPick = listen ? (
-    <motion.button
+    <button
       type="button"
       className="today__pick u-liquid"
-      variants={glassVariants}
       onClick={() => pressCta(() => navigate(`/pakiet/${listen.pack.id}/start`))}
     >
       <span className="today__pick-name">{listen.pack.name}</span>
@@ -262,30 +266,24 @@ export function TodayPage() {
         {levelName(listen.pack.level)} · ok. {estimateMinutes(listen.pack.wordCount - listen.startIndex)} min
       </span>
       <span className="today__pick-cta">Zacznij słuchać</span>
-    </motion.button>
+    </button>
   ) : (
-    <motion.div className="today__path-empty u-liquid" variants={glassVariants}>
+    <div className="today__path-empty u-liquid">
       <p>Na tym poziomie nie ma nic do słuchania. Zajrzyj do Trenuj albo zmień poziom.</p>
-    </motion.div>
+    </div>
   )
 
-  // PathStrip is glass too, so this slot rises without fading.
-  const stripSlot = (strip: typeof trainStrip) => (
-    <motion.div variants={glassVariants}>
-      {strip || <div className="today__strip-loading" />}
-    </motion.div>
-  )
+  const stripSlot = (strip: typeof trainStrip) => strip || <div className="today__strip-loading" />
 
   const trainContent = <>{stripSlot(trainStrip)}{trainPick}</>
   const listenContent = <>{stripSlot(listenStrip)}{listenPick}</>
 
   return (
     <AppShell>
-      <motion.div className="today" variants={staggerContainerWide} initial="hidden" animate="show">
+      <div className="today pe-arrive">
         {/* Large title, the way an iOS tab opens: the date above, the screen's
             name below, the level and the one info button on the right. */}
-        {/* LevelPill in here is glass — glassVariants, not variants. */}
-        <motion.header className="today__header" variants={glassVariants}>
+        <header className="today__header">
           <div className="today__heading">
             <p className="today__date">{todayLabel()}</p>
             <h1 className="today__title">Dzisiaj</h1>
@@ -294,19 +292,16 @@ export function TodayPage() {
             <LevelPill level={todayLevel} onPress={() => setLevelPickerOpen(true)} />
             <TodayGuideButton className="today__info" />
           </div>
-        </motion.header>
+        </header>
 
         {nothingLeft ? (
-          <motion.section className="today__done u-liquid u-liquid--gold" variants={glassVariants}>
-            <motion.span
-              className="today__done-icon"
-              aria-hidden="true"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={reduced ? { duration: 0 } : EASE_SPRING}
-            >
+          <section className="today__done u-liquid u-liquid--gold">
+            {/* The one flourish the screen keeps — and CSS, like the rest:
+                a spring here meant a motion component (and its projection
+                node) mounted on the page's busiest frame. */}
+            <span className="today__done-icon" aria-hidden="true">
               <CheckGlyph size={30} weight={2.4} />
-            </motion.span>
+            </span>
             <h2 className="today__done-title">Na dziś wszystko</h2>
             <p className="today__done-text">
               {reviewDone
@@ -315,30 +310,24 @@ export function TodayPage() {
                   ? 'Cel osiągnięty i nic nie czeka na powtórkę. Jutro pokażemy Ci, co dalej.'
                   : 'Nic nie czeka. Jutro pokażemy Ci, co dalej.'}
             </p>
-          </motion.section>
+          </section>
         ) : (
           <>
-            <motion.div className="today__group" variants={staggerContainer}>
-              {/* SessionHero is glass. */}
-              <motion.div variants={glassVariants}>
-                {pulse == null ? (
-                  <div className="today__skeleton skeleton" style={{ height: 196 }} />
-                ) : (
-                  <SessionHero
-                    snapshot={snapshot}
-                    onStart={() => pressCta(() => { unlockAudioGlobally(); navigate('/inteligentny') })}
-                    secondsStudied={pulse.secondsToday}
-                    goalSec={pulse.goalSec}
-                    onEditGoal={() => setGoalOpen(true)}
-                  />
-                )}
-              </motion.div>
+            <div className="today__group">
+              {pulse == null ? (
+                <div className="today__skeleton skeleton" style={{ height: 196 }} />
+              ) : (
+                <SessionHero
+                  snapshot={snapshot}
+                  onStart={() => pressCta(() => { unlockAudioGlobally(); navigate('/inteligentny') })}
+                  secondsStudied={pulse.secondsToday}
+                  goalSec={pulse.goalSec}
+                  onEditGoal={() => setGoalOpen(true)}
+                />
+              )}
 
               {backlog > 0 && (
-                <motion.div
-                  className={`today__reviews u-liquid today__reviews--${reviewDone ? 'done' : urgency}`}
-                  variants={glassVariants}
-                >
+                <div className={`today__reviews u-liquid today__reviews--${reviewDone ? 'done' : urgency}`}>
                   {/* The urgency breath — the whole card, not the icon. It has
                       to be an element of its own: .u-liquid has already spent
                       both pseudo-elements on the glass and its rim. */}
@@ -388,32 +377,28 @@ export function TodayPage() {
                       Statystyki <ChevronRightGlyph size={14} weight={2.2} />
                     </span>
                   </button>
-                </motion.div>
+                </div>
               )}
-            </motion.div>
+            </div>
 
-            <motion.div className="today__group" variants={staggerContainer}>
-              {/* The slider's own tab track is glass. */}
-              <motion.div variants={glassVariants}>
-                <ModeSlider
-                  active={activeMode}
-                  onChange={setActiveMode}
-                  listenContent={listenContent}
-                  trainContent={trainContent}
-                />
-              </motion.div>
+            <div className="today__group">
+              <ModeSlider
+                active={activeMode}
+                onChange={setActiveMode}
+                listenContent={listenContent}
+                trainContent={trainContent}
+              />
               {todayLevel != null && (
-                <motion.button
+                <button
                   type="button"
                   className="today__browse-level"
-                  variants={variants}
                   onClick={() => { homeSetLevel(todayLevel); navigate('/pakiety') }}
                 >
                   Wszystkie paczki poziomu {levelName(todayLevel)}
                   <ChevronRightGlyph size={14} weight={2.2} />
-                </motion.button>
+                </button>
               )}
-            </motion.div>
+            </div>
           </>
         )}
 
@@ -435,7 +420,7 @@ export function TodayPage() {
             onDecline={() => dismissLevelUp(levelUpTarget)}
           />
         )}
-      </motion.div>
+      </div>
     </AppShell>
   )
 }

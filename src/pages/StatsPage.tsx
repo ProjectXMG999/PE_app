@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
 import { CompassHero } from '../components/progress/CompassHero'
 import { RouteMap } from '../components/progress/RouteMap'
@@ -70,7 +71,12 @@ function buildGuidance(
     return 'Trasa czeka. Pierwszy trening to około 10 minut.'
   }
   if (servingLeft > 0) {
-    return `${servingLeft} ${plWords(servingLeft)} w dzisiejszej porcji powtórek — najszybszy sposób, żeby nic nie uciekło.`
+    // Polish, not English word order. "N słów w dzisiejszej porcji powtórek —
+    // najszybszy sposób, żeby…" is the English apposition ("X — the fastest way
+    // to Y") wearing Polish words: it opens on a bare noun phrase and hangs the
+    // point off a dash. A sentence with a verb, and the reason in the second
+    // clause, is how this is actually said.
+    return `Powtórz dziś ${servingLeft} ${plWords(servingLeft)}, a nic Ci nie ucieknie.`
   }
   if (levelStats?.nextLevel == null) {
     return `${knownWords.toLocaleString('pl-PL')} ${plWords(knownWords)}. Cała trasa za Tobą.`
@@ -81,8 +87,59 @@ function buildGuidance(
     const left = levelStats.nextLevelWords ?? 0
     return `Jeszcze ${left.toLocaleString('pl-PL')} ${plWords(left)} do ${target}.`
   }
-  return `Przy tym tempie jesteś ${days} ${plDays(days)} od ${target}.`
+  // Same fault, one branch down: "jesteś 91 dni od Everyday English" is
+  // "you are N days from X" with Polish words on it. Polish puts the distance
+  // where it belongs — what's left, and to what.
+  return `Przy tym tempie do ${target} zostało Ci ${days} ${plDays(days)}.`
 }
+
+/**
+ * Holds the rest of the page back for one beat, so the hero can animate.
+ *
+ * Postęp mounts a lot at once — the constellation's WebGL over every known
+ * word, the retention bars over the same rows, the route map, the achievement
+ * grid, the heatmap. Traced on a phone-class CPU with ~2 400 known words, that
+ * arrived as 2.4 seconds of blocked frames in the first 2.7 — including single
+ * frames of 225 ms and 425 ms — and the hero's figures roll straight through
+ * it. NumberFlow animates on the main thread like everything else, so a blocked
+ * frame isn't a slow roll, it's a stopped one: exactly the "crunch" you see.
+ *
+ * None of that work is visible yet. The hero is the only thing on the first
+ * screenful, so the rest waits for its sweep to finish — or for the first sign
+ * that the learner is heading down the page, whichever comes first. Scrolling,
+ * a deep link (/postęp#powtorki) and reduced motion all open it immediately;
+ * nobody waits for content they asked for.
+ */
+function useBelowHeroReady(immediate: boolean): boolean {
+  const reduced = useReducedMotion()
+  const [ready, setReady] = useState(() => immediate || !!reduced)
+
+  useEffect(() => {
+    if (ready) return
+    const open = () => setReady(true)
+    const timer = window.setTimeout(open, HERO_BEAT_MS)
+    const opts = { passive: true, once: true, capture: true } as const
+    // Capture on window: the app scrolls inside AppShell's own container, and
+    // scroll events don't bubble — they do reach window on the way down.
+    window.addEventListener('scroll', open, opts)
+    window.addEventListener('wheel', open, opts)
+    window.addEventListener('touchstart', open, opts)
+    window.addEventListener('keydown', open, opts)
+    return () => {
+      window.clearTimeout(timer)
+      window.removeEventListener('scroll', open, true)
+      window.removeEventListener('wheel', open, true)
+      window.removeEventListener('touchstart', open, true)
+      window.removeEventListener('keydown', open, true)
+    }
+  }, [ready])
+
+  return ready
+}
+
+/** The hero's sweep is 900 ms (SWEEP_MS in CompassHero), and its last figure
+ *  starts rolling at 260 ms. A beat past that, and the page fills itself in. */
+const HERO_BEAT_MS = 1100
 
 export function StatsPage() {
   const {
@@ -97,6 +154,8 @@ export function StatsPage() {
   const achievementUnlocks = useAppStore(s => s.achievementUnlocks)
   const frozenDays = useAppStore(s => s.streakFreeze.usedOn)
   const { hash } = useLocation()
+  // A deep link is a request for something further down — open the page at once.
+  const belowReady = useBelowHeroReady(hash !== '')
 
   const [timeOfDay, setTimeOfDay] = useState<TimeOfDayStats[] | null | undefined>(undefined)
 
@@ -173,6 +232,13 @@ export function StatsPage() {
           <p className="statspage__sub">Gdzie jesteś na trasie do 10 000 słów</p>
         </header>
 
+        {/* Waits for the POINTS too, not just for `loading`.
+            The panel's figures roll once, from zero, on a clock they start on
+            mount — so a reading that lands afterwards doesn't join the
+            choreography, it interrupts it: the achievements pass over every
+            known word used to fall in the middle of the roll, and the roll is
+            on the main thread like everything else. One instrument, coming up
+            once, with all four readings in hand. */}
         {loading ? (
           <div className="statspage__skeleton skeleton" style={{ height: 320 }} />
         ) : (
@@ -196,6 +262,12 @@ export function StatsPage() {
           </p>
         )}
 
+        {!belowReady ? (
+          /* Not a loading state — the data is here. It is the hero's beat, and
+             this keeps the page's height honest while it passes. */
+          <div className="statspage__skeleton skeleton" style={{ height: 460 }} aria-hidden="true" />
+        ) : (
+        <>
         {/* --overlay-host: the panel can go full screen, and the scroll-settle
             animation on a plain section would trap that `position: fixed`
             inside it — see StatsPage.css. */}
@@ -365,6 +437,8 @@ export function StatsPage() {
             <PackageProgressList limit={5} refreshKey={tick || undefined} />
           )}
         </section>
+        </>
+        )}
       </div>
     </AppShell>
   )

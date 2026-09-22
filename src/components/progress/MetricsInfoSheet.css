@@ -51,10 +51,20 @@
 .metricsinfo__item--pace   { border-left: 3px solid var(--accent-bright); }
 
 .metricsinfo__icon {
-  font-size: var(--text-2xl);
-  line-height: 1.3;
+  display: inline-flex;
+  /* The row is a stretch flex, so an icon left to itself centres against the
+     whole paragraph and floats in the card's middle. It belongs on the title
+     it labels — 3px is the optical drop onto that line's cap height. */
+  align-self: flex-start;
+  padding-top: 3px;
   flex-shrink: 0;
 }
+
+/* Each explanation wears the accent of the reading it explains — the same one
+   that already runs down its left edge. */
+.metricsinfo__item--streak .metricsinfo__icon { color: var(--accent-orange); }
+.metricsinfo__item--points .metricsinfo__icon { color: var(--points-gold); }
+.metricsinfo__item--pace   .metricsinfo__icon { color: var(--accent-bright); }
 
 .metricsinfo__text {
   min-width: 0;

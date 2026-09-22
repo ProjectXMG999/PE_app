@@ -1,16 +1,12 @@
 import { useLayoutEffect, useRef, type CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
-import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
 import { TrainingOnboardingCard } from '../components/training/TrainingOnboardingCard'
 import { exerciseGlyph } from '../components/training/exerciseGlyph'
 import { CheckGlyph, ChevronRightGlyph, SpeakerGlyph } from '../components/mode/glyphs'
-import { fadeUpReduced, glassReveal, glassRevealReduced, heroReveal, staggerContainer } from '../components/today/motion'
 import { TRAINING_EXERCISES, getListenedExercises } from '../data/trainingExercises'
 import './TrainingPage.css'
 import { armMorph, morphArmed, useLinkTransition } from '../navigation/transitions'
-
-const MotionLink = motion.create(Link)
 
 /**
  * Trening — the four speaking exercises.
@@ -19,18 +15,24 @@ const MotionLink = motion.create(Link)
  * corner, with the exercise symbol on a gradient tile. It used to be a flat
  * black card with a coloured bar across the top and an emoji in a tinted box —
  * the bar and the emoji were the only places the colour lived.
+ *
+ * ── No motion components on this screen ────────────────────────────────────
+ * The header, the onboarding card and the four cards used to be Framer
+ * `motion` elements cascading in on mount. Six motion components means six
+ * projection nodes joining the layout-projection pass that the tab bar's own
+ * `layoutId` indicator starts on every tab tap — measured, that pass topped the
+ * profile of opening this screen. The entrance is now `.pe-arrive` on the page
+ * itself (animations.css): one compositor-driven plane, no library involved.
+ *
+ * The press feedback went the same way. `whileTap` scaled each card, and
+ * scaling glass forces its backdrop to be re-sampled at a new scale every
+ * frame — the thing surfaces.css explicitly keeps off `.u-liquid`. The
+ * primitive's own `:active` (a brighter rim, the lift collapsing) is the
+ * house treatment and costs nothing.
  */
 export function TrainingPage() {
   const listened = getListenedExercises()
   const onLink = useLinkTransition()
-  const reduced = useReducedMotion()
-  const item = reduced ? fadeUpReduced : heroReveal
-  /* Anything that IS or CONTAINS glass rises without an opacity channel. A
-     group opacity below 1 composites the blurred backdrop at partial alpha over
-     the unblurred one, so the card lands looking almost clear and only reaches
-     full fog a third of a second later — it reads as the effect restarting
-     after the page has arrived. See glassReveal in today/motion.ts. */
-  const glassItem = reduced ? glassRevealReduced : glassReveal
 
   /* ── The icon morph ────────────────────────────────────────────────────────
      The four icons used to carry `view-transition-name` permanently, in the
@@ -74,27 +76,23 @@ export function TrainingPage() {
 
   return (
     <AppShell>
-      <motion.div className="training-page" variants={staggerContainer} initial="hidden" animate="show">
-        <motion.div className="training-header" variants={item}>
+      <div className="training-page pe-arrive">
+        <div className="training-header">
           <p className="training-header__kicker u-kicker">Trening</p>
           <h1 className="training-header__title">Language Performance Training</h1>
           <p className="training-header__subtitle">Poznaj 4 ćwiczenia, dzięki którym zaczniesz naprawdę mówić po angielsku.</p>
-        </motion.div>
+        </div>
 
-        <motion.div variants={glassItem}>
-          <TrainingOnboardingCard />
-        </motion.div>
+        <TrainingOnboardingCard />
 
-        <motion.div className="training-grid" variants={staggerContainer}>
+        <div className="training-grid">
           {TRAINING_EXERCISES.map((exercise, idx) => (
-            <MotionLink
+            <Link
               key={exercise.id}
               to={`/trening/${exercise.id}`}
               onClick={e => { openExercise(exercise.id); onLink(`/trening/${exercise.id}`, 'forward')(e) }}
               className="training-card u-liquid"
               style={{ ['--ex' as string]: exercise.color } as CSSProperties}
-              variants={glassItem}
-              whileTap={reduced ? undefined : { scale: 0.975 }}
             >
               <div className="training-card__top">
                 <div
@@ -126,10 +124,10 @@ export function TrainingPage() {
                   <ChevronRightGlyph size={16} weight={2.2} />
                 </span>
               </div>
-            </MotionLink>
+            </Link>
           ))}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </AppShell>
   )
 }

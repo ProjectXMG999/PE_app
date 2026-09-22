@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useReducedMotion } from 'framer-motion'
 import { FlowNumber } from '../shared/FlowNumber'
+import { BoltGlyph, FlameGlyph, GemGlyph } from '../mode/glyphs'
 import { LEVEL_META, ROUTE_TOTAL } from '../../data/levels'
 import { plWords, plDays } from '../../utils/plural'
 import { MetricsInfoSheet } from './MetricsInfoSheet'
@@ -110,8 +111,13 @@ export function CompassHero({ knownWords, streak, points, pace, guidance, loadin
 
       <p className="compass__eyebrow">Twoja trasa</p>
 
+      {/* `useGrouping` explicitly, because pl-PL's default is `min2`: it groups
+          from five digits up, so the panel read "2437 / 10 000" — the same
+          quantity written two ways, side by side, in its largest type. */}
       <p className="compass__figure">
-        <span className="compass__value"><FlowNumber value={loading ? 0 : knownWords} delayMs={60} /></span>
+        <span className="compass__value">
+          <FlowNumber value={loading ? 0 : knownWords} delayMs={60} format={{ useGrouping: true }} />
+        </span>
         <span className="compass__total">/ {ROUTE_TOTAL.toLocaleString('pl-PL')}</span>
       </p>
       <p className="compass__unit">słów poznanych</p>
@@ -149,7 +155,9 @@ export function CompassHero({ knownWords, streak, points, pace, guidance, loadin
         <div className="compass__gauge">
           <dt className="compass__gauge-label">seria</dt>
           <dd className="compass__gauge-value">
-            <span className="compass__gauge-icon" aria-hidden="true">🔥</span>
+            <span className="compass__gauge-icon compass__gauge-icon--streak">
+              <FlameGlyph size={15} weight={1.9} />
+            </span>
             <FlowNumber value={streak} delayMs={140} />
             <span className="compass__gauge-suffix">{plDays(streak)}</span>
           </dd>
@@ -157,21 +165,34 @@ export function CompassHero({ knownWords, streak, points, pace, guidance, loadin
         <div className="compass__gauge">
           <dt className="compass__gauge-label">punkty</dt>
           <dd className="compass__gauge-value compass__gauge-value--points">
-            <span className="compass__gauge-icon" aria-hidden="true">⬥</span>
-            <FlowNumber value={points} delayMs={200} />
+            <span className="compass__gauge-icon compass__gauge-icon--points">
+              <GemGlyph size={14} weight={1.9} />
+            </span>
+            <FlowNumber value={points} delayMs={200} format={{ useGrouping: true }} />
           </dd>
         </div>
         <div className="compass__gauge">
-          <dt className="compass__gauge-label">tempo</dt>
-          <dd className="compass__gauge-value">
-            <span className="compass__gauge-icon" aria-hidden="true">⚡</span>
-            <FlowNumber value={pace?.current ?? 0} delayMs={260} />
-            <span className="compass__gauge-suffix">/dzień</span>
+          {/* The delta rides on the LABEL, not on the figure. Beside the value
+              it was a fourth item in a row already carrying an icon, a number
+              and a unit: it wrapped, and the tempo column came out a line
+              taller than the two beside it — three gauges that are meant to
+              read as one instrument, sitting at two different heights. On the
+              label line it also says what it is about, which is the metric
+              rather than today's number. */}
+          <dt className="compass__gauge-label">
+            tempo
             {pace?.deltaPct != null && (
               <span className={`compass__delta${pace.deltaPct >= 0 ? '' : ' compass__delta--down'}`}>
-                {pace.deltaPct >= 0 ? '↑' : '↓'} {Math.abs(pace.deltaPct)}%
+                {pace.deltaPct >= 0 ? '↑' : '↓'}{Math.abs(pace.deltaPct)}%
               </span>
             )}
+          </dt>
+          <dd className="compass__gauge-value">
+            <span className="compass__gauge-icon compass__gauge-icon--pace">
+              <BoltGlyph size={15} weight={1.9} />
+            </span>
+            <FlowNumber value={pace?.current ?? 0} delayMs={260} />
+            <span className="compass__gauge-suffix">/dzień</span>
           </dd>
         </div>
       </dl>

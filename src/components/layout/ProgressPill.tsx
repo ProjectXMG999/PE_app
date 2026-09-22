@@ -1,6 +1,7 @@
 import { useProgressPulse } from '../../hooks/useProgressPulse'
 import { useAppStore } from '../../store/useAppStore'
 import { formatPoints } from '../../services/points'
+import { FlameGlyph, GemGlyph, SnowflakeGlyph } from '../mode/glyphs'
 import './ProgressPill.css'
 import { useTransitionNavigate } from '../../navigation/transitions'
 
@@ -33,14 +34,14 @@ export function ProgressPill() {
   return (
     <div className="progresspill">
       <button className="progresspill__stat progresspill__stat--flame u-liquid" onClick={() => navigate('/postęp', { direction: 'lateral' })}>
-        <span className="progresspill__icon" aria-hidden="true">🔥</span> {pulse.streak} dni
+        <span className="progresspill__icon"><FlameGlyph size={13} weight={2} /></span> {pulse.streak} dni
       </button>
       <button className="progresspill__stat progresspill__stat--points u-liquid" onClick={() => navigate('/postęp', { direction: 'lateral' })}>
-        <span className="progresspill__icon" aria-hidden="true">⬥</span> {formatPoints(pulse.points)}
+        <span className="progresspill__icon"><GemGlyph size={12} weight={2} /></span> {formatPoints(pulse.points)}
       </button>
       {freeze.available > 0 && (
         <span className="progresspill__stat progresspill__stat--freeze u-liquid" title="Zamrożenie serii — zużyje się samo, gdy opuścisz dzień">
-          <span className="progresspill__icon" aria-hidden="true">❄</span> {freeze.available}
+          <span className="progresspill__icon"><SnowflakeGlyph size={12} weight={2} /></span> {freeze.available}
         </span>
       )}
     </div>

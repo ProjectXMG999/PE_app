@@ -1,6 +1,7 @@
-import { useRef } from 'react'
+import { useRef, type ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { Sheet, useSheetMotion, type SheetHandle } from '../shared/Sheet'
+import { BoltGlyph, FlameGlyph, GemGlyph } from '../mode/glyphs'
 import './MetricsInfoSheet.css'
 
 interface Props {
@@ -8,7 +9,10 @@ interface Props {
 }
 
 interface Metric {
-  icon: string
+  /* The same glyphs the compass and the header pill use for these three
+     readings — an explanation that draws its subject differently from the
+     thing it explains is a second icon to learn, not a caption. */
+  icon: ReactNode
   title: string
   lead: string
   detail: string
@@ -24,21 +28,21 @@ interface Metric {
  */
 const METRICS: Metric[] = [
   {
-    icon: '🔥',
+    icon: <FlameGlyph size={26} weight={1.7} />,
     title: 'Seria',
     lead: 'Dni z rzędu, w których się uczyłeś — liczy się każda minuta, nie tylko domknięta paczka.',
-    detail: 'Ominięcie jednego dnia nie musi jej zepsuć: raz na 14 dni dostajesz zamrożenie ❄, które automatycznie ratuje serię za Ciebie.',
+    detail: 'Ominięcie jednego dnia nie musi jej zepsuć: raz na 14 dni dostajesz zamrożenie, które automatycznie ratuje serię za Ciebie.',
     accent: 'streak',
   },
   {
-    icon: '⬥',
+    icon: <GemGlyph size={24} weight={1.7} />,
     title: 'Punkty Progress',
     lead: 'Waluta wysiłku — rosną za każdą minutę nauki, nie tylko za nowe słowa.',
     detail: 'Najwięcej dają mówienie i aktywny trening, mniej szybkie słuchanie. Do tego bonus za opanowane słowa, ukończone paczki i regularność — liczy się nawet dzień, w którym nic „nie kliknęło".',
     accent: 'points',
   },
   {
-    icon: '⚡',
+    icon: <BoltGlyph size={26} weight={1.7} />,
     title: 'Tempo',
     lead: 'Średnia liczba nowo opanowanych słów na dzień, od pierwszego dnia nauki.',
     detail: 'Słowa oznaczone jako znane bez nauki w aplikacji się tu nie liczą — tempo ma pokazywać, ile faktycznie przerabiasz. Strzałka obok porównuje ostatni tydzień z poprzednim: mówi, czy przyspieszasz, czy zwalniasz.',
