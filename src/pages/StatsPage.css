@@ -1,4 +1,14 @@
+/* Capped like every other page (Dzisiaj 640, Pakiety 640→720, PackPreview and
+   ModeScreen 720). This was the one page without a width of its own, so on
+   desktop it inherited the shell's full --content-max-width — up to 2040px.
+   The heatmap is the casualty that makes it obvious: `repeat(7, 1fr)` with
+   `aspect-ratio: 1` means cell WIDTH drives cell HEIGHT, so at 2560px the
+   rhythm calendar became a 1364px-tall wall of 268px squares. The facts grid,
+   the achievement grid and the retention bars were all stretched by the same
+   missing line. */
 .statspage {
+  max-width: var(--focus-max-width);
+  margin: 0 auto;
   padding: var(--spacing-lg) var(--spacing-md);
   padding-bottom: var(--spacing-2xl);
 }

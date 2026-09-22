@@ -88,6 +88,42 @@ button {
   touch-action: manipulation;
 }
 
+/* ── Tap targets below 44px ──────────────────────────────────────────────────
+   Six buttons on the busiest screens are drawn smaller than a finger: the info
+   button on the Postęp hero (28), the search clear on Pakiety (30), the
+   Konstelacja mode switch (32), the sentence and word play buttons mid-session
+   (28 and 34) and the back button on the mode chooser (34).
+
+   Each keeps its drawn size — these are deliberately small, and growing them
+   would push six layouts around — and gains an invisible ::after that carries
+   the hit area out to 44+. A pseudo-element is out of flow, so nothing moves.
+
+   Listed centrally on purpose: this is the complete inventory of undersized
+   targets, so it can be re-audited in one place rather than rediscovered. Keep
+   it in sync if one of these is renamed.
+
+   `.compass__info-btn` is deliberately absent from the `position: relative`
+   rule — it is already `position: absolute`, which is its own containing
+   block; adding `relative` would move it. */
+.rc__search-clear,
+.constellation__mode,
+.stage__play,
+.modescreen__back {
+  position: relative;
+}
+
+.compass__info-btn::after,
+.rc__search-clear::after,
+.constellation__mode::after,
+.stage__play::after,
+.modescreen__back::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  /* The button itself owns the click; this only widens where the tap lands. */
+  pointer-events: auto;
+}
+
 input {
   font-family: var(--font-body);
   color: inherit;

@@ -10,8 +10,14 @@
   position: fixed;
   inset: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
+  /* `safe`, and a scroll, for the same reason SmartDoneScreen has them — this
+     is the same screen family and the fix only ever landed on that one. The
+     content stack here is ~440px (badge 148 + title clamp(38px,11vw,54px) +
+     chip + actions + padding), so any phone in LANDSCAPE — 390-412px of
+     viewport height — clips ~50px off BOTH ends with plain `center`, and
+     `.mastery__actions` is the only way off this screen. */
+  align-items: safe center;
   padding: env(safe-area-inset-top, 0px) 20px env(safe-area-inset-bottom, 0px);
   background:
     radial-gradient(ellipse 80% 55% at 50% 22%, var(--accent-glow) 0%, transparent 60%),
@@ -19,7 +25,10 @@
       color-mix(in oklch, var(--accent) 22%, var(--bg-primary)) 0%,
       var(--bg-primary) 72%);
   z-index: 200;
-  overflow: hidden;
+  /* x hidden so the bloom can't push the page sideways; y scrolls so a
+     landscape phone can reach the buttons. */
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Volumetric light behind the medallion (MasteryField.tsx). It sits above the

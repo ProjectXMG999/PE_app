@@ -30,3 +30,19 @@
   padding: 6px 16px;
   border-radius: var(--radius-full);
 }
+
+/* The one fixed bar that never got a desktop block. Toast, HerePill and
+   PackPreview's action bar all offset by the sidebar; this one spanned the
+   whole window, painted over the sidebar (z-index 200 against a sidebar in
+   normal grid flow), and floated ~86px off the bottom clearing a tab bar that
+   AppShell hides at this width. At 2560px it was a 2528px bar holding one
+   sentence and one button. */
+@media (min-width: 1024px) {
+  .sw-update-toast {
+    bottom: var(--spacing-xl);
+    left: var(--sidebar-width);
+    right: 0;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+}

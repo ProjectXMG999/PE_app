@@ -2,7 +2,14 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <!-- No `maximum-scale` / `user-scalable=no`. Every type token in tokens.css
+         is in px, so with zoom locked there was no way at all to enlarge text —
+         a WCAG 1.4.4 failure. iOS has ignored `user-scalable=no` since iOS 10,
+         but Android Chrome and an installed Android PWA honour it, and that is
+         a target platform. The double-tap-zoom delay such a lock usually guards
+         against is already handled by `touch-action: manipulation` on buttons
+         (global.css). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <!-- Dark = app base colour. Also the opaque status-bar background in an
          installed iOS PWA now that black-translucent is gone (see below). -->
     <meta name="theme-color" content="#010102" />

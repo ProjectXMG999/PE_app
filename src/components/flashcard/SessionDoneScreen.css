@@ -12,8 +12,12 @@
   position: fixed;
   inset: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
+  /* Same fix as SmartDoneScreen, which is the same screen family — with plain
+     `center` a card taller than the viewport overflows equally in both
+     directions and the top is clipped beyond reach. Bites in landscape, where
+     the viewport is 390-412px tall and the actions are the only way out. */
+  align-items: safe center;
   padding: env(safe-area-inset-top, 0px) 20px env(safe-area-inset-bottom, 0px);
   background:
     radial-gradient(ellipse 80% 55% at 50% 22%,
@@ -22,7 +26,8 @@
       color-mix(in oklch, var(--success) 16%, var(--bg-primary)) 0%,
       var(--bg-primary) 72%);
   z-index: 200;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Soft ambient bloom behind the medallion */

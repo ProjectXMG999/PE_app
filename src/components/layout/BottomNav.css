@@ -7,6 +7,14 @@
   position: fixed;
   left: var(--spacing-md);
   right: var(--spacing-md);
+  /* The capsule is only hidden from 1024px up, so between 640 and 1023 — iPad
+     portrait at 768, iPad Air at 834, an unfolded Fold at 912 — it stretched to
+     736-991px: five tabs of ~150-198px each holding a 32px icon and a 10px
+     label, floating under content that is still capped at 640. Capped and
+     centred, it stays a capsule at every width it is actually visible at.
+     `margin-inline: auto` resolves against the left/right insets above. */
+  max-width: 480px;
+  margin-inline: auto;
   /* Clear of the home indicator, not on top of it. At a flat 14px the capsule
      sat inside the system gesture zone on any notched phone: iOS draws the
      indicator over it and claims swipes there, so the bottom edge of every tab
