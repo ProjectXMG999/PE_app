@@ -41,11 +41,26 @@
      cannot parse oklch() there fails SILENTLY back to its own chrome colour,
      which is invisible on any device you did not test.
 
-     This is --bg-primary resolved to sRGB and has to be re-derived if that
-     moves: oklch(0.07 0.008 275) -> #010102. Not a free colour — the band has
-     to be the ink the page starts with, or the status area reads as a separate
-     strip of chrome laid on top of the app instead of as the top of the app. */
-  --theme-color-meta: #010102;
+     Not a free colour: it has to be what the app actually paints along its top
+     edge, or the status area reads as a separate strip of chrome laid on the
+     app instead of as the top of it.
+
+     That edge is NOT --bg-primary. With status-bar-style=default iOS reserves
+     the strip, paints it from this tag and puts the web view underneath — so
+     the strip sits directly above .ambient, and two of that layer's three
+     radial stops are anchored at the top of the screen (20% 10% violet,
+     88% 4% indigo). This used to say #010102, the flat ground, and the result
+     on a Dynamic Island iPhone was a flat black band above a violet app.
+
+     Measured at 393px wide with the shader running: #181e45. The frame drifts
+     under 9/255 as the mesh moves, so one static value holds. Re-measure if
+     --mesh-* or --ambient-strength move; a stale value here shows up as a
+     seam, which is exactly what it is for. */
+  --theme-color-meta: #181e45;
+  /* The focus/study screens hide the ambient (AppShell's hideAmbient), and
+     there the ground really is flat --bg-primary — App.tsx switches to this.
+     oklch(0.07 0.008 275) -> #010102. */
+  --theme-color-meta-flat: #010102;
 
   /* ── Accent (violet) — the interactive colour ──────────────────────────── */
   --accent: oklch(0.72 0.17 292);
@@ -467,11 +482,13 @@
   --bg-card-hover: oklch(0.965 0.012 290);
   --bg-input: oklch(1 0 0);
 
-  /* oklch(0.97 0.006 275) -> #f4f5f9, the same conversion as the dark value in
-     :root. Before this existed the meta tag was a single static #010102, so a
-     light-theme phone wore a black status band above a near-white app — the one
-     place the theme switch never reached. */
-  --theme-color-meta: #f4f5f9;
+  /* Measured the same way as the dark pair: the light mesh's top row is
+     #bfc5eb with the shader running (drift under 7/255), while the flat ground
+     under a focus screen is oklch(0.97 0.006 275) -> #f4f5f9. Before either
+     existed the meta tag was a single static #010102, so a light-theme phone
+     wore a black status band above a near-white app. */
+  --theme-color-meta: #bfc5eb;
+  --theme-color-meta-flat: #f4f5f9;
 
   --accent: oklch(0.55 0.22 292);
   --accent-dim: oklch(0.48 0.2 292);

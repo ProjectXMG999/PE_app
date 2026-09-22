@@ -58,8 +58,41 @@ const SettingsPage = lazyPage(() => import('./pages/SettingsPage'), 'SettingsPag
 const LoginPage = lazyPage(() => import('./pages/LoginPage'), 'LoginPage', /^\/logowanie$/)
 const AccountPage = lazyPage(() => import('./pages/AccountPage'), 'AccountPage', /^\/konto$/)
 
+/**
+ * The iOS status-bar band and the Chrome-on-Android address-bar tint. It isn't
+ * CSS, so it follows neither [data-theme] nor the page on its own.
+ *
+ * The colour has to be what the app actually paints along its top edge, and
+ * that is NOT --bg-primary: with `status-bar-style=default` iOS reserves the
+ * strip, paints it from this tag and puts the web view underneath, so the strip
+ * sits directly above the AmbientBackground — whose two brightest radial stops
+ * are anchored at the top of the screen. Measured on an iPhone-width viewport
+ * the app's top row is #181e45 dark / #bfc5eb light while this tag was saying
+ * #010102, which is the flat black band that showed above a violet app.
+ *
+ * Two exceptions put the flat --bg-primary under the strip instead, and both
+ * read the -flat token: the screens that hide the ambient (the study/focus
+ * stack), and the launch curtain, which paints that same flat colour over
+ * everything while [data-splash] is set. Without the curtain check React would
+ * mount and move the band to the mesh colour a full second before the mesh is
+ * actually on screen.
+ *
+ * Read from the store rather than a prop so every caller shares one
+ * implementation.
+ */
+function syncThemeColor() {
+  const el = document.documentElement
+  const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]')
+  if (!meta) return
+  const flat = el.hasAttribute('data-splash') || useAppStore.getState().ambientHidden
+  const token = flat ? '--theme-color-meta-flat' : '--theme-color-meta'
+  const c = getComputedStyle(el).getPropertyValue(token).trim()
+  if (c) meta.content = c
+}
+
 export function App() {
   const { theme, setInstallPrompt, setInstalled, setSwUpdateAvailable, setSwRegistration } = useAppStore()
+  const ambientHidden = useAppStore(s => s.ambientHidden)
   const location = useLocation()
 
   const { needRefresh, updateServiceWorker } = useRegisterSW({
@@ -76,19 +109,10 @@ export function App() {
     const apply = () => {
       el.classList.add('no-transition')
       el.setAttribute('data-theme', resolveTheme(theme))
-      // The iOS status-bar band and the Chrome-on-Android address-bar tint.
-      // It isn't CSS, so it doesn't follow [data-theme] on its own — before
-      // this it was a static #010102 in index.html and the light theme ran
-      // with a black band above a near-white app. Read from
-      // --theme-color-meta rather than hard-coded here so the colour keeps one
-      // home in tokens.css; the setAttribute above has already invalidated
-      // style and getComputedStyle forces the recalc, so this reads the NEW
-      // theme's value in the same tick.
-      const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]')
-      if (meta) {
-        const c = getComputedStyle(el).getPropertyValue('--theme-color-meta').trim()
-        if (c) meta.content = c
-      }
+      // setAttribute above has already invalidated style, and syncThemeColor's
+      // getComputedStyle forces the recalc, so this reads the NEW theme's
+      // value in the same tick.
+      syncThemeColor()
       // One rAF to let the attribute apply, then remove the class so transitions resume
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
@@ -104,6 +128,29 @@ export function App() {
       return () => mq.removeEventListener('change', apply)
     }
   }, [theme])
+
+  // Entering or leaving a focus screen swaps the ground under the status bar
+  // from the ambient mesh to flat --bg-primary, so the band has to follow. The
+  // theme effect above covers the theme half; this covers the other one.
+  useEffect(() => {
+    syncThemeColor()
+  }, [ambientHidden])
+
+  // The third thing that changes that ground: the launch curtain lifting. It
+  // is removed from the root by a timer in index.html and by boot/splash.ts on
+  // a tap, neither of which React hears about — so watch the attribute, the
+  // way AmbientBackground already watches data-theme.
+  useEffect(() => {
+    const el = document.documentElement
+    if (!el.hasAttribute('data-splash')) return
+    const mo = new MutationObserver(() => {
+      if (el.hasAttribute('data-splash')) return
+      syncThemeColor()
+      mo.disconnect()
+    })
+    mo.observe(el, { attributes: true, attributeFilter: ['data-splash'] })
+    return () => mo.disconnect()
+  }, [])
 
   useEffect(() => {
     initInstallService(
