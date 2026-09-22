@@ -6,13 +6,14 @@ import { useReviewSet, ReviewInterludeStep } from '../hooks/useReviewSet'
 import { useSessionOpener } from '../hooks/useSessionOpener'
 import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { applyKnown, applyUnknown } from '../services/review'
-import { saveSession, saveWordProgress } from '../services/db'
+import { saveSession, saveWordProgress, getWordProgress } from '../services/db'
 import { dayKey } from '../utils/day'
 import { plPackets } from '../utils/packVisuals'
 import { plWords } from '../utils/plural'
 import { StudyStage, StageTrack } from '../components/flashcard/StudyStage'
 import { SessionOpener } from '../components/flashcard/SessionOpener'
 import { SessionStage } from '../components/flashcard/SessionStage'
+import { ReviewCheckpoint } from '../components/flashcard/ReviewCheckpoint'
 import { useBack } from '../navigation/navigation'
 import './ReviewPage.css'
 
@@ -125,9 +126,13 @@ export function ReviewPage() {
     stop()
 
     const opts = { requestRetention: currentRequestRetention() }
+    // Fresh read rather than `card.progress`, which is the snapshot the set was
+    // built from — see the same note in SmartSessionPage. The retention signal
+    // below deliberately keeps reading the snapshot.
+    const existing = await getWordProgress(card.word.id)
     const updated = recalled
-      ? applyKnown(card.progress, card.word.id, card.packageId, new Date(), opts)
-      : applyUnknown(card.progress, card.word.id, card.packageId, new Date(), opts)
+      ? applyKnown(existing, card.word.id, card.packageId, new Date(), opts)
+      : applyUnknown(existing, card.word.id, card.packageId, new Date(), opts)
     await saveWordProgress(updated)
     if (recalled) setKept(k => k + 1)
     if (card.progress?.status === 'known') {
@@ -192,7 +197,6 @@ export function ReviewPage() {
     // Checkpoint after each finished batch — do you want to keep going?
     if (batchDone) {
       const queueLeft = Math.max(0, dueTotal - cardCount)
-      const totalToday = sessionSeen
       // Once the day's portion is done, stop nudging "keep going" — swap the
       // buttons so "enough for today" is the primary, and reassure.
       //
@@ -204,40 +208,18 @@ export function ReviewPage() {
       // already finished.
       const doneToday = servedBefore + sessionSeen
       const portionDone = reviewBudget > 0 && doneToday >= reviewBudget
-      const continueBtn = (
-        <button
-          className={`review__state-btn${portionDone ? '' : ' review__state-btn--primary u-cta'}`}
-          onClick={continueBatch}
-        >
-          Kontynuuj powtórkę
-        </button>
-      )
-      const stopBtn = (
-        <button
-          className={`review__state-btn${portionDone ? ' review__state-btn--primary u-cta' : ''}`}
-          onClick={() => goBack()}
-        >
-          {queueLeft > 0 ? 'Na dziś wystarczy' : backLabel}
-        </button>
-      )
       return (
-        <div className="review__state">
-          <span className="review__state-icon" aria-hidden="true">{queueLeft > 0 ? '💪' : '🎉'}</span>
-          <h1 className="review__state-title">
-            {queueLeft > 0 ? 'Świetnie!' : 'Wszystko zrobione!'}
-          </h1>
-          <p className="review__state-text">
-            Utrzymane <strong>{kept}</strong> z {cardCount} w tej porcji
-            {totalToday > cardCount && ` · dziś łącznie ${totalToday}`}.
-            {queueLeft > 0 ? ` W kolejce jeszcze ${queueLeft}.` : ' Kolejka pusta.'}
-            {portionDone && queueLeft > 0 &&
-              ` Zrobiłeś dziś ${doneToday} — reszta spokojnie może poczekać.`}
-          </p>
-          <div className="review__state-actions">
-            {queueLeft > 0 && (portionDone ? <>{stopBtn}{continueBtn}</> : <>{continueBtn}{stopBtn}</>)}
-            {queueLeft === 0 && stopBtn}
-          </div>
-        </div>
+        <ReviewCheckpoint
+          kept={kept}
+          cardCount={cardCount}
+          doneToday={doneToday}
+          reviewBudget={reviewBudget}
+          queueLeft={queueLeft}
+          portionDone={portionDone}
+          onContinue={continueBatch}
+          onStop={() => goBack()}
+          stopLabel={queueLeft > 0 ? 'Na dziś wystarczy' : backLabel}
+        />
       )
     }
 

@@ -1,8 +1,9 @@
-/* The session's non-card screens — loading, empty, batch-done, and the
-   listening interlude. The card itself is StudyStage (components/flashcard).
-   Shared with SmartSessionPage, which has the same three states. */
+/* The session's non-card screens — loading, empty, and the listening
+   interlude. The card itself is StudyStage (components/flashcard); the
+   between-batches checkpoint is ReviewCheckpoint, which has its own sheet.
+   Shared with SmartSessionPage and the two pages' error states. */
 
-/* Loading / empty / done — one centred column for all three. */
+/* Loading / empty / error — one centred column for all three. */
 .review__state {
   display: flex;
   flex-direction: column;
