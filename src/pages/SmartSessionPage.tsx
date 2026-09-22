@@ -6,7 +6,7 @@ import { useSmartSession } from '../hooks/useSmartSession'
 import { useSessionOpener } from '../hooks/useSessionOpener'
 import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { applyKnown, applyUnknown } from '../services/review'
-import { saveSession, saveWordProgress } from '../services/db'
+import { saveSession, saveWordProgress, getWordProgress } from '../services/db'
 import { recomputeMasteryFor } from '../services/masteryRepair'
 import { shouldPromptLevelUp } from '../services/comfort'
 import { showToast } from '../services/toast'
@@ -270,9 +270,16 @@ export function SmartSessionPage() {
     stop()
 
     const opts = { requestRetention: currentRequestRetention() }
+    // Read the row now rather than using `card.progress`, which was captured
+    // when the session was built. If the same word is answered twice in one
+    // sitting the second answer would otherwise be computed from the state
+    // before the first and overwrite it. `card.progress` is still the right
+    // input for the quality signals below — those ask what the word looked
+    // like when the session started.
+    const existing = await getWordProgress(card.word.id)
     const updated = recalled
-      ? applyKnown(card.progress, card.word.id, card.packageId, new Date(), opts)
-      : applyUnknown(card.progress, card.word.id, card.packageId, new Date(), opts)
+      ? applyKnown(existing, card.word.id, card.packageId, new Date(), opts)
+      : applyUnknown(existing, card.word.id, card.packageId, new Date(), opts)
     await saveWordProgress(updated)
 
     const t = tallyRef.current[card.segment]

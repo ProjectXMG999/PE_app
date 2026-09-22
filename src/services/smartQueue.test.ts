@@ -271,6 +271,32 @@ function pack(id: string, wordIds: string[]): Pack {
 }
 
 describe('composeSmartSteps', () => {
+  it('never asks the same word twice, even when it is both due and in a learn pack', () => {
+    // A `learning` word that is due sits in reviewWords AND still lives in its
+    // pack, whose only learn-stream filter is `status === 'known'`. It used to
+    // come round twice in one sitting, both copies carrying the progress row
+    // captured at build time — so the second answer was computed from the state
+    // before the first and quietly overwrote it.
+    const selection: SmartSelection = {
+      targetCount: 4,
+      size: sizeOf(4),
+      quota: { learn: 3, review: 1, stretch: 0 },
+      reviewRatio: SMART.REVIEW_RATIO,
+      tone: null,
+      learnPackIds: ['p1'],
+      stretchPackId: null,
+      reviewWords: [wp({ wordId: 'p1-w1', packageId: 'p1', status: 'learning' })],
+      packIds: ['p1'],
+    }
+    const packs = new Map([['p1', pack('p1', ['p1-w1', 'p1-w2', 'p1-w3', 'p1-w4'])]])
+
+    const { steps } = composeSmartSteps({ selection, packs, wordProgressById: new Map() })
+
+    const ids = steps.flatMap(s => (s.kind === 'card' ? [s.word.id] : []))
+    expect(new Set(ids).size).toBe(ids.length)
+    expect(ids.filter(id => id === 'p1-w1')).toHaveLength(1)
+  })
+
   it('weaves warmup → review hand-off → stretch hand-off, with no info card for an empty segment', () => {
     const selection: SmartSelection = {
       targetCount: 6,

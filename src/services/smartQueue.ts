@@ -139,6 +139,9 @@ export interface SmartSelection {
   stretchPackId: string | null
   /** Priority-ordered review words (real due words + leftovers), pre-capped. */
   reviewWords: WordProgress[]
+  /** No unlearned word is left on the route, so this sitting can only be
+   *  maintenance — whatever the quota arithmetic happens to come to. */
+  learnExhausted: boolean
   /** Every pack id the session needs content for. */
   packIds: string[]
 }
@@ -354,6 +357,8 @@ export function selectSmart({
     ...orderedDue.slice(0, dueCap),
     ...stragglerWords,
   ].slice(0, reviewTarget + Math.min(stragglerWords.length, SMART.STRAGGLER_OVERFLOW))
+  // Backfilled below, once we know how much of the sitting the learn stream can
+  // actually supply.
 
   // ── stretch stream ───────────────────────────────────────────────────────
   const learnCandidates = scoped.filter(p => !isFullyKnown(p) && !isStraggler(p))
@@ -423,6 +428,40 @@ export function selectSmart({
    */
   const learnQuota = Math.min(learnTarget, acc)
 
+  /**
+   * Nothing new left to draw on. Not "no learn words were picked" — the learn
+   * quota is a remainder and is legitimately 0 whenever review fills the
+   * sitting — but "the route holds no unlearned word this session could take".
+   * Stragglers are excluded from `learnCandidates` on purpose: their leftovers
+   * ride in the review stream, not as new material.
+   */
+  const learnExhausted = learnCandidates.length === 0 && stretchPackId === null
+
+  /**
+   * Unused learn capacity becomes review, instead of a shorter sitting.
+   *
+   * `reviewRatio` caps how much of a session is maintenance so new material
+   * isn't crowded out — a cap that only makes sense while there IS new material.
+   * A learner who has finished the route got the cap anyway: quota.learn
+   * clamped to 0 against an empty catalogue, nothing claimed the freed slots,
+   * and a 20-card sitting with 53 words due came out as 7 cards. The ratio had
+   * quietly become a ceiling on the whole session.
+   *
+   * So the remainder — whatever learn and stretch can't fill — is offered to
+   * the words that are actually due, in the same priority order, stragglers
+   * last. Where the learn stream can supply its quota this adds nothing.
+   */
+  const capacity = Math.max(0, targetCount - learnQuota - stretchTarget)
+  if (reviewWords.length < capacity) {
+    const taken = new Set(reviewWords.map(w => w.wordId))
+    for (const w of [...orderedDue, ...stragglerWords]) {
+      if (reviewWords.length >= capacity) break
+      if (taken.has(w.wordId)) continue
+      taken.add(w.wordId)
+      reviewWords.push(w)
+    }
+  }
+
   const packIds = [
     ...new Set([
       ...learnPackIds,
@@ -440,6 +479,7 @@ export function selectSmart({
     learnPackIds,
     stretchPackId,
     reviewWords,
+    learnExhausted,
     packIds,
   }
 }
@@ -455,6 +495,9 @@ export interface SmartPreview {
   adapted: boolean
   /** The day's goal is already covered; this session is a voluntary extra. */
   bonus: boolean
+  /** Nothing new left on the route — the sitting is pure maintenance, and no
+   *  line may promise new words. */
+  exhausted: boolean
 }
 
 /**
@@ -474,6 +517,7 @@ export function previewOf(sel: SmartSelection): SmartPreview {
     tone: sel.tone,
     adapted: Math.abs(sel.reviewRatio - SMART.REVIEW_RATIO) > 0.01,
     bonus: sel.size.bonus,
+    exhausted: sel.learnExhausted,
     // estimateMinutes' *default* pace is 8 s/word, meant for browsing a plain
     // pack — reusing it here undersold a session by ~3x. Pass the pace this
     // sitting was actually sized with (measured where possible) so the two
@@ -497,7 +541,25 @@ export function smartPeek(args: SelectArgs): SmartPreview {
  * that first, not why the ratio shifted.
  */
 export function smartReason(p: SmartPreview): string | null {
+  const fresh = p.learn + p.stretch
+  // Nothing to offer at all: the screens above already say so, and any line
+  // here would be a second, cheerier account of an empty session.
+  if (fresh + p.review === 0) return null
   if (p.bonus) return 'Cel na dziś masz z głowy — to krótka dokładka, jeśli masz ochotę.'
+  /**
+   * A sitting with no new words in it, described before the tone lines get to
+   * speak — because "dziś więcej nowych słów" over a mix of nothing but
+   * powtórki was the reported bug: a learner who had learned every word in the
+   * app was told the good news was more new words, beside a chip reading
+   * "7 powtórek". The health tone is still true (reviews ARE going well); the
+   * conclusion drawn from it is not, because the material it promises as the
+   * reward doesn't exist.
+   */
+  if (fresh === 0) {
+    return p.exhausted
+      ? 'Nie ma już nowych słów do wzięcia — dziś utrwalamy to, co umiesz.'
+      : 'Dziś sama powtórka — zaległe słowa wypełniły całą sesję.'
+  }
   if (!p.adapted) return null
   if (p.tone === 'strong') return 'Powtórki idą ci świetnie, więc dziś więcej nowych słów.'
   if (p.tone === 'slipping') return 'Kilka słów zaczyna ci uciekać, więc dziś więcej powtórek.'
@@ -532,6 +594,20 @@ export function composeSmartSteps({ selection, packs, wordProgressById }: Compos
 } {
   const usedPacks = new Set<string>()
 
+  /**
+   * Every word id this run has already committed to, across ALL three streams.
+   *
+   * Seeded from the review selection because those cards are built further down
+   * but chosen first. Without it, a `learning` word that is due sat in
+   * `selection.reviewWords` AND could be picked up again by `takeFromPacks`,
+   * whose only filter is `status === 'known'` — so the same word was asked
+   * twice in one sitting, both copies carrying the progress row captured at
+   * build time, and the second answer silently overwrote the first.
+   * `selectSmart` already dedupes stragglers against `orderedDue`; the learn
+   * and stretch streams were deduped against nothing.
+   */
+  const emitted = new Set(selection.reviewWords.map(w => w.wordId))
+
   const takeFromPacks = (
     packIds: string[],
     segment: SmartSegment,
@@ -545,6 +621,8 @@ export function composeSmartSteps({ selection, packs, wordProgressById }: Compos
         if (out.length >= limit) break
         const progress = wordProgressById.get(word.id)
         if (progress?.status === 'known') continue
+        if (emitted.has(word.id)) continue
+        emitted.add(word.id)
         usedPacks.add(id)
         out.push({ kind: 'card', segment, word, packageId: id, progress })
       }
