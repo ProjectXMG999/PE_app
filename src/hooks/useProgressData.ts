@@ -92,12 +92,25 @@ export interface ProgressSnapshot {
   streak: number
 }
 
+/** Above this, the read is long enough to have eaten a frame or several, and
+ *  worth a line in the console. Roughly four frames at 60 Hz. */
+const SLOW_READ_MS = 64
+
 async function fetchSnapshot(): Promise<ProgressSnapshot> {
   // Freezes live in the persisted UI store rather than IndexedDB — they're a
   // small entitlement, not study history — so the streak has to be told about
   // them here rather than being derivable from sessions alone.
   const { streakFreeze, dailyGoalSec, todayLevel } = useAppStore.getState()
 
+  // Split read from compute, and say so when the read is slow.
+  //
+  // Both halves were guessed at for two rounds of performance work before
+  // anyone measured them, and the guess was wrong: benchmarked over a realistic
+  // 8 000-row corpus the passes below total ~9 ms on a laptop. The reads are
+  // the half nobody could measure from a bench, because the cost is IndexedDB
+  // deserialising every row onto the main thread — so the app reports it
+  // instead. A line here is the difference between knowing and arguing.
+  const readStart = performance.now()
   const [packageProgress, storedWordProgress, sessions, ledger, dailyTime, streak] = await Promise.all([
     getAllPackageProgress(),
     getAllWordProgress(),
@@ -106,6 +119,13 @@ async function fetchSnapshot(): Promise<ProgressSnapshot> {
     getAllDailyTime(),
     getStreak(streakFreeze.usedOn),
   ])
+  const readMs = performance.now() - readStart
+  if (readMs > SLOW_READ_MS) {
+    console.warn(
+      `[progress] snapshot read took ${Math.round(readMs)} ms for ${storedWordProgress.length} word rows ` +
+      `— that is a blocked frame, not a slow query. Cached for ${CACHE_MS / 1000}s.`
+    )
+  }
 
   // Progress rows outlive the catalogue. Past data passes consolidated packs
   // and deduped words (see the `packs/` deletions in git history), and every
@@ -215,19 +235,36 @@ async function fetchSnapshot(): Promise<ProgressSnapshot> {
   }
 }
 
-// Deduplicates the burst of identical IndexedDB reads fired by the several
-// components that mount together on a tab (Home renders 4 independent
-// consumers). Long-lived caching is deliberately avoided: study pages write
-// progress outside this module, so each fresh mount re-reads. Writes now also
-// invalidate explicitly via progressEvents, which is what lets the always-
-// mounted streak/points widget cache for much longer than this window.
+/**
+ * A real cache, not a burst coalescer.
+ *
+ * This used to be a 2 s window, on the stated grounds that "study pages write
+ * progress outside this module, so each fresh mount re-reads". That reasoning
+ * is obsolete, and it was costing a full rebuild on every unhurried tab tap:
+ * six getAll()s, ~11 000 wordProgress rows structured-clone-deserialised on the
+ * main thread, and four passes over them. Every page that reads progress —
+ * Dzisiaj, Pakiety, Postęp — paid it on arrival.
+ *
+ * Writes invalidate explicitly now, and the coverage is complete rather than
+ * hopeful: every mutator in db.ts emits (word/package/session/dailyTime/
+ * reviewLedger/reset), the daily-goal writer in useAppStore emits, the debug
+ * seeder emits, and pullAndMergeProgress — the one place that writes to
+ * IndexedDB directly rather than through db.ts — ends with emitProgress('reset')
+ * for exactly this reason. There is no path that changes progress without
+ * landing here.
+ *
+ * So the TTL is now a backstop against nothing in particular (a clock crossing
+ * midnight, a write from a path nobody has thought of yet), not the mechanism.
+ * It matches useProgressPulse's CACHE_MS, which has run on the same
+ * invalidation contract for far longer than this window.
+ */
 let inflight: Promise<ProgressSnapshot> | null = null
 let inflightAt = 0
-const DEDUPE_MS = 2000
+const CACHE_MS = 60_000
 
 export function loadProgressSnapshot(force = false): Promise<ProgressSnapshot> {
   const now = Date.now()
-  if (!force && inflight && now - inflightAt < DEDUPE_MS) return inflight
+  if (!force && inflight && now - inflightAt < CACHE_MS) return inflight
   inflightAt = now
   inflight = fetchSnapshot()
   return inflight

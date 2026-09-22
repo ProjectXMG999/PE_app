@@ -15,7 +15,12 @@ import { pushLog } from './debug/audioLogger'
 // JSON.stringify over each of its arguments, in production, to throw the
 // result away. Every tagged log in the codebase puts its tag in the first
 // argument, so testing that one string loses nothing.
-const TAGS = ['[audio]', '[action]', '[seq]']
+// `[progress]` is here so the snapshot-read timing (useProgressData) reaches the
+// in-app overlay as well as the console. The symptom it exists to diagnose —
+// a blocked frame on entering a page — only happens on a phone, and requiring
+// a USB cable and a desktop Safari to read one number is how a measurement
+// stops being taken.
+const TAGS = ['[audio]', '[action]', '[seq]', '[progress]']
 const tagged = (args: unknown[]) =>
   typeof args[0] === 'string' && TAGS.some(t => (args[0] as string).includes(t))
 const serialise = (args: unknown[]) =>
@@ -30,6 +35,13 @@ console.log = (...args) => {
 console.error = (...args) => {
   origErr(...args)
   if (tagged(args)) pushLog('ERR ' + serialise(args))
+}
+// Wrapped for the same reason as the two above, and no more: an untagged warn
+// is passed straight through and never serialised.
+const origWarn = console.warn.bind(console)
+console.warn = (...args) => {
+  origWarn(...args)
+  if (tagged(args)) pushLog(serialise(args))
 }
 
 // Force reload when a new SW takes control — prevents stale chunk 404s after deploy
