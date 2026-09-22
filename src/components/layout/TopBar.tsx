@@ -14,6 +14,7 @@ import { useTransitionNavigate } from '../../navigation/transitions'
  *  takes over the name, the way an iOS navigation bar does. */
 const COMPACT_TITLES: Record<string, string> = {
   '/dzis': 'Dzisiaj',
+  '/pakiety': 'Mapa',
 }
 
 /** Roughly the height of a large title block — past this it's out of view. */

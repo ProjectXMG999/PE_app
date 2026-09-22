@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
 import { motion } from 'framer-motion'
 import { Sheet, useSheetMotion, type SheetHandle } from '../shared/Sheet'
+import { CheckGlyph } from '../mode/glyphs'
 import {
-  markLevelMastered, unmarkLevelMastered, LevelMasteryProgress, LevelMasteryFetchError,
+  markLevelMastered, unmarkLevelMastered, packageIdsForLevel,
+  LevelMasteryProgress, LevelMasteryFetchError,
 } from '../../services/levelMastery'
 import { showToast } from '../../services/toast'
 import './LevelMasteryAction.css'
@@ -65,7 +67,16 @@ export function LevelMasteryAction({ level, levelName, color, total, marked, onM
   const sheet = useRef<SheetHandle>(null)
   const mountedRef = useRef(true)
   const { rise, tap } = useSheetMotion()
-  useEffect(() => () => { mountedRef.current = false }, [])
+  /* The `true` initialiser is not enough on its own. StrictMode mounts, runs
+     the cleanup, and mounts again — so without re-arming the flag here, the
+     first cleanup left it false for the rest of the component's life and every
+     guard below silently returned: the progress line stayed on "0 / N", the
+     sheet never closed, the toast never fired, and a declaration that had in
+     fact been written to IndexedDB looked like a button that did nothing. */
+  useEffect(() => {
+    mountedRef.current = true
+    return () => { mountedRef.current = false }
+  }, [])
 
   /** Mounting the sheet IS opening it — it shows itself and plays its arrival.
    *  While one is already open (a failure arriving mid-run), this only swaps
@@ -76,7 +87,10 @@ export function LevelMasteryAction({ level, levelName, color, total, marked, onM
 
   async function handleMark() {
     setStage('marking')
-    setProgress({ loaded: 0, total })
+    // `total` is the level's WORD count — the number the confirmation screen
+    // quotes. Seeding the bar with it made the first frame read "0 / 1020
+    // paczek" for a level that has 109 of them.
+    setProgress({ loaded: 0, total: packageIdsForLevel(level).length })
     try {
       await markLevelMastered(level, p => { if (mountedRef.current) setProgress(p) })
       if (!mountedRef.current) return
@@ -114,12 +128,20 @@ export function LevelMasteryAction({ level, levelName, color, total, marked, onM
   }
 
   const busy = stage === 'marking' || stage === 'unmarking'
+  /** Packs, not words — what the "Pobieranie … paczek" line actually counts. */
+  const packCount = packageIdsForLevel(level).length
 
   return (
     <div className="lvl-mastery" style={{ '--lvl': color } as CSSProperties}>
       {marked ? (
         <>
-          <span className="lvl-mastery__badge">✓ Poziom opanowany</span>
+          {/* An SVG check, not the literal "✓": every other glyph in the app is
+              one, and the character renders at a different weight and baseline
+              in every font fallback it lands in. */}
+          <span className="lvl-mastery__badge">
+            <CheckGlyph size={14} weight={2.6} />
+            Poziom opanowany
+          </span>
           <button
             type="button"
             className="lvl-mastery__btn lvl-mastery__btn--undo"
@@ -180,14 +202,16 @@ export function LevelMasteryAction({ level, levelName, color, total, marked, onM
             <>
               <motion.h2 className="lvl-mastery-modal__title" variants={rise}>Oznaczanie „{levelName}"…</motion.h2>
               <motion.p className="lvl-mastery-modal__desc" variants={rise}>
-                Pobieranie słów: {progress?.loaded ?? 0} / {progress?.total ?? total} paczek.
+                {/* "Pobieranie słów: 0 / 109 paczek" named one thing and counted
+                    another. It counts packs, so it says packs. */}
+                Pobieranie paczek: {progress?.loaded ?? 0} z {progress?.total ?? packCount}.
                 Przy dużym poziomie może to potrwać do minuty.
               </motion.p>
               <motion.progress
                 className="lvl-mastery-modal__progress"
                 variants={rise}
                 value={progress?.loaded ?? 0}
-                max={progress?.total ?? total}
+                max={progress?.total ?? packCount}
               />
             </>
           ) : stage === 'confirm-mark' ? (

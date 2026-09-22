@@ -16,6 +16,8 @@ let ctxState: AudioContextState
    without this it claimed the last voice's envelope. */
 let pending: Scheduled | null
 let resumed: number
+/** Brings the held-open `resume()` below back, as the browser eventually does. */
+let releaseResume: (() => void) | null
 
 function fakeContext() {
   const ctx = {
@@ -23,7 +25,12 @@ function fakeContext() {
     currentTime: 10,
     sampleRate: 48000,
     destination: {},
-    resume: () => { resumed++; return Promise.resolve() },
+    resume: () => {
+      resumed++
+      // Held open so a test can decide WHEN the context comes up — which is the
+      // whole question for a sound fired by the tap that unlocks audio.
+      return new Promise<void>(res => { releaseResume = () => { ctxState = 'running'; res() } })
+    },
     createOscillator() {
       const rec: Scheduled = { freq: 0, start: 0, rampAt: 0 }
       scheduled.push(rec)
@@ -88,8 +95,10 @@ beforeEach(() => {
   buffers = 0
   pending = null
   resumed = 0
+  releaseResume = null
   ctxState = 'running'
   soundEnabled = true
+  vi.useRealTimers()
 })
 
 describe('playSessionCurtain', () => {
@@ -147,13 +156,34 @@ describe('playSessionCurtain', () => {
     expect(scheduled).toHaveLength(0)
   })
 
-  it('stays silent on a suspended context rather than queueing a pile-up', () => {
-    // currentTime is frozen while suspended, so anything scheduled now would
-    // fire all at once on resume — a phone coming back from the background.
+  it('waits out an unlock in flight instead of dropping the sound', async () => {
+    // The curtain is fired by the very tap that unlocks audio, and a context is
+    // still 'suspended' for a few ms after the resume() that unlocks it
+    // (measured in WebKit: through the microtask AND the setTimeout(0) after
+    // it). Refusing here is what made the curtain silent on the phone.
     ctxState = 'suspended'
     playSessionCurtain(1)
-    expect(scheduled).toHaveLength(0)
-    // But it does ask the context back, so one suspension is not a mute session.
+    expect(scheduled).toHaveLength(0)   // nothing scheduled against a frozen clock
     expect(resumed).toBe(1)
+
+    releaseResume!()
+    await Promise.resolve()
+    await Promise.resolve()
+    expect(scheduled).toHaveLength(4)
+  })
+
+  it('drops a sound whose context only comes back much later', async () => {
+    // A phone that spent the session with its screen off: currentTime is frozen
+    // the whole time, and the context can come up minutes after the sound that
+    // asked for it. Nothing here is worth hearing that late.
+    vi.useFakeTimers()
+    ctxState = 'suspended'
+    playSessionCurtain(1)
+
+    vi.advanceTimersByTime(30_000)
+    releaseResume!()
+    await Promise.resolve()
+    await Promise.resolve()
+    expect(scheduled).toHaveLength(0)
   })
 })

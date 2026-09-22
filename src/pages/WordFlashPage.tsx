@@ -18,6 +18,7 @@ import { StudyStage, StageTrack } from '../components/flashcard/StudyStage'
 import { PackSessionOpener } from '../components/flashcard/SessionOpener'
 import { SessionStage } from '../components/flashcard/SessionStage'
 import { useSessionOpener } from '../hooks/useSessionOpener'
+import { useStudyPad } from '../hooks/useStudyPad'
 import { useAppNavigate, useBack } from '../navigation/navigation'
 import './ReviewPage.css'
 
@@ -78,12 +79,16 @@ export function WordFlashPage() {
 
   // No loading screen of its own any more — the curtain is it, which is also
   // what makes the failure path load-bearing: nothing else would ever lift it.
+  // Level from the index, resolved synchronously — the words arrive later than
+  // the sound does.
+  const packLevel = allPacks.find(p => p.id === packageId)?.level
   const { visible: openerVisible, settled, dismiss: dismissOpener } =
-    // Level from the index, resolved synchronously — the words arrive later
-    // than the sound does.
-    useSessionOpener(!!error || wordsReady, {
-      level: allPacks.find(p => p.id === packageId)?.level,
-    })
+    useSessionOpener(!!error || wordsReady, { level: packLevel })
+
+  // The pad takes over from the curtain's chord, in the same key — it fades in
+  // as the curtain lifts and is gone before the done screen's own sound. See
+  // hooks/useStudyPad.ts.
+  useStudyPad(!openerVisible && !done && !showMastery && !error, packLevel)
 
   const currentWord = studyWords[cardIndex] ?? null
   const total = studyWords.length

@@ -2,7 +2,7 @@ import { getAudioContext } from './audioUnlock'
 import { keyForLevel } from './tonality'
 
 /**
- * A breathing pad under the listening mode.
+ * A breathing pad under a study session — every mode, not only Słuchaj.
  *
  * Słuchaj is minutes of clips separated by silence, and the silence is what
  * makes it feel like a file playing rather than a place to be. This fills it
@@ -10,6 +10,10 @@ import { keyForLevel } from './tonality'
  * seconds and falls over six — the cadence of a slow breath. Nothing asks the
  * listener to breathe along; after a minute most people do anyway, and that is
  * the whole point of choosing this shape over a flat drone.
+ *
+ * The silence it was written for turned out not to be Słuchaj's alone: a
+ * flashcard run is the same room with the same nothing in it between taps. It
+ * is started from hooks/useStudyPad.ts, which every session mode uses.
  *
  * It sits high: two octaves above the level's root, so there is no sub-bass
  * rumble, and it peaks at about −38 dB — quieter than the drone it replaced,
@@ -73,6 +77,11 @@ let nodes: PadNodes | null = null
 export function startStudyPad(level: number | null | undefined): void {
   const ctx = getAudioContext()
   if (!ctx) return
+  // Unlike the one-shot sounds in services/sfx.ts, a context that is still
+  // coming up doesn't stop the pad: it is continuous, so a graph built against
+  // a frozen currentTime costs nothing — the fade-in simply plays out from its
+  // start once the context runs. All it needs is the nudge.
+  if (ctx.state !== 'running') ctx.resume().catch(() => { /* no gesture to spend */ })
   const rootHz = keyForLevel(level).rootHz
 
   if (nodes) {

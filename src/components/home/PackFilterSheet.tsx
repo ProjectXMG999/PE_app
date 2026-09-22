@@ -8,6 +8,7 @@ import { LENS_LABEL, PACK_LENSES, PackFilters, PackLens } from '../../utils/pack
 import { CategoryStat, MIN_SAMPLE } from '../../utils/packProfile'
 import { coveragePct } from '../../utils/coverage'
 import { CoverageInfoSheet } from './CoverageInfoSheet'
+import { CheckGlyph } from '../mode/glyphs'
 import './PackFilterSheet.css'
 
 /**
@@ -145,6 +146,11 @@ export function PackFilterSheet({
                     <span className="pfsheet__row-name">{LENS_LABEL[lens]}</span>
                   </span>
                   <span className="pfsheet__count">{n.toLocaleString('pl-PL')}</span>
+                  {filters.lens === lens && (
+                    <span className="pfsheet__check" aria-hidden="true">
+                      <CheckGlyph size={16} weight={2.6} />
+                    </span>
+                  )}
                 </motion.button>
               )
             })}
@@ -163,6 +169,11 @@ export function PackFilterSheet({
             onClick={() => pick({ cat: null })}
           >
             <span className="pfsheet__row-name">Wszystkie kategorie</span>
+            {filters.cat == null && (
+              <span className="pfsheet__check" aria-hidden="true">
+                <CheckGlyph size={16} weight={2.6} />
+              </span>
+            )}
           </motion.button>
           {categories.map(({ cat, n }) => {
             const stat = statOf.get(cat)
@@ -195,6 +206,11 @@ export function PackFilterSheet({
                   </span>
                 )}
                 <span className="pfsheet__count">{show ? `${stat!.successPct}%` : n}</span>
+                {filters.cat === cat && (
+                  <span className="pfsheet__check" aria-hidden="true">
+                    <CheckGlyph size={16} weight={2.6} />
+                  </span>
+                )}
               </motion.button>
             )
           })}

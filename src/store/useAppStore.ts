@@ -160,9 +160,10 @@ interface AppStore {
   soundEnabled: boolean
   setSoundEnabled: (v: boolean) => void
 
-  /** The breathing pad under Słuchaj (audio/studyPad.ts). On by default — it is
-   *  the intended texture of the listening mode, and at −38 dB it sits under
-   *  the voice rather than beside it. One toggle in Ustawienia turns it off for
+  /** The breathing pad under a session (audio/studyPad.ts), in every mode —
+   *  hooks/useStudyPad.ts is what reads this. On by default: it is the intended
+   *  texture of a study sitting, and at −38 dB it sits under the voice rather
+   *  than beside it. One toggle in Ustawienia turns it off everywhere, for
    *  anyone who studies in silence. */
   studyPadEnabled: boolean
   setStudyPadEnabled: (v: boolean) => void

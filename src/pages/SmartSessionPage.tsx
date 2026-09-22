@@ -4,6 +4,7 @@ import { useCardFlip } from '../hooks/useCardFlip'
 import { useStudyClock } from '../hooks/useStudyClock'
 import { useSmartSession } from '../hooks/useSmartSession'
 import { useSessionOpener } from '../hooks/useSessionOpener'
+import { useStudyPad } from '../hooks/useStudyPad'
 import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { applyKnown, applyUnknown } from '../services/review'
 import { saveSession, saveWordProgress, getWordProgress } from '../services/db'
@@ -59,8 +60,14 @@ export function SmartSessionPage() {
   const { enRate, plRate } = useAppStore()
   const [nonce, setNonce] = useState(0)
   const { steps, packCount, preview, opensWith, missing, loading, error } = useSmartSession(nonce)
+  // Captured on entry: the done screen reads comfort against the level the
+  // session was actually built for, and changing the floor mid-session would
+  // otherwise re-anchor the verdict. Read before the curtain so the sound is in
+  // this session's key rather than the neutral one.
+  const [sessionLevel] = useState(() => useAppStore.getState().todayLevel ?? 1)
   // This mode has no loading screen of its own any more — the curtain is it.
-  const { visible: openerVisible, settled, dismiss: dismissOpener } = useSessionOpener(!loading)
+  const { visible: openerVisible, settled, dismiss: dismissOpener } =
+    useSessionOpener(!loading, { level: sessionLevel })
 
   const { side, isAdvancing, flip, advance: animateOut, resetToFront, handleAnimationEnd, cardClass } = useCardFlip()
   const { elapsedSec } = useStudyClock()
@@ -68,11 +75,12 @@ export function SmartSessionPage() {
   const [stepIndex, setStepIndex] = useState(0)
   const [done, setDone] = useState(false)
   const [levelUpTarget, setLevelUpTarget] = useState<number | null>(null)
+
+  // The pad takes over from the curtain's chord, in the same key — see
+  // hooks/useStudyPad.ts. Gone by the done screen, which has its own sounds.
+  useStudyPad(!openerVisible && !done && !error, sessionLevel)
+
   const [comfortBefore] = useState(() => useAppStore.getState().comfortLevel)
-  // Captured on entry alongside comfortBefore: the done screen reads comfort
-  // against the level the session was actually built for, and changing the
-  // floor mid-session would otherwise re-anchor the verdict.
-  const [sessionLevel] = useState(() => useAppStore.getState().todayLevel ?? 1)
   const [comfortAfter, setComfortAfter] = useState(comfortBefore)
   // Reviews still owed today once this sitting is folded in. Read off the
   // snapshot `finish` already loads, so it costs no extra IO.

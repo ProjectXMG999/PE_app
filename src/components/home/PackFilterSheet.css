@@ -15,9 +15,14 @@
   padding: 4px;
   margin-bottom: var(--spacing-md);
   border-radius: var(--radius-full);
-  background: var(--surface-tile);
-  box-shadow: var(--tile-hi);
-  border: 1px solid var(--border);
+  /* Rung 4, not rung 3. A segmented track is a recess INSIDE a surface — this
+     one sits on a sheet — and --fill-track is the token for exactly that. It
+     was --surface-tile, which is the rung for repeated rows, so the sheet's
+     own tabs were built from a different material than Dzisiaj's identical
+     control. Now all three segmented controls in the app are one object. */
+  background: var(--fill-track);
+  box-shadow: var(--fill-track-line);
+  border: 0;
 }
 
 .pfsheet__tab {
@@ -48,7 +53,8 @@
   inset: 0;
   z-index: -1;
   border-radius: inherit;
-  background: color-mix(in oklch, var(--accent) 18%, transparent);
+  background: var(--fill-thumb);
+  box-shadow: var(--fill-thumb-shadow);
 }
 
 .pfsheet__tab-label {
@@ -126,9 +132,30 @@
   transition: border-color var(--transition-fast);
 }
 
+/* A fill, not a ring. A 1px accent outline around a row that is otherwise
+   identical to the eleven rows under it is the weakest selected state the
+   system has, and on a phone held at arm's length the ring and the hairline
+   read as the same line. The tint is the app's standard chip strength, so the
+   selected row becomes the same object as an active filter chip.
+
+   No travelling layoutId marker here, tempting as LevelPicker's is: every row
+   in this sheet carries `whileTap={{ scale: 0.97 }}` from useSheetMotion, and
+   LevelPicker.css documents precisely that pairing as the projection stutter —
+   Framer measures the destination row with getBoundingClientRect while a
+   transform has it 3% small. Using the marker would mean stripping the tap
+   feedback from every row first, which costs more than it buys. */
 .pfsheet__row.is-active {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent-glow);
+  background:
+    linear-gradient(color-mix(in oklch, var(--accent) var(--fill-tint-mix), transparent),
+                    color-mix(in oklch, var(--accent) var(--fill-tint-mix), transparent)),
+    var(--surface-tile);
+  border-color: var(--border-accent);
+}
+
+/* Selection is not carried by colour alone. */
+.pfsheet__check {
+  flex: none;
+  color: var(--accent-bright);
 }
 
 .pfsheet__row:focus-visible {

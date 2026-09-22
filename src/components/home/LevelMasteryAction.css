@@ -19,35 +19,65 @@
 
 .lvl-mastery__badge {
   /* State, not an action — it keeps the level colour, since that's the whole
-     information it carries. Dimmed a step so the row still reads as quiet. */
+     information it carries. A chip rather than bare coloured text: a state
+     that survives a level change deserves a shape, and beside a button with a
+     surface, bare text read as a label that had lost its box.
+     (`in oklch`, not `in srgb` — tokens.css asks for every mix in oklch.) */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: var(--radius-full);
   font-family: var(--font-heading);
   font-size: var(--text-xs-plus);
-  font-weight: 600;
-  color: color-mix(in srgb, var(--lvl) 72%, var(--text-muted));
+  font-weight: 700;
+  color: color-mix(in oklch, var(--lvl) 72%, var(--text-muted));
+  background:
+    linear-gradient(color-mix(in oklch, var(--lvl) var(--fill-tint-mix), transparent),
+                    color-mix(in oklch, var(--lvl) var(--fill-tint-mix), transparent)),
+    var(--surface-tile);
+  border: 1px solid color-mix(in oklch, var(--lvl) 28%, var(--tile-border));
 }
 
+/* Quiet, but a button. It used to be bare text that warmed to the level colour
+   on hover — and a phone has no hover, so on the device it was permanently an
+   unadorned grey link floating between two strong controls, reading as a
+   caption someone had made tappable by accident.
+   It keeps its low volume (a tile, a hairline, muted text — nothing tinted, no
+   shadow) and gains the two things that make it a control: a surface, and the
+   level's own dot, so the row is visibly about the level whose colour fills the
+   segment above it rather than revealing that only on hover.
+   44px, so it stays out of global.css's inventory of sub-44px tap targets. */
 .lvl-mastery__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-heading);
   font-size: var(--text-xs-plus);
   font-weight: 600;
-  min-height: 36px;
-  padding: 0 var(--spacing-sm);
+  min-height: 44px;
+  padding: 0 14px;
   border-radius: var(--radius-full);
-  border: 1px solid transparent;
-  color: var(--text-muted);
-  background: transparent;
+  border: 1px solid var(--tile-border);
+  color: var(--text-secondary);
+  background: var(--surface-tile);
   transition: color var(--transition-fast), border-color var(--transition-fast),
     background var(--transition-fast);
 }
 
-/* Pull the button's own padding back so its TEXT starts on the page gutter,
-   not one --spacing-sm inside it. The hover pill still extends past the text
-   on both sides, which is what keeps it feeling like a button. Only when the
-   button leads the row — in the marked state the badge comes first and already
-   sits flush, having no padding of its own. */
-.lvl-mastery__btn:first-child {
-  margin-inline-start: calc(var(--spacing-sm) * -1);
+.lvl-mastery__btn::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border-radius: var(--radius-full);
+  background: var(--lvl);
 }
+
+/* The undo has no dot: it acts on the state the badge beside it already
+   carries in the level colour, and two level dots in one row is one too many. */
+.lvl-mastery__btn--undo::before { display: none; }
 
 .lvl-mastery__btn:hover:not(:disabled),
 .lvl-mastery__btn:focus-visible:not(:disabled) {

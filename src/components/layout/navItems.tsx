@@ -28,7 +28,7 @@ export const NAV_ITEMS: { path: Hub; label: string; icon: (active: boolean) => R
   },
   {
     path: '/pakiety',
-    label: 'Pakiety',
+    label: 'Mapa',
     icon: (active: boolean): ReactNode => (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="7" width="20" height="14" rx="2"/>
@@ -40,7 +40,7 @@ export const NAV_ITEMS: { path: Hub; label: string; icon: (active: boolean) => R
   },
   {
     path: '/trening',
-    label: 'Trening',
+    label: 'Ćwiczenia',
     icon: (active: boolean): ReactNode => (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -62,7 +62,7 @@ export const NAV_ITEMS: { path: Hub; label: string; icon: (active: boolean) => R
   },
   {
     // "Personalizacja" (the page's own title) overflows the bottom-bar cell —
-    // every other tab label is 6–7 chars. The short label lives only in the nav.
+    // no other tab label passes 9 chars. The short label lives only in the nav.
     path: '/ustawienia',
     label: 'Ustawienia',
     icon: (active: boolean): ReactNode => (

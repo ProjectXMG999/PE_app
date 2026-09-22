@@ -79,7 +79,16 @@ export function RouteSwitcher({
 
   return (
     <nav className="rsw" aria-label="Wybór poziomu i tomu">
-      <div className="rsw__levels" role="tablist" aria-label="Poziom">
+      {/* The active level's colour, on the track itself. The track is a
+          persistent node — unlike the indicator, which unmounts and remounts —
+          so this is the one thing here that can actually cross-fade from one
+          level's colour to the next. */}
+      <div
+        className="rsw__levels"
+        role="tablist"
+        aria-label="Poziom"
+        style={{ '--lvl-active': LEVEL_COLORS[activeLevel.level] } as CSSProperties}
+      >
         {levels.map((group, i) => {
           const on = group.level === activeLevel.level
           const pct = Math.round(levelStats[i]?.pct ?? 0)

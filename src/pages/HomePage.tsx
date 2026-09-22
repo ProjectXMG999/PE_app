@@ -173,6 +173,12 @@ export function HomePage() {
   const milestones = useMemo(() => milestonesFor(allPacks), [])
   const frontier = useMemo(() => frontierPack(allPacks, snapshot), [snapshot])
   const knownWords = snapshot?.knownTotal ?? 0
+  /** Packs finished across the whole route — the one figure the title can show
+   *  that stays true whatever level, volume or filter is on screen. */
+  const routeDone = useMemo(
+    () => (snapshot ? lStats.reduce((sum, s) => sum + s.done, 0) : null),
+    [snapshot, lStats],
+  )
 
   /** Route number of the pack immediately before each one — the "why now" line. */
   const prevNum = useMemo(() => {
@@ -635,6 +641,22 @@ export function HomePage() {
         )}
 
         <motion.div className="homepage__main" variants={staggerContainer}>
+          {/* The screen's name, the way every other tab opens. It scrolls away
+              and TopBar takes the name over (COMPACT_TITLES), so it costs
+              nothing below the fold. The route total sits beside it because
+              this is the one screen where "how much is there" is the question,
+              and it is the only number that is true on every filter. */}
+          <motion.header className="homepage__header" variants={item}>
+            <h1 className="homepage__title">Mapa</h1>
+            {snapshot && routeDone != null && (
+              <p className="homepage__count">
+                <b>{routeDone.toLocaleString('pl-PL')}</b>
+                {' / '}
+                {allPacks.length.toLocaleString('pl-PL')}
+              </p>
+            )}
+          </motion.header>
+
           <InstallBanner />
           <OnboardingCard />
 

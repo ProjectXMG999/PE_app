@@ -31,59 +31,164 @@
   min-width: 0;
 }
 
+/* ── Large title ──────────────────────────────────────────────────────────
+   Pakiety was the only tab without one; Dzisiaj, Trening and Postęp all open
+   with their name. It scrolls away and the TopBar picks the name up
+   (COMPACT_TITLES), so it costs nothing once you are moving.
+
+   34px literal, matching .today__title, NOT .u-display: --text-display is
+   clamp(28px, 8vw, 34px), which resolves to 31px on a 390px phone and would
+   make the two tab titles visibly different sizes. Parity with Dzisiaj is the
+   whole reason this exists. */
+.homepage__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-xs);
+}
+
+.homepage__title {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: var(--tracking-display);
+  color: var(--text-primary);
+}
+
+.homepage__count {
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  padding-bottom: 4px;
+}
+
+.homepage__count b {
+  color: var(--text-secondary);
+}
+
 /* The sticky block: search bar, then the level/volume switcher.
  *
- * With only the search bar this needed no paint of its own (the pill is
- * opaque). The switcher is not — it is a translucent track with gaps — so once
- * it is here the cards would visibly scroll through it. The block takes the
- * app's single glass recipe (tokens.css: glass is for things that stick) and
- * bleeds to the edge of the page gutter so its edge lines up with nothing but
- * the screen. `--page-gutter` is the one number both the padding and the bleed
- * read, which is what keeps the desktop width from drifting past the column —
- * the mismatch an earlier full-bleed version of this block shipped with. */
+ * It has NO paint of its own, at rest or stuck, and that is the point.
+ *
+ * It used to grow a full-bleed glass slab once pinned — 171px of
+ * --glass-bg-strong plus a blur, switching on at a threshold — and the reason
+ * was written down here: "the switcher is a translucent track with gaps, so the
+ * cards would visibly scroll through it". True, but it treated the symptom. The
+ * controls are now opaque objects in their own right (--surface-tile-opaque on
+ * the field, the track and the volume chips), so each one hides what passes
+ * behind it and the container has nothing left to do.
+ *
+ * What that buys: the aurora runs through the gaps between the controls at
+ * every scroll position instead of being covered by a dark band, one
+ * viewport-wide backdrop-filter leaves a screen that tokens.css already
+ * describes as carrying a dozen of them, and the abrupt on/off at 260px is
+ * simply gone — there is no state to switch.
+ *
+ * The bleed stays: the volume chips scroll to the screen edge, and
+ * `--page-gutter` is the one number both the padding and the bleed read, which
+ * is what keeps the desktop width from drifting past the column. */
 .homepage__chrome {
   position: sticky;
   top: 0;
   z-index: 20;
 }
 
+/* No `position` here: the base rule is `sticky`, this selector is more
+   specific, and setting `relative` on it silently unsticks the whole bar. */
 .homepage__chrome.has-switcher {
   margin-inline: calc(var(--page-gutter) * -1);
   padding: 0 var(--page-gutter) var(--spacing-sm);
-  border-bottom: 1px solid transparent;
-  transition: background var(--transition-med), border-color var(--transition-med),
-    box-shadow var(--transition-med);
 }
 
-/* Glass only once it is actually stuck. At rest, above the banners, a glass
-   slab reads as a dark band across the aurora for no reason — there is nothing
-   underneath it yet to separate from. Same recipe as HerePill's floating pill
-   on this same screen (--glass-bg-strong, --border-accent, --shadow-float),
-   so the two chrome layers read as one material rather than two. */
-.homepage__chrome.has-switcher.is-stuck {
-  background: var(--glass-bg-strong);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-          backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  border-bottom-color: var(--border-accent);
-  box-shadow: var(--shadow-float);
+/* The gaps, not the bar.
+ *
+ * Opaque controls hide what passes BEHIND them, but there are 8px of air
+ * between the search row, the level track and the volume chips, and rows slid
+ * through those: "początek trasy" surfacing between two controls reads as the
+ * screen tearing. The old answer was to fill the whole block with 92%
+ * --bg-card, which is the dark band this rebuild exists to remove.
+ *
+ * So: a fade, not a fill. It is the page's own ground at the top edge, where
+ * the list emerges from under the bar and legibility is the whole problem, and
+ * it reaches ZERO before the block ends — the lower third and everything below
+ * it is untouched aurora. No hard edge anywhere, nothing to switch on, and the
+ * mesh still runs through the bar.
+ *
+ * Only once stuck. At rest the bar sits over the banners with nothing beneath
+ * it to separate from, and a gradient there would be a smudge on the aurora
+ * for no reason. -1 z-index keeps it behind the controls it is backing. */
+.homepage__chrome.has-switcher::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  /* The stops are placed against what is actually at each height, not by feel:
+     the search row ends ~40%, the level track ~66%, and the volume chips run
+     ~70–92% — so the fade has to stay strong through the chips and only let go
+     in the last few pixels, where there is nothing left to read through. An
+     earlier, prettier curve was down to 38% by the chips and "początek trasy"
+     showed in the 8px beside them. */
+  background: linear-gradient(
+    to bottom,
+    var(--bg-primary) 0%,
+    color-mix(in oklch, var(--bg-primary) 94%, transparent) 52%,
+    color-mix(in oklch, var(--bg-primary) 78%, transparent) 84%,
+    transparent 100%);
+  transition: opacity var(--transition-med);
 }
 
-/* Desktop only: the reading column sits centred with open ambient space
-   either side of it, not flush with the screen like on mobile — so a stuck,
-   square-cornered slab there reads as a stray black box rather than a bar.
-   The shape (radius, invisible 1px border) is set unconditionally so nothing
-   pops in structurally when it sticks — only the shared glass/rim/shadow
-   above fades in, now framed on all four sides instead of just the bottom. */
+.homepage__chrome.has-switcher.is-stuck::before {
+  opacity: 1;
+}
+
 @media (min-width: 1024px) {
   .homepage__chrome.has-switcher {
     top: var(--spacing-sm);
-    border: 1px solid transparent;
-    border-radius: var(--radius-lg);
   }
+}
 
-  .homepage__chrome.has-switcher.is-stuck {
-    border-color: var(--border-accent);
-  }
+@media (prefers-reduced-motion: reduce) {
+  .homepage__chrome.has-switcher::before { transition: none; }
+}
+
+/* ── What "stuck" is allowed to change ────────────────────────────────────
+   Nothing that occupies space. This block is sticky but still holds its place
+   in flow, so ANY height change here drags every pack row below it: retiring
+   the volume row on scroll was measured as a 44px yank of the whole list at
+   the moment the threshold flipped. A list must not move while you are
+   reading it, and no easing fixes that — the collapse was animating the box
+   the rows are laid out against.
+
+   So the pinned state is a lift, not a layout: the controls gain a shadow and
+   their rims warm, which is what tells you they are now floating over the list
+   instead of sitting in it. Shadow and border-colour only — zero reflow, and
+   nothing can jump. */
+.homepage__chrome .rc__search,
+.homepage__chrome .rc__filters,
+.homepage__chrome .rsw__levels,
+.homepage__chrome .rsw__vol {
+  transition: box-shadow var(--transition-med), border-color var(--transition-med);
+}
+
+.homepage__chrome.is-stuck .rc__search,
+.homepage__chrome.is-stuck .rc__filters,
+.homepage__chrome.is-stuck .rsw__levels,
+.homepage__chrome.is-stuck .rsw__vol {
+  box-shadow: var(--tile-hi), var(--shadow-card);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage__chrome .rc__search,
+  .homepage__chrome .rc__filters,
+  .homepage__chrome .rsw__levels,
+  .homepage__chrome .rsw__vol { transition: none; }
 }
 
 /* A zero-height marker right above the chrome; when it scrolls out of view the
@@ -193,12 +298,36 @@
   color: var(--text-primary);
 }
 
+/* A quiet level chip, not an uppercase kicker. Two reasons it changed: the
+   filled segment 80px above is where the level shouts, so repeating it at full
+   volume was two shouts for one fact; and surfaces.css's own .u-kicker note
+   says these are sentence case now — "iOS dropped the uppercase wide-tracked
+   section header years ago". Real case also lets the name read as the name
+   ("Survival English", not "SURVIVAL ENGLISH"). */
 .homepage__volhead-level {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px 3px 8px;
+  border-radius: var(--radius-full);
   font-size: var(--text-xs);
-  font-weight: 800;
-  letter-spacing: var(--tracking-kicker);
-  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
   color: var(--lvl, var(--text-muted));
+  background:
+    linear-gradient(color-mix(in oklch, var(--lvl, transparent) var(--fill-tint-mix), transparent),
+                    color-mix(in oklch, var(--lvl, transparent) var(--fill-tint-mix), transparent)),
+    var(--surface-tile);
+  border: 1px solid color-mix(in oklch, var(--lvl, transparent) 30%, var(--tile-border));
+}
+
+.homepage__volhead-level::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border-radius: var(--radius-full);
+  background: currentColor;
 }
 
 .homepage__volhead-count {
@@ -221,12 +350,19 @@
   color: var(--text-secondary);
 }
 
+/* NOT --fill-well, even though that is the token for "the unfilled part of a
+   progress bar". A well is a groove cut into a surface, and it is darker than
+   what it sits in — which works on a card and disappears completely here,
+   where the meter lies directly on the ambient with no surface under it at
+   all. Measured: at 0% the whole bar vanished. A light line is what reads on
+   this ground, one step up from the old --border so the empty part is actually
+   visible, at 5px so it has something to be. */
 .homepage__volhead-meter {
   position: relative;
-  height: 4px;
+  height: 5px;
   margin-top: 4px;
   border-radius: var(--radius-full);
-  background: var(--border);
+  background: var(--border-strong);
   overflow: hidden;
 }
 
@@ -235,6 +371,7 @@
   inset: 0 auto 0 0;
   border-radius: inherit;
   background: var(--lvl, var(--accent));
+  box-shadow: 0 0 8px color-mix(in oklch, var(--lvl, var(--accent)) 45%, transparent);
   transition: width var(--transition-slow) var(--ease-out-expo);
 }
 

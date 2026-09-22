@@ -100,7 +100,7 @@ export function SettingsPage() {
           <Row
             inline
             name="Muzyka w tle"
-            hint="Cichy oddech wypełniający ciszę między słowami w trybie Słuchaj"
+            hint="Cichy oddech w tle każdej sesji — fiszek, powtórek i słuchania"
             control={
               <Toggle on={studyPadEnabled} onChange={setStudyPadEnabled} label="Muzyka w tle" />
             }

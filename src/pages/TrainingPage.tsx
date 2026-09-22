@@ -78,7 +78,7 @@ export function TrainingPage() {
     <AppShell>
       <div className="training-page pe-arrive">
         <div className="training-header">
-          <p className="training-header__kicker u-kicker">Trening</p>
+          <p className="training-header__kicker u-kicker">Ćwiczenia</p>
           <h1 className="training-header__title">Language Performance Training</h1>
           <p className="training-header__subtitle">Poznaj 4 ćwiczenia, dzięki którym zaczniesz naprawdę mówić po angielsku.</p>
         </div>

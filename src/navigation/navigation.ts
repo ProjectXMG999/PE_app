@@ -52,8 +52,8 @@ interface Target {
 
 const HUB_NAMES: Record<Hub, { label: string; backLabel: string }> = {
   '/dzis': { label: 'Dzisiaj', backLabel: 'Wróć do Dzisiaj' },
-  '/pakiety': { label: 'Pakiety', backLabel: 'Wróć do pakietów' },
-  '/trening': { label: 'Trening', backLabel: 'Wróć do treningu' },
+  '/pakiety': { label: 'Mapa', backLabel: 'Wróć do mapy' },
+  '/trening': { label: 'Ćwiczenia', backLabel: 'Wróć do ćwiczeń' },
   '/postęp': { label: 'Postęp', backLabel: 'Wróć do postępu' },
   '/ustawienia': { label: 'Ustawienia', backLabel: 'Wróć do ustawień' },
 }

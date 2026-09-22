@@ -4,6 +4,7 @@ import { useCardFlip } from '../hooks/useCardFlip'
 import { useStudyClock } from '../hooks/useStudyClock'
 import { useReviewSet, ReviewInterludeStep } from '../hooks/useReviewSet'
 import { useSessionOpener } from '../hooks/useSessionOpener'
+import { useStudyPad } from '../hooks/useStudyPad'
 import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { applyKnown, applyUnknown } from '../services/review'
 import { saveSession, saveWordProgress, getWordProgress } from '../services/db'
@@ -54,6 +55,11 @@ export function ReviewPage() {
   // retention. `status: 'known'` is permanent, so it's the honest test.
   const retentionRef = useRef({ rated: 0, known: 0 })
   const [batchDone, setBatchDone] = useState(false)
+
+  // The pad takes over from the curtain's chord — in the neutral key, the one
+  // the curtain already sounds in here: a review set spans packs of every
+  // level, so there is no level for it to be in. See hooks/useStudyPad.ts.
+  useStudyPad(!openerVisible && !batchDone && !error, null)
   // The clock runs for the whole visit, but `wordsCompleted` is per batch, so a
   // session row must record only its own slice — otherwise batch 3 of a visit
   // claims all three batches' minutes against twenty cards, and the sec/card

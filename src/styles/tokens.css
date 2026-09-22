@@ -79,6 +79,14 @@
      against a token that didn't exist, so the fallback was doing all the work
      and the "system" had a hardcoded white in it twice over. */
   --text-on-accent: oklch(0.99 0 0);
+  /* The same job for a LEVEL-coloured fill, and it has to be the opposite ink.
+     The four LEVEL_COLORS run L 0.62–0.81 — yellow at 0.81 is brighter than
+     most of this palette's text — so --text-on-accent (white) fails on ALL
+     four: measured 1.81 / 2.51 / 1.94 / 3.72 against levels 1–4. This ink
+     measures 10.73 / 7.73 / 10.03 / 5.23, i.e. AA on every one, with blue
+     (L 0.62) the tight case.
+     Defined once for both themes, like the level colours themselves. */
+  --text-on-lvl: oklch(0.16 0.03 275);
 
   /* ── Lines ────────────────────────────────────────────────────────────── */
   --border: oklch(1 0 0 / 0.1);
@@ -247,12 +255,21 @@
      also what stopped a Pakiety row from being a transparent window onto the
      mesh: with a bright current behind it the white film alone was invisible
      and the row WAS the background. */
-  --surface-tile:
-    linear-gradient(180deg, oklch(1 0 0 / 0.085), oklch(1 0 0 / 0.045)),
-    var(--liquid-veil);
+  /* The film alone, named so the veil under it can be swapped without the
+     gradient being retyped — see --surface-tile-opaque. */
+  --tile-film: linear-gradient(180deg, oklch(1 0 0 / 0.085), oklch(1 0 0 / 0.045));
+  --surface-tile: var(--tile-film), var(--liquid-veil);
   --surface-tile-hover:
     linear-gradient(180deg, oklch(1 0 0 / 0.13), oklch(1 0 0 / 0.075)),
     var(--liquid-veil);
+  /* The same tile on a SOLID base, for a tile that has to hide what passes
+     behind it rather than merely sit on the ambient: the sticky controls on
+     Pakiety, which pack rows scroll under. The veil is 32% of --bg-primary, so
+     a plain tile there would show the rows straight through. Note the base is
+     --bg-card, not --bg-input: this is a surface, and --bg-input is darker than
+     every card on the page, which is how the search field came to read as a
+     hole rather than a control. */
+  --surface-tile-opaque: var(--tile-film), var(--bg-card);
   --tile-border: oklch(1 0 0 / 0.13);
   --tile-hi: inset 0 1px 0 oklch(1 0 0 / 0.09);
 
@@ -703,6 +720,10 @@
      paper is the light theme's equivalent of the veil's job anyway. */
   --surface-tile: linear-gradient(180deg, oklch(1 0 0), oklch(0.985 0.004 275));
   --surface-tile-hover: linear-gradient(180deg, oklch(1 0 0), oklch(0.965 0.008 285));
+  /* Already opaque here — the light tile has no veil to swap — so the sticky
+     variant is simply the tile. Stated rather than inherited, because the dark
+     definition is built from --tile-film, which light theme doesn't use. */
+  --surface-tile-opaque: var(--surface-tile);
   --tile-border: oklch(0.22 0.02 275 / 0.12);
   --tile-hi: inset 0 1px 0 oklch(1 0 0 / 0.9);
 

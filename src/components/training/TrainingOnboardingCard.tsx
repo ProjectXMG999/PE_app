@@ -23,14 +23,14 @@ export function TrainingOnboardingCard() {
         <span className="training-intro-bar__icon" aria-hidden="true">
           <PlayGlyph size={16} />
         </span>
-        <span className="training-intro-bar__text">Jak działa Trening?</span>
+        <span className="training-intro-bar__text">Jak działają Ćwiczenia?</span>
         <span className="training-intro-bar__badge">1 min</span>
       </button>
 
       {isPlaying && (
         <AudioModal
-          title="Jak działa Trening?"
-          label="Trening"
+          title="Jak działają Ćwiczenia?"
+          label="Ćwiczenia"
           duration="1 min"
           src="/audio/training-intro.mp3"
           paragraphs={TRAINING_PARAGRAPHS}

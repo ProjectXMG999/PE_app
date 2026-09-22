@@ -18,13 +18,20 @@
 }
 
 /* ── Search ───────────────────────────────────────────────────────────────── */
-/* Two earlier passes kept inventing a bespoke "lit tile" recipe (a gradient,
-   an inset highlight, a stacked shadow) for this bar, none of which exist
-   anywhere on Dzisiaj. Dzisiaj's own controls — LevelPill, the FocusStage
-   card (`u-surface`) — are plain: one flat fill, one hairline border, no
-   shadow, no gradient, no blur. This is that recipe, copied outright rather
-   than re-derived: `background: var(--bg-card); border: 1px solid var(--border);`
-   is LevelPill's exact declaration. */
+/* Rung 3, the tile — the same material as the pack cards this field sits above.
+ *
+ * It was `--bg-input`, and the comment here used to claim that was "LevelPill's
+ * exact declaration", which it never was: LevelPill is `.u-liquid`, and
+ * `--bg-input` is oklch(0.145), i.e. DARKER than the --bg-card every card on
+ * this page is built from. A fill darker than the page's own surfaces, carrying
+ * no lit edge and no rim, is not a control — it is a hole punched in the page,
+ * and that is exactly how it read.
+ *
+ * What it must not become is glass. This field is sticky and pack rows scroll
+ * behind it, so its opacity is load-bearing (see the note on .homepage__chrome
+ * in HomePage.css, which is where the old full-bleed slab came from). The tile
+ * is the one rung that is both opaque enough to hide what passes under it and
+ * lit enough to read as an object: a fill, a top highlight and a rim. */
 .rc__search {
   display: flex;
   align-items: center;
@@ -33,17 +40,19 @@
   height: 48px;
   padding: 0 14px;
   border-radius: var(--radius-full);
-  background: var(--bg-input);
-  border: 1px solid var(--border);
+  background: var(--surface-tile-opaque);
+  border: 1px solid var(--tile-border);
+  box-shadow: var(--tile-hi);
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-/* The one addition Dzisiaj's plain pills don't need: a focus ring, because
-   this is an actual text input. Same treatment LoginPage's `.login__input`
-   already uses elsewhere in the app. */
+/* The one addition a plain pill doesn't need: a focus ring, because this is an
+   actual text input. Same treatment LoginPage's `.login__input` already uses.
+   --tile-hi is restated here — a box-shadow replaces, so focusing would
+   otherwise drop the lit top edge. */
 .rc__search:focus-within {
   border-color: var(--border-accent);
-  box-shadow: 0 0 0 3px var(--accent-glow);
+  box-shadow: var(--tile-hi), 0 0 0 3px var(--accent-glow);
 }
 
 .rc__search-icon {
@@ -82,8 +91,10 @@
 .rc__search-clear:hover { color: var(--text-primary); }
 
 /* ── Filters ──────────────────────────────────────────────────────────────── */
-/* Same LevelPill recipe as the search field beside it — flat fill, hairline
-   border, no shadow. */
+/* The same tile as the search field beside it, tinted. Two controls standing
+   side by side on the same row have to be the same class of object or the row
+   reads as two unrelated things that happen to be adjacent — which is what an
+   accent-over---bg-card fill next to a --bg-input fill was. */
 .rc__filters {
   position: relative;
   display: inline-flex;
@@ -96,9 +107,15 @@
   padding: 0 12px;
   border-radius: var(--radius-full);
   /* Tinted with the accent even when idle: this has to read as a control at a
-     glance, not as a second, emptier search field. */
-  background: color-mix(in oklch, var(--accent) 16%, var(--bg-card));
+     glance, not as a second, emptier search field. --fill-tint-mix is the
+     token that exists to stop this being hand-picked at 16% here and 18%
+     three files away. */
+  background:
+    linear-gradient(color-mix(in oklch, var(--accent) var(--fill-tint-mix), transparent),
+                    color-mix(in oklch, var(--accent) var(--fill-tint-mix), transparent)),
+    var(--surface-tile-opaque);
   border: 1px solid var(--border-accent);
+  box-shadow: var(--tile-hi);
   color: var(--text-accent);
   font-family: var(--font-heading);
   font-size: var(--text-sm);
@@ -115,7 +132,10 @@
 
 @media (hover: hover) {
   .rc__filters:hover {
-    background: color-mix(in oklch, var(--accent) 24%, var(--bg-card));
+    background:
+      linear-gradient(color-mix(in oklch, var(--accent) 22%, transparent),
+                      color-mix(in oklch, var(--accent) 22%, transparent)),
+      var(--surface-tile-opaque);
     color: var(--text-primary);
   }
 }

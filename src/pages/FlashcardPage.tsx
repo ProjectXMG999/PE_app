@@ -22,7 +22,7 @@ import { useWakeLock } from '../hooks/useWakeLock'
 import { useMediaSession } from '../hooks/useMediaSession'
 import { useLockArtwork } from '../hooks/useLockArtwork'
 import { startKeepAlive, stopKeepAlive } from '../audio/keepAlive'
-import { startStudyPad, stopStudyPad } from '../audio/studyPad'
+import { useStudyPad } from '../hooks/useStudyPad'
 import { hasSentenceAudioEn, hasSentenceAudioPl } from '../audio/sentenceAudio'
 import { useAppStore, currentRequestRetention } from '../store/useAppStore'
 import { saveSession, savePackageProgress, getPackageProgress, saveWordProgress, getPackageWordProgress, getWordProgress } from '../services/db'
@@ -53,7 +53,7 @@ export function FlashcardPage() {
   const location = useLocation()
   const studyMode = (mode === 'autoplay' ? 'autoplay' : 'fiszki') as StudyMode
 
-  const { setPackage, setCardIndex, autoplayMode, setAutoplayMode, enRate, setEnRate, plRate, keepScreenAudioAlive, studyPadEnabled } = useAppStore()
+  const { setPackage, setCardIndex, autoplayMode, setAutoplayMode, enRate, setEnRate, plRate, keepScreenAudioAlive } = useAppStore()
   const { pack, loading, error } = usePackageData(packageId ?? null)
   const allWords = pack?.words ?? []
   // In fiszki mode: only show words not yet marked 'known'. Autoplay always shows all.
@@ -483,18 +483,14 @@ export function FlashcardPage() {
     return () => stopKeepAlive()
   }, [keepAliveActive])
 
-  // Opt-in drone under the listening mode, in the pack's level key — fills the
-  // silence between clips so the session reads as a place rather than a file
-  // playing. Tied to the same condition as the keep-alive above, so pausing
-  // silences everything rather than leaving a tone running under a paused
-  // session. See audio/studyPad.ts, including why it does NOT replace keepAlive.
-  const padActive = studyPadEnabled && studyMode === 'autoplay' && !isPaused && !showCompletion && !loading
-  const padLevel = pack?.level ?? 1
-  useEffect(() => {
-    if (padActive) startStudyPad(padLevel)
-    else stopStudyPad()
-    return () => stopStudyPad()
-  }, [padActive, padLevel])
+  // Opt-in drone under the session, in the pack's level key — fills the silence
+  // so the session reads as a place rather than a file playing. It takes over
+  // from the curtain's chord, which is why it waits for the lift rather than
+  // starting under it; Słuchaj's pause silences it, because a tone running
+  // under a paused player is the one state that reads as a bug. See
+  // hooks/useStudyPad.ts and audio/studyPad.ts — including why the latter does
+  // NOT replace keepAlive.
+  useStudyPad(!openerVisible && !isPaused && !showCompletion && !error, pack?.level)
 
   // Lock-screen / notification transport controls + metadata.
   // Full support on Android Chrome; best-effort on iOS (stop() clears src between

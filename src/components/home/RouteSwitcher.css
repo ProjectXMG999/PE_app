@@ -1,11 +1,23 @@
 /* =============================================================================
  * ROUTE SWITCHER — level segments + volume chips, pinned under the search bar.
  * -----------------------------------------------------------------------------
- * Same language as Dzisiaj's ModeSlider: a translucent track, a sliding
- * indicator, muted labels that take their colour only when active. Each level
- * carries its own colour (--lvl, from LEVEL_COLORS) on the label, the progress
- * hairline and the indicator border — never as a fill, so four coloured
- * segments don't turn the header into a flag.
+ * Same object as Dzisiaj's ModeSlider: an opaque track, a sliding lit thumb,
+ * muted labels that take their colour only when active. This was the one
+ * segmented control in the app still built from --surface-translucent and a
+ * hand-rolled border while tokens.css was unifying every other one.
+ *
+ * The level's colour (--lvl, from LEVEL_COLORS) now FILLS the active segment
+ * rather than only outlining it. The old rule here said "never as a fill, so
+ * four coloured segments don't turn the header into a flag" — the flag is still
+ * the thing to avoid, but a fill was never what caused it: exactly one segment
+ * is ever active, so a fill produces one coloured object, not four. What keeps
+ * it from becoming a flag is the restraint on the other three, and that is now
+ * where the rule lives — inactive labels stay --text-muted and their progress
+ * hairlines drop to a quiet mix. Deliberate, and requested.
+ *
+ * Because the fill is light (the four levels run L 0.62–0.81), the active
+ * label flips to --text-on-lvl — white measures 1.8–3.7:1 on these four and
+ * fails AA on every one of them.
  * ========================================================================== */
 
 .rsw {
@@ -15,14 +27,26 @@
 }
 
 /* ── Levels: a four-way segmented control ─────────────────────────────────── */
+/* The track is opaque, and that is the whole reason the page no longer needs a
+   full-bleed glass slab behind this bar: it used to be translucent with 2px
+   gaps, so pack rows were visibly scrolling through it (see HomePage.css). An
+   opaque track hides what passes behind it by itself.
+   The wash is the ACTIVE level's colour at a whisper — a persistent node, so it
+   genuinely cross-fades yellow → blue when you change level, which is what
+   carries the transition while the thumb itself has to cut (see .rsw__level-ind). */
 .rsw__levels {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2px;
   padding: 3px;
-  background: var(--surface-translucent);
-  border: 1px solid var(--border);
+  background:
+    linear-gradient(color-mix(in oklch, var(--lvl-active, transparent) 6%, transparent),
+                    color-mix(in oklch, var(--lvl-active, transparent) 6%, transparent)),
+    var(--surface-tile-opaque);
+  border: 1px solid color-mix(in oklch, var(--lvl-active, transparent) 20%, var(--tile-border));
+  box-shadow: var(--tile-hi);
   border-radius: var(--radius-lg);
+  transition: background var(--transition-med), border-color var(--transition-med);
 }
 
 .rsw__level {
@@ -42,12 +66,32 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/* The standard thumb, hue-swapped: a translucent sheen lit from above over a
+   solid --lvl, keeping everything that makes a thumb a thumb — the vertical
+   gradient, the lit top rim, the soft drop — and changing only its colour. The
+   outer glow ties the shadow to the colour it is carrying, as the CTA's does.
+
+   The sheen is --tile-film and NOT --fill-thumb, which is the obvious choice
+   and is wrong: light theme redefines --fill-thumb as solid opaque white, so
+   layering it over the level colour hid the colour completely and the active
+   segment came out white on paper. --tile-film is defined once, translucent in
+   both themes, so the colour survives the theme flip.
+
+   Known and accepted: `{on && <NavIndicator/>}` unmounts one element and mounts
+   another, so on a level change the colour CUTS to the destination on the first
+   frame while the box slides. At a 45% border that was invisible; at a full
+   fill it is a real cut. It is tolerable because the pill belongs to where it
+   is going, the travel is ≤3 segments (~200ms), and the track's wash above
+   glides underneath it. The fix, if it ever reads badly, is to drop layoutId
+   here for one persistent indicator driven by left/width — not @property on
+   --lvl, which can't work: LEVEL_COLORS holds var() references, not colours. */
 .rsw__level-ind {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: var(--surface-translucent-strong);
-  border: 1px solid color-mix(in oklch, var(--lvl) 45%, transparent);
+  background: var(--tile-film), var(--lvl);
+  box-shadow: var(--fill-thumb-shadow),
+              0 2px 12px color-mix(in oklch, var(--lvl) 32%, transparent);
   pointer-events: none;
 }
 
@@ -68,14 +112,21 @@
   transition: color var(--transition-fast);
 }
 
-.rsw__level.is-on .rsw__level-name { color: var(--text-primary); }
+/* Ink, not white — see the file header. Heavier too: it is sitting on a bright
+   fill, where 700 reads lighter than it does on the ground. */
+.rsw__level.is-on .rsw__level-name {
+  color: var(--text-on-lvl);
+  font-weight: 800;
+}
 
 @media (hover: hover) {
   .rsw__level:not(.is-on):hover .rsw__level-name { color: var(--text-secondary); }
 }
 
 /* Progress as a hairline under the name — every level shows how far you are
-   in it, not only the one you are looking at. */
+   in it, not only the one you are looking at.
+   Quiet on the three you are not on: that restraint is what keeps four
+   coloured levels from reading as a flag now that the active one is filled. */
 .rsw__level-bar {
   position: relative;
   width: 60%;
@@ -89,8 +140,18 @@
   position: absolute;
   inset: 0 auto 0 0;
   border-radius: inherit;
-  background: var(--lvl);
+  background: color-mix(in oklch, var(--lvl) 55%, transparent);
   transition: width var(--transition-slow) var(--ease-out-expo);
+}
+
+/* On the filled segment the level colour has nowhere to go — --lvl on --lvl is
+   invisible — so the meter inverts: ink in a well, on the colour. */
+.rsw__level.is-on .rsw__level-bar {
+  background: oklch(0 0 0 / 0.18);
+}
+
+.rsw__level.is-on .rsw__level-bar > span {
+  background: color-mix(in oklch, var(--text-on-lvl) 75%, transparent);
 }
 
 /* ── Volumes: chips for the selected level ─────────────────────────────────── */
@@ -116,9 +177,12 @@
   gap: 7px;
   height: 36px;
   padding: 0 14px 0 8px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--tile-border);
   border-radius: var(--radius-full);
-  background: transparent;
+  /* Opaque, like the track above it and for the same reason: these chips are
+     sticky and pack rows pass behind them. Transparent, they were a window. */
+  background: var(--surface-tile-opaque);
+  box-shadow: var(--tile-hi);
   scroll-snap-align: center;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -126,12 +190,17 @@
 
 .rsw__vol.is-on { border-color: transparent; }
 
+/* The level's colour again, filled — the same thumb as the level segment, so
+   the two rows read as one control. A volume chip never changes hue mid-slide
+   (every chip in a row belongs to one level), so this is the clean case: no
+   colour cut, just the pill travelling. */
 .rsw__vol-ind {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: var(--surface-translucent-strong);
-  border: 1px solid color-mix(in oklch, var(--lvl) 45%, transparent);
+  background: var(--tile-film), var(--lvl);
+  box-shadow: var(--fill-thumb-shadow),
+              0 2px 12px color-mix(in oklch, var(--lvl) 32%, transparent);
   pointer-events: none;
 }
 
@@ -147,6 +216,13 @@
           mask: radial-gradient(circle, transparent 6px, #000 6.5px);
 }
 
+/* Inverted on the filled chip, exactly as the level meter is. */
+.rsw__vol.is-on .rsw__vol-ring {
+  background: conic-gradient(
+    color-mix(in oklch, var(--text-on-lvl) 75%, transparent) calc(var(--pct, 0) * 1%),
+    oklch(0 0 0 / 0.18) 0);
+}
+
 .rsw__vol-name {
   position: relative;
   font-family: var(--font-heading);
@@ -156,7 +232,10 @@
   white-space: nowrap;
 }
 
-.rsw__vol.is-on .rsw__vol-name { color: var(--text-primary); }
+.rsw__vol.is-on .rsw__vol-name {
+  color: var(--text-on-lvl);
+  font-weight: 800;
+}
 
 .rsw__vol-range {
   position: relative;
@@ -165,6 +244,12 @@
   font-variant-numeric: tabular-nums;
   color: var(--text-muted);
   white-space: nowrap;
+}
+
+/* Ink at reading strength, not the muted grey — on a bright fill --text-muted
+   is the one value that disappears entirely. */
+.rsw__vol.is-on .rsw__vol-range {
+  color: color-mix(in oklch, var(--text-on-lvl) 72%, transparent);
 }
 
 /* ── Filter counts ────────────────────────────────────────────────────────
@@ -194,6 +279,11 @@
   color: var(--text-muted);
 }
 
+/* The badge straddles the track's top edge, so its cut-out ring is half on the
+   track and half on whatever is above it. That used to be the chrome's glass
+   slab, and a flat --bg-primary ring passed unnoticed; with the slab gone the
+   upper half sits on the live mesh, where a flat dark ring reads as a smudge.
+   A translucent mix of the track's own base blends into both. */
 .rsw__count--level {
   position: absolute;
   top: -7px;
@@ -202,7 +292,7 @@
   height: 18px;
   padding: 0 5px;
   z-index: 1;
-  box-shadow: 0 0 0 2px var(--bg-primary);
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--bg-card) 82%, transparent);
 }
 
 .rsw__levels { overflow: visible; }

@@ -229,7 +229,7 @@ export function TodayPage() {
       ticks={listenTicks}
       band={listenBand(listenedCount)}
       note={listenBacklog > 0
-        ? `Z tyłu do przesłuchania: ${listenBacklog.toLocaleString('pl-PL')} ${plPacks(listenBacklog)} — nadrobisz w Pakietach.`
+        ? `Z tyłu do przesłuchania: ${listenBacklog.toLocaleString('pl-PL')} ${plPacks(listenBacklog)} — nadrobisz na Mapie.`
         : undefined}
     />
   )
