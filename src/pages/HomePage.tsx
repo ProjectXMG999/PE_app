@@ -308,17 +308,39 @@ export function HomePage() {
   }, [snapshot, levels, frontier, statOfVolume, selectVolume])
 
   // ── Stuck state: glass behind the chrome only while it is pinned ─────────
+  /**
+   * Measured, not observed.
+   *
+   * This was an IntersectionObserver on the sentinel, and it was right for
+   * every scroll a finger makes: an observer costs no layout, which is what you
+   * want on the longest list in the app. What it is not right for is the scroll
+   * the page makes for you. Coming back to /pakiety restores the offset you
+   * left from (below), so the chrome arrives already pinned — and an observer
+   * only ever speaks when the intersection *changes*. Whatever the engine
+   * decided during those restore frames is the state it keeps, with no callback
+   * owed to anyone; when it decides wrong, nothing scrolling further down can
+   * put it right, because further down is not a change. That is the reported
+   * bug exactly: a transparent bar with the pack rows sliding through it, and
+   * the glass appearing only after a trip back to the very top and down again
+   * — the one move that forces the intersection to flip twice.
+   *
+   * Asking the DOM directly has no such state to get wrong. The read is one
+   * rect pair, folded into the rAF that the scroll-offset save already runs
+   * (and which already forces this same layout by reading `scrollTop`), so a
+   * scrolling frame pays for one flush, not two.
+   */
   const sentinelRef = useRef<HTMLDivElement>(null)
   const [stuck, setStuck] = useState(false)
-  useEffect(() => {
+  /** The chrome's sticky `top`: 0 on mobile, --spacing-sm from 1024px up. Read
+   *  from the computed style rather than hardcoded, so the breakpoint lives in
+   *  one place — the stylesheet. Refreshed by the ResizeObserver below. */
+  const stickyTopRef = useRef(0)
+  const syncStuck = useCallback(() => {
+    const main = document.querySelector('.appshell__main')
     const node = sentinelRef.current
-    if (!node) return
-    const io = new IntersectionObserver(
-      ([e]) => setStuck(!e.isIntersecting),
-      { root: document.querySelector('.appshell__main'), threshold: 0 },
-    )
-    io.observe(node)
-    return () => io.disconnect()
+    if (!main || !node) return
+    const top = node.getBoundingClientRect().top - main.getBoundingClientRect().top
+    setStuck(top <= stickyTopRef.current + 0.5)
   }, [])
 
   // ── Sticky chrome height ──────────────────────────────────────────────────
@@ -328,12 +350,19 @@ export function HomePage() {
     const el = chromeRef.current
     const page = el?.closest('.homepage') as HTMLElement | null
     if (!el || !page) return
-    const publish = () => page.style.setProperty('--chrome-h', `${Math.round(el.offsetHeight)}px`)
+    const publish = () => {
+      page.style.setProperty('--chrome-h', `${Math.round(el.offsetHeight)}px`)
+      // Same beat: the sticky offset can only change with the breakpoint, and
+      // anything that dismisses a banner above the sentinel moves the point at
+      // which the chrome pins without any scrolling happening at all.
+      stickyTopRef.current = parseFloat(getComputedStyle(el).top) || 0
+      syncStuck()
+    }
     publish()
     const ro = new ResizeObserver(publish)
     ro.observe(el)
     return () => ro.disconnect()
-  }, [])
+  }, [syncStuck])
 
   // ── Jumping ───────────────────────────────────────────────────────────────
   /**
@@ -424,6 +453,11 @@ export function HomePage() {
     let frame = 0
     const write = () => {
       frame = 0
+      // Before the early return, not after: the chrome is pinned or not
+      // whatever the offset is worth remembering, and a scroll that happens
+      // during the restore is exactly the one that must not leave the glass
+      // behind.
+      syncStuck()
       if (!restoredRef.current || !selected) return
       try {
         sessionStorage.setItem(SCROLL_KEY, JSON.stringify({ v: selected, top: main.scrollTop }))
@@ -440,7 +474,7 @@ export function HomePage() {
       // offset after `selected` has moved on.
       if (frame !== 0) cancelAnimationFrame(frame)
     }
-  }, [selected])
+  }, [selected, syncStuck])
 
   useEffect(() => {
     if (restoredRef.current || focusPack || !snapshot || !selected || searching) return
@@ -471,8 +505,15 @@ export function HomePage() {
       prev = step.prev
       tries++
 
-      if (step.done) restoredRef.current = true
-      else raf = requestAnimationFrame(tick)
+      if (step.done) {
+        restoredRef.current = true
+        // The scroll events these frames fired have already kept the chrome in
+        // step. This is for the tail case they cannot cover: a restore that
+        // lands on the offset the scrollport is already at fires no scroll
+        // event at all, and the chrome would then keep the state it mounted
+        // with — transparent — while sitting pinned over the rows.
+        syncStuck()
+      } else raf = requestAnimationFrame(tick)
     }
     raf = requestAnimationFrame(tick)
 
@@ -483,7 +524,7 @@ export function HomePage() {
     // out from under the swipe. `focusedRef` covered the pack-focus race;
     // nothing covered this one.
     return () => { if (raf) cancelAnimationFrame(raf) }
-  }, [snapshot, selected, searching, focusPack])
+  }, [snapshot, selected, searching, focusPack, syncStuck])
 
   // ── A filter was switched on or changed: go where its packs are ───────────
   // If the volume on screen has none, move to the nearest one that does —

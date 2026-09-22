@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useReducedMotion } from 'framer-motion'
+import { playSessionCurtain } from '../services/sfx'
 
 /** How long the curtain holds once it has something to say. */
 export const OPENER_MIN_MS = 1200
@@ -51,9 +52,31 @@ export interface SessionOpenerState {
  * tidies those hooks up — and the failure mode, a curtain dropping over a
  * session already in progress, is the worst one this component has.
  */
-export function useSessionOpener(ready: boolean, opts: { minMs?: number } = {}): SessionOpenerState {
+export function useSessionOpener(
+  ready: boolean,
+  opts: { minMs?: number; level?: number | null } = {},
+): SessionOpenerState {
   const reduced = useReducedMotion()
   const minMs = opts.minMs ?? (reduced ? 0 : OPENER_MIN_MS)
+
+  // The curtain sounds on MOUNT, not on `lifting`. The hold is over a second
+  // long, so a sound at the lift would arrive that long after the tap that
+  // caused it and read as unrelated to it; fired here it swells under the title
+  // card and resolves as the card leaves. Mount is also the moment closest to
+  // the gesture, which is what unlocked the audio context in the first place.
+  //
+  // Latched, because StrictMode runs this effect twice and two curtains 0ms
+  // apart is one curtain at double the gain, phase-cancelling in places.
+  const soundedRef = useRef(false)
+  const level = opts.level
+  useEffect(() => {
+    if (soundedRef.current) return
+    soundedRef.current = true
+    playSessionCurtain(level)
+    // Mount only: `level` is read once, and a pack whose level resolves late
+    // must not re-trigger the sound. Intentionally not a dependency.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   // Seeded from the first render so a warm cache settles without a second
   // commit; the effect covers everything that arrives later. Never set false.

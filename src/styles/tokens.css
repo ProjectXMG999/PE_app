@@ -99,16 +99,30 @@
      get brighter and more saturated, so the difference between them — not the
      average of them — is what you see. Muted stops on a dark ground average out
      to a flat purple film; this is the same total amount of colour spent on
-     contrast instead. */
+     contrast instead.
+
+     The three chromatic stops were raised (violet L 0.40 → 0.46, teal 0.36 →
+     0.43, indigo 0.30 → 0.37, each keeping its hue and near enough its chroma)
+     while the ink stops stayed on the floor. That is deliberately the opposite
+     of turning the whole thing up: the ink is what the colour is measured
+     against, so widening the gap between the two halves of the palette is what
+     makes the currents read, and it costs the blacks nothing. */
   --mesh-1: #000001;  /* ink */
-  --mesh-2: #4d2e92;  /* violet — --accent hue */
+  --mesh-2: #5e3baf;  /* violet — --accent hue,        oklch(0.46 0.175 292) */
   --mesh-3: #010103;  /* ink */
-  --mesh-4: #00454b;  /* teal — --live hue */
-  --mesh-5: #1f206d;  /* indigo — --accent-indigo hue */
+  --mesh-4: #015b63;  /* teal — --live hue,            oklch(0.43 0.073 205) */
+  --mesh-5: #2d308d;  /* indigo — --accent-indigo hue, oklch(0.37 0.151 275) */
   /* How far the shader canvas is allowed to come up over the flat ground. The
      stops alternate ink and colour, so raising this deepens the blacks at the
-     same rate it brightens the currents — it buys contrast, not tint. */
-  --ambient-strength: 0.5;
+     same rate it brightens the currents — it buys contrast, not tint.
+
+     0.5 → 0.72: at 0.5 the mesh was mixed half-and-half with a flat floor that
+     has no structure in it, so half of every current was being averaged away
+     before it reached the screen. Costs nothing — it is one opacity on a layer
+     that was already composited. The calibration rule above still holds and
+     was re-checked at this value: an empty page reads as black with light
+     moving in it, not as purple. */
+  --ambient-strength: 0.72;
   --ambient-grain: 0.05;
 
   /* The film grain itself, as one texture shared by the ground and the glass.
@@ -190,7 +204,25 @@
      depth comes from the rim and the sheen rather than faked lensing. */
   --liquid-blur: 28px;
   --liquid-saturate: 1.9;
-  --liquid-bg: linear-gradient(180deg, oklch(1 0 0 / 0.1) 0%, oklch(1 0 0 / 0.045) 100%);
+  /* The white film the glass adds on top of what it transmits. Down from
+     0.1/0.045 now that there is something behind it worth transmitting: this
+     layer is pure addition, so every point of it is a point of the mesh you
+     don't see through the card. */
+  --liquid-bg: linear-gradient(180deg, oklch(1 0 0 / 0.06) 0%, oklch(1 0 0 / 0.025) 100%);
+  /* Smoked glass. The white film above cannot hold text on its own once the
+     ground is bright: a violet current passing under a card took muted text
+     from 4.0:1 to 2.8:1 (measured, Dzisiaj, pack card), and a card lit from
+     behind stopped reading as a card at all.
+
+     A thin veil of the page's own ink fixes both at once and is what the tab
+     bar has always done (BottomNav.css mixes --bg-primary under the same
+     film). It costs transmission rather than blocking it: the mesh still
+     modulates the card — a bright pool still lights it — but around a level
+     that stays BELOW the ground instead of floating above it. Dark panes on
+     lit ground, which is the separation the brighter mesh was bought for.
+     Measured back at 4.0–4.9:1 for muted text, i.e. where it was before the
+     ground came up. */
+  --liquid-veil: color-mix(in oklch, var(--bg-primary) 32%, transparent);
   /* The bottom stop is cool rather than neutral: a real glass edge disperses
      the light it bends, and the cool half is the half that actually shows.
      The warm top half is deliberately NOT attempted — these stops sit at
@@ -233,8 +265,15 @@
      makes the material read as glass at all: the ambient ground is calibrated
      to be felt and not looked at, so a blur of it returns a near-black
      rectangle — there is no light to transport. Each card brings its own,
-     and the glass refracts it. See the layer-order note in surfaces.css. */
-  --liquid-lamp-mix: 34%;
+     and the glass refracts it. See the layer-order note in surfaces.css.
+
+     34% → 26%, paid for by the brighter ground above. The lamp is a stand-in
+     for light the ground wasn't supplying; now that it supplies some, keeping
+     both at full strength just adds them together — which is how a card ends
+     up lighter than the mesh it is meant to be sitting on. Lowering it is what
+     turns the extra ambient into CONTRAST rather than into an overall lift:
+     the ground comes up, the cards stay where they were. */
+  --liquid-lamp-mix: 26%;
   /* Glass doesn't only block light, it focuses and passes it. How much of a
      card's own colour leaks out underneath it as a caustic. Only the tinted
      and gold variants and the hero card spend this: putting it in
@@ -457,14 +496,21 @@
      that sit exactly as far below the ground as the dark ones sit above it.
      Same stop order, same alternation, same shader motion — only the sign of
      the lightness changes, so a theme switch recolours the running animation
-     rather than swapping in a different one. Strength and grain stay equal to
-     the dark values for the same reason; re-derive these from the dark stops
-     (don't hand-tune them) if those ever change. */
+     rather than swapping in a different one. Re-derive these from the dark
+     stops (don't hand-tune them) if those ever change.
+
+     Strength does NOT mirror any more, and this is the one asymmetry worth
+     keeping: light text on a dark ground loses contrast slowly as the ground
+     comes up, dark text on a light ground loses it fast. The deeper stops
+     alone already cost the worst pool 5.0:1 → 4.5:1 for secondary text
+     reading directly off the ground (measured, Dzisiaj, light); at the dark
+     theme's 0.72 the same pool falls to 3.7:1, which is under AA for small
+     text. So light keeps 0.5 and takes its extra presence from the stops. */
   --mesh-1: #ffffff;  /* paper — mirrors ink #000001 */
-  --mesh-2: #9077e2;  /* violet — mirrors #4d2e92 */
+  --mesh-2: #7f60d7;  /* violet — mirrors #5e3baf */
   --mesh-3: #f3f4f9;  /* paper — mirrors ink #010103 */
-  --mesh-4: #6ba5ab;  /* teal — mirrors #00454b */
-  --mesh-5: #93a3fc;  /* indigo — mirrors #1f206d */
+  --mesh-4: #38929b;  /* teal — mirrors #015b63 */
+  --mesh-5: #7b8bf0;  /* indigo — mirrors #2d308d */
   --ambient-strength: 0.5;
   --ambient-grain: 0.05;
 
@@ -493,8 +539,15 @@
   --tile-hi: inset 0 1px 0 oklch(1 0 0 / 0.9);
 
   /* Liquid glass, light: frosted white over pale paper — a brighter fill,
-     a white rim and a cool, shallow shadow. */
-  --liquid-bg: linear-gradient(180deg, oklch(1 0 0 / 0.78) 0%, oklch(1 0 0 / 0.56) 100%);
+     a white rim and a cool, shallow shadow.
+
+     The film is lower than it looks because --liquid-veil (paper, 32%) now
+     sits under it in both themes: 0.72/0.42 over that lands the card back on
+     the 4.0:1 for muted text that 0.78/0.56 gave before. Deliberately
+     net-zero here — the dark card could afford to transmit more because its
+     text is light and the ground went brighter behind it; on paper, muted
+     text on a card is already at 4.0:1 and there is nothing to spend. */
+  --liquid-bg: linear-gradient(180deg, oklch(1 0 0 / 0.72) 0%, oklch(1 0 0 / 0.42) 100%);
   --liquid-rim: linear-gradient(180deg,
     oklch(1 0 0 / 1) 0%,
     oklch(1 0 0 / 0.6) 35%,
@@ -514,8 +567,10 @@
   /* A coloured light leak on paper goes muddy fast — about a third of dark. */
   --liquid-glow-mix: 12%;
   /* Far lower than dark: on near-white paper the lamp has little headroom
-     before it stops reading as light and starts reading as a stain. */
-  --liquid-lamp-mix: 13%;
+     before it stops reading as light and starts reading as a stain. Scaled by
+     the same ratio as the dark lamp (34→26) when the ground came up, so the
+     two themes keep telling the same story about where the light comes from. */
+  --liquid-lamp-mix: 10%;
 
   --glow-primary: 0 0 24px oklch(0.55 0.22 292 / 0.22);
   --glow-gold: 0 0 18px oklch(0.58 0.1 75 / 0.22);

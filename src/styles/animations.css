@@ -553,3 +553,15 @@
   animation: pe-arrive var(--pe-arrive-duration) var(--pe-arrive-ease) backwards;
 }
 
+/* Held at its first frame while the launch curtain is still down.
+   /dzis mounts underneath an opaque screen, so without this the whole arrival
+   plays out — and finishes — before anyone can see it, which is the same waste
+   useSessionOpener's `lifting` flag exists to prevent inside a session. The
+   attribute is dropped the moment the lift starts, so the content rises into
+   the fade rather than being revealed already settled.
+   index.html removes the attribute on its own timer too: a cascade paused by a
+   bundle that then failed to load would strand every page 12px off its mark. */
+:root[data-splash='on'] .pe-arrive {
+  animation-play-state: paused;
+}
+

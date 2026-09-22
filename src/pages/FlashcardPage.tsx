@@ -101,7 +101,12 @@ export function FlashcardPage() {
   // autoplay hook, because that hook's `enabled` reads it.
   const openerReady = !loading && dbLoaded && !!pack && studyWords.length > 0 && !showCompletion
   const { visible: openerVisible, settled: openerSettled, dismiss: dismissOpener } =
-    useSessionOpener(openerReady || !!error)
+    // The level comes from the index, not from `pack`: the curtain sounds on
+    // mount and the fetched pack is not there yet, so reading it from state
+    // would tune every session to level 1.
+    useSessionOpener(openerReady || !!error, {
+      level: allPacks.find(p => p.id === packageId)?.level,
+    })
   // Assigned once handleNext / handleAutoplayEnd exist below — the autoplay
   // sequence calls the latest version through these.
   const handleNextRef = useRef<(status?: 'known' | 'learning') => void>(() => {})

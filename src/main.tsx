@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { App } from './App'
 import './styles/global.css'
 import { pushLog } from './debug/audioLogger'
+import { runSplash } from './boot/splash'
 
 // Intercept console logs for the debug overlay (captures [audio], [action],
 // [seq] prefixes).
@@ -50,6 +51,11 @@ if ('serviceWorker' in navigator) {
     window.location.reload()
   })
 }
+
+// Before the mount, not inside a component: the curtain is already on screen by
+// now (index.html painted it), it is not React's to own, and StrictMode would
+// otherwise run its arming twice.
+runSplash()
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

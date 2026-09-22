@@ -26,11 +26,23 @@
      ones to the ground: mixing an ink stop in here just made a slightly
      purple black, which is what put a violet cast over the whole page before
      the shader had even loaded. Percentages are deliberately low — this is the
-     floor, not the light. */
+     floor, not the light.
+
+     Raised with the shader (dark: --ambient-strength 0.5 → 0.72) so the two
+     never disagree: this layer is what the first paint and every WebGL-less
+     device get, and leaving it behind would mean the app looked like one
+     background for the first second and a different one afterwards. Still the
+     floor — the mix percentages went up by less than the shader did.
+
+     One set of percentages for both themes, because the stops they mix are
+     already per-theme: the same 58% of light-theme --mesh-2 is pigment on
+     paper rather than light on ink. Light keeps its shader at 0.5 (see the
+     note on --ambient-strength there), and this raise is measured into that:
+     4.5:1 for secondary text reading off the ground at its worst pool. */
   background:
-    radial-gradient(54% 40% at 20% 10%, color-mix(in oklch, var(--mesh-2) 46%, transparent) 0%, transparent 58%),
-    radial-gradient(48% 38% at 88% 4%, color-mix(in oklch, var(--mesh-5) 40%, transparent) 0%, transparent 62%),
-    radial-gradient(66% 46% at 64% 100%, color-mix(in oklch, var(--mesh-4) 34%, transparent) 0%, transparent 64%),
+    radial-gradient(54% 40% at 20% 10%, color-mix(in oklch, var(--mesh-2) 58%, transparent) 0%, transparent 58%),
+    radial-gradient(48% 38% at 88% 4%, color-mix(in oklch, var(--mesh-5) 50%, transparent) 0%, transparent 62%),
+    radial-gradient(66% 46% at 64% 100%, color-mix(in oklch, var(--mesh-4) 44%, transparent) 0%, transparent 64%),
     var(--bg-primary);
 }
 
@@ -75,13 +87,15 @@
 /* Floor vignette — content sits above a soft shadow, not a hard edge.
    Lighter than it was: it was tuned against a ground three shades up from this
    one, and at full strength on obsidian it does nothing except crush the teal
-   current the mesh puts along the bottom edge. */
+   current the mesh puts along the bottom edge. Lighter again (0.26 → 0.18) now
+   that the mesh is carrying more: the bottom of the screen is where the teal
+   pool actually lands, and this was the one layer spending it. */
 .ambient::after {
   content: '';
   position: absolute;
   inset: 0;
   background: radial-gradient(130% 46% at 50% 118%,
-    oklch(0 0 0 / 0.26) 0%,
+    oklch(0 0 0 / 0.18) 0%,
     transparent 62%);
 }
 
@@ -94,6 +108,6 @@
    light. */
 [data-theme='light'] .ambient::after {
   background: radial-gradient(130% 46% at 50% 118%,
-    oklch(1 0 0 / 0.26) 0%,
+    oklch(1 0 0 / 0.18) 0%,
     transparent 62%);
 }

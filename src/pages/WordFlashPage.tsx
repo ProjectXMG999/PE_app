@@ -79,7 +79,11 @@ export function WordFlashPage() {
   // No loading screen of its own any more — the curtain is it, which is also
   // what makes the failure path load-bearing: nothing else would ever lift it.
   const { visible: openerVisible, settled, dismiss: dismissOpener } =
-    useSessionOpener(!!error || wordsReady)
+    // Level from the index, resolved synchronously — the words arrive later
+    // than the sound does.
+    useSessionOpener(!!error || wordsReady, {
+      level: allPacks.find(p => p.id === packageId)?.level,
+    })
 
   const currentWord = studyWords[cardIndex] ?? null
   const total = studyWords.length

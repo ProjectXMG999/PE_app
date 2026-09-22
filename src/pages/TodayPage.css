@@ -77,7 +77,11 @@
 .today__strip-loading {
   height: 128px;
   border-radius: var(--radius-xl);
-  background: var(--liquid-bg);
+  /* Both layers of the glass fill, in the card's own order — the placeholder
+     stands in for a .u-liquid card, so it has to be the same value of grey as
+     one. The white film alone is nearly nothing now that it has --liquid-veil
+     under it in the real card. */
+  background: var(--liquid-bg), var(--liquid-veil);
 }
 
 /* ── Reviews — an iOS inset-grouped pair of rows ──────────────────────────

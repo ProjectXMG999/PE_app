@@ -9,6 +9,7 @@ import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
 import './FlashcardModePage.css'
 import { useAppNavigate } from '../navigation/navigation'
+import { unlockAudioGlobally } from '../audio/audioUnlock'
 
 const allPacks = packagesIndex as PackMeta[]
 
@@ -127,7 +128,14 @@ export function FlashcardModePage() {
                   </span>
                 </span>
               }
-              onClick={() => navigate(`/pakiet/${packageId}/${m.id}`)}
+              // Unlocked here, synchronously inside the gesture, exactly as the
+              // Słuchaj and Dzisiaj launchers do. Without it these two modes
+              // reached their session with no audio context at all, so the
+              // curtain that opens them was the only silent one in the app.
+              onClick={() => {
+                unlockAudioGlobally()
+                navigate(`/pakiet/${packageId}/${m.id}`)
+              }}
             />
           ))}
         </div>

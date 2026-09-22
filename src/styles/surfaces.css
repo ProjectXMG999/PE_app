@@ -82,7 +82,8 @@
     var(--liquid-grain-url),
     var(--liquid-sheen),
     radial-gradient(120% 100% at 0% 0%, color-mix(in oklch, var(--u-hairline-color) 24%, transparent), transparent 60%),
-    var(--liquid-bg);
+    var(--liquid-bg),
+    var(--liquid-veil);
   -webkit-backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
           backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
 }
@@ -158,9 +159,13 @@
 /* The glass itself. The grain rides along as the topmost background layer:
    it has to sit ABOVE the blur (a blurred grain is just haze), and ::after is
    spoken for by the rim — so its strength is baked into --liquid-grain-url
-   per theme rather than carried by an `opacity` of its own. */
+   per theme rather than carried by an `opacity` of its own.
+
+   --liquid-veil is the bottom layer, under everything including the white
+   film: it is the smoke in smoked glass, not a coat of paint on the front.
+   See its note in tokens.css for why the card needs one now. */
 .u-liquid::before {
-  background: var(--liquid-grain-url), var(--liquid-sheen), var(--liquid-tint), var(--liquid-bg);
+  background: var(--liquid-grain-url), var(--liquid-sheen), var(--liquid-tint), var(--liquid-bg), var(--liquid-veil);
   -webkit-backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
           backdrop-filter: blur(var(--liquid-blur)) saturate(var(--liquid-saturate));
 }
