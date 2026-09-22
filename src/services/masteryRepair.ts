@@ -7,6 +7,7 @@ import {
 } from './db'
 import packagesIndex from '../data/packages-index.json'
 import { PackMeta } from '../types/vocabulary'
+import { PackageProgress, WordProgress } from '../types/progress'
 
 const wordCountById = new Map((packagesIndex as PackMeta[]).map(p => [p.id, p.wordCount]))
 
@@ -68,22 +69,43 @@ export async function repairMasteryFlags(): Promise<number> {
     getAllWordProgress(),
   ])
 
+  const knownByPack = knownCountByPack(words)
+  const plan = planMasteryRepair(packages, knownByPack, new Date().toISOString())
+  for (const row of [...plan.cleared, ...plan.promoted]) await savePackageProgress(row)
+
+  if (plan.cleared.length > 0) console.info(`[mastery] cleared ${plan.cleared.length} stale masteredAt flag(s)`)
+  if (plan.promoted.length > 0) console.info(`[mastery] set masteredAt on ${plan.promoted.length} fully-known pack(s)`)
+  return plan.cleared.length + plan.promoted.length
+}
+
+/** Known words per pack — the count every mastery decision is measured against. */
+export function knownCountByPack(words: WordProgress[]): Map<string, number> {
   const knownByPack = new Map<string, number>()
   for (const w of words) {
     if (w.status === 'known') {
       knownByPack.set(w.packageId, (knownByPack.get(w.packageId) ?? 0) + 1)
     }
   }
+  return knownByPack
+}
 
-  let fixed = 0
+/**
+ * The rows `repairMasteryFlags` would write, decided without touching the
+ * database — the unit-tested seam, in the same shape as listenRepair's.
+ */
+export function planMasteryRepair(
+  packages: PackageProgress[],
+  knownByPack: Map<string, number>,
+  nowIso: string,
+): { cleared: PackageProgress[]; promoted: PackageProgress[] } {
+  const cleared: PackageProgress[] = []
   for (const pp of packages) {
     if (pp.masteredAt == null) continue
     const total = wordCountById.get(pp.packageId)
     if (total == null) continue // pack not in the index — leave it alone
     if ((knownByPack.get(pp.packageId) ?? 0) >= total) continue // legitimately mastered
 
-    await savePackageProgress({ ...pp, masteredAt: null })
-    fixed++
+    cleared.push({ ...pp, masteredAt: null })
   }
 
   // The mirror case: every word is 'known' but masteredAt was never set, so the
@@ -91,26 +113,37 @@ export async function repairMasteryFlags(): Promise<number> {
   // hidden (it only renders while knownCount < wordCount) — no way to finish it
   // off. Happens when a pack's last words graduate through /powtorka (cross-pack,
   // never touches per-pack mastery) rather than a WordFlash/ActiveSentence run.
-  // Only touches packs already engaged with (a PackageProgress row exists);
-  // dates the mastery to the last full run through the pack if there was one.
-  let promoted = 0
-  for (const pp of packages) {
-    if (pp.masteredAt != null) continue
-    const total = wordCountById.get(pp.packageId)
+  //
+  // Driven by the WORD rows, not by the package rows. Keying it off existing
+  // PackageProgress rows meant a pack whose every word was learned in
+  // cross-pack sessions — /powtorka and Inteligentny, which write word progress
+  // for packs that were never opened on their own — had no row to promote and
+  // so could never be promoted at all. Those packs read as fully known on the
+  // route (the card counts words) and as unfinished on the pack page (the badge
+  // reads the flag), which is the same fact contradicting itself.
+  //
+  // Dates the mastery to the last full run through the pack if there was one.
+  const byPackId = new Map(packages.map(pp => [pp.packageId, pp]))
+  const promoted: PackageProgress[] = []
+  for (const [packageId, rawKnown] of knownByPack) {
+    const total = wordCountById.get(packageId)
     if (total == null || total === 0) continue
-    if ((knownByPack.get(pp.packageId) ?? 0) < total) continue
+    if (rawKnown < total) continue
+    const pp = byPackId.get(packageId)
+    if (pp?.masteredAt != null) continue
 
-    // `...pp` carries the listen axis through untouched — this pass used to
-    // raise currentIndex to the word count, so every fully-known pack reported
+    // The listen axis passes through untouched — this pass used to raise
+    // currentIndex to the word count, so every fully-known pack reported
     // itself as fully listened on each boot. See services/listenAxis.ts.
-    await savePackageProgress({
-      ...pp,
-      masteredAt: pp.completedAt ?? new Date().toISOString(),
+    promoted.push({
+      packageId,
+      startedAt: pp?.startedAt ?? nowIso,
+      completedAt: pp?.completedAt ?? nowIso,
+      listenedAt: pp?.listenedAt ?? null,
+      currentIndex: pp?.currentIndex ?? 0,
+      masteredAt: pp?.completedAt ?? nowIso,
     })
-    promoted++
   }
 
-  if (fixed > 0) console.info(`[mastery] cleared ${fixed} stale masteredAt flag(s)`)
-  if (promoted > 0) console.info(`[mastery] set masteredAt on ${promoted} fully-known pack(s)`)
-  return fixed + promoted
+  return { cleared, promoted }
 }
