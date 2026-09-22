@@ -1,4 +1,5 @@
 import { MeshGradient, StaticMeshGradient } from '@paper-design/shaders-react'
+import { MESH_SPEED } from './ambientControl'
 
 /**
  * The WebGL half of the ambient background, split into its own module so it can
@@ -87,7 +88,9 @@ export default function MeshField({ colors, still }: Props) {
     <MeshGradient
       style={FILL}
       colors={colors}
-      speed={0.14}
+      /* Held in ambientControl, because a thaw has to restore this exact
+         value — see MESH_SPEED there. */
+      speed={MESH_SPEED}
       distortion={0.85}
       swirl={0.6}
       /* The shader's own grain is off: the app draws film grain in CSS above

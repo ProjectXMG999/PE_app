@@ -21,7 +21,7 @@
   width: 28px;
   height: 28px;
   color: var(--text-muted);
-  background: var(--bg-surface);
+  background: var(--fill-chip);
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
   cursor: pointer;

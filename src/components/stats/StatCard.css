@@ -100,7 +100,7 @@
 /* Small compact variant */
 .statcard--small {
   padding: var(--spacing-sm) var(--spacing-md);
-  background: var(--bg-surface);
+  background: var(--fill-chip);
   border-color: transparent;
 }
 

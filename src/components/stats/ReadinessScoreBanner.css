@@ -14,9 +14,9 @@
 }
 
 .readiness-banner--empty {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  box-shadow: none;
+  background: var(--surface-tile);
+  border: 1px solid var(--tile-border);
+  box-shadow: var(--tile-hi);
   flex-direction: column;
   text-align: center;
   gap: var(--spacing-xs);

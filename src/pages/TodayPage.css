@@ -232,11 +232,7 @@
 }
 
 .today__reviews-row:active {
-  background: oklch(1 0 0 / 0.06);
-}
-
-[data-theme="light"] .today__reviews-row:active {
-  background: oklch(0.2 0.02 275 / 0.05);
+  background: var(--fill-pressed);
 }
 
 /* The queue row: inset hairline above it, starting where the text starts. */
@@ -265,7 +261,7 @@
   width: 36px;
   height: 36px;
   color: var(--row-tint);
-  background: color-mix(in oklch, var(--row-tint) 18%, transparent);
+  background: color-mix(in oklch, var(--row-tint) var(--fill-tint-mix), transparent);
   border-radius: 10px;
   /* Held still on purpose: the badge is now the brightest point of a card
      that breathes, not a widget with a pulse of its own. The rim just keeps

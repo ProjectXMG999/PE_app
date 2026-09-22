@@ -12,8 +12,9 @@
   gap: var(--spacing-sm);
   padding: 14px var(--spacing-md);
   border-radius: var(--radius-lg);
-  background: var(--surface-translucent);
-  border: 1px solid var(--border);
+  background: var(--surface-tile);
+  border: 1px solid var(--tile-border);
+  box-shadow: var(--tile-hi);
   font-family: var(--font-heading);
   font-size: var(--text-md);
   font-weight: 700;
@@ -31,7 +32,7 @@
 
 .about-app__summary:hover {
   border-color: var(--border-strong);
-  background: var(--surface-translucent-strong);
+  background: var(--surface-tile-hover);
 }
 
 .about-app__chevron {
@@ -66,8 +67,9 @@
   gap: var(--spacing-sm);
   padding: var(--spacing-md);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  background: var(--surface-translucent);
+  border: 1px solid var(--tile-border);
+  background: var(--surface-tile);
+  box-shadow: var(--tile-hi);
   width: 100%;
 }
 
@@ -213,7 +215,7 @@
   font-size: var(--text-2xs);
   font-weight: 500;
   opacity: 0.7;
-  background: oklch(1 0 0 / 0.18);
+  background: var(--fill-chip);
   border-radius: var(--radius-full);
   padding: 2px 7px;
 }

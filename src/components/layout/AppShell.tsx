@@ -22,6 +22,11 @@ interface Props {
   lockScroll?: boolean
 }
 
+/** Which mounted shell currently owns `ambientHidden` — see the effect below.
+ *  Module scope, because the two shells involved in a navigation are different
+ *  component instances and neither can see the other. */
+let ambientClaim = 0
+
 export function AppShell({
   children, hideBottomNav = false, hideTopBar = false, hideSidebar = hideBottomNav, hideAmbient = hideBottomNav,
   lockScroll = hideBottomNav,
@@ -37,9 +42,27 @@ export function AppShell({
   // The ambient WebGL background mounts once at the app root (App.tsx) so
   // navigating between pages never tears down and rebuilds its GPU context —
   // each AppShell just tells it whether to fade out for this screen.
+  //
+  // But every page mounts its OWN shell, so a navigation runs this cleanup and
+  // the arriving shell's effect back to back. Reset synchronously and the flag
+  // goes true → false → true within one hop; AmbientBackground mounts the
+  // shader on that flag (`showShader = armed && !ambientHidden`), so leaving a
+  // session for another one, or for the Konstelacja, paid a full WebGL context
+  // teardown and rebuild — getContext, shader compile, link, buffer upload —
+  // in the middle of the transition it was supposed to be hiding under.
+  //
+  // So the reset is deferred by a microtask and skipped if another shell has
+  // claimed the flag since. React runs cleanups and effects in one synchronous
+  // flush, so by the time the microtask lands the arriving shell has always
+  // had its say. A page that genuinely leaves the shell behind still clears it.
   useEffect(() => {
+    const mine = ++ambientClaim
     setAmbientHidden(hideAmbient)
-    return () => setAmbientHidden(false)
+    return () => {
+      queueMicrotask(() => {
+        if (ambientClaim === mine) setAmbientHidden(false)
+      })
+    }
   }, [hideAmbient, setAmbientHidden])
 
   const noNav = hideBottomNav || chromeHidden

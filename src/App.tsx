@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, type ComponentType } from 'react'
+import { Suspense, useEffect, type ComponentType } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { useRegisterSW } from 'virtual:pwa-register/react'
 import { useAppStore, resolveTheme } from './store/useAppStore'
@@ -27,6 +27,7 @@ import { AmbientBackground } from './components/ambient/AmbientBackground'
 import { TodayPage } from './pages/TodayPage'
 import { HOME, NavigationTracker } from './navigation/navigation'
 import { registerPage, warmPages } from './navigation/pageChunks'
+import { holdNoTransition } from './utils/noTransition'
 import './App.css'
 
 /**
@@ -35,11 +36,47 @@ import './App.css'
  * The order matters exactly as much as it does below: the first pattern that
  * matches a path wins, so the specific pack routes precede the catch-all one.
  */
+/**
+ * Not `React.lazy`, and the difference is visible.
+ *
+ * `lazy()` keeps its own idea of whether the chunk is here, and it only forms
+ * that idea the first time React renders the component: the very first render
+ * calls the loader, gets a promise back — a resolved one, for a module that was
+ * warmed minutes ago — and suspends anyway, for one tick. `isPageLoaded` said
+ * yes, so a view transition was already running around that render, and what it
+ * photographed as "the new page" was <LoadingFallback>: a spinner, no AppShell,
+ * no tab bar. The bar's old snapshot then floated frozen over the screen for the
+ * whole 240ms and snapped to the new tab at the end, with the active-tab marker
+ * fading to nothing in between — measured, on the first visit to every tab.
+ *
+ * Here the module cache IS the readiness, shared with pageChunks through the
+ * loader below, so `entry.ready` and "renders in this tick" cannot disagree.
+ */
 function lazyPage<M extends Record<string, unknown>>(
   load: () => Promise<M>, name: keyof M & string, match: RegExp,
 ) {
-  registerPage(match, load)
-  return lazy(() => load().then(m => ({ default: m[name] as ComponentType })))
+  let mod: M | null = null
+  let pending: Promise<M> | null = null
+
+  // Both the warm-up and the render path go through this, so whichever runs
+  // first fills the cache for the other.
+  const fetch = () => {
+    pending ??= load().then(
+      m => { mod = m; return m },
+      // Let a failed chunk be retried — the next render starts a fresh fetch
+      // rather than re-throwing a rejection forever. pageChunks does the same
+      // with its `started` flag, and PageErrorBoundary catches this throw.
+      err => { pending = null; throw err },
+    )
+    return pending
+  }
+  registerPage(match, fetch)
+
+  return function Page() {
+    if (!mod) throw fetch()
+    const Component = mod[name] as ComponentType
+    return <Component />
+  }
 }
 
 const HomePage = lazyPage(() => import('./pages/HomePage'), 'HomePage', /^\/pakiety$/)
@@ -91,7 +128,17 @@ function syncThemeColor() {
 }
 
 export function App() {
-  const { theme, setInstallPrompt, setInstalled, setSwUpdateAvailable, setSwRegistration } = useAppStore()
+  // Atomic selectors, not `useAppStore()`. The selector-less form is identity
+  // by default, and the state object's identity changes on every `set()` — so
+  // App, which owns the ambient background, the router and the three app-level
+  // hosts, was re-rendering on every card advance, every filter keystroke and
+  // the `setAmbientHidden` that each navigation fires. Only `theme` is state
+  // here; the four setters are stable, so those selectors never re-render.
+  const theme = useAppStore(s => s.theme)
+  const setInstallPrompt = useAppStore(s => s.setInstallPrompt)
+  const setInstalled = useAppStore(s => s.setInstalled)
+  const setSwUpdateAvailable = useAppStore(s => s.setSwUpdateAvailable)
+  const setSwRegistration = useAppStore(s => s.setSwRegistration)
   const ambientHidden = useAppStore(s => s.ambientHidden)
   const location = useLocation()
 
@@ -107,17 +154,18 @@ export function App() {
   useEffect(() => {
     const el = document.documentElement
     const apply = () => {
-      el.classList.add('no-transition')
+      // Reference counted, because a navigation now holds the same class for
+      // the length of its transition — see utils/noTransition. Whichever of
+      // the two finishes first must not uncork the other.
+      const release = holdNoTransition()
       el.setAttribute('data-theme', resolveTheme(theme))
       // setAttribute above has already invalidated style, and syncThemeColor's
       // getComputedStyle forces the recalc, so this reads the NEW theme's
       // value in the same tick.
       syncThemeColor()
-      // One rAF to let the attribute apply, then remove the class so transitions resume
+      // One rAF to let the attribute apply, then release so transitions resume
       requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          el.classList.remove('no-transition')
-        })
+        requestAnimationFrame(release)
       })
     }
     apply()

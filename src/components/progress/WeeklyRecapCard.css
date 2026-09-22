@@ -52,7 +52,7 @@
 
 .recap__stat {
   padding: var(--spacing-sm) var(--spacing-md);
-  background: var(--bg-surface);
+  background: var(--fill-chip);
   border-radius: var(--radius-md);
 }
 

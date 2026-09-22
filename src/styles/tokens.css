@@ -175,24 +175,100 @@
   --live: oklch(0.74 0.16 190);
   --live-soft: oklch(0.74 0.16 190 / 0.13);
 
-  /* ── Glass surfaces ──────────────────────────────────────────────────────
-     Translucent white on the ambient background — the default card fill in
-     the restrained/editorial style. Solid --bg-card only where opacity is
-     structurally required. */
+  /* ═══ THE SURFACE LADDER ═════════════════════════════════════════════════
+     Five rungs, and every surface in the app is on exactly one of them. The
+     rung decides BOTH the blur and the transparency — that pairing is the
+     whole point, and it is what had drifted: the same job was being done with
+     a 28px blur on Dzisiaj, a flat 3% wash on Ustawienia and an opaque
+     --bg-card on Postęp, so the five tabs read as five apps.
+
+       1  SHEET     opaque --bg-card. Modals, bottom sheets, dialogs — a
+                    surface that COVERS the page. Never translucent: you are
+                    meant to lose the page behind it, and a blur can't be
+                    trusted to hide 40 rows of scrolling text.
+       2  GLASS     --liquid-* (blur 28/14px) + --liquid-veil. Cards and the
+                    tab bar — things that FLOAT, one to a dozen per screen.
+       2b CHROME    --glass-* (blur 20/10px) + --glass-bg-strong. Bars and
+                    pills that stick to an edge. A tighter blur because they
+                    are small and the content behind them is moving.
+       3  TILE      --surface-tile + --liquid-veil, NO blur. Repeated rows:
+                    pack cards, achievement tiles, stat cards. Same veil and
+                    therefore the same VALUE as the glass above it, so a list
+                    reads as the same material — but a list of 100 rows cannot
+                    each carry a backdrop-filter (see the note on --liquid-blur
+                    for what that costs), so the blur is what it gives up.
+       4  FILL      --fill-* and --surface-translucent below. Things INSIDE a
+                    surface: chips, tracks, thumbs, pressed states, inset
+                    groups. Never blurred — a blur samples the page, and these
+                    sit on a card that already did that.
+       5  SCRIM     --overlay + --scrim-blur. Behind a sheet.
+
+     Adding a surface means picking a rung, not inventing a value. If none of
+     them fits, the ladder is wrong and belongs here — not in a component. */
+
+  /* Rung 4, the quiet end: a chip or panel that needs to be a shade off the
+     surface it sits on and nothing more. */
   --surface-translucent: oklch(1 0 0 / 0.032);
   --surface-translucent-strong: oklch(1 0 0 / 0.06);
 
-  /* ── Tile — the material for repeated list rows ──────────────────────────
+  /* ── Rung 3: the tile ────────────────────────────────────────────────────
      A flat 3% wash puts a card a few hundredths of lightness above the ground,
      which is why a list of them read as "nothing is there". A tile
      is instead three things at once — a stronger fill, a vertical gradient (lit
      from above) and a hairline of light on the top edge. That reads as a
      physical object without costing an outer shadow, which this design system
-     deliberately doesn't use. */
-  --surface-tile: linear-gradient(180deg, oklch(1 0 0 / 0.085), oklch(1 0 0 / 0.045));
-  --surface-tile-hover: linear-gradient(180deg, oklch(1 0 0 / 0.13), oklch(1 0 0 / 0.075));
+     deliberately doesn't use.
+
+     The veil under the film is the same one the glass carries, and it is what
+     makes a tile and a card the same colour rather than merely similar. It is
+     also what stopped a Pakiety row from being a transparent window onto the
+     mesh: with a bright current behind it the white film alone was invisible
+     and the row WAS the background. */
+  --surface-tile:
+    linear-gradient(180deg, oklch(1 0 0 / 0.085), oklch(1 0 0 / 0.045)),
+    var(--liquid-veil);
+  --surface-tile-hover:
+    linear-gradient(180deg, oklch(1 0 0 / 0.13), oklch(1 0 0 / 0.075)),
+    var(--liquid-veil);
   --tile-border: oklch(1 0 0 / 0.13);
   --tile-hi: inset 0 1px 0 oklch(1 0 0 / 0.09);
+
+  /* ── Rung 4: fills ───────────────────────────────────────────────────────
+     The small stuff inside a surface. Every one of these existed already, two
+     to four times over, at values that were within a hundredth of each other
+     and never the same: the segmented thumb was 0.22/0.1 on Dzisiaj, 0.2/0.1
+     in the guide sheet and 0.16/0.06 in the tab bar — whose own comment calls
+     it "the same object as the segmented control's indicator on Dzisiaj".
+     Now it is literally the same object. */
+
+  /* The recess a control sits in, and the inset-grouped panel — an iOS
+     grouped list inside a card. */
+  --fill-track: linear-gradient(180deg, oklch(1 0 0 / 0.07), oklch(1 0 0 / 0.035));
+  --fill-track-line: inset 0 1px 0 oklch(1 0 0 / 0.1), inset 0 0 0 1px oklch(1 0 0 / 0.05);
+  /* The thing that slides along a track: segmented indicator, selected tab. */
+  --fill-thumb: linear-gradient(180deg, oklch(1 0 0 / 0.2), oklch(1 0 0 / 0.09));
+  --fill-thumb-shadow: 0 2px 8px oklch(0 0 0 / 0.28), inset 0 1px 0 oklch(1 0 0 / 0.32);
+  /* A row or tile under a finger. */
+  --fill-pressed: oklch(1 0 0 / 0.06);
+  /* A small neutral chip ON a card: a duration, a count, a keycap. */
+  --fill-chip: oklch(1 0 0 / 0.1);
+  /* A well: the unfilled part of a progress bar or meter. The only fill that
+     goes DOWN rather than up — a track is a groove, and every one of these was
+     reaching for the opaque --bg-surface plus a hand-written
+     `rgba(0, 0, 0, 0.25)` inset, which is both off-system and the one place
+     sRGB was still creeping back in. */
+  --fill-well: oklch(0 0 0 / 0.22);
+  --fill-well-line: inset 0 1px 3px oklch(0 0 0 / 0.25);
+  /* A chip on a SATURATED fill (an accent banner, a coloured exercise card),
+     where the ladder above would disappear. Light and ink versions, because
+     on colour both directions are legible and the choice is contrast, not
+     theme — these do not flip with the theme. */
+  --fill-on-accent: oklch(1 0 0 / 0.2);
+  --fill-on-accent-ink: oklch(0 0 0 / 0.16);
+  /* The standard strength for a chip tinted by a colour variable —
+     color-mix(in oklch, var(--whatever), var(--fill-tint-mix)). Was anything
+     from 8% to 24% depending on which screen invented it. */
+  --fill-tint-mix: 14%;
 
   /* ── Glass ───────────────────────────────────────────────────────────────
      ONE scale for the whole app. Before this there were four unrelated blur
@@ -238,6 +314,13 @@
      Measured back at 4.0–4.9:1 for muted text, i.e. where it was before the
      ground came up. */
   --liquid-veil: color-mix(in oklch, var(--bg-primary) 32%, transparent);
+  /* The same smoke, thicker, for the one surface that has to survive content
+     scrolling under it at speed: the tab bar. A card only ever has the ambient
+     behind it, but the bar has text — and a blur of moving text at 32% is a
+     grey smear that reads as a rendering fault. Named rather than written into
+     BottomNav.css, so the two are visibly the same decision at two strengths
+     instead of one token and one magic number. */
+  --liquid-veil-strong: color-mix(in oklch, var(--bg-primary) 45%, transparent);
   /* The bottom stop is cool rather than neutral: a real glass edge disperses
      the light it bends, and the cool half is the half that actually shows.
      The warm top half is deliberately NOT attempted — these stops sit at
@@ -549,11 +632,29 @@
   --surface-translucent-strong: oklch(0.22 0.02 275 / 0.05);
 
   /* On a light ground the same idea inverts: the tile is a touch darker than
-     the page and the highlight sits on white, not on a white wash. */
+     the page and the highlight sits on white, not on a white wash. No veil
+     layer here, unlike dark — these stops are already opaque, and paper over
+     paper is the light theme's equivalent of the veil's job anyway. */
   --surface-tile: linear-gradient(180deg, oklch(1 0 0), oklch(0.985 0.004 275));
   --surface-tile-hover: linear-gradient(180deg, oklch(1 0 0), oklch(0.965 0.008 285));
   --tile-border: oklch(0.22 0.02 275 / 0.12);
   --tile-hi: inset 0 1px 0 oklch(1 0 0 / 0.9);
+
+  /* Rung 4 on paper. The track/thumb pair keeps its direction — the thumb is
+     lit from above and the track is the shade it sits in — but on white the
+     thumb has nowhere brighter to go, so it goes opaque and the shadow does
+     the lifting. --fill-on-accent and --fill-on-accent-ink are deliberately
+     absent: they sit on saturated colour, which is the same in both themes. */
+  --fill-track: linear-gradient(180deg, oklch(1 0 0 / 0.9), oklch(1 0 0 / 0.72));
+  --fill-track-line: inset 0 0 0 1px oklch(0.22 0.02 275 / 0.06);
+  --fill-thumb: linear-gradient(180deg, oklch(1 0 0), oklch(1 0 0));
+  --fill-thumb-shadow: 0 2px 6px oklch(0.22 0.02 275 / 0.14), inset 0 1px 0 oklch(1 0 0);
+  --fill-pressed: oklch(0.22 0.02 275 / 0.05);
+  --fill-chip: oklch(0.22 0.02 275 / 0.06);
+  /* A groove on paper is ink at a tenth, not black at a fifth: the dark
+     theme's well would read as a hole punched in the card. */
+  --fill-well: oklch(0.22 0.02 275 / 0.09);
+  --fill-well-line: inset 0 1px 2px oklch(0.22 0.02 275 / 0.12);
 
   /* Liquid glass, light: frosted white over pale paper — a brighter fill,
      a white rim and a cool, shallow shadow.

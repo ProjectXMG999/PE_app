@@ -70,8 +70,17 @@ const RELATION_META: Record<PackMemory['relation'], { label: string; cls: string
 export function PackageCard({ pack, memory, heardPct = 0, isFrontier, prevNum, index = 0 }: Props) {
   const navigate = useNavigate()
   const openFlow = useAppNavigate()
-  const { user, hasAccess: hasAccessFn } = useAuthStore()
-  const hasAccess = hasAccessFn()
+  // Atomic selectors, not `useAuthStore()`. Selector-less is identity, and the
+  // state object's identity changes on every `set()` — on /pakiety that is 864
+  // cards re-rendering because something unrelated touched the auth store.
+  //
+  // The second one selects the STATUS, not the `hasAccess` action: the action
+  // is a stable reference that reads the status through `get()`, so subscribing
+  // to it would leave every card showing a stale lock when entitlement finally
+  // resolves. Same rule as the store's own (useAuthStore.ts:26), read where a
+  // change to it can be seen.
+  const user = useAuthStore(s => s.user)
+  const hasAccess = useAuthStore(s => s.entitlementStatus === 'active')
   const iconRef = useRef<HTMLSpanElement>(null)
   const nameRef = useRef<HTMLSpanElement>(null)
 

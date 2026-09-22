@@ -5,6 +5,7 @@ import { usePackageData } from '../hooks/usePackageData'
 import { getPackageProgress } from '../services/db'
 import { unlockAudioGlobally } from '../audio/audioUnlock'
 import { unlockKeepAlive } from '../audio/keepAlive'
+import { warmCurtainSound } from '../services/sfx'
 import { hasAnySentenceAudio } from '../audio/sentenceAudio'
 import { RATES } from '../constants/audioRates'
 import {
@@ -143,6 +144,9 @@ export function AutoplayModePage() {
     // Unlock iOS audio while still inside the tap gesture.
     unlockAudioGlobally()
     unlockKeepAlive()
+    // Synthesise the curtain's noise bed now, at idle, rather than in the
+    // frames the curtain is animating — see warmCurtainSound.
+    warmCurtainSound()
     setAutoplayMode(mode)
     navigate(`/pakiet/${packageId}/autoplay`, { state: { resume: from } })
   }

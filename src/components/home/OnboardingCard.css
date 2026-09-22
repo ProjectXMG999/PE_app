@@ -98,7 +98,7 @@
 }
 
 .onboarding-card__btn--secondary {
-  background: var(--bg-surface);
+  background: var(--fill-chip);
   color: var(--text-secondary);
   box-shadow: none;
   border: 1px solid var(--border);

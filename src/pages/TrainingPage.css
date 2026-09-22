@@ -185,12 +185,12 @@
 
 .training-card__duration {
   color: var(--text-secondary);
-  background: color-mix(in oklch, var(--text-primary) 8%, transparent);
+  background: var(--fill-chip);
 }
 
 .training-card__done {
   color: var(--success);
-  background: color-mix(in oklch, var(--success) 14%, transparent);
+  background: color-mix(in oklch, var(--success) var(--fill-tint-mix), transparent);
 }
 
 .training-card__go {
@@ -341,7 +341,7 @@
   font-size: var(--text-sm);
   font-weight: 600;
   white-space: nowrap;
-  background: oklch(0 0 0 / 0.16);
+  background: var(--fill-on-accent-ink);
   border-radius: var(--radius-full);
   font-variant-numeric: tabular-nums;
 }
@@ -411,14 +411,9 @@
   margin: 6px 0 18px;
   padding: 8px 16px;
   list-style: none;
-  background: linear-gradient(180deg, oklch(1 0 0 / 0.07), oklch(1 0 0 / 0.035));
+  background: var(--fill-track);
   border-radius: 18px;
-  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.1), inset 0 0 0 1px oklch(1 0 0 / 0.05);
-}
-
-[data-theme="light"] .training-detail__ul {
-  background: oklch(1 0 0 / 0.75);
-  box-shadow: inset 0 0 0 1px oklch(0.2 0.02 275 / 0.07), 0 4px 14px oklch(0.2 0.02 275 / 0.05);
+  box-shadow: var(--fill-track-line);
 }
 
 .training-detail__li {

@@ -58,7 +58,7 @@
 .packprogress__bar {
   flex: 1;
   height: 6px;
-  background: var(--bg-surface);
+  background: var(--fill-well);
   border-radius: var(--radius-full);
   overflow: hidden;
 }

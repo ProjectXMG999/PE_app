@@ -89,13 +89,31 @@ export function playUnlock(tier: 'bronze' | 'silver' | 'gold' | 'legend') {
 }
 
 /**
- * The breath of moving fabric under the chord. Without it the curtain is just
- * an arpeggio; with it something is travelling. Brown noise through a bandpass
- * that climbs 300 → 900 Hz — the same technique the drone uses (audio/studyPad.ts
- * runs its own brown noise through a fixed 520 Hz bandpass), swept instead of parked.
+ * The curtain's noise bed, synthesised once.
+ *
+ * This loop runs `sampleRate × duration` times — ~31 000 iterations at 44.1 kHz
+ * — on the main thread, and `playSessionCurtain` fires from the curtain's mount
+ * effect. That put it in the first frames of entering a study mode, on top of
+ * the route's own mount and whatever the view transition was still animating:
+ * one of the few pieces of real JS in a window that is otherwise starved for
+ * main-thread time.
+ *
+ * Nothing about it varies. It is noise, the duration is the same every time,
+ * and an AudioBuffer can be handed to any number of BufferSources — so it is
+ * built at most once per AudioContext and kept.
+ *
+ * Keyed on the context, not global: a buffer belongs to the context that
+ * created it, and the sample rate can differ between them (a Bluetooth device
+ * connecting mid-session re-rates the context on some platforms). A WeakMap so
+ * a discarded context takes its buffer with it.
  */
-function curtainSweep(ctx: AudioContext, startAt: number, duration: number, peakGain: number) {
-  const len = Math.ceil(ctx.sampleRate * duration)
+const noiseBeds = new WeakMap<AudioContext, AudioBuffer>()
+
+function brownNoise(ctx: AudioContext): AudioBuffer {
+  const cached = noiseBeds.get(ctx)
+  if (cached) return cached
+
+  const len = Math.ceil(ctx.sampleRate * CURTAIN_SWEEP_S)
   const buf = ctx.createBuffer(1, len, ctx.sampleRate)
   const data = buf.getChannelData(0)
   let last = 0
@@ -103,9 +121,41 @@ function curtainSweep(ctx: AudioContext, startAt: number, duration: number, peak
     last = (last + 0.02 * (Math.random() * 2 - 1)) / 1.02
     data[i] = last * 3.5
   }
+  noiseBeds.set(ctx, buf)
+  return buf
+}
 
+/**
+ * Build the noise bed ahead of the first curtain, when nothing is waiting.
+ *
+ * Called from the audio unlock, which is the tap that opens a session — the
+ * work then lands while the route is still being fetched rather than in the
+ * frames the curtain is animating. Best-effort: if the context isn't up yet,
+ * the curtain builds it itself, exactly as it used to.
+ */
+export function warmCurtainSound(): void {
+  const idle = window.requestIdleCallback
+  const run = () => {
+    const ctx = getAudioContext()
+    if (ctx) brownNoise(ctx)
+  }
+  if (idle) idle(() => run(), { timeout: 1000 })
+  else window.setTimeout(run, 200)
+}
+
+/** How long the sweep runs — and therefore how long its noise bed is. */
+const CURTAIN_SWEEP_S = 0.7
+
+/**
+ * The breath of moving fabric under the chord. Without it the curtain is just
+ * an arpeggio; with it something is travelling. Brown noise through a bandpass
+ * that climbs 300 → 900 Hz — the same technique the drone uses (audio/studyPad.ts
+ * runs its own brown noise through a fixed 520 Hz bandpass), swept instead of parked.
+ */
+function curtainSweep(ctx: AudioContext, startAt: number, peakGain: number) {
+  const duration = CURTAIN_SWEEP_S
   const src = ctx.createBufferSource()
-  src.buffer = buf
+  src.buffer = brownNoise(ctx)
   const band = ctx.createBiquadFilter()
   band.type = 'bandpass'
   band.Q.value = 0.9
@@ -157,5 +207,5 @@ export function playSessionCurtain(level?: number | null) {
     tone(ctx, degreeHz(key, v.degree, v.octave), now + i * 0.09, 1.1 - i * 0.05, v.peak, 0.18)
   })
 
-  curtainSweep(ctx, now, 0.7, 0.01)
+  curtainSweep(ctx, now, 0.01)
 }

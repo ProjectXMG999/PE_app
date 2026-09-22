@@ -1,6 +1,7 @@
 .activity-chart {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--surface-tile);
+  border: 1px solid var(--tile-border);
+  box-shadow: var(--tile-hi);
   border-radius: var(--radius-lg);
   padding: var(--spacing-md);
 }

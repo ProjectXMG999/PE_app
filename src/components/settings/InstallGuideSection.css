@@ -2,8 +2,9 @@
    so this carries no margins or max-width of its own. */
 .install-guide {
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  background: var(--surface-translucent);
+  border: 1px solid var(--tile-border);
+  background: var(--surface-tile);
+  box-shadow: var(--tile-hi);
   overflow: hidden;
 }
 
@@ -76,7 +77,7 @@
 
 .install-guide__tab:hover {
   color: var(--text-secondary);
-  background: var(--surface-translucent-strong);
+  background: var(--fill-pressed);
 }
 
 .install-guide__tab--active {
@@ -152,7 +153,7 @@
   width: 22px;
   height: 22px;
   border-radius: 5px;
-  background: var(--bg-surface);
+  background: var(--fill-chip);
   border: 1px solid var(--border);
   color: var(--accent);
   flex-shrink: 0;

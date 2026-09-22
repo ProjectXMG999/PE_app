@@ -118,13 +118,22 @@ export function AmbientBackground() {
 
   // Unmounted, not just faded: a session screen should leave no shader running.
   const showShader = armed && !ambientHidden
+  const still = !!reduced || tabHidden
 
   return (
     <div className={`ambient${ambientHidden ? ' ambient--hidden' : ''}`} aria-hidden="true">
-      <div ref={fieldRef} className={`ambient__field${showShader ? ' ambient__field--ready' : ''}`}>
+      {/* data-ambient-live marks the ANIMATED shader for ambientControl, which
+          freezes it for the length of a view transition. The still variant
+          must not carry it: thawing that one would set a background that is
+          meant to hold still running at full speed. */}
+      <div
+        ref={fieldRef}
+        className={`ambient__field${showShader ? ' ambient__field--ready' : ''}`}
+        data-ambient-live={showShader && !still ? '' : undefined}
+      >
         {showShader && (
           <Suspense fallback={null}>
-            <MeshField colors={colors} still={!!reduced || tabHidden} />
+            <MeshField colors={colors} still={still} />
           </Suspense>
         )}
       </div>

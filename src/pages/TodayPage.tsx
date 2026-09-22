@@ -13,7 +13,7 @@ import { useProgressPulse } from '../hooks/useProgressPulse'
 import { FlowNumber } from '../components/shared/FlowNumber'
 import { useHaptics } from '../hooks/useHaptics'
 import { unlockAudioGlobally } from '../audio/audioUnlock'
-import { playTick, playSuccess } from '../services/sfx'
+import { playTick, playSuccess, warmCurtainSound } from '../services/sfx'
 import { nextListenPack, nextTrainPack, listenedPacksCount, listenBacklogCount, estimateMinutes, packLevelThresholds } from '../data/nextPack'
 import { shouldPromptLevelUp } from '../services/comfort'
 import { reviewMinutes } from '../services/reviewQueue'
@@ -319,7 +319,7 @@ export function TodayPage() {
               ) : (
                 <SessionHero
                   snapshot={snapshot}
-                  onStart={() => pressCta(() => { unlockAudioGlobally(); navigate('/inteligentny') })}
+                  onStart={() => pressCta(() => { unlockAudioGlobally(); warmCurtainSound(); navigate('/inteligentny') })}
                   secondsStudied={pulse.secondsToday}
                   goalSec={pulse.goalSec}
                   onEditGoal={() => setGoalOpen(true)}
@@ -337,7 +337,7 @@ export function TodayPage() {
                   <button
                     type="button"
                     className="today__reviews-row"
-                    onClick={() => pressCta(() => { unlockAudioGlobally(); navigate('/powtorka') })}
+                    onClick={() => pressCta(() => { unlockAudioGlobally(); warmCurtainSound(); navigate('/powtorka') })}
                   >
                     <span className="today__reviews-badge" aria-hidden="true">
                       {reviewDone ? <CheckGlyph size={18} weight={2.4} /> : <RepeatGlyph size={18} weight={2.2} />}

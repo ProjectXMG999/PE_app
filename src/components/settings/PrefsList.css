@@ -70,8 +70,14 @@
   padding-left: 2px;
 }
 
+/* Rung 3. It was .u-surface — a 3% wash — which is rung 4's material: on the
+   brighter ground a section card had nothing to sit on and the page read as
+   floating labels. The class stays for the radius and the hairline rows. */
 .settings__card {
   overflow: hidden;
+  background: var(--surface-tile);
+  border-color: var(--tile-border);
+  box-shadow: var(--tile-hi);
 }
 
 /* ── Row ──────────────────────────────────────────────────────────────────── */
@@ -137,8 +143,8 @@
   gap: 4px;
   padding: 4px;
   border-radius: var(--radius-full);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--fill-track);
+  box-shadow: var(--fill-track-line);
 }
 
 .settings__pill {
@@ -162,16 +168,18 @@
 
 .settings__pill:hover {
   color: var(--text-primary);
-  background: var(--surface-translucent-strong);
+  background: var(--fill-pressed);
 }
 
+/* The same thumb the tab bar and Dzisiaj's mode slider use. It was an
+   accent-filled pill with a hardcoded #fff on it, which made the one control
+   that appears on every settings screen the only segmented control in the app
+   that wasn't the segmented control. */
 .settings__pill--active,
 .settings__pill--active:hover {
-  color: #fff;
-  background: linear-gradient(135deg,
-    color-mix(in oklch, var(--accent) 94%, black) 0%,
-    color-mix(in oklch, var(--accent) 55%, black) 100%);
-  box-shadow: 0 4px 14px color-mix(in oklch, var(--accent) 38%, transparent);
+  color: var(--text-primary);
+  background: var(--fill-thumb);
+  box-shadow: var(--fill-thumb-shadow);
 }
 
 /* ── Toggle ───────────────────────────────────────────────────────────────── */

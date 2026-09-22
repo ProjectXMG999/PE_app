@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import type { MouseEvent } from 'react'
 import type { NavigateOptions } from 'react-router-dom'
 import { isPageLoaded, preloadPath } from './pageChunks'
+import { freezeAmbient, thawAmbient } from '../components/ambient/ambientControl'
+import { holdNoTransition } from '../utils/noTransition'
 
 /**
  * One motion vocabulary for moving between pages.
@@ -126,6 +128,36 @@ function viewTransitions(): StartViewTransition | null {
  */
 let active: ViewTransition | null = null
 
+/**
+ * Quiet the two things that make a transition cost more than it animates, for
+ * exactly as long as one is running.
+ *
+ *  • **The ambient shader** stops where it stands. It is the backdrop every
+ *    glass surface blurs through, so while it draws, a dozen large-kernel
+ *    blurs are re-convolved every frame — including through the outgoing
+ *    capture, which has to paint all of it first. See ambientControl.
+ *  • **The universal colour transition** (`*, *::before, *::after` in
+ *    global.css) stops being billed on the incoming page's first style
+ *    recalculation. That recalc was measured at 178–341 ms per tab-to-tab hop
+ *    on a phone-class CPU, on a tree that has just been mounted whole by
+ *    `flushSync`. Nothing is mid-fade during a page swap, so suppressing it
+ *    here changes nothing you can see.
+ *
+ * Both are restored by the returned function, which is idempotent and safe to
+ * call from every exit a transition has.
+ */
+function quietForTransition(): () => void {
+  freezeAmbient()
+  const releaseTransitions = holdNoTransition()
+  let done = false
+  return () => {
+    if (done) return
+    done = true
+    thawAmbient()
+    releaseTransitions()
+  }
+}
+
 export function navigateWithTransition(dir: NavDirection, to: string, navigate: () => void) {
   markDirection(dir)
   const start = viewTransitions()
@@ -140,6 +172,10 @@ export function navigateWithTransition(dir: NavDirection, to: string, navigate: 
   // `skipTransition` jumps to the end state, so the screen lands on the page
   // that was in flight and then on this one — which is what tapping quickly
   // asks for. Stop tapping and the very next navigation animates normally.
+  //
+  // `skipTransition` still settles `finished`, so the quiet window the skipped
+  // transition opened is released by its own handler below — nothing to undo
+  // here.
   if (active) {
     active.skipTransition()
     active = null
@@ -147,14 +183,20 @@ export function navigateWithTransition(dir: NavDirection, to: string, navigate: 
     return
   }
 
+  const resume = quietForTransition()
   const t = start(() => { flushSync(navigate) })
   active = t
   // Two-argument form, not `.catch`: `finished` rejects if the update callback
   // throws, and an unhandled rejection here would be noise on a path that has
   // already done its job. Guarded on identity so a transition that was
   // superseded can't clear its successor.
-  const clear = () => { if (active === t) active = null }
+  const clear = () => { if (active === t) active = null; resume() }
   t.finished.then(clear, clear)
+  // The net under the net. `finished` settles on every path the spec defines,
+  // but a background stuck still — or an app that has silently lost its colour
+  // transitions — is a far worse failure than a transition that paid full
+  // price, so nothing depends on that promise arriving.
+  window.setTimeout(resume, SETTLE_MS)
 }
 
 /**
@@ -177,10 +219,17 @@ export function popWithTransition(dir: NavDirection, pop: () => void) {
   const start = viewTransitions()
   if (!start) { pop(); return }
   settle()
-  popping = start(() => new Promise<void>(resolve => {
+  const resume = quietForTransition()
+  const t = start(() => new Promise<void>(resolve => {
     pending = resolve
     popTimer = window.setTimeout(() => { popping?.skipTransition(); settle() }, POP_TIMEOUT_MS)
   }))
+  popping = t
+  // Released on `finished`, not on `settle()`: settling only resolves the
+  // update callback, and the animation this is quieting runs for the 260 ms
+  // after that. Same net as the push path, for the same reason.
+  t.finished.then(resume, resume)
+  window.setTimeout(resume, SETTLE_MS + POP_TIMEOUT_MS)
   pop()
 }
 

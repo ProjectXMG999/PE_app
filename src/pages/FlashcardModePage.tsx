@@ -10,6 +10,7 @@ import { PackMeta } from '../types/vocabulary'
 import './FlashcardModePage.css'
 import { useAppNavigate } from '../navigation/navigation'
 import { unlockAudioGlobally } from '../audio/audioUnlock'
+import { warmCurtainSound } from '../services/sfx'
 
 const allPacks = packagesIndex as PackMeta[]
 
@@ -134,6 +135,9 @@ export function FlashcardModePage() {
               // curtain that opens them was the only silent one in the app.
               onClick={() => {
                 unlockAudioGlobally()
+                // The curtain's noise bed, built at idle instead of in the
+                // frames it animates — see warmCurtainSound.
+                warmCurtainSound()
                 navigate(`/pakiet/${packageId}/${m.id}`)
               }}
             />

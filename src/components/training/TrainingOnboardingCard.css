@@ -45,7 +45,7 @@
   font-size: var(--text-sm);
   font-weight: 500;
   color: var(--text-secondary);
-  background: color-mix(in oklch, var(--text-primary) 8%, transparent);
+  background: var(--fill-chip);
   border-radius: var(--radius-full);
   font-variant-numeric: tabular-nums;
 }

@@ -33,7 +33,7 @@
   height: 48px;
   padding: 0 14px;
   border-radius: var(--radius-full);
-  background: var(--bg-card);
+  background: var(--bg-input);
   border: 1px solid var(--border);
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
