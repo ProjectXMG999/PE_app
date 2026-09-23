@@ -8,6 +8,7 @@ import {
 } from 'react'
 import { motion, useDragControls, useReducedMotion, type PanInfo, type Variants } from 'framer-motion'
 import { EASE_OUT_EXPO } from '../today/motion'
+import { freezeAmbient, thawAmbient } from '../ambient/ambientControl'
 
 /**
  * ── The sheet ───────────────────────────────────────────────────────────────
@@ -147,6 +148,32 @@ export const Sheet = forwardRef<SheetHandle, Props>(function Sheet(
 
   useEffect(() => {
     ref.current?.showModal()
+  }, [])
+
+  /**
+   * The ambient mesh holds still for as long as a sheet is up.
+   *
+   * `.u-sheet::backdrop` is a backdrop-filter, and `#root` isolates — so the
+   * shader canvas IS the backdrop that scrim samples. A blur whose backdrop
+   * changes cannot be cached, so every frame the mesh draws forces the
+   * full-screen scrim to be re-convolved, on top of the panel's own spring and
+   * whatever the content is animating.
+   *
+   * Measured on this machine at CPU ×6, opening the level picker: p95 33.6 ms
+   * per frame, and 40.7 ms while the marker travels between rows — both over
+   * half rate, which is the stutter. The CPU profile put 1715 of 2313 ms in
+   * `(program)`, i.e. native paint, with the largest JS entry at 31 ms: there
+   * was never a script to optimise here.
+   *
+   * Freezing is invisible — `setSpeed(0)` leaves the mesh on its current frame
+   * and the thaw resumes from exactly that one — and a mesh nobody can see
+   * through a scrim has nothing to say while it is covered. ambientControl is
+   * reference counted, so a sheet opening during a view transition (or over
+   * another sheet) can't release the other one's freeze.
+   */
+  useEffect(() => {
+    freezeAmbient()
+    return thawAmbient
   }, [])
 
   function requestClose() {

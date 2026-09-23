@@ -35,6 +35,31 @@ export const COMFORT = {
   MASTERED_PACKS_FOR_PROMPT: 2,
 } as const
 
+/* ── Moving up a level: two switches ─────────────────────────────────────────
+ *
+ * The app raises difficulty by itself in exactly two ways, and these turn them
+ * off independently. Both are OFF for now, by request: the level moves only
+ * when the learner moves it, with the pill on Dzisiaj.
+ *
+ * LEVEL_UP_PROMPT_ENABLED   the "Podnieść poziom?" sheet — the only thing that
+ *                           ever writes todayLevel without a tap on the pill.
+ *                           Read by shouldPromptLevelUp below, so both of its
+ *                           call sites (Dzisiaj and the end of an Inteligentny
+ *                           sitting) are covered by the one switch.
+ * LEVEL_STRETCH_ENABLED     the stretch stream inside a sitting (selectSmart,
+ *                           smartQueue.ts): ~20% of the cards drawn from a pack
+ *                           one level up. It never touches todayLevel, but it
+ *                           is the one a learner actually feels.
+ *
+ * Neither touches updateComfort or strongStreakNext — comfort and the streak go
+ * on being measured, so the fit meter on the done screen still tells the truth,
+ * and flipping a switch back on takes effect against real history instead of
+ * starting from zero. Both gates are parameters with these as their defaults,
+ * so flipping a switch needs no change to the tests that cover the rules.
+ */
+export const LEVEL_UP_PROMPT_ENABLED = false
+export const LEVEL_STRETCH_ENABLED = false
+
 export interface LevelUpPromptState {
   dismissedForLevel: number | null
   /** Local-calendar day key (see utils/day.ts `dayKey`) — the cooldown check
@@ -87,6 +112,9 @@ export interface LevelUpArgs {
   masteredPacksAtFloor: number
   /** Defaults to today; injectable for tests. */
   now?: Date
+  /** Defaults to LEVEL_UP_PROMPT_ENABLED. Passed explicitly by the tests that
+   *  cover the rule itself, so the switch can be flipped without touching them. */
+  enabled?: boolean
 }
 
 /**
@@ -94,12 +122,20 @@ export interface LevelUpArgs {
  * and to which level. Deliberately cautious: needs a real streak, comfort a
  * full level above the floor, some proof of mastery at the current floor, and
  * respects a "Jeszcze nie" for a cooldown window.
+ *
+ * Returns null outright while the LEVEL_UP_PROMPT_ENABLED switch is off, which
+ * is the state it ships in today — the rules below are kept whole for the day
+ * it goes back on.
  */
 export function shouldPromptLevelUp(args: LevelUpArgs): { target: number } | null {
-  const { comfortLevel, strongStreak, todayLevel, levelUpPrompt, masteredPacksAtFloor } = args
+  const {
+    comfortLevel, strongStreak, todayLevel, levelUpPrompt, masteredPacksAtFloor,
+    enabled = LEVEL_UP_PROMPT_ENABLED,
+  } = args
   const floor = todayLevel ?? 1
   const target = Math.min(4, Math.round(comfortLevel))
 
+  if (!enabled) return null
   if (target <= floor) return null
   if (strongStreak < COMFORT.STRONG_STREAK_FOR_PROMPT) return null
   if (comfortLevel < floor + 1) return null

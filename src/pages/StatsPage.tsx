@@ -1,8 +1,23 @@
-import { lazy, Suspense, useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useReducedMotion } from 'framer-motion'
 import { AppShell } from '../components/layout/AppShell'
 import { CompassHero } from '../components/progress/CompassHero'
+/* Imported outright, not lazily, and that is deliberate.
+ *
+ * It used to be a `lazy()` behind a 460 px skeleton, for the reason MeshField is
+ * split: it carries a WebGL runtime nobody should download to read their streak.
+ * But the real panel is 450–602 px depending on the viewport, so the skeleton
+ * was the right height on a 390 px phone and wrong on every other screen —
+ * measured at seven widths — and the swap shoved everything below it by
+ * 10–35 px, 140 px on a tablet.
+ *
+ * The runtime is still deferred; the split just moved one level down, to the
+ * `import('./renderer')` inside the component, where it takes ogl with it and
+ * leaves the card behind. The card renders at its true height with everything
+ * else, so nothing jumps when the sky lights up. See the note above
+ * `loadRenderer` in Constellation.tsx. */
+import { Constellation } from '../components/progress/Constellation/Constellation'
 import { RouteMap } from '../components/progress/RouteMap'
 import { PaceSimulator } from '../components/progress/PaceSimulator'
 import { AchievementGrid } from '../components/progress/AchievementGrid'
@@ -34,10 +49,6 @@ import { PackMeta } from '../types/vocabulary'
 import './StatsPage.css'
 
 const allPacks = packagesIndex as PackMeta[]
-
-/** Split out for the same reason MeshField is: it carries the WebGL runtime,
- *  and nobody should download that just to read their streak. */
-const Constellation = lazy(() => import('../components/progress/Constellation/Constellation'))
 
 /** Words available across all 864 packs. Larger than ROUTE_TOTAL — the route is
  *  a goal, the corpus is the supply. */
@@ -274,11 +285,7 @@ export function StatsPage() {
         {snapshot != null && (
           <section className="statspage__section statspage__section--overlay-host">
             <h2 className="statspage__section-title">Konstelacja pamięci</h2>
-            <Suspense
-              fallback={<div className="statspage__skeleton skeleton skeleton--glass" style={{ height: 460 }} />}
-            >
-              <Constellation packs={allPacks} wordProgress={snapshot.wordProgress} />
-            </Suspense>
+            <Constellation packs={allPacks} wordProgress={snapshot.wordProgress} />
           </section>
         )}
 

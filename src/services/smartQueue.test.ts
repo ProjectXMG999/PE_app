@@ -154,15 +154,28 @@ describe('selectSmart', () => {
     expect(selection.reviewWords.map(w => w.wordId)).toContain(`${P002}-010`)
   })
 
+  // `allowLevelStretch` is passed explicitly here and below: these cover the
+  // stretch RULES, which outlive the LEVEL_STRETCH_ENABLED switch currently
+  // holding the stream off. Flipping it must not require editing these.
   it('adds a stretch pack only once comfort clears the learn pack level by STRETCH_MARGIN', () => {
     const snapshot = baseSnapshot()
+    const args = { snapshot, todayLevel: 1, goalSec: 15 * 60, allowLevelStretch: true }
 
-    const noStretch = selectSmart({ snapshot, comfortLevel: 1.0, todayLevel: 1, goalSec: 15 * 60 })
+    const noStretch = selectSmart({ ...args, comfortLevel: 1.0 })
     expect(noStretch.stretchPackId).toBeNull()
 
-    const withStretch = selectSmart({ snapshot, comfortLevel: 1.7, todayLevel: 1, goalSec: 15 * 60 })
+    const withStretch = selectSmart({ ...args, comfortLevel: 1.7 })
     expect(withStretch.stretchPackId).toBe(P111)
     expect(withStretch.quota.stretch).toBeGreaterThan(0)
+  })
+
+  it('never leaves the learner\'s own level while the stretch switch is off', () => {
+    // Same input as the passing case above, minus the opt-in.
+    const sel = selectSmart({
+      snapshot: baseSnapshot(), comfortLevel: 1.7, todayLevel: 1, goalSec: 15 * 60,
+    })
+    expect(sel.stretchPackId).toBeNull()
+    expect(sel.quota.stretch).toBe(0)
   })
 
   it('sizes the review slice by reviewRatio, not by today\'s serving budget', () => {
@@ -526,7 +539,9 @@ describe('selectSmart × review health', () => {
 
   it('drops stretch words when retention is below the floor, however comfortable the level feels', () => {
     // comfortLevel 2 against a level-1 route is exactly the case that adds stretch.
-    const args = { snapshot: dueSnapshot(), comfortLevel: 2, todayLevel: 1, goalSec }
+    const args = {
+      snapshot: dueSnapshot(), comfortLevel: 2, todayLevel: 1, goalSec, allowLevelStretch: true,
+    }
     expect(selectSmart({ ...args, reviewHealth: health(0.95) }).stretchPackId).not.toBeNull()
     expect(selectSmart({ ...args, reviewHealth: health(HEALTH.STRETCH_FLOOR - 0.05) }).stretchPackId).toBeNull()
   })

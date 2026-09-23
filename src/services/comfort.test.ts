@@ -60,16 +60,27 @@ describe('strongStreakNext', () => {
 })
 
 describe('shouldPromptLevelUp', () => {
+  // `enabled` is passed explicitly throughout: these cover the RULE, which
+  // outlives the LEVEL_UP_PROMPT_ENABLED switch currently holding the prompt
+  // off. Flipping that switch must not require editing a single case here.
   const base = {
     comfortLevel: 3.2,
     strongStreak: COMFORT.STRONG_STREAK_FOR_PROMPT,
     todayLevel: 2,
     levelUpPrompt: { dismissedForLevel: null, lastShownAt: null },
     masteredPacksAtFloor: COMFORT.MASTERED_PACKS_FOR_PROMPT,
+    enabled: true,
   }
 
   it('fires exactly when the streak, comfort gap, and mastery bar are all met', () => {
     expect(shouldPromptLevelUp(base)).toEqual({ target: 3 })
+  })
+
+  it('never fires while the switch is off, however far past every bar the learner is', () => {
+    expect(shouldPromptLevelUp({ ...base, enabled: false })).toBeNull()
+    expect(shouldPromptLevelUp({
+      ...base, enabled: false, comfortLevel: COMFORT.MAX, strongStreak: 99, masteredPacksAtFloor: 99,
+    })).toBeNull()
   })
 
   it('does not fire below the strong-streak threshold', () => {

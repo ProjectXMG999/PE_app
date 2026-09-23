@@ -49,6 +49,17 @@ console.warn = (...args) => {
 // status-bar inset, and everything here is sized off that.
 measureIosViewportGap()
 
+// ── TEMPORARY diagnostic, 2026-09-23 — delete once the question is settled ──
+// `?noarrive` switches off every entrance animation that sits ON or ABOVE a
+// backdrop-filter surface. The artefact it is meant to isolate ("elements are
+// greyer at first, then change") reproduces only on the phone: Blink measured
+// clean in both pointer modes, and Playwright's WebKit cannot be asked at all
+// because it renders backdrop-filter as a no-op. That leaves the device as the
+// only oracle, so the A/B has to be one tap on a URL.
+if (new URLSearchParams(window.location.search).has('noarrive')) {
+  document.documentElement.dataset.noarrive = ''
+}
+
 // Force reload when a new SW takes control — prevents stale chunk 404s after deploy
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.addEventListener('controllerchange', () => {

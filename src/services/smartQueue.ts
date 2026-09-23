@@ -3,6 +3,7 @@ import { orderDueWords, PriorityCtx } from './reviewQueue'
 import {
   ReviewHealth, EMPTY_REVIEW_HEALTH, reviewRatioFor, allowStretch, healthTone, HealthTone,
 } from './reviewHealth'
+import { LEVEL_STRETCH_ENABLED } from './comfort'
 import { estimateMinutes } from '../data/nextPack'
 import { dayKey, shiftDay } from '../utils/day'
 import { Session, WordProgress } from '../types/progress'
@@ -274,11 +275,16 @@ interface SelectArgs {
   /** Omitted = neutral: the baseline ratio, no stretch gate, as before the
    *  review-health loop existed. */
   reviewHealth?: ReviewHealth
+  /** Defaults to the LEVEL_STRETCH_ENABLED switch (services/comfort.ts), which
+   *  is off: no sitting reaches into a higher pack on its own. Passed
+   *  explicitly by the tests that cover the stretch rules themselves. */
+  allowLevelStretch?: boolean
 }
 
 export function selectSmart({
   snapshot, comfortLevel, todayLevel, goalSec, secondsStudiedToday,
   reviewHealth = EMPTY_REVIEW_HEALTH,
+  allowLevelStretch = LEVEL_STRETCH_ENABLED,
 }: SelectArgs): SmartSelection {
   const size = smartSessionSize({
     goalSec,
@@ -368,8 +374,14 @@ export function selectSmart({
   let stretchTarget = 0
   // Comfort says the harder material would fit; health has a veto. Stacking the
   // hardest new words on a memory that's already leaking is the one combination
-  // the mode should never produce.
-  if (allowStretch(reviewHealth) && comfortLevel >= learnPackLevel + 0.6 && targetLevel > learnPackLevel) {
+  // the mode should never produce. `allowLevelStretch` sits in front of both:
+  // while it is off the sitting never leaves the learner's own level at all.
+  if (
+    allowLevelStretch
+    && allowStretch(reviewHealth)
+    && comfortLevel >= learnPackLevel + 0.6
+    && targetLevel > learnPackLevel
+  ) {
     const stretchPack = allPacks.find(
       p => p.level === targetLevel && !isFullyKnown(p) && !isStraggler(p)
     )

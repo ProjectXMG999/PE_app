@@ -39,9 +39,13 @@ interface Props {
  * badly. Reading it as a demotion is exactly what the raw number invited, and
  * what docs/strona-pakiety.md §8 ("bez karzącej grywalizacji") rules out.
  *
- * The two top bands describe what comfort PERMITS, not what the queue did:
- * selectSmart also needs review health's consent before it actually reaches for
- * a harder pack, so a promise here would sometimes be false.
+ * The top bands describe where the LEARNER stands, never what the queue will do
+ * next. They used to promise the harder words ("niedługo dorzucę trudniejsze
+ * słowa"), which was already conditional — selectSmart needs review health's
+ * consent too — and is now simply untrue: LEVEL_STRETCH_ENABLED (comfort.ts) is
+ * off, so no sitting reaches into a higher pack on its own. A reading of the
+ * learner stays true either way, which is why the wording moved there rather
+ * than being branched on the switch.
  *
  * Two things the wording has to keep doing: no adjective that agrees with the
  * learner's gender ("gotowy/gotowa" — we don't know which), and no engine words
@@ -58,11 +62,11 @@ const FIT_COPY: Record<ComfortFit, { label: string; line: string }> = {
   },
   easy: {
     label: 'Z górki',
-    line: 'Radzisz sobie bez trudu — niedługo dorzucę trudniejsze słowa.',
+    line: 'Radzisz sobie bez trudu — ten materiał przestaje być wyzwaniem.',
   },
   stretching: {
     label: 'Podkręcamy tempo',
-    line: 'Mogę już dorzucać słowa z wyższego poziomu.',
+    line: 'Coraz mniej Cię to kosztuje — wyższy poziom jest coraz bliżej.',
   },
   ready: {
     label: 'Stać Cię na więcej',

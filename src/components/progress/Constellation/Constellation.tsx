@@ -8,7 +8,7 @@ import { WordProgress } from '../../../types/progress'
 import { PackMeta } from '../../../types/vocabulary'
 import { dayKey, daysBetween } from '../../../utils/day'
 import { plDays, plTimes, plWords } from '../../../utils/plural'
-import { ColorBy, createStarRenderer, StarPalette, StarRenderer } from './renderer'
+import type { ColorBy, StarPalette, StarRenderer } from './renderer'
 import {
   buildStarfield,
   hitTest,
@@ -33,7 +33,30 @@ import './Constellation.css'
  * The sky stays a night sky in both themes. Stars are additive light, and
  * additive light on a white page is grey smudge — so the panel keeps its own
  * dark ground while the level hues still come from the shared accent tokens.
+ *
+ * The component itself ships with Postęp; only its engine is fetched on
+ * demand — see `loadRenderer` below.
  */
+
+/**
+ * The sky's engine, on its own schedule.
+ *
+ * `renderer.ts` reaches ogl, which is ~45 kB of this panel's ~63 kB, and not
+ * one byte of the card around it needs any of that. So the split is HERE,
+ * rather than around the whole component in StatsPage — and that is what keeps
+ * the panel from arriving late and shoving the page around.
+ *
+ * It used to be lazy one level up, with a 460 px skeleton holding its place.
+ * The real panel is 450–602 px depending on the viewport (the sky is
+ * `aspect-ratio: 6/5` capped at 42vh, and the key wraps to one, two or three
+ * rows), so on every phone but a 390 px one the swap moved everything below it
+ * by 10–35 px — and by 140 px on a tablet. Measured, at seven widths.
+ *
+ * Now the card, its controls, the key and the count render at their real height
+ * with the rest of the page, and the stars light up inside a box that was
+ * already exactly the right size. Nothing moves; the sky simply fills in.
+ */
+const loadRenderer = () => import('./renderer')
 
 interface Props {
   packs: PackMeta[]
@@ -112,6 +135,8 @@ export function Constellation({ packs, wordProgress }: Props) {
   // A canvas that has held a WebGL context can never hand out a 2D one, so a
   // lost context has to remount the element before the fallback can draw.
   const [glLost, setGlLost] = useState(false)
+  // The engine's chunk never arrived — see loadRenderer.
+  const [skyFailed, setSkyFailed] = useState(false)
 
   const theme = useAppStore(s => s.theme)
   const setAmbientHidden = useAppStore(s => s.setAmbientHidden)
@@ -219,34 +244,53 @@ export function Constellation({ packs, wordProgress }: Props) {
     const canvas = canvasRef.current
     if (!canvas) return
 
-    const renderer = createStarRenderer(canvas, {
-      field,
-      palette: readColors(colorByRef.current),
-      colorBy: colorByRef.current,
-      ground: readGround(canvas),
-      reducedMotion: reduced,
-      forceCanvas2d: glLost,
-      onContextLost: () => setGlLost(true),
-    })
-    rendererRef.current = renderer
-    // Surfaced for debugging on real devices — which path actually ran is the
-    // first question when the sky looks wrong on someone's phone.
-    canvas.dataset.backend = renderer.backend
-    renderer.resize()
-    const v = viewRef.current
-    renderer.setView(v.cx, v.cy, v.zoom)
-    renderer.setActive(engagedRef.current)
+    // The engine arrives a tick (or a network) later than the card, so
+    // everything below is written to survive an unmount in between: the flag
+    // is checked once the module lands, and the cleanup disposes whatever
+    // exists by then.
+    let cancelled = false
+    let renderer: StarRenderer | null = null
+    let ro: ResizeObserver | null = null
 
-    const ro = new ResizeObserver(() => {
-      renderer.resize()
-      const cur = viewRef.current
-      renderer.setView(cur.cx, cur.cy, cur.zoom)
-    })
-    ro.observe(canvas)
+    loadRenderer()
+      .then(({ createStarRenderer }) => {
+        if (cancelled) return
+        renderer = createStarRenderer(canvas, {
+          field,
+          palette: readColors(colorByRef.current),
+          colorBy: colorByRef.current,
+          ground: readGround(canvas),
+          reducedMotion: reduced,
+          forceCanvas2d: glLost,
+          onContextLost: () => setGlLost(true),
+        })
+        rendererRef.current = renderer
+        // Surfaced for debugging on real devices — which path actually ran is
+        // the first question when the sky looks wrong on someone's phone.
+        canvas.dataset.backend = renderer.backend
+        renderer.resize()
+        const v = viewRef.current
+        renderer.setView(v.cx, v.cy, v.zoom)
+        renderer.setActive(engagedRef.current)
+
+        ro = new ResizeObserver(() => {
+          renderer?.resize()
+          const cur = viewRef.current
+          renderer?.setView(cur.cx, cur.cy, cur.zoom)
+        })
+        ro.observe(canvas)
+      })
+      // Offline with a cold cache, or a chunk that 404s after a deploy. The
+      // card keeps its shape and says so, rather than leaving a black square
+      // that looks like a sky with nothing in it.
+      .catch(() => {
+        if (!cancelled) setSkyFailed(true)
+      })
 
     return () => {
-      ro.disconnect()
-      renderer.dispose()
+      cancelled = true
+      ro?.disconnect()
+      renderer?.dispose()
       rendererRef.current = null
     }
   }, [field, reduced, glLost])
@@ -492,13 +536,19 @@ export function Constellation({ packs, wordProgress }: Props) {
           }
         />
 
-        {empty && (
+        {skyFailed ? (
+          <p className="constellation__empty">
+            Nie udało się wczytać mapy gwiazd.
+            <br />
+            Odśwież stronę, żeby spróbować jeszcze raz.
+          </p>
+        ) : empty ? (
           <p className="constellation__empty">
             Na razie ciemno.
             <br />
             Pierwsze poznane słowo zapali pierwszą gwiazdę.
           </p>
-        )}
+        ) : null}
 
         {zoomLabel > 1.02 && (
           <button

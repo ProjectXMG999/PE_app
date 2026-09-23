@@ -659,3 +659,22 @@
   animation: pe-arrive var(--pe-arrive-duration) var(--pe-arrive-ease) backwards;
 }
 
+/* ── TEMPORARY diagnostic, 2026-09-23 — delete with the main.tsx half ───────
+ * Everything an entrance animates ON or ABOVE glass, switched off together.
+ *
+ * What it is testing: `backdrop-filter` samples the backdrop under the
+ * element's CURRENT position, so a transform on the card — or on any ancestor
+ * of it — moves the sampling window every frame, and the engine may serve a
+ * stale or empty backdrop for the duration and only re-sample when the
+ * animation ends. On a page that is 75-95% glass that reads as "grey first,
+ * correct a moment later". Blink re-samples per frame and measured clean, so
+ * the suspicion is WebKit-only, and the phone is the only place it can be
+ * confirmed. Open any of Dzisiaj / Ćwiczenia / Postęp with ?noarrive and
+ * compare. */
+[data-noarrive] .pe-arrive,
+[data-noarrive] .statspage__header,
+[data-noarrive] .statspage__header + *,
+[data-noarrive] .statspage__section {
+  animation: none !important;
+}
+
