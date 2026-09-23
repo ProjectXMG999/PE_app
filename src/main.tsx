@@ -60,11 +60,39 @@ if (new URLSearchParams(window.location.search).has('noarrive')) {
   document.documentElement.dataset.noarrive = ''
 }
 
-// Force reload when a new SW takes control — prevents stale chunk 404s after deploy
+// Force reload when a NEW service worker takes over from an OLD one — that is
+// the deploy case, and without it the page keeps asking for chunks the new
+// precache no longer has.
+//
+// `hadController` is what stops it firing on the very first visit. The worker
+// calls `skipWaiting()` + `clientsClaim()` (sw/sw.ts), so on a first load it
+// installs and claims this page within a second or two — with no guard, that
+// claim looked exactly like a deploy and reloaded the app. The first visit
+// therefore downloaded, parsed and rendered everything twice, which is the
+// worst single thing that happens to "how long until I can use it". There is
+// nothing stale to escape on a first visit: the page and the worker that just
+// claimed it were served in the same breath.
 if ('serviceWorker' in navigator) {
+  const hadController = navigator.serviceWorker.controller != null
   navigator.serviceWorker.addEventListener('controllerchange', () => {
-    window.location.reload()
+    if (hadController) window.location.reload()
   })
+}
+
+// Open the connection to Supabase while the first screen is still painting.
+// Auth is not on the critical path — `/dzis` renders entirely from IndexedDB —
+// but `initAuthListener` fires right after the first commit, and without this
+// its first request pays DNS + TLS + TCP in full at exactly the moment the app
+// is assembling. Done here rather than as a <link> in index.html because the
+// origin comes from the environment, and a missing variable there would ship a
+// literal `%VITE_SUPABASE_URL%` as an href.
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+if (supabaseUrl) {
+  const link = document.createElement('link')
+  link.rel = 'preconnect'
+  link.href = new URL(supabaseUrl).origin
+  link.crossOrigin = ''
+  document.head.appendChild(link)
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

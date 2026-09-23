@@ -21,13 +21,16 @@ import { freezeAmbient, thawAmbient } from '../components/ambient/ambientControl
  *
  * So the transition is driven here instead, and the rules hold app-wide:
  *
- *  • **Every in-app navigation is a transition.** `useAppNavigate`, `useBack`,
- *    `useTransitionNavigate` and `linkTransition` all go through `open()`.
- *    Nothing has to remember to ask.
+ *  • **Every in-app navigation goes through one door.** `useAppNavigate`,
+ *    `useBack`, `useTransitionNavigate` and `linkTransition` all go through
+ *    `open()`. Nothing has to remember to ask.
  *  • **The direction is stamped on the document** as `<html data-nav>` before
  *    the snapshot is taken, and animations.css reads it. Forward brings the new
  *    page in from the right, back is its mirror, lateral (tab → tab, next pack,
  *    mode toggle) dissolves in place.
+ *  • **A coarse pointer gets the same vocabulary without the photographs.** See
+ *    COARSE_POINTER below: there the stamp drives a compositor-only entrance on
+ *    the incoming page instead of a pair of view-transition snapshots.
  *  • **Only the page travels.** The chrome — top bar, tab bar, sidebar, active
  *    tab marker — is named in animations.css so it sits the transition out
  *    instead of cross-fading with the content behind it.
@@ -49,6 +52,13 @@ export type NavDirection = 'forward' | 'back' | 'lateral'
 
 /** How long the page animation runs (animations.css), plus slack. */
 const SETTLE_MS = 700
+
+/**
+ * How long the transition-less page entrance runs (`pe-page-enter` in
+ * animations.css), plus slack. Only used on the coarse-pointer path, to decide
+ * when the mesh may start drifting again.
+ */
+const ENTER_MS = 400
 
 /**
  * Only history pops wait: how long we'll hold the outgoing frame before giving
@@ -83,7 +93,35 @@ interface ViewTransition {
 
 type StartViewTransition = (cb: () => void | Promise<void>) => ViewTransition
 
+/**
+ * Phones and tablets change pages WITHOUT a view transition.
+ *
+ * A transition photographs the whole viewport twice, and to take either photo
+ * the compositor has to paint the live WebGL mesh and every `backdrop-filter`
+ * surface above it first — a dozen of them on Dzisiaj (see the --liquid-blur
+ * note in tokens.css). At DPR 3 that is ~12 MB a capture, and the measurement
+ * in ambientControl put it at ~250 ms of a 778 ms Dzisiaj → Pakiety hop.
+ *
+ * It also caused the two artefacts the change was reported as. A snapshot bakes
+ * each blurred backdrop into a bitmap, so handing the screen back swaps baked
+ * blur for freshly computed blur in one frame — the "elements sharpen a moment
+ * after they land". And `.ambient` is deliberately unnamed (see animations.css),
+ * so the background rode inside the root snapshot and was faded and translated
+ * 6-10px with it, on every single navigation — the "background jumps".
+ *
+ * Both are gone the moment nothing photographs the screen. What replaces the
+ * dissolve is a compositor-only entrance on the incoming page, driven by the
+ * same `<html data-nav>` stamp — see `pe-page-enter-*` in animations.css.
+ *
+ * Desktop keeps the transition: there the canvas is small, the GPU is not the
+ * bottleneck, and the cross-fade is the nicer of the two.
+ */
+const COARSE_POINTER =
+  typeof window !== 'undefined' &&
+  window.matchMedia?.('(pointer: coarse)').matches === true
+
 function viewTransitions(): StartViewTransition | null {
+  if (COARSE_POINTER) return null
   const start = (document as Document & { startViewTransition?: StartViewTransition }).startViewTransition
   return typeof start === 'function' ? start.bind(document) : null
 }
@@ -128,7 +166,9 @@ function viewTransitions(): StartViewTransition | null {
 let active: ViewTransition | null = null
 
 /**
- * Hold the ambient shader still for exactly as long as a transition is running.
+ * Hold the ambient shader still for exactly as long as a page change is running
+ * — a view transition on a fine pointer, the commit plus `pe-page-enter` on a
+ * coarse one.
  *
  * The mesh is the backdrop every glass surface blurs through, so while it
  * draws, a dozen large-kernel blurs are re-convolved with it every frame —
@@ -165,7 +205,14 @@ export function navigateWithTransition(dir: NavDirection, to: string, navigate: 
   const start = viewTransitions()
   if (!start || !isPageLoaded(to)) {
     preloadPath(to)
+    // No transition, but the same reason to hold the mesh still: the commit and
+    // the entrance that follows it are exactly the window in which a moving
+    // backdrop makes every blur above it uncacheable. This is the ONLY quiet
+    // window a phone gets now that `start` is null there — without it, dropping
+    // view transitions would have handed back part of what it saved.
+    const resume = quietForTransition()
     navigate()
+    window.setTimeout(resume, ENTER_MS)
     return
   }
 
@@ -219,7 +266,12 @@ let popping: ViewTransition | null = null
 export function popWithTransition(dir: NavDirection, pop: () => void) {
   markDirection(dir)
   const start = viewTransitions()
-  if (!start) { pop(); return }
+  if (!start) {
+    const resume = quietForTransition()
+    pop()
+    window.setTimeout(resume, ENTER_MS)
+    return
+  }
   settle()
   const resume = quietForTransition()
   const t = start(() => new Promise<void>(resolve => {

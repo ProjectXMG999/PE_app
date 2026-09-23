@@ -273,22 +273,47 @@ export function StatsPage() {
           </p>
         )}
 
-        {!belowReady ? (
-          /* Not a loading state — the data is here. It is the hero's beat, and
-             this keeps the page's height honest while it passes. */
-          <div className="statspage__skeleton skeleton" style={{ height: 460 }} aria-hidden="true" />
-        ) : (
-        <>
-        {/* --overlay-host: the panel can go full screen, and the scroll-settle
+        {/* Outside the beat's gate, and that is the point.
+            The gate used to start here, so the whole screenful under the hero
+            was one 460 px plate — and in the dark theme a skeleton's shimmer
+            between --bg-surface and --bg-card is a black rectangle where the
+            page ought to be. It is the first thing under Twoja trasa and it sat
+            there for the beat's full second.
+
+            The card itself was never what the beat was protecting: 11 000 star
+            positions cost 1.3 ms to build. Only lighting them is expensive, and
+            that is what `skyReady` holds back now. So the real card takes its
+            real place immediately and the sky fills in a beat later, inside it.
+
+            `!loading` as well as the snapshot, and it is not redundant: those
+            are two async sources. The snapshot landed ~60 ms before useStats
+            did, so the card rendered — and then the note above it appeared and
+            shoved it down 50 px, which is this same jump arriving from the
+            other side. Nothing under the hero renders while the hero is still a
+            skeleton.
+
+            --overlay-host: the panel can go full screen, and the scroll-settle
             animation on a plain section would trap that `position: fixed`
             inside it — see StatsPage.css. */}
-        {snapshot != null && (
+        {!loading && snapshot != null && (
           <section className="statspage__section statspage__section--overlay-host">
             <h2 className="statspage__section-title">Konstelacja pamięci</h2>
-            <Constellation packs={allPacks} wordProgress={snapshot.wordProgress} />
+            <Constellation
+              packs={allPacks}
+              wordProgress={snapshot.wordProgress}
+              skyReady={belowReady}
+            />
           </section>
         )}
 
+        {!belowReady ? (
+          /* Not a loading state — the data is here. It is the hero's beat, and
+             this keeps the page's height honest while it passes. Below the fold
+             now that the Konstelacja renders above it, which is the only place
+             a featureless plate belongs. */
+          <div className="statspage__skeleton skeleton" style={{ height: 460 }} aria-hidden="true" />
+        ) : (
+        <>
         <section className="statspage__section" id="powtorki">
           <h2 className="statspage__section-title">Powtórki</h2>
           {snapshot == null ? (

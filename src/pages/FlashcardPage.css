@@ -31,14 +31,11 @@
   font-weight: 600;
 }
 
-.spinner {
-  width: 36px;
-  height: 36px;
-  border: 3px solid var(--border);
-  border-top-color: var(--accent);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-}
+/* `.spinner` used to live here. It is rendered by LoadingFallback, which is in
+   the main bundle — this file is a lazy chunk, so on every route that is NOT a
+   study route the fallback was an unstyled 0×0 div: a blank screen where a
+   spinner was meant to be. Moved to styles/animations.css, next to the
+   @keyframes it was already borrowing from there. */
 
 .flashcard-page__actions {
   display: flex;

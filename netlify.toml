@@ -23,6 +23,16 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Everything Vite emits into /assets carries a content hash in its filename, so
+# a changed file is a changed URL and this can never serve a stale one. Without
+# it these fall through to Netlify's default for static files, which revalidates
+# — five conditional requests on the critical path (entry, react, motion, store,
+# CSS) on every cold open, before the service worker has taken over.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/*"
   [headers.values]

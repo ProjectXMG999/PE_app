@@ -61,6 +61,16 @@ const loadRenderer = () => import('./renderer')
 interface Props {
   packs: PackMeta[]
   wordProgress: WordProgress[]
+  /**
+   * Whether the sky may light itself yet. The card always renders — it costs
+   * about a millisecond and a half to build 11 000 star positions, measured —
+   * but lighting them is ~70 ms of colour pass, buffer upload and first draw,
+   * and Postęp's hero is rolling four figures on this same thread for the first
+   * 900 ms. So the page can hand the panel its place immediately and still say
+   * "not yet" to the expensive half. Defaults to true: nobody else has a beat
+   * to protect. See useBelowHeroReady in StatsPage.tsx.
+   */
+  skyReady?: boolean
 }
 
 const MIN_ZOOM = 1
@@ -120,7 +130,7 @@ function readGround(el: Element): [number, number, number] {
   return rgbUnit(resolveCssColor(raw, [5, 6, 12]))
 }
 
-export function Constellation({ packs, wordProgress }: Props) {
+export function Constellation({ packs, wordProgress, skyReady = true }: Props) {
   const sectionRef = useRef<HTMLElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const rendererRef = useRef<StarRenderer | null>(null)
@@ -137,6 +147,10 @@ export function Constellation({ packs, wordProgress }: Props) {
   const [glLost, setGlLost] = useState(false)
   // The engine's chunk never arrived — see loadRenderer.
   const [skyFailed, setSkyFailed] = useState(false)
+  // Has the canvas drawn anything yet? Only ever set, never unset: a renderer
+  // rebuilt in place (a mode this panel reaches on a lost context) already has
+  // a sky on screen, and the haze should not come back over it.
+  const [lit, setLit] = useState(false)
 
   const theme = useAppStore(s => s.theme)
   const setAmbientHidden = useAppStore(s => s.setAmbientHidden)
@@ -240,9 +254,18 @@ export function Constellation({ packs, wordProgress }: Props) {
   const colorByRef = useRef(colorBy)
   colorByRef.current = colorBy
 
+  // The download starts with the card, even while `skyReady` is still holding
+  // the sky back: fetching is not main-thread work, so there is nothing for the
+  // hero's beat to protect from it. By the time the beat passes, the module is
+  // usually already in memory and the stars come up on the next frame instead
+  // of a round trip later.
+  useEffect(() => {
+    loadRenderer().catch(() => {})
+  }, [])
+
   useEffect(() => {
     const canvas = canvasRef.current
-    if (!canvas) return
+    if (!canvas || !skyReady) return
 
     // The engine arrives a tick (or a network) later than the card, so
     // everything below is written to survive an unmount in between: the flag
@@ -279,6 +302,12 @@ export function Constellation({ packs, wordProgress }: Props) {
           renderer?.setView(cur.cx, cur.cy, cur.zoom)
         })
         ro.observe(canvas)
+
+        // One frame later the canvas has cleared to its ground and the sweep
+        // has begun, so the waiting haze has something to lift off.
+        requestAnimationFrame(() => {
+          if (!cancelled) setLit(true)
+        })
       })
       // Offline with a cold cache, or a chunk that 404s after a deploy. The
       // card keeps its shape and says so, rather than leaving a black square
@@ -293,7 +322,7 @@ export function Constellation({ packs, wordProgress }: Props) {
       renderer?.dispose()
       rendererRef.current = null
     }
-  }, [field, reduced, glLost])
+  }, [field, reduced, glLost, skyReady])
 
   // Runs on a mode switch, and on a theme flip: the accents are
   // theme-independent today, but re-reading costs one pass over the colour
@@ -535,6 +564,18 @@ export function Constellation({ packs, wordProgress }: Props) {
               : `Mapa 10 000 słów — ${field.litCount} ${plWords(field.litCount)} zapalonych`
           }
         />
+
+        {/* The sky before its stars — see .constellation__waiting in the CSS.
+            Not drawn over an empty route or a failed load: both of those say
+            their own thing, and a haze promising a sky would argue with them. */}
+        {!empty && !skyFailed && (
+          <span
+            className={`constellation__waiting${lit ? ' is-lit' : ''}`}
+            aria-hidden="true"
+          >
+            <span className="constellation__waiting-glow" />
+          </span>
+        )}
 
         {skyFailed ? (
           <p className="constellation__empty">

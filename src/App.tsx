@@ -240,7 +240,20 @@ export function App() {
   // that hasn't loaded is the one case where the app can't transition, so this
   // should be done long before anything is tapped. One fetch at a time, in the
   // background; it is only the view modules.
+  //
+  // Idle rather than a flat 400 ms, with a short ceiling so it still lands
+  // early: at 400 ms this was reliably fetching ~550 kB of route chunks while
+  // the first screen was still assembling, alongside the Supabase chunk and the
+  // service worker's precache. The timeout keeps the original guarantee — the
+  // chunks are in memory long before anything is tapped — while letting the
+  // first paint go first on a phone, which is the whole window being complained
+  // about.
   useEffect(() => {
+    const ric = (window as Window & typeof globalThis).requestIdleCallback
+    if (typeof ric === 'function') {
+      const id = ric(() => void warmPages(), { timeout: 800 })
+      return () => window.cancelIdleCallback?.(id)
+    }
     const id = window.setTimeout(() => void warmPages(), 400)
     return () => clearTimeout(id)
   }, [])

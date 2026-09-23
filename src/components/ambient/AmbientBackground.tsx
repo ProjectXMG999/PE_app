@@ -1,6 +1,7 @@
 import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import { useReducedMotion } from 'framer-motion'
 import { useAppStore } from '../../store/useAppStore'
+import { startIdleFreeze } from './ambientControl'
 import './AmbientBackground.css'
 
 /**
@@ -154,6 +155,14 @@ export function AmbientBackground() {
   useEffect(() => {
     if (showShader) fieldHasRamped = true
   }, [showShader])
+
+  // Stop the mesh while nobody is touching the phone — see startIdleFreeze.
+  // Tied to the animated shader's lifetime on purpose: the still variant has no
+  // rAF to cancel, and there is nothing to freeze before this mounts.
+  useEffect(() => {
+    if (!showShader || still) return
+    return startIdleFreeze()
+  }, [showShader, still])
 
   return (
     <div className={`ambient${ambientHidden ? ' ambient--hidden' : ''}`} aria-hidden="true">

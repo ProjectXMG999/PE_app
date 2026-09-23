@@ -75,3 +75,79 @@ export function thawAmbient(): void {
   if (frozen === 0) return
   if (--frozen === 0) liveMesh()?.setSpeed(MESH_SPEED)
 }
+
+// ── The mesh stops when nobody is there ──────────────────────────────────────
+
+/**
+ * How long after the last touch the mesh holds still.
+ *
+ * Long enough that it is still visibly alive when you arrive on a screen and
+ * when you put your finger down, short enough that the resting state of the app
+ * — someone reading a card — is the still one.
+ */
+const IDLE_MS = 2000
+
+/**
+ * Hold the mesh still while nobody is touching the phone.
+ *
+ * The drift is the app's resting cost, and it is not the canvas that makes it
+ * expensive: `#root` isolates, so this canvas is the backdrop every glass
+ * surface samples, and a backdrop that changes cannot have its blur cached. A
+ * dozen large-kernel blurs are therefore re-convolved on every frame the shader
+ * draws — which, until now, was every frame, forever, including while the
+ * screen sat completely still. Stopping the shader makes all of them cacheable
+ * at once, so the saving is a multiple of the shader's own cost, and it leaves
+ * the GPU with headroom at the moment that actually needs it: the next tap.
+ *
+ * Coarse pointers only. A desktop GPU filling a small canvas is not the axis
+ * this is about, and the drift is more visible on a large screen.
+ *
+ * Takes ONE reference on the shared counter above and never more, so it can
+ * never fight with the freeze a navigation takes: whichever asks first stops
+ * the mesh, and it resumes only once both have let go.
+ */
+let idleTimer = 0
+let idleHolding = false
+
+function holdIdle(): void {
+  if (idleHolding) return
+  idleHolding = true
+  freezeAmbient()
+}
+
+function releaseIdle(): void {
+  if (!idleHolding) return
+  idleHolding = false
+  thawAmbient()
+}
+
+/** Any sign of life: let the mesh run, and start the clock again. */
+function bumpIdle(): void {
+  releaseIdle()
+  window.clearTimeout(idleTimer)
+  idleTimer = window.setTimeout(holdIdle, IDLE_MS)
+}
+
+/**
+ * Start watching for stillness. Returns the teardown, so the caller can tie
+ * this to the lifetime of the mounted shader — which is also why it is safe to
+ * assume the mesh exists by the time the first timer fires.
+ */
+export function startIdleFreeze(): () => void {
+  if (!window.matchMedia?.('(pointer: coarse)').matches) return () => {}
+
+  // Capture, so a scroll inside any container counts — scroll events from a
+  // scrolling element do not bubble to the window, and `.appshell__main` is
+  // where all of this app's scrolling happens.
+  const opts = { passive: true, capture: true } as const
+  window.addEventListener('pointerdown', bumpIdle, opts)
+  window.addEventListener('scroll', bumpIdle, opts)
+  bumpIdle()
+
+  return () => {
+    window.removeEventListener('pointerdown', bumpIdle, opts)
+    window.removeEventListener('scroll', bumpIdle, opts)
+    window.clearTimeout(idleTimer)
+    releaseIdle()
+  }
+}

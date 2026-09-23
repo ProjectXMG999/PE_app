@@ -28,6 +28,20 @@
   to   { transform: rotate(360deg); }
 }
 
+/* The Suspense fallback's spinner (components/shared/LoadingFallback). It has
+   to be in the main bundle: it is what a route chunk is shown BEHIND while it
+   loads, so defining it inside one of those chunks — which is where it used to
+   live, in pages/FlashcardPage.css — meant it only ever had styles on the
+   routes that least needed it. */
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
 @keyframes shimmer {
   0%   { background-position: -200% center; }
   100% { background-position: 200% center; }
@@ -648,6 +662,10 @@
   --pe-arrive-distance: 12px;
   --pe-arrive-duration: 400ms;
   --pe-arrive-ease: cubic-bezier(0.32, 0.72, 0, 1);
+  /* The hop's own entrance, below. Shorter than the settle above: this one
+     replaces a 260ms dissolve, and a page change that announces itself for
+     longer than the transition it stands in for is not the trade we made. */
+  --pe-page-enter-duration: 240ms;
 }
 
 @keyframes pe-arrive {
@@ -657,6 +675,62 @@
 
 .pe-arrive {
   animation: pe-arrive var(--pe-arrive-duration) var(--pe-arrive-ease) backwards;
+}
+
+/* ── The page change itself, on a phone ─────────────────────────────────────
+ * On a coarse pointer there is no view transition any more — transitions.ts
+ * returns no `startViewTransition` there, and the reasons are written out at
+ * COARSE_POINTER in that file. This is what stands in for the dissolve.
+ *
+ * It is deliberately NOT a port of the same motion:
+ *
+ *  • **Only the incoming page moves.** A cross-fade needs two screens at once,
+ *    which is precisely what cost two full-viewport captures. One page arriving
+ *    needs no photograph of the one it replaced — the old screen is simply gone
+ *    the moment React commits, which is the frame the phone could not have
+ *    painted through anyway.
+ *  • **Transform only, never opacity.** Same rule as `.pe-arrive` above, same
+ *    reason: fading a group of glass composites its blurred backdrop at partial
+ *    alpha over the unblurred real one, which is the fog this whole change
+ *    exists to remove. Re-introducing it here would have undone the point.
+ *  • **The direction still comes from `<html data-nav>`**, stamped by
+ *    `markDirection()` before the navigation, so forward, back and lateral read
+ *    the same as they do on a desktop. Lateral — a tab swap — rises instead of
+ *    sliding, because sideways travel between two peers says nothing.
+ *
+ * `.appshell__main-inner` is the hook because it is exactly the content area:
+ * the top bar, tab bar and sidebar are its siblings, so they hold still without
+ * needing to be named or excluded. Every page mounts its own shell today, so
+ * this element is fresh on every navigation and the animation simply replays.
+ * (When the shared layout lands, this will need a key or a restart — see the
+ * AppShell note about per-page shells.)
+ *
+ * No `will-change`: the element is new in the frame the animation starts, so
+ * there is nothing to promote ahead of time, and a standing hint on the page
+ * container would keep a layer alive for the whole visit. */
+@keyframes pe-page-enter-fwd {
+  from { transform: translate3d(14px, 0, 0); }
+  to   { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes pe-page-enter-back {
+  from { transform: translate3d(-14px, 0, 0); }
+  to   { transform: translate3d(0, 0, 0); }
+}
+
+@media (pointer: coarse) {
+  .appshell__main-inner {
+    animation: pe-arrive var(--pe-page-enter-duration) var(--pe-arrive-ease) backwards;
+  }
+
+  :root[data-nav='forward'] .appshell__main-inner { animation-name: pe-page-enter-fwd; }
+  :root[data-nav='back']    .appshell__main-inner { animation-name: pe-page-enter-back; }
+
+  /* Two planes moving inside one another is the "jumping" this replaces.
+     `.pe-arrive` is the settle for a page that ALREADY arrived under a
+     transition; with the transition gone, the entrance above is the whole
+     arrival and the second plane has nothing left to say. */
+  .pe-arrive { animation: none; }
 }
 
 /* ── TEMPORARY diagnostic, 2026-09-23 — delete with the main.tsx half ───────
@@ -672,6 +746,7 @@
  * confirmed. Open any of Dzisiaj / Ćwiczenia / Postęp with ?noarrive and
  * compare. */
 [data-noarrive] .pe-arrive,
+[data-noarrive] .appshell__main-inner,
 [data-noarrive] .statspage__header,
 [data-noarrive] .statspage__header + *,
 [data-noarrive] .statspage__section {

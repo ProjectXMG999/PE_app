@@ -137,6 +137,74 @@
   cursor: grabbing;
 }
 
+/* ── The sky before its stars ───────────────────────────────────────────────
+ *
+ * The engine is a chunk away, and Postęp's hero deliberately holds it back for
+ * a beat on top of that (see `skyReady` in Constellation.tsx), so for a moment
+ * the panel owns a canvas that has drawn nothing. Left alone that is a black
+ * rectangle under the first card on the page — which is exactly what it was
+ * reported as.
+ *
+ * So the sky gets a resting state: a haze where the disc will be, breathing
+ * slowly enough to read as "coming up" rather than as a spinner.
+ *
+ * It sits ON TOP of the canvas, not behind it. The WebGL context is created
+ * with `alpha: false` and clears opaque on its very first frame, so anything
+ * underneath would be cut off mid-breath; from above it can lift instead, over
+ * half a second, while the ignition sweep is still bringing stars in under it.
+ *
+ * Two elements, and that is load-bearing: the pulse animates the inner one's
+ * opacity and the lift transitions the outer one's. On one element the
+ * transition would have to fight the animation for the same property, and the
+ * hand-off flashes back to full for a frame. */
+.constellation__waiting {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 520ms var(--ease-out-expo, ease-out);
+}
+
+.constellation__waiting.is-lit {
+  opacity: 0;
+}
+
+.constellation__waiting-glow {
+  position: absolute;
+  inset: 0;
+  /* Closest-side, so the haze is a disc the size of the one the stars will
+     land in rather than an ellipse stretched across a 6:5 box. */
+  background: radial-gradient(
+    closest-side at 50% 50%,
+    oklch(0.68 0.14 275 / 0.5),
+    oklch(0.55 0.11 275 / 0.2) 58%,
+    transparent 82%
+  );
+  animation: constellation-wait 2.6s ease-in-out infinite;
+}
+
+/* These numbers were picked against a screenshot at 1:1 phone scale, not by
+   eye on a desktop: a third of this was a haze only a 3× display could see.
+   The trough is 0.6 rather than 0 for the same reason — a breath that goes out
+   entirely reads as the panel dying, not waiting. */
+@keyframes constellation-wait {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Reduced motion keeps the haze — it is what says the panel is still filling —
+   and only drops the breathing. */
+@media (prefers-reduced-motion: reduce) {
+  .constellation__waiting-glow {
+    animation: none;
+  }
+}
+
 .constellation__empty {
   position: absolute;
   inset: 0;

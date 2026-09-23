@@ -70,10 +70,20 @@ export function isPageLoaded(path: string): boolean {
   return !entry || entry.ready
 }
 
-/** One chunk at a time, so warming never competes with something the user is
- *  actually waiting for. Honours Data Saver. */
+/**
+ * One chunk at a time, so warming never competes with something the user is
+ * actually waiting for.
+ *
+ * Skipped entirely on Data Saver, and on a connection that reports itself as
+ * 2g: there the ~550 kB this fetches is not a head start, it is the thing
+ * standing between the user and the screen they asked for. The normal lazy path
+ * still runs when they tap, which on such a link is the honest trade.
+ */
 export async function warmPages() {
-  const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
+  const conn = (navigator as Navigator & {
+    connection?: { saveData?: boolean; effectiveType?: string }
+  }).connection
   if (conn?.saveData) return
+  if (conn?.effectiveType === '2g' || conn?.effectiveType === 'slow-2g') return
   for (const entry of entries) await start(entry)
 }
