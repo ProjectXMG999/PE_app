@@ -634,8 +634,12 @@ export function PackPreviewPage() {
       <motion.div
         className="packpreview__actions"
         ref={infoRef}
-        initial={{ y: '120%', opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        // Slides only. The bar carries `.packpreview__mode-info`, which is
+        // glass, so fading the group in would composite that strip's blurred
+        // backdrop at partial alpha — the fog thickening after the bar has
+        // already arrived. The slide alone reads as the same entrance.
+        initial={{ y: '120%' }}
+        animate={{ y: 0 }}
         transition={{ duration: reduced ? 0 : 0.32, ease: EASE_OUT_EXPO, delay: reduced ? 0 : 0.05 }}
       >
         {activeInfo && (

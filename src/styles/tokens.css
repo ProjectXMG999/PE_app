@@ -49,14 +49,25 @@
      the strip, paints it from this tag and puts the web view underneath — so
      the strip sits directly above .ambient, and two of that layer's three
      radial stops are anchored at the top of the screen (20% 10% violet,
-     88% 4% indigo). This used to say #010102, the flat ground, and the result
+     88% 4% teal). This used to say #010102, the flat ground, and the result
      on a Dynamic Island iPhone was a flat black band above a violet app.
 
-     Measured at 393px wide with the shader running: #181e45. The frame drifts
-     under 9/255 as the mesh moves, so one static value holds. Re-measure if
-     --mesh-* or --ambient-strength move; a stale value here shows up as a
-     seam, which is exactly what it is for. */
-  --theme-color-meta: #181e45;
+     Re-measured at 393px wide, 24 frames across a full sweep of the mesh, for
+     the ten-stop palette: the top edge now runs from #010502 (near black) to
+     #01055f (indigo) to #012320 (green) — a drift of 93/255 in blue and 31 in
+     green, where the old palette held inside 9/255 and one static value could
+     track it exactly. It can't any more; that is the price of the brighter
+     stops, and there is no version of this tag that animates.
+
+     So this is the MEDIAN of that sweep, not the mean (#010a1f): the mean is
+     dragged up by the indigo excursions, and the two failure modes are not
+     symmetric. A strip darker than the edge below it reads as the vignette the
+     app already has along its other edges; a strip lighter than the edge reads
+     as a lit band of chrome sitting on top of the app, which is the seam this
+     value exists to prevent. When in doubt, err dark.
+
+     Re-measure if --mesh-* or --ambient-strength move. */
+  --theme-color-meta: #010612;
   /* The focus/study screens hide the ambient (AppShell's hideAmbient), and
      there the ground really is flat --bg-primary — App.tsx switches to this.
      oklch(0.07 0.008 275) -> #010102. */
@@ -96,7 +107,7 @@
   --overlay: oklch(0 0 0 / 0.58);
 
   /* ── Ambient — the mesh-gradient ground behind every page ─────────────────
-     The five stops of the Paper Shaders mesh, read at runtime by
+     The ten stops of the Paper Shaders mesh, read at runtime by
      components/ambient/AmbientBackground.tsx and handed to the shader. They
      live here, in the one palette file, so the background can't drift away
      from the rest of the app — and so light theme is a real palette rather
@@ -111,12 +122,16 @@
      an empty page reads as "purple", --ambient-strength is too high.
 
      The shape of this palette matters as much as the colours: ink and colour
-     ALTERNATE. Five chromatic stops give a uniform purple film; ink between
+     ALTERNATE. An all-chromatic list gives a uniform purple film; ink between
      them gives separated pools of coloured light drifting across black, which
-     is the whole effect. The three chromatic stops are the app's own accent
-     hues — violet 292 (--accent), teal 200 (--live), indigo 275
-     (--accent-indigo) — so the background is lit by the same palette the UI
-     is drawn in, rather than by a decorative purple of its own.
+     is the whole effect. The chromatic stops are the app's own accent hues —
+     violet 293 (--accent), green 150 (--accent-green), teal 195
+     (--accent-teal) — so the background is lit by the same palette the UI is
+     drawn in, rather than by a decorative purple of its own.
+
+     Ten is the shader's hard ceiling (meshGradientMeta.maxColorCount in
+     @paper-design/shaders), so the ink:colour split below is a zero-sum
+     choice, not a free one.
 
      Lava on obsidian: the ink stops go nearly to black and the chromatic ones
      get brighter and more saturated, so the difference between them — not the
@@ -124,51 +139,88 @@
      to a flat purple film; this is the same total amount of colour spent on
      contrast instead.
 
-     The three chromatic stops were raised (violet L 0.40 → 0.46, teal 0.36 →
-     0.43, indigo 0.30 → 0.37, each keeping its hue and near enough its chroma)
-     while the ink stops stayed on the floor. That is deliberately the opposite
-     of turning the whole thing up: the ink is what the colour is measured
-     against, so widening the gap between the two halves of the palette is what
-     makes the currents read, and it costs the blacks nothing.
+     The ink:colour RATIO is the knob for how much of the screen is black. The
+     shader is an inverse-distance blend of one drifting site per stop (weight =
+     1/dist^3.5, mesh-gradient.js): every fragment is a weighted average of all
+     of them, so what fills the space BETWEEN the pools is whatever the list is
+     mostly made of. Add ink stops and the field falls toward black while the
+     pools burn just as bright, because near a site that site still dominates.
+     The chromatic VALUES are the separate knob for how strong the colour is,
+     and they sit high — the response curve below spends most of its range on
+     the dark half, so a dim stop comes out as a smudge rather than a current.
 
-     SEVEN stops, not five, and this is the knob for how much of the screen is
-     black. The shader is an inverse-distance blend of one drifting site per
-     stop (weight = 1/dist^3.5, mesh-gradient.js): every fragment is a weighted
-     average of all of them, so what fills the space BETWEEN the pools is
-     whatever the list is mostly made of. At 3 colour : 2 ink the average was
-     coloured and the bottom half of the screen was a continuous indigo wash
-     with the pools sitting in it. At 3 colour : 4 ink the same three pools
-     burn just as bright — their own site still dominates nearby — and the
-     field between them falls to ink.
+     TEN stops, and indigo is gone. Both follow from measuring what each hue
+     actually OWNS on screen — the share of pixels lit enough to read as colour
+     (L >= 0.12) and chromatic enough to read as a hue (C >= 0.05), sampled off
+     screenshots of the running app at phone size. On the seven-stop palette
+     that came out as: indigo 31%, blue 2.5%, and violet, teal and green all
+     at 0%. The background was not three currents on black. It was one indigo
+     film, and the two hues that were supposed to be the point of it did not
+     reach the screen at all.
 
-     So: to make the background blacker, add ink stops. To make the colour
-     stronger, raise the chromatic ones. Those are now separate knobs, which
-     they were not when the ratio was fixed at 3:2.
+     Indigo was the cause, not a victim. Every fragment is a weighted average of
+     the whole palette, and the average of violet 293 + teal 206 + indigo 275
+     lands on indigo — so the one stop whose hue sits between the other two gets
+     paid twice, once as its own pool and again as the colour of all the space
+     between the pools. Dropping it does not remove indigo from the screen: the
+     field between violet and teal still averages to h≈270, and it is still the
+     colour along the right edge. It removes indigo's second helping. Measured,
+     that share falls 31% → 7%.
 
-     Violet and teal are brighter again (L 0.46 → 0.56 and 0.43 → 0.56) because
-     the response curve below spends most of its range on the dark half: with
-     the field crushed to black, a stop at the old lightness came out as a
-     grey-violet smudge rather than a current. Indigo deliberately stays where
-     it was — three stops at the top of the range is a light show, and this one
-     is the wide, slow one that fills the space the other two are not in. */
-  --mesh-1: #000001;  /* ink */
-  --mesh-2: #7d4fe0;  /* violet — --accent hue,        oklch(0.56 0.209 293) */
-  --mesh-3: #010103;  /* ink */
-  --mesh-4: #01838f;  /* teal — --live hue,            oklch(0.56 0.095 206) */
-  --mesh-5: #000002;  /* ink */
-  --mesh-6: #2d308d;  /* indigo — --accent-indigo hue, oklch(0.37 0.151 275) */
-  --mesh-7: #010102;  /* ink */
+     What the freed stops buy:
+
+      * GREEN, two of them. --live at hue 206 is a dead end in sRGB — #01838f
+        was already AT the gamut ceiling (C 0.095 = max 0.095 at that L and
+        hue), which is why the teal current never read as a colour no matter
+        what was done to it. Hue 150 (--accent-green) has 0.172 available at
+        the same lightness, 80% more. Two sites rather than one because a
+        single one is a lamp, not a current: green's screen share is 0% → 9%.
+      * Two more ink stops, 4 → 6, which is the documented knob for black.
+
+     End to end, measured the same way (WebKit, 390×844 at 3×, dark, five
+     frames of the running mesh, app chrome hidden): black area (L < 0.12)
+     66% → 77%, DEEP black (L < 0.06) 13% → 47%, median lightness 0.109 →
+     0.061, and the pools got brighter rather than dimmer at the same time —
+     p99 lightness 0.236 → 0.387, p99 chroma 0.123 → 0.139. Blacker and more
+     colourful are not a trade here, because they were never competing for the
+     same pixels: the black came from the field and the colour from the pools.
+
+     So the palette is now violet / green / teal / deep-green over six inks, and
+     the three hues that are left are far enough apart that their average has
+     almost no chroma — which is exactly what the curve below needs, because a
+     grey average crushes to black and a chromatic one cannot.
+
+     The chromatic stops also went up to ~95% of their sRGB ceiling (violet
+     C 0.209 → 0.236). There is no reason to leave headroom on a stop whose
+     whole job is to be the part of the screen that has colour in it. */
+  --mesh-1:  #000001;  /* ink */
+  --mesh-2:  #864df5;  /* violet — --accent hue,       oklch(0.58 0.236 293) */
+  --mesh-3:  #010103;  /* ink */
+  --mesh-4:  #15a84f;  /* green — --accent-green hue,  oklch(0.64 0.172 150) */
+  --mesh-5:  #000002;  /* ink */
+  --mesh-6:  #069393;  /* teal — --accent-teal hue,    oklch(0.60 0.102 195) */
+  --mesh-7:  #010102;  /* ink */
+  --mesh-8:  #0f895e;  /* green, deeper and bluer,     oklch(0.56 0.119 162) */
+  --mesh-9:  #000102;  /* ink */
+  --mesh-10: #010001;  /* ink */
   /* How far the shader canvas is allowed to come up over the flat ground. The
      stops alternate ink and colour, so raising this deepens the blacks at the
      same rate it brightens the currents — it buys contrast, not tint.
 
-     0.5 → 0.72: at 0.5 the mesh was mixed half-and-half with a flat floor that
-     has no structure in it, so half of every current was being averaged away
-     before it reached the screen. Costs nothing — it is one opacity on a layer
-     that was already composited. The calibration rule above still holds and
-     was re-checked at this value: an empty page reads as black with light
-     moving in it, not as purple. */
-  --ambient-strength: 0.72;
+     0.5 → 0.72 → 0.86: the flat floor has no structure and no response curve,
+     so every point of it is a point that cannot be black and cannot be a
+     current — it is the half of the composite that averages the other half
+     toward the middle. At 0.72 it was still diluting both ends by 28%. Costs
+     nothing — it is one opacity on a layer that was already composited.
+
+     Not 1.0, deliberately: the floor is what the first paint and every
+     WebGL-less device get, and at 1.0 the shader would have nothing to
+     cross-fade from, so the app would visibly change background a second after
+     it opened. 14% is enough to keep the two in the same family.
+
+     The calibration rule above still holds and was re-checked here: an empty
+     page reads as black with light moving in it, not as purple. */
+  --ambient-strength: 0.86;
   --ambient-grain: 0.05;
 
   /* The film grain itself, as one texture shared by the ground and the glass.
@@ -262,14 +314,30 @@
   --surface-tile-hover:
     linear-gradient(180deg, oklch(1 0 0 / 0.13), oklch(1 0 0 / 0.075)),
     var(--liquid-veil);
-  /* The same tile on a SOLID base, for a tile that has to hide what passes
-     behind it rather than merely sit on the ambient: the sticky controls on
-     Pakiety, which pack rows scroll under. The veil is 32% of --bg-primary, so
-     a plain tile there would show the rows straight through. Note the base is
-     --bg-card, not --bg-input: this is a surface, and --bg-input is darker than
-     every card on the page, which is how the search field came to read as a
-     hole rather than a control. */
-  --surface-tile-opaque: var(--tile-film), var(--bg-card);
+  /* The sticky controls on Pakiety — the search field, the level track, the
+     volume chips — which pack rows scroll behind. They have to be opaque, and
+     that is not negotiable: a blur here would be load-bearing rather than
+     decorative (see HomePage.css). What IS negotiable is what the opacity is
+     made of.
+
+     It used to be --surface-tile-opaque: the tile film over a flat --bg-card.
+     --bg-card is oklch(0.16) at 0.014 chroma sitting on an 0.07 ground, so it
+     landed as a single dead value more than twice as light as everything around
+     it — the one surface on the screen with no light falling across it, and the
+     "grey widget" it was reported as.
+
+     So: still opaque, but a material rather than a fill. The base is a gradient
+     that starts near the card and sinks most of the way back to the ground,
+     which both seats the control in the page and gives it somewhere for the
+     light to fall FROM; the white film above it is that light. The colour comes
+     with it — both stops are mixes of two tokens that already carry the app's
+     violet, so the result is smoked glass rather than plastic. Darker overall
+     than what it replaces, which the text on it only gains from. */
+  --surface-on-chrome:
+    linear-gradient(180deg, oklch(1 0 0 / 0.1) 0%, oklch(1 0 0 / 0.022) 100%),
+    linear-gradient(180deg,
+      color-mix(in oklch, var(--bg-card) 72%, var(--bg-primary)) 0%,
+      color-mix(in oklch, var(--bg-card) 44%, var(--bg-primary)) 100%);
   --tile-border: oklch(1 0 0 / 0.13);
   --tile-hi: inset 0 1px 0 oklch(1 0 0 / 0.09);
 
@@ -677,8 +745,17 @@
      that sit exactly as far below the ground as the dark ones sit above it.
      Same stop order, same alternation, same shader motion — only the sign of
      the lightness changes, so a theme switch recolours the running animation
-     rather than swapping in a different one. Re-derive these from the dark
-     stops (don't hand-tune them) if those ever change.
+     rather than swapping in a different one.
+
+     The rule, exactly, so these can be re-derived rather than hand-tuned when
+     the dark stops move:  L_light = 1 − L_dark + 0.04,  hue kept, chroma kept
+     as far as the sRGB gamut allows at the new lightness. (The +0.04 is the
+     asymmetry of the two grounds: 0.07 and 0.97 are not mirror images.) It
+     reproduces every stop that shipped before this palette to within rounding.
+
+     The response curve on .ambient__field needs no light-theme variant:
+     contrast() pivots each channel around 0.5, so it is its own mirror — it
+     pushes paper to white by exactly as much as it pushes ink to black.
 
      Strength does NOT mirror any more, and this is the one asymmetry worth
      keeping: light text on a dark ground loses contrast slowly as the ground
@@ -687,13 +764,16 @@
      reading directly off the ground (measured, Dzisiaj, light); at the dark
      theme's 0.72 the same pool falls to 3.7:1, which is under AA for small
      text. So light keeps 0.5 and takes its extra presence from the stops. */
-  --mesh-1: #ffffff;  /* paper — mirrors ink #000001 */
-  --mesh-2: #6835c6;  /* violet — mirrors #7d4fe0 */
-  --mesh-3: #f3f4f9;  /* paper — mirrors ink #010103 */
-  --mesh-4: #066b75;  /* teal — mirrors #01838f */
-  --mesh-5: #fefeff;  /* paper — mirrors ink #000002 */
-  --mesh-6: #7b8bf0;  /* indigo — mirrors #2d308d */
-  --mesh-7: #f4f4f9;  /* paper — mirrors ink #010102 */
+  --mesh-1:  #ffffff;  /* paper — mirrors ink #000001 */
+  --mesh-2:  #651ccb;  /* violet — mirrors #864df5, oklch(0.46 0.236 293) */
+  --mesh-3:  #f3f4f9;  /* paper — mirrors ink #010103 */
+  --mesh-4:  #005724;  /* green — mirrors #15a84f,  oklch(0.40 0.110 150) */
+  --mesh-5:  #fefeff;  /* paper — mirrors ink #000002 */
+  --mesh-6:  #005f5f;  /* teal — mirrors #069393,   oklch(0.44 0.075 195) */
+  --mesh-7:  #f4f4f9;  /* paper — mirrors ink #010102 */
+  --mesh-8:  #00704b;  /* green — mirrors #0f895e,  oklch(0.48 0.106 162) */
+  --mesh-9:  #fbfbfe;  /* paper — mirrors ink #000102 */
+  --mesh-10: #f7f8fc;  /* paper — mirrors ink #010001 */
   --ambient-strength: 0.5;
   --ambient-grain: 0.05;
 
@@ -720,10 +800,10 @@
      paper is the light theme's equivalent of the veil's job anyway. */
   --surface-tile: linear-gradient(180deg, oklch(1 0 0), oklch(0.985 0.004 275));
   --surface-tile-hover: linear-gradient(180deg, oklch(1 0 0), oklch(0.965 0.008 285));
-  /* Already opaque here — the light tile has no veil to swap — so the sticky
-     variant is simply the tile. Stated rather than inherited, because the dark
-     definition is built from --tile-film, which light theme doesn't use. */
-  --surface-tile-opaque: var(--surface-tile);
+  /* On paper the tile is already opaque and has no veil to drop, so a control
+     on the chrome bar is simply the tile. Stated rather than inherited: the
+     dark definition is built from --tile-film, which light theme doesn't use. */
+  --surface-on-chrome: var(--surface-tile);
   --tile-border: oklch(0.22 0.02 275 / 0.12);
   --tile-hi: inset 0 1px 0 oklch(1 0 0 / 0.9);
 

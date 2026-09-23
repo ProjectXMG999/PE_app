@@ -1,9 +1,14 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import {
-  packageIdsForLevel, applyLevelMasteryToWord, packageProgressForLevelMastery,
+  packageIdsForLevel, masteryLevels, applyLevelMasteryToWord, packageProgressForLevelMastery,
   markLevelMastered, LevelMasteryFetchError,
 } from './levelMastery'
 import type { WordProgress, PackageProgress } from '../types/progress'
+import type { PackMeta } from '../types/vocabulary'
+import packagesIndex from '../data/packages-index.json'
+
+const allPacks = packagesIndex as PackMeta[]
+const volumeOf = new Map(allPacks.map(p => [p.id, p.volume]))
 
 /* The pack fetch and the database, stubbed — what's under test here is what
    markLevelMastered does when a pack DOESN'T arrive. It used to reject with
@@ -67,7 +72,7 @@ describe('markLevelMastered when packs fail to load', () => {
 
     expect(err).toBeInstanceOf(LevelMasteryFetchError)
     expect(err.failed).toEqual(['t1-p003'])
-    expect(err.total).toBe(109)
+    expect(err.total).toBe(102)
     expect(err.status).toBe(402)
     // One attempt only — a 402 doesn't become a 200 by asking again.
     expect(fetchImpl.mock.calls.filter(([id]) => id === 't1-p003')).toHaveLength(1)
@@ -78,14 +83,32 @@ describe('markLevelMastered when packs fail to load', () => {
 
 describe('packageIdsForLevel', () => {
   it('matches the current catalog\'s per-level pack counts', () => {
-    expect(packageIdsForLevel(1)).toHaveLength(109)
-    expect(packageIdsForLevel(2)).toHaveLength(156)
-    expect(packageIdsForLevel(3)).toHaveLength(234)
-    expect(packageIdsForLevel(4)).toHaveLength(335)
+    // Volume-grouped (the map's own levels), NOT `p.level === n`: the tag
+    // gives 109/156/234/335, which is the split that made the declaration
+    // dialog quote one number and write another.
+    expect(packageIdsForLevel(1)).toHaveLength(102)
+    expect(packageIdsForLevel(2)).toHaveLength(201)
+    expect(packageIdsForLevel(3)).toHaveLength(194)
+    expect(packageIdsForLevel(4)).toHaveLength(337)
   })
 
-  it('returns only ids for that level', () => {
-    expect(packageIdsForLevel(1).every(id => id.startsWith('t1-p'))).toBe(true)
+  /* The assertion this replaces was `every(id => id.startsWith('t1-p'))`,
+     which every pack in the catalogue satisfies — all 834 ids carry that
+     prefix, so it passed no matter how wrong the grouping was. */
+  it('partitions the whole catalogue: every pack in exactly one level', () => {
+    const ids = masteryLevels().flatMap(packageIdsForLevel)
+    expect(new Set(ids).size).toBe(ids.length)
+    expect(ids).toHaveLength(allPacks.length)
+  })
+
+  it('agrees with the map: a level holds whole volumes, never part of one', () => {
+    for (const level of masteryLevels()) {
+      const volumes = new Set(packageIdsForLevel(level).map(id => volumeOf.get(id)))
+      for (const v of volumes) {
+        const whole = allPacks.filter(p => p.volume === v).map(p => p.id)
+        expect(packageIdsForLevel(level)).toEqual(expect.arrayContaining(whole))
+      }
+    }
   })
 })
 

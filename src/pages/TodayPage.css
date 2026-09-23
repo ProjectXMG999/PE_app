@@ -73,6 +73,10 @@
    data arrives. */
 .today__skeleton { border-radius: var(--radius-xl); }
 
+/* It stands in for SessionHero, which is --radius-2xl — so the swap when the
+   pulse arrives changes neither the material (skeleton--glass) nor the shape. */
+.today__skeleton.skeleton--glass { border-radius: var(--radius-2xl); }
+
 /* Same height as the progress card, so nothing jumps when the data arrives. */
 .today__strip-loading {
   height: 128px;
@@ -373,8 +377,16 @@
 }
 
 /* Tinted, not filled: "Zaczynamy" in the hero is the page's one filled button.
-   The card is the button; this is its label. */
+   The card is the button; this is its label.
+
+   In --path-accent, set by the ModeSlider this card lives inside: "Zacznij
+   słuchać" is blue and "Zacznij trening" violet, which is the same pair the
+   screen behind each of them already uses. --accent is kept as the fallback
+   for any use outside the slider. */
 .today__pick-cta {
+  --pick-color: var(--path-accent, var(--accent));
+  --pick-lit: color-mix(in oklch, var(--pick-color) 62%, white);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -382,17 +394,17 @@
   margin-top: 14px;
   font-size: 17px;
   font-weight: 600;
-  color: var(--accent-bright);
+  color: var(--pick-lit);
   background: linear-gradient(180deg,
-    color-mix(in oklch, var(--accent) 30%, transparent),
-    color-mix(in oklch, var(--accent) 16%, transparent));
+    color-mix(in oklch, var(--pick-color) 30%, transparent),
+    color-mix(in oklch, var(--pick-color) 16%, transparent));
   border-radius: var(--radius-full);
-  box-shadow: inset 0 1px 0 color-mix(in oklch, var(--accent-bright) 45%, transparent),
-              inset 0 0 0 1px color-mix(in oklch, var(--accent) 22%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in oklch, var(--pick-lit) 45%, transparent),
+              inset 0 0 0 1px color-mix(in oklch, var(--pick-color) 22%, transparent);
 }
 
-/* On near-white the bright accent washes out; the deeper one reads. */
-[data-theme="light"] .today__pick-cta { color: var(--accent-dim); }
+/* On near-white the lit tint washes out; the deeper one reads. */
+[data-theme="light"] .today__pick-cta { color: var(--path-ink, var(--accent-dim)); }
 
 .today__path-empty {
   display: flex;

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { CSSProperties, useEffect, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { FlowNumber } from '../shared/FlowNumber'
 import { smartPeek, smartReason } from '../../services/smartQueue'
@@ -27,6 +27,41 @@ interface Props {
  * `linear()` spring approximation, the arc is EASE_OUT_EXPO) and a 50 ms head
  * start. Both are small; aligning them costs one prop and removes the question.
  */
+/**
+ * The ring's colour ramp, in the Trening exercises' own palette — the icons
+ * whose lit tiles this is borrowed from. Red on an untouched day, green once
+ * the goal is closed: the reading everybody already owns, and the two ends the
+ * learner is actually being asked about ("have I done today's minutes?").
+ *
+ * Nothing sits between them because nothing needs to. In OKLCH the short way
+ * from 5° to 150° runs through orange and yellow, so the middle of the day is
+ * handed to us — a third stop would only pull it off that line and read as a
+ * separate state rather than as a day filling up.
+ *
+ * Deliberately not the violet --accent it used to be. Violet is the app's
+ * chrome — it is on the kicker, the CTA, the nav, the mesh behind all of it —
+ * so a violet ring is the one thing on this card that cannot stand out.
+ */
+const RING_RAMP = ['var(--accent-pink)', 'var(--accent-green)']
+
+/**
+ * A fraction of the daily goal → one CSS colour, mixed between the two nearest
+ * stops so the ring travels the ramp smoothly rather than snapping between
+ * three states.
+ *
+ * Built here rather than in CSS because color-mix() blends exactly two colours:
+ * a three-stop ramp in pure CSS would need the piecewise choice of *which* two,
+ * which is a calc() no one should have to read. The stops stay as var() names,
+ * so both themes still resolve them their own way.
+ */
+function ringRamp(fraction: number): string {
+  const f = Math.min(1, Math.max(0, fraction))
+  const span = RING_RAMP.length - 1
+  const i = Math.min(span - 1, Math.floor(f * span))
+  const t = (f - i / span) * span
+  return `color-mix(in oklch, ${RING_RAMP[i + 1]} ${(t * 100).toFixed(1)}%, ${RING_RAMP[i]})`
+}
+
 const RING_DELAY_MS = 150
 const RING_DURATION_MS = 900
 /** Same curve as the arc's EASE_OUT_EXPO, spelled as CSS for NumberFlow. */
@@ -99,7 +134,11 @@ export function SessionHero({ snapshot, onStart, secondsStudied, goalSec, onEdit
 
   return (
     <div
-      className={`sessionhero u-liquid u-liquid--pressable ${met ? 'u-liquid--gold sessionhero--met' : 'u-liquid--tint'}`}
+      className="sessionhero u-liquid u-liquid--tint u-liquid--pressable"
+      /* One colour for the whole card. This is also why the gold/violet variant
+         swap is gone: at fraction 1 the ramp IS gold, so the card can no longer
+         disagree with the ring sitting on it. */
+      style={{ ['--ring-raw' as string]: ringRamp(fraction) } as CSSProperties}
       onClick={onStart}
     >
       <div className="sessionhero__top">

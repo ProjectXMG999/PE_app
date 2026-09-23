@@ -35,30 +35,31 @@
      the shader had even loaded. Percentages are deliberately low — this is the
      floor, not the light.
 
-     Raised with the shader (dark: --ambient-strength 0.5 → 0.72) so the two
-     never disagree: this layer is what the first paint and every WebGL-less
-     device get, and leaving it behind would mean the app looked like one
-     background for the first second and a different one afterwards. Still the
-     floor — the mix percentages went up by less than the shader did.
-
      One set of percentages for both themes, because the stops they mix are
-     already per-theme: the same 44% of light-theme --mesh-2 is pigment on
+     already per-theme: the same 20% of light-theme --mesh-2 is pigment on
      paper rather than light on ink. Light keeps its shader at 0.5 (see the
-     note on --ambient-strength there), and this raise is measured into that:
-     4.5:1 for secondary text reading off the ground at its worst pool.
+     note on --ambient-strength there), so this layer is a much larger share of
+     the light composite than of the dark one — which is the other reason these
+     numbers are low.
 
-     Pulled back hard — 58/50/44 to 26/20/18 — when the shader gained its
-     response curve. This layer has no structure (three static blobs covering
-     most of the screen) and no curve, so it is the half of the composite that
-     cannot be black; at 28% of the result (1 − --ambient-strength) it was
-     filling in exactly the space the curve had just cleared, and the screen
-     kept a navy floor under the currents instead of ink. It is still the same
-     three pools in the same three places, just far enough down to be a floor
-     rather than a wash. */
+     Pulled back hard — 58/50/44 to 26/20/18 to 20/15/14 — as the shader gained
+     its response curve and then its share. This layer has no structure (three
+     static blobs covering most of the screen) and no curve, so it is the half
+     of the composite that cannot be black; whatever it paints is filling in
+     exactly the space the curve has just cleared. It is now only 14% of the
+     result (1 − --ambient-strength), so these percentages are aimed at the
+     FIRST PAINT, where this layer is alone on screen, rather than at the
+     composite — they are what the app looks like for the second before the
+     shader arrives, and for good on a device that can't run it.
+
+     Which stop goes where changed with the palette: --mesh-6 is the teal now
+     rather than the indigo, and --mesh-4 is the green rather than the teal. So
+     the floor is violet top-left, teal top-right, green along the bottom —
+     the same three places, following the same three chromatic stops. */
   background:
-    radial-gradient(54% 40% at 20% 10%, color-mix(in oklch, var(--mesh-2) 26%, transparent) 0%, transparent 58%),
-    radial-gradient(48% 38% at 88% 4%, color-mix(in oklch, var(--mesh-6) 20%, transparent) 0%, transparent 62%),
-    radial-gradient(66% 46% at 64% 100%, color-mix(in oklch, var(--mesh-4) 18%, transparent) 0%, transparent 64%),
+    radial-gradient(54% 40% at 20% 10%, color-mix(in oklch, var(--mesh-2) 20%, transparent) 0%, transparent 58%),
+    radial-gradient(48% 38% at 88% 4%, color-mix(in oklch, var(--mesh-6) 15%, transparent) 0%, transparent 62%),
+    radial-gradient(66% 46% at 64% 100%, color-mix(in oklch, var(--mesh-4) 14%, transparent) 0%, transparent 64%),
     var(--bg-primary);
 }
 
@@ -94,18 +95,41 @@
      as the field loses light. Measured against the same palette without it:
      black area (L < 0.12) 3% → 72%, pool chroma p90 0.056 → 0.079.
 
-     1.5, not 1.9: at 1.9 the field is 94% black but the currents go with it
-     (chroma p90 0.022) and the background stops moving, which is the one thing
-     it is for. The saturate() is a small top-up, not the mechanism.
+     1.5 → 1.8, and the reason it can go there now is the palette under it. At
+     1.9 on the old seven stops the field was 94% black but the currents went
+     with it (chroma p90 0.022) and the background stopped moving. The current
+     palette has no indigo stop, so the average the curve works on is the mix of
+     three hues far enough apart to cancel — a near-grey rather than a colour —
+     and a near-grey is exactly what a contrast curve can crush without taking
+     the pools with it. Isolating this knob on the new palette, 1.5 → 1.8 buys
+     black area (L < 0.12) 51% → 54% and deep black (L < 0.06) 26% → 30% while
+     the pools get BRIGHTER rather than dimmer, p99 lightness 0.566 → 0.590.
+     (Those two are modelled — the whole composite reproduced offline — because
+     a browser can only be asked for one setting at a time. The end-to-end
+     figures in tokens.css are measured off real screenshots.)
+
+     saturate() 1.15 → 1.3 on the same grounds: it is a top-up on the pools,
+     and at this contrast there is room for it. It costs no black (54% either
+     way) and buys chroma p90 0.170 → 0.185.
 
      Cheap in a way blur is not — a per-pixel colour matrix, no neighbourhood
      sampling — and it replaces nothing: the canvas was already its own
      composited layer because of the opacity below. */
-  filter: contrast(1.5) saturate(1.15);
+  filter: contrast(1.8) saturate(1.3);
 }
 
 .ambient__field--ready {
   opacity: var(--ambient-strength);
+}
+
+/* Every arming after the first one. The ramp above is worth its 900 ms once,
+   when the shader first replaces the CSS floor; on the way back from a session
+   it is the ground the app has been sitting on all along, so it returns at
+   strength under cover of the page transition rather than growing into place
+   after it. Every glass surface blurs this layer, so a ramp here is a fog
+   change everywhere at once — see the note in AmbientBackground.tsx. */
+.ambient__field--instant {
+  transition: none;
 }
 
 /* Fine film grain over the shader — keeps the flowing gradient from reading as
@@ -127,9 +151,9 @@
 
 /* Floor vignette — content sits above a soft shadow, not a hard edge.
    Lighter than it was: it was tuned against a ground three shades up from this
-   one, and at full strength on obsidian it does nothing except crush the teal
+   one, and at full strength on obsidian it does nothing except crush the
    current the mesh puts along the bottom edge. Lighter again (0.26 → 0.18) now
-   that the mesh is carrying more: the bottom of the screen is where the teal
+   that the mesh is carrying more: the bottom of the screen is where the green
    pool actually lands, and this was the one layer spending it. */
 .ambient::after {
   content: '';

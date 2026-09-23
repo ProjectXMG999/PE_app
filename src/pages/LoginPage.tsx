@@ -34,7 +34,10 @@ export function LoginPage() {
     ? gate.returnTo
     : null
   const reduced = useReducedMotion()
-  const { theme, toggleTheme } = useAppStore()
+  // Atomic selectors — see the note in App.tsx. `toggleTheme` is a stable
+  // setter, so that one never re-renders at all.
+  const theme = useAppStore(s => s.theme)
+  const toggleTheme = useAppStore(s => s.toggleTheme)
   const resolved = resolveTheme(theme)
 
   const [mode, setMode] = useState<Mode>('signin')

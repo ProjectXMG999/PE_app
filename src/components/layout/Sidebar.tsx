@@ -13,7 +13,12 @@ import { ProgressLogo } from '../brand/ProgressLogo'
 import './Sidebar.css'
 
 export function Sidebar() {
-  const { theme, toggleTheme, devUnlocked, setDevUnlocked } = useAppStore()
+  // Atomic selectors — see the note in App.tsx. The sidebar is rebuilt by every
+  // navigation already; it should not also rebuild on every unrelated `set()`.
+  const theme = useAppStore(s => s.theme)
+  const toggleTheme = useAppStore(s => s.toggleTheme)
+  const devUnlocked = useAppStore(s => s.devUnlocked)
+  const setDevUnlocked = useAppStore(s => s.setDevUnlocked)
   const { user, hasAccess } = useAuthStore()
   const navigate = useTransitionNavigate()
   const tapsRef = useRef<number[]>([])

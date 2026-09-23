@@ -73,21 +73,16 @@
 
 /* The sticky block: search bar, then the level/volume switcher.
  *
- * It has NO paint of its own, at rest or stuck, and that is the point.
+ * Its paint is ONE unconditional layer — the ::before below — and the point is
+ * that it never switches. This block has been through both extremes: a glass
+ * slab that snapped on at a scroll threshold, then no paint at all with the
+ * controls made opaque to compensate, then a dark gradient faded in to cover
+ * the gaps between them. Each fixed the last one's damage and added its own
+ * band, threshold or grey. What they had in common was treating the bar as a
+ * state.
  *
- * It used to grow a full-bleed glass slab once pinned — 171px of
- * --glass-bg-strong plus a blur, switching on at a threshold — and the reason
- * was written down here: "the switcher is a translucent track with gaps, so the
- * cards would visibly scroll through it". True, but it treated the symptom. The
- * controls are now opaque objects in their own right (--surface-tile-opaque on
- * the field, the track and the volume chips), so each one hides what passes
- * behind it and the container has nothing left to do.
- *
- * What that buys: the aurora runs through the gaps between the controls at
- * every scroll position instead of being covered by a dark band, one
- * viewport-wide backdrop-filter leaves a screen that tokens.css already
- * describes as carrying a dozen of them, and the abrupt on/off at 260px is
- * simply gone — there is no state to switch.
+ * It isn't one. It is chrome, it is always chrome, and the ladder in tokens.css
+ * already says what chrome is made of.
  *
  * The bleed stays: the volume chips scroll to the screen edge, and
  * `--page-gutter` is the one number both the padding and the bleed read, which
@@ -105,57 +100,48 @@
   padding: 0 var(--page-gutter) var(--spacing-sm);
 }
 
-/* The gaps, not the bar.
+/* The bar is chrome, not a shadow cast on the page.
  *
- * Opaque controls hide what passes BEHIND them, but there are 8px of air
- * between the search row, the level track and the volume chips, and rows slid
- * through those: "początek trasy" surfacing between two controls reads as the
- * screen tearing. The old answer was to fill the whole block with 92%
- * --bg-card, which is the dark band this rebuild exists to remove.
+ * What was here: a dark gradient — the page's own ground at full strength along
+ * the top edge — faded in on `is-stuck`, so that rows passing through the 8px
+ * of air between the search row, the level track and the chips would not read
+ * as the screen tearing. It worked, and it cost the thing the whole screen is
+ * built around: a slab of --bg-primary switched on over the brightest part of
+ * the aurora, which is a dark band by any other name. Two further problems came
+ * with it. It ANIMATED its opacity over a region full of translucent controls,
+ * so the bar visibly darkened a beat after it stuck; and to survive it the
+ * controls had to go opaque (--surface-tile-opaque), which is where the flat
+ * grey came from.
  *
- * So: a fade, not a fill. It is the page's own ground at the top edge, where
- * the list emerges from under the bar and legibility is the whole problem, and
- * it reaches ZERO before the block ends — the lower third and everything below
- * it is untouched aurora. No hard edge anywhere, nothing to switch on, and the
- * mesh still runs through the bar.
+ * So the bar joins the ladder instead of improvising: rung 2b, CHROME — the
+ * recipe the tab bar already uses, and the one the ladder describes for "bars
+ * that stick to an edge, with the content behind them moving". A blur hides a
+ * passing row the way a fill does, and unlike a fill it keeps the colour: the
+ * aurora comes through diffused instead of being painted over.
  *
- * Only once stuck. At rest the bar sits over the banners with nothing beneath
- * it to separate from, and a gradient there would be a smudge on the aurora
- * for no reason. -1 z-index keeps it behind the controls it is backing. */
-.homepage__chrome.has-switcher::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0;
-  /* The stops are placed against what is actually at each height, not by feel:
-     the search row ends ~40%, the level track ~66%, and the volume chips run
-     ~70–92% — so the fade has to stay strong through the chips and only let go
-     in the last few pixels, where there is nothing left to read through. An
-     earlier, prettier curve was down to 38% by the chips and "początek trasy"
-     showed in the 8px beside them. */
-  background: linear-gradient(
-    to bottom,
-    var(--bg-primary) 0%,
-    color-mix(in oklch, var(--bg-primary) 94%, transparent) 52%,
-    color-mix(in oklch, var(--bg-primary) 78%, transparent) 84%,
-    transparent 100%);
-  transition: opacity var(--transition-med);
-}
-
-.homepage__chrome.has-switcher.is-stuck::before {
-  opacity: 1;
-}
+ * No state, and therefore no animation. Blurring a soft gradient looks almost
+ * exactly like not blurring it, so at rest — when the only thing behind the bar
+ * is the ambient — this is invisible; it simply IS in place by the time rows
+ * start passing under it. That also keeps it out of the trap the entrances are
+ * full of: fading a backdrop-filtered layer composites its blurred backdrop at
+ * partial alpha, which is the fog visibly thickening after the fact (see
+ * `fx-rise-glass` in animations.css). Nothing here fades.
+ *
+ * Deliberately NOT a backdrop-filter on this block, which is the obvious move
+ * and was tried first. Two reasons it stays out. It cannot be verified here:
+ * Playwright's WebKit renders `backdrop-filter` as a no-op, measured with a
+ * `position: fixed` probe at z-index 9999 over the list — pack rows came
+ * through it perfectly sharp — so a blur-based bar would be shipped on faith.
+ * And it would be load-bearing rather than decorative: if the blur is ever
+ * weak, absent or slow on a real device, rows read straight through the bar and
+ * the screen is unusable, which is exactly the failure the opaque controls were
+ * introduced to prevent. The controls stay opaque and carry the paint
+ * themselves; what changed is the material they are made of. */
 
 @media (min-width: 1024px) {
   .homepage__chrome.has-switcher {
     top: var(--spacing-sm);
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .homepage__chrome.has-switcher::before { transition: none; }
 }
 
 /* ── What "stuck" is allowed to change ────────────────────────────────────

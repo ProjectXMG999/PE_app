@@ -42,7 +42,7 @@
   background:
     linear-gradient(color-mix(in oklch, var(--lvl-active, transparent) 6%, transparent),
                     color-mix(in oklch, var(--lvl-active, transparent) 6%, transparent)),
-    var(--surface-tile-opaque);
+    var(--surface-on-chrome);
   border: 1px solid color-mix(in oklch, var(--lvl-active, transparent) 20%, var(--tile-border));
   box-shadow: var(--tile-hi);
   border-radius: var(--radius-lg);
@@ -181,7 +181,7 @@
   border-radius: var(--radius-full);
   /* Opaque, like the track above it and for the same reason: these chips are
      sticky and pack rows pass behind them. Transparent, they were a window. */
-  background: var(--surface-tile-opaque);
+  background: var(--surface-on-chrome);
   box-shadow: var(--tile-hi);
   scroll-snap-align: center;
   cursor: pointer;

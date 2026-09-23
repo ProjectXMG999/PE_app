@@ -3,12 +3,22 @@
  * -----------------------------------------------------------------------------
  * Eyebrow, a large percentage with the count beside it, a bar whose notches
  * are the level thresholds, and the distance to the next level. Liquid glass
- * (.u-liquid), like every card on Dzisiaj. One tint for
- * both paths; the level's colour lives in LevelPill. The fill grows once — no
- * shimmer, comet trail or number pop.
+ * (.u-liquid), like every card on Dzisiaj. The fill grows once — no shimmer,
+ * comet trail or number pop.
+ *
+ * The card is lit in --path-accent, which ModeSlider sets from the tab you are
+ * on: this card is blue under Słuchaj and violet under Trenuj, and it needs no
+ * prop to know which — it is inside the slider that already decided. The
+ * fallback keeps it violet anywhere else it might be used.
  * ========================================================================== */
 
 .pathstrip {
+  --tint-color: var(--path-accent, var(--accent));
+  /* The reached level's colour, set inline from LEVEL_COLORS. Before the first
+     threshold there is no level yet, so the bar falls back to the path's own
+     colour rather than inventing a fifth one. */
+  --band-color: var(--path-accent, var(--accent));
+
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -16,13 +26,38 @@
   border-radius: var(--radius-xl);
 }
 
+.pathstrip__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
 .pathstrip__eyebrow {
   margin: 0;
+  min-width: 0;
 }
 
 .pathstrip__eyebrow em {
   font-style: normal;
-  color: var(--accent);
+  color: var(--path-ink, var(--accent));
+}
+
+/* The level you are standing in, named in that level's own colour. */
+.pathstrip__band {
+  flex-shrink: 0;
+  padding: 3px 9px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  border-radius: var(--radius-full);
+  color: color-mix(in oklch, var(--band-color) 80%, white);
+  background: color-mix(in oklch, var(--band-color) 16%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--band-color) 32%, transparent);
+}
+
+[data-theme="light"] .pathstrip__band {
+  color: color-mix(in oklch, var(--band-color) 90%, black);
 }
 
 .pathstrip__figure {
@@ -46,22 +81,31 @@
   color: var(--text-secondary);
 }
 
+/* 8px rather than 6: the bar is now the card's colour statement, and 6px of it
+   behind a 2px notch every few hundred words was too little area to read as a
+   colour at all — it read as a grey line with a hint. */
 .pathstrip__track {
   position: relative;
-  height: 6px;
+  height: 8px;
   margin-top: 2px;
   border-radius: var(--radius-full);
   background: var(--route-line);
 }
 
+/* Lit, not painted — the same drop of colour past the edge that the Trening
+   icons and the goal ring use. Gradient rather than flat so the bar has a head:
+   the bright end is where your progress actually stands. */
 .pathstrip__fill {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  min-width: 6px;
+  min-width: 8px;
   border-radius: var(--radius-full);
-  background: var(--accent);
+  background: linear-gradient(90deg,
+    color-mix(in oklch, var(--band-color) 72%, transparent),
+    var(--band-color));
+  box-shadow: 0 0 10px color-mix(in oklch, var(--band-color) 55%, transparent);
 }
 
 /* Level thresholds: a dark notch — the card is glass, so there's no solid

@@ -629,7 +629,9 @@
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
-  animation: fx-rise 200ms var(--ease-out-expo) both;
+  /* Glass — the transform-only twin, so the strip doesn't frost over after it
+     has landed. See `fx-rise-glass` in animations.css. */
+  animation: fx-rise-glass 200ms var(--ease-out-expo) both;
 }
 
 .packpreview__mode-info-icon {

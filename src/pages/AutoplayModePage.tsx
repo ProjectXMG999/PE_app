@@ -110,7 +110,11 @@ function StepStrip({ steps }: { steps: AutoplayStep[] }) {
 export function AutoplayModePage() {
   const { packageId } = useParams<{ packageId: string }>()
   const navigate = useAppNavigate()
-  const { autoplayMode, setAutoplayMode, enRate, setEnRate } = useAppStore()
+  // Atomic selectors — see the note in App.tsx.
+  const autoplayMode = useAppStore(s => s.autoplayMode)
+  const setAutoplayMode = useAppStore(s => s.setAutoplayMode)
+  const enRate = useAppStore(s => s.enRate)
+  const setEnRate = useAppStore(s => s.setEnRate)
   const [resume, setResume] = useState<{ index: number; total: number } | null>(null)
 
   const meta = allPacks.find(p => p.id === packageId)
@@ -168,7 +172,7 @@ export function AutoplayModePage() {
       lead="Wybierz rytm sesji. Tryb i tempo zmienisz też w trakcie słuchania."
     >
       {resume && (
-        <ModeBlock className="resume u-liquid">
+        <ModeBlock className="resume u-liquid" glass>
           <div className="resume__top">
             <span className="u-kicker resume__kicker">Przerwana sesja</span>
             <span className="resume__count">{resume.index} / {resume.total}</span>
@@ -195,7 +199,7 @@ export function AutoplayModePage() {
         </ModeBlock>
       )}
 
-      <ModeBlock>
+      <ModeBlock glass>
         <div className="modescreen__cards">
           {MODE_ORDER.map(id => {
             const steps = sample ? planSequence(id, sample) : modeStepsForContent(id, hasSentences)

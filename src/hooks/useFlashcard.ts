@@ -5,7 +5,12 @@ import { Word } from '../types/vocabulary'
 export const REVEAL_STEPS = 4
 
 export function useFlashcard(words: Word[]) {
-  const { currentCardIndex, revealStep, setCardIndex, advanceReveal, resetReveal } = useAppStore()
+  // Atomic selectors — see the note in App.tsx.
+  const currentCardIndex = useAppStore(s => s.currentCardIndex)
+  const revealStep = useAppStore(s => s.revealStep)
+  const setCardIndex = useAppStore(s => s.setCardIndex)
+  const advanceReveal = useAppStore(s => s.advanceReveal)
+  const resetReveal = useAppStore(s => s.resetReveal)
 
   const currentWord = words[currentCardIndex] ?? null
   const isLastCard = currentCardIndex >= words.length - 1

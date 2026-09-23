@@ -14,12 +14,12 @@ import { FlowNumber } from '../components/shared/FlowNumber'
 import { useHaptics } from '../hooks/useHaptics'
 import { unlockAudioGlobally } from '../audio/audioUnlock'
 import { playTick, playSuccess, warmCurtainSound } from '../services/sfx'
-import { nextListenPack, nextTrainPack, listenedPacksCount, listenBacklogCount, estimateMinutes, packLevelThresholds } from '../data/nextPack'
+import { nextListenPack, nextTrainPack, listenedPacksCount, estimateMinutes, packLevelThresholds } from '../data/nextPack'
 import { shouldPromptLevelUp } from '../services/comfort'
 import { reviewMinutes } from '../services/reviewQueue'
 import { LEVEL_COLORS, LEVEL_META, ROUTE_TOTAL } from '../data/levels'
 import { BoltGlyph, CheckGlyph, ChevronRightGlyph, HeadphonesGlyph, RepeatGlyph } from '../components/mode/glyphs'
-import { plWords, plPacks } from '../utils/plural'
+import { plWords } from '../utils/plural'
 import { frontierPack } from '../utils/packRoute'
 import { useAppStore } from '../store/useAppStore'
 import packagesIndex from '../data/packages-index.json'
@@ -145,8 +145,11 @@ export function TodayPage() {
   // catalogue. Since the listen axis stopped counting declared and trained
   // packs, "the earliest pack you haven't heard" is pack #1 for nearly
   // everyone — a plain reading of the route that would send someone at 3 000
-  // words back to the beginning. The frontier is the honest starting point;
-  // the packs behind it are counted as a backlog rather than silently dropped.
+  // words back to the beginning. The frontier is the honest starting point.
+  // The packs behind it used to be summed into a line under the strip ("z tyłu
+  // do przesłuchania: 109 paczek"); Dzisiaj is a screen about what to do next,
+  // and a standing tally of what you skipped is not that. The Mapa still shows
+  // them, which is where someone actually goes to pick one up.
   const frontier = useMemo(() => frontierPack(scopedPacks, snapshot), [scopedPacks, snapshot])
   const listenPacks = useMemo(() => {
     if (!frontier) return scopedPacks
@@ -154,10 +157,6 @@ export function TodayPage() {
     return from <= 0 ? scopedPacks : scopedPacks.slice(from)
   }, [scopedPacks, frontier])
   const listen = useMemo(() => nextListenPack(listenPacks, snapshot), [listenPacks, snapshot])
-  const listenBacklog = useMemo(
-    () => listenBacklogCount(scopedPacks, snapshot, frontier),
-    [scopedPacks, snapshot, frontier]
-  )
   const train = useMemo(() => nextTrainPack(scopedPacks, snapshot), [scopedPacks, snapshot])
 
   const [activeMode, setActiveMode] = useState<StudyPath>(() => (train ? 'train' : 'listen'))
@@ -228,9 +227,6 @@ export function TodayPage() {
       unit="paczek"
       ticks={listenTicks}
       band={listenBand(listenedCount)}
-      note={listenBacklog > 0
-        ? `Z tyłu do przesłuchania: ${listenBacklog.toLocaleString('pl-PL')} ${plPacks(listenBacklog)} — nadrobisz na Mapie.`
-        : undefined}
     />
   )
 
@@ -315,7 +311,7 @@ export function TodayPage() {
           <>
             <div className="today__group">
               {pulse == null ? (
-                <div className="today__skeleton skeleton" style={{ height: 196 }} />
+                <div className="today__skeleton skeleton skeleton--glass" style={{ height: 196 }} />
               ) : (
                 <SessionHero
                   snapshot={snapshot}

@@ -61,8 +61,13 @@
     animation: pe-enter-rise var(--pe-enter-duration) var(--ease-out-expo) var(--pe-enter-delay) both;
   }
 
+  /* The compass is `.u-surface--raised` — glass — so it rises on the transform
+     channel alone. Fading it in instead meant 670 ms of its 28px backdrop
+     compositing at partial alpha, measured: the page arrived, then frosted
+     over. Same distance and timing as the header above it, so the two still
+     land as one arrival. See `pe-enter-rise-glass` in animations.css. */
   .statspage__header + * {
-    animation: pe-enter-rise var(--pe-enter-duration) var(--ease-out-expo)
+    animation: pe-enter-rise-glass var(--pe-enter-duration) var(--ease-out-expo)
       calc(var(--pe-enter-delay) + var(--pe-enter-step)) both;
   }
 }
@@ -106,6 +111,21 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
+    /* A section whose content is glass settles on the transform channel only —
+       the opacity channel would make its blurred backdrop composite at partial
+       alpha for the length of the scroll range, so the fog would pump as you
+       scrolled rather than hold. Only Powtórki qualifies today (`.retention` is
+       `.u-liquid`); the Konstelacja's section opts out of the animation
+       entirely just below. Same keyframe shape, minus the fade. */
+    .statspage__section:has(.u-liquid, .u-surface--raised) {
+      animation-name: statspage-settle-glass;
+    }
+
+    @keyframes statspage-settle-glass {
+      from { transform: translateY(14px); }
+      to   { transform: translateY(0); }
+    }
+
     /* Hosts a child that goes full screen (the Constellation). No transform
        here, so `position: fixed` inside still resolves against the viewport. */
     .statspage__section--overlay-host {
@@ -129,6 +149,12 @@
 
 .statspage__skeleton {
   border-radius: var(--radius-lg);
+}
+
+/* The two that hold a card's place — Konstelacja and Powtórki are both
+   --radius-xl — so the swap changes neither material nor shape. */
+.statspage__skeleton.skeleton--glass {
+  border-radius: var(--radius-xl);
 }
 
 /* ── "W liczbach" — the figures that don't belong on the route ──────────── */

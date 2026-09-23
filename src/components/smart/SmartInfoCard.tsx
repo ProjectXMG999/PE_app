@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { EASE_SPRING, heroReveal, fadeUpReduced } from '../today/motion'
+import { EASE_SPRING, glassReveal, glassRevealReduced } from '../today/motion'
 import './SmartInfoCard.css'
 
 export type SmartInfoVariant = 'review-ahead' | 'stretch-ahead' | 'back-to-new'
@@ -45,7 +45,9 @@ export function SmartInfoCard({ variant, count, onNext }: Props) {
     <div className={`smartinfo smartinfo--${copy.tone}`} onClick={onNext} role="button" tabIndex={0}>
       <motion.div
         className="smartinfo__card u-surface--raised"
-        variants={reduced ? fadeUpReduced : heroReveal}
+        // Glass — the same rise as `heroReveal`, minus the opacity channel that
+        // would make its backdrop blur thicken after it had landed.
+        variants={reduced ? glassRevealReduced : glassReveal}
         initial="hidden"
         animate="show"
       >

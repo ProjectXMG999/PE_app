@@ -33,16 +33,10 @@ import { AUTOPLAY_MODES, planSequence, estimateWordMs } from '../config/autoplay
 import { RATES } from '../constants/audioRates'
 import { useStudyClock } from '../hooks/useStudyClock'
 import { dayKey } from '../utils/day'
-import packagesIndex from '../data/packages-index.json'
-import { PackMeta } from '../types/vocabulary'
+import { packAt, packById } from '../data/packIndex'
 import './FlashcardPage.css'
 
-const allPacks = packagesIndex as PackMeta[]
-
-function getNextPack(currentId: string): PackMeta | null {
-  const idx = allPacks.findIndex(p => p.id === currentId)
-  return idx >= 0 && idx < allPacks.length - 1 ? allPacks[idx + 1] : null
-}
+const getNextPack = (currentId: string) => packAt(currentId, 1)
 
 export function FlashcardPage() {
   const { packageId, mode } = useParams<{ packageId: string; mode: string }>()
@@ -53,7 +47,17 @@ export function FlashcardPage() {
   const location = useLocation()
   const studyMode = (mode === 'autoplay' ? 'autoplay' : 'fiszki') as StudyMode
 
-  const { setPackage, setCardIndex, autoplayMode, setAutoplayMode, enRate, setEnRate, plRate, keepScreenAudioAlive } = useAppStore()
+  // Atomic selectors — see the note in App.tsx. The selector-less form made
+  // this page, which re-renders per card anyway, also re-render on every `set()`
+  // anywhere in the app. The five setters here are stable and never re-render.
+  const setPackage = useAppStore(s => s.setPackage)
+  const setCardIndex = useAppStore(s => s.setCardIndex)
+  const autoplayMode = useAppStore(s => s.autoplayMode)
+  const setAutoplayMode = useAppStore(s => s.setAutoplayMode)
+  const enRate = useAppStore(s => s.enRate)
+  const setEnRate = useAppStore(s => s.setEnRate)
+  const plRate = useAppStore(s => s.plRate)
+  const keepScreenAudioAlive = useAppStore(s => s.keepScreenAudioAlive)
   const { pack, loading, error } = usePackageData(packageId ?? null)
   const allWords = pack?.words ?? []
   // In fiszki mode: only show words not yet marked 'known'. Autoplay always shows all.
@@ -105,7 +109,7 @@ export function FlashcardPage() {
     // mount and the fetched pack is not there yet, so reading it from state
     // would tune every session to level 1.
     useSessionOpener(openerReady || !!error, {
-      level: allPacks.find(p => p.id === packageId)?.level,
+      level: packById(packageId)?.level,
     })
   // Assigned once handleNext / handleAutoplayEnd exist below — the autoplay
   // sequence calls the latest version through these.

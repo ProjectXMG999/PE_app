@@ -4,6 +4,8 @@
 import { getAudioElement } from './audioElement'
 
 let ctx: AudioContext | null = null
+/** Set once the silent WAV has actually played on the singleton element. */
+let unlockedElement = false
 
 /**
  * Unlock audio globally for the session using AudioContext.resume()
@@ -35,6 +37,15 @@ export function unlockAudioGlobally() {
 
     // Play silent audio on the singleton element to activate it within the gesture context.
     // This is the same element useAudio will use for real playback — iOS ties unlock to the element.
+    //
+    // Skipped once the context is genuinely running: the element only has to be
+    // activated once per load, and every later call was setting `src` and
+    // starting a media load in the same task as `startViewTransition` — work
+    // billed to the frames the transition is holding the screen still for. The
+    // guard is on `state === 'running'` rather than on a flag of our own,
+    // because that is the condition the unlock actually exists to reach.
+    if (ctx.state === 'running' && unlockedElement) return
+
     const el = getAudioElement()
     if (el) {
       el.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA'
@@ -42,6 +53,7 @@ export function unlockAudioGlobally() {
       // but Android/desktop persist it across src changes, muting all later playback
       el.volume = 1
       el.play().catch(() => {})
+      unlockedElement = true
     }
   } catch (e) {
     console.error('[audio] unlockAudioGlobally error:', e)

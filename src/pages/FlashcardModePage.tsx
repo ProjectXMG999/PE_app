@@ -107,7 +107,7 @@ export function FlashcardModePage() {
       }
       lead="W obu trybach ćwiczysz te same słowa. Różnica jest w tym, ile musisz powiedzieć z głowy, zanim odsłonisz odpowiedź."
     >
-      <ModeBlock>
+      <ModeBlock glass>
         <ModeLabel aside="Od łatwiejszego">Tryb treningu</ModeLabel>
         <div className="modescreen__cards">
           {MODES.map((m, i) => (

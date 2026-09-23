@@ -35,7 +35,10 @@ export function ReviewPage() {
   // Launched from Dzisiaj, so that's where the way out leads — by popping
   // back to it rather than stacking another copy on top of the session.
   const { goBack, backLabel } = useBack()
-  const { enRate, plRate } = useAppStore()
+  // Atomic selectors, not `useAppStore()` — the selector-less form subscribes to
+  // the whole state, whose identity changes on every `set()`. See App.tsx.
+  const enRate = useAppStore(s => s.enRate)
+  const plRate = useAppStore(s => s.plRate)
 
   const [overBudget, setOverBudget] = useState(false)
   const [round, setRound] = useState(0)

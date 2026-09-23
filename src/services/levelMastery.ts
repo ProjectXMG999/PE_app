@@ -10,12 +10,46 @@ import {
   getLevelMasterySnapshot,
 } from './db'
 import { isDeclaredKnownWord } from './review'
+import { groupByLevel } from '../utils/packRoute'
 import { LEVEL_MASTERY_FETCH_CONCURRENCY } from './reviewConfig'
 
 const allPacks = packagesIndex as PackMeta[]
 
+/** Built once — `groupByLevel` walks all 834 packs, and this is read during
+ *  render (the progress dialog quotes its size). */
+let idsByLevel: Map<number, string[]> | null = null
+
+/**
+ * The packs that "poziom N" means — for the declaration AND for the reset.
+ *
+ * Deliberately `groupByLevel`, not `p.level === level`. `pack.level` is a
+ * per-pack difficulty tag that is NOT monotonic along the route (packRoute.ts
+ * says so at the top and files each whole volume under its majority level),
+ * so the two definitions disagree badly: filtering by the tag pulled 7 packs
+ * the map draws inside Tom II into level 1, and left 38 of Tom III's out of
+ * level 2. Measured consequence on the catalogue as it stands: "Oznacz poziom
+ * jako opanowany" on Everyday promised 2695 words, wrote 2100, and then hung a
+ * "Poziom opanowany" badge over a level the map still drew as unfinished.
+ *
+ * The map's grouping is the only one the user can see, so it is the one both
+ * destructive operations act on.
+ */
 export function packageIdsForLevel(level: number): string[] {
-  return allPacks.filter(p => p.level === level).map(p => p.id)
+  if (!idsByLevel) {
+    idsByLevel = new Map()
+    // Accumulated rather than assigned: groups are contiguous on this
+    // catalogue, but a future volume could split a level into two runs and
+    // silently drop the first one.
+    for (const g of groupByLevel(allPacks)) {
+      idsByLevel.set(g.level, [...(idsByLevel.get(g.level) ?? []), ...g.packs.map(p => p.id)])
+    }
+  }
+  return idsByLevel.get(level) ?? []
+}
+
+/** The levels the route actually has, in route order. */
+export function masteryLevels(): number[] {
+  return [...new Set(groupByLevel(allPacks).map(g => g.level))]
 }
 
 /** Runs `fn` over `items` with at most `limit` in flight. pack-content hits an

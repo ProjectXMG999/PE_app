@@ -209,11 +209,17 @@
 
 /* The variants recolour all three light sources at once — the lamp under the
    glass, the wash inside it and the caustic below it — so a gold card is lit
-   gold from behind rather than merely painted gold on the front. */
+   gold from behind rather than merely painted gold on the front.
+
+   --tint-color is the one knob: set it on the card (or anywhere above it) and
+   the whole lamp changes hue. It is read with a fallback rather than declared
+   here on purpose — a `--tint-color: var(--accent)` in this block would sit on
+   the element itself and beat anything an ancestor set, which is exactly how
+   the path colour reaches the cards inside ModeSlider. */
 .u-liquid--tint {
-  --liquid-tint: radial-gradient(120% 100% at 0% 0%, color-mix(in oklch, var(--accent) 26%, transparent), transparent 60%);
-  --liquid-glow-color: color-mix(in oklch, var(--accent) var(--liquid-glow-mix), transparent);
-  --liquid-lamp-color: var(--accent);
+  --liquid-tint: radial-gradient(120% 100% at 0% 0%, color-mix(in oklch, var(--tint-color, var(--accent)) 26%, transparent), transparent 60%);
+  --liquid-glow-color: color-mix(in oklch, var(--tint-color, var(--accent)) var(--liquid-glow-mix), transparent);
+  --liquid-lamp-color: var(--tint-color, var(--accent));
   /* Hero cards burn brighter than the quiet ones. Proportional rather than
      absolute, so the light theme's much lower ceiling carries through. */
   --liquid-lamp-strength: calc(var(--liquid-lamp-mix) * 1.55);

@@ -1,7 +1,7 @@
 import { ReactNode, useState, type CSSProperties } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { AppShell } from '../layout/AppShell'
-import { fadeUp, fadeUpReduced, staggerContainer } from '../today/motion'
+import { fadeUp, fadeUpReduced, glassReveal, glassRevealReduced, staggerContainer } from '../today/motion'
 import { noOrphans } from '../../utils/typography'
 import { useBack } from '../../navigation/navigation'
 import './ModeScreen.css'
@@ -86,11 +86,24 @@ export function ModeFact({ children, color }: { children: ReactNode; color?: str
   )
 }
 
-/** A block in the cascade — rises in with the rest of the page. */
-export function ModeBlock({ className, children }: { className?: string; children: ReactNode }) {
+/**
+ * A block in the cascade — rises in with the rest of the page.
+ *
+ * `glass` for a block that IS a glass surface or holds one (a `.modescreen__cards`
+ * row of `.modecard`s, the `.resume u-liquid` strip): the opacity channel then
+ * comes off, because fading a group that contains a `backdrop-filter` composites
+ * its blurred backdrop at partial alpha and reads as the fog thickening after
+ * the block has landed. See `glassReveal` in today/motion.ts.
+ */
+export function ModeBlock(
+  { className, glass = false, children }: { className?: string; glass?: boolean; children: ReactNode },
+) {
   const reduced = useReducedMotion()
+  const variants = glass
+    ? (reduced ? glassRevealReduced : glassReveal)
+    : (reduced ? fadeUpReduced : fadeUp)
   return (
-    <motion.section className={className} variants={reduced ? fadeUpReduced : fadeUp}>
+    <motion.section className={className} variants={variants}>
       {children}
     </motion.section>
   )
@@ -143,7 +156,9 @@ export function ModeCard({
       className={`modecard u-liquid${current ? ' modecard--current' : ''}`}
       style={{ '--card-accent': color } as CSSProperties}
       onClick={onClick}
-      variants={reduced ? fadeUpReduced : fadeUp}
+      // Glass: rises without an opacity channel, or its fog thickens after it
+      // has landed. Same reason the card refuses a whileTap scale just below.
+      variants={reduced ? glassRevealReduced : glassReveal}
       // No whileTap scale: .u-liquid's press note (surfaces.css) — scaling the
       // card re-samples the blurred backdrop every frame. The rim brightening
       // from .u-liquid:active carries the press instead (the card is a

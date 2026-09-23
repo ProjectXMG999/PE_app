@@ -20,16 +20,26 @@ const THEMES: { value: ThemePreference; label: string }[] = [
 ]
 
 export function SettingsPage() {
-  const {
-    enRate, plRate, setEnRate, setPlRate,
-    theme, setTheme,
-    showDebug, setShowDebug,
-    devUnlocked, setDevUnlocked,
-    dailyGoalSec, setDailyGoalSec,
-    soundEnabled, setSoundEnabled,
-    studyPadEnabled, setStudyPadEnabled,
-    reviewHealth,
-  } = useAppStore()
+  // Atomic selectors — see the note in App.tsx. Nine fields read through one
+  // selector-less call meant every `set()` in the app re-rendered the page;
+  // the setters below are stable, so only the nine values can.
+  const enRate = useAppStore(s => s.enRate)
+  const plRate = useAppStore(s => s.plRate)
+  const setEnRate = useAppStore(s => s.setEnRate)
+  const setPlRate = useAppStore(s => s.setPlRate)
+  const theme = useAppStore(s => s.theme)
+  const setTheme = useAppStore(s => s.setTheme)
+  const showDebug = useAppStore(s => s.showDebug)
+  const setShowDebug = useAppStore(s => s.setShowDebug)
+  const devUnlocked = useAppStore(s => s.devUnlocked)
+  const setDevUnlocked = useAppStore(s => s.setDevUnlocked)
+  const dailyGoalSec = useAppStore(s => s.dailyGoalSec)
+  const setDailyGoalSec = useAppStore(s => s.setDailyGoalSec)
+  const soundEnabled = useAppStore(s => s.soundEnabled)
+  const setSoundEnabled = useAppStore(s => s.setSoundEnabled)
+  const studyPadEnabled = useAppStore(s => s.studyPadEnabled)
+  const setStudyPadEnabled = useAppStore(s => s.setStudyPadEnabled)
+  const reviewHealth = useAppStore(s => s.reviewHealth)
   const [showReset, setShowReset] = useState(false)
   const versionTapsRef = useRef<number[]>([])
   const version = import.meta.env.VITE_APP_VERSION || '1.0.0'

@@ -12,7 +12,10 @@ function detectPlatform(): Platform {
 }
 
 export function InstallGuideSection() {
-  const { installPromptEvent, isInstalled, setInstalled } = useAppStore()
+  // Atomic selectors — see the note in App.tsx.
+  const installPromptEvent = useAppStore(s => s.installPromptEvent)
+  const isInstalled = useAppStore(s => s.isInstalled)
+  const setInstalled = useAppStore(s => s.setInstalled)
   const [installing, setInstalling] = useState(false)
   const [activePlatform, setActivePlatform] = useState<Platform>(detectPlatform)
 

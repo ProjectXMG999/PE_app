@@ -12,8 +12,7 @@ import { getPackageWordProgress, saveWordProgress, saveSession, savePackageProgr
 import { applyKnown, applyUnknown } from '../services/review'
 import { useStudyClock } from '../hooks/useStudyClock'
 import { dayKey } from '../utils/day'
-import packagesIndex from '../data/packages-index.json'
-import { PackMeta } from '../types/vocabulary'
+import { packAt, packById } from '../data/packIndex'
 import { StudyStage, StageTrack } from '../components/flashcard/StudyStage'
 import { PackSessionOpener } from '../components/flashcard/SessionOpener'
 import { SessionStage } from '../components/flashcard/SessionStage'
@@ -22,14 +21,15 @@ import { useStudyPad } from '../hooks/useStudyPad'
 import { useAppNavigate, useBack } from '../navigation/navigation'
 import './ReviewPage.css'
 
-const allPacks = packagesIndex as PackMeta[]
-
 export function WordFlashPage() {
   const { packageId } = useParams<{ packageId: string }>()
   const navigate = useAppNavigate()
   const { goBack, backLabel } = useBack()
   const { pack, error } = usePackageData(packageId ?? null)
-  const { enRate, plRate } = useAppStore()
+  // Atomic selectors — see the note in App.tsx. This page re-renders on every
+  // card, so a whole-state subscription made each `set()` anywhere a re-render.
+  const enRate = useAppStore(s => s.enRate)
+  const plRate = useAppStore(s => s.plRate)
   const { playWord, stop } = useAudio(packageId ?? null, enRate, plRate)
   const { side, isAdvancing, flip, advance: animateOut, resetToFront, handleAnimationEnd, cardClass } = useCardFlip()
   const { elapsedSec } = useStudyClock()
@@ -81,7 +81,7 @@ export function WordFlashPage() {
   // what makes the failure path load-bearing: nothing else would ever lift it.
   // Level from the index, resolved synchronously — the words arrive later than
   // the sound does.
-  const packLevel = allPacks.find(p => p.id === packageId)?.level
+  const packLevel = packById(packageId)?.level
   const { visible: openerVisible, settled, dismiss: dismissOpener } =
     useSessionOpener(!!error || wordsReady, { level: packLevel })
 
@@ -93,8 +93,7 @@ export function WordFlashPage() {
   const currentWord = studyWords[cardIndex] ?? null
   const total = studyWords.length
   const isLast = cardIndex >= total - 1
-  const packIdx = allPacks.findIndex(p => p.id === packageId)
-  const nextPack = packIdx >= 0 && packIdx < allPacks.length - 1 ? allPacks[packIdx + 1] : null
+  const nextPack = packAt(packageId, 1)
 
   const flipCard = useCallback(() => {
     const revealing = side === 'front'

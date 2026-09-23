@@ -1,7 +1,35 @@
+/* =============================================================================
+ * MODE SLIDER — the Słuchaj / Trenuj segmented control and its sliding page.
+ * -----------------------------------------------------------------------------
+ * --path-accent is the whole point of this block. It is set here, on the root,
+ * so everything the slider contains — the pill, the progress strip, the
+ * recommendation card — is lit by the path you are actually on. The two values
+ * are the ones the rest of the app already uses (ModeScreen's --mode-accent,
+ * StudyStage's --stage-accent, PackPreview's two buttons), so tapping "Zacznij
+ * słuchać" never changes colour under you: blue here, blue on the next screen,
+ * blue in the session.
+ *
+ * --path-ink is the same colour made readable as text on translucent glass.
+ * Both live on the same element, so the cascade resolves --path-accent for the
+ * element FIRST and --path-ink picks up the variant's value, not the default.
+ * ========================================================================== */
+
 .modeslider {
+  --path-accent: var(--accent);
+  --path-ink: color-mix(in oklch, var(--path-accent) 72%, white);
+
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.modeslider--listen { --path-accent: var(--listen-blue); }
+.modeslider--train  { --path-accent: var(--accent); }
+
+/* On a white ground the ink has to go darker than the accent, not lighter —
+   --listen-blue at L 0.62 is already near the ceiling for body text. */
+[data-theme="light"] .modeslider {
+  --path-ink: color-mix(in oklch, var(--path-accent) 88%, black);
 }
 
 /* ── Segmented control ────────────────────────────────────────────────────
@@ -24,12 +52,23 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/* The selected segment: the same glass thumb as before, now with a wash of the
+   path's colour over it and a soft cast of that colour underneath. The wash
+   sits ON the thumb rather than replacing it — the thumb is what separates the
+   pill from the track, and a flat colour fill loses that edge. */
 .modeslider__indicator {
   position: absolute;
   inset: 0;
   border-radius: var(--radius-full);
-  background: var(--fill-thumb);
-  box-shadow: var(--fill-thumb-shadow);
+  background:
+    linear-gradient(180deg,
+      color-mix(in oklch, var(--path-accent) 32%, transparent),
+      color-mix(in oklch, var(--path-accent) 18%, transparent)),
+    var(--fill-thumb);
+  box-shadow:
+    var(--fill-thumb-shadow),
+    inset 0 0 0 1px color-mix(in oklch, var(--path-accent) 32%, transparent),
+    0 4px 12px color-mix(in oklch, var(--path-accent) 26%, transparent);
   pointer-events: none;
 }
 
@@ -50,7 +89,7 @@
 }
 
 .modeslider__tab--active .modeslider__tab-label {
-  color: var(--text-primary);
+  color: var(--path-ink);
 }
 
 /* overflow:hidden clips the sliding page at its edges — necessary so the

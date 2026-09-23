@@ -40,7 +40,7 @@
   height: 48px;
   padding: 0 14px;
   border-radius: var(--radius-full);
-  background: var(--surface-tile-opaque);
+  background: var(--surface-on-chrome);
   border: 1px solid var(--tile-border);
   box-shadow: var(--tile-hi);
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
@@ -113,7 +113,7 @@
   background:
     linear-gradient(color-mix(in oklch, var(--accent) var(--fill-tint-mix), transparent),
                     color-mix(in oklch, var(--accent) var(--fill-tint-mix), transparent)),
-    var(--surface-tile-opaque);
+    var(--surface-on-chrome);
   border: 1px solid var(--border-accent);
   box-shadow: var(--tile-hi);
   color: var(--text-accent);
@@ -135,7 +135,7 @@
     background:
       linear-gradient(color-mix(in oklch, var(--accent) 22%, transparent),
                       color-mix(in oklch, var(--accent) 22%, transparent)),
-      var(--surface-tile-opaque);
+      var(--surface-on-chrome);
     color: var(--text-primary);
   }
 }

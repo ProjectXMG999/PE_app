@@ -12,7 +12,7 @@ import './AmbientBackground.css'
  * screen that already feels familiar. Three things it adds that the landing
  * doesn't need:
  *
- *  1. **Theme.** The five mesh stops come from the --mesh-* tokens rather than
+ *  1. **Theme.** The ten mesh stops come from the --mesh-* tokens rather than
  *     being hard-coded, and are re-read when <html data-theme> flips. Light
  *     theme is the dark mesh with its lightness mirrored, and a flip recolours
  *     the running shader in place — the motion carries on from the same frame.
@@ -33,15 +33,39 @@ import './AmbientBackground.css'
  */
 const MeshField = lazy(() => import('./MeshField'))
 
-/** Seven, and the count is load-bearing rather than incidental: the shader
- *  averages one drifting site per stop, so the ink:colour ratio in this list is
- *  what decides how much of the screen is black between the pools. See the
- *  --mesh-* note in tokens.css. */
-const MESH_TOKENS = ['--mesh-1', '--mesh-2', '--mesh-3', '--mesh-4', '--mesh-5', '--mesh-6', '--mesh-7']
+/**
+ * Whether the field has already faded in once this load.
+ *
+ * The 900 ms ramp is a first-impression device: the shader arrives after the
+ * CSS floor has been on screen for a beat, and a hard swap would read as a pop.
+ * It is meant to happen once — but `ambientHidden` unmounts the shader for
+ * study screens, so every return from a session replayed the whole fade. And
+ * this canvas is the backdrop that every glass surface in the app blurs, so for
+ * those 900 ms the entire UI slid from "blurring a flat gradient" to "blurring
+ * a structured mesh" — the same "it frosts over after it lands" the entrances
+ * used to have, one layer down and app-wide.
+ *
+ * Module scope, not state: this component is mounted once at the app root and
+ * never unmounts, so a state initialiser would be frozen at its first value.
+ */
+let fieldHasRamped = false
+
+/** Ten, which is also the shader's ceiling (meshGradientMeta.maxColorCount),
+ *  and the count is load-bearing rather than incidental: the shader averages
+ *  one drifting site per stop, so the ink:colour ratio in this list is what
+ *  decides how much of the screen is black between the pools. See the --mesh-*
+ *  note in tokens.css. */
+const MESH_TOKENS = [
+  '--mesh-1', '--mesh-2', '--mesh-3', '--mesh-4', '--mesh-5',
+  '--mesh-6', '--mesh-7', '--mesh-8', '--mesh-9', '--mesh-10',
+]
 
 /** Used if the tokens can't be read — the dark palette at the same ratio, so a
  *  failure looks like the app rather than like a bug. */
-const FALLBACK_COLORS = ['#000001', '#5e3baf', '#010103', '#015b63', '#000002', '#2d308d', '#010102']
+const FALLBACK_COLORS = [
+  '#000001', '#864df5', '#010103', '#15a84f', '#000002',
+  '#069393', '#010102', '#0f895e', '#000102', '#010001',
+]
 
 function readMeshColors(): string[] {
   const cs = getComputedStyle(document.documentElement)
@@ -124,6 +148,13 @@ export function AmbientBackground() {
   const showShader = armed && !ambientHidden
   const still = !!reduced || tabHidden
 
+  // Read at render time so a re-arm lands in the SAME commit as `--ready`;
+  // setting it from the effect below would let the transition start first.
+  const instant = fieldHasRamped
+  useEffect(() => {
+    if (showShader) fieldHasRamped = true
+  }, [showShader])
+
   return (
     <div className={`ambient${ambientHidden ? ' ambient--hidden' : ''}`} aria-hidden="true">
       {/* data-ambient-live marks the ANIMATED shader for ambientControl, which
@@ -132,7 +163,7 @@ export function AmbientBackground() {
           meant to hold still running at full speed. */}
       <div
         ref={fieldRef}
-        className={`ambient__field${showShader ? ' ambient__field--ready' : ''}`}
+        className={`ambient__field${showShader ? ' ambient__field--ready' : ''}${instant ? ' ambient__field--instant' : ''}`}
         data-ambient-live={showShader && !still ? '' : undefined}
       >
         {showShader && (

@@ -141,6 +141,12 @@ export default defineConfig({
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'store-vendor': ['zustand', 'idb'],
+          // Split out because the entry graph reaches it early and for one
+          // thing only: AmbientBackground imports `useReducedMotion`, which
+          // dragged the whole animation library into the first parse. The
+          // screens that actually animate with it are lazy page chunks, so
+          // they can pull it on their own schedule.
+          'motion-vendor': ['framer-motion'],
         },
       },
     },

@@ -11,9 +11,14 @@
    erasing the centering, so the pill sat with its LEFT edge (not its centre)
    pinned to the middle of the screen — consistently offset right by half its
    own width. Both translations now live in the one animation. */
+/* No opacity channel: the pill is glass, and a group below full alpha
+   composites its blurred backdrop over the unblurred real one — the pill would
+   arrive nearly sharp and frost over afterwards. It can't borrow
+   `fx-rise-glass` for the reason above: the centering has to stay inside the
+   one animation. */
 @keyframes herepill-rise {
-  from { opacity: 0; transform: translate(-50%, 10px); }
-  to   { opacity: 1; transform: translate(-50%, 0); }
+  from { transform: translate(-50%, 10px); }
+  to   { transform: translate(-50%, 0); }
 }
 
 .herepill {

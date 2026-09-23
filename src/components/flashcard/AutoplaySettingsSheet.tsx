@@ -28,7 +28,13 @@ interface Props {
  * drone fades out under the finger rather than at the next card.
  */
 export function AutoplaySettingsSheet({ onClose }: Props) {
-  const { enRate, plRate, setEnRate, setPlRate, studyPadEnabled, setStudyPadEnabled } = useAppStore()
+  // Atomic selectors — see the note in App.tsx.
+  const enRate = useAppStore(s => s.enRate)
+  const plRate = useAppStore(s => s.plRate)
+  const setEnRate = useAppStore(s => s.setEnRate)
+  const setPlRate = useAppStore(s => s.setPlRate)
+  const studyPadEnabled = useAppStore(s => s.studyPadEnabled)
+  const setStudyPadEnabled = useAppStore(s => s.setStudyPadEnabled)
   const sheet = useRef<SheetHandle>(null)
   const { reduced, rise, tap } = useSheetMotion()
 

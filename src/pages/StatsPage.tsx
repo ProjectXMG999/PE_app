@@ -275,7 +275,7 @@ export function StatsPage() {
           <section className="statspage__section statspage__section--overlay-host">
             <h2 className="statspage__section-title">Konstelacja pamięci</h2>
             <Suspense
-              fallback={<div className="statspage__skeleton skeleton" style={{ height: 460 }} />}
+              fallback={<div className="statspage__skeleton skeleton skeleton--glass" style={{ height: 460 }} />}
             >
               <Constellation packs={allPacks} wordProgress={snapshot.wordProgress} />
             </Suspense>
@@ -285,7 +285,7 @@ export function StatsPage() {
         <section className="statspage__section" id="powtorki">
           <h2 className="statspage__section-title">Powtórki</h2>
           {snapshot == null ? (
-            <div className="statspage__skeleton skeleton" style={{ height: 760 }} />
+            <div className="statspage__skeleton skeleton skeleton--glass" style={{ height: 760 }} />
           ) : (
             <RetentionBars
               wordProgress={snapshot.wordProgress}

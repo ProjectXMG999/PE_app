@@ -358,6 +358,43 @@
   border-radius: var(--radius-sm);
 }
 
+/* ── A placeholder standing in for glass ───────────────────────────────────
+ * `.skeleton` above is an opaque plate. Where it holds the space for a
+ * `.u-liquid` card, the moment the data lands the block goes from opaque to
+ * frosted — the page picking up a stronger blur a beat after it had already
+ * arrived, which is the same complaint the entrances carried (see
+ * `fx-rise-glass`). The fix is the one `.today__strip-loading` has used since
+ * it was written: wear the card's own fill, so the swap changes the contents
+ * and not the material.
+ *
+ * The fill goes on the element and the shimmer moves to `::after`, because a
+ * single `background` can't carry both — `shimmer` animates
+ * `background-position`, which would drag the glass layers across with it.
+ *
+ * Deliberately NOT a real `backdrop-filter`: a placeholder should not pay for a
+ * blur convolution, and `--liquid-bg` over `--liquid-veil` is already the value
+ * of grey a real card settles at. */
+.skeleton--glass {
+  position: relative;
+  overflow: hidden;
+  background: var(--liquid-bg), var(--liquid-veil);
+  animation: none;
+}
+
+.skeleton--glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 25%,
+    color-mix(in oklch, var(--text-primary) 8%, transparent) 50%,
+    transparent 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
 /* =============================================================================
  * SYSTEM EFFECTS — canonical decorative motion, in one place.
  * -----------------------------------------------------------------------------
@@ -487,6 +524,29 @@
   animation: fx-rise 500ms var(--ease-out-expo) var(--fx-rise-delay, 0s) both;
 }
 
+/* ── The same two rises, for glass ─────────────────────────────────────────
+ * `fx-rise` and `pe-enter-rise` below carry an opacity channel, and on a
+ * surface that has a `backdrop-filter` — or contains one — that channel is a
+ * bug rather than a fade. A group at opacity < 1 composites its *blurred*
+ * backdrop at partial alpha over the unblurred real one, so the element lands
+ * looking almost sharp and then visibly frosts over as the fade finishes.
+ * Measured on Postęp: the compass ramped 0 → 1 across 670 ms *after* the page
+ * had already arrived, which is the whole of the "elements jump to a stronger
+ * blur" report. The map and Ustawienia were the two screens never to show it,
+ * for the one reason that neither has glass inside its entrance.
+ *
+ * Same distance, same duration, same curve — only the opacity is gone, so the
+ * fog holds one level from the first frame. The full account lives with
+ * `glassReveal` in components/today/motion.ts; these are its CSS half, the way
+ * `pe-enter-rise` is the CSS half of the Framer vocabulary.
+ *
+ * Pick the -glass twin whenever the animated element, or anything inside it,
+ * carries `.u-liquid`, `.u-surface--raised`, or a `backdrop-filter` of its own. */
+@keyframes fx-rise-glass {
+  from { transform: translateY(10px); }
+  to   { transform: translateY(0); }
+}
+
 /* ── Page entrance ─────────────────────────────────────────────────────────
  * The blocks of a page settling in, just behind the page swap itself. This is
  * the half of the app's arrival that actually carries it — the transition
@@ -523,6 +583,14 @@
 @keyframes pe-enter-rise {
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* The glass twin — see the note on `fx-rise-glass` above for why the opacity
+   channel is absent. Same 14px, same duration, same curve, so a glass block and
+   the plain block above it still land together. */
+@keyframes pe-enter-rise-glass {
+  from { transform: translateY(14px); }
+  to   { transform: translateY(0); }
 }
 
 /* CAUTION when applying this to a new block: `both` keeps the transform

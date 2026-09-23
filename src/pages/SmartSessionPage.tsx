@@ -57,7 +57,9 @@ export function SmartSessionPage() {
   // Launched from Dzisiaj, so that's where the way out leads — by popping
   // back to it rather than stacking another copy on top of the session.
   const { goBack, backLabel } = useBack()
-  const { enRate, plRate } = useAppStore()
+  // Atomic selectors — see the note in App.tsx.
+  const enRate = useAppStore(s => s.enRate)
+  const plRate = useAppStore(s => s.plRate)
   const [nonce, setNonce] = useState(0)
   const { steps, packCount, preview, opensWith, missing, loading, error } = useSmartSession(nonce)
   // Captured on entry: the done screen reads comfort against the level the

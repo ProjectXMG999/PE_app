@@ -3,7 +3,8 @@ import { useAppStore } from '../../store/useAppStore'
 import { getLogs, subscribeToLogs } from '../../debug/audioLogger'
 
 export function DebugOverlay() {
-  const { showDebug } = useAppStore()
+  // Atomic selector — see the note in App.tsx. This one is mounted app-wide.
+  const showDebug = useAppStore(s => s.showDebug)
   const [logs, setLogs] = useState<string[]>(() => getLogs())
   const [visible, setVisible] = useState(false)
 

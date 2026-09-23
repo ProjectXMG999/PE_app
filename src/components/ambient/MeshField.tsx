@@ -26,7 +26,7 @@ const FILL = { width: '100%', height: '100%' } as const
  * the untouched target is 2.96M px and the old 2.1M ceiling barely bit: the
  * shader ran ~985×2132 ≈ 2.1M fragments, sixty times a second, forever, on
  * every screen that isn't a session. The fragment program is not trivial
- * either — a distortion loop plus a five-colour accumulation per fragment — and
+ * either — a distortion loop plus a ten-colour accumulation per fragment — and
  * `speed: 0.14` slows the shader's *clock*, not the frame rate.
  *
  * Worse, it is the multiplier under everything else: #root isolates, so this
@@ -63,7 +63,7 @@ const GL_ATTRS: WebGLContextAttributes = {
 }
 
 interface Props {
-  /** The five mesh stops, read off the --mesh-* tokens by AmbientBackground so
+  /** The ten mesh stops, read off the --mesh-* tokens by AmbientBackground so
    *  the palette follows the theme. Hex strings. */
   colors: string[]
   still: boolean

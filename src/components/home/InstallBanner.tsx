@@ -4,7 +4,12 @@ import { isIOS, isInStandaloneMode, triggerInstall } from '../../services/instal
 import './InstallBanner.css'
 
 export function InstallBanner() {
-  const { installPromptEvent, isInstalled, iosBannerDismissed, setInstalled, dismissIOSBanner } = useAppStore()
+  // Atomic selectors — see the note in App.tsx.
+  const installPromptEvent = useAppStore(s => s.installPromptEvent)
+  const isInstalled = useAppStore(s => s.isInstalled)
+  const iosBannerDismissed = useAppStore(s => s.iosBannerDismissed)
+  const setInstalled = useAppStore(s => s.setInstalled)
+  const dismissIOSBanner = useAppStore(s => s.dismissIOSBanner)
   const [showIOS, setShowIOS] = useState(false)
   const [installing, setInstalling] = useState(false)
 

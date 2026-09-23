@@ -44,9 +44,17 @@ export function TopBar() {
     const main = document.querySelector<HTMLElement>('.appshell__main')
     if (!main) return
     const onScroll = () => setScrolled(main.scrollTop > (compactTitle ? COMPACT_AFTER : 4))
-    onScroll()
+    // The first read waits for the next frame. Every page mounts its own shell,
+    // so this effect runs on every navigation — and reading `scrollTop`
+    // straight away forces layout on a tree React has only just built, inside
+    // the same task the view transition is holding the screen still for.
+    // A frame later the layout is there for the asking and the read is free.
+    const first = requestAnimationFrame(onScroll)
     main.addEventListener('scroll', onScroll, { passive: true })
-    return () => main.removeEventListener('scroll', onScroll)
+    return () => {
+      cancelAnimationFrame(first)
+      main.removeEventListener('scroll', onScroll)
+    }
   }, [pathname, compactTitle])
 
   const compact = compactTitle != null && scrolled

@@ -14,8 +14,7 @@ import { getPackageWordProgress, saveWordProgress, saveSession, savePackageProgr
 import { applyKnown, applyUnknown } from '../services/review'
 import { useStudyClock } from '../hooks/useStudyClock'
 import { dayKey } from '../utils/day'
-import packagesIndex from '../data/packages-index.json'
-import { PackMeta } from '../types/vocabulary'
+import { packAt, packById } from '../data/packIndex'
 import { PackSessionOpener } from '../components/flashcard/SessionOpener'
 import { SessionStage } from '../components/flashcard/SessionStage'
 import { useSessionOpener } from '../hooks/useSessionOpener'
@@ -23,14 +22,14 @@ import { useStudyPad } from '../hooks/useStudyPad'
 import { useAppNavigate, useBack } from '../navigation/navigation'
 import './ReviewPage.css'
 
-const allPacks = packagesIndex as PackMeta[]
-
 export function ActiveSentencePage() {
   const { packageId } = useParams<{ packageId: string }>()
   const navigate = useAppNavigate()
   const { goBack, backLabel } = useBack()
   const { pack, error } = usePackageData(packageId ?? null)
-  const { enRate, plRate } = useAppStore()
+  // Atomic selectors — see the note in App.tsx.
+  const enRate = useAppStore(s => s.enRate)
+  const plRate = useAppStore(s => s.plRate)
   const { playWord, playSentence, playWordPl, playSentencePl, stop } = useAudio(packageId ?? null, enRate, plRate)
   const { side, isAdvancing, flip, advance: animateOut, resetToFront, handleAnimationEnd, cardClass } = useCardFlip()
   const { elapsedSec } = useStudyClock()
@@ -82,7 +81,7 @@ export function ActiveSentencePage() {
   // what makes the failure path load-bearing: nothing else would ever lift it.
   // Level from the index, resolved synchronously — the words arrive later than
   // the sound does.
-  const packLevel = allPacks.find(p => p.id === packageId)?.level
+  const packLevel = packById(packageId)?.level
   const { visible: openerVisible, settled, dismiss: dismissOpener } =
     useSessionOpener(!!error || wordsReady, { level: packLevel })
 
@@ -94,8 +93,7 @@ export function ActiveSentencePage() {
   const total = studyWords.length
   const sentenceProps = useSentenceCardProps(currentWord, { stop, playSentence, playSentencePl, playWordPl })
   const isLast = cardIndex >= total - 1
-  const packIdx = allPacks.findIndex(p => p.id === packageId)
-  const nextPack = packIdx >= 0 && packIdx < allPacks.length - 1 ? allPacks[packIdx + 1] : null
+  const nextPack = packAt(packageId, 1)
 
   const flipCard = useCallback(() => {
     const revealing = side === 'front'

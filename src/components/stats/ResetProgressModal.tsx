@@ -4,20 +4,28 @@ import { Sheet, useSheetMotion, type SheetHandle } from '../shared/Sheet'
 import { PackMeta } from '../../types/vocabulary'
 import packagesIndex from '../../data/packages-index.json'
 import { resetAllProgress, resetProgressForPackages } from '../../services/db'
+import { packageIdsForLevel, masteryLevels } from '../../services/levelMastery'
 import { invalidateProgressSnapshot } from '../../hooks/useProgressData'
 import { plPacks } from '../../utils/plural'
 import './ResetProgressModal.css'
 
 const allPacks = packagesIndex as PackMeta[]
-const VOLUMES = [...new Set(allPacks.map(p => p.volume))].sort()
-const LEVELS = [...new Set(allPacks.map(p => p.level))].filter(Boolean).sort() as number[]
+// Route order, not sorted: `packages-index.json` is already the curriculum
+// order (packRoute.ts), and `[].sort()` on "Tom I…Tom IX" is lexicographic —
+// it only happens to agree with the route for these nine labels.
+const VOLUMES = [...new Set(allPacks.map(p => p.volume))]
+const LEVELS = masteryLevels()
 
 type Scope = 'all' | `volume:${string}` | `level:${number}`
 
+/** The whole object of "Zresetujesz …", not just its tail: the tail form gave
+ *  "Zresetujesz progres całego progresu" on the scope people pick most. */
 function scopeLabel(scope: Scope): string {
-  if (scope === 'all') return 'całego progresu'
-  if (scope.startsWith('volume:')) return `tomu "${scope.slice(7)}"`
-  if (scope.startsWith('level:')) return `poziomu ${scope.slice(6)}`
+  if (scope === 'all') return 'cały progres'
+  // The volume id already carries the word ("Tom II"), so the numeral alone
+  // goes into the sentence — "progres tomu Tom II" was the literal alternative.
+  if (scope.startsWith('volume:')) return `progres tomu ${scope.slice(7).replace(/^Tom\s+/, '')}`
+  if (scope.startsWith('level:')) return `progres poziomu ${scope.slice(6)}`
   return ''
 }
 
@@ -27,10 +35,9 @@ function getPackageIds(scope: Scope): string[] {
     const vol = scope.slice(7)
     return allPacks.filter(p => p.volume === vol).map(p => p.id)
   }
-  if (scope.startsWith('level:')) {
-    const lvl = parseInt(scope.slice(6), 10)
-    return allPacks.filter(p => p.level === lvl).map(p => p.id)
-  }
+  // The same list "Oznacz poziom jako opanowany" acts on — see the note on
+  // packageIdsForLevel for why it is not `p.level === lvl`.
+  if (scope.startsWith('level:')) return packageIdsForLevel(parseInt(scope.slice(6), 10))
   return []
 }
 
@@ -50,6 +57,10 @@ export function ResetProgressModal({ onClose, onReset }: Props) {
 
   const CONFIRM_WORD = 'RESETUJ'
   const canConfirm = confirmText === CONFIRM_WORD && !busy
+  /** The exact set the confirm button will act on — the summary quotes its
+   *  size, so it must be the same list `handleReset` passes down, not a
+   *  second walk of the index that could drift from it. */
+  const scopedPackIds = getPackageIds(scope)
 
   // The confirmation field is where this dialog starts — the sheet itself
   // handles focus trapping, Escape and the close event.
@@ -68,7 +79,7 @@ export function ResetProgressModal({ onClose, onReset }: Props) {
         localStorage.removeItem('lp_onboarding_seen')
         localStorage.removeItem('lp_onboarding_card_hidden')
       } else {
-        await resetProgressForPackages(getPackageIds(scope))
+        await resetProgressForPackages(scopedPackIds)
       }
       invalidateProgressSnapshot()
       onReset()
@@ -143,8 +154,8 @@ export function ResetProgressModal({ onClose, onReset }: Props) {
       </motion.div>
 
       <motion.div className="reset-modal__summary" variants={rise}>
-        Zresetujesz progres {scopeLabel(scope)} —{' '}
-        <strong>{getPackageIds(scope).length}</strong> {plPacks(getPackageIds(scope).length)}
+        Zresetujesz {scopeLabel(scope)} —{' '}
+        <strong>{scopedPackIds.length}</strong> {plPacks(scopedPackIds.length)}
       </motion.div>
 
       {error && <p className="reset-modal__error" role="alert">{error}</p>}

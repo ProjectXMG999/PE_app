@@ -39,8 +39,22 @@ export function ModeSlider({ active, onChange, listenContent, trainContent }: Pr
     else if (info.offset.x > SWIPE_THRESHOLD) select('listen')
   }
 
+  /**
+   * The INCOMING page has no opacity channel: it holds glass (`.today__pick`
+   * and `.pathstrip` are `.u-liquid`), and a group below full alpha composites
+   * its blurred backdrop over the unblurred real one — so the panel arrived
+   * looking almost sharp and frosted over across the next quarter second. It is
+   * the same defect the page entrances carry, and the same answer: arrive at
+   * one fog level and travel on the transform channel alone (`glassReveal` in
+   * ./motion.ts, already shipped on Dzisiaj and Trening).
+   *
+   * The OUTGOING page keeps its fade. `mode="wait"` means the two never
+   * overlap, so without it the old panel would simply vanish at the swap; and
+   * fog thinning as something leaves is not what reads as wrong — the eye
+   * follows the arrival.
+   */
   const variants = {
-    enter: (dir: number) => ({ x: reduced ? 0 : dir > 0 ? 32 : -32, opacity: 0 }),
+    enter: (dir: number) => ({ x: reduced ? 0 : dir > 0 ? 32 : -32 }),
     center: { x: 0, opacity: 1 },
     exit: (dir: number) => ({ x: reduced ? 0 : dir > 0 ? -32 : 32, opacity: 0 }),
   }
@@ -51,7 +65,7 @@ export function ModeSlider({ active, onChange, listenContent, trainContent }: Pr
   ]
 
   return (
-    <div className="modeslider">
+    <div className={`modeslider modeslider--${active}`}>
       <div className="modeslider__tabs u-liquid" role="tablist" aria-label="Ścieżka nauki">
         {tabs.map(tab => (
           <button
