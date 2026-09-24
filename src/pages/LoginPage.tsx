@@ -65,13 +65,32 @@ export function LoginPage() {
         if (returnTo) navigate(returnTo, { replace: true, state: gate?.returnState })
         else navigate('/konto')
       } else if (mode === 'signup') {
-        const { error: err } = await sb.auth.signUp({ email, password })
+        // Same omission as the reset below had. This one fails less visibly:
+        // the confirm link hits Supabase's /auth/v1/verify first, so the address
+        // IS confirmed and only the redirect afterwards dead-ends — the account
+        // works, the user just gets a broken page for their trouble.
+        const { error: err } = await sb.auth.signUp({
+          email, password,
+          options: { emailRedirectTo: `${window.location.origin}/konto` },
+        })
         if (err) throw err
         setMessage('Konto utworzone. Sprawdź maila, aby potwierdzić adres.')
       } else {
-        const { error: err } = await sb.auth.resetPasswordForEmail(email)
+        // `redirectTo` is not optional in practice. Without it Supabase sends
+        // the recovery link to the project's Site URL, which was still the
+        // template default (http://localhost:3000) — so every reset mail landed
+        // on an address that does not exist on the recipient's device, which is
+        // exactly how "reset hasła nie działa" looked from the outside.
+        //
+        // window.location.origin rather than a constant, so a preview deploy
+        // sends people back to the preview and localhost back to localhost.
+        // The origin still has to be on Supabase's redirect allow list or the
+        // Site URL is used anyway — see docs/auth-redirects.md.
+        const { error: err } = await sb.auth.resetPasswordForEmail(email, {
+          redirectTo: `${window.location.origin}/konto?reset=1`,
+        })
         if (err) throw err
-        setMessage('Wysłaliśmy link do zresetowania hasła.')
+        setMessage('Wysłaliśmy link do zresetowania hasła. Otwórz go na tym urządzeniu.')
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Coś poszło nie tak.')

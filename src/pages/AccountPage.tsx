@@ -83,7 +83,14 @@ export function AccountPage() {
   const [busy, setBusy] = useState<'checkout' | 'portal' | null>(null)
   const [payError, setPayError] = useState<string | null>(null)
 
-  const [pwOpen, setPwOpen] = useState(false)
+  // Arriving from a recovery mail (?reset=1, set by LoginPage's redirectTo).
+  // The link logs the user in, which is the whole trap: without this they land
+  // on an ordinary account page with the password form collapsed and nothing
+  // saying why they are here, so the reset appears to have done nothing.
+  // Seeded into the initial state rather than set from an effect — the form is
+  // then open on the first paint instead of springing open after it.
+  const isRecovery = params.get('reset') === '1'
+  const [pwOpen, setPwOpen] = useState(isRecovery)
   const [newPassword, setNewPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [pwBusy, setPwBusy] = useState(false)
@@ -161,6 +168,14 @@ export function AccountPage() {
       setPwOpen(false)
       setNewPassword('')
       setConfirmPassword('')
+      // Drop ?reset=1 once it has been acted on, so a refresh (or the back
+      // gesture) doesn't reopen the form still claiming they arrived from a
+      // mail. `replace` keeps the spent recovery URL out of history.
+      if (isRecovery) {
+        const next = new URLSearchParams(params)
+        next.delete('reset')
+        setParams(next, { replace: true })
+      }
     } catch (err) {
       setPwError(err instanceof Error ? err.message : 'Coś poszło nie tak.')
     } finally {
@@ -361,7 +376,16 @@ export function AccountPage() {
               <Row
                 inline
                 name="Hasło"
-                hint={pwDone ? 'Hasło zostało zmienione.' : 'Zmień hasło, którym logujesz się w aplikacji'}
+                hint={
+                  pwDone
+                    ? 'Hasło zostało zmienione.'
+                    : isRecovery
+                      // The one line that makes a recovery landing make sense:
+                      // they clicked "nie pamiętam hasła" and are now on a page
+                      // that never mentions it otherwise.
+                      ? 'Ustaw nowe hasło — jesteś zalogowany z linku z maila.'
+                      : 'Zmień hasło, którym logujesz się w aplikacji'
+                }
                 control={
                   <button
                     type="button"
